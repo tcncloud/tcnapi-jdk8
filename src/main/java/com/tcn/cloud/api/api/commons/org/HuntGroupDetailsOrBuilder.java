@@ -195,7 +195,7 @@ public interface HuntGroupDetailsOrBuilder extends
 
   /**
    * <pre>
-   * The script details.
+   * The assigned script details.
    * </pre>
    *
    * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
@@ -204,7 +204,7 @@ public interface HuntGroupDetailsOrBuilder extends
   boolean hasScriptDetails();
   /**
    * <pre>
-   * The script details.
+   * The assigned script details.
    * </pre>
    *
    * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
@@ -213,7 +213,7 @@ public interface HuntGroupDetailsOrBuilder extends
   com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails getScriptDetails();
   /**
    * <pre>
-   * The script details.
+   * The assigned script details.
    * </pre>
    *
    * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>

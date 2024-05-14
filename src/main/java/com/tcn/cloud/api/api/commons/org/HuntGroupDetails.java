@@ -5175,7 +5175,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ScriptDetails is the entity to describe the features of scripts assigned to the hunt group.
+   * ScriptDetails is the entity to describe the features of a script assigned to the hunt group.
    * </pre>
    *
    * Protobuf type {@code api.commons.org.HuntGroupDetails.ScriptDetails}
@@ -5584,7 +5584,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ScriptDetails is the entity to describe the features of scripts assigned to the hunt group.
+     * ScriptDetails is the entity to describe the features of a script assigned to the hunt group.
      * </pre>
      *
      * Protobuf type {@code api.commons.org.HuntGroupDetails.ScriptDetails}
@@ -6504,7 +6504,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails scriptDetails_;
   /**
    * <pre>
-   * The script details.
+   * The assigned script details.
    * </pre>
    *
    * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
@@ -6516,7 +6516,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The script details.
+   * The assigned script details.
    * </pre>
    *
    * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
@@ -6528,7 +6528,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The script details.
+   * The assigned script details.
    * </pre>
    *
    * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
@@ -8411,7 +8411,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails, com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.Builder, com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetailsOrBuilder> scriptDetailsBuilder_;
     /**
      * <pre>
-     * The script details.
+     * The assigned script details.
      * </pre>
      *
      * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
@@ -8422,7 +8422,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The script details.
+     * The assigned script details.
      * </pre>
      *
      * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
@@ -8437,7 +8437,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The script details.
+     * The assigned script details.
      * </pre>
      *
      * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
@@ -8457,7 +8457,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The script details.
+     * The assigned script details.
      * </pre>
      *
      * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
@@ -8475,7 +8475,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The script details.
+     * The assigned script details.
      * </pre>
      *
      * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
@@ -8498,7 +8498,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The script details.
+     * The assigned script details.
      * </pre>
      *
      * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
@@ -8515,7 +8515,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The script details.
+     * The assigned script details.
      * </pre>
      *
      * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
@@ -8527,7 +8527,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The script details.
+     * The assigned script details.
      * </pre>
      *
      * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
@@ -8542,7 +8542,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The script details.
+     * The assigned script details.
      * </pre>
      *
      * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
