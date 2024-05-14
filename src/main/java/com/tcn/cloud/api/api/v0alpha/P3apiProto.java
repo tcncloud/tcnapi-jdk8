@@ -1488,1770 +1488,1772 @@ public final class P3apiProto {
       "e/protobuf/timestamp.proto\032\036google/proto" +
       "buf/wrappers.proto\"<\n\024GetAgentHuntGroupR" +
       "eq\022$\n\016hunt_group_sid\030\001 \001(\003R\014huntGroupSid" +
-      "\"\267\002\n\tHuntGroup\022$\n\016hunt_group_sid\030\001 \001(\003R\014" +
+      "\"\354\002\n\tHuntGroup\022$\n\016hunt_group_sid\030\001 \001(\003R\014" +
       "huntGroupSid\022\035\n\nclient_sid\030\002 \001(\003R\tclient" +
       "Sid\022\022\n\004name\030\003 \001(\tR\004name\022>\n\013description\030\004" +
       " \001(\0132\034.google.protobuf.StringValueR\013desc" +
       "ription\022;\n\013modify_date\030\005 \001(\0132\032.google.pr" +
       "otobuf.TimestampR\nmodifyDate\0223\n\004type\030\006 \001" +
       "(\0162\037.api.commons.HuntGroupType.EnumR\004typ" +
-      "e\022\037\n\013agent_count\030\007 \001(\003R\nagentCount\"?\n\021Ge" +
-      "tAgentSkillsReq\022$\n\016hunt_group_sid\030\004 \001(\003R" +
-      "\014huntGroupSidJ\004\010\003\020\004\"\230\001\n\021GetAgentSkillsRe" +
-      "s\022B\n\006skills\030\002 \003(\0132*.api.v0alpha.GetAgent" +
-      "SkillsRes.SkillsEntryR\006skills\0329\n\013SkillsE" +
-      "ntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005v" +
-      "alue:\0028\001J\004\010\001\020\002\"K\n\023CreateAgentSkillReq\022\022\n" +
-      "\004name\030\001 \001(\tR\004name\022 \n\013description\030\002 \001(\tR\013" +
-      "description\"\025\n\023CreateAgentSkillRes\"s\n\023Up" +
-      "dateAgentSkillReq\022&\n\017agent_skill_sid\030\001 \001" +
-      "(\003R\ragentSkillSid\022\022\n\004name\030\002 \001(\tR\004name\022 \n" +
-      "\013description\030\003 \001(\tR\013description\"\025\n\023Updat" +
-      "eAgentSkillRes\"=\n\023DeleteAgentSkillReq\022&\n" +
-      "\017agent_skill_sid\030\001 \001(\003R\ragentSkillSid\"\025\n" +
-      "\023DeleteAgentSkillRes\"\024\n\022ListAgentSkillsR" +
-      "eq\"E\n\022ListAgentSkillsRes\022/\n\006skills\030\001 \003(\013" +
-      "2\027.api.v0alpha.AgentSkillR\006skills\"\036\n\034Lis" +
-      "tSkillsForCurrentAgentReq\"O\n\034ListSkillsF" +
-      "orCurrentAgentRes\022/\n\006skills\030\001 \003(\0132\027.api." +
-      "v0alpha.AgentSkillR\006skills\"@\n\022GetAgentSe" +
-      "ssionReq\022*\n\021agent_session_sid\030\001 \001(\003R\017age" +
-      "ntSessionSid\"\257\014\n\014AgentSession\022*\n\021agent_s" +
-      "ession_sid\030\001 \001(\003R\017agentSessionSid\022@\n\016web" +
-      "_login_time\030\002 \001(\0132\032.google.protobuf.Time" +
-      "stampR\014webLoginTime\022B\n\017web_logout_time\030\003" +
-      " \001(\0132\032.google.protobuf.TimestampR\rwebLog" +
-      "outTime\022@\n\016ivr_login_time\030\004 \001(\0132\032.google" +
-      ".protobuf.TimestampR\014ivrLoginTime\022B\n\017ivr" +
-      "_logout_time\030\005 \001(\0132\032.google.protobuf.Tim" +
-      "estampR\rivrLogoutTime\022>\n\014ivr_duration\030\006 " +
-      "\001(\0132\033.google.protobuf.Int32ValueR\013ivrDur" +
-      "ation\022K\n\023ivr_billed_duration\030\007 \001(\0132\033.goo" +
-      "gle.protobuf.Int32ValueR\021ivrBilledDurati" +
-      "on\0220\n\004cost\030\010 \001(\0132\034.google.protobuf.Doubl" +
-      "eValueR\004cost\0228\n\tagent_sid\030\t \001(\0132\033.google" +
-      ".protobuf.Int64ValueR\010agentSid\0223\n\006status" +
-      "\030\n \001(\0132\033.google.protobuf.Int32ValueR\006sta" +
-      "tus\022A\n\016softphone_user\030\013 \001(\0132\032.google.pro" +
-      "tobuf.BoolValueR\rsoftphoneUser\022A\n\ragent_" +
-      "dial_in\030\014 \001(\0162\035.api.commons.AgentDialIn." +
-      "EnumR\013agentDialIn\022C\n\016agent_callerid\030\r \001(" +
-      "\0132\034.google.protobuf.StringValueR\ragentCa" +
-      "llerid\022L\n\023agent_dialed_number\030\016 \001(\0132\034.go" +
-      "ogle.protobuf.StringValueR\021agentDialedNu" +
-      "mber\0224\n\006worker\030\017 \001(\0132\034.google.protobuf.S" +
-      "tringValueR\006worker\022A\n\016hunt_group_sid\030\020 \001" +
-      "(\0132\033.google.protobuf.Int64ValueR\014huntGro" +
-      "upSid\022@\n\rwait_duration\030\021 \001(\0132\033.google.pr" +
-      "otobuf.Int32ValueR\014waitDuration\022B\n\016pause" +
-      "_duration\030\022 \001(\0132\033.google.protobuf.Int32V" +
-      "alueR\rpauseDuration\022H\n\021transfer_duration" +
-      "\030\023 \001(\0132\033.google.protobuf.Int32ValueR\020tra" +
-      "nsferDuration\022E\n\020wrap_up_duration\030\024 \001(\0132" +
-      "\033.google.protobuf.Int32ValueR\016wrapUpDura" +
-      "tion\022@\n\rtalk_duration\030\025 \001(\0132\033.google.pro" +
-      "tobuf.Int32ValueR\014talkDuration\022D\n\017manual" +
-      "_duration\030\026 \001(\0132\033.google.protobuf.Int32V" +
-      "alueR\016manualDuration\022F\n\020preview_duration" +
-      "\030\027 \001(\0132\033.google.protobuf.Int32ValueR\017pre" +
-      "viewDuration\022@\n\rhold_duration\030\030 \001(\0132\033.go" +
-      "ogle.protobuf.Int32ValueR\014holdDuration\"\024" +
-      "\n\022GetCurrentAgentReq\"\267\006\n\005Agent\022\033\n\tagent_" +
-      "sid\030\001 \001(\003R\010agentSid\022\035\n\nclient_sid\030\002 \001(\003R" +
-      "\tclientSid\022*\n\021agent_profile_sid\030\003 \001(\003R\017a" +
-      "gentProfileSid\022\033\n\tweb_login\030\004 \001(\tR\010webLo" +
-      "gin\0226\n\010agent_id\030\007 \001(\0132\033.google.protobuf." +
-      "Int64ValueR\007agentId\0228\n\tagent_pin\030\010 \001(\0132\033" +
-      ".google.protobuf.Int64ValueR\010agentPin\0225\n" +
-      "\010add_date\030\t \001(\0132\032.google.protobuf.Timest" +
-      "ampR\007addDate\022;\n\013modify_date\030\n \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\nmodifyDate\022E\n\017cal" +
-      "lback_number\030\013 \001(\0132\034.google.protobuf.Str" +
-      "ingValueR\016callbackNumber\022K\n\022callback_ext" +
-      "ension\030\014 \001(\0132\034.google.protobuf.StringVal" +
-      "ueR\021callbackExtension\022A\n\016hunt_group_sid\030" +
-      "\r \001(\0132\033.google.protobuf.Int64ValueR\014hunt" +
-      "GroupSid\022M\n\023subscriber_username\030\016 \001(\0132\034." +
-      "google.protobuf.StringValueR\022subscriberU" +
-      "sername\022F\n\020partner_agent_id\030\017 \001(\0132\034.goog" +
-      "le.protobuf.StringValueR\016partnerAgentId\022" +
-      "U\n\031last_password_change_date\030\020 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\026lastPasswordChan" +
-      "geDate\"\205\001\n\024GetClientInfoDataReq\022\031\n\010call_" +
-      "sid\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\0162\032." +
-      "api.commons.CallType.EnumR\010callType\022\031\n\010t" +
-      "ask_sid\030\004 \001(\003R\007taskSid\"\253\001\n\024GetClientInfo" +
-      "DataRes\022!\n\014phone_number\030\001 \001(\tR\013phoneNumb" +
-      "er\022\033\n\tcaller_id\030\002 \001(\tR\010callerId\0222\n\004rows\030" +
-      "\003 \003(\0132\036.api.commons.ClientInfoDataRowR\004r" +
-      "ows\022\037\n\013country_sid\030\004 \001(\003R\ncountrySid\"\233\001\n" +
-      "\037GetClientInfoDisplayTemplateReq\022\031\n\010call" +
-      "_sid\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\0162\032" +
-      ".api.commons.CallType.EnumR\010callType\022$\n\016" +
-      "hunt_group_sid\030\004 \001(\003R\014huntGroupSid\"\354\001\n\037G" +
-      "etClientInfoDisplayTemplateRes\022,\n\022displa" +
-      "y_all_fields\030\001 \001(\010R\020displayAllFields\022\\\n\026" +
-      "dialed_number_settings\030\002 \001(\0132&.api.commo" +
-      "ns.DialedNumberFieldSettingsR\024dialedNumb" +
-      "erSettings\022=\n\004rows\030\003 \003(\0132).api.commons.C" +
-      "lientInfoDisplayTemplateRowR\004rows\"c\n\032Lis" +
-      "tAgentStatisticsDataReq\022$\n\016hunt_group_si" +
-      "d\030\003 \001(\003R\014huntGroupSid\022\037\n\013session_sid\030\004 \001" +
-      "(\003R\nsessionSid\"\323\010\n\016StatisticsData\022K\n\023age" +
-      "nt_session_count\030\001 \001(\0132\033.google.protobuf" +
-      ".Int64ValueR\021agentSessionCount\022>\n\014ivr_du" +
-      "ration\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eR\013ivrDuration\022K\n\023agent_wait_duration\030\003 " +
-      "\001(\0132\033.google.protobuf.Int64ValueR\021agentW" +
-      "aitDuration\022I\n\022call_wait_duration\030\004 \001(\0132" +
-      "\033.google.protobuf.Int64ValueR\020callWaitDu" +
-      "ration\022@\n\rhold_duration\030\005 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueR\014holdDuration\022D\n\017manu" +
-      "al_duration\030\006 \001(\0132\033.google.protobuf.Int6" +
-      "4ValueR\016manualDuration\022B\n\016pause_duration" +
-      "\030\007 \001(\0132\033.google.protobuf.Int64ValueR\rpau" +
-      "seDuration\022F\n\020preview_duration\030\010 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueR\017previewDurati" +
-      "on\022J\n\022suspended_duration\030\t \001(\0132\033.google." +
-      "protobuf.Int64ValueR\021suspendedDuration\022@" +
-      "\n\rtalk_duration\030\n \001(\0132\033.google.protobuf." +
-      "Int64ValueR\014talkDuration\022H\n\021transfer_dur" +
-      "ation\030\013 \001(\0132\033.google.protobuf.Int64Value" +
-      "R\020transferDuration\022E\n\020wrap_up_duration\030\014" +
-      " \001(\0132\033.google.protobuf.Int64ValueR\016wrapU" +
-      "pDuration\022\035\n\nagent_name\030\r \001(\tR\tagentName" +
-      "\022&\n\017hunt_group_name\030\016 \001(\tR\rhuntGroupName" +
-      "\022\035\n\ncall_count\030\017 \001(\003R\tcallCount\022@\n\016web_l" +
-      "ogin_time\030\020 \001(\0132\032.google.protobuf.Timest" +
-      "ampR\014webLoginTime\022\033\n\tagent_sid\030\021 \001(\003R\010ag" +
-      "entSid\022$\n\016hunt_group_sid\030\022 \001(\003R\014huntGrou" +
-      "pSid\"}\n\032StatisticsColumnDefinition\022!\n\014he" +
-      "ader_label\030\001 \001(\tR\013headerLabel\022!\n\014statist" +
-      "ic_id\030\002 \001(\tR\013statisticId\022\031\n\010tool_tip\030\003 \001" +
-      "(\tR\007toolTip\"\260\001\n\032ListAgentStatisticsDataR" +
-      "es\022D\n\017statistics_data\030\001 \003(\0132\033.api.v0alph" +
-      "a.StatisticsDataR\016statisticsData\022L\n\rshow" +
-      "n_columns\030\002 \003(\0132\'.api.v0alpha.Statistics" +
-      "ColumnDefinitionR\014shownColumns\"\251\002\n\tPhone" +
-      "Book\022\035\n\nentry_type\030\002 \001(\tR\tentryType\022\035\n\ne" +
-      "ntry_name\030\003 \001(\tR\tentryName\022A\n\016hunt_group" +
-      "_sid\030\005 \001(\0132\033.google.protobuf.Int64ValueR" +
-      "\014huntGroupSid\022!\n\014phone_number\030\006 \001(\tR\013pho" +
-      "neNumber\022H\n\021phone_number_type\030\007 \001(\0132\034.go" +
-      "ogle.protobuf.StringValueR\017phoneNumberTy" +
-      "pe\022.\n\023phone_number_hidden\030\010 \001(\010R\021phoneNu" +
-      "mberHidden\"\226\002\n\016PhoneBookEntry\022$\n\016phone_b" +
-      "ook_sid\030\001 \001(\003R\014phoneBookSid\022\035\n\nentry_nam" +
-      "e\030\002 \001(\tR\tentryName\022B\n\010standard\030\003 \001(\0132$.a" +
-      "pi.v0alpha.PhoneBookStandardNumberH\000R\010st" +
-      "andard\0227\n\007sip_uri\030\004 \001(\0132\034.api.v0alpha.Ph" +
-      "oneBookSIPURIH\000R\006sipUri\022.\n\023phone_number_" +
-      "hidden\030\005 \001(\010R\021phoneNumberHiddenB\022\n\020phone" +
-      "_book_entry\"\260\001\n\027PhoneBookStandardNumber\022" +
-      "!\n\014phone_number\030\001 \001(\tR\013phoneNumber\022S\n\022ph" +
-      "one_number_types\030\002 \003(\0162%.api.commons.Pho" +
-      "neBookPhoneNumberTypeR\020phoneNumberTypes\022" +
-      "\035\n\nwhite_list\030\003 \001(\010R\twhiteList\"\223\001\n\017Phone" +
-      "BookSIPURI\022 \n\014sip_uri_left\030\001 \001(\tR\nsipUri" +
-      "Left\022\"\n\rsip_uri_right\030\002 \001(\tR\013sipUriRight" +
-      "\022:\n\tsip_types\030\003 \003(\0162\035.api.commons.PhoneB" +
-      "ookSIPTypeR\010sipTypes\"\037\n\035ListClientPhoneB" +
-      "ookEntriesReq\"\220\001\n\035ListClientPhoneBookEnt" +
-      "riesRes\022I\n\022phone_book_entries\030\001 \003(\0132\033.ap" +
-      "i.v0alpha.PhoneBookEntryR\020phoneBookEntri" +
-      "es\022$\n\016hunt_group_sid\030\002 \001(\003R\014huntGroupSid" +
-      "\"H\n ListHuntGroupPhoneBookEntriesReq\022$\n\016" +
-      "hunt_group_sid\030\001 \001(\003R\014huntGroupSid\"\223\001\n L" +
-      "istHuntGroupPhoneBookEntriesRes\022I\n\022phone" +
-      "_book_entries\030\001 \003(\0132\033.api.v0alpha.PhoneB" +
-      "ookEntryR\020phoneBookEntries\022$\n\016hunt_group" +
-      "_sid\030\002 \001(\003R\014huntGroupSid\"\237\002\n\027CreatePhone" +
-      "BookEntryReq\022$\n\016hunt_group_sid\030\001 \001(\003R\014hu" +
-      "ntGroupSid\022\035\n\nentry_name\030\002 \001(\tR\tentryNam" +
-      "e\022B\n\010standard\030\003 \001(\0132$.api.v0alpha.PhoneB" +
-      "ookStandardNumberH\000R\010standard\0227\n\007sip_uri" +
-      "\030\004 \001(\0132\034.api.v0alpha.PhoneBookSIPURIH\000R\006" +
-      "sipUri\022.\n\023phone_number_hidden\030\005 \001(\010R\021pho" +
-      "neNumberHiddenB\022\n\020phone_book_entry\"\031\n\027Cr" +
-      "eatePhoneBookEntryRes\"\305\002\n\027UpdatePhoneBoo" +
-      "kEntryReq\022$\n\016phone_book_sid\030\001 \001(\003R\014phone" +
-      "BookSid\022$\n\016hunt_group_sid\030\002 \001(\003R\014huntGro" +
-      "upSid\022\035\n\nentry_name\030\003 \001(\tR\tentryName\022B\n\010" +
-      "standard\030\004 \001(\0132$.api.v0alpha.PhoneBookSt" +
-      "andardNumberH\000R\010standard\0227\n\007sip_uri\030\005 \001(" +
-      "\0132\034.api.v0alpha.PhoneBookSIPURIH\000R\006sipUr" +
-      "i\022.\n\023phone_number_hidden\030\006 \001(\010R\021phoneNum" +
-      "berHiddenB\022\n\020phone_book_entry\"\031\n\027UpdateP" +
-      "honeBookEntryRes\"?\n\027DeletePhoneBookEntry" +
-      "Req\022$\n\016phone_book_sid\030\001 \001(\003R\014phoneBookSi" +
-      "d\"\031\n\027DeletePhoneBookEntryRes\"9\n\021ListPhon" +
-      "eBooksReq\022$\n\016hunt_group_sid\030\002 \001(\003R\014huntG" +
-      "roupSid\"\362\001\n\021ListPhoneBooksRes\022I\n\025caller_" +
-      "id_phone_books\030\001 \003(\0132\026.api.v0alpha.Phone" +
-      "BookR\022callerIdPhoneBooks\022H\n\024outbound_pho" +
-      "ne_books\030\002 \003(\0132\026.api.v0alpha.PhoneBookR\022" +
-      "outboundPhoneBooks\022H\n\024transfer_phone_boo" +
-      "ks\030\003 \003(\0132\026.api.v0alpha.PhoneBookR\022transf" +
-      "erPhoneBooks\"<\n\024ListAgentTriggersReq\022$\n\016" +
-      "hunt_group_sid\030\001 \001(\003R\014huntGroupSid\"W\n\021Tr" +
-      "iggerParameters\022\035\n\naction_key\030\001 \001(\tR\tact" +
-      "ionKey\022#\n\raction_string\030\002 \001(\tR\014actionStr" +
-      "ing\"\262\002\n\016TriggerDetails\022!\n\014trigger_name\030\001" +
-      " \001(\tR\013triggerName\022!\n\014trigger_desc\030\002 \001(\tR" +
-      "\013triggerDesc\022%\n\016trigger_status\030\003 \001(\003R\rtr" +
-      "iggerStatus\022)\n\020trigger_duration\030\004 \001(\003R\017t" +
-      "riggerDuration\0229\n\ncall_types\030\005 \003(\0162\032.api" +
-      ".commons.CallType.EnumR\tcallTypes\022M\n\022tri" +
-      "gger_parameters\030\006 \003(\0132\036.api.v0alpha.Trig" +
-      "gerParametersR\021triggerParameters\"\\\n\024List" +
-      "AgentTriggersRes\022D\n\017trigger_details\030\001 \003(" +
-      "\0132\033.api.v0alpha.TriggerDetailsR\016triggerD" +
-      "etails\"\247\002\n\014PBXExtension\022*\n\021pbx_extension" +
-      "_sid\030\001 \001(\003R\017pbxExtensionSid\022#\n\rpbx_exten" +
-      "sion\030\002 \001(\tR\014pbxExtension\022\031\n\010join_sid\030\004 \001" +
-      "(\003R\007joinSid\022\033\n\tjoin_type\030\005 \001(\tR\010joinType" +
-      "\022#\n\remail_subject\030\006 \001(\tR\014emailSubject\022\035\n" +
-      "\nemail_body\030\007 \001(\tR\temailBody\022\'\n\017email_ad" +
-      "dresses\030\010 \001(\tR\016emailAddresses\022!\n\014agent_a" +
-      "ccess\030\t \001(\010R\013agentAccess\"\026\n\024ListPBXExten" +
-      "sionsReq\"\234\005\n\024ListPBXExtensionsRes\022[\n\020age" +
-      "nt_extensions\030\001 \003(\01320.api.v0alpha.ListPB" +
-      "XExtensionsRes.AgentExtensionR\017agentExte" +
-      "nsions\022h\n\025hunt_group_extensions\030\002 \003(\01324." +
-      "api.v0alpha.ListPBXExtensionsRes.HuntGro" +
-      "upExtensionR\023huntGroupExtensions\032\326\001\n\016Age" +
-      "ntExtension\022#\n\rpbx_extension\030\001 \001(\tR\014pbxE" +
-      "xtension\022+\n\021greeting_location\030\002 \001(\tR\020gre" +
-      "etingLocation\0220\n\005email\030\003 \001(\0132\032.api.v0alp" +
-      "ha.EmailResponseR\005email\022\035\n\nagent_name\030\004 " +
-      "\001(\tR\tagentName\022!\n\014has_greeting\030\005 \001(\010R\013ha" +
-      "sGreeting\032\343\001\n\022HuntGroupExtension\022#\n\rpbx_" +
-      "extension\030\001 \001(\tR\014pbxExtension\022+\n\021greetin" +
-      "g_location\030\002 \001(\tR\020greetingLocation\0220\n\005em" +
-      "ail\030\003 \001(\0132\032.api.v0alpha.EmailResponseR\005e" +
-      "mail\022&\n\017hunt_group_name\030\004 \001(\tR\rhuntGroup" +
-      "Name\022!\n\014has_greeting\030\005 \001(\010R\013hasGreeting\"" +
-      "[\n\rEmailResponse\022\030\n\007subject\030\001 \001(\tR\007subje" +
-      "ct\022\022\n\004body\030\002 \001(\tR\004body\022\034\n\taddresses\030\003 \003(" +
-      "\tR\taddresses\"\235\001\n\rMailMergeData\022\031\n\010call_s" +
-      "id\030\004 \001(\003R\007callSid\0227\n\tcall_type\030\005 \001(\0162\032.a" +
-      "pi.commons.CallType.EnumR\010callType\0222\n\025sc" +
-      "heduled_callback_id\030\006 \001(\tR\023scheduledCall" +
-      "backIdJ\004\010\001\020\002\"\273\004\n\021HuntGroupResponse\0225\n\027hu" +
-      "nt_group_response_sid\030\001 \001(\003R\024huntGroupRe" +
-      "sponseSid\022A\n\016hunt_group_sid\030\002 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueR\014huntGroupSid\0220\n\004" +
-      "type\030\003 \001(\0132\034.google.protobuf.StringValue" +
-      "R\004type\022\030\n\007options\030\004 \003(\tR\007options\0220\n\004name" +
-      "\030\005 \001(\0132\034.google.protobuf.StringValueR\004na" +
-      "me\022>\n\013description\030\006 \001(\0132\034.google.protobu" +
-      "f.StringValueR\013description\0221\n\005order\030\007 \001(" +
-      "\0132\033.google.protobuf.Int32ValueR\005order\0226\n" +
-      "\010required\030\010 \001(\0132\032.google.protobuf.BoolVa" +
-      "lueR\010required\022A\n\rdefault_value\030\t \001(\0132\034.g" +
-      "oogle.protobuf.StringValueR\014defaultValue" +
-      "\022@\n\013manual_dial\030\n \001(\0132\037.api.v0alpha.Manu" +
-      "alDialSettingsR\nmanualDial\"\205\002\n\004DNCL\022<\n\013c" +
-      "ountry_sid\030\013 \001(\0132\033.google.protobuf.Int64" +
-      "ValueR\ncountrySid\022;\n\ndncl_notes\030d \001(\0132\034." +
-      "google.protobuf.StringValueR\tdnclNotes\022=" +
-      "\n\013dncl_number\030e \001(\0132\034.google.protobuf.St" +
-      "ringValueR\ndnclNumber\022C\n\017expiration_date" +
-      "\030f \001(\0132\032.google.protobuf.TimestampR\016expi" +
-      "rationDate\"\226\001\n\020AgentLoggingData\022\031\n\010call_" +
-      "sid\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\0162\032." +
-      "api.commons.CallType.EnumR\010callType\022.\n\023a" +
-      "ction_value_suffix\030\003 \001(\tR\021actionValueSuf" +
-      "fix\"\214\001\n\024CreateDNCLNumbersReq\022\'\n\005dncls\030\001 " +
-      "\003(\0132\021.api.v0alpha.DNCLR\005dncls\022K\n\022agent_l" +
-      "ogging_data\030\003 \001(\0132\035.api.v0alpha.AgentLog" +
-      "gingDataR\020agentLoggingData\"\205\001\n\024CreateDNC" +
-      "LNumbersRes\022#\n\rsuccess_count\030\001 \001(\003R\014succ" +
-      "essCount\022#\n\rinvalid_count\030\002 \001(\003R\014invalid" +
-      "Count\022#\n\rfailure_count\030\003 \001(\003R\014failureCou" +
-      "nt\"D\n\034GetHuntGroupAgentSettingsReq\022$\n\016hu" +
-      "nt_group_sid\030\001 \001(\003R\014huntGroupSid\"\205\020\n\026Hun" +
-      "tGroupAgentSettings\022%\n\016keypad_enabled\030\001 " +
-      "\001(\010R\rkeypadEnabled\022)\n\020keypad_delimiter\030\002" +
-      " \001(\tR\017keypadDelimiter\022D\n\nstatistics\030\003 \001(" +
-      "\0132$.api.v0alpha.AgentStatisticsSettingsR" +
-      "\nstatistics\0222\n\025end_call_confirmation\030\005 \001" +
-      "(\010R\023endCallConfirmation\0220\n\005pause\030\006 \001(\0132\032" +
-      ".api.v0alpha.PauseSettingsR\005pause\0227\n\003hqm" +
-      "\030\007 \001(\0132%.api.v0alpha.HoldQueueMonitorSet" +
-      "tingsR\003hqm\022@\n\013manual_dial\030\010 \001(\0132\037.api.v0" +
-      "alpha.ManualDialSettingsR\nmanualDial\0229\n\010" +
-      "transfer\030\t \001(\0132\035.api.v0alpha.TransferSet" +
-      "tingsR\010transfer\022C\n\014preview_dial\030\n \001(\0132 ." +
-      "api.v0alpha.PreviewDialSettingsR\013preview" +
-      "Dial\022\\\n\025phone_number_activity\030\013 \001(\0132(.ap" +
-      "i.v0alpha.PhoneNumberActivitySettingsR\023p" +
-      "honeNumberActivity\022-\n\004dncl\030\014 \001(\0132\031.api.v" +
-      "0alpha.DnclSettingsR\004dncl\0222\n\004hold\030\r \001(\0132" +
-      "\036.api.v0alpha.AgentHoldSettingsR\004hold\022L\n" +
-      "\017manual_approval\030\016 \001(\0132#.api.v0alpha.Man" +
-      "ualApprovalSettingsR\016manualApproval\022<\n\032d" +
-      "isplay_linkback_huntgroup\030\017 \001(\010R\030display" +
-      "LinkbackHuntgroup\022R\n\021schedule_callback\030\020" +
-      " \001(\0132%.api.v0alpha.ScheduleCallBackSetti" +
-      "ngsR\020scheduleCallback\022<\n\trecording\030\022 \001(\013" +
-      "2\036.api.v0alpha.RecordingSettingsR\trecord" +
-      "ing\022;\n\032display_phone_zip_metadata\030\023 \001(\010R" +
-      "\027displayPhoneZipMetadata\0225\n\027phone_zip_me" +
-      "tadata_keys\030\024 \003(\tR\024phoneZipMetadataKeys\022" +
-      "6\n\027display_machine_deliver\030\025 \001(\010R\025displa" +
-      "yMachineDeliver\0220\n\024allow_agent_intercom\030" +
-      "\026 \001(\010R\022allowAgentIntercom\022T\n\025display_dat" +
-      "a_settings\030\027 \001(\0132 .api.v0alpha.DisplayDa" +
-      "taSettingsR\023displayDataSettings\0225\n\027allow" +
-      "_change_hunt_group\030\030 \001(\010R\024allowChangeHun" +
-      "tGroup\0224\n\026agent_screen_recording\030\031 \001(\010R\024" +
-      "agentScreenRecording\022_\n\033inbound_complian" +
-      "ce_metadata\030\032 \003(\0132\037.api.v0alpha.Complian" +
-      "ceMetadataR\031inboundComplianceMetadata\022.\n" +
-      "\023notify_queued_calls\030\033 \001(\010R\021notifyQueued" +
-      "Calls\022C\n\036display_journey_retrieved_data\030" +
-      "\034 \001(\010R\033displayJourneyRetrievedData\022?\n\034li" +
-      "mit_journey_retrieved_data\030\035 \003(\tR\031limitJ" +
-      "ourneyRetrievedData\0220\n\024initial_agent_sta" +
-      "tus\030\036 \001(\003R\022initialAgentStatus\022*\n\021display" +
-      "_web_links\030\037 \001(\010R\017displayWebLinks\022%\n\016dis" +
-      "play_skills\030  \001(\010R\rdisplaySkills\022R\n\021inte" +
-      "rrupt_peering\030! \003(\0162%.api.commons.Interr" +
-      "uptedPeeringStatusR\020interruptPeering\022?\n\034" +
-      "display_integration_data_map\030\" \001(\010R\031disp" +
-      "layIntegrationDataMap\022;\n\032limit_integrati" +
-      "on_data_map\030# \003(\tR\027limitIntegrationDataM" +
-      "apJ\004\010\021\020\022\"\373\001\n\027AgentStatisticsSettings\022\'\n\017" +
-      "show_statistics\030\001 \001(\010R\016showStatistics\022*\n" +
-      "\021show_call_history\030\002 \001(\010R\017showCallHistor" +
-      "y\022b\n\023filter_call_history\030\003 \001(\01622.api.v0a" +
-      "lpha.AgentStatisticsSettings.HistoryFilt" +
-      "erR\021filterCallHistory\"\'\n\rHistoryFilter\022\t" +
-      "\n\005TODAY\020\000\022\013\n\007SESSION\020\001\"\240\002\n\rPauseSettings" +
-      "\022*\n\021allow_agent_pause\030\001 \001(\010R\017allowAgentP" +
-      "ause\0225\n\027allow_agent_pause_reset\030\002 \001(\010R\024a" +
-      "llowAgentPauseReset\0221\n\025use_agent_pause_c" +
-      "odes\030\003 \001(\010R\022useAgentPauseCodes\0227\n\030defaul" +
-      "t_agent_pause_code\030\004 \001(\tR\025defaultAgentPa" +
-      "useCode\022@\n\034recording_pause_confirmation\030" +
-      "\005 \001(\010R\032recordingPauseConfirmation\"\244\002\n\033Ph" +
-      "oneNumberActivitySettings\022=\n\033allow_phone" +
-      "_number_activity\030\001 \001(\010R\030allowPhoneNumber" +
-      "Activity\022J\n\"allow_export_phone_number_ac" +
-      "tivity\030\002 \001(\010R\036allowExportPhoneNumberActi" +
-      "vity\022A\n\035allow_pna_recordings_download\030\003 " +
-      "\001(\010R\032allowPnaRecordingsDownload\0227\n\030allow" +
-      "_pna_edit_responses\030\004 \001(\010R\025allowPnaEditR" +
-      "esponses\"\302\001\n\023PreviewDialSettings\0221\n\024requ" +
-      "ire_confirmation\030\002 \001(\010R\023requireConfirmat" +
-      "ion\022\'\n\017timeout_minutes\030\003 \001(\003R\016timeoutMin" +
-      "utes\022!\n\014allow_cancel\030\004 \001(\010R\013allowCancel\022" +
-      "&\n\017pause_on_cancel\030\005 \001(\010R\rpauseOnCancelJ" +
-      "\004\010\001\020\002\"\200\001\n\037HoldQueueMonitoringAgentRoutin" +
-      "g\"]\n\004Enum\022\013\n\007UNKNOWN\020\000\022\033\n\027ORIGINAL_AGENT" +
-      "_REQUIRED\020\001\022\034\n\030ORIGINAL_AGENT_PREFERRED\020" +
-      "\002\022\r\n\tANY_AGENT\020\003\"\334\001\n\030HoldQueueMonitorSet" +
-      "tings\022\030\n\007monitor\030\001 \001(\010R\007monitor\022%\n\016requi" +
-      "red_group\030\002 \001(\003R\rrequiredGroup\022\'\n\017prefer" +
-      "red_group\030\003 \001(\003R\016preferredGroup\022V\n\ragent" +
-      "_routing\030\004 \001(\01621.api.v0alpha.HoldQueueMo" +
-      "nitoringAgentRouting.EnumR\014agentRouting\"" +
-      "D\n\022ComplianceMetadata\022\022\n\004name\030\001 \001(\tR\004nam" +
-      "e\022\032\n\010required\030\002 \001(\010R\010required\"\331\021\n\022Manual" +
-      "DialSettings\022\030\n\007enabled\030\001 \001(\010R\007enabled\0227" +
-      "\n\030show_outbound_phone_book\030\002 \001(\010R\025showOu" +
-      "tboundPhoneBook\0228\n\031show_caller_id_phone_" +
-      "book\030\003 \001(\010R\025showCallerIdPhoneBook\022/\n\024has" +
-      "_custom_caller_id\030\004 \001(\010R\021hasCustomCaller" +
-      "Id\022*\n\021default_caller_id\030\005 \001(\tR\017defaultCa" +
-      "llerId\022.\n\023default_country_sid\030\006 \001(\003R\021def" +
-      "aultCountrySid\0222\n\025show_country_selector\030" +
-      "\007 \001(\010R\023showCountrySelector\0223\n\025timezone_r" +
-      "estrictions\030\010 \001(\010R\024timezoneRestrictions\022" +
-      "*\n\021scrub_cell_phones\030\t \001(\010R\017scrubCellPho" +
-      "nes\022%\n\016call_recording\030\013 \001(\010R\rcallRecordi" +
-      "ng\022.\n\023agent_override_cell\030\014 \001(\010R\021agentOv" +
-      "errideCell\022,\n\022agent_override_ccr\030\r \001(\010R\020" +
-      "agentOverrideCcr\022.\n\023agent_override_dncl\030" +
-      "\016 \001(\010R\021agentOverrideDncl\0226\n\027agent_overri" +
-      "de_timezone\030\017 \001(\010R\025agentOverrideTimezone" +
-      "\022$\n\016use_white_list\030\021 \001(\010R\014useWhiteList\022/" +
-      "\n\024use_random_caller_id\030\022 \001(\010R\021useRandomC",
-      "allerId\0225\n\027random_caller_id_bucket\030\023 \001(\003" +
-      "R\024randomCallerIdBucket\022@\n\035default_caller" +
-      "_id_country_sid\030\024 \001(\003R\031defaultCallerIdCo" +
-      "untrySid\022F\n display_caller_id_country_se" +
-      "lect\030\025 \001(\010R\034displayCallerIdCountrySelect" +
-      "\022/\n\024use_caller_id_bucket\030\027 \001(\010R\021useCalle" +
-      "rIdBucket\022I\n!agent_override_natural_comp" +
-      "liance\030\030 \001(\010R\036agentOverrideNaturalCompli" +
-      "ance\022F\n natural_compliance_rule_set_name" +
-      "\030\031 \001(\tR\034naturalComplianceRuleSetName\022P\n\023" +
-      "compliance_metadata\030\032 \003(\0132\037.api.v0alpha." +
-      "ComplianceMetadataR\022complianceMetadata\022\'" +
-      "\n\017enable_metadata\030\033 \001(\010R\016enableMetadata\022" +
-      "p\n\033use_timezone_validation_zip\030\034 \001(\01621.a" +
-      "pi.v0alpha.ManualDialSettings.ZipCodeVal" +
-      "idationR\030useTimezoneValidationZip\022N\n\"ena" +
-      "ble_reject_option_for_approvers\030\035 \001(\010B\002\030" +
-      "\001R\036enableRejectOptionForApprovers\022,\n\022ena" +
-      "ble_sip_address\030\036 \001(\010R\020enableSipAddress\022" +
-      ":\n\032mask_manual_dial_caller_id\030\037 \001(\010R\026mas" +
-      "kManualDialCallerId\022<\n\033enable_manual_dia" +
-      "l_data_dip\030  \001(\tR\027enableManualDialDataDi" +
-      "p\022<\n\033manual_dial_data_dip_config\030! \001(\003R\027" +
-      "manualDialDataDipConfig\022z\n$manual_dial_d" +
-      "ata_dip_result_handling\030\" \001(\0162+.api.v0al" +
-      "pha.ManualDialDataDipHandling.EnumR\037manu" +
-      "alDialDataDipResultHandling\022\211\001\n data_dip" +
-      "_manual_dial_integration\030# \003(\0132A.api.v0a" +
-      "lpha.ManualDialSettings.DataDipManualDia" +
-      "lIntegrationEntryR\034dataDipManualDialInte" +
-      "gration\022\204\001\n)data_dip_manual_dial_integra" +
-      "tion_handling\030$ \001(\0162+.api.v0alpha.Manual" +
-      "DialDataDipHandling.EnumR$dataDipManualD" +
-      "ialIntegrationHandling\032O\n!DataDipManualD" +
-      "ialIntegrationEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n" +
-      "\005value\030\002 \001(\tR\005value:\0028\001\"6\n\021ZipCodeValida" +
-      "tion\022\t\n\005FALSE\020\000\022\010\n\004TRUE\020\001\022\014\n\010REQUIRED\020\002J" +
-      "\004\010\n\020\013J\004\010\020\020\021J\004\010\026\020\027\"\212\001\n\031ManualDialDataDipH" +
-      "andling\"m\n\004Enum\022\010\n\004NONE\020\000\022\n\n\006CANCEL\020\001\022\025\n" +
-      "\021NOTIFY_AND_CANCEL\020\002\022\031\n\025NOTIFY_AND_ALLOW" +
-      "_CALL\020\003\022\035\n\031CALL_WITH_ORIGINAL_VALUES\020\004\"l" +
-      "\n\021ScrubListsAutoAdd\022\035\n\nscrub_list\030\001 \001(\tR" +
-      "\tscrubList\022\031\n\010field_id\030\002 \001(\tR\007fieldId\022\035\n" +
-      "\nfield_name\030\003 \001(\tR\tfieldName\"\226\002\n\032ScrubLi" +
-      "stsExpirationLimits\022:\n\031outbound_expirati" +
-      "on_limit\030\001 \003(\003R\027outboundExpirationLimit\022" +
-      "8\n\030inbound_expiration_limit\030\002 \003(\003R\026inbou" +
-      "ndExpirationLimit\022?\n\034manual_dial_expirat" +
-      "ion_limit\030\003 \003(\003R\031manualDialExpirationLim" +
-      "it\022A\n\035preview_dial_expiration_limit\030\004 \003(" +
-      "\003R\032previewDialExpirationLimit\"\272\010\n\014DnclSe" +
-      "ttings\022$\n\016allow_dncl_add\030\001 \001(\010R\014allowDnc" +
-      "lAdd\0228\n\031manual_dial_auto_dncl_add\030\002 \001(\010R" +
-      "\025manualDialAutoDnclAdd\022:\n\032preview_dial_a" +
-      "uto_dncl_add\030\003 \001(\010R\026previewDialAutoDnclA" +
-      "dd\022@\n\035agent_responses_auto_dncl_add\030\004 \001(" +
-      "\010R\031agentResponsesAutoDnclAdd\022F\n default_" +
-      "manual_dncl_expire_hours\030\006 \001(\003R\034defaultM" +
-      "anualDnclExpireHours\022H\n!default_preview_" +
-      "dncl_expire_hours\030\007 \001(\003R\035defaultPreviewD" +
-      "nclExpireHours\0220\n\024default_dncl_country\030\010" +
-      " \001(\003R\022defaultDnclCountry\022J\n\"default_outb" +
-      "ound_dncl_expire_hours\030\t \001(\003R\036defaultOut" +
-      "boundDnclExpireHours\022H\n!default_inbound_" +
-      "dncl_expire_hours\030\n \001(\003R\035defaultInboundD" +
-      "nclExpireHours\022H\n!hunt_group_compliance_" +
-      "scrub_lists\030\013 \003(\tR\035huntGroupComplianceSc" +
-      "rubLists\022^\n\034scrub_lists_auto_add_options" +
-      "\030\014 \003(\0132\036.api.v0alpha.ScrubListsAutoAddR\030" +
-      "scrubListsAutoAddOptions\022B\n\036display_dncl" +
-      "_options_in_wrapup\030\r \001(\010R\032displayDnclOpt" +
-      "ionsInWrapup\022*\n\021allow_dncl_remove\030\016 \001(\010R" +
-      "\017allowDnclRemove\022f\n1hunt_group_complianc" +
-      "e_scrub_lists_removal_allowed\030\017 \003(\tR+hun" +
-      "tGroupComplianceScrubListsRemovalAllowed" +
-      "\022j\n\035scrub_lists_expiration_limits\030\020 \001(\0132" +
-      "\'.api.v0alpha.ScrubListsExpirationLimits" +
-      "R\032scrubListsExpirationLimitsJ\004\010\005\020\006\"\356\016\n\020T" +
-      "ransferSettings\022\030\n\007allowed\030\001 \001(\010R\007allowe" +
-      "d\022%\n\016show_filtering\030\002 \001(\010R\rshowFiltering" +
-      "\022S\n\014requeue_type\030\003 \001(\01620.api.v0alpha.Req" +
-      "ueueTransferQueueConfigType.EnumR\013requeu" +
-      "eType\022:\n\004type\030\004 \003(\0162&.api.v0alpha.Transf" +
-      "erSettingsType.EnumR\004type\022.\n\023default_cou" +
-      "ntry_sid\030\005 \001(\003R\021defaultCountrySid\0222\n\025sho" +
-      "w_country_selector\030\006 \001(\010R\023showCountrySel" +
-      "ector\022;\n\032has_custom_transfer_number\030\007 \001(" +
-      "\010R\027hasCustomTransferNumber\0226\n\027default_tr" +
-      "ansfer_number\030\010 \001(\tR\025defaultTransferNumb" +
-      "er\022/\n\024has_custom_caller_id\030\t \001(\010R\021hasCus" +
-      "tomCallerId\022*\n\021default_caller_id\030\n \001(\tR\017" +
-      "defaultCallerId\0229\n\031show_transfers_phone_" +
-      "book\030\013 \001(\010R\026showTransfersPhoneBook\0228\n\031sh" +
-      "ow_caller_id_phone_book\030\014 \001(\010R\025showCalle" +
-      "rIdPhoneBook\022Q\n\rhand_off_type\030\r \003(\0162-.ap" +
-      "i.v0alpha.TransferSettingsHandOffType.En" +
-      "umR\013handOffType\022L\n\020recording_status\030\016 \001(" +
-      "\0162!.api.v0alpha.RecordingStatus.EnumR\017re" +
-      "cordingStatus\022@\n\035default_caller_id_count" +
-      "ry_sid\030\017 \001(\003R\031defaultCallerIdCountrySid\022" +
-      "D\n\037show_caller_id_country_selector\030\020 \001(\010" +
-      "R\033showCallerIdCountrySelector\022A\n\035start_r" +
-      "ecord_transfer_targets\030\021 \003(\tR\032startRecor" +
-      "dTransferTargets\022?\n\034stop_record_transfer" +
-      "_targets\030\022 \003(\tR\031stopRecordTransferTarget" +
-      "s\022[\n+default_filtering_include_all_onlin" +
-      "e_agents\030\023 \001(\010R&defaultFilteringIncludeA" +
-      "llOnlineAgents\0229\n\031requeue_type_custom_va" +
-      "lue\030\024 \001(\tR\026requeueTypeCustomValue\022F\n age" +
-      "nt_transfer_hunt_group_filter\030\025 \001(\010R\034age" +
-      "ntTransferHuntGroupFilter\022h\n\037agent_trans" +
-      "fer_recording_status\030\026 \001(\0162!.api.v0alpha" +
-      ".RecordingStatus.EnumR\034agentTransferReco" +
-      "rdingStatus\022l\n!requeue_transfer_recordin" +
-      "g_status\030\027 \001(\0162!.api.v0alpha.RecordingSt" +
-      "atus.EnumR\036requeueTransferRecordingStatu" +
-      "s\022f\n\036open_transfer_recording_status\030\030 \001(" +
-      "\0162!.api.v0alpha.RecordingStatus.EnumR\033op" +
-      "enTransferRecordingStatus\022>\n\033natural_com" +
-      "pliance_override\030\031 \001(\010R\031naturalComplianc" +
-      "eOverride\022W\n)transfer_natural_compliance" +
-      "_rule_set_name\030\032 \001(\tR$transferNaturalCom" +
-      "plianceRuleSetName\022P\n\023compliance_metadat" +
-      "a\030\033 \003(\0132\037.api.v0alpha.ComplianceMetadata" +
-      "R\022complianceMetadata\022%\n\016call_whitelist\030\034" +
-      " \001(\010R\rcallWhitelist\"\323\001\n\021RecordingSetting" +
-      "s\022+\n\021display_indicator\030\001 \001(\010R\020displayInd" +
-      "icator\022!\n\014enable_pause\030\002 \001(\010R\013enablePaus" +
-      "e\022!\n\014enable_delay\030\003 \001(\010R\013enableDelay\022\024\n\005" +
-      "delay\030\004 \001(\003R\005delay\0225\n\027pause_recording_on" +
-      "_hold\030  \001(\010R\024pauseRecordingOnHold\"_\n\017Sim" +
-      "pleHuntGroup\022$\n\016hunt_group_sid\030\001 \001(\003R\014hu" +
-      "ntGroupSid\022&\n\017hunt_group_name\030\002 \001(\tR\rhun" +
-      "tGroupName\"\364\002\n\023DisplayDataSettings\022Y\n\020di" +
-      "splay_data_dip\030\001 \001(\0162/.api.v0alpha.Displ" +
-      "ayDataSettings.DisplayDataDipR\016displayDa" +
-      "taDip\0221\n\025display_data_dip_keys\030\002 \003(\tR\022di" +
-      "splayDataDipKeys\0220\n\024display_data_collect" +
-      "\030\003 \001(\010R\022displayDataCollect\0224\n\026display_iv" +
-      "r_navigation\030\004 \001(\010R\024displayIvrNavigation" +
-      "\0225\n\027display_sip_header_data\030\005 \001(\010R\024displ" +
-      "aySipHeaderData\"0\n\016DisplayDataDip\022\010\n\004NON" +
-      "E\020\000\022\007\n\003ALL\020\001\022\013\n\007LIMITED\020\002\"[\n\036RequeueTran" +
-      "sferQueueConfigType\"9\n\004Enum\022\013\n\007UNKNOWN\020\000" +
-      "\022\013\n\007DEFAULT\020\001\022\013\n\007CURRENT\020\002\022\n\n\006CUSTOM\020\003\"c" +
-      "\n\017RecordingStatus\"P\n\004Enum\022\013\n\007UNKNOWN\020\000\022\022" +
-      "\n\016KEEP_RECORDING\020\001\022\022\n\016STOP_RECORDING\020\002\022\023" +
-      "\n\017START_RECORDING\020\003\"p\n\024TransferSettingsT" +
-      "ype\"X\n\004Enum\022\013\n\007UNKNOWN\020\000\022\t\n\005AGENT\020\001\022\010\n\004O" +
-      "PEN\020\002\022\013\n\007REQUEUE\020\003\022\016\n\nVOICE_MAIL\020\004\022\021\n\rPB" +
-      "X_EXTENSION\020\005\"V\n\033TransferSettingsHandOff" +
-      "Type\"7\n\004Enum\022\013\n\007UNKNOWN\020\000\022\016\n\nCONFERENCE\020" +
-      "\001\022\010\n\004WARM\020\002\022\010\n\004COLD\020\003\"\210\001\n\021AgentHoldSetti" +
-      "ngs\022;\n\007allowed\030\001 \001(\0162!.api.v0alpha.Allow" +
-      "edHoldType.EnumR\007allowed\0226\n\030auto_pause_o" +
-      "n_multi_hold\030\002 \001(\010R\024autoPauseOnMultiHold" +
-      "\"D\n\017AllowedHoldType\"1\n\004Enum\022\010\n\004NONE\020\000\022\n\n" +
-      "\006SIMPLE\020\001\022\t\n\005MULTI\020\002\022\010\n\004BOTH\020\003\"\363\001\n\026Manua" +
-      "lApprovalSettings\022\030\n\007allowed\030\001 \001(\010R\007allo" +
-      "wed\022\030\n\007confirm\030\002 \001(\010R\007confirm\022\037\n\013sms_all" +
-      "owed\030\003 \001(\010R\nsmsAllowed\0226\n\027sms_number_con" +
-      "firmation\030\004 \001(\010R\025smsNumberConfirmation\022L" +
-      "\n#disable_reject_option_for_approvers\030\005 " +
-      "\001(\010R\037disableRejectOptionForApprovers\"\264\002\n" +
-      "\030ListHuntGroupWebLinksReq\022$\n\016hunt_group_" +
-      "sid\030\001 \001(\003R\014huntGroupSid\022\031\n\010call_sid\030\004 \001(" +
-      "\003R\007callSid\0227\n\tcall_type\030\005 \001(\0162\032.api.comm" +
-      "ons.CallType.EnumR\010callType\022\035\n\nservice_i" +
-      "d\030\007 \001(\tR\tserviceId\0222\n\025scheduled_callback" +
-      "_id\030\010 \001(\tR\023scheduledCallbackId\022\037\n\013sessio" +
-      "n_sid\030\t \001(\003R\nsessionSid\022*\n\020isInitialPrev" +
-      "iew\030\n \001(\010R\020isInitialPreview\"M\n\030ListHuntG" +
-      "roupWebLinksRes\0221\n\tweb_links\030\001 \003(\0132\024.api" +
-      ".v0alpha.WebLinkR\010webLinks\"\366\001\n\007WebLink\022!" +
-      "\n\014display_name\030\001 \001(\tR\013displayName\022 \n\013des" +
-      "cription\030\002 \001(\tR\013description\022\031\n\010link_url\030" +
-      "\003 \001(\tR\007linkUrl\022\034\n\nis_js_link\030\004 \001(\010R\010isJs" +
-      "Link\0224\n\026tooltip_missing_fields\030\006 \003(\tR\024to" +
-      "oltipMissingFields\0227\n\030hunt_group_paramet" +
-      "er_sid\030\007 \001(\003R\025huntGroupParameterSid\"A\n\031G" +
-      "etHuntGroupPauseCodesReq\022$\n\016hunt_group_s" +
-      "id\030\001 \001(\003R\014huntGroupSid\"r\n\031GetHuntGroupPa" +
-      "useCodesRes\022\022\n\004name\030\001 \001(\tR\004name\022 \n\013descr" +
-      "iption\030\002 \001(\tR\013description\022\037\n\013pause_codes" +
-      "\030\003 \003(\tR\npauseCodes\"\225\001\n\027ListAgentCallHist" +
-      "oryReq\022\037\n\013session_sid\030\001 \001(\003R\nsessionSid\022" +
-      "Y\n\016history_filter\030\002 \001(\01622.api.v0alpha.Ag" +
-      "entStatisticsSettings.HistoryFilterR\rhis" +
-      "toryFilter\"\326\002\n\027ListAgentCallHistoryRes\022D" +
-      "\n\007history\030\001 \003(\0132*.api.v0alpha.ListAgentC" +
-      "allHistoryRes.EntryR\007history\032\364\001\n\005Entry\022\031" +
-      "\n\010call_sid\030\001 \001(\003R\007callSid\022#\n\rschedule_ti" +
-      "me\030\002 \001(\tR\014scheduleTime\0227\n\tcall_type\030\003 \001(" +
-      "\0162\032.api.commons.CallType.EnumR\010callType\022" +
-      "!\n\014phone_number\030\004 \001(\tR\013phoneNumber\022\033\n\tca" +
-      "ller_id\030\005 \001(\tR\010callerId\022\026\n\006result\030\006 \001(\005R" +
-      "\006result\022\032\n\010duration\030\007 \001(\005R\010duration\"F\n\036G" +
-      "etCampaignCompletionStatusReq\022$\n\016hunt_gr" +
-      "oup_sid\030\003 \001(\003R\014huntGroupSid\"\240\005\n\036GetCampa" +
-      "ignCompletionStatusRes\022)\n\020broadcasts_exi" +
-      "st\030\001 \001(\010R\017broadcastsExist\022)\n\020percent_com" +
-      "plete\030\002 \001(\005R\017percentComplete\022n\n\021completi" +
-      "on_status\030\003 \003(\0132A.api.v0alpha.GetCampaig" +
-      "nCompletionStatusRes.CompletionStatusEnt" +
-      "ryR\020completionStatus\022\037\n\013total_tasks\030\004 \001(" +
-      "\005R\ntotalTasks\0222\n\025total_tasks_completed\030\005" +
-      " \001(\005R\023totalTasksCompleted\032\325\001\n\031TaskGroupC" +
-      "ompletionStatus\022$\n\016task_group_sid\030\001 \001(\003R" +
-      "\014taskGroupSid\022\022\n\004name\030\002 \001(\tR\004name\022)\n\020per" +
-      "cent_complete\030\003 \001(\005R\017percentComplete\022\037\n\013" +
-      "total_tasks\030\004 \001(\005R\ntotalTasks\0222\n\025total_t" +
-      "asks_completed\030\005 \001(\005R\023totalTasksComplete" +
-      "d\032\212\001\n\025CompletionStatusEntry\022\020\n\003key\030\001 \001(\003" +
-      "R\003key\022[\n\005value\030\002 \001(\0132E.api.v0alpha.GetCa" +
-      "mpaignCompletionStatusRes.TaskGroupCompl" +
-      "etionStatusR\005value:\0028\001\"h\n\022GetLostPeerInf" +
-      "oReq\022\031\n\010call_sid\030\001 \001(\003R\007callSid\0227\n\tcall_" +
+      "e\022\037\n\013agent_count\030\007 \001(\003R\nagentCount\0223\n\026hu" +
+      "nt_group_skill_count\030\010 \001(\003R\023huntGroupSki" +
+      "llCount\"?\n\021GetAgentSkillsReq\022$\n\016hunt_gro" +
+      "up_sid\030\004 \001(\003R\014huntGroupSidJ\004\010\003\020\004\"\230\001\n\021Get" +
+      "AgentSkillsRes\022B\n\006skills\030\002 \003(\0132*.api.v0a" +
+      "lpha.GetAgentSkillsRes.SkillsEntryR\006skil" +
+      "ls\0329\n\013SkillsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005v" +
+      "alue\030\002 \001(\003R\005value:\0028\001J\004\010\001\020\002\"K\n\023CreateAge" +
+      "ntSkillReq\022\022\n\004name\030\001 \001(\tR\004name\022 \n\013descri" +
+      "ption\030\002 \001(\tR\013description\"\025\n\023CreateAgentS" +
+      "killRes\"s\n\023UpdateAgentSkillReq\022&\n\017agent_" +
+      "skill_sid\030\001 \001(\003R\ragentSkillSid\022\022\n\004name\030\002" +
+      " \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descrip" +
+      "tion\"\025\n\023UpdateAgentSkillRes\"=\n\023DeleteAge" +
+      "ntSkillReq\022&\n\017agent_skill_sid\030\001 \001(\003R\rage" +
+      "ntSkillSid\"\025\n\023DeleteAgentSkillRes\"\024\n\022Lis" +
+      "tAgentSkillsReq\"E\n\022ListAgentSkillsRes\022/\n" +
+      "\006skills\030\001 \003(\0132\027.api.v0alpha.AgentSkillR\006" +
+      "skills\"\036\n\034ListSkillsForCurrentAgentReq\"O" +
+      "\n\034ListSkillsForCurrentAgentRes\022/\n\006skills" +
+      "\030\001 \003(\0132\027.api.v0alpha.AgentSkillR\006skills\"" +
+      "@\n\022GetAgentSessionReq\022*\n\021agent_session_s" +
+      "id\030\001 \001(\003R\017agentSessionSid\"\257\014\n\014AgentSessi" +
+      "on\022*\n\021agent_session_sid\030\001 \001(\003R\017agentSess" +
+      "ionSid\022@\n\016web_login_time\030\002 \001(\0132\032.google." +
+      "protobuf.TimestampR\014webLoginTime\022B\n\017web_" +
+      "logout_time\030\003 \001(\0132\032.google.protobuf.Time" +
+      "stampR\rwebLogoutTime\022@\n\016ivr_login_time\030\004" +
+      " \001(\0132\032.google.protobuf.TimestampR\014ivrLog" +
+      "inTime\022B\n\017ivr_logout_time\030\005 \001(\0132\032.google" +
+      ".protobuf.TimestampR\rivrLogoutTime\022>\n\014iv" +
+      "r_duration\030\006 \001(\0132\033.google.protobuf.Int32" +
+      "ValueR\013ivrDuration\022K\n\023ivr_billed_duratio" +
+      "n\030\007 \001(\0132\033.google.protobuf.Int32ValueR\021iv" +
+      "rBilledDuration\0220\n\004cost\030\010 \001(\0132\034.google.p" +
+      "rotobuf.DoubleValueR\004cost\0228\n\tagent_sid\030\t" +
+      " \001(\0132\033.google.protobuf.Int64ValueR\010agent" +
+      "Sid\0223\n\006status\030\n \001(\0132\033.google.protobuf.In" +
+      "t32ValueR\006status\022A\n\016softphone_user\030\013 \001(\013" +
+      "2\032.google.protobuf.BoolValueR\rsoftphoneU" +
+      "ser\022A\n\ragent_dial_in\030\014 \001(\0162\035.api.commons" +
+      ".AgentDialIn.EnumR\013agentDialIn\022C\n\016agent_" +
+      "callerid\030\r \001(\0132\034.google.protobuf.StringV" +
+      "alueR\ragentCallerid\022L\n\023agent_dialed_numb" +
+      "er\030\016 \001(\0132\034.google.protobuf.StringValueR\021" +
+      "agentDialedNumber\0224\n\006worker\030\017 \001(\0132\034.goog" +
+      "le.protobuf.StringValueR\006worker\022A\n\016hunt_" +
+      "group_sid\030\020 \001(\0132\033.google.protobuf.Int64V" +
+      "alueR\014huntGroupSid\022@\n\rwait_duration\030\021 \001(" +
+      "\0132\033.google.protobuf.Int32ValueR\014waitDura" +
+      "tion\022B\n\016pause_duration\030\022 \001(\0132\033.google.pr" +
+      "otobuf.Int32ValueR\rpauseDuration\022H\n\021tran" +
+      "sfer_duration\030\023 \001(\0132\033.google.protobuf.In" +
+      "t32ValueR\020transferDuration\022E\n\020wrap_up_du" +
+      "ration\030\024 \001(\0132\033.google.protobuf.Int32Valu" +
+      "eR\016wrapUpDuration\022@\n\rtalk_duration\030\025 \001(\013" +
+      "2\033.google.protobuf.Int32ValueR\014talkDurat" +
+      "ion\022D\n\017manual_duration\030\026 \001(\0132\033.google.pr" +
+      "otobuf.Int32ValueR\016manualDuration\022F\n\020pre" +
+      "view_duration\030\027 \001(\0132\033.google.protobuf.In" +
+      "t32ValueR\017previewDuration\022@\n\rhold_durati" +
+      "on\030\030 \001(\0132\033.google.protobuf.Int32ValueR\014h" +
+      "oldDuration\"\024\n\022GetCurrentAgentReq\"\267\006\n\005Ag" +
+      "ent\022\033\n\tagent_sid\030\001 \001(\003R\010agentSid\022\035\n\nclie" +
+      "nt_sid\030\002 \001(\003R\tclientSid\022*\n\021agent_profile" +
+      "_sid\030\003 \001(\003R\017agentProfileSid\022\033\n\tweb_login" +
+      "\030\004 \001(\tR\010webLogin\0226\n\010agent_id\030\007 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueR\007agentId\0228\n\tagen" +
+      "t_pin\030\010 \001(\0132\033.google.protobuf.Int64Value" +
+      "R\010agentPin\0225\n\010add_date\030\t \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\007addDate\022;\n\013modify_date" +
+      "\030\n \001(\0132\032.google.protobuf.TimestampR\nmodi" +
+      "fyDate\022E\n\017callback_number\030\013 \001(\0132\034.google" +
+      ".protobuf.StringValueR\016callbackNumber\022K\n" +
+      "\022callback_extension\030\014 \001(\0132\034.google.proto" +
+      "buf.StringValueR\021callbackExtension\022A\n\016hu" +
+      "nt_group_sid\030\r \001(\0132\033.google.protobuf.Int" +
+      "64ValueR\014huntGroupSid\022M\n\023subscriber_user" +
+      "name\030\016 \001(\0132\034.google.protobuf.StringValue" +
+      "R\022subscriberUsername\022F\n\020partner_agent_id" +
+      "\030\017 \001(\0132\034.google.protobuf.StringValueR\016pa" +
+      "rtnerAgentId\022U\n\031last_password_change_dat" +
+      "e\030\020 \001(\0132\032.google.protobuf.TimestampR\026las" +
+      "tPasswordChangeDate\"\205\001\n\024GetClientInfoDat" +
+      "aReq\022\031\n\010call_sid\030\001 \001(\003R\007callSid\0227\n\tcall_" +
       "type\030\002 \001(\0162\032.api.commons.CallType.EnumR\010" +
-      "callType\"\242\002\n\022GetLostPeerInfoRes\022(\n\020forme" +
-      "r_agent_sid\030\001 \001(\003R\016formerAgentSid\022*\n\021for" +
-      "mer_agent_name\030\002 \001(\tR\017formerAgentName\0223\n" +
-      "\026former_hunt_group_name\030\003 \001(\tR\023formerHun" +
-      "tGroupName\022\037\n\013hunt_groups\030\004 \003(\tR\nhuntGro" +
-      "ups\022\026\n\006agents\030\005 \003(\tR\006agents\022!\n\014agent_ski" +
-      "lls\030\006 \003(\tR\013agentSkills\022%\n\016pbx_extensions" +
-      "\030\007 \003(\tR\rpbxExtensions\"\027\n\025GetDispositionK" +
-      "eysReq\"/\n\025GetDispositionKeysRes\022\026\n\006value" +
-      "s\030\001 \003(\tR\006values\"I\n\027GetScriptOrResponsesR" +
-      "eq\022.\n\004data\030\001 \001(\0132\032.api.v0alpha.MailMerge" +
-      "DataR\004data\"\217\001\n\027GetScriptOrResponsesRes\0226" +
-      "\n\007scripts\030\001 \001(\0132\034.api.v0alpha.HuntGroupS" +
-      "criptR\007scripts\022<\n\tresponses\030\002 \003(\0132\036.api." +
-      "v0alpha.HuntGroupResponseR\tresponses\"\023\n\021" +
-      "GetReadyAgentsReq\"Z\n\021GetReadyAgentsRes\022E" +
-      "\n\014ready_agents\030\001 \003(\0132\".api.v0alpha.Agent" +
-      "sByAgentSidShortR\013readyAgents\"p\n\025AgentsB" +
-      "yAgentSidShort\022\033\n\tagent_sid\030\001 \001(\003R\010agent" +
-      "Sid\022\035\n\nfirst_name\030\002 \001(\tR\tfirstName\022\033\n\tla" +
-      "st_name\030\003 \001(\tR\010lastName\"s\n\"ListAgentQueu" +
-      "eAndOnHoldCallDataReq\022*\n\021agent_session_s" +
-      "id\030\003 \001(\003R\017agentSessionSid\022!\n\014agent_skill" +
-      "s\030\004 \003(\tR\013agentSkills\"\362\005\n\"ListAgentQueueA" +
-      "ndOnHoldCallDataRes\022d\n\021agent_queue_calls" +
-      "\030\001 \003(\01328.api.v0alpha.ListAgentQueueAndOn" +
-      "HoldCallDataRes.CallDataR\017agentQueueCall" +
-      "s\022\\\n\ron_hold_calls\030\002 \003(\01328.api.v0alpha.L" +
-      "istAgentQueueAndOnHoldCallDataRes.CallDa" +
-      "taR\013onHoldCalls\022U\n\thqm_calls\030\003 \003(\01328.api" +
-      ".v0alpha.ListAgentQueueAndOnHoldCallData" +
-      "Res.CallDataR\010hqmCalls\032\260\003\n\010CallData\022\031\n\010c" +
-      "all_sid\030\001 \001(\003R\007callSid\022!\n\014phone_number\030\002" +
-      " \001(\tR\013phoneNumber\022\033\n\tcaller_id\030\003 \001(\tR\010ca" +
-      "llerId\0227\n\tcall_type\030\004 \001(\0162\032.api.commons." +
-      "CallType.EnumR\010callType\0229\n\nstart_date\030\005 " +
-      "\001(\0132\032.google.protobuf.TimestampR\tstartDa" +
-      "te\0227\n\thold_date\030\006 \001(\0132\032.google.protobuf." +
-      "TimestampR\010holdDate\022\026\n\006skills\030\007 \003(\tR\006ski" +
-      "lls\022%\n\016agent_specific\030\010 \001(\010R\ragentSpecif" +
-      "ic\022]\n\030queued_notification_type\030\t \001(\0162#.a" +
-      "pi.commons.QueuedNotificationTypeR\026queue" +
-      "dNotificationType\"X\n\030AgentCallResponseDe" +
-      "tails\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005" +
-      "value\022\024\n\005order\030\003 \001(\003R\005order\"\317\002\n\031SaveAgen" +
-      "tCallResponsesReq\022\031\n\010call_sid\030\001 \001(\003R\007cal" +
-      "lSid\022*\n\021agent_session_sid\030\002 \001(\003R\017agentSe" +
-      "ssionSid\022d\n\033agent_call_response_details\030" +
-      "\003 \003(\0132%.api.v0alpha.AgentCallResponseDet" +
-      "ailsR\030agentCallResponseDetails\0227\n\tcall_t" +
-      "ype\030\004 \001(\0162\032.api.commons.CallType.EnumR\010c" +
-      "allType\022L\n\023compliance_metadata\030\005 \003(\0132\033.a" +
-      "pi.commons.SimpleKeyValueR\022complianceMet" +
-      "adata\"\033\n\031SaveAgentCallResponsesRes\"\347\002\n\014A" +
-      "gentCallLog\022+\n\022agent_call_log_sid\030\001 \001(\003R" +
-      "\017agentCallLogSid\0226\n\010call_sid\030\002 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueR\007callSid\0227\n\tcall" +
-      "_type\030\003 \001(\0162\032.api.commons.CallType.EnumR" +
-      "\010callType\022;\n\013action_date\030\004 \001(\0132\032.google." +
-      "protobuf.TimestampR\nactionDate\022;\n\naction" +
-      "_key\030\005 \001(\0132\034.google.protobuf.StringValue" +
-      "R\tactionKey\022?\n\014action_value\030\006 \001(\0132\034.goog" +
-      "le.protobuf.StringValueR\013actionValue\"\210\001\n" +
-      "\nAgentSkill\022&\n\017agent_skill_sid\030\001 \001(\003R\rag" +
-      "entSkillSid\022\022\n\004name\030\002 \001(\tR\004name\022>\n\013descr" +
-      "iption\030\003 \001(\0132\034.google.protobuf.StringVal" +
-      "ueR\013description\"\035\n\033ListAgentTransferOpti" +
-      "onsReq\"\316\002\n\033ListAgentTransferOptionsRes\0221" +
-      "\n\nagent_info\030\001 \003(\0132\022.api.v0alpha.AgentR\t" +
-      "agentInfo\0225\n\nhunt_group\030\002 \003(\0132\026.api.v0al" +
-      "pha.HuntGroupR\thuntGroup\022@\n\016pbx_extensio" +
-      "ns\030\003 \003(\0132\031.api.v0alpha.PBXExtensionR\rpbx" +
-      "Extensions\022:\n\014agent_skills\030\004 \003(\0132\027.api.v" +
-      "0alpha.AgentSkillR\013agentSkills\022G\n\ragent_" +
-      "profile\030\005 \003(\0132\".api.v0alpha.AgentsByAgen" +
-      "tSidShortR\014agentProfile\"D\n\026GetIntercomPe" +
-      "erInfoReq\022*\n\021agent_session_sid\030\003 \001(\003R\017ag" +
-      "entSessionSid\"o\n\026GetIntercomPeerInfoRes\022" +
-      "\031\n\010peer_sid\030\001 \001(\003R\007peerSid\022\035\n\nfirst_name" +
-      "\030\002 \001(\tR\tfirstName\022\033\n\tlast_name\030\003 \001(\tR\010la" +
-      "stName\"\036\n\034ListOrgResponseEvaluatorsReq\"^" +
-      "\n\034ListOrgResponseEvaluatorsRes\022>\n\nevalua" +
-      "tors\030\001 \003(\0132\036.api.v0alpha.ResponseEvaluat" +
-      "orR\nevaluators\"\257\001\n\021ResponseEvaluator\022\022\n\004" +
-      "name\030\001 \001(\tR\004name\022 \n\013description\030\002 \001(\tR\013d" +
-      "escription\022-\n\022regular_expression\030\003 \001(\tR\021" +
-      "regularExpression\0225\n\027xml_client_property" +
-      "_sid\030\004 \001(\003R\024xmlClientPropertySid\"o\n$GetQ" +
-      "ueueConfigurationOptionsArrayReq\022G\n loca" +
-      "lized_account_default_string\030\002 \001(\tR\035loca" +
-      "lizedAccountDefaultString\"D\n$GetQueueCon" +
-      "figurationOptionsArrayRes\022\034\n\tfilenames\030\001" +
-      " \003(\tR\tfilenames\"\343\t\n\030AgentCallActivityDet" +
-      "ails\022\033\n\tagent_sid\030\001 \001(\003R\010agentSid\022;\n\nage" +
-      "nt_name\030\002 \001(\0132\034.google.protobuf.StringVa" +
-      "lueR\tagentName\022G\n\021agent_session_sid\030\003 \001(" +
-      "\0132\033.google.protobuf.Int64ValueR\017agentSes" +
-      "sionSid\022A\n\016hunt_group_sid\030\004 \001(\0132\033.google" +
-      ".protobuf.Int64ValueR\014huntGroupSid\022D\n\017hu" +
-      "nt_group_name\030\005 \001(\0132\034.google.protobuf.St" +
-      "ringValueR\rhuntGroupName\022D\n\017agent_call_c" +
-      "ost\030\006 \001(\0132\034.google.protobuf.DoubleValueR" +
-      "\ragentCallCost\022K\n\023agent_wait_duration\030\007 " +
-      "\001(\0132\033.google.protobuf.Int64ValueR\021agentW" +
-      "aitDuration\022I\n\022call_wait_duration\030\010 \001(\0132" +
-      "\033.google.protobuf.Int64ValueR\020callWaitDu" +
-      "ration\022@\n\rhold_duration\030\t \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueR\014holdDuration\022D\n\017manu" +
-      "al_duration\030\n \001(\0132\033.google.protobuf.Int6" +
-      "4ValueR\016manualDuration\022B\n\016pause_duration" +
-      "\030\013 \001(\0132\033.google.protobuf.Int64ValueR\rpau" +
-      "seDuration\022F\n\020preview_duration\030\014 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueR\017previewDurati" +
-      "on\022J\n\022suspended_duration\030\r \001(\0132\033.google." +
-      "protobuf.Int64ValueR\021suspendedDuration\022@" +
-      "\n\rtalk_duration\030\016 \001(\0132\033.google.protobuf." +
-      "Int64ValueR\014talkDuration\022H\n\021transfer_dur" +
-      "ation\030\017 \001(\0132\033.google.protobuf.Int64Value" +
-      "R\020transferDuration\022E\n\020wrap_up_duration\030\020" +
-      " \001(\0132\033.google.protobuf.Int64ValueR\016wrapU" +
-      "pDuration\022A\n\016agent_call_sid\030\021 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueR\014agentCallSid\022G\n\017" +
-      "hunt_group_type\030\022 \001(\0162\037.api.commons.Hunt" +
-      "GroupType.EnumR\rhuntGroupType\"\034\n\032GetCond" +
-      "itionalDNCLRulesReq\"\215\001\n\032GetConditionalDN" +
-      "CLRulesRes\022o\n\021disposition_rules\030\001 \003(\0132B." +
-      "api.v0alpha.AgentDispositionConditionalD" +
-      "ncl.DispositionRulesTableR\020dispositionRu" +
-      "les\"\376\001\n\022ManualDialStartReq\022E\n\020simple_cal" +
-      "l_data\030\001 \001(\0132\033.api.commons.SimpleCallDat" +
-      "aR\016simpleCallData\022$\n\016hunt_group_sid\030\006 \001(" +
-      "\003R\014huntGroupSid\022*\n\021agent_session_sid\030\007 \001" +
-      "(\003R\017agentSessionSid\022\033\n\tbucket_id\030\010 \001(\003R\010" +
-      "bucketId\022,\n\022bucket_region_data\030\t \001(\tR\020bu" +
-      "cketRegionDataJ\004\010\003\020\004\"\024\n\022ManualDialStartR" +
-      "es\"\317\002\n\032ListExtendedCallHistoryReq\022H\n\013sea" +
-      "rch_type\030\004 \001(\0162\'.api.commons.CallHistory" +
-      "SearchType.EnumR\nsearchType\0229\n\ncall_type" +
+      "callType\022\031\n\010task_sid\030\004 \001(\003R\007taskSid\"\253\001\n\024" +
+      "GetClientInfoDataRes\022!\n\014phone_number\030\001 \001" +
+      "(\tR\013phoneNumber\022\033\n\tcaller_id\030\002 \001(\tR\010call" +
+      "erId\0222\n\004rows\030\003 \003(\0132\036.api.commons.ClientI" +
+      "nfoDataRowR\004rows\022\037\n\013country_sid\030\004 \001(\003R\nc" +
+      "ountrySid\"\233\001\n\037GetClientInfoDisplayTempla" +
+      "teReq\022\031\n\010call_sid\030\001 \001(\003R\007callSid\0227\n\tcall" +
+      "_type\030\002 \001(\0162\032.api.commons.CallType.EnumR" +
+      "\010callType\022$\n\016hunt_group_sid\030\004 \001(\003R\014huntG" +
+      "roupSid\"\354\001\n\037GetClientInfoDisplayTemplate" +
+      "Res\022,\n\022display_all_fields\030\001 \001(\010R\020display" +
+      "AllFields\022\\\n\026dialed_number_settings\030\002 \001(" +
+      "\0132&.api.commons.DialedNumberFieldSetting" +
+      "sR\024dialedNumberSettings\022=\n\004rows\030\003 \003(\0132)." +
+      "api.commons.ClientInfoDisplayTemplateRow" +
+      "R\004rows\"c\n\032ListAgentStatisticsDataReq\022$\n\016" +
+      "hunt_group_sid\030\003 \001(\003R\014huntGroupSid\022\037\n\013se" +
+      "ssion_sid\030\004 \001(\003R\nsessionSid\"\323\010\n\016Statisti" +
+      "csData\022K\n\023agent_session_count\030\001 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueR\021agentSessionCo" +
+      "unt\022>\n\014ivr_duration\030\002 \001(\0132\033.google.proto" +
+      "buf.Int64ValueR\013ivrDuration\022K\n\023agent_wai" +
+      "t_duration\030\003 \001(\0132\033.google.protobuf.Int64" +
+      "ValueR\021agentWaitDuration\022I\n\022call_wait_du" +
+      "ration\030\004 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eR\020callWaitDuration\022@\n\rhold_duration\030\005 \001" +
+      "(\0132\033.google.protobuf.Int64ValueR\014holdDur" +
+      "ation\022D\n\017manual_duration\030\006 \001(\0132\033.google." +
+      "protobuf.Int64ValueR\016manualDuration\022B\n\016p" +
+      "ause_duration\030\007 \001(\0132\033.google.protobuf.In" +
+      "t64ValueR\rpauseDuration\022F\n\020preview_durat" +
+      "ion\030\010 \001(\0132\033.google.protobuf.Int64ValueR\017" +
+      "previewDuration\022J\n\022suspended_duration\030\t " +
+      "\001(\0132\033.google.protobuf.Int64ValueR\021suspen" +
+      "dedDuration\022@\n\rtalk_duration\030\n \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueR\014talkDuration\022H\n" +
+      "\021transfer_duration\030\013 \001(\0132\033.google.protob" +
+      "uf.Int64ValueR\020transferDuration\022E\n\020wrap_" +
+      "up_duration\030\014 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueR\016wrapUpDuration\022\035\n\nagent_name\030\r \001" +
+      "(\tR\tagentName\022&\n\017hunt_group_name\030\016 \001(\tR\r" +
+      "huntGroupName\022\035\n\ncall_count\030\017 \001(\003R\tcallC" +
+      "ount\022@\n\016web_login_time\030\020 \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\014webLoginTime\022\033\n\tagent_" +
+      "sid\030\021 \001(\003R\010agentSid\022$\n\016hunt_group_sid\030\022 " +
+      "\001(\003R\014huntGroupSid\"}\n\032StatisticsColumnDef" +
+      "inition\022!\n\014header_label\030\001 \001(\tR\013headerLab" +
+      "el\022!\n\014statistic_id\030\002 \001(\tR\013statisticId\022\031\n" +
+      "\010tool_tip\030\003 \001(\tR\007toolTip\"\260\001\n\032ListAgentSt" +
+      "atisticsDataRes\022D\n\017statistics_data\030\001 \003(\013" +
+      "2\033.api.v0alpha.StatisticsDataR\016statistic" +
+      "sData\022L\n\rshown_columns\030\002 \003(\0132\'.api.v0alp" +
+      "ha.StatisticsColumnDefinitionR\014shownColu" +
+      "mns\"\251\002\n\tPhoneBook\022\035\n\nentry_type\030\002 \001(\tR\te" +
+      "ntryType\022\035\n\nentry_name\030\003 \001(\tR\tentryName\022" +
+      "A\n\016hunt_group_sid\030\005 \001(\0132\033.google.protobu" +
+      "f.Int64ValueR\014huntGroupSid\022!\n\014phone_numb" +
+      "er\030\006 \001(\tR\013phoneNumber\022H\n\021phone_number_ty" +
+      "pe\030\007 \001(\0132\034.google.protobuf.StringValueR\017" +
+      "phoneNumberType\022.\n\023phone_number_hidden\030\010" +
+      " \001(\010R\021phoneNumberHidden\"\226\002\n\016PhoneBookEnt" +
+      "ry\022$\n\016phone_book_sid\030\001 \001(\003R\014phoneBookSid" +
+      "\022\035\n\nentry_name\030\002 \001(\tR\tentryName\022B\n\010stand" +
+      "ard\030\003 \001(\0132$.api.v0alpha.PhoneBookStandar" +
+      "dNumberH\000R\010standard\0227\n\007sip_uri\030\004 \001(\0132\034.a" +
+      "pi.v0alpha.PhoneBookSIPURIH\000R\006sipUri\022.\n\023" +
+      "phone_number_hidden\030\005 \001(\010R\021phoneNumberHi" +
+      "ddenB\022\n\020phone_book_entry\"\260\001\n\027PhoneBookSt" +
+      "andardNumber\022!\n\014phone_number\030\001 \001(\tR\013phon" +
+      "eNumber\022S\n\022phone_number_types\030\002 \003(\0162%.ap" +
+      "i.commons.PhoneBookPhoneNumberTypeR\020phon" +
+      "eNumberTypes\022\035\n\nwhite_list\030\003 \001(\010R\twhiteL" +
+      "ist\"\223\001\n\017PhoneBookSIPURI\022 \n\014sip_uri_left\030" +
+      "\001 \001(\tR\nsipUriLeft\022\"\n\rsip_uri_right\030\002 \001(\t" +
+      "R\013sipUriRight\022:\n\tsip_types\030\003 \003(\0162\035.api.c" +
+      "ommons.PhoneBookSIPTypeR\010sipTypes\"\037\n\035Lis" +
+      "tClientPhoneBookEntriesReq\"\220\001\n\035ListClien" +
+      "tPhoneBookEntriesRes\022I\n\022phone_book_entri" +
+      "es\030\001 \003(\0132\033.api.v0alpha.PhoneBookEntryR\020p" +
+      "honeBookEntries\022$\n\016hunt_group_sid\030\002 \001(\003R" +
+      "\014huntGroupSid\"H\n ListHuntGroupPhoneBookE" +
+      "ntriesReq\022$\n\016hunt_group_sid\030\001 \001(\003R\014huntG" +
+      "roupSid\"\223\001\n ListHuntGroupPhoneBookEntrie" +
+      "sRes\022I\n\022phone_book_entries\030\001 \003(\0132\033.api.v" +
+      "0alpha.PhoneBookEntryR\020phoneBookEntries\022" +
+      "$\n\016hunt_group_sid\030\002 \001(\003R\014huntGroupSid\"\237\002" +
+      "\n\027CreatePhoneBookEntryReq\022$\n\016hunt_group_" +
+      "sid\030\001 \001(\003R\014huntGroupSid\022\035\n\nentry_name\030\002 " +
+      "\001(\tR\tentryName\022B\n\010standard\030\003 \001(\0132$.api.v" +
+      "0alpha.PhoneBookStandardNumberH\000R\010standa" +
+      "rd\0227\n\007sip_uri\030\004 \001(\0132\034.api.v0alpha.PhoneB" +
+      "ookSIPURIH\000R\006sipUri\022.\n\023phone_number_hidd" +
+      "en\030\005 \001(\010R\021phoneNumberHiddenB\022\n\020phone_boo" +
+      "k_entry\"\031\n\027CreatePhoneBookEntryRes\"\305\002\n\027U" +
+      "pdatePhoneBookEntryReq\022$\n\016phone_book_sid" +
+      "\030\001 \001(\003R\014phoneBookSid\022$\n\016hunt_group_sid\030\002" +
+      " \001(\003R\014huntGroupSid\022\035\n\nentry_name\030\003 \001(\tR\t" +
+      "entryName\022B\n\010standard\030\004 \001(\0132$.api.v0alph" +
+      "a.PhoneBookStandardNumberH\000R\010standard\0227\n" +
+      "\007sip_uri\030\005 \001(\0132\034.api.v0alpha.PhoneBookSI" +
+      "PURIH\000R\006sipUri\022.\n\023phone_number_hidden\030\006 " +
+      "\001(\010R\021phoneNumberHiddenB\022\n\020phone_book_ent" +
+      "ry\"\031\n\027UpdatePhoneBookEntryRes\"?\n\027DeleteP" +
+      "honeBookEntryReq\022$\n\016phone_book_sid\030\001 \001(\003" +
+      "R\014phoneBookSid\"\031\n\027DeletePhoneBookEntryRe" +
+      "s\"9\n\021ListPhoneBooksReq\022$\n\016hunt_group_sid" +
+      "\030\002 \001(\003R\014huntGroupSid\"\362\001\n\021ListPhoneBooksR" +
+      "es\022I\n\025caller_id_phone_books\030\001 \003(\0132\026.api." +
+      "v0alpha.PhoneBookR\022callerIdPhoneBooks\022H\n" +
+      "\024outbound_phone_books\030\002 \003(\0132\026.api.v0alph" +
+      "a.PhoneBookR\022outboundPhoneBooks\022H\n\024trans" +
+      "fer_phone_books\030\003 \003(\0132\026.api.v0alpha.Phon" +
+      "eBookR\022transferPhoneBooks\"<\n\024ListAgentTr" +
+      "iggersReq\022$\n\016hunt_group_sid\030\001 \001(\003R\014huntG" +
+      "roupSid\"W\n\021TriggerParameters\022\035\n\naction_k" +
+      "ey\030\001 \001(\tR\tactionKey\022#\n\raction_string\030\002 \001" +
+      "(\tR\014actionString\"\262\002\n\016TriggerDetails\022!\n\014t" +
+      "rigger_name\030\001 \001(\tR\013triggerName\022!\n\014trigge" +
+      "r_desc\030\002 \001(\tR\013triggerDesc\022%\n\016trigger_sta" +
+      "tus\030\003 \001(\003R\rtriggerStatus\022)\n\020trigger_dura" +
+      "tion\030\004 \001(\003R\017triggerDuration\0229\n\ncall_type" +
       "s\030\005 \003(\0162\032.api.commons.CallType.EnumR\tcal" +
-      "lTypes\022\'\n\017customer_number\030\006 \001(\tR\016custome" +
-      "rNumber\022K\n\014search_scope\030\007 \001(\0162(.api.comm" +
-      "ons.CallHistorySearchScope.EnumR\013searchS" +
-      "cope\022\031\n\010call_sid\030\010 \001(\003R\007callSid\022\033\n\tcalle" +
-      "r_id\030\t \001(\tR\010callerId\"\225\005\n\032ListExtendedCal" +
-      "lHistoryRes\022\033\n\tgroup_sid\030\001 \001(\003R\010groupSid" +
-      "\0227\n\tcall_type\030\002 \001(\0162\032.api.commons.CallTy" +
-      "pe.EnumR\010callType\022\031\n\010call_sid\030\003 \001(\003R\007cal" +
-      "lSid\022\'\n\017customer_number\030\004 \001(\tR\016customerN" +
-      "umber\022\024\n\005phone\030\005 \001(\tR\005phone\022\022\n\004date\030\006 \001(" +
-      "\tR\004date\022\026\n\006result\030\007 \001(\005R\006result\022\026\n\006lengt" +
-      "h\030\010 \001(\005R\006length\0220\n\004cost\030\t \001(\0132\034.google.p" +
-      "rotobuf.DoubleValueR\004cost\0220\n\004keys\030\n \001(\0132" +
-      "\034.google.protobuf.StringValueR\004keys\022A\n\014c" +
-      "all_details\030\013 \001(\0132\036.api.v0alpha.GetCallD" +
-      "etailsResR\013callDetails\022\'\n\017linkback_lengt" +
-      "h\030\014 \001(\005R\016linkbackLength\022(\n\020is_call_recor" +
-      "ded\030\r \001(\010R\016isCallRecorded\022-\n\022recording_f" +
-      "ilename\030\016 \001(\tR\021recordingFilename\0229\n\nstar" +
-      "t_date\030\017 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\tstartDate\022\037\n\013country_sid\030\020 \001(\003R\ncountr" +
-      "ySid\"\315\001\n\032ListWhiteListPhoneBooksReq\022$\n\016h" +
-      "unt_group_sid\030\002 \001(\003R\014huntGroupSid\022D\n\037inc" +
-      "lude_null_phone_number_types\030\004 \001(\010R\033incl" +
-      "udeNullPhoneNumberTypes\022C\n\torder_bys\030\005 \003" +
-      "(\0162&.api.commons.ListPhoneBookOrderBy.En" +
-      "umR\010orderBys\"i\n\032ListWhiteListPhoneBooksR" +
-      "es\022K\n\026white_list_phone_books\030\001 \003(\0132\026.api" +
-      ".v0alpha.PhoneBookR\023whiteListPhoneBooks\"" +
-      "X\n\037UpdateAgentCallResponseValueReq\022\037\n\013re" +
-      "sponse_id\030\001 \001(\003R\nresponseId\022\024\n\005value\030\002 \001" +
-      "(\tR\005value\"!\n\037UpdateAgentCallResponseValu" +
-      "eRes\"\234\001\n\027PlacePreviewDialCallReq\022/\n\004call" +
+      "lTypes\022M\n\022trigger_parameters\030\006 \003(\0132\036.api" +
+      ".v0alpha.TriggerParametersR\021triggerParam" +
+      "eters\"\\\n\024ListAgentTriggersRes\022D\n\017trigger" +
+      "_details\030\001 \003(\0132\033.api.v0alpha.TriggerDeta" +
+      "ilsR\016triggerDetails\"\247\002\n\014PBXExtension\022*\n\021" +
+      "pbx_extension_sid\030\001 \001(\003R\017pbxExtensionSid" +
+      "\022#\n\rpbx_extension\030\002 \001(\tR\014pbxExtension\022\031\n" +
+      "\010join_sid\030\004 \001(\003R\007joinSid\022\033\n\tjoin_type\030\005 " +
+      "\001(\tR\010joinType\022#\n\remail_subject\030\006 \001(\tR\014em" +
+      "ailSubject\022\035\n\nemail_body\030\007 \001(\tR\temailBod" +
+      "y\022\'\n\017email_addresses\030\010 \001(\tR\016emailAddress" +
+      "es\022!\n\014agent_access\030\t \001(\010R\013agentAccess\"\026\n" +
+      "\024ListPBXExtensionsReq\"\234\005\n\024ListPBXExtensi" +
+      "onsRes\022[\n\020agent_extensions\030\001 \003(\01320.api.v" +
+      "0alpha.ListPBXExtensionsRes.AgentExtensi" +
+      "onR\017agentExtensions\022h\n\025hunt_group_extens" +
+      "ions\030\002 \003(\01324.api.v0alpha.ListPBXExtensio" +
+      "nsRes.HuntGroupExtensionR\023huntGroupExten" +
+      "sions\032\326\001\n\016AgentExtension\022#\n\rpbx_extensio" +
+      "n\030\001 \001(\tR\014pbxExtension\022+\n\021greeting_locati" +
+      "on\030\002 \001(\tR\020greetingLocation\0220\n\005email\030\003 \001(" +
+      "\0132\032.api.v0alpha.EmailResponseR\005email\022\035\n\n" +
+      "agent_name\030\004 \001(\tR\tagentName\022!\n\014has_greet" +
+      "ing\030\005 \001(\010R\013hasGreeting\032\343\001\n\022HuntGroupExte" +
+      "nsion\022#\n\rpbx_extension\030\001 \001(\tR\014pbxExtensi" +
+      "on\022+\n\021greeting_location\030\002 \001(\tR\020greetingL" +
+      "ocation\0220\n\005email\030\003 \001(\0132\032.api.v0alpha.Ema" +
+      "ilResponseR\005email\022&\n\017hunt_group_name\030\004 \001" +
+      "(\tR\rhuntGroupName\022!\n\014has_greeting\030\005 \001(\010R" +
+      "\013hasGreeting\"[\n\rEmailResponse\022\030\n\007subject" +
+      "\030\001 \001(\tR\007subject\022\022\n\004body\030\002 \001(\tR\004body\022\034\n\ta" +
+      "ddresses\030\003 \003(\tR\taddresses\"\235\001\n\rMailMergeD" +
+      "ata\022\031\n\010call_sid\030\004 \001(\003R\007callSid\0227\n\tcall_t" +
+      "ype\030\005 \001(\0162\032.api.commons.CallType.EnumR\010c" +
+      "allType\0222\n\025scheduled_callback_id\030\006 \001(\tR\023" +
+      "scheduledCallbackIdJ\004\010\001\020\002\"\273\004\n\021HuntGroupR" +
+      "esponse\0225\n\027hunt_group_response_sid\030\001 \001(\003" +
+      "R\024huntGroupResponseSid\022A\n\016hunt_group_sid" +
+      "\030\002 \001(\0132\033.google.protobuf.Int64ValueR\014hun" +
+      "tGroupSid\0220\n\004type\030\003 \001(\0132\034.google.protobu" +
+      "f.StringValueR\004type\022\030\n\007options\030\004 \003(\tR\007op" +
+      "tions\0220\n\004name\030\005 \001(\0132\034.google.protobuf.St" +
+      "ringValueR\004name\022>\n\013description\030\006 \001(\0132\034.g" +
+      "oogle.protobuf.StringValueR\013description\022" +
+      "1\n\005order\030\007 \001(\0132\033.google.protobuf.Int32Va" +
+      "lueR\005order\0226\n\010required\030\010 \001(\0132\032.google.pr" +
+      "otobuf.BoolValueR\010required\022A\n\rdefault_va" +
+      "lue\030\t \001(\0132\034.google.protobuf.StringValueR" +
+      "\014defaultValue\022@\n\013manual_dial\030\n \001(\0132\037.api" +
+      ".v0alpha.ManualDialSettingsR\nmanualDial\"" +
+      "\205\002\n\004DNCL\022<\n\013country_sid\030\013 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueR\ncountrySid\022;\n\ndncl_n" +
+      "otes\030d \001(\0132\034.google.protobuf.StringValue" +
+      "R\tdnclNotes\022=\n\013dncl_number\030e \001(\0132\034.googl" +
+      "e.protobuf.StringValueR\ndnclNumber\022C\n\017ex" +
+      "piration_date\030f \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\016expirationDate\"\226\001\n\020AgentLogging" +
+      "Data\022\031\n\010call_sid\030\001 \001(\003R\007callSid\0227\n\tcall_" +
+      "type\030\002 \001(\0162\032.api.commons.CallType.EnumR\010" +
+      "callType\022.\n\023action_value_suffix\030\003 \001(\tR\021a" +
+      "ctionValueSuffix\"\214\001\n\024CreateDNCLNumbersRe" +
+      "q\022\'\n\005dncls\030\001 \003(\0132\021.api.v0alpha.DNCLR\005dnc" +
+      "ls\022K\n\022agent_logging_data\030\003 \001(\0132\035.api.v0a" +
+      "lpha.AgentLoggingDataR\020agentLoggingData\"" +
+      "\205\001\n\024CreateDNCLNumbersRes\022#\n\rsuccess_coun" +
+      "t\030\001 \001(\003R\014successCount\022#\n\rinvalid_count\030\002" +
+      " \001(\003R\014invalidCount\022#\n\rfailure_count\030\003 \001(" +
+      "\003R\014failureCount\"D\n\034GetHuntGroupAgentSett" +
+      "ingsReq\022$\n\016hunt_group_sid\030\001 \001(\003R\014huntGro" +
+      "upSid\"\205\020\n\026HuntGroupAgentSettings\022%\n\016keyp" +
+      "ad_enabled\030\001 \001(\010R\rkeypadEnabled\022)\n\020keypa" +
+      "d_delimiter\030\002 \001(\tR\017keypadDelimiter\022D\n\nst" +
+      "atistics\030\003 \001(\0132$.api.v0alpha.AgentStatis" +
+      "ticsSettingsR\nstatistics\0222\n\025end_call_con" +
+      "firmation\030\005 \001(\010R\023endCallConfirmation\0220\n\005" +
+      "pause\030\006 \001(\0132\032.api.v0alpha.PauseSettingsR" +
+      "\005pause\0227\n\003hqm\030\007 \001(\0132%.api.v0alpha.HoldQu" +
+      "eueMonitorSettingsR\003hqm\022@\n\013manual_dial\030\010" +
+      " \001(\0132\037.api.v0alpha.ManualDialSettingsR\nm" +
+      "anualDial\0229\n\010transfer\030\t \001(\0132\035.api.v0alph" +
+      "a.TransferSettingsR\010transfer\022C\n\014preview_" +
+      "dial\030\n \001(\0132 .api.v0alpha.PreviewDialSett" +
+      "ingsR\013previewDial\022\\\n\025phone_number_activi" +
+      "ty\030\013 \001(\0132(.api.v0alpha.PhoneNumberActivi" +
+      "tySettingsR\023phoneNumberActivity\022-\n\004dncl\030" +
+      "\014 \001(\0132\031.api.v0alpha.DnclSettingsR\004dncl\0222" +
+      "\n\004hold\030\r \001(\0132\036.api.v0alpha.AgentHoldSett" +
+      "ingsR\004hold\022L\n\017manual_approval\030\016 \001(\0132#.ap" +
+      "i.v0alpha.ManualApprovalSettingsR\016manual" +
+      "Approval\022<\n\032display_linkback_huntgroup\030\017" +
+      " \001(\010R\030displayLinkbackHuntgroup\022R\n\021schedu" +
+      "le_callback\030\020 \001(\0132%.api.v0alpha.Schedule" +
+      "CallBackSettingsR\020scheduleCallback\022<\n\tre" +
+      "cording\030\022 \001(\0132\036.api.v0alpha.RecordingSet" +
+      "tingsR\trecording\022;\n\032display_phone_zip_me" +
+      "tadata\030\023 \001(\010R\027displayPhoneZipMetadata\0225\n" +
+      "\027phone_zip_metadata_keys\030\024 \003(\tR\024phoneZip" +
+      "MetadataKeys\0226\n\027display_machine_deliver\030" +
+      "\025 \001(\010R\025displayMachineDeliver\0220\n\024allow_ag" +
+      "ent_intercom\030\026 \001(\010R\022allowAgentIntercom\022T" +
+      "\n\025display_data_settings\030\027 \001(\0132 .api.v0al" +
+      "pha.DisplayDataSettingsR\023displayDataSett" +
+      "ings\0225\n\027allow_change_hunt_group\030\030 \001(\010R\024a" +
+      "llowChangeHuntGroup\0224\n\026agent_screen_reco" +
+      "rding\030\031 \001(\010R\024agentScreenRecording\022_\n\033inb" +
+      "ound_compliance_metadata\030\032 \003(\0132\037.api.v0a" +
+      "lpha.ComplianceMetadataR\031inboundComplian" +
+      "ceMetadata\022.\n\023notify_queued_calls\030\033 \001(\010R" +
+      "\021notifyQueuedCalls\022C\n\036display_journey_re" +
+      "trieved_data\030\034 \001(\010R\033displayJourneyRetrie" +
+      "vedData\022?\n\034limit_journey_retrieved_data\030" +
+      "\035 \003(\tR\031limitJourneyRetrievedData\0220\n\024init" +
+      "ial_agent_status\030\036 \001(\003R\022initialAgentStat" +
+      "us\022*\n\021display_web_links\030\037 \001(\010R\017displayWe" +
+      "bLinks\022%\n\016display_skills\030  \001(\010R\rdisplayS" +
+      "kills\022R\n\021interrupt_peering\030! \003(\0162%.api.c" +
+      "ommons.InterruptedPeeringStatusR\020interru" +
+      "ptPeering\022?\n\034display_integration_data_ma" +
+      "p\030\" \001(\010R\031displayIntegrationDataMap\022;\n\032li" +
+      "mit_integration_data_map\030# \003(\tR\027limitInt" +
+      "egrationDataMapJ\004\010\021\020\022\"\373\001\n\027AgentStatistic" +
+      "sSettings\022\'\n\017show_statistics\030\001 \001(\010R\016show" +
+      "Statistics\022*\n\021show_call_history\030\002 \001(\010R\017s" +
+      "howCallHistory\022b\n\023filter_call_history\030\003 " +
+      "\001(\01622.api.v0alpha.AgentStatisticsSetting" +
+      "s.HistoryFilterR\021filterCallHistory\"\'\n\rHi" +
+      "storyFilter\022\t\n\005TODAY\020\000\022\013\n\007SESSION\020\001\"\240\002\n\r" +
+      "PauseSettings\022*\n\021allow_agent_pause\030\001 \001(\010" +
+      "R\017allowAgentPause\0225\n\027allow_agent_pause_r" +
+      "eset\030\002 \001(\010R\024allowAgentPauseReset\0221\n\025use_" +
+      "agent_pause_codes\030\003 \001(\010R\022useAgentPauseCo" +
+      "des\0227\n\030default_agent_pause_code\030\004 \001(\tR\025d" +
+      "efaultAgentPauseCode\022@\n\034recording_pause_" +
+      "confirmation\030\005 \001(\010R\032recordingPauseConfir" +
+      "mation\"\244\002\n\033PhoneNumberActivitySettings\022=" +
+      "\n\033allow_phone_number_activity\030\001 \001(\010R\030all" +
+      "owPhoneNumberActivity\022J\n\"allow_export_ph" +
+      "one_number_activity\030\002 \001(\010R\036allowExportPh" +
+      "oneNumberActivity\022A\n\035allow_pna_recording" +
+      "s_download\030\003 \001(\010R\032allowPnaRecordingsDown" +
+      "load\0227\n\030allow_pna_edit_responses\030\004 \001(\010R\025" +
+      "allowPnaEditResponses\"\302\001\n\023PreviewDialSet" +
+      "tings\0221\n\024require_confirmation\030\002 \001(\010R\023req" +
+      "uireConfirmation\022\'\n\017timeout_minutes\030\003 \001(" +
+      "\003R\016timeoutMinutes\022!\n\014allow_cancel\030\004 \001(\010R" +
+      "\013allowCancel\022&\n\017pause_on_cancel\030\005 \001(\010R\rp" +
+      "auseOnCancelJ\004\010\001\020\002\"\200\001\n\037HoldQueueMonitori" +
+      "ngAgentRouting\"]\n\004Enum\022\013\n\007UNKNOWN\020\000\022\033\n\027O" +
+      "RIGINAL_AGENT_REQUIRED\020\001\022\034\n\030ORIGINAL_AGE" +
+      "NT_PREFERRED\020\002\022\r\n\tANY_AGENT\020\003\"\334\001\n\030HoldQu" +
+      "eueMonitorSettings\022\030\n\007monitor\030\001 \001(\010R\007mon" +
+      "itor\022%\n\016required_group\030\002 \001(\003R\rrequiredGr" +
+      "oup\022\'\n\017preferred_group\030\003 \001(\003R\016preferredG" +
+      "roup\022V\n\ragent_routing\030\004 \001(\01621.api.v0alph" +
+      "a.HoldQueueMonitoringAgentRouting.EnumR\014" +
+      "agentRouting\"D\n\022ComplianceMetadata\022\022\n\004na" +
+      "me\030\001 \001(\tR\004name\022\032\n\010required\030\002 \001(\010R\010requir" +
+      "ed\"\331\021\n\022ManualDialSettings\022\030\n\007enabled\030\001 \001" +
+      "(\010R\007enabled\0227\n\030show_outbound_phone_book\030" +
+      "\002 \001(\010R\025showOutboundPhoneBook\0228\n\031show_cal" +
+      "ler_id_phone_book\030\003 \001(\010R\025showCallerIdPho" +
+      "neBook\022/\n\024has_custom_caller_id\030\004 \001(\010R\021ha" +
+      "sCustomCallerId\022*\n\021default_caller_id\030\005 \001" +
+      "(\tR\017defaultCallerId\022.\n\023default_country_s" +
+      "id\030\006 \001(\003R\021defaultCountrySid\0222\n\025show_coun" +
+      "try_selector\030\007 \001(\010R\023showCountrySelector\022" +
+      "3\n\025timezone_restrictions\030\010 \001(\010R\024timezone" +
+      "Restrictions\022*\n\021scrub_cell_phones\030\t \001(\010R" +
+      "\017scrubCellPhones\022%\n\016call_recording\030\013 \001(\010" +
+      "R\rcallRecording\022.\n\023agent_override_cell\030\014" +
+      " \001(\010R\021agentOverrideCell\022,\n\022agent_overrid" +
+      "e_ccr\030\r \001(\010R\020agentOverrideCcr\022.\n\023agent_o" +
+      "verride_dncl\030\016 \001(\010R\021agentOverrideDncl\0226\n" +
+      "\027agent_override_timezone\030\017 \001(\010R\025agentOve" +
+      "rrideTimezone\022$\n\016use_white_list\030\021 \001(\010R\014u",
+      "seWhiteList\022/\n\024use_random_caller_id\030\022 \001(" +
+      "\010R\021useRandomCallerId\0225\n\027random_caller_id" +
+      "_bucket\030\023 \001(\003R\024randomCallerIdBucket\022@\n\035d" +
+      "efault_caller_id_country_sid\030\024 \001(\003R\031defa" +
+      "ultCallerIdCountrySid\022F\n display_caller_" +
+      "id_country_select\030\025 \001(\010R\034displayCallerId" +
+      "CountrySelect\022/\n\024use_caller_id_bucket\030\027 " +
+      "\001(\010R\021useCallerIdBucket\022I\n!agent_override" +
+      "_natural_compliance\030\030 \001(\010R\036agentOverride" +
+      "NaturalCompliance\022F\n natural_compliance_" +
+      "rule_set_name\030\031 \001(\tR\034naturalComplianceRu" +
+      "leSetName\022P\n\023compliance_metadata\030\032 \003(\0132\037" +
+      ".api.v0alpha.ComplianceMetadataR\022complia" +
+      "nceMetadata\022\'\n\017enable_metadata\030\033 \001(\010R\016en" +
+      "ableMetadata\022p\n\033use_timezone_validation_" +
+      "zip\030\034 \001(\01621.api.v0alpha.ManualDialSettin" +
+      "gs.ZipCodeValidationR\030useTimezoneValidat" +
+      "ionZip\022N\n\"enable_reject_option_for_appro" +
+      "vers\030\035 \001(\010B\002\030\001R\036enableRejectOptionForApp" +
+      "rovers\022,\n\022enable_sip_address\030\036 \001(\010R\020enab" +
+      "leSipAddress\022:\n\032mask_manual_dial_caller_" +
+      "id\030\037 \001(\010R\026maskManualDialCallerId\022<\n\033enab" +
+      "le_manual_dial_data_dip\030  \001(\tR\027enableMan" +
+      "ualDialDataDip\022<\n\033manual_dial_data_dip_c" +
+      "onfig\030! \001(\003R\027manualDialDataDipConfig\022z\n$" +
+      "manual_dial_data_dip_result_handling\030\" \001" +
+      "(\0162+.api.v0alpha.ManualDialDataDipHandli" +
+      "ng.EnumR\037manualDialDataDipResultHandling" +
+      "\022\211\001\n data_dip_manual_dial_integration\030# " +
+      "\003(\0132A.api.v0alpha.ManualDialSettings.Dat" +
+      "aDipManualDialIntegrationEntryR\034dataDipM" +
+      "anualDialIntegration\022\204\001\n)data_dip_manual" +
+      "_dial_integration_handling\030$ \001(\0162+.api.v" +
+      "0alpha.ManualDialDataDipHandling.EnumR$d" +
+      "ataDipManualDialIntegrationHandling\032O\n!D" +
+      "ataDipManualDialIntegrationEntry\022\020\n\003key\030" +
+      "\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"6\n\021" +
+      "ZipCodeValidation\022\t\n\005FALSE\020\000\022\010\n\004TRUE\020\001\022\014" +
+      "\n\010REQUIRED\020\002J\004\010\n\020\013J\004\010\020\020\021J\004\010\026\020\027\"\212\001\n\031Manua" +
+      "lDialDataDipHandling\"m\n\004Enum\022\010\n\004NONE\020\000\022\n" +
+      "\n\006CANCEL\020\001\022\025\n\021NOTIFY_AND_CANCEL\020\002\022\031\n\025NOT" +
+      "IFY_AND_ALLOW_CALL\020\003\022\035\n\031CALL_WITH_ORIGIN" +
+      "AL_VALUES\020\004\"l\n\021ScrubListsAutoAdd\022\035\n\nscru" +
+      "b_list\030\001 \001(\tR\tscrubList\022\031\n\010field_id\030\002 \001(" +
+      "\tR\007fieldId\022\035\n\nfield_name\030\003 \001(\tR\tfieldNam" +
+      "e\"\226\002\n\032ScrubListsExpirationLimits\022:\n\031outb" +
+      "ound_expiration_limit\030\001 \003(\003R\027outboundExp" +
+      "irationLimit\0228\n\030inbound_expiration_limit" +
+      "\030\002 \003(\003R\026inboundExpirationLimit\022?\n\034manual" +
+      "_dial_expiration_limit\030\003 \003(\003R\031manualDial" +
+      "ExpirationLimit\022A\n\035preview_dial_expirati" +
+      "on_limit\030\004 \003(\003R\032previewDialExpirationLim" +
+      "it\"\272\010\n\014DnclSettings\022$\n\016allow_dncl_add\030\001 " +
+      "\001(\010R\014allowDnclAdd\0228\n\031manual_dial_auto_dn" +
+      "cl_add\030\002 \001(\010R\025manualDialAutoDnclAdd\022:\n\032p" +
+      "review_dial_auto_dncl_add\030\003 \001(\010R\026preview" +
+      "DialAutoDnclAdd\022@\n\035agent_responses_auto_" +
+      "dncl_add\030\004 \001(\010R\031agentResponsesAutoDnclAd" +
+      "d\022F\n default_manual_dncl_expire_hours\030\006 " +
+      "\001(\003R\034defaultManualDnclExpireHours\022H\n!def" +
+      "ault_preview_dncl_expire_hours\030\007 \001(\003R\035de" +
+      "faultPreviewDnclExpireHours\0220\n\024default_d" +
+      "ncl_country\030\010 \001(\003R\022defaultDnclCountry\022J\n" +
+      "\"default_outbound_dncl_expire_hours\030\t \001(" +
+      "\003R\036defaultOutboundDnclExpireHours\022H\n!def" +
+      "ault_inbound_dncl_expire_hours\030\n \001(\003R\035de" +
+      "faultInboundDnclExpireHours\022H\n!hunt_grou" +
+      "p_compliance_scrub_lists\030\013 \003(\tR\035huntGrou" +
+      "pComplianceScrubLists\022^\n\034scrub_lists_aut" +
+      "o_add_options\030\014 \003(\0132\036.api.v0alpha.ScrubL" +
+      "istsAutoAddR\030scrubListsAutoAddOptions\022B\n" +
+      "\036display_dncl_options_in_wrapup\030\r \001(\010R\032d" +
+      "isplayDnclOptionsInWrapup\022*\n\021allow_dncl_" +
+      "remove\030\016 \001(\010R\017allowDnclRemove\022f\n1hunt_gr" +
+      "oup_compliance_scrub_lists_removal_allow" +
+      "ed\030\017 \003(\tR+huntGroupComplianceScrubListsR" +
+      "emovalAllowed\022j\n\035scrub_lists_expiration_" +
+      "limits\030\020 \001(\0132\'.api.v0alpha.ScrubListsExp" +
+      "irationLimitsR\032scrubListsExpirationLimit" +
+      "sJ\004\010\005\020\006\"\356\016\n\020TransferSettings\022\030\n\007allowed\030" +
+      "\001 \001(\010R\007allowed\022%\n\016show_filtering\030\002 \001(\010R\r" +
+      "showFiltering\022S\n\014requeue_type\030\003 \001(\01620.ap" +
+      "i.v0alpha.RequeueTransferQueueConfigType" +
+      ".EnumR\013requeueType\022:\n\004type\030\004 \003(\0162&.api.v" +
+      "0alpha.TransferSettingsType.EnumR\004type\022." +
+      "\n\023default_country_sid\030\005 \001(\003R\021defaultCoun" +
+      "trySid\0222\n\025show_country_selector\030\006 \001(\010R\023s" +
+      "howCountrySelector\022;\n\032has_custom_transfe" +
+      "r_number\030\007 \001(\010R\027hasCustomTransferNumber\022" +
+      "6\n\027default_transfer_number\030\010 \001(\tR\025defaul" +
+      "tTransferNumber\022/\n\024has_custom_caller_id\030" +
+      "\t \001(\010R\021hasCustomCallerId\022*\n\021default_call" +
+      "er_id\030\n \001(\tR\017defaultCallerId\0229\n\031show_tra" +
+      "nsfers_phone_book\030\013 \001(\010R\026showTransfersPh" +
+      "oneBook\0228\n\031show_caller_id_phone_book\030\014 \001" +
+      "(\010R\025showCallerIdPhoneBook\022Q\n\rhand_off_ty" +
+      "pe\030\r \003(\0162-.api.v0alpha.TransferSettingsH" +
+      "andOffType.EnumR\013handOffType\022L\n\020recordin" +
+      "g_status\030\016 \001(\0162!.api.v0alpha.RecordingSt" +
+      "atus.EnumR\017recordingStatus\022@\n\035default_ca" +
+      "ller_id_country_sid\030\017 \001(\003R\031defaultCaller" +
+      "IdCountrySid\022D\n\037show_caller_id_country_s" +
+      "elector\030\020 \001(\010R\033showCallerIdCountrySelect" +
+      "or\022A\n\035start_record_transfer_targets\030\021 \003(" +
+      "\tR\032startRecordTransferTargets\022?\n\034stop_re" +
+      "cord_transfer_targets\030\022 \003(\tR\031stopRecordT" +
+      "ransferTargets\022[\n+default_filtering_incl" +
+      "ude_all_online_agents\030\023 \001(\010R&defaultFilt" +
+      "eringIncludeAllOnlineAgents\0229\n\031requeue_t" +
+      "ype_custom_value\030\024 \001(\tR\026requeueTypeCusto" +
+      "mValue\022F\n agent_transfer_hunt_group_filt" +
+      "er\030\025 \001(\010R\034agentTransferHuntGroupFilter\022h" +
+      "\n\037agent_transfer_recording_status\030\026 \001(\0162" +
+      "!.api.v0alpha.RecordingStatus.EnumR\034agen" +
+      "tTransferRecordingStatus\022l\n!requeue_tran" +
+      "sfer_recording_status\030\027 \001(\0162!.api.v0alph" +
+      "a.RecordingStatus.EnumR\036requeueTransferR" +
+      "ecordingStatus\022f\n\036open_transfer_recordin" +
+      "g_status\030\030 \001(\0162!.api.v0alpha.RecordingSt" +
+      "atus.EnumR\033openTransferRecordingStatus\022>" +
+      "\n\033natural_compliance_override\030\031 \001(\010R\031nat" +
+      "uralComplianceOverride\022W\n)transfer_natur" +
+      "al_compliance_rule_set_name\030\032 \001(\tR$trans" +
+      "ferNaturalComplianceRuleSetName\022P\n\023compl" +
+      "iance_metadata\030\033 \003(\0132\037.api.v0alpha.Compl" +
+      "ianceMetadataR\022complianceMetadata\022%\n\016cal" +
+      "l_whitelist\030\034 \001(\010R\rcallWhitelist\"\323\001\n\021Rec" +
+      "ordingSettings\022+\n\021display_indicator\030\001 \001(" +
+      "\010R\020displayIndicator\022!\n\014enable_pause\030\002 \001(" +
+      "\010R\013enablePause\022!\n\014enable_delay\030\003 \001(\010R\013en" +
+      "ableDelay\022\024\n\005delay\030\004 \001(\003R\005delay\0225\n\027pause" +
+      "_recording_on_hold\030  \001(\010R\024pauseRecording" +
+      "OnHold\"_\n\017SimpleHuntGroup\022$\n\016hunt_group_" +
+      "sid\030\001 \001(\003R\014huntGroupSid\022&\n\017hunt_group_na" +
+      "me\030\002 \001(\tR\rhuntGroupName\"\364\002\n\023DisplayDataS" +
+      "ettings\022Y\n\020display_data_dip\030\001 \001(\0162/.api." +
+      "v0alpha.DisplayDataSettings.DisplayDataD" +
+      "ipR\016displayDataDip\0221\n\025display_data_dip_k" +
+      "eys\030\002 \003(\tR\022displayDataDipKeys\0220\n\024display" +
+      "_data_collect\030\003 \001(\010R\022displayDataCollect\022" +
+      "4\n\026display_ivr_navigation\030\004 \001(\010R\024display" +
+      "IvrNavigation\0225\n\027display_sip_header_data" +
+      "\030\005 \001(\010R\024displaySipHeaderData\"0\n\016DisplayD" +
+      "ataDip\022\010\n\004NONE\020\000\022\007\n\003ALL\020\001\022\013\n\007LIMITED\020\002\"[" +
+      "\n\036RequeueTransferQueueConfigType\"9\n\004Enum" +
+      "\022\013\n\007UNKNOWN\020\000\022\013\n\007DEFAULT\020\001\022\013\n\007CURRENT\020\002\022" +
+      "\n\n\006CUSTOM\020\003\"c\n\017RecordingStatus\"P\n\004Enum\022\013" +
+      "\n\007UNKNOWN\020\000\022\022\n\016KEEP_RECORDING\020\001\022\022\n\016STOP_" +
+      "RECORDING\020\002\022\023\n\017START_RECORDING\020\003\"p\n\024Tran" +
+      "sferSettingsType\"X\n\004Enum\022\013\n\007UNKNOWN\020\000\022\t\n" +
+      "\005AGENT\020\001\022\010\n\004OPEN\020\002\022\013\n\007REQUEUE\020\003\022\016\n\nVOICE" +
+      "_MAIL\020\004\022\021\n\rPBX_EXTENSION\020\005\"V\n\033TransferSe" +
+      "ttingsHandOffType\"7\n\004Enum\022\013\n\007UNKNOWN\020\000\022\016" +
+      "\n\nCONFERENCE\020\001\022\010\n\004WARM\020\002\022\010\n\004COLD\020\003\"\210\001\n\021A" +
+      "gentHoldSettings\022;\n\007allowed\030\001 \001(\0162!.api." +
+      "v0alpha.AllowedHoldType.EnumR\007allowed\0226\n" +
+      "\030auto_pause_on_multi_hold\030\002 \001(\010R\024autoPau" +
+      "seOnMultiHold\"D\n\017AllowedHoldType\"1\n\004Enum" +
+      "\022\010\n\004NONE\020\000\022\n\n\006SIMPLE\020\001\022\t\n\005MULTI\020\002\022\010\n\004BOT" +
+      "H\020\003\"\363\001\n\026ManualApprovalSettings\022\030\n\007allowe" +
+      "d\030\001 \001(\010R\007allowed\022\030\n\007confirm\030\002 \001(\010R\007confi" +
+      "rm\022\037\n\013sms_allowed\030\003 \001(\010R\nsmsAllowed\0226\n\027s" +
+      "ms_number_confirmation\030\004 \001(\010R\025smsNumberC" +
+      "onfirmation\022L\n#disable_reject_option_for" +
+      "_approvers\030\005 \001(\010R\037disableRejectOptionFor" +
+      "Approvers\"\264\002\n\030ListHuntGroupWebLinksReq\022$" +
+      "\n\016hunt_group_sid\030\001 \001(\003R\014huntGroupSid\022\031\n\010" +
+      "call_sid\030\004 \001(\003R\007callSid\0227\n\tcall_type\030\005 \001" +
+      "(\0162\032.api.commons.CallType.EnumR\010callType" +
+      "\022\035\n\nservice_id\030\007 \001(\tR\tserviceId\0222\n\025sched" +
+      "uled_callback_id\030\010 \001(\tR\023scheduledCallbac" +
+      "kId\022\037\n\013session_sid\030\t \001(\003R\nsessionSid\022*\n\020" +
+      "isInitialPreview\030\n \001(\010R\020isInitialPreview" +
+      "\"M\n\030ListHuntGroupWebLinksRes\0221\n\tweb_link" +
+      "s\030\001 \003(\0132\024.api.v0alpha.WebLinkR\010webLinks\"" +
+      "\366\001\n\007WebLink\022!\n\014display_name\030\001 \001(\tR\013displ" +
+      "ayName\022 \n\013description\030\002 \001(\tR\013description" +
+      "\022\031\n\010link_url\030\003 \001(\tR\007linkUrl\022\034\n\nis_js_lin" +
+      "k\030\004 \001(\010R\010isJsLink\0224\n\026tooltip_missing_fie" +
+      "lds\030\006 \003(\tR\024tooltipMissingFields\0227\n\030hunt_" +
+      "group_parameter_sid\030\007 \001(\003R\025huntGroupPara" +
+      "meterSid\"A\n\031GetHuntGroupPauseCodesReq\022$\n" +
+      "\016hunt_group_sid\030\001 \001(\003R\014huntGroupSid\"r\n\031G" +
+      "etHuntGroupPauseCodesRes\022\022\n\004name\030\001 \001(\tR\004" +
+      "name\022 \n\013description\030\002 \001(\tR\013description\022\037" +
+      "\n\013pause_codes\030\003 \003(\tR\npauseCodes\"\225\001\n\027List" +
+      "AgentCallHistoryReq\022\037\n\013session_sid\030\001 \001(\003" +
+      "R\nsessionSid\022Y\n\016history_filter\030\002 \001(\01622.a" +
+      "pi.v0alpha.AgentStatisticsSettings.Histo" +
+      "ryFilterR\rhistoryFilter\"\326\002\n\027ListAgentCal" +
+      "lHistoryRes\022D\n\007history\030\001 \003(\0132*.api.v0alp" +
+      "ha.ListAgentCallHistoryRes.EntryR\007histor" +
+      "y\032\364\001\n\005Entry\022\031\n\010call_sid\030\001 \001(\003R\007callSid\022#" +
+      "\n\rschedule_time\030\002 \001(\tR\014scheduleTime\0227\n\tc" +
+      "all_type\030\003 \001(\0162\032.api.commons.CallType.En" +
+      "umR\010callType\022!\n\014phone_number\030\004 \001(\tR\013phon" +
+      "eNumber\022\033\n\tcaller_id\030\005 \001(\tR\010callerId\022\026\n\006" +
+      "result\030\006 \001(\005R\006result\022\032\n\010duration\030\007 \001(\005R\010" +
+      "duration\"F\n\036GetCampaignCompletionStatusR" +
+      "eq\022$\n\016hunt_group_sid\030\003 \001(\003R\014huntGroupSid" +
+      "\"\240\005\n\036GetCampaignCompletionStatusRes\022)\n\020b" +
+      "roadcasts_exist\030\001 \001(\010R\017broadcastsExist\022)" +
+      "\n\020percent_complete\030\002 \001(\005R\017percentComplet" +
+      "e\022n\n\021completion_status\030\003 \003(\0132A.api.v0alp" +
+      "ha.GetCampaignCompletionStatusRes.Comple" +
+      "tionStatusEntryR\020completionStatus\022\037\n\013tot" +
+      "al_tasks\030\004 \001(\005R\ntotalTasks\0222\n\025total_task" +
+      "s_completed\030\005 \001(\005R\023totalTasksCompleted\032\325" +
+      "\001\n\031TaskGroupCompletionStatus\022$\n\016task_gro" +
+      "up_sid\030\001 \001(\003R\014taskGroupSid\022\022\n\004name\030\002 \001(\t" +
+      "R\004name\022)\n\020percent_complete\030\003 \001(\005R\017percen" +
+      "tComplete\022\037\n\013total_tasks\030\004 \001(\005R\ntotalTas" +
+      "ks\0222\n\025total_tasks_completed\030\005 \001(\005R\023total" +
+      "TasksCompleted\032\212\001\n\025CompletionStatusEntry" +
+      "\022\020\n\003key\030\001 \001(\003R\003key\022[\n\005value\030\002 \001(\0132E.api." +
+      "v0alpha.GetCampaignCompletionStatusRes.T" +
+      "askGroupCompletionStatusR\005value:\0028\001\"h\n\022G" +
+      "etLostPeerInfoReq\022\031\n\010call_sid\030\001 \001(\003R\007cal" +
+      "lSid\0227\n\tcall_type\030\002 \001(\0162\032.api.commons.Ca" +
+      "llType.EnumR\010callType\"\242\002\n\022GetLostPeerInf" +
+      "oRes\022(\n\020former_agent_sid\030\001 \001(\003R\016formerAg" +
+      "entSid\022*\n\021former_agent_name\030\002 \001(\tR\017forme" +
+      "rAgentName\0223\n\026former_hunt_group_name\030\003 \001" +
+      "(\tR\023formerHuntGroupName\022\037\n\013hunt_groups\030\004" +
+      " \003(\tR\nhuntGroups\022\026\n\006agents\030\005 \003(\tR\006agents" +
+      "\022!\n\014agent_skills\030\006 \003(\tR\013agentSkills\022%\n\016p" +
+      "bx_extensions\030\007 \003(\tR\rpbxExtensions\"\027\n\025Ge" +
+      "tDispositionKeysReq\"/\n\025GetDispositionKey" +
+      "sRes\022\026\n\006values\030\001 \003(\tR\006values\"I\n\027GetScrip" +
+      "tOrResponsesReq\022.\n\004data\030\001 \001(\0132\032.api.v0al" +
+      "pha.MailMergeDataR\004data\"\217\001\n\027GetScriptOrR" +
+      "esponsesRes\0226\n\007scripts\030\001 \001(\0132\034.api.v0alp" +
+      "ha.HuntGroupScriptR\007scripts\022<\n\tresponses" +
+      "\030\002 \003(\0132\036.api.v0alpha.HuntGroupResponseR\t" +
+      "responses\"\023\n\021GetReadyAgentsReq\"Z\n\021GetRea" +
+      "dyAgentsRes\022E\n\014ready_agents\030\001 \003(\0132\".api." +
+      "v0alpha.AgentsByAgentSidShortR\013readyAgen" +
+      "ts\"p\n\025AgentsByAgentSidShort\022\033\n\tagent_sid" +
+      "\030\001 \001(\003R\010agentSid\022\035\n\nfirst_name\030\002 \001(\tR\tfi" +
+      "rstName\022\033\n\tlast_name\030\003 \001(\tR\010lastName\"s\n\"" +
+      "ListAgentQueueAndOnHoldCallDataReq\022*\n\021ag" +
+      "ent_session_sid\030\003 \001(\003R\017agentSessionSid\022!" +
+      "\n\014agent_skills\030\004 \003(\tR\013agentSkills\"\362\005\n\"Li" +
+      "stAgentQueueAndOnHoldCallDataRes\022d\n\021agen" +
+      "t_queue_calls\030\001 \003(\01328.api.v0alpha.ListAg" +
+      "entQueueAndOnHoldCallDataRes.CallDataR\017a" +
+      "gentQueueCalls\022\\\n\ron_hold_calls\030\002 \003(\01328." +
+      "api.v0alpha.ListAgentQueueAndOnHoldCallD" +
+      "ataRes.CallDataR\013onHoldCalls\022U\n\thqm_call" +
+      "s\030\003 \003(\01328.api.v0alpha.ListAgentQueueAndO" +
+      "nHoldCallDataRes.CallDataR\010hqmCalls\032\260\003\n\010" +
+      "CallData\022\031\n\010call_sid\030\001 \001(\003R\007callSid\022!\n\014p" +
+      "hone_number\030\002 \001(\tR\013phoneNumber\022\033\n\tcaller" +
+      "_id\030\003 \001(\tR\010callerId\0227\n\tcall_type\030\004 \001(\0162\032" +
+      ".api.commons.CallType.EnumR\010callType\0229\n\n" +
+      "start_date\030\005 \001(\0132\032.google.protobuf.Times" +
+      "tampR\tstartDate\0227\n\thold_date\030\006 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\010holdDate\022\026\n\006skil" +
+      "ls\030\007 \003(\tR\006skills\022%\n\016agent_specific\030\010 \001(\010" +
+      "R\ragentSpecific\022]\n\030queued_notification_t" +
+      "ype\030\t \001(\0162#.api.commons.QueuedNotificati" +
+      "onTypeR\026queuedNotificationType\"X\n\030AgentC" +
+      "allResponseDetails\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005" +
+      "value\030\002 \001(\tR\005value\022\024\n\005order\030\003 \001(\003R\005order" +
+      "\"\317\002\n\031SaveAgentCallResponsesReq\022\031\n\010call_s" +
+      "id\030\001 \001(\003R\007callSid\022*\n\021agent_session_sid\030\002" +
+      " \001(\003R\017agentSessionSid\022d\n\033agent_call_resp" +
+      "onse_details\030\003 \003(\0132%.api.v0alpha.AgentCa" +
+      "llResponseDetailsR\030agentCallResponseDeta" +
+      "ils\0227\n\tcall_type\030\004 \001(\0162\032.api.commons.Cal" +
+      "lType.EnumR\010callType\022L\n\023compliance_metad" +
+      "ata\030\005 \003(\0132\033.api.commons.SimpleKeyValueR\022" +
+      "complianceMetadata\"\033\n\031SaveAgentCallRespo" +
+      "nsesRes\"\347\002\n\014AgentCallLog\022+\n\022agent_call_l" +
+      "og_sid\030\001 \001(\003R\017agentCallLogSid\0226\n\010call_si" +
+      "d\030\002 \001(\0132\033.google.protobuf.Int64ValueR\007ca" +
+      "llSid\0227\n\tcall_type\030\003 \001(\0162\032.api.commons.C" +
+      "allType.EnumR\010callType\022;\n\013action_date\030\004 " +
+      "\001(\0132\032.google.protobuf.TimestampR\nactionD" +
+      "ate\022;\n\naction_key\030\005 \001(\0132\034.google.protobu" +
+      "f.StringValueR\tactionKey\022?\n\014action_value" +
+      "\030\006 \001(\0132\034.google.protobuf.StringValueR\013ac" +
+      "tionValue\"\210\001\n\nAgentSkill\022&\n\017agent_skill_" +
+      "sid\030\001 \001(\003R\ragentSkillSid\022\022\n\004name\030\002 \001(\tR\004" +
+      "name\022>\n\013description\030\003 \001(\0132\034.google.proto" +
+      "buf.StringValueR\013description\"\035\n\033ListAgen" +
+      "tTransferOptionsReq\"\316\002\n\033ListAgentTransfe" +
+      "rOptionsRes\0221\n\nagent_info\030\001 \003(\0132\022.api.v0" +
+      "alpha.AgentR\tagentInfo\0225\n\nhunt_group\030\002 \003" +
+      "(\0132\026.api.v0alpha.HuntGroupR\thuntGroup\022@\n" +
+      "\016pbx_extensions\030\003 \003(\0132\031.api.v0alpha.PBXE" +
+      "xtensionR\rpbxExtensions\022:\n\014agent_skills\030" +
+      "\004 \003(\0132\027.api.v0alpha.AgentSkillR\013agentSki" +
+      "lls\022G\n\ragent_profile\030\005 \003(\0132\".api.v0alpha" +
+      ".AgentsByAgentSidShortR\014agentProfile\"D\n\026" +
+      "GetIntercomPeerInfoReq\022*\n\021agent_session_" +
+      "sid\030\003 \001(\003R\017agentSessionSid\"o\n\026GetInterco" +
+      "mPeerInfoRes\022\031\n\010peer_sid\030\001 \001(\003R\007peerSid\022" +
+      "\035\n\nfirst_name\030\002 \001(\tR\tfirstName\022\033\n\tlast_n" +
+      "ame\030\003 \001(\tR\010lastName\"\036\n\034ListOrgResponseEv" +
+      "aluatorsReq\"^\n\034ListOrgResponseEvaluators" +
+      "Res\022>\n\nevaluators\030\001 \003(\0132\036.api.v0alpha.Re" +
+      "sponseEvaluatorR\nevaluators\"\257\001\n\021Response" +
+      "Evaluator\022\022\n\004name\030\001 \001(\tR\004name\022 \n\013descrip" +
+      "tion\030\002 \001(\tR\013description\022-\n\022regular_expre" +
+      "ssion\030\003 \001(\tR\021regularExpression\0225\n\027xml_cl" +
+      "ient_property_sid\030\004 \001(\003R\024xmlClientProper" +
+      "tySid\"o\n$GetQueueConfigurationOptionsArr" +
+      "ayReq\022G\n localized_account_default_strin" +
+      "g\030\002 \001(\tR\035localizedAccountDefaultString\"D" +
+      "\n$GetQueueConfigurationOptionsArrayRes\022\034" +
+      "\n\tfilenames\030\001 \003(\tR\tfilenames\"\343\t\n\030AgentCa" +
+      "llActivityDetails\022\033\n\tagent_sid\030\001 \001(\003R\010ag" +
+      "entSid\022;\n\nagent_name\030\002 \001(\0132\034.google.prot" +
+      "obuf.StringValueR\tagentName\022G\n\021agent_ses" +
+      "sion_sid\030\003 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueR\017agentSessionSid\022A\n\016hunt_group_sid\030\004" +
+      " \001(\0132\033.google.protobuf.Int64ValueR\014huntG" +
+      "roupSid\022D\n\017hunt_group_name\030\005 \001(\0132\034.googl" +
+      "e.protobuf.StringValueR\rhuntGroupName\022D\n" +
+      "\017agent_call_cost\030\006 \001(\0132\034.google.protobuf" +
+      ".DoubleValueR\ragentCallCost\022K\n\023agent_wai" +
+      "t_duration\030\007 \001(\0132\033.google.protobuf.Int64" +
+      "ValueR\021agentWaitDuration\022I\n\022call_wait_du" +
+      "ration\030\010 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eR\020callWaitDuration\022@\n\rhold_duration\030\t \001" +
+      "(\0132\033.google.protobuf.Int64ValueR\014holdDur" +
+      "ation\022D\n\017manual_duration\030\n \001(\0132\033.google." +
+      "protobuf.Int64ValueR\016manualDuration\022B\n\016p" +
+      "ause_duration\030\013 \001(\0132\033.google.protobuf.In" +
+      "t64ValueR\rpauseDuration\022F\n\020preview_durat" +
+      "ion\030\014 \001(\0132\033.google.protobuf.Int64ValueR\017" +
+      "previewDuration\022J\n\022suspended_duration\030\r " +
+      "\001(\0132\033.google.protobuf.Int64ValueR\021suspen" +
+      "dedDuration\022@\n\rtalk_duration\030\016 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueR\014talkDuration\022H\n" +
+      "\021transfer_duration\030\017 \001(\0132\033.google.protob" +
+      "uf.Int64ValueR\020transferDuration\022E\n\020wrap_" +
+      "up_duration\030\020 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueR\016wrapUpDuration\022A\n\016agent_call_sid" +
+      "\030\021 \001(\0132\033.google.protobuf.Int64ValueR\014age" +
+      "ntCallSid\022G\n\017hunt_group_type\030\022 \001(\0162\037.api" +
+      ".commons.HuntGroupType.EnumR\rhuntGroupTy" +
+      "pe\"\034\n\032GetConditionalDNCLRulesReq\"\215\001\n\032Get" +
+      "ConditionalDNCLRulesRes\022o\n\021disposition_r" +
+      "ules\030\001 \003(\0132B.api.v0alpha.AgentDispositio" +
+      "nConditionalDncl.DispositionRulesTableR\020" +
+      "dispositionRules\"\376\001\n\022ManualDialStartReq\022" +
+      "E\n\020simple_call_data\030\001 \001(\0132\033.api.commons." +
+      "SimpleCallDataR\016simpleCallData\022$\n\016hunt_g" +
+      "roup_sid\030\006 \001(\003R\014huntGroupSid\022*\n\021agent_se" +
+      "ssion_sid\030\007 \001(\003R\017agentSessionSid\022\033\n\tbuck" +
+      "et_id\030\010 \001(\003R\010bucketId\022,\n\022bucket_region_d" +
+      "ata\030\t \001(\tR\020bucketRegionDataJ\004\010\003\020\004\"\024\n\022Man" +
+      "ualDialStartRes\"\317\002\n\032ListExtendedCallHist" +
+      "oryReq\022H\n\013search_type\030\004 \001(\0162\'.api.common" +
+      "s.CallHistorySearchType.EnumR\nsearchType" +
+      "\0229\n\ncall_types\030\005 \003(\0162\032.api.commons.CallT" +
+      "ype.EnumR\tcallTypes\022\'\n\017customer_number\030\006" +
+      " \001(\tR\016customerNumber\022K\n\014search_scope\030\007 \001" +
+      "(\0162(.api.commons.CallHistorySearchScope." +
+      "EnumR\013searchScope\022\031\n\010call_sid\030\010 \001(\003R\007cal" +
+      "lSid\022\033\n\tcaller_id\030\t \001(\tR\010callerId\"\225\005\n\032Li" +
+      "stExtendedCallHistoryRes\022\033\n\tgroup_sid\030\001 " +
+      "\001(\003R\010groupSid\0227\n\tcall_type\030\002 \001(\0162\032.api.c" +
+      "ommons.CallType.EnumR\010callType\022\031\n\010call_s" +
+      "id\030\003 \001(\003R\007callSid\022\'\n\017customer_number\030\004 \001" +
+      "(\tR\016customerNumber\022\024\n\005phone\030\005 \001(\tR\005phone" +
+      "\022\022\n\004date\030\006 \001(\tR\004date\022\026\n\006result\030\007 \001(\005R\006re" +
+      "sult\022\026\n\006length\030\010 \001(\005R\006length\0220\n\004cost\030\t \001" +
+      "(\0132\034.google.protobuf.DoubleValueR\004cost\0220" +
+      "\n\004keys\030\n \001(\0132\034.google.protobuf.StringVal" +
+      "ueR\004keys\022A\n\014call_details\030\013 \001(\0132\036.api.v0a" +
+      "lpha.GetCallDetailsResR\013callDetails\022\'\n\017l" +
+      "inkback_length\030\014 \001(\005R\016linkbackLength\022(\n\020" +
+      "is_call_recorded\030\r \001(\010R\016isCallRecorded\022-" +
+      "\n\022recording_filename\030\016 \001(\tR\021recordingFil" +
+      "ename\0229\n\nstart_date\030\017 \001(\0132\032.google.proto" +
+      "buf.TimestampR\tstartDate\022\037\n\013country_sid\030" +
+      "\020 \001(\003R\ncountrySid\"\315\001\n\032ListWhiteListPhone" +
+      "BooksReq\022$\n\016hunt_group_sid\030\002 \001(\003R\014huntGr" +
+      "oupSid\022D\n\037include_null_phone_number_type" +
+      "s\030\004 \001(\010R\033includeNullPhoneNumberTypes\022C\n\t" +
+      "order_bys\030\005 \003(\0162&.api.commons.ListPhoneB" +
+      "ookOrderBy.EnumR\010orderBys\"i\n\032ListWhiteLi" +
+      "stPhoneBooksRes\022K\n\026white_list_phone_book" +
+      "s\030\001 \003(\0132\026.api.v0alpha.PhoneBookR\023whiteLi" +
+      "stPhoneBooks\"X\n\037UpdateAgentCallResponseV" +
+      "alueReq\022\037\n\013response_id\030\001 \001(\003R\nresponseId" +
+      "\022\024\n\005value\030\002 \001(\tR\005value\"!\n\037UpdateAgentCal" +
+      "lResponseValueRes\"\234\001\n\027PlacePreviewDialCa" +
+      "llReq\022/\n\004call\030\001 \001(\0132\033.api.commons.Simple" +
+      "CallDataR\004call\022$\n\016hunt_group_sid\030\004 \001(\003R\014" +
+      "huntGroupSid\022*\n\021agent_session_sid\030\005 \001(\003R" +
+      "\017agentSessionSid\"\031\n\027PlacePreviewDialCall" +
+      "Res\"\253\001\n\030CancelPreviewDialCallReq\022/\n\004call" +
       "\030\001 \001(\0132\033.api.commons.SimpleCallDataR\004cal" +
-      "l\022$\n\016hunt_group_sid\030\004 \001(\003R\014huntGroupSid\022" +
-      "*\n\021agent_session_sid\030\005 \001(\003R\017agentSession" +
-      "Sid\"\031\n\027PlacePreviewDialCallRes\"\253\001\n\030Cance" +
-      "lPreviewDialCallReq\022/\n\004call\030\001 \001(\0132\033.api." +
-      "commons.SimpleCallDataR\004call\022*\n\021agent_se" +
-      "ssion_sid\030\002 \001(\003R\017agentSessionSid\0222\n\025repo" +
-      "rt_scrub_override\030\003 \001(\010R\023reportScrubOver" +
-      "ride\"\032\n\030CancelPreviewDialCallRes\"D\n\024Down" +
-      "loadRecordingRes\022\020\n\003url\030\001 \001(\tR\003url\022\032\n\010fi",
-      "lename\030\002 \001(\tR\010filename\"n\n\030DownloadCallRe" +
-      "cordingReq\022\031\n\010call_sid\030\002 \001(\003R\007callSid\0227\n" +
-      "\tcall_type\030\003 \001(\0162\032.api.commons.CallType." +
-      "EnumR\010callType\"\230\003\n\031DownloadCallRecording" +
-      "sReq\022R\n\013call_params\030\002 \003(\01321.api.v0alpha." +
-      "DownloadCallRecordingsReq.CallParamsR\nca" +
-      "llParams\022$\n\016html_file_name\030\003 \001(\tR\014htmlFi" +
-      "leName\022*\n\021html_file_content\030\004 \001(\tR\017htmlF" +
-      "ileContent\0228\n\tgroup_sid\030\005 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueR\010groupSid\0229\n\nstart_da" +
-      "te\030\006 \001(\0132\032.google.protobuf.TimestampR\tst" +
-      "artDate\032`\n\nCallParams\022\031\n\010call_sid\030\001 \001(\003R" +
-      "\007callSid\0227\n\tcall_type\030\002 \001(\0162\032.api.common" +
-      "s.CallType.EnumR\010callType\"\256\004\n\037AgentDispo" +
-      "sitionConditionalDncl\022\022\n\004name\030\001 \001(\tR\004nam" +
-      "e\022 \n\013description\030\002 \001(\tR\013description\022\037\n\013c" +
-      "ountry_sid\030\003 \001(\003R\ncountrySid\022z\n\027disposit" +
-      "ion_rules_table\030\004 \003(\0132B.api.v0alpha.Agen" +
-      "tDispositionConditionalDncl.DispositionR" +
-      "ulesTableR\025dispositionRulesTable\032\322\001\n\025Dis" +
-      "positionRulesTable\022\'\n\017disposition_key\030\001 " +
-      "\001(\tR\016dispositionKey\022\211\001\n\034disposition_expi" +
-      "ration_table\030\003 \003(\0132G.api.v0alpha.AgentDi" +
-      "spositionConditionalDncl.DispositionExpi" +
-      "rationTableR\032dispositionExpirationTableJ" +
-      "\004\010\002\020\003\032c\n\032DispositionExpirationTable\022+\n\021d" +
-      "isposition_value\030\001 \001(\tR\020dispositionValue" +
-      "\022\030\n\007integer\030\002 \001(\003R\007integer\"a\n\023UpdateTask" +
-      "StatusReq\022\031\n\010task_sid\030\002 \001(\003R\007taskSid\022/\n\006" +
-      "status\030\003 \001(\0162\027.api.commons.TaskStatusR\006s" +
-      "tatus\"\005\n\003Nil\"D\n\034ListCallbackRoutingAgent" +
-      "sReq\022$\n\016hunt_group_sid\030\002 \001(\003R\014huntGroupS" +
-      "id\"c\n\034ListCallbackRoutingAgentsRes\022C\n\013ag" +
-      "ent_short\030\001 \003(\0132\".api.v0alpha.AgentsByAg" +
-      "entSidShortR\nagentShort\"D\n\034ListCallbackR" +
-      "outingSkillsReq\022$\n\016hunt_group_sid\030\002 \001(\003R" +
-      "\014huntGroupSid\"Z\n\034ListCallbackRoutingSkil" +
-      "lsRes\022:\n\014agent_skills\030\001 \003(\0132\027.api.v0alph" +
-      "a.AgentSkillR\013agentSkills\"k\n\027HandleRecor" +
-      "dingDelayReq\022$\n\016hunt_group_sid\030\003 \001(\003R\014hu" +
-      "ntGroupSid\022*\n\021agent_session_sid\030\004 \001(\003R\017a" +
-      "gentSessionSid\"\031\n\027HandleRecordingDelayRe" +
-      "s\"\266\005\n\030ScheduleCallBackSettings\022:\n\031allow_" +
-      "callback_scheduling\030\001 \001(\010R\027allowCallback" +
-      "Scheduling\022G\n allow_scheduled_callback_c" +
-      "alling\030\002 \001(\010R\035allowScheduledCallbackCall" +
-      "ing\022T\n\'allow_automatic_callback_retrieva" +
-      "l_mode\030\003 \001(\010R#allowAutomaticCallbackRetr" +
-      "ievalMode\022C\n\036allow_default_callback_rout" +
-      "ing\030\004 \001(\010R\033allowDefaultCallbackRouting\022I" +
-      "\n!callbacks_retrieval_mode_settings\030\006 \001(" +
-      "\tR\036callbacksRetrievalModeSettings\022I\n!def" +
-      "ault_callback_routing_settings\030\010 \001(\tR\036de" +
-      "faultCallbackRoutingSettings\0220\n\024callback" +
-      "s_service_id\030\t \001(\tR\022callbacksServiceId\022/" +
-      "\n\024has_custom_caller_id\030\n \001(\010R\021hasCustomC" +
-      "allerId\022*\n\021default_caller_id\030\013 \001(\tR\017defa" +
-      "ultCallerId\022I\n!allow_scheduled_callback_" +
-      "calendar\030\014 \001(\010R\036allowScheduledCallbackCa" +
-      "lendarJ\004\010\005\020\006J\004\010\007\020\010\"\373\001\n\037UpdateAgentAssign" +
-      "edHuntGroupReq\022$\n\016hunt_group_sid\030\003 \001(\003R\014" +
-      "huntGroupSid\022P\n\006skills\030\004 \003(\01328.api.v0alp" +
-      "ha.UpdateAgentAssignedHuntGroupReq.Skill" +
-      "sEntryR\006skills\022%\n\016replace_skills\030\005 \001(\010R\r" +
-      "replaceSkills\0329\n\013SkillsEntry\022\020\n\003key\030\001 \001(" +
-      "\tR\003key\022\024\n\005value\030\002 \001(\003R\005value:\0028\001\"!\n\037Upda" +
-      "teAgentAssignedHuntGroupRes\"\023\n\021ListHuntG" +
-      "roupsReq\"J\n\021ListHuntGroupsRes\0225\n\nhunt_gr" +
-      "oup\030\001 \003(\0132\026.api.v0alpha.HuntGroupR\thuntG" +
-      "roup\"E\n\035ListReassignmentHuntGroupsReq\022$\n" +
-      "\016hunt_group_sid\030\002 \001(\003R\014huntGroupSid\"^\n\035L" +
-      "istReassignmentHuntGroupsRes\022=\n\013hunt_gro" +
-      "ups\030\001 \003(\0132\034.api.v0alpha.SimpleHuntGroupR" +
-      "\nhuntGroups\"\030\n\026GetOrgAgentSettingsReq\"\371\001" +
-      "\n\026GetOrgAgentSettingsRes\022*\n\021default_time" +
-      "_zone\030\001 \001(\tR\017defaultTimeZone\022=\n\033default_" +
-      "softphone_volume_in\030\002 \001(\003R\030defaultSoftph" +
-      "oneVolumeIn\022?\n\034default_softphone_volume_" +
-      "out\030\003 \001(\003R\031defaultSoftphoneVolumeOut\022-\n\022" +
-      "linkback_recording\030\005 \001(\010R\021linkbackRecord" +
-      "ingJ\004\010\004\020\005\"A\n\032ListCallerIdsFromBucketReq\022" +
-      "#\n\rbucket_number\030\002 \001(\003R\014bucketNumber\"]\n\032" +
-      "ListCallerIdsFromBucketRes\022?\n\016caller_id_" +
-      "info\030\001 \003(\0132\031.api.v0alpha.CallerIdInfoR\014c" +
-      "allerIdInfo\"G\n\014CallerIdInfo\022\026\n\006number\030\001 " +
-      "\001(\tR\006number\022\037\n\013region_code\030\002 \001(\tR\nregion" +
-      "Code\"\222\001\n\027SaveLastCallResponseReq\0227\n\tcall" +
-      "_type\030\001 \001(\0162\032.api.commons.CallType.EnumR" +
-      "\010callType\022\031\n\010call_sid\030\002 \001(\003R\007callSid\022#\n\r" +
-      "response_name\030\003 \001(\tR\014responseName\"\031\n\027Sav" +
-      "eLastCallResponseRes\"\244\002\n\021AgentCallRespon" +
-      "se\0225\n\027agent_call_response_sid\030\001 \001(\003R\024age" +
-      "ntCallResponseSid\022A\n\016agent_call_sid\030\002 \001(" +
-      "\0132\033.google.protobuf.Int64ValueR\014agentCal" +
-      "lSid\022.\n\003key\030\003 \001(\0132\034.google.protobuf.Stri" +
-      "ngValueR\003key\0222\n\005value\030\004 \001(\0132\034.google.pro" +
-      "tobuf.StringValueR\005value\0221\n\005order\030\005 \001(\0132" +
-      "\033.google.protobuf.Int32ValueR\005order\"\233\002\n\021" +
-      "GetCallDetailsRes\022N\n\022contact_field_data\030" +
-      "\001 \003(\0132 .api.v0alpha.ContactFieldDataRowR" +
-      "\020contactFieldData\022d\n\033agent_call_activity" +
-      "_details\030\002 \003(\0132%.api.v0alpha.AgentCallAc" +
-      "tivityDetailsR\030agentCallActivityDetails\022" +
-      "P\n\024agent_call_responses\030\003 \003(\0132\036.api.v0al" +
-      "pha.AgentCallResponseR\022agentCallResponse" +
-      "s\"z\n$ListAgentCallLogsByCallSidAndTypeRe" +
-      "q\022\031\n\010call_sid\030\002 \001(\003R\007callSid\0227\n\tcall_typ" +
-      "e\030\003 \001(\0162\032.api.commons.CallType.EnumR\010cal" +
-      "lType\"i\n$ListAgentCallLogsByCallSidAndTy" +
-      "peRes\022A\n\017agent_call_logs\030\001 \003(\0132\031.api.v0a" +
-      "lpha.AgentCallLogR\ragentCallLogs\"r\n\023Cont" +
-      "actFieldDataRow\022\037\n\013field_label\030\001 \001(\tR\nfi" +
-      "eldLabel\022\037\n\013field_value\030\002 \001(\tR\nfieldValu" +
-      "e\022\031\n\010is_phone\030\003 \001(\010R\007isPhone\"d\n\016GetCallD" +
-      "ataReq\022\031\n\010call_sid\030\001 \001(\003R\007callSid\0227\n\tcal" +
-      "l_type\030\002 \001(\0162\032.api.commons.CallType.Enum" +
-      "R\010callType\"\344\n\n\016GetCallDataRes\022C\n\010ivr_dat" +
-      "a\030\001 \003(\0132(.api.v0alpha.GetCallDataRes.Ivr" +
-      "DataEntryR\007ivrData\022b\n\023phone_enhanced_dat" +
-      "a\030\002 \003(\01322.api.v0alpha.GetCallDataRes.Pho" +
-      "neEnhancedDataEntryR\021phoneEnhancedData\022\\" +
-      "\n\021data_collect_data\030\003 \003(\01320.api.v0alpha." +
-      "GetCallDataRes.DataCollectDataEntryR\017dat" +
-      "aCollectData\022P\n\rdata_dip_data\030\004 \003(\0132,.ap" +
-      "i.v0alpha.GetCallDataRes.DataDipDataEntr" +
-      "yR\013dataDipData\022$\n\016caller_id_name\030\005 \001(\tR\014" +
-      "callerIdName\022.\n\023linkback_hunt_group\030\006 \001(" +
-      "\tR\021linkbackHuntGroup\022V\n\017sip_header_data\030" +
-      "\007 \003(\0132..api.v0alpha.GetCallDataRes.SipHe" +
-      "aderDataEntryR\rsipHeaderData\022e\n\024queued_c" +
-      "allback_data\030\010 \003(\01323.api.v0alpha.GetCall" +
-      "DataRes.QueuedCallbackDataEntryR\022queuedC" +
-      "allbackData\022k\n\026journey_retrieved_data\030\t " +
-      "\003(\01325.api.v0alpha.GetCallDataRes.Journey" +
-      "RetrievedDataEntryR\024journeyRetrievedData" +
-      "\022[\n\020integration_data\030\n \003(\01320.api.v0alpha" +
-      ".GetCallDataRes.IntegrationDataEntryR\017in" +
-      "tegrationData\032:\n\014IvrDataEntry\022\020\n\003key\030\001 \001" +
-      "(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\032D\n\026Pho" +
-      "neEnhancedDataEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n" +
-      "\005value\030\002 \001(\tR\005value:\0028\001\032B\n\024DataCollectDa" +
-      "taEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\t" +
-      "R\005value:\0028\001\032>\n\020DataDipDataEntry\022\020\n\003key\030\001" +
-      " \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\032@\n\022S" +
-      "ipHeaderDataEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005v" +
-      "alue\030\002 \001(\tR\005value:\0028\001\032E\n\027QueuedCallbackD" +
-      "ataEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(" +
-      "\tR\005value:\0028\001\032G\n\031JourneyRetrievedDataEntr" +
-      "y\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005valu" +
-      "e:\0028\001\032B\n\024IntegrationDataEntry\022\020\n\003key\030\001 \001" +
-      "(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\251\001\n\025Up" +
-      "datePBXExtensionReq\022#\n\rpbx_extension\030\002 \001" +
-      "(\tR\014pbxExtension\022#\n\remail_subject\030\003 \001(\tR" +
-      "\014emailSubject\022\035\n\nemail_body\030\004 \001(\tR\temail" +
-      "Body\022\'\n\017email_addresses\030\005 \001(\tR\016emailAddr" +
-      "esses\"\027\n\025UpdatePBXExtensionRes\"\314\001\n\017HuntG" +
-      "roupScript\022\022\n\004name\030\001 \001(\tR\004name\022 \n\013descri" +
-      "ption\030\002 \001(\tR\013description\0226\n\027auto_script_" +
-      "progression\030\003 \001(\010R\025autoScriptProgression" +
-      "\022\'\n\017script_category\030\004 \001(\tR\016scriptCategor" +
-      "y\022\"\n\003act\030\005 \003(\0132\020.api.v0alpha.ActR\003act\"\246\003" +
-      "\n\003Act\022:\n\013disposition\030\001 \003(\0132\030.api.v0alpha" +
-      ".DispositionR\013disposition\0221\n\010verbiage\030\002 " +
-      "\003(\0132\025.api.v0alpha.VerbiageR\010verbiage\022Q\n%" +
-      "default_conditional_navigation_target\030\003 " +
-      "\001(\003R\"defaultConditionalNavigationTarget\022" +
-      "Y\n\026conditional_navigation\030\004 \003(\0132\".api.v0" +
-      "alpha.ConditionalNavigationR\025conditional" +
-      "Navigation\022C\n\036page_arrival_recording_con" +
-      "trol\030\005 \001(\003R\033pageArrivalRecordingControl\022" +
-      "=\n\033page_exit_recording_control\030\006 \001(\003R\030pa" +
-      "geExitRecordingControl\"\227\002\n\013Disposition\022\032" +
-      "\n\010required\030\001 \001(\010R\010required\022\024\n\005order\030\002 \001(" +
-      "\003R\005order\022\022\n\004type\030\003 \001(\tR\004type\022\026\n\006header\030\004" +
-      " \001(\tR\006header\022\026\n\006prompt\030\005 \001(\tR\006prompt\022\"\n\014" +
-      "defaultValue\030\006 \001(\tR\014defaultValue\022)\n\020resp" +
-      "onse_options\030\007 \003(\tR\017responseOptions\022C\n\036b" +
-      "ypass_auto_script_progression\030\010 \001(\010R\033byp" +
-      "assAutoScriptProgression\"L\n\010Verbiage\022\024\n\005" +
-      "order\030\001 \001(\003R\005order\022\026\n\006header\030\002 \001(\tR\006head" +
-      "er\022\022\n\004body\030\003 \001(\tR\004body\"\263\001\n\025ConditionalNa" +
-      "vigation\022p\n\037complex_boolean_expression_l" +
-      "ist\030\001 \001(\0132).api.v0alpha.ComplexBooleanEx" +
-      "pressionListR\034complexBooleanExpressionLi" +
-      "st\022(\n\020target_act_index\030\002 \001(\003R\016targetActI" +
-      "ndex\"\203\001\n\034ComplexBooleanExpressionList\022c\n" +
-      "\032complex_boolean_expression\030\001 \003(\0132%.api." +
-      "v0alpha.ComplexBooleanExpressionR\030comple" +
-      "xBooleanExpression\"v\n\030ComplexBooleanExpr" +
-      "ession\022Z\n\027compare_expression_list\030\001 \001(\0132" +
-      "\".api.v0alpha.CompareExpressionListR\025com" +
-      "pareExpressionList\"s\n\025CompareExpressionL" +
-      "ist\022Z\n\031simple_compare_expression\030\001 \003(\0132\036" +
-      ".api.v0alpha.CompareExpressionR\027simpleCo" +
-      "mpareExpression\"z\n\021CompareExpression\022#\n\r" +
-      "operator_type\030\001 \001(\tR\014operatorType\022\033\n\tval" +
-      "ue_key\030\002 \001(\tR\010valueKey\022#\n\rcompare_value\030" +
-      "\003 \001(\tR\014compareValue\"t\n\036ListAgentCallResp" +
-      "onseValuesReq\022\031\n\010call_sid\030\002 \001(\003R\007callSid" +
-      "\0227\n\tcall_type\030\003 \001(\0162\032.api.commons.CallTy" +
-      "pe.EnumR\010callType\"\250\001\n\036ListAgentCallRespo" +
-      "nseValuesRes\022R\n\tresponses\030\001 \003(\01324.api.v0" +
-      "alpha.ListAgentCallResponseValuesRes.Res" +
-      "ponseR\tresponses\0322\n\010Response\022\020\n\003key\030\001 \001(" +
-      "\tR\003key\022\024\n\005value\030\002 \001(\tR\005value\"\265\016\n\rContact" +
-      "Schema\022,\n\022contact_schema_sid\030\001 \001(\003R\020cont" +
-      "actSchemaSid\022*\n\021contact_group_sid\030\002 \001(\003R" +
-      "\017contactGroupSid\0228\n\tdfc_sid01\030\005 \001(\0132\033.go" +
-      "ogle.protobuf.Int32ValueR\010dfcSid01\0228\n\tdf" +
-      "c_sid02\030\006 \001(\0132\033.google.protobuf.Int32Val" +
-      "ueR\010dfcSid02\0228\n\tdfc_sid03\030\007 \001(\0132\033.google" +
-      ".protobuf.Int32ValueR\010dfcSid03\0228\n\tdfc_si" +
-      "d04\030\010 \001(\0132\033.google.protobuf.Int32ValueR\010" +
-      "dfcSid04\0228\n\tdfc_sid05\030\t \001(\0132\033.google.pro" +
-      "tobuf.Int32ValueR\010dfcSid05\0228\n\tdfc_sid06\030" +
-      "\n \001(\0132\033.google.protobuf.Int32ValueR\010dfcS" +
-      "id06\0228\n\tdfc_sid07\030\013 \001(\0132\033.google.protobu" +
-      "f.Int32ValueR\010dfcSid07\0228\n\tdfc_sid08\030\014 \001(" +
-      "\0132\033.google.protobuf.Int32ValueR\010dfcSid08" +
-      "\0228\n\tdfc_sid09\030\r \001(\0132\033.google.protobuf.In" +
-      "t32ValueR\010dfcSid09\0228\n\tdfc_sid10\030\016 \001(\0132\033." +
-      "google.protobuf.Int32ValueR\010dfcSid10\0228\n\t" +
-      "dfc_sid11\030\017 \001(\0132\033.google.protobuf.Int32V" +
-      "alueR\010dfcSid11\0228\n\tdfc_sid12\030\020 \001(\0132\033.goog" +
-      "le.protobuf.Int32ValueR\010dfcSid12\0228\n\tdfc_" +
-      "sid13\030\021 \001(\0132\033.google.protobuf.Int32Value" +
-      "R\010dfcSid13\0228\n\tdfc_sid14\030\022 \001(\0132\033.google.p" +
-      "rotobuf.Int32ValueR\010dfcSid14\0228\n\tdfc_sid1" +
-      "5\030\023 \001(\0132\033.google.protobuf.Int32ValueR\010df" +
-      "cSid15\0228\n\tdfc_sid16\030\024 \001(\0132\033.google.proto" +
-      "buf.Int32ValueR\010dfcSid16\0228\n\tdfc_sid17\030\025 " +
-      "\001(\0132\033.google.protobuf.Int32ValueR\010dfcSid" +
-      "17\0228\n\tdfc_sid18\030\026 \001(\0132\033.google.protobuf." +
-      "Int32ValueR\010dfcSid18\0228\n\tdfc_sid19\030\027 \001(\0132" +
-      "\033.google.protobuf.Int32ValueR\010dfcSid19\0228" +
-      "\n\tdfc_sid20\030\030 \001(\0132\033.google.protobuf.Int3" +
-      "2ValueR\010dfcSid20\0228\n\tdfc_sid21\030\031 \001(\0132\033.go" +
-      "ogle.protobuf.Int32ValueR\010dfcSid21\0228\n\tdf" +
-      "c_sid22\030\032 \001(\0132\033.google.protobuf.Int32Val" +
-      "ueR\010dfcSid22\0228\n\tdfc_sid23\030\033 \001(\0132\033.google" +
-      ".protobuf.Int32ValueR\010dfcSid23\0228\n\tdfc_si" +
-      "d24\030\034 \001(\0132\033.google.protobuf.Int32ValueR\010" +
-      "dfcSid24\0228\n\tdfc_sid25\030\035 \001(\0132\033.google.pro" +
-      "tobuf.Int32ValueR\010dfcSid25\0228\n\tdfc_sid26\030" +
-      "\036 \001(\0132\033.google.protobuf.Int32ValueR\010dfcS" +
-      "id26\0228\n\tdfc_sid27\030\037 \001(\0132\033.google.protobu" +
-      "f.Int32ValueR\010dfcSid27\0228\n\tdfc_sid28\030  \001(" +
-      "\0132\033.google.protobuf.Int32ValueR\010dfcSid28" +
-      "\0228\n\tdfc_sid29\030! \001(\0132\033.google.protobuf.In" +
-      "t32ValueR\010dfcSid29\0228\n\tdfc_sid30\030\" \001(\0132\033." +
-      "google.protobuf.Int32ValueR\010dfcSid30\"O\n!" +
-      "GetContactSchemaByContactGroupReq\022*\n\021con" +
-      "tact_group_sid\030\002 \001(\003R\017contactGroupSid\"\350\001" +
-      "\n\027ContactFieldDescription\022A\n\035contact_fie" +
-      "ld_description_sid\030\001 \001(\005R\032contactFieldDe" +
-      "scriptionSid\022\035\n\nfield_name\030\003 \001(\tR\tfieldN" +
-      "ame\022\031\n\010is_phone\030\004 \001(\010R\007isPhone\022P\n\025displa" +
-      "y_format_string\030\005 \001(\0132\034.google.protobuf." +
-      "StringValueR\023displayFormatString\"\211\002\n\014Con" +
-      "tactGroup\022*\n\021contact_group_sid\030\001 \001(\003R\017co" +
-      "ntactGroupSid\0220\n\004name\030\004 \001(\0132\034.google.pro" +
-      "tobuf.StringValueR\004name\022\037\n\013country_sid\030\005" +
-      " \001(\003R\ncountrySid\022=\n\014last_updated\030\006 \001(\0132\032" +
-      ".google.protobuf.TimestampR\013lastUpdated\022" +
-      ";\n\nsha_digest\030\007 \001(\0132\034.google.protobuf.St" +
-      "ringValueR\tshaDigest\"@\n\022GetContactGroupR" +
-      "eq\022*\n\021contact_group_sid\030\001 \001(\003R\017contactGr" +
-      "oupSid\"F\n\026GetContactGroupSizeRes\022,\n\022cont" +
-      "act_group_size\030\001 \001(\003R\020contactGroupSize\"\'" +
-      "\n%ListContactGroupDetailsByClientSidReq\"" +
-      "g\n%ListContactGroupDetailsByClientSidRes" +
-      "\022>\n\rcontact_group\030\001 \003(\0132\031.api.v0alpha.Co" +
-      "ntactGroupR\014contactGroup\"\256\001\n CreateConta" +
-      "ctFieldDescriptionReq\022\035\n\nfield_name\030\001 \001(" +
-      "\tR\tfieldName\022\031\n\010is_phone\030\002 \001(\010R\007isPhone\022" +
-      "P\n\025display_format_string\030\003 \001(\0132\034.google." +
-      "protobuf.StringValueR\023displayFormatStrin" +
-      "g\"\"\n CreateContactFieldDescriptionRes\"\361\001" +
-      "\n UpdateContactFieldDescriptionReq\022A\n\035co" +
-      "ntact_field_description_sid\030\001 \001(\005R\032conta" +
-      "ctFieldDescriptionSid\022\035\n\nfield_name\030\002 \001(" +
-      "\tR\tfieldName\022\031\n\010is_phone\030\003 \001(\010R\007isPhone\022" +
-      "P\n\025display_format_string\030\004 \001(\0132\034.google." +
-      "protobuf.StringValueR\023displayFormatStrin" +
-      "g\"\"\n UpdateContactFieldDescriptionRes\"e\n" +
-      " DeleteContactFieldDescriptionReq\022A\n\035con" +
-      "tact_field_description_sid\030\001 \001(\005R\032contac" +
-      "tFieldDescriptionSid\"\"\n DeleteContactFie" +
-      "ldDescriptionRes\"!\n\037ListContactFieldDesc" +
-      "riptionsReq\"\203\001\n\037ListContactFieldDescript" +
-      "ionsRes\022`\n\031contact_field_description\030\001 \003" +
+      "l\022*\n\021agent_session_sid\030\002 \001(\003R\017agentSessi" +
+      "onSid\0222\n\025report_scrub_override\030\003 \001(\010R\023re" +
+      "portScrubOverride\"\032\n\030CancelPreviewDialCa",
+      "llRes\"D\n\024DownloadRecordingRes\022\020\n\003url\030\001 \001" +
+      "(\tR\003url\022\032\n\010filename\030\002 \001(\tR\010filename\"n\n\030D" +
+      "ownloadCallRecordingReq\022\031\n\010call_sid\030\002 \001(" +
+      "\003R\007callSid\0227\n\tcall_type\030\003 \001(\0162\032.api.comm" +
+      "ons.CallType.EnumR\010callType\"\230\003\n\031Download" +
+      "CallRecordingsReq\022R\n\013call_params\030\002 \003(\01321" +
+      ".api.v0alpha.DownloadCallRecordingsReq.C" +
+      "allParamsR\ncallParams\022$\n\016html_file_name\030" +
+      "\003 \001(\tR\014htmlFileName\022*\n\021html_file_content" +
+      "\030\004 \001(\tR\017htmlFileContent\0228\n\tgroup_sid\030\005 \001" +
+      "(\0132\033.google.protobuf.Int64ValueR\010groupSi" +
+      "d\0229\n\nstart_date\030\006 \001(\0132\032.google.protobuf." +
+      "TimestampR\tstartDate\032`\n\nCallParams\022\031\n\010ca" +
+      "ll_sid\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\016" +
+      "2\032.api.commons.CallType.EnumR\010callType\"\256" +
+      "\004\n\037AgentDispositionConditionalDncl\022\022\n\004na" +
+      "me\030\001 \001(\tR\004name\022 \n\013description\030\002 \001(\tR\013des" +
+      "cription\022\037\n\013country_sid\030\003 \001(\003R\ncountrySi" +
+      "d\022z\n\027disposition_rules_table\030\004 \003(\0132B.api" +
+      ".v0alpha.AgentDispositionConditionalDncl" +
+      ".DispositionRulesTableR\025dispositionRules" +
+      "Table\032\322\001\n\025DispositionRulesTable\022\'\n\017dispo" +
+      "sition_key\030\001 \001(\tR\016dispositionKey\022\211\001\n\034dis" +
+      "position_expiration_table\030\003 \003(\0132G.api.v0" +
+      "alpha.AgentDispositionConditionalDncl.Di" +
+      "spositionExpirationTableR\032dispositionExp" +
+      "irationTableJ\004\010\002\020\003\032c\n\032DispositionExpirat" +
+      "ionTable\022+\n\021disposition_value\030\001 \001(\tR\020dis" +
+      "positionValue\022\030\n\007integer\030\002 \001(\003R\007integer\"" +
+      "a\n\023UpdateTaskStatusReq\022\031\n\010task_sid\030\002 \001(\003" +
+      "R\007taskSid\022/\n\006status\030\003 \001(\0162\027.api.commons." +
+      "TaskStatusR\006status\"\005\n\003Nil\"D\n\034ListCallbac" +
+      "kRoutingAgentsReq\022$\n\016hunt_group_sid\030\002 \001(" +
+      "\003R\014huntGroupSid\"c\n\034ListCallbackRoutingAg" +
+      "entsRes\022C\n\013agent_short\030\001 \003(\0132\".api.v0alp" +
+      "ha.AgentsByAgentSidShortR\nagentShort\"D\n\034" +
+      "ListCallbackRoutingSkillsReq\022$\n\016hunt_gro" +
+      "up_sid\030\002 \001(\003R\014huntGroupSid\"Z\n\034ListCallba" +
+      "ckRoutingSkillsRes\022:\n\014agent_skills\030\001 \003(\013" +
+      "2\027.api.v0alpha.AgentSkillR\013agentSkills\"k" +
+      "\n\027HandleRecordingDelayReq\022$\n\016hunt_group_" +
+      "sid\030\003 \001(\003R\014huntGroupSid\022*\n\021agent_session" +
+      "_sid\030\004 \001(\003R\017agentSessionSid\"\031\n\027HandleRec" +
+      "ordingDelayRes\"\266\005\n\030ScheduleCallBackSetti" +
+      "ngs\022:\n\031allow_callback_scheduling\030\001 \001(\010R\027" +
+      "allowCallbackScheduling\022G\n allow_schedul" +
+      "ed_callback_calling\030\002 \001(\010R\035allowSchedule" +
+      "dCallbackCalling\022T\n\'allow_automatic_call" +
+      "back_retrieval_mode\030\003 \001(\010R#allowAutomati" +
+      "cCallbackRetrievalMode\022C\n\036allow_default_" +
+      "callback_routing\030\004 \001(\010R\033allowDefaultCall" +
+      "backRouting\022I\n!callbacks_retrieval_mode_" +
+      "settings\030\006 \001(\tR\036callbacksRetrievalModeSe" +
+      "ttings\022I\n!default_callback_routing_setti" +
+      "ngs\030\010 \001(\tR\036defaultCallbackRoutingSetting" +
+      "s\0220\n\024callbacks_service_id\030\t \001(\tR\022callbac" +
+      "ksServiceId\022/\n\024has_custom_caller_id\030\n \001(" +
+      "\010R\021hasCustomCallerId\022*\n\021default_caller_i" +
+      "d\030\013 \001(\tR\017defaultCallerId\022I\n!allow_schedu" +
+      "led_callback_calendar\030\014 \001(\010R\036allowSchedu" +
+      "ledCallbackCalendarJ\004\010\005\020\006J\004\010\007\020\010\"\373\001\n\037Upda" +
+      "teAgentAssignedHuntGroupReq\022$\n\016hunt_grou" +
+      "p_sid\030\003 \001(\003R\014huntGroupSid\022P\n\006skills\030\004 \003(" +
+      "\01328.api.v0alpha.UpdateAgentAssignedHuntG" +
+      "roupReq.SkillsEntryR\006skills\022%\n\016replace_s" +
+      "kills\030\005 \001(\010R\rreplaceSkills\0329\n\013SkillsEntr" +
+      "y\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005valu" +
+      "e:\0028\001\"!\n\037UpdateAgentAssignedHuntGroupRes" +
+      "\"\023\n\021ListHuntGroupsReq\"J\n\021ListHuntGroupsR" +
+      "es\0225\n\nhunt_group\030\001 \003(\0132\026.api.v0alpha.Hun" +
+      "tGroupR\thuntGroup\"E\n\035ListReassignmentHun" +
+      "tGroupsReq\022$\n\016hunt_group_sid\030\002 \001(\003R\014hunt" +
+      "GroupSid\"^\n\035ListReassignmentHuntGroupsRe" +
+      "s\022=\n\013hunt_groups\030\001 \003(\0132\034.api.v0alpha.Sim" +
+      "pleHuntGroupR\nhuntGroups\"\030\n\026GetOrgAgentS" +
+      "ettingsReq\"\371\001\n\026GetOrgAgentSettingsRes\022*\n" +
+      "\021default_time_zone\030\001 \001(\tR\017defaultTimeZon" +
+      "e\022=\n\033default_softphone_volume_in\030\002 \001(\003R\030" +
+      "defaultSoftphoneVolumeIn\022?\n\034default_soft" +
+      "phone_volume_out\030\003 \001(\003R\031defaultSoftphone" +
+      "VolumeOut\022-\n\022linkback_recording\030\005 \001(\010R\021l" +
+      "inkbackRecordingJ\004\010\004\020\005\"A\n\032ListCallerIdsF" +
+      "romBucketReq\022#\n\rbucket_number\030\002 \001(\003R\014buc" +
+      "ketNumber\"]\n\032ListCallerIdsFromBucketRes\022" +
+      "?\n\016caller_id_info\030\001 \003(\0132\031.api.v0alpha.Ca" +
+      "llerIdInfoR\014callerIdInfo\"G\n\014CallerIdInfo" +
+      "\022\026\n\006number\030\001 \001(\tR\006number\022\037\n\013region_code\030" +
+      "\002 \001(\tR\nregionCode\"\222\001\n\027SaveLastCallRespon" +
+      "seReq\0227\n\tcall_type\030\001 \001(\0162\032.api.commons.C" +
+      "allType.EnumR\010callType\022\031\n\010call_sid\030\002 \001(\003" +
+      "R\007callSid\022#\n\rresponse_name\030\003 \001(\tR\014respon" +
+      "seName\"\031\n\027SaveLastCallResponseRes\"\244\002\n\021Ag" +
+      "entCallResponse\0225\n\027agent_call_response_s" +
+      "id\030\001 \001(\003R\024agentCallResponseSid\022A\n\016agent_" +
+      "call_sid\030\002 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueR\014agentCallSid\022.\n\003key\030\003 \001(\0132\034.google." +
+      "protobuf.StringValueR\003key\0222\n\005value\030\004 \001(\013" +
+      "2\034.google.protobuf.StringValueR\005value\0221\n" +
+      "\005order\030\005 \001(\0132\033.google.protobuf.Int32Valu" +
+      "eR\005order\"\233\002\n\021GetCallDetailsRes\022N\n\022contac" +
+      "t_field_data\030\001 \003(\0132 .api.v0alpha.Contact" +
+      "FieldDataRowR\020contactFieldData\022d\n\033agent_" +
+      "call_activity_details\030\002 \003(\0132%.api.v0alph" +
+      "a.AgentCallActivityDetailsR\030agentCallAct" +
+      "ivityDetails\022P\n\024agent_call_responses\030\003 \003" +
+      "(\0132\036.api.v0alpha.AgentCallResponseR\022agen" +
+      "tCallResponses\"z\n$ListAgentCallLogsByCal" +
+      "lSidAndTypeReq\022\031\n\010call_sid\030\002 \001(\003R\007callSi" +
+      "d\0227\n\tcall_type\030\003 \001(\0162\032.api.commons.CallT" +
+      "ype.EnumR\010callType\"i\n$ListAgentCallLogsB" +
+      "yCallSidAndTypeRes\022A\n\017agent_call_logs\030\001 " +
+      "\003(\0132\031.api.v0alpha.AgentCallLogR\ragentCal" +
+      "lLogs\"r\n\023ContactFieldDataRow\022\037\n\013field_la" +
+      "bel\030\001 \001(\tR\nfieldLabel\022\037\n\013field_value\030\002 \001" +
+      "(\tR\nfieldValue\022\031\n\010is_phone\030\003 \001(\010R\007isPhon" +
+      "e\"d\n\016GetCallDataReq\022\031\n\010call_sid\030\001 \001(\003R\007c" +
+      "allSid\0227\n\tcall_type\030\002 \001(\0162\032.api.commons." +
+      "CallType.EnumR\010callType\"\344\n\n\016GetCallDataR" +
+      "es\022C\n\010ivr_data\030\001 \003(\0132(.api.v0alpha.GetCa" +
+      "llDataRes.IvrDataEntryR\007ivrData\022b\n\023phone" +
+      "_enhanced_data\030\002 \003(\01322.api.v0alpha.GetCa" +
+      "llDataRes.PhoneEnhancedDataEntryR\021phoneE" +
+      "nhancedData\022\\\n\021data_collect_data\030\003 \003(\01320" +
+      ".api.v0alpha.GetCallDataRes.DataCollectD" +
+      "ataEntryR\017dataCollectData\022P\n\rdata_dip_da" +
+      "ta\030\004 \003(\0132,.api.v0alpha.GetCallDataRes.Da" +
+      "taDipDataEntryR\013dataDipData\022$\n\016caller_id" +
+      "_name\030\005 \001(\tR\014callerIdName\022.\n\023linkback_hu" +
+      "nt_group\030\006 \001(\tR\021linkbackHuntGroup\022V\n\017sip" +
+      "_header_data\030\007 \003(\0132..api.v0alpha.GetCall" +
+      "DataRes.SipHeaderDataEntryR\rsipHeaderDat" +
+      "a\022e\n\024queued_callback_data\030\010 \003(\01323.api.v0" +
+      "alpha.GetCallDataRes.QueuedCallbackDataE" +
+      "ntryR\022queuedCallbackData\022k\n\026journey_retr" +
+      "ieved_data\030\t \003(\01325.api.v0alpha.GetCallDa" +
+      "taRes.JourneyRetrievedDataEntryR\024journey" +
+      "RetrievedData\022[\n\020integration_data\030\n \003(\0132" +
+      "0.api.v0alpha.GetCallDataRes.Integration" +
+      "DataEntryR\017integrationData\032:\n\014IvrDataEnt" +
+      "ry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005val" +
+      "ue:\0028\001\032D\n\026PhoneEnhancedDataEntry\022\020\n\003key\030" +
+      "\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\032B\n\024" +
+      "DataCollectDataEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024" +
+      "\n\005value\030\002 \001(\tR\005value:\0028\001\032>\n\020DataDipDataE" +
+      "ntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005v" +
+      "alue:\0028\001\032@\n\022SipHeaderDataEntry\022\020\n\003key\030\001 " +
+      "\001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\032E\n\027Qu" +
+      "euedCallbackDataEntry\022\020\n\003key\030\001 \001(\tR\003key\022" +
+      "\024\n\005value\030\002 \001(\tR\005value:\0028\001\032G\n\031JourneyRetr" +
+      "ievedDataEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005valu" +
+      "e\030\002 \001(\tR\005value:\0028\001\032B\n\024IntegrationDataEnt" +
+      "ry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005val" +
+      "ue:\0028\001\"\251\001\n\025UpdatePBXExtensionReq\022#\n\rpbx_" +
+      "extension\030\002 \001(\tR\014pbxExtension\022#\n\remail_s" +
+      "ubject\030\003 \001(\tR\014emailSubject\022\035\n\nemail_body" +
+      "\030\004 \001(\tR\temailBody\022\'\n\017email_addresses\030\005 \001" +
+      "(\tR\016emailAddresses\"\027\n\025UpdatePBXExtension" +
+      "Res\"\314\001\n\017HuntGroupScript\022\022\n\004name\030\001 \001(\tR\004n" +
+      "ame\022 \n\013description\030\002 \001(\tR\013description\0226\n" +
+      "\027auto_script_progression\030\003 \001(\010R\025autoScri" +
+      "ptProgression\022\'\n\017script_category\030\004 \001(\tR\016" +
+      "scriptCategory\022\"\n\003act\030\005 \003(\0132\020.api.v0alph" +
+      "a.ActR\003act\"\246\003\n\003Act\022:\n\013disposition\030\001 \003(\0132" +
+      "\030.api.v0alpha.DispositionR\013disposition\0221" +
+      "\n\010verbiage\030\002 \003(\0132\025.api.v0alpha.VerbiageR" +
+      "\010verbiage\022Q\n%default_conditional_navigat" +
+      "ion_target\030\003 \001(\003R\"defaultConditionalNavi" +
+      "gationTarget\022Y\n\026conditional_navigation\030\004" +
+      " \003(\0132\".api.v0alpha.ConditionalNavigation" +
+      "R\025conditionalNavigation\022C\n\036page_arrival_" +
+      "recording_control\030\005 \001(\003R\033pageArrivalReco" +
+      "rdingControl\022=\n\033page_exit_recording_cont" +
+      "rol\030\006 \001(\003R\030pageExitRecordingControl\"\227\002\n\013" +
+      "Disposition\022\032\n\010required\030\001 \001(\010R\010required\022" +
+      "\024\n\005order\030\002 \001(\003R\005order\022\022\n\004type\030\003 \001(\tR\004typ" +
+      "e\022\026\n\006header\030\004 \001(\tR\006header\022\026\n\006prompt\030\005 \001(" +
+      "\tR\006prompt\022\"\n\014defaultValue\030\006 \001(\tR\014default" +
+      "Value\022)\n\020response_options\030\007 \003(\tR\017respons" +
+      "eOptions\022C\n\036bypass_auto_script_progressi" +
+      "on\030\010 \001(\010R\033bypassAutoScriptProgression\"L\n" +
+      "\010Verbiage\022\024\n\005order\030\001 \001(\003R\005order\022\026\n\006heade" +
+      "r\030\002 \001(\tR\006header\022\022\n\004body\030\003 \001(\tR\004body\"\263\001\n\025" +
+      "ConditionalNavigation\022p\n\037complex_boolean" +
+      "_expression_list\030\001 \001(\0132).api.v0alpha.Com" +
+      "plexBooleanExpressionListR\034complexBoolea" +
+      "nExpressionList\022(\n\020target_act_index\030\002 \001(" +
+      "\003R\016targetActIndex\"\203\001\n\034ComplexBooleanExpr" +
+      "essionList\022c\n\032complex_boolean_expression" +
+      "\030\001 \003(\0132%.api.v0alpha.ComplexBooleanExpre" +
+      "ssionR\030complexBooleanExpression\"v\n\030Compl" +
+      "exBooleanExpression\022Z\n\027compare_expressio" +
+      "n_list\030\001 \001(\0132\".api.v0alpha.CompareExpres" +
+      "sionListR\025compareExpressionList\"s\n\025Compa" +
+      "reExpressionList\022Z\n\031simple_compare_expre" +
+      "ssion\030\001 \003(\0132\036.api.v0alpha.CompareExpress" +
+      "ionR\027simpleCompareExpression\"z\n\021CompareE" +
+      "xpression\022#\n\roperator_type\030\001 \001(\tR\014operat" +
+      "orType\022\033\n\tvalue_key\030\002 \001(\tR\010valueKey\022#\n\rc" +
+      "ompare_value\030\003 \001(\tR\014compareValue\"t\n\036List" +
+      "AgentCallResponseValuesReq\022\031\n\010call_sid\030\002" +
+      " \001(\003R\007callSid\0227\n\tcall_type\030\003 \001(\0162\032.api.c" +
+      "ommons.CallType.EnumR\010callType\"\250\001\n\036ListA" +
+      "gentCallResponseValuesRes\022R\n\tresponses\030\001" +
+      " \003(\01324.api.v0alpha.ListAgentCallResponse" +
+      "ValuesRes.ResponseR\tresponses\0322\n\010Respons" +
+      "e\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005valu" +
+      "e\"\265\016\n\rContactSchema\022,\n\022contact_schema_si" +
+      "d\030\001 \001(\003R\020contactSchemaSid\022*\n\021contact_gro" +
+      "up_sid\030\002 \001(\003R\017contactGroupSid\0228\n\tdfc_sid" +
+      "01\030\005 \001(\0132\033.google.protobuf.Int32ValueR\010d" +
+      "fcSid01\0228\n\tdfc_sid02\030\006 \001(\0132\033.google.prot" +
+      "obuf.Int32ValueR\010dfcSid02\0228\n\tdfc_sid03\030\007" +
+      " \001(\0132\033.google.protobuf.Int32ValueR\010dfcSi" +
+      "d03\0228\n\tdfc_sid04\030\010 \001(\0132\033.google.protobuf" +
+      ".Int32ValueR\010dfcSid04\0228\n\tdfc_sid05\030\t \001(\013" +
+      "2\033.google.protobuf.Int32ValueR\010dfcSid05\022" +
+      "8\n\tdfc_sid06\030\n \001(\0132\033.google.protobuf.Int" +
+      "32ValueR\010dfcSid06\0228\n\tdfc_sid07\030\013 \001(\0132\033.g" +
+      "oogle.protobuf.Int32ValueR\010dfcSid07\0228\n\td" +
+      "fc_sid08\030\014 \001(\0132\033.google.protobuf.Int32Va" +
+      "lueR\010dfcSid08\0228\n\tdfc_sid09\030\r \001(\0132\033.googl" +
+      "e.protobuf.Int32ValueR\010dfcSid09\0228\n\tdfc_s" +
+      "id10\030\016 \001(\0132\033.google.protobuf.Int32ValueR" +
+      "\010dfcSid10\0228\n\tdfc_sid11\030\017 \001(\0132\033.google.pr" +
+      "otobuf.Int32ValueR\010dfcSid11\0228\n\tdfc_sid12" +
+      "\030\020 \001(\0132\033.google.protobuf.Int32ValueR\010dfc" +
+      "Sid12\0228\n\tdfc_sid13\030\021 \001(\0132\033.google.protob" +
+      "uf.Int32ValueR\010dfcSid13\0228\n\tdfc_sid14\030\022 \001" +
+      "(\0132\033.google.protobuf.Int32ValueR\010dfcSid1" +
+      "4\0228\n\tdfc_sid15\030\023 \001(\0132\033.google.protobuf.I" +
+      "nt32ValueR\010dfcSid15\0228\n\tdfc_sid16\030\024 \001(\0132\033" +
+      ".google.protobuf.Int32ValueR\010dfcSid16\0228\n" +
+      "\tdfc_sid17\030\025 \001(\0132\033.google.protobuf.Int32" +
+      "ValueR\010dfcSid17\0228\n\tdfc_sid18\030\026 \001(\0132\033.goo" +
+      "gle.protobuf.Int32ValueR\010dfcSid18\0228\n\tdfc" +
+      "_sid19\030\027 \001(\0132\033.google.protobuf.Int32Valu" +
+      "eR\010dfcSid19\0228\n\tdfc_sid20\030\030 \001(\0132\033.google." +
+      "protobuf.Int32ValueR\010dfcSid20\0228\n\tdfc_sid" +
+      "21\030\031 \001(\0132\033.google.protobuf.Int32ValueR\010d" +
+      "fcSid21\0228\n\tdfc_sid22\030\032 \001(\0132\033.google.prot" +
+      "obuf.Int32ValueR\010dfcSid22\0228\n\tdfc_sid23\030\033" +
+      " \001(\0132\033.google.protobuf.Int32ValueR\010dfcSi" +
+      "d23\0228\n\tdfc_sid24\030\034 \001(\0132\033.google.protobuf" +
+      ".Int32ValueR\010dfcSid24\0228\n\tdfc_sid25\030\035 \001(\013" +
+      "2\033.google.protobuf.Int32ValueR\010dfcSid25\022" +
+      "8\n\tdfc_sid26\030\036 \001(\0132\033.google.protobuf.Int" +
+      "32ValueR\010dfcSid26\0228\n\tdfc_sid27\030\037 \001(\0132\033.g" +
+      "oogle.protobuf.Int32ValueR\010dfcSid27\0228\n\td" +
+      "fc_sid28\030  \001(\0132\033.google.protobuf.Int32Va" +
+      "lueR\010dfcSid28\0228\n\tdfc_sid29\030! \001(\0132\033.googl" +
+      "e.protobuf.Int32ValueR\010dfcSid29\0228\n\tdfc_s" +
+      "id30\030\" \001(\0132\033.google.protobuf.Int32ValueR" +
+      "\010dfcSid30\"O\n!GetContactSchemaByContactGr" +
+      "oupReq\022*\n\021contact_group_sid\030\002 \001(\003R\017conta" +
+      "ctGroupSid\"\350\001\n\027ContactFieldDescription\022A" +
+      "\n\035contact_field_description_sid\030\001 \001(\005R\032c" +
+      "ontactFieldDescriptionSid\022\035\n\nfield_name\030" +
+      "\003 \001(\tR\tfieldName\022\031\n\010is_phone\030\004 \001(\010R\007isPh" +
+      "one\022P\n\025display_format_string\030\005 \001(\0132\034.goo" +
+      "gle.protobuf.StringValueR\023displayFormatS" +
+      "tring\"\211\002\n\014ContactGroup\022*\n\021contact_group_" +
+      "sid\030\001 \001(\003R\017contactGroupSid\0220\n\004name\030\004 \001(\013" +
+      "2\034.google.protobuf.StringValueR\004name\022\037\n\013" +
+      "country_sid\030\005 \001(\003R\ncountrySid\022=\n\014last_up" +
+      "dated\030\006 \001(\0132\032.google.protobuf.TimestampR" +
+      "\013lastUpdated\022;\n\nsha_digest\030\007 \001(\0132\034.googl" +
+      "e.protobuf.StringValueR\tshaDigest\"@\n\022Get" +
+      "ContactGroupReq\022*\n\021contact_group_sid\030\001 \001" +
+      "(\003R\017contactGroupSid\"F\n\026GetContactGroupSi" +
+      "zeRes\022,\n\022contact_group_size\030\001 \001(\003R\020conta" +
+      "ctGroupSize\"\'\n%ListContactGroupDetailsBy" +
+      "ClientSidReq\"g\n%ListContactGroupDetailsB" +
+      "yClientSidRes\022>\n\rcontact_group\030\001 \003(\0132\031.a" +
+      "pi.v0alpha.ContactGroupR\014contactGroup\"\256\001" +
+      "\n CreateContactFieldDescriptionReq\022\035\n\nfi" +
+      "eld_name\030\001 \001(\tR\tfieldName\022\031\n\010is_phone\030\002 " +
+      "\001(\010R\007isPhone\022P\n\025display_format_string\030\003 " +
+      "\001(\0132\034.google.protobuf.StringValueR\023displ" +
+      "ayFormatString\"\"\n CreateContactFieldDesc" +
+      "riptionRes\"\361\001\n UpdateContactFieldDescrip" +
+      "tionReq\022A\n\035contact_field_description_sid" +
+      "\030\001 \001(\005R\032contactFieldDescriptionSid\022\035\n\nfi" +
+      "eld_name\030\002 \001(\tR\tfieldName\022\031\n\010is_phone\030\003 " +
+      "\001(\010R\007isPhone\022P\n\025display_format_string\030\004 " +
+      "\001(\0132\034.google.protobuf.StringValueR\023displ" +
+      "ayFormatString\"\"\n UpdateContactFieldDesc" +
+      "riptionRes\"e\n DeleteContactFieldDescript" +
+      "ionReq\022A\n\035contact_field_description_sid\030" +
+      "\001 \001(\005R\032contactFieldDescriptionSid\"\"\n Del" +
+      "eteContactFieldDescriptionRes\"!\n\037ListCon" +
+      "tactFieldDescriptionsReq\"\203\001\n\037ListContact" +
+      "FieldDescriptionsRes\022`\n\031contact_field_de" +
+      "scription\030\001 \003(\0132$.api.v0alpha.ContactFie" +
+      "ldDescriptionR\027contactFieldDescription\"T" +
+      "\n&ListContactFieldDescriptionsByCGSidReq" +
+      "\022*\n\021contact_group_sid\030\002 \001(\003R\017contactGrou" +
+      "pSid\"\212\001\n&ListContactFieldDescriptionsByC" +
+      "GSidRes\022`\n\031contact_field_description\030\001 \003" +
       "(\0132$.api.v0alpha.ContactFieldDescription" +
-      "R\027contactFieldDescription\"T\n&ListContact" +
-      "FieldDescriptionsByCGSidReq\022*\n\021contact_g" +
-      "roup_sid\030\002 \001(\003R\017contactGroupSid\"\212\001\n&List" +
-      "ContactFieldDescriptionsByCGSidRes\022`\n\031co" +
-      "ntact_field_description\030\001 \003(\0132$.api.v0al" +
-      "pha.ContactFieldDescriptionR\027contactFiel" +
-      "dDescription\" \n\036ListTableTemplatePropert" +
-      "iesReq\"\320\001\n\036ListTableTemplatePropertiesRe" +
-      "s\022V\n\025agent_table_templates\030\001 \003(\0132\".api.v" +
-      "0alpha.TableTemplatePropertyR\023agentTable" +
-      "Templates\022V\n\025queue_table_templates\030\002 \003(\013" +
-      "2\".api.v0alpha.TableTemplatePropertyR\023qu" +
-      "eueTableTemplates\"b\n\025TableTemplateProper" +
-      "ty\0225\n\027xml_client_property_sid\030\001 \001(\003R\024xml" +
-      "ClientPropertySid\022\022\n\004name\030\002 \001(\tR\004name\"\033\n" +
-      "\031ListAgentSkillsFiltersReq\"m\n\031ListAgentS" +
-      "killsFiltersRes\022P\n\024agent_skills_filters\030" +
-      "\001 \003(\0132\036.api.v0alpha.AgentSkillsFilterR\022a" +
-      "gentSkillsFilters\"^\n\021AgentSkillsFilter\0225" +
-      "\n\027xml_client_property_sid\030\001 \001(\003R\024xmlClie" +
-      "ntPropertySid\022\022\n\004name\030\002 \001(\tR\004name\"\034\n\032Lis" +
-      "tCustomReportFiltersReq\"y\n\032ListCustomRep" +
-      "ortFiltersRes\022[\n\025custom_report_filters\030\001" +
-      " \003(\0132\'.api.v0alpha.CustomReportFilterPro" +
-      "pertyR\023customReportFilters\"g\n\032CustomRepo" +
-      "rtFilterProperty\0225\n\027xml_client_property_" +
-      "sid\030\001 \001(\003R\024xmlClientPropertySid\022\022\n\004name\030" +
-      "\002 \001(\tR\004name\"\327 \n\025ContactImportTemplate\022=\n" +
-      "\033contact_import_template_sid\030\001 \001(\003R\030cont" +
-      "actImportTemplateSid\022\022\n\004name\030\002 \001(\tR\004name" +
-      "\022 \n\013description\030\003 \001(\tR\013description\022:\n\tde" +
-      "limiter\030\005 \001(\0132\034.google.protobuf.StringVa" +
-      "lueR\tdelimiter\0222\n\005quote\030\006 \001(\0132\034.google.p" +
-      "rotobuf.StringValueR\005quote\022$\n\016is_fixed_w" +
-      "idth\030\007 \001(\010R\014isFixedWidth\0228\n\tdfc_sid01\030\010 " +
-      "\001(\0132\033.google.protobuf.Int32ValueR\010dfcSid" +
-      "01\0228\n\tdfc_sid02\030\t \001(\0132\033.google.protobuf." +
-      "Int32ValueR\010dfcSid02\0228\n\tdfc_sid03\030\n \001(\0132" +
-      "\033.google.protobuf.Int32ValueR\010dfcSid03\0228" +
-      "\n\tdfc_sid04\030\013 \001(\0132\033.google.protobuf.Int3" +
-      "2ValueR\010dfcSid04\0228\n\tdfc_sid05\030\014 \001(\0132\033.go" +
-      "ogle.protobuf.Int32ValueR\010dfcSid05\0228\n\tdf" +
-      "c_sid06\030\r \001(\0132\033.google.protobuf.Int32Val" +
-      "ueR\010dfcSid06\0228\n\tdfc_sid07\030\016 \001(\0132\033.google" +
-      ".protobuf.Int32ValueR\010dfcSid07\0228\n\tdfc_si" +
-      "d08\030\017 \001(\0132\033.google.protobuf.Int32ValueR\010" +
-      "dfcSid08\0228\n\tdfc_sid09\030\020 \001(\0132\033.google.pro" +
-      "tobuf.Int32ValueR\010dfcSid09\0228\n\tdfc_sid10\030" +
-      "\021 \001(\0132\033.google.protobuf.Int32ValueR\010dfcS" +
-      "id10\0228\n\tdfc_sid11\030\022 \001(\0132\033.google.protobu" +
-      "f.Int32ValueR\010dfcSid11\0228\n\tdfc_sid12\030\023 \001(" +
-      "\0132\033.google.protobuf.Int32ValueR\010dfcSid12" +
-      "\0228\n\tdfc_sid13\030\024 \001(\0132\033.google.protobuf.In" +
-      "t32ValueR\010dfcSid13\0228\n\tdfc_sid14\030\025 \001(\0132\033." +
-      "google.protobuf.Int32ValueR\010dfcSid14\0228\n\t" +
-      "dfc_sid15\030\026 \001(\0132\033.google.protobuf.Int32V" +
-      "alueR\010dfcSid15\0228\n\tdfc_sid16\030\027 \001(\0132\033.goog" +
-      "le.protobuf.Int32ValueR\010dfcSid16\0228\n\tdfc_" +
-      "sid17\030\030 \001(\0132\033.google.protobuf.Int32Value" +
-      "R\010dfcSid17\0228\n\tdfc_sid18\030\031 \001(\0132\033.google.p" +
-      "rotobuf.Int32ValueR\010dfcSid18\0228\n\tdfc_sid1" +
-      "9\030\032 \001(\0132\033.google.protobuf.Int32ValueR\010df" +
-      "cSid19\0228\n\tdfc_sid20\030\033 \001(\0132\033.google.proto" +
-      "buf.Int32ValueR\010dfcSid20\0228\n\tdfc_sid21\030\034 " +
-      "\001(\0132\033.google.protobuf.Int32ValueR\010dfcSid" +
-      "21\0228\n\tdfc_sid22\030\035 \001(\0132\033.google.protobuf." +
-      "Int32ValueR\010dfcSid22\0228\n\tdfc_sid23\030\036 \001(\0132" +
-      "\033.google.protobuf.Int32ValueR\010dfcSid23\0228" +
-      "\n\tdfc_sid24\030\037 \001(\0132\033.google.protobuf.Int3" +
-      "2ValueR\010dfcSid24\0228\n\tdfc_sid25\030  \001(\0132\033.go" +
-      "ogle.protobuf.Int32ValueR\010dfcSid25\0228\n\tdf" +
-      "c_sid26\030! \001(\0132\033.google.protobuf.Int32Val" +
-      "ueR\010dfcSid26\0228\n\tdfc_sid27\030\" \001(\0132\033.google" +
-      ".protobuf.Int32ValueR\010dfcSid27\0228\n\tdfc_si" +
-      "d28\030# \001(\0132\033.google.protobuf.Int32ValueR\010" +
-      "dfcSid28\0228\n\tdfc_sid29\030$ \001(\0132\033.google.pro" +
-      "tobuf.Int32ValueR\010dfcSid29\0228\n\tdfc_sid30\030" +
-      "% \001(\0132\033.google.protobuf.Int32ValueR\010dfcS" +
-      "id30\022B\n\016field_length01\030& \001(\0132\033.google.pr" +
-      "otobuf.Int32ValueR\rfieldLength01\022B\n\016fiel" +
-      "d_length02\030\' \001(\0132\033.google.protobuf.Int32" +
-      "ValueR\rfieldLength02\022B\n\016field_length03\030(" +
-      " \001(\0132\033.google.protobuf.Int32ValueR\rfield" +
-      "Length03\022B\n\016field_length04\030) \001(\0132\033.googl" +
-      "e.protobuf.Int32ValueR\rfieldLength04\022B\n\016" +
-      "field_length05\030* \001(\0132\033.google.protobuf.I" +
-      "nt32ValueR\rfieldLength05\022B\n\016field_length" +
-      "06\030+ \001(\0132\033.google.protobuf.Int32ValueR\rf" +
-      "ieldLength06\022B\n\016field_length07\030, \001(\0132\033.g" +
-      "oogle.protobuf.Int32ValueR\rfieldLength07" +
-      "\022B\n\016field_length08\030- \001(\0132\033.google.protob" +
-      "uf.Int32ValueR\rfieldLength08\022B\n\016field_le" +
-      "ngth09\030. \001(\0132\033.google.protobuf.Int32Valu" +
-      "eR\rfieldLength09\022B\n\016field_length10\030/ \001(\013" +
-      "2\033.google.protobuf.Int32ValueR\rfieldLeng" +
-      "th10\022B\n\016field_length11\0300 \001(\0132\033.google.pr" +
-      "otobuf.Int32ValueR\rfieldLength11\022B\n\016fiel" +
-      "d_length12\0301 \001(\0132\033.google.protobuf.Int32" +
-      "ValueR\rfieldLength12\022B\n\016field_length13\0302" +
-      " \001(\0132\033.google.protobuf.Int32ValueR\rfield" +
-      "Length13\022B\n\016field_length14\0303 \001(\0132\033.googl" +
-      "e.protobuf.Int32ValueR\rfieldLength14\022B\n\016" +
-      "field_length15\0304 \001(\0132\033.google.protobuf.I" +
-      "nt32ValueR\rfieldLength15\022B\n\016field_length" +
-      "16\0305 \001(\0132\033.google.protobuf.Int32ValueR\rf" +
-      "ieldLength16\022B\n\016field_length17\0306 \001(\0132\033.g" +
-      "oogle.protobuf.Int32ValueR\rfieldLength17" +
-      "\022B\n\016field_length18\0307 \001(\0132\033.google.protob",
-      "uf.Int32ValueR\rfieldLength18\022B\n\016field_le" +
-      "ngth19\0308 \001(\0132\033.google.protobuf.Int32Valu" +
-      "eR\rfieldLength19\022B\n\016field_length20\0309 \001(\013" +
-      "2\033.google.protobuf.Int32ValueR\rfieldLeng" +
-      "th20\022B\n\016field_length21\030: \001(\0132\033.google.pr" +
-      "otobuf.Int32ValueR\rfieldLength21\022B\n\016fiel" +
-      "d_length22\030; \001(\0132\033.google.protobuf.Int32" +
-      "ValueR\rfieldLength22\022B\n\016field_length23\030<" +
-      " \001(\0132\033.google.protobuf.Int32ValueR\rfield" +
-      "Length23\022B\n\016field_length24\030= \001(\0132\033.googl" +
-      "e.protobuf.Int32ValueR\rfieldLength24\022B\n\016" +
-      "field_length25\030> \001(\0132\033.google.protobuf.I" +
-      "nt32ValueR\rfieldLength25\022B\n\016field_length" +
-      "26\030? \001(\0132\033.google.protobuf.Int32ValueR\rf" +
-      "ieldLength26\022B\n\016field_length27\030@ \001(\0132\033.g" +
-      "oogle.protobuf.Int32ValueR\rfieldLength27" +
-      "\022B\n\016field_length28\030A \001(\0132\033.google.protob" +
-      "uf.Int32ValueR\rfieldLength28\022B\n\016field_le" +
-      "ngth29\030B \001(\0132\033.google.protobuf.Int32Valu" +
-      "eR\rfieldLength29\022B\n\016field_length30\030C \001(\013" +
-      "2\033.google.protobuf.Int32ValueR\rfieldLeng" +
-      "th30\022\'\n\017template_number\030D \001(\005R\016templateN" +
-      "umber\022F\n\021exclude_first_row\030E \001(\0132\032.googl" +
-      "e.protobuf.BoolValueR\017excludeFirstRow\"\037\n" +
-      "\035ListContactImportTemplatesReq\"{\n\035ListCo" +
-      "ntactImportTemplatesRes\022Z\n\027contact_impor" +
-      "t_template\030\001 \003(\0132\".api.v0alpha.ContactIm" +
-      "portTemplateR\025contactImportTemplate\"i\n U" +
-      "pdatePreviewRecordToFinishedReq\022*\n\021agent" +
-      "_session_sid\030\003 \001(\003R\017agentSessionSid\022\031\n\010t" +
-      "ask_sid\030\004 \001(\003R\007taskSid\"\"\n UpdatePreviewR" +
-      "ecordToFinishedRes\"X\n\027UpdateAgentHuntGro" +
-      "upReq\022$\n\016hunt_group_sid\030\003 \001(\003R\014huntGroup" +
-      "Sid\022\027\n\007user_id\030\004 \001(\tR\006userId\"\031\n\027UpdateAg" +
-      "entHuntGroupRes\"c\n MultiAgentHuntGroupAs" +
-      "signmentReq\022\031\n\010user_ids\030\001 \003(\tR\007userIds\022$" +
-      "\n\016hunt_group_sid\030\002 \001(\003R\014huntGroupSid\"\"\n " +
-      "MultiAgentHuntGroupAssignmentRes\"1\n\022GetA" +
-      "gentProfileReq\022\033\n\tagent_sid\030\002 \001(\003R\010agent" +
-      "Sid\"J\n\014AgentProfile\022\035\n\nfirst_name\030\002 \001(\tR" +
-      "\tfirstName\022\033\n\tlast_name\030\003 \001(\tR\010lastName\"" +
-      "\245\001\n\025RecalculateBillingReq\022:\n\005month\030\001 \001(\016" +
-      "2$.api.commons.RecalculateBillingMonthR\005" +
-      "month\0229\n\005types\030\002 \003(\0162#.api.commons.Recal" +
-      "culateBillingTypeR\005types\022\025\n\006org_id\030\003 \001(\t" +
-      "R\005orgId\"\362\001\n\025RecalculateBillingRes\022C\n\007res" +
-      "ults\030\001 \003(\0132).api.v0alpha.RecalculateBill" +
-      "ingRes.ResultR\007results\032\223\001\n\006Result\0227\n\004typ" +
-      "e\030\001 \001(\0162#.api.commons.RecalculateBilling" +
-      "TypeR\004type\022\032\n\007updated\030\002 \001(\003H\000R\007updated\022%" +
-      "\n\rerror_message\030\003 \001(\tH\000R\014errorMessageB\r\n" +
-      "\013result_type\"&\n$ListOutboundBroadcastTem" +
-      "plateDataReq\"\325\002\n$ListOutboundBroadcastTe" +
-      "mplateDataRes\022T\n\ttemplates\030\001 \003(\01326.api.v" +
-      "0alpha.ListOutboundBroadcastTemplateData" +
-      "Res.DataR\ttemplates\032\326\001\n\004Data\022\'\n\017template" +
-      "_number\030\001 \001(\003R\016templateNumber\022#\n\rtemplat" +
-      "e_name\030\002 \001(\tR\014templateName\022C\n\rtemplate_t" +
-      "ype\030\003 \001(\0162\036.api.commons.TemplateType.Enu" +
-      "mR\014templateType\022;\n\013modify_date\030\004 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\nmodifyDate\"q\n\034" +
-      "MultiAgentSkillAssignmentReq\022\031\n\010user_ids" +
-      "\030\002 \003(\tR\007userIds\0220\n\006skills\030\003 \003(\0132\030.api.v0" +
-      "alpha.SkillUpdateR\006skillsJ\004\010\001\020\002\"\036\n\034Multi" +
-      "AgentSkillAssignmentRes\"Z\n\036MultiAgentSki" +
-      "llUnassignmentReq\022\031\n\010user_ids\030\001 \003(\tR\007use" +
-      "rIds\022\035\n\nskill_sids\030\002 \003(\003R\tskillSids\" \n\036M" +
-      "ultiAgentSkillUnassignmentRes\"&\n$ListMAM" +
-      "AgentHuntGroupsByClientSidReq\"]\n$ListMAM" +
-      "AgentHuntGroupsByClientSidRes\0225\n\nhunt_gr" +
-      "oup\030\001 \003(\0132\026.api.v0alpha.HuntGroupR\thuntG" +
-      "roup\"a\n\024UpdateAgentSkillsReq\022\027\n\007user_id\030" +
-      "\001 \001(\tR\006userId\0220\n\006skills\030\002 \003(\0132\030.api.v0al" +
-      "pha.SkillUpdateR\006skills\"@\n\013SkillUpdate\022\033" +
-      "\n\tskill_sid\030\001 \001(\003R\010skillSid\022\024\n\005level\030\002 \001" +
-      "(\003R\005level\"\026\n\024UpdateAgentSkillsRes\"\022\n\020Lis" +
-      "tTtsVoicesReq\"A\n\020ListTtsVoicesRes\022-\n\006voi" +
-      "ces\030\001 \003(\0132\025.api.v0alpha.TtsVoiceR\006voices" +
-      "\"\206\001\n\010TtsVoice\022\"\n\rtts_voice_sid\030\001 \001(\003R\013tt" +
-      "sVoiceSid\022!\n\014display_name\030\002 \001(\tR\013display" +
-      "Name\022\037\n\013actual_name\030\003 \001(\tR\nactualName\022\022\n" +
-      "\004port\030\004 \001(\003R\004port\"k\n\021CreateTtsVoiceReq\022\037" +
-      "\n\013actual_name\030\001 \001(\tR\nactualName\022!\n\014displ" +
-      "ay_name\030\002 \001(\tR\013displayName\022\022\n\004port\030\003 \001(\003" +
-      "R\004port\"\023\n\021CreateTtsVoiceRes\"7\n\021DeleteTts" +
-      "VoiceReq\022\"\n\rtts_voice_sid\030\001 \001(\003R\013ttsVoic" +
-      "eSid\"\023\n\021DeleteTtsVoiceRes\"m\n\rCustomDataK" +
-      "ey\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005value\030\002 \001(\tR\005v" +
-      "alue\0222\n\025client_properties_sid\030\003 \001(\003R\023cli" +
-      "entPropertiesSid\"\027\n\025ListCustomDataKeysRe" +
-      "q\"P\n\025ListCustomDataKeysRes\0227\n\tdata_keys\030" +
-      "\001 \003(\0132\032.api.v0alpha.CustomDataKeyR\010dataK" +
-      "eys\"O\n\026CreateCustomDataKeyReq\0225\n\010data_ke" +
-      "y\030\001 \001(\0132\032.api.v0alpha.CustomDataKeyR\007dat" +
-      "aKey\"\030\n\026CreateCustomDataKeyRes\"L\n\026Delete" +
-      "CustomDataKeyReq\0222\n\025client_properties_si" +
-      "d\030\001 \001(\003R\023clientPropertiesSid\"\030\n\026DeleteCu" +
-      "stomDataKeyRes\"N\n\026UpdateCustomDataKeyReq" +
-      "\0224\n\007dataKey\030\001 \001(\0132\032.api.v0alpha.CustomDa" +
-      "taKeyR\007dataKey\"\030\n\026UpdateCustomDataKeyRes" +
-      "\"\214\006\n\tExtension\022*\n\021pbx_extension_sid\030\001 \001(" +
-      "\003R\017pbxExtensionSid\022)\n\020extension_number\030\002" +
-      " \001(\tR\017extensionNumber\0224\n\005agent\030\003 \001(\0132\034.a" +
-      "pi.v0alpha.Extension.AgentH\000R\005agent\022A\n\nh" +
-      "unt_group\030\004 \001(\0132 .api.v0alpha.Extension." +
-      "HuntGroupH\000R\thuntGroup\022!\n\014agent_access\030\005" +
-      " \001(\010R\013agentAccess\0222\n\005email\030\007 \001(\0132\034.api.v" +
-      "0alpha.Extension.EmailR\005email\022\032\n\010greetin" +
-      "g\030\010 \001(\tR\010greeting\022!\n\014has_greeting\030\t \001(\010R" +
-      "\013hasGreeting\022)\n\020unheard_messages\030\n \001(\005R\017" +
-      "unheardMessages\022%\n\016total_messages\030\013 \001(\005R" +
-      "\rtotalMessages\032b\n\005Agent\022\035\n\nfirst_name\030\002 " +
-      "\001(\tR\tfirstName\022\033\n\tlast_name\030\003 \001(\tR\010lastN" +
-      "ame\022\027\n\007user_id\030\004 \001(\tR\006userIdJ\004\010\001\020\002\032Y\n\tHu" +
-      "ntGroup\022$\n\016hunt_group_sid\030\001 \001(\003R\014huntGro" +
-      "upSid\022&\n\017hunt_group_name\030\002 \001(\tR\rhuntGrou" +
-      "pName\032p\n\005Email\022\030\n\007subject\030\001 \001(\tR\007subject" +
-      "\022\022\n\004body\030\002 \001(\tR\004body\022\034\n\taddresses\030\003 \003(\tR" +
-      "\taddresses\022\033\n\tattach_vm\030\004 \001(\010R\010attachVmB" +
-      "\020\n\016extension_typeJ\004\010\006\020\007\"\030\n\026ListAgentExte" +
-      "nsionsReq\"P\n\026ListAgentExtensionsRes\0226\n\ne" +
-      "xtensions\030\001 \003(\0132\026.api.v0alpha.ExtensionR" +
-      "\nextensions\"\034\n\032ListHuntGroupExtensionsRe" +
-      "q\"T\n\032ListHuntGroupExtensionsRes\0226\n\nexten" +
-      "sions\030\001 \003(\0132\026.api.v0alpha.ExtensionR\next" +
-      "ensions\"Y\n\022CreateExtensionReq\022C\n\021extensi" +
-      "on_message\030\001 \001(\0132\026.api.v0alpha.Extension" +
-      "R\020extensionMessage\"\024\n\022CreateExtensionRes" +
-      "\"Y\n\022UpdateExtensionReq\022C\n\021extension_mess" +
-      "age\030\001 \001(\0132\026.api.v0alpha.ExtensionR\020exten" +
-      "sionMessage\"\024\n\022UpdateExtensionRes\"@\n\022Del" +
-      "eteExtensionReq\022*\n\021pbx_extension_sid\030\001 \001" +
-      "(\003R\017pbxExtensionSid\"\024\n\022DeleteExtensionRe" +
-      "s\"m\n\030GetActivityLogHistoryReq\022\035\n\nday_fil" +
-      "ter\030\001 \001(\005R\tdayFilter\022\033\n\tuser_name\030\002 \001(\tR" +
-      "\010userName\022\025\n\006org_id\030\004 \001(\tR\005orgId\"Y\n\030GetA" +
-      "ctivityLogHistoryRes\022=\n\ractivity_logs\030\001 " +
-      "\003(\0132\030.api.v0alpha.ActivityLogR\014activityL" +
-      "ogs\"\266\002\n\013ActivityLog\0229\n\tuser_name\030\001 \001(\0132\034" +
-      ".google.protobuf.StringValueR\010userName\022C" +
-      "\n\016origination_ip\030\002 \001(\0132\034.google.protobuf" +
-      ".StringValueR\roriginationIp\022=\n\013action_da" +
-      "te\030\003 \001(\0132\034.google.protobuf.StringValueR\n" +
-      "actionDate\0224\n\006action\030\004 \001(\0132\034.google.prot" +
-      "obuf.StringValueR\006action\0222\n\005notes\030\005 \001(\0132" +
-      "\034.google.protobuf.StringValueR\005notes\"O\n\r" +
-      "ListSkillsReq\022>\n\014type_filters\030\001 \003(\0162\033.ap" +
-      "i.commons.SkillType.EnumR\013typeFilters\"=\n" +
-      "\rListSkillsRes\022,\n\006skills\030\001 \003(\0132\024.api.v0a" +
-      "lpha.P3SkillR\006skills\"\235\001\n\007P3Skill\022\026\n\006regi" +
-      "on\030\001 \001(\tR\006region\022\023\n\005p3_id\030\002 \001(\tR\004p3Id\022\022\n" +
-      "\004name\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013" +
-      "description\022/\n\004type\030\005 \001(\0162\033.api.commons." +
-      "SkillType.EnumR\004type\"\032\n\030ListScheduleRule" +
-      "sRequest\"[\n\027ListScheduleRulesResult\022@\n\016s" +
-      "chedule_rules\030\001 \003(\0132\031.api.v0alpha.Schedu" +
-      "leRuleR\rscheduleRules\"\354\001\n\014ScheduleRule\022*" +
-      "\n\021schedule_rule_sid\030\001 \001(\003R\017scheduleRuleS" +
-      "id\022:\n\nclient_sid\030\002 \001(\0132\033.google.protobuf" +
-      ".Int64ValueR\tclientSid\0220\n\004name\030\003 \001(\0132\034.g" +
-      "oogle.protobuf.StringValueR\004name\022B\n\016rule" +
-      "_time_zone\030\004 \001(\0132\034.google.protobuf.Strin" +
-      "gValueR\014ruleTimeZone\"\023\n\021ListSmsNumbersRe" +
-      "q\"L\n\021ListSmsNumbersRes\0227\n\013sms_numbers\030\001 " +
-      "\003(\0132\026.api.commons.SmsNumberR\nsmsNumbers2" +
-      "\344~\n\005P3Api\022\206\001\n\021GetAgentHuntGroup\022!.api.v0" +
-      "alpha.GetAgentHuntGroupReq\032\026.api.v0alpha" +
-      ".HuntGroup\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v0alpha/" +
-      "p3api/getagenthuntgroup:\001*\022\203\001\n\017GetAgentS" +
-      "ession\022\037.api.v0alpha.GetAgentSessionReq\032" +
-      "\031.api.v0alpha.AgentSession\"4\272\270\221\002\002\030\001\202\323\344\223\002" +
-      "\'\"\"/api/v0alpha/p3api/getagentsession:\001*" +
-      "\022\205\001\n\016GetAgentSkills\022\036.api.v0alpha.GetAge" +
-      "ntSkillsReq\032\036.api.v0alpha.GetAgentSkills" +
-      "Res\"3\272\270\221\002\002\030\001\202\323\344\223\002&\"!/api/v0alpha/p3api/g" +
-      "etagentskills:\001*\022\217\001\n\020CreateAgentSkill\022 ." +
-      "api.v0alpha.CreateAgentSkillReq\032 .api.v0" +
-      "alpha.CreateAgentSkillRes\"7\272\270\221\002\004\n\002\010d\202\323\344\223" +
-      "\002(\"#/api/v0alpha/p3api/createagentskill:" +
-      "\001*\022\217\001\n\020UpdateAgentSkill\022 .api.v0alpha.Up" +
-      "dateAgentSkillReq\032 .api.v0alpha.UpdateAg" +
-      "entSkillRes\"7\272\270\221\002\004\n\002\010d\202\323\344\223\002(\"#/api/v0alp" +
-      "ha/p3api/updateagentskill:\001*\022\217\001\n\020DeleteA" +
-      "gentSkill\022 .api.v0alpha.DeleteAgentSkill" +
-      "Req\032 .api.v0alpha.DeleteAgentSkillRes\"7\272" +
-      "\270\221\002\004\n\002\010d\202\323\344\223\002(\"#/api/v0alpha/p3api/delet" +
-      "eagentskill:\001*\022\213\001\n\017ListAgentSkills\022\037.api" +
-      ".v0alpha.ListAgentSkillsReq\032\037.api.v0alph" +
-      "a.ListAgentSkillsRes\"6\272\270\221\002\004\n\002\010e\202\323\344\223\002\'\"\"/" +
-      "api/v0alpha/p3api/listagentskills:\001*\022\261\001\n" +
-      "\031ListSkillsForCurrentAgent\022).api.v0alpha" +
-      ".ListSkillsForCurrentAgentReq\032).api.v0al" +
-      "pha.ListSkillsForCurrentAgentRes\">\272\270\221\002\002\030" +
-      "\001\202\323\344\223\0021\",/api/v0alpha/p3api/listskillsfo" +
-      "rcurrentagent:\001*\022w\n\nListSkills\022\032.api.v0a" +
-      "lpha.ListSkillsReq\032\032.api.v0alpha.ListSki" +
-      "llsRes\"1\272\270\221\002\004\n\002\010e\202\323\344\223\002\"\"\035/api/v0alpha/p3" +
-      "api/listskills:\001*\022\224\001\n\021UpdateAgentSkills\022" +
-      "!.api.v0alpha.UpdateAgentSkillsReq\032!.api" +
-      ".v0alpha.UpdateAgentSkillsRes\"9\272\270\221\002\005\n\003\010\220" +
-      "\003\202\323\344\223\002)\"$/api/v0alpha/p3api/updateagents" +
-      "kills:\001*\022|\n\017GetCurrentAgent\022\037.api.v0alph" +
-      "a.GetCurrentAgentReq\032\022.api.v0alpha.Agent" +
-      "\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha/p3api/getc" +
-      "urrentagent:\001*\022\221\001\n\021GetClientInfoData\022!.a" +
-      "pi.v0alpha.GetClientInfoDataReq\032!.api.v0" +
-      "alpha.GetClientInfoDataRes\"6\272\270\221\002\002\030\001\202\323\344\223\002" +
-      ")\"$/api/v0alpha/p3api/getclientinfodata:" +
-      "\001*\022\275\001\n\034GetClientInfoDisplayTemplate\022,.ap" +
-      "i.v0alpha.GetClientInfoDisplayTemplateRe" +
-      "q\032,.api.v0alpha.GetClientInfoDisplayTemp" +
-      "lateRes\"A\272\270\221\002\002\030\001\202\323\344\223\0024\"//api/v0alpha/p3a" +
-      "pi/getclientinfodisplaytemplate:\001*\022\251\001\n\027L" +
-      "istAgentStatisticsData\022\'.api.v0alpha.Lis" +
-      "tAgentStatisticsDataReq\032\'.api.v0alpha.Li" +
-      "stAgentStatisticsDataRes\"<\272\270\221\002\002\030\001\202\323\344\223\002/\"" +
-      "*/api/v0alpha/p3api/listagentstatisticsd" +
-      "ata:\001*\022\221\001\n\021ListPBXExtensions\022!.api.v0alp" +
-      "ha.ListPBXExtensionsReq\032!.api.v0alpha.Li" +
-      "stPBXExtensionsRes\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/" +
-      "v0alpha/p3api/listpbxextensions:\001*\022\234\001\n\023L" +
-      "istAgentExtensions\022#.api.v0alpha.ListAge" +
-      "ntExtensionsReq\032#.api.v0alpha.ListAgentE" +
-      "xtensionsRes\";\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002+\"&/api/v0a" +
-      "lpha/p3api/listagentextensions:\001*\022\254\001\n\027Li" +
-      "stHuntGroupExtensions\022\'.api.v0alpha.List" +
-      "HuntGroupExtensionsReq\032\'.api.v0alpha.Lis" +
-      "tHuntGroupExtensionsRes\"?\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002" +
-      "/\"*/api/v0alpha/p3api/listhuntgroupexten" +
-      "sions:\001*\022\214\001\n\017CreateExtension\022\037.api.v0alp" +
-      "ha.CreateExtensionReq\032\037.api.v0alpha.Crea" +
-      "teExtensionRes\"7\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002\'\"\"/api/v" +
-      "0alpha/p3api/createextension:\001*\022\214\001\n\017Dele" +
-      "teExtension\022\037.api.v0alpha.DeleteExtensio" +
-      "nReq\032\037.api.v0alpha.DeleteExtensionRes\"7\272" +
-      "\270\221\002\005\n\003\010\220\003\202\323\344\223\002\'\"\"/api/v0alpha/p3api/dele" +
-      "teextension:\001*\022\214\001\n\017UpdateExtension\022\037.api" +
-      ".v0alpha.UpdateExtensionReq\032\037.api.v0alph" +
-      "a.UpdateExtensionRes\"7\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002\'\"\"" +
-      "/api/v0alpha/p3api/updateextension:\001*\022\225\001" +
-      "\n\022UpdatePBXExtension\022\".api.v0alpha.Updat" +
-      "ePBXExtensionReq\032\".api.v0alpha.UpdatePBX" +
-      "ExtensionRes\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v0alph" +
-      "a/p3api/updatepbxextension:\001*\022\221\001\n\021Create" +
-      "DNCLNumbers\022!.api.v0alpha.CreateDNCLNumb" +
-      "ersReq\032!.api.v0alpha.CreateDNCLNumbersRe" +
-      "s\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v0alpha/p3api/cre" +
-      "atednclnumbers:\001*\022\235\001\n\024GetScriptOrRespons" +
-      "es\022$.api.v0alpha.GetScriptOrResponsesReq" +
-      "\032$.api.v0alpha.GetScriptOrResponsesRes\"9" +
-      "\272\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v0alpha/p3api/getscr" +
-      "iptorresponses:\001*\022\253\001\n\031GetHuntGroupAgentS" +
-      "ettings\022).api.v0alpha.GetHuntGroupAgentS" +
-      "ettingsReq\032#.api.v0alpha.HuntGroupAgentS" +
-      "ettings\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v0alpha/p3a" +
-      "pi/gethuntgroupagentsettings:\001*\022\241\001\n\025List" +
-      "HuntGroupWebLinks\022%.api.v0alpha.ListHunt" +
-      "GroupWebLinksReq\032%.api.v0alpha.ListHuntG" +
-      "roupWebLinksRes\":\272\270\221\002\002\030\001\202\323\344\223\002-\"(/api/v0a" +
-      "lpha/p3api/listhuntgroupweblinks:\001*\022\245\001\n\026" +
-      "GetHuntGroupPauseCodes\022&.api.v0alpha.Get" +
-      "HuntGroupPauseCodesReq\032&.api.v0alpha.Get" +
-      "HuntGroupPauseCodesRes\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/" +
-      "api/v0alpha/p3api/gethuntgrouppausecodes" +
-      ":\001*\022\235\001\n\024ListAgentCallHistory\022$.api.v0alp" +
-      "ha.ListAgentCallHistoryReq\032$.api.v0alpha" +
-      ".ListAgentCallHistoryRes\"9\272\270\221\002\002\030\001\202\323\344\223\002,\"" +
-      "\'/api/v0alpha/p3api/listagentcallhistory" +
-      ":\001*\022\270\001\n\032ListClientPhoneBookEntries\022*.api" +
-      ".v0alpha.ListClientPhoneBookEntriesReq\032*" +
-      ".api.v0alpha.ListClientPhoneBookEntriesR" +
-      "es\"B\272\270\221\002\005\n\003\010\220\003\202\323\344\223\0022\"-/api/v0alpha/p3api" +
-      "/listclientphonebookentries:\001*\022\304\001\n\035ListH" +
-      "untGroupPhoneBookEntries\022-.api.v0alpha.L" +
-      "istHuntGroupPhoneBookEntriesReq\032-.api.v0" +
-      "alpha.ListHuntGroupPhoneBookEntriesRes\"E" +
-      "\272\270\221\002\005\n\003\010\220\003\202\323\344\223\0025\"0/api/v0alpha/p3api/lis" +
-      "thuntgroupphonebookentries:\001*\022\240\001\n\024Create" +
-      "PhoneBookEntry\022$.api.v0alpha.CreatePhone" +
-      "BookEntryReq\032$.api.v0alpha.CreatePhoneBo" +
-      "okEntryRes\"<\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002,\"\'/api/v0alp" +
-      "ha/p3api/createphonebookentry:\001*\022\240\001\n\024Upd" +
-      "atePhoneBookEntry\022$.api.v0alpha.UpdatePh" +
-      "oneBookEntryReq\032$.api.v0alpha.UpdatePhon" +
-      "eBookEntryRes\"<\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002,\"\'/api/v0" +
-      "alpha/p3api/updatephonebookentry:\001*\022\240\001\n\024" +
-      "DeletePhoneBookEntry\022$.api.v0alpha.Delet" +
-      "ePhoneBookEntryReq\032$.api.v0alpha.DeleteP" +
-      "honeBookEntryRes\"<\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002,\"\'/api" +
-      "/v0alpha/p3api/deletephonebookentry:\001*\022\205" +
-      "\001\n\016ListPhoneBooks\022\036.api.v0alpha.ListPhon" +
-      "eBooksReq\032\036.api.v0alpha.ListPhoneBooksRe" +
-      "s\"3\272\270\221\002\002\030\001\202\323\344\223\002&\"!/api/v0alpha/p3api/lis" +
-      "tphonebooks:\001*\022\221\001\n\021ListAgentTriggers\022!.a" +
-      "pi.v0alpha.ListAgentTriggersReq\032!.api.v0" +
-      "alpha.ListAgentTriggersRes\"6\272\270\221\002\002\030\001\202\323\344\223\002" +
-      ")\"$/api/v0alpha/p3api/listagenttriggers:" +
-      "\001*\022\271\001\n\033GetCampaignCompletionStatus\022+.api" +
-      ".v0alpha.GetCampaignCompletionStatusReq\032" +
-      "+.api.v0alpha.GetCampaignCompletionStatu" +
-      "sRes\"@\272\270\221\002\002\030\001\202\323\344\223\0023\"./api/v0alpha/p3api/" +
-      "getcampaigncompletionstatus:\001*\022\211\001\n\017GetLo" +
-      "stPeerInfo\022\037.api.v0alpha.GetLostPeerInfo" +
-      "Req\032\037.api.v0alpha.GetLostPeerInfoRes\"4\272\270" +
-      "\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha/p3api/getlostp" +
-      "eerinfo:\001*\022\225\001\n\022GetDispositionKeys\022\".api." +
-      "v0alpha.GetDispositionKeysReq\032\".api.v0al" +
-      "pha.GetDispositionKeysRes\"7\272\270\221\002\002\030\001\202\323\344\223\002*" +
-      "\"%/api/v0alpha/p3api/getdispositionkeys:" +
-      "\001*\022\205\001\n\016GetReadyAgents\022\036.api.v0alpha.GetR" +
-      "eadyAgentsReq\032\036.api.v0alpha.GetReadyAgen" +
-      "tsRes\"3\272\270\221\002\002\030\001\202\323\344\223\002&\"!/api/v0alpha/p3api" +
-      "/getreadyagents:\001*\022\311\001\n\037ListAgentQueueAnd" +
-      "OnHoldCallData\022/.api.v0alpha.ListAgentQu" +
-      "eueAndOnHoldCallDataReq\032/.api.v0alpha.Li" +
-      "stAgentQueueAndOnHoldCallDataRes\"D\272\270\221\002\002\030" +
-      "\001\202\323\344\223\0027\"2/api/v0alpha/p3api/listagentque" +
-      "ueandonholdcalldata:\001*\022\245\001\n\026SaveAgentCall" +
-      "Responses\022&.api.v0alpha.SaveAgentCallRes" +
-      "ponsesReq\032&.api.v0alpha.SaveAgentCallRes" +
-      "ponsesRes\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api/v0alpha/p" +
-      "3api/saveagentcallresponses:\001*\022\255\001\n\030ListA" +
-      "gentTransferOptions\022(.api.v0alpha.ListAg" +
-      "entTransferOptionsReq\032(.api.v0alpha.List" +
-      "AgentTransferOptionsRes\"=\272\270\221\002\002\030\001\202\323\344\223\0020\"+" +
-      "/api/v0alpha/p3api/listagenttransferopti" +
-      "ons:\001*\022\275\001\n\034UpdateAgentCallResponseValue\022" +
-      ",.api.v0alpha.UpdateAgentCallResponseVal" +
-      "ueReq\032,.api.v0alpha.UpdateAgentCallRespo" +
-      "nseValueRes\"A\272\270\221\002\002\030\001\202\323\344\223\0024\"//api/v0alpha" +
-      "/p3api/updateagentcallresponsevalue:\001*\022\231" +
-      "\001\n\023GetIntercomPeerInfo\022#.api.v0alpha.Get" +
-      "IntercomPeerInfoReq\032#.api.v0alpha.GetInt" +
-      "ercomPeerInfoRes\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0" +
-      "alpha/p3api/getintercompeerinfo:\001*\022\261\001\n\031L" +
-      "istOrgResponseEvaluators\022).api.v0alpha.L" +
-      "istOrgResponseEvaluatorsReq\032).api.v0alph" +
-      "a.ListOrgResponseEvaluatorsRes\">\272\270\221\002\002\030\001\202" +
-      "\323\344\223\0021\",/api/v0alpha/p3api/listorgrespons" +
-      "eevaluators:\001*\022\321\001\n!GetQueueConfiguration" +
-      "OptionsArray\0221.api.v0alpha.GetQueueConfi" +
-      "gurationOptionsArrayReq\0321.api.v0alpha.Ge" +
-      "tQueueConfigurationOptionsArrayRes\"F\272\270\221\002" +
-      "\002\030\001\202\323\344\223\0029\"4/api/v0alpha/p3api/getqueueco" +
-      "nfigurationoptionsarray:\001*\022\251\001\n\027GetCondit" +
-      "ionalDNCLRules\022\'.api.v0alpha.GetConditio" +
-      "nalDNCLRulesReq\032\'.api.v0alpha.GetConditi" +
-      "onalDNCLRulesRes\"<\272\270\221\002\002\030\001\202\323\344\223\002/\"*/api/v0" +
-      "alpha/p3api/getconditionaldnclrules:\001*\022\211" +
-      "\001\n\017ManualDialStart\022\037.api.v0alpha.ManualD" +
-      "ialStartReq\032\037.api.v0alpha.ManualDialStar" +
-      "tRes\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha/p3api/" +
-      "manualdialstart:\001*\022\253\001\n\027ListExtendedCallH" +
-      "istory\022\'.api.v0alpha.ListExtendedCallHis" +
-      "toryReq\032\'.api.v0alpha.ListExtendedCallHi" +
-      "storyRes\"<\272\270\221\002\002\030\001\202\323\344\223\002/\"*/api/v0alpha/p3" +
-      "api/listextendedcallhistory:\001*0\001\022\251\001\n\027Lis" +
-      "tWhiteListPhoneBooks\022\'.api.v0alpha.ListW" +
-      "hiteListPhoneBooksReq\032\'.api.v0alpha.List" +
-      "WhiteListPhoneBooksRes\"<\272\270\221\002\002\030\001\202\323\344\223\002/\"*/" +
-      "api/v0alpha/p3api/listwhitelistphonebook" +
-      "s:\001*\022\235\001\n\025DownloadCallRecording\022%.api.v0a" +
-      "lpha.DownloadCallRecordingReq\032!.api.v0al" +
-      "pha.DownloadRecordingRes\":\272\270\221\002\002\030\001\202\323\344\223\002-\"" +
-      "(/api/v0alpha/p3api/downloadcallrecordin" +
-      "g:\001*\022\240\001\n\026DownloadCallRecordings\022&.api.v0" +
-      "alpha.DownloadCallRecordingsReq\032!.api.v0" +
-      "alpha.DownloadRecordingRes\";\272\270\221\002\002\030\001\202\323\344\223\002" +
-      ".\")/api/v0alpha/p3api/downloadcallrecord" +
-      "ings:\001*\022\235\001\n\024PlacePreviewDialCall\022$.api.v" +
-      "0alpha.PlacePreviewDialCallReq\032$.api.v0a" +
-      "lpha.PlacePreviewDialCallRes\"9\272\270\221\002\002\030\001\202\323\344" +
-      "\223\002,\"\'/api/v0alpha/p3api/placepreviewdial" +
-      "call:\001*\022\241\001\n\025CancelPreviewDialCall\022%.api." +
-      "v0alpha.CancelPreviewDialCallReq\032%.api.v" +
-      "0alpha.CancelPreviewDialCallRes\":\272\270\221\002\002\030\001" +
-      "\202\323\344\223\002-\"(/api/v0alpha/p3api/cancelpreview" +
-      "dialcall:\001*\022}\n\020UpdateTaskStatus\022 .api.v0" +
-      "alpha.UpdateTaskStatusReq\032\020.api.v0alpha." +
-      "Nil\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v0alpha/p3api/u" +
-      "pdatetaskstatus:\001*\022\261\001\n\031ListCallbackRouti" +
-      "ngAgents\022).api.v0alpha.ListCallbackRouti" +
-      "ngAgentsReq\032).api.v0alpha.ListCallbackRo" +
-      "utingAgentsRes\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v0al" +
-      "pha/p3api/listcallbackroutingagents:\001*\022\261" +
-      "\001\n\031ListCallbackRoutingSkills\022).api.v0alp" +
-      "ha.ListCallbackRoutingSkillsReq\032).api.v0" +
-      "alpha.ListCallbackRoutingSkillsRes\">\272\270\221\002" +
-      "\002\030\001\202\323\344\223\0021\",/api/v0alpha/p3api/listcallba" +
-      "ckroutingskills:\001*\022\235\001\n\024HandleRecordingDe" +
-      "lay\022$.api.v0alpha.HandleRecordingDelayRe" +
-      "q\032$.api.v0alpha.HandleRecordingDelayRes\"" +
-      "9\272\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v0alpha/p3api/handl" +
-      "erecordingdelay:\001*\022\275\001\n\034UpdateAgentAssign" +
-      "edHuntGroup\022,.api.v0alpha.UpdateAgentAss" +
-      "ignedHuntGroupReq\032,.api.v0alpha.UpdateAg" +
-      "entAssignedHuntGroupRes\"A\272\270\221\002\002\030\001\202\323\344\223\0024\"/" +
-      "/api/v0alpha/p3api/updateagentassignedhu" +
-      "ntgroup:\001*\022y\n\013GetCallData\022\033.api.v0alpha." +
-      "GetCallDataReq\032\033.api.v0alpha.GetCallData",
-      "Res\"0\272\270\221\002\002\030\001\202\323\344\223\002#\"\036/api/v0alpha/p3api/g" +
-      "etcalldata:\001*\022\207\001\n\016ListHuntGroups\022\036.api.v" +
-      "0alpha.ListHuntGroupsReq\032\036.api.v0alpha.L" +
-      "istHuntGroupsRes\"5\272\270\221\002\004\n\002\010e\202\323\344\223\002&\"!/api/" +
-      "v0alpha/p3api/listHuntGroups:\001*\022\265\001\n\032List" +
-      "ReassignmentHuntGroups\022*.api.v0alpha.Lis" +
-      "tReassignmentHuntGroupsReq\032*.api.v0alpha" +
-      ".ListReassignmentHuntGroupsRes\"?\272\270\221\002\002\030\001\202" +
-      "\323\344\223\0022\"-/api/v0alpha/p3api/listreassignme" +
-      "nthuntgroups:\001*\022\231\001\n\023GetOrgAgentSettings\022" +
-      "#.api.v0alpha.GetOrgAgentSettingsReq\032#.a" +
-      "pi.v0alpha.GetOrgAgentSettingsRes\"8\272\270\221\002\002" +
-      "\030\001\202\323\344\223\002+\"&/api/v0alpha/p3api/getorgagent" +
-      "settings:\001*\022\251\001\n\027ListCallerIdsFromBucket\022" +
-      "\'.api.v0alpha.ListCallerIdsFromBucketReq" +
-      "\032\'.api.v0alpha.ListCallerIdsFromBucketRe" +
-      "s\"<\272\270\221\002\002\030\001\202\323\344\223\002/\"*/api/v0alpha/p3api/lis" +
-      "tcalleridsfrombucket:\001*\022\235\001\n\024SaveLastCall" +
-      "Response\022$.api.v0alpha.SaveLastCallRespo" +
-      "nseReq\032$.api.v0alpha.SaveLastCallRespons" +
-      "eRes\"9\272\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v0alpha/p3api/" +
-      "savelastcallresponse:\001*\022\321\001\n!ListAgentCal" +
-      "lLogsByCallSidAndType\0221.api.v0alpha.List" +
-      "AgentCallLogsByCallSidAndTypeReq\0321.api.v" +
-      "0alpha.ListAgentCallLogsByCallSidAndType" +
-      "Res\"F\272\270\221\002\002\030\001\202\323\344\223\0029\"4/api/v0alpha/p3api/l" +
-      "istagentcalllogsbycallsidandtype:\001*\022\271\001\n\033" +
-      "ListAgentCallResponseValues\022+.api.v0alph" +
-      "a.ListAgentCallResponseValuesReq\032+.api.v" +
-      "0alpha.ListAgentCallResponseValuesRes\"@\272" +
-      "\270\221\002\002\030\001\202\323\344\223\0023\"./api/v0alpha/p3api/listage" +
-      "ntcallresponsevalues:\001*\022\261\001\n\036GetContactSc" +
-      "hemaByContactGroup\022..api.v0alpha.GetCont" +
-      "actSchemaByContactGroupReq\032\032.api.v0alpha" +
-      ".ContactSchema\"C\272\270\221\002\002\030\001\202\323\344\223\0026\"1/api/v0al" +
-      "pha/p3api/getcontactschemabycontactgroup" +
-      ":\001*\022\325\001\n\"ListContactGroupDetailsByClientS" +
-      "id\0222.api.v0alpha.ListContactGroupDetails" +
-      "ByClientSidReq\0322.api.v0alpha.ListContact" +
-      "GroupDetailsByClientSidRes\"G\272\270\221\002\002\030\001\202\323\344\223\002" +
-      ":\"5/api/v0alpha/p3api/listcontactgroupde" +
-      "tailsbyclientsid:\001*\022\221\001\n\026GetContactGroupD" +
-      "etails\022\037.api.v0alpha.GetContactGroupReq\032" +
-      "\031.api.v0alpha.ContactGroup\";\272\270\221\002\002\030\001\202\323\344\223\002" +
-      ".\")/api/v0alpha/p3api/getcontactgroupdet" +
-      "ails:\001*\022\225\001\n\023GetContactGroupSize\022\037.api.v0" +
-      "alpha.GetContactGroupReq\032#.api.v0alpha.G" +
-      "etContactGroupSizeRes\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/a" +
-      "pi/v0alpha/p3api/getcontactgroupsize:\001*\022" +
-      "\303\001\n\035CreateContactFieldDescription\022-.api." +
-      "v0alpha.CreateContactFieldDescriptionReq" +
-      "\032-.api.v0alpha.CreateContactFieldDescrip" +
-      "tionRes\"D\272\270\221\002\004\n\002\010d\202\323\344\223\0025\"0/api/v0alpha/p" +
-      "3api/createcontactfielddescription:\001*\022\303\001" +
-      "\n\035UpdateContactFieldDescription\022-.api.v0" +
-      "alpha.UpdateContactFieldDescriptionReq\032-" +
-      ".api.v0alpha.UpdateContactFieldDescripti" +
-      "onRes\"D\272\270\221\002\004\n\002\010d\202\323\344\223\0025\"0/api/v0alpha/p3a" +
-      "pi/updatecontactfielddescription:\001*\022\303\001\n\035" +
-      "DeleteContactFieldDescription\022-.api.v0al" +
-      "pha.DeleteContactFieldDescriptionReq\032-.a" +
-      "pi.v0alpha.DeleteContactFieldDescription" +
-      "Res\"D\272\270\221\002\004\n\002\010d\202\323\344\223\0025\"0/api/v0alpha/p3api" +
-      "/deletecontactfielddescription:\001*\022\275\001\n\034Li" +
-      "stContactFieldDescriptions\022,.api.v0alpha" +
-      ".ListContactFieldDescriptionsReq\032,.api.v" +
-      "0alpha.ListContactFieldDescriptionsRes\"A" +
-      "\272\270\221\002\002\030\001\202\323\344\223\0024\"//api/v0alpha/p3api/listco" +
-      "ntactfielddescriptions:\001*\022\331\001\n#ListContac" +
-      "tFieldDescriptionsByCGSid\0223.api.v0alpha." +
-      "ListContactFieldDescriptionsByCGSidReq\0323" +
+      "R\027contactFieldDescription\" \n\036ListTableTe" +
+      "mplatePropertiesReq\"\320\001\n\036ListTableTemplat" +
+      "ePropertiesRes\022V\n\025agent_table_templates\030" +
+      "\001 \003(\0132\".api.v0alpha.TableTemplatePropert" +
+      "yR\023agentTableTemplates\022V\n\025queue_table_te" +
+      "mplates\030\002 \003(\0132\".api.v0alpha.TableTemplat" +
+      "ePropertyR\023queueTableTemplates\"b\n\025TableT" +
+      "emplateProperty\0225\n\027xml_client_property_s" +
+      "id\030\001 \001(\003R\024xmlClientPropertySid\022\022\n\004name\030\002" +
+      " \001(\tR\004name\"\033\n\031ListAgentSkillsFiltersReq\"" +
+      "m\n\031ListAgentSkillsFiltersRes\022P\n\024agent_sk" +
+      "ills_filters\030\001 \003(\0132\036.api.v0alpha.AgentSk" +
+      "illsFilterR\022agentSkillsFilters\"^\n\021AgentS" +
+      "killsFilter\0225\n\027xml_client_property_sid\030\001" +
+      " \001(\003R\024xmlClientPropertySid\022\022\n\004name\030\002 \001(\t" +
+      "R\004name\"\034\n\032ListCustomReportFiltersReq\"y\n\032" +
+      "ListCustomReportFiltersRes\022[\n\025custom_rep" +
+      "ort_filters\030\001 \003(\0132\'.api.v0alpha.CustomRe" +
+      "portFilterPropertyR\023customReportFilters\"" +
+      "g\n\032CustomReportFilterProperty\0225\n\027xml_cli" +
+      "ent_property_sid\030\001 \001(\003R\024xmlClientPropert" +
+      "ySid\022\022\n\004name\030\002 \001(\tR\004name\"\327 \n\025ContactImpo" +
+      "rtTemplate\022=\n\033contact_import_template_si" +
+      "d\030\001 \001(\003R\030contactImportTemplateSid\022\022\n\004nam" +
+      "e\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013desc" +
+      "ription\022:\n\tdelimiter\030\005 \001(\0132\034.google.prot" +
+      "obuf.StringValueR\tdelimiter\0222\n\005quote\030\006 \001" +
+      "(\0132\034.google.protobuf.StringValueR\005quote\022" +
+      "$\n\016is_fixed_width\030\007 \001(\010R\014isFixedWidth\0228\n" +
+      "\tdfc_sid01\030\010 \001(\0132\033.google.protobuf.Int32" +
+      "ValueR\010dfcSid01\0228\n\tdfc_sid02\030\t \001(\0132\033.goo" +
+      "gle.protobuf.Int32ValueR\010dfcSid02\0228\n\tdfc" +
+      "_sid03\030\n \001(\0132\033.google.protobuf.Int32Valu" +
+      "eR\010dfcSid03\0228\n\tdfc_sid04\030\013 \001(\0132\033.google." +
+      "protobuf.Int32ValueR\010dfcSid04\0228\n\tdfc_sid" +
+      "05\030\014 \001(\0132\033.google.protobuf.Int32ValueR\010d" +
+      "fcSid05\0228\n\tdfc_sid06\030\r \001(\0132\033.google.prot" +
+      "obuf.Int32ValueR\010dfcSid06\0228\n\tdfc_sid07\030\016" +
+      " \001(\0132\033.google.protobuf.Int32ValueR\010dfcSi" +
+      "d07\0228\n\tdfc_sid08\030\017 \001(\0132\033.google.protobuf" +
+      ".Int32ValueR\010dfcSid08\0228\n\tdfc_sid09\030\020 \001(\013" +
+      "2\033.google.protobuf.Int32ValueR\010dfcSid09\022" +
+      "8\n\tdfc_sid10\030\021 \001(\0132\033.google.protobuf.Int" +
+      "32ValueR\010dfcSid10\0228\n\tdfc_sid11\030\022 \001(\0132\033.g" +
+      "oogle.protobuf.Int32ValueR\010dfcSid11\0228\n\td" +
+      "fc_sid12\030\023 \001(\0132\033.google.protobuf.Int32Va" +
+      "lueR\010dfcSid12\0228\n\tdfc_sid13\030\024 \001(\0132\033.googl" +
+      "e.protobuf.Int32ValueR\010dfcSid13\0228\n\tdfc_s" +
+      "id14\030\025 \001(\0132\033.google.protobuf.Int32ValueR" +
+      "\010dfcSid14\0228\n\tdfc_sid15\030\026 \001(\0132\033.google.pr" +
+      "otobuf.Int32ValueR\010dfcSid15\0228\n\tdfc_sid16" +
+      "\030\027 \001(\0132\033.google.protobuf.Int32ValueR\010dfc" +
+      "Sid16\0228\n\tdfc_sid17\030\030 \001(\0132\033.google.protob" +
+      "uf.Int32ValueR\010dfcSid17\0228\n\tdfc_sid18\030\031 \001" +
+      "(\0132\033.google.protobuf.Int32ValueR\010dfcSid1" +
+      "8\0228\n\tdfc_sid19\030\032 \001(\0132\033.google.protobuf.I" +
+      "nt32ValueR\010dfcSid19\0228\n\tdfc_sid20\030\033 \001(\0132\033" +
+      ".google.protobuf.Int32ValueR\010dfcSid20\0228\n" +
+      "\tdfc_sid21\030\034 \001(\0132\033.google.protobuf.Int32" +
+      "ValueR\010dfcSid21\0228\n\tdfc_sid22\030\035 \001(\0132\033.goo" +
+      "gle.protobuf.Int32ValueR\010dfcSid22\0228\n\tdfc" +
+      "_sid23\030\036 \001(\0132\033.google.protobuf.Int32Valu" +
+      "eR\010dfcSid23\0228\n\tdfc_sid24\030\037 \001(\0132\033.google." +
+      "protobuf.Int32ValueR\010dfcSid24\0228\n\tdfc_sid" +
+      "25\030  \001(\0132\033.google.protobuf.Int32ValueR\010d" +
+      "fcSid25\0228\n\tdfc_sid26\030! \001(\0132\033.google.prot" +
+      "obuf.Int32ValueR\010dfcSid26\0228\n\tdfc_sid27\030\"" +
+      " \001(\0132\033.google.protobuf.Int32ValueR\010dfcSi" +
+      "d27\0228\n\tdfc_sid28\030# \001(\0132\033.google.protobuf" +
+      ".Int32ValueR\010dfcSid28\0228\n\tdfc_sid29\030$ \001(\013" +
+      "2\033.google.protobuf.Int32ValueR\010dfcSid29\022" +
+      "8\n\tdfc_sid30\030% \001(\0132\033.google.protobuf.Int" +
+      "32ValueR\010dfcSid30\022B\n\016field_length01\030& \001(" +
+      "\0132\033.google.protobuf.Int32ValueR\rfieldLen" +
+      "gth01\022B\n\016field_length02\030\' \001(\0132\033.google.p" +
+      "rotobuf.Int32ValueR\rfieldLength02\022B\n\016fie" +
+      "ld_length03\030( \001(\0132\033.google.protobuf.Int3" +
+      "2ValueR\rfieldLength03\022B\n\016field_length04\030" +
+      ") \001(\0132\033.google.protobuf.Int32ValueR\rfiel" +
+      "dLength04\022B\n\016field_length05\030* \001(\0132\033.goog" +
+      "le.protobuf.Int32ValueR\rfieldLength05\022B\n" +
+      "\016field_length06\030+ \001(\0132\033.google.protobuf." +
+      "Int32ValueR\rfieldLength06\022B\n\016field_lengt" +
+      "h07\030, \001(\0132\033.google.protobuf.Int32ValueR\r" +
+      "fieldLength07\022B\n\016field_length08\030- \001(\0132\033." +
+      "google.protobuf.Int32ValueR\rfieldLength0" +
+      "8\022B\n\016field_length09\030. \001(\0132\033.google.proto" +
+      "buf.Int32ValueR\rfieldLength09\022B\n\016field_l" +
+      "ength10\030/ \001(\0132\033.google.protobuf.Int32Val" +
+      "ueR\rfieldLength10\022B\n\016field_length11\0300 \001(" +
+      "\0132\033.google.protobuf.Int32ValueR\rfieldLen" +
+      "gth11\022B\n\016field_length12\0301 \001(\0132\033.google.p" +
+      "rotobuf.Int32ValueR\rfieldLength12\022B\n\016fie" +
+      "ld_length13\0302 \001(\0132\033.google.protobuf.Int3" +
+      "2ValueR\rfieldLength13\022B\n\016field_length14\030" +
+      "3 \001(\0132\033.google.protobuf.Int32ValueR\rfiel" +
+      "dLength14\022B\n\016field_length15\0304 \001(\0132\033.goog" +
+      "le.protobuf.Int32ValueR\rfieldLength15\022B\n" +
+      "\016field_length16\0305 \001(\0132\033.google.protobuf." +
+      "Int32ValueR\rfieldLength16\022B\n\016field_lengt" +
+      "h17\0306 \001(\0132\033.google.protobuf.Int32ValueR\r",
+      "fieldLength17\022B\n\016field_length18\0307 \001(\0132\033." +
+      "google.protobuf.Int32ValueR\rfieldLength1" +
+      "8\022B\n\016field_length19\0308 \001(\0132\033.google.proto" +
+      "buf.Int32ValueR\rfieldLength19\022B\n\016field_l" +
+      "ength20\0309 \001(\0132\033.google.protobuf.Int32Val" +
+      "ueR\rfieldLength20\022B\n\016field_length21\030: \001(" +
+      "\0132\033.google.protobuf.Int32ValueR\rfieldLen" +
+      "gth21\022B\n\016field_length22\030; \001(\0132\033.google.p" +
+      "rotobuf.Int32ValueR\rfieldLength22\022B\n\016fie" +
+      "ld_length23\030< \001(\0132\033.google.protobuf.Int3" +
+      "2ValueR\rfieldLength23\022B\n\016field_length24\030" +
+      "= \001(\0132\033.google.protobuf.Int32ValueR\rfiel" +
+      "dLength24\022B\n\016field_length25\030> \001(\0132\033.goog" +
+      "le.protobuf.Int32ValueR\rfieldLength25\022B\n" +
+      "\016field_length26\030? \001(\0132\033.google.protobuf." +
+      "Int32ValueR\rfieldLength26\022B\n\016field_lengt" +
+      "h27\030@ \001(\0132\033.google.protobuf.Int32ValueR\r" +
+      "fieldLength27\022B\n\016field_length28\030A \001(\0132\033." +
+      "google.protobuf.Int32ValueR\rfieldLength2" +
+      "8\022B\n\016field_length29\030B \001(\0132\033.google.proto" +
+      "buf.Int32ValueR\rfieldLength29\022B\n\016field_l" +
+      "ength30\030C \001(\0132\033.google.protobuf.Int32Val" +
+      "ueR\rfieldLength30\022\'\n\017template_number\030D \001" +
+      "(\005R\016templateNumber\022F\n\021exclude_first_row\030" +
+      "E \001(\0132\032.google.protobuf.BoolValueR\017exclu" +
+      "deFirstRow\"\037\n\035ListContactImportTemplates" +
+      "Req\"{\n\035ListContactImportTemplatesRes\022Z\n\027" +
+      "contact_import_template\030\001 \003(\0132\".api.v0al" +
+      "pha.ContactImportTemplateR\025contactImport" +
+      "Template\"i\n UpdatePreviewRecordToFinishe" +
+      "dReq\022*\n\021agent_session_sid\030\003 \001(\003R\017agentSe" +
+      "ssionSid\022\031\n\010task_sid\030\004 \001(\003R\007taskSid\"\"\n U" +
+      "pdatePreviewRecordToFinishedRes\"X\n\027Updat" +
+      "eAgentHuntGroupReq\022$\n\016hunt_group_sid\030\003 \001" +
+      "(\003R\014huntGroupSid\022\027\n\007user_id\030\004 \001(\tR\006userI" +
+      "d\"\031\n\027UpdateAgentHuntGroupRes\"c\n MultiAge" +
+      "ntHuntGroupAssignmentReq\022\031\n\010user_ids\030\001 \003" +
+      "(\tR\007userIds\022$\n\016hunt_group_sid\030\002 \001(\003R\014hun" +
+      "tGroupSid\"\"\n MultiAgentHuntGroupAssignme" +
+      "ntRes\"1\n\022GetAgentProfileReq\022\033\n\tagent_sid" +
+      "\030\002 \001(\003R\010agentSid\"J\n\014AgentProfile\022\035\n\nfirs" +
+      "t_name\030\002 \001(\tR\tfirstName\022\033\n\tlast_name\030\003 \001" +
+      "(\tR\010lastName\"\245\001\n\025RecalculateBillingReq\022:" +
+      "\n\005month\030\001 \001(\0162$.api.commons.RecalculateB" +
+      "illingMonthR\005month\0229\n\005types\030\002 \003(\0162#.api." +
+      "commons.RecalculateBillingTypeR\005types\022\025\n" +
+      "\006org_id\030\003 \001(\tR\005orgId\"\362\001\n\025RecalculateBill" +
+      "ingRes\022C\n\007results\030\001 \003(\0132).api.v0alpha.Re" +
+      "calculateBillingRes.ResultR\007results\032\223\001\n\006" +
+      "Result\0227\n\004type\030\001 \001(\0162#.api.commons.Recal" +
+      "culateBillingTypeR\004type\022\032\n\007updated\030\002 \001(\003" +
+      "H\000R\007updated\022%\n\rerror_message\030\003 \001(\tH\000R\014er" +
+      "rorMessageB\r\n\013result_type\"&\n$ListOutboun" +
+      "dBroadcastTemplateDataReq\"\325\002\n$ListOutbou" +
+      "ndBroadcastTemplateDataRes\022T\n\ttemplates\030" +
+      "\001 \003(\01326.api.v0alpha.ListOutboundBroadcas" +
+      "tTemplateDataRes.DataR\ttemplates\032\326\001\n\004Dat" +
+      "a\022\'\n\017template_number\030\001 \001(\003R\016templateNumb" +
+      "er\022#\n\rtemplate_name\030\002 \001(\tR\014templateName\022" +
+      "C\n\rtemplate_type\030\003 \001(\0162\036.api.commons.Tem" +
+      "plateType.EnumR\014templateType\022;\n\013modify_d" +
+      "ate\030\004 \001(\0132\032.google.protobuf.TimestampR\nm" +
+      "odifyDate\"q\n\034MultiAgentSkillAssignmentRe" +
+      "q\022\031\n\010user_ids\030\002 \003(\tR\007userIds\0220\n\006skills\030\003" +
+      " \003(\0132\030.api.v0alpha.SkillUpdateR\006skillsJ\004" +
+      "\010\001\020\002\"\036\n\034MultiAgentSkillAssignmentRes\"Z\n\036" +
+      "MultiAgentSkillUnassignmentReq\022\031\n\010user_i" +
+      "ds\030\001 \003(\tR\007userIds\022\035\n\nskill_sids\030\002 \003(\003R\ts" +
+      "killSids\" \n\036MultiAgentSkillUnassignmentR" +
+      "es\"&\n$ListMAMAgentHuntGroupsByClientSidR" +
+      "eq\"]\n$ListMAMAgentHuntGroupsByClientSidR" +
+      "es\0225\n\nhunt_group\030\001 \003(\0132\026.api.v0alpha.Hun" +
+      "tGroupR\thuntGroup\"a\n\024UpdateAgentSkillsRe" +
+      "q\022\027\n\007user_id\030\001 \001(\tR\006userId\0220\n\006skills\030\002 \003" +
+      "(\0132\030.api.v0alpha.SkillUpdateR\006skills\"@\n\013" +
+      "SkillUpdate\022\033\n\tskill_sid\030\001 \001(\003R\010skillSid" +
+      "\022\024\n\005level\030\002 \001(\003R\005level\"\026\n\024UpdateAgentSki" +
+      "llsRes\"\022\n\020ListTtsVoicesReq\"A\n\020ListTtsVoi" +
+      "cesRes\022-\n\006voices\030\001 \003(\0132\025.api.v0alpha.Tts" +
+      "VoiceR\006voices\"\206\001\n\010TtsVoice\022\"\n\rtts_voice_" +
+      "sid\030\001 \001(\003R\013ttsVoiceSid\022!\n\014display_name\030\002" +
+      " \001(\tR\013displayName\022\037\n\013actual_name\030\003 \001(\tR\n" +
+      "actualName\022\022\n\004port\030\004 \001(\003R\004port\"k\n\021Create" +
+      "TtsVoiceReq\022\037\n\013actual_name\030\001 \001(\tR\nactual" +
+      "Name\022!\n\014display_name\030\002 \001(\tR\013displayName\022" +
+      "\022\n\004port\030\003 \001(\003R\004port\"\023\n\021CreateTtsVoiceRes" +
+      "\"7\n\021DeleteTtsVoiceReq\022\"\n\rtts_voice_sid\030\001" +
+      " \001(\003R\013ttsVoiceSid\"\023\n\021DeleteTtsVoiceRes\"m" +
+      "\n\rCustomDataKey\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005v" +
+      "alue\030\002 \001(\tR\005value\0222\n\025client_properties_s" +
+      "id\030\003 \001(\003R\023clientPropertiesSid\"\027\n\025ListCus" +
+      "tomDataKeysReq\"P\n\025ListCustomDataKeysRes\022" +
+      "7\n\tdata_keys\030\001 \003(\0132\032.api.v0alpha.CustomD" +
+      "ataKeyR\010dataKeys\"O\n\026CreateCustomDataKeyR" +
+      "eq\0225\n\010data_key\030\001 \001(\0132\032.api.v0alpha.Custo" +
+      "mDataKeyR\007dataKey\"\030\n\026CreateCustomDataKey" +
+      "Res\"L\n\026DeleteCustomDataKeyReq\0222\n\025client_" +
+      "properties_sid\030\001 \001(\003R\023clientPropertiesSi" +
+      "d\"\030\n\026DeleteCustomDataKeyRes\"N\n\026UpdateCus" +
+      "tomDataKeyReq\0224\n\007dataKey\030\001 \001(\0132\032.api.v0a" +
+      "lpha.CustomDataKeyR\007dataKey\"\030\n\026UpdateCus" +
+      "tomDataKeyRes\"\214\006\n\tExtension\022*\n\021pbx_exten" +
+      "sion_sid\030\001 \001(\003R\017pbxExtensionSid\022)\n\020exten" +
+      "sion_number\030\002 \001(\tR\017extensionNumber\0224\n\005ag" +
+      "ent\030\003 \001(\0132\034.api.v0alpha.Extension.AgentH" +
+      "\000R\005agent\022A\n\nhunt_group\030\004 \001(\0132 .api.v0alp" +
+      "ha.Extension.HuntGroupH\000R\thuntGroup\022!\n\014a" +
+      "gent_access\030\005 \001(\010R\013agentAccess\0222\n\005email\030" +
+      "\007 \001(\0132\034.api.v0alpha.Extension.EmailR\005ema" +
+      "il\022\032\n\010greeting\030\010 \001(\tR\010greeting\022!\n\014has_gr" +
+      "eeting\030\t \001(\010R\013hasGreeting\022)\n\020unheard_mes" +
+      "sages\030\n \001(\005R\017unheardMessages\022%\n\016total_me" +
+      "ssages\030\013 \001(\005R\rtotalMessages\032b\n\005Agent\022\035\n\n" +
+      "first_name\030\002 \001(\tR\tfirstName\022\033\n\tlast_name" +
+      "\030\003 \001(\tR\010lastName\022\027\n\007user_id\030\004 \001(\tR\006userI" +
+      "dJ\004\010\001\020\002\032Y\n\tHuntGroup\022$\n\016hunt_group_sid\030\001" +
+      " \001(\003R\014huntGroupSid\022&\n\017hunt_group_name\030\002 " +
+      "\001(\tR\rhuntGroupName\032p\n\005Email\022\030\n\007subject\030\001" +
+      " \001(\tR\007subject\022\022\n\004body\030\002 \001(\tR\004body\022\034\n\tadd" +
+      "resses\030\003 \003(\tR\taddresses\022\033\n\tattach_vm\030\004 \001" +
+      "(\010R\010attachVmB\020\n\016extension_typeJ\004\010\006\020\007\"\030\n\026" +
+      "ListAgentExtensionsReq\"P\n\026ListAgentExten" +
+      "sionsRes\0226\n\nextensions\030\001 \003(\0132\026.api.v0alp" +
+      "ha.ExtensionR\nextensions\"\034\n\032ListHuntGrou" +
+      "pExtensionsReq\"T\n\032ListHuntGroupExtension" +
+      "sRes\0226\n\nextensions\030\001 \003(\0132\026.api.v0alpha.E" +
+      "xtensionR\nextensions\"Y\n\022CreateExtensionR" +
+      "eq\022C\n\021extension_message\030\001 \001(\0132\026.api.v0al" +
+      "pha.ExtensionR\020extensionMessage\"\024\n\022Creat" +
+      "eExtensionRes\"Y\n\022UpdateExtensionReq\022C\n\021e" +
+      "xtension_message\030\001 \001(\0132\026.api.v0alpha.Ext" +
+      "ensionR\020extensionMessage\"\024\n\022UpdateExtens" +
+      "ionRes\"@\n\022DeleteExtensionReq\022*\n\021pbx_exte" +
+      "nsion_sid\030\001 \001(\003R\017pbxExtensionSid\"\024\n\022Dele" +
+      "teExtensionRes\"m\n\030GetActivityLogHistoryR" +
+      "eq\022\035\n\nday_filter\030\001 \001(\005R\tdayFilter\022\033\n\tuse" +
+      "r_name\030\002 \001(\tR\010userName\022\025\n\006org_id\030\004 \001(\tR\005" +
+      "orgId\"Y\n\030GetActivityLogHistoryRes\022=\n\ract" +
+      "ivity_logs\030\001 \003(\0132\030.api.v0alpha.ActivityL" +
+      "ogR\014activityLogs\"\266\002\n\013ActivityLog\0229\n\tuser" +
+      "_name\030\001 \001(\0132\034.google.protobuf.StringValu" +
+      "eR\010userName\022C\n\016origination_ip\030\002 \001(\0132\034.go" +
+      "ogle.protobuf.StringValueR\roriginationIp" +
+      "\022=\n\013action_date\030\003 \001(\0132\034.google.protobuf." +
+      "StringValueR\nactionDate\0224\n\006action\030\004 \001(\0132" +
+      "\034.google.protobuf.StringValueR\006action\0222\n" +
+      "\005notes\030\005 \001(\0132\034.google.protobuf.StringVal" +
+      "ueR\005notes\"O\n\rListSkillsReq\022>\n\014type_filte" +
+      "rs\030\001 \003(\0162\033.api.commons.SkillType.EnumR\013t" +
+      "ypeFilters\"=\n\rListSkillsRes\022,\n\006skills\030\001 " +
+      "\003(\0132\024.api.v0alpha.P3SkillR\006skills\"\235\001\n\007P3" +
+      "Skill\022\026\n\006region\030\001 \001(\tR\006region\022\023\n\005p3_id\030\002" +
+      " \001(\tR\004p3Id\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013descri" +
+      "ption\030\004 \001(\tR\013description\022/\n\004type\030\005 \001(\0162\033" +
+      ".api.commons.SkillType.EnumR\004type\"\032\n\030Lis" +
+      "tScheduleRulesRequest\"[\n\027ListScheduleRul" +
+      "esResult\022@\n\016schedule_rules\030\001 \003(\0132\031.api.v" +
+      "0alpha.ScheduleRuleR\rscheduleRules\"\354\001\n\014S" +
+      "cheduleRule\022*\n\021schedule_rule_sid\030\001 \001(\003R\017" +
+      "scheduleRuleSid\022:\n\nclient_sid\030\002 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueR\tclientSid\0220\n\004n" +
+      "ame\030\003 \001(\0132\034.google.protobuf.StringValueR" +
+      "\004name\022B\n\016rule_time_zone\030\004 \001(\0132\034.google.p" +
+      "rotobuf.StringValueR\014ruleTimeZone\"\023\n\021Lis" +
+      "tSmsNumbersReq\"L\n\021ListSmsNumbersRes\0227\n\013s" +
+      "ms_numbers\030\001 \003(\0132\026.api.commons.SmsNumber" +
+      "R\nsmsNumbers2\344~\n\005P3Api\022\206\001\n\021GetAgentHuntG" +
+      "roup\022!.api.v0alpha.GetAgentHuntGroupReq\032" +
+      "\026.api.v0alpha.HuntGroup\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$" +
+      "/api/v0alpha/p3api/getagenthuntgroup:\001*\022" +
+      "\203\001\n\017GetAgentSession\022\037.api.v0alpha.GetAge" +
+      "ntSessionReq\032\031.api.v0alpha.AgentSession\"" +
+      "4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha/p3api/getag" +
+      "entsession:\001*\022\205\001\n\016GetAgentSkills\022\036.api.v" +
+      "0alpha.GetAgentSkillsReq\032\036.api.v0alpha.G" +
+      "etAgentSkillsRes\"3\272\270\221\002\002\030\001\202\323\344\223\002&\"!/api/v0" +
+      "alpha/p3api/getagentskills:\001*\022\217\001\n\020Create" +
+      "AgentSkill\022 .api.v0alpha.CreateAgentSkil" +
+      "lReq\032 .api.v0alpha.CreateAgentSkillRes\"7" +
+      "\272\270\221\002\004\n\002\010d\202\323\344\223\002(\"#/api/v0alpha/p3api/crea" +
+      "teagentskill:\001*\022\217\001\n\020UpdateAgentSkill\022 .a" +
+      "pi.v0alpha.UpdateAgentSkillReq\032 .api.v0a" +
+      "lpha.UpdateAgentSkillRes\"7\272\270\221\002\004\n\002\010d\202\323\344\223\002" +
+      "(\"#/api/v0alpha/p3api/updateagentskill:\001" +
+      "*\022\217\001\n\020DeleteAgentSkill\022 .api.v0alpha.Del" +
+      "eteAgentSkillReq\032 .api.v0alpha.DeleteAge" +
+      "ntSkillRes\"7\272\270\221\002\004\n\002\010d\202\323\344\223\002(\"#/api/v0alph" +
+      "a/p3api/deleteagentskill:\001*\022\213\001\n\017ListAgen" +
+      "tSkills\022\037.api.v0alpha.ListAgentSkillsReq" +
+      "\032\037.api.v0alpha.ListAgentSkillsRes\"6\272\270\221\002\004" +
+      "\n\002\010e\202\323\344\223\002\'\"\"/api/v0alpha/p3api/listagent" +
+      "skills:\001*\022\261\001\n\031ListSkillsForCurrentAgent\022" +
+      ").api.v0alpha.ListSkillsForCurrentAgentR" +
+      "eq\032).api.v0alpha.ListSkillsForCurrentAge" +
+      "ntRes\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v0alpha/p3api" +
+      "/listskillsforcurrentagent:\001*\022w\n\nListSki" +
+      "lls\022\032.api.v0alpha.ListSkillsReq\032\032.api.v0" +
+      "alpha.ListSkillsRes\"1\272\270\221\002\004\n\002\010e\202\323\344\223\002\"\"\035/a" +
+      "pi/v0alpha/p3api/listskills:\001*\022\224\001\n\021Updat" +
+      "eAgentSkills\022!.api.v0alpha.UpdateAgentSk" +
+      "illsReq\032!.api.v0alpha.UpdateAgentSkillsR" +
+      "es\"9\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002)\"$/api/v0alpha/p3api" +
+      "/updateagentskills:\001*\022|\n\017GetCurrentAgent" +
+      "\022\037.api.v0alpha.GetCurrentAgentReq\032\022.api." +
+      "v0alpha.Agent\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alp" +
+      "ha/p3api/getcurrentagent:\001*\022\221\001\n\021GetClien" +
+      "tInfoData\022!.api.v0alpha.GetClientInfoDat" +
+      "aReq\032!.api.v0alpha.GetClientInfoDataRes\"" +
+      "6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v0alpha/p3api/getcl" +
+      "ientinfodata:\001*\022\275\001\n\034GetClientInfoDisplay" +
+      "Template\022,.api.v0alpha.GetClientInfoDisp" +
+      "layTemplateReq\032,.api.v0alpha.GetClientIn" +
+      "foDisplayTemplateRes\"A\272\270\221\002\002\030\001\202\323\344\223\0024\"//ap" +
+      "i/v0alpha/p3api/getclientinfodisplaytemp" +
+      "late:\001*\022\251\001\n\027ListAgentStatisticsData\022\'.ap" +
+      "i.v0alpha.ListAgentStatisticsDataReq\032\'.a" +
+      "pi.v0alpha.ListAgentStatisticsDataRes\"<\272" +
+      "\270\221\002\002\030\001\202\323\344\223\002/\"*/api/v0alpha/p3api/listage" +
+      "ntstatisticsdata:\001*\022\221\001\n\021ListPBXExtension" +
+      "s\022!.api.v0alpha.ListPBXExtensionsReq\032!.a" +
+      "pi.v0alpha.ListPBXExtensionsRes\"6\272\270\221\002\002\030\001" +
+      "\202\323\344\223\002)\"$/api/v0alpha/p3api/listpbxextens" +
+      "ions:\001*\022\234\001\n\023ListAgentExtensions\022#.api.v0" +
+      "alpha.ListAgentExtensionsReq\032#.api.v0alp" +
+      "ha.ListAgentExtensionsRes\";\272\270\221\002\005\n\003\010\220\003\202\323\344" +
+      "\223\002+\"&/api/v0alpha/p3api/listagentextensi" +
+      "ons:\001*\022\254\001\n\027ListHuntGroupExtensions\022\'.api" +
+      ".v0alpha.ListHuntGroupExtensionsReq\032\'.ap" +
+      "i.v0alpha.ListHuntGroupExtensionsRes\"?\272\270" +
+      "\221\002\005\n\003\010\220\003\202\323\344\223\002/\"*/api/v0alpha/p3api/listh" +
+      "untgroupextensions:\001*\022\214\001\n\017CreateExtensio" +
+      "n\022\037.api.v0alpha.CreateExtensionReq\032\037.api" +
+      ".v0alpha.CreateExtensionRes\"7\272\270\221\002\005\n\003\010\220\003\202" +
+      "\323\344\223\002\'\"\"/api/v0alpha/p3api/createextensio" +
+      "n:\001*\022\214\001\n\017DeleteExtension\022\037.api.v0alpha.D" +
+      "eleteExtensionReq\032\037.api.v0alpha.DeleteEx" +
+      "tensionRes\"7\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002\'\"\"/api/v0alp" +
+      "ha/p3api/deleteextension:\001*\022\214\001\n\017UpdateEx" +
+      "tension\022\037.api.v0alpha.UpdateExtensionReq" +
+      "\032\037.api.v0alpha.UpdateExtensionRes\"7\272\270\221\002\005" +
+      "\n\003\010\220\003\202\323\344\223\002\'\"\"/api/v0alpha/p3api/updateex" +
+      "tension:\001*\022\225\001\n\022UpdatePBXExtension\022\".api." +
+      "v0alpha.UpdatePBXExtensionReq\032\".api.v0al" +
+      "pha.UpdatePBXExtensionRes\"7\272\270\221\002\002\030\001\202\323\344\223\002*" +
+      "\"%/api/v0alpha/p3api/updatepbxextension:" +
+      "\001*\022\221\001\n\021CreateDNCLNumbers\022!.api.v0alpha.C" +
+      "reateDNCLNumbersReq\032!.api.v0alpha.Create" +
+      "DNCLNumbersRes\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v0al" +
+      "pha/p3api/creatednclnumbers:\001*\022\235\001\n\024GetSc" +
+      "riptOrResponses\022$.api.v0alpha.GetScriptO" +
+      "rResponsesReq\032$.api.v0alpha.GetScriptOrR" +
+      "esponsesRes\"9\272\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v0alpha" +
+      "/p3api/getscriptorresponses:\001*\022\253\001\n\031GetHu" +
+      "ntGroupAgentSettings\022).api.v0alpha.GetHu" +
+      "ntGroupAgentSettingsReq\032#.api.v0alpha.Hu" +
+      "ntGroupAgentSettings\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/ap" +
+      "i/v0alpha/p3api/gethuntgroupagentsetting" +
+      "s:\001*\022\241\001\n\025ListHuntGroupWebLinks\022%.api.v0a" +
+      "lpha.ListHuntGroupWebLinksReq\032%.api.v0al" +
+      "pha.ListHuntGroupWebLinksRes\":\272\270\221\002\002\030\001\202\323\344" +
+      "\223\002-\"(/api/v0alpha/p3api/listhuntgroupweb" +
+      "links:\001*\022\245\001\n\026GetHuntGroupPauseCodes\022&.ap" +
+      "i.v0alpha.GetHuntGroupPauseCodesReq\032&.ap" +
+      "i.v0alpha.GetHuntGroupPauseCodesRes\";\272\270\221" +
+      "\002\002\030\001\202\323\344\223\002.\")/api/v0alpha/p3api/gethuntgr" +
+      "ouppausecodes:\001*\022\235\001\n\024ListAgentCallHistor" +
+      "y\022$.api.v0alpha.ListAgentCallHistoryReq\032" +
+      "$.api.v0alpha.ListAgentCallHistoryRes\"9\272" +
+      "\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v0alpha/p3api/listage" +
+      "ntcallhistory:\001*\022\270\001\n\032ListClientPhoneBook" +
+      "Entries\022*.api.v0alpha.ListClientPhoneBoo" +
+      "kEntriesReq\032*.api.v0alpha.ListClientPhon" +
+      "eBookEntriesRes\"B\272\270\221\002\005\n\003\010\220\003\202\323\344\223\0022\"-/api/" +
+      "v0alpha/p3api/listclientphonebookentries" +
+      ":\001*\022\304\001\n\035ListHuntGroupPhoneBookEntries\022-." +
+      "api.v0alpha.ListHuntGroupPhoneBookEntrie" +
+      "sReq\032-.api.v0alpha.ListHuntGroupPhoneBoo" +
+      "kEntriesRes\"E\272\270\221\002\005\n\003\010\220\003\202\323\344\223\0025\"0/api/v0al" +
+      "pha/p3api/listhuntgroupphonebookentries:" +
+      "\001*\022\240\001\n\024CreatePhoneBookEntry\022$.api.v0alph" +
+      "a.CreatePhoneBookEntryReq\032$.api.v0alpha." +
+      "CreatePhoneBookEntryRes\"<\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002" +
+      ",\"\'/api/v0alpha/p3api/createphonebookent" +
+      "ry:\001*\022\240\001\n\024UpdatePhoneBookEntry\022$.api.v0a" +
+      "lpha.UpdatePhoneBookEntryReq\032$.api.v0alp" +
+      "ha.UpdatePhoneBookEntryRes\"<\272\270\221\002\005\n\003\010\220\003\202\323" +
+      "\344\223\002,\"\'/api/v0alpha/p3api/updatephonebook" +
+      "entry:\001*\022\240\001\n\024DeletePhoneBookEntry\022$.api." +
+      "v0alpha.DeletePhoneBookEntryReq\032$.api.v0" +
+      "alpha.DeletePhoneBookEntryRes\"<\272\270\221\002\005\n\003\010\220" +
+      "\003\202\323\344\223\002,\"\'/api/v0alpha/p3api/deletephoneb" +
+      "ookentry:\001*\022\205\001\n\016ListPhoneBooks\022\036.api.v0a" +
+      "lpha.ListPhoneBooksReq\032\036.api.v0alpha.Lis" +
+      "tPhoneBooksRes\"3\272\270\221\002\002\030\001\202\323\344\223\002&\"!/api/v0al" +
+      "pha/p3api/listphonebooks:\001*\022\221\001\n\021ListAgen" +
+      "tTriggers\022!.api.v0alpha.ListAgentTrigger" +
+      "sReq\032!.api.v0alpha.ListAgentTriggersRes\"" +
+      "6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v0alpha/p3api/lista" +
+      "genttriggers:\001*\022\271\001\n\033GetCampaignCompletio" +
+      "nStatus\022+.api.v0alpha.GetCampaignComplet" +
+      "ionStatusReq\032+.api.v0alpha.GetCampaignCo" +
+      "mpletionStatusRes\"@\272\270\221\002\002\030\001\202\323\344\223\0023\"./api/v" +
+      "0alpha/p3api/getcampaigncompletionstatus" +
+      ":\001*\022\211\001\n\017GetLostPeerInfo\022\037.api.v0alpha.Ge" +
+      "tLostPeerInfoReq\032\037.api.v0alpha.GetLostPe" +
+      "erInfoRes\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha/p" +
+      "3api/getlostpeerinfo:\001*\022\225\001\n\022GetDispositi" +
+      "onKeys\022\".api.v0alpha.GetDispositionKeysR" +
+      "eq\032\".api.v0alpha.GetDispositionKeysRes\"7" +
+      "\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v0alpha/p3api/getdis" +
+      "positionkeys:\001*\022\205\001\n\016GetReadyAgents\022\036.api" +
+      ".v0alpha.GetReadyAgentsReq\032\036.api.v0alpha" +
+      ".GetReadyAgentsRes\"3\272\270\221\002\002\030\001\202\323\344\223\002&\"!/api/" +
+      "v0alpha/p3api/getreadyagents:\001*\022\311\001\n\037List" +
+      "AgentQueueAndOnHoldCallData\022/.api.v0alph" +
+      "a.ListAgentQueueAndOnHoldCallDataReq\032/.a" +
+      "pi.v0alpha.ListAgentQueueAndOnHoldCallDa" +
+      "taRes\"D\272\270\221\002\002\030\001\202\323\344\223\0027\"2/api/v0alpha/p3api" +
+      "/listagentqueueandonholdcalldata:\001*\022\245\001\n\026" +
+      "SaveAgentCallResponses\022&.api.v0alpha.Sav" +
+      "eAgentCallResponsesReq\032&.api.v0alpha.Sav" +
+      "eAgentCallResponsesRes\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/" +
+      "api/v0alpha/p3api/saveagentcallresponses" +
+      ":\001*\022\255\001\n\030ListAgentTransferOptions\022(.api.v" +
+      "0alpha.ListAgentTransferOptionsReq\032(.api" +
+      ".v0alpha.ListAgentTransferOptionsRes\"=\272\270" +
+      "\221\002\002\030\001\202\323\344\223\0020\"+/api/v0alpha/p3api/listagen" +
+      "ttransferoptions:\001*\022\275\001\n\034UpdateAgentCallR" +
+      "esponseValue\022,.api.v0alpha.UpdateAgentCa" +
+      "llResponseValueReq\032,.api.v0alpha.UpdateA" +
+      "gentCallResponseValueRes\"A\272\270\221\002\002\030\001\202\323\344\223\0024\"" +
+      "//api/v0alpha/p3api/updateagentcallrespo" +
+      "nsevalue:\001*\022\231\001\n\023GetIntercomPeerInfo\022#.ap" +
+      "i.v0alpha.GetIntercomPeerInfoReq\032#.api.v" +
+      "0alpha.GetIntercomPeerInfoRes\"8\272\270\221\002\002\030\001\202\323" +
+      "\344\223\002+\"&/api/v0alpha/p3api/getintercompeer" +
+      "info:\001*\022\261\001\n\031ListOrgResponseEvaluators\022)." +
+      "api.v0alpha.ListOrgResponseEvaluatorsReq" +
+      "\032).api.v0alpha.ListOrgResponseEvaluators" +
+      "Res\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v0alpha/p3api/l" +
+      "istorgresponseevaluators:\001*\022\321\001\n!GetQueue" +
+      "ConfigurationOptionsArray\0221.api.v0alpha." +
+      "GetQueueConfigurationOptionsArrayReq\0321.a" +
+      "pi.v0alpha.GetQueueConfigurationOptionsA" +
+      "rrayRes\"F\272\270\221\002\002\030\001\202\323\344\223\0029\"4/api/v0alpha/p3a" +
+      "pi/getqueueconfigurationoptionsarray:\001*\022" +
+      "\251\001\n\027GetConditionalDNCLRules\022\'.api.v0alph" +
+      "a.GetConditionalDNCLRulesReq\032\'.api.v0alp" +
+      "ha.GetConditionalDNCLRulesRes\"<\272\270\221\002\002\030\001\202\323" +
+      "\344\223\002/\"*/api/v0alpha/p3api/getconditionald" +
+      "nclrules:\001*\022\211\001\n\017ManualDialStart\022\037.api.v0" +
+      "alpha.ManualDialStartReq\032\037.api.v0alpha.M" +
+      "anualDialStartRes\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v" +
+      "0alpha/p3api/manualdialstart:\001*\022\253\001\n\027List" +
+      "ExtendedCallHistory\022\'.api.v0alpha.ListEx" +
+      "tendedCallHistoryReq\032\'.api.v0alpha.ListE" +
+      "xtendedCallHistoryRes\"<\272\270\221\002\002\030\001\202\323\344\223\002/\"*/a" +
+      "pi/v0alpha/p3api/listextendedcallhistory" +
+      ":\001*0\001\022\251\001\n\027ListWhiteListPhoneBooks\022\'.api." +
+      "v0alpha.ListWhiteListPhoneBooksReq\032\'.api" +
+      ".v0alpha.ListWhiteListPhoneBooksRes\"<\272\270\221" +
+      "\002\002\030\001\202\323\344\223\002/\"*/api/v0alpha/p3api/listwhite" +
+      "listphonebooks:\001*\022\235\001\n\025DownloadCallRecord" +
+      "ing\022%.api.v0alpha.DownloadCallRecordingR" +
+      "eq\032!.api.v0alpha.DownloadRecordingRes\":\272" +
+      "\270\221\002\002\030\001\202\323\344\223\002-\"(/api/v0alpha/p3api/downloa" +
+      "dcallrecording:\001*\022\240\001\n\026DownloadCallRecord" +
+      "ings\022&.api.v0alpha.DownloadCallRecording" +
+      "sReq\032!.api.v0alpha.DownloadRecordingRes\"" +
+      ";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api/v0alpha/p3api/downl" +
+      "oadcallrecordings:\001*\022\235\001\n\024PlacePreviewDia" +
+      "lCall\022$.api.v0alpha.PlacePreviewDialCall" +
+      "Req\032$.api.v0alpha.PlacePreviewDialCallRe" +
+      "s\"9\272\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v0alpha/p3api/pla" +
+      "cepreviewdialcall:\001*\022\241\001\n\025CancelPreviewDi" +
+      "alCall\022%.api.v0alpha.CancelPreviewDialCa" +
+      "llReq\032%.api.v0alpha.CancelPreviewDialCal" +
+      "lRes\":\272\270\221\002\002\030\001\202\323\344\223\002-\"(/api/v0alpha/p3api/" +
+      "cancelpreviewdialcall:\001*\022}\n\020UpdateTaskSt" +
+      "atus\022 .api.v0alpha.UpdateTaskStatusReq\032\020" +
+      ".api.v0alpha.Nil\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v0" +
+      "alpha/p3api/updatetaskstatus:\001*\022\261\001\n\031List" +
+      "CallbackRoutingAgents\022).api.v0alpha.List" +
+      "CallbackRoutingAgentsReq\032).api.v0alpha.L" +
+      "istCallbackRoutingAgentsRes\">\272\270\221\002\002\030\001\202\323\344\223" +
+      "\0021\",/api/v0alpha/p3api/listcallbackrouti" +
+      "ngagents:\001*\022\261\001\n\031ListCallbackRoutingSkill" +
+      "s\022).api.v0alpha.ListCallbackRoutingSkill" +
+      "sReq\032).api.v0alpha.ListCallbackRoutingSk" +
+      "illsRes\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v0alpha/p3a" +
+      "pi/listcallbackroutingskills:\001*\022\235\001\n\024Hand" +
+      "leRecordingDelay\022$.api.v0alpha.HandleRec" +
+      "ordingDelayReq\032$.api.v0alpha.HandleRecor" +
+      "dingDelayRes\"9\272\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v0alph" +
+      "a/p3api/handlerecordingdelay:\001*\022\275\001\n\034Upda" +
+      "teAgentAssignedHuntGroup\022,.api.v0alpha.U" +
+      "pdateAgentAssignedHuntGroupReq\032,.api.v0a" +
+      "lpha.UpdateAgentAssignedHuntGroupRes\"A\272\270" +
+      "\221\002\002\030\001\202\323\344\223\0024\"//api/v0alpha/p3api/updateag" +
+      "entassignedhuntgroup:\001*\022y\n\013GetCallData\022\033",
+      ".api.v0alpha.GetCallDataReq\032\033.api.v0alph" +
+      "a.GetCallDataRes\"0\272\270\221\002\002\030\001\202\323\344\223\002#\"\036/api/v0" +
+      "alpha/p3api/getcalldata:\001*\022\207\001\n\016ListHuntG" +
+      "roups\022\036.api.v0alpha.ListHuntGroupsReq\032\036." +
+      "api.v0alpha.ListHuntGroupsRes\"5\272\270\221\002\004\n\002\010e" +
+      "\202\323\344\223\002&\"!/api/v0alpha/p3api/listHuntGroup" +
+      "s:\001*\022\265\001\n\032ListReassignmentHuntGroups\022*.ap" +
+      "i.v0alpha.ListReassignmentHuntGroupsReq\032" +
+      "*.api.v0alpha.ListReassignmentHuntGroups" +
+      "Res\"?\272\270\221\002\002\030\001\202\323\344\223\0022\"-/api/v0alpha/p3api/l" +
+      "istreassignmenthuntgroups:\001*\022\231\001\n\023GetOrgA" +
+      "gentSettings\022#.api.v0alpha.GetOrgAgentSe" +
+      "ttingsReq\032#.api.v0alpha.GetOrgAgentSetti" +
+      "ngsRes\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alpha/p3ap" +
+      "i/getorgagentsettings:\001*\022\251\001\n\027ListCallerI" +
+      "dsFromBucket\022\'.api.v0alpha.ListCallerIds" +
+      "FromBucketReq\032\'.api.v0alpha.ListCallerId" +
+      "sFromBucketRes\"<\272\270\221\002\002\030\001\202\323\344\223\002/\"*/api/v0al" +
+      "pha/p3api/listcalleridsfrombucket:\001*\022\235\001\n" +
+      "\024SaveLastCallResponse\022$.api.v0alpha.Save" +
+      "LastCallResponseReq\032$.api.v0alpha.SaveLa" +
+      "stCallResponseRes\"9\272\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v" +
+      "0alpha/p3api/savelastcallresponse:\001*\022\321\001\n" +
+      "!ListAgentCallLogsByCallSidAndType\0221.api" +
+      ".v0alpha.ListAgentCallLogsByCallSidAndTy" +
+      "peReq\0321.api.v0alpha.ListAgentCallLogsByC" +
+      "allSidAndTypeRes\"F\272\270\221\002\002\030\001\202\323\344\223\0029\"4/api/v0" +
+      "alpha/p3api/listagentcalllogsbycallsidan" +
+      "dtype:\001*\022\271\001\n\033ListAgentCallResponseValues" +
+      "\022+.api.v0alpha.ListAgentCallResponseValu" +
+      "esReq\032+.api.v0alpha.ListAgentCallRespons" +
+      "eValuesRes\"@\272\270\221\002\002\030\001\202\323\344\223\0023\"./api/v0alpha/" +
+      "p3api/listagentcallresponsevalues:\001*\022\261\001\n" +
+      "\036GetContactSchemaByContactGroup\022..api.v0" +
+      "alpha.GetContactSchemaByContactGroupReq\032" +
+      "\032.api.v0alpha.ContactSchema\"C\272\270\221\002\002\030\001\202\323\344\223" +
+      "\0026\"1/api/v0alpha/p3api/getcontactschemab" +
+      "ycontactgroup:\001*\022\325\001\n\"ListContactGroupDet" +
+      "ailsByClientSid\0222.api.v0alpha.ListContac" +
+      "tGroupDetailsByClientSidReq\0322.api.v0alph" +
+      "a.ListContactGroupDetailsByClientSidRes\"" +
+      "G\272\270\221\002\002\030\001\202\323\344\223\002:\"5/api/v0alpha/p3api/listc" +
+      "ontactgroupdetailsbyclientsid:\001*\022\221\001\n\026Get" +
+      "ContactGroupDetails\022\037.api.v0alpha.GetCon" +
+      "tactGroupReq\032\031.api.v0alpha.ContactGroup\"" +
+      ";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api/v0alpha/p3api/getco" +
+      "ntactgroupdetails:\001*\022\225\001\n\023GetContactGroup" +
+      "Size\022\037.api.v0alpha.GetContactGroupReq\032#." +
+      "api.v0alpha.GetContactGroupSizeRes\"8\272\270\221\002" +
+      "\002\030\001\202\323\344\223\002+\"&/api/v0alpha/p3api/getcontact" +
+      "groupsize:\001*\022\303\001\n\035CreateContactFieldDescr" +
+      "iption\022-.api.v0alpha.CreateContactFieldD" +
+      "escriptionReq\032-.api.v0alpha.CreateContac" +
+      "tFieldDescriptionRes\"D\272\270\221\002\004\n\002\010d\202\323\344\223\0025\"0/" +
+      "api/v0alpha/p3api/createcontactfielddesc" +
+      "ription:\001*\022\303\001\n\035UpdateContactFieldDescrip" +
+      "tion\022-.api.v0alpha.UpdateContactFieldDes" +
+      "criptionReq\032-.api.v0alpha.UpdateContactF" +
+      "ieldDescriptionRes\"D\272\270\221\002\004\n\002\010d\202\323\344\223\0025\"0/ap" +
+      "i/v0alpha/p3api/updatecontactfielddescri" +
+      "ption:\001*\022\303\001\n\035DeleteContactFieldDescripti" +
+      "on\022-.api.v0alpha.DeleteContactFieldDescr" +
+      "iptionReq\032-.api.v0alpha.DeleteContactFie" +
+      "ldDescriptionRes\"D\272\270\221\002\004\n\002\010d\202\323\344\223\0025\"0/api/" +
+      "v0alpha/p3api/deletecontactfielddescript" +
+      "ion:\001*\022\275\001\n\034ListContactFieldDescriptions\022" +
+      ",.api.v0alpha.ListContactFieldDescriptio" +
+      "nsReq\032,.api.v0alpha.ListContactFieldDesc" +
+      "riptionsRes\"A\272\270\221\002\002\030\001\202\323\344\223\0024\"//api/v0alpha" +
+      "/p3api/listcontactfielddescriptions:\001*\022\331" +
+      "\001\n#ListContactFieldDescriptionsByCGSid\0223" +
       ".api.v0alpha.ListContactFieldDescription" +
-      "sByCGSidRes\"H\272\270\221\002\002\030\001\202\323\344\223\002;\"6/api/v0alpha" +
-      "/p3api/listcontactfielddescriptionsbycgs" +
-      "id:\001*\022\265\001\n\032ListContactImportTemplates\022*.a" +
-      "pi.v0alpha.ListContactImportTemplatesReq" +
-      "\032*.api.v0alpha.ListContactImportTemplate" +
-      "sRes\"?\272\270\221\002\002\030\001\202\323\344\223\0022\"-/api/v0alpha/p3api/" +
-      "listcontactimporttemplates:\001*\022\301\001\n\035Update" +
-      "PreviewRecordToFinished\022-.api.v0alpha.Up" +
-      "datePreviewRecordToFinishedReq\032-.api.v0a" +
-      "lpha.UpdatePreviewRecordToFinishedRes\"B\272" +
-      "\270\221\002\002\030\001\202\323\344\223\0025\"0/api/v0alpha/p3api/updatep" +
-      "reviewrecordtofinished:\001*\022\240\001\n\024UpdateAgen" +
-      "tHuntGroup\022$.api.v0alpha.UpdateAgentHunt" +
-      "GroupReq\032$.api.v0alpha.UpdateAgentHuntGr" +
-      "oupRes\"<\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002,\"\'/api/v0alpha/p" +
-      "3api/updateagenthuntgroup:\001*\022\304\001\n\035MultiAg" +
-      "entHuntGroupAssignment\022-.api.v0alpha.Mul" +
-      "tiAgentHuntGroupAssignmentReq\032-.api.v0al" +
-      "pha.MultiAgentHuntGroupAssignmentRes\"E\272\270" +
-      "\221\002\005\n\003\010\220\003\202\323\344\223\0025\"0/api/v0alpha/p3api/multi" +
-      "agenthuntgroupassignment:\001*\022\203\001\n\017GetAgent" +
-      "Profile\022\037.api.v0alpha.GetAgentProfileReq" +
-      "\032\031.api.v0alpha.AgentProfile\"4\272\270\221\002\002\030\001\202\323\344\223" +
-      "\002\'\"\"/api/v0alpha/p3api/getagentprofile:\001" +
-      "*\022\230\001\n\022RecalculateBilling\022\".api.v0alpha.R" +
-      "ecalculateBillingReq\032\".api.v0alpha.Recal" +
-      "culateBillingRes\":\272\270\221\002\005\n\003\010\360\001\202\323\344\223\002*\"%/api" +
-      "/v0alpha/p3api/recalculatebilling:\001*\022\321\001\n" +
-      "!ListOutboundBroadcastTemplateData\0221.api" +
-      ".v0alpha.ListOutboundBroadcastTemplateDa" +
-      "taReq\0321.api.v0alpha.ListOutboundBroadcas" +
-      "tTemplateDataRes\"F\272\270\221\002\002\030\001\202\323\344\223\0029\"4/api/v0" +
-      "alpha/p3api/listoutboundbroadcasttemplat" +
-      "edata:\001*\022\264\001\n\031MultiAgentSkillAssignment\022)" +
-      ".api.v0alpha.MultiAgentSkillAssignmentRe" +
-      "q\032).api.v0alpha.MultiAgentSkillAssignmen" +
-      "tRes\"A\272\270\221\002\005\n\003\010\220\003\202\323\344\223\0021\",/api/v0alpha/p3a" +
-      "pi/multiagentskillassignment:\001*\022\274\001\n\033Mult" +
-      "iAgentSkillUnassignment\022+.api.v0alpha.Mu" +
-      "ltiAgentSkillUnassignmentReq\032+.api.v0alp" +
-      "ha.MultiAgentSkillUnassignmentRes\"C\272\270\221\002\005" +
-      "\n\003\010\220\003\202\323\344\223\0023\"./api/v0alpha/p3api/multiage" +
-      "ntskillunassignment:\001*\022\321\001\n!ListMAMAgentH" +
-      "untGroupsByClientSid\0221.api.v0alpha.ListM" +
-      "AMAgentHuntGroupsByClientSidReq\0321.api.v0" +
-      "alpha.ListMAMAgentHuntGroupsByClientSidR" +
-      "es\"F\272\270\221\002\002\030\001\202\323\344\223\0029\"4/api/v0alpha/p3api/li" +
-      "stmamagenthuntgroupsbyclientsid:\001*\022\204\001\n\rL" +
-      "istTtsVoices\022\035.api.v0alpha.ListTtsVoices" +
-      "Req\032\035.api.v0alpha.ListTtsVoicesRes\"5\272\270\221\002" +
-      "\005\n\003\010\346\001\202\323\344\223\002%\" /api/v0alpha/p3api/listtts" +
-      "voices:\001*\022\210\001\n\016CreateTtsVoice\022\036.api.v0alp" +
-      "ha.CreateTtsVoiceReq\032\036.api.v0alpha.Creat" +
-      "eTtsVoiceRes\"6\272\270\221\002\005\n\003\010\346\001\202\323\344\223\002&\"!/api/v0a" +
-      "lpha/p3api/createttsvoice:\001*\022\210\001\n\016DeleteT" +
-      "tsVoice\022\036.api.v0alpha.DeleteTtsVoiceReq\032" +
-      "\036.api.v0alpha.DeleteTtsVoiceRes\"6\272\270\221\002\005\n\003" +
-      "\010\346\001\202\323\344\223\002&\"!/api/v0alpha/p3api/deletettsv" +
-      "oice:\001*\022\227\001\n\022ListCustomDataKeys\022\".api.v0a" +
-      "lpha.ListCustomDataKeysReq\032\".api.v0alpha" +
-      ".ListCustomDataKeysRes\"9\272\270\221\002\004\n\002\010e\202\323\344\223\002*\"" +
-      "%/api/v0alpha/p3api/listcustomdatakeys:\001" +
-      "*\022\233\001\n\023CreateCustomDataKey\022#.api.v0alpha." +
-      "CreateCustomDataKeyReq\032#.api.v0alpha.Cre" +
-      "ateCustomDataKeyRes\":\272\270\221\002\004\n\002\010d\202\323\344\223\002+\"&/a" +
-      "pi/v0alpha/p3api/createcustomdatakey:\001*\022" +
-      "\233\001\n\023DeleteCustomDataKey\022#.api.v0alpha.De" +
-      "leteCustomDataKeyReq\032#.api.v0alpha.Delet" +
-      "eCustomDataKeyRes\":\272\270\221\002\004\n\002\010d\202\323\344\223\002+\"&/api" +
-      "/v0alpha/p3api/deletecustomdatakey:\001*\022\233\001" +
-      "\n\023UpdateCustomDataKey\022#.api.v0alpha.Upda" +
-      "teCustomDataKeyReq\032#.api.v0alpha.UpdateC" +
-      "ustomDataKeyRes\":\272\270\221\002\004\n\002\010d\202\323\344\223\002+\"&/api/v" +
-      "0alpha/p3api/updatecustomdatakey:\001*\022\246\001\n\025" +
-      "GetActivityLogHistory\022%.api.v0alpha.GetA" +
-      "ctivityLogHistoryReq\032%.api.v0alpha.GetAc" +
-      "tivityLogHistoryRes\"=\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002-\"(/" +
-      "api/v0alpha/p3api/getactivityloghistory:" +
-      "\001*0\001\022\273\001\n\033ListTableTemplateProperties\022+.a" +
-      "pi.v0alpha.ListTableTemplatePropertiesRe" +
-      "q\032+.api.v0alpha.ListTableTemplatePropert" +
-      "iesRes\"B\272\270\221\002\004\n\002\010e\202\323\344\223\0023\"./api/v0alpha/p3" +
-      "api/listtabletemplateproperties:\001*\022\247\001\n\026L" +
-      "istAgentSkillsFilters\022&.api.v0alpha.List" +
-      "AgentSkillsFiltersReq\032&.api.v0alpha.List" +
-      "AgentSkillsFiltersRes\"=\272\270\221\002\004\n\002\010e\202\323\344\223\002.\")" +
-      "/api/v0alpha/p3api/listagentskillsfilter" +
-      "s:\001*\022\226\001\n\021ListScheduleRules\022%.api.v0alpha" +
-      ".ListScheduleRulesRequest\032$.api.v0alpha." +
-      "ListScheduleRulesResult\"4\272\270\221\002\004\n\002\010e\202\323\344\223\002%" +
-      "\" /api/v0alpha/org/compliance/list:\001*\022\253\001" +
-      "\n\027ListCustomReportFilters\022\'.api.v0alpha." +
-      "ListCustomReportFiltersReq\032\'.api.v0alpha" +
-      ".ListCustomReportFiltersRes\">\272\270\221\002\004\n\002\010e\202\323" +
-      "\344\223\002/\"*/api/v0alpha/p3api/listcustomrepor" +
-      "tfilters:\001*\022\210\001\n\016ListSmsNumbers\022\036.api.v0a" +
-      "lpha.ListSmsNumbersReq\032\036.api.v0alpha.Lis" +
-      "tSmsNumbersRes\"6\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002&\"!/api/v" +
-      "0alpha/p3api/listsmsnumbers:\001*Bx\n\035com.tc" +
-      "n.cloud.api.api.v0alphaB\nP3apiProtoP\001\242\002\003" +
-      "AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0" +
-      "alpha\\GPBMetadata\352\002\014Api::V0alphab\006proto3"
+      "sByCGSidReq\0323.api.v0alpha.ListContactFie" +
+      "ldDescriptionsByCGSidRes\"H\272\270\221\002\002\030\001\202\323\344\223\002;\"" +
+      "6/api/v0alpha/p3api/listcontactfielddesc" +
+      "riptionsbycgsid:\001*\022\265\001\n\032ListContactImport" +
+      "Templates\022*.api.v0alpha.ListContactImpor" +
+      "tTemplatesReq\032*.api.v0alpha.ListContactI" +
+      "mportTemplatesRes\"?\272\270\221\002\002\030\001\202\323\344\223\0022\"-/api/v" +
+      "0alpha/p3api/listcontactimporttemplates:" +
+      "\001*\022\301\001\n\035UpdatePreviewRecordToFinished\022-.a" +
+      "pi.v0alpha.UpdatePreviewRecordToFinished" +
+      "Req\032-.api.v0alpha.UpdatePreviewRecordToF" +
+      "inishedRes\"B\272\270\221\002\002\030\001\202\323\344\223\0025\"0/api/v0alpha/" +
+      "p3api/updatepreviewrecordtofinished:\001*\022\240" +
+      "\001\n\024UpdateAgentHuntGroup\022$.api.v0alpha.Up" +
+      "dateAgentHuntGroupReq\032$.api.v0alpha.Upda" +
+      "teAgentHuntGroupRes\"<\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002,\"\'/" +
+      "api/v0alpha/p3api/updateagenthuntgroup:\001" +
+      "*\022\304\001\n\035MultiAgentHuntGroupAssignment\022-.ap" +
+      "i.v0alpha.MultiAgentHuntGroupAssignmentR" +
+      "eq\032-.api.v0alpha.MultiAgentHuntGroupAssi" +
+      "gnmentRes\"E\272\270\221\002\005\n\003\010\220\003\202\323\344\223\0025\"0/api/v0alph" +
+      "a/p3api/multiagenthuntgroupassignment:\001*" +
+      "\022\203\001\n\017GetAgentProfile\022\037.api.v0alpha.GetAg" +
+      "entProfileReq\032\031.api.v0alpha.AgentProfile" +
+      "\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha/p3api/geta" +
+      "gentprofile:\001*\022\230\001\n\022RecalculateBilling\022\"." +
+      "api.v0alpha.RecalculateBillingReq\032\".api." +
+      "v0alpha.RecalculateBillingRes\":\272\270\221\002\005\n\003\010\360" +
+      "\001\202\323\344\223\002*\"%/api/v0alpha/p3api/recalculateb" +
+      "illing:\001*\022\321\001\n!ListOutboundBroadcastTempl" +
+      "ateData\0221.api.v0alpha.ListOutboundBroadc" +
+      "astTemplateDataReq\0321.api.v0alpha.ListOut" +
+      "boundBroadcastTemplateDataRes\"F\272\270\221\002\002\030\001\202\323" +
+      "\344\223\0029\"4/api/v0alpha/p3api/listoutboundbro" +
+      "adcasttemplatedata:\001*\022\264\001\n\031MultiAgentSkil" +
+      "lAssignment\022).api.v0alpha.MultiAgentSkil" +
+      "lAssignmentReq\032).api.v0alpha.MultiAgentS" +
+      "killAssignmentRes\"A\272\270\221\002\005\n\003\010\220\003\202\323\344\223\0021\",/ap" +
+      "i/v0alpha/p3api/multiagentskillassignmen" +
+      "t:\001*\022\274\001\n\033MultiAgentSkillUnassignment\022+.a" +
+      "pi.v0alpha.MultiAgentSkillUnassignmentRe" +
+      "q\032+.api.v0alpha.MultiAgentSkillUnassignm" +
+      "entRes\"C\272\270\221\002\005\n\003\010\220\003\202\323\344\223\0023\"./api/v0alpha/p" +
+      "3api/multiagentskillunassignment:\001*\022\321\001\n!" +
+      "ListMAMAgentHuntGroupsByClientSid\0221.api." +
+      "v0alpha.ListMAMAgentHuntGroupsByClientSi" +
+      "dReq\0321.api.v0alpha.ListMAMAgentHuntGroup" +
+      "sByClientSidRes\"F\272\270\221\002\002\030\001\202\323\344\223\0029\"4/api/v0a" +
+      "lpha/p3api/listmamagenthuntgroupsbyclien" +
+      "tsid:\001*\022\204\001\n\rListTtsVoices\022\035.api.v0alpha." +
+      "ListTtsVoicesReq\032\035.api.v0alpha.ListTtsVo" +
+      "icesRes\"5\272\270\221\002\005\n\003\010\346\001\202\323\344\223\002%\" /api/v0alpha/" +
+      "p3api/listttsvoices:\001*\022\210\001\n\016CreateTtsVoic" +
+      "e\022\036.api.v0alpha.CreateTtsVoiceReq\032\036.api." +
+      "v0alpha.CreateTtsVoiceRes\"6\272\270\221\002\005\n\003\010\346\001\202\323\344" +
+      "\223\002&\"!/api/v0alpha/p3api/createttsvoice:\001" +
+      "*\022\210\001\n\016DeleteTtsVoice\022\036.api.v0alpha.Delet" +
+      "eTtsVoiceReq\032\036.api.v0alpha.DeleteTtsVoic" +
+      "eRes\"6\272\270\221\002\005\n\003\010\346\001\202\323\344\223\002&\"!/api/v0alpha/p3a" +
+      "pi/deletettsvoice:\001*\022\227\001\n\022ListCustomDataK" +
+      "eys\022\".api.v0alpha.ListCustomDataKeysReq\032" +
+      "\".api.v0alpha.ListCustomDataKeysRes\"9\272\270\221" +
+      "\002\004\n\002\010e\202\323\344\223\002*\"%/api/v0alpha/p3api/listcus" +
+      "tomdatakeys:\001*\022\233\001\n\023CreateCustomDataKey\022#" +
+      ".api.v0alpha.CreateCustomDataKeyReq\032#.ap" +
+      "i.v0alpha.CreateCustomDataKeyRes\":\272\270\221\002\004\n" +
+      "\002\010d\202\323\344\223\002+\"&/api/v0alpha/p3api/createcust" +
+      "omdatakey:\001*\022\233\001\n\023DeleteCustomDataKey\022#.a" +
+      "pi.v0alpha.DeleteCustomDataKeyReq\032#.api." +
+      "v0alpha.DeleteCustomDataKeyRes\":\272\270\221\002\004\n\002\010" +
+      "d\202\323\344\223\002+\"&/api/v0alpha/p3api/deletecustom" +
+      "datakey:\001*\022\233\001\n\023UpdateCustomDataKey\022#.api" +
+      ".v0alpha.UpdateCustomDataKeyReq\032#.api.v0" +
+      "alpha.UpdateCustomDataKeyRes\":\272\270\221\002\004\n\002\010d\202" +
+      "\323\344\223\002+\"&/api/v0alpha/p3api/updatecustomda" +
+      "takey:\001*\022\246\001\n\025GetActivityLogHistory\022%.api" +
+      ".v0alpha.GetActivityLogHistoryReq\032%.api." +
+      "v0alpha.GetActivityLogHistoryRes\"=\272\270\221\002\005\n" +
+      "\003\010\310\001\202\323\344\223\002-\"(/api/v0alpha/p3api/getactivi" +
+      "tyloghistory:\001*0\001\022\273\001\n\033ListTableTemplateP" +
+      "roperties\022+.api.v0alpha.ListTableTemplat" +
+      "ePropertiesReq\032+.api.v0alpha.ListTableTe" +
+      "mplatePropertiesRes\"B\272\270\221\002\004\n\002\010e\202\323\344\223\0023\"./a" +
+      "pi/v0alpha/p3api/listtabletemplateproper" +
+      "ties:\001*\022\247\001\n\026ListAgentSkillsFilters\022&.api" +
+      ".v0alpha.ListAgentSkillsFiltersReq\032&.api" +
+      ".v0alpha.ListAgentSkillsFiltersRes\"=\272\270\221\002" +
+      "\004\n\002\010e\202\323\344\223\002.\")/api/v0alpha/p3api/listagen" +
+      "tskillsfilters:\001*\022\226\001\n\021ListScheduleRules\022" +
+      "%.api.v0alpha.ListScheduleRulesRequest\032$" +
+      ".api.v0alpha.ListScheduleRulesResult\"4\272\270" +
+      "\221\002\004\n\002\010e\202\323\344\223\002%\" /api/v0alpha/org/complian" +
+      "ce/list:\001*\022\253\001\n\027ListCustomReportFilters\022\'" +
+      ".api.v0alpha.ListCustomReportFiltersReq\032" +
+      "\'.api.v0alpha.ListCustomReportFiltersRes" +
+      "\">\272\270\221\002\004\n\002\010e\202\323\344\223\002/\"*/api/v0alpha/p3api/li" +
+      "stcustomreportfilters:\001*\022\210\001\n\016ListSmsNumb" +
+      "ers\022\036.api.v0alpha.ListSmsNumbersReq\032\036.ap" +
+      "i.v0alpha.ListSmsNumbersRes\"6\272\270\221\002\005\n\003\010\260\t\202" +
+      "\323\344\223\002&\"!/api/v0alpha/p3api/listsmsnumbers" +
+      ":\001*Bx\n\035com.tcn.cloud.api.api.v0alphaB\nP3" +
+      "apiProtoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0a" +
+      "lpha\342\002\027Api\\V0alpha\\GPBMetadata\352\002\014Api::V0" +
+      "alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3279,7 +3281,7 @@ public final class P3apiProto {
     internal_static_api_v0alpha_HuntGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_HuntGroup_descriptor,
-        new java.lang.String[] { "HuntGroupSid", "ClientSid", "Name", "Description", "ModifyDate", "Type", "AgentCount", });
+        new java.lang.String[] { "HuntGroupSid", "ClientSid", "Name", "Description", "ModifyDate", "Type", "AgentCount", "HuntGroupSkillCount", });
     internal_static_api_v0alpha_GetAgentSkillsReq_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_api_v0alpha_GetAgentSkillsReq_fieldAccessorTable = new
