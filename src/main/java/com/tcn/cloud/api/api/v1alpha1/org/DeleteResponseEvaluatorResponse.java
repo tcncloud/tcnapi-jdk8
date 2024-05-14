@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
+ * <pre>
+ * Response for the DeleteResponseEvaluator RPC.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.DeleteResponseEvaluatorResponse}
  */
 public final class DeleteResponseEvaluatorResponse extends
@@ -185,6 +189,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Response for the DeleteResponseEvaluator RPC.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.DeleteResponseEvaluatorResponse}
    */
   public static final class Builder extends

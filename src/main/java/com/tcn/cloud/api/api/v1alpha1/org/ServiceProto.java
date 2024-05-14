@@ -1115,16 +1115,16 @@ public final class ServiceProto {
       "Evaluator\0220.api.v1alpha1.org.CreateRespo" +
       "nseEvaluatorRequest\0321.api.v1alpha1.org.C" +
       "reateResponseEvaluatorResponse\"=\272\270\221\002\004\n\002\010" +
-      "e\202\323\344\223\002.\")/api/v1alpha1/org/createrespons" +
+      "d\202\323\344\223\002.\")/api/v1alpha1/org/createrespons" +
       "eevaluator:\001*\022\275\001\n\027UpdateResponseEvaluato" +
       "r\0220.api.v1alpha1.org.UpdateResponseEvalu" +
       "atorRequest\0321.api.v1alpha1.org.UpdateRes" +
-      "ponseEvaluatorResponse\"=\272\270\221\002\004\n\002\010e\202\323\344\223\002.\"" +
+      "ponseEvaluatorResponse\"=\272\270\221\002\004\n\002\010d\202\323\344\223\002.\"" +
       ")/api/v1alpha1/org/updateresponseevaluat" +
       "or:\001*\022\275\001\n\027DeleteResponseEvaluator\0220.api." +
       "v1alpha1.org.DeleteResponseEvaluatorRequ" +
       "est\0321.api.v1alpha1.org.DeleteResponseEva" +
-      "luatorResponse\"=\272\270\221\002\004\n\002\010e\202\323\344\223\002.\")/api/v1" +
+      "luatorResponse\"=\272\270\221\002\004\n\002\010d\202\323\344\223\002.\")/api/v1" +
       "alpha1/org/deleteresponseevaluator:\001*B\224\001" +
       "\n\"com.tcn.cloud.api.api.v1alpha1.orgB\014Se" +
       "rviceProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020" +

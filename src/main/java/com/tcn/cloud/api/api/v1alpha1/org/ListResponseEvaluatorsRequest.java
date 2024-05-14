@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
+ * <pre>
+ * Request for the ListResponseEvaluators RPC.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.ListResponseEvaluatorsRequest}
  */
 public final class ListResponseEvaluatorsRequest extends
@@ -185,6 +189,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request for the ListResponseEvaluators RPC.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.ListResponseEvaluatorsRequest}
    */
   public static final class Builder extends

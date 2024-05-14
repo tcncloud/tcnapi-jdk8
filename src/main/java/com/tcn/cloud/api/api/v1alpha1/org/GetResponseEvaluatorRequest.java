@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
+ * <pre>
+ * Request for the GetResponseEvaluator RPC.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.GetResponseEvaluatorRequest}
  */
 public final class GetResponseEvaluatorRequest extends
@@ -235,6 +239,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request for the GetResponseEvaluator RPC.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.GetResponseEvaluatorRequest}
    */
   public static final class Builder extends

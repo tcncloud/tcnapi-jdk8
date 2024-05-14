@@ -8,28 +8,16 @@ public interface UpdateResponseEvaluatorResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * the updated evaluator
-   * </pre>
-   *
    * <code>.api.v1alpha1.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
    * @return Whether the evaluator field is set.
    */
   boolean hasEvaluator();
   /**
-   * <pre>
-   * the updated evaluator
-   * </pre>
-   *
    * <code>.api.v1alpha1.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
    * @return The evaluator.
    */
   com.tcn.cloud.api.api.v1alpha1.org.ResponseEvaluator getEvaluator();
   /**
-   * <pre>
-   * the updated evaluator
-   * </pre>
-   *
    * <code>.api.v1alpha1.org.ResponseEvaluator evaluator = 1 [json_name = "evaluator"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.org.ResponseEvaluatorOrBuilder getEvaluatorOrBuilder();
