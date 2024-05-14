@@ -20,14 +20,12 @@ public interface BasicUnitConfigOrBuilder extends
   long getUnitSize();
 
   /**
-   * <pre>
-   * Required. the amount to rate each unit
-   * </pre>
-   *
-   * <code>double rate = 2 [json_name = "rate"];</code>
+   * <code>double rate = 2 [json_name = "rate", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha2.BasicUnitConfig.rate is deprecated.
+   *     See services/billing/entities/v1alpha2/modules.proto;l=22
    * @return The rate.
    */
-  double getRate();
+  @java.lang.Deprecated double getRate();
 
   /**
    * <pre>
@@ -154,4 +152,31 @@ public interface BasicUnitConfigOrBuilder extends
    * <code>.google.protobuf.Int64Value max_units_per_cycle = 6 [json_name = "maxUnitsPerCycle"];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getMaxUnitsPerCycleOrBuilder();
+
+  /**
+   * <pre>
+   * Required. the amount to rate each unit
+   * </pre>
+   *
+   * <code>.google.type.Decimal rate_decimal = 7 [json_name = "rateDecimal"];</code>
+   * @return Whether the rateDecimal field is set.
+   */
+  boolean hasRateDecimal();
+  /**
+   * <pre>
+   * Required. the amount to rate each unit
+   * </pre>
+   *
+   * <code>.google.type.Decimal rate_decimal = 7 [json_name = "rateDecimal"];</code>
+   * @return The rateDecimal.
+   */
+  com.google.type.Decimal getRateDecimal();
+  /**
+   * <pre>
+   * Required. the amount to rate each unit
+   * </pre>
+   *
+   * <code>.google.type.Decimal rate_decimal = 7 [json_name = "rateDecimal"];</code>
+   */
+  com.google.type.DecimalOrBuilder getRateDecimalOrBuilder();
 }

@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
+ * <pre>
+ * HuntGroup describes a hunt group in an organization.
+ * </pre>
+ *
  * Protobuf type {@code api.v0alpha.HuntGroup}
  */
 public final class HuntGroup extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   public static final int HUNT_GROUP_SID_FIELD_NUMBER = 1;
   private long huntGroupSid_ = 0L;
   /**
+   * <pre>
+   * The sid of the hunt group.
+   * </pre>
+   *
    * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
    * @return The huntGroupSid.
    */
@@ -54,6 +62,10 @@ private static final long serialVersionUID = 0L;
   public static final int CLIENT_SID_FIELD_NUMBER = 2;
   private long clientSid_ = 0L;
   /**
+   * <pre>
+   * The client sid of the hunt group.
+   * </pre>
+   *
    * <code>int64 client_sid = 2 [json_name = "clientSid"];</code>
    * @return The clientSid.
    */
@@ -66,6 +78,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
+   * <pre>
+   * The name of the hunt group.
+   * </pre>
+   *
    * <code>string name = 3 [json_name = "name"];</code>
    * @return The name.
    */
@@ -83,6 +99,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The name of the hunt group.
+   * </pre>
+   *
    * <code>string name = 3 [json_name = "name"];</code>
    * @return The bytes for name.
    */
@@ -104,6 +124,10 @@ private static final long serialVersionUID = 0L;
   public static final int DESCRIPTION_FIELD_NUMBER = 4;
   private com.google.protobuf.StringValue description_;
   /**
+   * <pre>
+   * The description of the hunt group.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue description = 4 [json_name = "description"];</code>
    * @return Whether the description field is set.
    */
@@ -112,6 +136,10 @@ private static final long serialVersionUID = 0L;
     return description_ != null;
   }
   /**
+   * <pre>
+   * The description of the hunt group.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue description = 4 [json_name = "description"];</code>
    * @return The description.
    */
@@ -120,6 +148,10 @@ private static final long serialVersionUID = 0L;
     return description_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description_;
   }
   /**
+   * <pre>
+   * The description of the hunt group.
+   * </pre>
+   *
    * <code>.google.protobuf.StringValue description = 4 [json_name = "description"];</code>
    */
   @java.lang.Override
@@ -130,6 +162,10 @@ private static final long serialVersionUID = 0L;
   public static final int MODIFY_DATE_FIELD_NUMBER = 5;
   private com.google.protobuf.Timestamp modifyDate_;
   /**
+   * <pre>
+   * The last time the hunt group was modified.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp modify_date = 5 [json_name = "modifyDate"];</code>
    * @return Whether the modifyDate field is set.
    */
@@ -138,6 +174,10 @@ private static final long serialVersionUID = 0L;
     return modifyDate_ != null;
   }
   /**
+   * <pre>
+   * The last time the hunt group was modified.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp modify_date = 5 [json_name = "modifyDate"];</code>
    * @return The modifyDate.
    */
@@ -146,6 +186,10 @@ private static final long serialVersionUID = 0L;
     return modifyDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : modifyDate_;
   }
   /**
+   * <pre>
+   * The last time the hunt group was modified.
+   * </pre>
+   *
    * <code>.google.protobuf.Timestamp modify_date = 5 [json_name = "modifyDate"];</code>
    */
   @java.lang.Override
@@ -156,6 +200,10 @@ private static final long serialVersionUID = 0L;
   public static final int TYPE_FIELD_NUMBER = 6;
   private int type_ = 0;
   /**
+   * <pre>
+   * The type of hunt group, connected or softphone.
+   * </pre>
+   *
    * <code>.api.commons.HuntGroupType.Enum type = 6 [json_name = "type"];</code>
    * @return The enum numeric value on the wire for type.
    */
@@ -163,6 +211,10 @@ private static final long serialVersionUID = 0L;
     return type_;
   }
   /**
+   * <pre>
+   * The type of hunt group, connected or softphone.
+   * </pre>
+   *
    * <code>.api.commons.HuntGroupType.Enum type = 6 [json_name = "type"];</code>
    * @return The type.
    */
@@ -174,12 +226,31 @@ private static final long serialVersionUID = 0L;
   public static final int AGENT_COUNT_FIELD_NUMBER = 7;
   private long agentCount_ = 0L;
   /**
+   * <pre>
+   * The number of agents in the hunt group.
+   * </pre>
+   *
    * <code>int64 agent_count = 7 [json_name = "agentCount"];</code>
    * @return The agentCount.
    */
   @java.lang.Override
   public long getAgentCount() {
     return agentCount_;
+  }
+
+  public static final int HUNT_GROUP_SKILL_AGENT_COUNT_FIELD_NUMBER = 8;
+  private long huntGroupSkillAgentCount_ = 0L;
+  /**
+   * <pre>
+   * The number of agents that have this hunt group's skill.
+   * </pre>
+   *
+   * <code>int64 hunt_group_skill_agent_count = 8 [json_name = "huntGroupSkillAgentCount"];</code>
+   * @return The huntGroupSkillAgentCount.
+   */
+  @java.lang.Override
+  public long getHuntGroupSkillAgentCount() {
+    return huntGroupSkillAgentCount_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -217,6 +288,9 @@ private static final long serialVersionUID = 0L;
     if (agentCount_ != 0L) {
       output.writeInt64(7, agentCount_);
     }
+    if (huntGroupSkillAgentCount_ != 0L) {
+      output.writeInt64(8, huntGroupSkillAgentCount_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -253,6 +327,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, agentCount_);
     }
+    if (huntGroupSkillAgentCount_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(8, huntGroupSkillAgentCount_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -287,6 +365,8 @@ private static final long serialVersionUID = 0L;
     if (type_ != other.type_) return false;
     if (getAgentCount()
         != other.getAgentCount()) return false;
+    if (getHuntGroupSkillAgentCount()
+        != other.getHuntGroupSkillAgentCount()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -319,6 +399,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + AGENT_COUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getAgentCount());
+    hash = (37 * hash) + HUNT_GROUP_SKILL_AGENT_COUNT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHuntGroupSkillAgentCount());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -417,6 +500,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * HuntGroup describes a hunt group in an organization.
+   * </pre>
+   *
    * Protobuf type {@code api.v0alpha.HuntGroup}
    */
   public static final class Builder extends
@@ -465,6 +552,7 @@ private static final long serialVersionUID = 0L;
       }
       type_ = 0;
       agentCount_ = 0L;
+      huntGroupSkillAgentCount_ = 0L;
       return this;
     }
 
@@ -522,6 +610,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.agentCount_ = agentCount_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.huntGroupSkillAgentCount_ = huntGroupSkillAgentCount_;
       }
     }
 
@@ -592,6 +683,9 @@ private static final long serialVersionUID = 0L;
       if (other.getAgentCount() != 0L) {
         setAgentCount(other.getAgentCount());
       }
+      if (other.getHuntGroupSkillAgentCount() != 0L) {
+        setHuntGroupSkillAgentCount(other.getHuntGroupSkillAgentCount());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -657,6 +751,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 56
+            case 64: {
+              huntGroupSkillAgentCount_ = input.readInt64();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -676,6 +775,10 @@ private static final long serialVersionUID = 0L;
 
     private long huntGroupSid_ ;
     /**
+     * <pre>
+     * The sid of the hunt group.
+     * </pre>
+     *
      * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
      * @return The huntGroupSid.
      */
@@ -684,6 +787,10 @@ private static final long serialVersionUID = 0L;
       return huntGroupSid_;
     }
     /**
+     * <pre>
+     * The sid of the hunt group.
+     * </pre>
+     *
      * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
      * @param value The huntGroupSid to set.
      * @return This builder for chaining.
@@ -696,6 +803,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The sid of the hunt group.
+     * </pre>
+     *
      * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
      * @return This builder for chaining.
      */
@@ -708,6 +819,10 @@ private static final long serialVersionUID = 0L;
 
     private long clientSid_ ;
     /**
+     * <pre>
+     * The client sid of the hunt group.
+     * </pre>
+     *
      * <code>int64 client_sid = 2 [json_name = "clientSid"];</code>
      * @return The clientSid.
      */
@@ -716,6 +831,10 @@ private static final long serialVersionUID = 0L;
       return clientSid_;
     }
     /**
+     * <pre>
+     * The client sid of the hunt group.
+     * </pre>
+     *
      * <code>int64 client_sid = 2 [json_name = "clientSid"];</code>
      * @param value The clientSid to set.
      * @return This builder for chaining.
@@ -728,6 +847,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The client sid of the hunt group.
+     * </pre>
+     *
      * <code>int64 client_sid = 2 [json_name = "clientSid"];</code>
      * @return This builder for chaining.
      */
@@ -740,6 +863,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
+     * <pre>
+     * The name of the hunt group.
+     * </pre>
+     *
      * <code>string name = 3 [json_name = "name"];</code>
      * @return The name.
      */
@@ -756,6 +883,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the hunt group.
+     * </pre>
+     *
      * <code>string name = 3 [json_name = "name"];</code>
      * @return The bytes for name.
      */
@@ -773,6 +904,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the hunt group.
+     * </pre>
+     *
      * <code>string name = 3 [json_name = "name"];</code>
      * @param value The name to set.
      * @return This builder for chaining.
@@ -786,6 +921,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the hunt group.
+     * </pre>
+     *
      * <code>string name = 3 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
@@ -796,6 +935,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the hunt group.
+     * </pre>
+     *
      * <code>string name = 3 [json_name = "name"];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
@@ -814,6 +957,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> descriptionBuilder_;
     /**
+     * <pre>
+     * The description of the hunt group.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue description = 4 [json_name = "description"];</code>
      * @return Whether the description field is set.
      */
@@ -821,6 +968,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
+     * <pre>
+     * The description of the hunt group.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue description = 4 [json_name = "description"];</code>
      * @return The description.
      */
@@ -832,6 +983,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The description of the hunt group.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue description = 4 [json_name = "description"];</code>
      */
     public Builder setDescription(com.google.protobuf.StringValue value) {
@@ -848,6 +1003,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The description of the hunt group.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue description = 4 [json_name = "description"];</code>
      */
     public Builder setDescription(
@@ -862,6 +1021,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The description of the hunt group.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue description = 4 [json_name = "description"];</code>
      */
     public Builder mergeDescription(com.google.protobuf.StringValue value) {
@@ -881,6 +1044,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The description of the hunt group.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue description = 4 [json_name = "description"];</code>
      */
     public Builder clearDescription() {
@@ -894,6 +1061,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The description of the hunt group.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue description = 4 [json_name = "description"];</code>
      */
     public com.google.protobuf.StringValue.Builder getDescriptionBuilder() {
@@ -902,6 +1073,10 @@ private static final long serialVersionUID = 0L;
       return getDescriptionFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The description of the hunt group.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue description = 4 [json_name = "description"];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder() {
@@ -913,6 +1088,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The description of the hunt group.
+     * </pre>
+     *
      * <code>.google.protobuf.StringValue description = 4 [json_name = "description"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -933,6 +1112,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> modifyDateBuilder_;
     /**
+     * <pre>
+     * The last time the hunt group was modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modify_date = 5 [json_name = "modifyDate"];</code>
      * @return Whether the modifyDate field is set.
      */
@@ -940,6 +1123,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
+     * <pre>
+     * The last time the hunt group was modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modify_date = 5 [json_name = "modifyDate"];</code>
      * @return The modifyDate.
      */
@@ -951,6 +1138,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The last time the hunt group was modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modify_date = 5 [json_name = "modifyDate"];</code>
      */
     public Builder setModifyDate(com.google.protobuf.Timestamp value) {
@@ -967,6 +1158,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The last time the hunt group was modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modify_date = 5 [json_name = "modifyDate"];</code>
      */
     public Builder setModifyDate(
@@ -981,6 +1176,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The last time the hunt group was modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modify_date = 5 [json_name = "modifyDate"];</code>
      */
     public Builder mergeModifyDate(com.google.protobuf.Timestamp value) {
@@ -1000,6 +1199,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The last time the hunt group was modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modify_date = 5 [json_name = "modifyDate"];</code>
      */
     public Builder clearModifyDate() {
@@ -1013,6 +1216,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The last time the hunt group was modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modify_date = 5 [json_name = "modifyDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getModifyDateBuilder() {
@@ -1021,6 +1228,10 @@ private static final long serialVersionUID = 0L;
       return getModifyDateFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The last time the hunt group was modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modify_date = 5 [json_name = "modifyDate"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getModifyDateOrBuilder() {
@@ -1032,6 +1243,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The last time the hunt group was modified.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp modify_date = 5 [json_name = "modifyDate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1050,6 +1265,10 @@ private static final long serialVersionUID = 0L;
 
     private int type_ = 0;
     /**
+     * <pre>
+     * The type of hunt group, connected or softphone.
+     * </pre>
+     *
      * <code>.api.commons.HuntGroupType.Enum type = 6 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
@@ -1057,6 +1276,10 @@ private static final long serialVersionUID = 0L;
       return type_;
     }
     /**
+     * <pre>
+     * The type of hunt group, connected or softphone.
+     * </pre>
+     *
      * <code>.api.commons.HuntGroupType.Enum type = 6 [json_name = "type"];</code>
      * @param value The enum numeric value on the wire for type to set.
      * @return This builder for chaining.
@@ -1068,6 +1291,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The type of hunt group, connected or softphone.
+     * </pre>
+     *
      * <code>.api.commons.HuntGroupType.Enum type = 6 [json_name = "type"];</code>
      * @return The type.
      */
@@ -1077,6 +1304,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.tcn.cloud.api.api.commons.HuntGroupType.Enum.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * The type of hunt group, connected or softphone.
+     * </pre>
+     *
      * <code>.api.commons.HuntGroupType.Enum type = 6 [json_name = "type"];</code>
      * @param value The type to set.
      * @return This builder for chaining.
@@ -1091,6 +1322,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The type of hunt group, connected or softphone.
+     * </pre>
+     *
      * <code>.api.commons.HuntGroupType.Enum type = 6 [json_name = "type"];</code>
      * @return This builder for chaining.
      */
@@ -1103,6 +1338,10 @@ private static final long serialVersionUID = 0L;
 
     private long agentCount_ ;
     /**
+     * <pre>
+     * The number of agents in the hunt group.
+     * </pre>
+     *
      * <code>int64 agent_count = 7 [json_name = "agentCount"];</code>
      * @return The agentCount.
      */
@@ -1111,6 +1350,10 @@ private static final long serialVersionUID = 0L;
       return agentCount_;
     }
     /**
+     * <pre>
+     * The number of agents in the hunt group.
+     * </pre>
+     *
      * <code>int64 agent_count = 7 [json_name = "agentCount"];</code>
      * @param value The agentCount to set.
      * @return This builder for chaining.
@@ -1123,12 +1366,60 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The number of agents in the hunt group.
+     * </pre>
+     *
      * <code>int64 agent_count = 7 [json_name = "agentCount"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAgentCount() {
       bitField0_ = (bitField0_ & ~0x00000040);
       agentCount_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long huntGroupSkillAgentCount_ ;
+    /**
+     * <pre>
+     * The number of agents that have this hunt group's skill.
+     * </pre>
+     *
+     * <code>int64 hunt_group_skill_agent_count = 8 [json_name = "huntGroupSkillAgentCount"];</code>
+     * @return The huntGroupSkillAgentCount.
+     */
+    @java.lang.Override
+    public long getHuntGroupSkillAgentCount() {
+      return huntGroupSkillAgentCount_;
+    }
+    /**
+     * <pre>
+     * The number of agents that have this hunt group's skill.
+     * </pre>
+     *
+     * <code>int64 hunt_group_skill_agent_count = 8 [json_name = "huntGroupSkillAgentCount"];</code>
+     * @param value The huntGroupSkillAgentCount to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHuntGroupSkillAgentCount(long value) {
+
+      huntGroupSkillAgentCount_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of agents that have this hunt group's skill.
+     * </pre>
+     *
+     * <code>int64 hunt_group_skill_agent_count = 8 [json_name = "huntGroupSkillAgentCount"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHuntGroupSkillAgentCount() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      huntGroupSkillAgentCount_ = 0L;
       onChanged();
       return this;
     }
