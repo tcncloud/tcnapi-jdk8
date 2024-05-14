@@ -110,6 +110,11 @@ public final class HuntgroupProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_org_HuntGroupDetails_IntegrationLinkDetails_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_HuntGroupDetails_ScriptDetails_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_HuntGroupDetails_ScriptDetails_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_org_CommunicationSettings_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -404,6 +409,11 @@ public final class HuntgroupProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_org_SimpleCompareExpression_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_ResponseEvaluator_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_ResponseEvaluator_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -556,7 +566,7 @@ public final class HuntgroupProto {
       "\003(\003R\014optionalData\022#\n\rrequired_data\030\003 \003(\003" +
       "R\014requiredData\032^\n\030PrepareStateCallDelive" +
       "ry\022\037\n\013manual_dial\030\001 \001(\010R\nmanualDial\022!\n\014p" +
-      "review_dial\030\002 \001(\010R\013previewDial\"\267\n\n\020HuntG" +
+      "review_dial\030\002 \001(\010R\013previewDial\"\347\014\n\020HuntG" +
       "roupDetails\022Y\n\017general_details\030\001 \001(\01320.a" +
       "pi.commons.org.HuntGroupDetails.GeneralD" +
       "etailsR\016generalDetails\022m\n\020template_detai" +
@@ -569,632 +579,644 @@ public final class HuntgroupProto {
       "tails.TriggerDetailsR\016triggerDetails\022r\n\030" +
       "integration_link_details\030\005 \003(\01328.api.com" +
       "mons.org.HuntGroupDetails.IntegrationLin" +
-      "kDetailsR\026integrationLinkDetails\032\330\001\n\016Gen" +
-      "eralDetails\022\022\n\004name\030\001 \001(\tR\004name\022 \n\013descr" +
-      "iption\030\002 \001(\tR\013description\0222\n\004type\030\003 \001(\0162" +
-      "\036.api.commons.org.HuntGroupTypeR\004type\022;\n" +
-      "\013modify_date\030\004 \001(\0132\032.google.protobuf.Tim" +
-      "estampR\nmodifyDate\022\037\n\013agent_count\030\005 \001(\003R" +
-      "\nagentCount\032\266\001\n ClientInfoDisplayTemplat" +
-      "eDetails\022\022\n\004name\030\001 \001(\tR\004name\022 \n\013descript" +
-      "ion\030\002 \001(\tR\013description\022,\n\022display_all_fi" +
-      "elds\030\003 \001(\010R\020displayAllFields\022.\n\023defined_" +
-      "field_count\030\004 \001(\003R\021definedFieldCount\032\212\001\n" +
-      "\016WebLinkDetails\022\022\n\004name\030\001 \001(\tR\004name\022 \n\013d" +
-      "escription\030\002 \001(\tR\013description\022\031\n\010base_ur" +
-      "l\030\003 \001(\tR\007baseUrl\022\'\n\017parameter_count\030\004 \001(" +
-      "\003R\016parameterCount\032\274\001\n\016TriggerDetails\022 \n\013" +
-      "description\030\001 \001(\tR\013description\0224\n\006status" +
-      "\030\002 \001(\0162\034.api.commons.org.AgentStatusR\006st" +
-      "atus\022\032\n\010duration\030\003 \001(\003R\010duration\0226\n\006acti" +
-      "on\030\004 \001(\0162\036.api.commons.org.TriggerAction" +
-      "R\006action\032N\n\026IntegrationLinkDetails\022\022\n\004na" +
-      "me\030\001 \001(\tR\004name\022 \n\013description\030\002 \001(\tR\013des" +
-      "cription\"\354\016\n\025CommunicationSettings\0227\n\030en" +
-      "able_scrub_list_adding\030\001 \001(\010R\025enableScru" +
-      "bListAdding\022\037\n\013scrub_lists\030\002 \003(\tR\nscrubL" +
-      "ists\0229\n\031enable_scrub_list_removal\030\003 \001(\010R" +
-      "\026enableScrubListRemoval\022=\n\033scrub_lists_r" +
-      "emoval_allowed\030\004 \003(\tR\030scrubListsRemovalA" +
-      "llowed\022R\n\032compliance_default_country\030\005 \001" +
-      "(\0162\024.api.commons.CountryR\030complianceDefa" +
-      "ultCountry\0229\n\031display_options_in_wrapup\030" +
-      "\006 \001(\010R\026displayOptionsInWrapup\022}\n\035inbound" +
-      "_scrub_list_expiration\030d \001(\0132:.api.commo" +
-      "ns.org.CommunicationSettings.ScrubListEx" +
-      "pirationR\032inboundScrubListExpiration\022{\n\034" +
-      "manual_scrub_list_expiration\030e \001(\0132:.api" +
-      ".commons.org.CommunicationSettings.Scrub" +
-      "ListExpirationR\031manualScrubListExpiratio" +
-      "n\022\177\n\036outbound_scrub_list_expiration\030f \001(" +
-      "\0132:.api.commons.org.CommunicationSetting" +
-      "s.ScrubListExpirationR\033outboundScrubList" +
-      "Expiration\022}\n\035preview_scrub_list_expirat" +
-      "ion\030g \001(\0132:.api.commons.org.Communicatio" +
-      "nSettings.ScrubListExpirationR\032previewSc" +
-      "rubListExpiration\022M\n#automate_manually_d" +
-      "ialed_scrub_list\030\310\001 \001(\010R\037automateManuall" +
-      "yDialedScrubList\022K\n\"automate_preview_dia" +
-      "led_scrub_list\030\311\001 \001(\010R\036automatePreviewDi" +
-      "aledScrubList\022u\n\027automate_response_rules" +
-      "\030\312\001 \001(\0132<.api.commons.org.CommunicationS" +
-      "ettings.AutomateResponseRulesR\025automateR" +
-      "esponseRules\022\203\001\n\035automate_scrub_list_cal" +
-      "l_data\030\313\001 \001(\0132@.api.commons.org.Communic" +
-      "ationSettings.AutomateScrubListCallDataR" +
-      "\031automateScrubListCallData\032\354\001\n\023ScrubList" +
-      "Expiration\022S\n\022default_expiration\030\001 \001(\0162$" +
-      ".api.commons.CommunicationExpirationR\021de" +
-      "faultExpiration\022)\n\020limit_expiration\030\002 \001(" +
-      "\010R\017limitExpiration\022U\n\023limited_expiration" +
-      "s\030\003 \003(\0162$.api.commons.CommunicationExpir" +
-      "ationR\022limitedExpirations\032L\n\025AutomateRes" +
-      "ponseRules\022\030\n\007enabled\030\001 \001(\010R\007enabled\022\031\n\010" +
-      "rule_sid\030\002 \001(\003R\007ruleSid\032\235\002\n\031AutomateScru" +
-      "bListCallData\022\030\n\007enabled\030\001 \001(\010R\007enabled\022" +
-      "\210\001\n\026scrub_list_data_fields\030\002 \003(\0132S.api.c" +
-      "ommons.org.CommunicationSettings.Automat" +
-      "eScrubListCallData.ScrubListDataFieldR\023s" +
-      "crubListDataFields\032[\n\022ScrubListDataField" +
-      "\022\035\n\nscrub_list\030\001 \001(\tR\tscrubList\022&\n\017call_" +
-      "data_field\030\002 \001(\003R\rcallDataField\"\342\007\n\020Call" +
-      "backSettings\022<\n\032enable_callback_scheduli" +
-      "ng\030\001 \001(\010R\030enableCallbackScheduling\022j\n\030de" +
-      "fault_callback_routing\030\002 \001(\01320.api.commo" +
-      "ns.org.CallbackSettings.DefaultRoutingR\026" +
-      "defaultCallbackRouting\0226\n\027enable_callbac" +
-      "k_calling\030\003 \001(\010R\025enableCallbackCalling\022<" +
-      "\n\032enable_automatic_retrieval\030\004 \001(\010R\030enab" +
-      "leAutomaticRetrieval\022{\n\033callback_routing" +
-      "_disallowed\030\005 \001(\0132;.api.commons.org.Call" +
-      "backSettings.CallbackRoutingDisallowedR\031" +
-      "callbackRoutingDisallowed\022A\n\035enable_cust" +
-      "omizable_caller_id\030\006 \001(\010R\032enableCustomiz" +
-      "ableCallerId\022*\n\021default_caller_id\030\007 \001(\tR" +
-      "\017defaultCallerId\0228\n\030enable_callback_cale" +
-      "ndar\030\010 \001(\010R\026enableCallbackCalendar\032\306\001\n\016D" +
-      "efaultRouting\022F\n\014routing_mode\030\001 \001(\0162#.ap" +
-      "i.commons.DefaultCallbackRoutingR\013routin" +
-      "gMode\022\033\n\tagent_sid\030\002 \001(\003R\010agentSid\022\'\n\017ag" +
-      "ent_skillsets\030\003 \003(\003R\016agentSkillsets\022&\n\017h" +
-      "unt_group_sids\030\004 \003(\003R\rhuntGroupSids\032\276\001\n\031" +
-      "CallbackRoutingDisallowed\0220\n\024use_routing" +
-      "_limiting\030\001 \001(\010R\022useRoutingLimiting\022\035\n\na" +
-      "gent_sids\030\002 \003(\003R\tagentSids\022&\n\017hunt_group" +
-      "_sids\030\003 \003(\003R\rhuntGroupSids\022(\n\020agent_skil" +
-      "l_sids\030\004 \003(\003R\016agentSkillSids\"\253\002\n\023Preview" +
-      "DialSettings\022;\n\032enable_preview_dial_canc" +
-      "el\030\001 \001(\010R\027enablePreviewDialCancel\022<\n\033ena" +
-      "ble_auto_pause_on_cancel\030\002 \001(\010R\027enableAu" +
-      "toPauseOnCancel\022\'\n\017timeout_minutes\030\003 \001(\003" +
-      "R\016timeoutMinutes\022>\n\033require_number_confi" +
-      "rmation\030\004 \001(\010R\031requireNumberConfirmation" +
-      "\0220\n\024preview_queue_config\030\005 \001(\tR\022previewQ" +
-      "ueueConfig\"\340\026\n\022ManualDialSettings\022,\n\022ena" +
-      "ble_manual_dial\030\001 \001(\010R\020enableManualDial\022" +
-      "8\n\030queue_configuration_name\030\002 \001(\tR\026queue" +
-      "ConfigurationName\022\\\n\026default_call_record" +
-      "ing\030\003 \001(\0162&.api.commons.HuntGroupOrgDefa" +
-      "ultCustomR\024defaultCallRecording\022P\n\020cell_" +
-      "phone_scrub\030\004 \001(\0162&.api.commons.HuntGrou" +
-      "pOrgDefaultCustomR\016cellPhoneScrub\022Z\n\025tim" +
-      "e_zone_restriction\030\005 \001(\0162&.api.commons.H" +
-      "untGroupOrgDefaultCustomR\023timeZoneRestri" +
-      "ction\022q\n time_zone_validation_postal_cod" +
-      "e\030\006 \001(\0162).api.commons.ManualDialTimeZone" +
-      "ValidationR\034timeZoneValidationPostalCode" +
-      "\022i\n\030natural_compliance_scrub\030\007 \001(\0132/.api" +
-      ".commons.org.NaturalLanguageComplianceSc" +
-      "rubR\026naturalComplianceScrub\022X\n\016scrub_ove" +
-      "rride\030\010 \001(\01321.api.commons.org.ManualDial" +
-      "Settings.ScrubOverrideR\rscrubOverride\022)\n" +
-      "\020enable_whitelist\030\t \001(\010R\017enableWhitelist" +
-      "\022N\n\030default_outbound_country\030\n \001(\0162\024.api" +
-      ".commons.CountryR\026defaultOutboundCountry" +
-      "\022K\n\"display_outbound_country_selection\030\013" +
-      " \001(\010R\037displayOutboundCountrySelection\022J\n" +
-      "\"display_outbound_number_phone_book\030\014 \001(" +
-      "\010R\036displayOutboundNumberPhoneBook\022O\n\031def" +
-      "ault_caller_id_country\030\r \001(\0162\024.api.commo" +
-      "ns.CountryR\026defaultCallerIdCountry\022L\n#di" +
-      "splay_caller_id_country_selection\030\016 \001(\010R" +
-      "\037displayCallerIdCountrySelection\022>\n\034disp" +
-      "lay_caller_id_phone_book\030\017 \001(\010R\030displayC" +
-      "allerIdPhoneBook\022A\n\035enable_customizable_" +
-      "caller_id\030\020 \001(\010R\032enableCustomizableCalle" +
-      "rId\022_\n\021default_caller_id\030\021 \001(\01323.api.com" +
-      "mons.org.ManualDialSettings.DefaultCalle" +
-      "rIdR\017defaultCallerId\0225\n\027enable_caller_id" +
-      "_bucket\030\022 \001(\010R\024enableCallerIdBucket\0225\n\027r" +
-      "andom_caller_id_bucket\030\023 \001(\003R\024randomCall" +
-      "erIdBucket\0229\n\031automate_random_caller_id\030" +
-      "\024 \001(\010R\026automateRandomCallerId\0221\n\025enable_" +
-      "mask_caller_id\030\025 \001(\010R\022enableMaskCallerId" +
-      "\022,\n\022enable_sip_address\030\026 \001(\010R\020enableSipA" +
-      "ddress\022\203\001\n$natural_language_compliance_m" +
-      "etadata\030\027 \001(\01322.api.commons.org.NaturalL" +
-      "anguageComplianceMetadataR!naturalLangua" +
-      "geComplianceMetadata\022I\n\016data_dip_scope\030\030" +
-      " \001(\0162#.api.commons.ManualDialDataDipScop" +
-      "eR\014dataDipScope\022-\n\023data_dip_config_sid\030\031" +
-      " \001(\003R\020dataDipConfigSid\022_\n\030data_dip_resul" +
-      "t_handling\030\032 \001(\0162&.api.commons.ManualDia" +
-      "lDataDipHandlingR\025dataDipResultHandling\022" +
-      "\200\001\n\035data_dip_integration_mappings\030\033 \003(\0132" +
-      "=.api.commons.org.ManualDialSettings.Dat" +
-      "aDipIntegrationMappingR\032dataDipIntegrati" +
-      "onMappings\022i\n\035data_dip_integration_handl" +
-      "ing\030\034 \001(\0162&.api.commons.ManualDialDataDi" +
-      "pHandlingR\032dataDipIntegrationHandling\022N\n" +
-      "\"enable_reject_option_for_approvers\030\035 \001(" +
-      "\010B\002\030\001R\036enableRejectOptionForApprovers\032\204\002" +
-      "\n\rScrubOverride\0220\n\024enable_dncl_override\030" +
-      "\001 \001(\010R\022enableDnclOverride\022;\n\032enable_cell" +
-      "_scrub_override\030\002 \001(\010R\027enableCellScrubOv" +
-      "erride\022D\n\037enable_time_zone_scrub_overrid" +
-      "e\030\003 \001(\010R\033enableTimeZoneScrubOverride\022>\n\033" +
-      "natural_compliance_override\030\004 \001(\010R\031natur" +
-      "alComplianceOverride\032y\n\017DefaultCallerId\022" +
-      "<\n\005usage\030\001 \001(\0162&.api.commons.DefaultManu" +
-      "alDialCallerIdR\005usage\022(\n\020custom_caller_i" +
-      "d\030\002 \001(\tR\016customCallerId\032\333\001\n\031DataDipInteg" +
-      "rationMapping\022L\n\014mapping_type\030\001 \001(\0162).ap" +
-      "i.commons.ManualDialDataDipIntegrationR\013" +
-      "mappingType\022-\n\023data_dip_return_key\030\002 \001(\t" +
-      "R\020dataDipReturnKey\022A\n\035contact_field_desc" +
-      "ription_sid\030\003 \001(\003R\032contactFieldDescripti" +
-      "onSid\"\223\001\n\036NaturalLanguageComplianceScrub" +
-      "\022Q\n\020compliance_scrub\030\001 \001(\0162&.api.commons" +
-      ".HuntGroupOrgDefaultCustomR\017complianceSc" +
-      "rub\022\036\n\013rule_set_id\030\002 \001(\tR\truleSetId\"\207\001\n!" +
-      "NaturalLanguageComplianceMetadata\022\030\n\007ena" +
-      "bled\030\001 \001(\010R\007enabled\022#\n\roptional_data\030\002 \003" +
-      "(\003R\014optionalData\022#\n\rrequired_data\030\003 \003(\003R" +
-      "\014requiredData\"l\n\022CallerIdBucketData\0225\n\027x" +
-      "ml_client_property_sid\030\001 \001(\003R\024xmlClientP" +
-      "ropertySid\022\037\n\013bucket_name\030\002 \001(\tR\nbucketN" +
-      "ame\"\213\027\n\024TransferCallSettings\022\'\n\017enable_t" +
-      "ransfer\030\001 \001(\010R\016enableTransfer\022X\n\016hand_of" +
-      "f_types\030\002 \001(\01322.api.commons.org.Transfer" +
-      "CallSettings.HandOffTypesR\014handOffTypes\022" +
-      "O\n\020recording_status\030\003 \001(\0162$.api.commons." +
-      "TransferRecordingStatusR\017recordingStatus" +
-      "\022Z\n\016transfer_types\030\004 \001(\01323.api.commons.o" +
-      "rg.TransferCallSettings.TransferTypesR\rt" +
-      "ransferTypes\022J\n\"display_transfer_number_" +
-      "phone_book\030\005 \001(\010R\036displayTransferNumberP" +
-      "honeBook\022C\n\036enable_transfer_number_editi" +
-      "ng\030\006 \001(\010R\033enableTransferNumberEditing\0226\n" +
-      "\027default_transfer_number\030\007 \001(\tR\025defaultT" +
-      "ransferNumber\0226\n\027start_recording_numbers" +
-      "\030\010 \003(\tR\025startRecordingNumbers\0224\n\026stop_re" +
-      "cording_numbers\030\t \003(\tR\024stopRecordingNumb" +
-      "ers\022L\n\027transfer_number_country\030\n \001(\0162\024.a" +
-      "pi.commons.CountryR\025transferNumberCountr" +
-      "y\022K\n\"display_transfer_country_selection\030" +
-      "\013 \001(\010R\037displayTransferCountrySelection\022>" +
-      "\n\034display_caller_id_phone_book\030\014 \001(\010R\030di" +
-      "splayCallerIdPhoneBook\0227\n\030enable_caller_" +
-      "id_editing\030\r \001(\010R\025enableCallerIdEditing\022" +
-      "a\n\021default_caller_id\030\016 \001(\01325.api.commons" +
-      ".org.TransferCallSettings.DefaultCallerI" +
-      "dR\017defaultCallerId\022@\n\021caller_id_country\030" +
-      "\017 \001(\0162\024.api.commons.CountryR\017callerIdCou" +
-      "ntry\022L\n#display_caller_id_country_select" +
-      "ion\030\020 \001(\010R\037displayCallerIdCountrySelecti" +
-      "on\022G\n display_agent_transfer_filtering\030\021" +
-      " \001(\010R\035displayAgentTransferFiltering\022G\n d" +
-      "efault_agent_transfer_filtering\030\022 \001(\010R\035d" +
-      "efaultAgentTransferFiltering\022=\n\033enable_h" +
-      "unt_group_filtering\030\023 \001(\010R\030enableHuntGro" +
-      "upFiltering\022q\n\024requeue_queue_config\030\024 \001(" +
-      "\0132?.api.commons.org.TransferCallSettings" +
-      ".RequeueQueueConfigurationR\022requeueQueue" +
-      "Config\022\177\n\033requeue_transfer_disallowed\030\025 " +
-      "\001(\0132?.api.commons.org.TransferCallSettin" +
-      "gs.RequeueTransferDisallowedR\031requeueTra" +
-      "nsferDisallowed\022s\n\027pbx_transfer_disallow" +
-      "ed\030\026 \001(\0132;.api.commons.org.TransferCallS" +
-      "ettings.PbxTransferDisallowedR\025pbxTransf" +
-      "erDisallowed\0222\n\025enable_scrub_override\030\027 " +
-      "\001(\010R\023enableScrubOverride\022)\n\020enable_white" +
-      "list\030\030 \001(\010R\017enableWhitelist\022i\n\030natural_c" +
-      "ompliance_scrub\030\031 \001(\0132/.api.commons.org." +
-      "NaturalLanguageComplianceScrubR\026naturalC" +
-      "omplianceScrub\022\203\001\n$natural_language_comp" +
-      "liance_metadata\030\032 \001(\01322.api.commons.org." +
-      "NaturalLanguageComplianceMetadataR!natur" +
-      "alLanguageComplianceMetadata\032}\n\014HandOffT" +
-      "ypes\022+\n\021enable_conference\030\001 \001(\010R\020enableC" +
-      "onference\022\037\n\013enable_warm\030\002 \001(\010R\nenableWa" +
-      "rm\022\037\n\013enable_cold\030\003 \001(\010R\nenableCold\032\254\002\n\r" +
-      "TransferTypes\0222\n\025enable_agent_transfer\030\001" +
-      " \001(\010R\023enableAgentTransfer\0220\n\024enable_open" +
-      "_transfer\030\002 \001(\010R\022enableOpenTransfer\0226\n\027e" +
-      "nable_requeue_transfer\030\003 \001(\010R\025enableRequ" +
-      "eueTransfer\022A\n\035enable_pbx_extension_tran",
-      "sfer\030\004 \001(\010R\032enablePbxExtensionTransfer\022:" +
-      "\n\031enable_voicemail_transfer\030\005 \001(\010R\027enabl" +
-      "eVoicemailTransfer\032\205\001\n\031RequeueTransferDi" +
-      "sallowed\022\026\n\006enable\030\001 \001(\010R\006enable\022(\n\020agen" +
-      "t_skill_sids\030\002 \003(\003R\016agentSkillSids\022&\n\017hu" +
-      "nt_group_sids\030\003 \003(\003R\rhuntGroupSids\032O\n\025Pb" +
-      "xTransferDisallowed\022\026\n\006enable\030\001 \001(\010R\006ena" +
-      "ble\022\036\n\nextensions\030\002 \003(\tR\nextensions\032{\n\031R" +
-      "equeueQueueConfiguration\022=\n\005usage\030\001 \001(\0162" +
-      "\'.api.commons.RequeueTransferQueueConfig" +
-      "R\005usage\022\037\n\013custom_name\030\002 \001(\tR\ncustomName" +
-      "\032w\n\017DefaultCallerId\022:\n\005usage\030\001 \001(\0162$.api" +
-      ".commons.DefaultTransferCallerIdR\005usage\022" +
-      "(\n\020custom_caller_id\030\002 \001(\tR\016customCallerI" +
-      "d\"\363\001\n\025NumberHistorySettings\022#\n\renable_se" +
-      "arch\030\001 \001(\010R\014enableSearch\0224\n\026enable_repor" +
-      "t_download\030\002 \001(\010R\024enableReportDownload\022<" +
-      "\n\032enable_recordings_download\030\003 \001(\010R\030enab" +
-      "leRecordingsDownload\022A\n\035enable_agent_res" +
-      "ponse_editing\030\004 \001(\010R\032enableAgentResponse" +
-      "Editing\"\344\001\n\030AgentResponseAutoRuleSet\022\037\n\013" +
-      "ruleset_sid\030\001 \001(\003R\nrulesetSid\022\022\n\004name\030\002 " +
-      "\001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descript" +
-      "ion\022.\n\007country\030\004 \001(\0162\024.api.commons.Count" +
-      "ryR\007country\022A\n\tresponses\030\005 \003(\0132#.api.com" +
-      "mons.org.AutoResponseChoiceR\tresponses\"\221" +
-      "\001\n\022AutoResponseChoice\022.\n\023agent_call_resp" +
-      "onse\030\001 \001(\tR\021agentCallResponse\022K\n\013compari" +
-      "tors\030\002 \003(\0132).api.commons.org.AgentRespon" +
-      "seComparitorsR\013comparitors\"P\n\030AgentRespo" +
-      "nseComparitors\022\024\n\005value\030\001 \001(\tR\005value\022\036\n\n" +
-      "expiration\030\002 \001(\003R\nexpiration\"\236\004\n\031ClientI" +
-      "nfoDisplayTemplate\022%\n\014template_sid\030\001 \001(\t" +
-      "B\002\030\001R\013templateSid\022\022\n\004name\030\002 \001(\tR\004name\022 \n" +
-      "\013description\030\003 \001(\tR\013description\022,\n\022displ" +
-      "ay_all_fields\030\004 \001(\010R\020displayAllFields\022b\n" +
-      "\031dialed_number_field_style\030\005 \001(\0132\'.api.c" +
-      "ommons.org.DialedNumberFieldStyleR\026diale" +
-      "dNumberFieldStyle\022T\n\024contact_field_style" +
-      "s\030\006 \003(\0132\".api.commons.org.ContactFieldSt" +
-      "yleR\022contactFieldStyles\022N\n\021template_cate" +
-      "gory\030\007 \001(\0162!.api.commons.org.TemplateCat" +
-      "egoryR\020templateCategory\022F\n client_info_d" +
-      "isplay_template_sid\030\010 \001(\003R\034clientInfoDis" +
-      "playTemplateSid\022$\n\016hunt_group_sid\030\t \001(\003R" +
-      "\014huntGroupSid\"\200\001\n\nFieldStyle\022\035\n\ntext_col" +
-      "or\030\001 \001(\tR\ttextColor\022)\n\020background_color\030" +
-      "\002 \001(\tR\017backgroundColor\022(\n\020allow_agent_co" +
-      "py\030\003 \001(\010R\016allowAgentCopy\"x\n\021ContactField" +
-      "Style\022%\n\016description_id\030\001 \001(\003R\rdescripti" +
-      "onId\022<\n\013field_style\030\002 \001(\0132\033.api.commons." +
-      "org.FieldStyleR\nfieldStyle\"\200\001\n\026DialedNum" +
-      "berFieldStyle\022<\n\013field_style\030\001 \001(\0132\033.api" +
-      ".commons.org.FieldStyleR\nfieldStyle\022(\n\020d" +
-      "isplay_to_agent\030\002 \001(\010R\016displayToAgent\"\306\002" +
-      "\n#HuntGroupWithClientInfoTemplateData\022]\n" +
-      "\nhunt_group\030\001 \001(\0132>.api.commons.org.Hunt" +
-      "GroupWithClientInfoTemplateData.HuntGrou" +
-      "pR\thuntGroup\022F\n\010template\030\002 \001(\0132*.api.com" +
-      "mons.org.ClientInfoDisplayTemplateR\010temp" +
-      "late\032x\n\tHuntGroup\022\035\n\nclient_sid\030\001 \001(\003R\tc" +
-      "lientSid\022$\n\016hunt_group_sid\030\002 \001(\003R\014huntGr" +
-      "oupSid\022&\n\017hunt_group_name\030\003 \001(\tR\rhuntGro" +
-      "upName\"\263\002\n\007WebLink\022 \n\014web_link_sid\030\001 \001(\003" +
-      "R\nwebLinkSid\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013desc" +
-      "ription\030\003 \001(\tR\013description\0229\n\tlink_type\030" +
-      "\004 \001(\0162\034.api.commons.org.WebLinkTypeR\010lin" +
-      "kType\022\024\n\005order\030\005 \001(\003R\005order\022<\n\010base_url\030" +
-      "\006 \003(\0132!.api.commons.org.WebLinkComponent" +
-      "R\007baseUrl\022A\n\nparameters\030\007 \003(\0132!.api.comm" +
-      "ons.org.WebLinkParameterR\nparameters\"m\n\020" +
-      "WebLinkComponent\022C\n\010key_type\030\001 \001(\0162(.api" +
-      ".commons.org.WebLinkComponentKeyTypeR\007ke" +
-      "yType\022\024\n\005value\030\002 \001(\tR\005value\"g\n\020WebLinkPa" +
-      "rameter\022\020\n\003key\030\001 \001(\tR\003key\022A\n\ncomponents\030" +
-      "\002 \003(\0132!.api.commons.org.WebLinkComponent" +
-      "R\ncomponents\"\352\007\n\rDataDipConfig\022\037\n\013config" +
-      "_name\030\001 \001(\tR\nconfigName\022\037\n\013config_type\030\002" +
-      " \001(\tR\nconfigType\022\035\n\nremote_url\030\003 \001(\tR\tre" +
-      "moteUrl\022i\n\027param_type_value_tuples\030\004 \003(\013" +
-      "22.api.commons.org.DataDipConfig.ParamTy" +
-      "peValueTupleR\024paramTypeValueTuples\022<\n\006pa" +
-      "rams\030\005 \003(\0132$.api.commons.org.DataDipConf" +
-      "ig.ParamR\006params\022=\n\004data\030\006 \003(\0132).api.com" +
-      "mons.org.DataDipConfig.ReturnDataR\004data\022" +
-      "%\n\016request_method\030\007 \001(\tR\rrequestMethod\0225" +
-      "\n\027xml_client_property_sid\030\010 \001(\003R\024xmlClie" +
-      "ntPropertySid\022?\n\007headers\030\t \003(\0132%.api.com" +
-      "mons.org.DataDipConfig.HeaderR\007headers\032\255" +
-      "\001\n\005Param\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005value\030\002 " +
-      "\001(\tR\005value\022\035\n\nparam_type\030\003 \001(\tR\tparamTyp" +
-      "e\022[\n\017composite_value\030\004 \003(\01322.api.commons" +
-      ".org.DataDipConfig.ParamTypeValueTupleR\016" +
-      "compositeValue\032=\n\023ParamTypeValueTuple\022\020\n" +
-      "\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value\032A\n" +
-      "\nReturnData\022\022\n\004name\030\001 \001(\tR\004name\022\037\n\013acces" +
-      "s_type\030\002 \001(\tR\naccessType\032\276\001\n\006Header\022\022\n\004n" +
-      "ame\030\001 \001(\tR\004name\022\024\n\005value\030\002 \001(\tR\005value\022\037\n" +
-      "\013header_type\030\003 \001(\tR\nheaderType\022i\n\027param_" +
-      "type_value_tuples\030\004 \003(\01322.api.commons.or" +
-      "g.DataDipConfig.ParamTypeValueTupleR\024par" +
-      "amTypeValueTuples\"\346\002\n\017IntegrationLink\022%\n" +
-      "\016integration_id\030\001 \001(\003R\rintegrationId\022#\n\r" +
-      "parameter_sid\030\002 \001(\003R\014parameterSid\022\022\n\004nam" +
-      "e\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013desc" +
-      "ription\022\033\n\tmethod_id\030\005 \001(\003R\010methodId\022\024\n\005" +
-      "order\030\006 \001(\003R\005order\022I\n\nparameters\030\007 \003(\0132)" +
-      ".api.commons.org.IntegrationLinkParamete" +
-      "rR\nparameters\022-\n\022configuration_name\030\010 \001(" +
-      "\tR\021configurationName\022$\n\016hunt_group_sid\030\t" +
-      " \001(\003R\014huntGroupSid\"\201\001\n\030IntegrationLinkPa" +
-      "rameter\022\020\n\003key\030\001 \001(\tR\003key\022S\n\016sub_paramet" +
-      "ers\030\002 \003(\0132,.api.commons.org.IntegrationL" +
-      "inkSubParameterR\rsubParameters\"w\n\033Integr" +
-      "ationLinkSubParameter\022\020\n\003key\030\001 \001(\tR\003key\022" +
-      "F\n\005parts\030\002 \003(\01320.api.commons.org.Integra" +
-      "tionLinkSubParameterPartR\005parts\"\312\001\n\037Inte" +
-      "grationLinkSubParameterPart\022*\n\021contact_f" +
-      "ield_sid\030\001 \001(\003R\017contactFieldSid\022!\n\014helpe" +
-      "r_value\030\002 \001(\tR\013helperValue\022X\n\025parameter_" +
-      "source_type\030\003 \001(\0162$.api.commons.org.Para" +
-      "meterSourceTypeR\023parameterSourceType\"\212\002\n" +
-      "\014AgentTrigger\022*\n\021agent_trigger_sid\030\001 \001(\003" +
-      "R\017agentTriggerSid\022 \n\013description\030\002 \001(\tR\013" +
-      "description\022R\n\023agent_status_option\030\003 \001(\013" +
-      "2\".api.commons.org.AgentStatusOptionR\021ag" +
-      "entStatusOption\022X\n\025trigger_action_option" +
-      "\030\004 \001(\0132$.api.commons.org.TriggerActionOp" +
-      "tionR\023triggerActionOption\"\262\002\n\021AgentStatu" +
-      "sOption\022?\n\014agent_status\030\001 \001(\0162\034.api.comm" +
-      "ons.org.AgentStatusR\013agentStatus\022\032\n\010dura" +
-      "tion\030\002 \001(\003R\010duration\022@\n\npause_code\030\003 \001(\013" +
-      "2!.api.commons.org.TriggerPauseCodeR\tpau" +
-      "seCode\022@\n\ncall_types\030\004 \001(\0132!.api.commons" +
-      ".org.TriggerCallTypesR\tcallTypes\022<\n\032sche" +
-      "duled_callback_present\030\005 \001(\010R\030scheduledC" +
-      "allbackPresent\"\236\001\n\020TriggerPauseCode\022N\n\021s" +
-      "ystem_pause_code\030\001 \001(\0162 .api.commons.org" +
-      ".SystemPauseCodeH\000R\017systemPauseCode\022,\n\021c" +
-      "ustom_pause_code\030\002 \001(\tH\000R\017customPauseCod" +
-      "eB\014\n\npause_code\"z\n\020TriggerCallTypes\022\032\n\010o" +
-      "utbound\030\001 \001(\010R\010outbound\022\030\n\007inbound\030\002 \001(\010" +
-      "R\007inbound\022\026\n\006manual\030\003 \001(\010R\006manual\022\030\n\007pre" +
-      "view\030\004 \001(\010R\007preview\"\224\002\n\023TriggerActionOpt" +
-      "ion\0226\n\006action\030\001 \001(\0162\036.api.commons.org.Tr" +
-      "iggerActionR\006action\022\'\n\017display_message\030\002" +
-      " \001(\tR\016displayMessage\022H\n\021advance_to_statu" +
-      "s\030\003 \001(\0162\034.api.commons.org.AgentStatusR\017a" +
-      "dvanceToStatus\022 \n\014web_link_sid\030\004 \001(\003R\nwe" +
-      "bLinkSid\0220\n\024integration_link_sid\030\005 \001(\003R\022" +
-      "integrationLinkSid\"\222\002\n\017HuntGroupScript\022\035" +
-      "\n\nscript_sid\030\001 \001(\003R\tscriptSid\022\022\n\004name\030\002 " +
-      "\001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descript" +
-      "ion\0226\n\027auto_script_progression\030\004 \001(\010R\025au" +
-      "toScriptProgression\022H\n\017script_category\030\005" +
-      " \001(\0162\037.api.commons.org.ScriptCategoryR\016s" +
-      "criptCategory\022(\n\004acts\030\006 \003(\0132\024.api.common" +
-      "s.org.ActR\004acts\"\270\003\n\003Act\022@\n\014dispositions\030" +
-      "\001 \003(\0132\034.api.commons.org.DispositionR\014dis" +
-      "positions\0227\n\tverbiages\030\002 \003(\0132\031.api.commo" +
-      "ns.org.VerbiageR\tverbiages\022_\n\027conditiona" +
-      "l_navigations\030\003 \003(\0132&.api.commons.org.Co" +
-      "nditionalNavigationR\026conditionalNavigati" +
-      "ons\022Q\n%default_conditional_navigation_ta" +
-      "rget\030\004 \001(\003R\"defaultConditionalNavigation" +
-      "Target\022C\n\036page_arrival_recording_control" +
-      "\030\005 \001(\003R\033pageArrivalRecordingControl\022=\n\033p" +
-      "age_exit_recording_control\030\006 \001(\003R\030pageEx" +
-      "itRecordingControl\"\375\002\n\013Disposition\022)\n\020re" +
-      "sponse_options\030\001 \003(\tR\017responseOptions\022\026\n" +
-      "\006header\030\002 \001(\tR\006header\022\026\n\006prompt\030\003 \001(\tR\006p" +
-      "rompt\022\024\n\005order\030\004 \001(\003R\005order\022\032\n\010required\030" +
-      "\005 \001(\010R\010required\022#\n\rdefault_value\030\006 \001(\tR\014" +
-      "defaultValue\022C\n\036bypass_auto_script_progr" +
-      "ession\030\007 \001(\010R\033bypassAutoScriptProgressio" +
-      "n\022H\n\rresponse_type\030\010 \001(\0162#.api.commons.o" +
-      "rg.ScriptResponseTypeR\014responseType\022-\n\022r" +
-      "esponse_evaluator\030\t \001(\003R\021responseEvaluat" +
-      "or\"L\n\010Verbiage\022\024\n\005order\030\001 \001(\003R\005order\022\026\n\006" +
-      "header\030\002 \001(\tR\006header\022\022\n\004body\030\003 \001(\tR\004body" +
-      "\"\267\001\n\025ConditionalNavigation\022(\n\020target_act" +
-      "_index\030\001 \001(\003R\016targetActIndex\022t\n\037complex_" +
-      "boolean_expression_list\030\002 \001(\0132-.api.comm" +
-      "ons.org.ComplexBooleanExpressionListR\034co" +
-      "mplexBooleanExpressionList\"\211\001\n\034ComplexBo" +
-      "oleanExpressionList\022i\n\033complex_boolean_e" +
-      "xpressions\030\001 \003(\0132).api.commons.org.Compl" +
-      "exBooleanExpressionR\031complexBooleanExpre" +
-      "ssions\"z\n\030ComplexBooleanExpression\022^\n\027co" +
-      "mpare_expression_list\030\001 \001(\0132&.api.common" +
-      "s.org.CompareExpressionListR\025compareExpr" +
-      "essionList\"}\n\025CompareExpressionList\022d\n\031s" +
-      "imple_compare_expression\030\001 \003(\0132(.api.com" +
-      "mons.org.SimpleCompareExpressionR\027simple" +
-      "CompareExpression\"\325\001\n\027SimpleCompareExpre" +
-      "ssion\022I\n\roperator_type\030\001 \001(\0162$.api.commo" +
-      "ns.org.CompareOperatorTypeR\014operatorType" +
-      "\022\033\n\tact_index\030\002 \001(\003R\010actIndex\022-\n\022disposi" +
-      "tion_header\030\003 \001(\tR\021dispositionHeader\022#\n\r" +
-      "compare_value\030\004 \001(\tR\014compareValue*n\n\rHun" +
-      "tGroupType\022\037\n\033HUNT_GROUP_TYPE_UNSPECIFIE" +
-      "D\020\000\022\035\n\031HUNT_GROUP_TYPE_CONNECTED\020\001\022\035\n\031HU" +
-      "NT_GROUP_TYPE_SOFTPHONE\020\002*w\n\020TemplateCat" +
-      "egory\022!\n\035TEMPLATE_CATEGORY_UNSPECIFIED\020\000" +
-      "\022 \n\034TEMPLATE_CATEGORY_HUNT_GROUP\020\001\022\036\n\032TE" +
-      "MPLATE_CATEGORY_CAMPAIGN\020\002*\\\n\013WebLinkTyp" +
-      "e\022\035\n\031WEB_LINK_TYPE_UNSPECIFIED\020\000\022\025\n\021WEB_" +
-      "LINK_STANDARD\020\001\022\027\n\023WEB_LINK_JAVASCRIPT\020\002" +
-      "*\373\004\n\027WebLinkComponentKeyType\022+\n\'WEB_LINK" +
-      "_COMPONENT_KEY_TYPE_UNSPECIFIED\020\000\022+\n\'WEB" +
-      "_LINK_COMPONENT_KEY_TYPE_STATIC_TEXT\020\001\022)" +
-      "\n%WEB_LINK_COMPONENT_KEY_TYPE_TTS_FIELD\020" +
-      "\002\022*\n&WEB_LINK_COMPONENT_KEY_TYPE_AGENT_I" +
-      "NFO\020\003\022(\n$WEB_LINK_COMPONENT_KEY_TYPE_DAT" +
-      "A_DIP\020\004\022(\n$WEB_LINK_COMPONENT_KEY_TYPE_I" +
-      "VR_DATA\020\005\022,\n(WEB_LINK_COMPONENT_KEY_TYPE" +
-      "_DATA_COLLECT\020\006\022.\n*WEB_LINK_COMPONENT_KE" +
-      "Y_TYPE_PHONE_METADATA\020\007\0223\n/WEB_LINK_COMP" +
-      "ONENT_KEY_TYPE_ZIP_POSTAL_METADATA\020\010\0227\n3" +
-      "WEB_LINK_COMPONENT_KEY_TYPE_CUSTOM_ACCOU" +
-      "NT_DATA_KEY\020\t\022/\n+WEB_LINK_COMPONENT_KEY_" +
-      "TYPE_SIP_HEADER_DATA\020\n\0220\n,WEB_LINK_COMPO" +
-      "NENT_KEY_TYPE_INTEGRATION_DATA\020\013\022,\n(WEB_" +
-      "LINK_COMPONENT_KEY_TYPE_JOURNEY_DATA\020\014*\263" +
-      "\037\n\023ParameterSourceType\022%\n!PARAMETER_SOUR" +
-      "CE_TYPE_UNSPECIFIED\020\000\022%\n!PARAMETER_SOURC" +
-      "E_TYPE_STATIC_TEXT\020\001\022 \n\034PARAMETER_SOURCE" +
-      "_TYPE_CFD_ID\020d\022#\n\036PARAMETER_SOURCE_TYPE_" +
-      "AGENT_ID\020\310\001\022+\n&PARAMETER_SOURCE_TYPE_AGE" +
-      "NT_FIRST_NAME\020\311\001\022*\n%PARAMETER_SOURCE_TYP" +
-      "E_AGENT_LAST_NAME\020\312\001\022)\n$PARAMETER_SOURCE" +
-      "_TYPE_AGENT_USERNAME\020\313\001\022+\n&PARAMETER_SOU" +
-      "RCE_TYPE_PARTNER_AGENT_ID\020\314\001\022 \n\033PARAMETE" +
-      "R_SOURCE_TYPE_HG_ID\020\315\001\022\"\n\035PARAMETER_SOUR" +
-      "CE_TYPE_HG_NAME\020\316\001\022\"\n\035PARAMETER_SOURCE_T" +
-      "YPE_HG_TYPE\020\317\001\022)\n$PARAMETER_SOURCE_TYPE_" +
-      "CONSUMER_PHONE\020\320\001\022$\n\037PARAMETER_SOURCE_TY" +
-      "PE_CALLER_ID\020\321\001\022\"\n\035PARAMETER_SOURCE_TYPE" +
-      "_CALL_ID\020\322\001\022#\n\036PARAMETER_SOURCE_TYPE_GRO" +
-      "UP_ID\020\323\001\022+\n&PARAMETER_SOURCE_TYPE_AGENT_" +
-      "SESSION_ID\020\324\001\022#\n\036PARAMETER_SOURCE_TYPE_D" +
-      "ATA_DIP\020\254\002\022#\n\036PARAMETER_SOURCE_TYPE_IVR_" +
-      "DATA\020\220\003\022\'\n\"PARAMETER_SOURCE_TYPE_DATA_CO" +
-      "LLECT\020\364\003\0223\n.PARAMETER_SOURCE_TYPE_PHONE_" +
-      "METADATA_AREA_CODE\020\330\004\0221\n,PARAMETER_SOURC" +
-      "E_TYPE_PHONE_METADATA_CARRIER\020\331\004\022=\n8PARA" +
-      "METER_SOURCE_TYPE_PHONE_METADATA_CENTRAL" +
-      "_OFFICE_CODE\020\332\004\022.\n)PARAMETER_SOURCE_TYPE" +
-      "_PHONE_METADATA_CITY\020\333\004\0226\n1PARAMETER_SOU" +
-      "RCE_TYPE_PHONE_METADATA_COUNTRY_CODE\020\334\004\022" +
-      ";\n6PARAMETER_SOURCE_TYPE_PHONE_METADATA_" +
-      "SUBSCRIBER_NUMBER\020\335\004\0222\n-PARAMETER_SOURCE" +
-      "_TYPE_PHONE_METADATA_ISO_CODE\020\336\004\022>\n9PARA" +
-      "METER_SOURCE_TYPE_PHONE_METADATA_INTERNA" +
-      "TIONAL_PREFIX\020\337\004\0222\n-PARAMETER_SOURCE_TYP" +
-      "E_PHONE_METADATA_LANGUAGE\020\340\004\0222\n-PARAMETE" +
-      "R_SOURCE_TYPE_PHONE_METADATA_LATITUDE\020\341\004" +
-      "\0223\n.PARAMETER_SOURCE_TYPE_PHONE_METADATA" +
-      "_LONGITUDE\020\342\004\022>\n9PARAMETER_SOURCE_TYPE_P" +
-      "HONE_METADATA_MAXIMUM_BLOCK_NUMBER\020\343\004\022>\n" +
-      "9PARAMETER_SOURCE_TYPE_PHONE_METADATA_MI" +
-      "NIMUM_BLOCK_NUMBER\020\344\004\022>\n9PARAMETER_SOURC" +
-      "E_TYPE_PHONE_METADATA_NATIONAL_DESTINATI" +
-      "ON\020\345\004\0229\n4PARAMETER_SOURCE_TYPE_PHONE_MET" +
-      "ADATA_NATIONAL_PREFIX\020\346\004\0229\n4PARAMETER_SO" +
-      "URCE_TYPE_PHONE_METADATA_NUMBER_BLOCK_ID" +
-      "\020\347\004\0225\n0PARAMETER_SOURCE_TYPE_PHONE_METAD" +
-      "ATA_NUMBER_TYPE\020\350\004\0222\n-PARAMETER_SOURCE_T" +
-      "YPE_PHONE_METADATA_USES_NDC\020\351\004\022:\n5PARAME" +
-      "TER_SOURCE_TYPE_PHONE_METADATA_DAYLIGHT_" +
-      "SAVINGS\020\352\004\0220\n+PARAMETER_SOURCE_TYPE_PHON" +
-      "E_METADATA_PREFIX\020\353\004\0225\n0PARAMETER_SOURCE" +
-      "_TYPE_PHONE_METADATA_REGION_CODE\020\354\004\0225\n0P" +
-      "ARAMETER_SOURCE_TYPE_PHONE_METADATA_REGI" +
-      "ON_NAME\020\355\004\022@\n;PARAMETER_SOURCE_TYPE_PHON" +
-      "E_METADATA_SPECIAL_SERVICE_CODE_1\020\356\004\022@\n;" +
-      "PARAMETER_SOURCE_TYPE_PHONE_METADATA_SPE" +
-      "CIAL_SERVICE_CODE_2\020\357\004\022@\n;PARAMETER_SOUR" +
-      "CE_TYPE_PHONE_METADATA_SPECIAL_SERVICE_C" +
-      "ODE_3\020\360\004\022@\n;PARAMETER_SOURCE_TYPE_PHONE_" +
-      "METADATA_SPECIAL_SERVICE_CODE_4\020\361\004\0223\n.PA" +
-      "RAMETER_SOURCE_TYPE_PHONE_METADATA_TIME_" +
-      "ZONE\020\362\004\0224\n/PARAMETER_SOURCE_TYPE_PHONE_M" +
-      "ETADATA_UTC_OFFSET\020\363\004\0224\n/PARAMETER_SOURC" +
-      "E_TYPE_ZIP_METADATA_ADMIN_CODE_1\020\274\005\0224\n/P" +
-      "ARAMETER_SOURCE_TYPE_ZIP_METADATA_ADMIN_" +
-      "CODE_2\020\275\005\0224\n/PARAMETER_SOURCE_TYPE_ZIP_M" +
-      "ETADATA_ADMIN_CODE_3\020\276\005\0224\n/PARAMETER_SOU" +
-      "RCE_TYPE_ZIP_METADATA_ADMIN_NAME_1\020\277\005\0224\n" +
-      "/PARAMETER_SOURCE_TYPE_ZIP_METADATA_ADMI" +
-      "N_NAME_2\020\300\005\0224\n/PARAMETER_SOURCE_TYPE_ZIP" +
-      "_METADATA_ADMIN_NAME_3\020\301\005\0221\n,PARAMETER_S" +
-      "OURCE_TYPE_ZIP_METADATA_AREA_CODE\020\302\005\0221\n," +
-      "PARAMETER_SOURCE_TYPE_ZIP_METADATA_CITY_" +
-      "NAME\020\303\005\0221\n,PARAMETER_SOURCE_TYPE_ZIP_MET" +
-      "ADATA_CITY_TYPE\020\304\005\0224\n/PARAMETER_SOURCE_T" +
-      "YPE_ZIP_METADATA_COUNTRY_CODE\020\305\005\0220\n+PARA" +
-      "METER_SOURCE_TYPE_ZIP_METADATA_ISO_CODE\020" +
-      "\306\005\0224\n/PARAMETER_SOURCE_TYPE_ZIP_METADATA" +
-      "_COUNTRY_NAME\020\307\005\0228\n3PARAMETER_SOURCE_TYP" +
-      "E_ZIP_METADATA_COUNTRY_FPS_CODE\020\310\005\0220\n+PA" +
-      "RAMETER_SOURCE_TYPE_ZIP_METADATA_LATITUD" +
-      "E\020\311\005\0229\n4PARAMETER_SOURCE_TYPE_ZIP_METADA" +
-      "TA_POSITION_ACCURACY\020\312\005\0221\n,PARAMETER_SOU" +
-      "RCE_TYPE_ZIP_METADATA_LONGITUDE\020\313\005\0229\n4PA" +
-      "RAMETER_SOURCE_TYPE_ZIP_METADATA_METROPO" +
-      "LITAN_AREA\020\314\005\0228\n3PARAMETER_SOURCE_TYPE_Z" +
-      "IP_METADATA_DAYLIGHT_SAVINGS\020\315\005\0222\n-PARAM" +
-      "ETER_SOURCE_TYPE_ZIP_METADATA_PLACE_NAME" +
-      "\020\316\005\0223\n.PARAMETER_SOURCE_TYPE_ZIP_METADAT" +
-      "A_POSTAL_CODE\020\317\005\0227\n2PARAMETER_SOURCE_TYP" +
-      "E_ZIP_METADATA_POSTAL_CODE_KEY\020\320\005\0223\n.PAR" +
-      "AMETER_SOURCE_TYPE_ZIP_METADATA_POSTAL_T" +
-      "YPE\020\321\005\022<\n7PARAMETER_SOURCE_TYPE_ZIP_META" +
-      "DATA_PROVICE_ABBREVIATION\020\322\005\0225\n0PARAMETE" +
-      "R_SOURCE_TYPE_ZIP_METADATA_PROVINCE_NAME" +
-      "\020\323\005\0226\n1PARAMETER_SOURCE_TYPE_ZIP_METADAT" +
-      "A_STATE_FPS_CODE\020\324\005\0221\n,PARAMETER_SOURCE_" +
-      "TYPE_ZIP_METADATA_TIME_ZONE\020\325\005\0222\n-PARAME" +
-      "TER_SOURCE_TYPE_ZIP_METADATA_UTC_OFFSET\020" +
-      "\326\005\022.\n)PARAMETER_SOURCE_TYPE_CUSTOM_ACCOU" +
-      "NT_DATA\020\240\006\022*\n%PARAMETER_SOURCE_TYPE_SIP_" +
-      "HEADER_DATA\020\204\007\022+\n&PARAMETER_SOURCE_TYPE_" +
-      "INTEGRATION_DATA\020\350\007\022\'\n\"PARAMETER_SOURCE_" +
-      "TYPE_JOURNEY_DATA\020\314\010*\327\002\n\013AgentStatus\022\034\n\030" +
-      "AGENT_STATUS_UNSPECIFIED\020\000\022\032\n\026AGENT_STAT" +
-      "US_LOGGED_IN\020\001\022\030\n\024AGENT_STATUS_WAITING\020\002" +
-      "\022\027\n\023AGENT_STATUS_PAUSED\020\003\022\030\n\024AGENT_STATU" +
-      "S_ON_CALL\020\004\022\036\n\032AGENT_STATUS_TRANSFER_CAL" +
-      "L\020\005\022\036\n\032AGENT_STATUS_TRANSFER_LOST\020\006\022%\n!A" +
-      "GENT_STATUS_TRANSFER_TARGET_LOST\020\007\022\035\n\031AG" +
-      "ENT_STATUS_PREVIEW_CALL\020\010\022!\n\035AGENT_STATU" +
-      "S_MANUAL_DIAL_CALL\020\t\022\030\n\024AGENT_STATUS_WRA" +
-      "P_UP\020\n*\350\001\n\017SystemPauseCode\022!\n\035SYSTEM_PAU" +
-      "SE_CODE_UNSPECIFIED\020\000\0225\n1SYSTEM_PAUSE_CO" +
-      "DE_AGENT_TRIGGER_ADVANCE_TO_PAUSED\020\001\022%\n!" +
-      "SYSTEM_PAUSE_CODE_CHANGE_PASSWORD\020\002\022&\n\"S" +
-      "YSTEM_PAUSE_CODE_CHECK_VOICE_MAIL\020\003\022,\n(S" +
-      "YSTEM_PAUSE_CODE_MANUALLY_APPROVE_CALLS\020" +
-      "\004*\353\001\n\rTriggerAction\022\036\n\032TRIGGER_ACTION_UN" +
-      "SPECIFIED\020\000\022$\n TRIGGER_ACTION_ADVANCE_TO" +
-      "_STATUS\020\001\022\"\n\036TRIGGER_ACTION_DISPLAY_MESS" +
-      "AGE\020\002\022\036\n\032TRIGGER_ACTION_EJECT_AGENT\020\003\022#\n" +
-      "\037TRIGGER_ACTION_EXECUTE_WEB_LINK\020\004\022+\n\'TR" +
-      "IGGER_ACTION_EXECUTE_INTEGRATION_LINK\020\005*" +
-      "o\n\016ScriptCategory\022\037\n\033SCRIPT_CATEGORY_UNS" +
-      "PECIFIED\020\000\022\036\n\032SCRIPT_CATEGORY_HUNT_GROUP" +
-      "\020\001\022\034\n\030SCRIPT_CATEGORY_CAMPAIGN\020\002*\242\004\n\022Scr" +
-      "iptResponseType\022$\n SCRIPT_RESPONSE_TYPE_" +
-      "UNSPECIFIED\020\000\022.\n*SCRIPT_RESPONSE_TYPE_DR" +
-      "OP_DOWN_SELECT_MENU\020\001\022-\n)SCRIPT_RESPONSE" +
-      "_TYPE_MULTIPLE_SELECT_MENU\020\002\022$\n SCRIPT_R" +
-      "ESPONSE_TYPE_CHECK_BOXES\020\003\022&\n\"SCRIPT_RES" +
-      "PONSE_TYPE_RADIO_BUTTONS\020\004\022!\n\035SCRIPT_RES" +
-      "PONSE_TYPE_TEXT_BOX\020\005\022.\n*SCRIPT_RESPONSE" +
-      "_TYPE_TEXT_BOX_ALPHANUMERIC\020\006\022+\n\'SCRIPT_" +
-      "RESPONSE_TYPE_TEXT_BOX_NUMERICAL\020\007\0220\n,SC" +
-      "RIPT_RESPONSE_TYPE_TEXT_VERIFICATION_FIE" +
-      "LD\020\010\022\"\n\036SCRIPT_RESPONSE_TYPE_TEXT_AREA\020\t" +
-      "\0221\n-SCRIPT_RESPONSE_TYPE_REGULAR_EXPRESS" +
-      "ION_FIELD\020\n\0220\n,SCRIPT_RESPONSE_TYPE_REGU" +
-      "LAR_EXPRESSION_AREA\020\013*\364\004\n\023CompareOperato" +
-      "rType\022%\n!COMPARE_OPERATOR_TYPE_UNSPECIFI" +
-      "ED\020\000\022 \n\034COMPARE_OPERATOR_TYPE_EQUALS\020\001\022$" +
-      "\n COMPARE_OPERATOR_TYPE_NOT_EQUALS\020\002\022&\n\"" +
-      "COMPARE_OPERATOR_TYPE_GREATER_THAN\020\003\022#\n\037" +
-      "COMPARE_OPERATOR_TYPE_LESS_THAN\020\004\0222\n.COM" +
-      "PARE_OPERATOR_TYPE_GREATER_THAN_OR_EQUAL" +
-      "_TO\020\005\022/\n+COMPARE_OPERATOR_TYPE_LESS_THAN" +
-      "_OR_EQUAL_TO\020\006\022\"\n\036COMPARE_OPERATOR_TYPE_" +
-      "CONTAINS\020\007\022*\n&COMPARE_OPERATOR_TYPE_DOES" +
-      "_NOT_CONTAIN\020\010\022\037\n\033COMPARE_OPERATOR_TYPE_" +
-      "BLANK\020\t\022#\n\037COMPARE_OPERATOR_TYPE_NOT_BAL" +
-      "NK\020\n\022%\n!COMPARE_OPERATOR_TYPE_STARTS_WIT" +
-      "H\020\013\022-\n)COMPARE_OPERATOR_TYPE_DOES_NOT_ST" +
-      "ART_WITH\020\014\022#\n\037COMPARE_OPERATOR_TYPE_ENDS" +
-      "_WITH\020\r\022+\n\'COMPARE_OPERATOR_TYPE_DOES_NO" +
-      "T_END_WITH\020\016B\221\001\n!com.tcn.cloud.api.api.c" +
-      "ommons.orgB\016HuntgroupProtoP\001\242\002\003ACO\252\002\017Api" +
-      ".Commons.Org\312\002\017Api\\Commons\\Org\342\002\033Api\\Com" +
-      "mons\\Org\\GPBMetadata\352\002\021Api::Commons::Org" +
-      "b\006proto3"
+      "kDetailsR\026integrationLinkDetails\022V\n\016scri" +
+      "pt_details\030\006 \001(\0132/.api.commons.org.HuntG" +
+      "roupDetails.ScriptDetailsR\rscriptDetails" +
+      "\032\330\001\n\016GeneralDetails\022\022\n\004name\030\001 \001(\tR\004name\022" +
+      " \n\013description\030\002 \001(\tR\013description\0222\n\004typ" +
+      "e\030\003 \001(\0162\036.api.commons.org.HuntGroupTypeR" +
+      "\004type\022;\n\013modify_date\030\004 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\nmodifyDate\022\037\n\013agent_coun" +
+      "t\030\005 \001(\003R\nagentCount\032\266\001\n ClientInfoDispla" +
+      "yTemplateDetails\022\022\n\004name\030\001 \001(\tR\004name\022 \n\013" +
+      "description\030\002 \001(\tR\013description\022,\n\022displa" +
+      "y_all_fields\030\003 \001(\010R\020displayAllFields\022.\n\023" +
+      "defined_field_count\030\004 \001(\003R\021definedFieldC" +
+      "ount\032\212\001\n\016WebLinkDetails\022\022\n\004name\030\001 \001(\tR\004n" +
+      "ame\022 \n\013description\030\002 \001(\tR\013description\022\031\n" +
+      "\010base_url\030\003 \001(\tR\007baseUrl\022\'\n\017parameter_co" +
+      "unt\030\004 \001(\003R\016parameterCount\032\274\001\n\016TriggerDet" +
+      "ails\022 \n\013description\030\001 \001(\tR\013description\0224" +
+      "\n\006status\030\002 \001(\0162\034.api.commons.org.AgentSt" +
+      "atusR\006status\022\032\n\010duration\030\003 \001(\003R\010duration" +
+      "\0226\n\006action\030\004 \001(\0162\036.api.commons.org.Trigg" +
+      "erActionR\006action\032N\n\026IntegrationLinkDetai" +
+      "ls\022\022\n\004name\030\001 \001(\tR\004name\022 \n\013description\030\002 " +
+      "\001(\tR\013description\032\325\001\n\rScriptDetails\022\035\n\nsc" +
+      "ript_sid\030\001 \001(\003R\tscriptSid\022\022\n\004name\030\002 \001(\tR" +
+      "\004name\022 \n\013description\030\003 \001(\tR\013description\022" +
+      "\033\n\tact_count\030\004 \001(\003R\010actCount\022+\n\021disposit" +
+      "ion_count\030\005 \001(\003R\020dispositionCount\022%\n\016ver" +
+      "biage_count\030\006 \001(\003R\rverbiageCount\"\354\016\n\025Com" +
+      "municationSettings\0227\n\030enable_scrub_list_" +
+      "adding\030\001 \001(\010R\025enableScrubListAdding\022\037\n\013s" +
+      "crub_lists\030\002 \003(\tR\nscrubLists\0229\n\031enable_s" +
+      "crub_list_removal\030\003 \001(\010R\026enableScrubList" +
+      "Removal\022=\n\033scrub_lists_removal_allowed\030\004" +
+      " \003(\tR\030scrubListsRemovalAllowed\022R\n\032compli" +
+      "ance_default_country\030\005 \001(\0162\024.api.commons" +
+      ".CountryR\030complianceDefaultCountry\0229\n\031di" +
+      "splay_options_in_wrapup\030\006 \001(\010R\026displayOp" +
+      "tionsInWrapup\022}\n\035inbound_scrub_list_expi" +
+      "ration\030d \001(\0132:.api.commons.org.Communica" +
+      "tionSettings.ScrubListExpirationR\032inboun" +
+      "dScrubListExpiration\022{\n\034manual_scrub_lis" +
+      "t_expiration\030e \001(\0132:.api.commons.org.Com" +
+      "municationSettings.ScrubListExpirationR\031" +
+      "manualScrubListExpiration\022\177\n\036outbound_sc" +
+      "rub_list_expiration\030f \001(\0132:.api.commons." +
+      "org.CommunicationSettings.ScrubListExpir" +
+      "ationR\033outboundScrubListExpiration\022}\n\035pr" +
+      "eview_scrub_list_expiration\030g \001(\0132:.api." +
+      "commons.org.CommunicationSettings.ScrubL" +
+      "istExpirationR\032previewScrubListExpiratio" +
+      "n\022M\n#automate_manually_dialed_scrub_list" +
+      "\030\310\001 \001(\010R\037automateManuallyDialedScrubList" +
+      "\022K\n\"automate_preview_dialed_scrub_list\030\311" +
+      "\001 \001(\010R\036automatePreviewDialedScrubList\022u\n" +
+      "\027automate_response_rules\030\312\001 \001(\0132<.api.co" +
+      "mmons.org.CommunicationSettings.Automate" +
+      "ResponseRulesR\025automateResponseRules\022\203\001\n" +
+      "\035automate_scrub_list_call_data\030\313\001 \001(\0132@." +
+      "api.commons.org.CommunicationSettings.Au" +
+      "tomateScrubListCallDataR\031automateScrubLi" +
+      "stCallData\032\354\001\n\023ScrubListExpiration\022S\n\022de" +
+      "fault_expiration\030\001 \001(\0162$.api.commons.Com" +
+      "municationExpirationR\021defaultExpiration\022" +
+      ")\n\020limit_expiration\030\002 \001(\010R\017limitExpirati" +
+      "on\022U\n\023limited_expirations\030\003 \003(\0162$.api.co" +
+      "mmons.CommunicationExpirationR\022limitedEx" +
+      "pirations\032L\n\025AutomateResponseRules\022\030\n\007en" +
+      "abled\030\001 \001(\010R\007enabled\022\031\n\010rule_sid\030\002 \001(\003R\007" +
+      "ruleSid\032\235\002\n\031AutomateScrubListCallData\022\030\n" +
+      "\007enabled\030\001 \001(\010R\007enabled\022\210\001\n\026scrub_list_d" +
+      "ata_fields\030\002 \003(\0132S.api.commons.org.Commu" +
+      "nicationSettings.AutomateScrubListCallDa" +
+      "ta.ScrubListDataFieldR\023scrubListDataFiel" +
+      "ds\032[\n\022ScrubListDataField\022\035\n\nscrub_list\030\001" +
+      " \001(\tR\tscrubList\022&\n\017call_data_field\030\002 \001(\003" +
+      "R\rcallDataField\"\342\007\n\020CallbackSettings\022<\n\032" +
+      "enable_callback_scheduling\030\001 \001(\010R\030enable" +
+      "CallbackScheduling\022j\n\030default_callback_r" +
+      "outing\030\002 \001(\01320.api.commons.org.CallbackS" +
+      "ettings.DefaultRoutingR\026defaultCallbackR" +
+      "outing\0226\n\027enable_callback_calling\030\003 \001(\010R" +
+      "\025enableCallbackCalling\022<\n\032enable_automat" +
+      "ic_retrieval\030\004 \001(\010R\030enableAutomaticRetri" +
+      "eval\022{\n\033callback_routing_disallowed\030\005 \001(" +
+      "\0132;.api.commons.org.CallbackSettings.Cal" +
+      "lbackRoutingDisallowedR\031callbackRoutingD" +
+      "isallowed\022A\n\035enable_customizable_caller_" +
+      "id\030\006 \001(\010R\032enableCustomizableCallerId\022*\n\021" +
+      "default_caller_id\030\007 \001(\tR\017defaultCallerId" +
+      "\0228\n\030enable_callback_calendar\030\010 \001(\010R\026enab" +
+      "leCallbackCalendar\032\306\001\n\016DefaultRouting\022F\n" +
+      "\014routing_mode\030\001 \001(\0162#.api.commons.Defaul" +
+      "tCallbackRoutingR\013routingMode\022\033\n\tagent_s" +
+      "id\030\002 \001(\003R\010agentSid\022\'\n\017agent_skillsets\030\003 " +
+      "\003(\003R\016agentSkillsets\022&\n\017hunt_group_sids\030\004" +
+      " \003(\003R\rhuntGroupSids\032\276\001\n\031CallbackRoutingD" +
+      "isallowed\0220\n\024use_routing_limiting\030\001 \001(\010R" +
+      "\022useRoutingLimiting\022\035\n\nagent_sids\030\002 \003(\003R" +
+      "\tagentSids\022&\n\017hunt_group_sids\030\003 \003(\003R\rhun" +
+      "tGroupSids\022(\n\020agent_skill_sids\030\004 \003(\003R\016ag" +
+      "entSkillSids\"\253\002\n\023PreviewDialSettings\022;\n\032" +
+      "enable_preview_dial_cancel\030\001 \001(\010R\027enable" +
+      "PreviewDialCancel\022<\n\033enable_auto_pause_o" +
+      "n_cancel\030\002 \001(\010R\027enableAutoPauseOnCancel\022" +
+      "\'\n\017timeout_minutes\030\003 \001(\003R\016timeoutMinutes" +
+      "\022>\n\033require_number_confirmation\030\004 \001(\010R\031r" +
+      "equireNumberConfirmation\0220\n\024preview_queu" +
+      "e_config\030\005 \001(\tR\022previewQueueConfig\"\340\026\n\022M" +
+      "anualDialSettings\022,\n\022enable_manual_dial\030" +
+      "\001 \001(\010R\020enableManualDial\0228\n\030queue_configu" +
+      "ration_name\030\002 \001(\tR\026queueConfigurationNam" +
+      "e\022\\\n\026default_call_recording\030\003 \001(\0162&.api." +
+      "commons.HuntGroupOrgDefaultCustomR\024defau" +
+      "ltCallRecording\022P\n\020cell_phone_scrub\030\004 \001(" +
+      "\0162&.api.commons.HuntGroupOrgDefaultCusto" +
+      "mR\016cellPhoneScrub\022Z\n\025time_zone_restricti" +
+      "on\030\005 \001(\0162&.api.commons.HuntGroupOrgDefau" +
+      "ltCustomR\023timeZoneRestriction\022q\n time_zo" +
+      "ne_validation_postal_code\030\006 \001(\0162).api.co" +
+      "mmons.ManualDialTimeZoneValidationR\034time" +
+      "ZoneValidationPostalCode\022i\n\030natural_comp" +
+      "liance_scrub\030\007 \001(\0132/.api.commons.org.Nat" +
+      "uralLanguageComplianceScrubR\026naturalComp" +
+      "lianceScrub\022X\n\016scrub_override\030\010 \001(\01321.ap" +
+      "i.commons.org.ManualDialSettings.ScrubOv" +
+      "errideR\rscrubOverride\022)\n\020enable_whitelis" +
+      "t\030\t \001(\010R\017enableWhitelist\022N\n\030default_outb" +
+      "ound_country\030\n \001(\0162\024.api.commons.Country" +
+      "R\026defaultOutboundCountry\022K\n\"display_outb" +
+      "ound_country_selection\030\013 \001(\010R\037displayOut" +
+      "boundCountrySelection\022J\n\"display_outboun" +
+      "d_number_phone_book\030\014 \001(\010R\036displayOutbou" +
+      "ndNumberPhoneBook\022O\n\031default_caller_id_c" +
+      "ountry\030\r \001(\0162\024.api.commons.CountryR\026defa" +
+      "ultCallerIdCountry\022L\n#display_caller_id_" +
+      "country_selection\030\016 \001(\010R\037displayCallerId" +
+      "CountrySelection\022>\n\034display_caller_id_ph" +
+      "one_book\030\017 \001(\010R\030displayCallerIdPhoneBook" +
+      "\022A\n\035enable_customizable_caller_id\030\020 \001(\010R" +
+      "\032enableCustomizableCallerId\022_\n\021default_c" +
+      "aller_id\030\021 \001(\01323.api.commons.org.ManualD" +
+      "ialSettings.DefaultCallerIdR\017defaultCall" +
+      "erId\0225\n\027enable_caller_id_bucket\030\022 \001(\010R\024e" +
+      "nableCallerIdBucket\0225\n\027random_caller_id_" +
+      "bucket\030\023 \001(\003R\024randomCallerIdBucket\0229\n\031au" +
+      "tomate_random_caller_id\030\024 \001(\010R\026automateR" +
+      "andomCallerId\0221\n\025enable_mask_caller_id\030\025" +
+      " \001(\010R\022enableMaskCallerId\022,\n\022enable_sip_a" +
+      "ddress\030\026 \001(\010R\020enableSipAddress\022\203\001\n$natur" +
+      "al_language_compliance_metadata\030\027 \001(\01322." +
+      "api.commons.org.NaturalLanguageComplianc" +
+      "eMetadataR!naturalLanguageComplianceMeta" +
+      "data\022I\n\016data_dip_scope\030\030 \001(\0162#.api.commo" +
+      "ns.ManualDialDataDipScopeR\014dataDipScope\022" +
+      "-\n\023data_dip_config_sid\030\031 \001(\003R\020dataDipCon" +
+      "figSid\022_\n\030data_dip_result_handling\030\032 \001(\016" +
+      "2&.api.commons.ManualDialDataDipHandling" +
+      "R\025dataDipResultHandling\022\200\001\n\035data_dip_int" +
+      "egration_mappings\030\033 \003(\0132=.api.commons.or" +
+      "g.ManualDialSettings.DataDipIntegrationM" +
+      "appingR\032dataDipIntegrationMappings\022i\n\035da" +
+      "ta_dip_integration_handling\030\034 \001(\0162&.api." +
+      "commons.ManualDialDataDipHandlingR\032dataD" +
+      "ipIntegrationHandling\022N\n\"enable_reject_o" +
+      "ption_for_approvers\030\035 \001(\010B\002\030\001R\036enableRej" +
+      "ectOptionForApprovers\032\204\002\n\rScrubOverride\022" +
+      "0\n\024enable_dncl_override\030\001 \001(\010R\022enableDnc" +
+      "lOverride\022;\n\032enable_cell_scrub_override\030" +
+      "\002 \001(\010R\027enableCellScrubOverride\022D\n\037enable" +
+      "_time_zone_scrub_override\030\003 \001(\010R\033enableT" +
+      "imeZoneScrubOverride\022>\n\033natural_complian" +
+      "ce_override\030\004 \001(\010R\031naturalComplianceOver" +
+      "ride\032y\n\017DefaultCallerId\022<\n\005usage\030\001 \001(\0162&" +
+      ".api.commons.DefaultManualDialCallerIdR\005" +
+      "usage\022(\n\020custom_caller_id\030\002 \001(\tR\016customC" +
+      "allerId\032\333\001\n\031DataDipIntegrationMapping\022L\n" +
+      "\014mapping_type\030\001 \001(\0162).api.commons.Manual" +
+      "DialDataDipIntegrationR\013mappingType\022-\n\023d" +
+      "ata_dip_return_key\030\002 \001(\tR\020dataDipReturnK" +
+      "ey\022A\n\035contact_field_description_sid\030\003 \001(" +
+      "\003R\032contactFieldDescriptionSid\"\223\001\n\036Natura" +
+      "lLanguageComplianceScrub\022Q\n\020compliance_s" +
+      "crub\030\001 \001(\0162&.api.commons.HuntGroupOrgDef" +
+      "aultCustomR\017complianceScrub\022\036\n\013rule_set_" +
+      "id\030\002 \001(\tR\truleSetId\"\207\001\n!NaturalLanguageC" +
+      "omplianceMetadata\022\030\n\007enabled\030\001 \001(\010R\007enab" +
+      "led\022#\n\roptional_data\030\002 \003(\003R\014optionalData" +
+      "\022#\n\rrequired_data\030\003 \003(\003R\014requiredData\"l\n" +
+      "\022CallerIdBucketData\0225\n\027xml_client_proper" +
+      "ty_sid\030\001 \001(\003R\024xmlClientPropertySid\022\037\n\013bu" +
+      "cket_name\030\002 \001(\tR\nbucketName\"\213\027\n\024Transfer" +
+      "CallSettings\022\'\n\017enable_transfer\030\001 \001(\010R\016e" +
+      "nableTransfer\022X\n\016hand_off_types\030\002 \001(\01322." +
+      "api.commons.org.TransferCallSettings.Han" +
+      "dOffTypesR\014handOffTypes\022O\n\020recording_sta" +
+      "tus\030\003 \001(\0162$.api.commons.TransferRecordin" +
+      "gStatusR\017recordingStatus\022Z\n\016transfer_typ" +
+      "es\030\004 \001(\01323.api.commons.org.TransferCallS" +
+      "ettings.TransferTypesR\rtransferTypes\022J\n\"" +
+      "display_transfer_number_phone_book\030\005 \001(\010" +
+      "R\036displayTransferNumberPhoneBook\022C\n\036enab" +
+      "le_transfer_number_editing\030\006 \001(\010R\033enable" +
+      "TransferNumberEditing\0226\n\027default_transfe" +
+      "r_number\030\007 \001(\tR\025defaultTransferNumber\0226\n" +
+      "\027start_recording_numbers\030\010 \003(\tR\025startRec" +
+      "ordingNumbers\0224\n\026stop_recording_numbers\030" +
+      "\t \003(\tR\024stopRecordingNumbers\022L\n\027transfer_" +
+      "number_country\030\n \001(\0162\024.api.commons.Count" +
+      "ryR\025transferNumberCountry\022K\n\"display_tra" +
+      "nsfer_country_selection\030\013 \001(\010R\037displayTr" +
+      "ansferCountrySelection\022>\n\034display_caller" +
+      "_id_phone_book\030\014 \001(\010R\030displayCallerIdPho" +
+      "neBook\0227\n\030enable_caller_id_editing\030\r \001(\010" +
+      "R\025enableCallerIdEditing\022a\n\021default_calle" +
+      "r_id\030\016 \001(\01325.api.commons.org.TransferCal" +
+      "lSettings.DefaultCallerIdR\017defaultCaller" +
+      "Id\022@\n\021caller_id_country\030\017 \001(\0162\024.api.comm" +
+      "ons.CountryR\017callerIdCountry\022L\n#display_" +
+      "caller_id_country_selection\030\020 \001(\010R\037displ" +
+      "ayCallerIdCountrySelection\022G\n display_ag" +
+      "ent_transfer_filtering\030\021 \001(\010R\035displayAge" +
+      "ntTransferFiltering\022G\n default_agent_tra" +
+      "nsfer_filtering\030\022 \001(\010R\035defaultAgentTrans" +
+      "ferFiltering\022=\n\033enable_hunt_group_filter" +
+      "ing\030\023 \001(\010R\030enableHuntGroupFiltering\022q\n\024r" +
+      "equeue_queue_config\030\024 \001(\0132?.api.commons." +
+      "org.TransferCallSettings.RequeueQueueCon" +
+      "figurationR\022requeueQueueConfig\022\177\n\033requeu" +
+      "e_transfer_disallowed\030\025 \001(\0132?.api.common" +
+      "s.org.TransferCallSettings.RequeueTransf" +
+      "erDisallowedR\031requeueTransferDisallowed\022" +
+      "s\n\027pbx_transfer_disallowed\030\026 \001(\0132;.api.c" +
+      "ommons.org.TransferCallSettings.PbxTrans" +
+      "ferDisallowedR\025pbxTransferDisallowed\0222\n\025" +
+      "enable_scrub_override\030\027 \001(\010R\023enableScrub" +
+      "Override\022)\n\020enable_whitelist\030\030 \001(\010R\017enab" +
+      "leWhitelist\022i\n\030natural_compliance_scrub\030" +
+      "\031 \001(\0132/.api.commons.org.NaturalLanguageC" +
+      "omplianceScrubR\026naturalComplianceScrub\022\203" +
+      "\001\n$natural_language_compliance_metadata\030" +
+      "\032 \001(\01322.api.commons.org.NaturalLanguageC" +
+      "omplianceMetadataR!naturalLanguageCompli" +
+      "anceMetadata\032}\n\014HandOffTypes\022+\n\021enable_c",
+      "onference\030\001 \001(\010R\020enableConference\022\037\n\013ena" +
+      "ble_warm\030\002 \001(\010R\nenableWarm\022\037\n\013enable_col" +
+      "d\030\003 \001(\010R\nenableCold\032\254\002\n\rTransferTypes\0222\n" +
+      "\025enable_agent_transfer\030\001 \001(\010R\023enableAgen" +
+      "tTransfer\0220\n\024enable_open_transfer\030\002 \001(\010R" +
+      "\022enableOpenTransfer\0226\n\027enable_requeue_tr" +
+      "ansfer\030\003 \001(\010R\025enableRequeueTransfer\022A\n\035e" +
+      "nable_pbx_extension_transfer\030\004 \001(\010R\032enab" +
+      "lePbxExtensionTransfer\022:\n\031enable_voicema" +
+      "il_transfer\030\005 \001(\010R\027enableVoicemailTransf" +
+      "er\032\205\001\n\031RequeueTransferDisallowed\022\026\n\006enab" +
+      "le\030\001 \001(\010R\006enable\022(\n\020agent_skill_sids\030\002 \003" +
+      "(\003R\016agentSkillSids\022&\n\017hunt_group_sids\030\003 " +
+      "\003(\003R\rhuntGroupSids\032O\n\025PbxTransferDisallo" +
+      "wed\022\026\n\006enable\030\001 \001(\010R\006enable\022\036\n\nextension" +
+      "s\030\002 \003(\tR\nextensions\032{\n\031RequeueQueueConfi" +
+      "guration\022=\n\005usage\030\001 \001(\0162\'.api.commons.Re" +
+      "queueTransferQueueConfigR\005usage\022\037\n\013custo" +
+      "m_name\030\002 \001(\tR\ncustomName\032w\n\017DefaultCalle" +
+      "rId\022:\n\005usage\030\001 \001(\0162$.api.commons.Default" +
+      "TransferCallerIdR\005usage\022(\n\020custom_caller" +
+      "_id\030\002 \001(\tR\016customCallerId\"\363\001\n\025NumberHist" +
+      "orySettings\022#\n\renable_search\030\001 \001(\010R\014enab" +
+      "leSearch\0224\n\026enable_report_download\030\002 \001(\010" +
+      "R\024enableReportDownload\022<\n\032enable_recordi" +
+      "ngs_download\030\003 \001(\010R\030enableRecordingsDown" +
+      "load\022A\n\035enable_agent_response_editing\030\004 " +
+      "\001(\010R\032enableAgentResponseEditing\"\344\001\n\030Agen" +
+      "tResponseAutoRuleSet\022\037\n\013ruleset_sid\030\001 \001(" +
+      "\003R\nrulesetSid\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013des" +
+      "cription\030\003 \001(\tR\013description\022.\n\007country\030\004" +
+      " \001(\0162\024.api.commons.CountryR\007country\022A\n\tr" +
+      "esponses\030\005 \003(\0132#.api.commons.org.AutoRes" +
+      "ponseChoiceR\tresponses\"\221\001\n\022AutoResponseC" +
+      "hoice\022.\n\023agent_call_response\030\001 \001(\tR\021agen" +
+      "tCallResponse\022K\n\013comparitors\030\002 \003(\0132).api" +
+      ".commons.org.AgentResponseComparitorsR\013c" +
+      "omparitors\"P\n\030AgentResponseComparitors\022\024" +
+      "\n\005value\030\001 \001(\tR\005value\022\036\n\nexpiration\030\002 \001(\003" +
+      "R\nexpiration\"\236\004\n\031ClientInfoDisplayTempla" +
+      "te\022%\n\014template_sid\030\001 \001(\tB\002\030\001R\013templateSi" +
+      "d\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001" +
+      "(\tR\013description\022,\n\022display_all_fields\030\004 " +
+      "\001(\010R\020displayAllFields\022b\n\031dialed_number_f" +
+      "ield_style\030\005 \001(\0132\'.api.commons.org.Diale" +
+      "dNumberFieldStyleR\026dialedNumberFieldStyl" +
+      "e\022T\n\024contact_field_styles\030\006 \003(\0132\".api.co" +
+      "mmons.org.ContactFieldStyleR\022contactFiel" +
+      "dStyles\022N\n\021template_category\030\007 \001(\0162!.api" +
+      ".commons.org.TemplateCategoryR\020templateC" +
+      "ategory\022F\n client_info_display_template_" +
+      "sid\030\010 \001(\003R\034clientInfoDisplayTemplateSid\022" +
+      "$\n\016hunt_group_sid\030\t \001(\003R\014huntGroupSid\"\200\001" +
+      "\n\nFieldStyle\022\035\n\ntext_color\030\001 \001(\tR\ttextCo" +
+      "lor\022)\n\020background_color\030\002 \001(\tR\017backgroun" +
+      "dColor\022(\n\020allow_agent_copy\030\003 \001(\010R\016allowA" +
+      "gentCopy\"x\n\021ContactFieldStyle\022%\n\016descrip" +
+      "tion_id\030\001 \001(\003R\rdescriptionId\022<\n\013field_st" +
+      "yle\030\002 \001(\0132\033.api.commons.org.FieldStyleR\n" +
+      "fieldStyle\"\200\001\n\026DialedNumberFieldStyle\022<\n" +
+      "\013field_style\030\001 \001(\0132\033.api.commons.org.Fie" +
+      "ldStyleR\nfieldStyle\022(\n\020display_to_agent\030" +
+      "\002 \001(\010R\016displayToAgent\"\306\002\n#HuntGroupWithC" +
+      "lientInfoTemplateData\022]\n\nhunt_group\030\001 \001(" +
+      "\0132>.api.commons.org.HuntGroupWithClientI" +
+      "nfoTemplateData.HuntGroupR\thuntGroup\022F\n\010" +
+      "template\030\002 \001(\0132*.api.commons.org.ClientI" +
+      "nfoDisplayTemplateR\010template\032x\n\tHuntGrou" +
+      "p\022\035\n\nclient_sid\030\001 \001(\003R\tclientSid\022$\n\016hunt" +
+      "_group_sid\030\002 \001(\003R\014huntGroupSid\022&\n\017hunt_g" +
+      "roup_name\030\003 \001(\tR\rhuntGroupName\"\263\002\n\007WebLi" +
+      "nk\022 \n\014web_link_sid\030\001 \001(\003R\nwebLinkSid\022\022\n\004" +
+      "name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013d" +
+      "escription\0229\n\tlink_type\030\004 \001(\0162\034.api.comm" +
+      "ons.org.WebLinkTypeR\010linkType\022\024\n\005order\030\005" +
+      " \001(\003R\005order\022<\n\010base_url\030\006 \003(\0132!.api.comm" +
+      "ons.org.WebLinkComponentR\007baseUrl\022A\n\npar" +
+      "ameters\030\007 \003(\0132!.api.commons.org.WebLinkP" +
+      "arameterR\nparameters\"m\n\020WebLinkComponent" +
+      "\022C\n\010key_type\030\001 \001(\0162(.api.commons.org.Web" +
+      "LinkComponentKeyTypeR\007keyType\022\024\n\005value\030\002" +
+      " \001(\tR\005value\"g\n\020WebLinkParameter\022\020\n\003key\030\001" +
+      " \001(\tR\003key\022A\n\ncomponents\030\002 \003(\0132!.api.comm" +
+      "ons.org.WebLinkComponentR\ncomponents\"\352\007\n" +
+      "\rDataDipConfig\022\037\n\013config_name\030\001 \001(\tR\ncon" +
+      "figName\022\037\n\013config_type\030\002 \001(\tR\nconfigType" +
+      "\022\035\n\nremote_url\030\003 \001(\tR\tremoteUrl\022i\n\027param" +
+      "_type_value_tuples\030\004 \003(\01322.api.commons.o" +
+      "rg.DataDipConfig.ParamTypeValueTupleR\024pa" +
+      "ramTypeValueTuples\022<\n\006params\030\005 \003(\0132$.api" +
+      ".commons.org.DataDipConfig.ParamR\006params" +
+      "\022=\n\004data\030\006 \003(\0132).api.commons.org.DataDip" +
+      "Config.ReturnDataR\004data\022%\n\016request_metho" +
+      "d\030\007 \001(\tR\rrequestMethod\0225\n\027xml_client_pro" +
+      "perty_sid\030\010 \001(\003R\024xmlClientPropertySid\022?\n" +
+      "\007headers\030\t \003(\0132%.api.commons.org.DataDip" +
+      "Config.HeaderR\007headers\032\255\001\n\005Param\022\022\n\004name" +
+      "\030\001 \001(\tR\004name\022\024\n\005value\030\002 \001(\tR\005value\022\035\n\npa" +
+      "ram_type\030\003 \001(\tR\tparamType\022[\n\017composite_v" +
+      "alue\030\004 \003(\01322.api.commons.org.DataDipConf" +
+      "ig.ParamTypeValueTupleR\016compositeValue\032=" +
+      "\n\023ParamTypeValueTuple\022\020\n\003key\030\001 \001(\tR\003key\022" +
+      "\024\n\005value\030\002 \001(\tR\005value\032A\n\nReturnData\022\022\n\004n" +
+      "ame\030\001 \001(\tR\004name\022\037\n\013access_type\030\002 \001(\tR\nac" +
+      "cessType\032\276\001\n\006Header\022\022\n\004name\030\001 \001(\tR\004name\022" +
+      "\024\n\005value\030\002 \001(\tR\005value\022\037\n\013header_type\030\003 \001" +
+      "(\tR\nheaderType\022i\n\027param_type_value_tuple" +
+      "s\030\004 \003(\01322.api.commons.org.DataDipConfig." +
+      "ParamTypeValueTupleR\024paramTypeValueTuple" +
+      "s\"\346\002\n\017IntegrationLink\022%\n\016integration_id\030" +
+      "\001 \001(\003R\rintegrationId\022#\n\rparameter_sid\030\002 " +
+      "\001(\003R\014parameterSid\022\022\n\004name\030\003 \001(\tR\004name\022 \n" +
+      "\013description\030\004 \001(\tR\013description\022\033\n\tmetho" +
+      "d_id\030\005 \001(\003R\010methodId\022\024\n\005order\030\006 \001(\003R\005ord" +
+      "er\022I\n\nparameters\030\007 \003(\0132).api.commons.org" +
+      ".IntegrationLinkParameterR\nparameters\022-\n" +
+      "\022configuration_name\030\010 \001(\tR\021configuration" +
+      "Name\022$\n\016hunt_group_sid\030\t \001(\003R\014huntGroupS" +
+      "id\"\201\001\n\030IntegrationLinkParameter\022\020\n\003key\030\001" +
+      " \001(\tR\003key\022S\n\016sub_parameters\030\002 \003(\0132,.api." +
+      "commons.org.IntegrationLinkSubParameterR" +
+      "\rsubParameters\"w\n\033IntegrationLinkSubPara" +
+      "meter\022\020\n\003key\030\001 \001(\tR\003key\022F\n\005parts\030\002 \003(\01320" +
+      ".api.commons.org.IntegrationLinkSubParam" +
+      "eterPartR\005parts\"\312\001\n\037IntegrationLinkSubPa" +
+      "rameterPart\022*\n\021contact_field_sid\030\001 \001(\003R\017" +
+      "contactFieldSid\022!\n\014helper_value\030\002 \001(\tR\013h" +
+      "elperValue\022X\n\025parameter_source_type\030\003 \001(" +
+      "\0162$.api.commons.org.ParameterSourceTypeR" +
+      "\023parameterSourceType\"\212\002\n\014AgentTrigger\022*\n" +
+      "\021agent_trigger_sid\030\001 \001(\003R\017agentTriggerSi" +
+      "d\022 \n\013description\030\002 \001(\tR\013description\022R\n\023a" +
+      "gent_status_option\030\003 \001(\0132\".api.commons.o" +
+      "rg.AgentStatusOptionR\021agentStatusOption\022" +
+      "X\n\025trigger_action_option\030\004 \001(\0132$.api.com" +
+      "mons.org.TriggerActionOptionR\023triggerAct" +
+      "ionOption\"\262\002\n\021AgentStatusOption\022?\n\014agent" +
+      "_status\030\001 \001(\0162\034.api.commons.org.AgentSta" +
+      "tusR\013agentStatus\022\032\n\010duration\030\002 \001(\003R\010dura" +
+      "tion\022@\n\npause_code\030\003 \001(\0132!.api.commons.o" +
+      "rg.TriggerPauseCodeR\tpauseCode\022@\n\ncall_t" +
+      "ypes\030\004 \001(\0132!.api.commons.org.TriggerCall" +
+      "TypesR\tcallTypes\022<\n\032scheduled_callback_p" +
+      "resent\030\005 \001(\010R\030scheduledCallbackPresent\"\236" +
+      "\001\n\020TriggerPauseCode\022N\n\021system_pause_code" +
+      "\030\001 \001(\0162 .api.commons.org.SystemPauseCode" +
+      "H\000R\017systemPauseCode\022,\n\021custom_pause_code" +
+      "\030\002 \001(\tH\000R\017customPauseCodeB\014\n\npause_code\"" +
+      "z\n\020TriggerCallTypes\022\032\n\010outbound\030\001 \001(\010R\010o" +
+      "utbound\022\030\n\007inbound\030\002 \001(\010R\007inbound\022\026\n\006man" +
+      "ual\030\003 \001(\010R\006manual\022\030\n\007preview\030\004 \001(\010R\007prev" +
+      "iew\"\224\002\n\023TriggerActionOption\0226\n\006action\030\001 " +
+      "\001(\0162\036.api.commons.org.TriggerActionR\006act" +
+      "ion\022\'\n\017display_message\030\002 \001(\tR\016displayMes" +
+      "sage\022H\n\021advance_to_status\030\003 \001(\0162\034.api.co" +
+      "mmons.org.AgentStatusR\017advanceToStatus\022 " +
+      "\n\014web_link_sid\030\004 \001(\003R\nwebLinkSid\0220\n\024inte" +
+      "gration_link_sid\030\005 \001(\003R\022integrationLinkS" +
+      "id\"\222\002\n\017HuntGroupScript\022\035\n\nscript_sid\030\001 \001" +
+      "(\003R\tscriptSid\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013des" +
+      "cription\030\003 \001(\tR\013description\0226\n\027auto_scri" +
+      "pt_progression\030\004 \001(\010R\025autoScriptProgress" +
+      "ion\022H\n\017script_category\030\005 \001(\0162\037.api.commo" +
+      "ns.org.ScriptCategoryR\016scriptCategory\022(\n" +
+      "\004acts\030\006 \003(\0132\024.api.commons.org.ActR\004acts\"" +
+      "\270\003\n\003Act\022@\n\014dispositions\030\001 \003(\0132\034.api.comm" +
+      "ons.org.DispositionR\014dispositions\0227\n\tver" +
+      "biages\030\002 \003(\0132\031.api.commons.org.VerbiageR" +
+      "\tverbiages\022_\n\027conditional_navigations\030\003 " +
+      "\003(\0132&.api.commons.org.ConditionalNavigat" +
+      "ionR\026conditionalNavigations\022Q\n%default_c" +
+      "onditional_navigation_target\030\004 \001(\003R\"defa" +
+      "ultConditionalNavigationTarget\022C\n\036page_a" +
+      "rrival_recording_control\030\005 \001(\003R\033pageArri" +
+      "valRecordingControl\022=\n\033page_exit_recordi" +
+      "ng_control\030\006 \001(\003R\030pageExitRecordingContr" +
+      "ol\"\375\002\n\013Disposition\022)\n\020response_options\030\001" +
+      " \003(\tR\017responseOptions\022\026\n\006header\030\002 \001(\tR\006h" +
+      "eader\022\026\n\006prompt\030\003 \001(\tR\006prompt\022\024\n\005order\030\004" +
+      " \001(\003R\005order\022\032\n\010required\030\005 \001(\010R\010required\022" +
+      "#\n\rdefault_value\030\006 \001(\tR\014defaultValue\022C\n\036" +
+      "bypass_auto_script_progression\030\007 \001(\010R\033by" +
+      "passAutoScriptProgression\022H\n\rresponse_ty" +
+      "pe\030\010 \001(\0162#.api.commons.org.ScriptRespons" +
+      "eTypeR\014responseType\022-\n\022response_evaluato" +
+      "r\030\t \001(\003R\021responseEvaluator\"L\n\010Verbiage\022\024" +
+      "\n\005order\030\001 \001(\003R\005order\022\026\n\006header\030\002 \001(\tR\006he" +
+      "ader\022\022\n\004body\030\003 \001(\tR\004body\"\267\001\n\025Conditional" +
+      "Navigation\022(\n\020target_act_index\030\001 \001(\003R\016ta" +
+      "rgetActIndex\022t\n\037complex_boolean_expressi" +
+      "on_list\030\002 \001(\0132-.api.commons.org.ComplexB" +
+      "ooleanExpressionListR\034complexBooleanExpr" +
+      "essionList\"\211\001\n\034ComplexBooleanExpressionL" +
+      "ist\022i\n\033complex_boolean_expressions\030\001 \003(\013" +
+      "2).api.commons.org.ComplexBooleanExpress" +
+      "ionR\031complexBooleanExpressions\"z\n\030Comple" +
+      "xBooleanExpression\022^\n\027compare_expression" +
+      "_list\030\001 \001(\0132&.api.commons.org.CompareExp" +
+      "ressionListR\025compareExpressionList\"}\n\025Co" +
+      "mpareExpressionList\022d\n\031simple_compare_ex" +
+      "pression\030\001 \003(\0132(.api.commons.org.SimpleC" +
+      "ompareExpressionR\027simpleCompareExpressio" +
+      "n\"\325\001\n\027SimpleCompareExpression\022I\n\roperato" +
+      "r_type\030\001 \001(\0162$.api.commons.org.CompareOp" +
+      "eratorTypeR\014operatorType\022\033\n\tact_index\030\002 " +
+      "\001(\003R\010actIndex\022-\n\022disposition_header\030\003 \001(" +
+      "\tR\021dispositionHeader\022#\n\rcompare_value\030\004 " +
+      "\001(\tR\014compareValue\"\303\001\n\021ResponseEvaluator\022" +
+      "2\n\025response_evaluator_id\030\001 \001(\tR\023response" +
+      "EvaluatorId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\022\n\004na" +
+      "me\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013des" +
+      "cription\022-\n\022regular_expression\030\005 \001(\tR\021re" +
+      "gularExpression*n\n\rHuntGroupType\022\037\n\033HUNT" +
+      "_GROUP_TYPE_UNSPECIFIED\020\000\022\035\n\031HUNT_GROUP_" +
+      "TYPE_CONNECTED\020\001\022\035\n\031HUNT_GROUP_TYPE_SOFT" +
+      "PHONE\020\002*w\n\020TemplateCategory\022!\n\035TEMPLATE_" +
+      "CATEGORY_UNSPECIFIED\020\000\022 \n\034TEMPLATE_CATEG" +
+      "ORY_HUNT_GROUP\020\001\022\036\n\032TEMPLATE_CATEGORY_CA" +
+      "MPAIGN\020\002*\\\n\013WebLinkType\022\035\n\031WEB_LINK_TYPE" +
+      "_UNSPECIFIED\020\000\022\025\n\021WEB_LINK_STANDARD\020\001\022\027\n" +
+      "\023WEB_LINK_JAVASCRIPT\020\002*\373\004\n\027WebLinkCompon" +
+      "entKeyType\022+\n\'WEB_LINK_COMPONENT_KEY_TYP" +
+      "E_UNSPECIFIED\020\000\022+\n\'WEB_LINK_COMPONENT_KE" +
+      "Y_TYPE_STATIC_TEXT\020\001\022)\n%WEB_LINK_COMPONE" +
+      "NT_KEY_TYPE_TTS_FIELD\020\002\022*\n&WEB_LINK_COMP" +
+      "ONENT_KEY_TYPE_AGENT_INFO\020\003\022(\n$WEB_LINK_" +
+      "COMPONENT_KEY_TYPE_DATA_DIP\020\004\022(\n$WEB_LIN" +
+      "K_COMPONENT_KEY_TYPE_IVR_DATA\020\005\022,\n(WEB_L" +
+      "INK_COMPONENT_KEY_TYPE_DATA_COLLECT\020\006\022.\n" +
+      "*WEB_LINK_COMPONENT_KEY_TYPE_PHONE_METAD" +
+      "ATA\020\007\0223\n/WEB_LINK_COMPONENT_KEY_TYPE_ZIP" +
+      "_POSTAL_METADATA\020\010\0227\n3WEB_LINK_COMPONENT" +
+      "_KEY_TYPE_CUSTOM_ACCOUNT_DATA_KEY\020\t\022/\n+W" +
+      "EB_LINK_COMPONENT_KEY_TYPE_SIP_HEADER_DA" +
+      "TA\020\n\0220\n,WEB_LINK_COMPONENT_KEY_TYPE_INTE" +
+      "GRATION_DATA\020\013\022,\n(WEB_LINK_COMPONENT_KEY" +
+      "_TYPE_JOURNEY_DATA\020\014*\263\037\n\023ParameterSource" +
+      "Type\022%\n!PARAMETER_SOURCE_TYPE_UNSPECIFIE" +
+      "D\020\000\022%\n!PARAMETER_SOURCE_TYPE_STATIC_TEXT" +
+      "\020\001\022 \n\034PARAMETER_SOURCE_TYPE_CFD_ID\020d\022#\n\036" +
+      "PARAMETER_SOURCE_TYPE_AGENT_ID\020\310\001\022+\n&PAR" +
+      "AMETER_SOURCE_TYPE_AGENT_FIRST_NAME\020\311\001\022*" +
+      "\n%PARAMETER_SOURCE_TYPE_AGENT_LAST_NAME\020" +
+      "\312\001\022)\n$PARAMETER_SOURCE_TYPE_AGENT_USERNA" +
+      "ME\020\313\001\022+\n&PARAMETER_SOURCE_TYPE_PARTNER_A" +
+      "GENT_ID\020\314\001\022 \n\033PARAMETER_SOURCE_TYPE_HG_I" +
+      "D\020\315\001\022\"\n\035PARAMETER_SOURCE_TYPE_HG_NAME\020\316\001" +
+      "\022\"\n\035PARAMETER_SOURCE_TYPE_HG_TYPE\020\317\001\022)\n$" +
+      "PARAMETER_SOURCE_TYPE_CONSUMER_PHONE\020\320\001\022" +
+      "$\n\037PARAMETER_SOURCE_TYPE_CALLER_ID\020\321\001\022\"\n" +
+      "\035PARAMETER_SOURCE_TYPE_CALL_ID\020\322\001\022#\n\036PAR" +
+      "AMETER_SOURCE_TYPE_GROUP_ID\020\323\001\022+\n&PARAME" +
+      "TER_SOURCE_TYPE_AGENT_SESSION_ID\020\324\001\022#\n\036P" +
+      "ARAMETER_SOURCE_TYPE_DATA_DIP\020\254\002\022#\n\036PARA" +
+      "METER_SOURCE_TYPE_IVR_DATA\020\220\003\022\'\n\"PARAMET" +
+      "ER_SOURCE_TYPE_DATA_COLLECT\020\364\003\0223\n.PARAME" +
+      "TER_SOURCE_TYPE_PHONE_METADATA_AREA_CODE" +
+      "\020\330\004\0221\n,PARAMETER_SOURCE_TYPE_PHONE_METAD" +
+      "ATA_CARRIER\020\331\004\022=\n8PARAMETER_SOURCE_TYPE_" +
+      "PHONE_METADATA_CENTRAL_OFFICE_CODE\020\332\004\022.\n" +
+      ")PARAMETER_SOURCE_TYPE_PHONE_METADATA_CI" +
+      "TY\020\333\004\0226\n1PARAMETER_SOURCE_TYPE_PHONE_MET" +
+      "ADATA_COUNTRY_CODE\020\334\004\022;\n6PARAMETER_SOURC" +
+      "E_TYPE_PHONE_METADATA_SUBSCRIBER_NUMBER\020" +
+      "\335\004\0222\n-PARAMETER_SOURCE_TYPE_PHONE_METADA" +
+      "TA_ISO_CODE\020\336\004\022>\n9PARAMETER_SOURCE_TYPE_" +
+      "PHONE_METADATA_INTERNATIONAL_PREFIX\020\337\004\0222" +
+      "\n-PARAMETER_SOURCE_TYPE_PHONE_METADATA_L" +
+      "ANGUAGE\020\340\004\0222\n-PARAMETER_SOURCE_TYPE_PHON" +
+      "E_METADATA_LATITUDE\020\341\004\0223\n.PARAMETER_SOUR" +
+      "CE_TYPE_PHONE_METADATA_LONGITUDE\020\342\004\022>\n9P" +
+      "ARAMETER_SOURCE_TYPE_PHONE_METADATA_MAXI" +
+      "MUM_BLOCK_NUMBER\020\343\004\022>\n9PARAMETER_SOURCE_" +
+      "TYPE_PHONE_METADATA_MINIMUM_BLOCK_NUMBER" +
+      "\020\344\004\022>\n9PARAMETER_SOURCE_TYPE_PHONE_METAD" +
+      "ATA_NATIONAL_DESTINATION\020\345\004\0229\n4PARAMETER" +
+      "_SOURCE_TYPE_PHONE_METADATA_NATIONAL_PRE" +
+      "FIX\020\346\004\0229\n4PARAMETER_SOURCE_TYPE_PHONE_ME" +
+      "TADATA_NUMBER_BLOCK_ID\020\347\004\0225\n0PARAMETER_S" +
+      "OURCE_TYPE_PHONE_METADATA_NUMBER_TYPE\020\350\004" +
+      "\0222\n-PARAMETER_SOURCE_TYPE_PHONE_METADATA" +
+      "_USES_NDC\020\351\004\022:\n5PARAMETER_SOURCE_TYPE_PH" +
+      "ONE_METADATA_DAYLIGHT_SAVINGS\020\352\004\0220\n+PARA" +
+      "METER_SOURCE_TYPE_PHONE_METADATA_PREFIX\020" +
+      "\353\004\0225\n0PARAMETER_SOURCE_TYPE_PHONE_METADA" +
+      "TA_REGION_CODE\020\354\004\0225\n0PARAMETER_SOURCE_TY" +
+      "PE_PHONE_METADATA_REGION_NAME\020\355\004\022@\n;PARA" +
+      "METER_SOURCE_TYPE_PHONE_METADATA_SPECIAL" +
+      "_SERVICE_CODE_1\020\356\004\022@\n;PARAMETER_SOURCE_T" +
+      "YPE_PHONE_METADATA_SPECIAL_SERVICE_CODE_" +
+      "2\020\357\004\022@\n;PARAMETER_SOURCE_TYPE_PHONE_META" +
+      "DATA_SPECIAL_SERVICE_CODE_3\020\360\004\022@\n;PARAME" +
+      "TER_SOURCE_TYPE_PHONE_METADATA_SPECIAL_S" +
+      "ERVICE_CODE_4\020\361\004\0223\n.PARAMETER_SOURCE_TYP" +
+      "E_PHONE_METADATA_TIME_ZONE\020\362\004\0224\n/PARAMET" +
+      "ER_SOURCE_TYPE_PHONE_METADATA_UTC_OFFSET" +
+      "\020\363\004\0224\n/PARAMETER_SOURCE_TYPE_ZIP_METADAT" +
+      "A_ADMIN_CODE_1\020\274\005\0224\n/PARAMETER_SOURCE_TY" +
+      "PE_ZIP_METADATA_ADMIN_CODE_2\020\275\005\0224\n/PARAM" +
+      "ETER_SOURCE_TYPE_ZIP_METADATA_ADMIN_CODE" +
+      "_3\020\276\005\0224\n/PARAMETER_SOURCE_TYPE_ZIP_METAD" +
+      "ATA_ADMIN_NAME_1\020\277\005\0224\n/PARAMETER_SOURCE_" +
+      "TYPE_ZIP_METADATA_ADMIN_NAME_2\020\300\005\0224\n/PAR" +
+      "AMETER_SOURCE_TYPE_ZIP_METADATA_ADMIN_NA" +
+      "ME_3\020\301\005\0221\n,PARAMETER_SOURCE_TYPE_ZIP_MET" +
+      "ADATA_AREA_CODE\020\302\005\0221\n,PARAMETER_SOURCE_T" +
+      "YPE_ZIP_METADATA_CITY_NAME\020\303\005\0221\n,PARAMET" +
+      "ER_SOURCE_TYPE_ZIP_METADATA_CITY_TYPE\020\304\005" +
+      "\0224\n/PARAMETER_SOURCE_TYPE_ZIP_METADATA_C" +
+      "OUNTRY_CODE\020\305\005\0220\n+PARAMETER_SOURCE_TYPE_" +
+      "ZIP_METADATA_ISO_CODE\020\306\005\0224\n/PARAMETER_SO" +
+      "URCE_TYPE_ZIP_METADATA_COUNTRY_NAME\020\307\005\0228" +
+      "\n3PARAMETER_SOURCE_TYPE_ZIP_METADATA_COU" +
+      "NTRY_FPS_CODE\020\310\005\0220\n+PARAMETER_SOURCE_TYP" +
+      "E_ZIP_METADATA_LATITUDE\020\311\005\0229\n4PARAMETER_" +
+      "SOURCE_TYPE_ZIP_METADATA_POSITION_ACCURA" +
+      "CY\020\312\005\0221\n,PARAMETER_SOURCE_TYPE_ZIP_METAD" +
+      "ATA_LONGITUDE\020\313\005\0229\n4PARAMETER_SOURCE_TYP" +
+      "E_ZIP_METADATA_METROPOLITAN_AREA\020\314\005\0228\n3P" +
+      "ARAMETER_SOURCE_TYPE_ZIP_METADATA_DAYLIG" +
+      "HT_SAVINGS\020\315\005\0222\n-PARAMETER_SOURCE_TYPE_Z" +
+      "IP_METADATA_PLACE_NAME\020\316\005\0223\n.PARAMETER_S" +
+      "OURCE_TYPE_ZIP_METADATA_POSTAL_CODE\020\317\005\0227" +
+      "\n2PARAMETER_SOURCE_TYPE_ZIP_METADATA_POS" +
+      "TAL_CODE_KEY\020\320\005\0223\n.PARAMETER_SOURCE_TYPE" +
+      "_ZIP_METADATA_POSTAL_TYPE\020\321\005\022<\n7PARAMETE" +
+      "R_SOURCE_TYPE_ZIP_METADATA_PROVICE_ABBRE" +
+      "VIATION\020\322\005\0225\n0PARAMETER_SOURCE_TYPE_ZIP_" +
+      "METADATA_PROVINCE_NAME\020\323\005\0226\n1PARAMETER_S" +
+      "OURCE_TYPE_ZIP_METADATA_STATE_FPS_CODE\020\324" +
+      "\005\0221\n,PARAMETER_SOURCE_TYPE_ZIP_METADATA_" +
+      "TIME_ZONE\020\325\005\0222\n-PARAMETER_SOURCE_TYPE_ZI" +
+      "P_METADATA_UTC_OFFSET\020\326\005\022.\n)PARAMETER_SO" +
+      "URCE_TYPE_CUSTOM_ACCOUNT_DATA\020\240\006\022*\n%PARA" +
+      "METER_SOURCE_TYPE_SIP_HEADER_DATA\020\204\007\022+\n&" +
+      "PARAMETER_SOURCE_TYPE_INTEGRATION_DATA\020\350" +
+      "\007\022\'\n\"PARAMETER_SOURCE_TYPE_JOURNEY_DATA\020" +
+      "\314\010*\327\002\n\013AgentStatus\022\034\n\030AGENT_STATUS_UNSPE" +
+      "CIFIED\020\000\022\032\n\026AGENT_STATUS_LOGGED_IN\020\001\022\030\n\024" +
+      "AGENT_STATUS_WAITING\020\002\022\027\n\023AGENT_STATUS_P" +
+      "AUSED\020\003\022\030\n\024AGENT_STATUS_ON_CALL\020\004\022\036\n\032AGE" +
+      "NT_STATUS_TRANSFER_CALL\020\005\022\036\n\032AGENT_STATU" +
+      "S_TRANSFER_LOST\020\006\022%\n!AGENT_STATUS_TRANSF" +
+      "ER_TARGET_LOST\020\007\022\035\n\031AGENT_STATUS_PREVIEW" +
+      "_CALL\020\010\022!\n\035AGENT_STATUS_MANUAL_DIAL_CALL" +
+      "\020\t\022\030\n\024AGENT_STATUS_WRAP_UP\020\n*\350\001\n\017SystemP" +
+      "auseCode\022!\n\035SYSTEM_PAUSE_CODE_UNSPECIFIE" +
+      "D\020\000\0225\n1SYSTEM_PAUSE_CODE_AGENT_TRIGGER_A" +
+      "DVANCE_TO_PAUSED\020\001\022%\n!SYSTEM_PAUSE_CODE_" +
+      "CHANGE_PASSWORD\020\002\022&\n\"SYSTEM_PAUSE_CODE_C" +
+      "HECK_VOICE_MAIL\020\003\022,\n(SYSTEM_PAUSE_CODE_M" +
+      "ANUALLY_APPROVE_CALLS\020\004*\353\001\n\rTriggerActio" +
+      "n\022\036\n\032TRIGGER_ACTION_UNSPECIFIED\020\000\022$\n TRI" +
+      "GGER_ACTION_ADVANCE_TO_STATUS\020\001\022\"\n\036TRIGG" +
+      "ER_ACTION_DISPLAY_MESSAGE\020\002\022\036\n\032TRIGGER_A" +
+      "CTION_EJECT_AGENT\020\003\022#\n\037TRIGGER_ACTION_EX" +
+      "ECUTE_WEB_LINK\020\004\022+\n\'TRIGGER_ACTION_EXECU" +
+      "TE_INTEGRATION_LINK\020\005*o\n\016ScriptCategory\022" +
+      "\037\n\033SCRIPT_CATEGORY_UNSPECIFIED\020\000\022\036\n\032SCRI" +
+      "PT_CATEGORY_HUNT_GROUP\020\001\022\034\n\030SCRIPT_CATEG" +
+      "ORY_CAMPAIGN\020\002*\242\004\n\022ScriptResponseType\022$\n" +
+      " SCRIPT_RESPONSE_TYPE_UNSPECIFIED\020\000\022.\n*S" +
+      "CRIPT_RESPONSE_TYPE_DROP_DOWN_SELECT_MEN" +
+      "U\020\001\022-\n)SCRIPT_RESPONSE_TYPE_MULTIPLE_SEL" +
+      "ECT_MENU\020\002\022$\n SCRIPT_RESPONSE_TYPE_CHECK" +
+      "_BOXES\020\003\022&\n\"SCRIPT_RESPONSE_TYPE_RADIO_B" +
+      "UTTONS\020\004\022!\n\035SCRIPT_RESPONSE_TYPE_TEXT_BO" +
+      "X\020\005\022.\n*SCRIPT_RESPONSE_TYPE_TEXT_BOX_ALP" +
+      "HANUMERIC\020\006\022+\n\'SCRIPT_RESPONSE_TYPE_TEXT" +
+      "_BOX_NUMERICAL\020\007\0220\n,SCRIPT_RESPONSE_TYPE" +
+      "_TEXT_VERIFICATION_FIELD\020\010\022\"\n\036SCRIPT_RES" +
+      "PONSE_TYPE_TEXT_AREA\020\t\0221\n-SCRIPT_RESPONS" +
+      "E_TYPE_REGULAR_EXPRESSION_FIELD\020\n\0220\n,SCR" +
+      "IPT_RESPONSE_TYPE_REGULAR_EXPRESSION_ARE" +
+      "A\020\013*\364\004\n\023CompareOperatorType\022%\n!COMPARE_O" +
+      "PERATOR_TYPE_UNSPECIFIED\020\000\022 \n\034COMPARE_OP" +
+      "ERATOR_TYPE_EQUALS\020\001\022$\n COMPARE_OPERATOR" +
+      "_TYPE_NOT_EQUALS\020\002\022&\n\"COMPARE_OPERATOR_T" +
+      "YPE_GREATER_THAN\020\003\022#\n\037COMPARE_OPERATOR_T" +
+      "YPE_LESS_THAN\020\004\0222\n.COMPARE_OPERATOR_TYPE" +
+      "_GREATER_THAN_OR_EQUAL_TO\020\005\022/\n+COMPARE_O" +
+      "PERATOR_TYPE_LESS_THAN_OR_EQUAL_TO\020\006\022\"\n\036" +
+      "COMPARE_OPERATOR_TYPE_CONTAINS\020\007\022*\n&COMP" +
+      "ARE_OPERATOR_TYPE_DOES_NOT_CONTAIN\020\010\022\037\n\033" +
+      "COMPARE_OPERATOR_TYPE_BLANK\020\t\022#\n\037COMPARE" +
+      "_OPERATOR_TYPE_NOT_BALNK\020\n\022%\n!COMPARE_OP" +
+      "ERATOR_TYPE_STARTS_WITH\020\013\022-\n)COMPARE_OPE" +
+      "RATOR_TYPE_DOES_NOT_START_WITH\020\014\022#\n\037COMP" +
+      "ARE_OPERATOR_TYPE_ENDS_WITH\020\r\022+\n\'COMPARE" +
+      "_OPERATOR_TYPE_DOES_NOT_END_WITH\020\016B\221\001\n!c" +
+      "om.tcn.cloud.api.api.commons.orgB\016Huntgr" +
+      "oupProtoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api" +
+      "\\Commons\\Org\342\002\033Api\\Commons\\Org\\GPBMetada" +
+      "ta\352\002\021Api::Commons::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1286,7 +1308,7 @@ public final class HuntgroupProto {
     internal_static_api_commons_org_HuntGroupDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_HuntGroupDetails_descriptor,
-        new java.lang.String[] { "GeneralDetails", "TemplateDetails", "WebLinkDetails", "TriggerDetails", "IntegrationLinkDetails", });
+        new java.lang.String[] { "GeneralDetails", "TemplateDetails", "WebLinkDetails", "TriggerDetails", "IntegrationLinkDetails", "ScriptDetails", });
     internal_static_api_commons_org_HuntGroupDetails_GeneralDetails_descriptor =
       internal_static_api_commons_org_HuntGroupDetails_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_org_HuntGroupDetails_GeneralDetails_fieldAccessorTable = new
@@ -1317,6 +1339,12 @@ public final class HuntgroupProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_HuntGroupDetails_IntegrationLinkDetails_descriptor,
         new java.lang.String[] { "Name", "Description", });
+    internal_static_api_commons_org_HuntGroupDetails_ScriptDetails_descriptor =
+      internal_static_api_commons_org_HuntGroupDetails_descriptor.getNestedTypes().get(5);
+    internal_static_api_commons_org_HuntGroupDetails_ScriptDetails_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_HuntGroupDetails_ScriptDetails_descriptor,
+        new java.lang.String[] { "ScriptSid", "Name", "Description", "ActCount", "DispositionCount", "VerbiageCount", });
     internal_static_api_commons_org_CommunicationSettings_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_commons_org_CommunicationSettings_fieldAccessorTable = new
@@ -1671,6 +1699,12 @@ public final class HuntgroupProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_SimpleCompareExpression_descriptor,
         new java.lang.String[] { "OperatorType", "ActIndex", "DispositionHeader", "CompareValue", });
+    internal_static_api_commons_org_ResponseEvaluator_descriptor =
+      getDescriptor().getMessageTypes().get(42);
+    internal_static_api_commons_org_ResponseEvaluator_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_ResponseEvaluator_descriptor,
+        new java.lang.String[] { "ResponseEvaluatorId", "OrgId", "Name", "Description", "RegularExpression", });
     com.tcn.cloud.api.api.commons.CountryProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();

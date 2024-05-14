@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1;
 
 /**
- * Protobuf type {@code services.omnichannel.tasks.v1alpha1.CancelTaskResponse}
+ * Protobuf type {@code services.omnichannel.tasks.v1alpha1.CancelTasksResponse}
  */
-public final class CancelTaskResponse extends
+public final class CancelTasksResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.omnichannel.tasks.v1alpha1.CancelTaskResponse)
-    CancelTaskResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.omnichannel.tasks.v1alpha1.CancelTasksResponse)
+    CancelTasksResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use CancelTaskResponse.newBuilder() to construct.
-  private CancelTaskResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use CancelTasksResponse.newBuilder() to construct.
+  private CancelTasksResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private CancelTaskResponse() {
+  private CancelTasksResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new CancelTaskResponse();
+    return new CancelTasksResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.EntitiesProto.internal_static_services_omnichannel_tasks_v1alpha1_CancelTaskResponse_descriptor;
+    return com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.EntitiesProto.internal_static_services_omnichannel_tasks_v1alpha1_CancelTasksResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.EntitiesProto.internal_static_services_omnichannel_tasks_v1alpha1_CancelTaskResponse_fieldAccessorTable
+    return com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.EntitiesProto.internal_static_services_omnichannel_tasks_v1alpha1_CancelTasksResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse.class, com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse.Builder.class);
+            com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse.class, com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,10 +71,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse other = (com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse) obj;
+    com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse other = (com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -92,44 +92,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -137,26 +137,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse parseFrom(
+  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -185,26 +185,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code services.omnichannel.tasks.v1alpha1.CancelTaskResponse}
+   * Protobuf type {@code services.omnichannel.tasks.v1alpha1.CancelTasksResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.omnichannel.tasks.v1alpha1.CancelTaskResponse)
-      com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.omnichannel.tasks.v1alpha1.CancelTasksResponse)
+      com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.EntitiesProto.internal_static_services_omnichannel_tasks_v1alpha1_CancelTaskResponse_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.EntitiesProto.internal_static_services_omnichannel_tasks_v1alpha1_CancelTasksResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.EntitiesProto.internal_static_services_omnichannel_tasks_v1alpha1_CancelTaskResponse_fieldAccessorTable
+      return com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.EntitiesProto.internal_static_services_omnichannel_tasks_v1alpha1_CancelTasksResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse.class, com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse.Builder.class);
+              com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse.class, com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse.newBuilder()
     private Builder() {
 
     }
@@ -223,17 +223,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.EntitiesProto.internal_static_services_omnichannel_tasks_v1alpha1_CancelTaskResponse_descriptor;
+      return com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.EntitiesProto.internal_static_services_omnichannel_tasks_v1alpha1_CancelTasksResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse.getDefaultInstance();
+    public com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse build() {
-      com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse result = buildPartial();
+    public com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse build() {
+      com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -241,8 +241,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse buildPartial() {
-      com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse result = new com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse(this);
+    public com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse buildPartial() {
+      com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse result = new com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse(this);
       onBuilt();
       return result;
     }
@@ -281,16 +281,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse) {
-        return mergeFrom((com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse)other);
+      if (other instanceof com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse) {
+        return mergeFrom((com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse other) {
-      if (other == com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse other) {
+      if (other == com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -345,23 +345,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.omnichannel.tasks.v1alpha1.CancelTaskResponse)
+    // @@protoc_insertion_point(builder_scope:services.omnichannel.tasks.v1alpha1.CancelTasksResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:services.omnichannel.tasks.v1alpha1.CancelTaskResponse)
-  private static final com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.omnichannel.tasks.v1alpha1.CancelTasksResponse)
+  private static final com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse();
   }
 
-  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<CancelTaskResponse>
-      PARSER = new com.google.protobuf.AbstractParser<CancelTaskResponse>() {
+  private static final com.google.protobuf.Parser<CancelTasksResponse>
+      PARSER = new com.google.protobuf.AbstractParser<CancelTasksResponse>() {
     @java.lang.Override
-    public CancelTaskResponse parsePartialFrom(
+    public CancelTasksResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -380,17 +380,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<CancelTaskResponse> parser() {
+  public static com.google.protobuf.Parser<CancelTasksResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<CancelTaskResponse> getParserForType() {
+  public com.google.protobuf.Parser<CancelTasksResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTaskResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

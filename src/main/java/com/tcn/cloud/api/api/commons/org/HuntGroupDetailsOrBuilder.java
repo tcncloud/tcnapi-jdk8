@@ -192,4 +192,31 @@ public interface HuntGroupDetailsOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.org.HuntGroupDetails.IntegrationLinkDetailsOrBuilder getIntegrationLinkDetailsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * The assigned script details.
+   * </pre>
+   *
+   * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
+   * @return Whether the scriptDetails field is set.
+   */
+  boolean hasScriptDetails();
+  /**
+   * <pre>
+   * The assigned script details.
+   * </pre>
+   *
+   * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
+   * @return The scriptDetails.
+   */
+  com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails getScriptDetails();
+  /**
+   * <pre>
+   * The assigned script details.
+   * </pre>
+   *
+   * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetailsOrBuilder getScriptDetailsOrBuilder();
 }
