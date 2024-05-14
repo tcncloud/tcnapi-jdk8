@@ -5089,6 +5089,1158 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface ScriptDetailsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.commons.org.HuntGroupDetails.ScriptDetails)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The sid of the script assigned to the hunt group.
+     * </pre>
+     *
+     * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
+     * @return The scriptSid.
+     */
+    long getScriptSid();
+
+    /**
+     * <pre>
+     * The name of the script.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * The name of the script.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * The desciption of the script.
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * The desciption of the script.
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * The number of acts that the script contains.
+     * </pre>
+     *
+     * <code>int64 act_count = 4 [json_name = "actCount"];</code>
+     * @return The actCount.
+     */
+    long getActCount();
+
+    /**
+     * <pre>
+     * The number of dispositions that the script contains.
+     * </pre>
+     *
+     * <code>int64 disposition_count = 5 [json_name = "dispositionCount"];</code>
+     * @return The dispositionCount.
+     */
+    long getDispositionCount();
+
+    /**
+     * <pre>
+     * The number of verbiages that the script contains.
+     * </pre>
+     *
+     * <code>int64 verbiage_count = 6 [json_name = "verbiageCount"];</code>
+     * @return The verbiageCount.
+     */
+    long getVerbiageCount();
+  }
+  /**
+   * <pre>
+   * ScriptDetails is the entity to describe the features of a script assigned to the hunt group.
+   * </pre>
+   *
+   * Protobuf type {@code api.commons.org.HuntGroupDetails.ScriptDetails}
+   */
+  public static final class ScriptDetails extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.commons.org.HuntGroupDetails.ScriptDetails)
+      ScriptDetailsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ScriptDetails.newBuilder() to construct.
+    private ScriptDetails(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ScriptDetails() {
+      name_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ScriptDetails();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_HuntGroupDetails_ScriptDetails_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_HuntGroupDetails_ScriptDetails_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.class, com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.Builder.class);
+    }
+
+    public static final int SCRIPT_SID_FIELD_NUMBER = 1;
+    private long scriptSid_ = 0L;
+    /**
+     * <pre>
+     * The sid of the script assigned to the hunt group.
+     * </pre>
+     *
+     * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
+     * @return The scriptSid.
+     */
+    @java.lang.Override
+    public long getScriptSid() {
+      return scriptSid_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * The name of the script.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the script.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * The desciption of the script.
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The desciption of the script.
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACT_COUNT_FIELD_NUMBER = 4;
+    private long actCount_ = 0L;
+    /**
+     * <pre>
+     * The number of acts that the script contains.
+     * </pre>
+     *
+     * <code>int64 act_count = 4 [json_name = "actCount"];</code>
+     * @return The actCount.
+     */
+    @java.lang.Override
+    public long getActCount() {
+      return actCount_;
+    }
+
+    public static final int DISPOSITION_COUNT_FIELD_NUMBER = 5;
+    private long dispositionCount_ = 0L;
+    /**
+     * <pre>
+     * The number of dispositions that the script contains.
+     * </pre>
+     *
+     * <code>int64 disposition_count = 5 [json_name = "dispositionCount"];</code>
+     * @return The dispositionCount.
+     */
+    @java.lang.Override
+    public long getDispositionCount() {
+      return dispositionCount_;
+    }
+
+    public static final int VERBIAGE_COUNT_FIELD_NUMBER = 6;
+    private long verbiageCount_ = 0L;
+    /**
+     * <pre>
+     * The number of verbiages that the script contains.
+     * </pre>
+     *
+     * <code>int64 verbiage_count = 6 [json_name = "verbiageCount"];</code>
+     * @return The verbiageCount.
+     */
+    @java.lang.Override
+    public long getVerbiageCount() {
+      return verbiageCount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (scriptSid_ != 0L) {
+        output.writeInt64(1, scriptSid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      if (actCount_ != 0L) {
+        output.writeInt64(4, actCount_);
+      }
+      if (dispositionCount_ != 0L) {
+        output.writeInt64(5, dispositionCount_);
+      }
+      if (verbiageCount_ != 0L) {
+        output.writeInt64(6, verbiageCount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (scriptSid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, scriptSid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      if (actCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, actCount_);
+      }
+      if (dispositionCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, dispositionCount_);
+      }
+      if (verbiageCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, verbiageCount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails other = (com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails) obj;
+
+      if (getScriptSid()
+          != other.getScriptSid()) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (getActCount()
+          != other.getActCount()) return false;
+      if (getDispositionCount()
+          != other.getDispositionCount()) return false;
+      if (getVerbiageCount()
+          != other.getVerbiageCount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCRIPT_SID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getScriptSid());
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + ACT_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getActCount());
+      hash = (37 * hash) + DISPOSITION_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDispositionCount());
+      hash = (37 * hash) + VERBIAGE_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVerbiageCount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ScriptDetails is the entity to describe the features of a script assigned to the hunt group.
+     * </pre>
+     *
+     * Protobuf type {@code api.commons.org.HuntGroupDetails.ScriptDetails}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.commons.org.HuntGroupDetails.ScriptDetails)
+        com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetailsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_HuntGroupDetails_ScriptDetails_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_HuntGroupDetails_ScriptDetails_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.class, com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        scriptSid_ = 0L;
+        name_ = "";
+        description_ = "";
+        actCount_ = 0L;
+        dispositionCount_ = 0L;
+        verbiageCount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_HuntGroupDetails_ScriptDetails_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails build() {
+        com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails buildPartial() {
+        com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails result = new com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.scriptSid_ = scriptSid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.actCount_ = actCount_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.dispositionCount_ = dispositionCount_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.verbiageCount_ = verbiageCount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails) {
+          return mergeFrom((com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails other) {
+        if (other == com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.getDefaultInstance()) return this;
+        if (other.getScriptSid() != 0L) {
+          setScriptSid(other.getScriptSid());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getActCount() != 0L) {
+          setActCount(other.getActCount());
+        }
+        if (other.getDispositionCount() != 0L) {
+          setDispositionCount(other.getDispositionCount());
+        }
+        if (other.getVerbiageCount() != 0L) {
+          setVerbiageCount(other.getVerbiageCount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                scriptSid_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                actCount_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                dispositionCount_ = input.readInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                verbiageCount_ = input.readInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long scriptSid_ ;
+      /**
+       * <pre>
+       * The sid of the script assigned to the hunt group.
+       * </pre>
+       *
+       * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
+       * @return The scriptSid.
+       */
+      @java.lang.Override
+      public long getScriptSid() {
+        return scriptSid_;
+      }
+      /**
+       * <pre>
+       * The sid of the script assigned to the hunt group.
+       * </pre>
+       *
+       * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
+       * @param value The scriptSid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScriptSid(long value) {
+
+        scriptSid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The sid of the script assigned to the hunt group.
+       * </pre>
+       *
+       * <code>int64 script_sid = 1 [json_name = "scriptSid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScriptSid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        scriptSid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * The name of the script.
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the script.
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the script.
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the script.
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the script.
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * The desciption of the script.
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The desciption of the script.
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The desciption of the script.
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The desciption of the script.
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The desciption of the script.
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long actCount_ ;
+      /**
+       * <pre>
+       * The number of acts that the script contains.
+       * </pre>
+       *
+       * <code>int64 act_count = 4 [json_name = "actCount"];</code>
+       * @return The actCount.
+       */
+      @java.lang.Override
+      public long getActCount() {
+        return actCount_;
+      }
+      /**
+       * <pre>
+       * The number of acts that the script contains.
+       * </pre>
+       *
+       * <code>int64 act_count = 4 [json_name = "actCount"];</code>
+       * @param value The actCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActCount(long value) {
+
+        actCount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of acts that the script contains.
+       * </pre>
+       *
+       * <code>int64 act_count = 4 [json_name = "actCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActCount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        actCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long dispositionCount_ ;
+      /**
+       * <pre>
+       * The number of dispositions that the script contains.
+       * </pre>
+       *
+       * <code>int64 disposition_count = 5 [json_name = "dispositionCount"];</code>
+       * @return The dispositionCount.
+       */
+      @java.lang.Override
+      public long getDispositionCount() {
+        return dispositionCount_;
+      }
+      /**
+       * <pre>
+       * The number of dispositions that the script contains.
+       * </pre>
+       *
+       * <code>int64 disposition_count = 5 [json_name = "dispositionCount"];</code>
+       * @param value The dispositionCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDispositionCount(long value) {
+
+        dispositionCount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of dispositions that the script contains.
+       * </pre>
+       *
+       * <code>int64 disposition_count = 5 [json_name = "dispositionCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDispositionCount() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        dispositionCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long verbiageCount_ ;
+      /**
+       * <pre>
+       * The number of verbiages that the script contains.
+       * </pre>
+       *
+       * <code>int64 verbiage_count = 6 [json_name = "verbiageCount"];</code>
+       * @return The verbiageCount.
+       */
+      @java.lang.Override
+      public long getVerbiageCount() {
+        return verbiageCount_;
+      }
+      /**
+       * <pre>
+       * The number of verbiages that the script contains.
+       * </pre>
+       *
+       * <code>int64 verbiage_count = 6 [json_name = "verbiageCount"];</code>
+       * @param value The verbiageCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVerbiageCount(long value) {
+
+        verbiageCount_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of verbiages that the script contains.
+       * </pre>
+       *
+       * <code>int64 verbiage_count = 6 [json_name = "verbiageCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVerbiageCount() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        verbiageCount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.commons.org.HuntGroupDetails.ScriptDetails)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.commons.org.HuntGroupDetails.ScriptDetails)
+    private static final com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails();
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ScriptDetails>
+        PARSER = new com.google.protobuf.AbstractParser<ScriptDetails>() {
+      @java.lang.Override
+      public ScriptDetails parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ScriptDetails> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ScriptDetails> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public static final int GENERAL_DETAILS_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.org.HuntGroupDetails.GeneralDetails generalDetails_;
   /**
@@ -5348,6 +6500,44 @@ private static final long serialVersionUID = 0L;
     return integrationLinkDetails_.get(index);
   }
 
+  public static final int SCRIPT_DETAILS_FIELD_NUMBER = 6;
+  private com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails scriptDetails_;
+  /**
+   * <pre>
+   * The assigned script details.
+   * </pre>
+   *
+   * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
+   * @return Whether the scriptDetails field is set.
+   */
+  @java.lang.Override
+  public boolean hasScriptDetails() {
+    return scriptDetails_ != null;
+  }
+  /**
+   * <pre>
+   * The assigned script details.
+   * </pre>
+   *
+   * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
+   * @return The scriptDetails.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails getScriptDetails() {
+    return scriptDetails_ == null ? com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.getDefaultInstance() : scriptDetails_;
+  }
+  /**
+   * <pre>
+   * The assigned script details.
+   * </pre>
+   *
+   * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetailsOrBuilder getScriptDetailsOrBuilder() {
+    return scriptDetails_ == null ? com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.getDefaultInstance() : scriptDetails_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -5377,6 +6567,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < integrationLinkDetails_.size(); i++) {
       output.writeMessage(5, integrationLinkDetails_.get(i));
     }
+    if (scriptDetails_ != null) {
+      output.writeMessage(6, getScriptDetails());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -5405,6 +6598,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < integrationLinkDetails_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, integrationLinkDetails_.get(i));
+    }
+    if (scriptDetails_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getScriptDetails());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -5437,6 +6634,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTriggerDetailsList())) return false;
     if (!getIntegrationLinkDetailsList()
         .equals(other.getIntegrationLinkDetailsList())) return false;
+    if (hasScriptDetails() != other.hasScriptDetails()) return false;
+    if (hasScriptDetails()) {
+      if (!getScriptDetails()
+          .equals(other.getScriptDetails())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -5467,6 +6669,10 @@ private static final long serialVersionUID = 0L;
     if (getIntegrationLinkDetailsCount() > 0) {
       hash = (37 * hash) + INTEGRATION_LINK_DETAILS_FIELD_NUMBER;
       hash = (53 * hash) + getIntegrationLinkDetailsList().hashCode();
+    }
+    if (hasScriptDetails()) {
+      hash = (37 * hash) + SCRIPT_DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getScriptDetails().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -5634,6 +6840,11 @@ private static final long serialVersionUID = 0L;
         integrationLinkDetailsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000010);
+      scriptDetails_ = null;
+      if (scriptDetailsBuilder_ != null) {
+        scriptDetailsBuilder_.dispose();
+        scriptDetailsBuilder_ = null;
+      }
       return this;
     }
 
@@ -5707,6 +6918,11 @@ private static final long serialVersionUID = 0L;
         result.templateDetails_ = templateDetailsBuilder_ == null
             ? templateDetails_
             : templateDetailsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.scriptDetails_ = scriptDetailsBuilder_ == null
+            ? scriptDetails_
+            : scriptDetailsBuilder_.build();
       }
     }
 
@@ -5838,6 +7054,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasScriptDetails()) {
+        mergeScriptDetails(other.getScriptDetails());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -5917,6 +7136,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 42
+            case 50: {
+              input.readMessage(
+                  getScriptDetailsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -7178,6 +8404,161 @@ private static final long serialVersionUID = 0L;
         integrationLinkDetails_ = null;
       }
       return integrationLinkDetailsBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails scriptDetails_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails, com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.Builder, com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetailsOrBuilder> scriptDetailsBuilder_;
+    /**
+     * <pre>
+     * The assigned script details.
+     * </pre>
+     *
+     * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
+     * @return Whether the scriptDetails field is set.
+     */
+    public boolean hasScriptDetails() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * The assigned script details.
+     * </pre>
+     *
+     * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
+     * @return The scriptDetails.
+     */
+    public com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails getScriptDetails() {
+      if (scriptDetailsBuilder_ == null) {
+        return scriptDetails_ == null ? com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.getDefaultInstance() : scriptDetails_;
+      } else {
+        return scriptDetailsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The assigned script details.
+     * </pre>
+     *
+     * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
+     */
+    public Builder setScriptDetails(com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails value) {
+      if (scriptDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        scriptDetails_ = value;
+      } else {
+        scriptDetailsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The assigned script details.
+     * </pre>
+     *
+     * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
+     */
+    public Builder setScriptDetails(
+        com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.Builder builderForValue) {
+      if (scriptDetailsBuilder_ == null) {
+        scriptDetails_ = builderForValue.build();
+      } else {
+        scriptDetailsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The assigned script details.
+     * </pre>
+     *
+     * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
+     */
+    public Builder mergeScriptDetails(com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails value) {
+      if (scriptDetailsBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          scriptDetails_ != null &&
+          scriptDetails_ != com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.getDefaultInstance()) {
+          getScriptDetailsBuilder().mergeFrom(value);
+        } else {
+          scriptDetails_ = value;
+        }
+      } else {
+        scriptDetailsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The assigned script details.
+     * </pre>
+     *
+     * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
+     */
+    public Builder clearScriptDetails() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      scriptDetails_ = null;
+      if (scriptDetailsBuilder_ != null) {
+        scriptDetailsBuilder_.dispose();
+        scriptDetailsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The assigned script details.
+     * </pre>
+     *
+     * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.Builder getScriptDetailsBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getScriptDetailsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The assigned script details.
+     * </pre>
+     *
+     * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetailsOrBuilder getScriptDetailsOrBuilder() {
+      if (scriptDetailsBuilder_ != null) {
+        return scriptDetailsBuilder_.getMessageOrBuilder();
+      } else {
+        return scriptDetails_ == null ?
+            com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.getDefaultInstance() : scriptDetails_;
+      }
+    }
+    /**
+     * <pre>
+     * The assigned script details.
+     * </pre>
+     *
+     * <code>.api.commons.org.HuntGroupDetails.ScriptDetails script_details = 6 [json_name = "scriptDetails"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails, com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.Builder, com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetailsOrBuilder> 
+        getScriptDetailsFieldBuilder() {
+      if (scriptDetailsBuilder_ == null) {
+        scriptDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails, com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetails.Builder, com.tcn.cloud.api.api.commons.org.HuntGroupDetails.ScriptDetailsOrBuilder>(
+                getScriptDetails(),
+                getParentForChildren(),
+                isClean());
+        scriptDetails_ = null;
+      }
+      return scriptDetailsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
