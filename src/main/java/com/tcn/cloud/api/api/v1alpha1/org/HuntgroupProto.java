@@ -444,6 +444,56 @@ public final class HuntgroupProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_UnassignScriptFromHuntGroupsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListResponseEvaluatorsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListResponseEvaluatorsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListResponseEvaluatorsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListResponseEvaluatorsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_GetResponseEvaluatorRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_GetResponseEvaluatorRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_GetResponseEvaluatorResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_GetResponseEvaluatorResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_CreateResponseEvaluatorRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_CreateResponseEvaluatorRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_CreateResponseEvaluatorResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_CreateResponseEvaluatorResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_UpdateResponseEvaluatorRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_UpdateResponseEvaluatorRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_UpdateResponseEvaluatorResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_UpdateResponseEvaluatorResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_DeleteResponseEvaluatorRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_DeleteResponseEvaluatorRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_DeleteResponseEvaluatorResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_DeleteResponseEvaluatorResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -698,11 +748,31 @@ public final class HuntgroupProto {
       "mHuntGroupsRequest\022\035\n\nscript_sid\030\001 \001(\003R\t" +
       "scriptSid\022&\n\017hunt_group_sids\030\002 \003(\003R\rhunt" +
       "GroupSids\"&\n$UnassignScriptFromHuntGroup" +
-      "sResponseB\226\001\n\"com.tcn.cloud.api.api.v1al" +
-      "pha1.orgB\016HuntgroupProtoP\001\242\002\003AVO\252\002\020Api.V" +
-      "1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1a" +
-      "lpha1\\Org\\GPBMetadata\352\002\022Api::V1alpha1::O" +
-      "rgb\006proto3"
+      "sResponse\"\037\n\035ListResponseEvaluatorsReque" +
+      "st\"d\n\036ListResponseEvaluatorsResponse\022B\n\n" +
+      "evaluators\030\001 \003(\0132\".api.commons.org.Respo" +
+      "nseEvaluatorR\nevaluators\"@\n\033GetResponseE" +
+      "valuatorRequest\022!\n\014evaluator_id\030\001 \001(\tR\013e" +
+      "valuatorId\"`\n\034GetResponseEvaluatorRespon" +
+      "se\022@\n\tevaluator\030\001 \001(\0132\".api.commons.org." +
+      "ResponseEvaluatorR\tevaluator\"b\n\036CreateRe" +
+      "sponseEvaluatorRequest\022@\n\tevaluator\030\001 \001(" +
+      "\0132\".api.commons.org.ResponseEvaluatorR\te" +
+      "valuator\"c\n\037CreateResponseEvaluatorRespo" +
+      "nse\022@\n\tevaluator\030\001 \001(\0132\".api.commons.org" +
+      ".ResponseEvaluatorR\tevaluator\"b\n\036UpdateR" +
+      "esponseEvaluatorRequest\022@\n\tevaluator\030\001 \001" +
+      "(\0132\".api.commons.org.ResponseEvaluatorR\t" +
+      "evaluator\"c\n\037UpdateResponseEvaluatorResp" +
+      "onse\022@\n\tevaluator\030\001 \001(\0132\".api.commons.or" +
+      "g.ResponseEvaluatorR\tevaluator\"C\n\036Delete" +
+      "ResponseEvaluatorRequest\022!\n\014evaluator_id" +
+      "\030\001 \001(\tR\013evaluatorId\"!\n\037DeleteResponseEva" +
+      "luatorResponseB\226\001\n\"com.tcn.cloud.api.api" +
+      ".v1alpha1.orgB\016HuntgroupProtoP\001\242\002\003AVO\252\002\020" +
+      "Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Ap" +
+      "i\\V1alpha1\\Org\\GPBMetadata\352\002\022Api::V1alph" +
+      "a1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1228,6 +1298,66 @@ public final class HuntgroupProto {
     internal_static_api_v1alpha1_org_UnassignScriptFromHuntGroupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UnassignScriptFromHuntGroupsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_ListResponseEvaluatorsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(84);
+    internal_static_api_v1alpha1_org_ListResponseEvaluatorsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListResponseEvaluatorsRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_ListResponseEvaluatorsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(85);
+    internal_static_api_v1alpha1_org_ListResponseEvaluatorsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListResponseEvaluatorsResponse_descriptor,
+        new java.lang.String[] { "Evaluators", });
+    internal_static_api_v1alpha1_org_GetResponseEvaluatorRequest_descriptor =
+      getDescriptor().getMessageTypes().get(86);
+    internal_static_api_v1alpha1_org_GetResponseEvaluatorRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_GetResponseEvaluatorRequest_descriptor,
+        new java.lang.String[] { "EvaluatorId", });
+    internal_static_api_v1alpha1_org_GetResponseEvaluatorResponse_descriptor =
+      getDescriptor().getMessageTypes().get(87);
+    internal_static_api_v1alpha1_org_GetResponseEvaluatorResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_GetResponseEvaluatorResponse_descriptor,
+        new java.lang.String[] { "Evaluator", });
+    internal_static_api_v1alpha1_org_CreateResponseEvaluatorRequest_descriptor =
+      getDescriptor().getMessageTypes().get(88);
+    internal_static_api_v1alpha1_org_CreateResponseEvaluatorRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_CreateResponseEvaluatorRequest_descriptor,
+        new java.lang.String[] { "Evaluator", });
+    internal_static_api_v1alpha1_org_CreateResponseEvaluatorResponse_descriptor =
+      getDescriptor().getMessageTypes().get(89);
+    internal_static_api_v1alpha1_org_CreateResponseEvaluatorResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_CreateResponseEvaluatorResponse_descriptor,
+        new java.lang.String[] { "Evaluator", });
+    internal_static_api_v1alpha1_org_UpdateResponseEvaluatorRequest_descriptor =
+      getDescriptor().getMessageTypes().get(90);
+    internal_static_api_v1alpha1_org_UpdateResponseEvaluatorRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_UpdateResponseEvaluatorRequest_descriptor,
+        new java.lang.String[] { "Evaluator", });
+    internal_static_api_v1alpha1_org_UpdateResponseEvaluatorResponse_descriptor =
+      getDescriptor().getMessageTypes().get(91);
+    internal_static_api_v1alpha1_org_UpdateResponseEvaluatorResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_UpdateResponseEvaluatorResponse_descriptor,
+        new java.lang.String[] { "Evaluator", });
+    internal_static_api_v1alpha1_org_DeleteResponseEvaluatorRequest_descriptor =
+      getDescriptor().getMessageTypes().get(92);
+    internal_static_api_v1alpha1_org_DeleteResponseEvaluatorRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_DeleteResponseEvaluatorRequest_descriptor,
+        new java.lang.String[] { "EvaluatorId", });
+    internal_static_api_v1alpha1_org_DeleteResponseEvaluatorResponse_descriptor =
+      getDescriptor().getMessageTypes().get(93);
+    internal_static_api_v1alpha1_org_DeleteResponseEvaluatorResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_DeleteResponseEvaluatorResponse_descriptor,
         new java.lang.String[] { });
     com.tcn.cloud.api.api.commons.BroadcastsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
