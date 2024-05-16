@@ -205,14 +205,4 @@ public interface AuthenticationPreferencesOrBuilder extends
    * @return The userAuthorizationViaIp.
    */
   boolean getUserAuthorizationViaIp();
-
-  /**
-   * <pre>
-   * Restrict sso users from logging in via username and password.
-   * </pre>
-   *
-   * <code>bool force_sso_provider = 20 [json_name = "forceSsoProvider"];</code>
-   * @return The forceSsoProvider.
-   */
-  boolean getForceSsoProvider();
 }

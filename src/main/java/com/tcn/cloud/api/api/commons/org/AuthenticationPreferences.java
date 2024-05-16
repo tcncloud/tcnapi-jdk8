@@ -1631,21 +1631,6 @@ private static final long serialVersionUID = 0L;
     return userAuthorizationViaIp_;
   }
 
-  public static final int FORCE_SSO_PROVIDER_FIELD_NUMBER = 20;
-  private boolean forceSsoProvider_ = false;
-  /**
-   * <pre>
-   * Restrict sso users from logging in via username and password.
-   * </pre>
-   *
-   * <code>bool force_sso_provider = 20 [json_name = "forceSsoProvider"];</code>
-   * @return The forceSsoProvider.
-   */
-  @java.lang.Override
-  public boolean getForceSsoProvider() {
-    return forceSsoProvider_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1692,9 +1677,6 @@ private static final long serialVersionUID = 0L;
     }
     if (userAuthorizationViaIp_ != false) {
       output.writeBool(19, userAuthorizationViaIp_);
-    }
-    if (forceSsoProvider_ != false) {
-      output.writeBool(20, forceSsoProvider_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1751,10 +1733,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(19, userAuthorizationViaIp_);
     }
-    if (forceSsoProvider_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(20, forceSsoProvider_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1798,8 +1776,6 @@ private static final long serialVersionUID = 0L;
         != other.getPasswordResetDayInterval()) return false;
     if (getUserAuthorizationViaIp()
         != other.getUserAuthorizationViaIp()) return false;
-    if (getForceSsoProvider()
-        != other.getForceSsoProvider()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1844,9 +1820,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + USER_AUTHORIZATION_VIA_IP_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getUserAuthorizationViaIp());
-    hash = (37 * hash) + FORCE_SSO_PROVIDER_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getForceSsoProvider());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2002,7 +1975,6 @@ private static final long serialVersionUID = 0L;
       allowForcePasswordResetInterval_ = false;
       passwordResetDayInterval_ = 0;
       userAuthorizationViaIp_ = false;
-      forceSsoProvider_ = false;
       return this;
     }
 
@@ -2073,9 +2045,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.userAuthorizationViaIp_ = userAuthorizationViaIp_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.forceSsoProvider_ = forceSsoProvider_;
       }
     }
 
@@ -2167,9 +2136,6 @@ private static final long serialVersionUID = 0L;
       if (other.getUserAuthorizationViaIp() != false) {
         setUserAuthorizationViaIp(other.getUserAuthorizationViaIp());
       }
-      if (other.getForceSsoProvider() != false) {
-        setForceSsoProvider(other.getForceSsoProvider());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2256,11 +2222,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000400;
               break;
             } // case 152
-            case 160: {
-              forceSsoProvider_ = input.readBool();
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 160
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3191,50 +3152,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearUserAuthorizationViaIp() {
       bitField0_ = (bitField0_ & ~0x00000400);
       userAuthorizationViaIp_ = false;
-      onChanged();
-      return this;
-    }
-
-    private boolean forceSsoProvider_ ;
-    /**
-     * <pre>
-     * Restrict sso users from logging in via username and password.
-     * </pre>
-     *
-     * <code>bool force_sso_provider = 20 [json_name = "forceSsoProvider"];</code>
-     * @return The forceSsoProvider.
-     */
-    @java.lang.Override
-    public boolean getForceSsoProvider() {
-      return forceSsoProvider_;
-    }
-    /**
-     * <pre>
-     * Restrict sso users from logging in via username and password.
-     * </pre>
-     *
-     * <code>bool force_sso_provider = 20 [json_name = "forceSsoProvider"];</code>
-     * @param value The forceSsoProvider to set.
-     * @return This builder for chaining.
-     */
-    public Builder setForceSsoProvider(boolean value) {
-
-      forceSsoProvider_ = value;
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Restrict sso users from logging in via username and password.
-     * </pre>
-     *
-     * <code>bool force_sso_provider = 20 [json_name = "forceSsoProvider"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearForceSsoProvider() {
-      bitField0_ = (bitField0_ & ~0x00000800);
-      forceSsoProvider_ = false;
       onChanged();
       return this;
     }
