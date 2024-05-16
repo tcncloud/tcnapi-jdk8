@@ -15354,6 +15354,33 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.AgentCallLogQuery agent_call_log = 12 [json_name = "agentCallLog"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLogQueryOrBuilder getAgentCallLogOrBuilder();
+
+    /**
+     * <pre>
+     * Query constraints on audio bytes.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
+     * @return Whether the audioBytes field is set.
+     */
+    boolean hasAudioBytes();
+    /**
+     * <pre>
+     * Query constraints on audio bytes.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
+     * @return The audioBytes.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes getAudioBytes();
+    /**
+     * <pre>
+     * Query constraints on audio bytes.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytesOrBuilder getAudioBytesOrBuilder();
   }
   /**
    * <pre>
@@ -15392,6 +15419,1442 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.Builder.class);
+    }
+
+    public interface AudioBytesOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Optional. Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gte = 1 [json_name = "gte"];</code>
+       * @return Whether the gte field is set.
+       */
+      boolean hasGte();
+      /**
+       * <pre>
+       * Optional. Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gte = 1 [json_name = "gte"];</code>
+       * @return The gte.
+       */
+      com.google.protobuf.Int64Value getGte();
+      /**
+       * <pre>
+       * Optional. Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gte = 1 [json_name = "gte"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getGteOrBuilder();
+
+      /**
+       * <pre>
+       * Optional. Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lte = 2 [json_name = "lte"];</code>
+       * @return Whether the lte field is set.
+       */
+      boolean hasLte();
+      /**
+       * <pre>
+       * Optional. Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lte = 2 [json_name = "lte"];</code>
+       * @return The lte.
+       */
+      com.google.protobuf.Int64Value getLte();
+      /**
+       * <pre>
+       * Optional. Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lte = 2 [json_name = "lte"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getLteOrBuilder();
+
+      /**
+       * <pre>
+       * Optional. Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gt = 3 [json_name = "gt"];</code>
+       * @return Whether the gt field is set.
+       */
+      boolean hasGt();
+      /**
+       * <pre>
+       * Optional. Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gt = 3 [json_name = "gt"];</code>
+       * @return The gt.
+       */
+      com.google.protobuf.Int64Value getGt();
+      /**
+       * <pre>
+       * Optional. Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gt = 3 [json_name = "gt"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getGtOrBuilder();
+
+      /**
+       * <pre>
+       * Optional. Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lt = 4 [json_name = "lt"];</code>
+       * @return Whether the lt field is set.
+       */
+      boolean hasLt();
+      /**
+       * <pre>
+       * Optional. Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lt = 4 [json_name = "lt"];</code>
+       * @return The lt.
+       */
+      com.google.protobuf.Int64Value getLt();
+      /**
+       * <pre>
+       * Optional. Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lt = 4 [json_name = "lt"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getLtOrBuilder();
+    }
+    /**
+     * <pre>
+     * AudioBytes defines a query on audio_bytes.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes}
+     */
+    public static final class AudioBytes extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes)
+        AudioBytesOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AudioBytes.newBuilder() to construct.
+      private AudioBytes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AudioBytes() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AudioBytes();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_AudioBytes_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_AudioBytes_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.Builder.class);
+      }
+
+      public static final int GTE_FIELD_NUMBER = 1;
+      private com.google.protobuf.Int64Value gte_;
+      /**
+       * <pre>
+       * Optional. Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gte = 1 [json_name = "gte"];</code>
+       * @return Whether the gte field is set.
+       */
+      @java.lang.Override
+      public boolean hasGte() {
+        return gte_ != null;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gte = 1 [json_name = "gte"];</code>
+       * @return The gte.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getGte() {
+        return gte_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gte_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gte = 1 [json_name = "gte"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getGteOrBuilder() {
+        return gte_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gte_;
+      }
+
+      public static final int LTE_FIELD_NUMBER = 2;
+      private com.google.protobuf.Int64Value lte_;
+      /**
+       * <pre>
+       * Optional. Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lte = 2 [json_name = "lte"];</code>
+       * @return Whether the lte field is set.
+       */
+      @java.lang.Override
+      public boolean hasLte() {
+        return lte_ != null;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lte = 2 [json_name = "lte"];</code>
+       * @return The lte.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getLte() {
+        return lte_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lte_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lte = 2 [json_name = "lte"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getLteOrBuilder() {
+        return lte_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lte_;
+      }
+
+      public static final int GT_FIELD_NUMBER = 3;
+      private com.google.protobuf.Int64Value gt_;
+      /**
+       * <pre>
+       * Optional. Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gt = 3 [json_name = "gt"];</code>
+       * @return Whether the gt field is set.
+       */
+      @java.lang.Override
+      public boolean hasGt() {
+        return gt_ != null;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gt = 3 [json_name = "gt"];</code>
+       * @return The gt.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getGt() {
+        return gt_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gt_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gt = 3 [json_name = "gt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getGtOrBuilder() {
+        return gt_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gt_;
+      }
+
+      public static final int LT_FIELD_NUMBER = 4;
+      private com.google.protobuf.Int64Value lt_;
+      /**
+       * <pre>
+       * Optional. Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lt = 4 [json_name = "lt"];</code>
+       * @return Whether the lt field is set.
+       */
+      @java.lang.Override
+      public boolean hasLt() {
+        return lt_ != null;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lt = 4 [json_name = "lt"];</code>
+       * @return The lt.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getLt() {
+        return lt_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lt_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value lt = 4 [json_name = "lt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getLtOrBuilder() {
+        return lt_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lt_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (gte_ != null) {
+          output.writeMessage(1, getGte());
+        }
+        if (lte_ != null) {
+          output.writeMessage(2, getLte());
+        }
+        if (gt_ != null) {
+          output.writeMessage(3, getGt());
+        }
+        if (lt_ != null) {
+          output.writeMessage(4, getLt());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (gte_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getGte());
+        }
+        if (lte_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getLte());
+        }
+        if (gt_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getGt());
+        }
+        if (lt_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getLt());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes) obj;
+
+        if (hasGte() != other.hasGte()) return false;
+        if (hasGte()) {
+          if (!getGte()
+              .equals(other.getGte())) return false;
+        }
+        if (hasLte() != other.hasLte()) return false;
+        if (hasLte()) {
+          if (!getLte()
+              .equals(other.getLte())) return false;
+        }
+        if (hasGt() != other.hasGt()) return false;
+        if (hasGt()) {
+          if (!getGt()
+              .equals(other.getGt())) return false;
+        }
+        if (hasLt() != other.hasLt()) return false;
+        if (hasLt()) {
+          if (!getLt()
+              .equals(other.getLt())) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasGte()) {
+          hash = (37 * hash) + GTE_FIELD_NUMBER;
+          hash = (53 * hash) + getGte().hashCode();
+        }
+        if (hasLte()) {
+          hash = (37 * hash) + LTE_FIELD_NUMBER;
+          hash = (53 * hash) + getLte().hashCode();
+        }
+        if (hasGt()) {
+          hash = (37 * hash) + GT_FIELD_NUMBER;
+          hash = (53 * hash) + getGt().hashCode();
+        }
+        if (hasLt()) {
+          hash = (37 * hash) + LT_FIELD_NUMBER;
+          hash = (53 * hash) + getLt().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * AudioBytes defines a query on audio_bytes.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytesOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_AudioBytes_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_AudioBytes_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          gte_ = null;
+          if (gteBuilder_ != null) {
+            gteBuilder_.dispose();
+            gteBuilder_ = null;
+          }
+          lte_ = null;
+          if (lteBuilder_ != null) {
+            lteBuilder_.dispose();
+            lteBuilder_ = null;
+          }
+          gt_ = null;
+          if (gtBuilder_ != null) {
+            gtBuilder_.dispose();
+            gtBuilder_ = null;
+          }
+          lt_ = null;
+          if (ltBuilder_ != null) {
+            ltBuilder_.dispose();
+            ltBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Call_AudioBytes_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.gte_ = gteBuilder_ == null
+                ? gte_
+                : gteBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.lte_ = lteBuilder_ == null
+                ? lte_
+                : lteBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.gt_ = gtBuilder_ == null
+                ? gt_
+                : gtBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.lt_ = ltBuilder_ == null
+                ? lt_
+                : ltBuilder_.build();
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.getDefaultInstance()) return this;
+          if (other.hasGte()) {
+            mergeGte(other.getGte());
+          }
+          if (other.hasLte()) {
+            mergeLte(other.getLte());
+          }
+          if (other.hasGt()) {
+            mergeGt(other.getGt());
+          }
+          if (other.hasLt()) {
+            mergeLt(other.getLt());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  input.readMessage(
+                      getGteFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 18: {
+                  input.readMessage(
+                      getLteFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 26: {
+                  input.readMessage(
+                      getGtFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                case 34: {
+                  input.readMessage(
+                      getLtFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 34
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.Int64Value gte_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gteBuilder_;
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gte = 1 [json_name = "gte"];</code>
+         * @return Whether the gte field is set.
+         */
+        public boolean hasGte() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gte = 1 [json_name = "gte"];</code>
+         * @return The gte.
+         */
+        public com.google.protobuf.Int64Value getGte() {
+          if (gteBuilder_ == null) {
+            return gte_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gte_;
+          } else {
+            return gteBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gte = 1 [json_name = "gte"];</code>
+         */
+        public Builder setGte(com.google.protobuf.Int64Value value) {
+          if (gteBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            gte_ = value;
+          } else {
+            gteBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gte = 1 [json_name = "gte"];</code>
+         */
+        public Builder setGte(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (gteBuilder_ == null) {
+            gte_ = builderForValue.build();
+          } else {
+            gteBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gte = 1 [json_name = "gte"];</code>
+         */
+        public Builder mergeGte(com.google.protobuf.Int64Value value) {
+          if (gteBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0) &&
+              gte_ != null &&
+              gte_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+              getGteBuilder().mergeFrom(value);
+            } else {
+              gte_ = value;
+            }
+          } else {
+            gteBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gte = 1 [json_name = "gte"];</code>
+         */
+        public Builder clearGte() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          gte_ = null;
+          if (gteBuilder_ != null) {
+            gteBuilder_.dispose();
+            gteBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gte = 1 [json_name = "gte"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getGteBuilder() {
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return getGteFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gte = 1 [json_name = "gte"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getGteOrBuilder() {
+          if (gteBuilder_ != null) {
+            return gteBuilder_.getMessageOrBuilder();
+          } else {
+            return gte_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : gte_;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gte = 1 [json_name = "gte"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getGteFieldBuilder() {
+          if (gteBuilder_ == null) {
+            gteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getGte(),
+                    getParentForChildren(),
+                    isClean());
+            gte_ = null;
+          }
+          return gteBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value lte_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> lteBuilder_;
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lte = 2 [json_name = "lte"];</code>
+         * @return Whether the lte field is set.
+         */
+        public boolean hasLte() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lte = 2 [json_name = "lte"];</code>
+         * @return The lte.
+         */
+        public com.google.protobuf.Int64Value getLte() {
+          if (lteBuilder_ == null) {
+            return lte_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lte_;
+          } else {
+            return lteBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lte = 2 [json_name = "lte"];</code>
+         */
+        public Builder setLte(com.google.protobuf.Int64Value value) {
+          if (lteBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            lte_ = value;
+          } else {
+            lteBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lte = 2 [json_name = "lte"];</code>
+         */
+        public Builder setLte(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (lteBuilder_ == null) {
+            lte_ = builderForValue.build();
+          } else {
+            lteBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lte = 2 [json_name = "lte"];</code>
+         */
+        public Builder mergeLte(com.google.protobuf.Int64Value value) {
+          if (lteBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) != 0) &&
+              lte_ != null &&
+              lte_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+              getLteBuilder().mergeFrom(value);
+            } else {
+              lte_ = value;
+            }
+          } else {
+            lteBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lte = 2 [json_name = "lte"];</code>
+         */
+        public Builder clearLte() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          lte_ = null;
+          if (lteBuilder_ != null) {
+            lteBuilder_.dispose();
+            lteBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lte = 2 [json_name = "lte"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getLteBuilder() {
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return getLteFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lte = 2 [json_name = "lte"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getLteOrBuilder() {
+          if (lteBuilder_ != null) {
+            return lteBuilder_.getMessageOrBuilder();
+          } else {
+            return lte_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : lte_;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than or equal.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lte = 2 [json_name = "lte"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getLteFieldBuilder() {
+          if (lteBuilder_ == null) {
+            lteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getLte(),
+                    getParentForChildren(),
+                    isClean());
+            lte_ = null;
+          }
+          return lteBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value gt_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gtBuilder_;
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gt = 3 [json_name = "gt"];</code>
+         * @return Whether the gt field is set.
+         */
+        public boolean hasGt() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gt = 3 [json_name = "gt"];</code>
+         * @return The gt.
+         */
+        public com.google.protobuf.Int64Value getGt() {
+          if (gtBuilder_ == null) {
+            return gt_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gt_;
+          } else {
+            return gtBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gt = 3 [json_name = "gt"];</code>
+         */
+        public Builder setGt(com.google.protobuf.Int64Value value) {
+          if (gtBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            gt_ = value;
+          } else {
+            gtBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gt = 3 [json_name = "gt"];</code>
+         */
+        public Builder setGt(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (gtBuilder_ == null) {
+            gt_ = builderForValue.build();
+          } else {
+            gtBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gt = 3 [json_name = "gt"];</code>
+         */
+        public Builder mergeGt(com.google.protobuf.Int64Value value) {
+          if (gtBuilder_ == null) {
+            if (((bitField0_ & 0x00000004) != 0) &&
+              gt_ != null &&
+              gt_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+              getGtBuilder().mergeFrom(value);
+            } else {
+              gt_ = value;
+            }
+          } else {
+            gtBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gt = 3 [json_name = "gt"];</code>
+         */
+        public Builder clearGt() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          gt_ = null;
+          if (gtBuilder_ != null) {
+            gtBuilder_.dispose();
+            gtBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gt = 3 [json_name = "gt"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getGtBuilder() {
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return getGtFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gt = 3 [json_name = "gt"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getGtOrBuilder() {
+          if (gtBuilder_ != null) {
+            return gtBuilder_.getMessageOrBuilder();
+          } else {
+            return gt_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : gt_;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where greater than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value gt = 3 [json_name = "gt"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getGtFieldBuilder() {
+          if (gtBuilder_ == null) {
+            gtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getGt(),
+                    getParentForChildren(),
+                    isClean());
+            gt_ = null;
+          }
+          return gtBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value lt_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> ltBuilder_;
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lt = 4 [json_name = "lt"];</code>
+         * @return Whether the lt field is set.
+         */
+        public boolean hasLt() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lt = 4 [json_name = "lt"];</code>
+         * @return The lt.
+         */
+        public com.google.protobuf.Int64Value getLt() {
+          if (ltBuilder_ == null) {
+            return lt_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lt_;
+          } else {
+            return ltBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lt = 4 [json_name = "lt"];</code>
+         */
+        public Builder setLt(com.google.protobuf.Int64Value value) {
+          if (ltBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            lt_ = value;
+          } else {
+            ltBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lt = 4 [json_name = "lt"];</code>
+         */
+        public Builder setLt(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (ltBuilder_ == null) {
+            lt_ = builderForValue.build();
+          } else {
+            ltBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lt = 4 [json_name = "lt"];</code>
+         */
+        public Builder mergeLt(com.google.protobuf.Int64Value value) {
+          if (ltBuilder_ == null) {
+            if (((bitField0_ & 0x00000008) != 0) &&
+              lt_ != null &&
+              lt_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+              getLtBuilder().mergeFrom(value);
+            } else {
+              lt_ = value;
+            }
+          } else {
+            ltBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lt = 4 [json_name = "lt"];</code>
+         */
+        public Builder clearLt() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          lt_ = null;
+          if (ltBuilder_ != null) {
+            ltBuilder_.dispose();
+            ltBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lt = 4 [json_name = "lt"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getLtBuilder() {
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return getLtFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lt = 4 [json_name = "lt"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getLtOrBuilder() {
+          if (ltBuilder_ != null) {
+            return ltBuilder_.getMessageOrBuilder();
+          } else {
+            return lt_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : lt_;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. Queries where less than.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value lt = 4 [json_name = "lt"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getLtFieldBuilder() {
+          if (ltBuilder_ == null) {
+            ltBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getLt(),
+                    getParentForChildren(),
+                    isClean());
+            lt_ = null;
+          }
+          return ltBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AudioBytes>
+          PARSER = new com.google.protobuf.AbstractParser<AudioBytes>() {
+        @java.lang.Override
+        public AudioBytes parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<AudioBytes> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AudioBytes> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     public interface HuntGroupSidsOrBuilder extends
@@ -42938,6 +44401,44 @@ private static final long serialVersionUID = 0L;
       return agentCallLog_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.AgentCallLogQuery.getDefaultInstance() : agentCallLog_;
     }
 
+    public static final int AUDIO_BYTES_FIELD_NUMBER = 13;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audioBytes_;
+    /**
+     * <pre>
+     * Query constraints on audio bytes.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
+     * @return Whether the audioBytes field is set.
+     */
+    @java.lang.Override
+    public boolean hasAudioBytes() {
+      return audioBytes_ != null;
+    }
+    /**
+     * <pre>
+     * Query constraints on audio bytes.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
+     * @return The audioBytes.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes getAudioBytes() {
+      return audioBytes_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.getDefaultInstance() : audioBytes_;
+    }
+    /**
+     * <pre>
+     * Query constraints on audio bytes.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytesOrBuilder getAudioBytesOrBuilder() {
+      return audioBytes_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.getDefaultInstance() : audioBytes_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -42984,6 +44485,9 @@ private static final long serialVersionUID = 0L;
       }
       if (agentCallLog_ != null) {
         output.writeMessage(12, getAgentCallLog());
+      }
+      if (audioBytes_ != null) {
+        output.writeMessage(13, getAudioBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -43037,6 +44541,10 @@ private static final long serialVersionUID = 0L;
       if (agentCallLog_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getAgentCallLog());
+      }
+      if (audioBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getAudioBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -43108,6 +44616,11 @@ private static final long serialVersionUID = 0L;
         if (!getAgentCallLog()
             .equals(other.getAgentCallLog())) return false;
       }
+      if (hasAudioBytes() != other.hasAudioBytes()) return false;
+      if (hasAudioBytes()) {
+        if (!getAudioBytes()
+            .equals(other.getAudioBytes())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -43162,6 +44675,10 @@ private static final long serialVersionUID = 0L;
       if (hasAgentCallLog()) {
         hash = (37 * hash) + AGENT_CALL_LOG_FIELD_NUMBER;
         hash = (53 * hash) + getAgentCallLog().hashCode();
+      }
+      if (hasAudioBytes()) {
+        hash = (37 * hash) + AUDIO_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getAudioBytes().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -43353,6 +44870,11 @@ private static final long serialVersionUID = 0L;
           agentCallLogBuilder_.dispose();
           agentCallLogBuilder_ = null;
         }
+        audioBytes_ = null;
+        if (audioBytesBuilder_ != null) {
+          audioBytesBuilder_.dispose();
+          audioBytesBuilder_ = null;
+        }
         return this;
       }
 
@@ -43441,6 +44963,11 @@ private static final long serialVersionUID = 0L;
               ? agentCallLog_
               : agentCallLogBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.audioBytes_ = audioBytesBuilder_ == null
+              ? audioBytes_
+              : audioBytesBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -43519,6 +45046,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasAgentCallLog()) {
           mergeAgentCallLog(other.getAgentCallLog());
+        }
+        if (other.hasAudioBytes()) {
+          mergeAudioBytes(other.getAudioBytes());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -43623,6 +45153,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000400;
                 break;
               } // case 98
+              case 106: {
+                input.readMessage(
+                    getAudioBytesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 106
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -45343,6 +46880,161 @@ private static final long serialVersionUID = 0L;
           agentCallLog_ = null;
         }
         return agentCallLogBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audioBytes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytesOrBuilder> audioBytesBuilder_;
+      /**
+       * <pre>
+       * Query constraints on audio bytes.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
+       * @return Whether the audioBytes field is set.
+       */
+      public boolean hasAudioBytes() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <pre>
+       * Query constraints on audio bytes.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
+       * @return The audioBytes.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes getAudioBytes() {
+        if (audioBytesBuilder_ == null) {
+          return audioBytes_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.getDefaultInstance() : audioBytes_;
+        } else {
+          return audioBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on audio bytes.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
+       */
+      public Builder setAudioBytes(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes value) {
+        if (audioBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          audioBytes_ = value;
+        } else {
+          audioBytesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on audio bytes.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
+       */
+      public Builder setAudioBytes(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.Builder builderForValue) {
+        if (audioBytesBuilder_ == null) {
+          audioBytes_ = builderForValue.build();
+        } else {
+          audioBytesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on audio bytes.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
+       */
+      public Builder mergeAudioBytes(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes value) {
+        if (audioBytesBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0) &&
+            audioBytes_ != null &&
+            audioBytes_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.getDefaultInstance()) {
+            getAudioBytesBuilder().mergeFrom(value);
+          } else {
+            audioBytes_ = value;
+          }
+        } else {
+          audioBytesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on audio bytes.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
+       */
+      public Builder clearAudioBytes() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        audioBytes_ = null;
+        if (audioBytesBuilder_ != null) {
+          audioBytesBuilder_.dispose();
+          audioBytesBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on audio bytes.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.Builder getAudioBytesBuilder() {
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return getAudioBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Query constraints on audio bytes.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytesOrBuilder getAudioBytesOrBuilder() {
+        if (audioBytesBuilder_ != null) {
+          return audioBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return audioBytes_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.getDefaultInstance() : audioBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on audio bytes.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes audio_bytes = 13 [json_name = "audioBytes"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytesOrBuilder> 
+          getAudioBytesFieldBuilder() {
+        if (audioBytesBuilder_ == null) {
+          audioBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytes.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Call.AudioBytesOrBuilder>(
+                  getAudioBytes(),
+                  getParentForChildren(),
+                  isClean());
+          audioBytes_ = null;
+        }
+        return audioBytesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
