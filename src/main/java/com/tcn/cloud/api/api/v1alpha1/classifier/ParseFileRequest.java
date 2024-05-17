@@ -52,14 +52,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
      * @deprecated api.v1alpha1.classifier.ParseFileRequest.ReParseFile.hints is deprecated.
-     *     See api/v1alpha1/classifier/service.proto;l=17
+     *     See api/v1alpha1/classifier/service.proto;l=64
      * @return Whether the hints field is set.
      */
     @java.lang.Deprecated boolean hasHints();
     /**
      * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
      * @deprecated api.v1alpha1.classifier.ParseFileRequest.ReParseFile.hints is deprecated.
-     *     See api/v1alpha1/classifier/service.proto;l=17
+     *     See api/v1alpha1/classifier/service.proto;l=64
      * @return The hints.
      */
     @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints();
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
      * @deprecated api.v1alpha1.classifier.ParseFileRequest.ReParseFile.hints is deprecated.
-     *     See api/v1alpha1/classifier/service.proto;l=17
+     *     See api/v1alpha1/classifier/service.proto;l=64
      * @return Whether the hints field is set.
      */
     @java.lang.Override
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
      * @deprecated api.v1alpha1.classifier.ParseFileRequest.ReParseFile.hints is deprecated.
-     *     See api/v1alpha1/classifier/service.proto;l=17
+     *     See api/v1alpha1/classifier/service.proto;l=64
      * @return The hints.
      */
     @java.lang.Override
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
        * @deprecated api.v1alpha1.classifier.ParseFileRequest.ReParseFile.hints is deprecated.
-       *     See api/v1alpha1/classifier/service.proto;l=17
+       *     See api/v1alpha1/classifier/service.proto;l=64
        * @return Whether the hints field is set.
        */
       @java.lang.Deprecated public boolean hasHints() {
@@ -630,7 +630,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>.api.v1alpha1.classifier.ParseHints hints = 2 [json_name = "hints", deprecated = true];</code>
        * @deprecated api.v1alpha1.classifier.ParseFileRequest.ReParseFile.hints is deprecated.
-       *     See api/v1alpha1/classifier/service.proto;l=17
+       *     See api/v1alpha1/classifier/service.proto;l=64
        * @return The hints.
        */
       @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.classifier.ParseHints getHints() {
