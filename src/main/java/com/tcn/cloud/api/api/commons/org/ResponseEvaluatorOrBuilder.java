@@ -12,20 +12,34 @@ public interface ResponseEvaluatorOrBuilder extends
    * ID of the response evaluator.
    * </pre>
    *
-   * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId"];</code>
+   * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId", deprecated = true];</code>
+   * @deprecated api.commons.org.ResponseEvaluator.response_evaluator_id is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=1355
    * @return The responseEvaluatorId.
    */
-  java.lang.String getResponseEvaluatorId();
+  @java.lang.Deprecated java.lang.String getResponseEvaluatorId();
   /**
    * <pre>
    * ID of the response evaluator.
    * </pre>
    *
-   * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId"];</code>
+   * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId", deprecated = true];</code>
+   * @deprecated api.commons.org.ResponseEvaluator.response_evaluator_id is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=1355
    * @return The bytes for responseEvaluatorId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getResponseEvaluatorIdBytes();
+
+  /**
+   * <pre>
+   * ID of the response evaluator.
+   * </pre>
+   *
+   * <code>int64 response_evaluator_sid = 6 [json_name = "responseEvaluatorSid"];</code>
+   * @return The responseEvaluatorSid.
+   */
+  long getResponseEvaluatorSid();
 
   /**
    * <pre>

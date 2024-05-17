@@ -55,11 +55,13 @@ private static final long serialVersionUID = 0L;
    * ID of the response evaluator.
    * </pre>
    *
-   * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId"];</code>
+   * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId", deprecated = true];</code>
+   * @deprecated api.commons.org.ResponseEvaluator.response_evaluator_id is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=1355
    * @return The responseEvaluatorId.
    */
   @java.lang.Override
-  public java.lang.String getResponseEvaluatorId() {
+  @java.lang.Deprecated public java.lang.String getResponseEvaluatorId() {
     java.lang.Object ref = responseEvaluatorId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -76,11 +78,13 @@ private static final long serialVersionUID = 0L;
    * ID of the response evaluator.
    * </pre>
    *
-   * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId"];</code>
+   * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId", deprecated = true];</code>
+   * @deprecated api.commons.org.ResponseEvaluator.response_evaluator_id is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=1355
    * @return The bytes for responseEvaluatorId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getResponseEvaluatorIdBytes() {
     java.lang.Object ref = responseEvaluatorId_;
     if (ref instanceof java.lang.String) {
@@ -92,6 +96,21 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int RESPONSE_EVALUATOR_SID_FIELD_NUMBER = 6;
+  private long responseEvaluatorSid_ = 0L;
+  /**
+   * <pre>
+   * ID of the response evaluator.
+   * </pre>
+   *
+   * <code>int64 response_evaluator_sid = 6 [json_name = "responseEvaluatorSid"];</code>
+   * @return The responseEvaluatorSid.
+   */
+  @java.lang.Override
+  public long getResponseEvaluatorSid() {
+    return responseEvaluatorSid_;
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 2;
@@ -311,6 +330,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regularExpression_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, regularExpression_);
     }
+    if (responseEvaluatorSid_ != 0L) {
+      output.writeInt64(6, responseEvaluatorSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -335,6 +357,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regularExpression_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, regularExpression_);
     }
+    if (responseEvaluatorSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(6, responseEvaluatorSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -352,6 +378,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getResponseEvaluatorId()
         .equals(other.getResponseEvaluatorId())) return false;
+    if (getResponseEvaluatorSid()
+        != other.getResponseEvaluatorSid()) return false;
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
     if (!getName()
@@ -373,6 +401,9 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + RESPONSE_EVALUATOR_ID_FIELD_NUMBER;
     hash = (53 * hash) + getResponseEvaluatorId().hashCode();
+    hash = (37 * hash) + RESPONSE_EVALUATOR_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getResponseEvaluatorSid());
     hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
@@ -517,6 +548,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       responseEvaluatorId_ = "";
+      responseEvaluatorSid_ = 0L;
       orgId_ = "";
       name_ = "";
       description_ = "";
@@ -558,15 +590,18 @@ private static final long serialVersionUID = 0L;
         result.responseEvaluatorId_ = responseEvaluatorId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.orgId_ = orgId_;
+        result.responseEvaluatorSid_ = responseEvaluatorSid_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.name_ = name_;
+        result.orgId_ = orgId_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.description_ = description_;
+        result.name_ = name_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.regularExpression_ = regularExpression_;
       }
     }
@@ -620,24 +655,27 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (other.getResponseEvaluatorSid() != 0L) {
+        setResponseEvaluatorSid(other.getResponseEvaluatorSid());
+      }
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getRegularExpression().isEmpty()) {
         regularExpression_ = other.regularExpression_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -673,24 +711,29 @@ private static final long serialVersionUID = 0L;
             } // case 10
             case 18: {
               orgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 18
             case 26: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 26
             case 34: {
               description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 34
             case 42: {
               regularExpression_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 42
+            case 48: {
+              responseEvaluatorSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -714,10 +757,12 @@ private static final long serialVersionUID = 0L;
      * ID of the response evaluator.
      * </pre>
      *
-     * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId"];</code>
+     * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId", deprecated = true];</code>
+     * @deprecated api.commons.org.ResponseEvaluator.response_evaluator_id is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=1355
      * @return The responseEvaluatorId.
      */
-    public java.lang.String getResponseEvaluatorId() {
+    @java.lang.Deprecated public java.lang.String getResponseEvaluatorId() {
       java.lang.Object ref = responseEvaluatorId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -734,10 +779,12 @@ private static final long serialVersionUID = 0L;
      * ID of the response evaluator.
      * </pre>
      *
-     * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId"];</code>
+     * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId", deprecated = true];</code>
+     * @deprecated api.commons.org.ResponseEvaluator.response_evaluator_id is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=1355
      * @return The bytes for responseEvaluatorId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getResponseEvaluatorIdBytes() {
       java.lang.Object ref = responseEvaluatorId_;
       if (ref instanceof String) {
@@ -755,11 +802,13 @@ private static final long serialVersionUID = 0L;
      * ID of the response evaluator.
      * </pre>
      *
-     * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId"];</code>
+     * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId", deprecated = true];</code>
+     * @deprecated api.commons.org.ResponseEvaluator.response_evaluator_id is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=1355
      * @param value The responseEvaluatorId to set.
      * @return This builder for chaining.
      */
-    public Builder setResponseEvaluatorId(
+    @java.lang.Deprecated public Builder setResponseEvaluatorId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       responseEvaluatorId_ = value;
@@ -772,10 +821,12 @@ private static final long serialVersionUID = 0L;
      * ID of the response evaluator.
      * </pre>
      *
-     * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId"];</code>
+     * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId", deprecated = true];</code>
+     * @deprecated api.commons.org.ResponseEvaluator.response_evaluator_id is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=1355
      * @return This builder for chaining.
      */
-    public Builder clearResponseEvaluatorId() {
+    @java.lang.Deprecated public Builder clearResponseEvaluatorId() {
       responseEvaluatorId_ = getDefaultInstance().getResponseEvaluatorId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
@@ -786,16 +837,62 @@ private static final long serialVersionUID = 0L;
      * ID of the response evaluator.
      * </pre>
      *
-     * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId"];</code>
+     * <code>string response_evaluator_id = 1 [json_name = "responseEvaluatorId", deprecated = true];</code>
+     * @deprecated api.commons.org.ResponseEvaluator.response_evaluator_id is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=1355
      * @param value The bytes for responseEvaluatorId to set.
      * @return This builder for chaining.
      */
-    public Builder setResponseEvaluatorIdBytes(
+    @java.lang.Deprecated public Builder setResponseEvaluatorIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       responseEvaluatorId_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private long responseEvaluatorSid_ ;
+    /**
+     * <pre>
+     * ID of the response evaluator.
+     * </pre>
+     *
+     * <code>int64 response_evaluator_sid = 6 [json_name = "responseEvaluatorSid"];</code>
+     * @return The responseEvaluatorSid.
+     */
+    @java.lang.Override
+    public long getResponseEvaluatorSid() {
+      return responseEvaluatorSid_;
+    }
+    /**
+     * <pre>
+     * ID of the response evaluator.
+     * </pre>
+     *
+     * <code>int64 response_evaluator_sid = 6 [json_name = "responseEvaluatorSid"];</code>
+     * @param value The responseEvaluatorSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResponseEvaluatorSid(long value) {
+
+      responseEvaluatorSid_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ID of the response evaluator.
+     * </pre>
+     *
+     * <code>int64 response_evaluator_sid = 6 [json_name = "responseEvaluatorSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResponseEvaluatorSid() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      responseEvaluatorSid_ = 0L;
       onChanged();
       return this;
     }
@@ -855,7 +952,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       orgId_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -869,7 +966,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearOrgId() {
       orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -887,7 +984,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       orgId_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -947,7 +1044,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       name_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -961,7 +1058,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearName() {
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -979,7 +1076,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       name_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1039,7 +1136,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       description_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1053,7 +1150,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearDescription() {
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1071,7 +1168,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       description_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1131,7 +1228,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       regularExpression_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1145,7 +1242,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearRegularExpression() {
       regularExpression_ = getDefaultInstance().getRegularExpression();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1163,7 +1260,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       regularExpression_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
