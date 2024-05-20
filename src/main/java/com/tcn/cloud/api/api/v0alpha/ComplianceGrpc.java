@@ -2270,6 +2270,11 @@ public final class ComplianceGrpc {
     }
 
     /**
+     * <pre>
+     * Download a scrub list defined by ScrubListDownloadRequest message.
+     * Required permissions:
+     *      PERMISSION_COMPLIANCE
+     * </pre>
      */
     default void scrubListDownload(com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -3029,6 +3034,11 @@ public final class ComplianceGrpc {
     }
 
     /**
+     * <pre>
+     * Download a scrub list defined by ScrubListDownloadRequest message.
+     * Required permissions:
+     *      PERMISSION_COMPLIANCE
+     * </pre>
      */
     public void scrubListDownload(com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -3802,6 +3812,11 @@ public final class ComplianceGrpc {
     }
 
     /**
+     * <pre>
+     * Download a scrub list defined by ScrubListDownloadRequest message.
+     * Required permissions:
+     *      PERMISSION_COMPLIANCE
+     * </pre>
      */
     public com.google.longrunning.Operation scrubListDownload(com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -4542,6 +4557,11 @@ public final class ComplianceGrpc {
     }
 
     /**
+     * <pre>
+     * Download a scrub list defined by ScrubListDownloadRequest message.
+     * Required permissions:
+     *      PERMISSION_COMPLIANCE
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> scrubListDownload(
         com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest request) {
