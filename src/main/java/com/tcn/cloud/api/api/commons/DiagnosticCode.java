@@ -649,6 +649,26 @@ public enum DiagnosticCode
    * <code>ATTEMPT_TO_BUILD_SCHEDULES_FOR_INVALID_PARENT_NODE = 66;</code>
    */
   ATTEMPT_TO_BUILD_SCHEDULES_FOR_INVALID_PARENT_NODE(66),
+  /**
+   * <pre>
+   * DiagnosticCodeSchedulableAgentsDoNotMeetTemplateMinimum integer value for a diagnostic coded as
+   * 'Schedulable Agents do not meet Tamplate Minimum' type.
+   * The diagnostic is reporting that agents will be auto generated upon building the schedule, unless added manually or agent generation is toggled off.
+   * </pre>
+   *
+   * <code>SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MINUMUM = 67;</code>
+   */
+  SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MINUMUM(67),
+  /**
+   * <pre>
+   * DiagnosticCodeSchedulableAgentsDoNotMeetTemplateMaximum integer value for a diagnostic coded as
+   * 'Schedulable Agents do not meet Template Maximum' type.
+   * The diagnostic is reporting that agents may be auto generated upon building the schedule, unless added manually or agent generation is toggled off.
+   * </pre>
+   *
+   * <code>SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MAXIMUM = 68;</code>
+   */
+  SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MAXIMUM(68),
   UNRECOGNIZED(-1),
   ;
 
@@ -1289,6 +1309,26 @@ public enum DiagnosticCode
    * <code>ATTEMPT_TO_BUILD_SCHEDULES_FOR_INVALID_PARENT_NODE = 66;</code>
    */
   public static final int ATTEMPT_TO_BUILD_SCHEDULES_FOR_INVALID_PARENT_NODE_VALUE = 66;
+  /**
+   * <pre>
+   * DiagnosticCodeSchedulableAgentsDoNotMeetTemplateMinimum integer value for a diagnostic coded as
+   * 'Schedulable Agents do not meet Tamplate Minimum' type.
+   * The diagnostic is reporting that agents will be auto generated upon building the schedule, unless added manually or agent generation is toggled off.
+   * </pre>
+   *
+   * <code>SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MINUMUM = 67;</code>
+   */
+  public static final int SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MINUMUM_VALUE = 67;
+  /**
+   * <pre>
+   * DiagnosticCodeSchedulableAgentsDoNotMeetTemplateMaximum integer value for a diagnostic coded as
+   * 'Schedulable Agents do not meet Template Maximum' type.
+   * The diagnostic is reporting that agents may be auto generated upon building the schedule, unless added manually or agent generation is toggled off.
+   * </pre>
+   *
+   * <code>SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MAXIMUM = 68;</code>
+   */
+  public static final int SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MAXIMUM_VALUE = 68;
 
 
   public final int getNumber() {
@@ -1382,6 +1422,8 @@ public enum DiagnosticCode
       case 64: return FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS;
       case 65: return SHIFT_TEMPLATE_HAS_NO_ASSOCIATED_SCHEDULING_AGENT_GROUPS;
       case 66: return ATTEMPT_TO_BUILD_SCHEDULES_FOR_INVALID_PARENT_NODE;
+      case 67: return SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MINUMUM;
+      case 68: return SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MAXIMUM;
       default: return null;
     }
   }
