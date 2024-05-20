@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.users;
 
 /**
+ * <pre>
+ * Response message for the GetAgentProfileGroup rpc.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.users.GetAgentProfileGroupResponse}
  */
 public final class GetAgentProfileGroupResponse extends
@@ -41,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int AGENT_PROFILE_GROUP_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.org.AgentProfileGroup agentProfileGroup_;
   /**
+   * <pre>
+   * Agent response group corresponding to the ID.
+   * </pre>
+   *
    * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
    * @return Whether the agentProfileGroup field is set.
    */
@@ -49,6 +57,10 @@ private static final long serialVersionUID = 0L;
     return agentProfileGroup_ != null;
   }
   /**
+   * <pre>
+   * Agent response group corresponding to the ID.
+   * </pre>
+   *
    * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
    * @return The agentProfileGroup.
    */
@@ -57,6 +69,10 @@ private static final long serialVersionUID = 0L;
     return agentProfileGroup_ == null ? com.tcn.cloud.api.api.commons.org.AgentProfileGroup.getDefaultInstance() : agentProfileGroup_;
   }
   /**
+   * <pre>
+   * Agent response group corresponding to the ID.
+   * </pre>
+   *
    * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
    */
   @java.lang.Override
@@ -227,6 +243,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Response message for the GetAgentProfileGroup rpc.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.users.GetAgentProfileGroupResponse}
    */
   public static final class Builder extends
@@ -406,6 +426,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.AgentProfileGroup, com.tcn.cloud.api.api.commons.org.AgentProfileGroup.Builder, com.tcn.cloud.api.api.commons.org.AgentProfileGroupOrBuilder> agentProfileGroupBuilder_;
     /**
+     * <pre>
+     * Agent response group corresponding to the ID.
+     * </pre>
+     *
      * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
      * @return Whether the agentProfileGroup field is set.
      */
@@ -413,6 +437,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Agent response group corresponding to the ID.
+     * </pre>
+     *
      * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
      * @return The agentProfileGroup.
      */
@@ -424,6 +452,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Agent response group corresponding to the ID.
+     * </pre>
+     *
      * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
      */
     public Builder setAgentProfileGroup(com.tcn.cloud.api.api.commons.org.AgentProfileGroup value) {
@@ -440,6 +472,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Agent response group corresponding to the ID.
+     * </pre>
+     *
      * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
      */
     public Builder setAgentProfileGroup(
@@ -454,6 +490,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Agent response group corresponding to the ID.
+     * </pre>
+     *
      * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
      */
     public Builder mergeAgentProfileGroup(com.tcn.cloud.api.api.commons.org.AgentProfileGroup value) {
@@ -473,6 +513,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Agent response group corresponding to the ID.
+     * </pre>
+     *
      * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
      */
     public Builder clearAgentProfileGroup() {
@@ -486,6 +530,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Agent response group corresponding to the ID.
+     * </pre>
+     *
      * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.AgentProfileGroup.Builder getAgentProfileGroupBuilder() {
@@ -494,6 +542,10 @@ private static final long serialVersionUID = 0L;
       return getAgentProfileGroupFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Agent response group corresponding to the ID.
+     * </pre>
+     *
      * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.AgentProfileGroupOrBuilder getAgentProfileGroupOrBuilder() {
@@ -505,6 +557,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Agent response group corresponding to the ID.
+     * </pre>
+     *
      * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

@@ -8,36 +8,60 @@ public interface AssignAgentProfileGroupsRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+   * <pre>
+   * Agent profile group ID to assign to provided users.
+   * </pre>
+   *
+   * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
    * @return The agentProfileGroupId.
    */
   java.lang.String getAgentProfileGroupId();
   /**
-   * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+   * <pre>
+   * Agent profile group ID to assign to provided users.
+   * </pre>
+   *
+   * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
    * @return The bytes for agentProfileGroupId.
    */
   com.google.protobuf.ByteString
       getAgentProfileGroupIdBytes();
 
   /**
-   * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+   * <pre>
+   * List of user IDs to assign to the agent profile group
+   * </pre>
+   *
+   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
    * @return A list containing the userIds.
    */
   java.util.List<java.lang.String>
       getUserIdsList();
   /**
-   * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+   * <pre>
+   * List of user IDs to assign to the agent profile group
+   * </pre>
+   *
+   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
    * @return The count of userIds.
    */
   int getUserIdsCount();
   /**
-   * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+   * <pre>
+   * List of user IDs to assign to the agent profile group
+   * </pre>
+   *
+   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
    * @param index The index of the element to return.
    * @return The userIds at the given index.
    */
   java.lang.String getUserIds(int index);
   /**
-   * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+   * <pre>
+   * List of user IDs to assign to the agent profile group
+   * </pre>
+   *
+   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the userIds at the given index.
    */

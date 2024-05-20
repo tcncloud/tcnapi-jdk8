@@ -18,31 +18,4 @@ public interface CreatePasswordResetLinkRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUserIdBytes();
-
-  /**
-   * <pre>
-   * DEPRECATED: no longer used.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration"];</code>
-   * @return Whether the expiration field is set.
-   */
-  boolean hasExpiration();
-  /**
-   * <pre>
-   * DEPRECATED: no longer used.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration"];</code>
-   * @return The expiration.
-   */
-  com.google.protobuf.Timestamp getExpiration();
-  /**
-   * <pre>
-   * DEPRECATED: no longer used.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration"];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getExpirationOrBuilder();
 }

@@ -8,11 +8,19 @@ public interface CreateAgentProfileGroupResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Created agent profile group.
+   * </pre>
+   *
    * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
    * @return The agentProfileGroupId.
    */
   java.lang.String getAgentProfileGroupId();
   /**
+   * <pre>
+   * Created agent profile group.
+   * </pre>
+   *
    * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
    * @return The bytes for agentProfileGroupId.
    */

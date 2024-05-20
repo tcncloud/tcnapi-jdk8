@@ -9,7 +9,7 @@ public interface ListAuthTokensByUserIdRequestOrBuilder extends
 
   /**
    * <pre>
-   * user id to get list of auth tokens
+   * User id to get list of auth tokens.
    * </pre>
    *
    * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -18,7 +18,7 @@ public interface ListAuthTokensByUserIdRequestOrBuilder extends
   java.lang.String getUserId();
   /**
    * <pre>
-   * user id to get list of auth tokens
+   * User id to get list of auth tokens.
    * </pre>
    *
    * <code>string user_id = 1 [json_name = "userId"];</code>

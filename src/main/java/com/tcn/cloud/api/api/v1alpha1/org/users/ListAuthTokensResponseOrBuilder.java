@@ -9,7 +9,7 @@ public interface ListAuthTokensResponseOrBuilder extends
 
   /**
    * <pre>
-   * list of current users auth tokens
+   * List of current users' auth tokens.
    * </pre>
    *
    * <code>repeated .api.commons.org.AuthToken auth_tokens = 1 [json_name = "authTokens"];</code>
@@ -18,7 +18,7 @@ public interface ListAuthTokensResponseOrBuilder extends
       getAuthTokensList();
   /**
    * <pre>
-   * list of current users auth tokens
+   * List of current users' auth tokens.
    * </pre>
    *
    * <code>repeated .api.commons.org.AuthToken auth_tokens = 1 [json_name = "authTokens"];</code>
@@ -26,7 +26,7 @@ public interface ListAuthTokensResponseOrBuilder extends
   com.tcn.cloud.api.api.commons.org.AuthToken getAuthTokens(int index);
   /**
    * <pre>
-   * list of current users auth tokens
+   * List of current users' auth tokens.
    * </pre>
    *
    * <code>repeated .api.commons.org.AuthToken auth_tokens = 1 [json_name = "authTokens"];</code>
@@ -34,7 +34,7 @@ public interface ListAuthTokensResponseOrBuilder extends
   int getAuthTokensCount();
   /**
    * <pre>
-   * list of current users auth tokens
+   * List of current users' auth tokens.
    * </pre>
    *
    * <code>repeated .api.commons.org.AuthToken auth_tokens = 1 [json_name = "authTokens"];</code>
@@ -43,7 +43,7 @@ public interface ListAuthTokensResponseOrBuilder extends
       getAuthTokensOrBuilderList();
   /**
    * <pre>
-   * list of current users auth tokens
+   * List of current users' auth tokens.
    * </pre>
    *
    * <code>repeated .api.commons.org.AuthToken auth_tokens = 1 [json_name = "authTokens"];</code>

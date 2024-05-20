@@ -8,17 +8,29 @@ public interface CreateAgentProfileGroupRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 2 [json_name = "agentProfileGroup"];</code>
+   * <pre>
+   * Agent profile group to create.
+   * </pre>
+   *
+   * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
    * @return Whether the agentProfileGroup field is set.
    */
   boolean hasAgentProfileGroup();
   /**
-   * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 2 [json_name = "agentProfileGroup"];</code>
+   * <pre>
+   * Agent profile group to create.
+   * </pre>
+   *
+   * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
    * @return The agentProfileGroup.
    */
   com.tcn.cloud.api.api.commons.org.AgentProfileGroup getAgentProfileGroup();
   /**
-   * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 2 [json_name = "agentProfileGroup"];</code>
+   * <pre>
+   * Agent profile group to create.
+   * </pre>
+   *
+   * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
    */
   com.tcn.cloud.api.api.commons.org.AgentProfileGroupOrBuilder getAgentProfileGroupOrBuilder();
 }

@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.users;
 
 /**
+ * <pre>
+ * Request message for the GetAgentProfileGroup rpc.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.users.GetAgentProfileGroupRequest}
  */
 public final class GetAgentProfileGroupRequest extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object agentProfileGroupId_ = "";
   /**
+   * <pre>
+   * ID of the agent profile group.
+   * </pre>
+   *
    * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
    * @return The agentProfileGroupId.
    */
@@ -60,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * ID of the agent profile group.
+   * </pre>
+   *
    * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
    * @return The bytes for agentProfileGroupId.
    */
@@ -235,6 +247,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request message for the GetAgentProfileGroup rpc.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.users.GetAgentProfileGroupRequest}
    */
   public static final class Builder extends
@@ -406,6 +422,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object agentProfileGroupId_ = "";
     /**
+     * <pre>
+     * ID of the agent profile group.
+     * </pre>
+     *
      * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
      * @return The agentProfileGroupId.
      */
@@ -422,6 +442,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * ID of the agent profile group.
+     * </pre>
+     *
      * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
      * @return The bytes for agentProfileGroupId.
      */
@@ -439,6 +463,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * ID of the agent profile group.
+     * </pre>
+     *
      * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
      * @param value The agentProfileGroupId to set.
      * @return This builder for chaining.
@@ -452,6 +480,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * ID of the agent profile group.
+     * </pre>
+     *
      * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
      * @return This builder for chaining.
      */
@@ -462,6 +494,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * ID of the agent profile group.
+     * </pre>
+     *
      * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
      * @param value The bytes for agentProfileGroupId to set.
      * @return This builder for chaining.

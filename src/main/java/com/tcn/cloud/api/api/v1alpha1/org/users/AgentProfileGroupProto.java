@@ -92,7 +92,7 @@ public final class AgentProfileGroupProto {
       "nt_profile_group\030\001 \001(\0132\".api.commons.org" +
       ".AgentProfileGroupR\021agentProfileGroup\"t\n" +
       "\036UpdateAgentProfileGroupRequest\022R\n\023agent" +
-      "_profile_group\030\002 \001(\0132\".api.commons.org.A" +
+      "_profile_group\030\001 \001(\0132\".api.commons.org.A" +
       "gentProfileGroupR\021agentProfileGroup\"!\n\037U" +
       "pdateAgentProfileGroupResponse\"\037\n\035ListAg" +
       "entProfileGroupsRequest\"v\n\036ListAgentProf" +
@@ -100,16 +100,16 @@ public final class AgentProfileGroupProto {
       "s\030\001 \003(\0132\".api.commons.org.AgentProfileGr" +
       "oupR\022agentProfileGroups\"t\n\036CreateAgentPr" +
       "ofileGroupRequest\022R\n\023agent_profile_group" +
-      "\030\002 \001(\0132\".api.commons.org.AgentProfileGro" +
+      "\030\001 \001(\0132\".api.commons.org.AgentProfileGro" +
       "upR\021agentProfileGroup\"V\n\037CreateAgentProf" +
       "ileGroupResponse\0223\n\026agent_profile_group_" +
       "id\030\001 \001(\tR\023agentProfileGroupId\"U\n\036DeleteA" +
       "gentProfileGroupRequest\0223\n\026agent_profile" +
-      "_group_id\030\002 \001(\tR\023agentProfileGroupId\"!\n\037" +
+      "_group_id\030\001 \001(\tR\023agentProfileGroupId\"!\n\037" +
       "DeleteAgentProfileGroupResponse\"q\n\037Assig" +
       "nAgentProfileGroupsRequest\0223\n\026agent_prof" +
-      "ile_group_id\030\002 \001(\tR\023agentProfileGroupId\022" +
-      "\031\n\010user_ids\030\003 \003(\tR\007userIds\"\"\n AssignAgen" +
+      "ile_group_id\030\001 \001(\tR\023agentProfileGroupId\022" +
+      "\031\n\010user_ids\030\002 \003(\tR\007userIds\"\"\n AssignAgen" +
       "tProfileGroupsResponseB\276\001\n(com.tcn.cloud" +
       ".api.api.v1alpha1.org.usersB\026AgentProfil" +
       "eGroupProtoP\001\242\002\004AVOU\252\002\026Api.V1alpha1.Org." +

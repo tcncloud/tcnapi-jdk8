@@ -8,12 +8,20 @@ public interface DeleteAgentProfileGroupRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+   * <pre>
+   * Agent profile group ID to delete.
+   * </pre>
+   *
+   * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
    * @return The agentProfileGroupId.
    */
   java.lang.String getAgentProfileGroupId();
   /**
-   * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+   * <pre>
+   * Agent profile group ID to delete.
+   * </pre>
+   *
+   * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
    * @return The bytes for agentProfileGroupId.
    */
   com.google.protobuf.ByteString

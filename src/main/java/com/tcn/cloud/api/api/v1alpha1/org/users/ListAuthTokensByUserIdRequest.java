@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object userId_ = "";
   /**
    * <pre>
-   * user id to get list of auth tokens
+   * User id to get list of auth tokens.
    * </pre>
    *
    * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -69,7 +69,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * user id to get list of auth tokens
+   * User id to get list of auth tokens.
    * </pre>
    *
    * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -423,7 +423,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object userId_ = "";
     /**
      * <pre>
-     * user id to get list of auth tokens
+     * User id to get list of auth tokens.
      * </pre>
      *
      * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -443,7 +443,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * user id to get list of auth tokens
+     * User id to get list of auth tokens.
      * </pre>
      *
      * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -464,7 +464,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * user id to get list of auth tokens
+     * User id to get list of auth tokens.
      * </pre>
      *
      * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -481,7 +481,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * user id to get list of auth tokens
+     * User id to get list of auth tokens.
      * </pre>
      *
      * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -495,7 +495,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * user id to get list of auth tokens
+     * User id to get list of auth tokens.
      * </pre>
      *
      * <code>string user_id = 1 [json_name = "userId"];</code>

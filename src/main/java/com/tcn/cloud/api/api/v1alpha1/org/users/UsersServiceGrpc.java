@@ -2193,7 +2193,7 @@ public final class UsersServiceGrpc {
 
     /**
      * <pre>
-     * GetMyUser returns a single user by UserId or by AgentSid.
+     * GetMyUser returns a single user by provided claims.
      * </pre>
      */
     default void getMyUser(com.tcn.cloud.api.api.v1alpha1.org.users.GetMyUserRequest request,
@@ -2908,7 +2908,7 @@ public final class UsersServiceGrpc {
 
     /**
      * <pre>
-     * GetMyUser returns a single user by UserId or by AgentSid.
+     * GetMyUser returns a single user by provided claims.
      * </pre>
      */
     public void getMyUser(com.tcn.cloud.api.api.v1alpha1.org.users.GetMyUserRequest request,
@@ -3676,7 +3676,7 @@ public final class UsersServiceGrpc {
 
     /**
      * <pre>
-     * GetMyUser returns a single user by UserId or by AgentSid.
+     * GetMyUser returns a single user by provided claims.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.users.GetMyUserResponse getMyUser(com.tcn.cloud.api.api.v1alpha1.org.users.GetMyUserRequest request) {
@@ -4385,7 +4385,7 @@ public final class UsersServiceGrpc {
 
     /**
      * <pre>
-     * GetMyUser returns a single user by UserId or by AgentSid.
+     * GetMyUser returns a single user by provided claims.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.users.GetMyUserResponse> getMyUser(

@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.users;
 
 /**
+ * <pre>
+ * Response message for the AssignAgentProfileGroups rpc.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.users.AssignAgentProfileGroupsResponse}
  */
 public final class AssignAgentProfileGroupsResponse extends
@@ -185,6 +189,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Response message for the AssignAgentProfileGroups rpc.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.users.AssignAgentProfileGroupsResponse}
    */
   public static final class Builder extends

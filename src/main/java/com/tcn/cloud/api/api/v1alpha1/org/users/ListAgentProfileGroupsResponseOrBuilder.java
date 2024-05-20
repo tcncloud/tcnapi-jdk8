@@ -8,24 +8,44 @@ public interface ListAgentProfileGroupsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * List of agent profile groups belonging to the org ID.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.org.AgentProfileGroup> 
       getAgentProfileGroupsList();
   /**
+   * <pre>
+   * List of agent profile groups belonging to the org ID.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
    */
   com.tcn.cloud.api.api.commons.org.AgentProfileGroup getAgentProfileGroups(int index);
   /**
+   * <pre>
+   * List of agent profile groups belonging to the org ID.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
    */
   int getAgentProfileGroupsCount();
   /**
+   * <pre>
+   * List of agent profile groups belonging to the org ID.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.org.AgentProfileGroupOrBuilder> 
       getAgentProfileGroupsOrBuilderList();
   /**
+   * <pre>
+   * List of agent profile groups belonging to the org ID.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
    */
   com.tcn.cloud.api.api.commons.org.AgentProfileGroupOrBuilder getAgentProfileGroupsOrBuilder(

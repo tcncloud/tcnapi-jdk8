@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.commons.org.AuthToken authToken_;
   /**
    * <pre>
-   * newly generated auth token
+   * Newly generated auth token.
    * </pre>
    *
    * <code>.api.commons.org.AuthToken auth_token = 1 [json_name = "authToken"];</code>
@@ -58,7 +58,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * newly generated auth token
+   * Newly generated auth token.
    * </pre>
    *
    * <code>.api.commons.org.AuthToken auth_token = 1 [json_name = "authToken"];</code>
@@ -70,7 +70,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * newly generated auth token
+   * Newly generated auth token.
    * </pre>
    *
    * <code>.api.commons.org.AuthToken auth_token = 1 [json_name = "authToken"];</code>
@@ -427,7 +427,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.AuthToken, com.tcn.cloud.api.api.commons.org.AuthToken.Builder, com.tcn.cloud.api.api.commons.org.AuthTokenOrBuilder> authTokenBuilder_;
     /**
      * <pre>
-     * newly generated auth token
+     * Newly generated auth token.
      * </pre>
      *
      * <code>.api.commons.org.AuthToken auth_token = 1 [json_name = "authToken"];</code>
@@ -438,7 +438,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * newly generated auth token
+     * Newly generated auth token.
      * </pre>
      *
      * <code>.api.commons.org.AuthToken auth_token = 1 [json_name = "authToken"];</code>
@@ -453,7 +453,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * newly generated auth token
+     * Newly generated auth token.
      * </pre>
      *
      * <code>.api.commons.org.AuthToken auth_token = 1 [json_name = "authToken"];</code>
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * newly generated auth token
+     * Newly generated auth token.
      * </pre>
      *
      * <code>.api.commons.org.AuthToken auth_token = 1 [json_name = "authToken"];</code>
@@ -491,7 +491,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * newly generated auth token
+     * Newly generated auth token.
      * </pre>
      *
      * <code>.api.commons.org.AuthToken auth_token = 1 [json_name = "authToken"];</code>
@@ -514,7 +514,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * newly generated auth token
+     * Newly generated auth token.
      * </pre>
      *
      * <code>.api.commons.org.AuthToken auth_token = 1 [json_name = "authToken"];</code>
@@ -531,7 +531,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * newly generated auth token
+     * Newly generated auth token.
      * </pre>
      *
      * <code>.api.commons.org.AuthToken auth_token = 1 [json_name = "authToken"];</code>
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * newly generated auth token
+     * Newly generated auth token.
      * </pre>
      *
      * <code>.api.commons.org.AuthToken auth_token = 1 [json_name = "authToken"];</code>
@@ -558,7 +558,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * newly generated auth token
+     * Newly generated auth token.
      * </pre>
      *
      * <code>.api.commons.org.AuthToken auth_token = 1 [json_name = "authToken"];</code>

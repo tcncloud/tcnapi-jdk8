@@ -8,16 +8,28 @@ public interface GetAgentProfileGroupResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Agent response group corresponding to the ID.
+   * </pre>
+   *
    * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
    * @return Whether the agentProfileGroup field is set.
    */
   boolean hasAgentProfileGroup();
   /**
+   * <pre>
+   * Agent response group corresponding to the ID.
+   * </pre>
+   *
    * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
    * @return The agentProfileGroup.
    */
   com.tcn.cloud.api.api.commons.org.AgentProfileGroup getAgentProfileGroup();
   /**
+   * <pre>
+   * Agent response group corresponding to the ID.
+   * </pre>
+   *
    * <code>.api.commons.org.AgentProfileGroup agent_profile_group = 1 [json_name = "agentProfileGroup"];</code>
    */
   com.tcn.cloud.api.api.commons.org.AgentProfileGroupOrBuilder getAgentProfileGroupOrBuilder();

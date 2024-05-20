@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.users;
 
 /**
+ * <pre>
+ * Request message for the ListAgentProfileGroups rpc.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.users.ListAgentProfileGroupsRequest}
  */
 public final class ListAgentProfileGroupsRequest extends
@@ -185,6 +189,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request message for the ListAgentProfileGroups rpc.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.users.ListAgentProfileGroupsRequest}
    */
   public static final class Builder extends

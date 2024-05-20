@@ -9,7 +9,7 @@ public interface DeleteAuthTokenByUserIdRequestOrBuilder extends
 
   /**
    * <pre>
-   * token to delete
+   * Token to delete.
    * </pre>
    *
    * <code>string token = 1 [json_name = "token"];</code>
@@ -18,7 +18,7 @@ public interface DeleteAuthTokenByUserIdRequestOrBuilder extends
   java.lang.String getToken();
   /**
    * <pre>
-   * token to delete
+   * Token to delete.
    * </pre>
    *
    * <code>string token = 1 [json_name = "token"];</code>
@@ -29,7 +29,7 @@ public interface DeleteAuthTokenByUserIdRequestOrBuilder extends
 
   /**
    * <pre>
-   * user token belongs to
+   * User token belongs to.
    * </pre>
    *
    * <code>string user_id = 2 [json_name = "userId"];</code>
@@ -38,7 +38,7 @@ public interface DeleteAuthTokenByUserIdRequestOrBuilder extends
   java.lang.String getUserId();
   /**
    * <pre>
-   * user token belongs to
+   * User token belongs to.
    * </pre>
    *
    * <code>string user_id = 2 [json_name = "userId"];</code>

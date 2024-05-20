@@ -9,7 +9,7 @@ public interface SetAuthTokenExpirationByUserIdRequestOrBuilder extends
 
   /**
    * <pre>
-   * token to reset expiration for that belongs to the given user
+   * Token to reset expiration for that belongs to the given user.
    * </pre>
    *
    * <code>string token = 1 [json_name = "token"];</code>
@@ -18,7 +18,7 @@ public interface SetAuthTokenExpirationByUserIdRequestOrBuilder extends
   java.lang.String getToken();
   /**
    * <pre>
-   * token to reset expiration for that belongs to the given user
+   * Token to reset expiration for that belongs to the given user.
    * </pre>
    *
    * <code>string token = 1 [json_name = "token"];</code>
@@ -29,7 +29,7 @@ public interface SetAuthTokenExpirationByUserIdRequestOrBuilder extends
 
   /**
    * <pre>
-   * user token belongs to
+   * User token belongs to.
    * </pre>
    *
    * <code>string user_id = 2 [json_name = "userId"];</code>
@@ -38,7 +38,7 @@ public interface SetAuthTokenExpirationByUserIdRequestOrBuilder extends
   java.lang.String getUserId();
   /**
    * <pre>
-   * user token belongs to
+   * User token belongs to.
    * </pre>
    *
    * <code>string user_id = 2 [json_name = "userId"];</code>

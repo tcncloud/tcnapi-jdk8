@@ -9,7 +9,7 @@ public interface CreateAuthTokenByUserIdRequestOrBuilder extends
 
   /**
    * <pre>
-   * user id creating new token for
+   * User id creating new token for.
    * </pre>
    *
    * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -18,7 +18,7 @@ public interface CreateAuthTokenByUserIdRequestOrBuilder extends
   java.lang.String getUserId();
   /**
    * <pre>
-   * user id creating new token for
+   * User id creating new token for.
    * </pre>
    *
    * <code>string user_id = 1 [json_name = "userId"];</code>

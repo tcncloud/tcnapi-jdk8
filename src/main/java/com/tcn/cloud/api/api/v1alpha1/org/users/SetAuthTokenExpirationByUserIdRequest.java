@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object token_ = "";
   /**
    * <pre>
-   * token to reset expiration for that belongs to the given user
+   * Token to reset expiration for that belongs to the given user.
    * </pre>
    *
    * <code>string token = 1 [json_name = "token"];</code>
@@ -70,7 +70,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * token to reset expiration for that belongs to the given user
+   * Token to reset expiration for that belongs to the given user.
    * </pre>
    *
    * <code>string token = 1 [json_name = "token"];</code>
@@ -96,7 +96,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object userId_ = "";
   /**
    * <pre>
-   * user token belongs to
+   * User token belongs to.
    * </pre>
    *
    * <code>string user_id = 2 [json_name = "userId"];</code>
@@ -117,7 +117,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * user token belongs to
+   * User token belongs to.
    * </pre>
    *
    * <code>string user_id = 2 [json_name = "userId"];</code>
@@ -495,7 +495,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object token_ = "";
     /**
      * <pre>
-     * token to reset expiration for that belongs to the given user
+     * Token to reset expiration for that belongs to the given user.
      * </pre>
      *
      * <code>string token = 1 [json_name = "token"];</code>
@@ -515,7 +515,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * token to reset expiration for that belongs to the given user
+     * Token to reset expiration for that belongs to the given user.
      * </pre>
      *
      * <code>string token = 1 [json_name = "token"];</code>
@@ -536,7 +536,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * token to reset expiration for that belongs to the given user
+     * Token to reset expiration for that belongs to the given user.
      * </pre>
      *
      * <code>string token = 1 [json_name = "token"];</code>
@@ -553,7 +553,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * token to reset expiration for that belongs to the given user
+     * Token to reset expiration for that belongs to the given user.
      * </pre>
      *
      * <code>string token = 1 [json_name = "token"];</code>
@@ -567,7 +567,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * token to reset expiration for that belongs to the given user
+     * Token to reset expiration for that belongs to the given user.
      * </pre>
      *
      * <code>string token = 1 [json_name = "token"];</code>
@@ -587,7 +587,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object userId_ = "";
     /**
      * <pre>
-     * user token belongs to
+     * User token belongs to.
      * </pre>
      *
      * <code>string user_id = 2 [json_name = "userId"];</code>
@@ -607,7 +607,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * user token belongs to
+     * User token belongs to.
      * </pre>
      *
      * <code>string user_id = 2 [json_name = "userId"];</code>
@@ -628,7 +628,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * user token belongs to
+     * User token belongs to.
      * </pre>
      *
      * <code>string user_id = 2 [json_name = "userId"];</code>
@@ -645,7 +645,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * user token belongs to
+     * User token belongs to.
      * </pre>
      *
      * <code>string user_id = 2 [json_name = "userId"];</code>
@@ -659,7 +659,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * user token belongs to
+     * User token belongs to.
      * </pre>
      *
      * <code>string user_id = 2 [json_name = "userId"];</code>

@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.users;
 
 /**
+ * <pre>
+ * Request message for the AssignAgentProfileGroups rpc.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.users.AssignAgentProfileGroupsRequest}
  */
 public final class AssignAgentProfileGroupsRequest extends
@@ -41,11 +45,15 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.users.AssignAgentProfileGroupsRequest.class, com.tcn.cloud.api.api.v1alpha1.org.users.AssignAgentProfileGroupsRequest.Builder.class);
   }
 
-  public static final int AGENT_PROFILE_GROUP_ID_FIELD_NUMBER = 2;
+  public static final int AGENT_PROFILE_GROUP_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object agentProfileGroupId_ = "";
   /**
-   * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+   * <pre>
+   * Agent profile group ID to assign to provided users.
+   * </pre>
+   *
+   * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
    * @return The agentProfileGroupId.
    */
   @java.lang.Override
@@ -62,7 +70,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+   * <pre>
+   * Agent profile group ID to assign to provided users.
+   * </pre>
+   *
+   * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
    * @return The bytes for agentProfileGroupId.
    */
   @java.lang.Override
@@ -80,12 +92,16 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int USER_IDS_FIELD_NUMBER = 3;
+  public static final int USER_IDS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList userIds_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+   * <pre>
+   * List of user IDs to assign to the agent profile group
+   * </pre>
+   *
+   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
    * @return A list containing the userIds.
    */
   public com.google.protobuf.ProtocolStringList
@@ -93,14 +109,22 @@ private static final long serialVersionUID = 0L;
     return userIds_;
   }
   /**
-   * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+   * <pre>
+   * List of user IDs to assign to the agent profile group
+   * </pre>
+   *
+   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
    * @return The count of userIds.
    */
   public int getUserIdsCount() {
     return userIds_.size();
   }
   /**
-   * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+   * <pre>
+   * List of user IDs to assign to the agent profile group
+   * </pre>
+   *
+   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
    * @param index The index of the element to return.
    * @return The userIds at the given index.
    */
@@ -108,7 +132,11 @@ private static final long serialVersionUID = 0L;
     return userIds_.get(index);
   }
   /**
-   * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+   * <pre>
+   * List of user IDs to assign to the agent profile group
+   * </pre>
+   *
+   * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the userIds at the given index.
    */
@@ -132,10 +160,10 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentProfileGroupId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, agentProfileGroupId_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, agentProfileGroupId_);
     }
     for (int i = 0; i < userIds_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userIds_.getRaw(i));
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userIds_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -147,7 +175,7 @@ private static final long serialVersionUID = 0L;
 
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentProfileGroupId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, agentProfileGroupId_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, agentProfileGroupId_);
     }
     {
       int dataSize = 0;
@@ -291,6 +319,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request message for the AssignAgentProfileGroups rpc.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.users.AssignAgentProfileGroupsRequest}
    */
   public static final class Builder extends
@@ -454,17 +486,17 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 18: {
+            case 10: {
               agentProfileGroupId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
-            } // case 18
-            case 26: {
+            } // case 10
+            case 18: {
               java.lang.String s = input.readStringRequireUtf8();
               ensureUserIdsIsMutable();
               userIds_.add(s);
               break;
-            } // case 26
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -484,7 +516,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object agentProfileGroupId_ = "";
     /**
-     * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+     * <pre>
+     * Agent profile group ID to assign to provided users.
+     * </pre>
+     *
+     * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
      * @return The agentProfileGroupId.
      */
     public java.lang.String getAgentProfileGroupId() {
@@ -500,7 +536,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+     * <pre>
+     * Agent profile group ID to assign to provided users.
+     * </pre>
+     *
+     * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
      * @return The bytes for agentProfileGroupId.
      */
     public com.google.protobuf.ByteString
@@ -517,7 +557,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+     * <pre>
+     * Agent profile group ID to assign to provided users.
+     * </pre>
+     *
+     * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
      * @param value The agentProfileGroupId to set.
      * @return This builder for chaining.
      */
@@ -530,7 +574,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+     * <pre>
+     * Agent profile group ID to assign to provided users.
+     * </pre>
+     *
+     * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAgentProfileGroupId() {
@@ -540,7 +588,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+     * <pre>
+     * Agent profile group ID to assign to provided users.
+     * </pre>
+     *
+     * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
      * @param value The bytes for agentProfileGroupId to set.
      * @return This builder for chaining.
      */
@@ -563,7 +615,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
     }
     /**
-     * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+     * <pre>
+     * List of user IDs to assign to the agent profile group
+     * </pre>
+     *
+     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
      * @return A list containing the userIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -572,14 +628,22 @@ private static final long serialVersionUID = 0L;
       return userIds_;
     }
     /**
-     * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+     * <pre>
+     * List of user IDs to assign to the agent profile group
+     * </pre>
+     *
+     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
      * @return The count of userIds.
      */
     public int getUserIdsCount() {
       return userIds_.size();
     }
     /**
-     * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+     * <pre>
+     * List of user IDs to assign to the agent profile group
+     * </pre>
+     *
+     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
      * @param index The index of the element to return.
      * @return The userIds at the given index.
      */
@@ -587,7 +651,11 @@ private static final long serialVersionUID = 0L;
       return userIds_.get(index);
     }
     /**
-     * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+     * <pre>
+     * List of user IDs to assign to the agent profile group
+     * </pre>
+     *
+     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the userIds at the given index.
      */
@@ -596,7 +664,11 @@ private static final long serialVersionUID = 0L;
       return userIds_.getByteString(index);
     }
     /**
-     * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+     * <pre>
+     * List of user IDs to assign to the agent profile group
+     * </pre>
+     *
+     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
      * @param index The index to set the value at.
      * @param value The userIds to set.
      * @return This builder for chaining.
@@ -611,7 +683,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+     * <pre>
+     * List of user IDs to assign to the agent profile group
+     * </pre>
+     *
+     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
      * @param value The userIds to add.
      * @return This builder for chaining.
      */
@@ -625,7 +701,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+     * <pre>
+     * List of user IDs to assign to the agent profile group
+     * </pre>
+     *
+     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
      * @param values The userIds to add.
      * @return This builder for chaining.
      */
@@ -639,7 +719,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+     * <pre>
+     * List of user IDs to assign to the agent profile group
+     * </pre>
+     *
+     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
      * @return This builder for chaining.
      */
     public Builder clearUserIds() {
@@ -650,7 +734,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string user_ids = 3 [json_name = "userIds"];</code>
+     * <pre>
+     * List of user IDs to assign to the agent profile group
+     * </pre>
+     *
+     * <code>repeated string user_ids = 2 [json_name = "userIds"];</code>
      * @param value The bytes of the userIds to add.
      * @return This builder for chaining.
      */

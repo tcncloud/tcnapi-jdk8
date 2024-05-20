@@ -20,10 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListPublicUsersResponse() {
-    userId_ = "";
-    firstName_ = "";
-    lastName_ = "";
-    username_ = "";
     users_ = java.util.Collections.emptyList();
   }
 
@@ -1187,222 +1183,18 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  public static final int USER_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object userId_ = "";
-  /**
-   * <pre>
-   * The user ID of the user
-   * </pre>
-   *
-   * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
-   * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.user_id is deprecated.
-   *     See api/v1alpha1/org/users/users.proto;l=375
-   * @return The userId.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getUserId() {
-    java.lang.Object ref = userId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      userId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * The user ID of the user
-   * </pre>
-   *
-   * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
-   * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.user_id is deprecated.
-   *     See api/v1alpha1/org/users/users.proto;l=375
-   * @return The bytes for userId.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
-      getUserIdBytes() {
-    java.lang.Object ref = userId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      userId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int FIRST_NAME_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object firstName_ = "";
-  /**
-   * <pre>
-   * The user's first name
-   * </pre>
-   *
-   * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
-   * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.first_name is deprecated.
-   *     See api/v1alpha1/org/users/users.proto;l=377
-   * @return The firstName.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getFirstName() {
-    java.lang.Object ref = firstName_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      firstName_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * The user's first name
-   * </pre>
-   *
-   * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
-   * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.first_name is deprecated.
-   *     See api/v1alpha1/org/users/users.proto;l=377
-   * @return The bytes for firstName.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
-      getFirstNameBytes() {
-    java.lang.Object ref = firstName_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      firstName_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int LAST_NAME_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object lastName_ = "";
-  /**
-   * <pre>
-   * The user's last name
-   * </pre>
-   *
-   * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
-   * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.last_name is deprecated.
-   *     See api/v1alpha1/org/users/users.proto;l=379
-   * @return The lastName.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getLastName() {
-    java.lang.Object ref = lastName_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      lastName_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * The user's last name
-   * </pre>
-   *
-   * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
-   * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.last_name is deprecated.
-   *     See api/v1alpha1/org/users/users.proto;l=379
-   * @return The bytes for lastName.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
-      getLastNameBytes() {
-    java.lang.Object ref = lastName_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      lastName_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int USERNAME_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object username_ = "";
-  /**
-   * <pre>
-   * The user's username
-   * </pre>
-   *
-   * <code>string username = 4 [json_name = "username", deprecated = true];</code>
-   * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.username is deprecated.
-   *     See api/v1alpha1/org/users/users.proto;l=381
-   * @return The username.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getUsername() {
-    java.lang.Object ref = username_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      username_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * The user's username
-   * </pre>
-   *
-   * <code>string username = 4 [json_name = "username", deprecated = true];</code>
-   * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.username is deprecated.
-   *     See api/v1alpha1/org/users/users.proto;l=381
-   * @return The bytes for username.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
-      getUsernameBytes() {
-    java.lang.Object ref = username_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      username_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int USERS_FIELD_NUMBER = 5;
+  public static final int USERS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User> users_;
   /**
-   * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+   * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
    */
   @java.lang.Override
   public java.util.List<com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User> getUsersList() {
     return users_;
   }
   /**
-   * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+   * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.UserOrBuilder> 
@@ -1410,21 +1202,21 @@ private static final long serialVersionUID = 0L;
     return users_;
   }
   /**
-   * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+   * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
    */
   @java.lang.Override
   public int getUsersCount() {
     return users_.size();
   }
   /**
-   * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+   * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User getUsers(int index) {
     return users_.get(index);
   }
   /**
-   * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+   * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.UserOrBuilder getUsersOrBuilder(
@@ -1446,20 +1238,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, firstName_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, lastName_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, username_);
-    }
     for (int i = 0; i < users_.size(); i++) {
-      output.writeMessage(5, users_.get(i));
+      output.writeMessage(1, users_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -1470,21 +1250,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, firstName_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, lastName_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, username_);
-    }
     for (int i = 0; i < users_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, users_.get(i));
+        .computeMessageSize(1, users_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1501,14 +1269,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse other = (com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse) obj;
 
-    if (!getUserId()
-        .equals(other.getUserId())) return false;
-    if (!getFirstName()
-        .equals(other.getFirstName())) return false;
-    if (!getLastName()
-        .equals(other.getLastName())) return false;
-    if (!getUsername()
-        .equals(other.getUsername())) return false;
     if (!getUsersList()
         .equals(other.getUsersList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1522,14 +1282,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + USER_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getUserId().hashCode();
-    hash = (37 * hash) + FIRST_NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getFirstName().hashCode();
-    hash = (37 * hash) + LAST_NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getLastName().hashCode();
-    hash = (37 * hash) + USERNAME_FIELD_NUMBER;
-    hash = (53 * hash) + getUsername().hashCode();
     if (getUsersCount() > 0) {
       hash = (37 * hash) + USERS_FIELD_NUMBER;
       hash = (53 * hash) + getUsersList().hashCode();
@@ -1669,17 +1421,13 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      userId_ = "";
-      firstName_ = "";
-      lastName_ = "";
-      username_ = "";
       if (usersBuilder_ == null) {
         users_ = java.util.Collections.emptyList();
       } else {
         users_ = null;
         usersBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -1714,9 +1462,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse result) {
       if (usersBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           users_ = java.util.Collections.unmodifiableList(users_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.users_ = users_;
       } else {
@@ -1726,18 +1474,6 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.userId_ = userId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.firstName_ = firstName_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.lastName_ = lastName_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.username_ = username_;
-      }
     }
 
     @java.lang.Override
@@ -1784,31 +1520,11 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.getDefaultInstance()) return this;
-      if (!other.getUserId().isEmpty()) {
-        userId_ = other.userId_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
-      if (!other.getFirstName().isEmpty()) {
-        firstName_ = other.firstName_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
-      if (!other.getLastName().isEmpty()) {
-        lastName_ = other.lastName_;
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
-      if (!other.getUsername().isEmpty()) {
-        username_ = other.username_;
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
       if (usersBuilder_ == null) {
         if (!other.users_.isEmpty()) {
           if (users_.isEmpty()) {
             users_ = other.users_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureUsersIsMutable();
             users_.addAll(other.users_);
@@ -1821,7 +1537,7 @@ private static final long serialVersionUID = 0L;
             usersBuilder_.dispose();
             usersBuilder_ = null;
             users_ = other.users_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
             usersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUsersFieldBuilder() : null;
@@ -1857,26 +1573,6 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              userId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              firstName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              lastName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              username_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
               com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User m =
                   input.readMessage(
                       com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User.parser(),
@@ -1888,7 +1584,7 @@ private static final long serialVersionUID = 0L;
                 usersBuilder_.addMessage(m);
               }
               break;
-            } // case 42
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1906,420 +1602,12 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object userId_ = "";
-    /**
-     * <pre>
-     * The user ID of the user
-     * </pre>
-     *
-     * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.user_id is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=375
-     * @return The userId.
-     */
-    @java.lang.Deprecated public java.lang.String getUserId() {
-      java.lang.Object ref = userId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        userId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The user ID of the user
-     * </pre>
-     *
-     * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.user_id is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=375
-     * @return The bytes for userId.
-     */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
-        getUserIdBytes() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        userId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The user ID of the user
-     * </pre>
-     *
-     * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.user_id is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=375
-     * @param value The userId to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setUserId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      userId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The user ID of the user
-     * </pre>
-     *
-     * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.user_id is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=375
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder clearUserId() {
-      userId_ = getDefaultInstance().getUserId();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The user ID of the user
-     * </pre>
-     *
-     * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.user_id is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=375
-     * @param value The bytes for userId to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setUserIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      userId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object firstName_ = "";
-    /**
-     * <pre>
-     * The user's first name
-     * </pre>
-     *
-     * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.first_name is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=377
-     * @return The firstName.
-     */
-    @java.lang.Deprecated public java.lang.String getFirstName() {
-      java.lang.Object ref = firstName_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        firstName_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The user's first name
-     * </pre>
-     *
-     * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.first_name is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=377
-     * @return The bytes for firstName.
-     */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
-        getFirstNameBytes() {
-      java.lang.Object ref = firstName_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        firstName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The user's first name
-     * </pre>
-     *
-     * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.first_name is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=377
-     * @param value The firstName to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setFirstName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      firstName_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The user's first name
-     * </pre>
-     *
-     * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.first_name is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=377
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder clearFirstName() {
-      firstName_ = getDefaultInstance().getFirstName();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The user's first name
-     * </pre>
-     *
-     * <code>string first_name = 2 [json_name = "firstName", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.first_name is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=377
-     * @param value The bytes for firstName to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setFirstNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      firstName_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object lastName_ = "";
-    /**
-     * <pre>
-     * The user's last name
-     * </pre>
-     *
-     * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.last_name is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=379
-     * @return The lastName.
-     */
-    @java.lang.Deprecated public java.lang.String getLastName() {
-      java.lang.Object ref = lastName_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        lastName_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The user's last name
-     * </pre>
-     *
-     * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.last_name is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=379
-     * @return The bytes for lastName.
-     */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
-        getLastNameBytes() {
-      java.lang.Object ref = lastName_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        lastName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The user's last name
-     * </pre>
-     *
-     * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.last_name is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=379
-     * @param value The lastName to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setLastName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      lastName_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The user's last name
-     * </pre>
-     *
-     * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.last_name is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=379
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder clearLastName() {
-      lastName_ = getDefaultInstance().getLastName();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The user's last name
-     * </pre>
-     *
-     * <code>string last_name = 3 [json_name = "lastName", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.last_name is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=379
-     * @param value The bytes for lastName to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setLastNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      lastName_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object username_ = "";
-    /**
-     * <pre>
-     * The user's username
-     * </pre>
-     *
-     * <code>string username = 4 [json_name = "username", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.username is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=381
-     * @return The username.
-     */
-    @java.lang.Deprecated public java.lang.String getUsername() {
-      java.lang.Object ref = username_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        username_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The user's username
-     * </pre>
-     *
-     * <code>string username = 4 [json_name = "username", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.username is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=381
-     * @return The bytes for username.
-     */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
-        getUsernameBytes() {
-      java.lang.Object ref = username_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        username_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The user's username
-     * </pre>
-     *
-     * <code>string username = 4 [json_name = "username", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.username is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=381
-     * @param value The username to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setUsername(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      username_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The user's username
-     * </pre>
-     *
-     * <code>string username = 4 [json_name = "username", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.username is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=381
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder clearUsername() {
-      username_ = getDefaultInstance().getUsername();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The user's username
-     * </pre>
-     *
-     * <code>string username = 4 [json_name = "username", deprecated = true];</code>
-     * @deprecated api.v1alpha1.org.users.ListPublicUsersResponse.username is deprecated.
-     *     See api/v1alpha1/org/users/users.proto;l=381
-     * @param value The bytes for username to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setUsernameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      username_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User> users_ =
       java.util.Collections.emptyList();
     private void ensureUsersIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         users_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User>(users_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -2327,7 +1615,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User, com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User.Builder, com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.UserOrBuilder> usersBuilder_;
 
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User> getUsersList() {
       if (usersBuilder_ == null) {
@@ -2337,7 +1625,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public int getUsersCount() {
       if (usersBuilder_ == null) {
@@ -2347,7 +1635,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User getUsers(int index) {
       if (usersBuilder_ == null) {
@@ -2357,7 +1645,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public Builder setUsers(
         int index, com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User value) {
@@ -2374,7 +1662,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public Builder setUsers(
         int index, com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User.Builder builderForValue) {
@@ -2388,7 +1676,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public Builder addUsers(com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User value) {
       if (usersBuilder_ == null) {
@@ -2404,7 +1692,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public Builder addUsers(
         int index, com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User value) {
@@ -2421,7 +1709,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public Builder addUsers(
         com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User.Builder builderForValue) {
@@ -2435,7 +1723,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public Builder addUsers(
         int index, com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User.Builder builderForValue) {
@@ -2449,7 +1737,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public Builder addAllUsers(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User> values) {
@@ -2464,12 +1752,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public Builder clearUsers() {
       if (usersBuilder_ == null) {
         users_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         usersBuilder_.clear();
@@ -2477,7 +1765,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public Builder removeUsers(int index) {
       if (usersBuilder_ == null) {
@@ -2490,14 +1778,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User.Builder getUsersBuilder(
         int index) {
       return getUsersFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.UserOrBuilder getUsersOrBuilder(
         int index) {
@@ -2507,7 +1795,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.UserOrBuilder> 
          getUsersOrBuilderList() {
@@ -2518,14 +1806,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User.Builder addUsersBuilder() {
       return getUsersFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User.Builder addUsersBuilder(
         int index) {
@@ -2533,7 +1821,7 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 5 [json_name = "users"];</code>
+     * <code>repeated .api.v1alpha1.org.users.ListPublicUsersResponse.User users = 1 [json_name = "users"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User.Builder> 
          getUsersBuilderList() {
@@ -2546,7 +1834,7 @@ private static final long serialVersionUID = 0L;
         usersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User, com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.User.Builder, com.tcn.cloud.api.api.v1alpha1.org.users.ListPublicUsersResponse.UserOrBuilder>(
                 users_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         users_ = null;

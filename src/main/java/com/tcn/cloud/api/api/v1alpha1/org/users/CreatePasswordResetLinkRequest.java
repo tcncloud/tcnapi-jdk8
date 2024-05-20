@@ -82,44 +82,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int EXPIRATION_FIELD_NUMBER = 2;
-  private com.google.protobuf.Timestamp expiration_;
-  /**
-   * <pre>
-   * DEPRECATED: no longer used.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration"];</code>
-   * @return Whether the expiration field is set.
-   */
-  @java.lang.Override
-  public boolean hasExpiration() {
-    return expiration_ != null;
-  }
-  /**
-   * <pre>
-   * DEPRECATED: no longer used.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration"];</code>
-   * @return The expiration.
-   */
-  @java.lang.Override
-  public com.google.protobuf.Timestamp getExpiration() {
-    return expiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiration_;
-  }
-  /**
-   * <pre>
-   * DEPRECATED: no longer used.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getExpirationOrBuilder() {
-    return expiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiration_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -137,9 +99,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
     }
-    if (expiration_ != null) {
-      output.writeMessage(2, getExpiration());
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -151,10 +110,6 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
-    }
-    if (expiration_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getExpiration());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -173,11 +128,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getUserId()
         .equals(other.getUserId())) return false;
-    if (hasExpiration() != other.hasExpiration()) return false;
-    if (hasExpiration()) {
-      if (!getExpiration()
-          .equals(other.getExpiration())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -191,10 +141,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getUserId().hashCode();
-    if (hasExpiration()) {
-      hash = (37 * hash) + EXPIRATION_FIELD_NUMBER;
-      hash = (53 * hash) + getExpiration().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -331,11 +277,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       userId_ = "";
-      expiration_ = null;
-      if (expirationBuilder_ != null) {
-        expirationBuilder_.dispose();
-        expirationBuilder_ = null;
-      }
       return this;
     }
 
@@ -371,11 +312,6 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.userId_ = userId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.expiration_ = expirationBuilder_ == null
-            ? expiration_
-            : expirationBuilder_.build();
       }
     }
 
@@ -428,9 +364,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (other.hasExpiration()) {
-        mergeExpiration(other.getExpiration());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -462,13 +395,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              input.readMessage(
-                  getExpirationFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -556,161 +482,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
-    }
-
-    private com.google.protobuf.Timestamp expiration_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expirationBuilder_;
-    /**
-     * <pre>
-     * DEPRECATED: no longer used.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration"];</code>
-     * @return Whether the expiration field is set.
-     */
-    public boolean hasExpiration() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <pre>
-     * DEPRECATED: no longer used.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration"];</code>
-     * @return The expiration.
-     */
-    public com.google.protobuf.Timestamp getExpiration() {
-      if (expirationBuilder_ == null) {
-        return expiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiration_;
-      } else {
-        return expirationBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * DEPRECATED: no longer used.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration"];</code>
-     */
-    public Builder setExpiration(com.google.protobuf.Timestamp value) {
-      if (expirationBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        expiration_ = value;
-      } else {
-        expirationBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * DEPRECATED: no longer used.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration"];</code>
-     */
-    public Builder setExpiration(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (expirationBuilder_ == null) {
-        expiration_ = builderForValue.build();
-      } else {
-        expirationBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * DEPRECATED: no longer used.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration"];</code>
-     */
-    public Builder mergeExpiration(com.google.protobuf.Timestamp value) {
-      if (expirationBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          expiration_ != null &&
-          expiration_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getExpirationBuilder().mergeFrom(value);
-        } else {
-          expiration_ = value;
-        }
-      } else {
-        expirationBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * DEPRECATED: no longer used.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration"];</code>
-     */
-    public Builder clearExpiration() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      expiration_ = null;
-      if (expirationBuilder_ != null) {
-        expirationBuilder_.dispose();
-        expirationBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * DEPRECATED: no longer used.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration"];</code>
-     */
-    public com.google.protobuf.Timestamp.Builder getExpirationBuilder() {
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return getExpirationFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * DEPRECATED: no longer used.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration"];</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getExpirationOrBuilder() {
-      if (expirationBuilder_ != null) {
-        return expirationBuilder_.getMessageOrBuilder();
-      } else {
-        return expiration_ == null ?
-            com.google.protobuf.Timestamp.getDefaultInstance() : expiration_;
-      }
-    }
-    /**
-     * <pre>
-     * DEPRECATED: no longer used.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp expiration = 2 [json_name = "expiration"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getExpirationFieldBuilder() {
-      if (expirationBuilder_ == null) {
-        expirationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                getExpiration(),
-                getParentForChildren(),
-                isClean());
-        expiration_ = null;
-      }
-      return expirationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

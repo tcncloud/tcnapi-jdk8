@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.users;
 
 /**
+ * <pre>
+ * Response message for the ListAgentProfileGroups rpc.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.users.ListAgentProfileGroupsResponse}
  */
 public final class ListAgentProfileGroupsResponse extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.AgentProfileGroup> agentProfileGroups_;
   /**
+   * <pre>
+   * List of agent profile groups belonging to the org ID.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
    */
   @java.lang.Override
@@ -50,6 +58,10 @@ private static final long serialVersionUID = 0L;
     return agentProfileGroups_;
   }
   /**
+   * <pre>
+   * List of agent profile groups belonging to the org ID.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
    */
   @java.lang.Override
@@ -58,6 +70,10 @@ private static final long serialVersionUID = 0L;
     return agentProfileGroups_;
   }
   /**
+   * <pre>
+   * List of agent profile groups belonging to the org ID.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
    */
   @java.lang.Override
@@ -65,6 +81,10 @@ private static final long serialVersionUID = 0L;
     return agentProfileGroups_.size();
   }
   /**
+   * <pre>
+   * List of agent profile groups belonging to the org ID.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
    */
   @java.lang.Override
@@ -72,6 +92,10 @@ private static final long serialVersionUID = 0L;
     return agentProfileGroups_.get(index);
   }
   /**
+   * <pre>
+   * List of agent profile groups belonging to the org ID.
+   * </pre>
+   *
    * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
    */
   @java.lang.Override
@@ -240,6 +264,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Response message for the ListAgentProfileGroups rpc.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.users.ListAgentProfileGroupsResponse}
    */
   public static final class Builder extends
@@ -467,6 +495,10 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.AgentProfileGroup, com.tcn.cloud.api.api.commons.org.AgentProfileGroup.Builder, com.tcn.cloud.api.api.commons.org.AgentProfileGroupOrBuilder> agentProfileGroupsBuilder_;
 
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.AgentProfileGroup> getAgentProfileGroupsList() {
@@ -477,6 +509,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public int getAgentProfileGroupsCount() {
@@ -487,6 +523,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.AgentProfileGroup getAgentProfileGroups(int index) {
@@ -497,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public Builder setAgentProfileGroups(
@@ -514,6 +558,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public Builder setAgentProfileGroups(
@@ -528,6 +576,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public Builder addAgentProfileGroups(com.tcn.cloud.api.api.commons.org.AgentProfileGroup value) {
@@ -544,6 +596,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public Builder addAgentProfileGroups(
@@ -561,6 +617,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public Builder addAgentProfileGroups(
@@ -575,6 +635,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public Builder addAgentProfileGroups(
@@ -589,6 +653,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public Builder addAllAgentProfileGroups(
@@ -604,6 +672,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public Builder clearAgentProfileGroups() {
@@ -617,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public Builder removeAgentProfileGroups(int index) {
@@ -630,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.AgentProfileGroup.Builder getAgentProfileGroupsBuilder(
@@ -637,6 +717,10 @@ private static final long serialVersionUID = 0L;
       return getAgentProfileGroupsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.AgentProfileGroupOrBuilder getAgentProfileGroupsOrBuilder(
@@ -647,6 +731,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.AgentProfileGroupOrBuilder> 
@@ -658,6 +746,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.AgentProfileGroup.Builder addAgentProfileGroupsBuilder() {
@@ -665,6 +757,10 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.org.AgentProfileGroup.getDefaultInstance());
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.AgentProfileGroup.Builder addAgentProfileGroupsBuilder(
@@ -673,6 +769,10 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.commons.org.AgentProfileGroup.getDefaultInstance());
     }
     /**
+     * <pre>
+     * List of agent profile groups belonging to the org ID.
+     * </pre>
+     *
      * <code>repeated .api.commons.org.AgentProfileGroup agent_profile_groups = 1 [json_name = "agentProfileGroups"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.AgentProfileGroup.Builder> 

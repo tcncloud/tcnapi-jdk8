@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.users;
 
 /**
+ * <pre>
+ * Request message for the DeleteAgentProfileGroup rpc.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.users.DeleteAgentProfileGroupRequest}
  */
 public final class DeleteAgentProfileGroupRequest extends
@@ -39,11 +43,15 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.users.DeleteAgentProfileGroupRequest.class, com.tcn.cloud.api.api.v1alpha1.org.users.DeleteAgentProfileGroupRequest.Builder.class);
   }
 
-  public static final int AGENT_PROFILE_GROUP_ID_FIELD_NUMBER = 2;
+  public static final int AGENT_PROFILE_GROUP_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object agentProfileGroupId_ = "";
   /**
-   * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+   * <pre>
+   * Agent profile group ID to delete.
+   * </pre>
+   *
+   * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
    * @return The agentProfileGroupId.
    */
   @java.lang.Override
@@ -60,7 +68,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+   * <pre>
+   * Agent profile group ID to delete.
+   * </pre>
+   *
+   * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
    * @return The bytes for agentProfileGroupId.
    */
   @java.lang.Override
@@ -93,7 +105,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentProfileGroupId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, agentProfileGroupId_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, agentProfileGroupId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -105,7 +117,7 @@ private static final long serialVersionUID = 0L;
 
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentProfileGroupId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, agentProfileGroupId_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, agentProfileGroupId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -235,6 +247,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Request message for the DeleteAgentProfileGroup rpc.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.users.DeleteAgentProfileGroupRequest}
    */
   public static final class Builder extends
@@ -382,11 +398,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 18: {
+            case 10: {
               agentProfileGroupId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
-            } // case 18
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -406,7 +422,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object agentProfileGroupId_ = "";
     /**
-     * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+     * <pre>
+     * Agent profile group ID to delete.
+     * </pre>
+     *
+     * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
      * @return The agentProfileGroupId.
      */
     public java.lang.String getAgentProfileGroupId() {
@@ -422,7 +442,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+     * <pre>
+     * Agent profile group ID to delete.
+     * </pre>
+     *
+     * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
      * @return The bytes for agentProfileGroupId.
      */
     public com.google.protobuf.ByteString
@@ -439,7 +463,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+     * <pre>
+     * Agent profile group ID to delete.
+     * </pre>
+     *
+     * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
      * @param value The agentProfileGroupId to set.
      * @return This builder for chaining.
      */
@@ -452,7 +480,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+     * <pre>
+     * Agent profile group ID to delete.
+     * </pre>
+     *
+     * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAgentProfileGroupId() {
@@ -462,7 +494,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+     * <pre>
+     * Agent profile group ID to delete.
+     * </pre>
+     *
+     * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
      * @param value The bytes for agentProfileGroupId to set.
      * @return This builder for chaining.
      */

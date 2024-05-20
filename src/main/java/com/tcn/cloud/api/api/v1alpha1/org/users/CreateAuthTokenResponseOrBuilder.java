@@ -9,7 +9,7 @@ public interface CreateAuthTokenResponseOrBuilder extends
 
   /**
    * <pre>
-   * newly generated auth token
+   * Newly generated auth token.
    * </pre>
    *
    * <code>.api.commons.org.AuthToken auth_token = 1 [json_name = "authToken"];</code>
@@ -18,7 +18,7 @@ public interface CreateAuthTokenResponseOrBuilder extends
   boolean hasAuthToken();
   /**
    * <pre>
-   * newly generated auth token
+   * Newly generated auth token.
    * </pre>
    *
    * <code>.api.commons.org.AuthToken auth_token = 1 [json_name = "authToken"];</code>
@@ -27,7 +27,7 @@ public interface CreateAuthTokenResponseOrBuilder extends
   com.tcn.cloud.api.api.commons.org.AuthToken getAuthToken();
   /**
    * <pre>
-   * newly generated auth token
+   * Newly generated auth token.
    * </pre>
    *
    * <code>.api.commons.org.AuthToken auth_token = 1 [json_name = "authToken"];</code>
