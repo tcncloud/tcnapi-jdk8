@@ -666,6 +666,37 @@ public final class ComplianceGrpc {
     return getProcessScrubListUploadMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest,
+      com.google.longrunning.Operation> getScrubListDownloadMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ScrubListDownload",
+      requestType = com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest.class,
+      responseType = com.google.longrunning.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest,
+      com.google.longrunning.Operation> getScrubListDownloadMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest, com.google.longrunning.Operation> getScrubListDownloadMethod;
+    if ((getScrubListDownloadMethod = ComplianceGrpc.getScrubListDownloadMethod) == null) {
+      synchronized (ComplianceGrpc.class) {
+        if ((getScrubListDownloadMethod = ComplianceGrpc.getScrubListDownloadMethod) == null) {
+          ComplianceGrpc.getScrubListDownloadMethod = getScrubListDownloadMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest, com.google.longrunning.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ScrubListDownload"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.longrunning.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ScrubListDownload"))
+              .build();
+        }
+      }
+    }
+    return getScrubListDownloadMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq,
       com.google.longrunning.Operation> getProcessScrubListDeleteUploadMethod;
 
@@ -1596,6 +1627,37 @@ public final class ComplianceGrpc {
     return getProcessConsentListDeleteUploadMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ConsentListDownloadRequest,
+      com.google.longrunning.Operation> getConsentListDownloadMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ConsentListDownload",
+      requestType = com.tcn.cloud.api.api.v0alpha.ConsentListDownloadRequest.class,
+      responseType = com.google.longrunning.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ConsentListDownloadRequest,
+      com.google.longrunning.Operation> getConsentListDownloadMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ConsentListDownloadRequest, com.google.longrunning.Operation> getConsentListDownloadMethod;
+    if ((getConsentListDownloadMethod = ComplianceGrpc.getConsentListDownloadMethod) == null) {
+      synchronized (ComplianceGrpc.class) {
+        if ((getConsentListDownloadMethod = ComplianceGrpc.getConsentListDownloadMethod) == null) {
+          ComplianceGrpc.getConsentListDownloadMethod = getConsentListDownloadMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ConsentListDownloadRequest, com.google.longrunning.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ConsentListDownload"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ConsentListDownloadRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.longrunning.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ConsentListDownload"))
+              .build();
+        }
+      }
+    }
+    return getConsentListDownloadMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq,
       com.google.protobuf.Empty> getEnableConsentProfileMethod;
 
@@ -2130,7 +2192,7 @@ public final class ComplianceGrpc {
      * The method will return a ScrubListRes message that will
      * contain the results.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE or PERMISSION_AGENT_COMPLIANCE_SCRUBLIST_OPTIONS
      * </pre>
      */
     default void addScrubListEntries(com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq request,
@@ -2143,7 +2205,7 @@ public final class ComplianceGrpc {
      * Update scrub list entry defined by UpdateScrubEntryReq message.
      * The method will update a scrub list entry with the specified fields
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE
      * </pre>
      */
     default void updateScrubEntry(com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq request,
@@ -2209,6 +2271,13 @@ public final class ComplianceGrpc {
 
     /**
      */
+    default void scrubListDownload(com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getScrubListDownloadMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void processScrubListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessScrubListDeleteUploadMethod(), responseObserver);
@@ -2225,7 +2294,7 @@ public final class ComplianceGrpc {
      * <pre>
      * Purge entries from a scrub list defined by PurgeScrubListReq message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE
      * </pre>
      */
     default void purgeScrubList(com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq request,
@@ -2549,7 +2618,7 @@ public final class ComplianceGrpc {
      * Process a consent delete list defined by DeleteConsentReq message
      * The method will return a google.protobuf.Empty message
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     default void processConsentListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq request,
@@ -2559,12 +2628,25 @@ public final class ComplianceGrpc {
 
     /**
      * <pre>
+     * Download a consent list defined by ConsentListDownloadRequest message
+     * The method will return a google.longrunning.Operation message
+     * Required permissions:
+     *      PERMISSION_COMPLIANCE_CONSENT
+     * </pre>
+     */
+    default void consentListDownload(com.tcn.cloud.api.api.v0alpha.ConsentListDownloadRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getConsentListDownloadMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Enable a consent profile defined by EnableConsentProfileReq message.
      * Set the disabled field to false for the specified
      * consent_profile_id field.
      * The method will return a google.protobuf.Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     default void enableConsentProfile(com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq request,
@@ -2579,7 +2661,7 @@ public final class ComplianceGrpc {
      * consent_profile_id field.
      * The method will return a google.protobuf.Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     default void disableConsentProfile(com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq request,
@@ -2595,7 +2677,7 @@ public final class ComplianceGrpc {
      * containing consent_profile_id, profile_name, the number of consents
      * belonging to the profile, and disabled.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     default void listConsentProfiles(com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq request,
@@ -2609,7 +2691,7 @@ public final class ComplianceGrpc {
      * The method will return a GetConsentUploadUrlRes messages
      * containing a url with which to upload an import file.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     default void getConsentUploadUrl(com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq request,
@@ -2622,7 +2704,7 @@ public final class ComplianceGrpc {
      * Process consent upload defined by ProcessConsentUploadReq message.
      * The method will process an uploaded consent file.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     default void processConsentUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq request,
@@ -2648,7 +2730,7 @@ public final class ComplianceGrpc {
      * The method will return a ListConsentTopicsRes message
      * containing topic, org_id, and deleted.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     default void listConsentTopics(com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq request,
@@ -2662,7 +2744,7 @@ public final class ComplianceGrpc {
      * for the specified topic and org_id.
      * The method will return a ConsentTopic message/entity.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     default void getConsentTopic(com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq request,
@@ -2675,7 +2757,7 @@ public final class ComplianceGrpc {
      * Create a consent topic defined by ConsentTopic
      * message.  The method will return an Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     default void createConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request,
@@ -2688,7 +2770,7 @@ public final class ComplianceGrpc {
      * Delete a consent topic defined by ConsentTopic message.
      * The method will return an Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     default void deleteConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request,
@@ -2701,7 +2783,7 @@ public final class ComplianceGrpc {
      * Update a consent topic defined by UpdateConsentTopicReq message.
      * The method will return an Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     default void updateConsentTopic(com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq request,
@@ -2859,7 +2941,7 @@ public final class ComplianceGrpc {
      * The method will return a ScrubListRes message that will
      * contain the results.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE or PERMISSION_AGENT_COMPLIANCE_SCRUBLIST_OPTIONS
      * </pre>
      */
     public void addScrubListEntries(com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq request,
@@ -2873,7 +2955,7 @@ public final class ComplianceGrpc {
      * Update scrub list entry defined by UpdateScrubEntryReq message.
      * The method will update a scrub list entry with the specified fields
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE
      * </pre>
      */
     public void updateScrubEntry(com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq request,
@@ -2948,6 +3030,14 @@ public final class ComplianceGrpc {
 
     /**
      */
+    public void scrubListDownload(com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getScrubListDownloadMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void processScrubListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -2966,7 +3056,7 @@ public final class ComplianceGrpc {
      * <pre>
      * Purge entries from a scrub list defined by PurgeScrubListReq message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE
      * </pre>
      */
     public void purgeScrubList(com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq request,
@@ -3317,7 +3407,7 @@ public final class ComplianceGrpc {
      * Process a consent delete list defined by DeleteConsentReq message
      * The method will return a google.protobuf.Empty message
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public void processConsentListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq request,
@@ -3328,12 +3418,26 @@ public final class ComplianceGrpc {
 
     /**
      * <pre>
+     * Download a consent list defined by ConsentListDownloadRequest message
+     * The method will return a google.longrunning.Operation message
+     * Required permissions:
+     *      PERMISSION_COMPLIANCE_CONSENT
+     * </pre>
+     */
+    public void consentListDownload(com.tcn.cloud.api.api.v0alpha.ConsentListDownloadRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getConsentListDownloadMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Enable a consent profile defined by EnableConsentProfileReq message.
      * Set the disabled field to false for the specified
      * consent_profile_id field.
      * The method will return a google.protobuf.Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public void enableConsentProfile(com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq request,
@@ -3349,7 +3453,7 @@ public final class ComplianceGrpc {
      * consent_profile_id field.
      * The method will return a google.protobuf.Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public void disableConsentProfile(com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq request,
@@ -3366,7 +3470,7 @@ public final class ComplianceGrpc {
      * containing consent_profile_id, profile_name, the number of consents
      * belonging to the profile, and disabled.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public void listConsentProfiles(com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq request,
@@ -3381,7 +3485,7 @@ public final class ComplianceGrpc {
      * The method will return a GetConsentUploadUrlRes messages
      * containing a url with which to upload an import file.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public void getConsentUploadUrl(com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq request,
@@ -3395,7 +3499,7 @@ public final class ComplianceGrpc {
      * Process consent upload defined by ProcessConsentUploadReq message.
      * The method will process an uploaded consent file.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public void processConsentUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq request,
@@ -3423,7 +3527,7 @@ public final class ComplianceGrpc {
      * The method will return a ListConsentTopicsRes message
      * containing topic, org_id, and deleted.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public void listConsentTopics(com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq request,
@@ -3438,7 +3542,7 @@ public final class ComplianceGrpc {
      * for the specified topic and org_id.
      * The method will return a ConsentTopic message/entity.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public void getConsentTopic(com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq request,
@@ -3452,7 +3556,7 @@ public final class ComplianceGrpc {
      * Create a consent topic defined by ConsentTopic
      * message.  The method will return an Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public void createConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request,
@@ -3466,7 +3570,7 @@ public final class ComplianceGrpc {
      * Delete a consent topic defined by ConsentTopic message.
      * The method will return an Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public void deleteConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request,
@@ -3480,7 +3584,7 @@ public final class ComplianceGrpc {
      * Update a consent topic defined by UpdateConsentTopicReq message.
      * The method will return an Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public void updateConsentTopic(com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq request,
@@ -3620,7 +3724,7 @@ public final class ComplianceGrpc {
      * The method will return a ScrubListRes message that will
      * contain the results.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE or PERMISSION_AGENT_COMPLIANCE_SCRUBLIST_OPTIONS
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ScrubListRes addScrubListEntries(com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq request) {
@@ -3633,7 +3737,7 @@ public final class ComplianceGrpc {
      * Update scrub list entry defined by UpdateScrubEntryReq message.
      * The method will update a scrub list entry with the specified fields
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryRes updateScrubEntry(com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq request) {
@@ -3699,6 +3803,13 @@ public final class ComplianceGrpc {
 
     /**
      */
+    public com.google.longrunning.Operation scrubListDownload(com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getScrubListDownloadMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public com.google.longrunning.Operation processScrubListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProcessScrubListDeleteUploadMethod(), getCallOptions(), request);
@@ -3715,7 +3826,7 @@ public final class ComplianceGrpc {
      * <pre>
      * Purge entries from a scrub list defined by PurgeScrubListReq message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.PurgeScrubListRes purgeScrubList(com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq request) {
@@ -4039,7 +4150,7 @@ public final class ComplianceGrpc {
      * Process a consent delete list defined by DeleteConsentReq message
      * The method will return a google.protobuf.Empty message
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.google.longrunning.Operation processConsentListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq request) {
@@ -4049,12 +4160,25 @@ public final class ComplianceGrpc {
 
     /**
      * <pre>
+     * Download a consent list defined by ConsentListDownloadRequest message
+     * The method will return a google.longrunning.Operation message
+     * Required permissions:
+     *      PERMISSION_COMPLIANCE_CONSENT
+     * </pre>
+     */
+    public com.google.longrunning.Operation consentListDownload(com.tcn.cloud.api.api.v0alpha.ConsentListDownloadRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getConsentListDownloadMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Enable a consent profile defined by EnableConsentProfileReq message.
      * Set the disabled field to false for the specified
      * consent_profile_id field.
      * The method will return a google.protobuf.Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.google.protobuf.Empty enableConsentProfile(com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq request) {
@@ -4069,7 +4193,7 @@ public final class ComplianceGrpc {
      * consent_profile_id field.
      * The method will return a google.protobuf.Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.google.protobuf.Empty disableConsentProfile(com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq request) {
@@ -4085,7 +4209,7 @@ public final class ComplianceGrpc {
      * containing consent_profile_id, profile_name, the number of consents
      * belonging to the profile, and disabled.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListConsentProfilesRes listConsentProfiles(com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq request) {
@@ -4099,7 +4223,7 @@ public final class ComplianceGrpc {
      * The method will return a GetConsentUploadUrlRes messages
      * containing a url with which to upload an import file.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlRes getConsentUploadUrl(com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq request) {
@@ -4112,7 +4236,7 @@ public final class ComplianceGrpc {
      * Process consent upload defined by ProcessConsentUploadReq message.
      * The method will process an uploaded consent file.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.google.longrunning.Operation processConsentUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq request) {
@@ -4138,7 +4262,7 @@ public final class ComplianceGrpc {
      * The method will return a ListConsentTopicsRes message
      * containing topic, org_id, and deleted.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListConsentTopicsRes listConsentTopics(com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq request) {
@@ -4152,7 +4276,7 @@ public final class ComplianceGrpc {
      * for the specified topic and org_id.
      * The method will return a ConsentTopic message/entity.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ConsentTopic getConsentTopic(com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq request) {
@@ -4165,7 +4289,7 @@ public final class ComplianceGrpc {
      * Create a consent topic defined by ConsentTopic
      * message.  The method will return an Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.Empty createConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request) {
@@ -4178,7 +4302,7 @@ public final class ComplianceGrpc {
      * Delete a consent topic defined by ConsentTopic message.
      * The method will return an Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.Empty deleteConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request) {
@@ -4191,7 +4315,7 @@ public final class ComplianceGrpc {
      * Update a consent topic defined by UpdateConsentTopicReq message.
      * The method will return an Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.Empty updateConsentTopic(com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq request) {
@@ -4330,7 +4454,7 @@ public final class ComplianceGrpc {
      * The method will return a ScrubListRes message that will
      * contain the results.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE or PERMISSION_AGENT_COMPLIANCE_SCRUBLIST_OPTIONS
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ScrubListRes> addScrubListEntries(
@@ -4344,7 +4468,7 @@ public final class ComplianceGrpc {
      * Update scrub list entry defined by UpdateScrubEntryReq message.
      * The method will update a scrub list entry with the specified fields
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryRes> updateScrubEntry(
@@ -4419,6 +4543,14 @@ public final class ComplianceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> scrubListDownload(
+        com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getScrubListDownloadMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> processScrubListDeleteUpload(
         com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -4437,7 +4569,7 @@ public final class ComplianceGrpc {
      * <pre>
      * Purge entries from a scrub list defined by PurgeScrubListReq message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.PurgeScrubListRes> purgeScrubList(
@@ -4788,7 +4920,7 @@ public final class ComplianceGrpc {
      * Process a consent delete list defined by DeleteConsentReq message
      * The method will return a google.protobuf.Empty message
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> processConsentListDeleteUpload(
@@ -4799,12 +4931,26 @@ public final class ComplianceGrpc {
 
     /**
      * <pre>
+     * Download a consent list defined by ConsentListDownloadRequest message
+     * The method will return a google.longrunning.Operation message
+     * Required permissions:
+     *      PERMISSION_COMPLIANCE_CONSENT
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> consentListDownload(
+        com.tcn.cloud.api.api.v0alpha.ConsentListDownloadRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getConsentListDownloadMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Enable a consent profile defined by EnableConsentProfileReq message.
      * Set the disabled field to false for the specified
      * consent_profile_id field.
      * The method will return a google.protobuf.Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> enableConsentProfile(
@@ -4820,7 +4966,7 @@ public final class ComplianceGrpc {
      * consent_profile_id field.
      * The method will return a google.protobuf.Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> disableConsentProfile(
@@ -4837,7 +4983,7 @@ public final class ComplianceGrpc {
      * containing consent_profile_id, profile_name, the number of consents
      * belonging to the profile, and disabled.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListConsentProfilesRes> listConsentProfiles(
@@ -4852,7 +4998,7 @@ public final class ComplianceGrpc {
      * The method will return a GetConsentUploadUrlRes messages
      * containing a url with which to upload an import file.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlRes> getConsentUploadUrl(
@@ -4866,7 +5012,7 @@ public final class ComplianceGrpc {
      * Process consent upload defined by ProcessConsentUploadReq message.
      * The method will process an uploaded consent file.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> processConsentUpload(
@@ -4894,7 +5040,7 @@ public final class ComplianceGrpc {
      * The method will return a ListConsentTopicsRes message
      * containing topic, org_id, and deleted.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListConsentTopicsRes> listConsentTopics(
@@ -4909,7 +5055,7 @@ public final class ComplianceGrpc {
      * for the specified topic and org_id.
      * The method will return a ConsentTopic message/entity.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ConsentTopic> getConsentTopic(
@@ -4923,7 +5069,7 @@ public final class ComplianceGrpc {
      * Create a consent topic defined by ConsentTopic
      * message.  The method will return an Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Empty> createConsentTopic(
@@ -4937,7 +5083,7 @@ public final class ComplianceGrpc {
      * Delete a consent topic defined by ConsentTopic message.
      * The method will return an Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Empty> deleteConsentTopic(
@@ -4951,7 +5097,7 @@ public final class ComplianceGrpc {
      * Update a consent topic defined by UpdateConsentTopicReq message.
      * The method will return an Empty message.
      * Required permissions:
-     *      EXECUTE_DO_NOT_CALL_LIST
+     *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Empty> updateConsentTopic(
@@ -5012,49 +5158,51 @@ public final class ComplianceGrpc {
   private static final int METHODID_SEARCH_SCRUB_LIST = 18;
   private static final int METHODID_GET_SCRUB_LIST_UPLOAD_URL = 19;
   private static final int METHODID_PROCESS_SCRUB_LIST_UPLOAD = 20;
-  private static final int METHODID_PROCESS_SCRUB_LIST_DELETE_UPLOAD = 21;
-  private static final int METHODID_EXPORT_SCRUB_LIST = 22;
-  private static final int METHODID_PURGE_SCRUB_LIST = 23;
-  private static final int METHODID_CREATE_SCENARIO = 24;
-  private static final int METHODID_GET_SCENARIO = 25;
-  private static final int METHODID_UPDATE_SCENARIO = 26;
-  private static final int METHODID_DELETE_SCENARIO = 27;
-  private static final int METHODID_RUN_ASSIGNED_SCENARIOS = 28;
-  private static final int METHODID_LIST_ALL_SCENARIOS = 29;
-  private static final int METHODID_LIST_UNASSIGNED_SCENARIOS = 30;
-  private static final int METHODID_LIST_ASSIGNED_RULE_SETS = 31;
-  private static final int METHODID_LIST_ASSIGNED_SCENARIOS = 32;
-  private static final int METHODID_ASSIGN_SCENARIO = 33;
-  private static final int METHODID_UNASSIGN_SCENARIO = 34;
-  private static final int METHODID_ENABLE_SCENARIO = 35;
-  private static final int METHODID_DISABLE_SCENARIO = 36;
-  private static final int METHODID_GET_FIELD_NAMES = 37;
-  private static final int METHODID_GET_RESULT_DESCRIPTIONS = 38;
-  private static final int METHODID_CREATE_CONSENT_PROFILE = 39;
-  private static final int METHODID_CREATE_CONSENT = 40;
-  private static final int METHODID_GET_CONSENT_PROFILE = 41;
-  private static final int METHODID_GET_CONSENT = 42;
-  private static final int METHODID_GET_CONSENT_BY_PROFILE_AND_CONTENT = 43;
-  private static final int METHODID_GET_CONSENT_BY_CONTENT = 44;
-  private static final int METHODID_SEARCH_CONSENT_BY_CONTENT = 45;
-  private static final int METHODID_UPDATE_CONSENT = 46;
-  private static final int METHODID_EXPIRE_CONSENT = 47;
-  private static final int METHODID_REVOKE_CONSENT = 48;
-  private static final int METHODID_DELETE_CONSENT = 49;
-  private static final int METHODID_PROCESS_CONSENT_LIST_DELETE_UPLOAD = 50;
-  private static final int METHODID_ENABLE_CONSENT_PROFILE = 51;
-  private static final int METHODID_DISABLE_CONSENT_PROFILE = 52;
-  private static final int METHODID_LIST_CONSENT_PROFILES = 53;
-  private static final int METHODID_GET_CONSENT_UPLOAD_URL = 54;
-  private static final int METHODID_PROCESS_CONSENT_UPLOAD = 55;
-  private static final int METHODID_EXPORT_CONSENT_LIST = 56;
-  private static final int METHODID_LIST_CONSENT_TOPICS = 57;
-  private static final int METHODID_GET_CONSENT_TOPIC = 58;
-  private static final int METHODID_CREATE_CONSENT_TOPIC = 59;
-  private static final int METHODID_DELETE_CONSENT_TOPIC = 60;
-  private static final int METHODID_UPDATE_CONSENT_TOPIC = 61;
-  private static final int METHODID_PROCESS_OUTBOUND_CALL = 62;
-  private static final int METHODID_QUERY_HOLIDAYS = 63;
+  private static final int METHODID_SCRUB_LIST_DOWNLOAD = 21;
+  private static final int METHODID_PROCESS_SCRUB_LIST_DELETE_UPLOAD = 22;
+  private static final int METHODID_EXPORT_SCRUB_LIST = 23;
+  private static final int METHODID_PURGE_SCRUB_LIST = 24;
+  private static final int METHODID_CREATE_SCENARIO = 25;
+  private static final int METHODID_GET_SCENARIO = 26;
+  private static final int METHODID_UPDATE_SCENARIO = 27;
+  private static final int METHODID_DELETE_SCENARIO = 28;
+  private static final int METHODID_RUN_ASSIGNED_SCENARIOS = 29;
+  private static final int METHODID_LIST_ALL_SCENARIOS = 30;
+  private static final int METHODID_LIST_UNASSIGNED_SCENARIOS = 31;
+  private static final int METHODID_LIST_ASSIGNED_RULE_SETS = 32;
+  private static final int METHODID_LIST_ASSIGNED_SCENARIOS = 33;
+  private static final int METHODID_ASSIGN_SCENARIO = 34;
+  private static final int METHODID_UNASSIGN_SCENARIO = 35;
+  private static final int METHODID_ENABLE_SCENARIO = 36;
+  private static final int METHODID_DISABLE_SCENARIO = 37;
+  private static final int METHODID_GET_FIELD_NAMES = 38;
+  private static final int METHODID_GET_RESULT_DESCRIPTIONS = 39;
+  private static final int METHODID_CREATE_CONSENT_PROFILE = 40;
+  private static final int METHODID_CREATE_CONSENT = 41;
+  private static final int METHODID_GET_CONSENT_PROFILE = 42;
+  private static final int METHODID_GET_CONSENT = 43;
+  private static final int METHODID_GET_CONSENT_BY_PROFILE_AND_CONTENT = 44;
+  private static final int METHODID_GET_CONSENT_BY_CONTENT = 45;
+  private static final int METHODID_SEARCH_CONSENT_BY_CONTENT = 46;
+  private static final int METHODID_UPDATE_CONSENT = 47;
+  private static final int METHODID_EXPIRE_CONSENT = 48;
+  private static final int METHODID_REVOKE_CONSENT = 49;
+  private static final int METHODID_DELETE_CONSENT = 50;
+  private static final int METHODID_PROCESS_CONSENT_LIST_DELETE_UPLOAD = 51;
+  private static final int METHODID_CONSENT_LIST_DOWNLOAD = 52;
+  private static final int METHODID_ENABLE_CONSENT_PROFILE = 53;
+  private static final int METHODID_DISABLE_CONSENT_PROFILE = 54;
+  private static final int METHODID_LIST_CONSENT_PROFILES = 55;
+  private static final int METHODID_GET_CONSENT_UPLOAD_URL = 56;
+  private static final int METHODID_PROCESS_CONSENT_UPLOAD = 57;
+  private static final int METHODID_EXPORT_CONSENT_LIST = 58;
+  private static final int METHODID_LIST_CONSENT_TOPICS = 59;
+  private static final int METHODID_GET_CONSENT_TOPIC = 60;
+  private static final int METHODID_CREATE_CONSENT_TOPIC = 61;
+  private static final int METHODID_DELETE_CONSENT_TOPIC = 62;
+  private static final int METHODID_UPDATE_CONSENT_TOPIC = 63;
+  private static final int METHODID_PROCESS_OUTBOUND_CALL = 64;
+  private static final int METHODID_QUERY_HOLIDAYS = 65;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -5155,6 +5303,10 @@ public final class ComplianceGrpc {
           break;
         case METHODID_PROCESS_SCRUB_LIST_UPLOAD:
           serviceImpl.processScrubListUpload((com.tcn.cloud.api.api.v0alpha.ProcessScrubListUploadReq) request,
+              (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
+          break;
+        case METHODID_SCRUB_LIST_DOWNLOAD:
+          serviceImpl.scrubListDownload((com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest) request,
               (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
           break;
         case METHODID_PROCESS_SCRUB_LIST_DELETE_UPLOAD:
@@ -5275,6 +5427,10 @@ public final class ComplianceGrpc {
           break;
         case METHODID_PROCESS_CONSENT_LIST_DELETE_UPLOAD:
           serviceImpl.processConsentListDeleteUpload((com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq) request,
+              (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
+          break;
+        case METHODID_CONSENT_LIST_DOWNLOAD:
+          serviceImpl.consentListDownload((com.tcn.cloud.api.api.v0alpha.ConsentListDownloadRequest) request,
               (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
           break;
         case METHODID_ENABLE_CONSENT_PROFILE:
@@ -5495,6 +5651,13 @@ public final class ComplianceGrpc {
               com.google.longrunning.Operation>(
                 service, METHODID_PROCESS_SCRUB_LIST_UPLOAD)))
         .addMethod(
+          getScrubListDownloadMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ScrubListDownloadRequest,
+              com.google.longrunning.Operation>(
+                service, METHODID_SCRUB_LIST_DOWNLOAD)))
+        .addMethod(
           getProcessScrubListDeleteUploadMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -5705,6 +5868,13 @@ public final class ComplianceGrpc {
               com.google.longrunning.Operation>(
                 service, METHODID_PROCESS_CONSENT_LIST_DELETE_UPLOAD)))
         .addMethod(
+          getConsentListDownloadMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ConsentListDownloadRequest,
+              com.google.longrunning.Operation>(
+                service, METHODID_CONSENT_LIST_DOWNLOAD)))
+        .addMethod(
           getEnableConsentProfileMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -5864,6 +6034,7 @@ public final class ComplianceGrpc {
               .addMethod(getSearchScrubListMethod())
               .addMethod(getGetScrubListUploadUrlMethod())
               .addMethod(getProcessScrubListUploadMethod())
+              .addMethod(getScrubListDownloadMethod())
               .addMethod(getProcessScrubListDeleteUploadMethod())
               .addMethod(getExportScrubListMethod())
               .addMethod(getPurgeScrubListMethod())
@@ -5894,6 +6065,7 @@ public final class ComplianceGrpc {
               .addMethod(getRevokeConsentMethod())
               .addMethod(getDeleteConsentMethod())
               .addMethod(getProcessConsentListDeleteUploadMethod())
+              .addMethod(getConsentListDownloadMethod())
               .addMethod(getEnableConsentProfileMethod())
               .addMethod(getDisableConsentProfileMethod())
               .addMethod(getListConsentProfilesMethod())
