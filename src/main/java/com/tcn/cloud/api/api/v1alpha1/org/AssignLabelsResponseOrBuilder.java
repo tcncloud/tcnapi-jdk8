@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface AssignLabelsResponseOrBuilder extends
+@java.lang.Deprecated public interface AssignLabelsResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.AssignLabelsResponse)
     com.google.protobuf.MessageOrBuilder {
 }
