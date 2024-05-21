@@ -12,7 +12,7 @@ public interface SetMyMfaTypeRequestOrBuilder extends
    * The info object to pull the type from.
    * </pre>
    *
-   * <code>.api.commons.org.MfaInfo info = 2 [json_name = "info"];</code>
+   * <code>.api.commons.org.MfaInfo info = 1 [json_name = "info"];</code>
    * @return Whether the info field is set.
    */
   boolean hasInfo();
@@ -21,7 +21,7 @@ public interface SetMyMfaTypeRequestOrBuilder extends
    * The info object to pull the type from.
    * </pre>
    *
-   * <code>.api.commons.org.MfaInfo info = 2 [json_name = "info"];</code>
+   * <code>.api.commons.org.MfaInfo info = 1 [json_name = "info"];</code>
    * @return The info.
    */
   com.tcn.cloud.api.api.commons.org.MfaInfo getInfo();
@@ -30,7 +30,7 @@ public interface SetMyMfaTypeRequestOrBuilder extends
    * The info object to pull the type from.
    * </pre>
    *
-   * <code>.api.commons.org.MfaInfo info = 2 [json_name = "info"];</code>
+   * <code>.api.commons.org.MfaInfo info = 1 [json_name = "info"];</code>
    */
   com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder getInfoOrBuilder();
 }
