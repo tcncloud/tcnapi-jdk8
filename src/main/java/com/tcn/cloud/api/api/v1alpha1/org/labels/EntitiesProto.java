@@ -104,6 +104,26 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_labels_GetLabeledEntityMapResponse_EntityLabels_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_labels_AssignLabelsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_labels_AssignLabelsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_labels_AssignLabelsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_labels_AssignLabelsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_labels_RevokeLabelsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_labels_RevokeLabelsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_labels_RevokeLabelsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_labels_RevokeLabelsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -150,12 +170,18 @@ public final class EntitiesProto {
       "g.labels.GetLabeledEntityMapResponse.Ent" +
       "ityLabelsR\005value:\0028\001\032>\n\014EntityLabels\022.\n\006" +
       "labels\030\001 \003(\0132\026.api.commons.org.LabelR\006la" +
-      "belsB\272\001\n)com.tcn.cloud.api.api.v1alpha1." +
-      "org.labelsB\rEntitiesProtoP\001\242\002\004AVOL\252\002\027Api" +
-      ".V1alpha1.Org.Labels\312\002\027Api\\V1alpha1\\Org\\" +
-      "Labels\342\002#Api\\V1alpha1\\Org\\Labels\\GPBMeta" +
-      "data\352\002\032Api::V1alpha1::Org::Labelsb\006proto" +
-      "3"
+      "bels\"b\n\023AssignLabelsRequest\022\033\n\tlabel_ids" +
+      "\030\001 \003(\tR\010labelIds\022.\n\023permission_group_id\030" +
+      "\002 \001(\tR\021permissionGroupId\"\026\n\024AssignLabels" +
+      "Response\"b\n\023RevokeLabelsRequest\022\033\n\tlabel" +
+      "_ids\030\001 \003(\tR\010labelIds\022.\n\023permission_group" +
+      "_id\030\002 \001(\tR\021permissionGroupId\"\026\n\024RevokeLa" +
+      "belsResponseB\272\001\n)com.tcn.cloud.api.api.v" +
+      "1alpha1.org.labelsB\rEntitiesProtoP\001\242\002\004AV" +
+      "OL\252\002\027Api.V1alpha1.Org.Labels\312\002\027Api\\V1alp" +
+      "ha1\\Org\\Labels\342\002#Api\\V1alpha1\\Org\\Labels" +
+      "\\GPBMetadata\352\002\032Api::V1alpha1::Org::Label" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -272,6 +298,30 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_labels_GetLabeledEntityMapResponse_EntityLabels_descriptor,
         new java.lang.String[] { "Labels", });
+    internal_static_api_v1alpha1_org_labels_AssignLabelsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_api_v1alpha1_org_labels_AssignLabelsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_labels_AssignLabelsRequest_descriptor,
+        new java.lang.String[] { "LabelIds", "PermissionGroupId", });
+    internal_static_api_v1alpha1_org_labels_AssignLabelsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_api_v1alpha1_org_labels_AssignLabelsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_labels_AssignLabelsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_labels_RevokeLabelsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_api_v1alpha1_org_labels_RevokeLabelsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_labels_RevokeLabelsRequest_descriptor,
+        new java.lang.String[] { "LabelIds", "PermissionGroupId", });
+    internal_static_api_v1alpha1_org_labels_RevokeLabelsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_api_v1alpha1_org_labels_RevokeLabelsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_labels_RevokeLabelsResponse_descriptor,
+        new java.lang.String[] { });
     com.tcn.cloud.api.api.commons.LabelsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.LabelsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();

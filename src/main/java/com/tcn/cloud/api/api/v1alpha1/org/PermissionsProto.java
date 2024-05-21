@@ -293,17 +293,18 @@ public final class PermissionsProto {
       "\n\006org_id\030\001 \001(\tR\005orgId\022<\n\npermission\030\002 \001(" +
       "\0162\034.api.commons.auth.PermissionR\npermiss" +
       "ion\"1\n/RemovePermissionFromAllPermission" +
-      "GroupsResponse\"b\n\023AssignLabelsRequest\022\033\n" +
+      "GroupsResponse\"f\n\023AssignLabelsRequest\022\033\n" +
       "\tlabel_ids\030\001 \003(\tR\010labelIds\022.\n\023permission" +
-      "_group_id\030\002 \001(\tR\021permissionGroupId\"\026\n\024As" +
-      "signLabelsResponse\"b\n\023RevokeLabelsReques" +
-      "t\022\033\n\tlabel_ids\030\001 \003(\tR\010labelIds\022.\n\023permis" +
-      "sion_group_id\030\002 \001(\tR\021permissionGroupId\"\026" +
-      "\n\024RevokeLabelsResponseB\230\001\n\"com.tcn.cloud" +
-      ".api.api.v1alpha1.orgB\020PermissionsProtoP" +
-      "\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha" +
-      "1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetadata\352\002\022A" +
-      "pi::V1alpha1::Orgb\006proto3"
+      "_group_id\030\002 \001(\tR\021permissionGroupId:\002\030\001\"\032" +
+      "\n\024AssignLabelsResponse:\002\030\001\"f\n\023RevokeLabe" +
+      "lsRequest\022\033\n\tlabel_ids\030\001 \003(\tR\010labelIds\022." +
+      "\n\023permission_group_id\030\002 \001(\tR\021permissionG" +
+      "roupId:\002\030\001\"\032\n\024RevokeLabelsResponse:\002\030\001B\230" +
+      "\001\n\"com.tcn.cloud.api.api.v1alpha1.orgB\020P" +
+      "ermissionsProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.O" +
+      "rg\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org" +
+      "\\GPBMetadata\352\002\022Api::V1alpha1::Orgb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

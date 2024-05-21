@@ -27,7 +27,7 @@ public final class ServiceProto {
       "\027api.v1alpha1.org.labels\032\027annotations/au" +
       "thz.proto\032&api/v1alpha1/org/labels/entit" +
       "ies.proto\032\034google/api/annotations.proto2" +
-      "\306\n\n\rLabelsService\022\243\001\n\013CreateLabel\022+.api." +
+      "\230\r\n\rLabelsService\022\243\001\n\013CreateLabel\022+.api." +
       "v1alpha1.org.labels.CreateLabelRequest\032," +
       ".api.v1alpha1.org.labels.CreateLabelResp" +
       "onse\"9\272\270\221\002\005\n\003\010\226\001\202\323\344\223\002)\"$/api/v1alpha1/or" +
@@ -60,12 +60,21 @@ public final class ServiceProto {
       ".labels.GetLabeledEntityMapRequest\0324.api" +
       ".v1alpha1.org.labels.GetLabeledEntityMap" +
       "Response\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v1alpha1/o" +
-      "rg/labels/getlabeledentitymap:\001*B\271\001\n)com" +
-      ".tcn.cloud.api.api.v1alpha1.org.labelsB\014" +
-      "ServiceProtoP\001\242\002\004AVOL\252\002\027Api.V1alpha1.Org" +
-      ".Labels\312\002\027Api\\V1alpha1\\Org\\Labels\342\002#Api\\" +
-      "V1alpha1\\Org\\Labels\\GPBMetadata\352\002\032Api::V" +
-      "1alpha1::Org::Labelsb\006proto3"
+      "rg/labels/getlabeledentitymap:\001*\022\246\001\n\014Ass" +
+      "ignLabels\022,.api.v1alpha1.org.labels.Assi" +
+      "gnLabelsRequest\032-.api.v1alpha1.org.label" +
+      "s.AssignLabelsResponse\"9\272\270\221\002\004\n\002\010n\202\323\344\223\002*\"" +
+      "%/api/v1alpha1/org/labels/assignlabels:\001" +
+      "*\022\246\001\n\014RevokeLabels\022,.api.v1alpha1.org.la" +
+      "bels.RevokeLabelsRequest\032-.api.v1alpha1." +
+      "org.labels.RevokeLabelsResponse\"9\272\270\221\002\004\n\002" +
+      "\010n\202\323\344\223\002*\"%/api/v1alpha1/org/labels/revok" +
+      "elabels:\001*B\271\001\n)com.tcn.cloud.api.api.v1a" +
+      "lpha1.org.labelsB\014ServiceProtoP\001\242\002\004AVOL\252" +
+      "\002\027Api.V1alpha1.Org.Labels\312\002\027Api\\V1alpha1" +
+      "\\Org\\Labels\342\002#Api\\V1alpha1\\Org\\Labels\\GP" +
+      "BMetadata\352\002\032Api::V1alpha1::Org::Labelsb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
