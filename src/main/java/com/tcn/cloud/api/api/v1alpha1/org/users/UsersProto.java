@@ -659,23 +659,23 @@ public final class UsersProto {
       "\001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\"\306\007\n\026G" +
       "etUserByOrgIdResponse\022\027\n\007user_id\030\001 \001(\tR\006" +
       "userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\032\n\010usernam" +
-      "e\030\r \001(\tR\010username\022\034\n\tdelegated\030\003 \001(\010R\tde" +
-      "legated\022\031\n\010org_name\030\004 \001(\tR\007orgName\022W\n\nhu" +
-      "nt_group\030\005 \001(\01328.api.v1alpha1.org.users." +
+      "e\030\003 \001(\tR\010username\022\034\n\tdelegated\030\004 \001(\010R\tde" +
+      "legated\022\031\n\010org_name\030\005 \001(\tR\007orgName\022W\n\nhu" +
+      "nt_group\030\006 \001(\01328.api.v1alpha1.org.users." +
       "GetUserByOrgIdResponse.HuntGroupR\thuntGr" +
-      "oup\022.\n\006labels\030\006 \003(\0132\026.api.commons.org.La" +
-      "belR\006labels\022.\n\006skills\030\007 \003(\0132\026.api.common" +
+      "oup\022.\n\006labels\030\007 \003(\0132\026.api.commons.org.La" +
+      "belR\006labels\022.\n\006skills\030\010 \003(\0132\026.api.common" +
       "s.org.SkillR\006skills\022M\n\021permission_groups" +
-      "\030\010 \003(\0132 .api.commons.org.PermissionGroup" +
+      "\030\t \003(\0132 .api.commons.org.PermissionGroup" +
       "R\020permissionGroups\022R\n\023p3_permission_grou" +
-      "p\030\t \001(\0132\".api.commons.org.P3PermissionGr" +
+      "p\030\n \001(\0132\".api.commons.org.P3PermissionGr" +
       "oupR\021p3PermissionGroup\022p\n\023agent_profile_" +
-      "group\030\n \001(\0132@.api.v1alpha1.org.users.Get" +
+      "group\030\013 \001(\0132@.api.v1alpha1.org.users.Get" +
       "UserByOrgIdResponse.AgentProfileGroupR\021a" +
-      "gentProfileGroup\022.\n\006trusts\030\025 \003(\0132\026.api.c" +
+      "gentProfileGroup\022.\n\006trusts\030\014 \003(\0132\026.api.c" +
       "ommons.org.TrustR\006trusts\022#\n\raccount_owne" +
-      "r\030\026 \001(\010R\014accountOwner\022%\n\016email_verified\030" +
-      "\027 \001(\010R\remailVerified\032Y\n\tHuntGroup\022$\n\016hun" +
+      "r\030\r \001(\010R\014accountOwner\022%\n\016email_verified\030" +
+      "\016 \001(\010R\remailVerified\032Y\n\tHuntGroup\022$\n\016hun" +
       "t_group_sid\030\001 \001(\003R\014huntGroupSid\022&\n\017hunt_" +
       "group_name\030\002 \001(\tR\rhuntGroupName\032\201\001\n\021Agen" +
       "tProfileGroup\0223\n\026agent_profile_group_id\030" +

@@ -12,7 +12,7 @@ public interface GetAgentProfileGroupRequestOrBuilder extends
    * ID of the agent profile group.
    * </pre>
    *
-   * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+   * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
    * @return The agentProfileGroupId.
    */
   java.lang.String getAgentProfileGroupId();
@@ -21,7 +21,7 @@ public interface GetAgentProfileGroupRequestOrBuilder extends
    * ID of the agent profile group.
    * </pre>
    *
-   * <code>string agent_profile_group_id = 2 [json_name = "agentProfileGroupId"];</code>
+   * <code>string agent_profile_group_id = 1 [json_name = "agentProfileGroupId"];</code>
    * @return The bytes for agentProfileGroupId.
    */
   com.google.protobuf.ByteString

@@ -87,7 +87,7 @@ public final class AgentProfileGroupProto {
       "roup.proto\022\026api.v1alpha1.org.users\032)api/" +
       "commons/org/agent_profile_group.proto\"R\n" +
       "\033GetAgentProfileGroupRequest\0223\n\026agent_pr" +
-      "ofile_group_id\030\002 \001(\tR\023agentProfileGroupI" +
+      "ofile_group_id\030\001 \001(\tR\023agentProfileGroupI" +
       "d\"r\n\034GetAgentProfileGroupResponse\022R\n\023age" +
       "nt_profile_group\030\001 \001(\0132\".api.commons.org" +
       ".AgentProfileGroupR\021agentProfileGroup\"t\n" +

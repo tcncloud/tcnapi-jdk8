@@ -52,7 +52,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * The agents's username
    * </pre>
    *
-   * <code>string username = 13 [json_name = "username"];</code>
+   * <code>string username = 3 [json_name = "username"];</code>
    * @return The username.
    */
   java.lang.String getUsername();
@@ -61,7 +61,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * The agents's username
    * </pre>
    *
-   * <code>string username = 13 [json_name = "username"];</code>
+   * <code>string username = 3 [json_name = "username"];</code>
    * @return The bytes for username.
    */
   com.google.protobuf.ByteString
@@ -72,7 +72,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * Whether the user is delegated (sso related)
    * </pre>
    *
-   * <code>bool delegated = 3 [json_name = "delegated"];</code>
+   * <code>bool delegated = 4 [json_name = "delegated"];</code>
    * @return The delegated.
    */
   boolean getDelegated();
@@ -82,7 +82,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * The name of the user's organization
    * </pre>
    *
-   * <code>string org_name = 4 [json_name = "orgName"];</code>
+   * <code>string org_name = 5 [json_name = "orgName"];</code>
    * @return The orgName.
    */
   java.lang.String getOrgName();
@@ -91,7 +91,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * The name of the user's organization
    * </pre>
    *
-   * <code>string org_name = 4 [json_name = "orgName"];</code>
+   * <code>string org_name = 5 [json_name = "orgName"];</code>
    * @return The bytes for orgName.
    */
   com.google.protobuf.ByteString
@@ -102,7 +102,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * An object with the hunt group fields required for the call
    * </pre>
    *
-   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 5 [json_name = "huntGroup"];</code>
+   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 6 [json_name = "huntGroup"];</code>
    * @return Whether the huntGroup field is set.
    */
   boolean hasHuntGroup();
@@ -111,7 +111,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * An object with the hunt group fields required for the call
    * </pre>
    *
-   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 5 [json_name = "huntGroup"];</code>
+   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 6 [json_name = "huntGroup"];</code>
    * @return The huntGroup.
    */
   com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup getHuntGroup();
@@ -120,7 +120,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * An object with the hunt group fields required for the call
    * </pre>
    *
-   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 5 [json_name = "huntGroup"];</code>
+   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 6 [json_name = "huntGroup"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroupOrBuilder getHuntGroupOrBuilder();
 
@@ -129,7 +129,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of the labels associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+   * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.org.Label> 
       getLabelsList();
@@ -138,7 +138,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of the labels associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+   * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
    */
   com.tcn.cloud.api.api.commons.org.Label getLabels(int index);
   /**
@@ -146,7 +146,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of the labels associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+   * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
    */
   int getLabelsCount();
   /**
@@ -154,7 +154,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of the labels associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+   * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.org.LabelOrBuilder> 
       getLabelsOrBuilderList();
@@ -163,7 +163,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of the labels associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+   * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
    */
   com.tcn.cloud.api.api.commons.org.LabelOrBuilder getLabelsOrBuilder(
       int index);
@@ -173,7 +173,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of the skills associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+   * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.org.Skill> 
       getSkillsList();
@@ -182,7 +182,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of the skills associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+   * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
    */
   com.tcn.cloud.api.api.commons.org.Skill getSkills(int index);
   /**
@@ -190,7 +190,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of the skills associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+   * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
    */
   int getSkillsCount();
   /**
@@ -198,7 +198,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of the skills associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+   * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.org.SkillOrBuilder> 
       getSkillsOrBuilderList();
@@ -207,7 +207,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of the skills associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+   * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
    */
   com.tcn.cloud.api.api.commons.org.SkillOrBuilder getSkillsOrBuilder(
       int index);
@@ -217,7 +217,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of the permission groups the user belongs to
    * </pre>
    *
-   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.org.PermissionGroup> 
       getPermissionGroupsList();
@@ -226,7 +226,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of the permission groups the user belongs to
    * </pre>
    *
-   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
    */
   com.tcn.cloud.api.api.commons.org.PermissionGroup getPermissionGroups(int index);
   /**
@@ -234,7 +234,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of the permission groups the user belongs to
    * </pre>
    *
-   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
    */
   int getPermissionGroupsCount();
   /**
@@ -242,7 +242,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of the permission groups the user belongs to
    * </pre>
    *
-   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.org.PermissionGroupOrBuilder> 
       getPermissionGroupsOrBuilderList();
@@ -251,7 +251,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of the permission groups the user belongs to
    * </pre>
    *
-   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
    */
   com.tcn.cloud.api.api.commons.org.PermissionGroupOrBuilder getPermissionGroupsOrBuilder(
       int index);
@@ -261,7 +261,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * The user's p3 permission group
    * </pre>
    *
-   * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 9 [json_name = "p3PermissionGroup"];</code>
+   * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 10 [json_name = "p3PermissionGroup"];</code>
    * @return Whether the p3PermissionGroup field is set.
    */
   boolean hasP3PermissionGroup();
@@ -270,7 +270,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * The user's p3 permission group
    * </pre>
    *
-   * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 9 [json_name = "p3PermissionGroup"];</code>
+   * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 10 [json_name = "p3PermissionGroup"];</code>
    * @return The p3PermissionGroup.
    */
   com.tcn.cloud.api.api.commons.org.P3PermissionGroup getP3PermissionGroup();
@@ -279,7 +279,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * The user's p3 permission group
    * </pre>
    *
-   * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 9 [json_name = "p3PermissionGroup"];</code>
+   * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 10 [json_name = "p3PermissionGroup"];</code>
    */
   com.tcn.cloud.api.api.commons.org.P3PermissionGroupOrBuilder getP3PermissionGroupOrBuilder();
 
@@ -288,7 +288,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * An object with the agent profile group fields required for the call
    * </pre>
    *
-   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 10 [json_name = "agentProfileGroup"];</code>
+   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 11 [json_name = "agentProfileGroup"];</code>
    * @return Whether the agentProfileGroup field is set.
    */
   boolean hasAgentProfileGroup();
@@ -297,7 +297,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * An object with the agent profile group fields required for the call
    * </pre>
    *
-   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 10 [json_name = "agentProfileGroup"];</code>
+   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 11 [json_name = "agentProfileGroup"];</code>
    * @return The agentProfileGroup.
    */
   com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup getAgentProfileGroup();
@@ -306,7 +306,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * An object with the agent profile group fields required for the call
    * </pre>
    *
-   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 10 [json_name = "agentProfileGroup"];</code>
+   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 11 [json_name = "agentProfileGroup"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroupOrBuilder getAgentProfileGroupOrBuilder();
 
@@ -315,7 +315,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of trusts the user has been assigned.
    * </pre>
    *
-   * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+   * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.org.Trust> 
       getTrustsList();
@@ -324,7 +324,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of trusts the user has been assigned.
    * </pre>
    *
-   * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+   * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
    */
   com.tcn.cloud.api.api.commons.org.Trust getTrusts(int index);
   /**
@@ -332,7 +332,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of trusts the user has been assigned.
    * </pre>
    *
-   * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+   * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
    */
   int getTrustsCount();
   /**
@@ -340,7 +340,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of trusts the user has been assigned.
    * </pre>
    *
-   * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+   * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.org.TrustOrBuilder> 
       getTrustsOrBuilderList();
@@ -349,7 +349,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * A list of trusts the user has been assigned.
    * </pre>
    *
-   * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+   * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
    */
   com.tcn.cloud.api.api.commons.org.TrustOrBuilder getTrustsOrBuilder(
       int index);
@@ -359,7 +359,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * Whether the user is an account owner
    * </pre>
    *
-   * <code>bool account_owner = 22 [json_name = "accountOwner"];</code>
+   * <code>bool account_owner = 13 [json_name = "accountOwner"];</code>
    * @return The accountOwner.
    */
   boolean getAccountOwner();
@@ -369,7 +369,7 @@ public interface GetUserByOrgIdResponseOrBuilder extends
    * if the user's email is verified
    * </pre>
    *
-   * <code>bool email_verified = 23 [json_name = "emailVerified"];</code>
+   * <code>bool email_verified = 14 [json_name = "emailVerified"];</code>
    * @return The emailVerified.
    */
   boolean getEmailVerified();

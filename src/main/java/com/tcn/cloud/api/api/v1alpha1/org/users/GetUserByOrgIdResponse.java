@@ -1613,7 +1613,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int USERNAME_FIELD_NUMBER = 13;
+  public static final int USERNAME_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object username_ = "";
   /**
@@ -1621,7 +1621,7 @@ private static final long serialVersionUID = 0L;
    * The agents's username
    * </pre>
    *
-   * <code>string username = 13 [json_name = "username"];</code>
+   * <code>string username = 3 [json_name = "username"];</code>
    * @return The username.
    */
   @java.lang.Override
@@ -1642,7 +1642,7 @@ private static final long serialVersionUID = 0L;
    * The agents's username
    * </pre>
    *
-   * <code>string username = 13 [json_name = "username"];</code>
+   * <code>string username = 3 [json_name = "username"];</code>
    * @return The bytes for username.
    */
   @java.lang.Override
@@ -1660,14 +1660,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int DELEGATED_FIELD_NUMBER = 3;
+  public static final int DELEGATED_FIELD_NUMBER = 4;
   private boolean delegated_ = false;
   /**
    * <pre>
    * Whether the user is delegated (sso related)
    * </pre>
    *
-   * <code>bool delegated = 3 [json_name = "delegated"];</code>
+   * <code>bool delegated = 4 [json_name = "delegated"];</code>
    * @return The delegated.
    */
   @java.lang.Override
@@ -1675,7 +1675,7 @@ private static final long serialVersionUID = 0L;
     return delegated_;
   }
 
-  public static final int ORG_NAME_FIELD_NUMBER = 4;
+  public static final int ORG_NAME_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgName_ = "";
   /**
@@ -1683,7 +1683,7 @@ private static final long serialVersionUID = 0L;
    * The name of the user's organization
    * </pre>
    *
-   * <code>string org_name = 4 [json_name = "orgName"];</code>
+   * <code>string org_name = 5 [json_name = "orgName"];</code>
    * @return The orgName.
    */
   @java.lang.Override
@@ -1704,7 +1704,7 @@ private static final long serialVersionUID = 0L;
    * The name of the user's organization
    * </pre>
    *
-   * <code>string org_name = 4 [json_name = "orgName"];</code>
+   * <code>string org_name = 5 [json_name = "orgName"];</code>
    * @return The bytes for orgName.
    */
   @java.lang.Override
@@ -1722,14 +1722,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int HUNT_GROUP_FIELD_NUMBER = 5;
+  public static final int HUNT_GROUP_FIELD_NUMBER = 6;
   private com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup huntGroup_;
   /**
    * <pre>
    * An object with the hunt group fields required for the call
    * </pre>
    *
-   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 5 [json_name = "huntGroup"];</code>
+   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 6 [json_name = "huntGroup"];</code>
    * @return Whether the huntGroup field is set.
    */
   @java.lang.Override
@@ -1741,7 +1741,7 @@ private static final long serialVersionUID = 0L;
    * An object with the hunt group fields required for the call
    * </pre>
    *
-   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 5 [json_name = "huntGroup"];</code>
+   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 6 [json_name = "huntGroup"];</code>
    * @return The huntGroup.
    */
   @java.lang.Override
@@ -1753,14 +1753,14 @@ private static final long serialVersionUID = 0L;
    * An object with the hunt group fields required for the call
    * </pre>
    *
-   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 5 [json_name = "huntGroup"];</code>
+   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 6 [json_name = "huntGroup"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroupOrBuilder getHuntGroupOrBuilder() {
     return huntGroup_ == null ? com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup.getDefaultInstance() : huntGroup_;
   }
 
-  public static final int LABELS_FIELD_NUMBER = 6;
+  public static final int LABELS_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.Label> labels_;
   /**
@@ -1768,7 +1768,7 @@ private static final long serialVersionUID = 0L;
    * A list of the labels associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+   * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
    */
   @java.lang.Override
   public java.util.List<com.tcn.cloud.api.api.commons.org.Label> getLabelsList() {
@@ -1779,7 +1779,7 @@ private static final long serialVersionUID = 0L;
    * A list of the labels associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+   * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.commons.org.LabelOrBuilder> 
@@ -1791,7 +1791,7 @@ private static final long serialVersionUID = 0L;
    * A list of the labels associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+   * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
    */
   @java.lang.Override
   public int getLabelsCount() {
@@ -1802,7 +1802,7 @@ private static final long serialVersionUID = 0L;
    * A list of the labels associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+   * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.Label getLabels(int index) {
@@ -1813,7 +1813,7 @@ private static final long serialVersionUID = 0L;
    * A list of the labels associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+   * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.LabelOrBuilder getLabelsOrBuilder(
@@ -1821,7 +1821,7 @@ private static final long serialVersionUID = 0L;
     return labels_.get(index);
   }
 
-  public static final int SKILLS_FIELD_NUMBER = 7;
+  public static final int SKILLS_FIELD_NUMBER = 8;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.Skill> skills_;
   /**
@@ -1829,7 +1829,7 @@ private static final long serialVersionUID = 0L;
    * A list of the skills associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+   * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
    */
   @java.lang.Override
   public java.util.List<com.tcn.cloud.api.api.commons.org.Skill> getSkillsList() {
@@ -1840,7 +1840,7 @@ private static final long serialVersionUID = 0L;
    * A list of the skills associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+   * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.commons.org.SkillOrBuilder> 
@@ -1852,7 +1852,7 @@ private static final long serialVersionUID = 0L;
    * A list of the skills associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+   * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
    */
   @java.lang.Override
   public int getSkillsCount() {
@@ -1863,7 +1863,7 @@ private static final long serialVersionUID = 0L;
    * A list of the skills associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+   * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.Skill getSkills(int index) {
@@ -1874,7 +1874,7 @@ private static final long serialVersionUID = 0L;
    * A list of the skills associated with the user
    * </pre>
    *
-   * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+   * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.SkillOrBuilder getSkillsOrBuilder(
@@ -1882,7 +1882,7 @@ private static final long serialVersionUID = 0L;
     return skills_.get(index);
   }
 
-  public static final int PERMISSION_GROUPS_FIELD_NUMBER = 8;
+  public static final int PERMISSION_GROUPS_FIELD_NUMBER = 9;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.PermissionGroup> permissionGroups_;
   /**
@@ -1890,7 +1890,7 @@ private static final long serialVersionUID = 0L;
    * A list of the permission groups the user belongs to
    * </pre>
    *
-   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
    */
   @java.lang.Override
   public java.util.List<com.tcn.cloud.api.api.commons.org.PermissionGroup> getPermissionGroupsList() {
@@ -1901,7 +1901,7 @@ private static final long serialVersionUID = 0L;
    * A list of the permission groups the user belongs to
    * </pre>
    *
-   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.commons.org.PermissionGroupOrBuilder> 
@@ -1913,7 +1913,7 @@ private static final long serialVersionUID = 0L;
    * A list of the permission groups the user belongs to
    * </pre>
    *
-   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
    */
   @java.lang.Override
   public int getPermissionGroupsCount() {
@@ -1924,7 +1924,7 @@ private static final long serialVersionUID = 0L;
    * A list of the permission groups the user belongs to
    * </pre>
    *
-   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.PermissionGroup getPermissionGroups(int index) {
@@ -1935,7 +1935,7 @@ private static final long serialVersionUID = 0L;
    * A list of the permission groups the user belongs to
    * </pre>
    *
-   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.PermissionGroupOrBuilder getPermissionGroupsOrBuilder(
@@ -1943,14 +1943,14 @@ private static final long serialVersionUID = 0L;
     return permissionGroups_.get(index);
   }
 
-  public static final int P3_PERMISSION_GROUP_FIELD_NUMBER = 9;
+  public static final int P3_PERMISSION_GROUP_FIELD_NUMBER = 10;
   private com.tcn.cloud.api.api.commons.org.P3PermissionGroup p3PermissionGroup_;
   /**
    * <pre>
    * The user's p3 permission group
    * </pre>
    *
-   * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 9 [json_name = "p3PermissionGroup"];</code>
+   * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 10 [json_name = "p3PermissionGroup"];</code>
    * @return Whether the p3PermissionGroup field is set.
    */
   @java.lang.Override
@@ -1962,7 +1962,7 @@ private static final long serialVersionUID = 0L;
    * The user's p3 permission group
    * </pre>
    *
-   * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 9 [json_name = "p3PermissionGroup"];</code>
+   * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 10 [json_name = "p3PermissionGroup"];</code>
    * @return The p3PermissionGroup.
    */
   @java.lang.Override
@@ -1974,21 +1974,21 @@ private static final long serialVersionUID = 0L;
    * The user's p3 permission group
    * </pre>
    *
-   * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 9 [json_name = "p3PermissionGroup"];</code>
+   * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 10 [json_name = "p3PermissionGroup"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.P3PermissionGroupOrBuilder getP3PermissionGroupOrBuilder() {
     return p3PermissionGroup_ == null ? com.tcn.cloud.api.api.commons.org.P3PermissionGroup.getDefaultInstance() : p3PermissionGroup_;
   }
 
-  public static final int AGENT_PROFILE_GROUP_FIELD_NUMBER = 10;
+  public static final int AGENT_PROFILE_GROUP_FIELD_NUMBER = 11;
   private com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agentProfileGroup_;
   /**
    * <pre>
    * An object with the agent profile group fields required for the call
    * </pre>
    *
-   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 10 [json_name = "agentProfileGroup"];</code>
+   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 11 [json_name = "agentProfileGroup"];</code>
    * @return Whether the agentProfileGroup field is set.
    */
   @java.lang.Override
@@ -2000,7 +2000,7 @@ private static final long serialVersionUID = 0L;
    * An object with the agent profile group fields required for the call
    * </pre>
    *
-   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 10 [json_name = "agentProfileGroup"];</code>
+   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 11 [json_name = "agentProfileGroup"];</code>
    * @return The agentProfileGroup.
    */
   @java.lang.Override
@@ -2012,14 +2012,14 @@ private static final long serialVersionUID = 0L;
    * An object with the agent profile group fields required for the call
    * </pre>
    *
-   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 10 [json_name = "agentProfileGroup"];</code>
+   * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 11 [json_name = "agentProfileGroup"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroupOrBuilder getAgentProfileGroupOrBuilder() {
     return agentProfileGroup_ == null ? com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup.getDefaultInstance() : agentProfileGroup_;
   }
 
-  public static final int TRUSTS_FIELD_NUMBER = 21;
+  public static final int TRUSTS_FIELD_NUMBER = 12;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.Trust> trusts_;
   /**
@@ -2027,7 +2027,7 @@ private static final long serialVersionUID = 0L;
    * A list of trusts the user has been assigned.
    * </pre>
    *
-   * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+   * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
    */
   @java.lang.Override
   public java.util.List<com.tcn.cloud.api.api.commons.org.Trust> getTrustsList() {
@@ -2038,7 +2038,7 @@ private static final long serialVersionUID = 0L;
    * A list of trusts the user has been assigned.
    * </pre>
    *
-   * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+   * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.commons.org.TrustOrBuilder> 
@@ -2050,7 +2050,7 @@ private static final long serialVersionUID = 0L;
    * A list of trusts the user has been assigned.
    * </pre>
    *
-   * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+   * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
    */
   @java.lang.Override
   public int getTrustsCount() {
@@ -2061,7 +2061,7 @@ private static final long serialVersionUID = 0L;
    * A list of trusts the user has been assigned.
    * </pre>
    *
-   * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+   * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.Trust getTrusts(int index) {
@@ -2072,7 +2072,7 @@ private static final long serialVersionUID = 0L;
    * A list of trusts the user has been assigned.
    * </pre>
    *
-   * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+   * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.TrustOrBuilder getTrustsOrBuilder(
@@ -2080,14 +2080,14 @@ private static final long serialVersionUID = 0L;
     return trusts_.get(index);
   }
 
-  public static final int ACCOUNT_OWNER_FIELD_NUMBER = 22;
+  public static final int ACCOUNT_OWNER_FIELD_NUMBER = 13;
   private boolean accountOwner_ = false;
   /**
    * <pre>
    * Whether the user is an account owner
    * </pre>
    *
-   * <code>bool account_owner = 22 [json_name = "accountOwner"];</code>
+   * <code>bool account_owner = 13 [json_name = "accountOwner"];</code>
    * @return The accountOwner.
    */
   @java.lang.Override
@@ -2095,14 +2095,14 @@ private static final long serialVersionUID = 0L;
     return accountOwner_;
   }
 
-  public static final int EMAIL_VERIFIED_FIELD_NUMBER = 23;
+  public static final int EMAIL_VERIFIED_FIELD_NUMBER = 14;
   private boolean emailVerified_ = false;
   /**
    * <pre>
    * if the user's email is verified
    * </pre>
    *
-   * <code>bool email_verified = 23 [json_name = "emailVerified"];</code>
+   * <code>bool email_verified = 14 [json_name = "emailVerified"];</code>
    * @return The emailVerified.
    */
   @java.lang.Override
@@ -2130,41 +2130,41 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, username_);
+    }
     if (delegated_ != false) {
-      output.writeBool(3, delegated_);
+      output.writeBool(4, delegated_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, orgName_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orgName_);
     }
     if (huntGroup_ != null) {
-      output.writeMessage(5, getHuntGroup());
+      output.writeMessage(6, getHuntGroup());
     }
     for (int i = 0; i < labels_.size(); i++) {
-      output.writeMessage(6, labels_.get(i));
+      output.writeMessage(7, labels_.get(i));
     }
     for (int i = 0; i < skills_.size(); i++) {
-      output.writeMessage(7, skills_.get(i));
+      output.writeMessage(8, skills_.get(i));
     }
     for (int i = 0; i < permissionGroups_.size(); i++) {
-      output.writeMessage(8, permissionGroups_.get(i));
+      output.writeMessage(9, permissionGroups_.get(i));
     }
     if (p3PermissionGroup_ != null) {
-      output.writeMessage(9, getP3PermissionGroup());
+      output.writeMessage(10, getP3PermissionGroup());
     }
     if (agentProfileGroup_ != null) {
-      output.writeMessage(10, getAgentProfileGroup());
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, username_);
+      output.writeMessage(11, getAgentProfileGroup());
     }
     for (int i = 0; i < trusts_.size(); i++) {
-      output.writeMessage(21, trusts_.get(i));
+      output.writeMessage(12, trusts_.get(i));
     }
     if (accountOwner_ != false) {
-      output.writeBool(22, accountOwner_);
+      output.writeBool(13, accountOwner_);
     }
     if (emailVerified_ != false) {
-      output.writeBool(23, emailVerified_);
+      output.writeBool(14, emailVerified_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -2181,51 +2181,51 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, username_);
+    }
     if (delegated_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(3, delegated_);
+        .computeBoolSize(4, delegated_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, orgName_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orgName_);
     }
     if (huntGroup_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getHuntGroup());
+        .computeMessageSize(6, getHuntGroup());
     }
     for (int i = 0; i < labels_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, labels_.get(i));
+        .computeMessageSize(7, labels_.get(i));
     }
     for (int i = 0; i < skills_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, skills_.get(i));
+        .computeMessageSize(8, skills_.get(i));
     }
     for (int i = 0; i < permissionGroups_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(8, permissionGroups_.get(i));
+        .computeMessageSize(9, permissionGroups_.get(i));
     }
     if (p3PermissionGroup_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(9, getP3PermissionGroup());
+        .computeMessageSize(10, getP3PermissionGroup());
     }
     if (agentProfileGroup_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(10, getAgentProfileGroup());
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, username_);
+        .computeMessageSize(11, getAgentProfileGroup());
     }
     for (int i = 0; i < trusts_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(21, trusts_.get(i));
+        .computeMessageSize(12, trusts_.get(i));
     }
     if (accountOwner_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(22, accountOwner_);
+        .computeBoolSize(13, accountOwner_);
     }
     if (emailVerified_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(23, emailVerified_);
+        .computeBoolSize(14, emailVerified_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2853,24 +2853,29 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 24: {
+            case 26: {
+              username_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
               delegated_ = input.readBool();
               bitField0_ |= 0x00000008;
               break;
-            } // case 24
-            case 34: {
+            } // case 32
+            case 42: {
               orgName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000010;
               break;
-            } // case 34
-            case 42: {
+            } // case 42
+            case 50: {
               input.readMessage(
                   getHuntGroupFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000020;
               break;
-            } // case 42
-            case 50: {
+            } // case 50
+            case 58: {
               com.tcn.cloud.api.api.commons.org.Label m =
                   input.readMessage(
                       com.tcn.cloud.api.api.commons.org.Label.parser(),
@@ -2882,8 +2887,8 @@ private static final long serialVersionUID = 0L;
                 labelsBuilder_.addMessage(m);
               }
               break;
-            } // case 50
-            case 58: {
+            } // case 58
+            case 66: {
               com.tcn.cloud.api.api.commons.org.Skill m =
                   input.readMessage(
                       com.tcn.cloud.api.api.commons.org.Skill.parser(),
@@ -2895,8 +2900,8 @@ private static final long serialVersionUID = 0L;
                 skillsBuilder_.addMessage(m);
               }
               break;
-            } // case 58
-            case 66: {
+            } // case 66
+            case 74: {
               com.tcn.cloud.api.api.commons.org.PermissionGroup m =
                   input.readMessage(
                       com.tcn.cloud.api.api.commons.org.PermissionGroup.parser(),
@@ -2908,27 +2913,22 @@ private static final long serialVersionUID = 0L;
                 permissionGroupsBuilder_.addMessage(m);
               }
               break;
-            } // case 66
-            case 74: {
+            } // case 74
+            case 82: {
               input.readMessage(
                   getP3PermissionGroupFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000200;
               break;
-            } // case 74
-            case 82: {
+            } // case 82
+            case 90: {
               input.readMessage(
                   getAgentProfileGroupFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000400;
               break;
-            } // case 82
-            case 106: {
-              username_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 106
-            case 170: {
+            } // case 90
+            case 98: {
               com.tcn.cloud.api.api.commons.org.Trust m =
                   input.readMessage(
                       com.tcn.cloud.api.api.commons.org.Trust.parser(),
@@ -2940,17 +2940,17 @@ private static final long serialVersionUID = 0L;
                 trustsBuilder_.addMessage(m);
               }
               break;
-            } // case 170
-            case 176: {
+            } // case 98
+            case 104: {
               accountOwner_ = input.readBool();
               bitField0_ |= 0x00001000;
               break;
-            } // case 176
-            case 184: {
+            } // case 104
+            case 112: {
               emailVerified_ = input.readBool();
               bitField0_ |= 0x00002000;
               break;
-            } // case 184
+            } // case 112
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3158,7 +3158,7 @@ private static final long serialVersionUID = 0L;
      * The agents's username
      * </pre>
      *
-     * <code>string username = 13 [json_name = "username"];</code>
+     * <code>string username = 3 [json_name = "username"];</code>
      * @return The username.
      */
     public java.lang.String getUsername() {
@@ -3178,7 +3178,7 @@ private static final long serialVersionUID = 0L;
      * The agents's username
      * </pre>
      *
-     * <code>string username = 13 [json_name = "username"];</code>
+     * <code>string username = 3 [json_name = "username"];</code>
      * @return The bytes for username.
      */
     public com.google.protobuf.ByteString
@@ -3199,7 +3199,7 @@ private static final long serialVersionUID = 0L;
      * The agents's username
      * </pre>
      *
-     * <code>string username = 13 [json_name = "username"];</code>
+     * <code>string username = 3 [json_name = "username"];</code>
      * @param value The username to set.
      * @return This builder for chaining.
      */
@@ -3216,7 +3216,7 @@ private static final long serialVersionUID = 0L;
      * The agents's username
      * </pre>
      *
-     * <code>string username = 13 [json_name = "username"];</code>
+     * <code>string username = 3 [json_name = "username"];</code>
      * @return This builder for chaining.
      */
     public Builder clearUsername() {
@@ -3230,7 +3230,7 @@ private static final long serialVersionUID = 0L;
      * The agents's username
      * </pre>
      *
-     * <code>string username = 13 [json_name = "username"];</code>
+     * <code>string username = 3 [json_name = "username"];</code>
      * @param value The bytes for username to set.
      * @return This builder for chaining.
      */
@@ -3250,7 +3250,7 @@ private static final long serialVersionUID = 0L;
      * Whether the user is delegated (sso related)
      * </pre>
      *
-     * <code>bool delegated = 3 [json_name = "delegated"];</code>
+     * <code>bool delegated = 4 [json_name = "delegated"];</code>
      * @return The delegated.
      */
     @java.lang.Override
@@ -3262,7 +3262,7 @@ private static final long serialVersionUID = 0L;
      * Whether the user is delegated (sso related)
      * </pre>
      *
-     * <code>bool delegated = 3 [json_name = "delegated"];</code>
+     * <code>bool delegated = 4 [json_name = "delegated"];</code>
      * @param value The delegated to set.
      * @return This builder for chaining.
      */
@@ -3278,7 +3278,7 @@ private static final long serialVersionUID = 0L;
      * Whether the user is delegated (sso related)
      * </pre>
      *
-     * <code>bool delegated = 3 [json_name = "delegated"];</code>
+     * <code>bool delegated = 4 [json_name = "delegated"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDelegated() {
@@ -3294,7 +3294,7 @@ private static final long serialVersionUID = 0L;
      * The name of the user's organization
      * </pre>
      *
-     * <code>string org_name = 4 [json_name = "orgName"];</code>
+     * <code>string org_name = 5 [json_name = "orgName"];</code>
      * @return The orgName.
      */
     public java.lang.String getOrgName() {
@@ -3314,7 +3314,7 @@ private static final long serialVersionUID = 0L;
      * The name of the user's organization
      * </pre>
      *
-     * <code>string org_name = 4 [json_name = "orgName"];</code>
+     * <code>string org_name = 5 [json_name = "orgName"];</code>
      * @return The bytes for orgName.
      */
     public com.google.protobuf.ByteString
@@ -3335,7 +3335,7 @@ private static final long serialVersionUID = 0L;
      * The name of the user's organization
      * </pre>
      *
-     * <code>string org_name = 4 [json_name = "orgName"];</code>
+     * <code>string org_name = 5 [json_name = "orgName"];</code>
      * @param value The orgName to set.
      * @return This builder for chaining.
      */
@@ -3352,7 +3352,7 @@ private static final long serialVersionUID = 0L;
      * The name of the user's organization
      * </pre>
      *
-     * <code>string org_name = 4 [json_name = "orgName"];</code>
+     * <code>string org_name = 5 [json_name = "orgName"];</code>
      * @return This builder for chaining.
      */
     public Builder clearOrgName() {
@@ -3366,7 +3366,7 @@ private static final long serialVersionUID = 0L;
      * The name of the user's organization
      * </pre>
      *
-     * <code>string org_name = 4 [json_name = "orgName"];</code>
+     * <code>string org_name = 5 [json_name = "orgName"];</code>
      * @param value The bytes for orgName to set.
      * @return This builder for chaining.
      */
@@ -3388,7 +3388,7 @@ private static final long serialVersionUID = 0L;
      * An object with the hunt group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 5 [json_name = "huntGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 6 [json_name = "huntGroup"];</code>
      * @return Whether the huntGroup field is set.
      */
     public boolean hasHuntGroup() {
@@ -3399,7 +3399,7 @@ private static final long serialVersionUID = 0L;
      * An object with the hunt group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 5 [json_name = "huntGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 6 [json_name = "huntGroup"];</code>
      * @return The huntGroup.
      */
     public com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup getHuntGroup() {
@@ -3414,7 +3414,7 @@ private static final long serialVersionUID = 0L;
      * An object with the hunt group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 5 [json_name = "huntGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 6 [json_name = "huntGroup"];</code>
      */
     public Builder setHuntGroup(com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup value) {
       if (huntGroupBuilder_ == null) {
@@ -3434,7 +3434,7 @@ private static final long serialVersionUID = 0L;
      * An object with the hunt group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 5 [json_name = "huntGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 6 [json_name = "huntGroup"];</code>
      */
     public Builder setHuntGroup(
         com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup.Builder builderForValue) {
@@ -3452,7 +3452,7 @@ private static final long serialVersionUID = 0L;
      * An object with the hunt group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 5 [json_name = "huntGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 6 [json_name = "huntGroup"];</code>
      */
     public Builder mergeHuntGroup(com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup value) {
       if (huntGroupBuilder_ == null) {
@@ -3475,7 +3475,7 @@ private static final long serialVersionUID = 0L;
      * An object with the hunt group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 5 [json_name = "huntGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 6 [json_name = "huntGroup"];</code>
      */
     public Builder clearHuntGroup() {
       bitField0_ = (bitField0_ & ~0x00000020);
@@ -3492,7 +3492,7 @@ private static final long serialVersionUID = 0L;
      * An object with the hunt group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 5 [json_name = "huntGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 6 [json_name = "huntGroup"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup.Builder getHuntGroupBuilder() {
       bitField0_ |= 0x00000020;
@@ -3504,7 +3504,7 @@ private static final long serialVersionUID = 0L;
      * An object with the hunt group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 5 [json_name = "huntGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 6 [json_name = "huntGroup"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroupOrBuilder getHuntGroupOrBuilder() {
       if (huntGroupBuilder_ != null) {
@@ -3519,7 +3519,7 @@ private static final long serialVersionUID = 0L;
      * An object with the hunt group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 5 [json_name = "huntGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup hunt_group = 6 [json_name = "huntGroup"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup, com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroup.Builder, com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.HuntGroupOrBuilder> 
@@ -3552,7 +3552,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.Label> getLabelsList() {
       if (labelsBuilder_ == null) {
@@ -3566,7 +3566,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public int getLabelsCount() {
       if (labelsBuilder_ == null) {
@@ -3580,7 +3580,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.Label getLabels(int index) {
       if (labelsBuilder_ == null) {
@@ -3594,7 +3594,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public Builder setLabels(
         int index, com.tcn.cloud.api.api.commons.org.Label value) {
@@ -3615,7 +3615,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public Builder setLabels(
         int index, com.tcn.cloud.api.api.commons.org.Label.Builder builderForValue) {
@@ -3633,7 +3633,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public Builder addLabels(com.tcn.cloud.api.api.commons.org.Label value) {
       if (labelsBuilder_ == null) {
@@ -3653,7 +3653,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public Builder addLabels(
         int index, com.tcn.cloud.api.api.commons.org.Label value) {
@@ -3674,7 +3674,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public Builder addLabels(
         com.tcn.cloud.api.api.commons.org.Label.Builder builderForValue) {
@@ -3692,7 +3692,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public Builder addLabels(
         int index, com.tcn.cloud.api.api.commons.org.Label.Builder builderForValue) {
@@ -3710,7 +3710,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public Builder addAllLabels(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.Label> values) {
@@ -3729,7 +3729,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public Builder clearLabels() {
       if (labelsBuilder_ == null) {
@@ -3746,7 +3746,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public Builder removeLabels(int index) {
       if (labelsBuilder_ == null) {
@@ -3763,7 +3763,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.Label.Builder getLabelsBuilder(
         int index) {
@@ -3774,7 +3774,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.LabelOrBuilder getLabelsOrBuilder(
         int index) {
@@ -3788,7 +3788,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.LabelOrBuilder> 
          getLabelsOrBuilderList() {
@@ -3803,7 +3803,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.Label.Builder addLabelsBuilder() {
       return getLabelsFieldBuilder().addBuilder(
@@ -3814,7 +3814,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.Label.Builder addLabelsBuilder(
         int index) {
@@ -3826,7 +3826,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 6 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 7 [json_name = "labels"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.Label.Builder> 
          getLabelsBuilderList() {
@@ -3864,7 +3864,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.Skill> getSkillsList() {
       if (skillsBuilder_ == null) {
@@ -3878,7 +3878,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public int getSkillsCount() {
       if (skillsBuilder_ == null) {
@@ -3892,7 +3892,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.Skill getSkills(int index) {
       if (skillsBuilder_ == null) {
@@ -3906,7 +3906,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public Builder setSkills(
         int index, com.tcn.cloud.api.api.commons.org.Skill value) {
@@ -3927,7 +3927,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public Builder setSkills(
         int index, com.tcn.cloud.api.api.commons.org.Skill.Builder builderForValue) {
@@ -3945,7 +3945,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public Builder addSkills(com.tcn.cloud.api.api.commons.org.Skill value) {
       if (skillsBuilder_ == null) {
@@ -3965,7 +3965,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public Builder addSkills(
         int index, com.tcn.cloud.api.api.commons.org.Skill value) {
@@ -3986,7 +3986,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public Builder addSkills(
         com.tcn.cloud.api.api.commons.org.Skill.Builder builderForValue) {
@@ -4004,7 +4004,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public Builder addSkills(
         int index, com.tcn.cloud.api.api.commons.org.Skill.Builder builderForValue) {
@@ -4022,7 +4022,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public Builder addAllSkills(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.Skill> values) {
@@ -4041,7 +4041,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public Builder clearSkills() {
       if (skillsBuilder_ == null) {
@@ -4058,7 +4058,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public Builder removeSkills(int index) {
       if (skillsBuilder_ == null) {
@@ -4075,7 +4075,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.Skill.Builder getSkillsBuilder(
         int index) {
@@ -4086,7 +4086,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.SkillOrBuilder getSkillsOrBuilder(
         int index) {
@@ -4100,7 +4100,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.SkillOrBuilder> 
          getSkillsOrBuilderList() {
@@ -4115,7 +4115,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.Skill.Builder addSkillsBuilder() {
       return getSkillsFieldBuilder().addBuilder(
@@ -4126,7 +4126,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.Skill.Builder addSkillsBuilder(
         int index) {
@@ -4138,7 +4138,7 @@ private static final long serialVersionUID = 0L;
      * A list of the skills associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Skill skills = 7 [json_name = "skills"];</code>
+     * <code>repeated .api.commons.org.Skill skills = 8 [json_name = "skills"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.Skill.Builder> 
          getSkillsBuilderList() {
@@ -4176,7 +4176,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.PermissionGroup> getPermissionGroupsList() {
       if (permissionGroupsBuilder_ == null) {
@@ -4190,7 +4190,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public int getPermissionGroupsCount() {
       if (permissionGroupsBuilder_ == null) {
@@ -4204,7 +4204,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.PermissionGroup getPermissionGroups(int index) {
       if (permissionGroupsBuilder_ == null) {
@@ -4218,7 +4218,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public Builder setPermissionGroups(
         int index, com.tcn.cloud.api.api.commons.org.PermissionGroup value) {
@@ -4239,7 +4239,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public Builder setPermissionGroups(
         int index, com.tcn.cloud.api.api.commons.org.PermissionGroup.Builder builderForValue) {
@@ -4257,7 +4257,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public Builder addPermissionGroups(com.tcn.cloud.api.api.commons.org.PermissionGroup value) {
       if (permissionGroupsBuilder_ == null) {
@@ -4277,7 +4277,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public Builder addPermissionGroups(
         int index, com.tcn.cloud.api.api.commons.org.PermissionGroup value) {
@@ -4298,7 +4298,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public Builder addPermissionGroups(
         com.tcn.cloud.api.api.commons.org.PermissionGroup.Builder builderForValue) {
@@ -4316,7 +4316,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public Builder addPermissionGroups(
         int index, com.tcn.cloud.api.api.commons.org.PermissionGroup.Builder builderForValue) {
@@ -4334,7 +4334,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public Builder addAllPermissionGroups(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.PermissionGroup> values) {
@@ -4353,7 +4353,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public Builder clearPermissionGroups() {
       if (permissionGroupsBuilder_ == null) {
@@ -4370,7 +4370,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public Builder removePermissionGroups(int index) {
       if (permissionGroupsBuilder_ == null) {
@@ -4387,7 +4387,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.PermissionGroup.Builder getPermissionGroupsBuilder(
         int index) {
@@ -4398,7 +4398,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.PermissionGroupOrBuilder getPermissionGroupsOrBuilder(
         int index) {
@@ -4412,7 +4412,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.PermissionGroupOrBuilder> 
          getPermissionGroupsOrBuilderList() {
@@ -4427,7 +4427,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.PermissionGroup.Builder addPermissionGroupsBuilder() {
       return getPermissionGroupsFieldBuilder().addBuilder(
@@ -4438,7 +4438,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.PermissionGroup.Builder addPermissionGroupsBuilder(
         int index) {
@@ -4450,7 +4450,7 @@ private static final long serialVersionUID = 0L;
      * A list of the permission groups the user belongs to
      * </pre>
      *
-     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 8 [json_name = "permissionGroups"];</code>
+     * <code>repeated .api.commons.org.PermissionGroup permission_groups = 9 [json_name = "permissionGroups"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.PermissionGroup.Builder> 
          getPermissionGroupsBuilderList() {
@@ -4479,7 +4479,7 @@ private static final long serialVersionUID = 0L;
      * The user's p3 permission group
      * </pre>
      *
-     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 9 [json_name = "p3PermissionGroup"];</code>
+     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 10 [json_name = "p3PermissionGroup"];</code>
      * @return Whether the p3PermissionGroup field is set.
      */
     public boolean hasP3PermissionGroup() {
@@ -4490,7 +4490,7 @@ private static final long serialVersionUID = 0L;
      * The user's p3 permission group
      * </pre>
      *
-     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 9 [json_name = "p3PermissionGroup"];</code>
+     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 10 [json_name = "p3PermissionGroup"];</code>
      * @return The p3PermissionGroup.
      */
     public com.tcn.cloud.api.api.commons.org.P3PermissionGroup getP3PermissionGroup() {
@@ -4505,7 +4505,7 @@ private static final long serialVersionUID = 0L;
      * The user's p3 permission group
      * </pre>
      *
-     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 9 [json_name = "p3PermissionGroup"];</code>
+     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 10 [json_name = "p3PermissionGroup"];</code>
      */
     public Builder setP3PermissionGroup(com.tcn.cloud.api.api.commons.org.P3PermissionGroup value) {
       if (p3PermissionGroupBuilder_ == null) {
@@ -4525,7 +4525,7 @@ private static final long serialVersionUID = 0L;
      * The user's p3 permission group
      * </pre>
      *
-     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 9 [json_name = "p3PermissionGroup"];</code>
+     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 10 [json_name = "p3PermissionGroup"];</code>
      */
     public Builder setP3PermissionGroup(
         com.tcn.cloud.api.api.commons.org.P3PermissionGroup.Builder builderForValue) {
@@ -4543,7 +4543,7 @@ private static final long serialVersionUID = 0L;
      * The user's p3 permission group
      * </pre>
      *
-     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 9 [json_name = "p3PermissionGroup"];</code>
+     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 10 [json_name = "p3PermissionGroup"];</code>
      */
     public Builder mergeP3PermissionGroup(com.tcn.cloud.api.api.commons.org.P3PermissionGroup value) {
       if (p3PermissionGroupBuilder_ == null) {
@@ -4566,7 +4566,7 @@ private static final long serialVersionUID = 0L;
      * The user's p3 permission group
      * </pre>
      *
-     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 9 [json_name = "p3PermissionGroup"];</code>
+     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 10 [json_name = "p3PermissionGroup"];</code>
      */
     public Builder clearP3PermissionGroup() {
       bitField0_ = (bitField0_ & ~0x00000200);
@@ -4583,7 +4583,7 @@ private static final long serialVersionUID = 0L;
      * The user's p3 permission group
      * </pre>
      *
-     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 9 [json_name = "p3PermissionGroup"];</code>
+     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 10 [json_name = "p3PermissionGroup"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.P3PermissionGroup.Builder getP3PermissionGroupBuilder() {
       bitField0_ |= 0x00000200;
@@ -4595,7 +4595,7 @@ private static final long serialVersionUID = 0L;
      * The user's p3 permission group
      * </pre>
      *
-     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 9 [json_name = "p3PermissionGroup"];</code>
+     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 10 [json_name = "p3PermissionGroup"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.P3PermissionGroupOrBuilder getP3PermissionGroupOrBuilder() {
       if (p3PermissionGroupBuilder_ != null) {
@@ -4610,7 +4610,7 @@ private static final long serialVersionUID = 0L;
      * The user's p3 permission group
      * </pre>
      *
-     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 9 [json_name = "p3PermissionGroup"];</code>
+     * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 10 [json_name = "p3PermissionGroup"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.P3PermissionGroup, com.tcn.cloud.api.api.commons.org.P3PermissionGroup.Builder, com.tcn.cloud.api.api.commons.org.P3PermissionGroupOrBuilder> 
@@ -4634,7 +4634,7 @@ private static final long serialVersionUID = 0L;
      * An object with the agent profile group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 10 [json_name = "agentProfileGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 11 [json_name = "agentProfileGroup"];</code>
      * @return Whether the agentProfileGroup field is set.
      */
     public boolean hasAgentProfileGroup() {
@@ -4645,7 +4645,7 @@ private static final long serialVersionUID = 0L;
      * An object with the agent profile group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 10 [json_name = "agentProfileGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 11 [json_name = "agentProfileGroup"];</code>
      * @return The agentProfileGroup.
      */
     public com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup getAgentProfileGroup() {
@@ -4660,7 +4660,7 @@ private static final long serialVersionUID = 0L;
      * An object with the agent profile group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 10 [json_name = "agentProfileGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 11 [json_name = "agentProfileGroup"];</code>
      */
     public Builder setAgentProfileGroup(com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup value) {
       if (agentProfileGroupBuilder_ == null) {
@@ -4680,7 +4680,7 @@ private static final long serialVersionUID = 0L;
      * An object with the agent profile group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 10 [json_name = "agentProfileGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 11 [json_name = "agentProfileGroup"];</code>
      */
     public Builder setAgentProfileGroup(
         com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup.Builder builderForValue) {
@@ -4698,7 +4698,7 @@ private static final long serialVersionUID = 0L;
      * An object with the agent profile group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 10 [json_name = "agentProfileGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 11 [json_name = "agentProfileGroup"];</code>
      */
     public Builder mergeAgentProfileGroup(com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup value) {
       if (agentProfileGroupBuilder_ == null) {
@@ -4721,7 +4721,7 @@ private static final long serialVersionUID = 0L;
      * An object with the agent profile group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 10 [json_name = "agentProfileGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 11 [json_name = "agentProfileGroup"];</code>
      */
     public Builder clearAgentProfileGroup() {
       bitField0_ = (bitField0_ & ~0x00000400);
@@ -4738,7 +4738,7 @@ private static final long serialVersionUID = 0L;
      * An object with the agent profile group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 10 [json_name = "agentProfileGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 11 [json_name = "agentProfileGroup"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup.Builder getAgentProfileGroupBuilder() {
       bitField0_ |= 0x00000400;
@@ -4750,7 +4750,7 @@ private static final long serialVersionUID = 0L;
      * An object with the agent profile group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 10 [json_name = "agentProfileGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 11 [json_name = "agentProfileGroup"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroupOrBuilder getAgentProfileGroupOrBuilder() {
       if (agentProfileGroupBuilder_ != null) {
@@ -4765,7 +4765,7 @@ private static final long serialVersionUID = 0L;
      * An object with the agent profile group fields required for the call
      * </pre>
      *
-     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 10 [json_name = "agentProfileGroup"];</code>
+     * <code>.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup agent_profile_group = 11 [json_name = "agentProfileGroup"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup, com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroup.Builder, com.tcn.cloud.api.api.v1alpha1.org.users.GetUserByOrgIdResponse.AgentProfileGroupOrBuilder> 
@@ -4798,7 +4798,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.Trust> getTrustsList() {
       if (trustsBuilder_ == null) {
@@ -4812,7 +4812,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public int getTrustsCount() {
       if (trustsBuilder_ == null) {
@@ -4826,7 +4826,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.Trust getTrusts(int index) {
       if (trustsBuilder_ == null) {
@@ -4840,7 +4840,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public Builder setTrusts(
         int index, com.tcn.cloud.api.api.commons.org.Trust value) {
@@ -4861,7 +4861,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public Builder setTrusts(
         int index, com.tcn.cloud.api.api.commons.org.Trust.Builder builderForValue) {
@@ -4879,7 +4879,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public Builder addTrusts(com.tcn.cloud.api.api.commons.org.Trust value) {
       if (trustsBuilder_ == null) {
@@ -4899,7 +4899,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public Builder addTrusts(
         int index, com.tcn.cloud.api.api.commons.org.Trust value) {
@@ -4920,7 +4920,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public Builder addTrusts(
         com.tcn.cloud.api.api.commons.org.Trust.Builder builderForValue) {
@@ -4938,7 +4938,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public Builder addTrusts(
         int index, com.tcn.cloud.api.api.commons.org.Trust.Builder builderForValue) {
@@ -4956,7 +4956,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public Builder addAllTrusts(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.Trust> values) {
@@ -4975,7 +4975,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public Builder clearTrusts() {
       if (trustsBuilder_ == null) {
@@ -4992,7 +4992,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public Builder removeTrusts(int index) {
       if (trustsBuilder_ == null) {
@@ -5009,7 +5009,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.Trust.Builder getTrustsBuilder(
         int index) {
@@ -5020,7 +5020,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.TrustOrBuilder getTrustsOrBuilder(
         int index) {
@@ -5034,7 +5034,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.TrustOrBuilder> 
          getTrustsOrBuilderList() {
@@ -5049,7 +5049,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.Trust.Builder addTrustsBuilder() {
       return getTrustsFieldBuilder().addBuilder(
@@ -5060,7 +5060,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.Trust.Builder addTrustsBuilder(
         int index) {
@@ -5072,7 +5072,7 @@ private static final long serialVersionUID = 0L;
      * A list of trusts the user has been assigned.
      * </pre>
      *
-     * <code>repeated .api.commons.org.Trust trusts = 21 [json_name = "trusts"];</code>
+     * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.org.Trust.Builder> 
          getTrustsBuilderList() {
@@ -5099,7 +5099,7 @@ private static final long serialVersionUID = 0L;
      * Whether the user is an account owner
      * </pre>
      *
-     * <code>bool account_owner = 22 [json_name = "accountOwner"];</code>
+     * <code>bool account_owner = 13 [json_name = "accountOwner"];</code>
      * @return The accountOwner.
      */
     @java.lang.Override
@@ -5111,7 +5111,7 @@ private static final long serialVersionUID = 0L;
      * Whether the user is an account owner
      * </pre>
      *
-     * <code>bool account_owner = 22 [json_name = "accountOwner"];</code>
+     * <code>bool account_owner = 13 [json_name = "accountOwner"];</code>
      * @param value The accountOwner to set.
      * @return This builder for chaining.
      */
@@ -5127,7 +5127,7 @@ private static final long serialVersionUID = 0L;
      * Whether the user is an account owner
      * </pre>
      *
-     * <code>bool account_owner = 22 [json_name = "accountOwner"];</code>
+     * <code>bool account_owner = 13 [json_name = "accountOwner"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAccountOwner() {
@@ -5143,7 +5143,7 @@ private static final long serialVersionUID = 0L;
      * if the user's email is verified
      * </pre>
      *
-     * <code>bool email_verified = 23 [json_name = "emailVerified"];</code>
+     * <code>bool email_verified = 14 [json_name = "emailVerified"];</code>
      * @return The emailVerified.
      */
     @java.lang.Override
@@ -5155,7 +5155,7 @@ private static final long serialVersionUID = 0L;
      * if the user's email is verified
      * </pre>
      *
-     * <code>bool email_verified = 23 [json_name = "emailVerified"];</code>
+     * <code>bool email_verified = 14 [json_name = "emailVerified"];</code>
      * @param value The emailVerified to set.
      * @return This builder for chaining.
      */
@@ -5171,7 +5171,7 @@ private static final long serialVersionUID = 0L;
      * if the user's email is verified
      * </pre>
      *
-     * <code>bool email_verified = 23 [json_name = "emailVerified"];</code>
+     * <code>bool email_verified = 14 [json_name = "emailVerified"];</code>
      * @return This builder for chaining.
      */
     public Builder clearEmailVerified() {
