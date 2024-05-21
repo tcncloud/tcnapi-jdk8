@@ -9109,6 +9109,7 @@ public final class OrgGrpc {
      * AssignLabels assigns labels to a given permission group
      * </pre>
      */
+    @java.lang.Deprecated
     default void assignLabels(com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignLabelsMethod(), responseObserver);
@@ -9119,6 +9120,7 @@ public final class OrgGrpc {
      * RevokeLabels revokes labels from a given permission group
      * </pre>
      */
+    @java.lang.Deprecated
     default void revokeLabels(com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeLabelsMethod(), responseObserver);
@@ -11670,6 +11672,7 @@ public final class OrgGrpc {
      * AssignLabels assigns labels to a given permission group
      * </pre>
      */
+    @java.lang.Deprecated
     public void assignLabels(com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -11681,6 +11684,7 @@ public final class OrgGrpc {
      * RevokeLabels revokes labels from a given permission group
      * </pre>
      */
+    @java.lang.Deprecated
     public void revokeLabels(com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -14073,6 +14077,7 @@ public final class OrgGrpc {
      * AssignLabels assigns labels to a given permission group
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse assignLabels(com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAssignLabelsMethod(), getCallOptions(), request);
@@ -14083,6 +14088,7 @@ public final class OrgGrpc {
      * RevokeLabels revokes labels from a given permission group
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse revokeLabels(com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRevokeLabelsMethod(), getCallOptions(), request);
@@ -16510,6 +16516,7 @@ public final class OrgGrpc {
      * AssignLabels assigns labels to a given permission group
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsResponse> assignLabels(
         com.tcn.cloud.api.api.v1alpha1.org.AssignLabelsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -16521,6 +16528,7 @@ public final class OrgGrpc {
      * RevokeLabels revokes labels from a given permission group
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsResponse> revokeLabels(
         com.tcn.cloud.api.api.v1alpha1.org.RevokeLabelsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(

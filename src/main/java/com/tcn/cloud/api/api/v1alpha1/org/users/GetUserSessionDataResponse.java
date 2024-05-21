@@ -135,7 +135,7 @@ private static final long serialVersionUID = 0L;
      * The User's partner agent id.
      * </pre>
      *
-     * <code>string partner_agent_id = 8 [json_name = "partnerAgentId"];</code>
+     * <code>string partner_agent_id = 5 [json_name = "partnerAgentId"];</code>
      * @return The partnerAgentId.
      */
     java.lang.String getPartnerAgentId();
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
      * The User's partner agent id.
      * </pre>
      *
-     * <code>string partner_agent_id = 8 [json_name = "partnerAgentId"];</code>
+     * <code>string partner_agent_id = 5 [json_name = "partnerAgentId"];</code>
      * @return The bytes for partnerAgentId.
      */
     com.google.protobuf.ByteString
@@ -1683,7 +1683,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.GetUserSessionDataResponse.User.RegionS
       }
     }
 
-    public static final int PARTNER_AGENT_ID_FIELD_NUMBER = 8;
+    public static final int PARTNER_AGENT_ID_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
     private volatile java.lang.Object partnerAgentId_ = "";
     /**
@@ -1691,7 +1691,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.GetUserSessionDataResponse.User.RegionS
      * The User's partner agent id.
      * </pre>
      *
-     * <code>string partner_agent_id = 8 [json_name = "partnerAgentId"];</code>
+     * <code>string partner_agent_id = 5 [json_name = "partnerAgentId"];</code>
      * @return The partnerAgentId.
      */
     @java.lang.Override
@@ -1712,7 +1712,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.GetUserSessionDataResponse.User.RegionS
      * The User's partner agent id.
      * </pre>
      *
-     * <code>string partner_agent_id = 8 [json_name = "partnerAgentId"];</code>
+     * <code>string partner_agent_id = 5 [json_name = "partnerAgentId"];</code>
      * @return The bytes for partnerAgentId.
      */
     @java.lang.Override
@@ -2740,7 +2740,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.GetUserSessionDataResponse.User.RegionS
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, p3PermissionGroupId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(partnerAgentId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, partnerAgentId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, partnerAgentId_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
@@ -2839,7 +2839,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.GetUserSessionDataResponse.User.RegionS
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, p3PermissionGroupId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(partnerAgentId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, partnerAgentId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, partnerAgentId_);
       }
       for (java.util.Map.Entry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.users.GetUserSessionDataResponse.User.RegionSids> entry
            : internalGetRegionSidMap().getMap().entrySet()) {
@@ -3716,11 +3716,11 @@ com.tcn.cloud.api.api.v1alpha1.org.users.GetUserSessionDataResponse.User.RegionS
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
-              case 66: {
+              case 42: {
                 partnerAgentId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000010;
                 break;
-              } // case 66
+              } // case 42
               case 82: {
                 com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.users.GetUserSessionDataResponse.User.RegionSids>
                 regionSidMap__ = input.readMessage(
@@ -4252,7 +4252,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.GetUserSessionDataResponse.User.RegionS
        * The User's partner agent id.
        * </pre>
        *
-       * <code>string partner_agent_id = 8 [json_name = "partnerAgentId"];</code>
+       * <code>string partner_agent_id = 5 [json_name = "partnerAgentId"];</code>
        * @return The partnerAgentId.
        */
       public java.lang.String getPartnerAgentId() {
@@ -4272,7 +4272,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.GetUserSessionDataResponse.User.RegionS
        * The User's partner agent id.
        * </pre>
        *
-       * <code>string partner_agent_id = 8 [json_name = "partnerAgentId"];</code>
+       * <code>string partner_agent_id = 5 [json_name = "partnerAgentId"];</code>
        * @return The bytes for partnerAgentId.
        */
       public com.google.protobuf.ByteString
@@ -4293,7 +4293,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.GetUserSessionDataResponse.User.RegionS
        * The User's partner agent id.
        * </pre>
        *
-       * <code>string partner_agent_id = 8 [json_name = "partnerAgentId"];</code>
+       * <code>string partner_agent_id = 5 [json_name = "partnerAgentId"];</code>
        * @param value The partnerAgentId to set.
        * @return This builder for chaining.
        */
@@ -4310,7 +4310,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.GetUserSessionDataResponse.User.RegionS
        * The User's partner agent id.
        * </pre>
        *
-       * <code>string partner_agent_id = 8 [json_name = "partnerAgentId"];</code>
+       * <code>string partner_agent_id = 5 [json_name = "partnerAgentId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPartnerAgentId() {
@@ -4324,7 +4324,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.GetUserSessionDataResponse.User.RegionS
        * The User's partner agent id.
        * </pre>
        *
-       * <code>string partner_agent_id = 8 [json_name = "partnerAgentId"];</code>
+       * <code>string partner_agent_id = 5 [json_name = "partnerAgentId"];</code>
        * @param value The bytes for partnerAgentId to set.
        * @return This builder for chaining.
        */

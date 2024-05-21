@@ -734,13 +734,13 @@ public final class UsersProto {
       "orgId\022\035\n\nfirst_name\030\003 \001(\tR\tfirstName\022\033\n\t" +
       "last_name\030\004 \001(\tR\010lastName\022\032\n\010username\030\005 " +
       "\001(\tR\010username\022%\n\016login_disabled\030\007 \001(\010R\rl" +
-      "oginDisabled\0220\n\024permission_group_ids\030\t \003" +
-      "(\tR\022permissionGroupIds\022.\n\006labels\030\n \003(\0132\026" +
+      "oginDisabled\0220\n\024permission_group_ids\030\010 \003" +
+      "(\tR\022permissionGroupIds\022.\n\006labels\030\t \003(\0132\026" +
       ".api.commons.org.LabelR\006labels\022#\n\raccoun" +
-      "t_owner\030\013 \001(\010R\014accountOwner\022\024\n\005agent\030\014 \001" +
-      "(\010R\005agent\022\033\n\ttrust_ids\030\r \003(\tR\010trustIds\0223" +
-      "\n\010mfa_info\030\016 \001(\0132\030.api.commons.org.MfaIn" +
-      "foR\007mfaInfo\022%\n\016email_verified\030\017 \001(\010R\rema" +
+      "t_owner\030\n \001(\010R\014accountOwner\022\024\n\005agent\030\013 \001" +
+      "(\010R\005agent\022\033\n\ttrust_ids\030\014 \003(\tR\010trustIds\0223" +
+      "\n\010mfa_info\030\r \001(\0132\030.api.commons.org.MfaIn" +
+      "foR\007mfaInfo\022%\n\016email_verified\030\016 \001(\010R\rema" +
       "ilVerified\"\177\n\027ListUsersByOrgIdRequest\022\025\n" +
       "\006org_id\030\001 \001(\tR\005orgId\022M\n\017archived_filter\030" +
       "\002 \001(\0162$.api.commons.UserArchivedStateFil" +
@@ -771,13 +771,13 @@ public final class UsersProto {
       "\005orgId\022\035\n\nfirst_name\030\003 \001(\tR\tfirstName\022\033\n" +
       "\tlast_name\030\004 \001(\tR\010lastName\022\032\n\010username\030\005" +
       " \001(\tR\010username\022%\n\016login_disabled\030\007 \001(\010R\r" +
-      "loginDisabled\0220\n\024permission_group_ids\030\t " +
-      "\003(\tR\022permissionGroupIds\022.\n\006labels\030\n \003(\0132" +
+      "loginDisabled\0220\n\024permission_group_ids\030\010 " +
+      "\003(\tR\022permissionGroupIds\022.\n\006labels\030\t \003(\0132" +
       "\026.api.commons.org.LabelR\006labels\022#\n\raccou" +
-      "nt_owner\030\013 \001(\010R\014accountOwner\022\024\n\005agent\030\014 " +
-      "\001(\010R\005agent\022\033\n\ttrust_ids\030\r \003(\tR\010trustIds\022" +
-      "3\n\010mfa_info\030\016 \001(\0132\030.api.commons.org.MfaI" +
-      "nfoR\007mfaInfo\022%\n\016email_verified\030\017 \001(\010R\rem" +
+      "nt_owner\030\n \001(\010R\014accountOwner\022\024\n\005agent\030\013 " +
+      "\001(\010R\005agent\022\033\n\ttrust_ids\030\014 \003(\tR\010trustIds\022" +
+      "3\n\010mfa_info\030\r \001(\0132\030.api.commons.org.MfaI" +
+      "nfoR\007mfaInfo\022%\n\016email_verified\030\016 \001(\010R\rem" +
       "ailVerified\"\216\002\n\023UpdateMyUserRequest\022)\n\020l" +
       "inkback_numbers\030\001 \003(\tR\017linkbackNumbers\022\035" +
       "\n\ncaller_ids\030\002 \003(\tR\tcallerIds\022J\n\022time_zo" +
@@ -886,7 +886,7 @@ public final class UsersProto {
       " \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\032\n\010u" +
       "sername\030\003 \001(\tR\010username\0223\n\026p3_permission" +
       "_group_id\030\004 \001(\tR\023p3PermissionGroupId\022(\n\020" +
-      "partner_agent_id\030\010 \001(\tR\016partnerAgentId\022o" +
+      "partner_agent_id\030\005 \001(\tR\016partnerAgentId\022o" +
       "\n\016region_sid_map\030\n \003(\0132I.api.v1alpha1.or" +
       "g.users.GetUserSessionDataResponse.User." +
       "RegionSidMapEntryR\014regionSidMap\022%\n\016defau" +

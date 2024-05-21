@@ -162,7 +162,7 @@ private static final long serialVersionUID = 0L;
      * A list of the (neo)permission group Ids the agent belongs to
      * </pre>
      *
-     * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+     * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
      * @return A list containing the permissionGroupIds.
      */
     java.util.List<java.lang.String>
@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
      * A list of the (neo)permission group Ids the agent belongs to
      * </pre>
      *
-     * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+     * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
      * @return The count of permissionGroupIds.
      */
     int getPermissionGroupIdsCount();
@@ -181,7 +181,7 @@ private static final long serialVersionUID = 0L;
      * A list of the (neo)permission group Ids the agent belongs to
      * </pre>
      *
-     * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+     * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
      * @param index The index of the element to return.
      * @return The permissionGroupIds at the given index.
      */
@@ -191,7 +191,7 @@ private static final long serialVersionUID = 0L;
      * A list of the (neo)permission group Ids the agent belongs to
      * </pre>
      *
-     * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+     * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the permissionGroupIds at the given index.
      */
@@ -203,7 +203,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
      */
     java.util.List<com.tcn.cloud.api.api.commons.org.Label> 
         getLabelsList();
@@ -212,7 +212,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
      */
     com.tcn.cloud.api.api.commons.org.Label getLabels(int index);
     /**
@@ -220,7 +220,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
      */
     int getLabelsCount();
     /**
@@ -228,7 +228,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
      */
     java.util.List<? extends com.tcn.cloud.api.api.commons.org.LabelOrBuilder> 
         getLabelsOrBuilderList();
@@ -237,7 +237,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
      */
     com.tcn.cloud.api.api.commons.org.LabelOrBuilder getLabelsOrBuilder(
         int index);
@@ -247,7 +247,7 @@ private static final long serialVersionUID = 0L;
      * Whether the user is an account owner
      * </pre>
      *
-     * <code>bool account_owner = 11 [json_name = "accountOwner"];</code>
+     * <code>bool account_owner = 10 [json_name = "accountOwner"];</code>
      * @return The accountOwner.
      */
     boolean getAccountOwner();
@@ -257,7 +257,7 @@ private static final long serialVersionUID = 0L;
      * Whether the user is also an agent
      * </pre>
      *
-     * <code>bool agent = 12 [json_name = "agent"];</code>
+     * <code>bool agent = 11 [json_name = "agent"];</code>
      * @return The agent.
      */
     boolean getAgent();
@@ -267,7 +267,7 @@ private static final long serialVersionUID = 0L;
      * A list of the trust ids the user has been assigned.
      * </pre>
      *
-     * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+     * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
      * @return A list containing the trustIds.
      */
     java.util.List<java.lang.String>
@@ -277,7 +277,7 @@ private static final long serialVersionUID = 0L;
      * A list of the trust ids the user has been assigned.
      * </pre>
      *
-     * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+     * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
      * @return The count of trustIds.
      */
     int getTrustIdsCount();
@@ -286,7 +286,7 @@ private static final long serialVersionUID = 0L;
      * A list of the trust ids the user has been assigned.
      * </pre>
      *
-     * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+     * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
      * @param index The index of the element to return.
      * @return The trustIds at the given index.
      */
@@ -296,7 +296,7 @@ private static final long serialVersionUID = 0L;
      * A list of the trust ids the user has been assigned.
      * </pre>
      *
-     * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+     * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the trustIds at the given index.
      */
@@ -308,7 +308,7 @@ private static final long serialVersionUID = 0L;
      * MfaInfo of the user.
      * </pre>
      *
-     * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+     * <code>.api.commons.org.MfaInfo mfa_info = 13 [json_name = "mfaInfo"];</code>
      * @return Whether the mfaInfo field is set.
      */
     boolean hasMfaInfo();
@@ -317,7 +317,7 @@ private static final long serialVersionUID = 0L;
      * MfaInfo of the user.
      * </pre>
      *
-     * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+     * <code>.api.commons.org.MfaInfo mfa_info = 13 [json_name = "mfaInfo"];</code>
      * @return The mfaInfo.
      */
     com.tcn.cloud.api.api.commons.org.MfaInfo getMfaInfo();
@@ -326,7 +326,7 @@ private static final long serialVersionUID = 0L;
      * MfaInfo of the user.
      * </pre>
      *
-     * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+     * <code>.api.commons.org.MfaInfo mfa_info = 13 [json_name = "mfaInfo"];</code>
      */
     com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder getMfaInfoOrBuilder();
 
@@ -335,7 +335,7 @@ private static final long serialVersionUID = 0L;
      * Whether or not the users email is verified.
      * </pre>
      *
-     * <code>bool email_verified = 15 [json_name = "emailVerified"];</code>
+     * <code>bool email_verified = 14 [json_name = "emailVerified"];</code>
      * @return The emailVerified.
      */
     boolean getEmailVerified();
@@ -639,7 +639,7 @@ private static final long serialVersionUID = 0L;
       return loginDisabled_;
     }
 
-    public static final int PERMISSION_GROUP_IDS_FIELD_NUMBER = 9;
+    public static final int PERMISSION_GROUP_IDS_FIELD_NUMBER = 8;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList permissionGroupIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
@@ -648,7 +648,7 @@ private static final long serialVersionUID = 0L;
      * A list of the (neo)permission group Ids the agent belongs to
      * </pre>
      *
-     * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+     * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
      * @return A list containing the permissionGroupIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -660,7 +660,7 @@ private static final long serialVersionUID = 0L;
      * A list of the (neo)permission group Ids the agent belongs to
      * </pre>
      *
-     * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+     * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
      * @return The count of permissionGroupIds.
      */
     public int getPermissionGroupIdsCount() {
@@ -671,7 +671,7 @@ private static final long serialVersionUID = 0L;
      * A list of the (neo)permission group Ids the agent belongs to
      * </pre>
      *
-     * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+     * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
      * @param index The index of the element to return.
      * @return The permissionGroupIds at the given index.
      */
@@ -683,7 +683,7 @@ private static final long serialVersionUID = 0L;
      * A list of the (neo)permission group Ids the agent belongs to
      * </pre>
      *
-     * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+     * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the permissionGroupIds at the given index.
      */
@@ -692,7 +692,7 @@ private static final long serialVersionUID = 0L;
       return permissionGroupIds_.getByteString(index);
     }
 
-    public static final int LABELS_FIELD_NUMBER = 10;
+    public static final int LABELS_FIELD_NUMBER = 9;
     @SuppressWarnings("serial")
     private java.util.List<com.tcn.cloud.api.api.commons.org.Label> labels_;
     /**
@@ -700,7 +700,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
      */
     @java.lang.Override
     public java.util.List<com.tcn.cloud.api.api.commons.org.Label> getLabelsList() {
@@ -711,7 +711,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.tcn.cloud.api.api.commons.org.LabelOrBuilder> 
@@ -723,7 +723,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
      */
     @java.lang.Override
     public int getLabelsCount() {
@@ -734,7 +734,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.Label getLabels(int index) {
@@ -745,7 +745,7 @@ private static final long serialVersionUID = 0L;
      * A list of the labels associated with the user
      * </pre>
      *
-     * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.LabelOrBuilder getLabelsOrBuilder(
@@ -753,14 +753,14 @@ private static final long serialVersionUID = 0L;
       return labels_.get(index);
     }
 
-    public static final int ACCOUNT_OWNER_FIELD_NUMBER = 11;
+    public static final int ACCOUNT_OWNER_FIELD_NUMBER = 10;
     private boolean accountOwner_ = false;
     /**
      * <pre>
      * Whether the user is an account owner
      * </pre>
      *
-     * <code>bool account_owner = 11 [json_name = "accountOwner"];</code>
+     * <code>bool account_owner = 10 [json_name = "accountOwner"];</code>
      * @return The accountOwner.
      */
     @java.lang.Override
@@ -768,14 +768,14 @@ private static final long serialVersionUID = 0L;
       return accountOwner_;
     }
 
-    public static final int AGENT_FIELD_NUMBER = 12;
+    public static final int AGENT_FIELD_NUMBER = 11;
     private boolean agent_ = false;
     /**
      * <pre>
      * Whether the user is also an agent
      * </pre>
      *
-     * <code>bool agent = 12 [json_name = "agent"];</code>
+     * <code>bool agent = 11 [json_name = "agent"];</code>
      * @return The agent.
      */
     @java.lang.Override
@@ -783,7 +783,7 @@ private static final long serialVersionUID = 0L;
       return agent_;
     }
 
-    public static final int TRUST_IDS_FIELD_NUMBER = 13;
+    public static final int TRUST_IDS_FIELD_NUMBER = 12;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList trustIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
@@ -792,7 +792,7 @@ private static final long serialVersionUID = 0L;
      * A list of the trust ids the user has been assigned.
      * </pre>
      *
-     * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+     * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
      * @return A list containing the trustIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -804,7 +804,7 @@ private static final long serialVersionUID = 0L;
      * A list of the trust ids the user has been assigned.
      * </pre>
      *
-     * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+     * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
      * @return The count of trustIds.
      */
     public int getTrustIdsCount() {
@@ -815,7 +815,7 @@ private static final long serialVersionUID = 0L;
      * A list of the trust ids the user has been assigned.
      * </pre>
      *
-     * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+     * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
      * @param index The index of the element to return.
      * @return The trustIds at the given index.
      */
@@ -827,7 +827,7 @@ private static final long serialVersionUID = 0L;
      * A list of the trust ids the user has been assigned.
      * </pre>
      *
-     * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+     * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the trustIds at the given index.
      */
@@ -836,14 +836,14 @@ private static final long serialVersionUID = 0L;
       return trustIds_.getByteString(index);
     }
 
-    public static final int MFA_INFO_FIELD_NUMBER = 14;
+    public static final int MFA_INFO_FIELD_NUMBER = 13;
     private com.tcn.cloud.api.api.commons.org.MfaInfo mfaInfo_;
     /**
      * <pre>
      * MfaInfo of the user.
      * </pre>
      *
-     * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+     * <code>.api.commons.org.MfaInfo mfa_info = 13 [json_name = "mfaInfo"];</code>
      * @return Whether the mfaInfo field is set.
      */
     @java.lang.Override
@@ -855,7 +855,7 @@ private static final long serialVersionUID = 0L;
      * MfaInfo of the user.
      * </pre>
      *
-     * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+     * <code>.api.commons.org.MfaInfo mfa_info = 13 [json_name = "mfaInfo"];</code>
      * @return The mfaInfo.
      */
     @java.lang.Override
@@ -867,21 +867,21 @@ private static final long serialVersionUID = 0L;
      * MfaInfo of the user.
      * </pre>
      *
-     * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+     * <code>.api.commons.org.MfaInfo mfa_info = 13 [json_name = "mfaInfo"];</code>
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder getMfaInfoOrBuilder() {
       return mfaInfo_ == null ? com.tcn.cloud.api.api.commons.org.MfaInfo.getDefaultInstance() : mfaInfo_;
     }
 
-    public static final int EMAIL_VERIFIED_FIELD_NUMBER = 15;
+    public static final int EMAIL_VERIFIED_FIELD_NUMBER = 14;
     private boolean emailVerified_ = false;
     /**
      * <pre>
      * Whether or not the users email is verified.
      * </pre>
      *
-     * <code>bool email_verified = 15 [json_name = "emailVerified"];</code>
+     * <code>bool email_verified = 14 [json_name = "emailVerified"];</code>
      * @return The emailVerified.
      */
     @java.lang.Override
@@ -922,25 +922,25 @@ private static final long serialVersionUID = 0L;
         output.writeBool(7, loginDisabled_);
       }
       for (int i = 0; i < permissionGroupIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, permissionGroupIds_.getRaw(i));
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, permissionGroupIds_.getRaw(i));
       }
       for (int i = 0; i < labels_.size(); i++) {
-        output.writeMessage(10, labels_.get(i));
+        output.writeMessage(9, labels_.get(i));
       }
       if (accountOwner_ != false) {
-        output.writeBool(11, accountOwner_);
+        output.writeBool(10, accountOwner_);
       }
       if (agent_ != false) {
-        output.writeBool(12, agent_);
+        output.writeBool(11, agent_);
       }
       for (int i = 0; i < trustIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, trustIds_.getRaw(i));
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, trustIds_.getRaw(i));
       }
       if (mfaInfo_ != null) {
-        output.writeMessage(14, getMfaInfo());
+        output.writeMessage(13, getMfaInfo());
       }
       if (emailVerified_ != false) {
-        output.writeBool(15, emailVerified_);
+        output.writeBool(14, emailVerified_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -980,15 +980,15 @@ private static final long serialVersionUID = 0L;
       }
       for (int i = 0; i < labels_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, labels_.get(i));
+          .computeMessageSize(9, labels_.get(i));
       }
       if (accountOwner_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(11, accountOwner_);
+          .computeBoolSize(10, accountOwner_);
       }
       if (agent_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(12, agent_);
+          .computeBoolSize(11, agent_);
       }
       {
         int dataSize = 0;
@@ -1000,11 +1000,11 @@ private static final long serialVersionUID = 0L;
       }
       if (mfaInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, getMfaInfo());
+          .computeMessageSize(13, getMfaInfo());
       }
       if (emailVerified_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, emailVerified_);
+          .computeBoolSize(14, emailVerified_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1533,13 +1533,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000020;
                 break;
               } // case 56
-              case 74: {
+              case 66: {
                 java.lang.String s = input.readStringRequireUtf8();
                 ensurePermissionGroupIdsIsMutable();
                 permissionGroupIds_.add(s);
                 break;
-              } // case 74
-              case 82: {
+              } // case 66
+              case 74: {
                 com.tcn.cloud.api.api.commons.org.Label m =
                     input.readMessage(
                         com.tcn.cloud.api.api.commons.org.Label.parser(),
@@ -1551,35 +1551,35 @@ private static final long serialVersionUID = 0L;
                   labelsBuilder_.addMessage(m);
                 }
                 break;
-              } // case 82
-              case 88: {
+              } // case 74
+              case 80: {
                 accountOwner_ = input.readBool();
                 bitField0_ |= 0x00000100;
                 break;
-              } // case 88
-              case 96: {
+              } // case 80
+              case 88: {
                 agent_ = input.readBool();
                 bitField0_ |= 0x00000200;
                 break;
-              } // case 96
-              case 106: {
+              } // case 88
+              case 98: {
                 java.lang.String s = input.readStringRequireUtf8();
                 ensureTrustIdsIsMutable();
                 trustIds_.add(s);
                 break;
-              } // case 106
-              case 114: {
+              } // case 98
+              case 106: {
                 input.readMessage(
                     getMfaInfoFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000800;
                 break;
-              } // case 114
-              case 120: {
+              } // case 106
+              case 112: {
                 emailVerified_ = input.readBool();
                 bitField0_ |= 0x00001000;
                 break;
-              } // case 120
+              } // case 112
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2114,7 +2114,7 @@ private static final long serialVersionUID = 0L;
        * A list of the (neo)permission group Ids the agent belongs to
        * </pre>
        *
-       * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+       * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
        * @return A list containing the permissionGroupIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -2127,7 +2127,7 @@ private static final long serialVersionUID = 0L;
        * A list of the (neo)permission group Ids the agent belongs to
        * </pre>
        *
-       * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+       * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
        * @return The count of permissionGroupIds.
        */
       public int getPermissionGroupIdsCount() {
@@ -2138,7 +2138,7 @@ private static final long serialVersionUID = 0L;
        * A list of the (neo)permission group Ids the agent belongs to
        * </pre>
        *
-       * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+       * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
        * @param index The index of the element to return.
        * @return The permissionGroupIds at the given index.
        */
@@ -2150,7 +2150,7 @@ private static final long serialVersionUID = 0L;
        * A list of the (neo)permission group Ids the agent belongs to
        * </pre>
        *
-       * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+       * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the permissionGroupIds at the given index.
        */
@@ -2163,7 +2163,7 @@ private static final long serialVersionUID = 0L;
        * A list of the (neo)permission group Ids the agent belongs to
        * </pre>
        *
-       * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+       * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
        * @param index The index to set the value at.
        * @param value The permissionGroupIds to set.
        * @return This builder for chaining.
@@ -2182,7 +2182,7 @@ private static final long serialVersionUID = 0L;
        * A list of the (neo)permission group Ids the agent belongs to
        * </pre>
        *
-       * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+       * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
        * @param value The permissionGroupIds to add.
        * @return This builder for chaining.
        */
@@ -2200,7 +2200,7 @@ private static final long serialVersionUID = 0L;
        * A list of the (neo)permission group Ids the agent belongs to
        * </pre>
        *
-       * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+       * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
        * @param values The permissionGroupIds to add.
        * @return This builder for chaining.
        */
@@ -2218,7 +2218,7 @@ private static final long serialVersionUID = 0L;
        * A list of the (neo)permission group Ids the agent belongs to
        * </pre>
        *
-       * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+       * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPermissionGroupIds() {
@@ -2233,7 +2233,7 @@ private static final long serialVersionUID = 0L;
        * A list of the (neo)permission group Ids the agent belongs to
        * </pre>
        *
-       * <code>repeated string permission_group_ids = 9 [json_name = "permissionGroupIds"];</code>
+       * <code>repeated string permission_group_ids = 8 [json_name = "permissionGroupIds"];</code>
        * @param value The bytes of the permissionGroupIds to add.
        * @return This builder for chaining.
        */
@@ -2265,7 +2265,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public java.util.List<com.tcn.cloud.api.api.commons.org.Label> getLabelsList() {
         if (labelsBuilder_ == null) {
@@ -2279,7 +2279,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public int getLabelsCount() {
         if (labelsBuilder_ == null) {
@@ -2293,7 +2293,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public com.tcn.cloud.api.api.commons.org.Label getLabels(int index) {
         if (labelsBuilder_ == null) {
@@ -2307,7 +2307,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public Builder setLabels(
           int index, com.tcn.cloud.api.api.commons.org.Label value) {
@@ -2328,7 +2328,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public Builder setLabels(
           int index, com.tcn.cloud.api.api.commons.org.Label.Builder builderForValue) {
@@ -2346,7 +2346,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public Builder addLabels(com.tcn.cloud.api.api.commons.org.Label value) {
         if (labelsBuilder_ == null) {
@@ -2366,7 +2366,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public Builder addLabels(
           int index, com.tcn.cloud.api.api.commons.org.Label value) {
@@ -2387,7 +2387,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public Builder addLabels(
           com.tcn.cloud.api.api.commons.org.Label.Builder builderForValue) {
@@ -2405,7 +2405,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public Builder addLabels(
           int index, com.tcn.cloud.api.api.commons.org.Label.Builder builderForValue) {
@@ -2423,7 +2423,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public Builder addAllLabels(
           java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.Label> values) {
@@ -2442,7 +2442,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public Builder clearLabels() {
         if (labelsBuilder_ == null) {
@@ -2459,7 +2459,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public Builder removeLabels(int index) {
         if (labelsBuilder_ == null) {
@@ -2476,7 +2476,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public com.tcn.cloud.api.api.commons.org.Label.Builder getLabelsBuilder(
           int index) {
@@ -2487,7 +2487,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public com.tcn.cloud.api.api.commons.org.LabelOrBuilder getLabelsOrBuilder(
           int index) {
@@ -2501,7 +2501,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public java.util.List<? extends com.tcn.cloud.api.api.commons.org.LabelOrBuilder> 
            getLabelsOrBuilderList() {
@@ -2516,7 +2516,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public com.tcn.cloud.api.api.commons.org.Label.Builder addLabelsBuilder() {
         return getLabelsFieldBuilder().addBuilder(
@@ -2527,7 +2527,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public com.tcn.cloud.api.api.commons.org.Label.Builder addLabelsBuilder(
           int index) {
@@ -2539,7 +2539,7 @@ private static final long serialVersionUID = 0L;
        * A list of the labels associated with the user
        * </pre>
        *
-       * <code>repeated .api.commons.org.Label labels = 10 [json_name = "labels"];</code>
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
        */
       public java.util.List<com.tcn.cloud.api.api.commons.org.Label.Builder> 
            getLabelsBuilderList() {
@@ -2566,7 +2566,7 @@ private static final long serialVersionUID = 0L;
        * Whether the user is an account owner
        * </pre>
        *
-       * <code>bool account_owner = 11 [json_name = "accountOwner"];</code>
+       * <code>bool account_owner = 10 [json_name = "accountOwner"];</code>
        * @return The accountOwner.
        */
       @java.lang.Override
@@ -2578,7 +2578,7 @@ private static final long serialVersionUID = 0L;
        * Whether the user is an account owner
        * </pre>
        *
-       * <code>bool account_owner = 11 [json_name = "accountOwner"];</code>
+       * <code>bool account_owner = 10 [json_name = "accountOwner"];</code>
        * @param value The accountOwner to set.
        * @return This builder for chaining.
        */
@@ -2594,7 +2594,7 @@ private static final long serialVersionUID = 0L;
        * Whether the user is an account owner
        * </pre>
        *
-       * <code>bool account_owner = 11 [json_name = "accountOwner"];</code>
+       * <code>bool account_owner = 10 [json_name = "accountOwner"];</code>
        * @return This builder for chaining.
        */
       public Builder clearAccountOwner() {
@@ -2610,7 +2610,7 @@ private static final long serialVersionUID = 0L;
        * Whether the user is also an agent
        * </pre>
        *
-       * <code>bool agent = 12 [json_name = "agent"];</code>
+       * <code>bool agent = 11 [json_name = "agent"];</code>
        * @return The agent.
        */
       @java.lang.Override
@@ -2622,7 +2622,7 @@ private static final long serialVersionUID = 0L;
        * Whether the user is also an agent
        * </pre>
        *
-       * <code>bool agent = 12 [json_name = "agent"];</code>
+       * <code>bool agent = 11 [json_name = "agent"];</code>
        * @param value The agent to set.
        * @return This builder for chaining.
        */
@@ -2638,7 +2638,7 @@ private static final long serialVersionUID = 0L;
        * Whether the user is also an agent
        * </pre>
        *
-       * <code>bool agent = 12 [json_name = "agent"];</code>
+       * <code>bool agent = 11 [json_name = "agent"];</code>
        * @return This builder for chaining.
        */
       public Builder clearAgent() {
@@ -2661,7 +2661,7 @@ private static final long serialVersionUID = 0L;
        * A list of the trust ids the user has been assigned.
        * </pre>
        *
-       * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+       * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
        * @return A list containing the trustIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -2674,7 +2674,7 @@ private static final long serialVersionUID = 0L;
        * A list of the trust ids the user has been assigned.
        * </pre>
        *
-       * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+       * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
        * @return The count of trustIds.
        */
       public int getTrustIdsCount() {
@@ -2685,7 +2685,7 @@ private static final long serialVersionUID = 0L;
        * A list of the trust ids the user has been assigned.
        * </pre>
        *
-       * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+       * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
        * @param index The index of the element to return.
        * @return The trustIds at the given index.
        */
@@ -2697,7 +2697,7 @@ private static final long serialVersionUID = 0L;
        * A list of the trust ids the user has been assigned.
        * </pre>
        *
-       * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+       * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the trustIds at the given index.
        */
@@ -2710,7 +2710,7 @@ private static final long serialVersionUID = 0L;
        * A list of the trust ids the user has been assigned.
        * </pre>
        *
-       * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+       * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
        * @param index The index to set the value at.
        * @param value The trustIds to set.
        * @return This builder for chaining.
@@ -2729,7 +2729,7 @@ private static final long serialVersionUID = 0L;
        * A list of the trust ids the user has been assigned.
        * </pre>
        *
-       * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+       * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
        * @param value The trustIds to add.
        * @return This builder for chaining.
        */
@@ -2747,7 +2747,7 @@ private static final long serialVersionUID = 0L;
        * A list of the trust ids the user has been assigned.
        * </pre>
        *
-       * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+       * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
        * @param values The trustIds to add.
        * @return This builder for chaining.
        */
@@ -2765,7 +2765,7 @@ private static final long serialVersionUID = 0L;
        * A list of the trust ids the user has been assigned.
        * </pre>
        *
-       * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+       * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTrustIds() {
@@ -2780,7 +2780,7 @@ private static final long serialVersionUID = 0L;
        * A list of the trust ids the user has been assigned.
        * </pre>
        *
-       * <code>repeated string trust_ids = 13 [json_name = "trustIds"];</code>
+       * <code>repeated string trust_ids = 12 [json_name = "trustIds"];</code>
        * @param value The bytes of the trustIds to add.
        * @return This builder for chaining.
        */
@@ -2803,7 +2803,7 @@ private static final long serialVersionUID = 0L;
        * MfaInfo of the user.
        * </pre>
        *
-       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       * <code>.api.commons.org.MfaInfo mfa_info = 13 [json_name = "mfaInfo"];</code>
        * @return Whether the mfaInfo field is set.
        */
       public boolean hasMfaInfo() {
@@ -2814,7 +2814,7 @@ private static final long serialVersionUID = 0L;
        * MfaInfo of the user.
        * </pre>
        *
-       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       * <code>.api.commons.org.MfaInfo mfa_info = 13 [json_name = "mfaInfo"];</code>
        * @return The mfaInfo.
        */
       public com.tcn.cloud.api.api.commons.org.MfaInfo getMfaInfo() {
@@ -2829,7 +2829,7 @@ private static final long serialVersionUID = 0L;
        * MfaInfo of the user.
        * </pre>
        *
-       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       * <code>.api.commons.org.MfaInfo mfa_info = 13 [json_name = "mfaInfo"];</code>
        */
       public Builder setMfaInfo(com.tcn.cloud.api.api.commons.org.MfaInfo value) {
         if (mfaInfoBuilder_ == null) {
@@ -2849,7 +2849,7 @@ private static final long serialVersionUID = 0L;
        * MfaInfo of the user.
        * </pre>
        *
-       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       * <code>.api.commons.org.MfaInfo mfa_info = 13 [json_name = "mfaInfo"];</code>
        */
       public Builder setMfaInfo(
           com.tcn.cloud.api.api.commons.org.MfaInfo.Builder builderForValue) {
@@ -2867,7 +2867,7 @@ private static final long serialVersionUID = 0L;
        * MfaInfo of the user.
        * </pre>
        *
-       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       * <code>.api.commons.org.MfaInfo mfa_info = 13 [json_name = "mfaInfo"];</code>
        */
       public Builder mergeMfaInfo(com.tcn.cloud.api.api.commons.org.MfaInfo value) {
         if (mfaInfoBuilder_ == null) {
@@ -2890,7 +2890,7 @@ private static final long serialVersionUID = 0L;
        * MfaInfo of the user.
        * </pre>
        *
-       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       * <code>.api.commons.org.MfaInfo mfa_info = 13 [json_name = "mfaInfo"];</code>
        */
       public Builder clearMfaInfo() {
         bitField0_ = (bitField0_ & ~0x00000800);
@@ -2907,7 +2907,7 @@ private static final long serialVersionUID = 0L;
        * MfaInfo of the user.
        * </pre>
        *
-       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       * <code>.api.commons.org.MfaInfo mfa_info = 13 [json_name = "mfaInfo"];</code>
        */
       public com.tcn.cloud.api.api.commons.org.MfaInfo.Builder getMfaInfoBuilder() {
         bitField0_ |= 0x00000800;
@@ -2919,7 +2919,7 @@ private static final long serialVersionUID = 0L;
        * MfaInfo of the user.
        * </pre>
        *
-       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       * <code>.api.commons.org.MfaInfo mfa_info = 13 [json_name = "mfaInfo"];</code>
        */
       public com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder getMfaInfoOrBuilder() {
         if (mfaInfoBuilder_ != null) {
@@ -2934,7 +2934,7 @@ private static final long serialVersionUID = 0L;
        * MfaInfo of the user.
        * </pre>
        *
-       * <code>.api.commons.org.MfaInfo mfa_info = 14 [json_name = "mfaInfo"];</code>
+       * <code>.api.commons.org.MfaInfo mfa_info = 13 [json_name = "mfaInfo"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcn.cloud.api.api.commons.org.MfaInfo, com.tcn.cloud.api.api.commons.org.MfaInfo.Builder, com.tcn.cloud.api.api.commons.org.MfaInfoOrBuilder> 
@@ -2956,7 +2956,7 @@ private static final long serialVersionUID = 0L;
        * Whether or not the users email is verified.
        * </pre>
        *
-       * <code>bool email_verified = 15 [json_name = "emailVerified"];</code>
+       * <code>bool email_verified = 14 [json_name = "emailVerified"];</code>
        * @return The emailVerified.
        */
       @java.lang.Override
@@ -2968,7 +2968,7 @@ private static final long serialVersionUID = 0L;
        * Whether or not the users email is verified.
        * </pre>
        *
-       * <code>bool email_verified = 15 [json_name = "emailVerified"];</code>
+       * <code>bool email_verified = 14 [json_name = "emailVerified"];</code>
        * @param value The emailVerified to set.
        * @return This builder for chaining.
        */
@@ -2984,7 +2984,7 @@ private static final long serialVersionUID = 0L;
        * Whether or not the users email is verified.
        * </pre>
        *
-       * <code>bool email_verified = 15 [json_name = "emailVerified"];</code>
+       * <code>bool email_verified = 14 [json_name = "emailVerified"];</code>
        * @return This builder for chaining.
        */
       public Builder clearEmailVerified() {
