@@ -229,4 +229,24 @@ public interface EvaluationOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.Evaluation.CustomFieldOrBuilder getCustomFieldsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * tcn user id of person who deleted evaluation
+   * </pre>
+   *
+   * <code>string deleted_by = 18 [json_name = "deletedBy"];</code>
+   * @return The deletedBy.
+   */
+  java.lang.String getDeletedBy();
+  /**
+   * <pre>
+   * tcn user id of person who deleted evaluation
+   * </pre>
+   *
+   * <code>string deleted_by = 18 [json_name = "deletedBy"];</code>
+   * @return The bytes for deletedBy.
+   */
+  com.google.protobuf.ByteString
+      getDeletedByBytes();
 }
