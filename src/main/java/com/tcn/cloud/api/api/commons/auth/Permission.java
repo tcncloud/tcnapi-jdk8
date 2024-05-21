@@ -176,6 +176,22 @@ public enum Permission
   PERMISSION_HUNTGROUP_EDIT(1901),
   /**
    * <pre>
+   * Enables access to get agent scripts properties and settings.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_SCRIPTS_VIEW = 1950 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_AGENT_SCRIPTS_VIEW(1950),
+  /**
+   * <pre>
+   * Enables access to update agent scripts properties and settings.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_SCRIPTS_EDIT = 1951 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_AGENT_SCRIPTS_EDIT(1951),
+  /**
+   * <pre>
    * Enables access to get and list soundboard files.
    * </pre>
    *
@@ -359,6 +375,22 @@ public enum Permission
    * <code>PERMISSION_MANUAL_CONVERSATION = 344 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_MANUAL_CONVERSATION(344),
+  /**
+   * <pre>
+   * Enables Agents to change their own hunt group
+   * </pre>
+   *
+   * <code>PERMISSION_CHANGE_OWN_HUNT_GROUP = 360 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_CHANGE_OWN_HUNT_GROUP(360),
+  /**
+   * <pre>
+   * Enables Agents to change their own skill groups
+   * </pre>
+   *
+   * <code>PERMISSION_CHANGE_OWN_SKILL_GROUPS = 361 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_CHANGE_OWN_SKILL_GROUPS(361),
   /**
    * <pre>
    * Enables access to voice analytics app.
@@ -979,6 +1011,22 @@ public enum Permission
   public static final int PERMISSION_HUNTGROUP_EDIT_VALUE = 1901;
   /**
    * <pre>
+   * Enables access to get agent scripts properties and settings.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_SCRIPTS_VIEW = 1950 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_AGENT_SCRIPTS_VIEW_VALUE = 1950;
+  /**
+   * <pre>
+   * Enables access to update agent scripts properties and settings.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_SCRIPTS_EDIT = 1951 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_AGENT_SCRIPTS_EDIT_VALUE = 1951;
+  /**
+   * <pre>
    * Enables access to get and list soundboard files.
    * </pre>
    *
@@ -1162,6 +1210,22 @@ public enum Permission
    * <code>PERMISSION_MANUAL_CONVERSATION = 344 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_MANUAL_CONVERSATION_VALUE = 344;
+  /**
+   * <pre>
+   * Enables Agents to change their own hunt group
+   * </pre>
+   *
+   * <code>PERMISSION_CHANGE_OWN_HUNT_GROUP = 360 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_CHANGE_OWN_HUNT_GROUP_VALUE = 360;
+  /**
+   * <pre>
+   * Enables Agents to change their own skill groups
+   * </pre>
+   *
+   * <code>PERMISSION_CHANGE_OWN_SKILL_GROUPS = 361 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_CHANGE_OWN_SKILL_GROUPS_VALUE = 361;
   /**
    * <pre>
    * Enables access to voice analytics app.
@@ -1657,6 +1721,8 @@ public enum Permission
       case 160: return PERMISSION_TRUST_MANAGEMENT;
       case 1900: return PERMISSION_HUNTGROUP_VIEW;
       case 1901: return PERMISSION_HUNTGROUP_EDIT;
+      case 1950: return PERMISSION_AGENT_SCRIPTS_VIEW;
+      case 1951: return PERMISSION_AGENT_SCRIPTS_EDIT;
       case 1700: return PERMISSION_SOUNDBOARD_VIEW;
       case 1701: return PERMISSION_SOUNDBOARD_EDIT;
       case 140: return PERMISSION_SUBSCRIPTION_MANAGEMENT;
@@ -1681,6 +1747,8 @@ public enum Permission
       case 342: return PERMISSION_AGENT_PLUGINS_VIEW;
       case 343: return PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW;
       case 344: return PERMISSION_MANUAL_CONVERSATION;
+      case 360: return PERMISSION_CHANGE_OWN_HUNT_GROUP;
+      case 361: return PERMISSION_CHANGE_OWN_SKILL_GROUPS;
       case 500: return PERMISSION_VOICE_ANALYTICS;
       case 501: return PERMISSION_VOICE_ANALYTICS_FLAG;
       case 502: return PERMISSION_VOICE_ANALYTICS_CONFIG;

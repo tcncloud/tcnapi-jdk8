@@ -914,6 +914,37 @@ public final class IntegrationsGrpc {
     return getGenerateEpicKeyPairsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq,
+      com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes> getPopulateIntegrationLinkMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "PopulateIntegrationLink",
+      requestType = com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq,
+      com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes> getPopulateIntegrationLinkMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq, com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes> getPopulateIntegrationLinkMethod;
+    if ((getPopulateIntegrationLinkMethod = IntegrationsGrpc.getPopulateIntegrationLinkMethod) == null) {
+      synchronized (IntegrationsGrpc.class) {
+        if ((getPopulateIntegrationLinkMethod = IntegrationsGrpc.getPopulateIntegrationLinkMethod) == null) {
+          IntegrationsGrpc.getPopulateIntegrationLinkMethod = getPopulateIntegrationLinkMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq, com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PopulateIntegrationLink"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes.getDefaultInstance()))
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("PopulateIntegrationLink"))
+              .build();
+        }
+      }
+    }
+    return getPopulateIntegrationLinkMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1236,6 +1267,13 @@ public final class IntegrationsGrpc {
     default void generateEpicKeyPairs(com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateEpicKeyPairsMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void populateIntegrationLink(com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPopulateIntegrationLinkMethod(), responseObserver);
     }
   }
 
@@ -1570,6 +1608,14 @@ public final class IntegrationsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGenerateEpicKeyPairsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void populateIntegrationLink(com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getPopulateIntegrationLinkMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1862,6 +1908,13 @@ public final class IntegrationsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes generateEpicKeyPairs(com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGenerateEpicKeyPairsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes populateIntegrationLink(com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPopulateIntegrationLinkMethod(), getCallOptions(), request);
     }
   }
 
@@ -2185,6 +2238,14 @@ public final class IntegrationsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGenerateEpicKeyPairsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes> populateIntegrationLink(
+        com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getPopulateIntegrationLinkMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PROCESS = 0;
@@ -2216,6 +2277,7 @@ public final class IntegrationsGrpc {
   private static final int METHODID_CALL_EPIC_PATIENT = 26;
   private static final int METHODID_HANG_UP_EPIC_PATIENT_CALL = 27;
   private static final int METHODID_GENERATE_EPIC_KEY_PAIRS = 28;
+  private static final int METHODID_POPULATE_INTEGRATION_LINK = 29;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2349,6 +2411,10 @@ public final class IntegrationsGrpc {
         case METHODID_GENERATE_EPIC_KEY_PAIRS:
           serviceImpl.generateEpicKeyPairs((com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes>) responseObserver);
+          break;
+        case METHODID_POPULATE_INTEGRATION_LINK:
+          serviceImpl.populateIntegrationLink((com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2571,6 +2637,13 @@ public final class IntegrationsGrpc {
               com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairReq,
               com.tcn.cloud.api.api.v1alpha1.integrations.GenerateEpicKeyPairRes>(
                 service, METHODID_GENERATE_EPIC_KEY_PAIRS)))
+        .addMethod(
+          getPopulateIntegrationLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes>(
+                service, METHODID_POPULATE_INTEGRATION_LINK)))
         .build();
   }
 
@@ -2648,6 +2721,7 @@ public final class IntegrationsGrpc {
               .addMethod(getCallEpicPatientMethod())
               .addMethod(getHangUpEpicPatientCallMethod())
               .addMethod(getGenerateEpicKeyPairsMethod())
+              .addMethod(getPopulateIntegrationLinkMethod())
               .build();
         }
       }

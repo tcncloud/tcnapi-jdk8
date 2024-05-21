@@ -14,7 +14,7 @@ public interface ClientInfoDisplayTemplateOrBuilder extends
    *
    * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
    * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
-   *     See api/commons/org/huntgroup.proto;l=770
+   *     See api/commons/org/huntgroup.proto;l=788
    * @return The templateSid.
    */
   @java.lang.Deprecated java.lang.String getTemplateSid();
@@ -25,7 +25,7 @@ public interface ClientInfoDisplayTemplateOrBuilder extends
    *
    * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
    * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
-   *     See api/commons/org/huntgroup.proto;l=770
+   *     See api/commons/org/huntgroup.proto;l=788
    * @return The bytes for templateSid.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

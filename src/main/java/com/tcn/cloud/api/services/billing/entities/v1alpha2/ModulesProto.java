@@ -35,42 +35,48 @@ public final class ModulesProto {
     java.lang.String[] descriptorData = {
       "\n0services/billing/entities/v1alpha2/mod" +
       "ules.proto\022\"services.billing.entities.v1" +
-      "alpha2\032\036google/protobuf/wrappers.proto\"!" +
-      "\n\013BasicConfig\022\022\n\004rate\030\001 \001(\001R\004rate\"\316\002\n\017Ba" +
-      "sicUnitConfig\022\033\n\tunit_size\030\001 \001(\003R\010unitSi" +
-      "ze\022\022\n\004rate\030\002 \001(\001R\004rate\0228\n\tmin_units\030\003 \001(" +
-      "\0132\033.google.protobuf.Int64ValueR\010minUnits" +
-      "\0228\n\tmax_units\030\004 \001(\0132\033.google.protobuf.In" +
-      "t64ValueR\010maxUnits\022J\n\023min_units_per_cycl" +
-      "e\030\005 \001(\0132\033.google.protobuf.Int64ValueR\020mi" +
-      "nUnitsPerCycle\022J\n\023max_units_per_cycle\030\006 " +
-      "\001(\0132\033.google.protobuf.Int64ValueR\020maxUni" +
-      "tsPerCycleB\357\001\n4com.tcn.cloud.api.service" +
-      "s.billing.entities.v1alpha2B\014ModulesProt" +
-      "oP\001\242\002\003SBE\252\002\"Services.Billing.Entities.V1" +
-      "alpha2\312\002\"Services\\Billing\\Entities\\V1alp" +
-      "ha2\342\002.Services\\Billing\\Entities\\V1alpha2" +
-      "\\GPBMetadata\352\002%Services::Billing::Entiti" +
-      "es::V1alpha2b\006proto3"
+      "alpha2\032\036google/protobuf/wrappers.proto\032\031" +
+      "google/type/decimal.proto\"^\n\013BasicConfig" +
+      "\022\026\n\004rate\030\001 \001(\001B\002\030\001R\004rate\0227\n\014rate_decimal" +
+      "\030\002 \001(\0132\024.google.type.DecimalR\013rateDecima" +
+      "l\"\213\003\n\017BasicUnitConfig\022\033\n\tunit_size\030\001 \001(\003" +
+      "R\010unitSize\022\026\n\004rate\030\002 \001(\001B\002\030\001R\004rate\0228\n\tmi" +
+      "n_units\030\003 \001(\0132\033.google.protobuf.Int64Val" +
+      "ueR\010minUnits\0228\n\tmax_units\030\004 \001(\0132\033.google" +
+      ".protobuf.Int64ValueR\010maxUnits\022J\n\023min_un" +
+      "its_per_cycle\030\005 \001(\0132\033.google.protobuf.In" +
+      "t64ValueR\020minUnitsPerCycle\022J\n\023max_units_" +
+      "per_cycle\030\006 \001(\0132\033.google.protobuf.Int64V" +
+      "alueR\020maxUnitsPerCycle\0227\n\014rate_decimal\030\007" +
+      " \001(\0132\024.google.type.DecimalR\013rateDecimalB" +
+      "\357\001\n4com.tcn.cloud.api.services.billing.e" +
+      "ntities.v1alpha2B\014ModulesProtoP\001\242\002\003SBE\252\002" +
+      "\"Services.Billing.Entities.V1alpha2\312\002\"Se" +
+      "rvices\\Billing\\Entities\\V1alpha2\342\002.Servi" +
+      "ces\\Billing\\Entities\\V1alpha2\\GPBMetadat" +
+      "a\352\002%Services::Billing::Entities::V1alpha" +
+      "2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
+          com.google.type.DecimalProto.getDescriptor(),
         });
     internal_static_services_billing_entities_v1alpha2_BasicConfig_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_services_billing_entities_v1alpha2_BasicConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha2_BasicConfig_descriptor,
-        new java.lang.String[] { "Rate", });
+        new java.lang.String[] { "Rate", "RateDecimal", });
     internal_static_services_billing_entities_v1alpha2_BasicUnitConfig_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_services_billing_entities_v1alpha2_BasicUnitConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha2_BasicUnitConfig_descriptor,
-        new java.lang.String[] { "UnitSize", "Rate", "MinUnits", "MaxUnits", "MinUnitsPerCycle", "MaxUnitsPerCycle", });
+        new java.lang.String[] { "UnitSize", "Rate", "MinUnits", "MaxUnits", "MinUnitsPerCycle", "MaxUnitsPerCycle", "RateDecimal", });
     com.google.protobuf.WrappersProto.getDescriptor();
+    com.google.type.DecimalProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

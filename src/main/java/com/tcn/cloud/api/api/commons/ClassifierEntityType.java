@@ -88,6 +88,10 @@ public enum ClassifierEntityType
    * <code>CET_POSTAL_CODE = 18;</code>
    */
   CET_POSTAL_CODE(18),
+  /**
+   * <code>CET_ACCOUNT_NUMBER = 19;</code>
+   */
+  CET_ACCOUNT_NUMBER(19),
   UNRECOGNIZED(-1),
   ;
 
@@ -167,6 +171,10 @@ public enum ClassifierEntityType
    * <code>CET_POSTAL_CODE = 18;</code>
    */
   public static final int CET_POSTAL_CODE_VALUE = 18;
+  /**
+   * <code>CET_ACCOUNT_NUMBER = 19;</code>
+   */
+  public static final int CET_ACCOUNT_NUMBER_VALUE = 19;
 
 
   public final int getNumber() {
@@ -212,6 +220,7 @@ public enum ClassifierEntityType
       case 16: return CET_US_PASSPORT;
       case 17: return CET_US_SSN;
       case 18: return CET_POSTAL_CODE;
+      case 19: return CET_ACCOUNT_NUMBER;
       default: return null;
     }
   }

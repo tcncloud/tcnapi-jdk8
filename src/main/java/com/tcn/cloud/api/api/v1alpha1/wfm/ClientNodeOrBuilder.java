@@ -395,7 +395,7 @@ public interface ClientNodeOrBuilder extends
    *
    * <code>.google.protobuf.Int64Value origin_sid = 14 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ClientNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4273
+   *     See api/v1alpha1/wfm/wfm.proto;l=4277
    * @return Whether the originSid field is set.
    */
   @java.lang.Deprecated boolean hasOriginSid();
@@ -407,7 +407,7 @@ public interface ClientNodeOrBuilder extends
    *
    * <code>.google.protobuf.Int64Value origin_sid = 14 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ClientNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4273
+   *     See api/v1alpha1/wfm/wfm.proto;l=4277
    * @return The originSid.
    */
   @java.lang.Deprecated com.google.protobuf.Int64Value getOriginSid();
@@ -420,4 +420,31 @@ public interface ClientNodeOrBuilder extends
    * <code>.google.protobuf.Int64Value origin_sid = 14 [json_name = "originSid", deprecated = true];</code>
    */
   @java.lang.Deprecated com.google.protobuf.Int64ValueOrBuilder getOriginSidOrBuilder();
+
+  /**
+   * <pre>
+   * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue shrinkage = 15 [json_name = "shrinkage"];</code>
+   * @return Whether the shrinkage field is set.
+   */
+  boolean hasShrinkage();
+  /**
+   * <pre>
+   * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue shrinkage = 15 [json_name = "shrinkage"];</code>
+   * @return The shrinkage.
+   */
+  com.google.protobuf.FloatValue getShrinkage();
+  /**
+   * <pre>
+   * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue shrinkage = 15 [json_name = "shrinkage"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getShrinkageOrBuilder();
 }

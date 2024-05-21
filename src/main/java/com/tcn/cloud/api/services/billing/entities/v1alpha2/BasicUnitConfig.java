@@ -63,15 +63,13 @@ private static final long serialVersionUID = 0L;
   public static final int RATE_FIELD_NUMBER = 2;
   private double rate_ = 0D;
   /**
-   * <pre>
-   * Required. the amount to rate each unit
-   * </pre>
-   *
-   * <code>double rate = 2 [json_name = "rate"];</code>
+   * <code>double rate = 2 [json_name = "rate", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha2.BasicUnitConfig.rate is deprecated.
+   *     See services/billing/entities/v1alpha2/modules.proto;l=22
    * @return The rate.
    */
   @java.lang.Override
-  public double getRate() {
+  @java.lang.Deprecated public double getRate() {
     return rate_;
   }
 
@@ -245,6 +243,44 @@ private static final long serialVersionUID = 0L;
     return maxUnitsPerCycle_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerCycle_;
   }
 
+  public static final int RATE_DECIMAL_FIELD_NUMBER = 7;
+  private com.google.type.Decimal rateDecimal_;
+  /**
+   * <pre>
+   * Required. the amount to rate each unit
+   * </pre>
+   *
+   * <code>.google.type.Decimal rate_decimal = 7 [json_name = "rateDecimal"];</code>
+   * @return Whether the rateDecimal field is set.
+   */
+  @java.lang.Override
+  public boolean hasRateDecimal() {
+    return rateDecimal_ != null;
+  }
+  /**
+   * <pre>
+   * Required. the amount to rate each unit
+   * </pre>
+   *
+   * <code>.google.type.Decimal rate_decimal = 7 [json_name = "rateDecimal"];</code>
+   * @return The rateDecimal.
+   */
+  @java.lang.Override
+  public com.google.type.Decimal getRateDecimal() {
+    return rateDecimal_ == null ? com.google.type.Decimal.getDefaultInstance() : rateDecimal_;
+  }
+  /**
+   * <pre>
+   * Required. the amount to rate each unit
+   * </pre>
+   *
+   * <code>.google.type.Decimal rate_decimal = 7 [json_name = "rateDecimal"];</code>
+   */
+  @java.lang.Override
+  public com.google.type.DecimalOrBuilder getRateDecimalOrBuilder() {
+    return rateDecimal_ == null ? com.google.type.Decimal.getDefaultInstance() : rateDecimal_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -276,6 +312,9 @@ private static final long serialVersionUID = 0L;
     }
     if (maxUnitsPerCycle_ != null) {
       output.writeMessage(6, getMaxUnitsPerCycle());
+    }
+    if (rateDecimal_ != null) {
+      output.writeMessage(7, getRateDecimal());
     }
     getUnknownFields().writeTo(output);
   }
@@ -309,6 +348,10 @@ private static final long serialVersionUID = 0L;
     if (maxUnitsPerCycle_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getMaxUnitsPerCycle());
+    }
+    if (rateDecimal_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getRateDecimal());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -350,6 +393,11 @@ private static final long serialVersionUID = 0L;
       if (!getMaxUnitsPerCycle()
           .equals(other.getMaxUnitsPerCycle())) return false;
     }
+    if (hasRateDecimal() != other.hasRateDecimal()) return false;
+    if (hasRateDecimal()) {
+      if (!getRateDecimal()
+          .equals(other.getRateDecimal())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -382,6 +430,10 @@ private static final long serialVersionUID = 0L;
     if (hasMaxUnitsPerCycle()) {
       hash = (37 * hash) + MAX_UNITS_PER_CYCLE_FIELD_NUMBER;
       hash = (53 * hash) + getMaxUnitsPerCycle().hashCode();
+    }
+    if (hasRateDecimal()) {
+      hash = (37 * hash) + RATE_DECIMAL_FIELD_NUMBER;
+      hash = (53 * hash) + getRateDecimal().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -541,6 +593,11 @@ private static final long serialVersionUID = 0L;
         maxUnitsPerCycleBuilder_.dispose();
         maxUnitsPerCycleBuilder_ = null;
       }
+      rateDecimal_ = null;
+      if (rateDecimalBuilder_ != null) {
+        rateDecimalBuilder_.dispose();
+        rateDecimalBuilder_ = null;
+      }
       return this;
     }
 
@@ -599,6 +656,11 @@ private static final long serialVersionUID = 0L;
         result.maxUnitsPerCycle_ = maxUnitsPerCycleBuilder_ == null
             ? maxUnitsPerCycle_
             : maxUnitsPerCycleBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.rateDecimal_ = rateDecimalBuilder_ == null
+            ? rateDecimal_
+            : rateDecimalBuilder_.build();
       }
     }
 
@@ -664,6 +726,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasMaxUnitsPerCycle()) {
         mergeMaxUnitsPerCycle(other.getMaxUnitsPerCycle());
       }
+      if (other.hasRateDecimal()) {
+        mergeRateDecimal(other.getRateDecimal());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -728,6 +793,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
+            case 58: {
+              input.readMessage(
+                  getRateDecimalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -797,27 +869,23 @@ private static final long serialVersionUID = 0L;
 
     private double rate_ ;
     /**
-     * <pre>
-     * Required. the amount to rate each unit
-     * </pre>
-     *
-     * <code>double rate = 2 [json_name = "rate"];</code>
+     * <code>double rate = 2 [json_name = "rate", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha2.BasicUnitConfig.rate is deprecated.
+     *     See services/billing/entities/v1alpha2/modules.proto;l=22
      * @return The rate.
      */
     @java.lang.Override
-    public double getRate() {
+    @java.lang.Deprecated public double getRate() {
       return rate_;
     }
     /**
-     * <pre>
-     * Required. the amount to rate each unit
-     * </pre>
-     *
-     * <code>double rate = 2 [json_name = "rate"];</code>
+     * <code>double rate = 2 [json_name = "rate", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha2.BasicUnitConfig.rate is deprecated.
+     *     See services/billing/entities/v1alpha2/modules.proto;l=22
      * @param value The rate to set.
      * @return This builder for chaining.
      */
-    public Builder setRate(double value) {
+    @java.lang.Deprecated public Builder setRate(double value) {
 
       rate_ = value;
       bitField0_ |= 0x00000002;
@@ -825,14 +893,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * Required. the amount to rate each unit
-     * </pre>
-     *
-     * <code>double rate = 2 [json_name = "rate"];</code>
+     * <code>double rate = 2 [json_name = "rate", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha2.BasicUnitConfig.rate is deprecated.
+     *     See services/billing/entities/v1alpha2/modules.proto;l=22
      * @return This builder for chaining.
      */
-    public Builder clearRate() {
+    @java.lang.Deprecated public Builder clearRate() {
       bitField0_ = (bitField0_ & ~0x00000002);
       rate_ = 0D;
       onChanged();
@@ -1511,6 +1577,161 @@ private static final long serialVersionUID = 0L;
         maxUnitsPerCycle_ = null;
       }
       return maxUnitsPerCycleBuilder_;
+    }
+
+    private com.google.type.Decimal rateDecimal_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.type.Decimal, com.google.type.Decimal.Builder, com.google.type.DecimalOrBuilder> rateDecimalBuilder_;
+    /**
+     * <pre>
+     * Required. the amount to rate each unit
+     * </pre>
+     *
+     * <code>.google.type.Decimal rate_decimal = 7 [json_name = "rateDecimal"];</code>
+     * @return Whether the rateDecimal field is set.
+     */
+    public boolean hasRateDecimal() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Required. the amount to rate each unit
+     * </pre>
+     *
+     * <code>.google.type.Decimal rate_decimal = 7 [json_name = "rateDecimal"];</code>
+     * @return The rateDecimal.
+     */
+    public com.google.type.Decimal getRateDecimal() {
+      if (rateDecimalBuilder_ == null) {
+        return rateDecimal_ == null ? com.google.type.Decimal.getDefaultInstance() : rateDecimal_;
+      } else {
+        return rateDecimalBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Required. the amount to rate each unit
+     * </pre>
+     *
+     * <code>.google.type.Decimal rate_decimal = 7 [json_name = "rateDecimal"];</code>
+     */
+    public Builder setRateDecimal(com.google.type.Decimal value) {
+      if (rateDecimalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        rateDecimal_ = value;
+      } else {
+        rateDecimalBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. the amount to rate each unit
+     * </pre>
+     *
+     * <code>.google.type.Decimal rate_decimal = 7 [json_name = "rateDecimal"];</code>
+     */
+    public Builder setRateDecimal(
+        com.google.type.Decimal.Builder builderForValue) {
+      if (rateDecimalBuilder_ == null) {
+        rateDecimal_ = builderForValue.build();
+      } else {
+        rateDecimalBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. the amount to rate each unit
+     * </pre>
+     *
+     * <code>.google.type.Decimal rate_decimal = 7 [json_name = "rateDecimal"];</code>
+     */
+    public Builder mergeRateDecimal(com.google.type.Decimal value) {
+      if (rateDecimalBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          rateDecimal_ != null &&
+          rateDecimal_ != com.google.type.Decimal.getDefaultInstance()) {
+          getRateDecimalBuilder().mergeFrom(value);
+        } else {
+          rateDecimal_ = value;
+        }
+      } else {
+        rateDecimalBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. the amount to rate each unit
+     * </pre>
+     *
+     * <code>.google.type.Decimal rate_decimal = 7 [json_name = "rateDecimal"];</code>
+     */
+    public Builder clearRateDecimal() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      rateDecimal_ = null;
+      if (rateDecimalBuilder_ != null) {
+        rateDecimalBuilder_.dispose();
+        rateDecimalBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. the amount to rate each unit
+     * </pre>
+     *
+     * <code>.google.type.Decimal rate_decimal = 7 [json_name = "rateDecimal"];</code>
+     */
+    public com.google.type.Decimal.Builder getRateDecimalBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getRateDecimalFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Required. the amount to rate each unit
+     * </pre>
+     *
+     * <code>.google.type.Decimal rate_decimal = 7 [json_name = "rateDecimal"];</code>
+     */
+    public com.google.type.DecimalOrBuilder getRateDecimalOrBuilder() {
+      if (rateDecimalBuilder_ != null) {
+        return rateDecimalBuilder_.getMessageOrBuilder();
+      } else {
+        return rateDecimal_ == null ?
+            com.google.type.Decimal.getDefaultInstance() : rateDecimal_;
+      }
+    }
+    /**
+     * <pre>
+     * Required. the amount to rate each unit
+     * </pre>
+     *
+     * <code>.google.type.Decimal rate_decimal = 7 [json_name = "rateDecimal"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.type.Decimal, com.google.type.Decimal.Builder, com.google.type.DecimalOrBuilder> 
+        getRateDecimalFieldBuilder() {
+      if (rateDecimalBuilder_ == null) {
+        rateDecimalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.type.Decimal, com.google.type.Decimal.Builder, com.google.type.DecimalOrBuilder>(
+                getRateDecimal(),
+                getParentForChildren(),
+                isClean());
+        rateDecimal_ = null;
+      }
+      return rateDecimalBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

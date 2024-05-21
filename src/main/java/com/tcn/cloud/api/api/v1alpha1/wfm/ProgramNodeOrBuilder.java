@@ -99,20 +99,24 @@ public interface ProgramNodeOrBuilder extends
    * Indicates whether on not the &#64;shrinkage_value is a percentage (true=percentage, false=agents).
    * </pre>
    *
-   * <code>bool shrinkage_is_percentage = 6 [json_name = "shrinkageIsPercentage"];</code>
+   * <code>bool shrinkage_is_percentage = 6 [json_name = "shrinkageIsPercentage", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.ProgramNode.shrinkage_is_percentage is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4378
    * @return The shrinkageIsPercentage.
    */
-  boolean getShrinkageIsPercentage();
+  @java.lang.Deprecated boolean getShrinkageIsPercentage();
 
   /**
    * <pre>
    * Value of the shrinkage. Either 0-100 if &#64;shrinkage_is_percentage is true, or a value greater than 0 otherwise.
    * </pre>
    *
-   * <code>int32 shrinkage_value = 7 [json_name = "shrinkageValue"];</code>
+   * <code>int32 shrinkage_value = 7 [json_name = "shrinkageValue", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.ProgramNode.shrinkage_value is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=4380
    * @return The shrinkageValue.
    */
-  int getShrinkageValue();
+  @java.lang.Deprecated int getShrinkageValue();
 
   /**
    * <pre>
@@ -440,7 +444,7 @@ public interface ProgramNodeOrBuilder extends
    *
    * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ProgramNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4389
+   *     See api/v1alpha1/wfm/wfm.proto;l=4399
    * @return Whether the originSid field is set.
    */
   @java.lang.Deprecated boolean hasOriginSid();
@@ -452,7 +456,7 @@ public interface ProgramNodeOrBuilder extends
    *
    * <code>.google.protobuf.Int64Value origin_sid = 16 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ProgramNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4389
+   *     See api/v1alpha1/wfm/wfm.proto;l=4399
    * @return The originSid.
    */
   @java.lang.Deprecated com.google.protobuf.Int64Value getOriginSid();
@@ -492,4 +496,31 @@ public interface ProgramNodeOrBuilder extends
    * <code>.api.commons.SkillProfileCategory skill_profile_category = 17 [json_name = "skillProfileCategory"];</code>
    */
   com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillProfileCategoryOrBuilder();
+
+  /**
+   * <pre>
+   * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue shrinkage = 18 [json_name = "shrinkage"];</code>
+   * @return Whether the shrinkage field is set.
+   */
+  boolean hasShrinkage();
+  /**
+   * <pre>
+   * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue shrinkage = 18 [json_name = "shrinkage"];</code>
+   * @return The shrinkage.
+   */
+  com.google.protobuf.FloatValue getShrinkage();
+  /**
+   * <pre>
+   * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue shrinkage = 18 [json_name = "shrinkage"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getShrinkageOrBuilder();
 }

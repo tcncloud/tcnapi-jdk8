@@ -76,6 +76,14 @@ public enum OmniTaskStatus
    * <code>OMNI_TASK_RECEIVED = 130;</code>
    */
   OMNI_TASK_RECEIVED(130),
+  /**
+   * <pre>
+   * the task was cancelled
+   * </pre>
+   *
+   * <code>OMNI_TASK_CANCELLED = 140;</code>
+   */
+  OMNI_TASK_CANCELLED(140),
   UNRECOGNIZED(-1),
   ;
 
@@ -143,6 +151,14 @@ public enum OmniTaskStatus
    * <code>OMNI_TASK_RECEIVED = 130;</code>
    */
   public static final int OMNI_TASK_RECEIVED_VALUE = 130;
+  /**
+   * <pre>
+   * the task was cancelled
+   * </pre>
+   *
+   * <code>OMNI_TASK_CANCELLED = 140;</code>
+   */
+  public static final int OMNI_TASK_CANCELLED_VALUE = 140;
 
 
   public final int getNumber() {
@@ -177,6 +193,7 @@ public enum OmniTaskStatus
       case 111: return OMNI_TASK_SENDING_INCOMPLETE;
       case 120: return OMNI_TASK_SENT;
       case 130: return OMNI_TASK_RECEIVED;
+      case 140: return OMNI_TASK_CANCELLED;
       default: return null;
     }
   }

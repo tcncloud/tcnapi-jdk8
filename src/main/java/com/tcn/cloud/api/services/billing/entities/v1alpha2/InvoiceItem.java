@@ -171,11 +171,13 @@ private static final long serialVersionUID = 0L;
   public static final int PRICE_FIELD_NUMBER = 5;
   private double price_ = 0D;
   /**
-   * <code>double price = 5 [json_name = "price"];</code>
+   * <code>double price = 5 [json_name = "price", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha2.InvoiceItem.price is deprecated.
+   *     See services/billing/entities/v1alpha2/invoice.proto;l=21
    * @return The price.
    */
   @java.lang.Override
-  public double getPrice() {
+  @java.lang.Deprecated public double getPrice() {
     return price_;
   }
 
@@ -220,6 +222,32 @@ private static final long serialVersionUID = 0L;
     return columns_.get(index);
   }
 
+  public static final int RATED_AMOUNT_FIELD_NUMBER = 7;
+  private com.google.type.Decimal ratedAmount_;
+  /**
+   * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
+   * @return Whether the ratedAmount field is set.
+   */
+  @java.lang.Override
+  public boolean hasRatedAmount() {
+    return ratedAmount_ != null;
+  }
+  /**
+   * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
+   * @return The ratedAmount.
+   */
+  @java.lang.Override
+  public com.google.type.Decimal getRatedAmount() {
+    return ratedAmount_ == null ? com.google.type.Decimal.getDefaultInstance() : ratedAmount_;
+  }
+  /**
+   * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
+   */
+  @java.lang.Override
+  public com.google.type.DecimalOrBuilder getRatedAmountOrBuilder() {
+    return ratedAmount_ == null ? com.google.type.Decimal.getDefaultInstance() : ratedAmount_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -252,6 +280,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < columns_.size(); i++) {
       output.writeMessage(6, columns_.get(i));
     }
+    if (ratedAmount_ != null) {
+      output.writeMessage(7, getRatedAmount());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -283,6 +314,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, columns_.get(i));
     }
+    if (ratedAmount_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getRatedAmount());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -313,6 +348,11 @@ private static final long serialVersionUID = 0L;
             other.getPrice())) return false;
     if (!getColumnsList()
         .equals(other.getColumnsList())) return false;
+    if (hasRatedAmount() != other.hasRatedAmount()) return false;
+    if (hasRatedAmount()) {
+      if (!getRatedAmount()
+          .equals(other.getRatedAmount())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -340,6 +380,10 @@ private static final long serialVersionUID = 0L;
     if (getColumnsCount() > 0) {
       hash = (37 * hash) + COLUMNS_FIELD_NUMBER;
       hash = (53 * hash) + getColumnsList().hashCode();
+    }
+    if (hasRatedAmount()) {
+      hash = (37 * hash) + RATED_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getRatedAmount().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -492,6 +536,11 @@ private static final long serialVersionUID = 0L;
         columnsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000020);
+      ratedAmount_ = null;
+      if (ratedAmountBuilder_ != null) {
+        ratedAmountBuilder_.dispose();
+        ratedAmountBuilder_ = null;
+      }
       return this;
     }
 
@@ -554,6 +603,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.price_ = price_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.ratedAmount_ = ratedAmountBuilder_ == null
+            ? ratedAmount_
+            : ratedAmountBuilder_.build();
       }
     }
 
@@ -646,6 +700,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasRatedAmount()) {
+        mergeRatedAmount(other.getRatedAmount());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -712,6 +769,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 50
+            case 58: {
+              input.readMessage(
+                  getRatedAmountFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1047,19 +1111,23 @@ private static final long serialVersionUID = 0L;
 
     private double price_ ;
     /**
-     * <code>double price = 5 [json_name = "price"];</code>
+     * <code>double price = 5 [json_name = "price", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha2.InvoiceItem.price is deprecated.
+     *     See services/billing/entities/v1alpha2/invoice.proto;l=21
      * @return The price.
      */
     @java.lang.Override
-    public double getPrice() {
+    @java.lang.Deprecated public double getPrice() {
       return price_;
     }
     /**
-     * <code>double price = 5 [json_name = "price"];</code>
+     * <code>double price = 5 [json_name = "price", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha2.InvoiceItem.price is deprecated.
+     *     See services/billing/entities/v1alpha2/invoice.proto;l=21
      * @param value The price to set.
      * @return This builder for chaining.
      */
-    public Builder setPrice(double value) {
+    @java.lang.Deprecated public Builder setPrice(double value) {
 
       price_ = value;
       bitField0_ |= 0x00000010;
@@ -1067,10 +1135,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>double price = 5 [json_name = "price"];</code>
+     * <code>double price = 5 [json_name = "price", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha2.InvoiceItem.price is deprecated.
+     *     See services/billing/entities/v1alpha2/invoice.proto;l=21
      * @return This builder for chaining.
      */
-    public Builder clearPrice() {
+    @java.lang.Deprecated public Builder clearPrice() {
       bitField0_ = (bitField0_ & ~0x00000010);
       price_ = 0D;
       onChanged();
@@ -1315,6 +1385,125 @@ private static final long serialVersionUID = 0L;
         columns_ = null;
       }
       return columnsBuilder_;
+    }
+
+    private com.google.type.Decimal ratedAmount_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.type.Decimal, com.google.type.Decimal.Builder, com.google.type.DecimalOrBuilder> ratedAmountBuilder_;
+    /**
+     * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
+     * @return Whether the ratedAmount field is set.
+     */
+    public boolean hasRatedAmount() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
+     * @return The ratedAmount.
+     */
+    public com.google.type.Decimal getRatedAmount() {
+      if (ratedAmountBuilder_ == null) {
+        return ratedAmount_ == null ? com.google.type.Decimal.getDefaultInstance() : ratedAmount_;
+      } else {
+        return ratedAmountBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
+     */
+    public Builder setRatedAmount(com.google.type.Decimal value) {
+      if (ratedAmountBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ratedAmount_ = value;
+      } else {
+        ratedAmountBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
+     */
+    public Builder setRatedAmount(
+        com.google.type.Decimal.Builder builderForValue) {
+      if (ratedAmountBuilder_ == null) {
+        ratedAmount_ = builderForValue.build();
+      } else {
+        ratedAmountBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
+     */
+    public Builder mergeRatedAmount(com.google.type.Decimal value) {
+      if (ratedAmountBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          ratedAmount_ != null &&
+          ratedAmount_ != com.google.type.Decimal.getDefaultInstance()) {
+          getRatedAmountBuilder().mergeFrom(value);
+        } else {
+          ratedAmount_ = value;
+        }
+      } else {
+        ratedAmountBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
+     */
+    public Builder clearRatedAmount() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      ratedAmount_ = null;
+      if (ratedAmountBuilder_ != null) {
+        ratedAmountBuilder_.dispose();
+        ratedAmountBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
+     */
+    public com.google.type.Decimal.Builder getRatedAmountBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getRatedAmountFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
+     */
+    public com.google.type.DecimalOrBuilder getRatedAmountOrBuilder() {
+      if (ratedAmountBuilder_ != null) {
+        return ratedAmountBuilder_.getMessageOrBuilder();
+      } else {
+        return ratedAmount_ == null ?
+            com.google.type.Decimal.getDefaultInstance() : ratedAmount_;
+      }
+    }
+    /**
+     * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.type.Decimal, com.google.type.Decimal.Builder, com.google.type.DecimalOrBuilder> 
+        getRatedAmountFieldBuilder() {
+      if (ratedAmountBuilder_ == null) {
+        ratedAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.type.Decimal, com.google.type.Decimal.Builder, com.google.type.DecimalOrBuilder>(
+                getRatedAmount(),
+                getParentForChildren(),
+                isClean());
+        ratedAmount_ = null;
+      }
+      return ratedAmountBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
