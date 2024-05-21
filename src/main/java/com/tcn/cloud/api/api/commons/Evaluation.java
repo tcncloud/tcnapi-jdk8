@@ -27,6 +27,7 @@ private static final long serialVersionUID = 0L;
     agentUserId_ = "";
     callType_ = 0;
     customFields_ = java.util.Collections.emptyList();
+    deletedBy_ = "";
   }
 
   @java.lang.Override
@@ -1190,6 +1191,53 @@ private static final long serialVersionUID = 0L;
     return customFields_.get(index);
   }
 
+  public static final int DELETED_BY_FIELD_NUMBER = 18;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object deletedBy_ = "";
+  /**
+   * <pre>
+   * tcn user id of person who deleted evaluation
+   * </pre>
+   *
+   * <code>string deleted_by = 18 [json_name = "deletedBy"];</code>
+   * @return The deletedBy.
+   */
+  @java.lang.Override
+  public java.lang.String getDeletedBy() {
+    java.lang.Object ref = deletedBy_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      deletedBy_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * tcn user id of person who deleted evaluation
+   * </pre>
+   *
+   * <code>string deleted_by = 18 [json_name = "deletedBy"];</code>
+   * @return The bytes for deletedBy.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDeletedByBytes() {
+    java.lang.Object ref = deletedBy_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      deletedBy_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1239,6 +1287,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < customFields_.size(); i++) {
       output.writeMessage(17, customFields_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deletedBy_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 18, deletedBy_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1295,6 +1346,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, customFields_.get(i));
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deletedBy_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, deletedBy_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1336,6 +1390,8 @@ private static final long serialVersionUID = 0L;
         != other.getTranscriptSid()) return false;
     if (!getCustomFieldsList()
         .equals(other.getCustomFieldsList())) return false;
+    if (!getDeletedBy()
+        .equals(other.getDeletedBy())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1382,6 +1438,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CUSTOM_FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + getCustomFieldsList().hashCode();
     }
+    hash = (37 * hash) + DELETED_BY_FIELD_NUMBER;
+    hash = (53 * hash) + getDeletedBy().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1546,6 +1604,7 @@ private static final long serialVersionUID = 0L;
         customFieldsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000800);
+      deletedBy_ = "";
       return this;
     }
 
@@ -1632,6 +1691,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.transcriptSid_ = transcriptSid_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.deletedBy_ = deletedBy_;
       }
     }
 
@@ -1765,6 +1827,11 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.getDeletedBy().isEmpty()) {
+        deletedBy_ = other.deletedBy_;
+        bitField0_ |= 0x00001000;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1869,6 +1936,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 138
+            case 146: {
+              deletedBy_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 146
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3141,6 +3213,98 @@ private static final long serialVersionUID = 0L;
         customFields_ = null;
       }
       return customFieldsBuilder_;
+    }
+
+    private java.lang.Object deletedBy_ = "";
+    /**
+     * <pre>
+     * tcn user id of person who deleted evaluation
+     * </pre>
+     *
+     * <code>string deleted_by = 18 [json_name = "deletedBy"];</code>
+     * @return The deletedBy.
+     */
+    public java.lang.String getDeletedBy() {
+      java.lang.Object ref = deletedBy_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deletedBy_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * tcn user id of person who deleted evaluation
+     * </pre>
+     *
+     * <code>string deleted_by = 18 [json_name = "deletedBy"];</code>
+     * @return The bytes for deletedBy.
+     */
+    public com.google.protobuf.ByteString
+        getDeletedByBytes() {
+      java.lang.Object ref = deletedBy_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deletedBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * tcn user id of person who deleted evaluation
+     * </pre>
+     *
+     * <code>string deleted_by = 18 [json_name = "deletedBy"];</code>
+     * @param value The deletedBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeletedBy(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      deletedBy_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * tcn user id of person who deleted evaluation
+     * </pre>
+     *
+     * <code>string deleted_by = 18 [json_name = "deletedBy"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDeletedBy() {
+      deletedBy_ = getDefaultInstance().getDeletedBy();
+      bitField0_ = (bitField0_ & ~0x00001000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * tcn user id of person who deleted evaluation
+     * </pre>
+     *
+     * <code>string deleted_by = 18 [json_name = "deletedBy"];</code>
+     * @param value The bytes for deletedBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeletedByBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      deletedBy_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
