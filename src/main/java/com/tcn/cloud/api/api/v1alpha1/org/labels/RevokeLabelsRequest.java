@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * Ids of labels getting revoked from a permission group
+   * Ids of labels getting revoked from a permission group.
    * </pre>
    *
    * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
@@ -63,7 +63,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Ids of labels getting revoked from a permission group
+   * Ids of labels getting revoked from a permission group.
    * </pre>
    *
    * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
@@ -74,7 +74,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Ids of labels getting revoked from a permission group
+   * Ids of labels getting revoked from a permission group.
    * </pre>
    *
    * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
@@ -86,7 +86,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Ids of labels getting revoked from a permission group
+   * Ids of labels getting revoked from a permission group.
    * </pre>
    *
    * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
@@ -524,7 +524,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ids of labels getting revoked from a permission group
+     * Ids of labels getting revoked from a permission group.
      * </pre>
      *
      * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
@@ -537,7 +537,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ids of labels getting revoked from a permission group
+     * Ids of labels getting revoked from a permission group.
      * </pre>
      *
      * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
@@ -548,7 +548,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ids of labels getting revoked from a permission group
+     * Ids of labels getting revoked from a permission group.
      * </pre>
      *
      * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
@@ -560,7 +560,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ids of labels getting revoked from a permission group
+     * Ids of labels getting revoked from a permission group.
      * </pre>
      *
      * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
@@ -573,7 +573,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ids of labels getting revoked from a permission group
+     * Ids of labels getting revoked from a permission group.
      * </pre>
      *
      * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
@@ -592,7 +592,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ids of labels getting revoked from a permission group
+     * Ids of labels getting revoked from a permission group.
      * </pre>
      *
      * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
@@ -610,7 +610,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ids of labels getting revoked from a permission group
+     * Ids of labels getting revoked from a permission group.
      * </pre>
      *
      * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
@@ -628,7 +628,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ids of labels getting revoked from a permission group
+     * Ids of labels getting revoked from a permission group.
      * </pre>
      *
      * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
@@ -643,7 +643,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ids of labels getting revoked from a permission group
+     * Ids of labels getting revoked from a permission group.
      * </pre>
      *
      * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>

@@ -455,7 +455,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * AssignLabels assigns labels to a specific permission group
+     * AssignLabels assigns labels to a specific permission group.
      * </pre>
      */
     default void assignLabels(com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsRequest request,
@@ -465,7 +465,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * RevokeLabels revokes labels from a specific permission group
+     * RevokeLabels revokes labels from a specific permission group.
      * </pre>
      */
     default void revokeLabels(com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsRequest request,
@@ -591,7 +591,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * AssignLabels assigns labels to a specific permission group
+     * AssignLabels assigns labels to a specific permission group.
      * </pre>
      */
     public void assignLabels(com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsRequest request,
@@ -602,7 +602,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * RevokeLabels revokes labels from a specific permission group
+     * RevokeLabels revokes labels from a specific permission group.
      * </pre>
      */
     public void revokeLabels(com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsRequest request,
@@ -710,7 +710,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * AssignLabels assigns labels to a specific permission group
+     * AssignLabels assigns labels to a specific permission group.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsResponse assignLabels(com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsRequest request) {
@@ -720,7 +720,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * RevokeLabels revokes labels from a specific permission group
+     * RevokeLabels revokes labels from a specific permission group.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsResponse revokeLabels(com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsRequest request) {
@@ -835,7 +835,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * AssignLabels assigns labels to a specific permission group
+     * AssignLabels assigns labels to a specific permission group.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsResponse> assignLabels(
@@ -846,7 +846,7 @@ public final class LabelsServiceGrpc {
 
     /**
      * <pre>
-     * RevokeLabels revokes labels from a specific permission group
+     * RevokeLabels revokes labels from a specific permission group.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsResponse> revokeLabels(

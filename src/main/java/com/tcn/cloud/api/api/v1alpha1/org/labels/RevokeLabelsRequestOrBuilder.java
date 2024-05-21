@@ -9,7 +9,7 @@ public interface RevokeLabelsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Ids of labels getting revoked from a permission group
+   * Ids of labels getting revoked from a permission group.
    * </pre>
    *
    * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
@@ -19,7 +19,7 @@ public interface RevokeLabelsRequestOrBuilder extends
       getLabelIdsList();
   /**
    * <pre>
-   * Ids of labels getting revoked from a permission group
+   * Ids of labels getting revoked from a permission group.
    * </pre>
    *
    * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
@@ -28,7 +28,7 @@ public interface RevokeLabelsRequestOrBuilder extends
   int getLabelIdsCount();
   /**
    * <pre>
-   * Ids of labels getting revoked from a permission group
+   * Ids of labels getting revoked from a permission group.
    * </pre>
    *
    * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
@@ -38,7 +38,7 @@ public interface RevokeLabelsRequestOrBuilder extends
   java.lang.String getLabelIds(int index);
   /**
    * <pre>
-   * Ids of labels getting revoked from a permission group
+   * Ids of labels getting revoked from a permission group.
    * </pre>
    *
    * <code>repeated string label_ids = 1 [json_name = "labelIds"];</code>
