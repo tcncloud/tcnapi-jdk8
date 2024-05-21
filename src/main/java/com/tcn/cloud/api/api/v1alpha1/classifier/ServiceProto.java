@@ -118,30 +118,36 @@ public final class ServiceProto {
       "\001 \001(\003R\016fileTemplateId\"e\n\027GetFileTemplate" +
       "Response\022J\n\rfile_template\030\001 \001(\0132%.api.v1" +
       "alpha1.classifier.FileTemplateR\014fileTemp" +
-      "late2\332\005\n\027ClassifierFileTemplates\022w\n\tPars" +
-      "eFile\022).api.v1alpha1.classifier.ParseFil" +
-      "eRequest\032*.api.v1alpha1.classifier.Parse" +
-      "FileResponse\"\023\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002\003:\001*\022\222\001\n\022Up" +
-      "dateFileTemplate\0222.api.v1alpha1.classifi" +
-      "er.UpdateFileTemplateRequest\0323.api.v1alp" +
-      "ha1.classifier.UpdateFileTemplateRespons" +
-      "e\"\023\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002\003:\001*\022\222\001\n\022DeleteFileTem" +
-      "plate\0222.api.v1alpha1.classifier.DeleteFi" +
-      "leTemplateRequest\0323.api.v1alpha1.classif" +
-      "ier.DeleteFileTemplateResponse\"\023\272\270\221\002\005\n\003\010" +
-      "\351\007\202\323\344\223\002\003:\001*\022\217\001\n\021ListFileTemplates\0221.api." +
-      "v1alpha1.classifier.ListFileTemplatesReq" +
-      "uest\0322.api.v1alpha1.classifier.ListFileT" +
-      "emplatesResponse\"\023\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002\003:\001*\022\211\001" +
-      "\n\017GetFileTemplate\022/.api.v1alpha1.classif" +
-      "ier.GetFileTemplateRequest\0320.api.v1alpha" +
-      "1.classifier.GetFileTemplateResponse\"\023\272\270" +
-      "\221\002\005\n\003\010\351\007\202\323\344\223\002\003:\001*B\267\001\n)com.tcn.cloud.api." +
-      "api.v1alpha1.classifierB\014ServiceProtoP\001\242" +
-      "\002\003AVC\252\002\027Api.V1alpha1.Classifier\312\002\027Api\\V1" +
-      "alpha1\\Classifier\342\002#Api\\V1alpha1\\Classif" +
-      "ier\\GPBMetadata\352\002\031Api::V1alpha1::Classif" +
-      "ierb\006proto3"
+      "late2\305\007\n\027ClassifierFileTemplates\022\246\001\n\tPar" +
+      "seFile\022).api.v1alpha1.classifier.ParseFi" +
+      "leRequest\032*.api.v1alpha1.classifier.Pars" +
+      "eFileResponse\"B\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0022\"-/api/v1" +
+      "alpha1/classifier/file_templates/parse:\001" +
+      "*\022\302\001\n\022UpdateFileTemplate\0222.api.v1alpha1." +
+      "classifier.UpdateFileTemplateRequest\0323.a" +
+      "pi.v1alpha1.classifier.UpdateFileTemplat" +
+      "eResponse\"C\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0023\"./api/v1alph" +
+      "a1/classifier/file_templates/update:\001*\022\302" +
+      "\001\n\022DeleteFileTemplate\0222.api.v1alpha1.cla" +
+      "ssifier.DeleteFileTemplateRequest\0323.api." +
+      "v1alpha1.classifier.DeleteFileTemplateRe" +
+      "sponse\"C\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0023*./api/v1alpha1/" +
+      "classifier/file_templates/delete:\001*\022\275\001\n\021" +
+      "ListFileTemplates\0221.api.v1alpha1.classif" +
+      "ier.ListFileTemplatesRequest\0322.api.v1alp" +
+      "ha1.classifier.ListFileTemplatesResponse" +
+      "\"A\272\270\221\002\005\n\003\010\351\007\202\323\344\223\0021\",/api/v1alpha1/classi" +
+      "fier/file_templates/list:\001*\022\266\001\n\017GetFileT" +
+      "emplate\022/.api.v1alpha1.classifier.GetFil" +
+      "eTemplateRequest\0320.api.v1alpha1.classifi" +
+      "er.GetFileTemplateResponse\"@\272\270\221\002\005\n\003\010\351\007\202\323" +
+      "\344\223\0020\"+/api/v1alpha1/classifier/file_temp" +
+      "lates/get:\001*B\267\001\n)com.tcn.cloud.api.api.v" +
+      "1alpha1.classifierB\014ServiceProtoP\001\242\002\003AVC" +
+      "\252\002\027Api.V1alpha1.Classifier\312\002\027Api\\V1alpha" +
+      "1\\Classifier\342\002#Api\\V1alpha1\\Classifier\\G" +
+      "PBMetadata\352\002\031Api::V1alpha1::Classifierb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

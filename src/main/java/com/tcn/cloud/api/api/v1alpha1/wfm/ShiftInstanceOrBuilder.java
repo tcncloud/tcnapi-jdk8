@@ -82,7 +82,7 @@ public interface ShiftInstanceOrBuilder extends
    *
    * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ShiftInstance.originating_program_node_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5794
+   *     See api/v1alpha1/wfm/wfm.proto;l=5806
    * @return The originatingProgramNodeSid.
    */
   @java.lang.Deprecated long getOriginatingProgramNodeSid();
@@ -202,4 +202,14 @@ public interface ShiftInstanceOrBuilder extends
    * <code>.api.v1alpha1.wfm.ShiftTemplate shift_template = 11 [json_name = "shiftTemplate"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.ShiftTemplateOrBuilder getShiftTemplateOrBuilder();
+
+  /**
+   * <pre>
+   * the percentage shrinkage expected for this shift [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>float planned_shrinkage_percent = 12 [json_name = "plannedShrinkagePercent"];</code>
+   * @return The plannedShrinkagePercent.
+   */
+  float getPlannedShrinkagePercent();
 }

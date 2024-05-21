@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.v1alpha1.org;
  *
  * Protobuf type {@code api.v1alpha1.org.AssignLabelsResponse}
  */
-public final class AssignLabelsResponse extends
+@java.lang.Deprecated public final class AssignLabelsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.org.AssignLabelsResponse)
     AssignLabelsResponseOrBuilder {

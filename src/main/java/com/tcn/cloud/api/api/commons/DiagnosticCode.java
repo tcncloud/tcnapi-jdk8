@@ -649,6 +649,46 @@ public enum DiagnosticCode
    * <code>ATTEMPT_TO_BUILD_SCHEDULES_FOR_INVALID_PARENT_NODE = 66;</code>
    */
   ATTEMPT_TO_BUILD_SCHEDULES_FOR_INVALID_PARENT_NODE(66),
+  /**
+   * <pre>
+   * DiagnosticCodeSchedulableAgentsDoNotMeetTemplateMinimum integer value for a diagnostic coded as
+   * 'Schedulable Agents do not meet Tamplate Minimum' type.
+   * The diagnostic is reporting that agents will be auto generated upon building the schedule, unless added manually or agent generation is toggled off.
+   * </pre>
+   *
+   * <code>SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MINIMUM = 67;</code>
+   */
+  SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MINIMUM(67),
+  /**
+   * <pre>
+   * DiagnosticCodeSchedulableAgentsDoNotMeetTemplateMaximum integer value for a diagnostic coded as
+   * 'Schedulable Agents do not meet Template Maximum' type.
+   * The diagnostic is reporting that agents may be auto generated upon building the schedule, unless added manually or agent generation is toggled off.
+   * </pre>
+   *
+   * <code>SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MAXIMUM = 68;</code>
+   */
+  SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MAXIMUM(68),
+  /**
+   * <pre>
+   * DiagnosticNoOpenTimesInheritedByProgram integer value for a diagnostic coded as
+   * 'No Open Times were set or inherited by Program' type
+   * The diagnostic is reporting that the program does not have any open time values set directly or through inheritance.
+   * </pre>
+   *
+   * <code>NO_OPEN_TIMES_SET_OR_INHERITED_BY_PROGRAM = 69;</code>
+   */
+  NO_OPEN_TIMES_SET_OR_INHERITED_BY_PROGRAM(69),
+  /**
+   * <pre>
+   * DiagnosticTourAgentCollectionsNeededToScheduleTour integer value for a diagnostic coded as
+   * 'Cannot generate shifts for Tour Shift Template that has no Agent Collections for Tour Patterns' type.
+   * The diagnostic is reporting that there are no tour agent collections, which are required to schedule the tour pattern.
+   * </pre>
+   *
+   * <code>TOUR_AGENT_COLLECTIONS_NEEDED_TO_SCHEDULE_TOUR = 70;</code>
+   */
+  TOUR_AGENT_COLLECTIONS_NEEDED_TO_SCHEDULE_TOUR(70),
   UNRECOGNIZED(-1),
   ;
 
@@ -1289,6 +1329,46 @@ public enum DiagnosticCode
    * <code>ATTEMPT_TO_BUILD_SCHEDULES_FOR_INVALID_PARENT_NODE = 66;</code>
    */
   public static final int ATTEMPT_TO_BUILD_SCHEDULES_FOR_INVALID_PARENT_NODE_VALUE = 66;
+  /**
+   * <pre>
+   * DiagnosticCodeSchedulableAgentsDoNotMeetTemplateMinimum integer value for a diagnostic coded as
+   * 'Schedulable Agents do not meet Tamplate Minimum' type.
+   * The diagnostic is reporting that agents will be auto generated upon building the schedule, unless added manually or agent generation is toggled off.
+   * </pre>
+   *
+   * <code>SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MINIMUM = 67;</code>
+   */
+  public static final int SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MINIMUM_VALUE = 67;
+  /**
+   * <pre>
+   * DiagnosticCodeSchedulableAgentsDoNotMeetTemplateMaximum integer value for a diagnostic coded as
+   * 'Schedulable Agents do not meet Template Maximum' type.
+   * The diagnostic is reporting that agents may be auto generated upon building the schedule, unless added manually or agent generation is toggled off.
+   * </pre>
+   *
+   * <code>SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MAXIMUM = 68;</code>
+   */
+  public static final int SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MAXIMUM_VALUE = 68;
+  /**
+   * <pre>
+   * DiagnosticNoOpenTimesInheritedByProgram integer value for a diagnostic coded as
+   * 'No Open Times were set or inherited by Program' type
+   * The diagnostic is reporting that the program does not have any open time values set directly or through inheritance.
+   * </pre>
+   *
+   * <code>NO_OPEN_TIMES_SET_OR_INHERITED_BY_PROGRAM = 69;</code>
+   */
+  public static final int NO_OPEN_TIMES_SET_OR_INHERITED_BY_PROGRAM_VALUE = 69;
+  /**
+   * <pre>
+   * DiagnosticTourAgentCollectionsNeededToScheduleTour integer value for a diagnostic coded as
+   * 'Cannot generate shifts for Tour Shift Template that has no Agent Collections for Tour Patterns' type.
+   * The diagnostic is reporting that there are no tour agent collections, which are required to schedule the tour pattern.
+   * </pre>
+   *
+   * <code>TOUR_AGENT_COLLECTIONS_NEEDED_TO_SCHEDULE_TOUR = 70;</code>
+   */
+  public static final int TOUR_AGENT_COLLECTIONS_NEEDED_TO_SCHEDULE_TOUR_VALUE = 70;
 
 
   public final int getNumber() {
@@ -1382,6 +1462,10 @@ public enum DiagnosticCode
       case 64: return FIRST_WEEK_PATTERN_NUMBERS_NOT_FOUND_IN_TOUR_WEEK_PATTERNS;
       case 65: return SHIFT_TEMPLATE_HAS_NO_ASSOCIATED_SCHEDULING_AGENT_GROUPS;
       case 66: return ATTEMPT_TO_BUILD_SCHEDULES_FOR_INVALID_PARENT_NODE;
+      case 67: return SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MINIMUM;
+      case 68: return SCHEDULABLE_AGENTS_DO_NOT_MEET_TEMPLATE_MAXIMUM;
+      case 69: return NO_OPEN_TIMES_SET_OR_INHERITED_BY_PROGRAM;
+      case 70: return TOUR_AGENT_COLLECTIONS_NEEDED_TO_SCHEDULE_TOUR;
       default: return null;
     }
   }

@@ -359,7 +359,7 @@ public final class PreferencesProto {
       "\n\002id\030\001 \001(\003R\002id\022\035\n\nfield_name\030\002 \001(\tR\tfiel" +
       "dName\022\031\n\010is_phone\030\003 \001(\010R\007isPhone\0222\n\025disp" +
       "lay_format_string\030\004 \001(\tR\023displayFormatSt" +
-      "ring\"\266\006\n\031AuthenticationPreferences\022\025\n\006or" +
+      "ring\"\344\006\n\031AuthenticationPreferences\022\025\n\006or" +
       "g_id\030\001 \001(\tR\005orgId\0220\n\024authorization_via_i" +
       "p\030\n \001(\010R\022authorizationViaIp\022\037\n\013allowed_i" +
       "ps\030\013 \003(\tR\nallowedIps\022\"\n\ragent_api_key\030\014 " +
@@ -375,309 +375,310 @@ public final class PreferencesProto {
       "wForcePasswordResetInterval\022=\n\033password_" +
       "reset_day_interval\030\022 \001(\005R\030passwordResetD" +
       "ayInterval\0229\n\031user_authorization_via_ip\030" +
-      "\023 \001(\010R\026userAuthorizationViaIp\032p\n\016DuoMfaS" +
-      "ettings\022\"\n\rduo_client_id\030\001 \001(\tR\013duoClien" +
-      "tId\022 \n\014duo_api_host\030\002 \001(\tR\nduoApiHost\022\030\n" +
-      "\007enabled\030\003 \001(\010R\007enabled\032,\n\020EmailMfaSetti" +
-      "ngs\022\030\n\007enabled\030\001 \001(\010R\007enabled\"\277\001\n\022Webhoo" +
-      "kPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022*\n\021p" +
-      "ush_urls_enabled\030\n \001(\010R\017pushUrlsEnabled\022" +
-      "/\n\024call_result_push_url\030\013 \001(\tR\021callResul" +
-      "tPushUrl\0225\n\027agent_response_push_url\030\014 \001(" +
-      "\tR\024agentResponsePushUrl\"\345\004\n\024DashboardPre" +
-      "ferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022*\n\021defau" +
-      "lt_info_view\030\n \001(\010R\017defaultInfoView\0226\n\027d" +
-      "efault_table_inclusion\030\013 \001(\010R\025defaultTab" +
-      "leInclusion\0222\n\025default_info_grouping\030\014 \001" +
-      "(\010R\023defaultInfoGrouping\022,\n\022default_small" +
-      "_icon\030\r \001(\010R\020defaultSmallIcon\0226\n\027default" +
-      "_descending_sort\030\016 \001(\010R\025defaultDescendin" +
-      "gSort\022,\n\022table_template_sid\030\017 \001(\003R\020table" +
-      "TemplateSid\022P\n\022default_call_types\030\020 \001(\0132" +
-      "\".api.commons.org.IncludedCallTypesR\020def" +
-      "aultCallTypes\022X\n\032default_info_sort_by_va" +
-      "lue\030\021 \001(\0162\034.api.commons.AgentInfoSortByR" +
-      "\026defaultInfoSortByValue\022^\n\032default_barge" +
-      "_in_filtering\030\022 \001(\0132!.api.commons.org.Ba" +
-      "rgeInFilteringR\027defaultBargeInFiltering\"" +
-      "\215\001\n\021IncludedCallTypes\022\032\n\010outbound\030\001 \001(\010R" +
-      "\010outbound\022\030\n\007inbound\030\002 \001(\010R\007inbound\022\037\n\013m" +
-      "anual_dial\030\003 \001(\010R\nmanualDial\022!\n\014preview_" +
-      "dial\030\004 \001(\010R\013previewDial\"\367\003\n\020BargeInFilte" +
-      "ring\022J\n\nhunt_group\030\001 \001(\0132+.api.commons.o" +
-      "rg.BargeInFiltering.HuntGroupR\thuntGroup" +
-      "\022P\n\014agent_status\030\002 \001(\0132-.api.commons.org" +
-      ".BargeInFiltering.AgentStatusR\013agentStat" +
-      "us\032C\n\tHuntGroup\022\020\n\003any\030\001 \001(\010R\003any\022$\n\016hun" +
-      "t_group_sid\030\002 \001(\003R\014huntGroupSid\032\377\001\n\013Agen" +
-      "tStatus\022\020\n\003any\030\001 \001(\010R\003any\022\030\n\007waiting\030\002 \001" +
-      "(\010R\007waiting\022\027\n\007on_call\030\003 \001(\010R\006onCall\022\027\n\007" +
-      "wrap_up\030\004 \001(\010R\006wrapUp\022\026\n\006paused\030\005 \001(\010R\006p" +
-      "aused\022\032\n\010transfer\030\006 \001(\010R\010transfer\022\030\n\007pre" +
-      "view\030\007 \001(\010R\007preview\022\026\n\006manual\030\010 \001(\010R\006man" +
-      "ual\022\020\n\003pbx\030\t \001(\010R\003pbx\022\032\n\010intercom\030\n \001(\010R" +
-      "\010intercom\"\320\003\n\031DashboardQueuePreferences\022" +
-      "\025\n\006org_id\030\001 \001(\tR\005orgId\022*\n\021default_info_v" +
-      "iew\030\n \001(\010R\017defaultInfoView\0222\n\025default_in" +
-      "fo_grouping\030\013 \001(\010R\023defaultInfoGrouping\022," +
-      "\n\022default_small_icon\030\014 \001(\010R\020defaultSmall" +
-      "Icon\0226\n\027default_descending_sort\030\r \001(\010R\025d" +
-      "efaultDescendingSort\022=\n\033default_agent_sk" +
-      "ills_filter\030\016 \001(\003R\030defaultAgentSkillsFil" +
-      "ter\022=\n\033default_info_table_template\030\017 \001(\003" +
-      "R\030defaultInfoTableTemplate\022X\n\032default_in" +
-      "fo_sort_by_value\030\020 \001(\0162\034.api.commons.Que" +
-      "ueInfoSortByR\026defaultInfoSortByValue\"\210\005\n" +
-      "\020PhonePreferences\022\025\n\006org_id\030\001 \001(\tR\005orgId" +
-      "\0222\n\025agent_preview_dialing\030\n \001(\010R\023agentPr" +
-      "eviewDialing\022A\n\035default_ring_length_thre" +
-      "shold\030\013 \001(\005R\032defaultRingLengthThreshold\022" +
-      "A\n\035display_ring_length_threshold\030\014 \001(\010R\032" +
-      "displayRingLengthThreshold\022$\n\016show_calle" +
-      "r_id\030\r \001(\010R\014showCallerId\0221\n\025default_use_" +
-      "caller_id\030\016 \001(\010R\022defaultUseCallerId\022>\n\033o" +
-      "verride_linkback_recording\030\017 \001(\010R\031overri" +
-      "deLinkbackRecording\022)\n\021caller_id_cfd_sid" +
-      "\030\020 \001(\003R\016callerIdCfdSid\022H\n\022default_dial_o" +
-      "rder\030\021 \001(\0132\032.api.commons.org.DialOrderR\020" +
-      "defaultDialOrder\022f\n\033answering_machine_de" +
-      "tection\030\022 \001(\0162&.api.commons.AnsweringMac" +
-      "hineDetectionR\031answeringMachineDetection" +
-      "\022-\n\022linkback_recording\030\023 \001(\010R\021linkbackRe" +
-      "cording\"\211\001\n\tDialOrder\0228\n\010standard\030\001 \001(\0162" +
-      "\032.api.commons.DialOrderTypeH\000R\010standard\022" +
-      ":\n\006custom\030\002 \001(\0132 .api.commons.org.Custom" +
-      "DialOrderH\000R\006customB\006\n\004type\"^\n\017CustomDia" +
-      "lOrder\022K\n\021dial_order_fields\030\001 \003(\0132\037.api." +
-      "commons.org.DialOrderFieldR\017dialOrderFie" +
-      "lds\"H\n\016DialOrderField\022\027\n\007cfd_sid\030\001 \001(\003R\006" +
-      "cfdSid\022\035\n\nfield_name\030\002 \001(\tR\tfieldName\"\331\006" +
-      "\n\025CompliancePreferences\022\025\n\006org_id\030\001 \001(\tR" +
-      "\005orgId\0229\n\031display_after_hours_calls\030\n \001(" +
-      "\010R\026displayAfterHoursCalls\022*\n\021after_hours" +
-      "_calls\030\013 \001(\010R\017afterHoursCalls\022<\n\032display" +
-      "_natural_compliance\030\014 \001(\010R\030displayNatura" +
-      "lCompliance\0224\n\026use_natural_compliance\030\r " +
-      "\001(\010R\024useNaturalCompliance\022=\n\033default_com" +
-      "pliance_rule_set\030\016 \001(\tR\030defaultComplianc" +
-      "eRuleSet\0227\n\030display_cell_phone_scrub\030\017 \001" +
-      "(\010R\025displayCellPhoneScrub\022(\n\020cell_phone_" +
-      "scrub\030\020 \001(\010R\016cellPhoneScrub\0224\n\026display_s" +
-      "chedule_rules\030\021 \001(\010R\024displayScheduleRule" +
-      "s\022,\n\022use_schedule_rules\030\022 \001(\010R\020useSchedu" +
-      "leRules\022V\n\025default_schedule_rule\030\023 \001(\0132\"" +
-      ".api.commons.org.ScheduleRuleFieldR\023defa" +
-      "ultScheduleRule\022)\n\021do_zip_code_scrub\030\024 \001" +
-      "(\010R\016doZipCodeScrub\022C\n\016zip_code_scrub\030\025 \001" +
-      "(\0132\035.api.commons.org.ZipCodeFieldR\014zipCo" +
-      "deScrub\022A\n\035default_email_compliance_list" +
-      "\030\026 \001(\tR\032defaultEmailComplianceList\022=\n\033de" +
-      "fault_sms_compliance_list\030\027 \001(\tR\030default" +
-      "SmsComplianceList\"@\n\021ScheduleRuleField\022\027" +
-      "\n\007rule_id\030\001 \001(\003R\006ruleId\022\022\n\004name\030\002 \001(\tR\004n" +
-      "ame\"F\n\014ZipCodeField\022\027\n\007cfd_sid\030\001 \001(\003R\006cf" +
-      "dSid\022\035\n\nfield_name\030\002 \001(\tR\tfieldName\"\266\005\n\024" +
-      "BroadcastPreferences\022\025\n\006org_id\030\001 \001(\tR\005or" +
-      "gId\022I\n!display_list_penetration_strategy" +
-      "\030\n \001(\010R\036displayListPenetrationStrategy\022C" +
-      "\n\036dial_list_penetration_strategy\030\013 \001(\010R\033" +
-      "dialListPenetrationStrategy\0223\n\026display_f" +
-      "ollow_the_sun\030\014 \001(\010R\023displayFollowTheSun" +
-      "\022$\n\016follow_the_sun\030\r \001(\010R\014followTheSun\022@" +
-      "\n\034sequence_terminator_override\030\016 \001(\010R\032se" +
-      "quenceTerminatorOverride\022f\n\033broadcast_te" +
-      "mplate_ordering\030\017 \001(\0162&.api.commons.Broa" +
-      "dcastTemplateOrderingR\031broadcastTemplate" +
-      "Ordering\022,\n\022start_time_enabled\030\020 \001(\010R\020st" +
-      "artTimeEnabled\022L\n\022default_start_time\030\021 \001" +
-      "(\0132\036.api.commons.org.BroadcastTimeR\020defa" +
-      "ultStartTime\022*\n\021stop_time_enabled\030\022 \001(\010R" +
-      "\017stopTimeEnabled\022J\n\021default_stop_time\030\023 " +
-      "\001(\0132\036.api.commons.org.BroadcastTimeR\017def" +
-      "aultStopTime\"r\n\rBroadcastTime\022\024\n\005hours\030\001" +
-      " \001(\005R\005hours\022\030\n\007minutes\030\002 \001(\005R\007minutes\0221\n" +
-      "\010timezone\030\003 \001(\0162\025.api.commons.TimeZoneR\010" +
-      "timezone\"\276\006\n\023SchedulePreferences\022\025\n\006org_" +
-      "id\030\001 \001(\tR\005orgId\022@\n\035display_schedule_by_t" +
-      "ime_zone\030\n \001(\010R\031displayScheduleByTimeZon" +
-      "e\0228\n\031use_schedule_by_time_zone\030\013 \001(\010R\025us" +
-      "eScheduleByTimeZone\022b\n\033schedule_by_time_" +
-      "zone_scope\030\014 \001(\0162$.api.commons.ScheduleB" +
-      "yTimeZoneScopeR\027scheduleByTimeZoneScope\022" +
-      ";\n\032display_schedule_as_paused\030\r \001(\010R\027dis" +
-      "playScheduleAsPaused\022,\n\022schedule_as_paus" +
-      "ed\030\016 \001(\010R\020scheduleAsPaused\022@\n\034default_co" +
-      "mpletion_threshold\030\017 \001(\003R\032defaultComplet" +
-      "ionThreshold\0228\n\030display_campaign_linking" +
-      "\030\020 \001(\010R\026displayCampaignLinking\0220\n\024use_ca" +
-      "mpaign_linking\030\021 \001(\010R\022useCampaignLinking" +
-      "\022^\n\016campaign_links\030\022 \003(\01327.api.commons.o" +
-      "rg.SchedulePreferences.CampaignLinksEntr" +
-      "yR\rcampaignLinks\0227\n\030default_campaign_lin" +
-      "k_id\030\023 \001(\tR\025defaultCampaignLinkId\022<\n\032res" +
-      "end_cancelled_campaigns\030\024 \001(\010R\030resendCan" +
-      "celledCampaigns\032@\n\022CampaignLinksEntry\022\020\n" +
-      "\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028" +
-      "\001\"\277\001\n\023EmailSmsPreferences\022\025\n\006org_id\030\001 \001(" +
-      "\tR\005orgId\022(\n\020use_custom_links\030\n \001(\010R\016useC" +
-      "ustomLinks\0225\n\026client_acknowledgement\030\013 \001" +
-      "(\010R\025clientAcknowledgement\0220\n\024email_from_" +
-      "addresses\030\014 \003(\tR\022emailFromAddresses\"\215\002\n\023" +
-      "BusinessPreferences\022\025\n\006org_id\030\001 \001(\tR\005org" +
-      "Id\022\"\n\rweeks_of_data\030\n \001(\005R\013weeksOfData\0225" +
-      "\n\ttime_zone\030\013 \001(\0162\030.api.commons.AnaTimeZ" +
-      "oneR\010timeZone\022.\n\023multi_client_access\030\014 \001" +
-      "(\010R\021multiClientAccess\0223\n\025custom_visualiz" +
-      "ations\030\r \001(\010R\024customVisualizations\022\037\n\013ti" +
-      "me_filter\030\016 \001(\tR\ntimeFilter\"\367\001\n\025Scorecar" +
-      "dsPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\0224\n\026" +
-      "call_sample_percentage\030\002 \001(\rR\024callSample" +
-      "Percentage\0220\n\024max_user_evaluations\030\003 \001(\r" +
-      "R\022maxUserEvaluations\022_\n\023evaluation_inter" +
-      "val\030\004 \001(\0162..api.commons.org.Scorecards.E" +
-      "valuationIntervalR\022evaluationInterval\"\210\001" +
-      "\n\nScorecards\"z\n\022EvaluationInterval\022\'\n#EV" +
-      "ALUATION_INTERVAL_DAY_UNSPECIFIED\020\000\022\034\n\030E" +
-      "VALUATION_INTERVAL_WEEK\020\001\022\035\n\031EVALUATION_" +
-      "INTERVAL_MONTH\020\002\"\312\003\n\031VoiceAnalyticsPrefe" +
-      "rences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\030\n\007enabled" +
-      "\030\002 \001(\010R\007enabled\022>\n\006redact\030\003 \003(\0132&.api.co" +
-      "mmons.org.VoiceAnalytics.RedactR\006redact\022" +
-      ">\n\006notify\030\004 \001(\0132&.api.commons.org.VoiceA" +
-      "nalytics.NotifyR\006notify\022M\n\016billing_notif" +
-      "y\030\005 \001(\0132&.api.commons.org.VoiceAnalytics" +
-      ".NotifyR\rbillingNotify\022#\n\rnumber_format\030" +
-      "\006 \001(\tR\014numberFormat\022*\n\021redact_all_digits" +
-      "\030\n \001(\010R\017redactAllDigits\022+\n\021silence_thres" +
-      "hold\030d \001(\rR\020silenceThreshold\022/\n\023talk_ove" +
-      "r_threshold\030\310\001 \001(\rR\021talkOverThreshold\"\374\002" +
-      "\n\016VoiceAnalytics\032S\n\006Redact\022@\n\006number\030\001 \001" +
-      "(\0132&.api.commons.org.VoiceAnalytics.Numb" +
-      "erH\000R\006numberB\007\n\005where\032\366\001\n\006Number\022?\n\004kind" +
-      "\030\001 \001(\0162+.api.commons.org.VoiceAnalytics." +
-      "Number.KindR\004kind\022\'\n\017min_consecutive\030\002 \001" +
-      "(\rR\016minConsecutive\022\'\n\017max_consecutive\030\003 " +
-      "\001(\rR\016maxConsecutive\022\022\n\004slop\030\004 \001(\rR\004slop\"" +
-      "E\n\004Kind\022\035\n\031KIND_CARDINAL_UNSPECIFIED\020\000\022\020" +
-      "\n\014KIND_ORDINAL\020\001\022\014\n\010KIND_ANY\020\002\032\034\n\006Notify" +
-      "\022\022\n\004cron\030\001 \001(\tR\004cron\"\225\002\n\023EndOfDayPrefere" +
-      "nces\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\035\n\neod_monda" +
-      "y\030\n \001(\005R\teodMonday\022\037\n\013eod_tuesday\030\013 \001(\005R" +
-      "\neodTuesday\022#\n\reod_wednesday\030\014 \001(\005R\014eodW" +
-      "ednesday\022!\n\014eod_thursday\030\r \001(\005R\013eodThurs" +
-      "day\022\035\n\neod_friday\030\016 \001(\005R\teodFriday\022!\n\014eo" +
-      "d_saturday\030\017 \001(\005R\013eodSaturday\022\035\n\neod_sun" +
-      "day\030\020 \001(\005R\teodSunday\"\352\002\n\021FilterPreferenc" +
-      "es\022\025\n\006org_id\030\001 \001(\tR\005orgId\022Z\n\032default_aut" +
-      "o_report_filter\030\n \001(\0132\035.api.commons.org." +
-      "ReportFilterR\027defaultAutoReportFilter\0225\n" +
-      "\027send_empty_auto_reports\030\013 \001(\010R\024sendEmpt" +
-      "yAutoReports\022E\n\037display_broadcast_resend" +
-      "_filter\030\014 \001(\010R\034displayBroadcastResendFil" +
-      "ter\022d\n\037default_broadcast_resend_filter\030\r" +
-      " \001(\0132\035.api.commons.org.ReportFilterR\034def" +
-      "aultBroadcastResendFilter\"s\n\014ReportFilte" +
-      "r\022?\n\010standard\030\001 \001(\0162!.api.commons.Standa" +
-      "rdReportFilterH\000R\010standard\022\030\n\006custom\030\002 \001" +
-      "(\003H\000R\006customB\010\n\006choice\"\254\003\n\024RecordingPref" +
-      "erences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022-\n\022conven" +
-      "tion_enabled\030\n \001(\010R\021conventionEnabled\022a\n" +
-      "\024file_name_convention\030\013 \001(\0132/.api.common" +
-      "s.org.RecordingsFileNamingConventionR\022fi" +
-      "leNameConvention\0224\n\026zip_convention_enabl" +
-      "ed\030\014 \001(\010R\024zipConventionEnabled\022k\n\030zip_fi" +
-      "le_name_convention\030\r \001(\01322.api.commons.o" +
-      "rg.RecordingsZipFileNamingConventionR\025zi" +
-      "pFileNameConvention\022H\n\020export_file_type\030" +
-      "\016 \001(\0162\036.api.commons.RecordingFileTypeR\016e" +
-      "xportFileType\"\333\002\n\036RecordingsFileNamingCo" +
-      "nvention\0225\n\027xml_client_property_sid\030\001 \001(" +
-      "\003R\024xmlClientPropertySid\022?\n\007inbound\030\002 \001(\013" +
-      "2%.api.commons.org.FileNamingConventionR" +
-      "\007inbound\022=\n\006manual\030\003 \001(\0132%.api.commons.o" +
-      "rg.FileNamingConventionR\006manual\022A\n\010outbo" +
-      "und\030\004 \001(\0132%.api.commons.org.FileNamingCo" +
-      "nventionR\010outbound\022?\n\007preview\030\005 \001(\0132%.ap" +
-      "i.commons.org.FileNamingConventionR\007prev" +
-      "iew\"\340\002\n!RecordingsZipFileNamingConventio" +
-      "n\0225\n\027xml_client_property_sid\030\001 \001(\003R\024xmlC" +
-      "lientPropertySid\022?\n\007inbound\030\002 \001(\0132%.api." +
-      "commons.org.FileNamingConventionR\007inboun" +
-      "d\022=\n\006manual\030\003 \001(\0132%.api.commons.org.File" +
-      "NamingConventionR\006manual\022A\n\010outbound\030\004 \001" +
-      "(\0132%.api.commons.org.FileNamingConventio" +
-      "nR\010outbound\022A\n\010combined\030\005 \001(\0132%.api.comm" +
-      "ons.org.FileNamingConventionR\010combined\"T" +
-      "\n\024FileNamingConvention\022<\n\010segments\030\001 \003(\013" +
-      "2 .api.commons.org.FileNameSegmentR\010segm" +
-      "ents\"}\n\017FileNameSegment\022!\n\014segment_type\030" +
-      "\001 \001(\tR\013segmentType\022%\n\016format_pattern\030\002 \001" +
-      "(\tR\rformatPattern\022 \n\014time_zone_id\030\003 \001(\tR" +
-      "\ntimeZoneId\"\342\003\n\026AdminClientPreferences\022\025" +
-      "\n\006org_id\030\001 \001(\tR\005orgId\0220\n\024use_reserved_ca" +
-      "rrier\030\n \001(\010R\022useReservedCarrier\022+\n\021reser" +
-      "ved_carriers\030\013 \003(\tR\020reservedCarriers\022\033\n\t" +
-      "email_key\030\014 \001(\tR\010emailKey\022\031\n\010email_id\030\r " +
-      "\001(\tR\007emailId\022\035\n\nemail_name\030\016 \001(\tR\temailN" +
-      "ame\022#\n\rwhitelist_ips\030\017 \003(\tR\014whitelistIps" +
-      "\022+\n\021whitelist_domains\030\020 \003(\tR\020whitelistDo" +
-      "mains\0220\n\024callbacks_service_id\030\021 \001(\tR\022cal" +
-      "lbacksServiceId\0224\n\026agent_screen_recordin" +
-      "g\030\022 \001(\010R\024agentScreenRecording\022A\n\021allowed" +
-      "_countries\030\023 \003(\0162\024.api.commons.CountryR\020" +
-      "allowedCountries\"\375\002\n\rBusinessHours\022\025\n\006or" +
-      "g_id\030\001 \001(\tR\005orgId\022 \n\013description\030\004 \001(\tR\013" +
-      "description\022*\n\021business_hours_id\030\006 \001(\tR\017" +
-      "businessHoursId\022.\n\023business_hours_name\030\007" +
-      " \001(\tR\021businessHoursName\0221\n\010timezone\030\010 \001(" +
-      "\0162\025.api.commons.TimeZoneR\010timezone\022A\n\rda" +
-      "y_intervals\030\t \003(\0132\034.api.commons.org.DayI" +
-      "ntervalR\014dayIntervals\022=\n\014last_updated\030\n " +
-      "\001(\0132\032.google.protobuf.TimestampR\013lastUpd" +
-      "atedJ\004\010\002\020\003J\004\010\003\020\004J\004\010\005\020\006R\002idR\004nameR\006ranges" +
-      "\"\207\001\n\005Range\022\035\n\nstart_hour\030\001 \001(\005R\tstartHou" +
-      "r\022!\n\014start_minute\030\002 \001(\005R\013startMinute\022\031\n\010" +
-      "end_hour\030\003 \001(\005R\007endHour\022\035\n\nend_minute\030\004 " +
-      "\001(\005R\tendMinute:\002\030\001\"7\n\tTimeOfDay\022\022\n\004hour\030" +
-      "\001 \001(\005R\004hour\022\026\n\006minute\030\002 \001(\005R\006minute\"\232\001\n\013" +
-      "DayInterval\022+\n\003day\030\001 \001(\0162\031.api.commons.W" +
-      "eekday.EnumR\003day\0220\n\005start\030\002 \001(\0132\032.api.co" +
-      "mmons.org.TimeOfDayR\005start\022,\n\003end\030\003 \001(\0132" +
-      "\032.api.commons.org.TimeOfDayR\003end\"w\n\014Mont" +
-      "hDayDate\022\033\n\tdate_name\030\001 \001(\tR\010dateName\022(\n" +
-      "\005month\030\002 \001(\0162\022.api.commons.MonthR\005month\022" +
-      " \n\014day_of_month\030\003 \001(\005R\ndayOfMonth\"c\n\016Cou" +
-      "ntryHoliday\022!\n\014holiday_name\030\001 \001(\tR\013holid" +
-      "ayName\022.\n\007country\030\002 \001(\0162\024.api.commons.Co" +
-      "untryR\007country\"\212\001\n\rProgrammedDay\0221\n\003day\030" +
-      "\001 \001(\0132\035.api.commons.org.MonthDayDateH\000R\003" +
-      "day\022;\n\007holiday\030\002 \001(\0132\037.api.commons.org.C" +
-      "ountryHolidayH\000R\007holidayB\t\n\007DayType\"\324\002\n\017" +
-      "ProgrammedDates\022\025\n\006org_id\030\001 \001(\tR\005orgId\022." +
-      "\n\023programmed_dates_id\030\002 \001(\tR\021programmedD" +
-      "atesId\0222\n\025programmed_dates_name\030\003 \001(\tR\023p" +
-      "rogrammedDatesName\022 \n\013description\030\004 \001(\tR" +
-      "\013description\0221\n\010timezone\030\005 \001(\0162\025.api.com" +
-      "mons.TimeZoneR\010timezone\0222\n\004days\030\006 \003(\0132\036." +
-      "api.commons.org.ProgrammedDayR\004days\022=\n\014l" +
-      "ast_updated\030\007 \001(\0132\032.google.protobuf.Time" +
-      "stampR\013lastUpdated\"\333\002\n\020ObservedHolidays\022" +
-      "\025\n\006org_id\030\001 \001(\tR\005orgId\0220\n\024observed_holid" +
-      "ays_id\030\002 \001(\tR\022observedHolidaysId\0224\n\026obse" +
-      "rved_holidays_name\030\003 \001(\tR\024observedHolida" +
-      "ysName\022 \n\013description\030\004 \001(\tR\013description" +
-      "\0221\n\010timezone\030\005 \001(\0162\025.api.commons.TimeZon" +
-      "eR\010timezone\0224\n\004days\030\006 \003(\0132 .api.commons." +
-      "org.ObservedHolidayR\004days\022=\n\014last_update" +
-      "d\030\007 \001(\0132\032.google.protobuf.TimestampR\013las" +
-      "tUpdated\"\214\001\n\017ObservedHoliday\0221\n\003day\030\001 \001(" +
-      "\0132\035.api.commons.org.MonthDayDateH\000R\003day\022" +
-      ";\n\007holiday\030\002 \001(\0132\037.api.commons.org.Count" +
-      "ryHolidayH\000R\007holidayB\t\n\007DayTypeB\223\001\n!com." +
-      "tcn.cloud.api.api.commons.orgB\020Preferenc" +
-      "esProtoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\" +
-      "Commons\\Org\342\002\033Api\\Commons\\Org\\GPBMetadat" +
-      "a\352\002\021Api::Commons::Orgb\006proto3"
+      "\023 \001(\010R\026userAuthorizationViaIp\022,\n\022force_s" +
+      "so_provider\030\024 \001(\010R\020forceSsoProvider\032p\n\016D" +
+      "uoMfaSettings\022\"\n\rduo_client_id\030\001 \001(\tR\013du" +
+      "oClientId\022 \n\014duo_api_host\030\002 \001(\tR\nduoApiH" +
+      "ost\022\030\n\007enabled\030\003 \001(\010R\007enabled\032,\n\020EmailMf" +
+      "aSettings\022\030\n\007enabled\030\001 \001(\010R\007enabled\"\277\001\n\022" +
+      "WebhookPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgI" +
+      "d\022*\n\021push_urls_enabled\030\n \001(\010R\017pushUrlsEn" +
+      "abled\022/\n\024call_result_push_url\030\013 \001(\tR\021cal" +
+      "lResultPushUrl\0225\n\027agent_response_push_ur" +
+      "l\030\014 \001(\tR\024agentResponsePushUrl\"\345\004\n\024Dashbo" +
+      "ardPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022*\n" +
+      "\021default_info_view\030\n \001(\010R\017defaultInfoVie" +
+      "w\0226\n\027default_table_inclusion\030\013 \001(\010R\025defa" +
+      "ultTableInclusion\0222\n\025default_info_groupi" +
+      "ng\030\014 \001(\010R\023defaultInfoGrouping\022,\n\022default" +
+      "_small_icon\030\r \001(\010R\020defaultSmallIcon\0226\n\027d" +
+      "efault_descending_sort\030\016 \001(\010R\025defaultDes" +
+      "cendingSort\022,\n\022table_template_sid\030\017 \001(\003R" +
+      "\020tableTemplateSid\022P\n\022default_call_types\030" +
+      "\020 \001(\0132\".api.commons.org.IncludedCallType" +
+      "sR\020defaultCallTypes\022X\n\032default_info_sort" +
+      "_by_value\030\021 \001(\0162\034.api.commons.AgentInfoS" +
+      "ortByR\026defaultInfoSortByValue\022^\n\032default" +
+      "_barge_in_filtering\030\022 \001(\0132!.api.commons." +
+      "org.BargeInFilteringR\027defaultBargeInFilt" +
+      "ering\"\215\001\n\021IncludedCallTypes\022\032\n\010outbound\030" +
+      "\001 \001(\010R\010outbound\022\030\n\007inbound\030\002 \001(\010R\007inboun" +
+      "d\022\037\n\013manual_dial\030\003 \001(\010R\nmanualDial\022!\n\014pr" +
+      "eview_dial\030\004 \001(\010R\013previewDial\"\367\003\n\020BargeI" +
+      "nFiltering\022J\n\nhunt_group\030\001 \001(\0132+.api.com" +
+      "mons.org.BargeInFiltering.HuntGroupR\thun" +
+      "tGroup\022P\n\014agent_status\030\002 \001(\0132-.api.commo" +
+      "ns.org.BargeInFiltering.AgentStatusR\013age" +
+      "ntStatus\032C\n\tHuntGroup\022\020\n\003any\030\001 \001(\010R\003any\022" +
+      "$\n\016hunt_group_sid\030\002 \001(\003R\014huntGroupSid\032\377\001" +
+      "\n\013AgentStatus\022\020\n\003any\030\001 \001(\010R\003any\022\030\n\007waiti" +
+      "ng\030\002 \001(\010R\007waiting\022\027\n\007on_call\030\003 \001(\010R\006onCa" +
+      "ll\022\027\n\007wrap_up\030\004 \001(\010R\006wrapUp\022\026\n\006paused\030\005 " +
+      "\001(\010R\006paused\022\032\n\010transfer\030\006 \001(\010R\010transfer\022" +
+      "\030\n\007preview\030\007 \001(\010R\007preview\022\026\n\006manual\030\010 \001(" +
+      "\010R\006manual\022\020\n\003pbx\030\t \001(\010R\003pbx\022\032\n\010intercom\030" +
+      "\n \001(\010R\010intercom\"\320\003\n\031DashboardQueuePrefer" +
+      "ences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022*\n\021default_" +
+      "info_view\030\n \001(\010R\017defaultInfoView\0222\n\025defa" +
+      "ult_info_grouping\030\013 \001(\010R\023defaultInfoGrou" +
+      "ping\022,\n\022default_small_icon\030\014 \001(\010R\020defaul" +
+      "tSmallIcon\0226\n\027default_descending_sort\030\r " +
+      "\001(\010R\025defaultDescendingSort\022=\n\033default_ag" +
+      "ent_skills_filter\030\016 \001(\003R\030defaultAgentSki" +
+      "llsFilter\022=\n\033default_info_table_template" +
+      "\030\017 \001(\003R\030defaultInfoTableTemplate\022X\n\032defa" +
+      "ult_info_sort_by_value\030\020 \001(\0162\034.api.commo" +
+      "ns.QueueInfoSortByR\026defaultInfoSortByVal" +
+      "ue\"\210\005\n\020PhonePreferences\022\025\n\006org_id\030\001 \001(\tR" +
+      "\005orgId\0222\n\025agent_preview_dialing\030\n \001(\010R\023a" +
+      "gentPreviewDialing\022A\n\035default_ring_lengt" +
+      "h_threshold\030\013 \001(\005R\032defaultRingLengthThre" +
+      "shold\022A\n\035display_ring_length_threshold\030\014" +
+      " \001(\010R\032displayRingLengthThreshold\022$\n\016show" +
+      "_caller_id\030\r \001(\010R\014showCallerId\0221\n\025defaul" +
+      "t_use_caller_id\030\016 \001(\010R\022defaultUseCallerI" +
+      "d\022>\n\033override_linkback_recording\030\017 \001(\010R\031" +
+      "overrideLinkbackRecording\022)\n\021caller_id_c" +
+      "fd_sid\030\020 \001(\003R\016callerIdCfdSid\022H\n\022default_" +
+      "dial_order\030\021 \001(\0132\032.api.commons.org.DialO" +
+      "rderR\020defaultDialOrder\022f\n\033answering_mach" +
+      "ine_detection\030\022 \001(\0162&.api.commons.Answer" +
+      "ingMachineDetectionR\031answeringMachineDet" +
+      "ection\022-\n\022linkback_recording\030\023 \001(\010R\021link" +
+      "backRecording\"\211\001\n\tDialOrder\0228\n\010standard\030" +
+      "\001 \001(\0162\032.api.commons.DialOrderTypeH\000R\010sta" +
+      "ndard\022:\n\006custom\030\002 \001(\0132 .api.commons.org." +
+      "CustomDialOrderH\000R\006customB\006\n\004type\"^\n\017Cus" +
+      "tomDialOrder\022K\n\021dial_order_fields\030\001 \003(\0132" +
+      "\037.api.commons.org.DialOrderFieldR\017dialOr" +
+      "derFields\"H\n\016DialOrderField\022\027\n\007cfd_sid\030\001" +
+      " \001(\003R\006cfdSid\022\035\n\nfield_name\030\002 \001(\tR\tfieldN" +
+      "ame\"\331\006\n\025CompliancePreferences\022\025\n\006org_id\030" +
+      "\001 \001(\tR\005orgId\0229\n\031display_after_hours_call" +
+      "s\030\n \001(\010R\026displayAfterHoursCalls\022*\n\021after" +
+      "_hours_calls\030\013 \001(\010R\017afterHoursCalls\022<\n\032d" +
+      "isplay_natural_compliance\030\014 \001(\010R\030display" +
+      "NaturalCompliance\0224\n\026use_natural_complia" +
+      "nce\030\r \001(\010R\024useNaturalCompliance\022=\n\033defau" +
+      "lt_compliance_rule_set\030\016 \001(\tR\030defaultCom" +
+      "plianceRuleSet\0227\n\030display_cell_phone_scr" +
+      "ub\030\017 \001(\010R\025displayCellPhoneScrub\022(\n\020cell_" +
+      "phone_scrub\030\020 \001(\010R\016cellPhoneScrub\0224\n\026dis" +
+      "play_schedule_rules\030\021 \001(\010R\024displaySchedu" +
+      "leRules\022,\n\022use_schedule_rules\030\022 \001(\010R\020use" +
+      "ScheduleRules\022V\n\025default_schedule_rule\030\023" +
+      " \001(\0132\".api.commons.org.ScheduleRuleField" +
+      "R\023defaultScheduleRule\022)\n\021do_zip_code_scr" +
+      "ub\030\024 \001(\010R\016doZipCodeScrub\022C\n\016zip_code_scr" +
+      "ub\030\025 \001(\0132\035.api.commons.org.ZipCodeFieldR" +
+      "\014zipCodeScrub\022A\n\035default_email_complianc" +
+      "e_list\030\026 \001(\tR\032defaultEmailComplianceList" +
+      "\022=\n\033default_sms_compliance_list\030\027 \001(\tR\030d" +
+      "efaultSmsComplianceList\"@\n\021ScheduleRuleF" +
+      "ield\022\027\n\007rule_id\030\001 \001(\003R\006ruleId\022\022\n\004name\030\002 " +
+      "\001(\tR\004name\"F\n\014ZipCodeField\022\027\n\007cfd_sid\030\001 \001" +
+      "(\003R\006cfdSid\022\035\n\nfield_name\030\002 \001(\tR\tfieldNam" +
+      "e\"\266\005\n\024BroadcastPreferences\022\025\n\006org_id\030\001 \001" +
+      "(\tR\005orgId\022I\n!display_list_penetration_st" +
+      "rategy\030\n \001(\010R\036displayListPenetrationStra" +
+      "tegy\022C\n\036dial_list_penetration_strategy\030\013" +
+      " \001(\010R\033dialListPenetrationStrategy\0223\n\026dis" +
+      "play_follow_the_sun\030\014 \001(\010R\023displayFollow" +
+      "TheSun\022$\n\016follow_the_sun\030\r \001(\010R\014followTh" +
+      "eSun\022@\n\034sequence_terminator_override\030\016 \001" +
+      "(\010R\032sequenceTerminatorOverride\022f\n\033broadc" +
+      "ast_template_ordering\030\017 \001(\0162&.api.common" +
+      "s.BroadcastTemplateOrderingR\031broadcastTe" +
+      "mplateOrdering\022,\n\022start_time_enabled\030\020 \001" +
+      "(\010R\020startTimeEnabled\022L\n\022default_start_ti" +
+      "me\030\021 \001(\0132\036.api.commons.org.BroadcastTime" +
+      "R\020defaultStartTime\022*\n\021stop_time_enabled\030" +
+      "\022 \001(\010R\017stopTimeEnabled\022J\n\021default_stop_t" +
+      "ime\030\023 \001(\0132\036.api.commons.org.BroadcastTim" +
+      "eR\017defaultStopTime\"r\n\rBroadcastTime\022\024\n\005h" +
+      "ours\030\001 \001(\005R\005hours\022\030\n\007minutes\030\002 \001(\005R\007minu" +
+      "tes\0221\n\010timezone\030\003 \001(\0162\025.api.commons.Time" +
+      "ZoneR\010timezone\"\276\006\n\023SchedulePreferences\022\025" +
+      "\n\006org_id\030\001 \001(\tR\005orgId\022@\n\035display_schedul" +
+      "e_by_time_zone\030\n \001(\010R\031displayScheduleByT" +
+      "imeZone\0228\n\031use_schedule_by_time_zone\030\013 \001" +
+      "(\010R\025useScheduleByTimeZone\022b\n\033schedule_by" +
+      "_time_zone_scope\030\014 \001(\0162$.api.commons.Sch" +
+      "eduleByTimeZoneScopeR\027scheduleByTimeZone" +
+      "Scope\022;\n\032display_schedule_as_paused\030\r \001(" +
+      "\010R\027displayScheduleAsPaused\022,\n\022schedule_a" +
+      "s_paused\030\016 \001(\010R\020scheduleAsPaused\022@\n\034defa" +
+      "ult_completion_threshold\030\017 \001(\003R\032defaultC" +
+      "ompletionThreshold\0228\n\030display_campaign_l" +
+      "inking\030\020 \001(\010R\026displayCampaignLinking\0220\n\024" +
+      "use_campaign_linking\030\021 \001(\010R\022useCampaignL" +
+      "inking\022^\n\016campaign_links\030\022 \003(\01327.api.com" +
+      "mons.org.SchedulePreferences.CampaignLin" +
+      "ksEntryR\rcampaignLinks\0227\n\030default_campai" +
+      "gn_link_id\030\023 \001(\tR\025defaultCampaignLinkId\022" +
+      "<\n\032resend_cancelled_campaigns\030\024 \001(\010R\030res" +
+      "endCancelledCampaigns\032@\n\022CampaignLinksEn" +
+      "try\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005va" +
+      "lue:\0028\001\"\277\001\n\023EmailSmsPreferences\022\025\n\006org_i" +
+      "d\030\001 \001(\tR\005orgId\022(\n\020use_custom_links\030\n \001(\010" +
+      "R\016useCustomLinks\0225\n\026client_acknowledgeme" +
+      "nt\030\013 \001(\010R\025clientAcknowledgement\0220\n\024email" +
+      "_from_addresses\030\014 \003(\tR\022emailFromAddresse" +
+      "s\"\215\002\n\023BusinessPreferences\022\025\n\006org_id\030\001 \001(" +
+      "\tR\005orgId\022\"\n\rweeks_of_data\030\n \001(\005R\013weeksOf" +
+      "Data\0225\n\ttime_zone\030\013 \001(\0162\030.api.commons.An" +
+      "aTimeZoneR\010timeZone\022.\n\023multi_client_acce" +
+      "ss\030\014 \001(\010R\021multiClientAccess\0223\n\025custom_vi" +
+      "sualizations\030\r \001(\010R\024customVisualizations" +
+      "\022\037\n\013time_filter\030\016 \001(\tR\ntimeFilter\"\367\001\n\025Sc" +
+      "orecardsPreferences\022\025\n\006org_id\030\001 \001(\tR\005org" +
+      "Id\0224\n\026call_sample_percentage\030\002 \001(\rR\024call" +
+      "SamplePercentage\0220\n\024max_user_evaluations" +
+      "\030\003 \001(\rR\022maxUserEvaluations\022_\n\023evaluation" +
+      "_interval\030\004 \001(\0162..api.commons.org.Scorec" +
+      "ards.EvaluationIntervalR\022evaluationInter" +
+      "val\"\210\001\n\nScorecards\"z\n\022EvaluationInterval" +
+      "\022\'\n#EVALUATION_INTERVAL_DAY_UNSPECIFIED\020" +
+      "\000\022\034\n\030EVALUATION_INTERVAL_WEEK\020\001\022\035\n\031EVALU" +
+      "ATION_INTERVAL_MONTH\020\002\"\312\003\n\031VoiceAnalytic" +
+      "sPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\030\n\007e" +
+      "nabled\030\002 \001(\010R\007enabled\022>\n\006redact\030\003 \003(\0132&." +
+      "api.commons.org.VoiceAnalytics.RedactR\006r" +
+      "edact\022>\n\006notify\030\004 \001(\0132&.api.commons.org." +
+      "VoiceAnalytics.NotifyR\006notify\022M\n\016billing" +
+      "_notify\030\005 \001(\0132&.api.commons.org.VoiceAna" +
+      "lytics.NotifyR\rbillingNotify\022#\n\rnumber_f" +
+      "ormat\030\006 \001(\tR\014numberFormat\022*\n\021redact_all_" +
+      "digits\030\n \001(\010R\017redactAllDigits\022+\n\021silence" +
+      "_threshold\030d \001(\rR\020silenceThreshold\022/\n\023ta" +
+      "lk_over_threshold\030\310\001 \001(\rR\021talkOverThresh" +
+      "old\"\374\002\n\016VoiceAnalytics\032S\n\006Redact\022@\n\006numb" +
+      "er\030\001 \001(\0132&.api.commons.org.VoiceAnalytic" +
+      "s.NumberH\000R\006numberB\007\n\005where\032\366\001\n\006Number\022?" +
+      "\n\004kind\030\001 \001(\0162+.api.commons.org.VoiceAnal" +
+      "ytics.Number.KindR\004kind\022\'\n\017min_consecuti" +
+      "ve\030\002 \001(\rR\016minConsecutive\022\'\n\017max_consecut" +
+      "ive\030\003 \001(\rR\016maxConsecutive\022\022\n\004slop\030\004 \001(\rR" +
+      "\004slop\"E\n\004Kind\022\035\n\031KIND_CARDINAL_UNSPECIFI" +
+      "ED\020\000\022\020\n\014KIND_ORDINAL\020\001\022\014\n\010KIND_ANY\020\002\032\034\n\006" +
+      "Notify\022\022\n\004cron\030\001 \001(\tR\004cron\"\225\002\n\023EndOfDayP" +
+      "references\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\035\n\neod" +
+      "_monday\030\n \001(\005R\teodMonday\022\037\n\013eod_tuesday\030" +
+      "\013 \001(\005R\neodTuesday\022#\n\reod_wednesday\030\014 \001(\005" +
+      "R\014eodWednesday\022!\n\014eod_thursday\030\r \001(\005R\013eo" +
+      "dThursday\022\035\n\neod_friday\030\016 \001(\005R\teodFriday" +
+      "\022!\n\014eod_saturday\030\017 \001(\005R\013eodSaturday\022\035\n\ne" +
+      "od_sunday\030\020 \001(\005R\teodSunday\"\352\002\n\021FilterPre" +
+      "ferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022Z\n\032defau" +
+      "lt_auto_report_filter\030\n \001(\0132\035.api.common" +
+      "s.org.ReportFilterR\027defaultAutoReportFil" +
+      "ter\0225\n\027send_empty_auto_reports\030\013 \001(\010R\024se" +
+      "ndEmptyAutoReports\022E\n\037display_broadcast_" +
+      "resend_filter\030\014 \001(\010R\034displayBroadcastRes" +
+      "endFilter\022d\n\037default_broadcast_resend_fi" +
+      "lter\030\r \001(\0132\035.api.commons.org.ReportFilte" +
+      "rR\034defaultBroadcastResendFilter\"s\n\014Repor" +
+      "tFilter\022?\n\010standard\030\001 \001(\0162!.api.commons." +
+      "StandardReportFilterH\000R\010standard\022\030\n\006cust" +
+      "om\030\002 \001(\003H\000R\006customB\010\n\006choice\"\254\003\n\024Recordi" +
+      "ngPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022-\n\022" +
+      "convention_enabled\030\n \001(\010R\021conventionEnab" +
+      "led\022a\n\024file_name_convention\030\013 \001(\0132/.api." +
+      "commons.org.RecordingsFileNamingConventi" +
+      "onR\022fileNameConvention\0224\n\026zip_convention" +
+      "_enabled\030\014 \001(\010R\024zipConventionEnabled\022k\n\030" +
+      "zip_file_name_convention\030\r \001(\01322.api.com" +
+      "mons.org.RecordingsZipFileNamingConventi" +
+      "onR\025zipFileNameConvention\022H\n\020export_file" +
+      "_type\030\016 \001(\0162\036.api.commons.RecordingFileT" +
+      "ypeR\016exportFileType\"\333\002\n\036RecordingsFileNa" +
+      "mingConvention\0225\n\027xml_client_property_si" +
+      "d\030\001 \001(\003R\024xmlClientPropertySid\022?\n\007inbound" +
+      "\030\002 \001(\0132%.api.commons.org.FileNamingConve" +
+      "ntionR\007inbound\022=\n\006manual\030\003 \001(\0132%.api.com" +
+      "mons.org.FileNamingConventionR\006manual\022A\n" +
+      "\010outbound\030\004 \001(\0132%.api.commons.org.FileNa" +
+      "mingConventionR\010outbound\022?\n\007preview\030\005 \001(" +
+      "\0132%.api.commons.org.FileNamingConvention" +
+      "R\007preview\"\340\002\n!RecordingsZipFileNamingCon" +
+      "vention\0225\n\027xml_client_property_sid\030\001 \001(\003" +
+      "R\024xmlClientPropertySid\022?\n\007inbound\030\002 \001(\0132" +
+      "%.api.commons.org.FileNamingConventionR\007" +
+      "inbound\022=\n\006manual\030\003 \001(\0132%.api.commons.or" +
+      "g.FileNamingConventionR\006manual\022A\n\010outbou" +
+      "nd\030\004 \001(\0132%.api.commons.org.FileNamingCon" +
+      "ventionR\010outbound\022A\n\010combined\030\005 \001(\0132%.ap" +
+      "i.commons.org.FileNamingConventionR\010comb" +
+      "ined\"T\n\024FileNamingConvention\022<\n\010segments" +
+      "\030\001 \003(\0132 .api.commons.org.FileNameSegment" +
+      "R\010segments\"}\n\017FileNameSegment\022!\n\014segment" +
+      "_type\030\001 \001(\tR\013segmentType\022%\n\016format_patte" +
+      "rn\030\002 \001(\tR\rformatPattern\022 \n\014time_zone_id\030" +
+      "\003 \001(\tR\ntimeZoneId\"\342\003\n\026AdminClientPrefere" +
+      "nces\022\025\n\006org_id\030\001 \001(\tR\005orgId\0220\n\024use_reser" +
+      "ved_carrier\030\n \001(\010R\022useReservedCarrier\022+\n" +
+      "\021reserved_carriers\030\013 \003(\tR\020reservedCarrie" +
+      "rs\022\033\n\temail_key\030\014 \001(\tR\010emailKey\022\031\n\010email" +
+      "_id\030\r \001(\tR\007emailId\022\035\n\nemail_name\030\016 \001(\tR\t" +
+      "emailName\022#\n\rwhitelist_ips\030\017 \003(\tR\014whitel" +
+      "istIps\022+\n\021whitelist_domains\030\020 \003(\tR\020white" +
+      "listDomains\0220\n\024callbacks_service_id\030\021 \001(" +
+      "\tR\022callbacksServiceId\0224\n\026agent_screen_re" +
+      "cording\030\022 \001(\010R\024agentScreenRecording\022A\n\021a" +
+      "llowed_countries\030\023 \003(\0162\024.api.commons.Cou" +
+      "ntryR\020allowedCountries\"\375\002\n\rBusinessHours" +
+      "\022\025\n\006org_id\030\001 \001(\tR\005orgId\022 \n\013description\030\004" +
+      " \001(\tR\013description\022*\n\021business_hours_id\030\006" +
+      " \001(\tR\017businessHoursId\022.\n\023business_hours_" +
+      "name\030\007 \001(\tR\021businessHoursName\0221\n\010timezon" +
+      "e\030\010 \001(\0162\025.api.commons.TimeZoneR\010timezone" +
+      "\022A\n\rday_intervals\030\t \003(\0132\034.api.commons.or" +
+      "g.DayIntervalR\014dayIntervals\022=\n\014last_upda" +
+      "ted\030\n \001(\0132\032.google.protobuf.TimestampR\013l" +
+      "astUpdatedJ\004\010\002\020\003J\004\010\003\020\004J\004\010\005\020\006R\002idR\004nameR\006" +
+      "ranges\"\207\001\n\005Range\022\035\n\nstart_hour\030\001 \001(\005R\tst" +
+      "artHour\022!\n\014start_minute\030\002 \001(\005R\013startMinu" +
+      "te\022\031\n\010end_hour\030\003 \001(\005R\007endHour\022\035\n\nend_min" +
+      "ute\030\004 \001(\005R\tendMinute:\002\030\001\"7\n\tTimeOfDay\022\022\n" +
+      "\004hour\030\001 \001(\005R\004hour\022\026\n\006minute\030\002 \001(\005R\006minut" +
+      "e\"\232\001\n\013DayInterval\022+\n\003day\030\001 \001(\0162\031.api.com" +
+      "mons.Weekday.EnumR\003day\0220\n\005start\030\002 \001(\0132\032." +
+      "api.commons.org.TimeOfDayR\005start\022,\n\003end\030" +
+      "\003 \001(\0132\032.api.commons.org.TimeOfDayR\003end\"w" +
+      "\n\014MonthDayDate\022\033\n\tdate_name\030\001 \001(\tR\010dateN" +
+      "ame\022(\n\005month\030\002 \001(\0162\022.api.commons.MonthR\005" +
+      "month\022 \n\014day_of_month\030\003 \001(\005R\ndayOfMonth\"" +
+      "c\n\016CountryHoliday\022!\n\014holiday_name\030\001 \001(\tR" +
+      "\013holidayName\022.\n\007country\030\002 \001(\0162\024.api.comm" +
+      "ons.CountryR\007country\"\212\001\n\rProgrammedDay\0221" +
+      "\n\003day\030\001 \001(\0132\035.api.commons.org.MonthDayDa" +
+      "teH\000R\003day\022;\n\007holiday\030\002 \001(\0132\037.api.commons" +
+      ".org.CountryHolidayH\000R\007holidayB\t\n\007DayTyp" +
+      "e\"\324\002\n\017ProgrammedDates\022\025\n\006org_id\030\001 \001(\tR\005o" +
+      "rgId\022.\n\023programmed_dates_id\030\002 \001(\tR\021progr" +
+      "ammedDatesId\0222\n\025programmed_dates_name\030\003 " +
+      "\001(\tR\023programmedDatesName\022 \n\013description\030" +
+      "\004 \001(\tR\013description\0221\n\010timezone\030\005 \001(\0162\025.a" +
+      "pi.commons.TimeZoneR\010timezone\0222\n\004days\030\006 " +
+      "\003(\0132\036.api.commons.org.ProgrammedDayR\004day" +
+      "s\022=\n\014last_updated\030\007 \001(\0132\032.google.protobu" +
+      "f.TimestampR\013lastUpdated\"\333\002\n\020ObservedHol" +
+      "idays\022\025\n\006org_id\030\001 \001(\tR\005orgId\0220\n\024observed" +
+      "_holidays_id\030\002 \001(\tR\022observedHolidaysId\0224" +
+      "\n\026observed_holidays_name\030\003 \001(\tR\024observed" +
+      "HolidaysName\022 \n\013description\030\004 \001(\tR\013descr" +
+      "iption\0221\n\010timezone\030\005 \001(\0162\025.api.commons.T" +
+      "imeZoneR\010timezone\0224\n\004days\030\006 \003(\0132 .api.co" +
+      "mmons.org.ObservedHolidayR\004days\022=\n\014last_" +
+      "updated\030\007 \001(\0132\032.google.protobuf.Timestam" +
+      "pR\013lastUpdated\"\214\001\n\017ObservedHoliday\0221\n\003da" +
+      "y\030\001 \001(\0132\035.api.commons.org.MonthDayDateH\000" +
+      "R\003day\022;\n\007holiday\030\002 \001(\0132\037.api.commons.org" +
+      ".CountryHolidayH\000R\007holidayB\t\n\007DayTypeB\223\001" +
+      "\n!com.tcn.cloud.api.api.commons.orgB\020Pre" +
+      "ferencesProtoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312" +
+      "\002\017Api\\Commons\\Org\342\002\033Api\\Commons\\Org\\GPBM" +
+      "etadata\352\002\021Api::Commons::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -737,7 +738,7 @@ public final class PreferencesProto {
     internal_static_api_commons_org_AuthenticationPreferences_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_AuthenticationPreferences_descriptor,
-        new java.lang.String[] { "OrgId", "AuthorizationViaIp", "AllowedIps", "AgentApiKey", "Enable2Fa", "BlockUnverifiedUsers", "EmailMfaSettings", "DuoMfaSettings", "AllowForcePasswordResetInterval", "PasswordResetDayInterval", "UserAuthorizationViaIp", });
+        new java.lang.String[] { "OrgId", "AuthorizationViaIp", "AllowedIps", "AgentApiKey", "Enable2Fa", "BlockUnverifiedUsers", "EmailMfaSettings", "DuoMfaSettings", "AllowForcePasswordResetInterval", "PasswordResetDayInterval", "UserAuthorizationViaIp", "ForceSsoProvider", });
     internal_static_api_commons_org_AuthenticationPreferences_DuoMfaSettings_descriptor =
       internal_static_api_commons_org_AuthenticationPreferences_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_org_AuthenticationPreferences_DuoMfaSettings_fieldAccessorTable = new
