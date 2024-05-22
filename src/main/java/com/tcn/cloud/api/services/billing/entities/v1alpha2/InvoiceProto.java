@@ -60,20 +60,20 @@ public final class InvoiceProto {
       "ogle.type.DecimalR\013ratedAmount\022\035\n\nproduc" +
       "t_id\030\010 \001(\tR\tproductId\"=\n\021InvoiceItemColu" +
       "mn\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005value\030\002 \001(\tR\005v" +
-      "alue*\243\002\n\007Product\022\027\n\023PRODUCT_UNSPECIFIED\020" +
+      "alue*\247\002\n\007Product\022\027\n\023PRODUCT_UNSPECIFIED\020" +
       "\000\022\021\n\014PRODUCT_OMNI\020\310\001\022\027\n\022PRODUCT_OMNI_SEA" +
       "TS\020\311\001\022\033\n\026PRODUCT_OMNI_CHAT_SENT\020\312\001\022\037\n\032PR" +
       "ODUCT_OMNI_CHAT_RECEIVED\020\313\001\022\035\n\030PRODUCT_O" +
       "MNI_EMAILS_SENT\020\314\001\022!\n\034PRODUCT_OMNI_EMAIL" +
       "S_RECEIVED\020\315\001\022\032\n\025PRODUCT_OMNI_SMS_SENT\020\316" +
       "\001\022\036\n\031PRODUCT_OMNI_SMS_RECEIVED\020\317\001\022\027\n\022PRO" +
-      "DUCT_COMPLIANCE\020\254\002B\357\001\n4com.tcn.cloud.api" +
-      ".services.billing.entities.v1alpha2B\014Inv" +
-      "oiceProtoP\001\242\002\003SBE\252\002\"Services.Billing.Ent" +
-      "ities.V1alpha2\312\002\"Services\\Billing\\Entiti" +
-      "es\\V1alpha2\342\002.Services\\Billing\\Entities\\" +
-      "V1alpha2\\GPBMetadata\352\002%Services::Billing" +
-      "::Entities::V1alpha2b\006proto3"
+      "DUCT_COMPLIANCE\020\254\002\032\002\030\001B\357\001\n4com.tcn.cloud" +
+      ".api.services.billing.entities.v1alpha2B" +
+      "\014InvoiceProtoP\001\242\002\003SBE\252\002\"Services.Billing" +
+      ".Entities.V1alpha2\312\002\"Services\\Billing\\En" +
+      "tities\\V1alpha2\342\002.Services\\Billing\\Entit" +
+      "ies\\V1alpha2\\GPBMetadata\352\002%Services::Bil" +
+      "ling::Entities::V1alpha2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
