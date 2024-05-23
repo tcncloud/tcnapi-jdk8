@@ -12,24 +12,24 @@ public interface ListIncomingTrustsResponseOrBuilder extends
    * List of trusts.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.org.trusts.ListIncomingTrustsResponse.Payload trusts = 1 [json_name = "trusts"];</code>
+   * <code>repeated .api.v1alpha1.org.trusts.ListTrustsResponsePayload trusts = 1 [json_name = "trusts"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.org.trusts.ListIncomingTrustsResponse.Payload> 
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.org.trusts.ListTrustsResponsePayload> 
       getTrustsList();
   /**
    * <pre>
    * List of trusts.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.org.trusts.ListIncomingTrustsResponse.Payload trusts = 1 [json_name = "trusts"];</code>
+   * <code>repeated .api.v1alpha1.org.trusts.ListTrustsResponsePayload trusts = 1 [json_name = "trusts"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.org.trusts.ListIncomingTrustsResponse.Payload getTrusts(int index);
+  com.tcn.cloud.api.api.v1alpha1.org.trusts.ListTrustsResponsePayload getTrusts(int index);
   /**
    * <pre>
    * List of trusts.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.org.trusts.ListIncomingTrustsResponse.Payload trusts = 1 [json_name = "trusts"];</code>
+   * <code>repeated .api.v1alpha1.org.trusts.ListTrustsResponsePayload trusts = 1 [json_name = "trusts"];</code>
    */
   int getTrustsCount();
   /**
@@ -37,17 +37,17 @@ public interface ListIncomingTrustsResponseOrBuilder extends
    * List of trusts.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.org.trusts.ListIncomingTrustsResponse.Payload trusts = 1 [json_name = "trusts"];</code>
+   * <code>repeated .api.v1alpha1.org.trusts.ListTrustsResponsePayload trusts = 1 [json_name = "trusts"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.org.trusts.ListIncomingTrustsResponse.PayloadOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.org.trusts.ListTrustsResponsePayloadOrBuilder> 
       getTrustsOrBuilderList();
   /**
    * <pre>
    * List of trusts.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.org.trusts.ListIncomingTrustsResponse.Payload trusts = 1 [json_name = "trusts"];</code>
+   * <code>repeated .api.v1alpha1.org.trusts.ListTrustsResponsePayload trusts = 1 [json_name = "trusts"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.org.trusts.ListIncomingTrustsResponse.PayloadOrBuilder getTrustsOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.org.trusts.ListTrustsResponsePayloadOrBuilder getTrustsOrBuilder(
       int index);
 }

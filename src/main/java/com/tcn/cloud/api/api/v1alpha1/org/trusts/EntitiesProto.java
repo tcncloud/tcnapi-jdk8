@@ -55,6 +55,11 @@ public final class EntitiesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_trusts_GetTrustResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_trusts_ListTrustsResponsePayload_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_trusts_ListTrustsResponsePayload_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_trusts_ListIncomingTrustsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -64,11 +69,6 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_trusts_ListIncomingTrustsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_trusts_ListIncomingTrustsResponse_Payload_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_trusts_ListIncomingTrustsResponse_Payload_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_trusts_ListGivenTrustsRequest_descriptor;
   static final 
@@ -80,11 +80,6 @@ public final class EntitiesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_trusts_ListGivenTrustsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_trusts_ListGivenTrustsResponse_Payload_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_trusts_ListGivenTrustsResponse_Payload_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_trusts_ListAssignableTrustsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -94,11 +89,6 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_trusts_ListAssignableTrustsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_trusts_ListAssignableTrustsResponse_Payload_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_trusts_ListAssignableTrustsResponse_Payload_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_trusts_DeleteTrustRequest_descriptor;
   static final 
@@ -155,39 +145,32 @@ public final class EntitiesProto {
       "d\"\206\001\n\020GetTrustResponse\022,\n\005trust\030\001 \001(\0132\026." +
       "api.commons.org.TrustR\005trust\022!\n\014grantor_" +
       "name\030\002 \001(\tR\013grantorName\022!\n\014grantee_name\030" +
-      "\003 \001(\tR\013granteeName\"\033\n\031ListIncomingTrusts" +
-      "Request\"\360\001\n\032ListIncomingTrustsResponse\022S" +
-      "\n\006trusts\030\001 \003(\0132;.api.v1alpha1.org.trusts" +
-      ".ListIncomingTrustsResponse.PayloadR\006tru" +
-      "sts\032}\n\007Payload\022,\n\005trust\030\001 \001(\0132\026.api.comm" +
-      "ons.org.TrustR\005trust\022!\n\014grantor_name\030\002 \001" +
-      "(\tR\013grantorName\022!\n\014grantee_name\030\003 \001(\tR\013g" +
-      "ranteeName\"\030\n\026ListGivenTrustsRequest\"\352\001\n" +
-      "\027ListGivenTrustsResponse\022P\n\006trusts\030\001 \003(\013" +
-      "28.api.v1alpha1.org.trusts.ListGivenTrus" +
-      "tsResponse.PayloadR\006trusts\032}\n\007Payload\022,\n" +
-      "\005trust\030\001 \001(\0132\026.api.commons.org.TrustR\005tr" +
-      "ust\022!\n\014grantor_name\030\002 \001(\tR\013grantorName\022!" +
-      "\n\014grantee_name\030\003 \001(\tR\013granteeName\"\035\n\033Lis" +
-      "tAssignableTrustsRequest\"\364\001\n\034ListAssigna" +
-      "bleTrustsResponse\022U\n\006trusts\030\001 \003(\0132=.api." +
-      "v1alpha1.org.trusts.ListAssignableTrusts" +
-      "Response.PayloadR\006trusts\032}\n\007Payload\022,\n\005t" +
-      "rust\030\001 \001(\0132\026.api.commons.org.TrustR\005trus" +
-      "t\022!\n\014grantor_name\030\002 \001(\tR\013grantorName\022!\n\014" +
-      "grantee_name\030\003 \001(\tR\013granteeName\"/\n\022Delet" +
-      "eTrustRequest\022\031\n\010trust_id\030\001 \001(\tR\007trustId" +
-      "\"\025\n\023DeleteTrustResponse\"J\n\022AssignTrustRe" +
-      "quest\022\031\n\010trust_id\030\001 \001(\tR\007trustId\022\031\n\010user" +
-      "_ids\030\002 \003(\tR\007userIds\"\025\n\023AssignTrustRespon" +
-      "se\"J\n\024UnassignTrustRequest\022\031\n\010trust_id\030\001" +
-      " \001(\tR\007trustId\022\027\n\007user_id\030\002 \001(\tR\006userId\"\027" +
-      "\n\025UnassignTrustResponseB\272\001\n)com.tcn.clou" +
-      "d.api.api.v1alpha1.org.trustsB\rEntitiesP" +
-      "rotoP\001\242\002\004AVOT\252\002\027Api.V1alpha1.Org.Trusts\312" +
-      "\002\027Api\\V1alpha1\\Org\\Trusts\342\002#Api\\V1alpha1" +
-      "\\Org\\Trusts\\GPBMetadata\352\002\032Api::V1alpha1:" +
-      ":Org::Trustsb\006proto3"
+      "\003 \001(\tR\013granteeName\"\217\001\n\031ListTrustsRespons" +
+      "ePayload\022,\n\005trust\030\001 \001(\0132\026.api.commons.or" +
+      "g.TrustR\005trust\022!\n\014grantor_name\030\002 \001(\tR\013gr" +
+      "antorName\022!\n\014grantee_name\030\003 \001(\tR\013grantee" +
+      "Name\"\033\n\031ListIncomingTrustsRequest\"h\n\032Lis" +
+      "tIncomingTrustsResponse\022J\n\006trusts\030\001 \003(\0132" +
+      "2.api.v1alpha1.org.trusts.ListTrustsResp" +
+      "onsePayloadR\006trusts\"\030\n\026ListGivenTrustsRe" +
+      "quest\"e\n\027ListGivenTrustsResponse\022J\n\006trus" +
+      "ts\030\001 \003(\01322.api.v1alpha1.org.trusts.ListT" +
+      "rustsResponsePayloadR\006trusts\"\035\n\033ListAssi" +
+      "gnableTrustsRequest\"j\n\034ListAssignableTru" +
+      "stsResponse\022J\n\006trusts\030\001 \003(\01322.api.v1alph" +
+      "a1.org.trusts.ListTrustsResponsePayloadR" +
+      "\006trusts\"/\n\022DeleteTrustRequest\022\031\n\010trust_i" +
+      "d\030\001 \001(\tR\007trustId\"\025\n\023DeleteTrustResponse\"" +
+      "J\n\022AssignTrustRequest\022\031\n\010trust_id\030\001 \001(\tR" +
+      "\007trustId\022\031\n\010user_ids\030\002 \003(\tR\007userIds\"\025\n\023A" +
+      "ssignTrustResponse\"J\n\024UnassignTrustReque" +
+      "st\022\031\n\010trust_id\030\001 \001(\tR\007trustId\022\027\n\007user_id" +
+      "\030\002 \001(\tR\006userId\"\027\n\025UnassignTrustResponseB" +
+      "\272\001\n)com.tcn.cloud.api.api.v1alpha1.org.t" +
+      "rustsB\rEntitiesProtoP\001\242\002\004AVOT\252\002\027Api.V1al" +
+      "pha1.Org.Trusts\312\002\027Api\\V1alpha1\\Org\\Trust" +
+      "s\342\002#Api\\V1alpha1\\Org\\Trusts\\GPBMetadata\352" +
+      "\002\032Api::V1alpha1::Org::Trustsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -243,92 +226,80 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_trusts_GetTrustResponse_descriptor,
         new java.lang.String[] { "Trust", "GrantorName", "GranteeName", });
-    internal_static_api_v1alpha1_org_trusts_ListIncomingTrustsRequest_descriptor =
+    internal_static_api_v1alpha1_org_trusts_ListTrustsResponsePayload_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_api_v1alpha1_org_trusts_ListTrustsResponsePayload_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_trusts_ListTrustsResponsePayload_descriptor,
+        new java.lang.String[] { "Trust", "GrantorName", "GranteeName", });
+    internal_static_api_v1alpha1_org_trusts_ListIncomingTrustsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_api_v1alpha1_org_trusts_ListIncomingTrustsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_trusts_ListIncomingTrustsRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_trusts_ListIncomingTrustsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_api_v1alpha1_org_trusts_ListIncomingTrustsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_trusts_ListIncomingTrustsResponse_descriptor,
         new java.lang.String[] { "Trusts", });
-    internal_static_api_v1alpha1_org_trusts_ListIncomingTrustsResponse_Payload_descriptor =
-      internal_static_api_v1alpha1_org_trusts_ListIncomingTrustsResponse_descriptor.getNestedTypes().get(0);
-    internal_static_api_v1alpha1_org_trusts_ListIncomingTrustsResponse_Payload_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_trusts_ListIncomingTrustsResponse_Payload_descriptor,
-        new java.lang.String[] { "Trust", "GrantorName", "GranteeName", });
     internal_static_api_v1alpha1_org_trusts_ListGivenTrustsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_org_trusts_ListGivenTrustsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_trusts_ListGivenTrustsRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_trusts_ListGivenTrustsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_api_v1alpha1_org_trusts_ListGivenTrustsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_trusts_ListGivenTrustsResponse_descriptor,
         new java.lang.String[] { "Trusts", });
-    internal_static_api_v1alpha1_org_trusts_ListGivenTrustsResponse_Payload_descriptor =
-      internal_static_api_v1alpha1_org_trusts_ListGivenTrustsResponse_descriptor.getNestedTypes().get(0);
-    internal_static_api_v1alpha1_org_trusts_ListGivenTrustsResponse_Payload_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_trusts_ListGivenTrustsResponse_Payload_descriptor,
-        new java.lang.String[] { "Trust", "GrantorName", "GranteeName", });
     internal_static_api_v1alpha1_org_trusts_ListAssignableTrustsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_api_v1alpha1_org_trusts_ListAssignableTrustsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_trusts_ListAssignableTrustsRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_trusts_ListAssignableTrustsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_api_v1alpha1_org_trusts_ListAssignableTrustsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_trusts_ListAssignableTrustsResponse_descriptor,
         new java.lang.String[] { "Trusts", });
-    internal_static_api_v1alpha1_org_trusts_ListAssignableTrustsResponse_Payload_descriptor =
-      internal_static_api_v1alpha1_org_trusts_ListAssignableTrustsResponse_descriptor.getNestedTypes().get(0);
-    internal_static_api_v1alpha1_org_trusts_ListAssignableTrustsResponse_Payload_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_trusts_ListAssignableTrustsResponse_Payload_descriptor,
-        new java.lang.String[] { "Trust", "GrantorName", "GranteeName", });
     internal_static_api_v1alpha1_org_trusts_DeleteTrustRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_api_v1alpha1_org_trusts_DeleteTrustRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_trusts_DeleteTrustRequest_descriptor,
         new java.lang.String[] { "TrustId", });
     internal_static_api_v1alpha1_org_trusts_DeleteTrustResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_api_v1alpha1_org_trusts_DeleteTrustResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_trusts_DeleteTrustResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_trusts_AssignTrustRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_api_v1alpha1_org_trusts_AssignTrustRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_trusts_AssignTrustRequest_descriptor,
         new java.lang.String[] { "TrustId", "UserIds", });
     internal_static_api_v1alpha1_org_trusts_AssignTrustResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_api_v1alpha1_org_trusts_AssignTrustResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_trusts_AssignTrustResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_trusts_UnassignTrustRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_api_v1alpha1_org_trusts_UnassignTrustRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_trusts_UnassignTrustRequest_descriptor,
         new java.lang.String[] { "TrustId", "UserId", });
     internal_static_api_v1alpha1_org_trusts_UnassignTrustResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_api_v1alpha1_org_trusts_UnassignTrustResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_trusts_UnassignTrustResponse_descriptor,
