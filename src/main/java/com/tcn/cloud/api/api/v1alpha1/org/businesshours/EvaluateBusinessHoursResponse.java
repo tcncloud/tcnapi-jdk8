@@ -58,6 +58,44 @@ private static final long serialVersionUID = 0L;
     return withinRange_;
   }
 
+  public static final int EFFICACY_TIMESTAMP_FIELD_NUMBER = 2;
+  private com.google.protobuf.Timestamp efficacyTimestamp_;
+  /**
+   * <pre>
+   * indicates how long this result can be used.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+   * @return Whether the efficacyTimestamp field is set.
+   */
+  @java.lang.Override
+  public boolean hasEfficacyTimestamp() {
+    return efficacyTimestamp_ != null;
+  }
+  /**
+   * <pre>
+   * indicates how long this result can be used.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+   * @return The efficacyTimestamp.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getEfficacyTimestamp() {
+    return efficacyTimestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : efficacyTimestamp_;
+  }
+  /**
+   * <pre>
+   * indicates how long this result can be used.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getEfficacyTimestampOrBuilder() {
+    return efficacyTimestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : efficacyTimestamp_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -75,6 +113,9 @@ private static final long serialVersionUID = 0L;
     if (withinRange_ != false) {
       output.writeBool(1, withinRange_);
     }
+    if (efficacyTimestamp_ != null) {
+      output.writeMessage(2, getEfficacyTimestamp());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -87,6 +128,10 @@ private static final long serialVersionUID = 0L;
     if (withinRange_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, withinRange_);
+    }
+    if (efficacyTimestamp_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getEfficacyTimestamp());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -105,6 +150,11 @@ private static final long serialVersionUID = 0L;
 
     if (getWithinRange()
         != other.getWithinRange()) return false;
+    if (hasEfficacyTimestamp() != other.hasEfficacyTimestamp()) return false;
+    if (hasEfficacyTimestamp()) {
+      if (!getEfficacyTimestamp()
+          .equals(other.getEfficacyTimestamp())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -119,6 +169,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + WITHIN_RANGE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getWithinRange());
+    if (hasEfficacyTimestamp()) {
+      hash = (37 * hash) + EFFICACY_TIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + getEfficacyTimestamp().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -255,6 +309,11 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       withinRange_ = false;
+      efficacyTimestamp_ = null;
+      if (efficacyTimestampBuilder_ != null) {
+        efficacyTimestampBuilder_.dispose();
+        efficacyTimestampBuilder_ = null;
+      }
       return this;
     }
 
@@ -290,6 +349,11 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.withinRange_ = withinRange_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.efficacyTimestamp_ = efficacyTimestampBuilder_ == null
+            ? efficacyTimestamp_
+            : efficacyTimestampBuilder_.build();
       }
     }
 
@@ -340,6 +404,9 @@ private static final long serialVersionUID = 0L;
       if (other.getWithinRange() != false) {
         setWithinRange(other.getWithinRange());
       }
+      if (other.hasEfficacyTimestamp()) {
+        mergeEfficacyTimestamp(other.getEfficacyTimestamp());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -371,6 +438,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
+            case 18: {
+              input.readMessage(
+                  getEfficacyTimestampFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -433,6 +507,161 @@ private static final long serialVersionUID = 0L;
       withinRange_ = false;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.Timestamp efficacyTimestamp_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> efficacyTimestampBuilder_;
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+     * @return Whether the efficacyTimestamp field is set.
+     */
+    public boolean hasEfficacyTimestamp() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+     * @return The efficacyTimestamp.
+     */
+    public com.google.protobuf.Timestamp getEfficacyTimestamp() {
+      if (efficacyTimestampBuilder_ == null) {
+        return efficacyTimestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : efficacyTimestamp_;
+      } else {
+        return efficacyTimestampBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+     */
+    public Builder setEfficacyTimestamp(com.google.protobuf.Timestamp value) {
+      if (efficacyTimestampBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        efficacyTimestamp_ = value;
+      } else {
+        efficacyTimestampBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+     */
+    public Builder setEfficacyTimestamp(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (efficacyTimestampBuilder_ == null) {
+        efficacyTimestamp_ = builderForValue.build();
+      } else {
+        efficacyTimestampBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+     */
+    public Builder mergeEfficacyTimestamp(com.google.protobuf.Timestamp value) {
+      if (efficacyTimestampBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          efficacyTimestamp_ != null &&
+          efficacyTimestamp_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getEfficacyTimestampBuilder().mergeFrom(value);
+        } else {
+          efficacyTimestamp_ = value;
+        }
+      } else {
+        efficacyTimestampBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+     */
+    public Builder clearEfficacyTimestamp() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      efficacyTimestamp_ = null;
+      if (efficacyTimestampBuilder_ != null) {
+        efficacyTimestampBuilder_.dispose();
+        efficacyTimestampBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getEfficacyTimestampBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getEfficacyTimestampFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getEfficacyTimestampOrBuilder() {
+      if (efficacyTimestampBuilder_ != null) {
+        return efficacyTimestampBuilder_.getMessageOrBuilder();
+      } else {
+        return efficacyTimestamp_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : efficacyTimestamp_;
+      }
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getEfficacyTimestampFieldBuilder() {
+      if (efficacyTimestampBuilder_ == null) {
+        efficacyTimestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getEfficacyTimestamp(),
+                getParentForChildren(),
+                isClean());
+        efficacyTimestamp_ = null;
+      }
+      return efficacyTimestampBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

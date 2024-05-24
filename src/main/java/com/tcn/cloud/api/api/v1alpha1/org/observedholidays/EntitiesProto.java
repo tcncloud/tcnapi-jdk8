@@ -107,54 +107,57 @@ public final class EntitiesProto {
       "ties.proto\022!api.v1alpha1.org.observedhol" +
       "idays\032\025api/commons/org.proto\032!api/common" +
       "s/org/preferences.proto\032 google/protobuf" +
-      "/field_mask.proto\"\035\n\033ListObservedHoliday" +
-      "sRequest\"n\n\034ListObservedHolidaysResponse" +
-      "\022N\n\021observed_holidays\030\001 \003(\0132!.api.common" +
-      "s.org.ObservedHolidaysR\020observedHolidays" +
-      "\"N\n\032GetObservedHolidaysRequest\0220\n\024observ" +
-      "ed_holidays_id\030\001 \001(\tR\022observedHolidaysId" +
-      "\"m\n\033GetObservedHolidaysResponse\022N\n\021obser" +
-      "ved_holidays\030\001 \001(\0132!.api.commons.org.Obs" +
-      "ervedHolidaysR\020observedHolidays\"\335\001\n\032SetO" +
-      "bservedHolidaysRequest\0224\n\026observed_holid" +
-      "ays_name\030\001 \001(\tR\024observedHolidaysName\022 \n\013" +
-      "description\030\002 \001(\tR\013description\0221\n\010timezo" +
-      "ne\030\003 \001(\0162\025.api.commons.TimeZoneR\010timezon" +
-      "e\0224\n\004days\030\004 \003(\0132 .api.commons.org.Observ" +
-      "edHolidayR\004days\"O\n\033SetObservedHolidaysRe" +
-      "sponse\0220\n\024observed_holidays_id\030\001 \001(\tR\022ob" +
-      "servedHolidaysId\"\204\001\n\034AddToObservedHolida" +
-      "ysRequest\0220\n\024observed_holidays_id\030\001 \001(\tR" +
-      "\022observedHolidaysId\0222\n\003day\030\002 \001(\0132 .api.c" +
-      "ommons.org.ObservedHolidayR\003day\"\037\n\035AddTo" +
-      "ObservedHolidaysResponse\"\211\001\n!RemoveFromO" +
-      "bservedHolidaysRequest\0220\n\024observed_holid" +
-      "ays_id\030\001 \001(\tR\022observedHolidaysId\0222\n\003day\030" +
-      "\002 \001(\0132 .api.commons.org.ObservedHolidayR" +
-      "\003day\"$\n\"RemoveFromObservedHolidaysRespon" +
-      "se\"\233\002\n!UpdateObservedHolidaysInfoRequest" +
-      "\0220\n\024observed_holidays_id\030\001 \001(\tR\022observed" +
-      "HolidaysId\0224\n\026observed_holidays_name\030\002 \001" +
-      "(\tR\024observedHolidaysName\022 \n\013description\030" +
-      "\003 \001(\tR\013description\0221\n\010timezone\030\004 \001(\0162\025.a" +
-      "pi.commons.TimeZoneR\010timezone\0229\n\nfield_m" +
-      "ask\030\005 \001(\0132\032.google.protobuf.FieldMaskR\tf" +
-      "ieldMask\"$\n\"UpdateObservedHolidaysInfoRe" +
-      "sponse\"Q\n\035DeleteObservedHolidaysRequest\022" +
+      "/field_mask.proto\032\037google/protobuf/times" +
+      "tamp.proto\"\035\n\033ListObservedHolidaysReques" +
+      "t\"n\n\034ListObservedHolidaysResponse\022N\n\021obs" +
+      "erved_holidays\030\001 \003(\0132!.api.commons.org.O" +
+      "bservedHolidaysR\020observedHolidays\"N\n\032Get" +
+      "ObservedHolidaysRequest\0220\n\024observed_holi" +
+      "days_id\030\001 \001(\tR\022observedHolidaysId\"m\n\033Get" +
+      "ObservedHolidaysResponse\022N\n\021observed_hol" +
+      "idays\030\001 \001(\0132!.api.commons.org.ObservedHo" +
+      "lidaysR\020observedHolidays\"\335\001\n\032SetObserved" +
+      "HolidaysRequest\0224\n\026observed_holidays_nam" +
+      "e\030\001 \001(\tR\024observedHolidaysName\022 \n\013descrip" +
+      "tion\030\002 \001(\tR\013description\0221\n\010timezone\030\003 \001(" +
+      "\0162\025.api.commons.TimeZoneR\010timezone\0224\n\004da" +
+      "ys\030\004 \003(\0132 .api.commons.org.ObservedHolid" +
+      "ayR\004days\"O\n\033SetObservedHolidaysResponse\022" +
       "0\n\024observed_holidays_id\030\001 \001(\tR\022observedH" +
-      "olidaysId\"R\n\036DeleteObservedHolidaysRespo" +
-      "nse\0220\n\024observed_holidays_id\030\001 \001(\tR\022obser" +
-      "vedHolidaysId\"S\n\037EvaluateObservedHoliday" +
-      "sRequest\0220\n\024observed_holidays_id\030\001 \001(\tR\022" +
-      "observedHolidaysId\"E\n EvaluateObservedHo" +
-      "lidaysResponse\022!\n\014date_matched\030\001 \001(\010R\013da" +
-      "teMatchedB\354\001\n3com.tcn.cloud.api.api.v1al" +
-      "pha1.org.observedholidaysB\rEntitiesProto" +
-      "P\001\242\002\004AVOO\252\002!Api.V1alpha1.Org.Observedhol" +
-      "idays\312\002!Api\\V1alpha1\\Org\\Observedholiday" +
-      "s\342\002-Api\\V1alpha1\\Org\\Observedholidays\\GP" +
-      "BMetadata\352\002$Api::V1alpha1::Org::Observed" +
-      "holidaysb\006proto3"
+      "olidaysId\"\204\001\n\034AddToObservedHolidaysReque" +
+      "st\0220\n\024observed_holidays_id\030\001 \001(\tR\022observ" +
+      "edHolidaysId\0222\n\003day\030\002 \001(\0132 .api.commons." +
+      "org.ObservedHolidayR\003day\"\037\n\035AddToObserve" +
+      "dHolidaysResponse\"\211\001\n!RemoveFromObserved" +
+      "HolidaysRequest\0220\n\024observed_holidays_id\030" +
+      "\001 \001(\tR\022observedHolidaysId\0222\n\003day\030\002 \001(\0132 " +
+      ".api.commons.org.ObservedHolidayR\003day\"$\n" +
+      "\"RemoveFromObservedHolidaysResponse\"\233\002\n!" +
+      "UpdateObservedHolidaysInfoRequest\0220\n\024obs" +
+      "erved_holidays_id\030\001 \001(\tR\022observedHoliday" +
+      "sId\0224\n\026observed_holidays_name\030\002 \001(\tR\024obs" +
+      "ervedHolidaysName\022 \n\013description\030\003 \001(\tR\013" +
+      "description\0221\n\010timezone\030\004 \001(\0162\025.api.comm" +
+      "ons.TimeZoneR\010timezone\0229\n\nfield_mask\030\005 \001" +
+      "(\0132\032.google.protobuf.FieldMaskR\tfieldMas" +
+      "k\"$\n\"UpdateObservedHolidaysInfoResponse\"" +
+      "Q\n\035DeleteObservedHolidaysRequest\0220\n\024obse" +
+      "rved_holidays_id\030\001 \001(\tR\022observedHolidays" +
+      "Id\"R\n\036DeleteObservedHolidaysResponse\0220\n\024" +
+      "observed_holidays_id\030\001 \001(\tR\022observedHoli" +
+      "daysId\"S\n\037EvaluateObservedHolidaysReques" +
+      "t\0220\n\024observed_holidays_id\030\001 \001(\tR\022observe" +
+      "dHolidaysId\"\220\001\n EvaluateObservedHolidays" +
+      "Response\022!\n\014date_matched\030\001 \001(\010R\013dateMatc" +
+      "hed\022I\n\022efficacy_timestamp\030\002 \001(\0132\032.google" +
+      ".protobuf.TimestampR\021efficacyTimestampB\354" +
+      "\001\n3com.tcn.cloud.api.api.v1alpha1.org.ob" +
+      "servedholidaysB\rEntitiesProtoP\001\242\002\004AVOO\252\002" +
+      "!Api.V1alpha1.Org.Observedholidays\312\002!Api" +
+      "\\V1alpha1\\Org\\Observedholidays\342\002-Api\\V1a" +
+      "lpha1\\Org\\Observedholidays\\GPBMetadata\352\002" +
+      "$Api::V1alpha1::Org::Observedholidaysb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -162,6 +165,7 @@ public final class EntitiesProto {
           com.tcn.cloud.api.api.commons.OrgProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.org.PreferencesProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_api_v1alpha1_org_observedholidays_ListObservedHolidaysRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -258,10 +262,11 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_org_observedholidays_EvaluateObservedHolidaysResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_observedholidays_EvaluateObservedHolidaysResponse_descriptor,
-        new java.lang.String[] { "DateMatched", });
+        new java.lang.String[] { "DateMatched", "EfficacyTimestamp", });
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.PreferencesProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

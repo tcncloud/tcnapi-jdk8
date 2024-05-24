@@ -17,4 +17,31 @@ public interface EvaluateBusinessHoursResponseOrBuilder extends
    * @return The withinRange.
    */
   boolean getWithinRange();
+
+  /**
+   * <pre>
+   * indicates how long this result can be used.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+   * @return Whether the efficacyTimestamp field is set.
+   */
+  boolean hasEfficacyTimestamp();
+  /**
+   * <pre>
+   * indicates how long this result can be used.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+   * @return The efficacyTimestamp.
+   */
+  com.google.protobuf.Timestamp getEfficacyTimestamp();
+  /**
+   * <pre>
+   * indicates how long this result can be used.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getEfficacyTimestampOrBuilder();
 }
