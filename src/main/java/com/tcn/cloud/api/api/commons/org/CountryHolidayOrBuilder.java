@@ -29,20 +29,126 @@ public interface CountryHolidayOrBuilder extends
 
   /**
    * <pre>
-   * The country.
+   * The country.  Deprecated.
    * </pre>
    *
-   * <code>.api.commons.Country country = 2 [json_name = "country"];</code>
+   * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
+   * @deprecated api.commons.org.CountryHoliday.country is deprecated.
+   *     See api/commons/org/preferences.proto;l=806
    * @return The enum numeric value on the wire for country.
    */
-  int getCountryValue();
+  @java.lang.Deprecated int getCountryValue();
   /**
    * <pre>
-   * The country.
+   * The country.  Deprecated.
    * </pre>
    *
-   * <code>.api.commons.Country country = 2 [json_name = "country"];</code>
+   * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
+   * @deprecated api.commons.org.CountryHoliday.country is deprecated.
+   *     See api/commons/org/preferences.proto;l=806
    * @return The country.
    */
-  com.tcn.cloud.api.api.commons.Country getCountry();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.Country getCountry();
+
+  /**
+   * <pre>
+   * The country name from holiday service.
+   * </pre>
+   *
+   * <code>string country_name = 3 [json_name = "countryName"];</code>
+   * @return The countryName.
+   */
+  java.lang.String getCountryName();
+  /**
+   * <pre>
+   * The country name from holiday service.
+   * </pre>
+   *
+   * <code>string country_name = 3 [json_name = "countryName"];</code>
+   * @return The bytes for countryName.
+   */
+  com.google.protobuf.ByteString
+      getCountryNameBytes();
+
+  /**
+   * <pre>
+   * The type of holiday- eg. National, religious.
+   * </pre>
+   *
+   * <code>repeated string type = 4 [json_name = "type"];</code>
+   * @return A list containing the type.
+   */
+  java.util.List<java.lang.String>
+      getTypeList();
+  /**
+   * <pre>
+   * The type of holiday- eg. National, religious.
+   * </pre>
+   *
+   * <code>repeated string type = 4 [json_name = "type"];</code>
+   * @return The count of type.
+   */
+  int getTypeCount();
+  /**
+   * <pre>
+   * The type of holiday- eg. National, religious.
+   * </pre>
+   *
+   * <code>repeated string type = 4 [json_name = "type"];</code>
+   * @param index The index of the element to return.
+   * @return The type at the given index.
+   */
+  java.lang.String getType(int index);
+  /**
+   * <pre>
+   * The type of holiday- eg. National, religious.
+   * </pre>
+   *
+   * <code>repeated string type = 4 [json_name = "type"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the type at the given index.
+   */
+  com.google.protobuf.ByteString
+      getTypeBytes(int index);
+
+  /**
+   * <pre>
+   * The specific sub-regions of the country that celebrate the holiday.
+   * </pre>
+   *
+   * <code>repeated string state = 5 [json_name = "state"];</code>
+   * @return A list containing the state.
+   */
+  java.util.List<java.lang.String>
+      getStateList();
+  /**
+   * <pre>
+   * The specific sub-regions of the country that celebrate the holiday.
+   * </pre>
+   *
+   * <code>repeated string state = 5 [json_name = "state"];</code>
+   * @return The count of state.
+   */
+  int getStateCount();
+  /**
+   * <pre>
+   * The specific sub-regions of the country that celebrate the holiday.
+   * </pre>
+   *
+   * <code>repeated string state = 5 [json_name = "state"];</code>
+   * @param index The index of the element to return.
+   * @return The state at the given index.
+   */
+  java.lang.String getState(int index);
+  /**
+   * <pre>
+   * The specific sub-regions of the country that celebrate the holiday.
+   * </pre>
+   *
+   * <code>repeated string state = 5 [json_name = "state"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the state at the given index.
+   */
+  com.google.protobuf.ByteString
+      getStateBytes(int index);
 }
