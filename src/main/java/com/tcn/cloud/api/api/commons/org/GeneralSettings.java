@@ -8691,6 +8691,21 @@ private static final long serialVersionUID = 0L;
     return enableEnvisionScreenRecording_;
   }
 
+  public static final int AGENT_SCREEN_RECORDING_FIELD_NUMBER = 301;
+  private boolean agentScreenRecording_ = false;
+  /**
+   * <pre>
+   * Read only- shows if the Agent Screen Recording is enabled for the Org
+   * </pre>
+   *
+   * <code>bool agent_screen_recording = 301 [json_name = "agentScreenRecording"];</code>
+   * @return The agentScreenRecording.
+   */
+  @java.lang.Override
+  public boolean getAgentScreenRecording() {
+    return agentScreenRecording_;
+  }
+
   public static final int ENABLE_AGENT_SIMPLE_HOLD_FIELD_NUMBER = 400;
   private boolean enableAgentSimpleHold_ = false;
   /**
@@ -9440,6 +9455,9 @@ private static final long serialVersionUID = 0L;
     if (enableEnvisionScreenRecording_ != false) {
       output.writeBool(300, enableEnvisionScreenRecording_);
     }
+    if (agentScreenRecording_ != false) {
+      output.writeBool(301, agentScreenRecording_);
+    }
     if (enableAgentSimpleHold_ != false) {
       output.writeBool(400, enableAgentSimpleHold_);
     }
@@ -9601,6 +9619,10 @@ private static final long serialVersionUID = 0L;
     if (enableEnvisionScreenRecording_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(300, enableEnvisionScreenRecording_);
+    }
+    if (agentScreenRecording_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(301, agentScreenRecording_);
     }
     if (enableAgentSimpleHold_ != false) {
       size += com.google.protobuf.CodedOutputStream
@@ -9767,6 +9789,8 @@ private static final long serialVersionUID = 0L;
         != other.getEnablePauseRecordingOnHold()) return false;
     if (getEnableEnvisionScreenRecording()
         != other.getEnableEnvisionScreenRecording()) return false;
+    if (getAgentScreenRecording()
+        != other.getAgentScreenRecording()) return false;
     if (getEnableAgentSimpleHold()
         != other.getEnableAgentSimpleHold()) return false;
     if (getEnableAgentMultiAccept()
@@ -9912,6 +9936,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ENABLE_ENVISION_SCREEN_RECORDING_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getEnableEnvisionScreenRecording());
+    hash = (37 * hash) + AGENT_SCREEN_RECORDING_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getAgentScreenRecording());
     hash = (37 * hash) + ENABLE_AGENT_SIMPLE_HOLD_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getEnableAgentSimpleHold());
@@ -10166,6 +10193,7 @@ private static final long serialVersionUID = 0L;
       callRecordingDelay_ = 0L;
       enablePauseRecordingOnHold_ = false;
       enableEnvisionScreenRecording_ = false;
+      agentScreenRecording_ = false;
       enableAgentSimpleHold_ = false;
       enableAgentMultiAccept_ = false;
       pauseAgentAfterMultiAccept_ = false;
@@ -10321,112 +10349,115 @@ private static final long serialVersionUID = 0L;
         result.enableEnvisionScreenRecording_ = enableEnvisionScreenRecording_;
       }
       if (((from_bitField0_ & 0x00010000) != 0)) {
-        result.enableAgentSimpleHold_ = enableAgentSimpleHold_;
+        result.agentScreenRecording_ = agentScreenRecording_;
       }
       if (((from_bitField0_ & 0x00020000) != 0)) {
-        result.enableAgentMultiAccept_ = enableAgentMultiAccept_;
+        result.enableAgentSimpleHold_ = enableAgentSimpleHold_;
       }
       if (((from_bitField0_ & 0x00040000) != 0)) {
-        result.pauseAgentAfterMultiAccept_ = pauseAgentAfterMultiAccept_;
+        result.enableAgentMultiAccept_ = enableAgentMultiAccept_;
       }
       if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.pauseAgentAfterMultiAccept_ = pauseAgentAfterMultiAccept_;
+      }
+      if (((from_bitField0_ & 0x00100000) != 0)) {
         result.holdQueueMonitoring_ = holdQueueMonitoringBuilder_ == null
             ? holdQueueMonitoring_
             : holdQueueMonitoringBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00100000) != 0)) {
+      if (((from_bitField0_ & 0x00200000) != 0)) {
         result.displayMachineDeliver_ = displayMachineDeliver_;
       }
-      if (((from_bitField0_ & 0x00200000) != 0)) {
+      if (((from_bitField0_ & 0x00400000) != 0)) {
         result.displayLinkbackHuntGroup_ = displayLinkbackHuntGroup_;
       }
-      if (((from_bitField0_ & 0x00400000) != 0)) {
+      if (((from_bitField0_ & 0x00800000) != 0)) {
         result.displaySipHeaderData_ = displaySipHeaderData_;
       }
-      if (((from_bitField0_ & 0x00800000) != 0)) {
+      if (((from_bitField0_ & 0x01000000) != 0)) {
         result.displayIvrNavigationKeys_ = displayIvrNavigationKeys_;
       }
-      if (((from_bitField0_ & 0x01000000) != 0)) {
+      if (((from_bitField0_ & 0x02000000) != 0)) {
         result.displayDataCollectData_ = displayDataCollectData_;
       }
-      if (((from_bitField0_ & 0x02000000) != 0)) {
+      if (((from_bitField0_ & 0x04000000) != 0)) {
         result.displayDataDippedData_ = displayDataDippedDataBuilder_ == null
             ? displayDataDippedData_
             : displayDataDippedDataBuilder_.build();
       }
-      if (((from_bitField0_ & 0x04000000) != 0)) {
+      if (((from_bitField0_ & 0x08000000) != 0)) {
         result.integrationDataDisplay_ = integrationDataDisplayBuilder_ == null
             ? integrationDataDisplay_
             : integrationDataDisplayBuilder_.build();
       }
-      if (((from_bitField0_ & 0x08000000) != 0)) {
+      if (((from_bitField0_ & 0x10000000) != 0)) {
         result.journeyDataDisplay_ = journeyDataDisplayBuilder_ == null
             ? journeyDataDisplay_
             : journeyDataDisplayBuilder_.build();
       }
-      if (((from_bitField0_ & 0x10000000) != 0)) {
+      if (((from_bitField0_ & 0x20000000) != 0)) {
         result.agentCallHistoryScope_ = agentCallHistoryScope_;
       }
-      if (((from_bitField0_ & 0x20000000) != 0)) {
+      if (((from_bitField0_ & 0x40000000) != 0)) {
         result.agentLoginGuiStatisticsDisplay_ = agentLoginGuiStatisticsDisplayBuilder_ == null
             ? agentLoginGuiStatisticsDisplay_
             : agentLoginGuiStatisticsDisplayBuilder_.build();
       }
-      if (((from_bitField0_ & 0x40000000) != 0)) {
+      if (((from_bitField0_ & 0x80000000) != 0)) {
         result.phoneZipMetadataDisplay_ = phoneZipMetadataDisplayBuilder_ == null
             ? phoneZipMetadataDisplay_
             : phoneZipMetadataDisplayBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x80000000) != 0)) {
-        result.displaySkills_ = displaySkills_;
       }
     }
 
     private void buildPartial1(com.tcn.cloud.api.api.commons.org.GeneralSettings result) {
       int from_bitField1_ = bitField1_;
       if (((from_bitField1_ & 0x00000001) != 0)) {
-        result.displayWebLinks_ = displayWebLinks_;
+        result.displaySkills_ = displaySkills_;
       }
       if (((from_bitField1_ & 0x00000002) != 0)) {
-        result.enableAgentHuntGroupReassignment_ = enableAgentHuntGroupReassignment_;
+        result.displayWebLinks_ = displayWebLinks_;
       }
       if (((from_bitField1_ & 0x00000004) != 0)) {
+        result.enableAgentHuntGroupReassignment_ = enableAgentHuntGroupReassignment_;
+      }
+      if (((from_bitField1_ & 0x00000008) != 0)) {
         result.disallowedHuntGroups_ = disallowedHuntGroupsBuilder_ == null
             ? disallowedHuntGroups_
             : disallowedHuntGroupsBuilder_.build();
       }
-      if (((from_bitField1_ & 0x00000008) != 0)) {
+      if (((from_bitField1_ & 0x00000010) != 0)) {
         result.enableManualApprovalOfCalls_ = enableManualApprovalOfCalls_;
       }
-      if (((from_bitField1_ & 0x00000010) != 0)) {
+      if (((from_bitField1_ & 0x00000020) != 0)) {
         result.requireManualApprovalNumber_ = requireManualApprovalNumber_;
       }
-      if (((from_bitField1_ & 0x00000020) != 0)) {
+      if (((from_bitField1_ & 0x00000040) != 0)) {
         result.enableManualApprovalOfSms_ = enableManualApprovalOfSms_;
       }
-      if (((from_bitField1_ & 0x00000040) != 0)) {
+      if (((from_bitField1_ & 0x00000080) != 0)) {
         result.requireManualApprovalNumberSms_ = requireManualApprovalNumberSms_;
       }
-      if (((from_bitField1_ & 0x00000080) != 0)) {
+      if (((from_bitField1_ & 0x00000100) != 0)) {
         result.disableRejectOptionForApprovers_ = disableRejectOptionForApprovers_;
       }
-      if (((from_bitField1_ & 0x00000100) != 0)) {
+      if (((from_bitField1_ & 0x00000200) != 0)) {
         result.alphanumericKeypad_ = alphanumericKeypadBuilder_ == null
             ? alphanumericKeypad_
             : alphanumericKeypadBuilder_.build();
       }
-      if (((from_bitField1_ & 0x00000200) != 0)) {
+      if (((from_bitField1_ & 0x00000400) != 0)) {
         result.enableCallDesktopNotifications_ = enableCallDesktopNotifications_;
       }
-      if (((from_bitField1_ & 0x00000400) != 0)) {
+      if (((from_bitField1_ & 0x00000800) != 0)) {
         result.inboundComplianceMetadata_ = inboundComplianceMetadataBuilder_ == null
             ? inboundComplianceMetadata_
             : inboundComplianceMetadataBuilder_.build();
       }
-      if (((from_bitField1_ & 0x00000800) != 0)) {
+      if (((from_bitField1_ & 0x00001000) != 0)) {
         result.enableAgentIntercom_ = enableAgentIntercom_;
       }
-      if (((from_bitField1_ & 0x00001000) != 0)) {
+      if (((from_bitField1_ & 0x00002000) != 0)) {
         result.prepareStateCallDelivery_ = prepareStateCallDeliveryBuilder_ == null
             ? prepareStateCallDelivery_
             : prepareStateCallDeliveryBuilder_.build();
@@ -10535,6 +10566,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getEnableEnvisionScreenRecording() != false) {
         setEnableEnvisionScreenRecording(other.getEnableEnvisionScreenRecording());
+      }
+      if (other.getAgentScreenRecording() != false) {
+        setAgentScreenRecording(other.getAgentScreenRecording());
       }
       if (other.getEnableAgentSimpleHold() != false) {
         setEnableAgentSimpleHold(other.getEnableAgentSimpleHold());
@@ -10732,169 +10766,174 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00008000;
               break;
             } // case 2400
+            case 2408: {
+              agentScreenRecording_ = input.readBool();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 2408
             case 3200: {
               enableAgentSimpleHold_ = input.readBool();
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00020000;
               break;
             } // case 3200
             case 3208: {
               enableAgentMultiAccept_ = input.readBool();
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00040000;
               break;
             } // case 3208
             case 3216: {
               pauseAgentAfterMultiAccept_ = input.readBool();
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00080000;
               break;
             } // case 3216
             case 3226: {
               input.readMessage(
                   getHoldQueueMonitoringFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00100000;
               break;
             } // case 3226
             case 4000: {
               displayMachineDeliver_ = input.readBool();
-              bitField0_ |= 0x00100000;
+              bitField0_ |= 0x00200000;
               break;
             } // case 4000
             case 4008: {
               displayLinkbackHuntGroup_ = input.readBool();
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x00400000;
               break;
             } // case 4008
             case 4016: {
               displaySipHeaderData_ = input.readBool();
-              bitField0_ |= 0x00400000;
+              bitField0_ |= 0x00800000;
               break;
             } // case 4016
             case 4024: {
               displayIvrNavigationKeys_ = input.readBool();
-              bitField0_ |= 0x00800000;
+              bitField0_ |= 0x01000000;
               break;
             } // case 4024
             case 4032: {
               displayDataCollectData_ = input.readBool();
-              bitField0_ |= 0x01000000;
+              bitField0_ |= 0x02000000;
               break;
             } // case 4032
             case 4042: {
               input.readMessage(
                   getDisplayDataDippedDataFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x02000000;
+              bitField0_ |= 0x04000000;
               break;
             } // case 4042
             case 4050: {
               input.readMessage(
                   getIntegrationDataDisplayFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x04000000;
+              bitField0_ |= 0x08000000;
               break;
             } // case 4050
             case 4058: {
               input.readMessage(
                   getJourneyDataDisplayFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x08000000;
+              bitField0_ |= 0x10000000;
               break;
             } // case 4058
             case 4064: {
               agentCallHistoryScope_ = input.readEnum();
-              bitField0_ |= 0x10000000;
+              bitField0_ |= 0x20000000;
               break;
             } // case 4064
             case 4074: {
               input.readMessage(
                   getAgentLoginGuiStatisticsDisplayFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x20000000;
+              bitField0_ |= 0x40000000;
               break;
             } // case 4074
             case 4082: {
               input.readMessage(
                   getPhoneZipMetadataDisplayFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x40000000;
+              bitField0_ |= 0x80000000;
               break;
             } // case 4082
             case 4088: {
               displaySkills_ = input.readBool();
-              bitField0_ |= 0x80000000;
+              bitField1_ |= 0x00000001;
               break;
             } // case 4088
             case 4096: {
               displayWebLinks_ = input.readBool();
-              bitField1_ |= 0x00000001;
+              bitField1_ |= 0x00000002;
               break;
             } // case 4096
             case 4800: {
               enableAgentHuntGroupReassignment_ = input.readBool();
-              bitField1_ |= 0x00000002;
+              bitField1_ |= 0x00000004;
               break;
             } // case 4800
             case 4810: {
               input.readMessage(
                   getDisallowedHuntGroupsFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x00000004;
+              bitField1_ |= 0x00000008;
               break;
             } // case 4810
             case 5600: {
               enableManualApprovalOfCalls_ = input.readBool();
-              bitField1_ |= 0x00000008;
+              bitField1_ |= 0x00000010;
               break;
             } // case 5600
             case 5608: {
               requireManualApprovalNumber_ = input.readBool();
-              bitField1_ |= 0x00000010;
+              bitField1_ |= 0x00000020;
               break;
             } // case 5608
             case 5616: {
               enableManualApprovalOfSms_ = input.readBool();
-              bitField1_ |= 0x00000020;
+              bitField1_ |= 0x00000040;
               break;
             } // case 5616
             case 5624: {
               requireManualApprovalNumberSms_ = input.readBool();
-              bitField1_ |= 0x00000040;
+              bitField1_ |= 0x00000080;
               break;
             } // case 5624
             case 5632: {
               disableRejectOptionForApprovers_ = input.readBool();
-              bitField1_ |= 0x00000080;
+              bitField1_ |= 0x00000100;
               break;
             } // case 5632
             case 6402: {
               input.readMessage(
                   getAlphanumericKeypadFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x00000100;
+              bitField1_ |= 0x00000200;
               break;
             } // case 6402
             case 6408: {
               enableCallDesktopNotifications_ = input.readBool();
-              bitField1_ |= 0x00000200;
+              bitField1_ |= 0x00000400;
               break;
             } // case 6408
             case 6418: {
               input.readMessage(
                   getInboundComplianceMetadataFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x00000400;
+              bitField1_ |= 0x00000800;
               break;
             } // case 6418
             case 6424: {
               enableAgentIntercom_ = input.readBool();
-              bitField1_ |= 0x00000800;
+              bitField1_ |= 0x00001000;
               break;
             } // case 6424
             case 6434: {
               input.readMessage(
                   getPrepareStateCallDeliveryFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x00001000;
+              bitField1_ |= 0x00002000;
               break;
             } // case 6434
             default: {
@@ -11961,6 +12000,50 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private boolean agentScreenRecording_ ;
+    /**
+     * <pre>
+     * Read only- shows if the Agent Screen Recording is enabled for the Org
+     * </pre>
+     *
+     * <code>bool agent_screen_recording = 301 [json_name = "agentScreenRecording"];</code>
+     * @return The agentScreenRecording.
+     */
+    @java.lang.Override
+    public boolean getAgentScreenRecording() {
+      return agentScreenRecording_;
+    }
+    /**
+     * <pre>
+     * Read only- shows if the Agent Screen Recording is enabled for the Org
+     * </pre>
+     *
+     * <code>bool agent_screen_recording = 301 [json_name = "agentScreenRecording"];</code>
+     * @param value The agentScreenRecording to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentScreenRecording(boolean value) {
+
+      agentScreenRecording_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Read only- shows if the Agent Screen Recording is enabled for the Org
+     * </pre>
+     *
+     * <code>bool agent_screen_recording = 301 [json_name = "agentScreenRecording"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentScreenRecording() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      agentScreenRecording_ = false;
+      onChanged();
+      return this;
+    }
+
     private boolean enableAgentSimpleHold_ ;
     /**
      * <pre>
@@ -11986,7 +12069,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEnableAgentSimpleHold(boolean value) {
 
       enableAgentSimpleHold_ = value;
-      bitField0_ |= 0x00010000;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -11999,7 +12082,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableAgentSimpleHold() {
-      bitField0_ = (bitField0_ & ~0x00010000);
+      bitField0_ = (bitField0_ & ~0x00020000);
       enableAgentSimpleHold_ = false;
       onChanged();
       return this;
@@ -12030,7 +12113,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEnableAgentMultiAccept(boolean value) {
 
       enableAgentMultiAccept_ = value;
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -12043,7 +12126,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableAgentMultiAccept() {
-      bitField0_ = (bitField0_ & ~0x00020000);
+      bitField0_ = (bitField0_ & ~0x00040000);
       enableAgentMultiAccept_ = false;
       onChanged();
       return this;
@@ -12074,7 +12157,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPauseAgentAfterMultiAccept(boolean value) {
 
       pauseAgentAfterMultiAccept_ = value;
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -12087,7 +12170,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPauseAgentAfterMultiAccept() {
-      bitField0_ = (bitField0_ & ~0x00040000);
+      bitField0_ = (bitField0_ & ~0x00080000);
       pauseAgentAfterMultiAccept_ = false;
       onChanged();
       return this;
@@ -12105,7 +12188,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the holdQueueMonitoring field is set.
      */
     public boolean hasHoldQueueMonitoring() {
-      return ((bitField0_ & 0x00080000) != 0);
+      return ((bitField0_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -12138,7 +12221,7 @@ private static final long serialVersionUID = 0L;
       } else {
         holdQueueMonitoringBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -12156,7 +12239,7 @@ private static final long serialVersionUID = 0L;
       } else {
         holdQueueMonitoringBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -12169,7 +12252,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHoldQueueMonitoring(com.tcn.cloud.api.api.commons.org.GeneralSettings.HoldQueueMonitoring value) {
       if (holdQueueMonitoringBuilder_ == null) {
-        if (((bitField0_ & 0x00080000) != 0) &&
+        if (((bitField0_ & 0x00100000) != 0) &&
           holdQueueMonitoring_ != null &&
           holdQueueMonitoring_ != com.tcn.cloud.api.api.commons.org.GeneralSettings.HoldQueueMonitoring.getDefaultInstance()) {
           getHoldQueueMonitoringBuilder().mergeFrom(value);
@@ -12179,7 +12262,7 @@ private static final long serialVersionUID = 0L;
       } else {
         holdQueueMonitoringBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -12191,7 +12274,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.HoldQueueMonitoring hold_queue_monitoring = 403 [json_name = "holdQueueMonitoring"];</code>
      */
     public Builder clearHoldQueueMonitoring() {
-      bitField0_ = (bitField0_ & ~0x00080000);
+      bitField0_ = (bitField0_ & ~0x00100000);
       holdQueueMonitoring_ = null;
       if (holdQueueMonitoringBuilder_ != null) {
         holdQueueMonitoringBuilder_.dispose();
@@ -12208,7 +12291,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.HoldQueueMonitoring hold_queue_monitoring = 403 [json_name = "holdQueueMonitoring"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.GeneralSettings.HoldQueueMonitoring.Builder getHoldQueueMonitoringBuilder() {
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return getHoldQueueMonitoringFieldBuilder().getBuilder();
     }
@@ -12273,7 +12356,7 @@ private static final long serialVersionUID = 0L;
     public Builder setDisplayMachineDeliver(boolean value) {
 
       displayMachineDeliver_ = value;
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -12286,7 +12369,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayMachineDeliver() {
-      bitField0_ = (bitField0_ & ~0x00100000);
+      bitField0_ = (bitField0_ & ~0x00200000);
       displayMachineDeliver_ = false;
       onChanged();
       return this;
@@ -12317,7 +12400,7 @@ private static final long serialVersionUID = 0L;
     public Builder setDisplayLinkbackHuntGroup(boolean value) {
 
       displayLinkbackHuntGroup_ = value;
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -12330,7 +12413,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayLinkbackHuntGroup() {
-      bitField0_ = (bitField0_ & ~0x00200000);
+      bitField0_ = (bitField0_ & ~0x00400000);
       displayLinkbackHuntGroup_ = false;
       onChanged();
       return this;
@@ -12361,7 +12444,7 @@ private static final long serialVersionUID = 0L;
     public Builder setDisplaySipHeaderData(boolean value) {
 
       displaySipHeaderData_ = value;
-      bitField0_ |= 0x00400000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -12374,7 +12457,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplaySipHeaderData() {
-      bitField0_ = (bitField0_ & ~0x00400000);
+      bitField0_ = (bitField0_ & ~0x00800000);
       displaySipHeaderData_ = false;
       onChanged();
       return this;
@@ -12405,7 +12488,7 @@ private static final long serialVersionUID = 0L;
     public Builder setDisplayIvrNavigationKeys(boolean value) {
 
       displayIvrNavigationKeys_ = value;
-      bitField0_ |= 0x00800000;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -12418,7 +12501,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayIvrNavigationKeys() {
-      bitField0_ = (bitField0_ & ~0x00800000);
+      bitField0_ = (bitField0_ & ~0x01000000);
       displayIvrNavigationKeys_ = false;
       onChanged();
       return this;
@@ -12449,7 +12532,7 @@ private static final long serialVersionUID = 0L;
     public Builder setDisplayDataCollectData(boolean value) {
 
       displayDataCollectData_ = value;
-      bitField0_ |= 0x01000000;
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -12462,7 +12545,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayDataCollectData() {
-      bitField0_ = (bitField0_ & ~0x01000000);
+      bitField0_ = (bitField0_ & ~0x02000000);
       displayDataCollectData_ = false;
       onChanged();
       return this;
@@ -12480,7 +12563,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the displayDataDippedData field is set.
      */
     public boolean hasDisplayDataDippedData() {
-      return ((bitField0_ & 0x02000000) != 0);
+      return ((bitField0_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -12513,7 +12596,7 @@ private static final long serialVersionUID = 0L;
       } else {
         displayDataDippedDataBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x02000000;
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -12531,7 +12614,7 @@ private static final long serialVersionUID = 0L;
       } else {
         displayDataDippedDataBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x02000000;
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -12544,7 +12627,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDisplayDataDippedData(com.tcn.cloud.api.api.commons.org.GeneralSettings.DataDipDataDisplay value) {
       if (displayDataDippedDataBuilder_ == null) {
-        if (((bitField0_ & 0x02000000) != 0) &&
+        if (((bitField0_ & 0x04000000) != 0) &&
           displayDataDippedData_ != null &&
           displayDataDippedData_ != com.tcn.cloud.api.api.commons.org.GeneralSettings.DataDipDataDisplay.getDefaultInstance()) {
           getDisplayDataDippedDataBuilder().mergeFrom(value);
@@ -12554,7 +12637,7 @@ private static final long serialVersionUID = 0L;
       } else {
         displayDataDippedDataBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x02000000;
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -12566,7 +12649,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.DataDipDataDisplay display_data_dipped_data = 505 [json_name = "displayDataDippedData"];</code>
      */
     public Builder clearDisplayDataDippedData() {
-      bitField0_ = (bitField0_ & ~0x02000000);
+      bitField0_ = (bitField0_ & ~0x04000000);
       displayDataDippedData_ = null;
       if (displayDataDippedDataBuilder_ != null) {
         displayDataDippedDataBuilder_.dispose();
@@ -12583,7 +12666,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.DataDipDataDisplay display_data_dipped_data = 505 [json_name = "displayDataDippedData"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.GeneralSettings.DataDipDataDisplay.Builder getDisplayDataDippedDataBuilder() {
-      bitField0_ |= 0x02000000;
+      bitField0_ |= 0x04000000;
       onChanged();
       return getDisplayDataDippedDataFieldBuilder().getBuilder();
     }
@@ -12635,7 +12718,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the integrationDataDisplay field is set.
      */
     public boolean hasIntegrationDataDisplay() {
-      return ((bitField0_ & 0x04000000) != 0);
+      return ((bitField0_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -12668,7 +12751,7 @@ private static final long serialVersionUID = 0L;
       } else {
         integrationDataDisplayBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x04000000;
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -12686,7 +12769,7 @@ private static final long serialVersionUID = 0L;
       } else {
         integrationDataDisplayBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x04000000;
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -12699,7 +12782,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeIntegrationDataDisplay(com.tcn.cloud.api.api.commons.org.GeneralSettings.IntegrationDataDisplay value) {
       if (integrationDataDisplayBuilder_ == null) {
-        if (((bitField0_ & 0x04000000) != 0) &&
+        if (((bitField0_ & 0x08000000) != 0) &&
           integrationDataDisplay_ != null &&
           integrationDataDisplay_ != com.tcn.cloud.api.api.commons.org.GeneralSettings.IntegrationDataDisplay.getDefaultInstance()) {
           getIntegrationDataDisplayBuilder().mergeFrom(value);
@@ -12709,7 +12792,7 @@ private static final long serialVersionUID = 0L;
       } else {
         integrationDataDisplayBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x04000000;
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -12721,7 +12804,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.IntegrationDataDisplay integration_data_display = 506 [json_name = "integrationDataDisplay"];</code>
      */
     public Builder clearIntegrationDataDisplay() {
-      bitField0_ = (bitField0_ & ~0x04000000);
+      bitField0_ = (bitField0_ & ~0x08000000);
       integrationDataDisplay_ = null;
       if (integrationDataDisplayBuilder_ != null) {
         integrationDataDisplayBuilder_.dispose();
@@ -12738,7 +12821,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.IntegrationDataDisplay integration_data_display = 506 [json_name = "integrationDataDisplay"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.GeneralSettings.IntegrationDataDisplay.Builder getIntegrationDataDisplayBuilder() {
-      bitField0_ |= 0x04000000;
+      bitField0_ |= 0x08000000;
       onChanged();
       return getIntegrationDataDisplayFieldBuilder().getBuilder();
     }
@@ -12790,7 +12873,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the journeyDataDisplay field is set.
      */
     public boolean hasJourneyDataDisplay() {
-      return ((bitField0_ & 0x08000000) != 0);
+      return ((bitField0_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -12823,7 +12906,7 @@ private static final long serialVersionUID = 0L;
       } else {
         journeyDataDisplayBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -12841,7 +12924,7 @@ private static final long serialVersionUID = 0L;
       } else {
         journeyDataDisplayBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -12854,7 +12937,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeJourneyDataDisplay(com.tcn.cloud.api.api.commons.org.GeneralSettings.JourneyDataDisplay value) {
       if (journeyDataDisplayBuilder_ == null) {
-        if (((bitField0_ & 0x08000000) != 0) &&
+        if (((bitField0_ & 0x10000000) != 0) &&
           journeyDataDisplay_ != null &&
           journeyDataDisplay_ != com.tcn.cloud.api.api.commons.org.GeneralSettings.JourneyDataDisplay.getDefaultInstance()) {
           getJourneyDataDisplayBuilder().mergeFrom(value);
@@ -12864,7 +12947,7 @@ private static final long serialVersionUID = 0L;
       } else {
         journeyDataDisplayBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -12876,7 +12959,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.JourneyDataDisplay journey_data_display = 507 [json_name = "journeyDataDisplay"];</code>
      */
     public Builder clearJourneyDataDisplay() {
-      bitField0_ = (bitField0_ & ~0x08000000);
+      bitField0_ = (bitField0_ & ~0x10000000);
       journeyDataDisplay_ = null;
       if (journeyDataDisplayBuilder_ != null) {
         journeyDataDisplayBuilder_.dispose();
@@ -12893,7 +12976,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.JourneyDataDisplay journey_data_display = 507 [json_name = "journeyDataDisplay"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.GeneralSettings.JourneyDataDisplay.Builder getJourneyDataDisplayBuilder() {
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x10000000;
       onChanged();
       return getJourneyDataDisplayFieldBuilder().getBuilder();
     }
@@ -12956,7 +13039,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAgentCallHistoryScopeValue(int value) {
       agentCallHistoryScope_ = value;
-      bitField0_ |= 0x10000000;
+      bitField0_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -12986,7 +13069,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x10000000;
+      bitField0_ |= 0x20000000;
       agentCallHistoryScope_ = value.getNumber();
       onChanged();
       return this;
@@ -13000,7 +13083,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentCallHistoryScope() {
-      bitField0_ = (bitField0_ & ~0x10000000);
+      bitField0_ = (bitField0_ & ~0x20000000);
       agentCallHistoryScope_ = 0;
       onChanged();
       return this;
@@ -13018,7 +13101,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the agentLoginGuiStatisticsDisplay field is set.
      */
     public boolean hasAgentLoginGuiStatisticsDisplay() {
-      return ((bitField0_ & 0x20000000) != 0);
+      return ((bitField0_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -13051,7 +13134,7 @@ private static final long serialVersionUID = 0L;
       } else {
         agentLoginGuiStatisticsDisplayBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x20000000;
+      bitField0_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -13069,7 +13152,7 @@ private static final long serialVersionUID = 0L;
       } else {
         agentLoginGuiStatisticsDisplayBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x20000000;
+      bitField0_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -13082,7 +13165,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAgentLoginGuiStatisticsDisplay(com.tcn.cloud.api.api.commons.org.GeneralSettings.AgentLoginGuiStatisticsDisplay value) {
       if (agentLoginGuiStatisticsDisplayBuilder_ == null) {
-        if (((bitField0_ & 0x20000000) != 0) &&
+        if (((bitField0_ & 0x40000000) != 0) &&
           agentLoginGuiStatisticsDisplay_ != null &&
           agentLoginGuiStatisticsDisplay_ != com.tcn.cloud.api.api.commons.org.GeneralSettings.AgentLoginGuiStatisticsDisplay.getDefaultInstance()) {
           getAgentLoginGuiStatisticsDisplayBuilder().mergeFrom(value);
@@ -13092,7 +13175,7 @@ private static final long serialVersionUID = 0L;
       } else {
         agentLoginGuiStatisticsDisplayBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x20000000;
+      bitField0_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -13104,7 +13187,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.AgentLoginGuiStatisticsDisplay agent_login_gui_statistics_display = 509 [json_name = "agentLoginGuiStatisticsDisplay"];</code>
      */
     public Builder clearAgentLoginGuiStatisticsDisplay() {
-      bitField0_ = (bitField0_ & ~0x20000000);
+      bitField0_ = (bitField0_ & ~0x40000000);
       agentLoginGuiStatisticsDisplay_ = null;
       if (agentLoginGuiStatisticsDisplayBuilder_ != null) {
         agentLoginGuiStatisticsDisplayBuilder_.dispose();
@@ -13121,7 +13204,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.AgentLoginGuiStatisticsDisplay agent_login_gui_statistics_display = 509 [json_name = "agentLoginGuiStatisticsDisplay"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.GeneralSettings.AgentLoginGuiStatisticsDisplay.Builder getAgentLoginGuiStatisticsDisplayBuilder() {
-      bitField0_ |= 0x20000000;
+      bitField0_ |= 0x40000000;
       onChanged();
       return getAgentLoginGuiStatisticsDisplayFieldBuilder().getBuilder();
     }
@@ -13173,7 +13256,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the phoneZipMetadataDisplay field is set.
      */
     public boolean hasPhoneZipMetadataDisplay() {
-      return ((bitField0_ & 0x40000000) != 0);
+      return ((bitField0_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -13206,7 +13289,7 @@ private static final long serialVersionUID = 0L;
       } else {
         phoneZipMetadataDisplayBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x40000000;
+      bitField0_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -13224,7 +13307,7 @@ private static final long serialVersionUID = 0L;
       } else {
         phoneZipMetadataDisplayBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x40000000;
+      bitField0_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -13237,7 +13320,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePhoneZipMetadataDisplay(com.tcn.cloud.api.api.commons.org.GeneralSettings.PhoneZipMetadataDisplay value) {
       if (phoneZipMetadataDisplayBuilder_ == null) {
-        if (((bitField0_ & 0x40000000) != 0) &&
+        if (((bitField0_ & 0x80000000) != 0) &&
           phoneZipMetadataDisplay_ != null &&
           phoneZipMetadataDisplay_ != com.tcn.cloud.api.api.commons.org.GeneralSettings.PhoneZipMetadataDisplay.getDefaultInstance()) {
           getPhoneZipMetadataDisplayBuilder().mergeFrom(value);
@@ -13247,7 +13330,7 @@ private static final long serialVersionUID = 0L;
       } else {
         phoneZipMetadataDisplayBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x40000000;
+      bitField0_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -13259,7 +13342,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.PhoneZipMetadataDisplay phone_zip_metadata_display = 510 [json_name = "phoneZipMetadataDisplay"];</code>
      */
     public Builder clearPhoneZipMetadataDisplay() {
-      bitField0_ = (bitField0_ & ~0x40000000);
+      bitField0_ = (bitField0_ & ~0x80000000);
       phoneZipMetadataDisplay_ = null;
       if (phoneZipMetadataDisplayBuilder_ != null) {
         phoneZipMetadataDisplayBuilder_.dispose();
@@ -13276,7 +13359,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.PhoneZipMetadataDisplay phone_zip_metadata_display = 510 [json_name = "phoneZipMetadataDisplay"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.GeneralSettings.PhoneZipMetadataDisplay.Builder getPhoneZipMetadataDisplayBuilder() {
-      bitField0_ |= 0x40000000;
+      bitField0_ |= 0x80000000;
       onChanged();
       return getPhoneZipMetadataDisplayFieldBuilder().getBuilder();
     }
@@ -13341,7 +13424,7 @@ private static final long serialVersionUID = 0L;
     public Builder setDisplaySkills(boolean value) {
 
       displaySkills_ = value;
-      bitField0_ |= 0x80000000;
+      bitField1_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -13354,7 +13437,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplaySkills() {
-      bitField0_ = (bitField0_ & ~0x80000000);
+      bitField1_ = (bitField1_ & ~0x00000001);
       displaySkills_ = false;
       onChanged();
       return this;
@@ -13385,7 +13468,7 @@ private static final long serialVersionUID = 0L;
     public Builder setDisplayWebLinks(boolean value) {
 
       displayWebLinks_ = value;
-      bitField1_ |= 0x00000001;
+      bitField1_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -13398,7 +13481,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayWebLinks() {
-      bitField1_ = (bitField1_ & ~0x00000001);
+      bitField1_ = (bitField1_ & ~0x00000002);
       displayWebLinks_ = false;
       onChanged();
       return this;
@@ -13429,7 +13512,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEnableAgentHuntGroupReassignment(boolean value) {
 
       enableAgentHuntGroupReassignment_ = value;
-      bitField1_ |= 0x00000002;
+      bitField1_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -13442,7 +13525,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableAgentHuntGroupReassignment() {
-      bitField1_ = (bitField1_ & ~0x00000002);
+      bitField1_ = (bitField1_ & ~0x00000004);
       enableAgentHuntGroupReassignment_ = false;
       onChanged();
       return this;
@@ -13460,7 +13543,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the disallowedHuntGroups field is set.
      */
     public boolean hasDisallowedHuntGroups() {
-      return ((bitField1_ & 0x00000004) != 0);
+      return ((bitField1_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -13493,7 +13576,7 @@ private static final long serialVersionUID = 0L;
       } else {
         disallowedHuntGroupsBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x00000004;
+      bitField1_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -13511,7 +13594,7 @@ private static final long serialVersionUID = 0L;
       } else {
         disallowedHuntGroupsBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x00000004;
+      bitField1_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -13524,7 +13607,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDisallowedHuntGroups(com.tcn.cloud.api.api.commons.org.GeneralSettings.DisallowedHuntGroups value) {
       if (disallowedHuntGroupsBuilder_ == null) {
-        if (((bitField1_ & 0x00000004) != 0) &&
+        if (((bitField1_ & 0x00000008) != 0) &&
           disallowedHuntGroups_ != null &&
           disallowedHuntGroups_ != com.tcn.cloud.api.api.commons.org.GeneralSettings.DisallowedHuntGroups.getDefaultInstance()) {
           getDisallowedHuntGroupsBuilder().mergeFrom(value);
@@ -13534,7 +13617,7 @@ private static final long serialVersionUID = 0L;
       } else {
         disallowedHuntGroupsBuilder_.mergeFrom(value);
       }
-      bitField1_ |= 0x00000004;
+      bitField1_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -13546,7 +13629,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.DisallowedHuntGroups disallowed_hunt_groups = 601 [json_name = "disallowedHuntGroups"];</code>
      */
     public Builder clearDisallowedHuntGroups() {
-      bitField1_ = (bitField1_ & ~0x00000004);
+      bitField1_ = (bitField1_ & ~0x00000008);
       disallowedHuntGroups_ = null;
       if (disallowedHuntGroupsBuilder_ != null) {
         disallowedHuntGroupsBuilder_.dispose();
@@ -13563,7 +13646,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.DisallowedHuntGroups disallowed_hunt_groups = 601 [json_name = "disallowedHuntGroups"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.GeneralSettings.DisallowedHuntGroups.Builder getDisallowedHuntGroupsBuilder() {
-      bitField1_ |= 0x00000004;
+      bitField1_ |= 0x00000008;
       onChanged();
       return getDisallowedHuntGroupsFieldBuilder().getBuilder();
     }
@@ -13628,7 +13711,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEnableManualApprovalOfCalls(boolean value) {
 
       enableManualApprovalOfCalls_ = value;
-      bitField1_ |= 0x00000008;
+      bitField1_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -13641,7 +13724,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableManualApprovalOfCalls() {
-      bitField1_ = (bitField1_ & ~0x00000008);
+      bitField1_ = (bitField1_ & ~0x00000010);
       enableManualApprovalOfCalls_ = false;
       onChanged();
       return this;
@@ -13672,7 +13755,7 @@ private static final long serialVersionUID = 0L;
     public Builder setRequireManualApprovalNumber(boolean value) {
 
       requireManualApprovalNumber_ = value;
-      bitField1_ |= 0x00000010;
+      bitField1_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -13685,7 +13768,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequireManualApprovalNumber() {
-      bitField1_ = (bitField1_ & ~0x00000010);
+      bitField1_ = (bitField1_ & ~0x00000020);
       requireManualApprovalNumber_ = false;
       onChanged();
       return this;
@@ -13716,7 +13799,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEnableManualApprovalOfSms(boolean value) {
 
       enableManualApprovalOfSms_ = value;
-      bitField1_ |= 0x00000020;
+      bitField1_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -13729,7 +13812,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableManualApprovalOfSms() {
-      bitField1_ = (bitField1_ & ~0x00000020);
+      bitField1_ = (bitField1_ & ~0x00000040);
       enableManualApprovalOfSms_ = false;
       onChanged();
       return this;
@@ -13762,7 +13845,7 @@ private static final long serialVersionUID = 0L;
     public Builder setRequireManualApprovalNumberSms(boolean value) {
 
       requireManualApprovalNumberSms_ = value;
-      bitField1_ |= 0x00000040;
+      bitField1_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -13776,7 +13859,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequireManualApprovalNumberSms() {
-      bitField1_ = (bitField1_ & ~0x00000040);
+      bitField1_ = (bitField1_ & ~0x00000080);
       requireManualApprovalNumberSms_ = false;
       onChanged();
       return this;
@@ -13807,7 +13890,7 @@ private static final long serialVersionUID = 0L;
     public Builder setDisableRejectOptionForApprovers(boolean value) {
 
       disableRejectOptionForApprovers_ = value;
-      bitField1_ |= 0x00000080;
+      bitField1_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -13820,7 +13903,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisableRejectOptionForApprovers() {
-      bitField1_ = (bitField1_ & ~0x00000080);
+      bitField1_ = (bitField1_ & ~0x00000100);
       disableRejectOptionForApprovers_ = false;
       onChanged();
       return this;
@@ -13838,7 +13921,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the alphanumericKeypad field is set.
      */
     public boolean hasAlphanumericKeypad() {
-      return ((bitField1_ & 0x00000100) != 0);
+      return ((bitField1_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -13871,7 +13954,7 @@ private static final long serialVersionUID = 0L;
       } else {
         alphanumericKeypadBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x00000100;
+      bitField1_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -13889,7 +13972,7 @@ private static final long serialVersionUID = 0L;
       } else {
         alphanumericKeypadBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x00000100;
+      bitField1_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -13902,7 +13985,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAlphanumericKeypad(com.tcn.cloud.api.api.commons.org.GeneralSettings.AlphanumericKeypad value) {
       if (alphanumericKeypadBuilder_ == null) {
-        if (((bitField1_ & 0x00000100) != 0) &&
+        if (((bitField1_ & 0x00000200) != 0) &&
           alphanumericKeypad_ != null &&
           alphanumericKeypad_ != com.tcn.cloud.api.api.commons.org.GeneralSettings.AlphanumericKeypad.getDefaultInstance()) {
           getAlphanumericKeypadBuilder().mergeFrom(value);
@@ -13912,7 +13995,7 @@ private static final long serialVersionUID = 0L;
       } else {
         alphanumericKeypadBuilder_.mergeFrom(value);
       }
-      bitField1_ |= 0x00000100;
+      bitField1_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -13924,7 +14007,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.AlphanumericKeypad alphanumeric_keypad = 800 [json_name = "alphanumericKeypad"];</code>
      */
     public Builder clearAlphanumericKeypad() {
-      bitField1_ = (bitField1_ & ~0x00000100);
+      bitField1_ = (bitField1_ & ~0x00000200);
       alphanumericKeypad_ = null;
       if (alphanumericKeypadBuilder_ != null) {
         alphanumericKeypadBuilder_.dispose();
@@ -13941,7 +14024,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.AlphanumericKeypad alphanumeric_keypad = 800 [json_name = "alphanumericKeypad"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.GeneralSettings.AlphanumericKeypad.Builder getAlphanumericKeypadBuilder() {
-      bitField1_ |= 0x00000100;
+      bitField1_ |= 0x00000200;
       onChanged();
       return getAlphanumericKeypadFieldBuilder().getBuilder();
     }
@@ -14006,7 +14089,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEnableCallDesktopNotifications(boolean value) {
 
       enableCallDesktopNotifications_ = value;
-      bitField1_ |= 0x00000200;
+      bitField1_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -14019,7 +14102,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableCallDesktopNotifications() {
-      bitField1_ = (bitField1_ & ~0x00000200);
+      bitField1_ = (bitField1_ & ~0x00000400);
       enableCallDesktopNotifications_ = false;
       onChanged();
       return this;
@@ -14039,7 +14122,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the inboundComplianceMetadata field is set.
      */
     public boolean hasInboundComplianceMetadata() {
-      return ((bitField1_ & 0x00000400) != 0);
+      return ((bitField1_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -14076,7 +14159,7 @@ private static final long serialVersionUID = 0L;
       } else {
         inboundComplianceMetadataBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x00000400;
+      bitField1_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -14096,7 +14179,7 @@ private static final long serialVersionUID = 0L;
       } else {
         inboundComplianceMetadataBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x00000400;
+      bitField1_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -14111,7 +14194,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeInboundComplianceMetadata(com.tcn.cloud.api.api.commons.org.GeneralSettings.InboundComplianceMetadata value) {
       if (inboundComplianceMetadataBuilder_ == null) {
-        if (((bitField1_ & 0x00000400) != 0) &&
+        if (((bitField1_ & 0x00000800) != 0) &&
           inboundComplianceMetadata_ != null &&
           inboundComplianceMetadata_ != com.tcn.cloud.api.api.commons.org.GeneralSettings.InboundComplianceMetadata.getDefaultInstance()) {
           getInboundComplianceMetadataBuilder().mergeFrom(value);
@@ -14121,7 +14204,7 @@ private static final long serialVersionUID = 0L;
       } else {
         inboundComplianceMetadataBuilder_.mergeFrom(value);
       }
-      bitField1_ |= 0x00000400;
+      bitField1_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -14135,7 +14218,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.InboundComplianceMetadata inbound_compliance_metadata = 802 [json_name = "inboundComplianceMetadata"];</code>
      */
     public Builder clearInboundComplianceMetadata() {
-      bitField1_ = (bitField1_ & ~0x00000400);
+      bitField1_ = (bitField1_ & ~0x00000800);
       inboundComplianceMetadata_ = null;
       if (inboundComplianceMetadataBuilder_ != null) {
         inboundComplianceMetadataBuilder_.dispose();
@@ -14154,7 +14237,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.InboundComplianceMetadata inbound_compliance_metadata = 802 [json_name = "inboundComplianceMetadata"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.GeneralSettings.InboundComplianceMetadata.Builder getInboundComplianceMetadataBuilder() {
-      bitField1_ |= 0x00000400;
+      bitField1_ |= 0x00000800;
       onChanged();
       return getInboundComplianceMetadataFieldBuilder().getBuilder();
     }
@@ -14225,7 +14308,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEnableAgentIntercom(boolean value) {
 
       enableAgentIntercom_ = value;
-      bitField1_ |= 0x00000800;
+      bitField1_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -14239,7 +14322,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableAgentIntercom() {
-      bitField1_ = (bitField1_ & ~0x00000800);
+      bitField1_ = (bitField1_ & ~0x00001000);
       enableAgentIntercom_ = false;
       onChanged();
       return this;
@@ -14258,7 +14341,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the prepareStateCallDelivery field is set.
      */
     public boolean hasPrepareStateCallDelivery() {
-      return ((bitField1_ & 0x00001000) != 0);
+      return ((bitField1_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -14293,7 +14376,7 @@ private static final long serialVersionUID = 0L;
       } else {
         prepareStateCallDeliveryBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x00001000;
+      bitField1_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -14312,7 +14395,7 @@ private static final long serialVersionUID = 0L;
       } else {
         prepareStateCallDeliveryBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x00001000;
+      bitField1_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -14326,7 +14409,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePrepareStateCallDelivery(com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery value) {
       if (prepareStateCallDeliveryBuilder_ == null) {
-        if (((bitField1_ & 0x00001000) != 0) &&
+        if (((bitField1_ & 0x00002000) != 0) &&
           prepareStateCallDelivery_ != null &&
           prepareStateCallDelivery_ != com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.getDefaultInstance()) {
           getPrepareStateCallDeliveryBuilder().mergeFrom(value);
@@ -14336,7 +14419,7 @@ private static final long serialVersionUID = 0L;
       } else {
         prepareStateCallDeliveryBuilder_.mergeFrom(value);
       }
-      bitField1_ |= 0x00001000;
+      bitField1_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -14349,7 +14432,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
      */
     public Builder clearPrepareStateCallDelivery() {
-      bitField1_ = (bitField1_ & ~0x00001000);
+      bitField1_ = (bitField1_ & ~0x00002000);
       prepareStateCallDelivery_ = null;
       if (prepareStateCallDeliveryBuilder_ != null) {
         prepareStateCallDeliveryBuilder_.dispose();
@@ -14367,7 +14450,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.PrepareStateCallDelivery prepare_state_call_delivery = 804 [json_name = "prepareStateCallDelivery"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.GeneralSettings.PrepareStateCallDelivery.Builder getPrepareStateCallDeliveryBuilder() {
-      bitField1_ |= 0x00001000;
+      bitField1_ |= 0x00002000;
       onChanged();
       return getPrepareStateCallDeliveryFieldBuilder().getBuilder();
     }
