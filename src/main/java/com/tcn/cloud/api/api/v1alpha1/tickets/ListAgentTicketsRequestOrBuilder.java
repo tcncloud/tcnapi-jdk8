@@ -39,27 +39,27 @@ public interface ListAgentTicketsRequestOrBuilder extends
    *defines the search by field
    * </pre>
    *
-   * <code>.google.protobuf.FieldMask filter_masks = 2 [json_name = "filterMasks"];</code>
-   * @return Whether the filterMasks field is set.
+   * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
+   * @return Whether the filterMask field is set.
    */
-  boolean hasFilterMasks();
+  boolean hasFilterMask();
   /**
    * <pre>
    *defines the search by field
    * </pre>
    *
-   * <code>.google.protobuf.FieldMask filter_masks = 2 [json_name = "filterMasks"];</code>
-   * @return The filterMasks.
+   * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
+   * @return The filterMask.
    */
-  com.google.protobuf.FieldMask getFilterMasks();
+  com.google.protobuf.FieldMask getFilterMask();
   /**
    * <pre>
    *defines the search by field
    * </pre>
    *
-   * <code>.google.protobuf.FieldMask filter_masks = 2 [json_name = "filterMasks"];</code>
+   * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
    */
-  com.google.protobuf.FieldMaskOrBuilder getFilterMasksOrBuilder();
+  com.google.protobuf.FieldMaskOrBuilder getFilterMaskOrBuilder();
 
   /**
    * <pre>

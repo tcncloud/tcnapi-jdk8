@@ -81,42 +81,42 @@ private static final long serialVersionUID = 0L;
     return selectFieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : selectFieldMask_;
   }
 
-  public static final int FILTER_MASKS_FIELD_NUMBER = 2;
-  private com.google.protobuf.FieldMask filterMasks_;
+  public static final int FILTER_MASK_FIELD_NUMBER = 2;
+  private com.google.protobuf.FieldMask filterMask_;
   /**
    * <pre>
    *defines the search by field
    * </pre>
    *
-   * <code>.google.protobuf.FieldMask filter_masks = 2 [json_name = "filterMasks"];</code>
-   * @return Whether the filterMasks field is set.
+   * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
+   * @return Whether the filterMask field is set.
    */
   @java.lang.Override
-  public boolean hasFilterMasks() {
-    return filterMasks_ != null;
+  public boolean hasFilterMask() {
+    return filterMask_ != null;
   }
   /**
    * <pre>
    *defines the search by field
    * </pre>
    *
-   * <code>.google.protobuf.FieldMask filter_masks = 2 [json_name = "filterMasks"];</code>
-   * @return The filterMasks.
+   * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
+   * @return The filterMask.
    */
   @java.lang.Override
-  public com.google.protobuf.FieldMask getFilterMasks() {
-    return filterMasks_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : filterMasks_;
+  public com.google.protobuf.FieldMask getFilterMask() {
+    return filterMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : filterMask_;
   }
   /**
    * <pre>
    *defines the search by field
    * </pre>
    *
-   * <code>.google.protobuf.FieldMask filter_masks = 2 [json_name = "filterMasks"];</code>
+   * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.FieldMaskOrBuilder getFilterMasksOrBuilder() {
-    return filterMasks_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : filterMasks_;
+  public com.google.protobuf.FieldMaskOrBuilder getFilterMaskOrBuilder() {
+    return filterMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : filterMask_;
   }
 
   public static final int PARTICIPANT_ID_FIELD_NUMBER = 3;
@@ -198,8 +198,8 @@ private static final long serialVersionUID = 0L;
     if (selectFieldMask_ != null) {
       output.writeMessage(1, getSelectFieldMask());
     }
-    if (filterMasks_ != null) {
-      output.writeMessage(2, getFilterMasks());
+    if (filterMask_ != null) {
+      output.writeMessage(2, getFilterMask());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(participantId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, participantId_);
@@ -220,9 +220,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getSelectFieldMask());
     }
-    if (filterMasks_ != null) {
+    if (filterMask_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getFilterMasks());
+        .computeMessageSize(2, getFilterMask());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(participantId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, participantId_);
@@ -251,10 +251,10 @@ private static final long serialVersionUID = 0L;
       if (!getSelectFieldMask()
           .equals(other.getSelectFieldMask())) return false;
     }
-    if (hasFilterMasks() != other.hasFilterMasks()) return false;
-    if (hasFilterMasks()) {
-      if (!getFilterMasks()
-          .equals(other.getFilterMasks())) return false;
+    if (hasFilterMask() != other.hasFilterMask()) return false;
+    if (hasFilterMask()) {
+      if (!getFilterMask()
+          .equals(other.getFilterMask())) return false;
     }
     if (!getParticipantId()
         .equals(other.getParticipantId())) return false;
@@ -275,9 +275,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SELECT_FIELD_MASK_FIELD_NUMBER;
       hash = (53 * hash) + getSelectFieldMask().hashCode();
     }
-    if (hasFilterMasks()) {
-      hash = (37 * hash) + FILTER_MASKS_FIELD_NUMBER;
-      hash = (53 * hash) + getFilterMasks().hashCode();
+    if (hasFilterMask()) {
+      hash = (37 * hash) + FILTER_MASK_FIELD_NUMBER;
+      hash = (53 * hash) + getFilterMask().hashCode();
     }
     hash = (37 * hash) + PARTICIPANT_ID_FIELD_NUMBER;
     hash = (53 * hash) + getParticipantId().hashCode();
@@ -424,10 +424,10 @@ private static final long serialVersionUID = 0L;
         selectFieldMaskBuilder_.dispose();
         selectFieldMaskBuilder_ = null;
       }
-      filterMasks_ = null;
-      if (filterMasksBuilder_ != null) {
-        filterMasksBuilder_.dispose();
-        filterMasksBuilder_ = null;
+      filterMask_ = null;
+      if (filterMaskBuilder_ != null) {
+        filterMaskBuilder_.dispose();
+        filterMaskBuilder_ = null;
       }
       participantId_ = "";
       agentViewLimit_ = 0L;
@@ -470,9 +470,9 @@ private static final long serialVersionUID = 0L;
             : selectFieldMaskBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.filterMasks_ = filterMasksBuilder_ == null
-            ? filterMasks_
-            : filterMasksBuilder_.build();
+        result.filterMask_ = filterMaskBuilder_ == null
+            ? filterMask_
+            : filterMaskBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.participantId_ = participantId_;
@@ -529,8 +529,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasSelectFieldMask()) {
         mergeSelectFieldMask(other.getSelectFieldMask());
       }
-      if (other.hasFilterMasks()) {
-        mergeFilterMasks(other.getFilterMasks());
+      if (other.hasFilterMask()) {
+        mergeFilterMask(other.getFilterMask());
       }
       if (!other.getParticipantId().isEmpty()) {
         participantId_ = other.participantId_;
@@ -575,7 +575,7 @@ private static final long serialVersionUID = 0L;
             } // case 10
             case 18: {
               input.readMessage(
-                  getFilterMasksFieldBuilder().getBuilder(),
+                  getFilterMaskFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
@@ -762,18 +762,18 @@ private static final long serialVersionUID = 0L;
       return selectFieldMaskBuilder_;
     }
 
-    private com.google.protobuf.FieldMask filterMasks_;
+    private com.google.protobuf.FieldMask filterMask_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> filterMasksBuilder_;
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> filterMaskBuilder_;
     /**
      * <pre>
      *defines the search by field
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask filter_masks = 2 [json_name = "filterMasks"];</code>
-     * @return Whether the filterMasks field is set.
+     * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
+     * @return Whether the filterMask field is set.
      */
-    public boolean hasFilterMasks() {
+    public boolean hasFilterMask() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
@@ -781,14 +781,14 @@ private static final long serialVersionUID = 0L;
      *defines the search by field
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask filter_masks = 2 [json_name = "filterMasks"];</code>
-     * @return The filterMasks.
+     * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
+     * @return The filterMask.
      */
-    public com.google.protobuf.FieldMask getFilterMasks() {
-      if (filterMasksBuilder_ == null) {
-        return filterMasks_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : filterMasks_;
+    public com.google.protobuf.FieldMask getFilterMask() {
+      if (filterMaskBuilder_ == null) {
+        return filterMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : filterMask_;
       } else {
-        return filterMasksBuilder_.getMessage();
+        return filterMaskBuilder_.getMessage();
       }
     }
     /**
@@ -796,16 +796,16 @@ private static final long serialVersionUID = 0L;
      *defines the search by field
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask filter_masks = 2 [json_name = "filterMasks"];</code>
+     * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
      */
-    public Builder setFilterMasks(com.google.protobuf.FieldMask value) {
-      if (filterMasksBuilder_ == null) {
+    public Builder setFilterMask(com.google.protobuf.FieldMask value) {
+      if (filterMaskBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        filterMasks_ = value;
+        filterMask_ = value;
       } else {
-        filterMasksBuilder_.setMessage(value);
+        filterMaskBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000002;
       onChanged();
@@ -816,14 +816,14 @@ private static final long serialVersionUID = 0L;
      *defines the search by field
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask filter_masks = 2 [json_name = "filterMasks"];</code>
+     * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
      */
-    public Builder setFilterMasks(
+    public Builder setFilterMask(
         com.google.protobuf.FieldMask.Builder builderForValue) {
-      if (filterMasksBuilder_ == null) {
-        filterMasks_ = builderForValue.build();
+      if (filterMaskBuilder_ == null) {
+        filterMask_ = builderForValue.build();
       } else {
-        filterMasksBuilder_.setMessage(builderForValue.build());
+        filterMaskBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000002;
       onChanged();
@@ -834,19 +834,19 @@ private static final long serialVersionUID = 0L;
      *defines the search by field
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask filter_masks = 2 [json_name = "filterMasks"];</code>
+     * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
      */
-    public Builder mergeFilterMasks(com.google.protobuf.FieldMask value) {
-      if (filterMasksBuilder_ == null) {
+    public Builder mergeFilterMask(com.google.protobuf.FieldMask value) {
+      if (filterMaskBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
-          filterMasks_ != null &&
-          filterMasks_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
-          getFilterMasksBuilder().mergeFrom(value);
+          filterMask_ != null &&
+          filterMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getFilterMaskBuilder().mergeFrom(value);
         } else {
-          filterMasks_ = value;
+          filterMask_ = value;
         }
       } else {
-        filterMasksBuilder_.mergeFrom(value);
+        filterMaskBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000002;
       onChanged();
@@ -857,14 +857,14 @@ private static final long serialVersionUID = 0L;
      *defines the search by field
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask filter_masks = 2 [json_name = "filterMasks"];</code>
+     * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
      */
-    public Builder clearFilterMasks() {
+    public Builder clearFilterMask() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      filterMasks_ = null;
-      if (filterMasksBuilder_ != null) {
-        filterMasksBuilder_.dispose();
-        filterMasksBuilder_ = null;
+      filterMask_ = null;
+      if (filterMaskBuilder_ != null) {
+        filterMaskBuilder_.dispose();
+        filterMaskBuilder_ = null;
       }
       onChanged();
       return this;
@@ -874,26 +874,26 @@ private static final long serialVersionUID = 0L;
      *defines the search by field
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask filter_masks = 2 [json_name = "filterMasks"];</code>
+     * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
      */
-    public com.google.protobuf.FieldMask.Builder getFilterMasksBuilder() {
+    public com.google.protobuf.FieldMask.Builder getFilterMaskBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
-      return getFilterMasksFieldBuilder().getBuilder();
+      return getFilterMaskFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      *defines the search by field
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask filter_masks = 2 [json_name = "filterMasks"];</code>
+     * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
      */
-    public com.google.protobuf.FieldMaskOrBuilder getFilterMasksOrBuilder() {
-      if (filterMasksBuilder_ != null) {
-        return filterMasksBuilder_.getMessageOrBuilder();
+    public com.google.protobuf.FieldMaskOrBuilder getFilterMaskOrBuilder() {
+      if (filterMaskBuilder_ != null) {
+        return filterMaskBuilder_.getMessageOrBuilder();
       } else {
-        return filterMasks_ == null ?
-            com.google.protobuf.FieldMask.getDefaultInstance() : filterMasks_;
+        return filterMask_ == null ?
+            com.google.protobuf.FieldMask.getDefaultInstance() : filterMask_;
       }
     }
     /**
@@ -901,20 +901,20 @@ private static final long serialVersionUID = 0L;
      *defines the search by field
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask filter_masks = 2 [json_name = "filterMasks"];</code>
+     * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
-        getFilterMasksFieldBuilder() {
-      if (filterMasksBuilder_ == null) {
-        filterMasksBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getFilterMaskFieldBuilder() {
+      if (filterMaskBuilder_ == null) {
+        filterMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
-                getFilterMasks(),
+                getFilterMask(),
                 getParentForChildren(),
                 isClean());
-        filterMasks_ = null;
+        filterMask_ = null;
       }
-      return filterMasksBuilder_;
+      return filterMaskBuilder_;
     }
 
     private java.lang.Object participantId_ = "";
