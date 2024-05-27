@@ -5,22 +5,21 @@ package com.tcn.cloud.api.api.v1alpha1.tickets;
 
 /**
  * <pre>
- * ListAvailableAgentTicketsResponse -
+ * ListAgentTicketsResponse -
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.tickets.ListAvailableAgentTicketsResponse}
+ * Protobuf type {@code api.v1alpha1.tickets.ListAgentTicketsResponse}
  */
-public final class ListAvailableAgentTicketsResponse extends
+public final class ListAgentTicketsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.tickets.ListAvailableAgentTicketsResponse)
-    ListAvailableAgentTicketsResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.tickets.ListAgentTicketsResponse)
+    ListAgentTicketsResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ListAvailableAgentTicketsResponse.newBuilder() to construct.
-  private ListAvailableAgentTicketsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ListAgentTicketsResponse.newBuilder() to construct.
+  private ListAgentTicketsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ListAvailableAgentTicketsResponse() {
-    ticketSid_ = emptyLongList();
+  private ListAgentTicketsResponse() {
     ticket_ = java.util.Collections.emptyList();
   }
 
@@ -28,69 +27,34 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ListAvailableAgentTicketsResponse();
+    return new ListAgentTicketsResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListAvailableAgentTicketsResponse_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListAgentTicketsResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListAvailableAgentTicketsResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListAgentTicketsResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.class, com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse.class, com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse.Builder.class);
   }
 
-  public static final int TICKET_SID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList ticketSid_;
-  /**
-   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
-   * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=159
-   * @return A list containing the ticketSid.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public java.util.List<java.lang.Long>
-      getTicketSidList() {
-    return ticketSid_;
-  }
-  /**
-   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
-   * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=159
-   * @return The count of ticketSid.
-   */
-  @java.lang.Deprecated public int getTicketSidCount() {
-    return ticketSid_.size();
-  }
-  /**
-   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
-   * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=159
-   * @param index The index of the element to return.
-   * @return The ticketSid at the given index.
-   */
-  @java.lang.Deprecated public long getTicketSid(int index) {
-    return ticketSid_.getLong(index);
-  }
-  private int ticketSidMemoizedSerializedSize = -1;
-
-  public static final int TICKET_FIELD_NUMBER = 2;
+  public static final int TICKET_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.Ticket> ticket_;
   /**
-   * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+   * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
    */
   @java.lang.Override
   public java.util.List<com.tcn.cloud.api.api.commons.Ticket> getTicketList() {
     return ticket_;
   }
   /**
-   * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+   * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.commons.TicketOrBuilder> 
@@ -98,21 +62,21 @@ private static final long serialVersionUID = 0L;
     return ticket_;
   }
   /**
-   * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+   * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
    */
   @java.lang.Override
   public int getTicketCount() {
     return ticket_.size();
   }
   /**
-   * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+   * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.Ticket getTicket(int index) {
     return ticket_.get(index);
   }
   /**
-   * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+   * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.TicketOrBuilder getTicketOrBuilder(
@@ -134,16 +98,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    getSerializedSize();
-    if (getTicketSidList().size() > 0) {
-      output.writeUInt32NoTag(10);
-      output.writeUInt32NoTag(ticketSidMemoizedSerializedSize);
-    }
-    for (int i = 0; i < ticketSid_.size(); i++) {
-      output.writeInt64NoTag(ticketSid_.getLong(i));
-    }
     for (int i = 0; i < ticket_.size(); i++) {
-      output.writeMessage(2, ticket_.get(i));
+      output.writeMessage(1, ticket_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -154,23 +110,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    {
-      int dataSize = 0;
-      for (int i = 0; i < ticketSid_.size(); i++) {
-        dataSize += com.google.protobuf.CodedOutputStream
-          .computeInt64SizeNoTag(ticketSid_.getLong(i));
-      }
-      size += dataSize;
-      if (!getTicketSidList().isEmpty()) {
-        size += 1;
-        size += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(dataSize);
-      }
-      ticketSidMemoizedSerializedSize = dataSize;
-    }
     for (int i = 0; i < ticket_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, ticket_.get(i));
+        .computeMessageSize(1, ticket_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -182,13 +124,11 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse other = (com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse) obj;
+    com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse other = (com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse) obj;
 
-    if (!getTicketSidList()
-        .equals(other.getTicketSidList())) return false;
     if (!getTicketList()
         .equals(other.getTicketList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -202,10 +142,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getTicketSidCount() > 0) {
-      hash = (37 * hash) + TICKET_SID_FIELD_NUMBER;
-      hash = (53 * hash) + getTicketSidList().hashCode();
-    }
     if (getTicketCount() > 0) {
       hash = (37 * hash) + TICKET_FIELD_NUMBER;
       hash = (53 * hash) + getTicketList().hashCode();
@@ -215,44 +151,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -260,26 +196,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -292,7 +228,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -309,29 +245,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ListAvailableAgentTicketsResponse -
+   * ListAgentTicketsResponse -
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.tickets.ListAvailableAgentTicketsResponse}
+   * Protobuf type {@code api.v1alpha1.tickets.ListAgentTicketsResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.tickets.ListAvailableAgentTicketsResponse)
-      com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.tickets.ListAgentTicketsResponse)
+      com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListAvailableAgentTicketsResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListAgentTicketsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListAvailableAgentTicketsResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListAgentTicketsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.class, com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse.class, com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse.newBuilder()
     private Builder() {
 
     }
@@ -345,31 +281,30 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      ticketSid_ = emptyLongList();
       if (ticketBuilder_ == null) {
         ticket_ = java.util.Collections.emptyList();
       } else {
         ticket_ = null;
         ticketBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListAvailableAgentTicketsResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListAgentTicketsResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse build() {
-      com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -377,24 +312,19 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse result = new com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse(this);
+    public com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse result = new com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        ticketSid_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.ticketSid_ = ticketSid_;
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse result) {
       if (ticketBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           ticket_ = java.util.Collections.unmodifiableList(ticket_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.ticket_ = ticket_;
       } else {
@@ -402,7 +332,7 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse result) {
       int from_bitField0_ = bitField0_;
     }
 
@@ -440,31 +370,21 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.getDefaultInstance()) return this;
-      if (!other.ticketSid_.isEmpty()) {
-        if (ticketSid_.isEmpty()) {
-          ticketSid_ = other.ticketSid_;
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          ensureTicketSidIsMutable();
-          ticketSid_.addAll(other.ticketSid_);
-        }
-        onChanged();
-      }
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse.getDefaultInstance()) return this;
       if (ticketBuilder_ == null) {
         if (!other.ticket_.isEmpty()) {
           if (ticket_.isEmpty()) {
             ticket_ = other.ticket_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureTicketIsMutable();
             ticket_.addAll(other.ticket_);
@@ -477,7 +397,7 @@ private static final long serialVersionUID = 0L;
             ticketBuilder_.dispose();
             ticketBuilder_ = null;
             ticket_ = other.ticket_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             ticketBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTicketFieldBuilder() : null;
@@ -512,23 +432,7 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              long v = input.readInt64();
-              ensureTicketSidIsMutable();
-              ticketSid_.addLong(v);
-              break;
-            } // case 8
             case 10: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureTicketSidIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                ticketSid_.addLong(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 10
-            case 18: {
               com.tcn.cloud.api.api.commons.Ticket m =
                   input.readMessage(
                       com.tcn.cloud.api.api.commons.Ticket.parser(),
@@ -540,7 +444,7 @@ private static final long serialVersionUID = 0L;
                 ticketBuilder_.addMessage(m);
               }
               break;
-            } // case 18
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -558,107 +462,12 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.Internal.LongList ticketSid_ = emptyLongList();
-    private void ensureTicketSidIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
-        ticketSid_ = mutableCopy(ticketSid_);
-        bitField0_ |= 0x00000001;
-      }
-    }
-    /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
-     * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=159
-     * @return A list containing the ticketSid.
-     */
-    @java.lang.Deprecated public java.util.List<java.lang.Long>
-        getTicketSidList() {
-      return ((bitField0_ & 0x00000001) != 0) ?
-               java.util.Collections.unmodifiableList(ticketSid_) : ticketSid_;
-    }
-    /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
-     * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=159
-     * @return The count of ticketSid.
-     */
-    @java.lang.Deprecated public int getTicketSidCount() {
-      return ticketSid_.size();
-    }
-    /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
-     * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=159
-     * @param index The index of the element to return.
-     * @return The ticketSid at the given index.
-     */
-    @java.lang.Deprecated public long getTicketSid(int index) {
-      return ticketSid_.getLong(index);
-    }
-    /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
-     * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=159
-     * @param index The index to set the value at.
-     * @param value The ticketSid to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setTicketSid(
-        int index, long value) {
-
-      ensureTicketSidIsMutable();
-      ticketSid_.setLong(index, value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
-     * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=159
-     * @param value The ticketSid to add.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder addTicketSid(long value) {
-
-      ensureTicketSidIsMutable();
-      ticketSid_.addLong(value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
-     * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=159
-     * @param values The ticketSid to add.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder addAllTicketSid(
-        java.lang.Iterable<? extends java.lang.Long> values) {
-      ensureTicketSidIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, ticketSid_);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
-     * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=159
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder clearTicketSid() {
-      ticketSid_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-
     private java.util.List<com.tcn.cloud.api.api.commons.Ticket> ticket_ =
       java.util.Collections.emptyList();
     private void ensureTicketIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         ticket_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Ticket>(ticket_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -666,7 +475,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.Ticket, com.tcn.cloud.api.api.commons.Ticket.Builder, com.tcn.cloud.api.api.commons.TicketOrBuilder> ticketBuilder_;
 
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.Ticket> getTicketList() {
       if (ticketBuilder_ == null) {
@@ -676,7 +485,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public int getTicketCount() {
       if (ticketBuilder_ == null) {
@@ -686,7 +495,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public com.tcn.cloud.api.api.commons.Ticket getTicket(int index) {
       if (ticketBuilder_ == null) {
@@ -696,7 +505,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public Builder setTicket(
         int index, com.tcn.cloud.api.api.commons.Ticket value) {
@@ -713,7 +522,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public Builder setTicket(
         int index, com.tcn.cloud.api.api.commons.Ticket.Builder builderForValue) {
@@ -727,7 +536,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public Builder addTicket(com.tcn.cloud.api.api.commons.Ticket value) {
       if (ticketBuilder_ == null) {
@@ -743,7 +552,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public Builder addTicket(
         int index, com.tcn.cloud.api.api.commons.Ticket value) {
@@ -760,7 +569,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public Builder addTicket(
         com.tcn.cloud.api.api.commons.Ticket.Builder builderForValue) {
@@ -774,7 +583,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public Builder addTicket(
         int index, com.tcn.cloud.api.api.commons.Ticket.Builder builderForValue) {
@@ -788,7 +597,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public Builder addAllTicket(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.Ticket> values) {
@@ -803,12 +612,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public Builder clearTicket() {
       if (ticketBuilder_ == null) {
         ticket_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         ticketBuilder_.clear();
@@ -816,7 +625,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public Builder removeTicket(int index) {
       if (ticketBuilder_ == null) {
@@ -829,14 +638,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public com.tcn.cloud.api.api.commons.Ticket.Builder getTicketBuilder(
         int index) {
       return getTicketFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public com.tcn.cloud.api.api.commons.TicketOrBuilder getTicketOrBuilder(
         int index) {
@@ -846,7 +655,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.TicketOrBuilder> 
          getTicketOrBuilderList() {
@@ -857,14 +666,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public com.tcn.cloud.api.api.commons.Ticket.Builder addTicketBuilder() {
       return getTicketFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.commons.Ticket.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public com.tcn.cloud.api.api.commons.Ticket.Builder addTicketBuilder(
         int index) {
@@ -872,7 +681,7 @@ private static final long serialVersionUID = 0L;
           index, com.tcn.cloud.api.api.commons.Ticket.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     * <code>repeated .api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.Ticket.Builder> 
          getTicketBuilderList() {
@@ -885,7 +694,7 @@ private static final long serialVersionUID = 0L;
         ticketBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.Ticket, com.tcn.cloud.api.api.commons.Ticket.Builder, com.tcn.cloud.api.api.commons.TicketOrBuilder>(
                 ticket_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         ticket_ = null;
@@ -905,23 +714,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.tickets.ListAvailableAgentTicketsResponse)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.tickets.ListAgentTicketsResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.tickets.ListAvailableAgentTicketsResponse)
-  private static final com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.tickets.ListAgentTicketsResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ListAvailableAgentTicketsResponse>
-      PARSER = new com.google.protobuf.AbstractParser<ListAvailableAgentTicketsResponse>() {
+  private static final com.google.protobuf.Parser<ListAgentTicketsResponse>
+      PARSER = new com.google.protobuf.AbstractParser<ListAgentTicketsResponse>() {
     @java.lang.Override
-    public ListAvailableAgentTicketsResponse parsePartialFrom(
+    public ListAgentTicketsResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -940,17 +749,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ListAvailableAgentTicketsResponse> parser() {
+  public static com.google.protobuf.Parser<ListAgentTicketsResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ListAvailableAgentTicketsResponse> getParserForType() {
+  public com.google.protobuf.Parser<ListAgentTicketsResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
