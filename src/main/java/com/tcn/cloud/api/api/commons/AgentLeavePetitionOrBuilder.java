@@ -9,7 +9,7 @@ public interface AgentLeavePetitionOrBuilder extends
 
   /**
    * <pre>
-   * ID of the time off request.
+   * ID of the agent leave petition.
    * </pre>
    *
    * <code>int64 agent_leave_petition_id = 1 [json_name = "agentLeavePetitionId"];</code>
@@ -51,20 +51,20 @@ public interface AgentLeavePetitionOrBuilder extends
    * A comment sent by agent when the time off was requested.
    * </pre>
    *
-   * <code>string request_comment = 4 [json_name = "requestComment"];</code>
-   * @return The requestComment.
+   * <code>string petition_comment = 4 [json_name = "petitionComment"];</code>
+   * @return The petitionComment.
    */
-  java.lang.String getRequestComment();
+  java.lang.String getPetitionComment();
   /**
    * <pre>
    * A comment sent by agent when the time off was requested.
    * </pre>
    *
-   * <code>string request_comment = 4 [json_name = "requestComment"];</code>
-   * @return The bytes for requestComment.
+   * <code>string petition_comment = 4 [json_name = "petitionComment"];</code>
+   * @return The bytes for petitionComment.
    */
   com.google.protobuf.ByteString
-      getRequestCommentBytes();
+      getPetitionCommentBytes();
 
   /**
    * <pre>
