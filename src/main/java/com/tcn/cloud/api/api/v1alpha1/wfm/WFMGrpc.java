@@ -5226,66 +5226,66 @@ public final class WFMGrpc {
     return getRemoveAgentFromScheduleMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffResponse> getCreateAgentTimeOffMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionResponse> getCreateAgentLeavePetitionMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CreateAgentTimeOff",
-      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "CreateAgentLeavePetition",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffResponse> getCreateAgentTimeOffMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffResponse> getCreateAgentTimeOffMethod;
-    if ((getCreateAgentTimeOffMethod = WFMGrpc.getCreateAgentTimeOffMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionResponse> getCreateAgentLeavePetitionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionResponse> getCreateAgentLeavePetitionMethod;
+    if ((getCreateAgentLeavePetitionMethod = WFMGrpc.getCreateAgentLeavePetitionMethod) == null) {
       synchronized (WFMGrpc.class) {
-        if ((getCreateAgentTimeOffMethod = WFMGrpc.getCreateAgentTimeOffMethod) == null) {
-          WFMGrpc.getCreateAgentTimeOffMethod = getCreateAgentTimeOffMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffResponse>newBuilder()
+        if ((getCreateAgentLeavePetitionMethod = WFMGrpc.getCreateAgentLeavePetitionMethod) == null) {
+          WFMGrpc.getCreateAgentLeavePetitionMethod = getCreateAgentLeavePetitionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAgentTimeOff"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAgentLeavePetition"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateAgentTimeOff"))
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateAgentLeavePetition"))
               .build();
         }
       }
     }
-    return getCreateAgentTimeOffMethod;
+    return getCreateAgentLeavePetitionMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse> getListAgentTimeOffsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse> getListAgentLeavePetitionsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListAgentTimeOffs",
-      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "ListAgentLeavePetitions",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse> getListAgentTimeOffsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse> getListAgentTimeOffsMethod;
-    if ((getListAgentTimeOffsMethod = WFMGrpc.getListAgentTimeOffsMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse> getListAgentLeavePetitionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse> getListAgentLeavePetitionsMethod;
+    if ((getListAgentLeavePetitionsMethod = WFMGrpc.getListAgentLeavePetitionsMethod) == null) {
       synchronized (WFMGrpc.class) {
-        if ((getListAgentTimeOffsMethod = WFMGrpc.getListAgentTimeOffsMethod) == null) {
-          WFMGrpc.getListAgentTimeOffsMethod = getListAgentTimeOffsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse>newBuilder()
+        if ((getListAgentLeavePetitionsMethod = WFMGrpc.getListAgentLeavePetitionsMethod) == null) {
+          WFMGrpc.getListAgentLeavePetitionsMethod = getListAgentLeavePetitionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentTimeOffs"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentLeavePetitions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListAgentTimeOffs"))
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListAgentLeavePetitions"))
               .build();
         }
       }
     }
-    return getListAgentTimeOffsMethod;
+    return getListAgentLeavePetitionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest,
@@ -8100,7 +8100,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a time off request for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
+     * Creates an agent leave petition to request time off for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
      * The &#64;request_comment must be set with a value.
      * The &#64;requested_datetime_ranges may not overlap each other.
      * Errors:
@@ -8109,25 +8109,25 @@ public final class WFMGrpc {
      *   - grpc.NotFound: the &#64;wfm_agent_sid does not exist for the org sending the request.
      * </pre>
      */
-    default void createAgentTimeOff(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAgentTimeOffMethod(), responseObserver);
+    default void createAgentLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAgentLeavePetitionMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * Lists all time off requests for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
-     * If no &#64;wfm_agent_sids are provided, all time off requests overlapping &#64;datetime_range for the org sending the request will be returned.
-     * If &#64;include_archived is true, archived time off requests will be returned as well, otherwise archived requests will not be included.
-     * If no time off requests are found for the given parameters, an empty slice will be returned.
+     * Lists agent leave petitions for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
+     * If no &#64;wfm_agent_sids are provided, all agent leave petitions overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
+     * If no agent leave petitions are found for the given parameters, an empty slice will be returned.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when listing the time off requests.
+     *   - grpc.Internal: error occurs when listing the agent leave petitions.
      * </pre>
      */
-    default void listAgentTimeOffs(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentTimeOffsMethod(), responseObserver);
+    default void listAgentLeavePetitions(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentLeavePetitionsMethod(), responseObserver);
     }
 
     /**
@@ -11021,7 +11021,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a time off request for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
+     * Creates an agent leave petition to request time off for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
      * The &#64;request_comment must be set with a value.
      * The &#64;requested_datetime_ranges may not overlap each other.
      * Errors:
@@ -11030,27 +11030,27 @@ public final class WFMGrpc {
      *   - grpc.NotFound: the &#64;wfm_agent_sid does not exist for the org sending the request.
      * </pre>
      */
-    public void createAgentTimeOff(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffResponse> responseObserver) {
+    public void createAgentLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCreateAgentTimeOffMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCreateAgentLeavePetitionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      * <pre>
-     * Lists all time off requests for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
-     * If no &#64;wfm_agent_sids are provided, all time off requests overlapping &#64;datetime_range for the org sending the request will be returned.
-     * If &#64;include_archived is true, archived time off requests will be returned as well, otherwise archived requests will not be included.
-     * If no time off requests are found for the given parameters, an empty slice will be returned.
+     * Lists agent leave petitions for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
+     * If no &#64;wfm_agent_sids are provided, all agent leave petitions overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
+     * If no agent leave petitions are found for the given parameters, an empty slice will be returned.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when listing the time off requests.
+     *   - grpc.Internal: error occurs when listing the agent leave petitions.
      * </pre>
      */
-    public void listAgentTimeOffs(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse> responseObserver) {
+    public void listAgentLeavePetitions(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListAgentTimeOffsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListAgentLeavePetitionsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -13772,7 +13772,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a time off request for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
+     * Creates an agent leave petition to request time off for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
      * The &#64;request_comment must be set with a value.
      * The &#64;requested_datetime_ranges may not overlap each other.
      * Errors:
@@ -13781,25 +13781,25 @@ public final class WFMGrpc {
      *   - grpc.NotFound: the &#64;wfm_agent_sid does not exist for the org sending the request.
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffResponse createAgentTimeOff(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffRequest request) {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionResponse createAgentLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCreateAgentTimeOffMethod(), getCallOptions(), request);
+          getChannel(), getCreateAgentLeavePetitionMethod(), getCallOptions(), request);
     }
 
     /**
      * <pre>
-     * Lists all time off requests for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
-     * If no &#64;wfm_agent_sids are provided, all time off requests overlapping &#64;datetime_range for the org sending the request will be returned.
-     * If &#64;include_archived is true, archived time off requests will be returned as well, otherwise archived requests will not be included.
-     * If no time off requests are found for the given parameters, an empty slice will be returned.
+     * Lists agent leave petitions for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
+     * If no &#64;wfm_agent_sids are provided, all agent leave petitions overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
+     * If no agent leave petitions are found for the given parameters, an empty slice will be returned.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when listing the time off requests.
+     *   - grpc.Internal: error occurs when listing the agent leave petitions.
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse listAgentTimeOffs(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest request) {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse listAgentLeavePetitions(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListAgentTimeOffsMethod(), getCallOptions(), request);
+          getChannel(), getListAgentLeavePetitionsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -16577,7 +16577,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Creates a time off request for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
+     * Creates an agent leave petition to request time off for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
      * The &#64;request_comment must be set with a value.
      * The &#64;requested_datetime_ranges may not overlap each other.
      * Errors:
@@ -16586,27 +16586,27 @@ public final class WFMGrpc {
      *   - grpc.NotFound: the &#64;wfm_agent_sid does not exist for the org sending the request.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffResponse> createAgentTimeOff(
-        com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionResponse> createAgentLeavePetition(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCreateAgentTimeOffMethod(), getCallOptions()), request);
+          getChannel().newCall(getCreateAgentLeavePetitionMethod(), getCallOptions()), request);
     }
 
     /**
      * <pre>
-     * Lists all time off requests for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
-     * If no &#64;wfm_agent_sids are provided, all time off requests overlapping &#64;datetime_range for the org sending the request will be returned.
-     * If &#64;include_archived is true, archived time off requests will be returned as well, otherwise archived requests will not be included.
-     * If no time off requests are found for the given parameters, an empty slice will be returned.
+     * Lists agent leave petitions for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
+     * If no &#64;wfm_agent_sids are provided, all agent leave petitions overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
+     * If no agent leave petitions are found for the given parameters, an empty slice will be returned.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
-     *   - grpc.Internal: error occurs when listing the time off requests.
+     *   - grpc.Internal: error occurs when listing the agent leave petitions.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse> listAgentTimeOffs(
-        com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse> listAgentLeavePetitions(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListAgentTimeOffsMethod(), getCallOptions()), request);
+          getChannel().newCall(getListAgentLeavePetitionsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -16834,8 +16834,8 @@ public final class WFMGrpc {
   private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 165;
   private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 166;
   private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 167;
-  private static final int METHODID_CREATE_AGENT_TIME_OFF = 168;
-  private static final int METHODID_LIST_AGENT_TIME_OFFS = 169;
+  private static final int METHODID_CREATE_AGENT_LEAVE_PETITION = 168;
+  private static final int METHODID_LIST_AGENT_LEAVE_PETITIONS = 169;
   private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 170;
   private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 171;
   private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 172;
@@ -17530,13 +17530,13 @@ public final class WFMGrpc {
           serviceImpl.removeAgentFromSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse>) responseObserver);
           break;
-        case METHODID_CREATE_AGENT_TIME_OFF:
-          serviceImpl.createAgentTimeOff((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffResponse>) responseObserver);
+        case METHODID_CREATE_AGENT_LEAVE_PETITION:
+          serviceImpl.createAgentLeavePetition((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionResponse>) responseObserver);
           break;
-        case METHODID_LIST_AGENT_TIME_OFFS:
-          serviceImpl.listAgentTimeOffs((com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse>) responseObserver);
+        case METHODID_LIST_AGENT_LEAVE_PETITIONS:
+          serviceImpl.listAgentLeavePetitions((com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse>) responseObserver);
           break;
         case METHODID_HELLO_WORLD_WFMADHERENCE:
           serviceImpl.helloWorldWFMAdherence((com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest) request,
@@ -18749,19 +18749,19 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse>(
                 service, METHODID_REMOVE_AGENT_FROM_SCHEDULE)))
         .addMethod(
-          getCreateAgentTimeOffMethod(),
+          getCreateAgentLeavePetitionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffRequest,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentTimeOffResponse>(
-                service, METHODID_CREATE_AGENT_TIME_OFF)))
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionResponse>(
+                service, METHODID_CREATE_AGENT_LEAVE_PETITION)))
         .addMethod(
-          getListAgentTimeOffsMethod(),
+          getListAgentLeavePetitionsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse>(
-                service, METHODID_LIST_AGENT_TIME_OFFS)))
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse>(
+                service, METHODID_LIST_AGENT_LEAVE_PETITIONS)))
         .addMethod(
           getHelloWorldWFMAdherenceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -19006,8 +19006,8 @@ public final class WFMGrpc {
               .addMethod(getReplaceAgentOnScheduleMethod())
               .addMethod(getReplaceAgentOnScheduleV1Method())
               .addMethod(getRemoveAgentFromScheduleMethod())
-              .addMethod(getCreateAgentTimeOffMethod())
-              .addMethod(getListAgentTimeOffsMethod())
+              .addMethod(getCreateAgentLeavePetitionMethod())
+              .addMethod(getListAgentLeavePetitionsMethod())
               .addMethod(getHelloWorldWFMAdherenceMethod())
               .addMethod(getListAgentStatesForDayMethod())
               .addMethod(getListRealTimeManagementStatesMethod())

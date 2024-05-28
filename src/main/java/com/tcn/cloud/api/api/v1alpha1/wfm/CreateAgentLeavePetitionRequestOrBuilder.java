@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface CreateAgentTimeOffRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.CreateAgentTimeOffRequest)
+public interface CreateAgentLeavePetitionRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.CreateAgentLeavePetitionRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

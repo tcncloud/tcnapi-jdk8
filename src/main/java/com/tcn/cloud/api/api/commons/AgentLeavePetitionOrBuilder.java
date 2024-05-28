@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface AgentTimeOffOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.AgentTimeOff)
+public interface AgentLeavePetitionOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.AgentLeavePetition)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -12,10 +12,10 @@ public interface AgentTimeOffOrBuilder extends
    * ID of the time off request.
    * </pre>
    *
-   * <code>int64 agent_time_off_request_id = 1 [json_name = "agentTimeOffRequestId"];</code>
-   * @return The agentTimeOffRequestId.
+   * <code>int64 agent_leave_petition_id = 1 [json_name = "agentLeavePetitionId"];</code>
+   * @return The agentLeavePetitionId.
    */
-  long getAgentTimeOffRequestId();
+  long getAgentLeavePetitionId();
 
   /**
    * <pre>
@@ -32,19 +32,19 @@ public interface AgentTimeOffOrBuilder extends
    * Current status of the time off request.
    * </pre>
    *
-   * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
-   * @return The enum numeric value on the wire for requestStatus.
+   * <code>.api.commons.AgentLeavePetitionStatus petition_status = 3 [json_name = "petitionStatus"];</code>
+   * @return The enum numeric value on the wire for petitionStatus.
    */
-  int getRequestStatusValue();
+  int getPetitionStatusValue();
   /**
    * <pre>
    * Current status of the time off request.
    * </pre>
    *
-   * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
-   * @return The requestStatus.
+   * <code>.api.commons.AgentLeavePetitionStatus petition_status = 3 [json_name = "petitionStatus"];</code>
+   * @return The petitionStatus.
    */
-  com.tcn.cloud.api.api.commons.AgentTimeOffStatus getRequestStatus();
+  com.tcn.cloud.api.api.commons.AgentLeavePetitionStatus getPetitionStatus();
 
   /**
    * <pre>
