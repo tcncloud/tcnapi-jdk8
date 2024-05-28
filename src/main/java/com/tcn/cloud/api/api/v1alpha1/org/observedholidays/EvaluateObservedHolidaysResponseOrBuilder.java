@@ -22,25 +22,25 @@ public interface EvaluateObservedHolidaysResponseOrBuilder extends
    * indicates how long this result can be used.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
-   * @return Whether the efficacyTimestamp field is set.
+   * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+   * @return Whether the resultExpiration field is set.
    */
-  boolean hasEfficacyTimestamp();
+  boolean hasResultExpiration();
   /**
    * <pre>
    * indicates how long this result can be used.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
-   * @return The efficacyTimestamp.
+   * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+   * @return The resultExpiration.
    */
-  com.google.protobuf.Timestamp getEfficacyTimestamp();
+  com.google.protobuf.Timestamp getResultExpiration();
   /**
    * <pre>
    * indicates how long this result can be used.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp efficacy_timestamp = 2 [json_name = "efficacyTimestamp"];</code>
+   * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getEfficacyTimestampOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getResultExpirationOrBuilder();
 }

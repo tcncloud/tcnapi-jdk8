@@ -147,17 +147,17 @@ public final class EntitiesProto {
       "observed_holidays_id\030\001 \001(\tR\022observedHoli" +
       "daysId\"S\n\037EvaluateObservedHolidaysReques" +
       "t\0220\n\024observed_holidays_id\030\001 \001(\tR\022observe" +
-      "dHolidaysId\"\220\001\n EvaluateObservedHolidays" +
+      "dHolidaysId\"\216\001\n EvaluateObservedHolidays" +
       "Response\022!\n\014date_matched\030\001 \001(\010R\013dateMatc" +
-      "hed\022I\n\022efficacy_timestamp\030\002 \001(\0132\032.google" +
-      ".protobuf.TimestampR\021efficacyTimestampB\354" +
-      "\001\n3com.tcn.cloud.api.api.v1alpha1.org.ob" +
-      "servedholidaysB\rEntitiesProtoP\001\242\002\004AVOO\252\002" +
-      "!Api.V1alpha1.Org.Observedholidays\312\002!Api" +
-      "\\V1alpha1\\Org\\Observedholidays\342\002-Api\\V1a" +
-      "lpha1\\Org\\Observedholidays\\GPBMetadata\352\002" +
-      "$Api::V1alpha1::Org::Observedholidaysb\006p" +
-      "roto3"
+      "hed\022G\n\021result_expiration\030\002 \001(\0132\032.google." +
+      "protobuf.TimestampR\020resultExpirationB\354\001\n" +
+      "3com.tcn.cloud.api.api.v1alpha1.org.obse" +
+      "rvedholidaysB\rEntitiesProtoP\001\242\002\004AVOO\252\002!A" +
+      "pi.V1alpha1.Org.Observedholidays\312\002!Api\\V" +
+      "1alpha1\\Org\\Observedholidays\342\002-Api\\V1alp" +
+      "ha1\\Org\\Observedholidays\\GPBMetadata\352\002$A" +
+      "pi::V1alpha1::Org::Observedholidaysb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -262,7 +262,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_org_observedholidays_EvaluateObservedHolidaysResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_observedholidays_EvaluateObservedHolidaysResponse_descriptor,
-        new java.lang.String[] { "DateMatched", "EfficacyTimestamp", });
+        new java.lang.String[] { "DateMatched", "ResultExpiration", });
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.PreferencesProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();

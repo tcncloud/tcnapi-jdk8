@@ -144,17 +144,17 @@ public final class EntitiesProto {
       "\n\021business_hours_id\030\001 \001(\tR\017businessHours" +
       "Id\"\035\n\033DeleteBusinessHoursResponse\"J\n\034Eva" +
       "luateBusinessHoursRequest\022*\n\021business_ho" +
-      "urs_id\030\001 \001(\tR\017businessHoursId\"\215\001\n\035Evalua" +
+      "urs_id\030\001 \001(\tR\017businessHoursId\"\213\001\n\035Evalua" +
       "teBusinessHoursResponse\022!\n\014within_range\030" +
-      "\001 \001(\010R\013withinRange\022I\n\022efficacy_timestamp" +
-      "\030\002 \001(\0132\032.google.protobuf.TimestampR\021effi" +
-      "cacyTimestampB\335\001\n0com.tcn.cloud.api.api." +
-      "v1alpha1.org.businesshoursB\rEntitiesProt" +
-      "oP\001\242\002\004AVOB\252\002\036Api.V1alpha1.Org.Businessho" +
-      "urs\312\002\036Api\\V1alpha1\\Org\\Businesshours\342\002*A" +
-      "pi\\V1alpha1\\Org\\Businesshours\\GPBMetadat" +
-      "a\352\002!Api::V1alpha1::Org::Businesshoursb\006p" +
-      "roto3"
+      "\001 \001(\010R\013withinRange\022G\n\021result_expiration\030" +
+      "\002 \001(\0132\032.google.protobuf.TimestampR\020resul" +
+      "tExpirationB\335\001\n0com.tcn.cloud.api.api.v1" +
+      "alpha1.org.businesshoursB\rEntitiesProtoP" +
+      "\001\242\002\004AVOB\252\002\036Api.V1alpha1.Org.Businesshour" +
+      "s\312\002\036Api\\V1alpha1\\Org\\Businesshours\342\002*Api" +
+      "\\V1alpha1\\Org\\Businesshours\\GPBMetadata\352" +
+      "\002!Api::V1alpha1::Org::Businesshoursb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -259,7 +259,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_org_businesshours_EvaluateBusinessHoursResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_businesshours_EvaluateBusinessHoursResponse_descriptor,
-        new java.lang.String[] { "WithinRange", "EfficacyTimestamp", });
+        new java.lang.String[] { "WithinRange", "ResultExpiration", });
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.PreferencesProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
