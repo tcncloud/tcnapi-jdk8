@@ -10,7 +10,6 @@ public interface CreateLeaveRequestRequestOrBuilder extends
   /**
    * <pre>
    * All datetime ranges being requested for the leave.
-   * These datetime ranges will be accepted or rejected together.
    * No overlap is allowed between the datetime ranges.
    * </pre>
    *
@@ -21,7 +20,6 @@ public interface CreateLeaveRequestRequestOrBuilder extends
   /**
    * <pre>
    * All datetime ranges being requested for the leave.
-   * These datetime ranges will be accepted or rejected together.
    * No overlap is allowed between the datetime ranges.
    * </pre>
    *
@@ -31,7 +29,6 @@ public interface CreateLeaveRequestRequestOrBuilder extends
   /**
    * <pre>
    * All datetime ranges being requested for the leave.
-   * These datetime ranges will be accepted or rejected together.
    * No overlap is allowed between the datetime ranges.
    * </pre>
    *
@@ -41,7 +38,6 @@ public interface CreateLeaveRequestRequestOrBuilder extends
   /**
    * <pre>
    * All datetime ranges being requested for the leave.
-   * These datetime ranges will be accepted or rejected together.
    * No overlap is allowed between the datetime ranges.
    * </pre>
    *
@@ -52,7 +48,6 @@ public interface CreateLeaveRequestRequestOrBuilder extends
   /**
    * <pre>
    * All datetime ranges being requested for the leave.
-   * These datetime ranges will be accepted or rejected together.
    * No overlap is allowed between the datetime ranges.
    * </pre>
    *

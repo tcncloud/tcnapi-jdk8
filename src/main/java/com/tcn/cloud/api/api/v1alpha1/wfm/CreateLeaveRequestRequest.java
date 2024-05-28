@@ -50,7 +50,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * All datetime ranges being requested for the leave.
-   * These datetime ranges will be accepted or rejected together.
    * No overlap is allowed between the datetime ranges.
    * </pre>
    *
@@ -63,7 +62,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * All datetime ranges being requested for the leave.
-   * These datetime ranges will be accepted or rejected together.
    * No overlap is allowed between the datetime ranges.
    * </pre>
    *
@@ -77,7 +75,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * All datetime ranges being requested for the leave.
-   * These datetime ranges will be accepted or rejected together.
    * No overlap is allowed between the datetime ranges.
    * </pre>
    *
@@ -90,7 +87,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * All datetime ranges being requested for the leave.
-   * These datetime ranges will be accepted or rejected together.
    * No overlap is allowed between the datetime ranges.
    * </pre>
    *
@@ -103,7 +99,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * All datetime ranges being requested for the leave.
-   * These datetime ranges will be accepted or rejected together.
    * No overlap is allowed between the datetime ranges.
    * </pre>
    *
@@ -618,7 +613,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -634,7 +628,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -650,7 +643,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -666,7 +658,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -689,7 +680,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -709,7 +699,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -731,7 +720,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -754,7 +742,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -774,7 +761,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -794,7 +780,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -815,7 +800,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -834,7 +818,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -853,7 +836,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -866,7 +848,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -882,7 +863,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -899,7 +879,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -912,7 +891,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
@@ -926,7 +904,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * All datetime ranges being requested for the leave.
-     * These datetime ranges will be accepted or rejected together.
      * No overlap is allowed between the datetime ranges.
      * </pre>
      *
