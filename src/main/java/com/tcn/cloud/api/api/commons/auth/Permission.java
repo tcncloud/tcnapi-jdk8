@@ -502,10 +502,12 @@ public enum Permission
   /**
    * <pre>
    * allows access to read insights
+   * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_INSIGHT_VIEW = 605 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_INSIGHT_VIEW = 605 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   PERMISSION_INSIGHTS_INSIGHT_VIEW(605),
   /**
    * <pre>
@@ -1335,11 +1337,12 @@ public enum Permission
   /**
    * <pre>
    * allows access to read insights
+   * deprecated
    * </pre>
    *
-   * <code>PERMISSION_INSIGHTS_INSIGHT_VIEW = 605 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_INSIGHTS_INSIGHT_VIEW = 605 [deprecated = true];</code>
    */
-  public static final int PERMISSION_INSIGHTS_INSIGHT_VIEW_VALUE = 605;
+  @java.lang.Deprecated public static final int PERMISSION_INSIGHTS_INSIGHT_VIEW_VALUE = 605;
   /**
    * <pre>
    * allows access to edit insights

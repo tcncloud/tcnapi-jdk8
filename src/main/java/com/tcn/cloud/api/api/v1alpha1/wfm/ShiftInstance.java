@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.ShiftInstance.originating_program_node_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5794
+   *     See api/v1alpha1/wfm/wfm.proto;l=5806
    * @return The originatingProgramNodeSid.
    */
   @java.lang.Override
@@ -321,6 +321,21 @@ private static final long serialVersionUID = 0L;
     return shiftTemplate_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ShiftTemplate.getDefaultInstance() : shiftTemplate_;
   }
 
+  public static final int PLANNED_SHRINKAGE_PERCENT_FIELD_NUMBER = 12;
+  private float plannedShrinkagePercent_ = 0F;
+  /**
+   * <pre>
+   * the percentage shrinkage expected for this shift [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>float planned_shrinkage_percent = 12 [json_name = "plannedShrinkagePercent"];</code>
+   * @return The plannedShrinkagePercent.
+   */
+  @java.lang.Override
+  public float getPlannedShrinkagePercent() {
+    return plannedShrinkagePercent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -367,6 +382,9 @@ private static final long serialVersionUID = 0L;
     }
     if (shiftTemplate_ != null) {
       output.writeMessage(11, getShiftTemplate());
+    }
+    if (java.lang.Float.floatToRawIntBits(plannedShrinkagePercent_) != 0) {
+      output.writeFloat(12, plannedShrinkagePercent_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -421,6 +439,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getShiftTemplate());
     }
+    if (java.lang.Float.floatToRawIntBits(plannedShrinkagePercent_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(12, plannedShrinkagePercent_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -463,6 +485,9 @@ private static final long serialVersionUID = 0L;
       if (!getShiftTemplate()
           .equals(other.getShiftTemplate())) return false;
     }
+    if (java.lang.Float.floatToIntBits(getPlannedShrinkagePercent())
+        != java.lang.Float.floatToIntBits(
+            other.getPlannedShrinkagePercent())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -508,6 +533,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SHIFT_TEMPLATE_FIELD_NUMBER;
       hash = (53 * hash) + getShiftTemplate().hashCode();
     }
+    hash = (37 * hash) + PLANNED_SHRINKAGE_PERCENT_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getPlannedShrinkagePercent());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -668,6 +696,7 @@ private static final long serialVersionUID = 0L;
         shiftTemplateBuilder_.dispose();
         shiftTemplateBuilder_ = null;
       }
+      plannedShrinkagePercent_ = 0F;
       return this;
     }
 
@@ -747,6 +776,9 @@ private static final long serialVersionUID = 0L;
         result.shiftTemplate_ = shiftTemplateBuilder_ == null
             ? shiftTemplate_
             : shiftTemplateBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.plannedShrinkagePercent_ = plannedShrinkagePercent_;
       }
     }
 
@@ -850,6 +882,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasShiftTemplate()) {
         mergeShiftTemplate(other.getShiftTemplate());
       }
+      if (other.getPlannedShrinkagePercent() != 0F) {
+        setPlannedShrinkagePercent(other.getPlannedShrinkagePercent());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -943,6 +978,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000400;
               break;
             } // case 90
+            case 101: {
+              plannedShrinkagePercent_ = input.readFloat();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 101
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1302,7 +1342,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.ShiftInstance.originating_program_node_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5794
+     *     See api/v1alpha1/wfm/wfm.proto;l=5806
      * @return The originatingProgramNodeSid.
      */
     @java.lang.Override
@@ -1316,7 +1356,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.ShiftInstance.originating_program_node_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5794
+     *     See api/v1alpha1/wfm/wfm.proto;l=5806
      * @param value The originatingProgramNodeSid to set.
      * @return This builder for chaining.
      */
@@ -1334,7 +1374,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 originating_program_node_sid = 6 [json_name = "originatingProgramNodeSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.ShiftInstance.originating_program_node_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5794
+     *     See api/v1alpha1/wfm/wfm.proto;l=5806
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearOriginatingProgramNodeSid() {
@@ -1991,6 +2031,50 @@ private static final long serialVersionUID = 0L;
         shiftTemplate_ = null;
       }
       return shiftTemplateBuilder_;
+    }
+
+    private float plannedShrinkagePercent_ ;
+    /**
+     * <pre>
+     * the percentage shrinkage expected for this shift [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+     * </pre>
+     *
+     * <code>float planned_shrinkage_percent = 12 [json_name = "plannedShrinkagePercent"];</code>
+     * @return The plannedShrinkagePercent.
+     */
+    @java.lang.Override
+    public float getPlannedShrinkagePercent() {
+      return plannedShrinkagePercent_;
+    }
+    /**
+     * <pre>
+     * the percentage shrinkage expected for this shift [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+     * </pre>
+     *
+     * <code>float planned_shrinkage_percent = 12 [json_name = "plannedShrinkagePercent"];</code>
+     * @param value The plannedShrinkagePercent to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPlannedShrinkagePercent(float value) {
+
+      plannedShrinkagePercent_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the percentage shrinkage expected for this shift [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+     * </pre>
+     *
+     * <code>float planned_shrinkage_percent = 12 [json_name = "plannedShrinkagePercent"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPlannedShrinkagePercent() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      plannedShrinkagePercent_ = 0F;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -410,4 +410,31 @@ public interface CallCenterNodeOrBuilder extends
    * <code>.google.protobuf.Int64Value origin_sid = 13 [json_name = "originSid", deprecated = true];</code>
    */
   @java.lang.Deprecated com.google.protobuf.Int64ValueOrBuilder getOriginSidOrBuilder();
+
+  /**
+   * <pre>
+   * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue shrinkage = 14 [json_name = "shrinkage"];</code>
+   * @return Whether the shrinkage field is set.
+   */
+  boolean hasShrinkage();
+  /**
+   * <pre>
+   * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue shrinkage = 14 [json_name = "shrinkage"];</code>
+   * @return The shrinkage.
+   */
+  com.google.protobuf.FloatValue getShrinkage();
+  /**
+   * <pre>
+   * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue shrinkage = 14 [json_name = "shrinkage"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getShrinkageOrBuilder();
 }

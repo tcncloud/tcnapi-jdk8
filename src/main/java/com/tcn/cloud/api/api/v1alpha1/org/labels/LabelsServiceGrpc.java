@@ -263,6 +263,68 @@ public final class LabelsServiceGrpc {
     return getGetLabeledEntityMapMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsResponse> getAssignLabelsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AssignLabels",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsResponse> getAssignLabelsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsRequest, com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsResponse> getAssignLabelsMethod;
+    if ((getAssignLabelsMethod = LabelsServiceGrpc.getAssignLabelsMethod) == null) {
+      synchronized (LabelsServiceGrpc.class) {
+        if ((getAssignLabelsMethod = LabelsServiceGrpc.getAssignLabelsMethod) == null) {
+          LabelsServiceGrpc.getAssignLabelsMethod = getAssignLabelsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsRequest, com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignLabels"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new LabelsServiceMethodDescriptorSupplier("AssignLabels"))
+              .build();
+        }
+      }
+    }
+    return getAssignLabelsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsResponse> getRevokeLabelsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RevokeLabels",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsResponse> getRevokeLabelsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsRequest, com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsResponse> getRevokeLabelsMethod;
+    if ((getRevokeLabelsMethod = LabelsServiceGrpc.getRevokeLabelsMethod) == null) {
+      synchronized (LabelsServiceGrpc.class) {
+        if ((getRevokeLabelsMethod = LabelsServiceGrpc.getRevokeLabelsMethod) == null) {
+          LabelsServiceGrpc.getRevokeLabelsMethod = getRevokeLabelsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsRequest, com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RevokeLabels"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new LabelsServiceMethodDescriptorSupplier("RevokeLabels"))
+              .build();
+        }
+      }
+    }
+    return getRevokeLabelsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -390,6 +452,26 @@ public final class LabelsServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLabeledEntityMapMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * AssignLabels assigns labels to a specific permission group.
+     * </pre>
+     */
+    default void assignLabels(com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignLabelsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RevokeLabels revokes labels from a specific permission group.
+     * </pre>
+     */
+    default void revokeLabels(com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeLabelsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -506,6 +588,28 @@ public final class LabelsServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetLabeledEntityMapMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * AssignLabels assigns labels to a specific permission group.
+     * </pre>
+     */
+    public void assignLabels(com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAssignLabelsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RevokeLabels revokes labels from a specific permission group.
+     * </pre>
+     */
+    public void revokeLabels(com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRevokeLabelsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -602,6 +706,26 @@ public final class LabelsServiceGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse getLabeledEntityMap(com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetLabeledEntityMapMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AssignLabels assigns labels to a specific permission group.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsResponse assignLabels(com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAssignLabelsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RevokeLabels revokes labels from a specific permission group.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsResponse revokeLabels(com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRevokeLabelsMethod(), getCallOptions(), request);
     }
   }
 
@@ -708,6 +832,28 @@ public final class LabelsServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetLabeledEntityMapMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * AssignLabels assigns labels to a specific permission group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsResponse> assignLabels(
+        com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAssignLabelsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RevokeLabels revokes labels from a specific permission group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsResponse> revokeLabels(
+        com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRevokeLabelsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_LABEL = 0;
@@ -718,6 +864,8 @@ public final class LabelsServiceGrpc {
   private static final int METHODID_ATTACH_LABEL = 5;
   private static final int METHODID_DETACH_LABEL = 6;
   private static final int METHODID_GET_LABELED_ENTITY_MAP = 7;
+  private static final int METHODID_ASSIGN_LABELS = 8;
+  private static final int METHODID_REVOKE_LABELS = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -767,6 +915,14 @@ public final class LabelsServiceGrpc {
         case METHODID_GET_LABELED_ENTITY_MAP:
           serviceImpl.getLabeledEntityMap((com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse>) responseObserver);
+          break;
+        case METHODID_ASSIGN_LABELS:
+          serviceImpl.assignLabels((com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsResponse>) responseObserver);
+          break;
+        case METHODID_REVOKE_LABELS:
+          serviceImpl.revokeLabels((com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -842,6 +998,20 @@ public final class LabelsServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapRequest,
               com.tcn.cloud.api.api.v1alpha1.org.labels.GetLabeledEntityMapResponse>(
                 service, METHODID_GET_LABELED_ENTITY_MAP)))
+        .addMethod(
+          getAssignLabelsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.labels.AssignLabelsResponse>(
+                service, METHODID_ASSIGN_LABELS)))
+        .addMethod(
+          getRevokeLabelsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.labels.RevokeLabelsResponse>(
+                service, METHODID_REVOKE_LABELS)))
         .build();
   }
 
@@ -898,6 +1068,8 @@ public final class LabelsServiceGrpc {
               .addMethod(getAttachLabelMethod())
               .addMethod(getDetachLabelMethod())
               .addMethod(getGetLabeledEntityMapMethod())
+              .addMethod(getAssignLabelsMethod())
+              .addMethod(getRevokeLabelsMethod())
               .build();
         }
       }

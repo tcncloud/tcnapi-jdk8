@@ -26,7 +26,7 @@ public final class ServiceProto {
       "\n#api/v1alpha1/insights/service.proto\022\025a" +
       "pi.v1alpha1.insights\032\027annotations/authz." +
       "proto\032#api/v1alpha1/insights/insight.pro" +
-      "to\032\034google/api/annotations.proto2\355\022\n\010Ins" +
+      "to\032\034google/api/annotations.proto2\343\022\n\010Ins" +
       "ights\022\263\001\n\rCreateInsight\022+.api.v1alpha1.i" +
       "nsights.CreateInsightRequest\032,.api.v1alp" +
       "ha1.insights.CreateInsightResponse\"G\272\270\221\002" +
@@ -34,12 +34,12 @@ public final class ServiceProto {
       "s/insights/createinsight:\001*\022\264\001\n\014ListInsi" +
       "ghts\022*.api.v1alpha1.insights.ListInsight" +
       "sRequest\032+.api.v1alpha1.insights.ListIns" +
-      "ightsResponse\"K\272\270\221\002\017\n\003\010\372\001\n\003\010\335\004\n\003\010\332\004\202\323\344\223\002" +
+      "ightsResponse\"K\272\270\221\002\017\n\003\010\372\001\n\003\010\331\004\n\003\010\332\004\202\323\344\223\002" +
       "1\",/api/v1alpha1/insights/insights/listi" +
       "nsights:\001*\022\271\001\n\017ListOrgInsights\022-.api.v1a" +
       "lpha1.insights.ListOrgInsightsRequest\032.." +
       "api.v1alpha1.insights.ListOrgInsightsRes" +
-      "ponse\"G\272\270\221\002\010\n\006\010\372\001\010\335\004\202\323\344\223\0024\"//api/v1alpha" +
+      "ponse\"G\272\270\221\002\010\n\006\010\372\001\010\331\004\202\323\344\223\0024\"//api/v1alpha" +
       "1/insights/insights/listorginsights:\001*\022\263" +
       "\001\n\rUpdateInsight\022+.api.v1alpha1.insights" +
       ".UpdateInsightRequest\032,.api.v1alpha1.ins" +
@@ -50,48 +50,48 @@ public final class ServiceProto {
       "est\032,.api.v1alpha1.insights.DeleteInsigh" +
       "tResponse\"G\272\270\221\002\n\n\003\010\372\001\n\003\010\336\004\202\323\344\223\0022\"-/api/v" +
       "1alpha1/insights/insights/deleteinsight:" +
-      "\001*\022\261\001\n\nGetInsight\022(.api.v1alpha1.insight" +
+      "\001*\022\254\001\n\nGetInsight\022(.api.v1alpha1.insight" +
       "s.GetInsightRequest\032).api.v1alpha1.insig" +
-      "hts.GetInsightResponse\"N\272\270\221\002\024\n\003\010\372\001\n\003\010\335\004\n" +
-      "\003\010\331\004\n\003\010\332\004\202\323\344\223\002/\"*/api/v1alpha1/insights/" +
-      "insights/getinsight:\001*\022\277\001\n\024CreateCommons" +
-      "Insight\022+.api.v1alpha1.insights.CreateIn" +
-      "sightRequest\032,.api.v1alpha1.insights.Cre" +
-      "ateInsightResponse\"L\272\270\221\002\010\n\006\010\372\001\010\336\004\202\323\344\223\0029\"" +
-      "4/api/v1alpha1/insights/insights/createc" +
-      "ommonsinsight:\001*\022\277\001\n\024UpdateCommonsInsigh" +
-      "t\022+.api.v1alpha1.insights.UpdateInsightR" +
-      "equest\032,.api.v1alpha1.insights.UpdateIns" +
-      "ightResponse\"L\272\270\221\002\010\n\006\010\372\001\010\336\004\202\323\344\223\0029\"4/api/" +
-      "v1alpha1/insights/insights/updatecommons" +
-      "insight:\001*\022\277\001\n\024DeleteCommonsInsight\022+.ap" +
-      "i.v1alpha1.insights.DeleteInsightRequest" +
-      "\032,.api.v1alpha1.insights.DeleteInsightRe" +
-      "sponse\"L\272\270\221\002\010\n\006\010\372\001\010\336\004\202\323\344\223\0029\"4/api/v1alph" +
-      "a1/insights/insights/deletecommonsinsigh" +
-      "t:\001*\022\257\001\n\014GetVfsSchema\022*.api.v1alpha1.ins" +
-      "ights.GetVfsSchemaRequest\032+.api.v1alpha1" +
-      ".insights.GetVfsSchemaResponse\"F\272\270\221\002\n\n\003\010" +
-      "\372\001\n\003\010\336\004\202\323\344\223\0021\",/api/v1alpha1/insights/in" +
-      "sights/getvfsschema:\001*\022\243\001\n\tListVfses\022\'.a" +
-      "pi.v1alpha1.insights.ListVfsesRequest\032(." +
-      "api.v1alpha1.insights.ListVfsesResponse\"" +
-      "C\272\270\221\002\n\n\003\010\372\001\n\003\010\336\004\202\323\344\223\002.\")/api/v1alpha1/in" +
-      "sights/insights/listvfses:\001*\022\301\001\n\016ListVfs" +
-      "Schemas\022,.api.v1alpha1.insights.ListVfsS" +
-      "chemasRequest\032-.api.v1alpha1.insights.Li" +
-      "stVfsSchemasResponse\"R\272\270\221\002\024\n\003\010\372\001\n\003\010\336\004\n\003\010" +
-      "\331\004\n\003\010\335\004\202\323\344\223\0023\"./api/v1alpha1/insights/in" +
-      "sights/listvfsschemas:\001*\022\265\001\n\016PublishInsi" +
-      "ght\022,.api.v1alpha1.insights.PublishInsig" +
-      "htRequest\032-.api.v1alpha1.insights.Publis" +
-      "hInsightResponse\"F\272\270\221\002\010\n\006\010\372\001\010\336\004\202\323\344\223\0023\"./" +
-      "api/v1alpha1/insights/insights/publishin" +
-      "sight:\001*B\255\001\n\'com.tcn.cloud.api.api.v1alp" +
-      "ha1.insightsB\014ServiceProtoP\001\242\002\003AVI\252\002\025Api" +
-      ".V1alpha1.Insights\312\002\025Api\\V1alpha1\\Insigh" +
-      "ts\342\002!Api\\V1alpha1\\Insights\\GPBMetadata\352\002" +
-      "\027Api::V1alpha1::Insightsb\006proto3"
+      "hts.GetInsightResponse\"I\272\270\221\002\017\n\003\010\372\001\n\003\010\331\004\n" +
+      "\003\010\332\004\202\323\344\223\002/\"*/api/v1alpha1/insights/insig" +
+      "hts/getinsight:\001*\022\277\001\n\024CreateCommonsInsig" +
+      "ht\022+.api.v1alpha1.insights.CreateInsight" +
+      "Request\032,.api.v1alpha1.insights.CreateIn" +
+      "sightResponse\"L\272\270\221\002\010\n\006\010\372\001\010\336\004\202\323\344\223\0029\"4/api" +
+      "/v1alpha1/insights/insights/createcommon" +
+      "sinsight:\001*\022\277\001\n\024UpdateCommonsInsight\022+.a" +
+      "pi.v1alpha1.insights.UpdateInsightReques" +
+      "t\032,.api.v1alpha1.insights.UpdateInsightR" +
+      "esponse\"L\272\270\221\002\010\n\006\010\372\001\010\336\004\202\323\344\223\0029\"4/api/v1alp" +
+      "ha1/insights/insights/updatecommonsinsig" +
+      "ht:\001*\022\277\001\n\024DeleteCommonsInsight\022+.api.v1a" +
+      "lpha1.insights.DeleteInsightRequest\032,.ap" +
+      "i.v1alpha1.insights.DeleteInsightRespons" +
+      "e\"L\272\270\221\002\010\n\006\010\372\001\010\336\004\202\323\344\223\0029\"4/api/v1alpha1/in" +
+      "sights/insights/deletecommonsinsight:\001*\022" +
+      "\257\001\n\014GetVfsSchema\022*.api.v1alpha1.insights" +
+      ".GetVfsSchemaRequest\032+.api.v1alpha1.insi" +
+      "ghts.GetVfsSchemaResponse\"F\272\270\221\002\n\n\003\010\372\001\n\003\010" +
+      "\336\004\202\323\344\223\0021\",/api/v1alpha1/insights/insight" +
+      "s/getvfsschema:\001*\022\243\001\n\tListVfses\022\'.api.v1" +
+      "alpha1.insights.ListVfsesRequest\032(.api.v" +
+      "1alpha1.insights.ListVfsesResponse\"C\272\270\221\002" +
+      "\n\n\003\010\372\001\n\003\010\336\004\202\323\344\223\002.\")/api/v1alpha1/insight" +
+      "s/insights/listvfses:\001*\022\274\001\n\016ListVfsSchem" +
+      "as\022,.api.v1alpha1.insights.ListVfsSchema" +
+      "sRequest\032-.api.v1alpha1.insights.ListVfs" +
+      "SchemasResponse\"M\272\270\221\002\017\n\003\010\372\001\n\003\010\336\004\n\003\010\331\004\202\323\344" +
+      "\223\0023\"./api/v1alpha1/insights/insights/lis" +
+      "tvfsschemas:\001*\022\265\001\n\016PublishInsight\022,.api." +
+      "v1alpha1.insights.PublishInsightRequest\032" +
+      "-.api.v1alpha1.insights.PublishInsightRe" +
+      "sponse\"F\272\270\221\002\010\n\006\010\372\001\010\336\004\202\323\344\223\0023\"./api/v1alph" +
+      "a1/insights/insights/publishinsight:\001*B\255" +
+      "\001\n\'com.tcn.cloud.api.api.v1alpha1.insigh" +
+      "tsB\014ServiceProtoP\001\242\002\003AVI\252\002\025Api.V1alpha1." +
+      "Insights\312\002\025Api\\V1alpha1\\Insights\342\002!Api\\V" +
+      "1alpha1\\Insights\\GPBMetadata\352\002\027Api::V1al" +
+      "pha1::Insightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

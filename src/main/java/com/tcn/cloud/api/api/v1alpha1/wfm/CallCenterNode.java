@@ -650,6 +650,44 @@ private static final long serialVersionUID = 0L;
     return originSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : originSid_;
   }
 
+  public static final int SHRINKAGE_FIELD_NUMBER = 14;
+  private com.google.protobuf.FloatValue shrinkage_;
+  /**
+   * <pre>
+   * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue shrinkage = 14 [json_name = "shrinkage"];</code>
+   * @return Whether the shrinkage field is set.
+   */
+  @java.lang.Override
+  public boolean hasShrinkage() {
+    return shrinkage_ != null;
+  }
+  /**
+   * <pre>
+   * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue shrinkage = 14 [json_name = "shrinkage"];</code>
+   * @return The shrinkage.
+   */
+  @java.lang.Override
+  public com.google.protobuf.FloatValue getShrinkage() {
+    return shrinkage_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : shrinkage_;
+  }
+  /**
+   * <pre>
+   * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>.google.protobuf.FloatValue shrinkage = 14 [json_name = "shrinkage"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.FloatValueOrBuilder getShrinkageOrBuilder() {
+    return shrinkage_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : shrinkage_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -702,6 +740,9 @@ private static final long serialVersionUID = 0L;
     }
     if (originSid_ != null) {
       output.writeMessage(13, getOriginSid());
+    }
+    if (shrinkage_ != null) {
+      output.writeMessage(14, getShrinkage());
     }
     getUnknownFields().writeTo(output);
   }
@@ -762,6 +803,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getOriginSid());
     }
+    if (shrinkage_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, getShrinkage());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -807,6 +852,11 @@ private static final long serialVersionUID = 0L;
     if (hasOriginSid()) {
       if (!getOriginSid()
           .equals(other.getOriginSid())) return false;
+    }
+    if (hasShrinkage() != other.hasShrinkage()) return false;
+    if (hasShrinkage()) {
+      if (!getShrinkage()
+          .equals(other.getShrinkage())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -862,6 +912,10 @@ private static final long serialVersionUID = 0L;
     if (hasOriginSid()) {
       hash = (37 * hash) + ORIGIN_SID_FIELD_NUMBER;
       hash = (53 * hash) + getOriginSid().hashCode();
+    }
+    if (hasShrinkage()) {
+      hash = (37 * hash) + SHRINKAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getShrinkage().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1055,6 +1109,11 @@ private static final long serialVersionUID = 0L;
         originSidBuilder_.dispose();
         originSidBuilder_ = null;
       }
+      shrinkage_ = null;
+      if (shrinkageBuilder_ != null) {
+        shrinkageBuilder_.dispose();
+        shrinkageBuilder_ = null;
+      }
       return this;
     }
 
@@ -1170,6 +1229,11 @@ private static final long serialVersionUID = 0L;
         result.originSid_ = originSidBuilder_ == null
             ? originSid_
             : originSidBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.shrinkage_ = shrinkageBuilder_ == null
+            ? shrinkage_
+            : shrinkageBuilder_.build();
       }
     }
 
@@ -1398,6 +1462,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasOriginSid()) {
         mergeOriginSid(other.getOriginSid());
       }
+      if (other.hasShrinkage()) {
+        mergeShrinkage(other.getShrinkage());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1541,6 +1608,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00001000;
               break;
             } // case 106
+            case 114: {
+              input.readMessage(
+                  getShrinkageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 114
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -4096,6 +4170,161 @@ private static final long serialVersionUID = 0L;
         originSid_ = null;
       }
       return originSidBuilder_;
+    }
+
+    private com.google.protobuf.FloatValue shrinkage_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> shrinkageBuilder_;
+    /**
+     * <pre>
+     * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue shrinkage = 14 [json_name = "shrinkage"];</code>
+     * @return Whether the shrinkage field is set.
+     */
+    public boolean hasShrinkage() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue shrinkage = 14 [json_name = "shrinkage"];</code>
+     * @return The shrinkage.
+     */
+    public com.google.protobuf.FloatValue getShrinkage() {
+      if (shrinkageBuilder_ == null) {
+        return shrinkage_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : shrinkage_;
+      } else {
+        return shrinkageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue shrinkage = 14 [json_name = "shrinkage"];</code>
+     */
+    public Builder setShrinkage(com.google.protobuf.FloatValue value) {
+      if (shrinkageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        shrinkage_ = value;
+      } else {
+        shrinkageBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue shrinkage = 14 [json_name = "shrinkage"];</code>
+     */
+    public Builder setShrinkage(
+        com.google.protobuf.FloatValue.Builder builderForValue) {
+      if (shrinkageBuilder_ == null) {
+        shrinkage_ = builderForValue.build();
+      } else {
+        shrinkageBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue shrinkage = 14 [json_name = "shrinkage"];</code>
+     */
+    public Builder mergeShrinkage(com.google.protobuf.FloatValue value) {
+      if (shrinkageBuilder_ == null) {
+        if (((bitField0_ & 0x00002000) != 0) &&
+          shrinkage_ != null &&
+          shrinkage_ != com.google.protobuf.FloatValue.getDefaultInstance()) {
+          getShrinkageBuilder().mergeFrom(value);
+        } else {
+          shrinkage_ = value;
+        }
+      } else {
+        shrinkageBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue shrinkage = 14 [json_name = "shrinkage"];</code>
+     */
+    public Builder clearShrinkage() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      shrinkage_ = null;
+      if (shrinkageBuilder_ != null) {
+        shrinkageBuilder_.dispose();
+        shrinkageBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue shrinkage = 14 [json_name = "shrinkage"];</code>
+     */
+    public com.google.protobuf.FloatValue.Builder getShrinkageBuilder() {
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return getShrinkageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue shrinkage = 14 [json_name = "shrinkage"];</code>
+     */
+    public com.google.protobuf.FloatValueOrBuilder getShrinkageOrBuilder() {
+      if (shrinkageBuilder_ != null) {
+        return shrinkageBuilder_.getMessageOrBuilder();
+      } else {
+        return shrinkage_ == null ?
+            com.google.protobuf.FloatValue.getDefaultInstance() : shrinkage_;
+      }
+    }
+    /**
+     * <pre>
+     * the shrinkage percentage [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue shrinkage = 14 [json_name = "shrinkage"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+        getShrinkageFieldBuilder() {
+      if (shrinkageBuilder_ == null) {
+        shrinkageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                getShrinkage(),
+                getParentForChildren(),
+                isClean());
+        shrinkage_ = null;
+      }
+      return shrinkageBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

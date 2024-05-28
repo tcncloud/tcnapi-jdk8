@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface AssignLabelsRequestOrBuilder extends
+@java.lang.Deprecated public interface AssignLabelsRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.AssignLabelsRequest)
     com.google.protobuf.MessageOrBuilder {
 
