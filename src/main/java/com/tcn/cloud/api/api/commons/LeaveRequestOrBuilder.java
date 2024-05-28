@@ -69,6 +69,7 @@ public interface LeaveRequestOrBuilder extends
   /**
    * <pre>
    * A response from the manager when the request was approved or denied.
+   * This field is null by default.
    * </pre>
    *
    * <code>string response_comment = 5 [json_name = "responseComment"];</code>
@@ -78,6 +79,7 @@ public interface LeaveRequestOrBuilder extends
   /**
    * <pre>
    * A response from the manager when the request was approved or denied.
+   * This field is null by default.
    * </pre>
    *
    * <code>string response_comment = 5 [json_name = "responseComment"];</code>
@@ -223,6 +225,7 @@ public interface LeaveRequestOrBuilder extends
   /**
    * <pre>
    * The user ID of the manager who approved or denied the request.
+   * This field is null by default.
    * </pre>
    *
    * <code>string resolved_by_user_id = 10 [json_name = "resolvedByUserId"];</code>
@@ -232,6 +235,7 @@ public interface LeaveRequestOrBuilder extends
   /**
    * <pre>
    * The user ID of the manager who approved or denied the request.
+   * This field is null by default.
    * </pre>
    *
    * <code>string resolved_by_user_id = 10 [json_name = "resolvedByUserId"];</code>
