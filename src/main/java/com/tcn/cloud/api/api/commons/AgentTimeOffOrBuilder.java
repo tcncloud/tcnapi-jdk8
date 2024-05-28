@@ -9,17 +9,17 @@ public interface AgentTimeOffOrBuilder extends
 
   /**
    * <pre>
-   * ID of the leave request.
+   * ID of the time off request.
    * </pre>
    *
-   * <code>int64 leave_request_id = 1 [json_name = "leaveRequestId"];</code>
-   * @return The leaveRequestId.
+   * <code>int64 agent_time_off_request_id = 1 [json_name = "agentTimeOffRequestId"];</code>
+   * @return The agentTimeOffRequestId.
    */
-  long getLeaveRequestId();
+  long getAgentTimeOffRequestId();
 
   /**
    * <pre>
-   * ID of the agent requesting the leave.
+   * ID of the agent requesting the time off.
    * </pre>
    *
    * <code>int64 wfm_agent_sid = 2 [json_name = "wfmAgentSid"];</code>
@@ -29,7 +29,7 @@ public interface AgentTimeOffOrBuilder extends
 
   /**
    * <pre>
-   * Current status of the leave request.
+   * Current status of the time off request.
    * </pre>
    *
    * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
@@ -38,7 +38,7 @@ public interface AgentTimeOffOrBuilder extends
   int getRequestStatusValue();
   /**
    * <pre>
-   * Current status of the leave request.
+   * Current status of the time off request.
    * </pre>
    *
    * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
@@ -48,7 +48,7 @@ public interface AgentTimeOffOrBuilder extends
 
   /**
    * <pre>
-   * A comment sent by agent when the leave was requested.
+   * A comment sent by agent when the time off was requested.
    * </pre>
    *
    * <code>string request_comment = 4 [json_name = "requestComment"];</code>
@@ -57,7 +57,7 @@ public interface AgentTimeOffOrBuilder extends
   java.lang.String getRequestComment();
   /**
    * <pre>
-   * A comment sent by agent when the leave was requested.
+   * A comment sent by agent when the time off was requested.
    * </pre>
    *
    * <code>string request_comment = 4 [json_name = "requestComment"];</code>

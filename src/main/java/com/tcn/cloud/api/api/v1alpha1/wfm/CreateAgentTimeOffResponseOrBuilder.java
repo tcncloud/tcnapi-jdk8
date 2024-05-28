@@ -12,25 +12,25 @@ public interface CreateAgentTimeOffResponseOrBuilder extends
    * The newly created time off request.
    * </pre>
    *
-   * <code>.api.commons.AgentTimeOff leave_request = 1 [json_name = "leaveRequest"];</code>
-   * @return Whether the leaveRequest field is set.
+   * <code>.api.commons.AgentTimeOff agent_time_off_request = 1 [json_name = "agentTimeOffRequest"];</code>
+   * @return Whether the agentTimeOffRequest field is set.
    */
-  boolean hasLeaveRequest();
+  boolean hasAgentTimeOffRequest();
   /**
    * <pre>
    * The newly created time off request.
    * </pre>
    *
-   * <code>.api.commons.AgentTimeOff leave_request = 1 [json_name = "leaveRequest"];</code>
-   * @return The leaveRequest.
+   * <code>.api.commons.AgentTimeOff agent_time_off_request = 1 [json_name = "agentTimeOffRequest"];</code>
+   * @return The agentTimeOffRequest.
    */
-  com.tcn.cloud.api.api.commons.AgentTimeOff getLeaveRequest();
+  com.tcn.cloud.api.api.commons.AgentTimeOff getAgentTimeOffRequest();
   /**
    * <pre>
    * The newly created time off request.
    * </pre>
    *
-   * <code>.api.commons.AgentTimeOff leave_request = 1 [json_name = "leaveRequest"];</code>
+   * <code>.api.commons.AgentTimeOff agent_time_off_request = 1 [json_name = "agentTimeOffRequest"];</code>
    */
-  com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder getLeaveRequestOrBuilder();
+  com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder getAgentTimeOffRequestOrBuilder();
 }

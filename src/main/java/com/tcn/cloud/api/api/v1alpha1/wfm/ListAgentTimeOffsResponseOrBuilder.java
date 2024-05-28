@@ -12,42 +12,42 @@ public interface ListAgentTimeOffsResponseOrBuilder extends
    * All agent time off requests matching the parameters in the request.
    * </pre>
    *
-   * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+   * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.AgentTimeOff> 
-      getLeaveRequestsList();
+      getAgentTimeOffRequestsList();
   /**
    * <pre>
    * All agent time off requests matching the parameters in the request.
    * </pre>
    *
-   * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+   * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
    */
-  com.tcn.cloud.api.api.commons.AgentTimeOff getLeaveRequests(int index);
+  com.tcn.cloud.api.api.commons.AgentTimeOff getAgentTimeOffRequests(int index);
   /**
    * <pre>
    * All agent time off requests matching the parameters in the request.
    * </pre>
    *
-   * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+   * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
    */
-  int getLeaveRequestsCount();
+  int getAgentTimeOffRequestsCount();
   /**
    * <pre>
    * All agent time off requests matching the parameters in the request.
    * </pre>
    *
-   * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+   * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder> 
-      getLeaveRequestsOrBuilderList();
+      getAgentTimeOffRequestsOrBuilderList();
   /**
    * <pre>
    * All agent time off requests matching the parameters in the request.
    * </pre>
    *
-   * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+   * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
    */
-  com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder getLeaveRequestsOrBuilder(
+  com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder getAgentTimeOffRequestsOrBuilder(
       int index);
 }

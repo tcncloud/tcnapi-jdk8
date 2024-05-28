@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListAgentTimeOffsResponse() {
-    leaveRequests_ = java.util.Collections.emptyList();
+    agentTimeOffRequests_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -43,65 +43,65 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse.Builder.class);
   }
 
-  public static final int LEAVE_REQUESTS_FIELD_NUMBER = 1;
+  public static final int AGENT_TIME_OFF_REQUESTS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.AgentTimeOff> leaveRequests_;
+  private java.util.List<com.tcn.cloud.api.api.commons.AgentTimeOff> agentTimeOffRequests_;
   /**
    * <pre>
    * All agent time off requests matching the parameters in the request.
    * </pre>
    *
-   * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+   * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.AgentTimeOff> getLeaveRequestsList() {
-    return leaveRequests_;
+  public java.util.List<com.tcn.cloud.api.api.commons.AgentTimeOff> getAgentTimeOffRequestsList() {
+    return agentTimeOffRequests_;
   }
   /**
    * <pre>
    * All agent time off requests matching the parameters in the request.
    * </pre>
    *
-   * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+   * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder> 
-      getLeaveRequestsOrBuilderList() {
-    return leaveRequests_;
+      getAgentTimeOffRequestsOrBuilderList() {
+    return agentTimeOffRequests_;
   }
   /**
    * <pre>
    * All agent time off requests matching the parameters in the request.
    * </pre>
    *
-   * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+   * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
    */
   @java.lang.Override
-  public int getLeaveRequestsCount() {
-    return leaveRequests_.size();
+  public int getAgentTimeOffRequestsCount() {
+    return agentTimeOffRequests_.size();
   }
   /**
    * <pre>
    * All agent time off requests matching the parameters in the request.
    * </pre>
    *
-   * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+   * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.AgentTimeOff getLeaveRequests(int index) {
-    return leaveRequests_.get(index);
+  public com.tcn.cloud.api.api.commons.AgentTimeOff getAgentTimeOffRequests(int index) {
+    return agentTimeOffRequests_.get(index);
   }
   /**
    * <pre>
    * All agent time off requests matching the parameters in the request.
    * </pre>
    *
-   * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+   * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder getLeaveRequestsOrBuilder(
+  public com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder getAgentTimeOffRequestsOrBuilder(
       int index) {
-    return leaveRequests_.get(index);
+    return agentTimeOffRequests_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -118,8 +118,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < leaveRequests_.size(); i++) {
-      output.writeMessage(1, leaveRequests_.get(i));
+    for (int i = 0; i < agentTimeOffRequests_.size(); i++) {
+      output.writeMessage(1, agentTimeOffRequests_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -130,9 +130,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    for (int i = 0; i < leaveRequests_.size(); i++) {
+    for (int i = 0; i < agentTimeOffRequests_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, leaveRequests_.get(i));
+        .computeMessageSize(1, agentTimeOffRequests_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -149,8 +149,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse other = (com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse) obj;
 
-    if (!getLeaveRequestsList()
-        .equals(other.getLeaveRequestsList())) return false;
+    if (!getAgentTimeOffRequestsList()
+        .equals(other.getAgentTimeOffRequestsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -162,9 +162,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getLeaveRequestsCount() > 0) {
-      hash = (37 * hash) + LEAVE_REQUESTS_FIELD_NUMBER;
-      hash = (53 * hash) + getLeaveRequestsList().hashCode();
+    if (getAgentTimeOffRequestsCount() > 0) {
+      hash = (37 * hash) + AGENT_TIME_OFF_REQUESTS_FIELD_NUMBER;
+      hash = (53 * hash) + getAgentTimeOffRequestsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -301,11 +301,11 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      if (leaveRequestsBuilder_ == null) {
-        leaveRequests_ = java.util.Collections.emptyList();
+      if (agentTimeOffRequestsBuilder_ == null) {
+        agentTimeOffRequests_ = java.util.Collections.emptyList();
       } else {
-        leaveRequests_ = null;
-        leaveRequestsBuilder_.clear();
+        agentTimeOffRequests_ = null;
+        agentTimeOffRequestsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
       return this;
@@ -341,14 +341,14 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse result) {
-      if (leaveRequestsBuilder_ == null) {
+      if (agentTimeOffRequestsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
-          leaveRequests_ = java.util.Collections.unmodifiableList(leaveRequests_);
+          agentTimeOffRequests_ = java.util.Collections.unmodifiableList(agentTimeOffRequests_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.leaveRequests_ = leaveRequests_;
+        result.agentTimeOffRequests_ = agentTimeOffRequests_;
       } else {
-        result.leaveRequests_ = leaveRequestsBuilder_.build();
+        result.agentTimeOffRequests_ = agentTimeOffRequestsBuilder_.build();
       }
     }
 
@@ -400,29 +400,29 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsResponse.getDefaultInstance()) return this;
-      if (leaveRequestsBuilder_ == null) {
-        if (!other.leaveRequests_.isEmpty()) {
-          if (leaveRequests_.isEmpty()) {
-            leaveRequests_ = other.leaveRequests_;
+      if (agentTimeOffRequestsBuilder_ == null) {
+        if (!other.agentTimeOffRequests_.isEmpty()) {
+          if (agentTimeOffRequests_.isEmpty()) {
+            agentTimeOffRequests_ = other.agentTimeOffRequests_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureLeaveRequestsIsMutable();
-            leaveRequests_.addAll(other.leaveRequests_);
+            ensureAgentTimeOffRequestsIsMutable();
+            agentTimeOffRequests_.addAll(other.agentTimeOffRequests_);
           }
           onChanged();
         }
       } else {
-        if (!other.leaveRequests_.isEmpty()) {
-          if (leaveRequestsBuilder_.isEmpty()) {
-            leaveRequestsBuilder_.dispose();
-            leaveRequestsBuilder_ = null;
-            leaveRequests_ = other.leaveRequests_;
+        if (!other.agentTimeOffRequests_.isEmpty()) {
+          if (agentTimeOffRequestsBuilder_.isEmpty()) {
+            agentTimeOffRequestsBuilder_.dispose();
+            agentTimeOffRequestsBuilder_ = null;
+            agentTimeOffRequests_ = other.agentTimeOffRequests_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            leaveRequestsBuilder_ = 
+            agentTimeOffRequestsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getLeaveRequestsFieldBuilder() : null;
+                 getAgentTimeOffRequestsFieldBuilder() : null;
           } else {
-            leaveRequestsBuilder_.addAllMessages(other.leaveRequests_);
+            agentTimeOffRequestsBuilder_.addAllMessages(other.agentTimeOffRequests_);
           }
         }
       }
@@ -457,11 +457,11 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       com.tcn.cloud.api.api.commons.AgentTimeOff.parser(),
                       extensionRegistry);
-              if (leaveRequestsBuilder_ == null) {
-                ensureLeaveRequestsIsMutable();
-                leaveRequests_.add(m);
+              if (agentTimeOffRequestsBuilder_ == null) {
+                ensureAgentTimeOffRequestsIsMutable();
+                agentTimeOffRequests_.add(m);
               } else {
-                leaveRequestsBuilder_.addMessage(m);
+                agentTimeOffRequestsBuilder_.addMessage(m);
               }
               break;
             } // case 10
@@ -482,30 +482,30 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.api.commons.AgentTimeOff> leaveRequests_ =
+    private java.util.List<com.tcn.cloud.api.api.commons.AgentTimeOff> agentTimeOffRequests_ =
       java.util.Collections.emptyList();
-    private void ensureLeaveRequestsIsMutable() {
+    private void ensureAgentTimeOffRequestsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        leaveRequests_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.AgentTimeOff>(leaveRequests_);
+        agentTimeOffRequests_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.AgentTimeOff>(agentTimeOffRequests_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.AgentTimeOff, com.tcn.cloud.api.api.commons.AgentTimeOff.Builder, com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder> leaveRequestsBuilder_;
+        com.tcn.cloud.api.api.commons.AgentTimeOff, com.tcn.cloud.api.api.commons.AgentTimeOff.Builder, com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder> agentTimeOffRequestsBuilder_;
 
     /**
      * <pre>
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.AgentTimeOff> getLeaveRequestsList() {
-      if (leaveRequestsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(leaveRequests_);
+    public java.util.List<com.tcn.cloud.api.api.commons.AgentTimeOff> getAgentTimeOffRequestsList() {
+      if (agentTimeOffRequestsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(agentTimeOffRequests_);
       } else {
-        return leaveRequestsBuilder_.getMessageList();
+        return agentTimeOffRequestsBuilder_.getMessageList();
       }
     }
     /**
@@ -513,13 +513,13 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public int getLeaveRequestsCount() {
-      if (leaveRequestsBuilder_ == null) {
-        return leaveRequests_.size();
+    public int getAgentTimeOffRequestsCount() {
+      if (agentTimeOffRequestsBuilder_ == null) {
+        return agentTimeOffRequests_.size();
       } else {
-        return leaveRequestsBuilder_.getCount();
+        return agentTimeOffRequestsBuilder_.getCount();
       }
     }
     /**
@@ -527,13 +527,13 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public com.tcn.cloud.api.api.commons.AgentTimeOff getLeaveRequests(int index) {
-      if (leaveRequestsBuilder_ == null) {
-        return leaveRequests_.get(index);
+    public com.tcn.cloud.api.api.commons.AgentTimeOff getAgentTimeOffRequests(int index) {
+      if (agentTimeOffRequestsBuilder_ == null) {
+        return agentTimeOffRequests_.get(index);
       } else {
-        return leaveRequestsBuilder_.getMessage(index);
+        return agentTimeOffRequestsBuilder_.getMessage(index);
       }
     }
     /**
@@ -541,19 +541,19 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public Builder setLeaveRequests(
+    public Builder setAgentTimeOffRequests(
         int index, com.tcn.cloud.api.api.commons.AgentTimeOff value) {
-      if (leaveRequestsBuilder_ == null) {
+      if (agentTimeOffRequestsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureLeaveRequestsIsMutable();
-        leaveRequests_.set(index, value);
+        ensureAgentTimeOffRequestsIsMutable();
+        agentTimeOffRequests_.set(index, value);
         onChanged();
       } else {
-        leaveRequestsBuilder_.setMessage(index, value);
+        agentTimeOffRequestsBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -562,16 +562,16 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public Builder setLeaveRequests(
+    public Builder setAgentTimeOffRequests(
         int index, com.tcn.cloud.api.api.commons.AgentTimeOff.Builder builderForValue) {
-      if (leaveRequestsBuilder_ == null) {
-        ensureLeaveRequestsIsMutable();
-        leaveRequests_.set(index, builderForValue.build());
+      if (agentTimeOffRequestsBuilder_ == null) {
+        ensureAgentTimeOffRequestsIsMutable();
+        agentTimeOffRequests_.set(index, builderForValue.build());
         onChanged();
       } else {
-        leaveRequestsBuilder_.setMessage(index, builderForValue.build());
+        agentTimeOffRequestsBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -580,18 +580,18 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public Builder addLeaveRequests(com.tcn.cloud.api.api.commons.AgentTimeOff value) {
-      if (leaveRequestsBuilder_ == null) {
+    public Builder addAgentTimeOffRequests(com.tcn.cloud.api.api.commons.AgentTimeOff value) {
+      if (agentTimeOffRequestsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureLeaveRequestsIsMutable();
-        leaveRequests_.add(value);
+        ensureAgentTimeOffRequestsIsMutable();
+        agentTimeOffRequests_.add(value);
         onChanged();
       } else {
-        leaveRequestsBuilder_.addMessage(value);
+        agentTimeOffRequestsBuilder_.addMessage(value);
       }
       return this;
     }
@@ -600,19 +600,19 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public Builder addLeaveRequests(
+    public Builder addAgentTimeOffRequests(
         int index, com.tcn.cloud.api.api.commons.AgentTimeOff value) {
-      if (leaveRequestsBuilder_ == null) {
+      if (agentTimeOffRequestsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureLeaveRequestsIsMutable();
-        leaveRequests_.add(index, value);
+        ensureAgentTimeOffRequestsIsMutable();
+        agentTimeOffRequests_.add(index, value);
         onChanged();
       } else {
-        leaveRequestsBuilder_.addMessage(index, value);
+        agentTimeOffRequestsBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -621,16 +621,16 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public Builder addLeaveRequests(
+    public Builder addAgentTimeOffRequests(
         com.tcn.cloud.api.api.commons.AgentTimeOff.Builder builderForValue) {
-      if (leaveRequestsBuilder_ == null) {
-        ensureLeaveRequestsIsMutable();
-        leaveRequests_.add(builderForValue.build());
+      if (agentTimeOffRequestsBuilder_ == null) {
+        ensureAgentTimeOffRequestsIsMutable();
+        agentTimeOffRequests_.add(builderForValue.build());
         onChanged();
       } else {
-        leaveRequestsBuilder_.addMessage(builderForValue.build());
+        agentTimeOffRequestsBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -639,16 +639,16 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public Builder addLeaveRequests(
+    public Builder addAgentTimeOffRequests(
         int index, com.tcn.cloud.api.api.commons.AgentTimeOff.Builder builderForValue) {
-      if (leaveRequestsBuilder_ == null) {
-        ensureLeaveRequestsIsMutable();
-        leaveRequests_.add(index, builderForValue.build());
+      if (agentTimeOffRequestsBuilder_ == null) {
+        ensureAgentTimeOffRequestsIsMutable();
+        agentTimeOffRequests_.add(index, builderForValue.build());
         onChanged();
       } else {
-        leaveRequestsBuilder_.addMessage(index, builderForValue.build());
+        agentTimeOffRequestsBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -657,17 +657,17 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public Builder addAllLeaveRequests(
+    public Builder addAllAgentTimeOffRequests(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.AgentTimeOff> values) {
-      if (leaveRequestsBuilder_ == null) {
-        ensureLeaveRequestsIsMutable();
+      if (agentTimeOffRequestsBuilder_ == null) {
+        ensureAgentTimeOffRequestsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, leaveRequests_);
+            values, agentTimeOffRequests_);
         onChanged();
       } else {
-        leaveRequestsBuilder_.addAllMessages(values);
+        agentTimeOffRequestsBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -676,15 +676,15 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public Builder clearLeaveRequests() {
-      if (leaveRequestsBuilder_ == null) {
-        leaveRequests_ = java.util.Collections.emptyList();
+    public Builder clearAgentTimeOffRequests() {
+      if (agentTimeOffRequestsBuilder_ == null) {
+        agentTimeOffRequests_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
-        leaveRequestsBuilder_.clear();
+        agentTimeOffRequestsBuilder_.clear();
       }
       return this;
     }
@@ -693,15 +693,15 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public Builder removeLeaveRequests(int index) {
-      if (leaveRequestsBuilder_ == null) {
-        ensureLeaveRequestsIsMutable();
-        leaveRequests_.remove(index);
+    public Builder removeAgentTimeOffRequests(int index) {
+      if (agentTimeOffRequestsBuilder_ == null) {
+        ensureAgentTimeOffRequestsIsMutable();
+        agentTimeOffRequests_.remove(index);
         onChanged();
       } else {
-        leaveRequestsBuilder_.remove(index);
+        agentTimeOffRequestsBuilder_.remove(index);
       }
       return this;
     }
@@ -710,24 +710,24 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public com.tcn.cloud.api.api.commons.AgentTimeOff.Builder getLeaveRequestsBuilder(
+    public com.tcn.cloud.api.api.commons.AgentTimeOff.Builder getAgentTimeOffRequestsBuilder(
         int index) {
-      return getLeaveRequestsFieldBuilder().getBuilder(index);
+      return getAgentTimeOffRequestsFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder getLeaveRequestsOrBuilder(
+    public com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder getAgentTimeOffRequestsOrBuilder(
         int index) {
-      if (leaveRequestsBuilder_ == null) {
-        return leaveRequests_.get(index);  } else {
-        return leaveRequestsBuilder_.getMessageOrBuilder(index);
+      if (agentTimeOffRequestsBuilder_ == null) {
+        return agentTimeOffRequests_.get(index);  } else {
+        return agentTimeOffRequestsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -735,14 +735,14 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder> 
-         getLeaveRequestsOrBuilderList() {
-      if (leaveRequestsBuilder_ != null) {
-        return leaveRequestsBuilder_.getMessageOrBuilderList();
+         getAgentTimeOffRequestsOrBuilderList() {
+      if (agentTimeOffRequestsBuilder_ != null) {
+        return agentTimeOffRequestsBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(leaveRequests_);
+        return java.util.Collections.unmodifiableList(agentTimeOffRequests_);
       }
     }
     /**
@@ -750,10 +750,10 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public com.tcn.cloud.api.api.commons.AgentTimeOff.Builder addLeaveRequestsBuilder() {
-      return getLeaveRequestsFieldBuilder().addBuilder(
+    public com.tcn.cloud.api.api.commons.AgentTimeOff.Builder addAgentTimeOffRequestsBuilder() {
+      return getAgentTimeOffRequestsFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.commons.AgentTimeOff.getDefaultInstance());
     }
     /**
@@ -761,11 +761,11 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
-    public com.tcn.cloud.api.api.commons.AgentTimeOff.Builder addLeaveRequestsBuilder(
+    public com.tcn.cloud.api.api.commons.AgentTimeOff.Builder addAgentTimeOffRequestsBuilder(
         int index) {
-      return getLeaveRequestsFieldBuilder().addBuilder(
+      return getAgentTimeOffRequestsFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.commons.AgentTimeOff.getDefaultInstance());
     }
     /**
@@ -773,25 +773,25 @@ private static final long serialVersionUID = 0L;
      * All agent time off requests matching the parameters in the request.
      * </pre>
      *
-     * <code>repeated .api.commons.AgentTimeOff leave_requests = 1 [json_name = "leaveRequests"];</code>
+     * <code>repeated .api.commons.AgentTimeOff agent_time_off_requests = 1 [json_name = "agentTimeOffRequests"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.AgentTimeOff.Builder> 
-         getLeaveRequestsBuilderList() {
-      return getLeaveRequestsFieldBuilder().getBuilderList();
+         getAgentTimeOffRequestsBuilderList() {
+      return getAgentTimeOffRequestsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
         com.tcn.cloud.api.api.commons.AgentTimeOff, com.tcn.cloud.api.api.commons.AgentTimeOff.Builder, com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder> 
-        getLeaveRequestsFieldBuilder() {
-      if (leaveRequestsBuilder_ == null) {
-        leaveRequestsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        getAgentTimeOffRequestsFieldBuilder() {
+      if (agentTimeOffRequestsBuilder_ == null) {
+        agentTimeOffRequestsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.AgentTimeOff, com.tcn.cloud.api.api.commons.AgentTimeOff.Builder, com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder>(
-                leaveRequests_,
+                agentTimeOffRequests_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
-        leaveRequests_ = null;
+        agentTimeOffRequests_ = null;
       }
-      return leaveRequestsBuilder_;
+      return agentTimeOffRequestsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

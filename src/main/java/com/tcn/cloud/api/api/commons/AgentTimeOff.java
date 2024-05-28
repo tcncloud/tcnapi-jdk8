@@ -47,26 +47,26 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.AgentTimeOff.class, com.tcn.cloud.api.api.commons.AgentTimeOff.Builder.class);
   }
 
-  public static final int LEAVE_REQUEST_ID_FIELD_NUMBER = 1;
-  private long leaveRequestId_ = 0L;
+  public static final int AGENT_TIME_OFF_REQUEST_ID_FIELD_NUMBER = 1;
+  private long agentTimeOffRequestId_ = 0L;
   /**
    * <pre>
-   * ID of the leave request.
+   * ID of the time off request.
    * </pre>
    *
-   * <code>int64 leave_request_id = 1 [json_name = "leaveRequestId"];</code>
-   * @return The leaveRequestId.
+   * <code>int64 agent_time_off_request_id = 1 [json_name = "agentTimeOffRequestId"];</code>
+   * @return The agentTimeOffRequestId.
    */
   @java.lang.Override
-  public long getLeaveRequestId() {
-    return leaveRequestId_;
+  public long getAgentTimeOffRequestId() {
+    return agentTimeOffRequestId_;
   }
 
   public static final int WFM_AGENT_SID_FIELD_NUMBER = 2;
   private long wfmAgentSid_ = 0L;
   /**
    * <pre>
-   * ID of the agent requesting the leave.
+   * ID of the agent requesting the time off.
    * </pre>
    *
    * <code>int64 wfm_agent_sid = 2 [json_name = "wfmAgentSid"];</code>
@@ -81,7 +81,7 @@ private static final long serialVersionUID = 0L;
   private int requestStatus_ = 0;
   /**
    * <pre>
-   * Current status of the leave request.
+   * Current status of the time off request.
    * </pre>
    *
    * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
@@ -92,7 +92,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Current status of the leave request.
+   * Current status of the time off request.
    * </pre>
    *
    * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object requestComment_ = "";
   /**
    * <pre>
-   * A comment sent by agent when the leave was requested.
+   * A comment sent by agent when the time off was requested.
    * </pre>
    *
    * <code>string request_comment = 4 [json_name = "requestComment"];</code>
@@ -129,7 +129,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A comment sent by agent when the leave was requested.
+   * A comment sent by agent when the time off was requested.
    * </pre>
    *
    * <code>string request_comment = 4 [json_name = "requestComment"];</code>
@@ -446,8 +446,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (leaveRequestId_ != 0L) {
-      output.writeInt64(1, leaveRequestId_);
+    if (agentTimeOffRequestId_ != 0L) {
+      output.writeInt64(1, agentTimeOffRequestId_);
     }
     if (wfmAgentSid_ != 0L) {
       output.writeInt64(2, wfmAgentSid_);
@@ -485,9 +485,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (leaveRequestId_ != 0L) {
+    if (agentTimeOffRequestId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, leaveRequestId_);
+        .computeInt64Size(1, agentTimeOffRequestId_);
     }
     if (wfmAgentSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
@@ -537,8 +537,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.AgentTimeOff other = (com.tcn.cloud.api.api.commons.AgentTimeOff) obj;
 
-    if (getLeaveRequestId()
-        != other.getLeaveRequestId()) return false;
+    if (getAgentTimeOffRequestId()
+        != other.getAgentTimeOffRequestId()) return false;
     if (getWfmAgentSid()
         != other.getWfmAgentSid()) return false;
     if (requestStatus_ != other.requestStatus_) return false;
@@ -576,9 +576,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + LEAVE_REQUEST_ID_FIELD_NUMBER;
+    hash = (37 * hash) + AGENT_TIME_OFF_REQUEST_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getLeaveRequestId());
+        getAgentTimeOffRequestId());
     hash = (37 * hash) + WFM_AGENT_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getWfmAgentSid());
@@ -741,7 +741,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      leaveRequestId_ = 0L;
+      agentTimeOffRequestId_ = 0L;
       wfmAgentSid_ = 0L;
       requestStatus_ = 0;
       requestComment_ = "";
@@ -816,7 +816,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.AgentTimeOff result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.leaveRequestId_ = leaveRequestId_;
+        result.agentTimeOffRequestId_ = agentTimeOffRequestId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.wfmAgentSid_ = wfmAgentSid_;
@@ -894,8 +894,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.AgentTimeOff other) {
       if (other == com.tcn.cloud.api.api.commons.AgentTimeOff.getDefaultInstance()) return this;
-      if (other.getLeaveRequestId() != 0L) {
-        setLeaveRequestId(other.getLeaveRequestId());
+      if (other.getAgentTimeOffRequestId() != 0L) {
+        setAgentTimeOffRequestId(other.getAgentTimeOffRequestId());
       }
       if (other.getWfmAgentSid() != 0L) {
         setWfmAgentSid(other.getWfmAgentSid());
@@ -980,7 +980,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              leaveRequestId_ = input.readInt64();
+              agentTimeOffRequestId_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
@@ -1060,46 +1060,46 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long leaveRequestId_ ;
+    private long agentTimeOffRequestId_ ;
     /**
      * <pre>
-     * ID of the leave request.
+     * ID of the time off request.
      * </pre>
      *
-     * <code>int64 leave_request_id = 1 [json_name = "leaveRequestId"];</code>
-     * @return The leaveRequestId.
+     * <code>int64 agent_time_off_request_id = 1 [json_name = "agentTimeOffRequestId"];</code>
+     * @return The agentTimeOffRequestId.
      */
     @java.lang.Override
-    public long getLeaveRequestId() {
-      return leaveRequestId_;
+    public long getAgentTimeOffRequestId() {
+      return agentTimeOffRequestId_;
     }
     /**
      * <pre>
-     * ID of the leave request.
+     * ID of the time off request.
      * </pre>
      *
-     * <code>int64 leave_request_id = 1 [json_name = "leaveRequestId"];</code>
-     * @param value The leaveRequestId to set.
+     * <code>int64 agent_time_off_request_id = 1 [json_name = "agentTimeOffRequestId"];</code>
+     * @param value The agentTimeOffRequestId to set.
      * @return This builder for chaining.
      */
-    public Builder setLeaveRequestId(long value) {
+    public Builder setAgentTimeOffRequestId(long value) {
 
-      leaveRequestId_ = value;
+      agentTimeOffRequestId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * ID of the leave request.
+     * ID of the time off request.
      * </pre>
      *
-     * <code>int64 leave_request_id = 1 [json_name = "leaveRequestId"];</code>
+     * <code>int64 agent_time_off_request_id = 1 [json_name = "agentTimeOffRequestId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearLeaveRequestId() {
+    public Builder clearAgentTimeOffRequestId() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      leaveRequestId_ = 0L;
+      agentTimeOffRequestId_ = 0L;
       onChanged();
       return this;
     }
@@ -1107,7 +1107,7 @@ private static final long serialVersionUID = 0L;
     private long wfmAgentSid_ ;
     /**
      * <pre>
-     * ID of the agent requesting the leave.
+     * ID of the agent requesting the time off.
      * </pre>
      *
      * <code>int64 wfm_agent_sid = 2 [json_name = "wfmAgentSid"];</code>
@@ -1119,7 +1119,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the agent requesting the leave.
+     * ID of the agent requesting the time off.
      * </pre>
      *
      * <code>int64 wfm_agent_sid = 2 [json_name = "wfmAgentSid"];</code>
@@ -1135,7 +1135,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the agent requesting the leave.
+     * ID of the agent requesting the time off.
      * </pre>
      *
      * <code>int64 wfm_agent_sid = 2 [json_name = "wfmAgentSid"];</code>
@@ -1151,7 +1151,7 @@ private static final long serialVersionUID = 0L;
     private int requestStatus_ = 0;
     /**
      * <pre>
-     * Current status of the leave request.
+     * Current status of the time off request.
      * </pre>
      *
      * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
@@ -1162,7 +1162,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Current status of the leave request.
+     * Current status of the time off request.
      * </pre>
      *
      * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
@@ -1177,7 +1177,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Current status of the leave request.
+     * Current status of the time off request.
      * </pre>
      *
      * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
@@ -1190,7 +1190,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Current status of the leave request.
+     * Current status of the time off request.
      * </pre>
      *
      * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
@@ -1208,7 +1208,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Current status of the leave request.
+     * Current status of the time off request.
      * </pre>
      *
      * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
@@ -1224,7 +1224,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object requestComment_ = "";
     /**
      * <pre>
-     * A comment sent by agent when the leave was requested.
+     * A comment sent by agent when the time off was requested.
      * </pre>
      *
      * <code>string request_comment = 4 [json_name = "requestComment"];</code>
@@ -1244,7 +1244,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A comment sent by agent when the leave was requested.
+     * A comment sent by agent when the time off was requested.
      * </pre>
      *
      * <code>string request_comment = 4 [json_name = "requestComment"];</code>
@@ -1265,7 +1265,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A comment sent by agent when the leave was requested.
+     * A comment sent by agent when the time off was requested.
      * </pre>
      *
      * <code>string request_comment = 4 [json_name = "requestComment"];</code>
@@ -1282,7 +1282,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A comment sent by agent when the leave was requested.
+     * A comment sent by agent when the time off was requested.
      * </pre>
      *
      * <code>string request_comment = 4 [json_name = "requestComment"];</code>
@@ -1296,7 +1296,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A comment sent by agent when the leave was requested.
+     * A comment sent by agent when the time off was requested.
      * </pre>
      *
      * <code>string request_comment = 4 [json_name = "requestComment"];</code>
