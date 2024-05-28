@@ -91,43 +91,43 @@ public interface LeaveRequestOrBuilder extends
    * A list of datetime ranges to be blocked off on the schedule.
    * </pre>
    *
-   * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+   * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.DatetimeRange> 
-      getRequestDatetimeRangesList();
+      getRequestedDatetimeRangesList();
   /**
    * <pre>
    * A list of datetime ranges to be blocked off on the schedule.
    * </pre>
    *
-   * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+   * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
    */
-  com.tcn.cloud.api.api.commons.DatetimeRange getRequestDatetimeRanges(int index);
+  com.tcn.cloud.api.api.commons.DatetimeRange getRequestedDatetimeRanges(int index);
   /**
    * <pre>
    * A list of datetime ranges to be blocked off on the schedule.
    * </pre>
    *
-   * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+   * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
    */
-  int getRequestDatetimeRangesCount();
+  int getRequestedDatetimeRangesCount();
   /**
    * <pre>
    * A list of datetime ranges to be blocked off on the schedule.
    * </pre>
    *
-   * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+   * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder> 
-      getRequestDatetimeRangesOrBuilderList();
+      getRequestedDatetimeRangesOrBuilderList();
   /**
    * <pre>
    * A list of datetime ranges to be blocked off on the schedule.
    * </pre>
    *
-   * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+   * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
    */
-  com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getRequestDatetimeRangesOrBuilder(
+  com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getRequestedDatetimeRangesOrBuilder(
       int index);
 
   /**

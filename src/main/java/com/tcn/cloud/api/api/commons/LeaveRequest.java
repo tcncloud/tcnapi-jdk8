@@ -23,7 +23,7 @@ private static final long serialVersionUID = 0L;
     requestStatus_ = 0;
     requestComment_ = "";
     responseComment_ = "";
-    requestDatetimeRanges_ = java.util.Collections.emptyList();
+    requestedDatetimeRanges_ = java.util.Collections.emptyList();
     resolvedByUserId_ = "";
   }
 
@@ -197,65 +197,65 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int REQUEST_DATETIME_RANGES_FIELD_NUMBER = 6;
+  public static final int REQUESTED_DATETIME_RANGES_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.DatetimeRange> requestDatetimeRanges_;
+  private java.util.List<com.tcn.cloud.api.api.commons.DatetimeRange> requestedDatetimeRanges_;
   /**
    * <pre>
    * A list of datetime ranges to be blocked off on the schedule.
    * </pre>
    *
-   * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+   * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.DatetimeRange> getRequestDatetimeRangesList() {
-    return requestDatetimeRanges_;
+  public java.util.List<com.tcn.cloud.api.api.commons.DatetimeRange> getRequestedDatetimeRangesList() {
+    return requestedDatetimeRanges_;
   }
   /**
    * <pre>
    * A list of datetime ranges to be blocked off on the schedule.
    * </pre>
    *
-   * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+   * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder> 
-      getRequestDatetimeRangesOrBuilderList() {
-    return requestDatetimeRanges_;
+      getRequestedDatetimeRangesOrBuilderList() {
+    return requestedDatetimeRanges_;
   }
   /**
    * <pre>
    * A list of datetime ranges to be blocked off on the schedule.
    * </pre>
    *
-   * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+   * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
    */
   @java.lang.Override
-  public int getRequestDatetimeRangesCount() {
-    return requestDatetimeRanges_.size();
+  public int getRequestedDatetimeRangesCount() {
+    return requestedDatetimeRanges_.size();
   }
   /**
    * <pre>
    * A list of datetime ranges to be blocked off on the schedule.
    * </pre>
    *
-   * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+   * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.DatetimeRange getRequestDatetimeRanges(int index) {
-    return requestDatetimeRanges_.get(index);
+  public com.tcn.cloud.api.api.commons.DatetimeRange getRequestedDatetimeRanges(int index) {
+    return requestedDatetimeRanges_.get(index);
   }
   /**
    * <pre>
    * A list of datetime ranges to be blocked off on the schedule.
    * </pre>
    *
-   * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+   * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getRequestDatetimeRangesOrBuilder(
+  public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getRequestedDatetimeRangesOrBuilder(
       int index) {
-    return requestDatetimeRanges_.get(index);
+    return requestedDatetimeRanges_.get(index);
   }
 
   public static final int CREATED_TIME_FIELD_NUMBER = 7;
@@ -457,8 +457,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(responseComment_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, responseComment_);
     }
-    for (int i = 0; i < requestDatetimeRanges_.size(); i++) {
-      output.writeMessage(6, requestDatetimeRanges_.get(i));
+    for (int i = 0; i < requestedDatetimeRanges_.size(); i++) {
+      output.writeMessage(6, requestedDatetimeRanges_.get(i));
     }
     if (createdTime_ != null) {
       output.writeMessage(7, getCreatedTime());
@@ -499,9 +499,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(responseComment_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, responseComment_);
     }
-    for (int i = 0; i < requestDatetimeRanges_.size(); i++) {
+    for (int i = 0; i < requestedDatetimeRanges_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, requestDatetimeRanges_.get(i));
+        .computeMessageSize(6, requestedDatetimeRanges_.get(i));
     }
     if (createdTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -542,8 +542,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getRequestComment())) return false;
     if (!getResponseComment()
         .equals(other.getResponseComment())) return false;
-    if (!getRequestDatetimeRangesList()
-        .equals(other.getRequestDatetimeRangesList())) return false;
+    if (!getRequestedDatetimeRangesList()
+        .equals(other.getRequestedDatetimeRangesList())) return false;
     if (hasCreatedTime() != other.hasCreatedTime()) return false;
     if (hasCreatedTime()) {
       if (!getCreatedTime()
@@ -584,9 +584,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getRequestComment().hashCode();
     hash = (37 * hash) + RESPONSE_COMMENT_FIELD_NUMBER;
     hash = (53 * hash) + getResponseComment().hashCode();
-    if (getRequestDatetimeRangesCount() > 0) {
-      hash = (37 * hash) + REQUEST_DATETIME_RANGES_FIELD_NUMBER;
-      hash = (53 * hash) + getRequestDatetimeRangesList().hashCode();
+    if (getRequestedDatetimeRangesCount() > 0) {
+      hash = (37 * hash) + REQUESTED_DATETIME_RANGES_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestedDatetimeRangesList().hashCode();
     }
     if (hasCreatedTime()) {
       hash = (37 * hash) + CREATED_TIME_FIELD_NUMBER;
@@ -742,11 +742,11 @@ private static final long serialVersionUID = 0L;
       requestStatus_ = 0;
       requestComment_ = "";
       responseComment_ = "";
-      if (requestDatetimeRangesBuilder_ == null) {
-        requestDatetimeRanges_ = java.util.Collections.emptyList();
+      if (requestedDatetimeRangesBuilder_ == null) {
+        requestedDatetimeRanges_ = java.util.Collections.emptyList();
       } else {
-        requestDatetimeRanges_ = null;
-        requestDatetimeRangesBuilder_.clear();
+        requestedDatetimeRanges_ = null;
+        requestedDatetimeRangesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000020);
       createdTime_ = null;
@@ -798,14 +798,14 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.LeaveRequest result) {
-      if (requestDatetimeRangesBuilder_ == null) {
+      if (requestedDatetimeRangesBuilder_ == null) {
         if (((bitField0_ & 0x00000020) != 0)) {
-          requestDatetimeRanges_ = java.util.Collections.unmodifiableList(requestDatetimeRanges_);
+          requestedDatetimeRanges_ = java.util.Collections.unmodifiableList(requestedDatetimeRanges_);
           bitField0_ = (bitField0_ & ~0x00000020);
         }
-        result.requestDatetimeRanges_ = requestDatetimeRanges_;
+        result.requestedDatetimeRanges_ = requestedDatetimeRanges_;
       } else {
-        result.requestDatetimeRanges_ = requestDatetimeRangesBuilder_.build();
+        result.requestedDatetimeRanges_ = requestedDatetimeRangesBuilder_.build();
       }
     }
 
@@ -909,29 +909,29 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
-      if (requestDatetimeRangesBuilder_ == null) {
-        if (!other.requestDatetimeRanges_.isEmpty()) {
-          if (requestDatetimeRanges_.isEmpty()) {
-            requestDatetimeRanges_ = other.requestDatetimeRanges_;
+      if (requestedDatetimeRangesBuilder_ == null) {
+        if (!other.requestedDatetimeRanges_.isEmpty()) {
+          if (requestedDatetimeRanges_.isEmpty()) {
+            requestedDatetimeRanges_ = other.requestedDatetimeRanges_;
             bitField0_ = (bitField0_ & ~0x00000020);
           } else {
-            ensureRequestDatetimeRangesIsMutable();
-            requestDatetimeRanges_.addAll(other.requestDatetimeRanges_);
+            ensureRequestedDatetimeRangesIsMutable();
+            requestedDatetimeRanges_.addAll(other.requestedDatetimeRanges_);
           }
           onChanged();
         }
       } else {
-        if (!other.requestDatetimeRanges_.isEmpty()) {
-          if (requestDatetimeRangesBuilder_.isEmpty()) {
-            requestDatetimeRangesBuilder_.dispose();
-            requestDatetimeRangesBuilder_ = null;
-            requestDatetimeRanges_ = other.requestDatetimeRanges_;
+        if (!other.requestedDatetimeRanges_.isEmpty()) {
+          if (requestedDatetimeRangesBuilder_.isEmpty()) {
+            requestedDatetimeRangesBuilder_.dispose();
+            requestedDatetimeRangesBuilder_ = null;
+            requestedDatetimeRanges_ = other.requestedDatetimeRanges_;
             bitField0_ = (bitField0_ & ~0x00000020);
-            requestDatetimeRangesBuilder_ = 
+            requestedDatetimeRangesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getRequestDatetimeRangesFieldBuilder() : null;
+                 getRequestedDatetimeRangesFieldBuilder() : null;
           } else {
-            requestDatetimeRangesBuilder_.addAllMessages(other.requestDatetimeRanges_);
+            requestedDatetimeRangesBuilder_.addAllMessages(other.requestedDatetimeRanges_);
           }
         }
       }
@@ -1005,11 +1005,11 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       com.tcn.cloud.api.api.commons.DatetimeRange.parser(),
                       extensionRegistry);
-              if (requestDatetimeRangesBuilder_ == null) {
-                ensureRequestDatetimeRangesIsMutable();
-                requestDatetimeRanges_.add(m);
+              if (requestedDatetimeRangesBuilder_ == null) {
+                ensureRequestedDatetimeRangesIsMutable();
+                requestedDatetimeRanges_.add(m);
               } else {
-                requestDatetimeRangesBuilder_.addMessage(m);
+                requestedDatetimeRangesBuilder_.addMessage(m);
               }
               break;
             } // case 50
@@ -1401,30 +1401,30 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.commons.DatetimeRange> requestDatetimeRanges_ =
+    private java.util.List<com.tcn.cloud.api.api.commons.DatetimeRange> requestedDatetimeRanges_ =
       java.util.Collections.emptyList();
-    private void ensureRequestDatetimeRangesIsMutable() {
+    private void ensureRequestedDatetimeRangesIsMutable() {
       if (!((bitField0_ & 0x00000020) != 0)) {
-        requestDatetimeRanges_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.DatetimeRange>(requestDatetimeRanges_);
+        requestedDatetimeRanges_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.DatetimeRange>(requestedDatetimeRanges_);
         bitField0_ |= 0x00000020;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.DatetimeRange, com.tcn.cloud.api.api.commons.DatetimeRange.Builder, com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder> requestDatetimeRangesBuilder_;
+        com.tcn.cloud.api.api.commons.DatetimeRange, com.tcn.cloud.api.api.commons.DatetimeRange.Builder, com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder> requestedDatetimeRangesBuilder_;
 
     /**
      * <pre>
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.DatetimeRange> getRequestDatetimeRangesList() {
-      if (requestDatetimeRangesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(requestDatetimeRanges_);
+    public java.util.List<com.tcn.cloud.api.api.commons.DatetimeRange> getRequestedDatetimeRangesList() {
+      if (requestedDatetimeRangesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(requestedDatetimeRanges_);
       } else {
-        return requestDatetimeRangesBuilder_.getMessageList();
+        return requestedDatetimeRangesBuilder_.getMessageList();
       }
     }
     /**
@@ -1432,13 +1432,13 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public int getRequestDatetimeRangesCount() {
-      if (requestDatetimeRangesBuilder_ == null) {
-        return requestDatetimeRanges_.size();
+    public int getRequestedDatetimeRangesCount() {
+      if (requestedDatetimeRangesBuilder_ == null) {
+        return requestedDatetimeRanges_.size();
       } else {
-        return requestDatetimeRangesBuilder_.getCount();
+        return requestedDatetimeRangesBuilder_.getCount();
       }
     }
     /**
@@ -1446,13 +1446,13 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public com.tcn.cloud.api.api.commons.DatetimeRange getRequestDatetimeRanges(int index) {
-      if (requestDatetimeRangesBuilder_ == null) {
-        return requestDatetimeRanges_.get(index);
+    public com.tcn.cloud.api.api.commons.DatetimeRange getRequestedDatetimeRanges(int index) {
+      if (requestedDatetimeRangesBuilder_ == null) {
+        return requestedDatetimeRanges_.get(index);
       } else {
-        return requestDatetimeRangesBuilder_.getMessage(index);
+        return requestedDatetimeRangesBuilder_.getMessage(index);
       }
     }
     /**
@@ -1460,19 +1460,19 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public Builder setRequestDatetimeRanges(
+    public Builder setRequestedDatetimeRanges(
         int index, com.tcn.cloud.api.api.commons.DatetimeRange value) {
-      if (requestDatetimeRangesBuilder_ == null) {
+      if (requestedDatetimeRangesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureRequestDatetimeRangesIsMutable();
-        requestDatetimeRanges_.set(index, value);
+        ensureRequestedDatetimeRangesIsMutable();
+        requestedDatetimeRanges_.set(index, value);
         onChanged();
       } else {
-        requestDatetimeRangesBuilder_.setMessage(index, value);
+        requestedDatetimeRangesBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -1481,16 +1481,16 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public Builder setRequestDatetimeRanges(
+    public Builder setRequestedDatetimeRanges(
         int index, com.tcn.cloud.api.api.commons.DatetimeRange.Builder builderForValue) {
-      if (requestDatetimeRangesBuilder_ == null) {
-        ensureRequestDatetimeRangesIsMutable();
-        requestDatetimeRanges_.set(index, builderForValue.build());
+      if (requestedDatetimeRangesBuilder_ == null) {
+        ensureRequestedDatetimeRangesIsMutable();
+        requestedDatetimeRanges_.set(index, builderForValue.build());
         onChanged();
       } else {
-        requestDatetimeRangesBuilder_.setMessage(index, builderForValue.build());
+        requestedDatetimeRangesBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1499,18 +1499,18 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public Builder addRequestDatetimeRanges(com.tcn.cloud.api.api.commons.DatetimeRange value) {
-      if (requestDatetimeRangesBuilder_ == null) {
+    public Builder addRequestedDatetimeRanges(com.tcn.cloud.api.api.commons.DatetimeRange value) {
+      if (requestedDatetimeRangesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureRequestDatetimeRangesIsMutable();
-        requestDatetimeRanges_.add(value);
+        ensureRequestedDatetimeRangesIsMutable();
+        requestedDatetimeRanges_.add(value);
         onChanged();
       } else {
-        requestDatetimeRangesBuilder_.addMessage(value);
+        requestedDatetimeRangesBuilder_.addMessage(value);
       }
       return this;
     }
@@ -1519,19 +1519,19 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public Builder addRequestDatetimeRanges(
+    public Builder addRequestedDatetimeRanges(
         int index, com.tcn.cloud.api.api.commons.DatetimeRange value) {
-      if (requestDatetimeRangesBuilder_ == null) {
+      if (requestedDatetimeRangesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureRequestDatetimeRangesIsMutable();
-        requestDatetimeRanges_.add(index, value);
+        ensureRequestedDatetimeRangesIsMutable();
+        requestedDatetimeRanges_.add(index, value);
         onChanged();
       } else {
-        requestDatetimeRangesBuilder_.addMessage(index, value);
+        requestedDatetimeRangesBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -1540,16 +1540,16 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public Builder addRequestDatetimeRanges(
+    public Builder addRequestedDatetimeRanges(
         com.tcn.cloud.api.api.commons.DatetimeRange.Builder builderForValue) {
-      if (requestDatetimeRangesBuilder_ == null) {
-        ensureRequestDatetimeRangesIsMutable();
-        requestDatetimeRanges_.add(builderForValue.build());
+      if (requestedDatetimeRangesBuilder_ == null) {
+        ensureRequestedDatetimeRangesIsMutable();
+        requestedDatetimeRanges_.add(builderForValue.build());
         onChanged();
       } else {
-        requestDatetimeRangesBuilder_.addMessage(builderForValue.build());
+        requestedDatetimeRangesBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -1558,16 +1558,16 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public Builder addRequestDatetimeRanges(
+    public Builder addRequestedDatetimeRanges(
         int index, com.tcn.cloud.api.api.commons.DatetimeRange.Builder builderForValue) {
-      if (requestDatetimeRangesBuilder_ == null) {
-        ensureRequestDatetimeRangesIsMutable();
-        requestDatetimeRanges_.add(index, builderForValue.build());
+      if (requestedDatetimeRangesBuilder_ == null) {
+        ensureRequestedDatetimeRangesIsMutable();
+        requestedDatetimeRanges_.add(index, builderForValue.build());
         onChanged();
       } else {
-        requestDatetimeRangesBuilder_.addMessage(index, builderForValue.build());
+        requestedDatetimeRangesBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1576,17 +1576,17 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public Builder addAllRequestDatetimeRanges(
+    public Builder addAllRequestedDatetimeRanges(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.DatetimeRange> values) {
-      if (requestDatetimeRangesBuilder_ == null) {
-        ensureRequestDatetimeRangesIsMutable();
+      if (requestedDatetimeRangesBuilder_ == null) {
+        ensureRequestedDatetimeRangesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, requestDatetimeRanges_);
+            values, requestedDatetimeRanges_);
         onChanged();
       } else {
-        requestDatetimeRangesBuilder_.addAllMessages(values);
+        requestedDatetimeRangesBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -1595,15 +1595,15 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public Builder clearRequestDatetimeRanges() {
-      if (requestDatetimeRangesBuilder_ == null) {
-        requestDatetimeRanges_ = java.util.Collections.emptyList();
+    public Builder clearRequestedDatetimeRanges() {
+      if (requestedDatetimeRangesBuilder_ == null) {
+        requestedDatetimeRanges_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
-        requestDatetimeRangesBuilder_.clear();
+        requestedDatetimeRangesBuilder_.clear();
       }
       return this;
     }
@@ -1612,15 +1612,15 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public Builder removeRequestDatetimeRanges(int index) {
-      if (requestDatetimeRangesBuilder_ == null) {
-        ensureRequestDatetimeRangesIsMutable();
-        requestDatetimeRanges_.remove(index);
+    public Builder removeRequestedDatetimeRanges(int index) {
+      if (requestedDatetimeRangesBuilder_ == null) {
+        ensureRequestedDatetimeRangesIsMutable();
+        requestedDatetimeRanges_.remove(index);
         onChanged();
       } else {
-        requestDatetimeRangesBuilder_.remove(index);
+        requestedDatetimeRangesBuilder_.remove(index);
       }
       return this;
     }
@@ -1629,24 +1629,24 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public com.tcn.cloud.api.api.commons.DatetimeRange.Builder getRequestDatetimeRangesBuilder(
+    public com.tcn.cloud.api.api.commons.DatetimeRange.Builder getRequestedDatetimeRangesBuilder(
         int index) {
-      return getRequestDatetimeRangesFieldBuilder().getBuilder(index);
+      return getRequestedDatetimeRangesFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getRequestDatetimeRangesOrBuilder(
+    public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getRequestedDatetimeRangesOrBuilder(
         int index) {
-      if (requestDatetimeRangesBuilder_ == null) {
-        return requestDatetimeRanges_.get(index);  } else {
-        return requestDatetimeRangesBuilder_.getMessageOrBuilder(index);
+      if (requestedDatetimeRangesBuilder_ == null) {
+        return requestedDatetimeRanges_.get(index);  } else {
+        return requestedDatetimeRangesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -1654,14 +1654,14 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder> 
-         getRequestDatetimeRangesOrBuilderList() {
-      if (requestDatetimeRangesBuilder_ != null) {
-        return requestDatetimeRangesBuilder_.getMessageOrBuilderList();
+         getRequestedDatetimeRangesOrBuilderList() {
+      if (requestedDatetimeRangesBuilder_ != null) {
+        return requestedDatetimeRangesBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(requestDatetimeRanges_);
+        return java.util.Collections.unmodifiableList(requestedDatetimeRanges_);
       }
     }
     /**
@@ -1669,10 +1669,10 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public com.tcn.cloud.api.api.commons.DatetimeRange.Builder addRequestDatetimeRangesBuilder() {
-      return getRequestDatetimeRangesFieldBuilder().addBuilder(
+    public com.tcn.cloud.api.api.commons.DatetimeRange.Builder addRequestedDatetimeRangesBuilder() {
+      return getRequestedDatetimeRangesFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance());
     }
     /**
@@ -1680,11 +1680,11 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
-    public com.tcn.cloud.api.api.commons.DatetimeRange.Builder addRequestDatetimeRangesBuilder(
+    public com.tcn.cloud.api.api.commons.DatetimeRange.Builder addRequestedDatetimeRangesBuilder(
         int index) {
-      return getRequestDatetimeRangesFieldBuilder().addBuilder(
+      return getRequestedDatetimeRangesFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance());
     }
     /**
@@ -1692,25 +1692,25 @@ private static final long serialVersionUID = 0L;
      * A list of datetime ranges to be blocked off on the schedule.
      * </pre>
      *
-     * <code>repeated .api.commons.DatetimeRange request_datetime_ranges = 6 [json_name = "requestDatetimeRanges"];</code>
+     * <code>repeated .api.commons.DatetimeRange requested_datetime_ranges = 6 [json_name = "requestedDatetimeRanges"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.DatetimeRange.Builder> 
-         getRequestDatetimeRangesBuilderList() {
-      return getRequestDatetimeRangesFieldBuilder().getBuilderList();
+         getRequestedDatetimeRangesBuilderList() {
+      return getRequestedDatetimeRangesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
         com.tcn.cloud.api.api.commons.DatetimeRange, com.tcn.cloud.api.api.commons.DatetimeRange.Builder, com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder> 
-        getRequestDatetimeRangesFieldBuilder() {
-      if (requestDatetimeRangesBuilder_ == null) {
-        requestDatetimeRangesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        getRequestedDatetimeRangesFieldBuilder() {
+      if (requestedDatetimeRangesBuilder_ == null) {
+        requestedDatetimeRangesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.DatetimeRange, com.tcn.cloud.api.api.commons.DatetimeRange.Builder, com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder>(
-                requestDatetimeRanges_,
+                requestedDatetimeRanges_,
                 ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
-        requestDatetimeRanges_ = null;
+        requestedDatetimeRanges_ = null;
       }
-      return requestDatetimeRangesBuilder_;
+      return requestedDatetimeRangesBuilder_;
     }
 
     private com.google.protobuf.Timestamp createdTime_;
