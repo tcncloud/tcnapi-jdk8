@@ -22,6 +22,11 @@ private static final long serialVersionUID = 0L;
   private CountryHoliday() {
     holidayName_ = "";
     country_ = 0;
+    countryName_ = "";
+    types_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    states_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -95,26 +100,183 @@ private static final long serialVersionUID = 0L;
   private int country_ = 0;
   /**
    * <pre>
-   * The country.
+   * The country.  Deprecated.
    * </pre>
    *
-   * <code>.api.commons.Country country = 2 [json_name = "country"];</code>
+   * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
+   * @deprecated api.commons.org.CountryHoliday.country is deprecated.
+   *     See api/commons/org/preferences.proto;l=806
    * @return The enum numeric value on the wire for country.
    */
-  @java.lang.Override public int getCountryValue() {
+  @java.lang.Override @java.lang.Deprecated public int getCountryValue() {
     return country_;
   }
   /**
    * <pre>
-   * The country.
+   * The country.  Deprecated.
    * </pre>
    *
-   * <code>.api.commons.Country country = 2 [json_name = "country"];</code>
+   * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
+   * @deprecated api.commons.org.CountryHoliday.country is deprecated.
+   *     See api/commons/org/preferences.proto;l=806
    * @return The country.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.Country getCountry() {
+  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.Country getCountry() {
     com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.forNumber(country_);
     return result == null ? com.tcn.cloud.api.api.commons.Country.UNRECOGNIZED : result;
+  }
+
+  public static final int COUNTRY_NAME_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object countryName_ = "";
+  /**
+   * <pre>
+   * The country name from holiday service.
+   * </pre>
+   *
+   * <code>string country_name = 3 [json_name = "countryName"];</code>
+   * @return The countryName.
+   */
+  @java.lang.Override
+  public java.lang.String getCountryName() {
+    java.lang.Object ref = countryName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      countryName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The country name from holiday service.
+   * </pre>
+   *
+   * <code>string country_name = 3 [json_name = "countryName"];</code>
+   * @return The bytes for countryName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCountryNameBytes() {
+    java.lang.Object ref = countryName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      countryName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TYPES_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList types_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * The type of holiday- eg. National, religious.
+   * </pre>
+   *
+   * <code>repeated string types = 4 [json_name = "types"];</code>
+   * @return A list containing the types.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getTypesList() {
+    return types_;
+  }
+  /**
+   * <pre>
+   * The type of holiday- eg. National, religious.
+   * </pre>
+   *
+   * <code>repeated string types = 4 [json_name = "types"];</code>
+   * @return The count of types.
+   */
+  public int getTypesCount() {
+    return types_.size();
+  }
+  /**
+   * <pre>
+   * The type of holiday- eg. National, religious.
+   * </pre>
+   *
+   * <code>repeated string types = 4 [json_name = "types"];</code>
+   * @param index The index of the element to return.
+   * @return The types at the given index.
+   */
+  public java.lang.String getTypes(int index) {
+    return types_.get(index);
+  }
+  /**
+   * <pre>
+   * The type of holiday- eg. National, religious.
+   * </pre>
+   *
+   * <code>repeated string types = 4 [json_name = "types"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the types at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getTypesBytes(int index) {
+    return types_.getByteString(index);
+  }
+
+  public static final int STATES_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList states_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * The specific sub-regions of the country that celebrate the holiday.
+   * </pre>
+   *
+   * <code>repeated string states = 5 [json_name = "states"];</code>
+   * @return A list containing the states.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getStatesList() {
+    return states_;
+  }
+  /**
+   * <pre>
+   * The specific sub-regions of the country that celebrate the holiday.
+   * </pre>
+   *
+   * <code>repeated string states = 5 [json_name = "states"];</code>
+   * @return The count of states.
+   */
+  public int getStatesCount() {
+    return states_.size();
+  }
+  /**
+   * <pre>
+   * The specific sub-regions of the country that celebrate the holiday.
+   * </pre>
+   *
+   * <code>repeated string states = 5 [json_name = "states"];</code>
+   * @param index The index of the element to return.
+   * @return The states at the given index.
+   */
+  public java.lang.String getStates(int index) {
+    return states_.get(index);
+  }
+  /**
+   * <pre>
+   * The specific sub-regions of the country that celebrate the holiday.
+   * </pre>
+   *
+   * <code>repeated string states = 5 [json_name = "states"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the states at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getStatesBytes(int index) {
+    return states_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -137,6 +299,15 @@ private static final long serialVersionUID = 0L;
     if (country_ != com.tcn.cloud.api.api.commons.Country.COUNTRY_UNDEFINED.getNumber()) {
       output.writeEnum(2, country_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, countryName_);
+    }
+    for (int i = 0; i < types_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, types_.getRaw(i));
+    }
+    for (int i = 0; i < states_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, states_.getRaw(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -152,6 +323,25 @@ private static final long serialVersionUID = 0L;
     if (country_ != com.tcn.cloud.api.api.commons.Country.COUNTRY_UNDEFINED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, country_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, countryName_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < types_.size(); i++) {
+        dataSize += computeStringSizeNoTag(types_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getTypesList().size();
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < states_.size(); i++) {
+        dataSize += computeStringSizeNoTag(states_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getStatesList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -171,6 +361,12 @@ private static final long serialVersionUID = 0L;
     if (!getHolidayName()
         .equals(other.getHolidayName())) return false;
     if (country_ != other.country_) return false;
+    if (!getCountryName()
+        .equals(other.getCountryName())) return false;
+    if (!getTypesList()
+        .equals(other.getTypesList())) return false;
+    if (!getStatesList()
+        .equals(other.getStatesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -186,6 +382,16 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getHolidayName().hashCode();
     hash = (37 * hash) + COUNTRY_FIELD_NUMBER;
     hash = (53 * hash) + country_;
+    hash = (37 * hash) + COUNTRY_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getCountryName().hashCode();
+    if (getTypesCount() > 0) {
+      hash = (37 * hash) + TYPES_FIELD_NUMBER;
+      hash = (53 * hash) + getTypesList().hashCode();
+    }
+    if (getStatesCount() > 0) {
+      hash = (37 * hash) + STATES_FIELD_NUMBER;
+      hash = (53 * hash) + getStatesList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -323,6 +529,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       holidayName_ = "";
       country_ = 0;
+      countryName_ = "";
+      types_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      states_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -361,6 +572,17 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.country_ = country_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.countryName_ = countryName_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        types_.makeImmutable();
+        result.types_ = types_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        states_.makeImmutable();
+        result.states_ = states_;
       }
     }
 
@@ -416,6 +638,31 @@ private static final long serialVersionUID = 0L;
       if (other.country_ != 0) {
         setCountryValue(other.getCountryValue());
       }
+      if (!other.getCountryName().isEmpty()) {
+        countryName_ = other.countryName_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (!other.types_.isEmpty()) {
+        if (types_.isEmpty()) {
+          types_ = other.types_;
+          bitField0_ |= 0x00000008;
+        } else {
+          ensureTypesIsMutable();
+          types_.addAll(other.types_);
+        }
+        onChanged();
+      }
+      if (!other.states_.isEmpty()) {
+        if (states_.isEmpty()) {
+          states_ = other.states_;
+          bitField0_ |= 0x00000010;
+        } else {
+          ensureStatesIsMutable();
+          states_.addAll(other.states_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -452,6 +699,23 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 26: {
+              countryName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureTypesIsMutable();
+              types_.add(s);
+              break;
+            } // case 34
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureStatesIsMutable();
+              states_.add(s);
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -564,25 +828,29 @@ private static final long serialVersionUID = 0L;
     private int country_ = 0;
     /**
      * <pre>
-     * The country.
+     * The country.  Deprecated.
      * </pre>
      *
-     * <code>.api.commons.Country country = 2 [json_name = "country"];</code>
+     * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
+     * @deprecated api.commons.org.CountryHoliday.country is deprecated.
+     *     See api/commons/org/preferences.proto;l=806
      * @return The enum numeric value on the wire for country.
      */
-    @java.lang.Override public int getCountryValue() {
+    @java.lang.Override @java.lang.Deprecated public int getCountryValue() {
       return country_;
     }
     /**
      * <pre>
-     * The country.
+     * The country.  Deprecated.
      * </pre>
      *
-     * <code>.api.commons.Country country = 2 [json_name = "country"];</code>
+     * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
+     * @deprecated api.commons.org.CountryHoliday.country is deprecated.
+     *     See api/commons/org/preferences.proto;l=806
      * @param value The enum numeric value on the wire for country to set.
      * @return This builder for chaining.
      */
-    public Builder setCountryValue(int value) {
+    @java.lang.Deprecated public Builder setCountryValue(int value) {
       country_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -590,27 +858,31 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The country.
+     * The country.  Deprecated.
      * </pre>
      *
-     * <code>.api.commons.Country country = 2 [json_name = "country"];</code>
+     * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
+     * @deprecated api.commons.org.CountryHoliday.country is deprecated.
+     *     See api/commons/org/preferences.proto;l=806
      * @return The country.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.Country getCountry() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.Country getCountry() {
       com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.forNumber(country_);
       return result == null ? com.tcn.cloud.api.api.commons.Country.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * The country.
+     * The country.  Deprecated.
      * </pre>
      *
-     * <code>.api.commons.Country country = 2 [json_name = "country"];</code>
+     * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
+     * @deprecated api.commons.org.CountryHoliday.country is deprecated.
+     *     See api/commons/org/preferences.proto;l=806
      * @param value The country to set.
      * @return This builder for chaining.
      */
-    public Builder setCountry(com.tcn.cloud.api.api.commons.Country value) {
+    @java.lang.Deprecated public Builder setCountry(com.tcn.cloud.api.api.commons.Country value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -621,15 +893,403 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The country.
+     * The country.  Deprecated.
      * </pre>
      *
-     * <code>.api.commons.Country country = 2 [json_name = "country"];</code>
+     * <code>.api.commons.Country country = 2 [json_name = "country", deprecated = true];</code>
+     * @deprecated api.commons.org.CountryHoliday.country is deprecated.
+     *     See api/commons/org/preferences.proto;l=806
      * @return This builder for chaining.
      */
-    public Builder clearCountry() {
+    @java.lang.Deprecated public Builder clearCountry() {
       bitField0_ = (bitField0_ & ~0x00000002);
       country_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object countryName_ = "";
+    /**
+     * <pre>
+     * The country name from holiday service.
+     * </pre>
+     *
+     * <code>string country_name = 3 [json_name = "countryName"];</code>
+     * @return The countryName.
+     */
+    public java.lang.String getCountryName() {
+      java.lang.Object ref = countryName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        countryName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The country name from holiday service.
+     * </pre>
+     *
+     * <code>string country_name = 3 [json_name = "countryName"];</code>
+     * @return The bytes for countryName.
+     */
+    public com.google.protobuf.ByteString
+        getCountryNameBytes() {
+      java.lang.Object ref = countryName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        countryName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The country name from holiday service.
+     * </pre>
+     *
+     * <code>string country_name = 3 [json_name = "countryName"];</code>
+     * @param value The countryName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCountryName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      countryName_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The country name from holiday service.
+     * </pre>
+     *
+     * <code>string country_name = 3 [json_name = "countryName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCountryName() {
+      countryName_ = getDefaultInstance().getCountryName();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The country name from holiday service.
+     * </pre>
+     *
+     * <code>string country_name = 3 [json_name = "countryName"];</code>
+     * @param value The bytes for countryName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCountryNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      countryName_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList types_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureTypesIsMutable() {
+      if (!types_.isModifiable()) {
+        types_ = new com.google.protobuf.LazyStringArrayList(types_);
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * The type of holiday- eg. National, religious.
+     * </pre>
+     *
+     * <code>repeated string types = 4 [json_name = "types"];</code>
+     * @return A list containing the types.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTypesList() {
+      types_.makeImmutable();
+      return types_;
+    }
+    /**
+     * <pre>
+     * The type of holiday- eg. National, religious.
+     * </pre>
+     *
+     * <code>repeated string types = 4 [json_name = "types"];</code>
+     * @return The count of types.
+     */
+    public int getTypesCount() {
+      return types_.size();
+    }
+    /**
+     * <pre>
+     * The type of holiday- eg. National, religious.
+     * </pre>
+     *
+     * <code>repeated string types = 4 [json_name = "types"];</code>
+     * @param index The index of the element to return.
+     * @return The types at the given index.
+     */
+    public java.lang.String getTypes(int index) {
+      return types_.get(index);
+    }
+    /**
+     * <pre>
+     * The type of holiday- eg. National, religious.
+     * </pre>
+     *
+     * <code>repeated string types = 4 [json_name = "types"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the types at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTypesBytes(int index) {
+      return types_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * The type of holiday- eg. National, religious.
+     * </pre>
+     *
+     * <code>repeated string types = 4 [json_name = "types"];</code>
+     * @param index The index to set the value at.
+     * @param value The types to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTypes(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureTypesIsMutable();
+      types_.set(index, value);
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The type of holiday- eg. National, religious.
+     * </pre>
+     *
+     * <code>repeated string types = 4 [json_name = "types"];</code>
+     * @param value The types to add.
+     * @return This builder for chaining.
+     */
+    public Builder addTypes(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureTypesIsMutable();
+      types_.add(value);
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The type of holiday- eg. National, religious.
+     * </pre>
+     *
+     * <code>repeated string types = 4 [json_name = "types"];</code>
+     * @param values The types to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllTypes(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureTypesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, types_);
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The type of holiday- eg. National, religious.
+     * </pre>
+     *
+     * <code>repeated string types = 4 [json_name = "types"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTypes() {
+      types_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The type of holiday- eg. National, religious.
+     * </pre>
+     *
+     * <code>repeated string types = 4 [json_name = "types"];</code>
+     * @param value The bytes of the types to add.
+     * @return This builder for chaining.
+     */
+    public Builder addTypesBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureTypesIsMutable();
+      types_.add(value);
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList states_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureStatesIsMutable() {
+      if (!states_.isModifiable()) {
+        states_ = new com.google.protobuf.LazyStringArrayList(states_);
+      }
+      bitField0_ |= 0x00000010;
+    }
+    /**
+     * <pre>
+     * The specific sub-regions of the country that celebrate the holiday.
+     * </pre>
+     *
+     * <code>repeated string states = 5 [json_name = "states"];</code>
+     * @return A list containing the states.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getStatesList() {
+      states_.makeImmutable();
+      return states_;
+    }
+    /**
+     * <pre>
+     * The specific sub-regions of the country that celebrate the holiday.
+     * </pre>
+     *
+     * <code>repeated string states = 5 [json_name = "states"];</code>
+     * @return The count of states.
+     */
+    public int getStatesCount() {
+      return states_.size();
+    }
+    /**
+     * <pre>
+     * The specific sub-regions of the country that celebrate the holiday.
+     * </pre>
+     *
+     * <code>repeated string states = 5 [json_name = "states"];</code>
+     * @param index The index of the element to return.
+     * @return The states at the given index.
+     */
+    public java.lang.String getStates(int index) {
+      return states_.get(index);
+    }
+    /**
+     * <pre>
+     * The specific sub-regions of the country that celebrate the holiday.
+     * </pre>
+     *
+     * <code>repeated string states = 5 [json_name = "states"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the states at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getStatesBytes(int index) {
+      return states_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * The specific sub-regions of the country that celebrate the holiday.
+     * </pre>
+     *
+     * <code>repeated string states = 5 [json_name = "states"];</code>
+     * @param index The index to set the value at.
+     * @param value The states to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStates(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureStatesIsMutable();
+      states_.set(index, value);
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The specific sub-regions of the country that celebrate the holiday.
+     * </pre>
+     *
+     * <code>repeated string states = 5 [json_name = "states"];</code>
+     * @param value The states to add.
+     * @return This builder for chaining.
+     */
+    public Builder addStates(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureStatesIsMutable();
+      states_.add(value);
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The specific sub-regions of the country that celebrate the holiday.
+     * </pre>
+     *
+     * <code>repeated string states = 5 [json_name = "states"];</code>
+     * @param values The states to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllStates(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureStatesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, states_);
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The specific sub-regions of the country that celebrate the holiday.
+     * </pre>
+     *
+     * <code>repeated string states = 5 [json_name = "states"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStates() {
+      states_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000010);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The specific sub-regions of the country that celebrate the holiday.
+     * </pre>
+     *
+     * <code>repeated string states = 5 [json_name = "states"];</code>
+     * @param value The bytes of the states to add.
+     * @return This builder for chaining.
+     */
+    public Builder addStatesBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureStatesIsMutable();
+      states_.add(value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
