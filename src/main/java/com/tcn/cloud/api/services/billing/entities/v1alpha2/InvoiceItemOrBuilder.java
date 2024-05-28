@@ -20,15 +20,19 @@ public interface InvoiceItemOrBuilder extends
       getClientIdBytes();
 
   /**
-   * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product"];</code>
+   * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha2.InvoiceItem.product is deprecated.
+   *     See services/billing/entities/v1alpha2/invoice.proto;l=18
    * @return The enum numeric value on the wire for product.
    */
-  int getProductValue();
+  @java.lang.Deprecated int getProductValue();
   /**
-   * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product"];</code>
+   * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha2.InvoiceItem.product is deprecated.
+   *     See services/billing/entities/v1alpha2/invoice.proto;l=18
    * @return The product.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha2.Product getProduct();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha2.Product getProduct();
 
   /**
    * <code>string description = 3 [json_name = "description"];</code>
@@ -103,4 +107,16 @@ public interface InvoiceItemOrBuilder extends
    * <code>.google.type.Decimal rated_amount = 7 [json_name = "ratedAmount"];</code>
    */
   com.google.type.DecimalOrBuilder getRatedAmountOrBuilder();
+
+  /**
+   * <code>string product_id = 8 [json_name = "productId"];</code>
+   * @return The productId.
+   */
+  java.lang.String getProductId();
+  /**
+   * <code>string product_id = 8 [json_name = "productId"];</code>
+   * @return The bytes for productId.
+   */
+  com.google.protobuf.ByteString
+      getProductIdBytes();
 }
