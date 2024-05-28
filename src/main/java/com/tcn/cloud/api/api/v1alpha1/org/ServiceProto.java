@@ -804,26 +804,26 @@ public final class ServiceProto {
       "roupscript:\001*\022\303\001\n\027ListOrgHuntGroupScript" +
       "s\022-.api.v1alpha1.org.ListHuntGroupScript" +
       "sRequest\032..api.v1alpha1.org.ListHuntGrou" +
-      "pScriptsResponse\"G\272\270\221\002\005\n\003\010\354\016\202\323\344\223\0027\"2/api" +
+      "pScriptsResponse\"G\272\270\221\002\005\n\003\010\236\017\202\323\344\223\0027\"2/api" +
       "/v1alpha1/org/huntgroup/listorghuntgroup" +
       "script:\001*0\001\022\264\001\n\022GetHuntGroupScript\022+.api" +
       ".v1alpha1.org.GetHuntGroupScriptRequest\032" +
       ",.api.v1alpha1.org.GetHuntGroupScriptRes" +
-      "ponse\"C\272\270\221\002\005\n\003\010\354\016\202\323\344\223\0023\"./api/v1alpha1/o" +
+      "ponse\"C\272\270\221\002\005\n\003\010\236\017\202\323\344\223\0023\"./api/v1alpha1/o" +
       "rg/huntgroup/gethuntgroupscript:\001*\022\300\001\n\025C" +
       "reateHuntGroupScript\022..api.v1alpha1.org." +
       "CreateHuntGroupScriptRequest\032/.api.v1alp" +
       "ha1.org.CreateHuntGroupScriptResponse\"F\272" +
-      "\270\221\002\005\n\003\010\355\016\202\323\344\223\0026\"1/api/v1alpha1/org/huntg" +
+      "\270\221\002\005\n\003\010\237\017\202\323\344\223\0026\"1/api/v1alpha1/org/huntg" +
       "roup/createhuntgroupscript:\001*\022\300\001\n\025Update" +
       "HuntGroupScript\022..api.v1alpha1.org.Updat" +
       "eHuntGroupScriptRequest\032/.api.v1alpha1.o" +
       "rg.UpdateHuntGroupScriptResponse\"F\272\270\221\002\005\n" +
-      "\003\010\355\016\202\323\344\223\0026\"1/api/v1alpha1/org/huntgroup/" +
+      "\003\010\237\017\202\323\344\223\0026\"1/api/v1alpha1/org/huntgroup/" +
       "updatehuntgroupscript:\001*\022\300\001\n\025DeleteHuntG" +
       "roupScript\022..api.v1alpha1.org.DeleteHunt" +
       "GroupScriptRequest\032/.api.v1alpha1.org.De",
-      "leteHuntGroupScriptResponse\"F\272\270\221\002\005\n\003\010\355\016\202" +
+      "leteHuntGroupScriptResponse\"F\272\270\221\002\005\n\003\010\237\017\202" +
       "\323\344\223\0026\"1/api/v1alpha1/org/huntgroup/delet" +
       "ehuntgroupscript:\001*\022\314\001\n\030AssignScriptToHu" +
       "ntGroups\0221.api.v1alpha1.org.AssignScript" +

@@ -54,7 +54,7 @@ public interface BuildProfileForecastByIntervalReqOrBuilder extends
    *
    * <code>int64 skill_profile_sid = 3 [json_name = "skillProfileSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.BuildProfileForecastByIntervalReq.skill_profile_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=3838
+   *     See api/v1alpha1/wfm/wfm.proto;l=3862
    * @return The skillProfileSid.
    */
   @java.lang.Deprecated long getSkillProfileSid();

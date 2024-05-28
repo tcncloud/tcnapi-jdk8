@@ -16,4 +16,31 @@ public interface EvaluateObservedHolidaysResponseOrBuilder extends
    * @return The dateMatched.
    */
   boolean getDateMatched();
+
+  /**
+   * <pre>
+   * indicates how long this result can be used.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+   * @return Whether the resultExpiration field is set.
+   */
+  boolean hasResultExpiration();
+  /**
+   * <pre>
+   * indicates how long this result can be used.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+   * @return The resultExpiration.
+   */
+  com.google.protobuf.Timestamp getResultExpiration();
+  /**
+   * <pre>
+   * indicates how long this result can be used.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getResultExpirationOrBuilder();
 }

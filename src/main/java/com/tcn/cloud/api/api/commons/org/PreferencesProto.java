@@ -648,37 +648,40 @@ public final class PreferencesProto {
       "\n\014MonthDayDate\022\033\n\tdate_name\030\001 \001(\tR\010dateN" +
       "ame\022(\n\005month\030\002 \001(\0162\022.api.commons.MonthR\005" +
       "month\022 \n\014day_of_month\030\003 \001(\005R\ndayOfMonth\"" +
-      "c\n\016CountryHoliday\022!\n\014holiday_name\030\001 \001(\tR" +
-      "\013holidayName\022.\n\007country\030\002 \001(\0162\024.api.comm" +
-      "ons.CountryR\007country\"\212\001\n\rProgrammedDay\0221" +
-      "\n\003day\030\001 \001(\0132\035.api.commons.org.MonthDayDa" +
-      "teH\000R\003day\022;\n\007holiday\030\002 \001(\0132\037.api.commons" +
-      ".org.CountryHolidayH\000R\007holidayB\t\n\007DayTyp" +
-      "e\"\324\002\n\017ProgrammedDates\022\025\n\006org_id\030\001 \001(\tR\005o" +
-      "rgId\022.\n\023programmed_dates_id\030\002 \001(\tR\021progr" +
-      "ammedDatesId\0222\n\025programmed_dates_name\030\003 " +
-      "\001(\tR\023programmedDatesName\022 \n\013description\030" +
-      "\004 \001(\tR\013description\0221\n\010timezone\030\005 \001(\0162\025.a" +
-      "pi.commons.TimeZoneR\010timezone\0222\n\004days\030\006 " +
-      "\003(\0132\036.api.commons.org.ProgrammedDayR\004day" +
-      "s\022=\n\014last_updated\030\007 \001(\0132\032.google.protobu" +
-      "f.TimestampR\013lastUpdated\"\333\002\n\020ObservedHol" +
-      "idays\022\025\n\006org_id\030\001 \001(\tR\005orgId\0220\n\024observed" +
-      "_holidays_id\030\002 \001(\tR\022observedHolidaysId\0224" +
-      "\n\026observed_holidays_name\030\003 \001(\tR\024observed" +
-      "HolidaysName\022 \n\013description\030\004 \001(\tR\013descr" +
-      "iption\0221\n\010timezone\030\005 \001(\0162\025.api.commons.T" +
-      "imeZoneR\010timezone\0224\n\004days\030\006 \003(\0132 .api.co" +
-      "mmons.org.ObservedHolidayR\004days\022=\n\014last_" +
-      "updated\030\007 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\013lastUpdated\"\214\001\n\017ObservedHoliday\0221\n\003da" +
-      "y\030\001 \001(\0132\035.api.commons.org.MonthDayDateH\000" +
-      "R\003day\022;\n\007holiday\030\002 \001(\0132\037.api.commons.org" +
-      ".CountryHolidayH\000R\007holidayB\t\n\007DayTypeB\223\001" +
-      "\n!com.tcn.cloud.api.api.commons.orgB\020Pre" +
-      "ferencesProtoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312" +
-      "\002\017Api\\Commons\\Org\342\002\033Api\\Commons\\Org\\GPBM" +
-      "etadata\352\002\021Api::Commons::Orgb\006proto3"
+      "\270\001\n\016CountryHoliday\022!\n\014holiday_name\030\001 \001(\t" +
+      "R\013holidayName\0222\n\007country\030\002 \001(\0162\024.api.com" +
+      "mons.CountryB\002\030\001R\007country\022!\n\014country_nam" +
+      "e\030\003 \001(\tR\013countryName\022\024\n\005types\030\004 \003(\tR\005typ" +
+      "es\022\026\n\006states\030\005 \003(\tR\006states\"\212\001\n\rProgramme" +
+      "dDay\0221\n\003day\030\001 \001(\0132\035.api.commons.org.Mont" +
+      "hDayDateH\000R\003day\022;\n\007holiday\030\002 \001(\0132\037.api.c" +
+      "ommons.org.CountryHolidayH\000R\007holidayB\t\n\007" +
+      "DayType\"\324\002\n\017ProgrammedDates\022\025\n\006org_id\030\001 " +
+      "\001(\tR\005orgId\022.\n\023programmed_dates_id\030\002 \001(\tR" +
+      "\021programmedDatesId\0222\n\025programmed_dates_n" +
+      "ame\030\003 \001(\tR\023programmedDatesName\022 \n\013descri" +
+      "ption\030\004 \001(\tR\013description\0221\n\010timezone\030\005 \001" +
+      "(\0162\025.api.commons.TimeZoneR\010timezone\0222\n\004d" +
+      "ays\030\006 \003(\0132\036.api.commons.org.ProgrammedDa" +
+      "yR\004days\022=\n\014last_updated\030\007 \001(\0132\032.google.p" +
+      "rotobuf.TimestampR\013lastUpdated\"\333\002\n\020Obser" +
+      "vedHolidays\022\025\n\006org_id\030\001 \001(\tR\005orgId\0220\n\024ob" +
+      "served_holidays_id\030\002 \001(\tR\022observedHolida" +
+      "ysId\0224\n\026observed_holidays_name\030\003 \001(\tR\024ob" +
+      "servedHolidaysName\022 \n\013description\030\004 \001(\tR" +
+      "\013description\0221\n\010timezone\030\005 \001(\0162\025.api.com" +
+      "mons.TimeZoneR\010timezone\0224\n\004days\030\006 \003(\0132 ." +
+      "api.commons.org.ObservedHolidayR\004days\022=\n" +
+      "\014last_updated\030\007 \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\013lastUpdated\"\214\001\n\017ObservedHoliday" +
+      "\0221\n\003day\030\001 \001(\0132\035.api.commons.org.MonthDay" +
+      "DateH\000R\003day\022;\n\007holiday\030\002 \001(\0132\037.api.commo" +
+      "ns.org.CountryHolidayH\000R\007holidayB\t\n\007DayT" +
+      "ypeB\223\001\n!com.tcn.cloud.api.api.commons.or" +
+      "gB\020PreferencesProtoP\001\242\002\003ACO\252\002\017Api.Common" +
+      "s.Org\312\002\017Api\\Commons\\Org\342\002\033Api\\Commons\\Or" +
+      "g\\GPBMetadata\352\002\021Api::Commons::Orgb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1002,7 +1005,7 @@ public final class PreferencesProto {
     internal_static_api_commons_org_CountryHoliday_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_CountryHoliday_descriptor,
-        new java.lang.String[] { "HolidayName", "Country", });
+        new java.lang.String[] { "HolidayName", "Country", "CountryName", "Types", "States", });
     internal_static_api_commons_org_ProgrammedDay_descriptor =
       getDescriptor().getMessageTypes().get(44);
     internal_static_api_commons_org_ProgrammedDay_fieldAccessorTable = new

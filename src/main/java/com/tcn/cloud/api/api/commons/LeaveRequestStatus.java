@@ -5,12 +5,12 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * The RequestStatus, which is the current state of an agent's LeaveRequest for the scheduler service.
+ * The LeaveRequestStatus, which is the current state of an agent's LeaveRequest for the scheduler service.
  * </pre>
  *
- * Protobuf enum {@code api.commons.RequestStatus}
+ * Protobuf enum {@code api.commons.LeaveRequestStatus}
  */
-public enum RequestStatus
+public enum LeaveRequestStatus
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
@@ -111,7 +111,7 @@ public enum RequestStatus
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static RequestStatus valueOf(int value) {
+  public static LeaveRequestStatus valueOf(int value) {
     return forNumber(value);
   }
 
@@ -119,7 +119,7 @@ public enum RequestStatus
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static RequestStatus forNumber(int value) {
+  public static LeaveRequestStatus forNumber(int value) {
     switch (value) {
       case 0: return UNSPECIFIED_STATUS;
       case 1: return PENDING_REQUEST;
@@ -130,15 +130,15 @@ public enum RequestStatus
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<RequestStatus>
+  public static com.google.protobuf.Internal.EnumLiteMap<LeaveRequestStatus>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      RequestStatus> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<RequestStatus>() {
-          public RequestStatus findValueByNumber(int number) {
-            return RequestStatus.forNumber(number);
+      LeaveRequestStatus> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<LeaveRequestStatus>() {
+          public LeaveRequestStatus findValueByNumber(int number) {
+            return LeaveRequestStatus.forNumber(number);
           }
         };
 
@@ -159,9 +159,9 @@ public enum RequestStatus
     return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(20);
   }
 
-  private static final RequestStatus[] VALUES = values();
+  private static final LeaveRequestStatus[] VALUES = values();
 
-  public static RequestStatus valueOf(
+  public static LeaveRequestStatus valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -175,10 +175,10 @@ public enum RequestStatus
 
   private final int value;
 
-  private RequestStatus(int value) {
+  private LeaveRequestStatus(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.commons.RequestStatus)
+  // @@protoc_insertion_point(enum_scope:api.commons.LeaveRequestStatus)
 }
 

@@ -6,7 +6,7 @@ package com.tcn.cloud.api.services.billing.entities.v1alpha2;
 /**
  * Protobuf enum {@code services.billing.entities.v1alpha2.Product}
  */
-public enum Product
+@java.lang.Deprecated public enum Product
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <code>PRODUCT_UNSPECIFIED = 0;</code>

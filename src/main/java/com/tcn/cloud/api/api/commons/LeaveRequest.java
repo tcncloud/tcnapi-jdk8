@@ -84,7 +84,7 @@ private static final long serialVersionUID = 0L;
    * Current status of the leave request.
    * </pre>
    *
-   * <code>.api.commons.RequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+   * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
    * @return The enum numeric value on the wire for requestStatus.
    */
   @java.lang.Override public int getRequestStatusValue() {
@@ -95,12 +95,12 @@ private static final long serialVersionUID = 0L;
    * Current status of the leave request.
    * </pre>
    *
-   * <code>.api.commons.RequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+   * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
    * @return The requestStatus.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.RequestStatus getRequestStatus() {
-    com.tcn.cloud.api.api.commons.RequestStatus result = com.tcn.cloud.api.api.commons.RequestStatus.forNumber(requestStatus_);
-    return result == null ? com.tcn.cloud.api.api.commons.RequestStatus.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.LeaveRequestStatus getRequestStatus() {
+    com.tcn.cloud.api.api.commons.LeaveRequestStatus result = com.tcn.cloud.api.api.commons.LeaveRequestStatus.forNumber(requestStatus_);
+    return result == null ? com.tcn.cloud.api.api.commons.LeaveRequestStatus.UNRECOGNIZED : result;
   }
 
   public static final int REQUEST_COMMENT_FIELD_NUMBER = 4;
@@ -452,7 +452,7 @@ private static final long serialVersionUID = 0L;
     if (wfmAgentSid_ != 0L) {
       output.writeInt64(2, wfmAgentSid_);
     }
-    if (requestStatus_ != com.tcn.cloud.api.api.commons.RequestStatus.UNSPECIFIED_STATUS.getNumber()) {
+    if (requestStatus_ != com.tcn.cloud.api.api.commons.LeaveRequestStatus.UNSPECIFIED_STATUS.getNumber()) {
       output.writeEnum(3, requestStatus_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestComment_)) {
@@ -493,7 +493,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, wfmAgentSid_);
     }
-    if (requestStatus_ != com.tcn.cloud.api.api.commons.RequestStatus.UNSPECIFIED_STATUS.getNumber()) {
+    if (requestStatus_ != com.tcn.cloud.api.api.commons.LeaveRequestStatus.UNSPECIFIED_STATUS.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, requestStatus_);
     }
@@ -1154,7 +1154,7 @@ private static final long serialVersionUID = 0L;
      * Current status of the leave request.
      * </pre>
      *
-     * <code>.api.commons.RequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+     * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
      * @return The enum numeric value on the wire for requestStatus.
      */
     @java.lang.Override public int getRequestStatusValue() {
@@ -1165,7 +1165,7 @@ private static final long serialVersionUID = 0L;
      * Current status of the leave request.
      * </pre>
      *
-     * <code>.api.commons.RequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+     * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
      * @param value The enum numeric value on the wire for requestStatus to set.
      * @return This builder for chaining.
      */
@@ -1180,24 +1180,24 @@ private static final long serialVersionUID = 0L;
      * Current status of the leave request.
      * </pre>
      *
-     * <code>.api.commons.RequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+     * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
      * @return The requestStatus.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.RequestStatus getRequestStatus() {
-      com.tcn.cloud.api.api.commons.RequestStatus result = com.tcn.cloud.api.api.commons.RequestStatus.forNumber(requestStatus_);
-      return result == null ? com.tcn.cloud.api.api.commons.RequestStatus.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.LeaveRequestStatus getRequestStatus() {
+      com.tcn.cloud.api.api.commons.LeaveRequestStatus result = com.tcn.cloud.api.api.commons.LeaveRequestStatus.forNumber(requestStatus_);
+      return result == null ? com.tcn.cloud.api.api.commons.LeaveRequestStatus.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * Current status of the leave request.
      * </pre>
      *
-     * <code>.api.commons.RequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+     * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
      * @param value The requestStatus to set.
      * @return This builder for chaining.
      */
-    public Builder setRequestStatus(com.tcn.cloud.api.api.commons.RequestStatus value) {
+    public Builder setRequestStatus(com.tcn.cloud.api.api.commons.LeaveRequestStatus value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1211,7 +1211,7 @@ private static final long serialVersionUID = 0L;
      * Current status of the leave request.
      * </pre>
      *
-     * <code>.api.commons.RequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+     * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRequestStatus() {
