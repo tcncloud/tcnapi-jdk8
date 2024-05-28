@@ -110,6 +110,21 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageChatUnitsOrBuilder();
 
   /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size_total = 1603 [json_name = "agentMessageChatSizeTotal"];</code>
+   * @return Whether the agentMessageChatSizeTotal field is set.
+   */
+  boolean hasAgentMessageChatSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size_total = 1603 [json_name = "agentMessageChatSizeTotal"];</code>
+   * @return The agentMessageChatSizeTotal.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getAgentMessageChatSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size_total = 1603 [json_name = "agentMessageChatSizeTotal"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getAgentMessageChatSizeTotalOrBuilder();
+
+  /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
    * @return Whether the agentMessageEmail field is set.
    */
@@ -153,6 +168,21 @@ public interface RateDefinitionConfigOrBuilder extends
    * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email_units = 1612 [json_name = "agentMessageEmailUnits"];</code>
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageEmailUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size_total = 1613 [json_name = "agentMessageEmailSizeTotal"];</code>
+   * @return Whether the agentMessageEmailSizeTotal field is set.
+   */
+  boolean hasAgentMessageEmailSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size_total = 1613 [json_name = "agentMessageEmailSizeTotal"];</code>
+   * @return The agentMessageEmailSizeTotal.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getAgentMessageEmailSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size_total = 1613 [json_name = "agentMessageEmailSizeTotal"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getAgentMessageEmailSizeTotalOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_sms = 1620 [json_name = "agentMessageSms"];</code>
@@ -200,6 +230,21 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getAgentMessageSmsUnitsOrBuilder();
 
   /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size_total = 1623 [json_name = "agentMessageSmsSizeTotal"];</code>
+   * @return Whether the agentMessageSmsSizeTotal field is set.
+   */
+  boolean hasAgentMessageSmsSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size_total = 1623 [json_name = "agentMessageSmsSizeTotal"];</code>
+   * @return The agentMessageSmsSizeTotal.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getAgentMessageSmsSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size_total = 1623 [json_name = "agentMessageSmsSizeTotal"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getAgentMessageSmsSizeTotalOrBuilder();
+
+  /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
    * @return Whether the managerMessageChat field is set.
    */
@@ -243,6 +288,21 @@ public interface RateDefinitionConfigOrBuilder extends
    * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat_units = 1702 [json_name = "managerMessageChatUnits"];</code>
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageChatUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size_total = 1703 [json_name = "managerMessageChatSizeTotal"];</code>
+   * @return Whether the managerMessageChatSizeTotal field is set.
+   */
+  boolean hasManagerMessageChatSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size_total = 1703 [json_name = "managerMessageChatSizeTotal"];</code>
+   * @return The managerMessageChatSizeTotal.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getManagerMessageChatSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size_total = 1703 [json_name = "managerMessageChatSizeTotal"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getManagerMessageChatSizeTotalOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_email = 1710 [json_name = "managerMessageEmail"];</code>
@@ -290,6 +350,21 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageEmailUnitsOrBuilder();
 
   /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size_total = 1713 [json_name = "managerMessageEmailSizeTotal"];</code>
+   * @return Whether the managerMessageEmailSizeTotal field is set.
+   */
+  boolean hasManagerMessageEmailSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size_total = 1713 [json_name = "managerMessageEmailSizeTotal"];</code>
+   * @return The managerMessageEmailSizeTotal.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getManagerMessageEmailSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size_total = 1713 [json_name = "managerMessageEmailSizeTotal"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getManagerMessageEmailSizeTotalOrBuilder();
+
+  /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
    * @return Whether the managerMessageSms field is set.
    */
@@ -333,6 +408,21 @@ public interface RateDefinitionConfigOrBuilder extends
    * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms_units = 1722 [json_name = "managerMessageSmsUnits"];</code>
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getManagerMessageSmsUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size_total = 1723 [json_name = "managerMessageSmsSizeTotal"];</code>
+   * @return Whether the managerMessageSmsSizeTotal field is set.
+   */
+  boolean hasManagerMessageSmsSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size_total = 1723 [json_name = "managerMessageSmsSizeTotal"];</code>
+   * @return The managerMessageSmsSizeTotal.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getManagerMessageSmsSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size_total = 1723 [json_name = "managerMessageSmsSizeTotal"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getManagerMessageSmsSizeTotalOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_chat = 1800 [json_name = "systemMessageChat"];</code>
@@ -380,6 +470,21 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageChatUnitsOrBuilder();
 
   /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size_total = 1803 [json_name = "systemMessageChatSizeTotal"];</code>
+   * @return Whether the systemMessageChatSizeTotal field is set.
+   */
+  boolean hasSystemMessageChatSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size_total = 1803 [json_name = "systemMessageChatSizeTotal"];</code>
+   * @return The systemMessageChatSizeTotal.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getSystemMessageChatSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size_total = 1803 [json_name = "systemMessageChatSizeTotal"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getSystemMessageChatSizeTotalOrBuilder();
+
+  /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
    * @return Whether the systemMessageEmail field is set.
    */
@@ -423,6 +528,21 @@ public interface RateDefinitionConfigOrBuilder extends
    * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email_units = 1812 [json_name = "systemMessageEmailUnits"];</code>
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageEmailUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size_total = 1813 [json_name = "systemMessageEmailSizeTotal"];</code>
+   * @return Whether the systemMessageEmailSizeTotal field is set.
+   */
+  boolean hasSystemMessageEmailSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size_total = 1813 [json_name = "systemMessageEmailSizeTotal"];</code>
+   * @return The systemMessageEmailSizeTotal.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getSystemMessageEmailSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size_total = 1813 [json_name = "systemMessageEmailSizeTotal"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getSystemMessageEmailSizeTotalOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_sms = 1820 [json_name = "systemMessageSms"];</code>
@@ -470,6 +590,21 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getSystemMessageSmsUnitsOrBuilder();
 
   /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size_total = 1823 [json_name = "systemMessageSmsSizeTotal"];</code>
+   * @return Whether the systemMessageSmsSizeTotal field is set.
+   */
+  boolean hasSystemMessageSmsSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size_total = 1823 [json_name = "systemMessageSmsSizeTotal"];</code>
+   * @return The systemMessageSmsSizeTotal.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getSystemMessageSmsSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size_total = 1823 [json_name = "systemMessageSmsSizeTotal"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getSystemMessageSmsSizeTotalOrBuilder();
+
+  /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
    * @return Whether the customerMessageChat field is set.
    */
@@ -513,6 +648,21 @@ public interface RateDefinitionConfigOrBuilder extends
    * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat_units = 1902 [json_name = "customerMessageChatUnits"];</code>
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageChatUnitsOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size_total = 1903 [json_name = "customerMessageChatSizeTotal"];</code>
+   * @return Whether the customerMessageChatSizeTotal field is set.
+   */
+  boolean hasCustomerMessageChatSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size_total = 1903 [json_name = "customerMessageChatSizeTotal"];</code>
+   * @return The customerMessageChatSizeTotal.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getCustomerMessageChatSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size_total = 1903 [json_name = "customerMessageChatSizeTotal"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getCustomerMessageChatSizeTotalOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_email = 1910 [json_name = "customerMessageEmail"];</code>
@@ -560,6 +710,21 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageEmailUnitsOrBuilder();
 
   /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size_total = 1913 [json_name = "customerMessageEmailSizeTotal"];</code>
+   * @return Whether the customerMessageEmailSizeTotal field is set.
+   */
+  boolean hasCustomerMessageEmailSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size_total = 1913 [json_name = "customerMessageEmailSizeTotal"];</code>
+   * @return The customerMessageEmailSizeTotal.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getCustomerMessageEmailSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size_total = 1913 [json_name = "customerMessageEmailSizeTotal"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getCustomerMessageEmailSizeTotalOrBuilder();
+
+  /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
    * @return Whether the customerMessageSms field is set.
    */
@@ -605,8 +770,23 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder getCustomerMessageSmsUnitsOrBuilder();
 
   /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size_total = 1923 [json_name = "customerMessageSmsSizeTotal"];</code>
+   * @return Whether the customerMessageSmsSizeTotal field is set.
+   */
+  boolean hasCustomerMessageSmsSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size_total = 1923 [json_name = "customerMessageSmsSizeTotal"];</code>
+   * @return The customerMessageSmsSizeTotal.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getCustomerMessageSmsSizeTotal();
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size_total = 1923 [json_name = "customerMessageSmsSizeTotal"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getCustomerMessageSmsSizeTotalOrBuilder();
+
+  /**
    * <pre>
-   * compliance configs
+   * compliance configs (2000 - 2999)
    * </pre>
    *
    * <code>.services.billing.entities.v1alpha2.BasicConfig compliance_rnd_query = 2000 [json_name = "complianceRndQuery"];</code>
@@ -615,7 +795,7 @@ public interface RateDefinitionConfigOrBuilder extends
   boolean hasComplianceRndQuery();
   /**
    * <pre>
-   * compliance configs
+   * compliance configs (2000 - 2999)
    * </pre>
    *
    * <code>.services.billing.entities.v1alpha2.BasicConfig compliance_rnd_query = 2000 [json_name = "complianceRndQuery"];</code>
@@ -624,7 +804,7 @@ public interface RateDefinitionConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig getComplianceRndQuery();
   /**
    * <pre>
-   * compliance configs
+   * compliance configs (2000 - 2999)
    * </pre>
    *
    * <code>.services.billing.entities.v1alpha2.BasicConfig compliance_rnd_query = 2000 [json_name = "complianceRndQuery"];</code>
