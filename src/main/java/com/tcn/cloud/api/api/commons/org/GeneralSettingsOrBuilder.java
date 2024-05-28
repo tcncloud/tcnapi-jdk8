@@ -247,6 +247,16 @@ public interface GeneralSettingsOrBuilder extends
 
   /**
    * <pre>
+   * Read only- shows if the Agent Screen Recording is enabled for the Org
+   * </pre>
+   *
+   * <code>bool agent_screen_recording = 301 [json_name = "agentScreenRecording"];</code>
+   * @return The agentScreenRecording.
+   */
+  boolean getAgentScreenRecording();
+
+  /**
+   * <pre>
    * Enable agent simple hold. `Allow Agent Hold`
    * </pre>
    *

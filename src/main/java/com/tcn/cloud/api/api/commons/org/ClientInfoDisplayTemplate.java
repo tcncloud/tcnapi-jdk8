@@ -57,7 +57,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
    * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
-   *     See api/commons/org/huntgroup.proto;l=788
+   *     See api/commons/org/huntgroup.proto;l=790
    * @return The templateSid.
    */
   @java.lang.Override
@@ -80,7 +80,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
    * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
-   *     See api/commons/org/huntgroup.proto;l=788
+   *     See api/commons/org/huntgroup.proto;l=790
    * @return The bytes for templateSid.
    */
   @java.lang.Override
@@ -950,7 +950,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
      * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
-     *     See api/commons/org/huntgroup.proto;l=788
+     *     See api/commons/org/huntgroup.proto;l=790
      * @return The templateSid.
      */
     @java.lang.Deprecated public java.lang.String getTemplateSid() {
@@ -972,7 +972,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
      * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
-     *     See api/commons/org/huntgroup.proto;l=788
+     *     See api/commons/org/huntgroup.proto;l=790
      * @return The bytes for templateSid.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -995,7 +995,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
      * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
-     *     See api/commons/org/huntgroup.proto;l=788
+     *     See api/commons/org/huntgroup.proto;l=790
      * @param value The templateSid to set.
      * @return This builder for chaining.
      */
@@ -1014,7 +1014,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
      * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
-     *     See api/commons/org/huntgroup.proto;l=788
+     *     See api/commons/org/huntgroup.proto;l=790
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTemplateSid() {
@@ -1030,7 +1030,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string template_sid = 1 [json_name = "templateSid", deprecated = true];</code>
      * @deprecated api.commons.org.ClientInfoDisplayTemplate.template_sid is deprecated.
-     *     See api/commons/org/huntgroup.proto;l=788
+     *     See api/commons/org/huntgroup.proto;l=790
      * @param value The bytes for templateSid to set.
      * @return This builder for chaining.
      */
