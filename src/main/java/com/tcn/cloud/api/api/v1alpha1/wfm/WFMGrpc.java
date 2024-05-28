@@ -5226,6 +5226,68 @@ public final class WFMGrpc {
     return getRemoveAgentFromScheduleMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestResponse> getCreateLeaveRequestMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateLeaveRequest",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestResponse> getCreateLeaveRequestMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestResponse> getCreateLeaveRequestMethod;
+    if ((getCreateLeaveRequestMethod = WFMGrpc.getCreateLeaveRequestMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateLeaveRequestMethod = WFMGrpc.getCreateLeaveRequestMethod) == null) {
+          WFMGrpc.getCreateLeaveRequestMethod = getCreateLeaveRequestMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateLeaveRequest"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateLeaveRequest"))
+              .build();
+        }
+      }
+    }
+    return getCreateLeaveRequestMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsResponse> getListLeaveRequestsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListLeaveRequests",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsResponse> getListLeaveRequestsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsResponse> getListLeaveRequestsMethod;
+    if ((getListLeaveRequestsMethod = WFMGrpc.getListLeaveRequestsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListLeaveRequestsMethod = WFMGrpc.getListLeaveRequestsMethod) == null) {
+          WFMGrpc.getListLeaveRequestsMethod = getListLeaveRequestsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListLeaveRequests"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListLeaveRequests"))
+              .build();
+        }
+      }
+    }
+    return getListLeaveRequestsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest,
       com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> getHelloWorldWFMAdherenceMethod;
 
@@ -8034,6 +8096,37 @@ public final class WFMGrpc {
     default void removeAgentFromSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveAgentFromScheduleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a leave request for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
+     * The &#64;request_comment must be set with a value. The remaining fields will be set to default values, with the request status set as PENDING.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when creating the leave request.
+     *   - grpc.NotFound: the &#64;wfm_agent_sid does not exist for the org sending the request.
+     * </pre>
+     */
+    default void createLeaveRequest(com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateLeaveRequestMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists all leave requests for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
+     * If no &#64;wfm_agent_sids are provided, all leave requests overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If &#64;include_archived is true, archived leave requests will be returned as well, otherwise archived requests will not be included.
+     * If no leave requests are found for the given parameters, an empty slice will be returned.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when listing the leave requests.
+     * </pre>
+     */
+    default void listLeaveRequests(com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListLeaveRequestsMethod(), responseObserver);
     }
 
     /**
@@ -10927,6 +11020,39 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Creates a leave request for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
+     * The &#64;request_comment must be set with a value. The remaining fields will be set to default values, with the request status set as PENDING.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when creating the leave request.
+     *   - grpc.NotFound: the &#64;wfm_agent_sid does not exist for the org sending the request.
+     * </pre>
+     */
+    public void createLeaveRequest(com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateLeaveRequestMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists all leave requests for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
+     * If no &#64;wfm_agent_sids are provided, all leave requests overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If &#64;include_archived is true, archived leave requests will be returned as well, otherwise archived requests will not be included.
+     * If no leave requests are found for the given parameters, an empty slice will be returned.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when listing the leave requests.
+     * </pre>
+     */
+    public void listLeaveRequests(com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListLeaveRequestsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * A hello world endpoint to test the WFM Adherence App.
      * Returns a string with a hello world message.
      * </pre>
@@ -13640,6 +13766,37 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse removeAgentFromSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveAgentFromScheduleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a leave request for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
+     * The &#64;request_comment must be set with a value. The remaining fields will be set to default values, with the request status set as PENDING.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when creating the leave request.
+     *   - grpc.NotFound: the &#64;wfm_agent_sid does not exist for the org sending the request.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestResponse createLeaveRequest(com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateLeaveRequestMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists all leave requests for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
+     * If no &#64;wfm_agent_sids are provided, all leave requests overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If &#64;include_archived is true, archived leave requests will be returned as well, otherwise archived requests will not be included.
+     * If no leave requests are found for the given parameters, an empty slice will be returned.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when listing the leave requests.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsResponse listLeaveRequests(com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListLeaveRequestsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -16417,6 +16574,39 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Creates a leave request for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
+     * The &#64;request_comment must be set with a value. The remaining fields will be set to default values, with the request status set as PENDING.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when creating the leave request.
+     *   - grpc.NotFound: the &#64;wfm_agent_sid does not exist for the org sending the request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestResponse> createLeaveRequest(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateLeaveRequestMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists all leave requests for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
+     * If no &#64;wfm_agent_sids are provided, all leave requests overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If &#64;include_archived is true, archived leave requests will be returned as well, otherwise archived requests will not be included.
+     * If no leave requests are found for the given parameters, an empty slice will be returned.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when listing the leave requests.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsResponse> listLeaveRequests(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListLeaveRequestsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * A hello world endpoint to test the WFM Adherence App.
      * Returns a string with a hello world message.
      * </pre>
@@ -16640,10 +16830,12 @@ public final class WFMGrpc {
   private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 165;
   private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 166;
   private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 167;
-  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 168;
-  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 169;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 170;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 171;
+  private static final int METHODID_CREATE_LEAVE_REQUEST = 168;
+  private static final int METHODID_LIST_LEAVE_REQUESTS = 169;
+  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 170;
+  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 171;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 172;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 173;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -17333,6 +17525,14 @@ public final class WFMGrpc {
         case METHODID_REMOVE_AGENT_FROM_SCHEDULE:
           serviceImpl.removeAgentFromSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_LEAVE_REQUEST:
+          serviceImpl.createLeaveRequest((com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestResponse>) responseObserver);
+          break;
+        case METHODID_LIST_LEAVE_REQUESTS:
+          serviceImpl.listLeaveRequests((com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsResponse>) responseObserver);
           break;
         case METHODID_HELLO_WORLD_WFMADHERENCE:
           serviceImpl.helloWorldWFMAdherence((com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest) request,
@@ -18545,6 +18745,20 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.RemoveAgentFromScheduleResponse>(
                 service, METHODID_REMOVE_AGENT_FROM_SCHEDULE)))
         .addMethod(
+          getCreateLeaveRequestMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateLeaveRequestResponse>(
+                service, METHODID_CREATE_LEAVE_REQUEST)))
+        .addMethod(
+          getListLeaveRequestsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsResponse>(
+                service, METHODID_LIST_LEAVE_REQUESTS)))
+        .addMethod(
           getHelloWorldWFMAdherenceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -18788,6 +19002,8 @@ public final class WFMGrpc {
               .addMethod(getReplaceAgentOnScheduleMethod())
               .addMethod(getReplaceAgentOnScheduleV1Method())
               .addMethod(getRemoveAgentFromScheduleMethod())
+              .addMethod(getCreateLeaveRequestMethod())
+              .addMethod(getListLeaveRequestsMethod())
               .addMethod(getHelloWorldWFMAdherenceMethod())
               .addMethod(getListAgentStatesForDayMethod())
               .addMethod(getListRealTimeManagementStatesMethod())
