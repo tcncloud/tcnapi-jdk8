@@ -75,80 +75,80 @@ public interface CountryHolidayOrBuilder extends
    * The type of holiday- eg. National, religious.
    * </pre>
    *
-   * <code>repeated string type = 4 [json_name = "type"];</code>
-   * @return A list containing the type.
+   * <code>repeated string types = 4 [json_name = "types"];</code>
+   * @return A list containing the types.
    */
   java.util.List<java.lang.String>
-      getTypeList();
+      getTypesList();
   /**
    * <pre>
    * The type of holiday- eg. National, religious.
    * </pre>
    *
-   * <code>repeated string type = 4 [json_name = "type"];</code>
-   * @return The count of type.
+   * <code>repeated string types = 4 [json_name = "types"];</code>
+   * @return The count of types.
    */
-  int getTypeCount();
+  int getTypesCount();
   /**
    * <pre>
    * The type of holiday- eg. National, religious.
    * </pre>
    *
-   * <code>repeated string type = 4 [json_name = "type"];</code>
+   * <code>repeated string types = 4 [json_name = "types"];</code>
    * @param index The index of the element to return.
-   * @return The type at the given index.
+   * @return The types at the given index.
    */
-  java.lang.String getType(int index);
+  java.lang.String getTypes(int index);
   /**
    * <pre>
    * The type of holiday- eg. National, religious.
    * </pre>
    *
-   * <code>repeated string type = 4 [json_name = "type"];</code>
+   * <code>repeated string types = 4 [json_name = "types"];</code>
    * @param index The index of the value to return.
-   * @return The bytes of the type at the given index.
+   * @return The bytes of the types at the given index.
    */
   com.google.protobuf.ByteString
-      getTypeBytes(int index);
+      getTypesBytes(int index);
 
   /**
    * <pre>
    * The specific sub-regions of the country that celebrate the holiday.
    * </pre>
    *
-   * <code>repeated string state = 5 [json_name = "state"];</code>
-   * @return A list containing the state.
+   * <code>repeated string states = 5 [json_name = "states"];</code>
+   * @return A list containing the states.
    */
   java.util.List<java.lang.String>
-      getStateList();
+      getStatesList();
   /**
    * <pre>
    * The specific sub-regions of the country that celebrate the holiday.
    * </pre>
    *
-   * <code>repeated string state = 5 [json_name = "state"];</code>
-   * @return The count of state.
+   * <code>repeated string states = 5 [json_name = "states"];</code>
+   * @return The count of states.
    */
-  int getStateCount();
+  int getStatesCount();
   /**
    * <pre>
    * The specific sub-regions of the country that celebrate the holiday.
    * </pre>
    *
-   * <code>repeated string state = 5 [json_name = "state"];</code>
+   * <code>repeated string states = 5 [json_name = "states"];</code>
    * @param index The index of the element to return.
-   * @return The state at the given index.
+   * @return The states at the given index.
    */
-  java.lang.String getState(int index);
+  java.lang.String getStates(int index);
   /**
    * <pre>
    * The specific sub-regions of the country that celebrate the holiday.
    * </pre>
    *
-   * <code>repeated string state = 5 [json_name = "state"];</code>
+   * <code>repeated string states = 5 [json_name = "states"];</code>
    * @param index The index of the value to return.
-   * @return The bytes of the state at the given index.
+   * @return The bytes of the states at the given index.
    */
   com.google.protobuf.ByteString
-      getStateBytes(int index);
+      getStatesBytes(int index);
 }
