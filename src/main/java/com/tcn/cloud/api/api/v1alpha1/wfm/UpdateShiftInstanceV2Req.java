@@ -142,6 +142,21 @@ private static final long serialVersionUID = 0L;
     return isLocked_;
   }
 
+  public static final int PLANNED_SHRINKAGE_PERCENT_FIELD_NUMBER = 6;
+  private float plannedShrinkagePercent_ = 0F;
+  /**
+   * <pre>
+   * the percentage shrinkage expected for this shift [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>float planned_shrinkage_percent = 6 [json_name = "plannedShrinkagePercent"];</code>
+   * @return The plannedShrinkagePercent.
+   */
+  @java.lang.Override
+  public float getPlannedShrinkagePercent() {
+    return plannedShrinkagePercent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -170,6 +185,9 @@ private static final long serialVersionUID = 0L;
     }
     if (isLocked_ != false) {
       output.writeBool(5, isLocked_);
+    }
+    if (java.lang.Float.floatToRawIntBits(plannedShrinkagePercent_) != 0) {
+      output.writeFloat(6, plannedShrinkagePercent_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -200,6 +218,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, isLocked_);
     }
+    if (java.lang.Float.floatToRawIntBits(plannedShrinkagePercent_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(6, plannedShrinkagePercent_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -228,6 +250,9 @@ private static final long serialVersionUID = 0L;
         != other.getWfmAgentSid()) return false;
     if (getIsLocked()
         != other.getIsLocked()) return false;
+    if (java.lang.Float.floatToIntBits(getPlannedShrinkagePercent())
+        != java.lang.Float.floatToIntBits(
+            other.getPlannedShrinkagePercent())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -254,6 +279,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_LOCKED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsLocked());
+    hash = (37 * hash) + PLANNED_SHRINKAGE_PERCENT_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getPlannedShrinkagePercent());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -398,6 +426,7 @@ private static final long serialVersionUID = 0L;
       widthInMinutes_ = 0;
       wfmAgentSid_ = 0L;
       isLocked_ = false;
+      plannedShrinkagePercent_ = 0F;
       return this;
     }
 
@@ -447,6 +476,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.isLocked_ = isLocked_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.plannedShrinkagePercent_ = plannedShrinkagePercent_;
       }
     }
 
@@ -509,6 +541,9 @@ private static final long serialVersionUID = 0L;
       if (other.getIsLocked() != false) {
         setIsLocked(other.getIsLocked());
       }
+      if (other.getPlannedShrinkagePercent() != 0F) {
+        setPlannedShrinkagePercent(other.getPlannedShrinkagePercent());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -562,6 +597,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 53: {
+              plannedShrinkagePercent_ = input.readFloat();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 53
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -912,6 +952,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearIsLocked() {
       bitField0_ = (bitField0_ & ~0x00000010);
       isLocked_ = false;
+      onChanged();
+      return this;
+    }
+
+    private float plannedShrinkagePercent_ ;
+    /**
+     * <pre>
+     * the percentage shrinkage expected for this shift [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+     * </pre>
+     *
+     * <code>float planned_shrinkage_percent = 6 [json_name = "plannedShrinkagePercent"];</code>
+     * @return The plannedShrinkagePercent.
+     */
+    @java.lang.Override
+    public float getPlannedShrinkagePercent() {
+      return plannedShrinkagePercent_;
+    }
+    /**
+     * <pre>
+     * the percentage shrinkage expected for this shift [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+     * </pre>
+     *
+     * <code>float planned_shrinkage_percent = 6 [json_name = "plannedShrinkagePercent"];</code>
+     * @param value The plannedShrinkagePercent to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPlannedShrinkagePercent(float value) {
+
+      plannedShrinkagePercent_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the percentage shrinkage expected for this shift [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+     * </pre>
+     *
+     * <code>float planned_shrinkage_percent = 6 [json_name = "plannedShrinkagePercent"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPlannedShrinkagePercent() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      plannedShrinkagePercent_ = 0F;
       onChanged();
       return this;
     }
