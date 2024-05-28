@@ -544,6 +544,31 @@ public final class UsersProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_users_ListUsersAllowedIpsResponse_AllowedIps_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_users_UpdateBulkUsersDisabledRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_users_UpdateBulkUsersDisabledRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_users_UpdateBulkUsersDisabledResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_users_UpdateBulkUsersDisabledResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_users_UserDirectoryEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_users_UserDirectoryEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_users_ListUserDirectoriesRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_users_ListUserDirectoriesRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_users_ListUserDirectoriesResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_users_ListUserDirectoriesResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -964,11 +989,24 @@ public final class UsersProto {
       "ey\022T\n\005value\030\002 \001(\0132>.api.v1alpha1.org.use" +
       "rs.ListUsersAllowedIpsResponse.AllowedIp" +
       "sR\005value:\0028\001\032\036\n\nAllowedIps\022\020\n\003ips\030\001 \003(\tR" +
-      "\003ipsB\262\001\n(com.tcn.cloud.api.api.v1alpha1." +
-      "org.usersB\nUsersProtoP\001\242\002\004AVOU\252\002\026Api.V1a" +
-      "lpha1.Org.Users\312\002\026Api\\V1alpha1\\Org\\Users" +
-      "\342\002\"Api\\V1alpha1\\Org\\Users\\GPBMetadata\352\002\031" +
-      "Api::V1alpha1::Org::Usersb\006proto3"
+      "\003ips\"U\n\036UpdateBulkUsersDisabledRequest\022\031" +
+      "\n\010user_ids\030\001 \003(\tR\007userIds\022\030\n\007disable\030\002 \001" +
+      "(\010R\007disable\"B\n\037UpdateBulkUsersDisabledRe" +
+      "sponse\022\037\n\013updated_ids\030\001 \003(\tR\nupdatedIds\"" +
+      "\243\001\n\022UserDirectoryEntry\022\027\n\007user_id\030\001 \001(\tR" +
+      "\006userId\022\033\n\tfull_name\030\002 \001(\tR\010fullName\022\033\n\t" +
+      "user_name\030\003 \001(\tR\010userName\022\035\n\nfirst_name\030" +
+      "\004 \001(\tR\tfirstName\022\033\n\tlast_name\030\005 \001(\tR\010las" +
+      "tName\"=\n\032ListUserDirectoriesRequest\022\037\n\013a" +
+      "gents_only\030\001 \001(\010R\nagentsOnly\"t\n\033ListUser" +
+      "DirectoriesResponse\022U\n\020user_directories\030" +
+      "\001 \003(\0132*.api.v1alpha1.org.users.UserDirec" +
+      "toryEntryR\017userDirectoriesB\262\001\n(com.tcn.c" +
+      "loud.api.api.v1alpha1.org.usersB\nUsersPr" +
+      "otoP\001\242\002\004AVOU\252\002\026Api.V1alpha1.Org.Users\312\002\026" +
+      "Api\\V1alpha1\\Org\\Users\342\002\"Api\\V1alpha1\\Or" +
+      "g\\Users\\GPBMetadata\352\002\031Api::V1alpha1::Org" +
+      "::Usersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1620,6 +1658,36 @@ public final class UsersProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_users_ListUsersAllowedIpsResponse_AllowedIps_descriptor,
         new java.lang.String[] { "Ips", });
+    internal_static_api_v1alpha1_org_users_UpdateBulkUsersDisabledRequest_descriptor =
+      getDescriptor().getMessageTypes().get(88);
+    internal_static_api_v1alpha1_org_users_UpdateBulkUsersDisabledRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_users_UpdateBulkUsersDisabledRequest_descriptor,
+        new java.lang.String[] { "UserIds", "Disable", });
+    internal_static_api_v1alpha1_org_users_UpdateBulkUsersDisabledResponse_descriptor =
+      getDescriptor().getMessageTypes().get(89);
+    internal_static_api_v1alpha1_org_users_UpdateBulkUsersDisabledResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_users_UpdateBulkUsersDisabledResponse_descriptor,
+        new java.lang.String[] { "UpdatedIds", });
+    internal_static_api_v1alpha1_org_users_UserDirectoryEntry_descriptor =
+      getDescriptor().getMessageTypes().get(90);
+    internal_static_api_v1alpha1_org_users_UserDirectoryEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_users_UserDirectoryEntry_descriptor,
+        new java.lang.String[] { "UserId", "FullName", "UserName", "FirstName", "LastName", });
+    internal_static_api_v1alpha1_org_users_ListUserDirectoriesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(91);
+    internal_static_api_v1alpha1_org_users_ListUserDirectoriesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_users_ListUserDirectoriesRequest_descriptor,
+        new java.lang.String[] { "AgentsOnly", });
+    internal_static_api_v1alpha1_org_users_ListUserDirectoriesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(92);
+    internal_static_api_v1alpha1_org_users_ListUserDirectoriesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_users_ListUserDirectoriesResponse_descriptor,
+        new java.lang.String[] { "UserDirectories", });
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.LabelsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.PermissionsProto.getDescriptor();

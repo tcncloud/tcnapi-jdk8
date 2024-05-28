@@ -5,22 +5,22 @@ package com.tcn.cloud.api.api.v1alpha1.org.users;
 
 /**
  * <pre>
- * Request message for the ListUsersAllowedIps rpc.
+ * Response message for the UpdateUsersBulkDisabled rpc.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.org.users.ListUsersAllowedIpsRequest}
+ * Protobuf type {@code api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse}
  */
-public final class ListUsersAllowedIpsRequest extends
+public final class UpdateBulkUsersDisabledResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.users.ListUsersAllowedIpsRequest)
-    ListUsersAllowedIpsRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse)
+    UpdateBulkUsersDisabledResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ListUsersAllowedIpsRequest.newBuilder() to construct.
-  private ListUsersAllowedIpsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UpdateBulkUsersDisabledResponse.newBuilder() to construct.
+  private UpdateBulkUsersDisabledResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ListUsersAllowedIpsRequest() {
-    userIds_ =
+  private UpdateBulkUsersDisabledResponse() {
+    updatedIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
@@ -28,73 +28,73 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ListUsersAllowedIpsRequest();
+    return new UpdateBulkUsersDisabledResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.users.UsersProto.internal_static_api_v1alpha1_org_users_ListUsersAllowedIpsRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.users.UsersProto.internal_static_api_v1alpha1_org_users_UpdateBulkUsersDisabledResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.users.UsersProto.internal_static_api_v1alpha1_org_users_ListUsersAllowedIpsRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.users.UsersProto.internal_static_api_v1alpha1_org_users_UpdateBulkUsersDisabledResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest.class, com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse.class, com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse.Builder.class);
   }
 
-  public static final int USER_IDS_FIELD_NUMBER = 1;
+  public static final int UPDATED_IDS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList userIds_ =
+  private com.google.protobuf.LazyStringArrayList updatedIds_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * list of user ids to get mapping of restricted ips
+   * updated_ids is a list of every id that was updated.
    * </pre>
    *
-   * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
-   * @return A list containing the userIds.
+   * <code>repeated string updated_ids = 1 [json_name = "updatedIds"];</code>
+   * @return A list containing the updatedIds.
    */
   public com.google.protobuf.ProtocolStringList
-      getUserIdsList() {
-    return userIds_;
+      getUpdatedIdsList() {
+    return updatedIds_;
   }
   /**
    * <pre>
-   * list of user ids to get mapping of restricted ips
+   * updated_ids is a list of every id that was updated.
    * </pre>
    *
-   * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
-   * @return The count of userIds.
+   * <code>repeated string updated_ids = 1 [json_name = "updatedIds"];</code>
+   * @return The count of updatedIds.
    */
-  public int getUserIdsCount() {
-    return userIds_.size();
+  public int getUpdatedIdsCount() {
+    return updatedIds_.size();
   }
   /**
    * <pre>
-   * list of user ids to get mapping of restricted ips
+   * updated_ids is a list of every id that was updated.
    * </pre>
    *
-   * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
+   * <code>repeated string updated_ids = 1 [json_name = "updatedIds"];</code>
    * @param index The index of the element to return.
-   * @return The userIds at the given index.
+   * @return The updatedIds at the given index.
    */
-  public java.lang.String getUserIds(int index) {
-    return userIds_.get(index);
+  public java.lang.String getUpdatedIds(int index) {
+    return updatedIds_.get(index);
   }
   /**
    * <pre>
-   * list of user ids to get mapping of restricted ips
+   * updated_ids is a list of every id that was updated.
    * </pre>
    *
-   * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
+   * <code>repeated string updated_ids = 1 [json_name = "updatedIds"];</code>
    * @param index The index of the value to return.
-   * @return The bytes of the userIds at the given index.
+   * @return The bytes of the updatedIds at the given index.
    */
   public com.google.protobuf.ByteString
-      getUserIdsBytes(int index) {
-    return userIds_.getByteString(index);
+      getUpdatedIdsBytes(int index) {
+    return updatedIds_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -111,8 +111,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < userIds_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userIds_.getRaw(i));
+    for (int i = 0; i < updatedIds_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, updatedIds_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -125,11 +125,11 @@ private static final long serialVersionUID = 0L;
     size = 0;
     {
       int dataSize = 0;
-      for (int i = 0; i < userIds_.size(); i++) {
-        dataSize += computeStringSizeNoTag(userIds_.getRaw(i));
+      for (int i = 0; i < updatedIds_.size(); i++) {
+        dataSize += computeStringSizeNoTag(updatedIds_.getRaw(i));
       }
       size += dataSize;
-      size += 1 * getUserIdsList().size();
+      size += 1 * getUpdatedIdsList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -141,13 +141,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest other = (com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse other = (com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse) obj;
 
-    if (!getUserIdsList()
-        .equals(other.getUserIdsList())) return false;
+    if (!getUpdatedIdsList()
+        .equals(other.getUpdatedIdsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -159,53 +159,53 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getUserIdsCount() > 0) {
-      hash = (37 * hash) + USER_IDS_FIELD_NUMBER;
-      hash = (53 * hash) + getUserIdsList().hashCode();
+    if (getUpdatedIdsCount() > 0) {
+      hash = (37 * hash) + UPDATED_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getUpdatedIdsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -213,26 +213,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -245,7 +245,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -262,29 +262,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for the ListUsersAllowedIps rpc.
+   * Response message for the UpdateUsersBulkDisabled rpc.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.org.users.ListUsersAllowedIpsRequest}
+   * Protobuf type {@code api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.users.ListUsersAllowedIpsRequest)
-      com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse)
+      com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.users.UsersProto.internal_static_api_v1alpha1_org_users_ListUsersAllowedIpsRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.users.UsersProto.internal_static_api_v1alpha1_org_users_UpdateBulkUsersDisabledResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.users.UsersProto.internal_static_api_v1alpha1_org_users_ListUsersAllowedIpsRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.users.UsersProto.internal_static_api_v1alpha1_org_users_UpdateBulkUsersDisabledResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest.class, com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse.class, com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse.newBuilder()
     private Builder() {
 
     }
@@ -298,7 +298,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      userIds_ =
+      updatedIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
@@ -306,17 +306,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.users.UsersProto.internal_static_api_v1alpha1_org_users_ListUsersAllowedIpsRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.users.UsersProto.internal_static_api_v1alpha1_org_users_UpdateBulkUsersDisabledResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -324,18 +324,18 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest result = new com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse result = new com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        userIds_.makeImmutable();
-        result.userIds_ = userIds_;
+        updatedIds_.makeImmutable();
+        result.updatedIds_ = updatedIds_;
       }
     }
 
@@ -373,23 +373,23 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest.getDefaultInstance()) return this;
-      if (!other.userIds_.isEmpty()) {
-        if (userIds_.isEmpty()) {
-          userIds_ = other.userIds_;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse.getDefaultInstance()) return this;
+      if (!other.updatedIds_.isEmpty()) {
+        if (updatedIds_.isEmpty()) {
+          updatedIds_ = other.updatedIds_;
           bitField0_ |= 0x00000001;
         } else {
-          ensureUserIdsIsMutable();
-          userIds_.addAll(other.userIds_);
+          ensureUpdatedIdsIsMutable();
+          updatedIds_.addAll(other.updatedIds_);
         }
         onChanged();
       }
@@ -421,8 +421,8 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              ensureUserIdsIsMutable();
-              userIds_.add(s);
+              ensureUpdatedIdsIsMutable();
+              updatedIds_.add(s);
               break;
             } // case 10
             default: {
@@ -442,128 +442,128 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringArrayList userIds_ =
+    private com.google.protobuf.LazyStringArrayList updatedIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureUserIdsIsMutable() {
-      if (!userIds_.isModifiable()) {
-        userIds_ = new com.google.protobuf.LazyStringArrayList(userIds_);
+    private void ensureUpdatedIdsIsMutable() {
+      if (!updatedIds_.isModifiable()) {
+        updatedIds_ = new com.google.protobuf.LazyStringArrayList(updatedIds_);
       }
       bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
-     * list of user ids to get mapping of restricted ips
+     * updated_ids is a list of every id that was updated.
      * </pre>
      *
-     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
-     * @return A list containing the userIds.
+     * <code>repeated string updated_ids = 1 [json_name = "updatedIds"];</code>
+     * @return A list containing the updatedIds.
      */
     public com.google.protobuf.ProtocolStringList
-        getUserIdsList() {
-      userIds_.makeImmutable();
-      return userIds_;
+        getUpdatedIdsList() {
+      updatedIds_.makeImmutable();
+      return updatedIds_;
     }
     /**
      * <pre>
-     * list of user ids to get mapping of restricted ips
+     * updated_ids is a list of every id that was updated.
      * </pre>
      *
-     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
-     * @return The count of userIds.
+     * <code>repeated string updated_ids = 1 [json_name = "updatedIds"];</code>
+     * @return The count of updatedIds.
      */
-    public int getUserIdsCount() {
-      return userIds_.size();
+    public int getUpdatedIdsCount() {
+      return updatedIds_.size();
     }
     /**
      * <pre>
-     * list of user ids to get mapping of restricted ips
+     * updated_ids is a list of every id that was updated.
      * </pre>
      *
-     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
+     * <code>repeated string updated_ids = 1 [json_name = "updatedIds"];</code>
      * @param index The index of the element to return.
-     * @return The userIds at the given index.
+     * @return The updatedIds at the given index.
      */
-    public java.lang.String getUserIds(int index) {
-      return userIds_.get(index);
+    public java.lang.String getUpdatedIds(int index) {
+      return updatedIds_.get(index);
     }
     /**
      * <pre>
-     * list of user ids to get mapping of restricted ips
+     * updated_ids is a list of every id that was updated.
      * </pre>
      *
-     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
+     * <code>repeated string updated_ids = 1 [json_name = "updatedIds"];</code>
      * @param index The index of the value to return.
-     * @return The bytes of the userIds at the given index.
+     * @return The bytes of the updatedIds at the given index.
      */
     public com.google.protobuf.ByteString
-        getUserIdsBytes(int index) {
-      return userIds_.getByteString(index);
+        getUpdatedIdsBytes(int index) {
+      return updatedIds_.getByteString(index);
     }
     /**
      * <pre>
-     * list of user ids to get mapping of restricted ips
+     * updated_ids is a list of every id that was updated.
      * </pre>
      *
-     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
+     * <code>repeated string updated_ids = 1 [json_name = "updatedIds"];</code>
      * @param index The index to set the value at.
-     * @param value The userIds to set.
+     * @param value The updatedIds to set.
      * @return This builder for chaining.
      */
-    public Builder setUserIds(
+    public Builder setUpdatedIds(
         int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      ensureUserIdsIsMutable();
-      userIds_.set(index, value);
+      ensureUpdatedIdsIsMutable();
+      updatedIds_.set(index, value);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * list of user ids to get mapping of restricted ips
+     * updated_ids is a list of every id that was updated.
      * </pre>
      *
-     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
-     * @param value The userIds to add.
+     * <code>repeated string updated_ids = 1 [json_name = "updatedIds"];</code>
+     * @param value The updatedIds to add.
      * @return This builder for chaining.
      */
-    public Builder addUserIds(
+    public Builder addUpdatedIds(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      ensureUserIdsIsMutable();
-      userIds_.add(value);
+      ensureUpdatedIdsIsMutable();
+      updatedIds_.add(value);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * list of user ids to get mapping of restricted ips
+     * updated_ids is a list of every id that was updated.
      * </pre>
      *
-     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
-     * @param values The userIds to add.
+     * <code>repeated string updated_ids = 1 [json_name = "updatedIds"];</code>
+     * @param values The updatedIds to add.
      * @return This builder for chaining.
      */
-    public Builder addAllUserIds(
+    public Builder addAllUpdatedIds(
         java.lang.Iterable<java.lang.String> values) {
-      ensureUserIdsIsMutable();
+      ensureUpdatedIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, userIds_);
+          values, updatedIds_);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * list of user ids to get mapping of restricted ips
+     * updated_ids is a list of every id that was updated.
      * </pre>
      *
-     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
+     * <code>repeated string updated_ids = 1 [json_name = "updatedIds"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearUserIds() {
-      userIds_ =
+    public Builder clearUpdatedIds() {
+      updatedIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
@@ -571,19 +571,19 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of user ids to get mapping of restricted ips
+     * updated_ids is a list of every id that was updated.
      * </pre>
      *
-     * <code>repeated string user_ids = 1 [json_name = "userIds"];</code>
-     * @param value The bytes of the userIds to add.
+     * <code>repeated string updated_ids = 1 [json_name = "updatedIds"];</code>
+     * @param value The bytes of the updatedIds to add.
      * @return This builder for chaining.
      */
-    public Builder addUserIdsBytes(
+    public Builder addUpdatedIdsBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      ensureUserIdsIsMutable();
-      userIds_.add(value);
+      ensureUpdatedIdsIsMutable();
+      updatedIds_.add(value);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -601,23 +601,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.users.ListUsersAllowedIpsRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.users.ListUsersAllowedIpsRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ListUsersAllowedIpsRequest>
-      PARSER = new com.google.protobuf.AbstractParser<ListUsersAllowedIpsRequest>() {
+  private static final com.google.protobuf.Parser<UpdateBulkUsersDisabledResponse>
+      PARSER = new com.google.protobuf.AbstractParser<UpdateBulkUsersDisabledResponse>() {
     @java.lang.Override
-    public ListUsersAllowedIpsRequest parsePartialFrom(
+    public UpdateBulkUsersDisabledResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -636,17 +636,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ListUsersAllowedIpsRequest> parser() {
+  public static com.google.protobuf.Parser<UpdateBulkUsersDisabledResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ListUsersAllowedIpsRequest> getParserForType() {
+  public com.google.protobuf.Parser<UpdateBulkUsersDisabledResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

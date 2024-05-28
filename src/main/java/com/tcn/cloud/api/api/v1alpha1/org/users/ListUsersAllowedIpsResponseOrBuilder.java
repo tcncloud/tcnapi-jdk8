@@ -9,7 +9,7 @@ public interface ListUsersAllowedIpsResponseOrBuilder extends
 
   /**
    * <pre>
-   * user id to allowed ips map
+   * User id to allowed ips map
    * </pre>
    *
    * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
@@ -17,7 +17,7 @@ public interface ListUsersAllowedIpsResponseOrBuilder extends
   int getUserAllowedIpsMapCount();
   /**
    * <pre>
-   * user id to allowed ips map
+   * User id to allowed ips map
    * </pre>
    *
    * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
@@ -32,7 +32,7 @@ public interface ListUsersAllowedIpsResponseOrBuilder extends
   getUserAllowedIpsMap();
   /**
    * <pre>
-   * user id to allowed ips map
+   * User id to allowed ips map
    * </pre>
    *
    * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
@@ -41,7 +41,7 @@ public interface ListUsersAllowedIpsResponseOrBuilder extends
   getUserAllowedIpsMapMap();
   /**
    * <pre>
-   * user id to allowed ips map
+   * User id to allowed ips map
    * </pre>
    *
    * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
@@ -53,7 +53,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps 
 com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps defaultValue);
   /**
    * <pre>
-   * user id to allowed ips map
+   * User id to allowed ips map
    * </pre>
    *
    * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>

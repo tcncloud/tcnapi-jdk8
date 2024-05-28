@@ -30,7 +30,7 @@ public final class ServiceProto {
       "s/auth_token.proto\032*api/v1alpha1/org/use" +
       "rs/notifications.proto\032\"api/v1alpha1/org" +
       "/users/users.proto\032\034google/api/annotatio" +
-      "ns.proto2\262i\n\014UsersService\022\233\001\n\nCreateUser" +
+      "ns.proto2\301l\n\014UsersService\022\233\001\n\nCreateUser" +
       "\022).api.v1alpha1.org.users.CreateUserRequ" +
       "est\032*.api.v1alpha1.org.users.CreateUserR" +
       "esponse\"6\272\270\221\002\004\n\002\010v\202\323\344\223\002\'\"\"/api/v1alpha1/" +
@@ -367,12 +367,22 @@ public final class ServiceProto {
       "tUsersAllowedIpsRequest\0323.api.v1alpha1.o" +
       "rg.users.ListUsersAllowedIpsResponse\"?\272\270" +
       "\221\002\004\n\002\010e\202\323\344\223\0020\"+/api/v1alpha1/org/users/l" +
-      "istusersallowedips:\001*B\264\001\n(com.tcn.cloud." +
-      "api.api.v1alpha1.org.usersB\014ServiceProto" +
-      "P\001\242\002\004AVOU\252\002\026Api.V1alpha1.Org.Users\312\002\026Api" +
-      "\\V1alpha1\\Org\\Users\342\002\"Api\\V1alpha1\\Org\\U" +
-      "sers\\GPBMetadata\352\002\031Api::V1alpha1::Org::U" +
-      "sersb\006proto3"
+      "istusersallowedips:\001*\022\272\001\n\023ListUserDirect" +
+      "ories\0222.api.v1alpha1.org.users.ListUserD" +
+      "irectoriesRequest\0323.api.v1alpha1.org.use" +
+      "rs.ListUserDirectoriesResponse\":\272\270\221\002\002\030\001\202" +
+      "\323\344\223\002-\"(/api/v1alpha1/org/users/getuserdi" +
+      "rectory:\001*\022\317\001\n\027UpdateBulkUsersDisabled\0226" +
+      ".api.v1alpha1.org.users.UpdateBulkUsersD" +
+      "isabledRequest\0327.api.v1alpha1.org.users." +
+      "UpdateBulkUsersDisabledResponse\"C\272\270\221\002\004\n\002" +
+      "\010w\202\323\344\223\0024\"//api/v1alpha1/org/users/update" +
+      "bulkusersdisabled:\001*B\264\001\n(com.tcn.cloud.a" +
+      "pi.api.v1alpha1.org.usersB\014ServiceProtoP" +
+      "\001\242\002\004AVOU\252\002\026Api.V1alpha1.Org.Users\312\002\026Api\\" +
+      "V1alpha1\\Org\\Users\342\002\"Api\\V1alpha1\\Org\\Us" +
+      "ers\\GPBMetadata\352\002\031Api::V1alpha1::Org::Us" +
+      "ersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -2123,6 +2123,68 @@ public final class UsersServiceGrpc {
     return getListUsersAllowedIpsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesResponse> getListUserDirectoriesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListUserDirectories",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesResponse> getListUserDirectoriesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesRequest, com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesResponse> getListUserDirectoriesMethod;
+    if ((getListUserDirectoriesMethod = UsersServiceGrpc.getListUserDirectoriesMethod) == null) {
+      synchronized (UsersServiceGrpc.class) {
+        if ((getListUserDirectoriesMethod = UsersServiceGrpc.getListUserDirectoriesMethod) == null) {
+          UsersServiceGrpc.getListUserDirectoriesMethod = getListUserDirectoriesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesRequest, com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListUserDirectories"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UsersServiceMethodDescriptorSupplier("ListUserDirectories"))
+              .build();
+        }
+      }
+    }
+    return getListUserDirectoriesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse> getUpdateBulkUsersDisabledMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateBulkUsersDisabled",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse> getUpdateBulkUsersDisabledMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledRequest, com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse> getUpdateBulkUsersDisabledMethod;
+    if ((getUpdateBulkUsersDisabledMethod = UsersServiceGrpc.getUpdateBulkUsersDisabledMethod) == null) {
+      synchronized (UsersServiceGrpc.class) {
+        if ((getUpdateBulkUsersDisabledMethod = UsersServiceGrpc.getUpdateBulkUsersDisabledMethod) == null) {
+          UsersServiceGrpc.getUpdateBulkUsersDisabledMethod = getUpdateBulkUsersDisabledMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledRequest, com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateBulkUsersDisabled"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UsersServiceMethodDescriptorSupplier("UpdateBulkUsersDisabled"))
+              .build();
+        }
+      }
+    }
+    return getUpdateBulkUsersDisabledMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -2854,6 +2916,27 @@ public final class UsersServiceGrpc {
     default void listUsersAllowedIps(com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUsersAllowedIpsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListUserDirectories is a permission-less list users that returns the names of all users
+     * for an organization.
+     * </pre>
+     */
+    default void listUserDirectories(com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUserDirectoriesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateBulkUsersDisabled bulk updates the disabled value on a list of users.
+     * </pre>
+     */
+    default void updateBulkUsersDisabled(com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBulkUsersDisabledMethod(), responseObserver);
     }
   }
 
@@ -3636,6 +3719,29 @@ public final class UsersServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListUsersAllowedIpsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListUserDirectories is a permission-less list users that returns the names of all users
+     * for an organization.
+     * </pre>
+     */
+    public void listUserDirectories(com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListUserDirectoriesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateBulkUsersDisabled bulk updates the disabled value on a list of users.
+     * </pre>
+     */
+    public void updateBulkUsersDisabled(com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateBulkUsersDisabledMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -4342,6 +4448,27 @@ public final class UsersServiceGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsResponse listUsersAllowedIps(com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListUsersAllowedIpsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListUserDirectories is a permission-less list users that returns the names of all users
+     * for an organization.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesResponse listUserDirectories(com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListUserDirectoriesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateBulkUsersDisabled bulk updates the disabled value on a list of users.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse updateBulkUsersDisabled(com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateBulkUsersDisabledMethod(), getCallOptions(), request);
     }
   }
 
@@ -5058,6 +5185,29 @@ public final class UsersServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListUsersAllowedIpsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * ListUserDirectories is a permission-less list users that returns the names of all users
+     * for an organization.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesResponse> listUserDirectories(
+        com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListUserDirectoriesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateBulkUsersDisabled bulk updates the disabled value on a list of users.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse> updateBulkUsersDisabled(
+        com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateBulkUsersDisabledMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_USER = 0;
@@ -5128,6 +5278,8 @@ public final class UsersServiceGrpc {
   private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 65;
   private static final int METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS = 66;
   private static final int METHODID_LIST_USERS_ALLOWED_IPS = 67;
+  private static final int METHODID_LIST_USER_DIRECTORIES = 68;
+  private static final int METHODID_UPDATE_BULK_USERS_DISABLED = 69;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -5417,6 +5569,14 @@ public final class UsersServiceGrpc {
         case METHODID_LIST_USERS_ALLOWED_IPS:
           serviceImpl.listUsersAllowedIps((com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_USER_DIRECTORIES:
+          serviceImpl.listUserDirectories((com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_BULK_USERS_DISABLED:
+          serviceImpl.updateBulkUsersDisabled((com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -5912,6 +6072,20 @@ public final class UsersServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsRequest,
               com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsResponse>(
                 service, METHODID_LIST_USERS_ALLOWED_IPS)))
+        .addMethod(
+          getListUserDirectoriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.users.ListUserDirectoriesResponse>(
+                service, METHODID_LIST_USER_DIRECTORIES)))
+        .addMethod(
+          getUpdateBulkUsersDisabledMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.users.UpdateBulkUsersDisabledResponse>(
+                service, METHODID_UPDATE_BULK_USERS_DISABLED)))
         .build();
   }
 
@@ -6028,6 +6202,8 @@ public final class UsersServiceGrpc {
               .addMethod(getAddGroupedUserIPRestrictionsMethod())
               .addMethod(getRemoveGroupedUserIPRestrictionsMethod())
               .addMethod(getListUsersAllowedIpsMethod())
+              .addMethod(getListUserDirectoriesMethod())
+              .addMethod(getUpdateBulkUsersDisabledMethod())
               .build();
         }
       }

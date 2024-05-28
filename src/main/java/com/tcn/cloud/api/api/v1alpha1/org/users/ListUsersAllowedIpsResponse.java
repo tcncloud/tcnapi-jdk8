@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v1alpha1.org.users;
 
 /**
+ * <pre>
+ * Response message for the ListUsersAllowedIps rpc.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.org.users.ListUsersAllowedIpsResponse}
  */
 public final class ListUsersAllowedIpsResponse extends
@@ -764,7 +768,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * user id to allowed ips map
+   * User id to allowed ips map
    * </pre>
    *
    * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
@@ -785,7 +789,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * user id to allowed ips map
+   * User id to allowed ips map
    * </pre>
    *
    * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
@@ -796,7 +800,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * user id to allowed ips map
+   * User id to allowed ips map
    * </pre>
    *
    * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
@@ -814,7 +818,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps 
   }
   /**
    * <pre>
-   * user id to allowed ips map
+   * User id to allowed ips map
    * </pre>
    *
    * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
@@ -1000,6 +1004,10 @@ com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps 
     return builder;
   }
   /**
+   * <pre>
+   * Response message for the ListUsersAllowedIps rpc.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.org.users.ListUsersAllowedIpsResponse}
    */
   public static final class Builder extends
@@ -1222,7 +1230,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps 
     }
     /**
      * <pre>
-     * user id to allowed ips map
+     * User id to allowed ips map
      * </pre>
      *
      * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
@@ -1243,7 +1251,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps 
     }
     /**
      * <pre>
-     * user id to allowed ips map
+     * User id to allowed ips map
      * </pre>
      *
      * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
@@ -1254,7 +1262,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps 
     }
     /**
      * <pre>
-     * user id to allowed ips map
+     * User id to allowed ips map
      * </pre>
      *
      * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
@@ -1272,7 +1280,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps 
     }
     /**
      * <pre>
-     * user id to allowed ips map
+     * User id to allowed ips map
      * </pre>
      *
      * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
@@ -1296,7 +1304,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps 
     }
     /**
      * <pre>
-     * user id to allowed ips map
+     * User id to allowed ips map
      * </pre>
      *
      * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
@@ -1319,7 +1327,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps 
     }
     /**
      * <pre>
-     * user id to allowed ips map
+     * User id to allowed ips map
      * </pre>
      *
      * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
@@ -1336,7 +1344,7 @@ com.tcn.cloud.api.api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps 
     }
     /**
      * <pre>
-     * user id to allowed ips map
+     * User id to allowed ips map
      * </pre>
      *
      * <code>map&lt;string, .api.v1alpha1.org.users.ListUsersAllowedIpsResponse.AllowedIps&gt; user_allowed_ips_map = 1 [json_name = "userAllowedIpsMap"];</code>
