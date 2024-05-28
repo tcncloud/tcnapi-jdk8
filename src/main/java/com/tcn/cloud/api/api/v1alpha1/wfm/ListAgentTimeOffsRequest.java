@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
- * Request message for ListLeaveRequests.
+ * Request message for ListAgentTimeOffs.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.wfm.ListLeaveRequestsRequest}
+ * Protobuf type {@code api.v1alpha1.wfm.ListAgentTimeOffsRequest}
  */
-public final class ListLeaveRequestsRequest extends
+public final class ListAgentTimeOffsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.ListLeaveRequestsRequest)
-    ListLeaveRequestsRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.ListAgentTimeOffsRequest)
+    ListAgentTimeOffsRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ListLeaveRequestsRequest.newBuilder() to construct.
-  private ListLeaveRequestsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ListAgentTimeOffsRequest.newBuilder() to construct.
+  private ListAgentTimeOffsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ListLeaveRequestsRequest() {
+  private ListAgentTimeOffsRequest() {
     wfmAgentSids_ = emptyLongList();
   }
 
@@ -27,20 +27,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ListLeaveRequestsRequest();
+    return new ListAgentTimeOffsRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListLeaveRequestsRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListAgentTimeOffsRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListLeaveRequestsRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListAgentTimeOffsRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest.Builder.class);
   }
 
   public static final int WFM_AGENT_SIDS_FIELD_NUMBER = 1;
@@ -48,8 +48,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Internal.LongList wfmAgentSids_;
   /**
    * <pre>
-   * The wfm agents to list leave requests for.
-   * If no SIDs are provided, all leave requests within the &#64;datetime_range will be returned.
+   * The wfm agents to list agent time off requests for.
+   * If no SIDs are provided, all time off requests within the &#64;datetime_range will be returned.
    * </pre>
    *
    * <code>repeated int64 wfm_agent_sids = 1 [json_name = "wfmAgentSids"];</code>
@@ -62,8 +62,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The wfm agents to list leave requests for.
-   * If no SIDs are provided, all leave requests within the &#64;datetime_range will be returned.
+   * The wfm agents to list agent time off requests for.
+   * If no SIDs are provided, all time off requests within the &#64;datetime_range will be returned.
    * </pre>
    *
    * <code>repeated int64 wfm_agent_sids = 1 [json_name = "wfmAgentSids"];</code>
@@ -74,8 +74,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The wfm agents to list leave requests for.
-   * If no SIDs are provided, all leave requests within the &#64;datetime_range will be returned.
+   * The wfm agents to list agent time off requests for.
+   * If no SIDs are provided, all time off requests within the &#64;datetime_range will be returned.
    * </pre>
    *
    * <code>repeated int64 wfm_agent_sids = 1 [json_name = "wfmAgentSids"];</code>
@@ -91,8 +91,8 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.commons.DatetimeRange datetimeRange_;
   /**
    * <pre>
-   * Datetime range over which leave requests should be retrieved.
-   * Any leave requests overlapping the datetime range may be returned.
+   * Datetime range over which time off requests should be retrieved.
+   * Any time off requests overlapping the datetime range may be returned.
    * </pre>
    *
    * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
@@ -104,8 +104,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Datetime range over which leave requests should be retrieved.
-   * Any leave requests overlapping the datetime range may be returned.
+   * Datetime range over which time off requests should be retrieved.
+   * Any time off requests overlapping the datetime range may be returned.
    * </pre>
    *
    * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
@@ -117,8 +117,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Datetime range over which leave requests should be retrieved.
-   * Any leave requests overlapping the datetime range may be returned.
+   * Datetime range over which time off requests should be retrieved.
+   * Any time off requests overlapping the datetime range may be returned.
    * </pre>
    *
    * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
@@ -132,7 +132,7 @@ private static final long serialVersionUID = 0L;
   private boolean includeArchived_ = false;
   /**
    * <pre>
-   * If true, archived leave requests will be included in the response.
+   * If true, archived time off requests will be included in the response.
    * Otherwise, no archived requests will be included in the response.
    * </pre>
    *
@@ -213,10 +213,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest other = (com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest other = (com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest) obj;
 
     if (!getWfmAgentSidsList()
         .equals(other.getWfmAgentSidsList())) return false;
@@ -254,44 +254,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -299,26 +299,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -331,7 +331,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -348,29 +348,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for ListLeaveRequests.
+   * Request message for ListAgentTimeOffs.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.wfm.ListLeaveRequestsRequest}
+   * Protobuf type {@code api.v1alpha1.wfm.ListAgentTimeOffsRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.ListLeaveRequestsRequest)
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.ListAgentTimeOffsRequest)
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListLeaveRequestsRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListAgentTimeOffsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListLeaveRequestsRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListAgentTimeOffsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest.newBuilder()
     private Builder() {
 
     }
@@ -397,17 +397,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListLeaveRequestsRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListAgentTimeOffsRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -415,15 +415,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest result = new com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest result = new com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest result) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         wfmAgentSids_.makeImmutable();
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -431,7 +431,7 @@ private static final long serialVersionUID = 0L;
       result.wfmAgentSids_ = wfmAgentSids_;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.datetimeRange_ = datetimeRangeBuilder_ == null
@@ -477,16 +477,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest.getDefaultInstance()) return this;
       if (!other.wfmAgentSids_.isEmpty()) {
         if (wfmAgentSids_.isEmpty()) {
           wfmAgentSids_ = other.wfmAgentSids_;
@@ -583,8 +583,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The wfm agents to list leave requests for.
-     * If no SIDs are provided, all leave requests within the &#64;datetime_range will be returned.
+     * The wfm agents to list agent time off requests for.
+     * If no SIDs are provided, all time off requests within the &#64;datetime_range will be returned.
      * </pre>
      *
      * <code>repeated int64 wfm_agent_sids = 1 [json_name = "wfmAgentSids"];</code>
@@ -597,8 +597,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The wfm agents to list leave requests for.
-     * If no SIDs are provided, all leave requests within the &#64;datetime_range will be returned.
+     * The wfm agents to list agent time off requests for.
+     * If no SIDs are provided, all time off requests within the &#64;datetime_range will be returned.
      * </pre>
      *
      * <code>repeated int64 wfm_agent_sids = 1 [json_name = "wfmAgentSids"];</code>
@@ -609,8 +609,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The wfm agents to list leave requests for.
-     * If no SIDs are provided, all leave requests within the &#64;datetime_range will be returned.
+     * The wfm agents to list agent time off requests for.
+     * If no SIDs are provided, all time off requests within the &#64;datetime_range will be returned.
      * </pre>
      *
      * <code>repeated int64 wfm_agent_sids = 1 [json_name = "wfmAgentSids"];</code>
@@ -622,8 +622,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The wfm agents to list leave requests for.
-     * If no SIDs are provided, all leave requests within the &#64;datetime_range will be returned.
+     * The wfm agents to list agent time off requests for.
+     * If no SIDs are provided, all time off requests within the &#64;datetime_range will be returned.
      * </pre>
      *
      * <code>repeated int64 wfm_agent_sids = 1 [json_name = "wfmAgentSids"];</code>
@@ -641,8 +641,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The wfm agents to list leave requests for.
-     * If no SIDs are provided, all leave requests within the &#64;datetime_range will be returned.
+     * The wfm agents to list agent time off requests for.
+     * If no SIDs are provided, all time off requests within the &#64;datetime_range will be returned.
      * </pre>
      *
      * <code>repeated int64 wfm_agent_sids = 1 [json_name = "wfmAgentSids"];</code>
@@ -658,8 +658,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The wfm agents to list leave requests for.
-     * If no SIDs are provided, all leave requests within the &#64;datetime_range will be returned.
+     * The wfm agents to list agent time off requests for.
+     * If no SIDs are provided, all time off requests within the &#64;datetime_range will be returned.
      * </pre>
      *
      * <code>repeated int64 wfm_agent_sids = 1 [json_name = "wfmAgentSids"];</code>
@@ -676,8 +676,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The wfm agents to list leave requests for.
-     * If no SIDs are provided, all leave requests within the &#64;datetime_range will be returned.
+     * The wfm agents to list agent time off requests for.
+     * If no SIDs are provided, all time off requests within the &#64;datetime_range will be returned.
      * </pre>
      *
      * <code>repeated int64 wfm_agent_sids = 1 [json_name = "wfmAgentSids"];</code>
@@ -695,8 +695,8 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.DatetimeRange, com.tcn.cloud.api.api.commons.DatetimeRange.Builder, com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder> datetimeRangeBuilder_;
     /**
      * <pre>
-     * Datetime range over which leave requests should be retrieved.
-     * Any leave requests overlapping the datetime range may be returned.
+     * Datetime range over which time off requests should be retrieved.
+     * Any time off requests overlapping the datetime range may be returned.
      * </pre>
      *
      * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
@@ -707,8 +707,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Datetime range over which leave requests should be retrieved.
-     * Any leave requests overlapping the datetime range may be returned.
+     * Datetime range over which time off requests should be retrieved.
+     * Any time off requests overlapping the datetime range may be returned.
      * </pre>
      *
      * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
@@ -723,8 +723,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Datetime range over which leave requests should be retrieved.
-     * Any leave requests overlapping the datetime range may be returned.
+     * Datetime range over which time off requests should be retrieved.
+     * Any time off requests overlapping the datetime range may be returned.
      * </pre>
      *
      * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
@@ -744,8 +744,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Datetime range over which leave requests should be retrieved.
-     * Any leave requests overlapping the datetime range may be returned.
+     * Datetime range over which time off requests should be retrieved.
+     * Any time off requests overlapping the datetime range may be returned.
      * </pre>
      *
      * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
@@ -763,8 +763,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Datetime range over which leave requests should be retrieved.
-     * Any leave requests overlapping the datetime range may be returned.
+     * Datetime range over which time off requests should be retrieved.
+     * Any time off requests overlapping the datetime range may be returned.
      * </pre>
      *
      * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
@@ -787,8 +787,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Datetime range over which leave requests should be retrieved.
-     * Any leave requests overlapping the datetime range may be returned.
+     * Datetime range over which time off requests should be retrieved.
+     * Any time off requests overlapping the datetime range may be returned.
      * </pre>
      *
      * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
@@ -805,8 +805,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Datetime range over which leave requests should be retrieved.
-     * Any leave requests overlapping the datetime range may be returned.
+     * Datetime range over which time off requests should be retrieved.
+     * Any time off requests overlapping the datetime range may be returned.
      * </pre>
      *
      * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
@@ -818,8 +818,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Datetime range over which leave requests should be retrieved.
-     * Any leave requests overlapping the datetime range may be returned.
+     * Datetime range over which time off requests should be retrieved.
+     * Any time off requests overlapping the datetime range may be returned.
      * </pre>
      *
      * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
@@ -834,8 +834,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Datetime range over which leave requests should be retrieved.
-     * Any leave requests overlapping the datetime range may be returned.
+     * Datetime range over which time off requests should be retrieved.
+     * Any time off requests overlapping the datetime range may be returned.
      * </pre>
      *
      * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
@@ -857,7 +857,7 @@ private static final long serialVersionUID = 0L;
     private boolean includeArchived_ ;
     /**
      * <pre>
-     * If true, archived leave requests will be included in the response.
+     * If true, archived time off requests will be included in the response.
      * Otherwise, no archived requests will be included in the response.
      * </pre>
      *
@@ -870,7 +870,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If true, archived leave requests will be included in the response.
+     * If true, archived time off requests will be included in the response.
      * Otherwise, no archived requests will be included in the response.
      * </pre>
      *
@@ -887,7 +887,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If true, archived leave requests will be included in the response.
+     * If true, archived time off requests will be included in the response.
      * Otherwise, no archived requests will be included in the response.
      * </pre>
      *
@@ -913,23 +913,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.ListLeaveRequestsRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.ListAgentTimeOffsRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.ListLeaveRequestsRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.ListAgentTimeOffsRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ListLeaveRequestsRequest>
-      PARSER = new com.google.protobuf.AbstractParser<ListLeaveRequestsRequest>() {
+  private static final com.google.protobuf.Parser<ListAgentTimeOffsRequest>
+      PARSER = new com.google.protobuf.AbstractParser<ListAgentTimeOffsRequest>() {
     @java.lang.Override
-    public ListLeaveRequestsRequest parsePartialFrom(
+    public ListAgentTimeOffsRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -948,17 +948,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ListLeaveRequestsRequest> parser() {
+  public static com.google.protobuf.Parser<ListAgentTimeOffsRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ListLeaveRequestsRequest> getParserForType() {
+  public com.google.protobuf.Parser<ListAgentTimeOffsRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.ListLeaveRequestsRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentTimeOffsRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -8,18 +8,18 @@ package com.tcn.cloud.api.api.commons;
  * Represents an agent's request for time off.
  * </pre>
  *
- * Protobuf type {@code api.commons.LeaveRequest}
+ * Protobuf type {@code api.commons.AgentTimeOff}
  */
-public final class LeaveRequest extends
+public final class AgentTimeOff extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.LeaveRequest)
-    LeaveRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.AgentTimeOff)
+    AgentTimeOffOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use LeaveRequest.newBuilder() to construct.
-  private LeaveRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use AgentTimeOff.newBuilder() to construct.
+  private AgentTimeOff(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private LeaveRequest() {
+  private AgentTimeOff() {
     requestStatus_ = 0;
     requestComment_ = "";
     responseComment_ = "";
@@ -31,20 +31,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new LeaveRequest();
+    return new AgentTimeOff();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_LeaveRequest_descriptor;
+    return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_AgentTimeOff_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_LeaveRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_AgentTimeOff_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.LeaveRequest.class, com.tcn.cloud.api.api.commons.LeaveRequest.Builder.class);
+            com.tcn.cloud.api.api.commons.AgentTimeOff.class, com.tcn.cloud.api.api.commons.AgentTimeOff.Builder.class);
   }
 
   public static final int LEAVE_REQUEST_ID_FIELD_NUMBER = 1;
@@ -84,7 +84,7 @@ private static final long serialVersionUID = 0L;
    * Current status of the leave request.
    * </pre>
    *
-   * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+   * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
    * @return The enum numeric value on the wire for requestStatus.
    */
   @java.lang.Override public int getRequestStatusValue() {
@@ -95,12 +95,12 @@ private static final long serialVersionUID = 0L;
    * Current status of the leave request.
    * </pre>
    *
-   * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+   * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
    * @return The requestStatus.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.LeaveRequestStatus getRequestStatus() {
-    com.tcn.cloud.api.api.commons.LeaveRequestStatus result = com.tcn.cloud.api.api.commons.LeaveRequestStatus.forNumber(requestStatus_);
-    return result == null ? com.tcn.cloud.api.api.commons.LeaveRequestStatus.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.AgentTimeOffStatus getRequestStatus() {
+    com.tcn.cloud.api.api.commons.AgentTimeOffStatus result = com.tcn.cloud.api.api.commons.AgentTimeOffStatus.forNumber(requestStatus_);
+    return result == null ? com.tcn.cloud.api.api.commons.AgentTimeOffStatus.UNRECOGNIZED : result;
   }
 
   public static final int REQUEST_COMMENT_FIELD_NUMBER = 4;
@@ -452,7 +452,7 @@ private static final long serialVersionUID = 0L;
     if (wfmAgentSid_ != 0L) {
       output.writeInt64(2, wfmAgentSid_);
     }
-    if (requestStatus_ != com.tcn.cloud.api.api.commons.LeaveRequestStatus.UNSPECIFIED_STATUS.getNumber()) {
+    if (requestStatus_ != com.tcn.cloud.api.api.commons.AgentTimeOffStatus.UNSPECIFIED_STATUS.getNumber()) {
       output.writeEnum(3, requestStatus_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestComment_)) {
@@ -493,7 +493,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, wfmAgentSid_);
     }
-    if (requestStatus_ != com.tcn.cloud.api.api.commons.LeaveRequestStatus.UNSPECIFIED_STATUS.getNumber()) {
+    if (requestStatus_ != com.tcn.cloud.api.api.commons.AgentTimeOffStatus.UNSPECIFIED_STATUS.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, requestStatus_);
     }
@@ -532,10 +532,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.LeaveRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.AgentTimeOff)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.LeaveRequest other = (com.tcn.cloud.api.api.commons.LeaveRequest) obj;
+    com.tcn.cloud.api.api.commons.AgentTimeOff other = (com.tcn.cloud.api.api.commons.AgentTimeOff) obj;
 
     if (getLeaveRequestId()
         != other.getLeaveRequestId()) return false;
@@ -611,44 +611,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.LeaveRequest parseFrom(
+  public static com.tcn.cloud.api.api.commons.AgentTimeOff parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.LeaveRequest parseFrom(
+  public static com.tcn.cloud.api.api.commons.AgentTimeOff parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.LeaveRequest parseFrom(
+  public static com.tcn.cloud.api.api.commons.AgentTimeOff parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.LeaveRequest parseFrom(
+  public static com.tcn.cloud.api.api.commons.AgentTimeOff parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.LeaveRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.AgentTimeOff parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.LeaveRequest parseFrom(
+  public static com.tcn.cloud.api.api.commons.AgentTimeOff parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.LeaveRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.AgentTimeOff parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.LeaveRequest parseFrom(
+  public static com.tcn.cloud.api.api.commons.AgentTimeOff parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -656,26 +656,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.LeaveRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.AgentTimeOff parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.LeaveRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.AgentTimeOff parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.LeaveRequest parseFrom(
+  public static com.tcn.cloud.api.api.commons.AgentTimeOff parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.LeaveRequest parseFrom(
+  public static com.tcn.cloud.api.api.commons.AgentTimeOff parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -688,7 +688,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.LeaveRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.AgentTimeOff prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -708,26 +708,26 @@ private static final long serialVersionUID = 0L;
    * Represents an agent's request for time off.
    * </pre>
    *
-   * Protobuf type {@code api.commons.LeaveRequest}
+   * Protobuf type {@code api.commons.AgentTimeOff}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.LeaveRequest)
-      com.tcn.cloud.api.api.commons.LeaveRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.AgentTimeOff)
+      com.tcn.cloud.api.api.commons.AgentTimeOffOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_LeaveRequest_descriptor;
+      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_AgentTimeOff_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_LeaveRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_AgentTimeOff_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.LeaveRequest.class, com.tcn.cloud.api.api.commons.LeaveRequest.Builder.class);
+              com.tcn.cloud.api.api.commons.AgentTimeOff.class, com.tcn.cloud.api.api.commons.AgentTimeOff.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.LeaveRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.AgentTimeOff.newBuilder()
     private Builder() {
 
     }
@@ -775,17 +775,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_LeaveRequest_descriptor;
+      return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_AgentTimeOff_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.LeaveRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.LeaveRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.AgentTimeOff getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.AgentTimeOff.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.LeaveRequest build() {
-      com.tcn.cloud.api.api.commons.LeaveRequest result = buildPartial();
+    public com.tcn.cloud.api.api.commons.AgentTimeOff build() {
+      com.tcn.cloud.api.api.commons.AgentTimeOff result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -793,15 +793,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.LeaveRequest buildPartial() {
-      com.tcn.cloud.api.api.commons.LeaveRequest result = new com.tcn.cloud.api.api.commons.LeaveRequest(this);
+    public com.tcn.cloud.api.api.commons.AgentTimeOff buildPartial() {
+      com.tcn.cloud.api.api.commons.AgentTimeOff result = new com.tcn.cloud.api.api.commons.AgentTimeOff(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.LeaveRequest result) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.AgentTimeOff result) {
       if (requestedDatetimeRangesBuilder_ == null) {
         if (((bitField0_ & 0x00000020) != 0)) {
           requestedDatetimeRanges_ = java.util.Collections.unmodifiableList(requestedDatetimeRanges_);
@@ -813,7 +813,7 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.LeaveRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.AgentTimeOff result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.leaveRequestId_ = leaveRequestId_;
@@ -884,16 +884,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.LeaveRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.LeaveRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.AgentTimeOff) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.AgentTimeOff)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.LeaveRequest other) {
-      if (other == com.tcn.cloud.api.api.commons.LeaveRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.AgentTimeOff other) {
+      if (other == com.tcn.cloud.api.api.commons.AgentTimeOff.getDefaultInstance()) return this;
       if (other.getLeaveRequestId() != 0L) {
         setLeaveRequestId(other.getLeaveRequestId());
       }
@@ -1154,7 +1154,7 @@ private static final long serialVersionUID = 0L;
      * Current status of the leave request.
      * </pre>
      *
-     * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+     * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
      * @return The enum numeric value on the wire for requestStatus.
      */
     @java.lang.Override public int getRequestStatusValue() {
@@ -1165,7 +1165,7 @@ private static final long serialVersionUID = 0L;
      * Current status of the leave request.
      * </pre>
      *
-     * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+     * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
      * @param value The enum numeric value on the wire for requestStatus to set.
      * @return This builder for chaining.
      */
@@ -1180,24 +1180,24 @@ private static final long serialVersionUID = 0L;
      * Current status of the leave request.
      * </pre>
      *
-     * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+     * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
      * @return The requestStatus.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.LeaveRequestStatus getRequestStatus() {
-      com.tcn.cloud.api.api.commons.LeaveRequestStatus result = com.tcn.cloud.api.api.commons.LeaveRequestStatus.forNumber(requestStatus_);
-      return result == null ? com.tcn.cloud.api.api.commons.LeaveRequestStatus.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.AgentTimeOffStatus getRequestStatus() {
+      com.tcn.cloud.api.api.commons.AgentTimeOffStatus result = com.tcn.cloud.api.api.commons.AgentTimeOffStatus.forNumber(requestStatus_);
+      return result == null ? com.tcn.cloud.api.api.commons.AgentTimeOffStatus.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * Current status of the leave request.
      * </pre>
      *
-     * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+     * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
      * @param value The requestStatus to set.
      * @return This builder for chaining.
      */
-    public Builder setRequestStatus(com.tcn.cloud.api.api.commons.LeaveRequestStatus value) {
+    public Builder setRequestStatus(com.tcn.cloud.api.api.commons.AgentTimeOffStatus value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1211,7 +1211,7 @@ private static final long serialVersionUID = 0L;
      * Current status of the leave request.
      * </pre>
      *
-     * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+     * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRequestStatus() {
@@ -2323,23 +2323,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.LeaveRequest)
+    // @@protoc_insertion_point(builder_scope:api.commons.AgentTimeOff)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.LeaveRequest)
-  private static final com.tcn.cloud.api.api.commons.LeaveRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.AgentTimeOff)
+  private static final com.tcn.cloud.api.api.commons.AgentTimeOff DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.LeaveRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.AgentTimeOff();
   }
 
-  public static com.tcn.cloud.api.api.commons.LeaveRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.AgentTimeOff getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<LeaveRequest>
-      PARSER = new com.google.protobuf.AbstractParser<LeaveRequest>() {
+  private static final com.google.protobuf.Parser<AgentTimeOff>
+      PARSER = new com.google.protobuf.AbstractParser<AgentTimeOff>() {
     @java.lang.Override
-    public LeaveRequest parsePartialFrom(
+    public AgentTimeOff parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2358,17 +2358,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<LeaveRequest> parser() {
+  public static com.google.protobuf.Parser<AgentTimeOff> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<LeaveRequest> getParserForType() {
+  public com.google.protobuf.Parser<AgentTimeOff> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.LeaveRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.AgentTimeOff getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

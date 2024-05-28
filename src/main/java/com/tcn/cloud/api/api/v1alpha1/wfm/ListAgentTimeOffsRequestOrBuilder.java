@@ -3,14 +3,14 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface ListLeaveRequestsRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.ListLeaveRequestsRequest)
+public interface ListAgentTimeOffsRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.ListAgentTimeOffsRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * The wfm agents to list leave requests for.
-   * If no SIDs are provided, all leave requests within the &#64;datetime_range will be returned.
+   * The wfm agents to list agent time off requests for.
+   * If no SIDs are provided, all time off requests within the &#64;datetime_range will be returned.
    * </pre>
    *
    * <code>repeated int64 wfm_agent_sids = 1 [json_name = "wfmAgentSids"];</code>
@@ -19,8 +19,8 @@ public interface ListLeaveRequestsRequestOrBuilder extends
   java.util.List<java.lang.Long> getWfmAgentSidsList();
   /**
    * <pre>
-   * The wfm agents to list leave requests for.
-   * If no SIDs are provided, all leave requests within the &#64;datetime_range will be returned.
+   * The wfm agents to list agent time off requests for.
+   * If no SIDs are provided, all time off requests within the &#64;datetime_range will be returned.
    * </pre>
    *
    * <code>repeated int64 wfm_agent_sids = 1 [json_name = "wfmAgentSids"];</code>
@@ -29,8 +29,8 @@ public interface ListLeaveRequestsRequestOrBuilder extends
   int getWfmAgentSidsCount();
   /**
    * <pre>
-   * The wfm agents to list leave requests for.
-   * If no SIDs are provided, all leave requests within the &#64;datetime_range will be returned.
+   * The wfm agents to list agent time off requests for.
+   * If no SIDs are provided, all time off requests within the &#64;datetime_range will be returned.
    * </pre>
    *
    * <code>repeated int64 wfm_agent_sids = 1 [json_name = "wfmAgentSids"];</code>
@@ -41,8 +41,8 @@ public interface ListLeaveRequestsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Datetime range over which leave requests should be retrieved.
-   * Any leave requests overlapping the datetime range may be returned.
+   * Datetime range over which time off requests should be retrieved.
+   * Any time off requests overlapping the datetime range may be returned.
    * </pre>
    *
    * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
@@ -51,8 +51,8 @@ public interface ListLeaveRequestsRequestOrBuilder extends
   boolean hasDatetimeRange();
   /**
    * <pre>
-   * Datetime range over which leave requests should be retrieved.
-   * Any leave requests overlapping the datetime range may be returned.
+   * Datetime range over which time off requests should be retrieved.
+   * Any time off requests overlapping the datetime range may be returned.
    * </pre>
    *
    * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
@@ -61,8 +61,8 @@ public interface ListLeaveRequestsRequestOrBuilder extends
   com.tcn.cloud.api.api.commons.DatetimeRange getDatetimeRange();
   /**
    * <pre>
-   * Datetime range over which leave requests should be retrieved.
-   * Any leave requests overlapping the datetime range may be returned.
+   * Datetime range over which time off requests should be retrieved.
+   * Any time off requests overlapping the datetime range may be returned.
    * </pre>
    *
    * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
@@ -71,7 +71,7 @@ public interface ListLeaveRequestsRequestOrBuilder extends
 
   /**
    * <pre>
-   * If true, archived leave requests will be included in the response.
+   * If true, archived time off requests will be included in the response.
    * Otherwise, no archived requests will be included in the response.
    * </pre>
    *

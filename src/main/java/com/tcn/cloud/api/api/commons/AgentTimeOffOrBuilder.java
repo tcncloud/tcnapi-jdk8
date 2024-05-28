@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface LeaveRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.LeaveRequest)
+public interface AgentTimeOffOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.AgentTimeOff)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -32,7 +32,7 @@ public interface LeaveRequestOrBuilder extends
    * Current status of the leave request.
    * </pre>
    *
-   * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+   * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
    * @return The enum numeric value on the wire for requestStatus.
    */
   int getRequestStatusValue();
@@ -41,10 +41,10 @@ public interface LeaveRequestOrBuilder extends
    * Current status of the leave request.
    * </pre>
    *
-   * <code>.api.commons.LeaveRequestStatus request_status = 3 [json_name = "requestStatus"];</code>
+   * <code>.api.commons.AgentTimeOffStatus request_status = 3 [json_name = "requestStatus"];</code>
    * @return The requestStatus.
    */
-  com.tcn.cloud.api.api.commons.LeaveRequestStatus getRequestStatus();
+  com.tcn.cloud.api.api.commons.AgentTimeOffStatus getRequestStatus();
 
   /**
    * <pre>

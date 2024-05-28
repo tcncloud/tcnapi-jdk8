@@ -3,13 +3,13 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface CreateLeaveRequestRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.CreateLeaveRequestRequest)
+public interface CreateAgentTimeOffRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.CreateAgentTimeOffRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * All datetime ranges being requested for the leave.
+   * All datetime ranges being requested for the time off.
    * No overlap is allowed between the datetime ranges.
    * </pre>
    *
@@ -19,7 +19,7 @@ public interface CreateLeaveRequestRequestOrBuilder extends
       getRequestedDatetimeRangesList();
   /**
    * <pre>
-   * All datetime ranges being requested for the leave.
+   * All datetime ranges being requested for the time off.
    * No overlap is allowed between the datetime ranges.
    * </pre>
    *
@@ -28,7 +28,7 @@ public interface CreateLeaveRequestRequestOrBuilder extends
   com.tcn.cloud.api.api.commons.DatetimeRange getRequestedDatetimeRanges(int index);
   /**
    * <pre>
-   * All datetime ranges being requested for the leave.
+   * All datetime ranges being requested for the time off.
    * No overlap is allowed between the datetime ranges.
    * </pre>
    *
@@ -37,7 +37,7 @@ public interface CreateLeaveRequestRequestOrBuilder extends
   int getRequestedDatetimeRangesCount();
   /**
    * <pre>
-   * All datetime ranges being requested for the leave.
+   * All datetime ranges being requested for the time off.
    * No overlap is allowed between the datetime ranges.
    * </pre>
    *
@@ -47,7 +47,7 @@ public interface CreateLeaveRequestRequestOrBuilder extends
       getRequestedDatetimeRangesOrBuilderList();
   /**
    * <pre>
-   * All datetime ranges being requested for the leave.
+   * All datetime ranges being requested for the time off.
    * No overlap is allowed between the datetime ranges.
    * </pre>
    *
@@ -58,7 +58,7 @@ public interface CreateLeaveRequestRequestOrBuilder extends
 
   /**
    * <pre>
-   * A comment describing the reason for the leave request.
+   * A comment describing the reason for the time off request.
    * </pre>
    *
    * <code>string request_comment = 2 [json_name = "requestComment"];</code>
@@ -67,7 +67,7 @@ public interface CreateLeaveRequestRequestOrBuilder extends
   java.lang.String getRequestComment();
   /**
    * <pre>
-   * A comment describing the reason for the leave request.
+   * A comment describing the reason for the time off request.
    * </pre>
    *
    * <code>string request_comment = 2 [json_name = "requestComment"];</code>

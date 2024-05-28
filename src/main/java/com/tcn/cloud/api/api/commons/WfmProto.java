@@ -115,10 +115,10 @@ public final class WfmProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_AgentStateSequence_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_LeaveRequest_descriptor;
+    internal_static_api_commons_AgentTimeOff_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_LeaveRequest_fieldAccessorTable;
+      internal_static_api_commons_AgentTimeOff_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -251,10 +251,10 @@ public final class WfmProto {
       "art_datetime\030\002 \001(\0132\032.google.protobuf.Tim" +
       "estampR\rstartDatetime\022E\n\016state_segments\030" +
       "\003 \003(\0132\036.api.commons.AgentStateSegmentR\rs" +
-      "tateSegments\"\300\004\n\014LeaveRequest\022(\n\020leave_r" +
+      "tateSegments\"\300\004\n\014AgentTimeOff\022(\n\020leave_r" +
       "equest_id\030\001 \001(\003R\016leaveRequestId\022\"\n\rwfm_a" +
       "gent_sid\030\002 \001(\003R\013wfmAgentSid\022F\n\016request_s" +
-      "tatus\030\003 \001(\0162\037.api.commons.LeaveRequestSt" +
+      "tatus\030\003 \001(\0162\037.api.commons.AgentTimeOffSt" +
       "atusR\rrequestStatus\022\'\n\017request_comment\030\004" +
       " \001(\tR\016requestComment\022)\n\020response_comment" +
       "\030\005 \001(\tR\017responseComment\022V\n\031requested_dat" +
@@ -403,8 +403,8 @@ public final class WfmProto {
       "\013UNSPECIFIED\020\000\022\r\n\tLOGGED_IN\020\001\022\020\n\014CALL_ON" +
       "_HOLD\020\004\022\021\n\rOUTBOUND_CALL\020\005\022\014\n\010TRANSFER\020\007" +
       "\022\016\n\nCONFERENCE\020\010\022\t\n\005READY\020\t\022\r\n\tNOT_READY" +
-      "\020\n\022\013\n\007WRAP_UP\020\013\022\016\n\nLOGGED_OUT\020\r*\202\001\n\022Leav" +
-      "eRequestStatus\022\026\n\022UNSPECIFIED_STATUS\020\000\022\023" +
+      "\020\n\022\013\n\007WRAP_UP\020\013\022\016\n\nLOGGED_OUT\020\r*\202\001\n\022Agen" +
+      "tTimeOffStatus\022\026\n\022UNSPECIFIED_STATUS\020\000\022\023" +
       "\n\017PENDING_REQUEST\020\001\022\024\n\020APPROVED_REQUEST\020" +
       "\002\022\022\n\016DENIED_REQUEST\020\003\022\025\n\021CANCELLED_REQUE" +
       "ST\020\004Bv\n\035com.tcn.cloud.api.api.commonsB\010W" +
@@ -537,11 +537,11 @@ public final class WfmProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AgentStateSequence_descriptor,
         new java.lang.String[] { "WfmAgentSid", "StartDatetime", "StateSegments", });
-    internal_static_api_commons_LeaveRequest_descriptor =
+    internal_static_api_commons_AgentTimeOff_descriptor =
       getDescriptor().getMessageTypes().get(20);
-    internal_static_api_commons_LeaveRequest_fieldAccessorTable = new
+    internal_static_api_commons_AgentTimeOff_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_LeaveRequest_descriptor,
+        internal_static_api_commons_AgentTimeOff_descriptor,
         new java.lang.String[] { "LeaveRequestId", "WfmAgentSid", "RequestStatus", "RequestComment", "ResponseComment", "RequestedDatetimeRanges", "CreatedTime", "ArchivedTime", "ResolvedTime", "ResolvedByUserId", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }

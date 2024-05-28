@@ -2080,25 +2080,25 @@ public final class WfmProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_wfm_ListRealTimeManagementStateColorsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_wfm_CreateLeaveRequestRequest_descriptor;
+    internal_static_api_v1alpha1_wfm_CreateAgentTimeOffRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_wfm_CreateLeaveRequestRequest_fieldAccessorTable;
+      internal_static_api_v1alpha1_wfm_CreateAgentTimeOffRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_wfm_CreateLeaveRequestResponse_descriptor;
+    internal_static_api_v1alpha1_wfm_CreateAgentTimeOffResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_wfm_CreateLeaveRequestResponse_fieldAccessorTable;
+      internal_static_api_v1alpha1_wfm_CreateAgentTimeOffResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_wfm_ListLeaveRequestsRequest_descriptor;
+    internal_static_api_v1alpha1_wfm_ListAgentTimeOffsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_wfm_ListLeaveRequestsRequest_fieldAccessorTable;
+      internal_static_api_v1alpha1_wfm_ListAgentTimeOffsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_wfm_ListLeaveRequestsResponse_descriptor;
+    internal_static_api_v1alpha1_wfm_ListAgentTimeOffsResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_wfm_ListLeaveRequestsResponse_fieldAccessorTable;
+      internal_static_api_v1alpha1_wfm_ListAgentTimeOffsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3975,21 +3975,21 @@ public final class WfmProto {
       "tStateColorsRequest\"~\n)ListRealTimeManag" +
       "ementStateColorsResponse\022Q\n\014state_colors" +
       "\030\001 \003(\0132..api.v1alpha1.wfm.RealTimeManage" +
-      "mentStateColorR\013stateColors\"\300\001\n\031CreateLe" +
-      "aveRequestRequest\022V\n\031requested_datetime_" +
+      "mentStateColorR\013stateColors\"\300\001\n\031CreateAg" +
+      "entTimeOffRequest\022V\n\031requested_datetime_" +
       "ranges\030\001 \003(\0132\032.api.commons.DatetimeRange" +
       "R\027requestedDatetimeRanges\022\'\n\017request_com" +
       "ment\030\002 \001(\tR\016requestComment\022\"\n\rwfm_agent_" +
-      "sid\030\003 \001(\003R\013wfmAgentSid\"\\\n\032CreateLeaveReq" +
-      "uestResponse\022>\n\rleave_request\030\001 \001(\0132\031.ap" +
-      "i.commons.LeaveRequestR\014leaveRequest\"\256\001\n" +
-      "\030ListLeaveRequestsRequest\022$\n\016wfm_agent_s" +
+      "sid\030\003 \001(\003R\013wfmAgentSid\"\\\n\032CreateAgentTim" +
+      "eOffResponse\022>\n\rleave_request\030\001 \001(\0132\031.ap" +
+      "i.commons.AgentTimeOffR\014leaveRequest\"\256\001\n" +
+      "\030ListAgentTimeOffsRequest\022$\n\016wfm_agent_s" +
       "ids\030\001 \003(\003R\014wfmAgentSids\022A\n\016datetime_rang" +
       "e\030\002 \001(\0132\032.api.commons.DatetimeRangeR\rdat" +
       "etimeRange\022)\n\020include_archived\030\003 \001(\010R\017in" +
-      "cludeArchived\"]\n\031ListLeaveRequestsRespon" +
+      "cludeArchived\"]\n\031ListAgentTimeOffsRespon" +
       "se\022@\n\016leave_requests\030\001 \003(\0132\031.api.commons" +
-      ".LeaveRequestR\rleaveRequests2\240\202\002\n\003WFM\022\313\001" +
+      ".AgentTimeOffR\rleaveRequests2\240\202\002\n\003WFM\022\313\001" +
       "\n\031PerformInitialClientSetup\0222.api.v1alph" +
       "a1.wfm.PerformInitialClientSetupRequest\032" +
       "3.api.v1alpha1.wfm.PerformInitialClientS" +
@@ -4786,15 +4786,15 @@ public final class WfmProto {
       "uest\0321.api.v1alpha1.wfm.RemoveAgentFromS" +
       "cheduleResponse\"E\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0025\"0/api/" +
       "v1alpha1/wfm/removeagentfromschedulerequ" +
-      "est:\001*\022\252\001\n\022CreateLeaveRequest\022+.api.v1al" +
-      "pha1.wfm.CreateLeaveRequestRequest\032,.api" +
-      ".v1alpha1.wfm.CreateLeaveRequestResponse" +
+      "est:\001*\022\252\001\n\022CreateAgentTimeOff\022+.api.v1al" +
+      "pha1.wfm.CreateAgentTimeOffRequest\032,.api" +
+      ".v1alpha1.wfm.CreateAgentTimeOffResponse" +
       "\"9\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002)\"$/api/v1alpha1/wfm/cr" +
-      "eateleaverequest:\001*\022\246\001\n\021ListLeaveRequest" +
-      "s\022*.api.v1alpha1.wfm.ListLeaveRequestsRe" +
-      "quest\032+.api.v1alpha1.wfm.ListLeaveReques" +
-      "tsResponse\"8\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002(\"#/api/v1alp" +
-      "ha1/wfm/listleaverequests:\001*\022\304\001\n\026HelloWo" +
+      "eateagenttimeoff:\001*\022\246\001\n\021ListAgentTimeOff" +
+      "s\022*.api.v1alpha1.wfm.ListAgentTimeOffsRe" +
+      "quest\032+.api.v1alpha1.wfm.ListAgentTimeOf" +
+      "fsResponse\"8\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002(\"#/api/v1alp" +
+      "ha1/wfm/listagenttimeoffs:\001*\022\304\001\n\026HelloWo" +
       "rldWFMAdherence\022/.api.v1alpha1.wfm.Hello" +
       "WorldWFMAdherenceRequest\0320.api.v1alpha1." +
       "wfm.HelloWorldWFMAdherenceResponse\"G\272\270\221\002" +
@@ -7310,29 +7310,29 @@ public final class WfmProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_wfm_ListRealTimeManagementStateColorsResponse_descriptor,
         new java.lang.String[] { "StateColors", });
-    internal_static_api_v1alpha1_wfm_CreateLeaveRequestRequest_descriptor =
+    internal_static_api_v1alpha1_wfm_CreateAgentTimeOffRequest_descriptor =
       getDescriptor().getMessageTypes().get(390);
-    internal_static_api_v1alpha1_wfm_CreateLeaveRequestRequest_fieldAccessorTable = new
+    internal_static_api_v1alpha1_wfm_CreateAgentTimeOffRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_wfm_CreateLeaveRequestRequest_descriptor,
+        internal_static_api_v1alpha1_wfm_CreateAgentTimeOffRequest_descriptor,
         new java.lang.String[] { "RequestedDatetimeRanges", "RequestComment", "WfmAgentSid", });
-    internal_static_api_v1alpha1_wfm_CreateLeaveRequestResponse_descriptor =
+    internal_static_api_v1alpha1_wfm_CreateAgentTimeOffResponse_descriptor =
       getDescriptor().getMessageTypes().get(391);
-    internal_static_api_v1alpha1_wfm_CreateLeaveRequestResponse_fieldAccessorTable = new
+    internal_static_api_v1alpha1_wfm_CreateAgentTimeOffResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_wfm_CreateLeaveRequestResponse_descriptor,
+        internal_static_api_v1alpha1_wfm_CreateAgentTimeOffResponse_descriptor,
         new java.lang.String[] { "LeaveRequest", });
-    internal_static_api_v1alpha1_wfm_ListLeaveRequestsRequest_descriptor =
+    internal_static_api_v1alpha1_wfm_ListAgentTimeOffsRequest_descriptor =
       getDescriptor().getMessageTypes().get(392);
-    internal_static_api_v1alpha1_wfm_ListLeaveRequestsRequest_fieldAccessorTable = new
+    internal_static_api_v1alpha1_wfm_ListAgentTimeOffsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_wfm_ListLeaveRequestsRequest_descriptor,
+        internal_static_api_v1alpha1_wfm_ListAgentTimeOffsRequest_descriptor,
         new java.lang.String[] { "WfmAgentSids", "DatetimeRange", "IncludeArchived", });
-    internal_static_api_v1alpha1_wfm_ListLeaveRequestsResponse_descriptor =
+    internal_static_api_v1alpha1_wfm_ListAgentTimeOffsResponse_descriptor =
       getDescriptor().getMessageTypes().get(393);
-    internal_static_api_v1alpha1_wfm_ListLeaveRequestsResponse_fieldAccessorTable = new
+    internal_static_api_v1alpha1_wfm_ListAgentTimeOffsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_wfm_ListLeaveRequestsResponse_descriptor,
+        internal_static_api_v1alpha1_wfm_ListAgentTimeOffsResponse_descriptor,
         new java.lang.String[] { "LeaveRequests", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

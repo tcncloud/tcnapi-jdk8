@@ -5,12 +5,12 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * The LeaveRequestStatus, which is the current state of an agent's LeaveRequest for the scheduler service.
+ * The AgentTimeOffStatus, which is the current state of an agent's AgentTimeOff for the scheduler service.
  * </pre>
  *
- * Protobuf enum {@code api.commons.LeaveRequestStatus}
+ * Protobuf enum {@code api.commons.AgentTimeOffStatus}
  */
-public enum LeaveRequestStatus
+public enum AgentTimeOffStatus
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
@@ -111,7 +111,7 @@ public enum LeaveRequestStatus
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static LeaveRequestStatus valueOf(int value) {
+  public static AgentTimeOffStatus valueOf(int value) {
     return forNumber(value);
   }
 
@@ -119,7 +119,7 @@ public enum LeaveRequestStatus
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static LeaveRequestStatus forNumber(int value) {
+  public static AgentTimeOffStatus forNumber(int value) {
     switch (value) {
       case 0: return UNSPECIFIED_STATUS;
       case 1: return PENDING_REQUEST;
@@ -130,15 +130,15 @@ public enum LeaveRequestStatus
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<LeaveRequestStatus>
+  public static com.google.protobuf.Internal.EnumLiteMap<AgentTimeOffStatus>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      LeaveRequestStatus> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<LeaveRequestStatus>() {
-          public LeaveRequestStatus findValueByNumber(int number) {
-            return LeaveRequestStatus.forNumber(number);
+      AgentTimeOffStatus> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<AgentTimeOffStatus>() {
+          public AgentTimeOffStatus findValueByNumber(int number) {
+            return AgentTimeOffStatus.forNumber(number);
           }
         };
 
@@ -159,9 +159,9 @@ public enum LeaveRequestStatus
     return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(20);
   }
 
-  private static final LeaveRequestStatus[] VALUES = values();
+  private static final AgentTimeOffStatus[] VALUES = values();
 
-  public static LeaveRequestStatus valueOf(
+  public static AgentTimeOffStatus valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -175,10 +175,10 @@ public enum LeaveRequestStatus
 
   private final int value;
 
-  private LeaveRequestStatus(int value) {
+  private AgentTimeOffStatus(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.commons.LeaveRequestStatus)
+  // @@protoc_insertion_point(enum_scope:api.commons.AgentTimeOffStatus)
 }
 
