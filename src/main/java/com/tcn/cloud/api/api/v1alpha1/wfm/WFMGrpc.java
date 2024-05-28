@@ -8101,7 +8101,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates an agent leave petition to request time off for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
-     * The &#64;request_comment must be set with a value.
+     * The &#64;petition_comment must be set with a value.
      * The &#64;requested_datetime_ranges may not overlap each other.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
@@ -11022,7 +11022,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates an agent leave petition to request time off for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
-     * The &#64;request_comment must be set with a value.
+     * The &#64;petition_comment must be set with a value.
      * The &#64;requested_datetime_ranges may not overlap each other.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
@@ -13773,7 +13773,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates an agent leave petition to request time off for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
-     * The &#64;request_comment must be set with a value.
+     * The &#64;petition_comment must be set with a value.
      * The &#64;requested_datetime_ranges may not overlap each other.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
@@ -16578,7 +16578,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates an agent leave petition to request time off for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
-     * The &#64;request_comment must be set with a value.
+     * The &#64;petition_comment must be set with a value.
      * The &#64;requested_datetime_ranges may not overlap each other.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.

@@ -452,7 +452,7 @@ private static final long serialVersionUID = 0L;
     if (wfmAgentSid_ != 0L) {
       output.writeInt64(2, wfmAgentSid_);
     }
-    if (petitionStatus_ != com.tcn.cloud.api.api.commons.AgentLeavePetitionStatus.UNSPECIFIED_STATUS.getNumber()) {
+    if (petitionStatus_ != com.tcn.cloud.api.api.commons.AgentLeavePetitionStatus.UNSPECIFIED_PETITION_STATUS.getNumber()) {
       output.writeEnum(3, petitionStatus_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(petitionComment_)) {
@@ -493,7 +493,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, wfmAgentSid_);
     }
-    if (petitionStatus_ != com.tcn.cloud.api.api.commons.AgentLeavePetitionStatus.UNSPECIFIED_STATUS.getNumber()) {
+    if (petitionStatus_ != com.tcn.cloud.api.api.commons.AgentLeavePetitionStatus.UNSPECIFIED_PETITION_STATUS.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, petitionStatus_);
     }

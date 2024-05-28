@@ -21,7 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private CreateAgentLeavePetitionRequest() {
     requestedDatetimeRanges_ = java.util.Collections.emptyList();
-    requestComment_ = "";
+    petitionComment_ = "";
   }
 
   @java.lang.Override
@@ -110,27 +110,27 @@ private static final long serialVersionUID = 0L;
     return requestedDatetimeRanges_.get(index);
   }
 
-  public static final int REQUEST_COMMENT_FIELD_NUMBER = 2;
+  public static final int PETITION_COMMENT_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object requestComment_ = "";
+  private volatile java.lang.Object petitionComment_ = "";
   /**
    * <pre>
    * A comment describing the reason for the time off request.
    * </pre>
    *
-   * <code>string request_comment = 2 [json_name = "requestComment"];</code>
-   * @return The requestComment.
+   * <code>string petition_comment = 2 [json_name = "petitionComment"];</code>
+   * @return The petitionComment.
    */
   @java.lang.Override
-  public java.lang.String getRequestComment() {
-    java.lang.Object ref = requestComment_;
+  public java.lang.String getPetitionComment() {
+    java.lang.Object ref = petitionComment_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      requestComment_ = s;
+      petitionComment_ = s;
       return s;
     }
   }
@@ -139,18 +139,18 @@ private static final long serialVersionUID = 0L;
    * A comment describing the reason for the time off request.
    * </pre>
    *
-   * <code>string request_comment = 2 [json_name = "requestComment"];</code>
-   * @return The bytes for requestComment.
+   * <code>string petition_comment = 2 [json_name = "petitionComment"];</code>
+   * @return The bytes for petitionComment.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getRequestCommentBytes() {
-    java.lang.Object ref = requestComment_;
+      getPetitionCommentBytes() {
+    java.lang.Object ref = petitionComment_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      requestComment_ = b;
+      petitionComment_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -189,8 +189,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < requestedDatetimeRanges_.size(); i++) {
       output.writeMessage(1, requestedDatetimeRanges_.get(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestComment_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, requestComment_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(petitionComment_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, petitionComment_);
     }
     if (wfmAgentSid_ != 0L) {
       output.writeInt64(3, wfmAgentSid_);
@@ -208,8 +208,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, requestedDatetimeRanges_.get(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestComment_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, requestComment_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(petitionComment_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, petitionComment_);
     }
     if (wfmAgentSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
@@ -232,8 +232,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getRequestedDatetimeRangesList()
         .equals(other.getRequestedDatetimeRangesList())) return false;
-    if (!getRequestComment()
-        .equals(other.getRequestComment())) return false;
+    if (!getPetitionComment()
+        .equals(other.getPetitionComment())) return false;
     if (getWfmAgentSid()
         != other.getWfmAgentSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -251,8 +251,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + REQUESTED_DATETIME_RANGES_FIELD_NUMBER;
       hash = (53 * hash) + getRequestedDatetimeRangesList().hashCode();
     }
-    hash = (37 * hash) + REQUEST_COMMENT_FIELD_NUMBER;
-    hash = (53 * hash) + getRequestComment().hashCode();
+    hash = (37 * hash) + PETITION_COMMENT_FIELD_NUMBER;
+    hash = (53 * hash) + getPetitionComment().hashCode();
     hash = (37 * hash) + WFM_AGENT_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getWfmAgentSid());
@@ -398,7 +398,7 @@ private static final long serialVersionUID = 0L;
         requestedDatetimeRangesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
-      requestComment_ = "";
+      petitionComment_ = "";
       wfmAgentSid_ = 0L;
       return this;
     }
@@ -447,7 +447,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentLeavePetitionRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.requestComment_ = requestComment_;
+        result.petitionComment_ = petitionComment_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.wfmAgentSid_ = wfmAgentSid_;
@@ -524,8 +524,8 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (!other.getRequestComment().isEmpty()) {
-        requestComment_ = other.requestComment_;
+      if (!other.getPetitionComment().isEmpty()) {
+        petitionComment_ = other.petitionComment_;
         bitField0_ |= 0x00000002;
         onChanged();
       }
@@ -572,7 +572,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 18: {
-              requestComment_ = input.readStringRequireUtf8();
+              petitionComment_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
@@ -928,22 +928,22 @@ private static final long serialVersionUID = 0L;
       return requestedDatetimeRangesBuilder_;
     }
 
-    private java.lang.Object requestComment_ = "";
+    private java.lang.Object petitionComment_ = "";
     /**
      * <pre>
      * A comment describing the reason for the time off request.
      * </pre>
      *
-     * <code>string request_comment = 2 [json_name = "requestComment"];</code>
-     * @return The requestComment.
+     * <code>string petition_comment = 2 [json_name = "petitionComment"];</code>
+     * @return The petitionComment.
      */
-    public java.lang.String getRequestComment() {
-      java.lang.Object ref = requestComment_;
+    public java.lang.String getPetitionComment() {
+      java.lang.Object ref = petitionComment_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        requestComment_ = s;
+        petitionComment_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -954,17 +954,17 @@ private static final long serialVersionUID = 0L;
      * A comment describing the reason for the time off request.
      * </pre>
      *
-     * <code>string request_comment = 2 [json_name = "requestComment"];</code>
-     * @return The bytes for requestComment.
+     * <code>string petition_comment = 2 [json_name = "petitionComment"];</code>
+     * @return The bytes for petitionComment.
      */
     public com.google.protobuf.ByteString
-        getRequestCommentBytes() {
-      java.lang.Object ref = requestComment_;
+        getPetitionCommentBytes() {
+      java.lang.Object ref = petitionComment_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        requestComment_ = b;
+        petitionComment_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -975,14 +975,14 @@ private static final long serialVersionUID = 0L;
      * A comment describing the reason for the time off request.
      * </pre>
      *
-     * <code>string request_comment = 2 [json_name = "requestComment"];</code>
-     * @param value The requestComment to set.
+     * <code>string petition_comment = 2 [json_name = "petitionComment"];</code>
+     * @param value The petitionComment to set.
      * @return This builder for chaining.
      */
-    public Builder setRequestComment(
+    public Builder setPetitionComment(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      requestComment_ = value;
+      petitionComment_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
@@ -992,11 +992,11 @@ private static final long serialVersionUID = 0L;
      * A comment describing the reason for the time off request.
      * </pre>
      *
-     * <code>string request_comment = 2 [json_name = "requestComment"];</code>
+     * <code>string petition_comment = 2 [json_name = "petitionComment"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearRequestComment() {
-      requestComment_ = getDefaultInstance().getRequestComment();
+    public Builder clearPetitionComment() {
+      petitionComment_ = getDefaultInstance().getPetitionComment();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
@@ -1006,15 +1006,15 @@ private static final long serialVersionUID = 0L;
      * A comment describing the reason for the time off request.
      * </pre>
      *
-     * <code>string request_comment = 2 [json_name = "requestComment"];</code>
-     * @param value The bytes for requestComment to set.
+     * <code>string petition_comment = 2 [json_name = "petitionComment"];</code>
+     * @param value The bytes for petitionComment to set.
      * @return This builder for chaining.
      */
-    public Builder setRequestCommentBytes(
+    public Builder setPetitionCommentBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      requestComment_ = value;
+      petitionComment_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;

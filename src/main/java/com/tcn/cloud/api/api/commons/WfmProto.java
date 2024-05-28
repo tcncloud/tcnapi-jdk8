@@ -404,14 +404,14 @@ public final class WfmProto {
       "D\020\000\022\r\n\tLOGGED_IN\020\001\022\020\n\014CALL_ON_HOLD\020\004\022\021\n\r" +
       "OUTBOUND_CALL\020\005\022\014\n\010TRANSFER\020\007\022\016\n\nCONFERE" +
       "NCE\020\010\022\t\n\005READY\020\t\022\r\n\tNOT_READY\020\n\022\013\n\007WRAP_" +
-      "UP\020\013\022\016\n\nLOGGED_OUT\020\r*\210\001\n\030AgentLeavePetit" +
-      "ionStatus\022\026\n\022UNSPECIFIED_STATUS\020\000\022\023\n\017PEN" +
-      "DING_REQUEST\020\001\022\024\n\020APPROVED_REQUEST\020\002\022\022\n\016" +
-      "DENIED_REQUEST\020\003\022\025\n\021CANCELLED_REQUEST\020\004B" +
-      "v\n\035com.tcn.cloud.api.api.commonsB\010WfmPro" +
-      "toP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002" +
-      "\027Api\\Commons\\GPBMetadata\352\002\014Api::Commonsb" +
-      "\006proto3"
+      "UP\020\013\022\016\n\nLOGGED_OUT\020\r*\225\001\n\030AgentLeavePetit" +
+      "ionStatus\022\037\n\033UNSPECIFIED_PETITION_STATUS" +
+      "\020\000\022\024\n\020PENDING_PETITION\020\001\022\025\n\021APPROVED_PET" +
+      "ITION\020\002\022\023\n\017DENIED_PETITION\020\003\022\026\n\022CANCELLE" +
+      "D_PETITION\020\004Bv\n\035com.tcn.cloud.api.api.co" +
+      "mmonsB\010WfmProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013" +
+      "Api\\Commons\342\002\027Api\\Commons\\GPBMetadata\352\002\014" +
+      "Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

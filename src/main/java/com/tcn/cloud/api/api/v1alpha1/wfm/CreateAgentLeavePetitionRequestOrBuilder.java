@@ -61,20 +61,20 @@ public interface CreateAgentLeavePetitionRequestOrBuilder extends
    * A comment describing the reason for the time off request.
    * </pre>
    *
-   * <code>string request_comment = 2 [json_name = "requestComment"];</code>
-   * @return The requestComment.
+   * <code>string petition_comment = 2 [json_name = "petitionComment"];</code>
+   * @return The petitionComment.
    */
-  java.lang.String getRequestComment();
+  java.lang.String getPetitionComment();
   /**
    * <pre>
    * A comment describing the reason for the time off request.
    * </pre>
    *
-   * <code>string request_comment = 2 [json_name = "requestComment"];</code>
-   * @return The bytes for requestComment.
+   * <code>string petition_comment = 2 [json_name = "petitionComment"];</code>
+   * @return The bytes for petitionComment.
    */
   com.google.protobuf.ByteString
-      getRequestCommentBytes();
+      getPetitionCommentBytes();
 
   /**
    * <pre>

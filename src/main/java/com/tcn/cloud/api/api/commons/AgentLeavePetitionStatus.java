@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * The AgentLeavePetition, which is the current state of an agent's AgentLeavePetition for the scheduler service.
+ * The AgentLeavePetitionStatus, which is the current state of an agent's AgentLeavePetition for the scheduler service.
  * </pre>
  *
  * Protobuf enum {@code api.commons.AgentLeavePetitionStatus}
@@ -17,41 +17,41 @@ public enum AgentLeavePetitionStatus
    * Not Set.
    * </pre>
    *
-   * <code>UNSPECIFIED_STATUS = 0;</code>
+   * <code>UNSPECIFIED_PETITION_STATUS = 0;</code>
    */
-  UNSPECIFIED_STATUS(0),
+  UNSPECIFIED_PETITION_STATUS(0),
   /**
    * <pre>
-   * The request is pending approval.
+   * The petition is pending approval.
    * </pre>
    *
-   * <code>PENDING_REQUEST = 1;</code>
+   * <code>PENDING_PETITION = 1;</code>
    */
-  PENDING_REQUEST(1),
+  PENDING_PETITION(1),
   /**
    * <pre>
-   * The request has been approved.
+   * The petition has been approved.
    * </pre>
    *
-   * <code>APPROVED_REQUEST = 2;</code>
+   * <code>APPROVED_PETITION = 2;</code>
    */
-  APPROVED_REQUEST(2),
+  APPROVED_PETITION(2),
   /**
    * <pre>
-   * The request has been denied.
+   * The petition has been denied.
    * </pre>
    *
-   * <code>DENIED_REQUEST = 3;</code>
+   * <code>DENIED_PETITION = 3;</code>
    */
-  DENIED_REQUEST(3),
+  DENIED_PETITION(3),
   /**
    * <pre>
-   * The request has been cancelled.
+   * The petition has been cancelled.
    * </pre>
    *
-   * <code>CANCELLED_REQUEST = 4;</code>
+   * <code>CANCELLED_PETITION = 4;</code>
    */
-  CANCELLED_REQUEST(4),
+  CANCELLED_PETITION(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -60,41 +60,41 @@ public enum AgentLeavePetitionStatus
    * Not Set.
    * </pre>
    *
-   * <code>UNSPECIFIED_STATUS = 0;</code>
+   * <code>UNSPECIFIED_PETITION_STATUS = 0;</code>
    */
-  public static final int UNSPECIFIED_STATUS_VALUE = 0;
+  public static final int UNSPECIFIED_PETITION_STATUS_VALUE = 0;
   /**
    * <pre>
-   * The request is pending approval.
+   * The petition is pending approval.
    * </pre>
    *
-   * <code>PENDING_REQUEST = 1;</code>
+   * <code>PENDING_PETITION = 1;</code>
    */
-  public static final int PENDING_REQUEST_VALUE = 1;
+  public static final int PENDING_PETITION_VALUE = 1;
   /**
    * <pre>
-   * The request has been approved.
+   * The petition has been approved.
    * </pre>
    *
-   * <code>APPROVED_REQUEST = 2;</code>
+   * <code>APPROVED_PETITION = 2;</code>
    */
-  public static final int APPROVED_REQUEST_VALUE = 2;
+  public static final int APPROVED_PETITION_VALUE = 2;
   /**
    * <pre>
-   * The request has been denied.
+   * The petition has been denied.
    * </pre>
    *
-   * <code>DENIED_REQUEST = 3;</code>
+   * <code>DENIED_PETITION = 3;</code>
    */
-  public static final int DENIED_REQUEST_VALUE = 3;
+  public static final int DENIED_PETITION_VALUE = 3;
   /**
    * <pre>
-   * The request has been cancelled.
+   * The petition has been cancelled.
    * </pre>
    *
-   * <code>CANCELLED_REQUEST = 4;</code>
+   * <code>CANCELLED_PETITION = 4;</code>
    */
-  public static final int CANCELLED_REQUEST_VALUE = 4;
+  public static final int CANCELLED_PETITION_VALUE = 4;
 
 
   public final int getNumber() {
@@ -121,11 +121,11 @@ public enum AgentLeavePetitionStatus
    */
   public static AgentLeavePetitionStatus forNumber(int value) {
     switch (value) {
-      case 0: return UNSPECIFIED_STATUS;
-      case 1: return PENDING_REQUEST;
-      case 2: return APPROVED_REQUEST;
-      case 3: return DENIED_REQUEST;
-      case 4: return CANCELLED_REQUEST;
+      case 0: return UNSPECIFIED_PETITION_STATUS;
+      case 1: return PENDING_PETITION;
+      case 2: return APPROVED_PETITION;
+      case 3: return DENIED_PETITION;
+      case 4: return CANCELLED_PETITION;
       default: return null;
     }
   }
