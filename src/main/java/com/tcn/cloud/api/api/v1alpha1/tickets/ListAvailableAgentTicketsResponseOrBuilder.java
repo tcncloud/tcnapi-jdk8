@@ -10,21 +10,21 @@ public interface ListAvailableAgentTicketsResponseOrBuilder extends
   /**
    * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=159
+   *     See api/v1alpha1/tickets/ticket.proto;l=157
    * @return A list containing the ticketSid.
    */
   @java.lang.Deprecated java.util.List<java.lang.Long> getTicketSidList();
   /**
    * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=159
+   *     See api/v1alpha1/tickets/ticket.proto;l=157
    * @return The count of ticketSid.
    */
   @java.lang.Deprecated int getTicketSidCount();
   /**
    * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=159
+   *     See api/v1alpha1/tickets/ticket.proto;l=157
    * @param index The index of the element to return.
    * @return The ticketSid at the given index.
    */

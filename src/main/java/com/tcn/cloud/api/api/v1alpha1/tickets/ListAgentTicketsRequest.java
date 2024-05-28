@@ -166,21 +166,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int AGENT_VIEW_LIMIT_FIELD_NUMBER = 4;
-  private long agentViewLimit_ = 0L;
-  /**
-   * <pre>
-   *agent profile setting of tickets view limit
-   * </pre>
-   *
-   * <code>int64 agent_view_limit = 4 [json_name = "agentViewLimit"];</code>
-   * @return The agentViewLimit.
-   */
-  @java.lang.Override
-  public long getAgentViewLimit() {
-    return agentViewLimit_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -204,9 +189,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(participantId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, participantId_);
     }
-    if (agentViewLimit_ != 0L) {
-      output.writeInt64(4, agentViewLimit_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -226,10 +208,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(participantId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, participantId_);
-    }
-    if (agentViewLimit_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(4, agentViewLimit_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -258,8 +236,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!getParticipantId()
         .equals(other.getParticipantId())) return false;
-    if (getAgentViewLimit()
-        != other.getAgentViewLimit()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -281,9 +257,6 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + PARTICIPANT_ID_FIELD_NUMBER;
     hash = (53 * hash) + getParticipantId().hashCode();
-    hash = (37 * hash) + AGENT_VIEW_LIMIT_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getAgentViewLimit());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -430,7 +403,6 @@ private static final long serialVersionUID = 0L;
         filterMaskBuilder_ = null;
       }
       participantId_ = "";
-      agentViewLimit_ = 0L;
       return this;
     }
 
@@ -476,9 +448,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.participantId_ = participantId_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.agentViewLimit_ = agentViewLimit_;
       }
     }
 
@@ -537,9 +506,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
-      if (other.getAgentViewLimit() != 0L) {
-        setAgentViewLimit(other.getAgentViewLimit());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -585,11 +551,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
-            case 32: {
-              agentViewLimit_ = input.readInt64();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1005,50 +966,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       participantId_ = value;
       bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
-    private long agentViewLimit_ ;
-    /**
-     * <pre>
-     *agent profile setting of tickets view limit
-     * </pre>
-     *
-     * <code>int64 agent_view_limit = 4 [json_name = "agentViewLimit"];</code>
-     * @return The agentViewLimit.
-     */
-    @java.lang.Override
-    public long getAgentViewLimit() {
-      return agentViewLimit_;
-    }
-    /**
-     * <pre>
-     *agent profile setting of tickets view limit
-     * </pre>
-     *
-     * <code>int64 agent_view_limit = 4 [json_name = "agentViewLimit"];</code>
-     * @param value The agentViewLimit to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAgentViewLimit(long value) {
-
-      agentViewLimit_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     *agent profile setting of tickets view limit
-     * </pre>
-     *
-     * <code>int64 agent_view_limit = 4 [json_name = "agentViewLimit"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAgentViewLimit() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      agentViewLimit_ = 0L;
       onChanged();
       return this;
     }

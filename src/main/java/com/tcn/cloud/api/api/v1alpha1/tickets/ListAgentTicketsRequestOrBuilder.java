@@ -80,14 +80,4 @@ public interface ListAgentTicketsRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getParticipantIdBytes();
-
-  /**
-   * <pre>
-   *agent profile setting of tickets view limit
-   * </pre>
-   *
-   * <code>int64 agent_view_limit = 4 [json_name = "agentViewLimit"];</code>
-   * @return The agentViewLimit.
-   */
-  long getAgentViewLimit();
 }
