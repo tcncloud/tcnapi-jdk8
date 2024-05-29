@@ -285,4 +285,36 @@ public interface AuthConnectionSettingsOrBuilder extends
    * @return The type.
    */
   com.tcn.cloud.api.api.commons.org.ConnectionType getType();
+
+  /**
+   * <pre>
+   * resource_url is used as an extra parameter on oidc requests.
+   * It may be required for certain ADFS configuration.
+   * </pre>
+   *
+   * <code>string resource_url = 100 [json_name = "resourceUrl"];</code>
+   * @return The resourceUrl.
+   */
+  java.lang.String getResourceUrl();
+  /**
+   * <pre>
+   * resource_url is used as an extra parameter on oidc requests.
+   * It may be required for certain ADFS configuration.
+   * </pre>
+   *
+   * <code>string resource_url = 100 [json_name = "resourceUrl"];</code>
+   * @return The bytes for resourceUrl.
+   */
+  com.google.protobuf.ByteString
+      getResourceUrlBytes();
+
+  /**
+   * <pre>
+   * gov_azure reflects whether or not an azure connection uses the government endpoints.
+   * </pre>
+   *
+   * <code>bool gov_azure = 101 [json_name = "govAzure"];</code>
+   * @return The govAzure.
+   */
+  boolean getGovAzure();
 }
