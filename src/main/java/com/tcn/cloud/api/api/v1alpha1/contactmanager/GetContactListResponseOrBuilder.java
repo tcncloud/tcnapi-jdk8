@@ -8,6 +8,30 @@ public interface GetContactListResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
+   */
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.ContactManagerList> 
+      getContactListList();
+  /**
+   * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
+   */
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.ContactManagerList getContactList(int index);
+  /**
+   * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
+   */
+  @java.lang.Deprecated int getContactListCount();
+  /**
+   * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
+   */
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.commons.ContactManagerListOrBuilder> 
+      getContactListOrBuilderList();
+  /**
+   * <code>repeated .api.commons.ContactManagerList contact_list = 1 [json_name = "contactList", deprecated = true];</code>
+   */
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.ContactManagerListOrBuilder getContactListOrBuilder(
+      int index);
+
+  /**
    * <code>repeated .api.v1alpha1.contactmanager.ContactManagerList contact_manager_list = 2 [json_name = "contactManagerList"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.contactmanager.ContactManagerList> 

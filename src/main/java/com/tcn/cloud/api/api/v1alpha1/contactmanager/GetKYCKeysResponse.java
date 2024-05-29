@@ -77,6 +77,19 @@ private static final long serialVersionUID = 0L;
     return entryType_.getByteString(index);
   }
 
+  public static final int KYC_LIMIT_FIELD_NUMBER = 2;
+  private long kycLimit_ = 0L;
+  /**
+   * <code>int64 kyc_limit = 2 [json_name = "kycLimit", deprecated = true];</code>
+   * @deprecated api.v1alpha1.contactmanager.GetKYCKeysResponse.kyc_limit is deprecated.
+   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=57
+   * @return The kycLimit.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated public long getKycLimit() {
+    return kycLimit_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -93,6 +106,9 @@ private static final long serialVersionUID = 0L;
                       throws java.io.IOException {
     for (int i = 0; i < entryType_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entryType_.getRaw(i));
+    }
+    if (kycLimit_ != 0L) {
+      output.writeInt64(2, kycLimit_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -111,6 +127,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getEntryTypeList().size();
     }
+    if (kycLimit_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, kycLimit_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -128,6 +148,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getEntryTypeList()
         .equals(other.getEntryTypeList())) return false;
+    if (getKycLimit()
+        != other.getKycLimit()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -143,6 +165,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ENTRY_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getEntryTypeList().hashCode();
     }
+    hash = (37 * hash) + KYC_LIMIT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getKycLimit());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -276,6 +301,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       entryType_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      kycLimit_ = 0L;
       return this;
     }
 
@@ -312,6 +338,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         entryType_.makeImmutable();
         result.entryType_ = entryType_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.kycLimit_ = kycLimit_;
       }
     }
 
@@ -369,6 +398,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.getKycLimit() != 0L) {
+        setKycLimit(other.getKycLimit());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -401,6 +433,11 @@ private static final long serialVersionUID = 0L;
               entryType_.add(s);
               break;
             } // case 10
+            case 16: {
+              kycLimit_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -525,6 +562,44 @@ private static final long serialVersionUID = 0L;
       ensureEntryTypeIsMutable();
       entryType_.add(value);
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private long kycLimit_ ;
+    /**
+     * <code>int64 kyc_limit = 2 [json_name = "kycLimit", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.GetKYCKeysResponse.kyc_limit is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=57
+     * @return The kycLimit.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public long getKycLimit() {
+      return kycLimit_;
+    }
+    /**
+     * <code>int64 kyc_limit = 2 [json_name = "kycLimit", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.GetKYCKeysResponse.kyc_limit is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=57
+     * @param value The kycLimit to set.
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated public Builder setKycLimit(long value) {
+
+      kycLimit_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 kyc_limit = 2 [json_name = "kycLimit", deprecated = true];</code>
+     * @deprecated api.v1alpha1.contactmanager.GetKYCKeysResponse.kyc_limit is deprecated.
+     *     See api/v1alpha1/contactmanager/contactmanager.proto;l=57
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated public Builder clearKycLimit() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      kycLimit_ = 0L;
       onChanged();
       return this;
     }

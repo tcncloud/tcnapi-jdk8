@@ -607,37 +607,6 @@ public final class TicketsGrpc {
     return getListAvailableAgentTicketsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsRequest,
-      com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse> getListAgentTicketsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListAgentTickets",
-      requestType = com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsRequest,
-      com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse> getListAgentTicketsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsRequest, com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse> getListAgentTicketsMethod;
-    if ((getListAgentTicketsMethod = TicketsGrpc.getListAgentTicketsMethod) == null) {
-      synchronized (TicketsGrpc.class) {
-        if ((getListAgentTicketsMethod = TicketsGrpc.getListAgentTicketsMethod) == null) {
-          TicketsGrpc.getListAgentTicketsMethod = getListAgentTicketsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsRequest, com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentTickets"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new TicketsMethodDescriptorSupplier("ListAgentTickets"))
-              .build();
-        }
-      }
-    }
-    return getListAgentTicketsMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.ListSkillsRequest,
       com.tcn.cloud.api.api.v1alpha1.tickets.ListSkillsResponse> getListSkillsMethod;
 
@@ -1347,16 +1316,6 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     *public method - to return list of available tickets to pick for an Agent
-     * </pre>
-     */
-    default void listAgentTickets(com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentTicketsMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * public method to fetch list of skills for a tickets user
      * </pre>
      */
@@ -1751,17 +1710,6 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     *public method - to return list of available tickets to pick for an Agent
-     * </pre>
-     */
-    public void listAgentTickets(com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListAgentTicketsMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * public method to fetch list of skills for a tickets user
      * </pre>
      */
@@ -2134,16 +2082,6 @@ public final class TicketsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse listAvailableAgentTickets(com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAvailableAgentTicketsMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     *public method - to return list of available tickets to pick for an Agent
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse listAgentTickets(com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListAgentTicketsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -2528,17 +2466,6 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     *public method - to return list of available tickets to pick for an Agent
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse> listAgentTickets(
-        com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListAgentTicketsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * public method to fetch list of skills for a tickets user
      * </pre>
      */
@@ -2722,22 +2649,21 @@ public final class TicketsGrpc {
   private static final int METHODID_EDIT_MASK_TICKET = 16;
   private static final int METHODID_LIST_ALLOCATED_TICKETS = 17;
   private static final int METHODID_LIST_AVAILABLE_AGENT_TICKETS = 18;
-  private static final int METHODID_LIST_AGENT_TICKETS = 19;
-  private static final int METHODID_LIST_SKILLS = 20;
-  private static final int METHODID_LIST_USERS = 21;
-  private static final int METHODID_CLOSE_TICKET_ACTION = 22;
-  private static final int METHODID_ASSIGN_TICKET_ACTION = 23;
-  private static final int METHODID_CREATE_TICKET_ACTION = 24;
-  private static final int METHODID_CHANGE_TICKET_STATUS = 25;
-  private static final int METHODID_CREATE_TICKET_TEMPLATE = 26;
-  private static final int METHODID_EDIT_TICKET_TEMPLATE = 27;
-  private static final int METHODID_LIST_TICKET_TEMPLATE = 28;
-  private static final int METHODID_ASSIGN_TICKET_TEMPLATE = 29;
-  private static final int METHODID_GET_ALL_ACTION_TYPE = 30;
-  private static final int METHODID_GET_PHONE_NUMBER_TYPE = 31;
-  private static final int METHODID_ADD_ENTITY_REF = 32;
-  private static final int METHODID_LIST_TICKETS_BY_ENTITY_REF = 33;
-  private static final int METHODID_LIST_ENTITY_REFS_BY_TICKET = 34;
+  private static final int METHODID_LIST_SKILLS = 19;
+  private static final int METHODID_LIST_USERS = 20;
+  private static final int METHODID_CLOSE_TICKET_ACTION = 21;
+  private static final int METHODID_ASSIGN_TICKET_ACTION = 22;
+  private static final int METHODID_CREATE_TICKET_ACTION = 23;
+  private static final int METHODID_CHANGE_TICKET_STATUS = 24;
+  private static final int METHODID_CREATE_TICKET_TEMPLATE = 25;
+  private static final int METHODID_EDIT_TICKET_TEMPLATE = 26;
+  private static final int METHODID_LIST_TICKET_TEMPLATE = 27;
+  private static final int METHODID_ASSIGN_TICKET_TEMPLATE = 28;
+  private static final int METHODID_GET_ALL_ACTION_TYPE = 29;
+  private static final int METHODID_GET_PHONE_NUMBER_TYPE = 30;
+  private static final int METHODID_ADD_ENTITY_REF = 31;
+  private static final int METHODID_LIST_TICKETS_BY_ENTITY_REF = 32;
+  private static final int METHODID_LIST_ENTITY_REFS_BY_TICKET = 33;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2831,10 +2757,6 @@ public final class TicketsGrpc {
         case METHODID_LIST_AVAILABLE_AGENT_TICKETS:
           serviceImpl.listAvailableAgentTickets((com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse>) responseObserver);
-          break;
-        case METHODID_LIST_AGENT_TICKETS:
-          serviceImpl.listAgentTickets((com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse>) responseObserver);
           break;
         case METHODID_LIST_SKILLS:
           serviceImpl.listSkills((com.tcn.cloud.api.api.v1alpha1.tickets.ListSkillsRequest) request,
@@ -3048,13 +2970,6 @@ public final class TicketsGrpc {
               com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse>(
                 service, METHODID_LIST_AVAILABLE_AGENT_TICKETS)))
         .addMethod(
-          getListAgentTicketsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsRequest,
-              com.tcn.cloud.api.api.v1alpha1.tickets.ListAgentTicketsResponse>(
-                service, METHODID_LIST_AGENT_TICKETS)))
-        .addMethod(
           getListSkillsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -3226,7 +3141,6 @@ public final class TicketsGrpc {
               .addMethod(getEditMaskTicketMethod())
               .addMethod(getListAllocatedTicketsMethod())
               .addMethod(getListAvailableAgentTicketsMethod())
-              .addMethod(getListAgentTicketsMethod())
               .addMethod(getListSkillsMethod())
               .addMethod(getListUsersMethod())
               .addMethod(getCloseTicketActionMethod())

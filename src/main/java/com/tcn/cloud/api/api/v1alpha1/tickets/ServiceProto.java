@@ -27,7 +27,7 @@ public final class ServiceProto {
       "i.v1alpha1.tickets\032\027annotations/authz.pr" +
       "oto\032\"api/v1alpha1/tickets/project.proto\032" +
       "!api/v1alpha1/tickets/ticket.proto\032\034goog" +
-      "le/api/annotations.proto2\2760\n\007Tickets\022\235\001\n" +
+      "le/api/annotations.proto2\205/\n\007Tickets\022\235\001\n" +
       "\014CreateTicket\022%.api.v1alpha1.tickets.Cre" +
       "ateTicketReq\032%.api.v1alpha1.tickets.Crea" +
       "teTicketRes\"?\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002/\"*/api/v1al" +
@@ -106,88 +106,83 @@ public final class ServiceProto {
       "sRequest\0327.api.v1alpha1.tickets.ListAvai" +
       "lableAgentTicketsResponse\"L\272\270\221\002\005\n\003\010\234\030\202\323\344" +
       "\223\002<\"7/api/v1alpha1/tickets/tickets/lista" +
-      "vailableagenttickets:\001*\022\266\001\n\020ListAgentTic" +
-      "kets\022-.api.v1alpha1.tickets.ListAgentTic" +
-      "ketsRequest\032..api.v1alpha1.tickets.ListA" +
-      "gentTicketsResponse\"C\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0023\"./" +
-      "api/v1alpha1/tickets/tickets/listagentti" +
-      "ckets:\001*\022\236\001\n\nListSkills\022\'.api.v1alpha1.t" +
-      "ickets.ListSkillsRequest\032(.api.v1alpha1." +
-      "tickets.ListSkillsResponse\"=\272\270\221\002\005\n\003\010\234\030\202\323" +
-      "\344\223\002-\"(/api/v1alpha1/tickets/tickets/list" +
-      "skills:\001*\022\232\001\n\tListUsers\022&.api.v1alpha1.t" +
-      "ickets.ListUsersRequest\032\'.api.v1alpha1.t" +
-      "ickets.ListUsersResponse\"<\272\270\221\002\005\n\003\010\234\030\202\323\344\223" +
-      "\002,\"\'/api/v1alpha1/tickets/tickets/listus" +
-      "ers:\001*\022\272\001\n\021CloseTicketAction\022..api.v1alp" +
-      "ha1.tickets.CloseTicketActionRequest\032/.a" +
-      "pi.v1alpha1.tickets.CloseTicketActionRes" +
-      "ponse\"D\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0024\"//api/v1alpha1/t" +
-      "ickets/tickets/closeticketaction:\001*\022\276\001\n\022" +
-      "AssignTicketAction\022/.api.v1alpha1.ticket" +
-      "s.AssignTicketActionRequest\0320.api.v1alph" +
-      "a1.tickets.AssignTicketActionResponse\"E\272" +
-      "\270\221\002\005\n\003\010\234\030\202\323\344\223\0025\"0/api/v1alpha1/tickets/t" +
-      "ickets/assignticketaction:\001*\022\276\001\n\022CreateT" +
-      "icketAction\022/.api.v1alpha1.tickets.Creat" +
-      "eTicketActionRequest\0320.api.v1alpha1.tick" +
-      "ets.CreateTicketActionResponse\"E\272\270\221\002\005\n\003\010" +
+      "vailableagenttickets:\001*\022\236\001\n\nListSkills\022\'" +
+      ".api.v1alpha1.tickets.ListSkillsRequest\032" +
+      "(.api.v1alpha1.tickets.ListSkillsRespons" +
+      "e\"=\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002-\"(/api/v1alpha1/ticke" +
+      "ts/tickets/listskills:\001*\022\232\001\n\tListUsers\022&" +
+      ".api.v1alpha1.tickets.ListUsersRequest\032\'" +
+      ".api.v1alpha1.tickets.ListUsersResponse\"" +
+      "<\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002,\"\'/api/v1alpha1/tickets" +
+      "/tickets/listusers:\001*\022\272\001\n\021CloseTicketAct" +
+      "ion\022..api.v1alpha1.tickets.CloseTicketAc" +
+      "tionRequest\032/.api.v1alpha1.tickets.Close" +
+      "TicketActionResponse\"D\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0024\"/" +
+      "/api/v1alpha1/tickets/tickets/closeticke" +
+      "taction:\001*\022\276\001\n\022AssignTicketAction\022/.api." +
+      "v1alpha1.tickets.AssignTicketActionReque" +
+      "st\0320.api.v1alpha1.tickets.AssignTicketAc" +
+      "tionResponse\"E\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0025\"0/api/v1a" +
+      "lpha1/tickets/tickets/assignticketaction" +
+      ":\001*\022\276\001\n\022CreateTicketAction\022/.api.v1alpha" +
+      "1.tickets.CreateTicketActionRequest\0320.ap" +
+      "i.v1alpha1.tickets.CreateTicketActionRes" +
+      "ponse\"E\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0025\"0/api/v1alpha1/t" +
+      "ickets/tickets/createticketaction:\001*\022\276\001\n" +
+      "\022ChangeTicketStatus\022/.api.v1alpha1.ticke" +
+      "ts.ChangeTicketStatusRequest\0320.api.v1alp" +
+      "ha1.tickets.ChangeTicketStatusResponse\"E" +
+      "\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0025\"0/api/v1alpha1/tickets/" +
+      "tickets/changeticketstatus:\001*\022\306\001\n\024Create" +
+      "TicketTemplate\0221.api.v1alpha1.tickets.Cr" +
+      "eateTicketTemplateRequest\0322.api.v1alpha1" +
+      ".tickets.CreateTicketTemplateResponse\"G\272" +
+      "\270\221\002\005\n\003\010\235\030\202\323\344\223\0027\"2/api/v1alpha1/tickets/t" +
+      "ickets/createtickettemplate:\001*\022\276\001\n\022EditT" +
+      "icketTemplate\022/.api.v1alpha1.tickets.Edi" +
+      "tTicketTemplateRequest\0320.api.v1alpha1.ti" +
+      "ckets.EditTicketTemplateResponse\"E\272\270\221\002\005\n" +
+      "\003\010\235\030\202\323\344\223\0025\"0/api/v1alpha1/tickets/ticket" +
+      "s/edittickettemplate:\001*\022\303\001\n\022ListTicketTe" +
+      "mplate\022/.api.v1alpha1.tickets.ListTicket" +
+      "TemplateRequest\0320.api.v1alpha1.tickets.L" +
+      "istTicketTemplateResponse\"J\272\270\221\002\n\n\003\010\235\030\n\003\010" +
       "\234\030\202\323\344\223\0025\"0/api/v1alpha1/tickets/tickets/" +
-      "createticketaction:\001*\022\276\001\n\022ChangeTicketSt" +
-      "atus\022/.api.v1alpha1.tickets.ChangeTicket" +
-      "StatusRequest\0320.api.v1alpha1.tickets.Cha" +
-      "ngeTicketStatusResponse\"E\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002" +
-      "5\"0/api/v1alpha1/tickets/tickets/changet" +
-      "icketstatus:\001*\022\306\001\n\024CreateTicketTemplate\022" +
-      "1.api.v1alpha1.tickets.CreateTicketTempl" +
-      "ateRequest\0322.api.v1alpha1.tickets.Create" +
-      "TicketTemplateResponse\"G\272\270\221\002\005\n\003\010\235\030\202\323\344\223\0027" +
-      "\"2/api/v1alpha1/tickets/tickets/createti" +
-      "ckettemplate:\001*\022\276\001\n\022EditTicketTemplate\022/" +
-      ".api.v1alpha1.tickets.EditTicketTemplate" +
-      "Request\0320.api.v1alpha1.tickets.EditTicke" +
-      "tTemplateResponse\"E\272\270\221\002\005\n\003\010\235\030\202\323\344\223\0025\"0/ap" +
-      "i/v1alpha1/tickets/tickets/edittickettem" +
-      "plate:\001*\022\303\001\n\022ListTicketTemplate\022/.api.v1" +
-      "alpha1.tickets.ListTicketTemplateRequest" +
-      "\0320.api.v1alpha1.tickets.ListTicketTempla" +
-      "teResponse\"J\272\270\221\002\n\n\003\010\235\030\n\003\010\234\030\202\323\344\223\0025\"0/api/" +
-      "v1alpha1/tickets/tickets/listtickettempl" +
-      "ate:\001*\022\310\001\n\024AssignTicketTemplate\0222.api.v1" +
-      "alpha1.tickets.AssignProjectTemplateRequ" +
-      "est\0323.api.v1alpha1.tickets.AssignProject" +
-      "TemplateResponse\"G\272\270\221\002\005\n\003\010\235\030\202\323\344\223\0027\"2/api" +
-      "/v1alpha1/tickets/tickets/assigntickette" +
-      "mplate:\001*\022\265\001\n\020GetAllActionType\022*.api.v1a" +
-      "lpha1.tickets.GetActionTypeRequest\032+.api" +
-      ".v1alpha1.tickets.GetActionTypeResponse\"" +
-      "H\272\270\221\002\n\n\003\010\235\030\n\003\010\234\030\202\323\344\223\0023\"./api/v1alpha1/ti" +
-      "ckets/tickets/getallActiontype:\001*\022\303\001\n\022Ge" +
-      "tPhoneNumberType\022/.api.v1alpha1.tickets." +
-      "GetPhoneNumberTypeRequest\0320.api.v1alpha1" +
-      ".tickets.GetPhoneNumberTypeResponse\"J\272\270\221" +
-      "\002\n\n\003\010\235\030\n\003\010\234\030\202\323\344\223\0025\"0/api/v1alpha1/ticket" +
-      "s/tickets/getphonenumbertype:\001*\022\253\001\n\014AddE" +
-      "ntityRef\022).api.v1alpha1.tickets.AddEntit" +
-      "yRefRequest\032*.api.v1alpha1.tickets.AddEn" +
-      "tityRefResponse\"D\272\270\221\002\n\n\003\010\235\030\n\003\010\234\030\202\323\344\223\002/\"*" +
-      "/api/v1alpha1/tickets/tickets/addentityr" +
-      "ef:\001*\022\323\001\n\026ListTicketsByEntityRef\0223.api.v" +
-      "1alpha1.tickets.ListTicketsByEntityRefRe" +
-      "quest\0324.api.v1alpha1.tickets.ListTickets" +
-      "ByEntityRefResponse\"N\272\270\221\002\n\n\003\010\235\030\n\003\010\234\030\202\323\344\223" +
-      "\0029\"4/api/v1alpha1/tickets/tickets/listti" +
-      "cketsbyentityref:\001*\022\323\001\n\026ListEntityRefsBy" +
-      "Ticket\0223.api.v1alpha1.tickets.ListEntity" +
-      "RefsByTicketRequest\0324.api.v1alpha1.ticke" +
-      "ts.ListEntityRefsByTicketResponse\"N\272\270\221\002\n" +
-      "\n\003\010\235\030\n\003\010\234\030\202\323\344\223\0029\"4/api/v1alpha1/tickets/" +
-      "tickets/listentityrefsbyticket:\001*B\250\001\n&co" +
-      "m.tcn.cloud.api.api.v1alpha1.ticketsB\014Se" +
-      "rviceProtoP\001\242\002\003AVT\252\002\024Api.V1alpha1.Ticket" +
-      "s\312\002\024Api\\V1alpha1\\Tickets\342\002 Api\\V1alpha1\\" +
-      "Tickets\\GPBMetadata\352\002\026Api::V1alpha1::Tic" +
-      "ketsb\006proto3"
+      "listtickettemplate:\001*\022\310\001\n\024AssignTicketTe" +
+      "mplate\0222.api.v1alpha1.tickets.AssignProj" +
+      "ectTemplateRequest\0323.api.v1alpha1.ticket" +
+      "s.AssignProjectTemplateResponse\"G\272\270\221\002\005\n\003" +
+      "\010\235\030\202\323\344\223\0027\"2/api/v1alpha1/tickets/tickets" +
+      "/assigntickettemplate:\001*\022\265\001\n\020GetAllActio" +
+      "nType\022*.api.v1alpha1.tickets.GetActionTy" +
+      "peRequest\032+.api.v1alpha1.tickets.GetActi" +
+      "onTypeResponse\"H\272\270\221\002\n\n\003\010\235\030\n\003\010\234\030\202\323\344\223\0023\"./" +
+      "api/v1alpha1/tickets/tickets/getallActio" +
+      "ntype:\001*\022\303\001\n\022GetPhoneNumberType\022/.api.v1" +
+      "alpha1.tickets.GetPhoneNumberTypeRequest" +
+      "\0320.api.v1alpha1.tickets.GetPhoneNumberTy" +
+      "peResponse\"J\272\270\221\002\n\n\003\010\235\030\n\003\010\234\030\202\323\344\223\0025\"0/api/" +
+      "v1alpha1/tickets/tickets/getphonenumbert" +
+      "ype:\001*\022\253\001\n\014AddEntityRef\022).api.v1alpha1.t" +
+      "ickets.AddEntityRefRequest\032*.api.v1alpha" +
+      "1.tickets.AddEntityRefResponse\"D\272\270\221\002\n\n\003\010" +
+      "\235\030\n\003\010\234\030\202\323\344\223\002/\"*/api/v1alpha1/tickets/tic" +
+      "kets/addentityref:\001*\022\323\001\n\026ListTicketsByEn" +
+      "tityRef\0223.api.v1alpha1.tickets.ListTicke" +
+      "tsByEntityRefRequest\0324.api.v1alpha1.tick" +
+      "ets.ListTicketsByEntityRefResponse\"N\272\270\221\002" +
+      "\n\n\003\010\235\030\n\003\010\234\030\202\323\344\223\0029\"4/api/v1alpha1/tickets" +
+      "/tickets/listticketsbyentityref:\001*\022\323\001\n\026L" +
+      "istEntityRefsByTicket\0223.api.v1alpha1.tic" +
+      "kets.ListEntityRefsByTicketRequest\0324.api" +
+      ".v1alpha1.tickets.ListEntityRefsByTicket" +
+      "Response\"N\272\270\221\002\n\n\003\010\235\030\n\003\010\234\030\202\323\344\223\0029\"4/api/v1" +
+      "alpha1/tickets/tickets/listentityrefsbyt" +
+      "icket:\001*B\250\001\n&com.tcn.cloud.api.api.v1alp" +
+      "ha1.ticketsB\014ServiceProtoP\001\242\002\003AVT\252\002\024Api." +
+      "V1alpha1.Tickets\312\002\024Api\\V1alpha1\\Tickets\342" +
+      "\002 Api\\V1alpha1\\Tickets\\GPBMetadata\352\002\026Api" +
+      "::V1alpha1::Ticketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

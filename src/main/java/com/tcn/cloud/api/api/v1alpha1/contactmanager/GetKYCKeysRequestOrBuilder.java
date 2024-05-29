@@ -6,10 +6,4 @@ package com.tcn.cloud.api.api.v1alpha1.contactmanager;
 public interface GetKYCKeysRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.contactmanager.GetKYCKeysRequest)
     com.google.protobuf.MessageOrBuilder {
-
-  /**
-   * <code>int64 project_sid = 1 [json_name = "projectSid", jstype = JS_STRING];</code>
-   * @return The projectSid.
-   */
-  long getProjectSid();
 }
