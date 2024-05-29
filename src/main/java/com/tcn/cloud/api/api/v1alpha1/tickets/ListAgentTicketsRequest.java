@@ -20,7 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListAgentTicketsRequest() {
-    participantId_ = "";
   }
 
   @java.lang.Override
@@ -119,53 +118,6 @@ private static final long serialVersionUID = 0L;
     return filterMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : filterMask_;
   }
 
-  public static final int PARTICIPANT_ID_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object participantId_ = "";
-  /**
-   * <pre>
-   * user_id of agent
-   * </pre>
-   *
-   * <code>string participant_id = 3 [json_name = "participantId"];</code>
-   * @return The participantId.
-   */
-  @java.lang.Override
-  public java.lang.String getParticipantId() {
-    java.lang.Object ref = participantId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      participantId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * user_id of agent
-   * </pre>
-   *
-   * <code>string participant_id = 3 [json_name = "participantId"];</code>
-   * @return The bytes for participantId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getParticipantIdBytes() {
-    java.lang.Object ref = participantId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      participantId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -186,9 +138,6 @@ private static final long serialVersionUID = 0L;
     if (filterMask_ != null) {
       output.writeMessage(2, getFilterMask());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(participantId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, participantId_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -205,9 +154,6 @@ private static final long serialVersionUID = 0L;
     if (filterMask_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getFilterMask());
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(participantId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, participantId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -234,8 +180,6 @@ private static final long serialVersionUID = 0L;
       if (!getFilterMask()
           .equals(other.getFilterMask())) return false;
     }
-    if (!getParticipantId()
-        .equals(other.getParticipantId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -255,8 +199,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FILTER_MASK_FIELD_NUMBER;
       hash = (53 * hash) + getFilterMask().hashCode();
     }
-    hash = (37 * hash) + PARTICIPANT_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getParticipantId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -402,7 +344,6 @@ private static final long serialVersionUID = 0L;
         filterMaskBuilder_.dispose();
         filterMaskBuilder_ = null;
       }
-      participantId_ = "";
       return this;
     }
 
@@ -445,9 +386,6 @@ private static final long serialVersionUID = 0L;
         result.filterMask_ = filterMaskBuilder_ == null
             ? filterMask_
             : filterMaskBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.participantId_ = participantId_;
       }
     }
 
@@ -501,11 +439,6 @@ private static final long serialVersionUID = 0L;
       if (other.hasFilterMask()) {
         mergeFilterMask(other.getFilterMask());
       }
-      if (!other.getParticipantId().isEmpty()) {
-        participantId_ = other.participantId_;
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -546,11 +479,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              participantId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -876,98 +804,6 @@ private static final long serialVersionUID = 0L;
         filterMask_ = null;
       }
       return filterMaskBuilder_;
-    }
-
-    private java.lang.Object participantId_ = "";
-    /**
-     * <pre>
-     * user_id of agent
-     * </pre>
-     *
-     * <code>string participant_id = 3 [json_name = "participantId"];</code>
-     * @return The participantId.
-     */
-    public java.lang.String getParticipantId() {
-      java.lang.Object ref = participantId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        participantId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * user_id of agent
-     * </pre>
-     *
-     * <code>string participant_id = 3 [json_name = "participantId"];</code>
-     * @return The bytes for participantId.
-     */
-    public com.google.protobuf.ByteString
-        getParticipantIdBytes() {
-      java.lang.Object ref = participantId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        participantId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * user_id of agent
-     * </pre>
-     *
-     * <code>string participant_id = 3 [json_name = "participantId"];</code>
-     * @param value The participantId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setParticipantId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      participantId_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * user_id of agent
-     * </pre>
-     *
-     * <code>string participant_id = 3 [json_name = "participantId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearParticipantId() {
-      participantId_ = getDefaultInstance().getParticipantId();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * user_id of agent
-     * </pre>
-     *
-     * <code>string participant_id = 3 [json_name = "participantId"];</code>
-     * @param value The bytes for participantId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setParticipantIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      participantId_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

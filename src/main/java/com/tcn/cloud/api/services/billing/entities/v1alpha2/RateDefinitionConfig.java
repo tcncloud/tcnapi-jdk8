@@ -50,39 +50,51 @@ private static final long serialVersionUID = 0L;
     AGENT_MESSAGE_CHAT(1600),
     AGENT_MESSAGE_CHAT_SIZE(1601),
     AGENT_MESSAGE_CHAT_UNITS(1602),
+    AGENT_MESSAGE_CHAT_SIZE_TOTAL(1603),
     AGENT_MESSAGE_EMAIL(1610),
     AGENT_MESSAGE_EMAIL_SIZE(1611),
     AGENT_MESSAGE_EMAIL_UNITS(1612),
+    AGENT_MESSAGE_EMAIL_SIZE_TOTAL(1613),
     AGENT_MESSAGE_SMS(1620),
     AGENT_MESSAGE_SMS_SIZE(1621),
     AGENT_MESSAGE_SMS_UNITS(1622),
+    AGENT_MESSAGE_SMS_SIZE_TOTAL(1623),
     MANAGER_MESSAGE_CHAT(1700),
     MANAGER_MESSAGE_CHAT_SIZE(1701),
     MANAGER_MESSAGE_CHAT_UNITS(1702),
+    MANAGER_MESSAGE_CHAT_SIZE_TOTAL(1703),
     MANAGER_MESSAGE_EMAIL(1710),
     MANAGER_MESSAGE_EMAIL_SIZE(1711),
     MANAGER_MESSAGE_EMAIL_UNITS(1712),
+    MANAGER_MESSAGE_EMAIL_SIZE_TOTAL(1713),
     MANAGER_MESSAGE_SMS(1720),
     MANAGER_MESSAGE_SMS_SIZE(1721),
     MANAGER_MESSAGE_SMS_UNITS(1722),
+    MANAGER_MESSAGE_SMS_SIZE_TOTAL(1723),
     SYSTEM_MESSAGE_CHAT(1800),
     SYSTEM_MESSAGE_CHAT_SIZE(1801),
     SYSTEM_MESSAGE_CHAT_UNITS(1802),
+    SYSTEM_MESSAGE_CHAT_SIZE_TOTAL(1803),
     SYSTEM_MESSAGE_EMAIL(1810),
     SYSTEM_MESSAGE_EMAIL_SIZE(1811),
     SYSTEM_MESSAGE_EMAIL_UNITS(1812),
+    SYSTEM_MESSAGE_EMAIL_SIZE_TOTAL(1813),
     SYSTEM_MESSAGE_SMS(1820),
     SYSTEM_MESSAGE_SMS_SIZE(1821),
     SYSTEM_MESSAGE_SMS_UNITS(1822),
+    SYSTEM_MESSAGE_SMS_SIZE_TOTAL(1823),
     CUSTOMER_MESSAGE_CHAT(1900),
     CUSTOMER_MESSAGE_CHAT_SIZE(1901),
     CUSTOMER_MESSAGE_CHAT_UNITS(1902),
+    CUSTOMER_MESSAGE_CHAT_SIZE_TOTAL(1903),
     CUSTOMER_MESSAGE_EMAIL(1910),
     CUSTOMER_MESSAGE_EMAIL_SIZE(1911),
     CUSTOMER_MESSAGE_EMAIL_UNITS(1912),
+    CUSTOMER_MESSAGE_EMAIL_SIZE_TOTAL(1913),
     CUSTOMER_MESSAGE_SMS(1920),
     CUSTOMER_MESSAGE_SMS_SIZE(1921),
     CUSTOMER_MESSAGE_SMS_UNITS(1922),
+    CUSTOMER_MESSAGE_SMS_SIZE_TOTAL(1923),
     COMPLIANCE_RND_QUERY(2000),
     COMPLIANCE_RND_QUERY_CACHED(2001),
     CONFIG_NOT_SET(0);
@@ -108,39 +120,51 @@ private static final long serialVersionUID = 0L;
         case 1600: return AGENT_MESSAGE_CHAT;
         case 1601: return AGENT_MESSAGE_CHAT_SIZE;
         case 1602: return AGENT_MESSAGE_CHAT_UNITS;
+        case 1603: return AGENT_MESSAGE_CHAT_SIZE_TOTAL;
         case 1610: return AGENT_MESSAGE_EMAIL;
         case 1611: return AGENT_MESSAGE_EMAIL_SIZE;
         case 1612: return AGENT_MESSAGE_EMAIL_UNITS;
+        case 1613: return AGENT_MESSAGE_EMAIL_SIZE_TOTAL;
         case 1620: return AGENT_MESSAGE_SMS;
         case 1621: return AGENT_MESSAGE_SMS_SIZE;
         case 1622: return AGENT_MESSAGE_SMS_UNITS;
+        case 1623: return AGENT_MESSAGE_SMS_SIZE_TOTAL;
         case 1700: return MANAGER_MESSAGE_CHAT;
         case 1701: return MANAGER_MESSAGE_CHAT_SIZE;
         case 1702: return MANAGER_MESSAGE_CHAT_UNITS;
+        case 1703: return MANAGER_MESSAGE_CHAT_SIZE_TOTAL;
         case 1710: return MANAGER_MESSAGE_EMAIL;
         case 1711: return MANAGER_MESSAGE_EMAIL_SIZE;
         case 1712: return MANAGER_MESSAGE_EMAIL_UNITS;
+        case 1713: return MANAGER_MESSAGE_EMAIL_SIZE_TOTAL;
         case 1720: return MANAGER_MESSAGE_SMS;
         case 1721: return MANAGER_MESSAGE_SMS_SIZE;
         case 1722: return MANAGER_MESSAGE_SMS_UNITS;
+        case 1723: return MANAGER_MESSAGE_SMS_SIZE_TOTAL;
         case 1800: return SYSTEM_MESSAGE_CHAT;
         case 1801: return SYSTEM_MESSAGE_CHAT_SIZE;
         case 1802: return SYSTEM_MESSAGE_CHAT_UNITS;
+        case 1803: return SYSTEM_MESSAGE_CHAT_SIZE_TOTAL;
         case 1810: return SYSTEM_MESSAGE_EMAIL;
         case 1811: return SYSTEM_MESSAGE_EMAIL_SIZE;
         case 1812: return SYSTEM_MESSAGE_EMAIL_UNITS;
+        case 1813: return SYSTEM_MESSAGE_EMAIL_SIZE_TOTAL;
         case 1820: return SYSTEM_MESSAGE_SMS;
         case 1821: return SYSTEM_MESSAGE_SMS_SIZE;
         case 1822: return SYSTEM_MESSAGE_SMS_UNITS;
+        case 1823: return SYSTEM_MESSAGE_SMS_SIZE_TOTAL;
         case 1900: return CUSTOMER_MESSAGE_CHAT;
         case 1901: return CUSTOMER_MESSAGE_CHAT_SIZE;
         case 1902: return CUSTOMER_MESSAGE_CHAT_UNITS;
+        case 1903: return CUSTOMER_MESSAGE_CHAT_SIZE_TOTAL;
         case 1910: return CUSTOMER_MESSAGE_EMAIL;
         case 1911: return CUSTOMER_MESSAGE_EMAIL_SIZE;
         case 1912: return CUSTOMER_MESSAGE_EMAIL_UNITS;
+        case 1913: return CUSTOMER_MESSAGE_EMAIL_SIZE_TOTAL;
         case 1920: return CUSTOMER_MESSAGE_SMS;
         case 1921: return CUSTOMER_MESSAGE_SMS_SIZE;
         case 1922: return CUSTOMER_MESSAGE_SMS_UNITS;
+        case 1923: return CUSTOMER_MESSAGE_SMS_SIZE_TOTAL;
         case 2000: return COMPLIANCE_RND_QUERY;
         case 2001: return COMPLIANCE_RND_QUERY_CACHED;
         case 0: return CONFIG_NOT_SET;
@@ -356,6 +380,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
 
+  public static final int AGENT_MESSAGE_CHAT_SIZE_TOTAL_FIELD_NUMBER = 1603;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size_total = 1603 [json_name = "agentMessageChatSizeTotal"];</code>
+   * @return Whether the agentMessageChatSizeTotal field is set.
+   */
+  @java.lang.Override
+  public boolean hasAgentMessageChatSizeTotal() {
+    return configCase_ == 1603;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size_total = 1603 [json_name = "agentMessageChatSizeTotal"];</code>
+   * @return The agentMessageChatSizeTotal.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getAgentMessageChatSizeTotal() {
+    if (configCase_ == 1603) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size_total = 1603 [json_name = "agentMessageChatSizeTotal"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getAgentMessageChatSizeTotalOrBuilder() {
+    if (configCase_ == 1603) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+
   public static final int AGENT_MESSAGE_EMAIL_FIELD_NUMBER = 1610;
   /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
@@ -447,6 +502,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int AGENT_MESSAGE_EMAIL_SIZE_TOTAL_FIELD_NUMBER = 1613;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size_total = 1613 [json_name = "agentMessageEmailSizeTotal"];</code>
+   * @return Whether the agentMessageEmailSizeTotal field is set.
+   */
+  @java.lang.Override
+  public boolean hasAgentMessageEmailSizeTotal() {
+    return configCase_ == 1613;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size_total = 1613 [json_name = "agentMessageEmailSizeTotal"];</code>
+   * @return The agentMessageEmailSizeTotal.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getAgentMessageEmailSizeTotal() {
+    if (configCase_ == 1613) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size_total = 1613 [json_name = "agentMessageEmailSizeTotal"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getAgentMessageEmailSizeTotalOrBuilder() {
+    if (configCase_ == 1613) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
   public static final int AGENT_MESSAGE_SMS_FIELD_NUMBER = 1620;
@@ -542,6 +628,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
 
+  public static final int AGENT_MESSAGE_SMS_SIZE_TOTAL_FIELD_NUMBER = 1623;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size_total = 1623 [json_name = "agentMessageSmsSizeTotal"];</code>
+   * @return Whether the agentMessageSmsSizeTotal field is set.
+   */
+  @java.lang.Override
+  public boolean hasAgentMessageSmsSizeTotal() {
+    return configCase_ == 1623;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size_total = 1623 [json_name = "agentMessageSmsSizeTotal"];</code>
+   * @return The agentMessageSmsSizeTotal.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getAgentMessageSmsSizeTotal() {
+    if (configCase_ == 1623) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size_total = 1623 [json_name = "agentMessageSmsSizeTotal"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getAgentMessageSmsSizeTotalOrBuilder() {
+    if (configCase_ == 1623) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+
   public static final int MANAGER_MESSAGE_CHAT_FIELD_NUMBER = 1700;
   /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
@@ -633,6 +750,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int MANAGER_MESSAGE_CHAT_SIZE_TOTAL_FIELD_NUMBER = 1703;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size_total = 1703 [json_name = "managerMessageChatSizeTotal"];</code>
+   * @return Whether the managerMessageChatSizeTotal field is set.
+   */
+  @java.lang.Override
+  public boolean hasManagerMessageChatSizeTotal() {
+    return configCase_ == 1703;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size_total = 1703 [json_name = "managerMessageChatSizeTotal"];</code>
+   * @return The managerMessageChatSizeTotal.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getManagerMessageChatSizeTotal() {
+    if (configCase_ == 1703) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size_total = 1703 [json_name = "managerMessageChatSizeTotal"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getManagerMessageChatSizeTotalOrBuilder() {
+    if (configCase_ == 1703) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
   public static final int MANAGER_MESSAGE_EMAIL_FIELD_NUMBER = 1710;
@@ -728,6 +876,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
 
+  public static final int MANAGER_MESSAGE_EMAIL_SIZE_TOTAL_FIELD_NUMBER = 1713;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size_total = 1713 [json_name = "managerMessageEmailSizeTotal"];</code>
+   * @return Whether the managerMessageEmailSizeTotal field is set.
+   */
+  @java.lang.Override
+  public boolean hasManagerMessageEmailSizeTotal() {
+    return configCase_ == 1713;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size_total = 1713 [json_name = "managerMessageEmailSizeTotal"];</code>
+   * @return The managerMessageEmailSizeTotal.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getManagerMessageEmailSizeTotal() {
+    if (configCase_ == 1713) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size_total = 1713 [json_name = "managerMessageEmailSizeTotal"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getManagerMessageEmailSizeTotalOrBuilder() {
+    if (configCase_ == 1713) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+
   public static final int MANAGER_MESSAGE_SMS_FIELD_NUMBER = 1720;
   /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
@@ -819,6 +998,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int MANAGER_MESSAGE_SMS_SIZE_TOTAL_FIELD_NUMBER = 1723;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size_total = 1723 [json_name = "managerMessageSmsSizeTotal"];</code>
+   * @return Whether the managerMessageSmsSizeTotal field is set.
+   */
+  @java.lang.Override
+  public boolean hasManagerMessageSmsSizeTotal() {
+    return configCase_ == 1723;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size_total = 1723 [json_name = "managerMessageSmsSizeTotal"];</code>
+   * @return The managerMessageSmsSizeTotal.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getManagerMessageSmsSizeTotal() {
+    if (configCase_ == 1723) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size_total = 1723 [json_name = "managerMessageSmsSizeTotal"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getManagerMessageSmsSizeTotalOrBuilder() {
+    if (configCase_ == 1723) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
   public static final int SYSTEM_MESSAGE_CHAT_FIELD_NUMBER = 1800;
@@ -914,6 +1124,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
 
+  public static final int SYSTEM_MESSAGE_CHAT_SIZE_TOTAL_FIELD_NUMBER = 1803;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size_total = 1803 [json_name = "systemMessageChatSizeTotal"];</code>
+   * @return Whether the systemMessageChatSizeTotal field is set.
+   */
+  @java.lang.Override
+  public boolean hasSystemMessageChatSizeTotal() {
+    return configCase_ == 1803;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size_total = 1803 [json_name = "systemMessageChatSizeTotal"];</code>
+   * @return The systemMessageChatSizeTotal.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getSystemMessageChatSizeTotal() {
+    if (configCase_ == 1803) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size_total = 1803 [json_name = "systemMessageChatSizeTotal"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getSystemMessageChatSizeTotalOrBuilder() {
+    if (configCase_ == 1803) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+
   public static final int SYSTEM_MESSAGE_EMAIL_FIELD_NUMBER = 1810;
   /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
@@ -1005,6 +1246,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int SYSTEM_MESSAGE_EMAIL_SIZE_TOTAL_FIELD_NUMBER = 1813;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size_total = 1813 [json_name = "systemMessageEmailSizeTotal"];</code>
+   * @return Whether the systemMessageEmailSizeTotal field is set.
+   */
+  @java.lang.Override
+  public boolean hasSystemMessageEmailSizeTotal() {
+    return configCase_ == 1813;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size_total = 1813 [json_name = "systemMessageEmailSizeTotal"];</code>
+   * @return The systemMessageEmailSizeTotal.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getSystemMessageEmailSizeTotal() {
+    if (configCase_ == 1813) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size_total = 1813 [json_name = "systemMessageEmailSizeTotal"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getSystemMessageEmailSizeTotalOrBuilder() {
+    if (configCase_ == 1813) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
   public static final int SYSTEM_MESSAGE_SMS_FIELD_NUMBER = 1820;
@@ -1100,6 +1372,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
 
+  public static final int SYSTEM_MESSAGE_SMS_SIZE_TOTAL_FIELD_NUMBER = 1823;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size_total = 1823 [json_name = "systemMessageSmsSizeTotal"];</code>
+   * @return Whether the systemMessageSmsSizeTotal field is set.
+   */
+  @java.lang.Override
+  public boolean hasSystemMessageSmsSizeTotal() {
+    return configCase_ == 1823;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size_total = 1823 [json_name = "systemMessageSmsSizeTotal"];</code>
+   * @return The systemMessageSmsSizeTotal.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getSystemMessageSmsSizeTotal() {
+    if (configCase_ == 1823) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size_total = 1823 [json_name = "systemMessageSmsSizeTotal"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getSystemMessageSmsSizeTotalOrBuilder() {
+    if (configCase_ == 1823) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+
   public static final int CUSTOMER_MESSAGE_CHAT_FIELD_NUMBER = 1900;
   /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
@@ -1191,6 +1494,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
+  }
+
+  public static final int CUSTOMER_MESSAGE_CHAT_SIZE_TOTAL_FIELD_NUMBER = 1903;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size_total = 1903 [json_name = "customerMessageChatSizeTotal"];</code>
+   * @return Whether the customerMessageChatSizeTotal field is set.
+   */
+  @java.lang.Override
+  public boolean hasCustomerMessageChatSizeTotal() {
+    return configCase_ == 1903;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size_total = 1903 [json_name = "customerMessageChatSizeTotal"];</code>
+   * @return The customerMessageChatSizeTotal.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getCustomerMessageChatSizeTotal() {
+    if (configCase_ == 1903) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size_total = 1903 [json_name = "customerMessageChatSizeTotal"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getCustomerMessageChatSizeTotalOrBuilder() {
+    if (configCase_ == 1903) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
   }
 
   public static final int CUSTOMER_MESSAGE_EMAIL_FIELD_NUMBER = 1910;
@@ -1286,6 +1620,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
 
+  public static final int CUSTOMER_MESSAGE_EMAIL_SIZE_TOTAL_FIELD_NUMBER = 1913;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size_total = 1913 [json_name = "customerMessageEmailSizeTotal"];</code>
+   * @return Whether the customerMessageEmailSizeTotal field is set.
+   */
+  @java.lang.Override
+  public boolean hasCustomerMessageEmailSizeTotal() {
+    return configCase_ == 1913;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size_total = 1913 [json_name = "customerMessageEmailSizeTotal"];</code>
+   * @return The customerMessageEmailSizeTotal.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getCustomerMessageEmailSizeTotal() {
+    if (configCase_ == 1913) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size_total = 1913 [json_name = "customerMessageEmailSizeTotal"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getCustomerMessageEmailSizeTotalOrBuilder() {
+    if (configCase_ == 1913) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+
   public static final int CUSTOMER_MESSAGE_SMS_FIELD_NUMBER = 1920;
   /**
    * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
@@ -1379,10 +1744,41 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.getDefaultInstance();
   }
 
+  public static final int CUSTOMER_MESSAGE_SMS_SIZE_TOTAL_FIELD_NUMBER = 1923;
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size_total = 1923 [json_name = "customerMessageSmsSizeTotal"];</code>
+   * @return Whether the customerMessageSmsSizeTotal field is set.
+   */
+  @java.lang.Override
+  public boolean hasCustomerMessageSmsSizeTotal() {
+    return configCase_ == 1923;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size_total = 1923 [json_name = "customerMessageSmsSizeTotal"];</code>
+   * @return The customerMessageSmsSizeTotal.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getCustomerMessageSmsSizeTotal() {
+    if (configCase_ == 1923) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size_total = 1923 [json_name = "customerMessageSmsSizeTotal"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getCustomerMessageSmsSizeTotalOrBuilder() {
+    if (configCase_ == 1923) {
+       return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+    }
+    return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+  }
+
   public static final int COMPLIANCE_RND_QUERY_FIELD_NUMBER = 2000;
   /**
    * <pre>
-   * compliance configs
+   * compliance configs (2000 - 2999)
    * </pre>
    *
    * <code>.services.billing.entities.v1alpha2.BasicConfig compliance_rnd_query = 2000 [json_name = "complianceRndQuery"];</code>
@@ -1394,7 +1790,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * compliance configs
+   * compliance configs (2000 - 2999)
    * </pre>
    *
    * <code>.services.billing.entities.v1alpha2.BasicConfig compliance_rnd_query = 2000 [json_name = "complianceRndQuery"];</code>
@@ -1409,7 +1805,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * compliance configs
+   * compliance configs (2000 - 2999)
    * </pre>
    *
    * <code>.services.billing.entities.v1alpha2.BasicConfig compliance_rnd_query = 2000 [json_name = "complianceRndQuery"];</code>
@@ -1485,6 +1881,9 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1602) {
       output.writeMessage(1602, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
+    if (configCase_ == 1603) {
+      output.writeMessage(1603, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
     if (configCase_ == 1610) {
       output.writeMessage(1610, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
@@ -1493,6 +1892,9 @@ private static final long serialVersionUID = 0L;
     }
     if (configCase_ == 1612) {
       output.writeMessage(1612, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
+    if (configCase_ == 1613) {
+      output.writeMessage(1613, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
     if (configCase_ == 1620) {
       output.writeMessage(1620, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1503,6 +1905,9 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1622) {
       output.writeMessage(1622, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
+    if (configCase_ == 1623) {
+      output.writeMessage(1623, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
     if (configCase_ == 1700) {
       output.writeMessage(1700, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
@@ -1511,6 +1916,9 @@ private static final long serialVersionUID = 0L;
     }
     if (configCase_ == 1702) {
       output.writeMessage(1702, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
+    if (configCase_ == 1703) {
+      output.writeMessage(1703, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
     if (configCase_ == 1710) {
       output.writeMessage(1710, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1521,6 +1929,9 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1712) {
       output.writeMessage(1712, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
+    if (configCase_ == 1713) {
+      output.writeMessage(1713, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
     if (configCase_ == 1720) {
       output.writeMessage(1720, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
@@ -1529,6 +1940,9 @@ private static final long serialVersionUID = 0L;
     }
     if (configCase_ == 1722) {
       output.writeMessage(1722, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
+    if (configCase_ == 1723) {
+      output.writeMessage(1723, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
     if (configCase_ == 1800) {
       output.writeMessage(1800, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1539,6 +1953,9 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1802) {
       output.writeMessage(1802, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
+    if (configCase_ == 1803) {
+      output.writeMessage(1803, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
     if (configCase_ == 1810) {
       output.writeMessage(1810, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
@@ -1547,6 +1964,9 @@ private static final long serialVersionUID = 0L;
     }
     if (configCase_ == 1812) {
       output.writeMessage(1812, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
+    if (configCase_ == 1813) {
+      output.writeMessage(1813, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
     if (configCase_ == 1820) {
       output.writeMessage(1820, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1557,6 +1977,9 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1822) {
       output.writeMessage(1822, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
+    if (configCase_ == 1823) {
+      output.writeMessage(1823, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
     if (configCase_ == 1900) {
       output.writeMessage(1900, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
@@ -1565,6 +1988,9 @@ private static final long serialVersionUID = 0L;
     }
     if (configCase_ == 1902) {
       output.writeMessage(1902, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
+    if (configCase_ == 1903) {
+      output.writeMessage(1903, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
     if (configCase_ == 1910) {
       output.writeMessage(1910, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1575,6 +2001,9 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1912) {
       output.writeMessage(1912, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
+    if (configCase_ == 1913) {
+      output.writeMessage(1913, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
     if (configCase_ == 1920) {
       output.writeMessage(1920, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
@@ -1583,6 +2012,9 @@ private static final long serialVersionUID = 0L;
     }
     if (configCase_ == 1922) {
       output.writeMessage(1922, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
+    if (configCase_ == 1923) {
+      output.writeMessage(1923, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
     if (configCase_ == 2000) {
       output.writeMessage(2000, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1623,6 +2055,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1602, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
+    if (configCase_ == 1603) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1603, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
     if (configCase_ == 1610) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1610, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1634,6 +2070,10 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1612) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1612, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
+    if (configCase_ == 1613) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1613, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
     if (configCase_ == 1620) {
       size += com.google.protobuf.CodedOutputStream
@@ -1647,6 +2087,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1622, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
+    if (configCase_ == 1623) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1623, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
     if (configCase_ == 1700) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1700, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1658,6 +2102,10 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1702) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1702, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
+    if (configCase_ == 1703) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1703, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
     if (configCase_ == 1710) {
       size += com.google.protobuf.CodedOutputStream
@@ -1671,6 +2119,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1712, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
+    if (configCase_ == 1713) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1713, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
     if (configCase_ == 1720) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1720, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1682,6 +2134,10 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1722) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1722, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
+    if (configCase_ == 1723) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1723, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
     if (configCase_ == 1800) {
       size += com.google.protobuf.CodedOutputStream
@@ -1695,6 +2151,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1802, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
+    if (configCase_ == 1803) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1803, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
     if (configCase_ == 1810) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1810, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1706,6 +2166,10 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1812) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1812, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
+    if (configCase_ == 1813) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1813, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
     if (configCase_ == 1820) {
       size += com.google.protobuf.CodedOutputStream
@@ -1719,6 +2183,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1822, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
+    if (configCase_ == 1823) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1823, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
     if (configCase_ == 1900) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1900, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1730,6 +2198,10 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1902) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1902, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
+    if (configCase_ == 1903) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1903, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
     if (configCase_ == 1910) {
       size += com.google.protobuf.CodedOutputStream
@@ -1743,6 +2215,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1912, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
     }
+    if (configCase_ == 1913) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1913, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
+    }
     if (configCase_ == 1920) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1920, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
@@ -1754,6 +2230,10 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 1922) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1922, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig) config_);
+    }
+    if (configCase_ == 1923) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1923, (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_);
     }
     if (configCase_ == 2000) {
       size += com.google.protobuf.CodedOutputStream
@@ -1804,6 +2284,10 @@ private static final long serialVersionUID = 0L;
         if (!getAgentMessageChatUnits()
             .equals(other.getAgentMessageChatUnits())) return false;
         break;
+      case 1603:
+        if (!getAgentMessageChatSizeTotal()
+            .equals(other.getAgentMessageChatSizeTotal())) return false;
+        break;
       case 1610:
         if (!getAgentMessageEmail()
             .equals(other.getAgentMessageEmail())) return false;
@@ -1815,6 +2299,10 @@ private static final long serialVersionUID = 0L;
       case 1612:
         if (!getAgentMessageEmailUnits()
             .equals(other.getAgentMessageEmailUnits())) return false;
+        break;
+      case 1613:
+        if (!getAgentMessageEmailSizeTotal()
+            .equals(other.getAgentMessageEmailSizeTotal())) return false;
         break;
       case 1620:
         if (!getAgentMessageSms()
@@ -1828,6 +2316,10 @@ private static final long serialVersionUID = 0L;
         if (!getAgentMessageSmsUnits()
             .equals(other.getAgentMessageSmsUnits())) return false;
         break;
+      case 1623:
+        if (!getAgentMessageSmsSizeTotal()
+            .equals(other.getAgentMessageSmsSizeTotal())) return false;
+        break;
       case 1700:
         if (!getManagerMessageChat()
             .equals(other.getManagerMessageChat())) return false;
@@ -1839,6 +2331,10 @@ private static final long serialVersionUID = 0L;
       case 1702:
         if (!getManagerMessageChatUnits()
             .equals(other.getManagerMessageChatUnits())) return false;
+        break;
+      case 1703:
+        if (!getManagerMessageChatSizeTotal()
+            .equals(other.getManagerMessageChatSizeTotal())) return false;
         break;
       case 1710:
         if (!getManagerMessageEmail()
@@ -1852,6 +2348,10 @@ private static final long serialVersionUID = 0L;
         if (!getManagerMessageEmailUnits()
             .equals(other.getManagerMessageEmailUnits())) return false;
         break;
+      case 1713:
+        if (!getManagerMessageEmailSizeTotal()
+            .equals(other.getManagerMessageEmailSizeTotal())) return false;
+        break;
       case 1720:
         if (!getManagerMessageSms()
             .equals(other.getManagerMessageSms())) return false;
@@ -1863,6 +2363,10 @@ private static final long serialVersionUID = 0L;
       case 1722:
         if (!getManagerMessageSmsUnits()
             .equals(other.getManagerMessageSmsUnits())) return false;
+        break;
+      case 1723:
+        if (!getManagerMessageSmsSizeTotal()
+            .equals(other.getManagerMessageSmsSizeTotal())) return false;
         break;
       case 1800:
         if (!getSystemMessageChat()
@@ -1876,6 +2380,10 @@ private static final long serialVersionUID = 0L;
         if (!getSystemMessageChatUnits()
             .equals(other.getSystemMessageChatUnits())) return false;
         break;
+      case 1803:
+        if (!getSystemMessageChatSizeTotal()
+            .equals(other.getSystemMessageChatSizeTotal())) return false;
+        break;
       case 1810:
         if (!getSystemMessageEmail()
             .equals(other.getSystemMessageEmail())) return false;
@@ -1887,6 +2395,10 @@ private static final long serialVersionUID = 0L;
       case 1812:
         if (!getSystemMessageEmailUnits()
             .equals(other.getSystemMessageEmailUnits())) return false;
+        break;
+      case 1813:
+        if (!getSystemMessageEmailSizeTotal()
+            .equals(other.getSystemMessageEmailSizeTotal())) return false;
         break;
       case 1820:
         if (!getSystemMessageSms()
@@ -1900,6 +2412,10 @@ private static final long serialVersionUID = 0L;
         if (!getSystemMessageSmsUnits()
             .equals(other.getSystemMessageSmsUnits())) return false;
         break;
+      case 1823:
+        if (!getSystemMessageSmsSizeTotal()
+            .equals(other.getSystemMessageSmsSizeTotal())) return false;
+        break;
       case 1900:
         if (!getCustomerMessageChat()
             .equals(other.getCustomerMessageChat())) return false;
@@ -1911,6 +2427,10 @@ private static final long serialVersionUID = 0L;
       case 1902:
         if (!getCustomerMessageChatUnits()
             .equals(other.getCustomerMessageChatUnits())) return false;
+        break;
+      case 1903:
+        if (!getCustomerMessageChatSizeTotal()
+            .equals(other.getCustomerMessageChatSizeTotal())) return false;
         break;
       case 1910:
         if (!getCustomerMessageEmail()
@@ -1924,6 +2444,10 @@ private static final long serialVersionUID = 0L;
         if (!getCustomerMessageEmailUnits()
             .equals(other.getCustomerMessageEmailUnits())) return false;
         break;
+      case 1913:
+        if (!getCustomerMessageEmailSizeTotal()
+            .equals(other.getCustomerMessageEmailSizeTotal())) return false;
+        break;
       case 1920:
         if (!getCustomerMessageSms()
             .equals(other.getCustomerMessageSms())) return false;
@@ -1935,6 +2459,10 @@ private static final long serialVersionUID = 0L;
       case 1922:
         if (!getCustomerMessageSmsUnits()
             .equals(other.getCustomerMessageSmsUnits())) return false;
+        break;
+      case 1923:
+        if (!getCustomerMessageSmsSizeTotal()
+            .equals(other.getCustomerMessageSmsSizeTotal())) return false;
         break;
       case 2000:
         if (!getComplianceRndQuery()
@@ -1983,6 +2511,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + AGENT_MESSAGE_CHAT_UNITS_FIELD_NUMBER;
         hash = (53 * hash) + getAgentMessageChatUnits().hashCode();
         break;
+      case 1603:
+        hash = (37 * hash) + AGENT_MESSAGE_CHAT_SIZE_TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getAgentMessageChatSizeTotal().hashCode();
+        break;
       case 1610:
         hash = (37 * hash) + AGENT_MESSAGE_EMAIL_FIELD_NUMBER;
         hash = (53 * hash) + getAgentMessageEmail().hashCode();
@@ -1994,6 +2526,10 @@ private static final long serialVersionUID = 0L;
       case 1612:
         hash = (37 * hash) + AGENT_MESSAGE_EMAIL_UNITS_FIELD_NUMBER;
         hash = (53 * hash) + getAgentMessageEmailUnits().hashCode();
+        break;
+      case 1613:
+        hash = (37 * hash) + AGENT_MESSAGE_EMAIL_SIZE_TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getAgentMessageEmailSizeTotal().hashCode();
         break;
       case 1620:
         hash = (37 * hash) + AGENT_MESSAGE_SMS_FIELD_NUMBER;
@@ -2007,6 +2543,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + AGENT_MESSAGE_SMS_UNITS_FIELD_NUMBER;
         hash = (53 * hash) + getAgentMessageSmsUnits().hashCode();
         break;
+      case 1623:
+        hash = (37 * hash) + AGENT_MESSAGE_SMS_SIZE_TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getAgentMessageSmsSizeTotal().hashCode();
+        break;
       case 1700:
         hash = (37 * hash) + MANAGER_MESSAGE_CHAT_FIELD_NUMBER;
         hash = (53 * hash) + getManagerMessageChat().hashCode();
@@ -2018,6 +2558,10 @@ private static final long serialVersionUID = 0L;
       case 1702:
         hash = (37 * hash) + MANAGER_MESSAGE_CHAT_UNITS_FIELD_NUMBER;
         hash = (53 * hash) + getManagerMessageChatUnits().hashCode();
+        break;
+      case 1703:
+        hash = (37 * hash) + MANAGER_MESSAGE_CHAT_SIZE_TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getManagerMessageChatSizeTotal().hashCode();
         break;
       case 1710:
         hash = (37 * hash) + MANAGER_MESSAGE_EMAIL_FIELD_NUMBER;
@@ -2031,6 +2575,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + MANAGER_MESSAGE_EMAIL_UNITS_FIELD_NUMBER;
         hash = (53 * hash) + getManagerMessageEmailUnits().hashCode();
         break;
+      case 1713:
+        hash = (37 * hash) + MANAGER_MESSAGE_EMAIL_SIZE_TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getManagerMessageEmailSizeTotal().hashCode();
+        break;
       case 1720:
         hash = (37 * hash) + MANAGER_MESSAGE_SMS_FIELD_NUMBER;
         hash = (53 * hash) + getManagerMessageSms().hashCode();
@@ -2042,6 +2590,10 @@ private static final long serialVersionUID = 0L;
       case 1722:
         hash = (37 * hash) + MANAGER_MESSAGE_SMS_UNITS_FIELD_NUMBER;
         hash = (53 * hash) + getManagerMessageSmsUnits().hashCode();
+        break;
+      case 1723:
+        hash = (37 * hash) + MANAGER_MESSAGE_SMS_SIZE_TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getManagerMessageSmsSizeTotal().hashCode();
         break;
       case 1800:
         hash = (37 * hash) + SYSTEM_MESSAGE_CHAT_FIELD_NUMBER;
@@ -2055,6 +2607,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SYSTEM_MESSAGE_CHAT_UNITS_FIELD_NUMBER;
         hash = (53 * hash) + getSystemMessageChatUnits().hashCode();
         break;
+      case 1803:
+        hash = (37 * hash) + SYSTEM_MESSAGE_CHAT_SIZE_TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getSystemMessageChatSizeTotal().hashCode();
+        break;
       case 1810:
         hash = (37 * hash) + SYSTEM_MESSAGE_EMAIL_FIELD_NUMBER;
         hash = (53 * hash) + getSystemMessageEmail().hashCode();
@@ -2066,6 +2622,10 @@ private static final long serialVersionUID = 0L;
       case 1812:
         hash = (37 * hash) + SYSTEM_MESSAGE_EMAIL_UNITS_FIELD_NUMBER;
         hash = (53 * hash) + getSystemMessageEmailUnits().hashCode();
+        break;
+      case 1813:
+        hash = (37 * hash) + SYSTEM_MESSAGE_EMAIL_SIZE_TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getSystemMessageEmailSizeTotal().hashCode();
         break;
       case 1820:
         hash = (37 * hash) + SYSTEM_MESSAGE_SMS_FIELD_NUMBER;
@@ -2079,6 +2639,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SYSTEM_MESSAGE_SMS_UNITS_FIELD_NUMBER;
         hash = (53 * hash) + getSystemMessageSmsUnits().hashCode();
         break;
+      case 1823:
+        hash = (37 * hash) + SYSTEM_MESSAGE_SMS_SIZE_TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getSystemMessageSmsSizeTotal().hashCode();
+        break;
       case 1900:
         hash = (37 * hash) + CUSTOMER_MESSAGE_CHAT_FIELD_NUMBER;
         hash = (53 * hash) + getCustomerMessageChat().hashCode();
@@ -2090,6 +2654,10 @@ private static final long serialVersionUID = 0L;
       case 1902:
         hash = (37 * hash) + CUSTOMER_MESSAGE_CHAT_UNITS_FIELD_NUMBER;
         hash = (53 * hash) + getCustomerMessageChatUnits().hashCode();
+        break;
+      case 1903:
+        hash = (37 * hash) + CUSTOMER_MESSAGE_CHAT_SIZE_TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerMessageChatSizeTotal().hashCode();
         break;
       case 1910:
         hash = (37 * hash) + CUSTOMER_MESSAGE_EMAIL_FIELD_NUMBER;
@@ -2103,6 +2671,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + CUSTOMER_MESSAGE_EMAIL_UNITS_FIELD_NUMBER;
         hash = (53 * hash) + getCustomerMessageEmailUnits().hashCode();
         break;
+      case 1913:
+        hash = (37 * hash) + CUSTOMER_MESSAGE_EMAIL_SIZE_TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerMessageEmailSizeTotal().hashCode();
+        break;
       case 1920:
         hash = (37 * hash) + CUSTOMER_MESSAGE_SMS_FIELD_NUMBER;
         hash = (53 * hash) + getCustomerMessageSms().hashCode();
@@ -2114,6 +2686,10 @@ private static final long serialVersionUID = 0L;
       case 1922:
         hash = (37 * hash) + CUSTOMER_MESSAGE_SMS_UNITS_FIELD_NUMBER;
         hash = (53 * hash) + getCustomerMessageSmsUnits().hashCode();
+        break;
+      case 1923:
+        hash = (37 * hash) + CUSTOMER_MESSAGE_SMS_SIZE_TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerMessageSmsSizeTotal().hashCode();
         break;
       case 2000:
         hash = (37 * hash) + COMPLIANCE_RND_QUERY_FIELD_NUMBER;
@@ -2276,6 +2852,9 @@ private static final long serialVersionUID = 0L;
       if (agentMessageChatUnitsBuilder_ != null) {
         agentMessageChatUnitsBuilder_.clear();
       }
+      if (agentMessageChatSizeTotalBuilder_ != null) {
+        agentMessageChatSizeTotalBuilder_.clear();
+      }
       if (agentMessageEmailBuilder_ != null) {
         agentMessageEmailBuilder_.clear();
       }
@@ -2284,6 +2863,9 @@ private static final long serialVersionUID = 0L;
       }
       if (agentMessageEmailUnitsBuilder_ != null) {
         agentMessageEmailUnitsBuilder_.clear();
+      }
+      if (agentMessageEmailSizeTotalBuilder_ != null) {
+        agentMessageEmailSizeTotalBuilder_.clear();
       }
       if (agentMessageSmsBuilder_ != null) {
         agentMessageSmsBuilder_.clear();
@@ -2294,6 +2876,9 @@ private static final long serialVersionUID = 0L;
       if (agentMessageSmsUnitsBuilder_ != null) {
         agentMessageSmsUnitsBuilder_.clear();
       }
+      if (agentMessageSmsSizeTotalBuilder_ != null) {
+        agentMessageSmsSizeTotalBuilder_.clear();
+      }
       if (managerMessageChatBuilder_ != null) {
         managerMessageChatBuilder_.clear();
       }
@@ -2302,6 +2887,9 @@ private static final long serialVersionUID = 0L;
       }
       if (managerMessageChatUnitsBuilder_ != null) {
         managerMessageChatUnitsBuilder_.clear();
+      }
+      if (managerMessageChatSizeTotalBuilder_ != null) {
+        managerMessageChatSizeTotalBuilder_.clear();
       }
       if (managerMessageEmailBuilder_ != null) {
         managerMessageEmailBuilder_.clear();
@@ -2312,6 +2900,9 @@ private static final long serialVersionUID = 0L;
       if (managerMessageEmailUnitsBuilder_ != null) {
         managerMessageEmailUnitsBuilder_.clear();
       }
+      if (managerMessageEmailSizeTotalBuilder_ != null) {
+        managerMessageEmailSizeTotalBuilder_.clear();
+      }
       if (managerMessageSmsBuilder_ != null) {
         managerMessageSmsBuilder_.clear();
       }
@@ -2320,6 +2911,9 @@ private static final long serialVersionUID = 0L;
       }
       if (managerMessageSmsUnitsBuilder_ != null) {
         managerMessageSmsUnitsBuilder_.clear();
+      }
+      if (managerMessageSmsSizeTotalBuilder_ != null) {
+        managerMessageSmsSizeTotalBuilder_.clear();
       }
       if (systemMessageChatBuilder_ != null) {
         systemMessageChatBuilder_.clear();
@@ -2330,6 +2924,9 @@ private static final long serialVersionUID = 0L;
       if (systemMessageChatUnitsBuilder_ != null) {
         systemMessageChatUnitsBuilder_.clear();
       }
+      if (systemMessageChatSizeTotalBuilder_ != null) {
+        systemMessageChatSizeTotalBuilder_.clear();
+      }
       if (systemMessageEmailBuilder_ != null) {
         systemMessageEmailBuilder_.clear();
       }
@@ -2338,6 +2935,9 @@ private static final long serialVersionUID = 0L;
       }
       if (systemMessageEmailUnitsBuilder_ != null) {
         systemMessageEmailUnitsBuilder_.clear();
+      }
+      if (systemMessageEmailSizeTotalBuilder_ != null) {
+        systemMessageEmailSizeTotalBuilder_.clear();
       }
       if (systemMessageSmsBuilder_ != null) {
         systemMessageSmsBuilder_.clear();
@@ -2348,6 +2948,9 @@ private static final long serialVersionUID = 0L;
       if (systemMessageSmsUnitsBuilder_ != null) {
         systemMessageSmsUnitsBuilder_.clear();
       }
+      if (systemMessageSmsSizeTotalBuilder_ != null) {
+        systemMessageSmsSizeTotalBuilder_.clear();
+      }
       if (customerMessageChatBuilder_ != null) {
         customerMessageChatBuilder_.clear();
       }
@@ -2356,6 +2959,9 @@ private static final long serialVersionUID = 0L;
       }
       if (customerMessageChatUnitsBuilder_ != null) {
         customerMessageChatUnitsBuilder_.clear();
+      }
+      if (customerMessageChatSizeTotalBuilder_ != null) {
+        customerMessageChatSizeTotalBuilder_.clear();
       }
       if (customerMessageEmailBuilder_ != null) {
         customerMessageEmailBuilder_.clear();
@@ -2366,6 +2972,9 @@ private static final long serialVersionUID = 0L;
       if (customerMessageEmailUnitsBuilder_ != null) {
         customerMessageEmailUnitsBuilder_.clear();
       }
+      if (customerMessageEmailSizeTotalBuilder_ != null) {
+        customerMessageEmailSizeTotalBuilder_.clear();
+      }
       if (customerMessageSmsBuilder_ != null) {
         customerMessageSmsBuilder_.clear();
       }
@@ -2374,6 +2983,9 @@ private static final long serialVersionUID = 0L;
       }
       if (customerMessageSmsUnitsBuilder_ != null) {
         customerMessageSmsUnitsBuilder_.clear();
+      }
+      if (customerMessageSmsSizeTotalBuilder_ != null) {
+        customerMessageSmsSizeTotalBuilder_.clear();
       }
       if (complianceRndQueryBuilder_ != null) {
         complianceRndQueryBuilder_.clear();
@@ -2451,6 +3063,10 @@ private static final long serialVersionUID = 0L;
           agentMessageChatUnitsBuilder_ != null) {
         result.config_ = agentMessageChatUnitsBuilder_.build();
       }
+      if (configCase_ == 1603 &&
+          agentMessageChatSizeTotalBuilder_ != null) {
+        result.config_ = agentMessageChatSizeTotalBuilder_.build();
+      }
       if (configCase_ == 1610 &&
           agentMessageEmailBuilder_ != null) {
         result.config_ = agentMessageEmailBuilder_.build();
@@ -2462,6 +3078,10 @@ private static final long serialVersionUID = 0L;
       if (configCase_ == 1612 &&
           agentMessageEmailUnitsBuilder_ != null) {
         result.config_ = agentMessageEmailUnitsBuilder_.build();
+      }
+      if (configCase_ == 1613 &&
+          agentMessageEmailSizeTotalBuilder_ != null) {
+        result.config_ = agentMessageEmailSizeTotalBuilder_.build();
       }
       if (configCase_ == 1620 &&
           agentMessageSmsBuilder_ != null) {
@@ -2475,6 +3095,10 @@ private static final long serialVersionUID = 0L;
           agentMessageSmsUnitsBuilder_ != null) {
         result.config_ = agentMessageSmsUnitsBuilder_.build();
       }
+      if (configCase_ == 1623 &&
+          agentMessageSmsSizeTotalBuilder_ != null) {
+        result.config_ = agentMessageSmsSizeTotalBuilder_.build();
+      }
       if (configCase_ == 1700 &&
           managerMessageChatBuilder_ != null) {
         result.config_ = managerMessageChatBuilder_.build();
@@ -2486,6 +3110,10 @@ private static final long serialVersionUID = 0L;
       if (configCase_ == 1702 &&
           managerMessageChatUnitsBuilder_ != null) {
         result.config_ = managerMessageChatUnitsBuilder_.build();
+      }
+      if (configCase_ == 1703 &&
+          managerMessageChatSizeTotalBuilder_ != null) {
+        result.config_ = managerMessageChatSizeTotalBuilder_.build();
       }
       if (configCase_ == 1710 &&
           managerMessageEmailBuilder_ != null) {
@@ -2499,6 +3127,10 @@ private static final long serialVersionUID = 0L;
           managerMessageEmailUnitsBuilder_ != null) {
         result.config_ = managerMessageEmailUnitsBuilder_.build();
       }
+      if (configCase_ == 1713 &&
+          managerMessageEmailSizeTotalBuilder_ != null) {
+        result.config_ = managerMessageEmailSizeTotalBuilder_.build();
+      }
       if (configCase_ == 1720 &&
           managerMessageSmsBuilder_ != null) {
         result.config_ = managerMessageSmsBuilder_.build();
@@ -2510,6 +3142,10 @@ private static final long serialVersionUID = 0L;
       if (configCase_ == 1722 &&
           managerMessageSmsUnitsBuilder_ != null) {
         result.config_ = managerMessageSmsUnitsBuilder_.build();
+      }
+      if (configCase_ == 1723 &&
+          managerMessageSmsSizeTotalBuilder_ != null) {
+        result.config_ = managerMessageSmsSizeTotalBuilder_.build();
       }
       if (configCase_ == 1800 &&
           systemMessageChatBuilder_ != null) {
@@ -2523,6 +3159,10 @@ private static final long serialVersionUID = 0L;
           systemMessageChatUnitsBuilder_ != null) {
         result.config_ = systemMessageChatUnitsBuilder_.build();
       }
+      if (configCase_ == 1803 &&
+          systemMessageChatSizeTotalBuilder_ != null) {
+        result.config_ = systemMessageChatSizeTotalBuilder_.build();
+      }
       if (configCase_ == 1810 &&
           systemMessageEmailBuilder_ != null) {
         result.config_ = systemMessageEmailBuilder_.build();
@@ -2534,6 +3174,10 @@ private static final long serialVersionUID = 0L;
       if (configCase_ == 1812 &&
           systemMessageEmailUnitsBuilder_ != null) {
         result.config_ = systemMessageEmailUnitsBuilder_.build();
+      }
+      if (configCase_ == 1813 &&
+          systemMessageEmailSizeTotalBuilder_ != null) {
+        result.config_ = systemMessageEmailSizeTotalBuilder_.build();
       }
       if (configCase_ == 1820 &&
           systemMessageSmsBuilder_ != null) {
@@ -2547,6 +3191,10 @@ private static final long serialVersionUID = 0L;
           systemMessageSmsUnitsBuilder_ != null) {
         result.config_ = systemMessageSmsUnitsBuilder_.build();
       }
+      if (configCase_ == 1823 &&
+          systemMessageSmsSizeTotalBuilder_ != null) {
+        result.config_ = systemMessageSmsSizeTotalBuilder_.build();
+      }
       if (configCase_ == 1900 &&
           customerMessageChatBuilder_ != null) {
         result.config_ = customerMessageChatBuilder_.build();
@@ -2558,6 +3206,10 @@ private static final long serialVersionUID = 0L;
       if (configCase_ == 1902 &&
           customerMessageChatUnitsBuilder_ != null) {
         result.config_ = customerMessageChatUnitsBuilder_.build();
+      }
+      if (configCase_ == 1903 &&
+          customerMessageChatSizeTotalBuilder_ != null) {
+        result.config_ = customerMessageChatSizeTotalBuilder_.build();
       }
       if (configCase_ == 1910 &&
           customerMessageEmailBuilder_ != null) {
@@ -2571,6 +3223,10 @@ private static final long serialVersionUID = 0L;
           customerMessageEmailUnitsBuilder_ != null) {
         result.config_ = customerMessageEmailUnitsBuilder_.build();
       }
+      if (configCase_ == 1913 &&
+          customerMessageEmailSizeTotalBuilder_ != null) {
+        result.config_ = customerMessageEmailSizeTotalBuilder_.build();
+      }
       if (configCase_ == 1920 &&
           customerMessageSmsBuilder_ != null) {
         result.config_ = customerMessageSmsBuilder_.build();
@@ -2582,6 +3238,10 @@ private static final long serialVersionUID = 0L;
       if (configCase_ == 1922 &&
           customerMessageSmsUnitsBuilder_ != null) {
         result.config_ = customerMessageSmsUnitsBuilder_.build();
+      }
+      if (configCase_ == 1923 &&
+          customerMessageSmsSizeTotalBuilder_ != null) {
+        result.config_ = customerMessageSmsSizeTotalBuilder_.build();
       }
       if (configCase_ == 2000 &&
           complianceRndQueryBuilder_ != null) {
@@ -2662,6 +3322,10 @@ private static final long serialVersionUID = 0L;
           mergeAgentMessageChatUnits(other.getAgentMessageChatUnits());
           break;
         }
+        case AGENT_MESSAGE_CHAT_SIZE_TOTAL: {
+          mergeAgentMessageChatSizeTotal(other.getAgentMessageChatSizeTotal());
+          break;
+        }
         case AGENT_MESSAGE_EMAIL: {
           mergeAgentMessageEmail(other.getAgentMessageEmail());
           break;
@@ -2672,6 +3336,10 @@ private static final long serialVersionUID = 0L;
         }
         case AGENT_MESSAGE_EMAIL_UNITS: {
           mergeAgentMessageEmailUnits(other.getAgentMessageEmailUnits());
+          break;
+        }
+        case AGENT_MESSAGE_EMAIL_SIZE_TOTAL: {
+          mergeAgentMessageEmailSizeTotal(other.getAgentMessageEmailSizeTotal());
           break;
         }
         case AGENT_MESSAGE_SMS: {
@@ -2686,6 +3354,10 @@ private static final long serialVersionUID = 0L;
           mergeAgentMessageSmsUnits(other.getAgentMessageSmsUnits());
           break;
         }
+        case AGENT_MESSAGE_SMS_SIZE_TOTAL: {
+          mergeAgentMessageSmsSizeTotal(other.getAgentMessageSmsSizeTotal());
+          break;
+        }
         case MANAGER_MESSAGE_CHAT: {
           mergeManagerMessageChat(other.getManagerMessageChat());
           break;
@@ -2696,6 +3368,10 @@ private static final long serialVersionUID = 0L;
         }
         case MANAGER_MESSAGE_CHAT_UNITS: {
           mergeManagerMessageChatUnits(other.getManagerMessageChatUnits());
+          break;
+        }
+        case MANAGER_MESSAGE_CHAT_SIZE_TOTAL: {
+          mergeManagerMessageChatSizeTotal(other.getManagerMessageChatSizeTotal());
           break;
         }
         case MANAGER_MESSAGE_EMAIL: {
@@ -2710,6 +3386,10 @@ private static final long serialVersionUID = 0L;
           mergeManagerMessageEmailUnits(other.getManagerMessageEmailUnits());
           break;
         }
+        case MANAGER_MESSAGE_EMAIL_SIZE_TOTAL: {
+          mergeManagerMessageEmailSizeTotal(other.getManagerMessageEmailSizeTotal());
+          break;
+        }
         case MANAGER_MESSAGE_SMS: {
           mergeManagerMessageSms(other.getManagerMessageSms());
           break;
@@ -2720,6 +3400,10 @@ private static final long serialVersionUID = 0L;
         }
         case MANAGER_MESSAGE_SMS_UNITS: {
           mergeManagerMessageSmsUnits(other.getManagerMessageSmsUnits());
+          break;
+        }
+        case MANAGER_MESSAGE_SMS_SIZE_TOTAL: {
+          mergeManagerMessageSmsSizeTotal(other.getManagerMessageSmsSizeTotal());
           break;
         }
         case SYSTEM_MESSAGE_CHAT: {
@@ -2734,6 +3418,10 @@ private static final long serialVersionUID = 0L;
           mergeSystemMessageChatUnits(other.getSystemMessageChatUnits());
           break;
         }
+        case SYSTEM_MESSAGE_CHAT_SIZE_TOTAL: {
+          mergeSystemMessageChatSizeTotal(other.getSystemMessageChatSizeTotal());
+          break;
+        }
         case SYSTEM_MESSAGE_EMAIL: {
           mergeSystemMessageEmail(other.getSystemMessageEmail());
           break;
@@ -2744,6 +3432,10 @@ private static final long serialVersionUID = 0L;
         }
         case SYSTEM_MESSAGE_EMAIL_UNITS: {
           mergeSystemMessageEmailUnits(other.getSystemMessageEmailUnits());
+          break;
+        }
+        case SYSTEM_MESSAGE_EMAIL_SIZE_TOTAL: {
+          mergeSystemMessageEmailSizeTotal(other.getSystemMessageEmailSizeTotal());
           break;
         }
         case SYSTEM_MESSAGE_SMS: {
@@ -2758,6 +3450,10 @@ private static final long serialVersionUID = 0L;
           mergeSystemMessageSmsUnits(other.getSystemMessageSmsUnits());
           break;
         }
+        case SYSTEM_MESSAGE_SMS_SIZE_TOTAL: {
+          mergeSystemMessageSmsSizeTotal(other.getSystemMessageSmsSizeTotal());
+          break;
+        }
         case CUSTOMER_MESSAGE_CHAT: {
           mergeCustomerMessageChat(other.getCustomerMessageChat());
           break;
@@ -2768,6 +3464,10 @@ private static final long serialVersionUID = 0L;
         }
         case CUSTOMER_MESSAGE_CHAT_UNITS: {
           mergeCustomerMessageChatUnits(other.getCustomerMessageChatUnits());
+          break;
+        }
+        case CUSTOMER_MESSAGE_CHAT_SIZE_TOTAL: {
+          mergeCustomerMessageChatSizeTotal(other.getCustomerMessageChatSizeTotal());
           break;
         }
         case CUSTOMER_MESSAGE_EMAIL: {
@@ -2782,6 +3482,10 @@ private static final long serialVersionUID = 0L;
           mergeCustomerMessageEmailUnits(other.getCustomerMessageEmailUnits());
           break;
         }
+        case CUSTOMER_MESSAGE_EMAIL_SIZE_TOTAL: {
+          mergeCustomerMessageEmailSizeTotal(other.getCustomerMessageEmailSizeTotal());
+          break;
+        }
         case CUSTOMER_MESSAGE_SMS: {
           mergeCustomerMessageSms(other.getCustomerMessageSms());
           break;
@@ -2792,6 +3496,10 @@ private static final long serialVersionUID = 0L;
         }
         case CUSTOMER_MESSAGE_SMS_UNITS: {
           mergeCustomerMessageSmsUnits(other.getCustomerMessageSmsUnits());
+          break;
+        }
+        case CUSTOMER_MESSAGE_SMS_SIZE_TOTAL: {
+          mergeCustomerMessageSmsSizeTotal(other.getCustomerMessageSmsSizeTotal());
           break;
         }
         case COMPLIANCE_RND_QUERY: {
@@ -2874,6 +3582,13 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1602;
               break;
             } // case 12818
+            case 12826: {
+              input.readMessage(
+                  getAgentMessageChatSizeTotalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1603;
+              break;
+            } // case 12826
             case 12882: {
               input.readMessage(
                   getAgentMessageEmailFieldBuilder().getBuilder(),
@@ -2895,6 +3610,13 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1612;
               break;
             } // case 12898
+            case 12906: {
+              input.readMessage(
+                  getAgentMessageEmailSizeTotalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1613;
+              break;
+            } // case 12906
             case 12962: {
               input.readMessage(
                   getAgentMessageSmsFieldBuilder().getBuilder(),
@@ -2916,6 +3638,13 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1622;
               break;
             } // case 12978
+            case 12986: {
+              input.readMessage(
+                  getAgentMessageSmsSizeTotalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1623;
+              break;
+            } // case 12986
             case 13602: {
               input.readMessage(
                   getManagerMessageChatFieldBuilder().getBuilder(),
@@ -2937,6 +3666,13 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1702;
               break;
             } // case 13618
+            case 13626: {
+              input.readMessage(
+                  getManagerMessageChatSizeTotalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1703;
+              break;
+            } // case 13626
             case 13682: {
               input.readMessage(
                   getManagerMessageEmailFieldBuilder().getBuilder(),
@@ -2958,6 +3694,13 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1712;
               break;
             } // case 13698
+            case 13706: {
+              input.readMessage(
+                  getManagerMessageEmailSizeTotalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1713;
+              break;
+            } // case 13706
             case 13762: {
               input.readMessage(
                   getManagerMessageSmsFieldBuilder().getBuilder(),
@@ -2979,6 +3722,13 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1722;
               break;
             } // case 13778
+            case 13786: {
+              input.readMessage(
+                  getManagerMessageSmsSizeTotalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1723;
+              break;
+            } // case 13786
             case 14402: {
               input.readMessage(
                   getSystemMessageChatFieldBuilder().getBuilder(),
@@ -3000,6 +3750,13 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1802;
               break;
             } // case 14418
+            case 14426: {
+              input.readMessage(
+                  getSystemMessageChatSizeTotalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1803;
+              break;
+            } // case 14426
             case 14482: {
               input.readMessage(
                   getSystemMessageEmailFieldBuilder().getBuilder(),
@@ -3021,6 +3778,13 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1812;
               break;
             } // case 14498
+            case 14506: {
+              input.readMessage(
+                  getSystemMessageEmailSizeTotalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1813;
+              break;
+            } // case 14506
             case 14562: {
               input.readMessage(
                   getSystemMessageSmsFieldBuilder().getBuilder(),
@@ -3042,6 +3806,13 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1822;
               break;
             } // case 14578
+            case 14586: {
+              input.readMessage(
+                  getSystemMessageSmsSizeTotalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1823;
+              break;
+            } // case 14586
             case 15202: {
               input.readMessage(
                   getCustomerMessageChatFieldBuilder().getBuilder(),
@@ -3063,6 +3834,13 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1902;
               break;
             } // case 15218
+            case 15226: {
+              input.readMessage(
+                  getCustomerMessageChatSizeTotalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1903;
+              break;
+            } // case 15226
             case 15282: {
               input.readMessage(
                   getCustomerMessageEmailFieldBuilder().getBuilder(),
@@ -3084,6 +3862,13 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1912;
               break;
             } // case 15298
+            case 15306: {
+              input.readMessage(
+                  getCustomerMessageEmailSizeTotalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1913;
+              break;
+            } // case 15306
             case 15362: {
               input.readMessage(
                   getCustomerMessageSmsFieldBuilder().getBuilder(),
@@ -3105,6 +3890,13 @@ private static final long serialVersionUID = 0L;
               configCase_ = 1922;
               break;
             } // case 15378
+            case 15386: {
+              input.readMessage(
+                  getCustomerMessageSmsSizeTotalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 1923;
+              break;
+            } // case 15386
             case 16002: {
               input.readMessage(
                   getComplianceRndQueryFieldBuilder().getBuilder(),
@@ -4041,6 +4833,148 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> agentMessageChatSizeTotalBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size_total = 1603 [json_name = "agentMessageChatSizeTotal"];</code>
+     * @return Whether the agentMessageChatSizeTotal field is set.
+     */
+    @java.lang.Override
+    public boolean hasAgentMessageChatSizeTotal() {
+      return configCase_ == 1603;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size_total = 1603 [json_name = "agentMessageChatSizeTotal"];</code>
+     * @return The agentMessageChatSizeTotal.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getAgentMessageChatSizeTotal() {
+      if (agentMessageChatSizeTotalBuilder_ == null) {
+        if (configCase_ == 1603) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1603) {
+          return agentMessageChatSizeTotalBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size_total = 1603 [json_name = "agentMessageChatSizeTotal"];</code>
+     */
+    public Builder setAgentMessageChatSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (agentMessageChatSizeTotalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        agentMessageChatSizeTotalBuilder_.setMessage(value);
+      }
+      configCase_ = 1603;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size_total = 1603 [json_name = "agentMessageChatSizeTotal"];</code>
+     */
+    public Builder setAgentMessageChatSizeTotal(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder builderForValue) {
+      if (agentMessageChatSizeTotalBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        agentMessageChatSizeTotalBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1603;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size_total = 1603 [json_name = "agentMessageChatSizeTotal"];</code>
+     */
+    public Builder mergeAgentMessageChatSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (agentMessageChatSizeTotalBuilder_ == null) {
+        if (configCase_ == 1603 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1603) {
+          agentMessageChatSizeTotalBuilder_.mergeFrom(value);
+        } else {
+          agentMessageChatSizeTotalBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1603;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size_total = 1603 [json_name = "agentMessageChatSizeTotal"];</code>
+     */
+    public Builder clearAgentMessageChatSizeTotal() {
+      if (agentMessageChatSizeTotalBuilder_ == null) {
+        if (configCase_ == 1603) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1603) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        agentMessageChatSizeTotalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size_total = 1603 [json_name = "agentMessageChatSizeTotal"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder getAgentMessageChatSizeTotalBuilder() {
+      return getAgentMessageChatSizeTotalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size_total = 1603 [json_name = "agentMessageChatSizeTotal"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getAgentMessageChatSizeTotalOrBuilder() {
+      if ((configCase_ == 1603) && (agentMessageChatSizeTotalBuilder_ != null)) {
+        return agentMessageChatSizeTotalBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1603) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_chat_size_total = 1603 [json_name = "agentMessageChatSizeTotal"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> 
+        getAgentMessageChatSizeTotalFieldBuilder() {
+      if (agentMessageChatSizeTotalBuilder_ == null) {
+        if (!(configCase_ == 1603)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+        }
+        agentMessageChatSizeTotalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1603;
+      onChanged();
+      return agentMessageChatSizeTotalBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> agentMessageEmailBuilder_;
     /**
      * <code>.services.billing.entities.v1alpha2.BasicConfig agent_message_email = 1610 [json_name = "agentMessageEmail"];</code>
@@ -4464,6 +5398,148 @@ private static final long serialVersionUID = 0L;
       configCase_ = 1612;
       onChanged();
       return agentMessageEmailUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> agentMessageEmailSizeTotalBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size_total = 1613 [json_name = "agentMessageEmailSizeTotal"];</code>
+     * @return Whether the agentMessageEmailSizeTotal field is set.
+     */
+    @java.lang.Override
+    public boolean hasAgentMessageEmailSizeTotal() {
+      return configCase_ == 1613;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size_total = 1613 [json_name = "agentMessageEmailSizeTotal"];</code>
+     * @return The agentMessageEmailSizeTotal.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getAgentMessageEmailSizeTotal() {
+      if (agentMessageEmailSizeTotalBuilder_ == null) {
+        if (configCase_ == 1613) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1613) {
+          return agentMessageEmailSizeTotalBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size_total = 1613 [json_name = "agentMessageEmailSizeTotal"];</code>
+     */
+    public Builder setAgentMessageEmailSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (agentMessageEmailSizeTotalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        agentMessageEmailSizeTotalBuilder_.setMessage(value);
+      }
+      configCase_ = 1613;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size_total = 1613 [json_name = "agentMessageEmailSizeTotal"];</code>
+     */
+    public Builder setAgentMessageEmailSizeTotal(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder builderForValue) {
+      if (agentMessageEmailSizeTotalBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        agentMessageEmailSizeTotalBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1613;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size_total = 1613 [json_name = "agentMessageEmailSizeTotal"];</code>
+     */
+    public Builder mergeAgentMessageEmailSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (agentMessageEmailSizeTotalBuilder_ == null) {
+        if (configCase_ == 1613 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1613) {
+          agentMessageEmailSizeTotalBuilder_.mergeFrom(value);
+        } else {
+          agentMessageEmailSizeTotalBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1613;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size_total = 1613 [json_name = "agentMessageEmailSizeTotal"];</code>
+     */
+    public Builder clearAgentMessageEmailSizeTotal() {
+      if (agentMessageEmailSizeTotalBuilder_ == null) {
+        if (configCase_ == 1613) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1613) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        agentMessageEmailSizeTotalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size_total = 1613 [json_name = "agentMessageEmailSizeTotal"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder getAgentMessageEmailSizeTotalBuilder() {
+      return getAgentMessageEmailSizeTotalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size_total = 1613 [json_name = "agentMessageEmailSizeTotal"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getAgentMessageEmailSizeTotalOrBuilder() {
+      if ((configCase_ == 1613) && (agentMessageEmailSizeTotalBuilder_ != null)) {
+        return agentMessageEmailSizeTotalBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1613) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_email_size_total = 1613 [json_name = "agentMessageEmailSizeTotal"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> 
+        getAgentMessageEmailSizeTotalFieldBuilder() {
+      if (agentMessageEmailSizeTotalBuilder_ == null) {
+        if (!(configCase_ == 1613)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+        }
+        agentMessageEmailSizeTotalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1613;
+      onChanged();
+      return agentMessageEmailSizeTotalBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -4893,6 +5969,148 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> agentMessageSmsSizeTotalBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size_total = 1623 [json_name = "agentMessageSmsSizeTotal"];</code>
+     * @return Whether the agentMessageSmsSizeTotal field is set.
+     */
+    @java.lang.Override
+    public boolean hasAgentMessageSmsSizeTotal() {
+      return configCase_ == 1623;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size_total = 1623 [json_name = "agentMessageSmsSizeTotal"];</code>
+     * @return The agentMessageSmsSizeTotal.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getAgentMessageSmsSizeTotal() {
+      if (agentMessageSmsSizeTotalBuilder_ == null) {
+        if (configCase_ == 1623) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1623) {
+          return agentMessageSmsSizeTotalBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size_total = 1623 [json_name = "agentMessageSmsSizeTotal"];</code>
+     */
+    public Builder setAgentMessageSmsSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (agentMessageSmsSizeTotalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        agentMessageSmsSizeTotalBuilder_.setMessage(value);
+      }
+      configCase_ = 1623;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size_total = 1623 [json_name = "agentMessageSmsSizeTotal"];</code>
+     */
+    public Builder setAgentMessageSmsSizeTotal(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder builderForValue) {
+      if (agentMessageSmsSizeTotalBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        agentMessageSmsSizeTotalBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1623;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size_total = 1623 [json_name = "agentMessageSmsSizeTotal"];</code>
+     */
+    public Builder mergeAgentMessageSmsSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (agentMessageSmsSizeTotalBuilder_ == null) {
+        if (configCase_ == 1623 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1623) {
+          agentMessageSmsSizeTotalBuilder_.mergeFrom(value);
+        } else {
+          agentMessageSmsSizeTotalBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1623;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size_total = 1623 [json_name = "agentMessageSmsSizeTotal"];</code>
+     */
+    public Builder clearAgentMessageSmsSizeTotal() {
+      if (agentMessageSmsSizeTotalBuilder_ == null) {
+        if (configCase_ == 1623) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1623) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        agentMessageSmsSizeTotalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size_total = 1623 [json_name = "agentMessageSmsSizeTotal"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder getAgentMessageSmsSizeTotalBuilder() {
+      return getAgentMessageSmsSizeTotalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size_total = 1623 [json_name = "agentMessageSmsSizeTotal"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getAgentMessageSmsSizeTotalOrBuilder() {
+      if ((configCase_ == 1623) && (agentMessageSmsSizeTotalBuilder_ != null)) {
+        return agentMessageSmsSizeTotalBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1623) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig agent_message_sms_size_total = 1623 [json_name = "agentMessageSmsSizeTotal"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> 
+        getAgentMessageSmsSizeTotalFieldBuilder() {
+      if (agentMessageSmsSizeTotalBuilder_ == null) {
+        if (!(configCase_ == 1623)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+        }
+        agentMessageSmsSizeTotalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1623;
+      onChanged();
+      return agentMessageSmsSizeTotalBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> managerMessageChatBuilder_;
     /**
      * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_chat = 1700 [json_name = "managerMessageChat"];</code>
@@ -5316,6 +6534,148 @@ private static final long serialVersionUID = 0L;
       configCase_ = 1702;
       onChanged();
       return managerMessageChatUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> managerMessageChatSizeTotalBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size_total = 1703 [json_name = "managerMessageChatSizeTotal"];</code>
+     * @return Whether the managerMessageChatSizeTotal field is set.
+     */
+    @java.lang.Override
+    public boolean hasManagerMessageChatSizeTotal() {
+      return configCase_ == 1703;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size_total = 1703 [json_name = "managerMessageChatSizeTotal"];</code>
+     * @return The managerMessageChatSizeTotal.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getManagerMessageChatSizeTotal() {
+      if (managerMessageChatSizeTotalBuilder_ == null) {
+        if (configCase_ == 1703) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1703) {
+          return managerMessageChatSizeTotalBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size_total = 1703 [json_name = "managerMessageChatSizeTotal"];</code>
+     */
+    public Builder setManagerMessageChatSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (managerMessageChatSizeTotalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        managerMessageChatSizeTotalBuilder_.setMessage(value);
+      }
+      configCase_ = 1703;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size_total = 1703 [json_name = "managerMessageChatSizeTotal"];</code>
+     */
+    public Builder setManagerMessageChatSizeTotal(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder builderForValue) {
+      if (managerMessageChatSizeTotalBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        managerMessageChatSizeTotalBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1703;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size_total = 1703 [json_name = "managerMessageChatSizeTotal"];</code>
+     */
+    public Builder mergeManagerMessageChatSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (managerMessageChatSizeTotalBuilder_ == null) {
+        if (configCase_ == 1703 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1703) {
+          managerMessageChatSizeTotalBuilder_.mergeFrom(value);
+        } else {
+          managerMessageChatSizeTotalBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1703;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size_total = 1703 [json_name = "managerMessageChatSizeTotal"];</code>
+     */
+    public Builder clearManagerMessageChatSizeTotal() {
+      if (managerMessageChatSizeTotalBuilder_ == null) {
+        if (configCase_ == 1703) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1703) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        managerMessageChatSizeTotalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size_total = 1703 [json_name = "managerMessageChatSizeTotal"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder getManagerMessageChatSizeTotalBuilder() {
+      return getManagerMessageChatSizeTotalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size_total = 1703 [json_name = "managerMessageChatSizeTotal"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getManagerMessageChatSizeTotalOrBuilder() {
+      if ((configCase_ == 1703) && (managerMessageChatSizeTotalBuilder_ != null)) {
+        return managerMessageChatSizeTotalBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1703) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_chat_size_total = 1703 [json_name = "managerMessageChatSizeTotal"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> 
+        getManagerMessageChatSizeTotalFieldBuilder() {
+      if (managerMessageChatSizeTotalBuilder_ == null) {
+        if (!(configCase_ == 1703)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+        }
+        managerMessageChatSizeTotalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1703;
+      onChanged();
+      return managerMessageChatSizeTotalBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -5745,6 +7105,148 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> managerMessageEmailSizeTotalBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size_total = 1713 [json_name = "managerMessageEmailSizeTotal"];</code>
+     * @return Whether the managerMessageEmailSizeTotal field is set.
+     */
+    @java.lang.Override
+    public boolean hasManagerMessageEmailSizeTotal() {
+      return configCase_ == 1713;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size_total = 1713 [json_name = "managerMessageEmailSizeTotal"];</code>
+     * @return The managerMessageEmailSizeTotal.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getManagerMessageEmailSizeTotal() {
+      if (managerMessageEmailSizeTotalBuilder_ == null) {
+        if (configCase_ == 1713) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1713) {
+          return managerMessageEmailSizeTotalBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size_total = 1713 [json_name = "managerMessageEmailSizeTotal"];</code>
+     */
+    public Builder setManagerMessageEmailSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (managerMessageEmailSizeTotalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        managerMessageEmailSizeTotalBuilder_.setMessage(value);
+      }
+      configCase_ = 1713;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size_total = 1713 [json_name = "managerMessageEmailSizeTotal"];</code>
+     */
+    public Builder setManagerMessageEmailSizeTotal(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder builderForValue) {
+      if (managerMessageEmailSizeTotalBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        managerMessageEmailSizeTotalBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1713;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size_total = 1713 [json_name = "managerMessageEmailSizeTotal"];</code>
+     */
+    public Builder mergeManagerMessageEmailSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (managerMessageEmailSizeTotalBuilder_ == null) {
+        if (configCase_ == 1713 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1713) {
+          managerMessageEmailSizeTotalBuilder_.mergeFrom(value);
+        } else {
+          managerMessageEmailSizeTotalBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1713;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size_total = 1713 [json_name = "managerMessageEmailSizeTotal"];</code>
+     */
+    public Builder clearManagerMessageEmailSizeTotal() {
+      if (managerMessageEmailSizeTotalBuilder_ == null) {
+        if (configCase_ == 1713) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1713) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        managerMessageEmailSizeTotalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size_total = 1713 [json_name = "managerMessageEmailSizeTotal"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder getManagerMessageEmailSizeTotalBuilder() {
+      return getManagerMessageEmailSizeTotalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size_total = 1713 [json_name = "managerMessageEmailSizeTotal"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getManagerMessageEmailSizeTotalOrBuilder() {
+      if ((configCase_ == 1713) && (managerMessageEmailSizeTotalBuilder_ != null)) {
+        return managerMessageEmailSizeTotalBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1713) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_email_size_total = 1713 [json_name = "managerMessageEmailSizeTotal"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> 
+        getManagerMessageEmailSizeTotalFieldBuilder() {
+      if (managerMessageEmailSizeTotalBuilder_ == null) {
+        if (!(configCase_ == 1713)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+        }
+        managerMessageEmailSizeTotalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1713;
+      onChanged();
+      return managerMessageEmailSizeTotalBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> managerMessageSmsBuilder_;
     /**
      * <code>.services.billing.entities.v1alpha2.BasicConfig manager_message_sms = 1720 [json_name = "managerMessageSms"];</code>
@@ -6168,6 +7670,148 @@ private static final long serialVersionUID = 0L;
       configCase_ = 1722;
       onChanged();
       return managerMessageSmsUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> managerMessageSmsSizeTotalBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size_total = 1723 [json_name = "managerMessageSmsSizeTotal"];</code>
+     * @return Whether the managerMessageSmsSizeTotal field is set.
+     */
+    @java.lang.Override
+    public boolean hasManagerMessageSmsSizeTotal() {
+      return configCase_ == 1723;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size_total = 1723 [json_name = "managerMessageSmsSizeTotal"];</code>
+     * @return The managerMessageSmsSizeTotal.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getManagerMessageSmsSizeTotal() {
+      if (managerMessageSmsSizeTotalBuilder_ == null) {
+        if (configCase_ == 1723) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1723) {
+          return managerMessageSmsSizeTotalBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size_total = 1723 [json_name = "managerMessageSmsSizeTotal"];</code>
+     */
+    public Builder setManagerMessageSmsSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (managerMessageSmsSizeTotalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        managerMessageSmsSizeTotalBuilder_.setMessage(value);
+      }
+      configCase_ = 1723;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size_total = 1723 [json_name = "managerMessageSmsSizeTotal"];</code>
+     */
+    public Builder setManagerMessageSmsSizeTotal(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder builderForValue) {
+      if (managerMessageSmsSizeTotalBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        managerMessageSmsSizeTotalBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1723;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size_total = 1723 [json_name = "managerMessageSmsSizeTotal"];</code>
+     */
+    public Builder mergeManagerMessageSmsSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (managerMessageSmsSizeTotalBuilder_ == null) {
+        if (configCase_ == 1723 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1723) {
+          managerMessageSmsSizeTotalBuilder_.mergeFrom(value);
+        } else {
+          managerMessageSmsSizeTotalBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1723;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size_total = 1723 [json_name = "managerMessageSmsSizeTotal"];</code>
+     */
+    public Builder clearManagerMessageSmsSizeTotal() {
+      if (managerMessageSmsSizeTotalBuilder_ == null) {
+        if (configCase_ == 1723) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1723) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        managerMessageSmsSizeTotalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size_total = 1723 [json_name = "managerMessageSmsSizeTotal"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder getManagerMessageSmsSizeTotalBuilder() {
+      return getManagerMessageSmsSizeTotalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size_total = 1723 [json_name = "managerMessageSmsSizeTotal"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getManagerMessageSmsSizeTotalOrBuilder() {
+      if ((configCase_ == 1723) && (managerMessageSmsSizeTotalBuilder_ != null)) {
+        return managerMessageSmsSizeTotalBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1723) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig manager_message_sms_size_total = 1723 [json_name = "managerMessageSmsSizeTotal"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> 
+        getManagerMessageSmsSizeTotalFieldBuilder() {
+      if (managerMessageSmsSizeTotalBuilder_ == null) {
+        if (!(configCase_ == 1723)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+        }
+        managerMessageSmsSizeTotalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1723;
+      onChanged();
+      return managerMessageSmsSizeTotalBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -6597,6 +8241,148 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> systemMessageChatSizeTotalBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size_total = 1803 [json_name = "systemMessageChatSizeTotal"];</code>
+     * @return Whether the systemMessageChatSizeTotal field is set.
+     */
+    @java.lang.Override
+    public boolean hasSystemMessageChatSizeTotal() {
+      return configCase_ == 1803;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size_total = 1803 [json_name = "systemMessageChatSizeTotal"];</code>
+     * @return The systemMessageChatSizeTotal.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getSystemMessageChatSizeTotal() {
+      if (systemMessageChatSizeTotalBuilder_ == null) {
+        if (configCase_ == 1803) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1803) {
+          return systemMessageChatSizeTotalBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size_total = 1803 [json_name = "systemMessageChatSizeTotal"];</code>
+     */
+    public Builder setSystemMessageChatSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (systemMessageChatSizeTotalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        systemMessageChatSizeTotalBuilder_.setMessage(value);
+      }
+      configCase_ = 1803;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size_total = 1803 [json_name = "systemMessageChatSizeTotal"];</code>
+     */
+    public Builder setSystemMessageChatSizeTotal(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder builderForValue) {
+      if (systemMessageChatSizeTotalBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        systemMessageChatSizeTotalBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1803;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size_total = 1803 [json_name = "systemMessageChatSizeTotal"];</code>
+     */
+    public Builder mergeSystemMessageChatSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (systemMessageChatSizeTotalBuilder_ == null) {
+        if (configCase_ == 1803 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1803) {
+          systemMessageChatSizeTotalBuilder_.mergeFrom(value);
+        } else {
+          systemMessageChatSizeTotalBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1803;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size_total = 1803 [json_name = "systemMessageChatSizeTotal"];</code>
+     */
+    public Builder clearSystemMessageChatSizeTotal() {
+      if (systemMessageChatSizeTotalBuilder_ == null) {
+        if (configCase_ == 1803) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1803) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        systemMessageChatSizeTotalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size_total = 1803 [json_name = "systemMessageChatSizeTotal"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder getSystemMessageChatSizeTotalBuilder() {
+      return getSystemMessageChatSizeTotalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size_total = 1803 [json_name = "systemMessageChatSizeTotal"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getSystemMessageChatSizeTotalOrBuilder() {
+      if ((configCase_ == 1803) && (systemMessageChatSizeTotalBuilder_ != null)) {
+        return systemMessageChatSizeTotalBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1803) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_chat_size_total = 1803 [json_name = "systemMessageChatSizeTotal"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> 
+        getSystemMessageChatSizeTotalFieldBuilder() {
+      if (systemMessageChatSizeTotalBuilder_ == null) {
+        if (!(configCase_ == 1803)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+        }
+        systemMessageChatSizeTotalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1803;
+      onChanged();
+      return systemMessageChatSizeTotalBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> systemMessageEmailBuilder_;
     /**
      * <code>.services.billing.entities.v1alpha2.BasicConfig system_message_email = 1810 [json_name = "systemMessageEmail"];</code>
@@ -7020,6 +8806,148 @@ private static final long serialVersionUID = 0L;
       configCase_ = 1812;
       onChanged();
       return systemMessageEmailUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> systemMessageEmailSizeTotalBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size_total = 1813 [json_name = "systemMessageEmailSizeTotal"];</code>
+     * @return Whether the systemMessageEmailSizeTotal field is set.
+     */
+    @java.lang.Override
+    public boolean hasSystemMessageEmailSizeTotal() {
+      return configCase_ == 1813;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size_total = 1813 [json_name = "systemMessageEmailSizeTotal"];</code>
+     * @return The systemMessageEmailSizeTotal.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getSystemMessageEmailSizeTotal() {
+      if (systemMessageEmailSizeTotalBuilder_ == null) {
+        if (configCase_ == 1813) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1813) {
+          return systemMessageEmailSizeTotalBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size_total = 1813 [json_name = "systemMessageEmailSizeTotal"];</code>
+     */
+    public Builder setSystemMessageEmailSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (systemMessageEmailSizeTotalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        systemMessageEmailSizeTotalBuilder_.setMessage(value);
+      }
+      configCase_ = 1813;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size_total = 1813 [json_name = "systemMessageEmailSizeTotal"];</code>
+     */
+    public Builder setSystemMessageEmailSizeTotal(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder builderForValue) {
+      if (systemMessageEmailSizeTotalBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        systemMessageEmailSizeTotalBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1813;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size_total = 1813 [json_name = "systemMessageEmailSizeTotal"];</code>
+     */
+    public Builder mergeSystemMessageEmailSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (systemMessageEmailSizeTotalBuilder_ == null) {
+        if (configCase_ == 1813 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1813) {
+          systemMessageEmailSizeTotalBuilder_.mergeFrom(value);
+        } else {
+          systemMessageEmailSizeTotalBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1813;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size_total = 1813 [json_name = "systemMessageEmailSizeTotal"];</code>
+     */
+    public Builder clearSystemMessageEmailSizeTotal() {
+      if (systemMessageEmailSizeTotalBuilder_ == null) {
+        if (configCase_ == 1813) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1813) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        systemMessageEmailSizeTotalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size_total = 1813 [json_name = "systemMessageEmailSizeTotal"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder getSystemMessageEmailSizeTotalBuilder() {
+      return getSystemMessageEmailSizeTotalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size_total = 1813 [json_name = "systemMessageEmailSizeTotal"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getSystemMessageEmailSizeTotalOrBuilder() {
+      if ((configCase_ == 1813) && (systemMessageEmailSizeTotalBuilder_ != null)) {
+        return systemMessageEmailSizeTotalBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1813) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_email_size_total = 1813 [json_name = "systemMessageEmailSizeTotal"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> 
+        getSystemMessageEmailSizeTotalFieldBuilder() {
+      if (systemMessageEmailSizeTotalBuilder_ == null) {
+        if (!(configCase_ == 1813)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+        }
+        systemMessageEmailSizeTotalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1813;
+      onChanged();
+      return systemMessageEmailSizeTotalBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -7449,6 +9377,148 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> systemMessageSmsSizeTotalBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size_total = 1823 [json_name = "systemMessageSmsSizeTotal"];</code>
+     * @return Whether the systemMessageSmsSizeTotal field is set.
+     */
+    @java.lang.Override
+    public boolean hasSystemMessageSmsSizeTotal() {
+      return configCase_ == 1823;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size_total = 1823 [json_name = "systemMessageSmsSizeTotal"];</code>
+     * @return The systemMessageSmsSizeTotal.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getSystemMessageSmsSizeTotal() {
+      if (systemMessageSmsSizeTotalBuilder_ == null) {
+        if (configCase_ == 1823) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1823) {
+          return systemMessageSmsSizeTotalBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size_total = 1823 [json_name = "systemMessageSmsSizeTotal"];</code>
+     */
+    public Builder setSystemMessageSmsSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (systemMessageSmsSizeTotalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        systemMessageSmsSizeTotalBuilder_.setMessage(value);
+      }
+      configCase_ = 1823;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size_total = 1823 [json_name = "systemMessageSmsSizeTotal"];</code>
+     */
+    public Builder setSystemMessageSmsSizeTotal(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder builderForValue) {
+      if (systemMessageSmsSizeTotalBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        systemMessageSmsSizeTotalBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1823;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size_total = 1823 [json_name = "systemMessageSmsSizeTotal"];</code>
+     */
+    public Builder mergeSystemMessageSmsSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (systemMessageSmsSizeTotalBuilder_ == null) {
+        if (configCase_ == 1823 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1823) {
+          systemMessageSmsSizeTotalBuilder_.mergeFrom(value);
+        } else {
+          systemMessageSmsSizeTotalBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1823;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size_total = 1823 [json_name = "systemMessageSmsSizeTotal"];</code>
+     */
+    public Builder clearSystemMessageSmsSizeTotal() {
+      if (systemMessageSmsSizeTotalBuilder_ == null) {
+        if (configCase_ == 1823) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1823) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        systemMessageSmsSizeTotalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size_total = 1823 [json_name = "systemMessageSmsSizeTotal"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder getSystemMessageSmsSizeTotalBuilder() {
+      return getSystemMessageSmsSizeTotalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size_total = 1823 [json_name = "systemMessageSmsSizeTotal"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getSystemMessageSmsSizeTotalOrBuilder() {
+      if ((configCase_ == 1823) && (systemMessageSmsSizeTotalBuilder_ != null)) {
+        return systemMessageSmsSizeTotalBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1823) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig system_message_sms_size_total = 1823 [json_name = "systemMessageSmsSizeTotal"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> 
+        getSystemMessageSmsSizeTotalFieldBuilder() {
+      if (systemMessageSmsSizeTotalBuilder_ == null) {
+        if (!(configCase_ == 1823)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+        }
+        systemMessageSmsSizeTotalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1823;
+      onChanged();
+      return systemMessageSmsSizeTotalBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> customerMessageChatBuilder_;
     /**
      * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_chat = 1900 [json_name = "customerMessageChat"];</code>
@@ -7872,6 +9942,148 @@ private static final long serialVersionUID = 0L;
       configCase_ = 1902;
       onChanged();
       return customerMessageChatUnitsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> customerMessageChatSizeTotalBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size_total = 1903 [json_name = "customerMessageChatSizeTotal"];</code>
+     * @return Whether the customerMessageChatSizeTotal field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomerMessageChatSizeTotal() {
+      return configCase_ == 1903;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size_total = 1903 [json_name = "customerMessageChatSizeTotal"];</code>
+     * @return The customerMessageChatSizeTotal.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getCustomerMessageChatSizeTotal() {
+      if (customerMessageChatSizeTotalBuilder_ == null) {
+        if (configCase_ == 1903) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1903) {
+          return customerMessageChatSizeTotalBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size_total = 1903 [json_name = "customerMessageChatSizeTotal"];</code>
+     */
+    public Builder setCustomerMessageChatSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (customerMessageChatSizeTotalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        customerMessageChatSizeTotalBuilder_.setMessage(value);
+      }
+      configCase_ = 1903;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size_total = 1903 [json_name = "customerMessageChatSizeTotal"];</code>
+     */
+    public Builder setCustomerMessageChatSizeTotal(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder builderForValue) {
+      if (customerMessageChatSizeTotalBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        customerMessageChatSizeTotalBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1903;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size_total = 1903 [json_name = "customerMessageChatSizeTotal"];</code>
+     */
+    public Builder mergeCustomerMessageChatSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (customerMessageChatSizeTotalBuilder_ == null) {
+        if (configCase_ == 1903 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1903) {
+          customerMessageChatSizeTotalBuilder_.mergeFrom(value);
+        } else {
+          customerMessageChatSizeTotalBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1903;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size_total = 1903 [json_name = "customerMessageChatSizeTotal"];</code>
+     */
+    public Builder clearCustomerMessageChatSizeTotal() {
+      if (customerMessageChatSizeTotalBuilder_ == null) {
+        if (configCase_ == 1903) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1903) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        customerMessageChatSizeTotalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size_total = 1903 [json_name = "customerMessageChatSizeTotal"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder getCustomerMessageChatSizeTotalBuilder() {
+      return getCustomerMessageChatSizeTotalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size_total = 1903 [json_name = "customerMessageChatSizeTotal"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getCustomerMessageChatSizeTotalOrBuilder() {
+      if ((configCase_ == 1903) && (customerMessageChatSizeTotalBuilder_ != null)) {
+        return customerMessageChatSizeTotalBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1903) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_chat_size_total = 1903 [json_name = "customerMessageChatSizeTotal"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> 
+        getCustomerMessageChatSizeTotalFieldBuilder() {
+      if (customerMessageChatSizeTotalBuilder_ == null) {
+        if (!(configCase_ == 1903)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+        }
+        customerMessageChatSizeTotalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1903;
+      onChanged();
+      return customerMessageChatSizeTotalBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -8301,6 +10513,148 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> customerMessageEmailSizeTotalBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size_total = 1913 [json_name = "customerMessageEmailSizeTotal"];</code>
+     * @return Whether the customerMessageEmailSizeTotal field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomerMessageEmailSizeTotal() {
+      return configCase_ == 1913;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size_total = 1913 [json_name = "customerMessageEmailSizeTotal"];</code>
+     * @return The customerMessageEmailSizeTotal.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getCustomerMessageEmailSizeTotal() {
+      if (customerMessageEmailSizeTotalBuilder_ == null) {
+        if (configCase_ == 1913) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1913) {
+          return customerMessageEmailSizeTotalBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size_total = 1913 [json_name = "customerMessageEmailSizeTotal"];</code>
+     */
+    public Builder setCustomerMessageEmailSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (customerMessageEmailSizeTotalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        customerMessageEmailSizeTotalBuilder_.setMessage(value);
+      }
+      configCase_ = 1913;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size_total = 1913 [json_name = "customerMessageEmailSizeTotal"];</code>
+     */
+    public Builder setCustomerMessageEmailSizeTotal(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder builderForValue) {
+      if (customerMessageEmailSizeTotalBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        customerMessageEmailSizeTotalBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1913;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size_total = 1913 [json_name = "customerMessageEmailSizeTotal"];</code>
+     */
+    public Builder mergeCustomerMessageEmailSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (customerMessageEmailSizeTotalBuilder_ == null) {
+        if (configCase_ == 1913 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1913) {
+          customerMessageEmailSizeTotalBuilder_.mergeFrom(value);
+        } else {
+          customerMessageEmailSizeTotalBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1913;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size_total = 1913 [json_name = "customerMessageEmailSizeTotal"];</code>
+     */
+    public Builder clearCustomerMessageEmailSizeTotal() {
+      if (customerMessageEmailSizeTotalBuilder_ == null) {
+        if (configCase_ == 1913) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1913) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        customerMessageEmailSizeTotalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size_total = 1913 [json_name = "customerMessageEmailSizeTotal"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder getCustomerMessageEmailSizeTotalBuilder() {
+      return getCustomerMessageEmailSizeTotalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size_total = 1913 [json_name = "customerMessageEmailSizeTotal"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getCustomerMessageEmailSizeTotalOrBuilder() {
+      if ((configCase_ == 1913) && (customerMessageEmailSizeTotalBuilder_ != null)) {
+        return customerMessageEmailSizeTotalBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1913) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_email_size_total = 1913 [json_name = "customerMessageEmailSizeTotal"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> 
+        getCustomerMessageEmailSizeTotalFieldBuilder() {
+      if (customerMessageEmailSizeTotalBuilder_ == null) {
+        if (!(configCase_ == 1913)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+        }
+        customerMessageEmailSizeTotalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1913;
+      onChanged();
+      return customerMessageEmailSizeTotalBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> customerMessageSmsBuilder_;
     /**
      * <code>.services.billing.entities.v1alpha2.BasicConfig customer_message_sms = 1920 [json_name = "customerMessageSms"];</code>
@@ -8727,10 +11081,152 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> customerMessageSmsSizeTotalBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size_total = 1923 [json_name = "customerMessageSmsSizeTotal"];</code>
+     * @return Whether the customerMessageSmsSizeTotal field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomerMessageSmsSizeTotal() {
+      return configCase_ == 1923;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size_total = 1923 [json_name = "customerMessageSmsSizeTotal"];</code>
+     * @return The customerMessageSmsSizeTotal.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig getCustomerMessageSmsSizeTotal() {
+      if (customerMessageSmsSizeTotalBuilder_ == null) {
+        if (configCase_ == 1923) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      } else {
+        if (configCase_ == 1923) {
+          return customerMessageSmsSizeTotalBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size_total = 1923 [json_name = "customerMessageSmsSizeTotal"];</code>
+     */
+    public Builder setCustomerMessageSmsSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (customerMessageSmsSizeTotalBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+        onChanged();
+      } else {
+        customerMessageSmsSizeTotalBuilder_.setMessage(value);
+      }
+      configCase_ = 1923;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size_total = 1923 [json_name = "customerMessageSmsSizeTotal"];</code>
+     */
+    public Builder setCustomerMessageSmsSizeTotal(
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder builderForValue) {
+      if (customerMessageSmsSizeTotalBuilder_ == null) {
+        config_ = builderForValue.build();
+        onChanged();
+      } else {
+        customerMessageSmsSizeTotalBuilder_.setMessage(builderForValue.build());
+      }
+      configCase_ = 1923;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size_total = 1923 [json_name = "customerMessageSmsSizeTotal"];</code>
+     */
+    public Builder mergeCustomerMessageSmsSizeTotal(com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig value) {
+      if (customerMessageSmsSizeTotalBuilder_ == null) {
+        if (configCase_ == 1923 &&
+            config_ != com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance()) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          config_ = value;
+        }
+        onChanged();
+      } else {
+        if (configCase_ == 1923) {
+          customerMessageSmsSizeTotalBuilder_.mergeFrom(value);
+        } else {
+          customerMessageSmsSizeTotalBuilder_.setMessage(value);
+        }
+      }
+      configCase_ = 1923;
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size_total = 1923 [json_name = "customerMessageSmsSizeTotal"];</code>
+     */
+    public Builder clearCustomerMessageSmsSizeTotal() {
+      if (customerMessageSmsSizeTotalBuilder_ == null) {
+        if (configCase_ == 1923) {
+          configCase_ = 0;
+          config_ = null;
+          onChanged();
+        }
+      } else {
+        if (configCase_ == 1923) {
+          configCase_ = 0;
+          config_ = null;
+        }
+        customerMessageSmsSizeTotalBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size_total = 1923 [json_name = "customerMessageSmsSizeTotal"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder getCustomerMessageSmsSizeTotalBuilder() {
+      return getCustomerMessageSmsSizeTotalFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size_total = 1923 [json_name = "customerMessageSmsSizeTotal"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder getCustomerMessageSmsSizeTotalOrBuilder() {
+      if ((configCase_ == 1923) && (customerMessageSmsSizeTotalBuilder_ != null)) {
+        return customerMessageSmsSizeTotalBuilder_.getMessageOrBuilder();
+      } else {
+        if (configCase_ == 1923) {
+          return (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_;
+        }
+        return com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha2.BasicUnitConfig customer_message_sms_size_total = 1923 [json_name = "customerMessageSmsSizeTotal"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder> 
+        getCustomerMessageSmsSizeTotalFieldBuilder() {
+      if (customerMessageSmsSizeTotalBuilder_ == null) {
+        if (!(configCase_ == 1923)) {
+          config_ = com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.getDefaultInstance();
+        }
+        customerMessageSmsSizeTotalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfigOrBuilder>(
+                (com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicUnitConfig) config_,
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      configCase_ = 1923;
+      onChanged();
+      return customerMessageSmsSizeTotalBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha2.BasicConfigOrBuilder> complianceRndQueryBuilder_;
     /**
      * <pre>
-     * compliance configs
+     * compliance configs (2000 - 2999)
      * </pre>
      *
      * <code>.services.billing.entities.v1alpha2.BasicConfig compliance_rnd_query = 2000 [json_name = "complianceRndQuery"];</code>
@@ -8742,7 +11238,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance configs
+     * compliance configs (2000 - 2999)
      * </pre>
      *
      * <code>.services.billing.entities.v1alpha2.BasicConfig compliance_rnd_query = 2000 [json_name = "complianceRndQuery"];</code>
@@ -8764,7 +11260,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance configs
+     * compliance configs (2000 - 2999)
      * </pre>
      *
      * <code>.services.billing.entities.v1alpha2.BasicConfig compliance_rnd_query = 2000 [json_name = "complianceRndQuery"];</code>
@@ -8784,7 +11280,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance configs
+     * compliance configs (2000 - 2999)
      * </pre>
      *
      * <code>.services.billing.entities.v1alpha2.BasicConfig compliance_rnd_query = 2000 [json_name = "complianceRndQuery"];</code>
@@ -8802,7 +11298,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance configs
+     * compliance configs (2000 - 2999)
      * </pre>
      *
      * <code>.services.billing.entities.v1alpha2.BasicConfig compliance_rnd_query = 2000 [json_name = "complianceRndQuery"];</code>
@@ -8829,7 +11325,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance configs
+     * compliance configs (2000 - 2999)
      * </pre>
      *
      * <code>.services.billing.entities.v1alpha2.BasicConfig compliance_rnd_query = 2000 [json_name = "complianceRndQuery"];</code>
@@ -8852,7 +11348,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance configs
+     * compliance configs (2000 - 2999)
      * </pre>
      *
      * <code>.services.billing.entities.v1alpha2.BasicConfig compliance_rnd_query = 2000 [json_name = "complianceRndQuery"];</code>
@@ -8862,7 +11358,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance configs
+     * compliance configs (2000 - 2999)
      * </pre>
      *
      * <code>.services.billing.entities.v1alpha2.BasicConfig compliance_rnd_query = 2000 [json_name = "complianceRndQuery"];</code>
@@ -8880,7 +11376,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * compliance configs
+     * compliance configs (2000 - 2999)
      * </pre>
      *
      * <code>.services.billing.entities.v1alpha2.BasicConfig compliance_rnd_query = 2000 [json_name = "complianceRndQuery"];</code>

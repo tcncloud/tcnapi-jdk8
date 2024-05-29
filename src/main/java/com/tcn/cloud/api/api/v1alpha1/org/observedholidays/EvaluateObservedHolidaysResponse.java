@@ -57,6 +57,44 @@ private static final long serialVersionUID = 0L;
     return dateMatched_;
   }
 
+  public static final int RESULT_EXPIRATION_FIELD_NUMBER = 2;
+  private com.google.protobuf.Timestamp resultExpiration_;
+  /**
+   * <pre>
+   * indicates how long this result can be used.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+   * @return Whether the resultExpiration field is set.
+   */
+  @java.lang.Override
+  public boolean hasResultExpiration() {
+    return resultExpiration_ != null;
+  }
+  /**
+   * <pre>
+   * indicates how long this result can be used.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+   * @return The resultExpiration.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getResultExpiration() {
+    return resultExpiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : resultExpiration_;
+  }
+  /**
+   * <pre>
+   * indicates how long this result can be used.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getResultExpirationOrBuilder() {
+    return resultExpiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : resultExpiration_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -74,6 +112,9 @@ private static final long serialVersionUID = 0L;
     if (dateMatched_ != false) {
       output.writeBool(1, dateMatched_);
     }
+    if (resultExpiration_ != null) {
+      output.writeMessage(2, getResultExpiration());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -86,6 +127,10 @@ private static final long serialVersionUID = 0L;
     if (dateMatched_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, dateMatched_);
+    }
+    if (resultExpiration_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getResultExpiration());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -104,6 +149,11 @@ private static final long serialVersionUID = 0L;
 
     if (getDateMatched()
         != other.getDateMatched()) return false;
+    if (hasResultExpiration() != other.hasResultExpiration()) return false;
+    if (hasResultExpiration()) {
+      if (!getResultExpiration()
+          .equals(other.getResultExpiration())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -118,6 +168,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DATE_MATCHED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDateMatched());
+    if (hasResultExpiration()) {
+      hash = (37 * hash) + RESULT_EXPIRATION_FIELD_NUMBER;
+      hash = (53 * hash) + getResultExpiration().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -254,6 +308,11 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       dateMatched_ = false;
+      resultExpiration_ = null;
+      if (resultExpirationBuilder_ != null) {
+        resultExpirationBuilder_.dispose();
+        resultExpirationBuilder_ = null;
+      }
       return this;
     }
 
@@ -289,6 +348,11 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.dateMatched_ = dateMatched_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.resultExpiration_ = resultExpirationBuilder_ == null
+            ? resultExpiration_
+            : resultExpirationBuilder_.build();
       }
     }
 
@@ -339,6 +403,9 @@ private static final long serialVersionUID = 0L;
       if (other.getDateMatched() != false) {
         setDateMatched(other.getDateMatched());
       }
+      if (other.hasResultExpiration()) {
+        mergeResultExpiration(other.getResultExpiration());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -370,6 +437,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
+            case 18: {
+              input.readMessage(
+                  getResultExpirationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -429,6 +503,161 @@ private static final long serialVersionUID = 0L;
       dateMatched_ = false;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.Timestamp resultExpiration_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> resultExpirationBuilder_;
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+     * @return Whether the resultExpiration field is set.
+     */
+    public boolean hasResultExpiration() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+     * @return The resultExpiration.
+     */
+    public com.google.protobuf.Timestamp getResultExpiration() {
+      if (resultExpirationBuilder_ == null) {
+        return resultExpiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : resultExpiration_;
+      } else {
+        return resultExpirationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+     */
+    public Builder setResultExpiration(com.google.protobuf.Timestamp value) {
+      if (resultExpirationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        resultExpiration_ = value;
+      } else {
+        resultExpirationBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+     */
+    public Builder setResultExpiration(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (resultExpirationBuilder_ == null) {
+        resultExpiration_ = builderForValue.build();
+      } else {
+        resultExpirationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+     */
+    public Builder mergeResultExpiration(com.google.protobuf.Timestamp value) {
+      if (resultExpirationBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          resultExpiration_ != null &&
+          resultExpiration_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getResultExpirationBuilder().mergeFrom(value);
+        } else {
+          resultExpiration_ = value;
+        }
+      } else {
+        resultExpirationBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+     */
+    public Builder clearResultExpiration() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      resultExpiration_ = null;
+      if (resultExpirationBuilder_ != null) {
+        resultExpirationBuilder_.dispose();
+        resultExpirationBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getResultExpirationBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getResultExpirationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getResultExpirationOrBuilder() {
+      if (resultExpirationBuilder_ != null) {
+        return resultExpirationBuilder_.getMessageOrBuilder();
+      } else {
+        return resultExpiration_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : resultExpiration_;
+      }
+    }
+    /**
+     * <pre>
+     * indicates how long this result can be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp result_expiration = 2 [json_name = "resultExpiration"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getResultExpirationFieldBuilder() {
+      if (resultExpirationBuilder_ == null) {
+        resultExpirationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getResultExpiration(),
+                getParentForChildren(),
+                isClean());
+        resultExpiration_ = null;
+      }
+      return resultExpirationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

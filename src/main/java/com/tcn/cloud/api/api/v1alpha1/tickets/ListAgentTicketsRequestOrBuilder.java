@@ -60,24 +60,4 @@ public interface ListAgentTicketsRequestOrBuilder extends
    * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
    */
   com.google.protobuf.FieldMaskOrBuilder getFilterMaskOrBuilder();
-
-  /**
-   * <pre>
-   * user_id of agent
-   * </pre>
-   *
-   * <code>string participant_id = 3 [json_name = "participantId"];</code>
-   * @return The participantId.
-   */
-  java.lang.String getParticipantId();
-  /**
-   * <pre>
-   * user_id of agent
-   * </pre>
-   *
-   * <code>string participant_id = 3 [json_name = "participantId"];</code>
-   * @return The bytes for participantId.
-   */
-  com.google.protobuf.ByteString
-      getParticipantIdBytes();
 }

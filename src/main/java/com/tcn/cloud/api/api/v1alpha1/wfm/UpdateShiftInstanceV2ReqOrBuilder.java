@@ -75,4 +75,14 @@ public interface UpdateShiftInstanceV2ReqOrBuilder extends
    * @return The isLocked.
    */
   boolean getIsLocked();
+
+  /**
+   * <pre>
+   * the percentage shrinkage expected for this shift [0.0, 100.0]. 0.0 = no shrinkage,  100 = no agents
+   * </pre>
+   *
+   * <code>float planned_shrinkage_percent = 6 [json_name = "plannedShrinkagePercent"];</code>
+   * @return The plannedShrinkagePercent.
+   */
+  float getPlannedShrinkagePercent();
 }
