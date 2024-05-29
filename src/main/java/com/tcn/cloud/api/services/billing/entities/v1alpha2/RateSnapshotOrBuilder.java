@@ -60,4 +60,16 @@ public interface RateSnapshotOrBuilder extends
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha2.RateDefinitionOrBuilder getRatesOrBuilder(
       int index);
+
+  /**
+   * <code>string edited_by = 4 [json_name = "editedBy"];</code>
+   * @return The editedBy.
+   */
+  java.lang.String getEditedBy();
+  /**
+   * <code>string edited_by = 4 [json_name = "editedBy"];</code>
+   * @return The bytes for editedBy.
+   */
+  com.google.protobuf.ByteString
+      getEditedByBytes();
 }
