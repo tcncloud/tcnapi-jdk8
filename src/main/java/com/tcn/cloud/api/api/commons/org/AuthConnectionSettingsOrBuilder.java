@@ -310,11 +310,11 @@ public interface AuthConnectionSettingsOrBuilder extends
 
   /**
    * <pre>
-   * gov_azure reflects whether or not an azure connection uses the government endpoints.
+   * use_government_azure reflects whether or not an azure connection uses the government endpoints.
    * </pre>
    *
-   * <code>bool gov_azure = 101 [json_name = "govAzure"];</code>
-   * @return The govAzure.
+   * <code>bool use_government_azure = 101 [json_name = "useGovernmentAzure"];</code>
+   * @return The useGovernmentAzure.
    */
-  boolean getGovAzure();
+  boolean getUseGovernmentAzure();
 }

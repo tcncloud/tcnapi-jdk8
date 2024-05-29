@@ -1187,19 +1187,19 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int GOV_AZURE_FIELD_NUMBER = 101;
-  private boolean govAzure_ = false;
+  public static final int USE_GOVERNMENT_AZURE_FIELD_NUMBER = 101;
+  private boolean useGovernmentAzure_ = false;
   /**
    * <pre>
-   * gov_azure reflects whether or not an azure connection uses the government endpoints.
+   * use_government_azure reflects whether or not an azure connection uses the government endpoints.
    * </pre>
    *
-   * <code>bool gov_azure = 101 [json_name = "govAzure"];</code>
-   * @return The govAzure.
+   * <code>bool use_government_azure = 101 [json_name = "useGovernmentAzure"];</code>
+   * @return The useGovernmentAzure.
    */
   @java.lang.Override
-  public boolean getGovAzure() {
-    return govAzure_;
+  public boolean getUseGovernmentAzure() {
+    return useGovernmentAzure_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -1249,8 +1249,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceUrl_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 100, resourceUrl_);
     }
-    if (govAzure_ != false) {
-      output.writeBool(101, govAzure_);
+    if (useGovernmentAzure_ != false) {
+      output.writeBool(101, useGovernmentAzure_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1298,9 +1298,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceUrl_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(100, resourceUrl_);
     }
-    if (govAzure_ != false) {
+    if (useGovernmentAzure_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(101, govAzure_);
+        .computeBoolSize(101, useGovernmentAzure_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1344,8 +1344,8 @@ private static final long serialVersionUID = 0L;
     if (type_ != other.type_) return false;
     if (!getResourceUrl()
         .equals(other.getResourceUrl())) return false;
-    if (getGovAzure()
-        != other.getGovAzure()) return false;
+    if (getUseGovernmentAzure()
+        != other.getUseGovernmentAzure()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1385,9 +1385,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + type_;
     hash = (37 * hash) + RESOURCE_URL_FIELD_NUMBER;
     hash = (53 * hash) + getResourceUrl().hashCode();
-    hash = (37 * hash) + GOV_AZURE_FIELD_NUMBER;
+    hash = (37 * hash) + USE_GOVERNMENT_AZURE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getGovAzure());
+        getUseGovernmentAzure());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1548,7 +1548,7 @@ private static final long serialVersionUID = 0L;
       name_ = "";
       type_ = 0;
       resourceUrl_ = "";
-      govAzure_ = false;
+      useGovernmentAzure_ = false;
       return this;
     }
 
@@ -1630,7 +1630,7 @@ private static final long serialVersionUID = 0L;
         result.resourceUrl_ = resourceUrl_;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.govAzure_ = govAzure_;
+        result.useGovernmentAzure_ = useGovernmentAzure_;
       }
     }
 
@@ -1748,8 +1748,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000400;
         onChanged();
       }
-      if (other.getGovAzure() != false) {
-        setGovAzure(other.getGovAzure());
+      if (other.getUseGovernmentAzure() != false) {
+        setUseGovernmentAzure(other.getUseGovernmentAzure());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1845,7 +1845,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 802
             case 808: {
-              govAzure_ = input.readBool();
+              useGovernmentAzure_ = input.readBool();
               bitField0_ |= 0x00000800;
               break;
             } // case 808
@@ -3343,46 +3343,46 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private boolean govAzure_ ;
+    private boolean useGovernmentAzure_ ;
     /**
      * <pre>
-     * gov_azure reflects whether or not an azure connection uses the government endpoints.
+     * use_government_azure reflects whether or not an azure connection uses the government endpoints.
      * </pre>
      *
-     * <code>bool gov_azure = 101 [json_name = "govAzure"];</code>
-     * @return The govAzure.
+     * <code>bool use_government_azure = 101 [json_name = "useGovernmentAzure"];</code>
+     * @return The useGovernmentAzure.
      */
     @java.lang.Override
-    public boolean getGovAzure() {
-      return govAzure_;
+    public boolean getUseGovernmentAzure() {
+      return useGovernmentAzure_;
     }
     /**
      * <pre>
-     * gov_azure reflects whether or not an azure connection uses the government endpoints.
+     * use_government_azure reflects whether or not an azure connection uses the government endpoints.
      * </pre>
      *
-     * <code>bool gov_azure = 101 [json_name = "govAzure"];</code>
-     * @param value The govAzure to set.
+     * <code>bool use_government_azure = 101 [json_name = "useGovernmentAzure"];</code>
+     * @param value The useGovernmentAzure to set.
      * @return This builder for chaining.
      */
-    public Builder setGovAzure(boolean value) {
+    public Builder setUseGovernmentAzure(boolean value) {
 
-      govAzure_ = value;
+      useGovernmentAzure_ = value;
       bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * gov_azure reflects whether or not an azure connection uses the government endpoints.
+     * use_government_azure reflects whether or not an azure connection uses the government endpoints.
      * </pre>
      *
-     * <code>bool gov_azure = 101 [json_name = "govAzure"];</code>
+     * <code>bool use_government_azure = 101 [json_name = "useGovernmentAzure"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearGovAzure() {
+    public Builder clearUseGovernmentAzure() {
       bitField0_ = (bitField0_ & ~0x00000800);
-      govAzure_ = false;
+      useGovernmentAzure_ = false;
       onChanged();
       return this;
     }
