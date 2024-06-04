@@ -60,4 +60,16 @@ public interface RateSnapshotOrBuilder extends
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha2.RateDefinitionOrBuilder getRatesOrBuilder(
       int index);
+
+  /**
+   * <code>string user_id = 4 [json_name = "userId"];</code>
+   * @return The userId.
+   */
+  java.lang.String getUserId();
+  /**
+   * <code>string user_id = 4 [json_name = "userId"];</code>
+   * @return The bytes for userId.
+   */
+  com.google.protobuf.ByteString
+      getUserIdBytes();
 }
