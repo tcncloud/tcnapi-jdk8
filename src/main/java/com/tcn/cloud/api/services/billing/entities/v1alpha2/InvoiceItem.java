@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     product_ = 0;
     description_ = "";
     columns_ = java.util.Collections.emptyList();
+    productId_ = "";
   }
 
   @java.lang.Override
@@ -88,17 +89,21 @@ private static final long serialVersionUID = 0L;
   public static final int PRODUCT_FIELD_NUMBER = 2;
   private int product_ = 0;
   /**
-   * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product"];</code>
+   * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha2.InvoiceItem.product is deprecated.
+   *     See services/billing/entities/v1alpha2/invoice.proto;l=18
    * @return The enum numeric value on the wire for product.
    */
-  @java.lang.Override public int getProductValue() {
+  @java.lang.Override @java.lang.Deprecated public int getProductValue() {
     return product_;
   }
   /**
-   * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product"];</code>
+   * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha2.InvoiceItem.product is deprecated.
+   *     See services/billing/entities/v1alpha2/invoice.proto;l=18
    * @return The product.
    */
-  @java.lang.Override public com.tcn.cloud.api.services.billing.entities.v1alpha2.Product getProduct() {
+  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha2.Product getProduct() {
     com.tcn.cloud.api.services.billing.entities.v1alpha2.Product result = com.tcn.cloud.api.services.billing.entities.v1alpha2.Product.forNumber(product_);
     return result == null ? com.tcn.cloud.api.services.billing.entities.v1alpha2.Product.UNRECOGNIZED : result;
   }
@@ -248,6 +253,45 @@ private static final long serialVersionUID = 0L;
     return ratedAmount_ == null ? com.google.type.Decimal.getDefaultInstance() : ratedAmount_;
   }
 
+  public static final int PRODUCT_ID_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object productId_ = "";
+  /**
+   * <code>string product_id = 8 [json_name = "productId"];</code>
+   * @return The productId.
+   */
+  @java.lang.Override
+  public java.lang.String getProductId() {
+    java.lang.Object ref = productId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      productId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string product_id = 8 [json_name = "productId"];</code>
+   * @return The bytes for productId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getProductIdBytes() {
+    java.lang.Object ref = productId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      productId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -282,6 +326,9 @@ private static final long serialVersionUID = 0L;
     }
     if (ratedAmount_ != null) {
       output.writeMessage(7, getRatedAmount());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, productId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -318,6 +365,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getRatedAmount());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, productId_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -353,6 +403,8 @@ private static final long serialVersionUID = 0L;
       if (!getRatedAmount()
           .equals(other.getRatedAmount())) return false;
     }
+    if (!getProductId()
+        .equals(other.getProductId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -385,6 +437,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RATED_AMOUNT_FIELD_NUMBER;
       hash = (53 * hash) + getRatedAmount().hashCode();
     }
+    hash = (37 * hash) + PRODUCT_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getProductId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -541,6 +595,7 @@ private static final long serialVersionUID = 0L;
         ratedAmountBuilder_.dispose();
         ratedAmountBuilder_ = null;
       }
+      productId_ = "";
       return this;
     }
 
@@ -608,6 +663,9 @@ private static final long serialVersionUID = 0L;
         result.ratedAmount_ = ratedAmountBuilder_ == null
             ? ratedAmount_
             : ratedAmountBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.productId_ = productId_;
       }
     }
 
@@ -703,6 +761,11 @@ private static final long serialVersionUID = 0L;
       if (other.hasRatedAmount()) {
         mergeRatedAmount(other.getRatedAmount());
       }
+      if (!other.getProductId().isEmpty()) {
+        productId_ = other.productId_;
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -776,6 +839,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 58
+            case 66: {
+              productId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -867,38 +935,46 @@ private static final long serialVersionUID = 0L;
 
     private int product_ = 0;
     /**
-     * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha2.InvoiceItem.product is deprecated.
+     *     See services/billing/entities/v1alpha2/invoice.proto;l=18
      * @return The enum numeric value on the wire for product.
      */
-    @java.lang.Override public int getProductValue() {
+    @java.lang.Override @java.lang.Deprecated public int getProductValue() {
       return product_;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha2.InvoiceItem.product is deprecated.
+     *     See services/billing/entities/v1alpha2/invoice.proto;l=18
      * @param value The enum numeric value on the wire for product to set.
      * @return This builder for chaining.
      */
-    public Builder setProductValue(int value) {
+    @java.lang.Deprecated public Builder setProductValue(int value) {
       product_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha2.InvoiceItem.product is deprecated.
+     *     See services/billing/entities/v1alpha2/invoice.proto;l=18
      * @return The product.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha2.Product getProduct() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha2.Product getProduct() {
       com.tcn.cloud.api.services.billing.entities.v1alpha2.Product result = com.tcn.cloud.api.services.billing.entities.v1alpha2.Product.forNumber(product_);
       return result == null ? com.tcn.cloud.api.services.billing.entities.v1alpha2.Product.UNRECOGNIZED : result;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha2.InvoiceItem.product is deprecated.
+     *     See services/billing/entities/v1alpha2/invoice.proto;l=18
      * @param value The product to set.
      * @return This builder for chaining.
      */
-    public Builder setProduct(com.tcn.cloud.api.services.billing.entities.v1alpha2.Product value) {
+    @java.lang.Deprecated public Builder setProduct(com.tcn.cloud.api.services.billing.entities.v1alpha2.Product value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -908,10 +984,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha2.Product product = 2 [json_name = "product", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha2.InvoiceItem.product is deprecated.
+     *     See services/billing/entities/v1alpha2/invoice.proto;l=18
      * @return This builder for chaining.
      */
-    public Builder clearProduct() {
+    @java.lang.Deprecated public Builder clearProduct() {
       bitField0_ = (bitField0_ & ~0x00000002);
       product_ = 0;
       onChanged();
@@ -1504,6 +1582,78 @@ private static final long serialVersionUID = 0L;
         ratedAmount_ = null;
       }
       return ratedAmountBuilder_;
+    }
+
+    private java.lang.Object productId_ = "";
+    /**
+     * <code>string product_id = 8 [json_name = "productId"];</code>
+     * @return The productId.
+     */
+    public java.lang.String getProductId() {
+      java.lang.Object ref = productId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        productId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string product_id = 8 [json_name = "productId"];</code>
+     * @return The bytes for productId.
+     */
+    public com.google.protobuf.ByteString
+        getProductIdBytes() {
+      java.lang.Object ref = productId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        productId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string product_id = 8 [json_name = "productId"];</code>
+     * @param value The productId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProductId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      productId_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string product_id = 8 [json_name = "productId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProductId() {
+      productId_ = getDefaultInstance().getProductId();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string product_id = 8 [json_name = "productId"];</code>
+     * @param value The bytes for productId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProductIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      productId_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
