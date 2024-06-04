@@ -31,12 +31,4 @@ public interface GetKYCKeysResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getEntryTypeBytes(int index);
-
-  /**
-   * <code>int64 kyc_limit = 2 [json_name = "kycLimit", deprecated = true];</code>
-   * @deprecated api.v1alpha1.contactmanager.GetKYCKeysResponse.kyc_limit is deprecated.
-   *     See api/v1alpha1/contactmanager/contactmanager.proto;l=57
-   * @return The kycLimit.
-   */
-  @java.lang.Deprecated long getKycLimit();
 }
