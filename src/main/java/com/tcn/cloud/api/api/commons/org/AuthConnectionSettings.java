@@ -28,7 +28,6 @@ private static final long serialVersionUID = 0L;
     orgId_ = "";
     name_ = "";
     type_ = 0;
-    resourceUrl_ = "";
   }
 
   @java.lang.Override
@@ -1138,70 +1137,6 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.org.ConnectionType.UNRECOGNIZED : result;
   }
 
-  public static final int RESOURCE_URL_FIELD_NUMBER = 100;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object resourceUrl_ = "";
-  /**
-   * <pre>
-   * resource_url is used as an extra parameter on oidc requests.
-   * It may be required for certain ADFS configuration.
-   * </pre>
-   *
-   * <code>string resource_url = 100 [json_name = "resourceUrl"];</code>
-   * @return The resourceUrl.
-   */
-  @java.lang.Override
-  public java.lang.String getResourceUrl() {
-    java.lang.Object ref = resourceUrl_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      resourceUrl_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * resource_url is used as an extra parameter on oidc requests.
-   * It may be required for certain ADFS configuration.
-   * </pre>
-   *
-   * <code>string resource_url = 100 [json_name = "resourceUrl"];</code>
-   * @return The bytes for resourceUrl.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getResourceUrlBytes() {
-    java.lang.Object ref = resourceUrl_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      resourceUrl_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int USE_GOVERNMENT_AZURE_FIELD_NUMBER = 101;
-  private boolean useGovernmentAzure_ = false;
-  /**
-   * <pre>
-   * use_government_azure reflects whether or not an azure connection uses the government endpoints.
-   * </pre>
-   *
-   * <code>bool use_government_azure = 101 [json_name = "useGovernmentAzure"];</code>
-   * @return The useGovernmentAzure.
-   */
-  @java.lang.Override
-  public boolean getUseGovernmentAzure() {
-    return useGovernmentAzure_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1246,12 +1181,6 @@ private static final long serialVersionUID = 0L;
     if (type_ != com.tcn.cloud.api.api.commons.org.ConnectionType.CONNECTION_TYPE_NONE.getNumber()) {
       output.writeEnum(10, type_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceUrl_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 100, resourceUrl_);
-    }
-    if (useGovernmentAzure_ != false) {
-      output.writeBool(101, useGovernmentAzure_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1295,13 +1224,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(10, type_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceUrl_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(100, resourceUrl_);
-    }
-    if (useGovernmentAzure_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(101, useGovernmentAzure_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1342,10 +1264,6 @@ private static final long serialVersionUID = 0L;
     if (!getName()
         .equals(other.getName())) return false;
     if (type_ != other.type_) return false;
-    if (!getResourceUrl()
-        .equals(other.getResourceUrl())) return false;
-    if (getUseGovernmentAzure()
-        != other.getUseGovernmentAzure()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1383,11 +1301,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + type_;
-    hash = (37 * hash) + RESOURCE_URL_FIELD_NUMBER;
-    hash = (53 * hash) + getResourceUrl().hashCode();
-    hash = (37 * hash) + USE_GOVERNMENT_AZURE_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getUseGovernmentAzure());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1547,8 +1460,6 @@ private static final long serialVersionUID = 0L;
       orgId_ = "";
       name_ = "";
       type_ = 0;
-      resourceUrl_ = "";
-      useGovernmentAzure_ = false;
       return this;
     }
 
@@ -1625,12 +1536,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.type_ = type_;
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.resourceUrl_ = resourceUrl_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.useGovernmentAzure_ = useGovernmentAzure_;
       }
     }
 
@@ -1743,14 +1648,6 @@ private static final long serialVersionUID = 0L;
       if (other.type_ != 0) {
         setTypeValue(other.getTypeValue());
       }
-      if (!other.getResourceUrl().isEmpty()) {
-        resourceUrl_ = other.resourceUrl_;
-        bitField0_ |= 0x00000400;
-        onChanged();
-      }
-      if (other.getUseGovernmentAzure() != false) {
-        setUseGovernmentAzure(other.getUseGovernmentAzure());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1839,16 +1736,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 80
-            case 802: {
-              resourceUrl_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000400;
-              break;
-            } // case 802
-            case 808: {
-              useGovernmentAzure_ = input.readBool();
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 808
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3242,147 +3129,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearType() {
       bitField0_ = (bitField0_ & ~0x00000200);
       type_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object resourceUrl_ = "";
-    /**
-     * <pre>
-     * resource_url is used as an extra parameter on oidc requests.
-     * It may be required for certain ADFS configuration.
-     * </pre>
-     *
-     * <code>string resource_url = 100 [json_name = "resourceUrl"];</code>
-     * @return The resourceUrl.
-     */
-    public java.lang.String getResourceUrl() {
-      java.lang.Object ref = resourceUrl_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        resourceUrl_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * resource_url is used as an extra parameter on oidc requests.
-     * It may be required for certain ADFS configuration.
-     * </pre>
-     *
-     * <code>string resource_url = 100 [json_name = "resourceUrl"];</code>
-     * @return The bytes for resourceUrl.
-     */
-    public com.google.protobuf.ByteString
-        getResourceUrlBytes() {
-      java.lang.Object ref = resourceUrl_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        resourceUrl_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * resource_url is used as an extra parameter on oidc requests.
-     * It may be required for certain ADFS configuration.
-     * </pre>
-     *
-     * <code>string resource_url = 100 [json_name = "resourceUrl"];</code>
-     * @param value The resourceUrl to set.
-     * @return This builder for chaining.
-     */
-    public Builder setResourceUrl(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      resourceUrl_ = value;
-      bitField0_ |= 0x00000400;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * resource_url is used as an extra parameter on oidc requests.
-     * It may be required for certain ADFS configuration.
-     * </pre>
-     *
-     * <code>string resource_url = 100 [json_name = "resourceUrl"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearResourceUrl() {
-      resourceUrl_ = getDefaultInstance().getResourceUrl();
-      bitField0_ = (bitField0_ & ~0x00000400);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * resource_url is used as an extra parameter on oidc requests.
-     * It may be required for certain ADFS configuration.
-     * </pre>
-     *
-     * <code>string resource_url = 100 [json_name = "resourceUrl"];</code>
-     * @param value The bytes for resourceUrl to set.
-     * @return This builder for chaining.
-     */
-    public Builder setResourceUrlBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      resourceUrl_ = value;
-      bitField0_ |= 0x00000400;
-      onChanged();
-      return this;
-    }
-
-    private boolean useGovernmentAzure_ ;
-    /**
-     * <pre>
-     * use_government_azure reflects whether or not an azure connection uses the government endpoints.
-     * </pre>
-     *
-     * <code>bool use_government_azure = 101 [json_name = "useGovernmentAzure"];</code>
-     * @return The useGovernmentAzure.
-     */
-    @java.lang.Override
-    public boolean getUseGovernmentAzure() {
-      return useGovernmentAzure_;
-    }
-    /**
-     * <pre>
-     * use_government_azure reflects whether or not an azure connection uses the government endpoints.
-     * </pre>
-     *
-     * <code>bool use_government_azure = 101 [json_name = "useGovernmentAzure"];</code>
-     * @param value The useGovernmentAzure to set.
-     * @return This builder for chaining.
-     */
-    public Builder setUseGovernmentAzure(boolean value) {
-
-      useGovernmentAzure_ = value;
-      bitField0_ |= 0x00000800;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * use_government_azure reflects whether or not an azure connection uses the government endpoints.
-     * </pre>
-     *
-     * <code>bool use_government_azure = 101 [json_name = "useGovernmentAzure"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearUseGovernmentAzure() {
-      bitField0_ = (bitField0_ & ~0x00000800);
-      useGovernmentAzure_ = false;
       onChanged();
       return this;
     }

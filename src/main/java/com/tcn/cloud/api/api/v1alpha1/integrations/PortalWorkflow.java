@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PortalWorkflow() {
+    pluginInstanceId_ = "";
     actions_ = java.util.Collections.emptyList();
     formFields_ = java.util.Collections.emptyList();
     headerText_ = "";
@@ -64,6 +65,57 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_PortalWorkflow_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow.class, com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow.Builder.class);
+  }
+
+  public static final int PLUGIN_INSTANCE_ID_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pluginInstanceId_ = "";
+  /**
+   * <pre>
+   * the global data for this flow.
+   * the portal_link data + the plugin_instance data
+   * make up the inital data set that is given to the Actions in "segments".
+   * </pre>
+   *
+   * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
+   * @return The pluginInstanceId.
+   */
+  @java.lang.Override
+  public java.lang.String getPluginInstanceId() {
+    java.lang.Object ref = pluginInstanceId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      pluginInstanceId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the global data for this flow.
+   * the portal_link data + the plugin_instance data
+   * make up the inital data set that is given to the Actions in "segments".
+   * </pre>
+   *
+   * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
+   * @return The bytes for pluginInstanceId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPluginInstanceIdBytes() {
+    java.lang.Object ref = pluginInstanceId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      pluginInstanceId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int ACTIONS_FIELD_NUMBER = 2;
@@ -598,6 +650,9 @@ java.lang.String defaultValue) {
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginInstanceId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pluginInstanceId_);
+    }
     for (int i = 0; i < actions_.size(); i++) {
       output.writeMessage(2, actions_.get(i));
     }
@@ -643,6 +698,9 @@ java.lang.String defaultValue) {
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginInstanceId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pluginInstanceId_);
+    }
     for (int i = 0; i < actions_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, actions_.get(i));
@@ -708,6 +766,8 @@ java.lang.String defaultValue) {
     }
     com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow other = (com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow) obj;
 
+    if (!getPluginInstanceId()
+        .equals(other.getPluginInstanceId())) return false;
     if (!getActionsList()
         .equals(other.getActionsList())) return false;
     if (hasTemplate() != other.hasTemplate()) return false;
@@ -742,6 +802,8 @@ java.lang.String defaultValue) {
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + PLUGIN_INSTANCE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getPluginInstanceId().hashCode();
     if (getActionsCount() > 0) {
       hash = (37 * hash) + ACTIONS_FIELD_NUMBER;
       hash = (53 * hash) + getActionsList().hashCode();
@@ -942,13 +1004,14 @@ java.lang.String defaultValue) {
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      pluginInstanceId_ = "";
       if (actionsBuilder_ == null) {
         actions_ = java.util.Collections.emptyList();
       } else {
         actions_ = null;
         actionsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       template_ = null;
       if (templateBuilder_ != null) {
         templateBuilder_.dispose();
@@ -960,7 +1023,7 @@ java.lang.String defaultValue) {
         formFields_ = null;
         formFieldsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       internalGetMutableOpts().clear();
       headerText_ = "";
       footerText_ = "";
@@ -971,14 +1034,14 @@ java.lang.String defaultValue) {
         demoFailConditions_ = null;
         demoFailConditionsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       if (demoPassConditionsBuilder_ == null) {
         demoPassConditions_ = java.util.Collections.emptyList();
       } else {
         demoPassConditions_ = null;
         demoPassConditionsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       internalGetMutableDemoResults().clear();
       return this;
     }
@@ -1014,36 +1077,36 @@ java.lang.String defaultValue) {
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow result) {
       if (actionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           actions_ = java.util.Collections.unmodifiableList(actions_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.actions_ = actions_;
       } else {
         result.actions_ = actionsBuilder_.build();
       }
       if (formFieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           formFields_ = java.util.Collections.unmodifiableList(formFields_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.formFields_ = formFields_;
       } else {
         result.formFields_ = formFieldsBuilder_.build();
       }
       if (demoFailConditionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0)) {
+        if (((bitField0_ & 0x00000100) != 0)) {
           demoFailConditions_ = java.util.Collections.unmodifiableList(demoFailConditions_);
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000100);
         }
         result.demoFailConditions_ = demoFailConditions_;
       } else {
         result.demoFailConditions_ = demoFailConditionsBuilder_.build();
       }
       if (demoPassConditionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
+        if (((bitField0_ & 0x00000200) != 0)) {
           demoPassConditions_ = java.util.Collections.unmodifiableList(demoPassConditions_);
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000200);
         }
         result.demoPassConditions_ = demoPassConditions_;
       } else {
@@ -1053,25 +1116,28 @@ java.lang.String defaultValue) {
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.pluginInstanceId_ = pluginInstanceId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.template_ = templateBuilder_ == null
             ? template_
             : templateBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.opts_ = internalGetOpts();
         result.opts_.makeImmutable();
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.headerText_ = headerText_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.footerText_ = footerText_;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.demoMode_ = demoMode_;
       }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.demoResults_ = internalGetDemoResults();
         result.demoResults_.makeImmutable();
       }
@@ -1121,11 +1187,16 @@ java.lang.String defaultValue) {
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.integrations.PortalWorkflow.getDefaultInstance()) return this;
+      if (!other.getPluginInstanceId().isEmpty()) {
+        pluginInstanceId_ = other.pluginInstanceId_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       if (actionsBuilder_ == null) {
         if (!other.actions_.isEmpty()) {
           if (actions_.isEmpty()) {
             actions_ = other.actions_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureActionsIsMutable();
             actions_.addAll(other.actions_);
@@ -1138,7 +1209,7 @@ java.lang.String defaultValue) {
             actionsBuilder_.dispose();
             actionsBuilder_ = null;
             actions_ = other.actions_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             actionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getActionsFieldBuilder() : null;
@@ -1154,7 +1225,7 @@ java.lang.String defaultValue) {
         if (!other.formFields_.isEmpty()) {
           if (formFields_.isEmpty()) {
             formFields_ = other.formFields_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureFormFieldsIsMutable();
             formFields_.addAll(other.formFields_);
@@ -1167,7 +1238,7 @@ java.lang.String defaultValue) {
             formFieldsBuilder_.dispose();
             formFieldsBuilder_ = null;
             formFields_ = other.formFields_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
             formFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFormFieldsFieldBuilder() : null;
@@ -1178,15 +1249,15 @@ java.lang.String defaultValue) {
       }
       internalGetMutableOpts().mergeFrom(
           other.internalGetOpts());
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       if (!other.getHeaderText().isEmpty()) {
         headerText_ = other.headerText_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getFooterText().isEmpty()) {
         footerText_ = other.footerText_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.getDemoMode() != false) {
@@ -1196,7 +1267,7 @@ java.lang.String defaultValue) {
         if (!other.demoFailConditions_.isEmpty()) {
           if (demoFailConditions_.isEmpty()) {
             demoFailConditions_ = other.demoFailConditions_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000100);
           } else {
             ensureDemoFailConditionsIsMutable();
             demoFailConditions_.addAll(other.demoFailConditions_);
@@ -1209,7 +1280,7 @@ java.lang.String defaultValue) {
             demoFailConditionsBuilder_.dispose();
             demoFailConditionsBuilder_ = null;
             demoFailConditions_ = other.demoFailConditions_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000100);
             demoFailConditionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDemoFailConditionsFieldBuilder() : null;
@@ -1222,7 +1293,7 @@ java.lang.String defaultValue) {
         if (!other.demoPassConditions_.isEmpty()) {
           if (demoPassConditions_.isEmpty()) {
             demoPassConditions_ = other.demoPassConditions_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000200);
           } else {
             ensureDemoPassConditionsIsMutable();
             demoPassConditions_.addAll(other.demoPassConditions_);
@@ -1235,7 +1306,7 @@ java.lang.String defaultValue) {
             demoPassConditionsBuilder_.dispose();
             demoPassConditionsBuilder_ = null;
             demoPassConditions_ = other.demoPassConditions_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000200);
             demoPassConditionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDemoPassConditionsFieldBuilder() : null;
@@ -1246,7 +1317,7 @@ java.lang.String defaultValue) {
       }
       internalGetMutableDemoResults().mergeFrom(
           other.internalGetDemoResults());
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1273,6 +1344,11 @@ java.lang.String defaultValue) {
             case 0:
               done = true;
               break;
+            case 10: {
+              pluginInstanceId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
             case 18: {
               com.tcn.cloud.api.api.v1alpha1.integrations.Action m =
                   input.readMessage(
@@ -1290,7 +1366,7 @@ java.lang.String defaultValue) {
               input.readMessage(
                   getTemplateFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
@@ -1312,22 +1388,22 @@ java.lang.String defaultValue) {
                   OptsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               internalGetMutableOpts().getMutableMap().put(
                   opts__.getKey(), opts__.getValue());
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
               headerText_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 50
             case 58: {
               footerText_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 58
             case 64: {
               demoMode_ = input.readBool();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               break;
             } // case 64
             case 74: {
@@ -1362,7 +1438,7 @@ java.lang.String defaultValue) {
                   DemoResultsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               internalGetMutableDemoResults().getMutableMap().put(
                   demoResults__.getKey(), demoResults__.getValue());
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000400;
               break;
             } // case 90
             default: {
@@ -1382,12 +1458,114 @@ java.lang.String defaultValue) {
     }
     private int bitField0_;
 
+    private java.lang.Object pluginInstanceId_ = "";
+    /**
+     * <pre>
+     * the global data for this flow.
+     * the portal_link data + the plugin_instance data
+     * make up the inital data set that is given to the Actions in "segments".
+     * </pre>
+     *
+     * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
+     * @return The pluginInstanceId.
+     */
+    public java.lang.String getPluginInstanceId() {
+      java.lang.Object ref = pluginInstanceId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pluginInstanceId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the global data for this flow.
+     * the portal_link data + the plugin_instance data
+     * make up the inital data set that is given to the Actions in "segments".
+     * </pre>
+     *
+     * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
+     * @return The bytes for pluginInstanceId.
+     */
+    public com.google.protobuf.ByteString
+        getPluginInstanceIdBytes() {
+      java.lang.Object ref = pluginInstanceId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pluginInstanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the global data for this flow.
+     * the portal_link data + the plugin_instance data
+     * make up the inital data set that is given to the Actions in "segments".
+     * </pre>
+     *
+     * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
+     * @param value The pluginInstanceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPluginInstanceId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      pluginInstanceId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the global data for this flow.
+     * the portal_link data + the plugin_instance data
+     * make up the inital data set that is given to the Actions in "segments".
+     * </pre>
+     *
+     * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPluginInstanceId() {
+      pluginInstanceId_ = getDefaultInstance().getPluginInstanceId();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the global data for this flow.
+     * the portal_link data + the plugin_instance data
+     * make up the inital data set that is given to the Actions in "segments".
+     * </pre>
+     *
+     * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
+     * @param value The bytes for pluginInstanceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPluginInstanceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      pluginInstanceId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Action> actions_ =
       java.util.Collections.emptyList();
     private void ensureActionsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         actions_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.Action>(actions_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -1581,7 +1759,7 @@ java.lang.String defaultValue) {
     public Builder clearActions() {
       if (actionsBuilder_ == null) {
         actions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         actionsBuilder_.clear();
@@ -1686,7 +1864,7 @@ java.lang.String defaultValue) {
         actionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.integrations.Action, com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.ActionOrBuilder>(
                 actions_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         actions_ = null;
@@ -1706,7 +1884,7 @@ java.lang.String defaultValue) {
      * @return Whether the template field is set.
      */
     public boolean hasTemplate() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1739,7 +1917,7 @@ java.lang.String defaultValue) {
       } else {
         templateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1757,7 +1935,7 @@ java.lang.String defaultValue) {
       } else {
         templateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1770,7 +1948,7 @@ java.lang.String defaultValue) {
      */
     public Builder mergeTemplate(com.tcn.cloud.api.api.v1alpha1.integrations.Template value) {
       if (templateBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
+        if (((bitField0_ & 0x00000004) != 0) &&
           template_ != null &&
           template_ != com.tcn.cloud.api.api.v1alpha1.integrations.Template.getDefaultInstance()) {
           getTemplateBuilder().mergeFrom(value);
@@ -1780,7 +1958,7 @@ java.lang.String defaultValue) {
       } else {
         templateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1792,7 +1970,7 @@ java.lang.String defaultValue) {
      * <code>.api.v1alpha1.integrations.Template template = 3 [json_name = "template"];</code>
      */
     public Builder clearTemplate() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       template_ = null;
       if (templateBuilder_ != null) {
         templateBuilder_.dispose();
@@ -1809,7 +1987,7 @@ java.lang.String defaultValue) {
      * <code>.api.v1alpha1.integrations.Template template = 3 [json_name = "template"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.Template.Builder getTemplateBuilder() {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return getTemplateFieldBuilder().getBuilder();
     }
@@ -1852,9 +2030,9 @@ java.lang.String defaultValue) {
     private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> formFields_ =
       java.util.Collections.emptyList();
     private void ensureFormFieldsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         formFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(formFields_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -2048,7 +2226,7 @@ java.lang.String defaultValue) {
     public Builder clearFormFields() {
       if (formFieldsBuilder_ == null) {
         formFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         formFieldsBuilder_.clear();
@@ -2153,7 +2331,7 @@ java.lang.String defaultValue) {
         formFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
                 formFields_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         formFields_ = null;
@@ -2180,7 +2358,7 @@ java.lang.String defaultValue) {
       if (!opts_.isMutable()) {
         opts_ = opts_.copy();
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return opts_;
     }
@@ -2256,7 +2434,7 @@ java.lang.String defaultValue) {
       return map.get(key);
     }
     public Builder clearOpts() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       internalGetMutableOpts().getMutableMap()
           .clear();
       return this;
@@ -2281,7 +2459,7 @@ java.lang.String defaultValue) {
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
         getMutableOpts() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       return internalGetMutableOpts().getMutableMap();
     }
     /**
@@ -2298,7 +2476,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableOpts().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       return this;
     }
     /**
@@ -2312,7 +2490,7 @@ java.lang.String defaultValue) {
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableOpts().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       return this;
     }
 
@@ -2371,7 +2549,7 @@ java.lang.String defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       headerText_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2385,7 +2563,7 @@ java.lang.String defaultValue) {
      */
     public Builder clearHeaderText() {
       headerText_ = getDefaultInstance().getHeaderText();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -2403,7 +2581,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       headerText_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2451,7 +2629,7 @@ java.lang.String defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       footerText_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2461,7 +2639,7 @@ java.lang.String defaultValue) {
      */
     public Builder clearFooterText() {
       footerText_ = getDefaultInstance().getFooterText();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -2475,7 +2653,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       footerText_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2507,7 +2685,7 @@ java.lang.String defaultValue) {
     public Builder setDemoMode(boolean value) {
 
       demoMode_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2521,7 +2699,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearDemoMode() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       demoMode_ = false;
       onChanged();
       return this;
@@ -2530,9 +2708,9 @@ java.lang.String defaultValue) {
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Condition> demoFailConditions_ =
       java.util.Collections.emptyList();
     private void ensureDemoFailConditionsIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
+      if (!((bitField0_ & 0x00000100) != 0)) {
         demoFailConditions_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.Condition>(demoFailConditions_);
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
        }
     }
 
@@ -2682,7 +2860,7 @@ java.lang.String defaultValue) {
     public Builder clearDemoFailConditions() {
       if (demoFailConditionsBuilder_ == null) {
         demoFailConditions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
       } else {
         demoFailConditionsBuilder_.clear();
@@ -2759,7 +2937,7 @@ java.lang.String defaultValue) {
         demoFailConditionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.integrations.Condition, com.tcn.cloud.api.api.v1alpha1.integrations.Condition.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.ConditionOrBuilder>(
                 demoFailConditions_,
-                ((bitField0_ & 0x00000080) != 0),
+                ((bitField0_ & 0x00000100) != 0),
                 getParentForChildren(),
                 isClean());
         demoFailConditions_ = null;
@@ -2770,9 +2948,9 @@ java.lang.String defaultValue) {
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Condition> demoPassConditions_ =
       java.util.Collections.emptyList();
     private void ensureDemoPassConditionsIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!((bitField0_ & 0x00000200) != 0)) {
         demoPassConditions_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.Condition>(demoPassConditions_);
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
        }
     }
 
@@ -2922,7 +3100,7 @@ java.lang.String defaultValue) {
     public Builder clearDemoPassConditions() {
       if (demoPassConditionsBuilder_ == null) {
         demoPassConditions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
       } else {
         demoPassConditionsBuilder_.clear();
@@ -2999,7 +3177,7 @@ java.lang.String defaultValue) {
         demoPassConditionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.integrations.Condition, com.tcn.cloud.api.api.v1alpha1.integrations.Condition.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.ConditionOrBuilder>(
                 demoPassConditions_,
-                ((bitField0_ & 0x00000100) != 0),
+                ((bitField0_ & 0x00000200) != 0),
                 getParentForChildren(),
                 isClean());
         demoPassConditions_ = null;
@@ -3026,7 +3204,7 @@ java.lang.String defaultValue) {
       if (!demoResults_.isMutable()) {
         demoResults_ = demoResults_.copy();
       }
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return demoResults_;
     }
@@ -3086,7 +3264,7 @@ java.lang.String defaultValue) {
       return map.get(key);
     }
     public Builder clearDemoResults() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       internalGetMutableDemoResults().getMutableMap()
           .clear();
       return this;
@@ -3107,7 +3285,7 @@ java.lang.String defaultValue) {
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
         getMutableDemoResults() {
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       return internalGetMutableDemoResults().getMutableMap();
     }
     /**
@@ -3120,7 +3298,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableDemoResults().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       return this;
     }
     /**
@@ -3130,7 +3308,7 @@ java.lang.String defaultValue) {
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableDemoResults().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       return this;
     }
     @java.lang.Override

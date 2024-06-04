@@ -669,6 +669,37 @@ public final class LearnGrpc {
     return getExportManyStreamMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListVersionsReq,
+      com.tcn.cloud.api.api.v0alpha.ListVersionsRes> getListVersionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListVersions",
+      requestType = com.tcn.cloud.api.api.v0alpha.ListVersionsReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ListVersionsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListVersionsReq,
+      com.tcn.cloud.api.api.v0alpha.ListVersionsRes> getListVersionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListVersionsReq, com.tcn.cloud.api.api.v0alpha.ListVersionsRes> getListVersionsMethod;
+    if ((getListVersionsMethod = LearnGrpc.getListVersionsMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getListVersionsMethod = LearnGrpc.getListVersionsMethod) == null) {
+          LearnGrpc.getListVersionsMethod = getListVersionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListVersionsReq, com.tcn.cloud.api.api.v0alpha.ListVersionsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListVersions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListVersionsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListVersionsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("ListVersions"))
+              .build();
+        }
+      }
+    }
+    return getListVersionsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -933,6 +964,16 @@ public final class LearnGrpc {
     default void exportManyStream(com.tcn.cloud.api.api.v0alpha.ExportManyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportManyStreamMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * list all the different versions
+     * </pre>
+     */
+    default void listVersions(com.tcn.cloud.api.api.v0alpha.ListVersionsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListVersionsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListVersionsMethod(), responseObserver);
     }
   }
 
@@ -1204,6 +1245,17 @@ public final class LearnGrpc {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getExportManyStreamMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * list all the different versions
+     * </pre>
+     */
+    public void listVersions(com.tcn.cloud.api.api.v0alpha.ListVersionsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListVersionsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListVersionsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1442,6 +1494,16 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getExportManyStreamMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * list all the different versions
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListVersionsRes listVersions(com.tcn.cloud.api.api.v0alpha.ListVersionsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListVersionsMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -1663,6 +1725,17 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getReviewVersionMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * list all the different versions
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListVersionsRes> listVersions(
+        com.tcn.cloud.api.api.v0alpha.ListVersionsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListVersionsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_EXIST = 0;
@@ -1686,6 +1759,7 @@ public final class LearnGrpc {
   private static final int METHODID_REVIEW_FILE_VERSIONS = 18;
   private static final int METHODID_REVIEW_VERSION = 19;
   private static final int METHODID_EXPORT_MANY_STREAM = 20;
+  private static final int METHODID_LIST_VERSIONS = 21;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1787,6 +1861,10 @@ public final class LearnGrpc {
         case METHODID_EXPORT_MANY_STREAM:
           serviceImpl.exportManyStream((com.tcn.cloud.api.api.v0alpha.ExportManyReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportRes>) responseObserver);
+          break;
+        case METHODID_LIST_VERSIONS:
+          serviceImpl.listVersions((com.tcn.cloud.api.api.v0alpha.ListVersionsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListVersionsRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1953,6 +2031,13 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.ExportManyReq,
               com.tcn.cloud.api.api.v0alpha.ExportRes>(
                 service, METHODID_EXPORT_MANY_STREAM)))
+        .addMethod(
+          getListVersionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListVersionsReq,
+              com.tcn.cloud.api.api.v0alpha.ListVersionsRes>(
+                service, METHODID_LIST_VERSIONS)))
         .build();
   }
 
@@ -2022,6 +2107,7 @@ public final class LearnGrpc {
               .addMethod(getReviewFileVersionsMethod())
               .addMethod(getReviewVersionMethod())
               .addMethod(getExportManyStreamMethod())
+              .addMethod(getListVersionsMethod())
               .build();
         }
       }

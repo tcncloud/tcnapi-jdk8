@@ -21,7 +21,6 @@ private static final long serialVersionUID = 0L;
   }
   private Action() {
     workflowDefinitionName_ = "";
-    pluginInstanceId_ = "";
   }
 
   @java.lang.Override
@@ -41,10 +40,8 @@ private static final long serialVersionUID = 0L;
   protected com.google.protobuf.MapField internalGetMapField(
       int number) {
     switch (number) {
-      case 5:
-        return internalGetRestructureBefore();
-      case 6:
-        return internalGetRestructureAfter();
+      case 4:
+        return internalGetRename();
       default:
         throw new RuntimeException(
             "Invalid map field number: " + number);
@@ -97,60 +94,13 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PLUGIN_INSTANCE_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object pluginInstanceId_ = "";
-  /**
-   * <pre>
-   * the global data for this action.
-   * </pre>
-   *
-   * <code>string plugin_instance_id = 2 [json_name = "pluginInstanceId"];</code>
-   * @return The pluginInstanceId.
-   */
-  @java.lang.Override
-  public java.lang.String getPluginInstanceId() {
-    java.lang.Object ref = pluginInstanceId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      pluginInstanceId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * the global data for this action.
-   * </pre>
-   *
-   * <code>string plugin_instance_id = 2 [json_name = "pluginInstanceId"];</code>
-   * @return The bytes for pluginInstanceId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getPluginInstanceIdBytes() {
-    java.lang.Object ref = pluginInstanceId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      pluginInstanceId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int RESTRUCTURE_BEFORE_FIELD_NUMBER = 5;
-  private static final class RestructureBeforeDefaultEntryHolder {
+  public static final int RENAME_FIELD_NUMBER = 4;
+  private static final class RenameDefaultEntryHolder {
     static final com.google.protobuf.MapEntry<
         java.lang.String, java.lang.String> defaultEntry =
             com.google.protobuf.MapEntry
             .<java.lang.String, java.lang.String>newDefaultInstance(
-                com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_Action_RestructureBeforeEntry_descriptor, 
+                com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_Action_RenameEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.STRING,
@@ -158,168 +108,89 @@ private static final long serialVersionUID = 0L;
   }
   @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
-      java.lang.String, java.lang.String> restructureBefore_;
+      java.lang.String, java.lang.String> rename_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-  internalGetRestructureBefore() {
-    if (restructureBefore_ == null) {
+  internalGetRename() {
+    if (rename_ == null) {
       return com.google.protobuf.MapField.emptyMapField(
-          RestructureBeforeDefaultEntryHolder.defaultEntry);
+          RenameDefaultEntryHolder.defaultEntry);
     }
-    return restructureBefore_;
+    return rename_;
   }
-  public int getRestructureBeforeCount() {
-    return internalGetRestructureBefore().getMap().size();
+  public int getRenameCount() {
+    return internalGetRename().getMap().size();
   }
   /**
    * <pre>
    * when a flow is executed if we find in the result any keys that match
-   * the keys in rename, we will restructure the keys to the matching
-   * value in these map's.
+   * the keys in rename, we will rename the result keys to the matching
+   * value in rename map's.
    * </pre>
    *
-   * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
+   * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
    */
   @java.lang.Override
-  public boolean containsRestructureBefore(
+  public boolean containsRename(
       java.lang.String key) {
     if (key == null) { throw new NullPointerException("map key"); }
-    return internalGetRestructureBefore().getMap().containsKey(key);
+    return internalGetRename().getMap().containsKey(key);
   }
   /**
-   * Use {@link #getRestructureBeforeMap()} instead.
+   * Use {@link #getRenameMap()} instead.
    */
   @java.lang.Override
   @java.lang.Deprecated
-  public java.util.Map<java.lang.String, java.lang.String> getRestructureBefore() {
-    return getRestructureBeforeMap();
+  public java.util.Map<java.lang.String, java.lang.String> getRename() {
+    return getRenameMap();
   }
   /**
    * <pre>
    * when a flow is executed if we find in the result any keys that match
-   * the keys in rename, we will restructure the keys to the matching
-   * value in these map's.
+   * the keys in rename, we will rename the result keys to the matching
+   * value in rename map's.
    * </pre>
    *
-   * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
+   * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
    */
   @java.lang.Override
-  public java.util.Map<java.lang.String, java.lang.String> getRestructureBeforeMap() {
-    return internalGetRestructureBefore().getMap();
+  public java.util.Map<java.lang.String, java.lang.String> getRenameMap() {
+    return internalGetRename().getMap();
   }
   /**
    * <pre>
    * when a flow is executed if we find in the result any keys that match
-   * the keys in rename, we will restructure the keys to the matching
-   * value in these map's.
+   * the keys in rename, we will rename the result keys to the matching
+   * value in rename map's.
    * </pre>
    *
-   * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
+   * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
    */
   @java.lang.Override
   public /* nullable */
-java.lang.String getRestructureBeforeOrDefault(
+java.lang.String getRenameOrDefault(
       java.lang.String key,
       /* nullable */
 java.lang.String defaultValue) {
     if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
-        internalGetRestructureBefore().getMap();
+        internalGetRename().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
    * <pre>
    * when a flow is executed if we find in the result any keys that match
-   * the keys in rename, we will restructure the keys to the matching
-   * value in these map's.
+   * the keys in rename, we will rename the result keys to the matching
+   * value in rename map's.
    * </pre>
    *
-   * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
+   * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
    */
   @java.lang.Override
-  public java.lang.String getRestructureBeforeOrThrow(
+  public java.lang.String getRenameOrThrow(
       java.lang.String key) {
     if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
-        internalGetRestructureBefore().getMap();
-    if (!map.containsKey(key)) {
-      throw new java.lang.IllegalArgumentException();
-    }
-    return map.get(key);
-  }
-
-  public static final int RESTRUCTURE_AFTER_FIELD_NUMBER = 6;
-  private static final class RestructureAfterDefaultEntryHolder {
-    static final com.google.protobuf.MapEntry<
-        java.lang.String, java.lang.String> defaultEntry =
-            com.google.protobuf.MapEntry
-            .<java.lang.String, java.lang.String>newDefaultInstance(
-                com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_Action_RestructureAfterEntry_descriptor, 
-                com.google.protobuf.WireFormat.FieldType.STRING,
-                "",
-                com.google.protobuf.WireFormat.FieldType.STRING,
-                "");
-  }
-  @SuppressWarnings("serial")
-  private com.google.protobuf.MapField<
-      java.lang.String, java.lang.String> restructureAfter_;
-  private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-  internalGetRestructureAfter() {
-    if (restructureAfter_ == null) {
-      return com.google.protobuf.MapField.emptyMapField(
-          RestructureAfterDefaultEntryHolder.defaultEntry);
-    }
-    return restructureAfter_;
-  }
-  public int getRestructureAfterCount() {
-    return internalGetRestructureAfter().getMap().size();
-  }
-  /**
-   * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
-   */
-  @java.lang.Override
-  public boolean containsRestructureAfter(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    return internalGetRestructureAfter().getMap().containsKey(key);
-  }
-  /**
-   * Use {@link #getRestructureAfterMap()} instead.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated
-  public java.util.Map<java.lang.String, java.lang.String> getRestructureAfter() {
-    return getRestructureAfterMap();
-  }
-  /**
-   * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
-   */
-  @java.lang.Override
-  public java.util.Map<java.lang.String, java.lang.String> getRestructureAfterMap() {
-    return internalGetRestructureAfter().getMap();
-  }
-  /**
-   * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
-   */
-  @java.lang.Override
-  public /* nullable */
-java.lang.String getRestructureAfterOrDefault(
-      java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, java.lang.String> map =
-        internalGetRestructureAfter().getMap();
-    return map.containsKey(key) ? map.get(key) : defaultValue;
-  }
-  /**
-   * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
-   */
-  @java.lang.Override
-  public java.lang.String getRestructureAfterOrThrow(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, java.lang.String> map =
-        internalGetRestructureAfter().getMap();
+        internalGetRename().getMap();
     if (!map.containsKey(key)) {
       throw new java.lang.IllegalArgumentException();
     }
@@ -343,21 +214,12 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowDefinitionName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, workflowDefinitionName_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginInstanceId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pluginInstanceId_);
-    }
     com.google.protobuf.GeneratedMessageV3
       .serializeStringMapTo(
         output,
-        internalGetRestructureBefore(),
-        RestructureBeforeDefaultEntryHolder.defaultEntry,
-        5);
-    com.google.protobuf.GeneratedMessageV3
-      .serializeStringMapTo(
-        output,
-        internalGetRestructureAfter(),
-        RestructureAfterDefaultEntryHolder.defaultEntry,
-        6);
+        internalGetRename(),
+        RenameDefaultEntryHolder.defaultEntry,
+        4);
     getUnknownFields().writeTo(output);
   }
 
@@ -370,28 +232,15 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowDefinitionName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, workflowDefinitionName_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginInstanceId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pluginInstanceId_);
-    }
     for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-         : internalGetRestructureBefore().getMap().entrySet()) {
+         : internalGetRename().getMap().entrySet()) {
       com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-      restructureBefore__ = RestructureBeforeDefaultEntryHolder.defaultEntry.newBuilderForType()
+      rename__ = RenameDefaultEntryHolder.defaultEntry.newBuilderForType()
           .setKey(entry.getKey())
           .setValue(entry.getValue())
           .build();
       size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, restructureBefore__);
-    }
-    for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-         : internalGetRestructureAfter().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-      restructureAfter__ = RestructureAfterDefaultEntryHolder.defaultEntry.newBuilderForType()
-          .setKey(entry.getKey())
-          .setValue(entry.getValue())
-          .build();
-      size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, restructureAfter__);
+          .computeMessageSize(4, rename__);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -410,12 +259,8 @@ java.lang.String defaultValue) {
 
     if (!getWorkflowDefinitionName()
         .equals(other.getWorkflowDefinitionName())) return false;
-    if (!getPluginInstanceId()
-        .equals(other.getPluginInstanceId())) return false;
-    if (!internalGetRestructureBefore().equals(
-        other.internalGetRestructureBefore())) return false;
-    if (!internalGetRestructureAfter().equals(
-        other.internalGetRestructureAfter())) return false;
+    if (!internalGetRename().equals(
+        other.internalGetRename())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -429,15 +274,9 @@ java.lang.String defaultValue) {
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + WORKFLOW_DEFINITION_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getWorkflowDefinitionName().hashCode();
-    hash = (37 * hash) + PLUGIN_INSTANCE_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getPluginInstanceId().hashCode();
-    if (!internalGetRestructureBefore().getMap().isEmpty()) {
-      hash = (37 * hash) + RESTRUCTURE_BEFORE_FIELD_NUMBER;
-      hash = (53 * hash) + internalGetRestructureBefore().hashCode();
-    }
-    if (!internalGetRestructureAfter().getMap().isEmpty()) {
-      hash = (37 * hash) + RESTRUCTURE_AFTER_FIELD_NUMBER;
-      hash = (53 * hash) + internalGetRestructureAfter().hashCode();
+    if (!internalGetRename().getMap().isEmpty()) {
+      hash = (37 * hash) + RENAME_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetRename().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -556,10 +395,8 @@ java.lang.String defaultValue) {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 5:
-          return internalGetRestructureBefore();
-        case 6:
-          return internalGetRestructureAfter();
+        case 4:
+          return internalGetRename();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -569,10 +406,8 @@ java.lang.String defaultValue) {
     protected com.google.protobuf.MapField internalGetMutableMapField(
         int number) {
       switch (number) {
-        case 5:
-          return internalGetMutableRestructureBefore();
-        case 6:
-          return internalGetMutableRestructureAfter();
+        case 4:
+          return internalGetMutableRename();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -601,9 +436,7 @@ java.lang.String defaultValue) {
       super.clear();
       bitField0_ = 0;
       workflowDefinitionName_ = "";
-      pluginInstanceId_ = "";
-      internalGetMutableRestructureBefore().clear();
-      internalGetMutableRestructureAfter().clear();
+      internalGetMutableRename().clear();
       return this;
     }
 
@@ -641,15 +474,8 @@ java.lang.String defaultValue) {
         result.workflowDefinitionName_ = workflowDefinitionName_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.pluginInstanceId_ = pluginInstanceId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.restructureBefore_ = internalGetRestructureBefore();
-        result.restructureBefore_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.restructureAfter_ = internalGetRestructureAfter();
-        result.restructureAfter_.makeImmutable();
+        result.rename_ = internalGetRename();
+        result.rename_.makeImmutable();
       }
     }
 
@@ -702,17 +528,9 @@ java.lang.String defaultValue) {
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getPluginInstanceId().isEmpty()) {
-        pluginInstanceId_ = other.pluginInstanceId_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
-      internalGetMutableRestructureBefore().mergeFrom(
-          other.internalGetRestructureBefore());
-      bitField0_ |= 0x00000004;
-      internalGetMutableRestructureAfter().mergeFrom(
-          other.internalGetRestructureAfter());
-      bitField0_ |= 0x00000008;
+      internalGetMutableRename().mergeFrom(
+          other.internalGetRename());
+      bitField0_ |= 0x00000002;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -744,29 +562,15 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              pluginInstanceId_ = input.readStringRequireUtf8();
+            case 34: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              rename__ = input.readMessage(
+                  RenameDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableRename().getMutableMap().put(
+                  rename__.getKey(), rename__.getValue());
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
-            case 42: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              restructureBefore__ = input.readMessage(
-                  RestructureBeforeDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableRestructureBefore().getMutableMap().put(
-                  restructureBefore__.getKey(), restructureBefore__.getValue());
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 42
-            case 50: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              restructureAfter__ = input.readMessage(
-                  RestructureAfterDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableRestructureAfter().getMutableMap().put(
-                  restructureAfter__.getKey(), restructureAfter__.getValue());
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 50
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -856,391 +660,172 @@ java.lang.String defaultValue) {
       return this;
     }
 
-    private java.lang.Object pluginInstanceId_ = "";
-    /**
-     * <pre>
-     * the global data for this action.
-     * </pre>
-     *
-     * <code>string plugin_instance_id = 2 [json_name = "pluginInstanceId"];</code>
-     * @return The pluginInstanceId.
-     */
-    public java.lang.String getPluginInstanceId() {
-      java.lang.Object ref = pluginInstanceId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        pluginInstanceId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> rename_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetRename() {
+      if (rename_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            RenameDefaultEntryHolder.defaultEntry);
       }
+      return rename_;
     }
-    /**
-     * <pre>
-     * the global data for this action.
-     * </pre>
-     *
-     * <code>string plugin_instance_id = 2 [json_name = "pluginInstanceId"];</code>
-     * @return The bytes for pluginInstanceId.
-     */
-    public com.google.protobuf.ByteString
-        getPluginInstanceIdBytes() {
-      java.lang.Object ref = pluginInstanceId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pluginInstanceId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableRename() {
+      if (rename_ == null) {
+        rename_ = com.google.protobuf.MapField.newMapField(
+            RenameDefaultEntryHolder.defaultEntry);
       }
-    }
-    /**
-     * <pre>
-     * the global data for this action.
-     * </pre>
-     *
-     * <code>string plugin_instance_id = 2 [json_name = "pluginInstanceId"];</code>
-     * @param value The pluginInstanceId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setPluginInstanceId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      pluginInstanceId_ = value;
+      if (!rename_.isMutable()) {
+        rename_ = rename_.copy();
+      }
       bitField0_ |= 0x00000002;
       onChanged();
-      return this;
+      return rename_;
+    }
+    public int getRenameCount() {
+      return internalGetRename().getMap().size();
     }
     /**
      * <pre>
-     * the global data for this action.
+     * when a flow is executed if we find in the result any keys that match
+     * the keys in rename, we will rename the result keys to the matching
+     * value in rename map's.
      * </pre>
      *
-     * <code>string plugin_instance_id = 2 [json_name = "pluginInstanceId"];</code>
-     * @return This builder for chaining.
+     * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
      */
-    public Builder clearPluginInstanceId() {
-      pluginInstanceId_ = getDefaultInstance().getPluginInstanceId();
+    @java.lang.Override
+    public boolean containsRename(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetRename().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getRenameMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getRename() {
+      return getRenameMap();
+    }
+    /**
+     * <pre>
+     * when a flow is executed if we find in the result any keys that match
+     * the keys in rename, we will rename the result keys to the matching
+     * value in rename map's.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.String> getRenameMap() {
+      return internalGetRename().getMap();
+    }
+    /**
+     * <pre>
+     * when a flow is executed if we find in the result any keys that match
+     * the keys in rename, we will rename the result keys to the matching
+     * value in rename map's.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+java.lang.String getRenameOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetRename().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * when a flow is executed if we find in the result any keys that match
+     * the keys in rename, we will rename the result keys to the matching
+     * value in rename map's.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
+     */
+    @java.lang.Override
+    public java.lang.String getRenameOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetRename().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearRename() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
+      internalGetMutableRename().getMutableMap()
+          .clear();
       return this;
     }
     /**
      * <pre>
-     * the global data for this action.
+     * when a flow is executed if we find in the result any keys that match
+     * the keys in rename, we will rename the result keys to the matching
+     * value in rename map's.
      * </pre>
      *
-     * <code>string plugin_instance_id = 2 [json_name = "pluginInstanceId"];</code>
-     * @param value The bytes for pluginInstanceId to set.
-     * @return This builder for chaining.
+     * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
      */
-    public Builder setPluginInstanceIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      pluginInstanceId_ = value;
+    public Builder removeRename(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableRename().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String>
+        getMutableRename() {
       bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> restructureBefore_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetRestructureBefore() {
-      if (restructureBefore_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            RestructureBeforeDefaultEntryHolder.defaultEntry);
-      }
-      return restructureBefore_;
-    }
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableRestructureBefore() {
-      if (restructureBefore_ == null) {
-        restructureBefore_ = com.google.protobuf.MapField.newMapField(
-            RestructureBeforeDefaultEntryHolder.defaultEntry);
-      }
-      if (!restructureBefore_.isMutable()) {
-        restructureBefore_ = restructureBefore_.copy();
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return restructureBefore_;
-    }
-    public int getRestructureBeforeCount() {
-      return internalGetRestructureBefore().getMap().size();
+      return internalGetMutableRename().getMutableMap();
     }
     /**
      * <pre>
      * when a flow is executed if we find in the result any keys that match
-     * the keys in rename, we will restructure the keys to the matching
-     * value in these map's.
+     * the keys in rename, we will rename the result keys to the matching
+     * value in rename map's.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
+     * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
      */
-    @java.lang.Override
-    public boolean containsRestructureBefore(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetRestructureBefore().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getRestructureBeforeMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getRestructureBefore() {
-      return getRestructureBeforeMap();
-    }
-    /**
-     * <pre>
-     * when a flow is executed if we find in the result any keys that match
-     * the keys in rename, we will restructure the keys to the matching
-     * value in these map's.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.String, java.lang.String> getRestructureBeforeMap() {
-      return internalGetRestructureBefore().getMap();
-    }
-    /**
-     * <pre>
-     * when a flow is executed if we find in the result any keys that match
-     * the keys in rename, we will restructure the keys to the matching
-     * value in these map's.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
-     */
-    @java.lang.Override
-    public /* nullable */
-java.lang.String getRestructureBeforeOrDefault(
-        java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetRestructureBefore().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <pre>
-     * when a flow is executed if we find in the result any keys that match
-     * the keys in rename, we will restructure the keys to the matching
-     * value in these map's.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
-     */
-    @java.lang.Override
-    public java.lang.String getRestructureBeforeOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetRestructureBefore().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-    public Builder clearRestructureBefore() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      internalGetMutableRestructureBefore().getMutableMap()
-          .clear();
-      return this;
-    }
-    /**
-     * <pre>
-     * when a flow is executed if we find in the result any keys that match
-     * the keys in rename, we will restructure the keys to the matching
-     * value in these map's.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
-     */
-    public Builder removeRestructureBefore(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      internalGetMutableRestructureBefore().getMutableMap()
-          .remove(key);
-      return this;
-    }
-    /**
-     * Use alternate mutation accessors instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String>
-        getMutableRestructureBefore() {
-      bitField0_ |= 0x00000004;
-      return internalGetMutableRestructureBefore().getMutableMap();
-    }
-    /**
-     * <pre>
-     * when a flow is executed if we find in the result any keys that match
-     * the keys in rename, we will restructure the keys to the matching
-     * value in these map's.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
-     */
-    public Builder putRestructureBefore(
+    public Builder putRename(
         java.lang.String key,
         java.lang.String value) {
       if (key == null) { throw new NullPointerException("map key"); }
       if (value == null) { throw new NullPointerException("map value"); }
-      internalGetMutableRestructureBefore().getMutableMap()
+      internalGetMutableRename().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       return this;
     }
     /**
      * <pre>
      * when a flow is executed if we find in the result any keys that match
-     * the keys in rename, we will restructure the keys to the matching
-     * value in these map's.
+     * the keys in rename, we will rename the result keys to the matching
+     * value in rename map's.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
+     * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
      */
-    public Builder putAllRestructureBefore(
+    public Builder putAllRename(
         java.util.Map<java.lang.String, java.lang.String> values) {
-      internalGetMutableRestructureBefore().getMutableMap()
+      internalGetMutableRename().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000004;
-      return this;
-    }
-
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> restructureAfter_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetRestructureAfter() {
-      if (restructureAfter_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            RestructureAfterDefaultEntryHolder.defaultEntry);
-      }
-      return restructureAfter_;
-    }
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableRestructureAfter() {
-      if (restructureAfter_ == null) {
-        restructureAfter_ = com.google.protobuf.MapField.newMapField(
-            RestructureAfterDefaultEntryHolder.defaultEntry);
-      }
-      if (!restructureAfter_.isMutable()) {
-        restructureAfter_ = restructureAfter_.copy();
-      }
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return restructureAfter_;
-    }
-    public int getRestructureAfterCount() {
-      return internalGetRestructureAfter().getMap().size();
-    }
-    /**
-     * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
-     */
-    @java.lang.Override
-    public boolean containsRestructureAfter(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetRestructureAfter().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getRestructureAfterMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getRestructureAfter() {
-      return getRestructureAfterMap();
-    }
-    /**
-     * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.String, java.lang.String> getRestructureAfterMap() {
-      return internalGetRestructureAfter().getMap();
-    }
-    /**
-     * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
-     */
-    @java.lang.Override
-    public /* nullable */
-java.lang.String getRestructureAfterOrDefault(
-        java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetRestructureAfter().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
-     */
-    @java.lang.Override
-    public java.lang.String getRestructureAfterOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetRestructureAfter().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-    public Builder clearRestructureAfter() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      internalGetMutableRestructureAfter().getMutableMap()
-          .clear();
-      return this;
-    }
-    /**
-     * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
-     */
-    public Builder removeRestructureAfter(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      internalGetMutableRestructureAfter().getMutableMap()
-          .remove(key);
-      return this;
-    }
-    /**
-     * Use alternate mutation accessors instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String>
-        getMutableRestructureAfter() {
-      bitField0_ |= 0x00000008;
-      return internalGetMutableRestructureAfter().getMutableMap();
-    }
-    /**
-     * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
-     */
-    public Builder putRestructureAfter(
-        java.lang.String key,
-        java.lang.String value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
-      internalGetMutableRestructureAfter().getMutableMap()
-          .put(key, value);
-      bitField0_ |= 0x00000008;
-      return this;
-    }
-    /**
-     * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
-     */
-    public Builder putAllRestructureAfter(
-        java.util.Map<java.lang.String, java.lang.String> values) {
-      internalGetMutableRestructureAfter().getMutableMap()
-          .putAll(values);
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       return this;
     }
     @java.lang.Override

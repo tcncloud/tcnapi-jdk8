@@ -4,6 +4,12 @@
 package com.tcn.cloud.api.api.v1alpha1.integrations;
 
 /**
+ * <pre>
+ * this describes the requirements to build a Flow entity
+ * that matches this description.  All created flows must
+ * conform to a FlowDefinition.
+ * </pre>
+ *
  * Protobuf type {@code api.v1alpha1.integrations.WorkflowDefinition}
  */
 public final class WorkflowDefinition extends
@@ -18,7 +24,14 @@ private static final long serialVersionUID = 0L;
   private WorkflowDefinition() {
     flowType_ = 0;
     definitionName_ = "";
-    actionDefinitions_ = java.util.Collections.emptyList();
+    method_ = 0;
+    reqFields_ = java.util.Collections.emptyList();
+    resFields_ = java.util.Collections.emptyList();
+    pluginFields_ = java.util.Collections.emptyList();
+    linkFields_ = java.util.Collections.emptyList();
+    prevFields_ = java.util.Collections.emptyList();
+    formFields_ = java.util.Collections.emptyList();
+    opts_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -45,7 +58,7 @@ private static final long serialVersionUID = 0L;
   private int flowType_ = 0;
   /**
    * <pre>
-   * Payment, Invoice, or other type of flow
+   * the type of flow
    * </pre>
    *
    * <code>.api.commons.integrations.FlowType flow_type = 1 [json_name = "flowType"];</code>
@@ -56,7 +69,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Payment, Invoice, or other type of flow
+   * the type of flow
    * </pre>
    *
    * <code>.api.commons.integrations.FlowType flow_type = 1 [json_name = "flowType"];</code>
@@ -72,7 +85,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object definitionName_ = "";
   /**
    * <pre>
-   * the name of this workflow definition
+   * the name of this flow definition
    * </pre>
    *
    * <code>string definition_name = 2 [json_name = "definitionName"];</code>
@@ -93,7 +106,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the name of this workflow definition
+   * the name of this flow definition
    * </pre>
    *
    * <code>string definition_name = 2 [json_name = "definitionName"];</code>
@@ -114,65 +127,573 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ACTION_DEFINITIONS_FIELD_NUMBER = 12;
+  public static final int METHOD_FIELD_NUMBER = 3;
+  private int method_ = 0;
+  /**
+   * <pre>
+   * the api method performed for this flow.
+   * </pre>
+   *
+   * <code>.api.commons.integrations.RequestMethod method = 3 [json_name = "method"];</code>
+   * @return The enum numeric value on the wire for method.
+   */
+  @java.lang.Override public int getMethodValue() {
+    return method_;
+  }
+  /**
+   * <pre>
+   * the api method performed for this flow.
+   * </pre>
+   *
+   * <code>.api.commons.integrations.RequestMethod method = 3 [json_name = "method"];</code>
+   * @return The method.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethod() {
+    com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(method_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
+  }
+
+  public static final int REQ_FIELDS_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition> actionDefinitions_;
+  private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> reqFields_;
   /**
    * <pre>
-   * the list of choices that can be selected for an action during the workflow execution
+   * the fields required to complete this flow
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition> getActionDefinitionsList() {
-    return actionDefinitions_;
+  public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getReqFieldsList() {
+    return reqFields_;
   }
   /**
    * <pre>
-   * the list of choices that can be selected for an action during the workflow execution
+   * the fields required to complete this flow
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinitionOrBuilder> 
-      getActionDefinitionsOrBuilderList() {
-    return actionDefinitions_;
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+      getReqFieldsOrBuilderList() {
+    return reqFields_;
   }
   /**
    * <pre>
-   * the list of choices that can be selected for an action during the workflow execution
+   * the fields required to complete this flow
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
    */
   @java.lang.Override
-  public int getActionDefinitionsCount() {
-    return actionDefinitions_.size();
+  public int getReqFieldsCount() {
+    return reqFields_.size();
   }
   /**
    * <pre>
-   * the list of choices that can be selected for an action during the workflow execution
+   * the fields required to complete this flow
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition getActionDefinitions(int index) {
-    return actionDefinitions_.get(index);
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getReqFields(int index) {
+    return reqFields_.get(index);
   }
   /**
    * <pre>
-   * the list of choices that can be selected for an action during the workflow execution
+   * the fields required to complete this flow
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinitionOrBuilder getActionDefinitionsOrBuilder(
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getReqFieldsOrBuilder(
       int index) {
-    return actionDefinitions_.get(index);
+    return reqFields_.get(index);
+  }
+
+  public static final int RES_FIELDS_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> resFields_;
+  /**
+   * <pre>
+   * the fields returned from this flows execution
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getResFieldsList() {
+    return resFields_;
+  }
+  /**
+   * <pre>
+   * the fields returned from this flows execution
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+      getResFieldsOrBuilderList() {
+    return resFields_;
+  }
+  /**
+   * <pre>
+   * the fields returned from this flows execution
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+   */
+  @java.lang.Override
+  public int getResFieldsCount() {
+    return resFields_.size();
+  }
+  /**
+   * <pre>
+   * the fields returned from this flows execution
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getResFields(int index) {
+    return resFields_.get(index);
+  }
+  /**
+   * <pre>
+   * the fields returned from this flows execution
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getResFieldsOrBuilder(
+      int index) {
+    return resFields_.get(index);
+  }
+
+  public static final int PLUGIN_FIELDS_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> pluginFields_;
+  /**
+   * <pre>
+   * a subset of req_fields we suggest go in the plugin instance.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getPluginFieldsList() {
+    return pluginFields_;
+  }
+  /**
+   * <pre>
+   * a subset of req_fields we suggest go in the plugin instance.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+      getPluginFieldsOrBuilderList() {
+    return pluginFields_;
+  }
+  /**
+   * <pre>
+   * a subset of req_fields we suggest go in the plugin instance.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+   */
+  @java.lang.Override
+  public int getPluginFieldsCount() {
+    return pluginFields_.size();
+  }
+  /**
+   * <pre>
+   * a subset of req_fields we suggest go in the plugin instance.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getPluginFields(int index) {
+    return pluginFields_.get(index);
+  }
+  /**
+   * <pre>
+   * a subset of req_fields we suggest go in the plugin instance.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getPluginFieldsOrBuilder(
+      int index) {
+    return pluginFields_.get(index);
+  }
+
+  public static final int LINK_FIELDS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> linkFields_;
+  /**
+   * <pre>
+   * a subset of req_fields we suggest go in the portal link
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getLinkFieldsList() {
+    return linkFields_;
+  }
+  /**
+   * <pre>
+   * a subset of req_fields we suggest go in the portal link
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+      getLinkFieldsOrBuilderList() {
+    return linkFields_;
+  }
+  /**
+   * <pre>
+   * a subset of req_fields we suggest go in the portal link
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+   */
+  @java.lang.Override
+  public int getLinkFieldsCount() {
+    return linkFields_.size();
+  }
+  /**
+   * <pre>
+   * a subset of req_fields we suggest go in the portal link
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getLinkFields(int index) {
+    return linkFields_.get(index);
+  }
+  /**
+   * <pre>
+   * a subset of req_fields we suggest go in the portal link
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getLinkFieldsOrBuilder(
+      int index) {
+    return linkFields_.get(index);
+  }
+
+  public static final int PREV_FIELDS_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> prevFields_;
+  /**
+   * <pre>
+   * a subset of req_fields we suggest come from some previously called flow.
+   * this is usually empty. Experian Payment flows do have this populated with
+   * data that comes from the experian query balance flow.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getPrevFieldsList() {
+    return prevFields_;
+  }
+  /**
+   * <pre>
+   * a subset of req_fields we suggest come from some previously called flow.
+   * this is usually empty. Experian Payment flows do have this populated with
+   * data that comes from the experian query balance flow.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+      getPrevFieldsOrBuilderList() {
+    return prevFields_;
+  }
+  /**
+   * <pre>
+   * a subset of req_fields we suggest come from some previously called flow.
+   * this is usually empty. Experian Payment flows do have this populated with
+   * data that comes from the experian query balance flow.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+   */
+  @java.lang.Override
+  public int getPrevFieldsCount() {
+    return prevFields_.size();
+  }
+  /**
+   * <pre>
+   * a subset of req_fields we suggest come from some previously called flow.
+   * this is usually empty. Experian Payment flows do have this populated with
+   * data that comes from the experian query balance flow.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getPrevFields(int index) {
+    return prevFields_.get(index);
+  }
+  /**
+   * <pre>
+   * a subset of req_fields we suggest come from some previously called flow.
+   * this is usually empty. Experian Payment flows do have this populated with
+   * data that comes from the experian query balance flow.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getPrevFieldsOrBuilder(
+      int index) {
+    return prevFields_.get(index);
+  }
+
+  public static final int FORM_FIELDS_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> formFields_;
+  /**
+   * <pre>
+   * a subset of either req_fields OR res_fields that is suggested comes from the user.
+   * Example:
+   * verification flows would have a subset of the res_fields here, because
+   * we want to verify the user provided data against the api call's result.
+   * but
+   * payment flows would have a subset of req_fields here, because
+   * we want to take the payment fields from the user to make the api call.
+   * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+   * a user form, so this is empty on those flows.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getFormFieldsList() {
+    return formFields_;
+  }
+  /**
+   * <pre>
+   * a subset of either req_fields OR res_fields that is suggested comes from the user.
+   * Example:
+   * verification flows would have a subset of the res_fields here, because
+   * we want to verify the user provided data against the api call's result.
+   * but
+   * payment flows would have a subset of req_fields here, because
+   * we want to take the payment fields from the user to make the api call.
+   * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+   * a user form, so this is empty on those flows.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+      getFormFieldsOrBuilderList() {
+    return formFields_;
+  }
+  /**
+   * <pre>
+   * a subset of either req_fields OR res_fields that is suggested comes from the user.
+   * Example:
+   * verification flows would have a subset of the res_fields here, because
+   * we want to verify the user provided data against the api call's result.
+   * but
+   * payment flows would have a subset of req_fields here, because
+   * we want to take the payment fields from the user to make the api call.
+   * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+   * a user form, so this is empty on those flows.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+   */
+  @java.lang.Override
+  public int getFormFieldsCount() {
+    return formFields_.size();
+  }
+  /**
+   * <pre>
+   * a subset of either req_fields OR res_fields that is suggested comes from the user.
+   * Example:
+   * verification flows would have a subset of the res_fields here, because
+   * we want to verify the user provided data against the api call's result.
+   * but
+   * payment flows would have a subset of req_fields here, because
+   * we want to take the payment fields from the user to make the api call.
+   * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+   * a user form, so this is empty on those flows.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getFormFields(int index) {
+    return formFields_.get(index);
+  }
+  /**
+   * <pre>
+   * a subset of either req_fields OR res_fields that is suggested comes from the user.
+   * Example:
+   * verification flows would have a subset of the res_fields here, because
+   * we want to verify the user provided data against the api call's result.
+   * but
+   * payment flows would have a subset of req_fields here, because
+   * we want to take the payment fields from the user to make the api call.
+   * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+   * a user form, so this is empty on those flows.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getFormFieldsOrBuilder(
+      int index) {
+    return formFields_.get(index);
+  }
+
+  public static final int TEMPLATE_FIELD_NUMBER = 10;
+  private com.tcn.cloud.api.api.v1alpha1.integrations.Template template_;
+  /**
+   * <pre>
+   * The default template that can be used with the result data to make it pretty
+   * and grouped. Right now this is only used for invoices.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.integrations.Template template = 10 [json_name = "template"];</code>
+   * @return Whether the template field is set.
+   */
+  @java.lang.Override
+  public boolean hasTemplate() {
+    return template_ != null;
+  }
+  /**
+   * <pre>
+   * The default template that can be used with the result data to make it pretty
+   * and grouped. Right now this is only used for invoices.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.integrations.Template template = 10 [json_name = "template"];</code>
+   * @return The template.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.integrations.Template getTemplate() {
+    return template_ == null ? com.tcn.cloud.api.api.v1alpha1.integrations.Template.getDefaultInstance() : template_;
+  }
+  /**
+   * <pre>
+   * The default template that can be used with the result data to make it pretty
+   * and grouped. Right now this is only used for invoices.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.integrations.Template template = 10 [json_name = "template"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.integrations.TemplateOrBuilder getTemplateOrBuilder() {
+    return template_ == null ? com.tcn.cloud.api.api.v1alpha1.integrations.Template.getDefaultInstance() : template_;
+  }
+
+  public static final int OPTS_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> opts_;
+  /**
+   * <pre>
+   * Optional data that can be defined on Flow creation tine to affect the execution
+   * of the flow entity.
+   * Example:
+   * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+   * if checked, we change the account number used for payment, rather than use the
+   * one provided in the portal link.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getOptsList() {
+    return opts_;
+  }
+  /**
+   * <pre>
+   * Optional data that can be defined on Flow creation tine to affect the execution
+   * of the flow entity.
+   * Example:
+   * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+   * if checked, we change the account number used for payment, rather than use the
+   * one provided in the portal link.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+      getOptsOrBuilderList() {
+    return opts_;
+  }
+  /**
+   * <pre>
+   * Optional data that can be defined on Flow creation tine to affect the execution
+   * of the flow entity.
+   * Example:
+   * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+   * if checked, we change the account number used for payment, rather than use the
+   * one provided in the portal link.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+   */
+  @java.lang.Override
+  public int getOptsCount() {
+    return opts_.size();
+  }
+  /**
+   * <pre>
+   * Optional data that can be defined on Flow creation tine to affect the execution
+   * of the flow entity.
+   * Example:
+   * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+   * if checked, we change the account number used for payment, rather than use the
+   * one provided in the portal link.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getOpts(int index) {
+    return opts_.get(index);
+  }
+  /**
+   * <pre>
+   * Optional data that can be defined on Flow creation tine to affect the execution
+   * of the flow entity.
+   * Example:
+   * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+   * if checked, we change the account number used for payment, rather than use the
+   * one provided in the portal link.
+   * </pre>
+   *
+   * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getOptsOrBuilder(
+      int index) {
+    return opts_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -195,8 +716,32 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(definitionName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, definitionName_);
     }
-    for (int i = 0; i < actionDefinitions_.size(); i++) {
-      output.writeMessage(12, actionDefinitions_.get(i));
+    if (method_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
+      output.writeEnum(3, method_);
+    }
+    for (int i = 0; i < reqFields_.size(); i++) {
+      output.writeMessage(4, reqFields_.get(i));
+    }
+    for (int i = 0; i < resFields_.size(); i++) {
+      output.writeMessage(5, resFields_.get(i));
+    }
+    for (int i = 0; i < pluginFields_.size(); i++) {
+      output.writeMessage(6, pluginFields_.get(i));
+    }
+    for (int i = 0; i < linkFields_.size(); i++) {
+      output.writeMessage(7, linkFields_.get(i));
+    }
+    for (int i = 0; i < prevFields_.size(); i++) {
+      output.writeMessage(8, prevFields_.get(i));
+    }
+    for (int i = 0; i < formFields_.size(); i++) {
+      output.writeMessage(9, formFields_.get(i));
+    }
+    if (template_ != null) {
+      output.writeMessage(10, getTemplate());
+    }
+    for (int i = 0; i < opts_.size(); i++) {
+      output.writeMessage(11, opts_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -214,9 +759,41 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(definitionName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, definitionName_);
     }
-    for (int i = 0; i < actionDefinitions_.size(); i++) {
+    if (method_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(12, actionDefinitions_.get(i));
+        .computeEnumSize(3, method_);
+    }
+    for (int i = 0; i < reqFields_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, reqFields_.get(i));
+    }
+    for (int i = 0; i < resFields_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, resFields_.get(i));
+    }
+    for (int i = 0; i < pluginFields_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, pluginFields_.get(i));
+    }
+    for (int i = 0; i < linkFields_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, linkFields_.get(i));
+    }
+    for (int i = 0; i < prevFields_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, prevFields_.get(i));
+    }
+    for (int i = 0; i < formFields_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, formFields_.get(i));
+    }
+    if (template_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getTemplate());
+    }
+    for (int i = 0; i < opts_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, opts_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -236,8 +813,26 @@ private static final long serialVersionUID = 0L;
     if (flowType_ != other.flowType_) return false;
     if (!getDefinitionName()
         .equals(other.getDefinitionName())) return false;
-    if (!getActionDefinitionsList()
-        .equals(other.getActionDefinitionsList())) return false;
+    if (method_ != other.method_) return false;
+    if (!getReqFieldsList()
+        .equals(other.getReqFieldsList())) return false;
+    if (!getResFieldsList()
+        .equals(other.getResFieldsList())) return false;
+    if (!getPluginFieldsList()
+        .equals(other.getPluginFieldsList())) return false;
+    if (!getLinkFieldsList()
+        .equals(other.getLinkFieldsList())) return false;
+    if (!getPrevFieldsList()
+        .equals(other.getPrevFieldsList())) return false;
+    if (!getFormFieldsList()
+        .equals(other.getFormFieldsList())) return false;
+    if (hasTemplate() != other.hasTemplate()) return false;
+    if (hasTemplate()) {
+      if (!getTemplate()
+          .equals(other.getTemplate())) return false;
+    }
+    if (!getOptsList()
+        .equals(other.getOptsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -253,9 +848,39 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + flowType_;
     hash = (37 * hash) + DEFINITION_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getDefinitionName().hashCode();
-    if (getActionDefinitionsCount() > 0) {
-      hash = (37 * hash) + ACTION_DEFINITIONS_FIELD_NUMBER;
-      hash = (53 * hash) + getActionDefinitionsList().hashCode();
+    hash = (37 * hash) + METHOD_FIELD_NUMBER;
+    hash = (53 * hash) + method_;
+    if (getReqFieldsCount() > 0) {
+      hash = (37 * hash) + REQ_FIELDS_FIELD_NUMBER;
+      hash = (53 * hash) + getReqFieldsList().hashCode();
+    }
+    if (getResFieldsCount() > 0) {
+      hash = (37 * hash) + RES_FIELDS_FIELD_NUMBER;
+      hash = (53 * hash) + getResFieldsList().hashCode();
+    }
+    if (getPluginFieldsCount() > 0) {
+      hash = (37 * hash) + PLUGIN_FIELDS_FIELD_NUMBER;
+      hash = (53 * hash) + getPluginFieldsList().hashCode();
+    }
+    if (getLinkFieldsCount() > 0) {
+      hash = (37 * hash) + LINK_FIELDS_FIELD_NUMBER;
+      hash = (53 * hash) + getLinkFieldsList().hashCode();
+    }
+    if (getPrevFieldsCount() > 0) {
+      hash = (37 * hash) + PREV_FIELDS_FIELD_NUMBER;
+      hash = (53 * hash) + getPrevFieldsList().hashCode();
+    }
+    if (getFormFieldsCount() > 0) {
+      hash = (37 * hash) + FORM_FIELDS_FIELD_NUMBER;
+      hash = (53 * hash) + getFormFieldsList().hashCode();
+    }
+    if (hasTemplate()) {
+      hash = (37 * hash) + TEMPLATE_FIELD_NUMBER;
+      hash = (53 * hash) + getTemplate().hashCode();
+    }
+    if (getOptsCount() > 0) {
+      hash = (37 * hash) + OPTS_FIELD_NUMBER;
+      hash = (53 * hash) + getOptsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -355,6 +980,12 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * this describes the requirements to build a Flow entity
+   * that matches this description.  All created flows must
+   * conform to a FlowDefinition.
+   * </pre>
+   *
    * Protobuf type {@code api.v1alpha1.integrations.WorkflowDefinition}
    */
   public static final class Builder extends
@@ -390,13 +1021,61 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       flowType_ = 0;
       definitionName_ = "";
-      if (actionDefinitionsBuilder_ == null) {
-        actionDefinitions_ = java.util.Collections.emptyList();
+      method_ = 0;
+      if (reqFieldsBuilder_ == null) {
+        reqFields_ = java.util.Collections.emptyList();
       } else {
-        actionDefinitions_ = null;
-        actionDefinitionsBuilder_.clear();
+        reqFields_ = null;
+        reqFieldsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
+      if (resFieldsBuilder_ == null) {
+        resFields_ = java.util.Collections.emptyList();
+      } else {
+        resFields_ = null;
+        resFieldsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000010);
+      if (pluginFieldsBuilder_ == null) {
+        pluginFields_ = java.util.Collections.emptyList();
+      } else {
+        pluginFields_ = null;
+        pluginFieldsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000020);
+      if (linkFieldsBuilder_ == null) {
+        linkFields_ = java.util.Collections.emptyList();
+      } else {
+        linkFields_ = null;
+        linkFieldsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000040);
+      if (prevFieldsBuilder_ == null) {
+        prevFields_ = java.util.Collections.emptyList();
+      } else {
+        prevFields_ = null;
+        prevFieldsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000080);
+      if (formFieldsBuilder_ == null) {
+        formFields_ = java.util.Collections.emptyList();
+      } else {
+        formFields_ = null;
+        formFieldsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000100);
+      template_ = null;
+      if (templateBuilder_ != null) {
+        templateBuilder_.dispose();
+        templateBuilder_ = null;
+      }
+      if (optsBuilder_ == null) {
+        opts_ = java.util.Collections.emptyList();
+      } else {
+        opts_ = null;
+        optsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000400);
       return this;
     }
 
@@ -430,14 +1109,68 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.integrations.WorkflowDefinition result) {
-      if (actionDefinitionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
-          actionDefinitions_ = java.util.Collections.unmodifiableList(actionDefinitions_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+      if (reqFieldsBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          reqFields_ = java.util.Collections.unmodifiableList(reqFields_);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
-        result.actionDefinitions_ = actionDefinitions_;
+        result.reqFields_ = reqFields_;
       } else {
-        result.actionDefinitions_ = actionDefinitionsBuilder_.build();
+        result.reqFields_ = reqFieldsBuilder_.build();
+      }
+      if (resFieldsBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          resFields_ = java.util.Collections.unmodifiableList(resFields_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.resFields_ = resFields_;
+      } else {
+        result.resFields_ = resFieldsBuilder_.build();
+      }
+      if (pluginFieldsBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0)) {
+          pluginFields_ = java.util.Collections.unmodifiableList(pluginFields_);
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.pluginFields_ = pluginFields_;
+      } else {
+        result.pluginFields_ = pluginFieldsBuilder_.build();
+      }
+      if (linkFieldsBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0)) {
+          linkFields_ = java.util.Collections.unmodifiableList(linkFields_);
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.linkFields_ = linkFields_;
+      } else {
+        result.linkFields_ = linkFieldsBuilder_.build();
+      }
+      if (prevFieldsBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0)) {
+          prevFields_ = java.util.Collections.unmodifiableList(prevFields_);
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.prevFields_ = prevFields_;
+      } else {
+        result.prevFields_ = prevFieldsBuilder_.build();
+      }
+      if (formFieldsBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0)) {
+          formFields_ = java.util.Collections.unmodifiableList(formFields_);
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.formFields_ = formFields_;
+      } else {
+        result.formFields_ = formFieldsBuilder_.build();
+      }
+      if (optsBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0)) {
+          opts_ = java.util.Collections.unmodifiableList(opts_);
+          bitField0_ = (bitField0_ & ~0x00000400);
+        }
+        result.opts_ = opts_;
+      } else {
+        result.opts_ = optsBuilder_.build();
       }
     }
 
@@ -448,6 +1181,14 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.definitionName_ = definitionName_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.method_ = method_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.template_ = templateBuilder_ == null
+            ? template_
+            : templateBuilder_.build();
       }
     }
 
@@ -503,29 +1244,191 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (actionDefinitionsBuilder_ == null) {
-        if (!other.actionDefinitions_.isEmpty()) {
-          if (actionDefinitions_.isEmpty()) {
-            actionDefinitions_ = other.actionDefinitions_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+      if (other.method_ != 0) {
+        setMethodValue(other.getMethodValue());
+      }
+      if (reqFieldsBuilder_ == null) {
+        if (!other.reqFields_.isEmpty()) {
+          if (reqFields_.isEmpty()) {
+            reqFields_ = other.reqFields_;
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
-            ensureActionDefinitionsIsMutable();
-            actionDefinitions_.addAll(other.actionDefinitions_);
+            ensureReqFieldsIsMutable();
+            reqFields_.addAll(other.reqFields_);
           }
           onChanged();
         }
       } else {
-        if (!other.actionDefinitions_.isEmpty()) {
-          if (actionDefinitionsBuilder_.isEmpty()) {
-            actionDefinitionsBuilder_.dispose();
-            actionDefinitionsBuilder_ = null;
-            actionDefinitions_ = other.actionDefinitions_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-            actionDefinitionsBuilder_ = 
+        if (!other.reqFields_.isEmpty()) {
+          if (reqFieldsBuilder_.isEmpty()) {
+            reqFieldsBuilder_.dispose();
+            reqFieldsBuilder_ = null;
+            reqFields_ = other.reqFields_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+            reqFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getActionDefinitionsFieldBuilder() : null;
+                 getReqFieldsFieldBuilder() : null;
           } else {
-            actionDefinitionsBuilder_.addAllMessages(other.actionDefinitions_);
+            reqFieldsBuilder_.addAllMessages(other.reqFields_);
+          }
+        }
+      }
+      if (resFieldsBuilder_ == null) {
+        if (!other.resFields_.isEmpty()) {
+          if (resFields_.isEmpty()) {
+            resFields_ = other.resFields_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureResFieldsIsMutable();
+            resFields_.addAll(other.resFields_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.resFields_.isEmpty()) {
+          if (resFieldsBuilder_.isEmpty()) {
+            resFieldsBuilder_.dispose();
+            resFieldsBuilder_ = null;
+            resFields_ = other.resFields_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+            resFieldsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getResFieldsFieldBuilder() : null;
+          } else {
+            resFieldsBuilder_.addAllMessages(other.resFields_);
+          }
+        }
+      }
+      if (pluginFieldsBuilder_ == null) {
+        if (!other.pluginFields_.isEmpty()) {
+          if (pluginFields_.isEmpty()) {
+            pluginFields_ = other.pluginFields_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensurePluginFieldsIsMutable();
+            pluginFields_.addAll(other.pluginFields_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.pluginFields_.isEmpty()) {
+          if (pluginFieldsBuilder_.isEmpty()) {
+            pluginFieldsBuilder_.dispose();
+            pluginFieldsBuilder_ = null;
+            pluginFields_ = other.pluginFields_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+            pluginFieldsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getPluginFieldsFieldBuilder() : null;
+          } else {
+            pluginFieldsBuilder_.addAllMessages(other.pluginFields_);
+          }
+        }
+      }
+      if (linkFieldsBuilder_ == null) {
+        if (!other.linkFields_.isEmpty()) {
+          if (linkFields_.isEmpty()) {
+            linkFields_ = other.linkFields_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureLinkFieldsIsMutable();
+            linkFields_.addAll(other.linkFields_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.linkFields_.isEmpty()) {
+          if (linkFieldsBuilder_.isEmpty()) {
+            linkFieldsBuilder_.dispose();
+            linkFieldsBuilder_ = null;
+            linkFields_ = other.linkFields_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+            linkFieldsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getLinkFieldsFieldBuilder() : null;
+          } else {
+            linkFieldsBuilder_.addAllMessages(other.linkFields_);
+          }
+        }
+      }
+      if (prevFieldsBuilder_ == null) {
+        if (!other.prevFields_.isEmpty()) {
+          if (prevFields_.isEmpty()) {
+            prevFields_ = other.prevFields_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensurePrevFieldsIsMutable();
+            prevFields_.addAll(other.prevFields_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.prevFields_.isEmpty()) {
+          if (prevFieldsBuilder_.isEmpty()) {
+            prevFieldsBuilder_.dispose();
+            prevFieldsBuilder_ = null;
+            prevFields_ = other.prevFields_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+            prevFieldsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getPrevFieldsFieldBuilder() : null;
+          } else {
+            prevFieldsBuilder_.addAllMessages(other.prevFields_);
+          }
+        }
+      }
+      if (formFieldsBuilder_ == null) {
+        if (!other.formFields_.isEmpty()) {
+          if (formFields_.isEmpty()) {
+            formFields_ = other.formFields_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureFormFieldsIsMutable();
+            formFields_.addAll(other.formFields_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.formFields_.isEmpty()) {
+          if (formFieldsBuilder_.isEmpty()) {
+            formFieldsBuilder_.dispose();
+            formFieldsBuilder_ = null;
+            formFields_ = other.formFields_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+            formFieldsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getFormFieldsFieldBuilder() : null;
+          } else {
+            formFieldsBuilder_.addAllMessages(other.formFields_);
+          }
+        }
+      }
+      if (other.hasTemplate()) {
+        mergeTemplate(other.getTemplate());
+      }
+      if (optsBuilder_ == null) {
+        if (!other.opts_.isEmpty()) {
+          if (opts_.isEmpty()) {
+            opts_ = other.opts_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+          } else {
+            ensureOptsIsMutable();
+            opts_.addAll(other.opts_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.opts_.isEmpty()) {
+          if (optsBuilder_.isEmpty()) {
+            optsBuilder_.dispose();
+            optsBuilder_ = null;
+            opts_ = other.opts_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+            optsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getOptsFieldBuilder() : null;
+          } else {
+            optsBuilder_.addAllMessages(other.opts_);
           }
         }
       }
@@ -565,19 +1468,109 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 98: {
-              com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition m =
+            case 24: {
+              method_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition.parser(),
+                      com.tcn.cloud.api.api.commons.integrations.FieldDefinition.parser(),
                       extensionRegistry);
-              if (actionDefinitionsBuilder_ == null) {
-                ensureActionDefinitionsIsMutable();
-                actionDefinitions_.add(m);
+              if (reqFieldsBuilder_ == null) {
+                ensureReqFieldsIsMutable();
+                reqFields_.add(m);
               } else {
-                actionDefinitionsBuilder_.addMessage(m);
+                reqFieldsBuilder_.addMessage(m);
               }
               break;
-            } // case 98
+            } // case 34
+            case 42: {
+              com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.integrations.FieldDefinition.parser(),
+                      extensionRegistry);
+              if (resFieldsBuilder_ == null) {
+                ensureResFieldsIsMutable();
+                resFields_.add(m);
+              } else {
+                resFieldsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 42
+            case 50: {
+              com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.integrations.FieldDefinition.parser(),
+                      extensionRegistry);
+              if (pluginFieldsBuilder_ == null) {
+                ensurePluginFieldsIsMutable();
+                pluginFields_.add(m);
+              } else {
+                pluginFieldsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 50
+            case 58: {
+              com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.integrations.FieldDefinition.parser(),
+                      extensionRegistry);
+              if (linkFieldsBuilder_ == null) {
+                ensureLinkFieldsIsMutable();
+                linkFields_.add(m);
+              } else {
+                linkFieldsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 58
+            case 66: {
+              com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.integrations.FieldDefinition.parser(),
+                      extensionRegistry);
+              if (prevFieldsBuilder_ == null) {
+                ensurePrevFieldsIsMutable();
+                prevFields_.add(m);
+              } else {
+                prevFieldsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 66
+            case 74: {
+              com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.integrations.FieldDefinition.parser(),
+                      extensionRegistry);
+              if (formFieldsBuilder_ == null) {
+                ensureFormFieldsIsMutable();
+                formFields_.add(m);
+              } else {
+                formFieldsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getTemplateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 90: {
+              com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.integrations.FieldDefinition.parser(),
+                      extensionRegistry);
+              if (optsBuilder_ == null) {
+                ensureOptsIsMutable();
+                opts_.add(m);
+              } else {
+                optsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -598,7 +1591,7 @@ private static final long serialVersionUID = 0L;
     private int flowType_ = 0;
     /**
      * <pre>
-     * Payment, Invoice, or other type of flow
+     * the type of flow
      * </pre>
      *
      * <code>.api.commons.integrations.FlowType flow_type = 1 [json_name = "flowType"];</code>
@@ -609,7 +1602,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Payment, Invoice, or other type of flow
+     * the type of flow
      * </pre>
      *
      * <code>.api.commons.integrations.FlowType flow_type = 1 [json_name = "flowType"];</code>
@@ -624,7 +1617,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Payment, Invoice, or other type of flow
+     * the type of flow
      * </pre>
      *
      * <code>.api.commons.integrations.FlowType flow_type = 1 [json_name = "flowType"];</code>
@@ -637,7 +1630,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Payment, Invoice, or other type of flow
+     * the type of flow
      * </pre>
      *
      * <code>.api.commons.integrations.FlowType flow_type = 1 [json_name = "flowType"];</code>
@@ -655,7 +1648,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Payment, Invoice, or other type of flow
+     * the type of flow
      * </pre>
      *
      * <code>.api.commons.integrations.FlowType flow_type = 1 [json_name = "flowType"];</code>
@@ -671,7 +1664,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object definitionName_ = "";
     /**
      * <pre>
-     * the name of this workflow definition
+     * the name of this flow definition
      * </pre>
      *
      * <code>string definition_name = 2 [json_name = "definitionName"];</code>
@@ -691,7 +1684,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the name of this workflow definition
+     * the name of this flow definition
      * </pre>
      *
      * <code>string definition_name = 2 [json_name = "definitionName"];</code>
@@ -712,7 +1705,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the name of this workflow definition
+     * the name of this flow definition
      * </pre>
      *
      * <code>string definition_name = 2 [json_name = "definitionName"];</code>
@@ -729,7 +1722,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the name of this workflow definition
+     * the name of this flow definition
      * </pre>
      *
      * <code>string definition_name = 2 [json_name = "definitionName"];</code>
@@ -743,7 +1736,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the name of this workflow definition
+     * the name of this flow definition
      * </pre>
      *
      * <code>string definition_name = 2 [json_name = "definitionName"];</code>
@@ -760,316 +1753,2695 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition> actionDefinitions_ =
+    private int method_ = 0;
+    /**
+     * <pre>
+     * the api method performed for this flow.
+     * </pre>
+     *
+     * <code>.api.commons.integrations.RequestMethod method = 3 [json_name = "method"];</code>
+     * @return The enum numeric value on the wire for method.
+     */
+    @java.lang.Override public int getMethodValue() {
+      return method_;
+    }
+    /**
+     * <pre>
+     * the api method performed for this flow.
+     * </pre>
+     *
+     * <code>.api.commons.integrations.RequestMethod method = 3 [json_name = "method"];</code>
+     * @param value The enum numeric value on the wire for method to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMethodValue(int value) {
+      method_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the api method performed for this flow.
+     * </pre>
+     *
+     * <code>.api.commons.integrations.RequestMethod method = 3 [json_name = "method"];</code>
+     * @return The method.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethod() {
+      com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(method_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * the api method performed for this flow.
+     * </pre>
+     *
+     * <code>.api.commons.integrations.RequestMethod method = 3 [json_name = "method"];</code>
+     * @param value The method to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMethod(com.tcn.cloud.api.api.commons.integrations.RequestMethod value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      method_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the api method performed for this flow.
+     * </pre>
+     *
+     * <code>.api.commons.integrations.RequestMethod method = 3 [json_name = "method"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMethod() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      method_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> reqFields_ =
       java.util.Collections.emptyList();
-    private void ensureActionDefinitionsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
-        actionDefinitions_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition>(actionDefinitions_);
-        bitField0_ |= 0x00000004;
+    private void ensureReqFieldsIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        reqFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(reqFields_);
+        bitField0_ |= 0x00000008;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition, com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinitionOrBuilder> actionDefinitionsBuilder_;
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> reqFieldsBuilder_;
 
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition> getActionDefinitionsList() {
-      if (actionDefinitionsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(actionDefinitions_);
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getReqFieldsList() {
+      if (reqFieldsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(reqFields_);
       } else {
-        return actionDefinitionsBuilder_.getMessageList();
+        return reqFieldsBuilder_.getMessageList();
       }
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public int getActionDefinitionsCount() {
-      if (actionDefinitionsBuilder_ == null) {
-        return actionDefinitions_.size();
+    public int getReqFieldsCount() {
+      if (reqFieldsBuilder_ == null) {
+        return reqFields_.size();
       } else {
-        return actionDefinitionsBuilder_.getCount();
+        return reqFieldsBuilder_.getCount();
       }
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition getActionDefinitions(int index) {
-      if (actionDefinitionsBuilder_ == null) {
-        return actionDefinitions_.get(index);
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getReqFields(int index) {
+      if (reqFieldsBuilder_ == null) {
+        return reqFields_.get(index);
       } else {
-        return actionDefinitionsBuilder_.getMessage(index);
+        return reqFieldsBuilder_.getMessage(index);
       }
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public Builder setActionDefinitions(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition value) {
-      if (actionDefinitionsBuilder_ == null) {
+    public Builder setReqFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (reqFieldsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureActionDefinitionsIsMutable();
-        actionDefinitions_.set(index, value);
+        ensureReqFieldsIsMutable();
+        reqFields_.set(index, value);
         onChanged();
       } else {
-        actionDefinitionsBuilder_.setMessage(index, value);
+        reqFieldsBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public Builder setActionDefinitions(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition.Builder builderForValue) {
-      if (actionDefinitionsBuilder_ == null) {
-        ensureActionDefinitionsIsMutable();
-        actionDefinitions_.set(index, builderForValue.build());
+    public Builder setReqFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (reqFieldsBuilder_ == null) {
+        ensureReqFieldsIsMutable();
+        reqFields_.set(index, builderForValue.build());
         onChanged();
       } else {
-        actionDefinitionsBuilder_.setMessage(index, builderForValue.build());
+        reqFieldsBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public Builder addActionDefinitions(com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition value) {
-      if (actionDefinitionsBuilder_ == null) {
+    public Builder addReqFields(com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (reqFieldsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureActionDefinitionsIsMutable();
-        actionDefinitions_.add(value);
+        ensureReqFieldsIsMutable();
+        reqFields_.add(value);
         onChanged();
       } else {
-        actionDefinitionsBuilder_.addMessage(value);
+        reqFieldsBuilder_.addMessage(value);
       }
       return this;
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public Builder addActionDefinitions(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition value) {
-      if (actionDefinitionsBuilder_ == null) {
+    public Builder addReqFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (reqFieldsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureActionDefinitionsIsMutable();
-        actionDefinitions_.add(index, value);
+        ensureReqFieldsIsMutable();
+        reqFields_.add(index, value);
         onChanged();
       } else {
-        actionDefinitionsBuilder_.addMessage(index, value);
+        reqFieldsBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public Builder addActionDefinitions(
-        com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition.Builder builderForValue) {
-      if (actionDefinitionsBuilder_ == null) {
-        ensureActionDefinitionsIsMutable();
-        actionDefinitions_.add(builderForValue.build());
+    public Builder addReqFields(
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (reqFieldsBuilder_ == null) {
+        ensureReqFieldsIsMutable();
+        reqFields_.add(builderForValue.build());
         onChanged();
       } else {
-        actionDefinitionsBuilder_.addMessage(builderForValue.build());
+        reqFieldsBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public Builder addActionDefinitions(
-        int index, com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition.Builder builderForValue) {
-      if (actionDefinitionsBuilder_ == null) {
-        ensureActionDefinitionsIsMutable();
-        actionDefinitions_.add(index, builderForValue.build());
+    public Builder addReqFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (reqFieldsBuilder_ == null) {
+        ensureReqFieldsIsMutable();
+        reqFields_.add(index, builderForValue.build());
         onChanged();
       } else {
-        actionDefinitionsBuilder_.addMessage(index, builderForValue.build());
+        reqFieldsBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public Builder addAllActionDefinitions(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition> values) {
-      if (actionDefinitionsBuilder_ == null) {
-        ensureActionDefinitionsIsMutable();
+    public Builder addAllReqFields(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinition> values) {
+      if (reqFieldsBuilder_ == null) {
+        ensureReqFieldsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, actionDefinitions_);
+            values, reqFields_);
         onChanged();
       } else {
-        actionDefinitionsBuilder_.addAllMessages(values);
+        reqFieldsBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public Builder clearActionDefinitions() {
-      if (actionDefinitionsBuilder_ == null) {
-        actionDefinitions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+    public Builder clearReqFields() {
+      if (reqFieldsBuilder_ == null) {
+        reqFields_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
-        actionDefinitionsBuilder_.clear();
+        reqFieldsBuilder_.clear();
       }
       return this;
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public Builder removeActionDefinitions(int index) {
-      if (actionDefinitionsBuilder_ == null) {
-        ensureActionDefinitionsIsMutable();
-        actionDefinitions_.remove(index);
+    public Builder removeReqFields(int index) {
+      if (reqFieldsBuilder_ == null) {
+        ensureReqFieldsIsMutable();
+        reqFields_.remove(index);
         onChanged();
       } else {
-        actionDefinitionsBuilder_.remove(index);
+        reqFieldsBuilder_.remove(index);
       }
       return this;
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition.Builder getActionDefinitionsBuilder(
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder getReqFieldsBuilder(
         int index) {
-      return getActionDefinitionsFieldBuilder().getBuilder(index);
+      return getReqFieldsFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinitionOrBuilder getActionDefinitionsOrBuilder(
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getReqFieldsOrBuilder(
         int index) {
-      if (actionDefinitionsBuilder_ == null) {
-        return actionDefinitions_.get(index);  } else {
-        return actionDefinitionsBuilder_.getMessageOrBuilder(index);
+      if (reqFieldsBuilder_ == null) {
+        return reqFields_.get(index);  } else {
+        return reqFieldsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinitionOrBuilder> 
-         getActionDefinitionsOrBuilderList() {
-      if (actionDefinitionsBuilder_ != null) {
-        return actionDefinitionsBuilder_.getMessageOrBuilderList();
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+         getReqFieldsOrBuilderList() {
+      if (reqFieldsBuilder_ != null) {
+        return reqFieldsBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(actionDefinitions_);
+        return java.util.Collections.unmodifiableList(reqFields_);
       }
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition.Builder addActionDefinitionsBuilder() {
-      return getActionDefinitionsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition.getDefaultInstance());
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addReqFieldsBuilder() {
+      return getReqFieldsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition.Builder addActionDefinitionsBuilder(
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addReqFieldsBuilder(
         int index) {
-      return getActionDefinitionsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition.getDefaultInstance());
+      return getReqFieldsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
     }
     /**
      * <pre>
-     * the list of choices that can be selected for an action during the workflow execution
+     * the fields required to complete this flow
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition.Builder> 
-         getActionDefinitionsBuilderList() {
-      return getActionDefinitionsFieldBuilder().getBuilderList();
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder> 
+         getReqFieldsBuilderList() {
+      return getReqFieldsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition, com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinitionOrBuilder> 
-        getActionDefinitionsFieldBuilder() {
-      if (actionDefinitionsBuilder_ == null) {
-        actionDefinitionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition, com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinitionOrBuilder>(
-                actionDefinitions_,
-                ((bitField0_ & 0x00000004) != 0),
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+        getReqFieldsFieldBuilder() {
+      if (reqFieldsBuilder_ == null) {
+        reqFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
+                reqFields_,
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
-        actionDefinitions_ = null;
+        reqFields_ = null;
       }
-      return actionDefinitionsBuilder_;
+      return reqFieldsBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> resFields_ =
+      java.util.Collections.emptyList();
+    private void ensureResFieldsIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        resFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(resFields_);
+        bitField0_ |= 0x00000010;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> resFieldsBuilder_;
+
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getResFieldsList() {
+      if (resFieldsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(resFields_);
+      } else {
+        return resFieldsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public int getResFieldsCount() {
+      if (resFieldsBuilder_ == null) {
+        return resFields_.size();
+      } else {
+        return resFieldsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getResFields(int index) {
+      if (resFieldsBuilder_ == null) {
+        return resFields_.get(index);
+      } else {
+        return resFieldsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public Builder setResFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (resFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureResFieldsIsMutable();
+        resFields_.set(index, value);
+        onChanged();
+      } else {
+        resFieldsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public Builder setResFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (resFieldsBuilder_ == null) {
+        ensureResFieldsIsMutable();
+        resFields_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        resFieldsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public Builder addResFields(com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (resFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureResFieldsIsMutable();
+        resFields_.add(value);
+        onChanged();
+      } else {
+        resFieldsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public Builder addResFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (resFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureResFieldsIsMutable();
+        resFields_.add(index, value);
+        onChanged();
+      } else {
+        resFieldsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public Builder addResFields(
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (resFieldsBuilder_ == null) {
+        ensureResFieldsIsMutable();
+        resFields_.add(builderForValue.build());
+        onChanged();
+      } else {
+        resFieldsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public Builder addResFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (resFieldsBuilder_ == null) {
+        ensureResFieldsIsMutable();
+        resFields_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        resFieldsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public Builder addAllResFields(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinition> values) {
+      if (resFieldsBuilder_ == null) {
+        ensureResFieldsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, resFields_);
+        onChanged();
+      } else {
+        resFieldsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public Builder clearResFields() {
+      if (resFieldsBuilder_ == null) {
+        resFields_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+      } else {
+        resFieldsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public Builder removeResFields(int index) {
+      if (resFieldsBuilder_ == null) {
+        ensureResFieldsIsMutable();
+        resFields_.remove(index);
+        onChanged();
+      } else {
+        resFieldsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder getResFieldsBuilder(
+        int index) {
+      return getResFieldsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getResFieldsOrBuilder(
+        int index) {
+      if (resFieldsBuilder_ == null) {
+        return resFields_.get(index);  } else {
+        return resFieldsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+         getResFieldsOrBuilderList() {
+      if (resFieldsBuilder_ != null) {
+        return resFieldsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(resFields_);
+      }
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addResFieldsBuilder() {
+      return getResFieldsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addResFieldsBuilder(
+        int index) {
+      return getResFieldsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * the fields returned from this flows execution
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder> 
+         getResFieldsBuilderList() {
+      return getResFieldsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+        getResFieldsFieldBuilder() {
+      if (resFieldsBuilder_ == null) {
+        resFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
+                resFields_,
+                ((bitField0_ & 0x00000010) != 0),
+                getParentForChildren(),
+                isClean());
+        resFields_ = null;
+      }
+      return resFieldsBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> pluginFields_ =
+      java.util.Collections.emptyList();
+    private void ensurePluginFieldsIsMutable() {
+      if (!((bitField0_ & 0x00000020) != 0)) {
+        pluginFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(pluginFields_);
+        bitField0_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> pluginFieldsBuilder_;
+
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getPluginFieldsList() {
+      if (pluginFieldsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(pluginFields_);
+      } else {
+        return pluginFieldsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public int getPluginFieldsCount() {
+      if (pluginFieldsBuilder_ == null) {
+        return pluginFields_.size();
+      } else {
+        return pluginFieldsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getPluginFields(int index) {
+      if (pluginFieldsBuilder_ == null) {
+        return pluginFields_.get(index);
+      } else {
+        return pluginFieldsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public Builder setPluginFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (pluginFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePluginFieldsIsMutable();
+        pluginFields_.set(index, value);
+        onChanged();
+      } else {
+        pluginFieldsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public Builder setPluginFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (pluginFieldsBuilder_ == null) {
+        ensurePluginFieldsIsMutable();
+        pluginFields_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        pluginFieldsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public Builder addPluginFields(com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (pluginFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePluginFieldsIsMutable();
+        pluginFields_.add(value);
+        onChanged();
+      } else {
+        pluginFieldsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public Builder addPluginFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (pluginFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePluginFieldsIsMutable();
+        pluginFields_.add(index, value);
+        onChanged();
+      } else {
+        pluginFieldsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public Builder addPluginFields(
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (pluginFieldsBuilder_ == null) {
+        ensurePluginFieldsIsMutable();
+        pluginFields_.add(builderForValue.build());
+        onChanged();
+      } else {
+        pluginFieldsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public Builder addPluginFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (pluginFieldsBuilder_ == null) {
+        ensurePluginFieldsIsMutable();
+        pluginFields_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        pluginFieldsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public Builder addAllPluginFields(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinition> values) {
+      if (pluginFieldsBuilder_ == null) {
+        ensurePluginFieldsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, pluginFields_);
+        onChanged();
+      } else {
+        pluginFieldsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public Builder clearPluginFields() {
+      if (pluginFieldsBuilder_ == null) {
+        pluginFields_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+      } else {
+        pluginFieldsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public Builder removePluginFields(int index) {
+      if (pluginFieldsBuilder_ == null) {
+        ensurePluginFieldsIsMutable();
+        pluginFields_.remove(index);
+        onChanged();
+      } else {
+        pluginFieldsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder getPluginFieldsBuilder(
+        int index) {
+      return getPluginFieldsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getPluginFieldsOrBuilder(
+        int index) {
+      if (pluginFieldsBuilder_ == null) {
+        return pluginFields_.get(index);  } else {
+        return pluginFieldsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+         getPluginFieldsOrBuilderList() {
+      if (pluginFieldsBuilder_ != null) {
+        return pluginFieldsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(pluginFields_);
+      }
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addPluginFieldsBuilder() {
+      return getPluginFieldsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addPluginFieldsBuilder(
+        int index) {
+      return getPluginFieldsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the plugin instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder> 
+         getPluginFieldsBuilderList() {
+      return getPluginFieldsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+        getPluginFieldsFieldBuilder() {
+      if (pluginFieldsBuilder_ == null) {
+        pluginFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
+                pluginFields_,
+                ((bitField0_ & 0x00000020) != 0),
+                getParentForChildren(),
+                isClean());
+        pluginFields_ = null;
+      }
+      return pluginFieldsBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> linkFields_ =
+      java.util.Collections.emptyList();
+    private void ensureLinkFieldsIsMutable() {
+      if (!((bitField0_ & 0x00000040) != 0)) {
+        linkFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(linkFields_);
+        bitField0_ |= 0x00000040;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> linkFieldsBuilder_;
+
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getLinkFieldsList() {
+      if (linkFieldsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(linkFields_);
+      } else {
+        return linkFieldsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public int getLinkFieldsCount() {
+      if (linkFieldsBuilder_ == null) {
+        return linkFields_.size();
+      } else {
+        return linkFieldsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getLinkFields(int index) {
+      if (linkFieldsBuilder_ == null) {
+        return linkFields_.get(index);
+      } else {
+        return linkFieldsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public Builder setLinkFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (linkFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLinkFieldsIsMutable();
+        linkFields_.set(index, value);
+        onChanged();
+      } else {
+        linkFieldsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public Builder setLinkFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (linkFieldsBuilder_ == null) {
+        ensureLinkFieldsIsMutable();
+        linkFields_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        linkFieldsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public Builder addLinkFields(com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (linkFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLinkFieldsIsMutable();
+        linkFields_.add(value);
+        onChanged();
+      } else {
+        linkFieldsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public Builder addLinkFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (linkFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLinkFieldsIsMutable();
+        linkFields_.add(index, value);
+        onChanged();
+      } else {
+        linkFieldsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public Builder addLinkFields(
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (linkFieldsBuilder_ == null) {
+        ensureLinkFieldsIsMutable();
+        linkFields_.add(builderForValue.build());
+        onChanged();
+      } else {
+        linkFieldsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public Builder addLinkFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (linkFieldsBuilder_ == null) {
+        ensureLinkFieldsIsMutable();
+        linkFields_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        linkFieldsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public Builder addAllLinkFields(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinition> values) {
+      if (linkFieldsBuilder_ == null) {
+        ensureLinkFieldsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, linkFields_);
+        onChanged();
+      } else {
+        linkFieldsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public Builder clearLinkFields() {
+      if (linkFieldsBuilder_ == null) {
+        linkFields_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+      } else {
+        linkFieldsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public Builder removeLinkFields(int index) {
+      if (linkFieldsBuilder_ == null) {
+        ensureLinkFieldsIsMutable();
+        linkFields_.remove(index);
+        onChanged();
+      } else {
+        linkFieldsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder getLinkFieldsBuilder(
+        int index) {
+      return getLinkFieldsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getLinkFieldsOrBuilder(
+        int index) {
+      if (linkFieldsBuilder_ == null) {
+        return linkFields_.get(index);  } else {
+        return linkFieldsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+         getLinkFieldsOrBuilderList() {
+      if (linkFieldsBuilder_ != null) {
+        return linkFieldsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(linkFields_);
+      }
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addLinkFieldsBuilder() {
+      return getLinkFieldsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addLinkFieldsBuilder(
+        int index) {
+      return getLinkFieldsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest go in the portal link
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder> 
+         getLinkFieldsBuilderList() {
+      return getLinkFieldsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+        getLinkFieldsFieldBuilder() {
+      if (linkFieldsBuilder_ == null) {
+        linkFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
+                linkFields_,
+                ((bitField0_ & 0x00000040) != 0),
+                getParentForChildren(),
+                isClean());
+        linkFields_ = null;
+      }
+      return linkFieldsBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> prevFields_ =
+      java.util.Collections.emptyList();
+    private void ensurePrevFieldsIsMutable() {
+      if (!((bitField0_ & 0x00000080) != 0)) {
+        prevFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(prevFields_);
+        bitField0_ |= 0x00000080;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> prevFieldsBuilder_;
+
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getPrevFieldsList() {
+      if (prevFieldsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(prevFields_);
+      } else {
+        return prevFieldsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public int getPrevFieldsCount() {
+      if (prevFieldsBuilder_ == null) {
+        return prevFields_.size();
+      } else {
+        return prevFieldsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getPrevFields(int index) {
+      if (prevFieldsBuilder_ == null) {
+        return prevFields_.get(index);
+      } else {
+        return prevFieldsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public Builder setPrevFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (prevFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePrevFieldsIsMutable();
+        prevFields_.set(index, value);
+        onChanged();
+      } else {
+        prevFieldsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public Builder setPrevFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (prevFieldsBuilder_ == null) {
+        ensurePrevFieldsIsMutable();
+        prevFields_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        prevFieldsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public Builder addPrevFields(com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (prevFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePrevFieldsIsMutable();
+        prevFields_.add(value);
+        onChanged();
+      } else {
+        prevFieldsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public Builder addPrevFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (prevFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePrevFieldsIsMutable();
+        prevFields_.add(index, value);
+        onChanged();
+      } else {
+        prevFieldsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public Builder addPrevFields(
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (prevFieldsBuilder_ == null) {
+        ensurePrevFieldsIsMutable();
+        prevFields_.add(builderForValue.build());
+        onChanged();
+      } else {
+        prevFieldsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public Builder addPrevFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (prevFieldsBuilder_ == null) {
+        ensurePrevFieldsIsMutable();
+        prevFields_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        prevFieldsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public Builder addAllPrevFields(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinition> values) {
+      if (prevFieldsBuilder_ == null) {
+        ensurePrevFieldsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, prevFields_);
+        onChanged();
+      } else {
+        prevFieldsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public Builder clearPrevFields() {
+      if (prevFieldsBuilder_ == null) {
+        prevFields_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+      } else {
+        prevFieldsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public Builder removePrevFields(int index) {
+      if (prevFieldsBuilder_ == null) {
+        ensurePrevFieldsIsMutable();
+        prevFields_.remove(index);
+        onChanged();
+      } else {
+        prevFieldsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder getPrevFieldsBuilder(
+        int index) {
+      return getPrevFieldsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getPrevFieldsOrBuilder(
+        int index) {
+      if (prevFieldsBuilder_ == null) {
+        return prevFields_.get(index);  } else {
+        return prevFieldsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+         getPrevFieldsOrBuilderList() {
+      if (prevFieldsBuilder_ != null) {
+        return prevFieldsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(prevFields_);
+      }
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addPrevFieldsBuilder() {
+      return getPrevFieldsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addPrevFieldsBuilder(
+        int index) {
+      return getPrevFieldsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * a subset of req_fields we suggest come from some previously called flow.
+     * this is usually empty. Experian Payment flows do have this populated with
+     * data that comes from the experian query balance flow.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder> 
+         getPrevFieldsBuilderList() {
+      return getPrevFieldsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+        getPrevFieldsFieldBuilder() {
+      if (prevFieldsBuilder_ == null) {
+        prevFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
+                prevFields_,
+                ((bitField0_ & 0x00000080) != 0),
+                getParentForChildren(),
+                isClean());
+        prevFields_ = null;
+      }
+      return prevFieldsBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> formFields_ =
+      java.util.Collections.emptyList();
+    private void ensureFormFieldsIsMutable() {
+      if (!((bitField0_ & 0x00000100) != 0)) {
+        formFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(formFields_);
+        bitField0_ |= 0x00000100;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> formFieldsBuilder_;
+
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getFormFieldsList() {
+      if (formFieldsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(formFields_);
+      } else {
+        return formFieldsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public int getFormFieldsCount() {
+      if (formFieldsBuilder_ == null) {
+        return formFields_.size();
+      } else {
+        return formFieldsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getFormFields(int index) {
+      if (formFieldsBuilder_ == null) {
+        return formFields_.get(index);
+      } else {
+        return formFieldsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public Builder setFormFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (formFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFormFieldsIsMutable();
+        formFields_.set(index, value);
+        onChanged();
+      } else {
+        formFieldsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public Builder setFormFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (formFieldsBuilder_ == null) {
+        ensureFormFieldsIsMutable();
+        formFields_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        formFieldsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public Builder addFormFields(com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (formFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFormFieldsIsMutable();
+        formFields_.add(value);
+        onChanged();
+      } else {
+        formFieldsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public Builder addFormFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (formFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFormFieldsIsMutable();
+        formFields_.add(index, value);
+        onChanged();
+      } else {
+        formFieldsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public Builder addFormFields(
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (formFieldsBuilder_ == null) {
+        ensureFormFieldsIsMutable();
+        formFields_.add(builderForValue.build());
+        onChanged();
+      } else {
+        formFieldsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public Builder addFormFields(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (formFieldsBuilder_ == null) {
+        ensureFormFieldsIsMutable();
+        formFields_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        formFieldsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public Builder addAllFormFields(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinition> values) {
+      if (formFieldsBuilder_ == null) {
+        ensureFormFieldsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, formFields_);
+        onChanged();
+      } else {
+        formFieldsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public Builder clearFormFields() {
+      if (formFieldsBuilder_ == null) {
+        formFields_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+      } else {
+        formFieldsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public Builder removeFormFields(int index) {
+      if (formFieldsBuilder_ == null) {
+        ensureFormFieldsIsMutable();
+        formFields_.remove(index);
+        onChanged();
+      } else {
+        formFieldsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder getFormFieldsBuilder(
+        int index) {
+      return getFormFieldsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getFormFieldsOrBuilder(
+        int index) {
+      if (formFieldsBuilder_ == null) {
+        return formFields_.get(index);  } else {
+        return formFieldsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+         getFormFieldsOrBuilderList() {
+      if (formFieldsBuilder_ != null) {
+        return formFieldsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(formFields_);
+      }
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addFormFieldsBuilder() {
+      return getFormFieldsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addFormFieldsBuilder(
+        int index) {
+      return getFormFieldsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * a subset of either req_fields OR res_fields that is suggested comes from the user.
+     * Example:
+     * verification flows would have a subset of the res_fields here, because
+     * we want to verify the user provided data against the api call's result.
+     * but
+     * payment flows would have a subset of req_fields here, because
+     * we want to take the payment fields from the user to make the api call.
+     * Some flows have no form fields. Invoice Flows and Execute Flows don't need
+     * a user form, so this is empty on those flows.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder> 
+         getFormFieldsBuilderList() {
+      return getFormFieldsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+        getFormFieldsFieldBuilder() {
+      if (formFieldsBuilder_ == null) {
+        formFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
+                formFields_,
+                ((bitField0_ & 0x00000100) != 0),
+                getParentForChildren(),
+                isClean());
+        formFields_ = null;
+      }
+      return formFieldsBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.integrations.Template template_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.integrations.Template, com.tcn.cloud.api.api.v1alpha1.integrations.Template.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.TemplateOrBuilder> templateBuilder_;
+    /**
+     * <pre>
+     * The default template that can be used with the result data to make it pretty
+     * and grouped. Right now this is only used for invoices.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.Template template = 10 [json_name = "template"];</code>
+     * @return Whether the template field is set.
+     */
+    public boolean hasTemplate() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * The default template that can be used with the result data to make it pretty
+     * and grouped. Right now this is only used for invoices.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.Template template = 10 [json_name = "template"];</code>
+     * @return The template.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.Template getTemplate() {
+      if (templateBuilder_ == null) {
+        return template_ == null ? com.tcn.cloud.api.api.v1alpha1.integrations.Template.getDefaultInstance() : template_;
+      } else {
+        return templateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The default template that can be used with the result data to make it pretty
+     * and grouped. Right now this is only used for invoices.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.Template template = 10 [json_name = "template"];</code>
+     */
+    public Builder setTemplate(com.tcn.cloud.api.api.v1alpha1.integrations.Template value) {
+      if (templateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        template_ = value;
+      } else {
+        templateBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The default template that can be used with the result data to make it pretty
+     * and grouped. Right now this is only used for invoices.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.Template template = 10 [json_name = "template"];</code>
+     */
+    public Builder setTemplate(
+        com.tcn.cloud.api.api.v1alpha1.integrations.Template.Builder builderForValue) {
+      if (templateBuilder_ == null) {
+        template_ = builderForValue.build();
+      } else {
+        templateBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The default template that can be used with the result data to make it pretty
+     * and grouped. Right now this is only used for invoices.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.Template template = 10 [json_name = "template"];</code>
+     */
+    public Builder mergeTemplate(com.tcn.cloud.api.api.v1alpha1.integrations.Template value) {
+      if (templateBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0) &&
+          template_ != null &&
+          template_ != com.tcn.cloud.api.api.v1alpha1.integrations.Template.getDefaultInstance()) {
+          getTemplateBuilder().mergeFrom(value);
+        } else {
+          template_ = value;
+        }
+      } else {
+        templateBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The default template that can be used with the result data to make it pretty
+     * and grouped. Right now this is only used for invoices.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.Template template = 10 [json_name = "template"];</code>
+     */
+    public Builder clearTemplate() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      template_ = null;
+      if (templateBuilder_ != null) {
+        templateBuilder_.dispose();
+        templateBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The default template that can be used with the result data to make it pretty
+     * and grouped. Right now this is only used for invoices.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.Template template = 10 [json_name = "template"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.Template.Builder getTemplateBuilder() {
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return getTemplateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The default template that can be used with the result data to make it pretty
+     * and grouped. Right now this is only used for invoices.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.Template template = 10 [json_name = "template"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.TemplateOrBuilder getTemplateOrBuilder() {
+      if (templateBuilder_ != null) {
+        return templateBuilder_.getMessageOrBuilder();
+      } else {
+        return template_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.integrations.Template.getDefaultInstance() : template_;
+      }
+    }
+    /**
+     * <pre>
+     * The default template that can be used with the result data to make it pretty
+     * and grouped. Right now this is only used for invoices.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.integrations.Template template = 10 [json_name = "template"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.integrations.Template, com.tcn.cloud.api.api.v1alpha1.integrations.Template.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.TemplateOrBuilder> 
+        getTemplateFieldBuilder() {
+      if (templateBuilder_ == null) {
+        templateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.integrations.Template, com.tcn.cloud.api.api.v1alpha1.integrations.Template.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.TemplateOrBuilder>(
+                getTemplate(),
+                getParentForChildren(),
+                isClean());
+        template_ = null;
+      }
+      return templateBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> opts_ =
+      java.util.Collections.emptyList();
+    private void ensureOptsIsMutable() {
+      if (!((bitField0_ & 0x00000400) != 0)) {
+        opts_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(opts_);
+        bitField0_ |= 0x00000400;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> optsBuilder_;
+
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getOptsList() {
+      if (optsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(opts_);
+      } else {
+        return optsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public int getOptsCount() {
+      if (optsBuilder_ == null) {
+        return opts_.size();
+      } else {
+        return optsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getOpts(int index) {
+      if (optsBuilder_ == null) {
+        return opts_.get(index);
+      } else {
+        return optsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public Builder setOpts(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (optsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOptsIsMutable();
+        opts_.set(index, value);
+        onChanged();
+      } else {
+        optsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public Builder setOpts(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (optsBuilder_ == null) {
+        ensureOptsIsMutable();
+        opts_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        optsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public Builder addOpts(com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (optsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOptsIsMutable();
+        opts_.add(value);
+        onChanged();
+      } else {
+        optsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public Builder addOpts(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
+      if (optsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOptsIsMutable();
+        opts_.add(index, value);
+        onChanged();
+      } else {
+        optsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public Builder addOpts(
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (optsBuilder_ == null) {
+        ensureOptsIsMutable();
+        opts_.add(builderForValue.build());
+        onChanged();
+      } else {
+        optsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public Builder addOpts(
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
+      if (optsBuilder_ == null) {
+        ensureOptsIsMutable();
+        opts_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        optsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public Builder addAllOpts(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinition> values) {
+      if (optsBuilder_ == null) {
+        ensureOptsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, opts_);
+        onChanged();
+      } else {
+        optsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public Builder clearOpts() {
+      if (optsBuilder_ == null) {
+        opts_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+      } else {
+        optsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public Builder removeOpts(int index) {
+      if (optsBuilder_ == null) {
+        ensureOptsIsMutable();
+        opts_.remove(index);
+        onChanged();
+      } else {
+        optsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder getOptsBuilder(
+        int index) {
+      return getOptsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getOptsOrBuilder(
+        int index) {
+      if (optsBuilder_ == null) {
+        return opts_.get(index);  } else {
+        return optsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+         getOptsOrBuilderList() {
+      if (optsBuilder_ != null) {
+        return optsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(opts_);
+      }
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addOptsBuilder() {
+      return getOptsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addOptsBuilder(
+        int index) {
+      return getOptsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Optional data that can be defined on Flow creation tine to affect the execution
+     * of the flow entity.
+     * Example:
+     * Experian flows have a 'use_invoice_account_number' field that is a boolean.
+     * if checked, we change the account number used for payment, rather than use the
+     * one provided in the portal link.
+     * </pre>
+     *
+     * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder> 
+         getOptsBuilderList() {
+      return getOptsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
+        getOptsFieldBuilder() {
+      if (optsBuilder_ == null) {
+        optsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
+                opts_,
+                ((bitField0_ & 0x00000400) != 0),
+                getParentForChildren(),
+                isClean());
+        opts_ = null;
+      }
+      return optsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

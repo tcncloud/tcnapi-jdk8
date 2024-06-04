@@ -9,6 +9,30 @@ public interface PortalWorkflowOrBuilder extends
 
   /**
    * <pre>
+   * the global data for this flow.
+   * the portal_link data + the plugin_instance data
+   * make up the inital data set that is given to the Actions in "segments".
+   * </pre>
+   *
+   * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
+   * @return The pluginInstanceId.
+   */
+  java.lang.String getPluginInstanceId();
+  /**
+   * <pre>
+   * the global data for this flow.
+   * the portal_link data + the plugin_instance data
+   * make up the inital data set that is given to the Actions in "segments".
+   * </pre>
+   *
+   * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
+   * @return The bytes for pluginInstanceId.
+   */
+  com.google.protobuf.ByteString
+      getPluginInstanceIdBytes();
+
+  /**
+   * <pre>
    * the set of actions on the integrations api that must be executed in order
    * </pre>
    *
