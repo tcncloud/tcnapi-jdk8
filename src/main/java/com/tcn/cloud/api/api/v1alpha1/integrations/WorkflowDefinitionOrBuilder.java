@@ -9,7 +9,7 @@ public interface WorkflowDefinitionOrBuilder extends
 
   /**
    * <pre>
-   * the type of flow
+   * Payment, Invoice, or other type of flow
    * </pre>
    *
    * <code>.api.commons.integrations.FlowType flow_type = 1 [json_name = "flowType"];</code>
@@ -18,7 +18,7 @@ public interface WorkflowDefinitionOrBuilder extends
   int getFlowTypeValue();
   /**
    * <pre>
-   * the type of flow
+   * Payment, Invoice, or other type of flow
    * </pre>
    *
    * <code>.api.commons.integrations.FlowType flow_type = 1 [json_name = "flowType"];</code>
@@ -28,7 +28,7 @@ public interface WorkflowDefinitionOrBuilder extends
 
   /**
    * <pre>
-   * the name of this flow definition
+   * the name of this workflow definition
    * </pre>
    *
    * <code>string definition_name = 2 [json_name = "definitionName"];</code>
@@ -37,7 +37,7 @@ public interface WorkflowDefinitionOrBuilder extends
   java.lang.String getDefinitionName();
   /**
    * <pre>
-   * the name of this flow definition
+   * the name of this workflow definition
    * </pre>
    *
    * <code>string definition_name = 2 [json_name = "definitionName"];</code>
@@ -48,433 +48,45 @@ public interface WorkflowDefinitionOrBuilder extends
 
   /**
    * <pre>
-   * the api method performed for this flow.
+   * the list of choices that can be selected for an action during the workflow execution
    * </pre>
    *
-   * <code>.api.commons.integrations.RequestMethod method = 3 [json_name = "method"];</code>
-   * @return The enum numeric value on the wire for method.
+   * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
    */
-  int getMethodValue();
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition> 
+      getActionDefinitionsList();
   /**
    * <pre>
-   * the api method performed for this flow.
+   * the list of choices that can be selected for an action during the workflow execution
    * </pre>
    *
-   * <code>.api.commons.integrations.RequestMethod method = 3 [json_name = "method"];</code>
-   * @return The method.
+   * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
    */
-  com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethod();
-
+  com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinition getActionDefinitions(int index);
   /**
    * <pre>
-   * the fields required to complete this flow
+   * the list of choices that can be selected for an action during the workflow execution
    * </pre>
    *
-   * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
+   * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> 
-      getReqFieldsList();
+  int getActionDefinitionsCount();
   /**
    * <pre>
-   * the fields required to complete this flow
+   * the list of choices that can be selected for an action during the workflow execution
    * </pre>
    *
-   * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
+   * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
    */
-  com.tcn.cloud.api.api.commons.integrations.FieldDefinition getReqFields(int index);
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinitionOrBuilder> 
+      getActionDefinitionsOrBuilderList();
   /**
    * <pre>
-   * the fields required to complete this flow
+   * the list of choices that can be selected for an action during the workflow execution
    * </pre>
    *
-   * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
+   * <code>repeated .api.v1alpha1.integrations.ActionDefinition action_definitions = 12 [json_name = "actionDefinitions"];</code>
    */
-  int getReqFieldsCount();
-  /**
-   * <pre>
-   * the fields required to complete this flow
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
-      getReqFieldsOrBuilderList();
-  /**
-   * <pre>
-   * the fields required to complete this flow
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition req_fields = 4 [json_name = "reqFields"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getReqFieldsOrBuilder(
-      int index);
-
-  /**
-   * <pre>
-   * the fields returned from this flows execution
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> 
-      getResFieldsList();
-  /**
-   * <pre>
-   * the fields returned from this flows execution
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.FieldDefinition getResFields(int index);
-  /**
-   * <pre>
-   * the fields returned from this flows execution
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
-   */
-  int getResFieldsCount();
-  /**
-   * <pre>
-   * the fields returned from this flows execution
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
-      getResFieldsOrBuilderList();
-  /**
-   * <pre>
-   * the fields returned from this flows execution
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition res_fields = 5 [json_name = "resFields"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getResFieldsOrBuilder(
-      int index);
-
-  /**
-   * <pre>
-   * a subset of req_fields we suggest go in the plugin instance.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> 
-      getPluginFieldsList();
-  /**
-   * <pre>
-   * a subset of req_fields we suggest go in the plugin instance.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.FieldDefinition getPluginFields(int index);
-  /**
-   * <pre>
-   * a subset of req_fields we suggest go in the plugin instance.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
-   */
-  int getPluginFieldsCount();
-  /**
-   * <pre>
-   * a subset of req_fields we suggest go in the plugin instance.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
-      getPluginFieldsOrBuilderList();
-  /**
-   * <pre>
-   * a subset of req_fields we suggest go in the plugin instance.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition plugin_fields = 6 [json_name = "pluginFields"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getPluginFieldsOrBuilder(
-      int index);
-
-  /**
-   * <pre>
-   * a subset of req_fields we suggest go in the portal link
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> 
-      getLinkFieldsList();
-  /**
-   * <pre>
-   * a subset of req_fields we suggest go in the portal link
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.FieldDefinition getLinkFields(int index);
-  /**
-   * <pre>
-   * a subset of req_fields we suggest go in the portal link
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
-   */
-  int getLinkFieldsCount();
-  /**
-   * <pre>
-   * a subset of req_fields we suggest go in the portal link
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
-      getLinkFieldsOrBuilderList();
-  /**
-   * <pre>
-   * a subset of req_fields we suggest go in the portal link
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition link_fields = 7 [json_name = "linkFields"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getLinkFieldsOrBuilder(
-      int index);
-
-  /**
-   * <pre>
-   * a subset of req_fields we suggest come from some previously called flow.
-   * this is usually empty. Experian Payment flows do have this populated with
-   * data that comes from the experian query balance flow.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> 
-      getPrevFieldsList();
-  /**
-   * <pre>
-   * a subset of req_fields we suggest come from some previously called flow.
-   * this is usually empty. Experian Payment flows do have this populated with
-   * data that comes from the experian query balance flow.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.FieldDefinition getPrevFields(int index);
-  /**
-   * <pre>
-   * a subset of req_fields we suggest come from some previously called flow.
-   * this is usually empty. Experian Payment flows do have this populated with
-   * data that comes from the experian query balance flow.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
-   */
-  int getPrevFieldsCount();
-  /**
-   * <pre>
-   * a subset of req_fields we suggest come from some previously called flow.
-   * this is usually empty. Experian Payment flows do have this populated with
-   * data that comes from the experian query balance flow.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
-      getPrevFieldsOrBuilderList();
-  /**
-   * <pre>
-   * a subset of req_fields we suggest come from some previously called flow.
-   * this is usually empty. Experian Payment flows do have this populated with
-   * data that comes from the experian query balance flow.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition prev_fields = 8 [json_name = "prevFields"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getPrevFieldsOrBuilder(
-      int index);
-
-  /**
-   * <pre>
-   * a subset of either req_fields OR res_fields that is suggested comes from the user.
-   * Example:
-   * verification flows would have a subset of the res_fields here, because
-   * we want to verify the user provided data against the api call's result.
-   * but
-   * payment flows would have a subset of req_fields here, because
-   * we want to take the payment fields from the user to make the api call.
-   * Some flows have no form fields. Invoice Flows and Execute Flows don't need
-   * a user form, so this is empty on those flows.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> 
-      getFormFieldsList();
-  /**
-   * <pre>
-   * a subset of either req_fields OR res_fields that is suggested comes from the user.
-   * Example:
-   * verification flows would have a subset of the res_fields here, because
-   * we want to verify the user provided data against the api call's result.
-   * but
-   * payment flows would have a subset of req_fields here, because
-   * we want to take the payment fields from the user to make the api call.
-   * Some flows have no form fields. Invoice Flows and Execute Flows don't need
-   * a user form, so this is empty on those flows.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.FieldDefinition getFormFields(int index);
-  /**
-   * <pre>
-   * a subset of either req_fields OR res_fields that is suggested comes from the user.
-   * Example:
-   * verification flows would have a subset of the res_fields here, because
-   * we want to verify the user provided data against the api call's result.
-   * but
-   * payment flows would have a subset of req_fields here, because
-   * we want to take the payment fields from the user to make the api call.
-   * Some flows have no form fields. Invoice Flows and Execute Flows don't need
-   * a user form, so this is empty on those flows.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
-   */
-  int getFormFieldsCount();
-  /**
-   * <pre>
-   * a subset of either req_fields OR res_fields that is suggested comes from the user.
-   * Example:
-   * verification flows would have a subset of the res_fields here, because
-   * we want to verify the user provided data against the api call's result.
-   * but
-   * payment flows would have a subset of req_fields here, because
-   * we want to take the payment fields from the user to make the api call.
-   * Some flows have no form fields. Invoice Flows and Execute Flows don't need
-   * a user form, so this is empty on those flows.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
-      getFormFieldsOrBuilderList();
-  /**
-   * <pre>
-   * a subset of either req_fields OR res_fields that is suggested comes from the user.
-   * Example:
-   * verification flows would have a subset of the res_fields here, because
-   * we want to verify the user provided data against the api call's result.
-   * but
-   * payment flows would have a subset of req_fields here, because
-   * we want to take the payment fields from the user to make the api call.
-   * Some flows have no form fields. Invoice Flows and Execute Flows don't need
-   * a user form, so this is empty on those flows.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition form_fields = 9 [json_name = "formFields"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getFormFieldsOrBuilder(
-      int index);
-
-  /**
-   * <pre>
-   * The default template that can be used with the result data to make it pretty
-   * and grouped. Right now this is only used for invoices.
-   * </pre>
-   *
-   * <code>.api.v1alpha1.integrations.Template template = 10 [json_name = "template"];</code>
-   * @return Whether the template field is set.
-   */
-  boolean hasTemplate();
-  /**
-   * <pre>
-   * The default template that can be used with the result data to make it pretty
-   * and grouped. Right now this is only used for invoices.
-   * </pre>
-   *
-   * <code>.api.v1alpha1.integrations.Template template = 10 [json_name = "template"];</code>
-   * @return The template.
-   */
-  com.tcn.cloud.api.api.v1alpha1.integrations.Template getTemplate();
-  /**
-   * <pre>
-   * The default template that can be used with the result data to make it pretty
-   * and grouped. Right now this is only used for invoices.
-   * </pre>
-   *
-   * <code>.api.v1alpha1.integrations.Template template = 10 [json_name = "template"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.integrations.TemplateOrBuilder getTemplateOrBuilder();
-
-  /**
-   * <pre>
-   * Optional data that can be defined on Flow creation tine to affect the execution
-   * of the flow entity.
-   * Example:
-   * Experian flows have a 'use_invoice_account_number' field that is a boolean.
-   * if checked, we change the account number used for payment, rather than use the
-   * one provided in the portal link.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> 
-      getOptsList();
-  /**
-   * <pre>
-   * Optional data that can be defined on Flow creation tine to affect the execution
-   * of the flow entity.
-   * Example:
-   * Experian flows have a 'use_invoice_account_number' field that is a boolean.
-   * if checked, we change the account number used for payment, rather than use the
-   * one provided in the portal link.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.FieldDefinition getOpts(int index);
-  /**
-   * <pre>
-   * Optional data that can be defined on Flow creation tine to affect the execution
-   * of the flow entity.
-   * Example:
-   * Experian flows have a 'use_invoice_account_number' field that is a boolean.
-   * if checked, we change the account number used for payment, rather than use the
-   * one provided in the portal link.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
-   */
-  int getOptsCount();
-  /**
-   * <pre>
-   * Optional data that can be defined on Flow creation tine to affect the execution
-   * of the flow entity.
-   * Example:
-   * Experian flows have a 'use_invoice_account_number' field that is a boolean.
-   * if checked, we change the account number used for payment, rather than use the
-   * one provided in the portal link.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
-      getOptsOrBuilderList();
-  /**
-   * <pre>
-   * Optional data that can be defined on Flow creation tine to affect the execution
-   * of the flow entity.
-   * Example:
-   * Experian flows have a 'use_invoice_account_number' field that is a boolean.
-   * if checked, we change the account number used for payment, rather than use the
-   * one provided in the portal link.
-   * </pre>
-   *
-   * <code>repeated .api.commons.integrations.FieldDefinition opts = 11 [json_name = "opts"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getOptsOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.integrations.ActionDefinitionOrBuilder getActionDefinitionsOrBuilder(
       int index);
 }
