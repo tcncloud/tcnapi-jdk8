@@ -8,7 +8,7 @@ public interface DeleteFileTemplateRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 file_template = 1 [json_name = "fileTemplate"];</code>
+   * <code>int64 file_template = 1 [json_name = "fileTemplate", jstype = JS_STRING];</code>
    * @return The fileTemplate.
    */
   long getFileTemplate();

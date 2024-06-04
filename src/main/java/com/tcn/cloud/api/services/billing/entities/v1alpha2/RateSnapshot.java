@@ -21,7 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private RateSnapshot() {
     rates_ = java.util.Collections.emptyList();
-    editedBy_ = "";
+    userId_ = "";
   }
 
   @java.lang.Override
@@ -137,39 +137,39 @@ private static final long serialVersionUID = 0L;
     return rates_.get(index);
   }
 
-  public static final int EDITED_BY_FIELD_NUMBER = 4;
+  public static final int USER_ID_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object editedBy_ = "";
+  private volatile java.lang.Object userId_ = "";
   /**
-   * <code>string edited_by = 4 [json_name = "editedBy"];</code>
-   * @return The editedBy.
+   * <code>string user_id = 4 [json_name = "userId"];</code>
+   * @return The userId.
    */
   @java.lang.Override
-  public java.lang.String getEditedBy() {
-    java.lang.Object ref = editedBy_;
+  public java.lang.String getUserId() {
+    java.lang.Object ref = userId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      editedBy_ = s;
+      userId_ = s;
       return s;
     }
   }
   /**
-   * <code>string edited_by = 4 [json_name = "editedBy"];</code>
-   * @return The bytes for editedBy.
+   * <code>string user_id = 4 [json_name = "userId"];</code>
+   * @return The bytes for userId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getEditedByBytes() {
-    java.lang.Object ref = editedBy_;
+      getUserIdBytes() {
+    java.lang.Object ref = userId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      editedBy_ = b;
+      userId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -199,8 +199,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < rates_.size(); i++) {
       output.writeMessage(3, rates_.get(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editedBy_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, editedBy_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, userId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -223,8 +223,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, rates_.get(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(editedBy_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, editedBy_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, userId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -253,8 +253,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getRatesList()
         .equals(other.getRatesList())) return false;
-    if (!getEditedBy()
-        .equals(other.getEditedBy())) return false;
+    if (!getUserId()
+        .equals(other.getUserId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -278,8 +278,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RATES_FIELD_NUMBER;
       hash = (53 * hash) + getRatesList().hashCode();
     }
-    hash = (37 * hash) + EDITED_BY_FIELD_NUMBER;
-    hash = (53 * hash) + getEditedBy().hashCode();
+    hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getUserId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -432,7 +432,7 @@ private static final long serialVersionUID = 0L;
         ratesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
-      editedBy_ = "";
+      userId_ = "";
       return this;
     }
 
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
             : endDateBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.editedBy_ = editedBy_;
+        result.userId_ = userId_;
       }
     }
 
@@ -570,8 +570,8 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (!other.getEditedBy().isEmpty()) {
-        editedBy_ = other.editedBy_;
+      if (!other.getUserId().isEmpty()) {
+        userId_ = other.userId_;
         bitField0_ |= 0x00000008;
         onChanged();
       }
@@ -629,7 +629,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 26
             case 34: {
-              editedBy_ = input.readStringRequireUtf8();
+              userId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
             } // case 34
@@ -1128,73 +1128,73 @@ private static final long serialVersionUID = 0L;
       return ratesBuilder_;
     }
 
-    private java.lang.Object editedBy_ = "";
+    private java.lang.Object userId_ = "";
     /**
-     * <code>string edited_by = 4 [json_name = "editedBy"];</code>
-     * @return The editedBy.
+     * <code>string user_id = 4 [json_name = "userId"];</code>
+     * @return The userId.
      */
-    public java.lang.String getEditedBy() {
-      java.lang.Object ref = editedBy_;
+    public java.lang.String getUserId() {
+      java.lang.Object ref = userId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        editedBy_ = s;
+        userId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string edited_by = 4 [json_name = "editedBy"];</code>
-     * @return The bytes for editedBy.
+     * <code>string user_id = 4 [json_name = "userId"];</code>
+     * @return The bytes for userId.
      */
     public com.google.protobuf.ByteString
-        getEditedByBytes() {
-      java.lang.Object ref = editedBy_;
+        getUserIdBytes() {
+      java.lang.Object ref = userId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        editedBy_ = b;
+        userId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string edited_by = 4 [json_name = "editedBy"];</code>
-     * @param value The editedBy to set.
+     * <code>string user_id = 4 [json_name = "userId"];</code>
+     * @param value The userId to set.
      * @return This builder for chaining.
      */
-    public Builder setEditedBy(
+    public Builder setUserId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      editedBy_ = value;
+      userId_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>string edited_by = 4 [json_name = "editedBy"];</code>
+     * <code>string user_id = 4 [json_name = "userId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearEditedBy() {
-      editedBy_ = getDefaultInstance().getEditedBy();
+    public Builder clearUserId() {
+      userId_ = getDefaultInstance().getUserId();
       bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
-     * <code>string edited_by = 4 [json_name = "editedBy"];</code>
-     * @param value The bytes for editedBy to set.
+     * <code>string user_id = 4 [json_name = "userId"];</code>
+     * @param value The bytes for userId to set.
      * @return This builder for chaining.
      */
-    public Builder setEditedByBytes(
+    public Builder setUserIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      editedBy_ = value;
+      userId_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;

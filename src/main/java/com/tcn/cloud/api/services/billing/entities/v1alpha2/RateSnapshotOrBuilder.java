@@ -62,14 +62,14 @@ public interface RateSnapshotOrBuilder extends
       int index);
 
   /**
-   * <code>string edited_by = 4 [json_name = "editedBy"];</code>
-   * @return The editedBy.
+   * <code>string user_id = 4 [json_name = "userId"];</code>
+   * @return The userId.
    */
-  java.lang.String getEditedBy();
+  java.lang.String getUserId();
   /**
-   * <code>string edited_by = 4 [json_name = "editedBy"];</code>
-   * @return The bytes for editedBy.
+   * <code>string user_id = 4 [json_name = "userId"];</code>
+   * @return The bytes for userId.
    */
   com.google.protobuf.ByteString
-      getEditedByBytes();
+      getUserIdBytes();
 }

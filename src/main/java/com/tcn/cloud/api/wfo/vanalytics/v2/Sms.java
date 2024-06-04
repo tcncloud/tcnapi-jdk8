@@ -1868,6 +1868,50 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Duration offset = 2 [json_name = "offset"];</code>
      */
     com.google.protobuf.DurationOrBuilder getOffsetOrBuilder();
+
+    /**
+     * <pre>
+     * The attachments associated with the segment.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+     */
+    java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment> 
+        getAttachmentsList();
+    /**
+     * <pre>
+     * The attachments associated with the segment.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment getAttachments(int index);
+    /**
+     * <pre>
+     * The attachments associated with the segment.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+     */
+    int getAttachmentsCount();
+    /**
+     * <pre>
+     * The attachments associated with the segment.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+     */
+    java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.AttachmentOrBuilder> 
+        getAttachmentsOrBuilderList();
+    /**
+     * <pre>
+     * The attachments associated with the segment.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.AttachmentOrBuilder getAttachmentsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -1887,6 +1931,7 @@ private static final long serialVersionUID = 0L;
     }
     private Segment() {
       text_ = "";
+      attachments_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -1907,6 +1952,511 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Sms_Segment_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.class, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Builder.class);
+    }
+
+    public interface AttachmentOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.Sms.Segment.Attachment)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The unique identifier of the attachment.
+       * </pre>
+       *
+       * <code>int64 attachment_sid = 1 [json_name = "attachmentSid"];</code>
+       * @return The attachmentSid.
+       */
+      long getAttachmentSid();
+    }
+    /**
+     * <pre>
+     * Attachment metadata.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.Sms.Segment.Attachment}
+     */
+    public static final class Attachment extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.Sms.Segment.Attachment)
+        AttachmentOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Attachment.newBuilder() to construct.
+      private Attachment(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Attachment() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Attachment();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Sms_Segment_Attachment_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Sms_Segment_Attachment_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.class, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.Builder.class);
+      }
+
+      public static final int ATTACHMENT_SID_FIELD_NUMBER = 1;
+      private long attachmentSid_ = 0L;
+      /**
+       * <pre>
+       * The unique identifier of the attachment.
+       * </pre>
+       *
+       * <code>int64 attachment_sid = 1 [json_name = "attachmentSid"];</code>
+       * @return The attachmentSid.
+       */
+      @java.lang.Override
+      public long getAttachmentSid() {
+        return attachmentSid_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (attachmentSid_ != 0L) {
+          output.writeInt64(1, attachmentSid_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (attachmentSid_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, attachmentSid_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment other = (com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment) obj;
+
+        if (getAttachmentSid()
+            != other.getAttachmentSid()) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ATTACHMENT_SID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getAttachmentSid());
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Attachment metadata.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.Sms.Segment.Attachment}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.Sms.Segment.Attachment)
+          com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.AttachmentOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Sms_Segment_Attachment_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Sms_Segment_Attachment_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.class, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          attachmentSid_ = 0L;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Sms_Segment_Attachment_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment result = new com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.attachmentSid_ = attachmentSid_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.getDefaultInstance()) return this;
+          if (other.getAttachmentSid() != 0L) {
+            setAttachmentSid(other.getAttachmentSid());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  attachmentSid_ = input.readInt64();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private long attachmentSid_ ;
+        /**
+         * <pre>
+         * The unique identifier of the attachment.
+         * </pre>
+         *
+         * <code>int64 attachment_sid = 1 [json_name = "attachmentSid"];</code>
+         * @return The attachmentSid.
+         */
+        @java.lang.Override
+        public long getAttachmentSid() {
+          return attachmentSid_;
+        }
+        /**
+         * <pre>
+         * The unique identifier of the attachment.
+         * </pre>
+         *
+         * <code>int64 attachment_sid = 1 [json_name = "attachmentSid"];</code>
+         * @param value The attachmentSid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAttachmentSid(long value) {
+
+          attachmentSid_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The unique identifier of the attachment.
+         * </pre>
+         *
+         * <code>int64 attachment_sid = 1 [json_name = "attachmentSid"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAttachmentSid() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          attachmentSid_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.Sms.Segment.Attachment)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.Sms.Segment.Attachment)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Attachment>
+          PARSER = new com.google.protobuf.AbstractParser<Attachment>() {
+        @java.lang.Override
+        public Attachment parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Attachment> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Attachment> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     public static final int TEXT_FIELD_NUMBER = 1;
@@ -1994,6 +2544,67 @@ private static final long serialVersionUID = 0L;
       return offset_ == null ? com.google.protobuf.Duration.getDefaultInstance() : offset_;
     }
 
+    public static final int ATTACHMENTS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment> attachments_;
+    /**
+     * <pre>
+     * The attachments associated with the segment.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment> getAttachmentsList() {
+      return attachments_;
+    }
+    /**
+     * <pre>
+     * The attachments associated with the segment.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.AttachmentOrBuilder> 
+        getAttachmentsOrBuilderList() {
+      return attachments_;
+    }
+    /**
+     * <pre>
+     * The attachments associated with the segment.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+     */
+    @java.lang.Override
+    public int getAttachmentsCount() {
+      return attachments_.size();
+    }
+    /**
+     * <pre>
+     * The attachments associated with the segment.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment getAttachments(int index) {
+      return attachments_.get(index);
+    }
+    /**
+     * <pre>
+     * The attachments associated with the segment.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.AttachmentOrBuilder getAttachmentsOrBuilder(
+        int index) {
+      return attachments_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2014,6 +2625,9 @@ private static final long serialVersionUID = 0L;
       if (offset_ != null) {
         output.writeMessage(2, getOffset());
       }
+      for (int i = 0; i < attachments_.size(); i++) {
+        output.writeMessage(3, attachments_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2029,6 +2643,10 @@ private static final long serialVersionUID = 0L;
       if (offset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOffset());
+      }
+      for (int i = 0; i < attachments_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, attachments_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2052,6 +2670,8 @@ private static final long serialVersionUID = 0L;
         if (!getOffset()
             .equals(other.getOffset())) return false;
       }
+      if (!getAttachmentsList()
+          .equals(other.getAttachmentsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2068,6 +2688,10 @@ private static final long serialVersionUID = 0L;
       if (hasOffset()) {
         hash = (37 * hash) + OFFSET_FIELD_NUMBER;
         hash = (53 * hash) + getOffset().hashCode();
+      }
+      if (getAttachmentsCount() > 0) {
+        hash = (37 * hash) + ATTACHMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getAttachmentsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -2210,6 +2834,13 @@ private static final long serialVersionUID = 0L;
           offsetBuilder_.dispose();
           offsetBuilder_ = null;
         }
+        if (attachmentsBuilder_ == null) {
+          attachments_ = java.util.Collections.emptyList();
+        } else {
+          attachments_ = null;
+          attachmentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -2236,9 +2867,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment buildPartial() {
         com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment result = new com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment result) {
+        if (attachmentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            attachments_ = java.util.Collections.unmodifiableList(attachments_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.attachments_ = attachments_;
+        } else {
+          result.attachments_ = attachmentsBuilder_.build();
+        }
       }
 
       private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment result) {
@@ -2305,6 +2949,32 @@ private static final long serialVersionUID = 0L;
         if (other.hasOffset()) {
           mergeOffset(other.getOffset());
         }
+        if (attachmentsBuilder_ == null) {
+          if (!other.attachments_.isEmpty()) {
+            if (attachments_.isEmpty()) {
+              attachments_ = other.attachments_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureAttachmentsIsMutable();
+              attachments_.addAll(other.attachments_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.attachments_.isEmpty()) {
+            if (attachmentsBuilder_.isEmpty()) {
+              attachmentsBuilder_.dispose();
+              attachmentsBuilder_ = null;
+              attachments_ = other.attachments_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              attachmentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAttachmentsFieldBuilder() : null;
+            } else {
+              attachmentsBuilder_.addAllMessages(other.attachments_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2343,6 +3013,19 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment m =
+                    input.readMessage(
+                        com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.parser(),
+                        extensionRegistry);
+                if (attachmentsBuilder_ == null) {
+                  ensureAttachmentsIsMutable();
+                  attachments_.add(m);
+                } else {
+                  attachmentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2605,6 +3288,318 @@ private static final long serialVersionUID = 0L;
           offset_ = null;
         }
         return offsetBuilder_;
+      }
+
+      private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment> attachments_ =
+        java.util.Collections.emptyList();
+      private void ensureAttachmentsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          attachments_ = new java.util.ArrayList<com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment>(attachments_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.AttachmentOrBuilder> attachmentsBuilder_;
+
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment> getAttachmentsList() {
+        if (attachmentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(attachments_);
+        } else {
+          return attachmentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public int getAttachmentsCount() {
+        if (attachmentsBuilder_ == null) {
+          return attachments_.size();
+        } else {
+          return attachmentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment getAttachments(int index) {
+        if (attachmentsBuilder_ == null) {
+          return attachments_.get(index);
+        } else {
+          return attachmentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public Builder setAttachments(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment value) {
+        if (attachmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttachmentsIsMutable();
+          attachments_.set(index, value);
+          onChanged();
+        } else {
+          attachmentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public Builder setAttachments(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.Builder builderForValue) {
+        if (attachmentsBuilder_ == null) {
+          ensureAttachmentsIsMutable();
+          attachments_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          attachmentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public Builder addAttachments(com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment value) {
+        if (attachmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttachmentsIsMutable();
+          attachments_.add(value);
+          onChanged();
+        } else {
+          attachmentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public Builder addAttachments(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment value) {
+        if (attachmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttachmentsIsMutable();
+          attachments_.add(index, value);
+          onChanged();
+        } else {
+          attachmentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public Builder addAttachments(
+          com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.Builder builderForValue) {
+        if (attachmentsBuilder_ == null) {
+          ensureAttachmentsIsMutable();
+          attachments_.add(builderForValue.build());
+          onChanged();
+        } else {
+          attachmentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public Builder addAttachments(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.Builder builderForValue) {
+        if (attachmentsBuilder_ == null) {
+          ensureAttachmentsIsMutable();
+          attachments_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          attachmentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public Builder addAllAttachments(
+          java.lang.Iterable<? extends com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment> values) {
+        if (attachmentsBuilder_ == null) {
+          ensureAttachmentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, attachments_);
+          onChanged();
+        } else {
+          attachmentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public Builder clearAttachments() {
+        if (attachmentsBuilder_ == null) {
+          attachments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          attachmentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public Builder removeAttachments(int index) {
+        if (attachmentsBuilder_ == null) {
+          ensureAttachmentsIsMutable();
+          attachments_.remove(index);
+          onChanged();
+        } else {
+          attachmentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.Builder getAttachmentsBuilder(
+          int index) {
+        return getAttachmentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.AttachmentOrBuilder getAttachmentsOrBuilder(
+          int index) {
+        if (attachmentsBuilder_ == null) {
+          return attachments_.get(index);  } else {
+          return attachmentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.AttachmentOrBuilder> 
+           getAttachmentsOrBuilderList() {
+        if (attachmentsBuilder_ != null) {
+          return attachmentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(attachments_);
+        }
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.Builder addAttachmentsBuilder() {
+        return getAttachmentsFieldBuilder().addBuilder(
+            com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.Builder addAttachmentsBuilder(
+          int index) {
+        return getAttachmentsFieldBuilder().addBuilder(
+            index, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The attachments associated with the segment.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.Sms.Segment.Attachment attachments = 3 [json_name = "attachments"];</code>
+       */
+      public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.Builder> 
+           getAttachmentsBuilderList() {
+        return getAttachmentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.AttachmentOrBuilder> 
+          getAttachmentsFieldBuilder() {
+        if (attachmentsBuilder_ == null) {
+          attachmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.Attachment.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.Sms.Segment.AttachmentOrBuilder>(
+                  attachments_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          attachments_ = null;
+        }
+        return attachmentsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

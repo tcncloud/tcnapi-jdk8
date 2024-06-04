@@ -8,7 +8,7 @@ public interface FileTemplateOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 file_template_id = 1 [json_name = "fileTemplateId"];</code>
+   * <code>int64 file_template_id = 1 [json_name = "fileTemplateId", jstype = JS_STRING];</code>
    * @return The fileTemplateId.
    */
   long getFileTemplateId();
