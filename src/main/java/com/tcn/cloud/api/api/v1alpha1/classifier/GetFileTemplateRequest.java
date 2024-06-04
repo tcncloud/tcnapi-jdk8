@@ -41,7 +41,7 @@ private static final long serialVersionUID = 0L;
   public static final int FILE_TEMPLATE_ID_FIELD_NUMBER = 1;
   private long fileTemplateId_ = 0L;
   /**
-   * <code>int64 file_template_id = 1 [json_name = "fileTemplateId"];</code>
+   * <code>int64 file_template_id = 1 [json_name = "fileTemplateId", jstype = JS_STRING];</code>
    * @return The fileTemplateId.
    */
   @java.lang.Override
@@ -377,7 +377,7 @@ private static final long serialVersionUID = 0L;
 
     private long fileTemplateId_ ;
     /**
-     * <code>int64 file_template_id = 1 [json_name = "fileTemplateId"];</code>
+     * <code>int64 file_template_id = 1 [json_name = "fileTemplateId", jstype = JS_STRING];</code>
      * @return The fileTemplateId.
      */
     @java.lang.Override
@@ -385,7 +385,7 @@ private static final long serialVersionUID = 0L;
       return fileTemplateId_;
     }
     /**
-     * <code>int64 file_template_id = 1 [json_name = "fileTemplateId"];</code>
+     * <code>int64 file_template_id = 1 [json_name = "fileTemplateId", jstype = JS_STRING];</code>
      * @param value The fileTemplateId to set.
      * @return This builder for chaining.
      */
@@ -397,7 +397,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 file_template_id = 1 [json_name = "fileTemplateId"];</code>
+     * <code>int64 file_template_id = 1 [json_name = "fileTemplateId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearFileTemplateId() {
