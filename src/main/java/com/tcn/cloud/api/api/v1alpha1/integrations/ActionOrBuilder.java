@@ -21,65 +21,119 @@ public interface ActionOrBuilder extends
 
   /**
    * <pre>
-   * when a flow is executed if we find in the result any keys that match
-   * the keys in rename, we will rename the result keys to the matching
-   * value in rename map's.
+   * the global data for this action.
    * </pre>
    *
-   * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
+   * <code>string plugin_instance_id = 2 [json_name = "pluginInstanceId"];</code>
+   * @return The pluginInstanceId.
    */
-  int getRenameCount();
+  java.lang.String getPluginInstanceId();
+  /**
+   * <pre>
+   * the global data for this action.
+   * </pre>
+   *
+   * <code>string plugin_instance_id = 2 [json_name = "pluginInstanceId"];</code>
+   * @return The bytes for pluginInstanceId.
+   */
+  com.google.protobuf.ByteString
+      getPluginInstanceIdBytes();
+
   /**
    * <pre>
    * when a flow is executed if we find in the result any keys that match
-   * the keys in rename, we will rename the result keys to the matching
-   * value in rename map's.
+   * the keys in rename, we will restructure the keys to the matching
+   * value in these map's.
    * </pre>
    *
-   * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
+   * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
    */
-  boolean containsRename(
+  int getRestructureBeforeCount();
+  /**
+   * <pre>
+   * when a flow is executed if we find in the result any keys that match
+   * the keys in rename, we will restructure the keys to the matching
+   * value in these map's.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
+   */
+  boolean containsRestructureBefore(
       java.lang.String key);
   /**
-   * Use {@link #getRenameMap()} instead.
+   * Use {@link #getRestructureBeforeMap()} instead.
    */
   @java.lang.Deprecated
   java.util.Map<java.lang.String, java.lang.String>
-  getRename();
+  getRestructureBefore();
   /**
    * <pre>
    * when a flow is executed if we find in the result any keys that match
-   * the keys in rename, we will rename the result keys to the matching
-   * value in rename map's.
+   * the keys in rename, we will restructure the keys to the matching
+   * value in these map's.
    * </pre>
    *
-   * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
+   * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
    */
   java.util.Map<java.lang.String, java.lang.String>
-  getRenameMap();
+  getRestructureBeforeMap();
   /**
    * <pre>
    * when a flow is executed if we find in the result any keys that match
-   * the keys in rename, we will rename the result keys to the matching
-   * value in rename map's.
+   * the keys in rename, we will restructure the keys to the matching
+   * value in these map's.
    * </pre>
    *
-   * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
+   * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
    */
   /* nullable */
-java.lang.String getRenameOrDefault(
+java.lang.String getRestructureBeforeOrDefault(
       java.lang.String key,
       /* nullable */
 java.lang.String defaultValue);
   /**
    * <pre>
    * when a flow is executed if we find in the result any keys that match
-   * the keys in rename, we will rename the result keys to the matching
-   * value in rename map's.
+   * the keys in rename, we will restructure the keys to the matching
+   * value in these map's.
    * </pre>
    *
-   * <code>map&lt;string, string&gt; rename = 4 [json_name = "rename"];</code>
+   * <code>map&lt;string, string&gt; restructure_before = 5 [json_name = "restructureBefore"];</code>
    */
-  java.lang.String getRenameOrThrow(
+  java.lang.String getRestructureBeforeOrThrow(
+      java.lang.String key);
+
+  /**
+   * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
+   */
+  int getRestructureAfterCount();
+  /**
+   * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
+   */
+  boolean containsRestructureAfter(
+      java.lang.String key);
+  /**
+   * Use {@link #getRestructureAfterMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, java.lang.String>
+  getRestructureAfter();
+  /**
+   * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
+   */
+  java.util.Map<java.lang.String, java.lang.String>
+  getRestructureAfterMap();
+  /**
+   * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
+   */
+  /* nullable */
+java.lang.String getRestructureAfterOrDefault(
+      java.lang.String key,
+      /* nullable */
+java.lang.String defaultValue);
+  /**
+   * <code>map&lt;string, string&gt; restructure_after = 6 [json_name = "restructureAfter"];</code>
+   */
+  java.lang.String getRestructureAfterOrThrow(
       java.lang.String key);
 }

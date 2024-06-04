@@ -45,7 +45,7 @@ private static final long serialVersionUID = 0L;
    * if empty we will start at begining/end of list
    * </pre>
    *
-   * <code>int64 prev_id = 1 [json_name = "prevId"];</code>
+   * <code>int64 prev_id = 1 [json_name = "prevId", jstype = JS_STRING];</code>
    * @return The prevId.
    */
   @java.lang.Override
@@ -462,7 +462,7 @@ private static final long serialVersionUID = 0L;
      * if empty we will start at begining/end of list
      * </pre>
      *
-     * <code>int64 prev_id = 1 [json_name = "prevId"];</code>
+     * <code>int64 prev_id = 1 [json_name = "prevId", jstype = JS_STRING];</code>
      * @return The prevId.
      */
     @java.lang.Override
@@ -474,7 +474,7 @@ private static final long serialVersionUID = 0L;
      * if empty we will start at begining/end of list
      * </pre>
      *
-     * <code>int64 prev_id = 1 [json_name = "prevId"];</code>
+     * <code>int64 prev_id = 1 [json_name = "prevId", jstype = JS_STRING];</code>
      * @param value The prevId to set.
      * @return This builder for chaining.
      */
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
      * if empty we will start at begining/end of list
      * </pre>
      *
-     * <code>int64 prev_id = 1 [json_name = "prevId"];</code>
+     * <code>int64 prev_id = 1 [json_name = "prevId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearPrevId() {

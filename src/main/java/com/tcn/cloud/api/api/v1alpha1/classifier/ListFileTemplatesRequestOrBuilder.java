@@ -12,7 +12,7 @@ public interface ListFileTemplatesRequestOrBuilder extends
    * if empty we will start at begining/end of list
    * </pre>
    *
-   * <code>int64 prev_id = 1 [json_name = "prevId"];</code>
+   * <code>int64 prev_id = 1 [json_name = "prevId", jstype = JS_STRING];</code>
    * @return The prevId.
    */
   long getPrevId();
