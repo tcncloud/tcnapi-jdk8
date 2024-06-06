@@ -8149,6 +8149,7 @@ public final class WFMGrpc {
      * <pre>
      * Lists agent leave petitions for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
      * If no &#64;wfm_agent_sids are provided, all agent leave petitions overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If no &#64;datetime_range is provided, petitions will be returned across all datetimes.
      * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
      * If no agent leave petitions are found for the given parameters, an empty slice will be returned.
      * Errors:
@@ -11088,6 +11089,7 @@ public final class WFMGrpc {
      * <pre>
      * Lists agent leave petitions for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
      * If no &#64;wfm_agent_sids are provided, all agent leave petitions overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If no &#64;datetime_range is provided, petitions will be returned across all datetimes.
      * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
      * If no agent leave petitions are found for the given parameters, an empty slice will be returned.
      * Errors:
@@ -13856,6 +13858,7 @@ public final class WFMGrpc {
      * <pre>
      * Lists agent leave petitions for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
      * If no &#64;wfm_agent_sids are provided, all agent leave petitions overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If no &#64;datetime_range is provided, petitions will be returned across all datetimes.
      * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
      * If no agent leave petitions are found for the given parameters, an empty slice will be returned.
      * Errors:
@@ -16679,6 +16682,7 @@ public final class WFMGrpc {
      * <pre>
      * Lists agent leave petitions for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
      * If no &#64;wfm_agent_sids are provided, all agent leave petitions overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If no &#64;datetime_range is provided, petitions will be returned across all datetimes.
      * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
      * If no agent leave petitions are found for the given parameters, an empty slice will be returned.
      * Errors:
