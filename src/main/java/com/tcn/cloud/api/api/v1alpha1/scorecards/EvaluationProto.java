@@ -95,6 +95,16 @@ public final class EvaluationProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_scorecards_DeleteEvaluationByOrgIdRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_BulkDeleteEvaluationsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_BulkDeleteEvaluationsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_BulkDeleteEvaluationsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_BulkDeleteEvaluationsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_scorecards_RestoreEvaluationRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -163,17 +173,20 @@ public final class EvaluationProto {
       "_fields\030\n \001(\0132\032.google.protobuf.FieldMas" +
       "kR\014returnFields\"\\\n\036DeleteEvaluationByOrg" +
       "IdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022#\n\reval" +
-      "uation_id\030\002 \001(\003R\014evaluationId\"X\n\030Restore" +
-      "EvaluationRequest\022#\n\revaluation_id\030\002 \001(\003" +
-      "R\014evaluationId\022\027\n\007user_id\030\003 \001(\tR\006userId\"" +
-      "T\n\031RestoreEvaluationResponse\0227\n\nevaluati" +
-      "on\030\001 \001(\0132\027.api.commons.EvaluationR\nevalu" +
-      "ationB\272\001\n)com.tcn.cloud.api.api.v1alpha1" +
-      ".scorecardsB\017EvaluationProtoP\001\242\002\003AVS\252\002\027A" +
-      "pi.V1alpha1.Scorecards\312\002\027Api\\V1alpha1\\Sc" +
-      "orecards\342\002#Api\\V1alpha1\\Scorecards\\GPBMe" +
-      "tadata\352\002\031Api::V1alpha1::Scorecardsb\006prot" +
-      "o3"
+      "uation_id\030\002 \001(\003R\014evaluationId\"\\\n\034BulkDel" +
+      "eteEvaluationsRequest\022\025\n\006org_id\030\001 \001(\tR\005o" +
+      "rgId\022%\n\016evaluation_ids\030\002 \003(\003R\revaluation" +
+      "Ids\"\037\n\035BulkDeleteEvaluationsResponse\"X\n\030" +
+      "RestoreEvaluationRequest\022#\n\revaluation_i" +
+      "d\030\002 \001(\003R\014evaluationId\022\027\n\007user_id\030\003 \001(\tR\006" +
+      "userId\"T\n\031RestoreEvaluationResponse\0227\n\ne" +
+      "valuation\030\001 \001(\0132\027.api.commons.Evaluation" +
+      "R\nevaluationB\272\001\n)com.tcn.cloud.api.api.v" +
+      "1alpha1.scorecardsB\017EvaluationProtoP\001\242\002\003" +
+      "AVS\252\002\027Api.V1alpha1.Scorecards\312\002\027Api\\V1al" +
+      "pha1\\Scorecards\342\002#Api\\V1alpha1\\Scorecard" +
+      "s\\GPBMetadata\352\002\031Api::V1alpha1::Scorecard" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -277,14 +290,26 @@ public final class EvaluationProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_DeleteEvaluationByOrgIdRequest_descriptor,
         new java.lang.String[] { "OrgId", "EvaluationId", });
-    internal_static_api_v1alpha1_scorecards_RestoreEvaluationRequest_descriptor =
+    internal_static_api_v1alpha1_scorecards_BulkDeleteEvaluationsRequest_descriptor =
       getDescriptor().getMessageTypes().get(16);
+    internal_static_api_v1alpha1_scorecards_BulkDeleteEvaluationsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_BulkDeleteEvaluationsRequest_descriptor,
+        new java.lang.String[] { "OrgId", "EvaluationIds", });
+    internal_static_api_v1alpha1_scorecards_BulkDeleteEvaluationsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_api_v1alpha1_scorecards_BulkDeleteEvaluationsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_BulkDeleteEvaluationsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_scorecards_RestoreEvaluationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(18);
     internal_static_api_v1alpha1_scorecards_RestoreEvaluationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_RestoreEvaluationRequest_descriptor,
         new java.lang.String[] { "EvaluationId", "UserId", });
     internal_static_api_v1alpha1_scorecards_RestoreEvaluationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_api_v1alpha1_scorecards_RestoreEvaluationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_RestoreEvaluationResponse_descriptor,
