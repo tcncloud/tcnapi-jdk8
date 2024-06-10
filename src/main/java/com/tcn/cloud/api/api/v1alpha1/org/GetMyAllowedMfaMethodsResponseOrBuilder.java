@@ -36,4 +36,27 @@ public interface GetMyAllowedMfaMethodsResponseOrBuilder extends
    * @return The duoEnabled.
    */
   boolean getDuoEnabled();
+
+  /**
+   * <pre>
+   * The user is allowed to set up totp mfa if an
+   * authenticator type is provided/set by the orgaization.
+   * Unspecified means the totp method is not allowed.
+   * </pre>
+   *
+   * <code>.api.commons.org.TotpAuthenticatorType totp_enabled = 4 [json_name = "totpEnabled"];</code>
+   * @return The enum numeric value on the wire for totpEnabled.
+   */
+  int getTotpEnabledValue();
+  /**
+   * <pre>
+   * The user is allowed to set up totp mfa if an
+   * authenticator type is provided/set by the orgaization.
+   * Unspecified means the totp method is not allowed.
+   * </pre>
+   *
+   * <code>.api.commons.org.TotpAuthenticatorType totp_enabled = 4 [json_name = "totpEnabled"];</code>
+   * @return The totpEnabled.
+   */
+  com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType getTotpEnabled();
 }

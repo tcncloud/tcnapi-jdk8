@@ -215,4 +215,23 @@ public interface AuthenticationPreferencesOrBuilder extends
    * @return The forceSsoProvider.
    */
   boolean getForceSsoProvider();
+
+  /**
+   * <pre>
+   * The type of authenticator app that is being used.
+   * </pre>
+   *
+   * <code>.api.commons.org.TotpAuthenticatorType authenticator_app = 21 [json_name = "authenticatorApp"];</code>
+   * @return The enum numeric value on the wire for authenticatorApp.
+   */
+  int getAuthenticatorAppValue();
+  /**
+   * <pre>
+   * The type of authenticator app that is being used.
+   * </pre>
+   *
+   * <code>.api.commons.org.TotpAuthenticatorType authenticator_app = 21 [json_name = "authenticatorApp"];</code>
+   * @return The authenticatorApp.
+   */
+  com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType getAuthenticatorApp();
 }

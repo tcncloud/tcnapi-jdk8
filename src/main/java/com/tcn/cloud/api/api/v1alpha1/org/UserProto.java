@@ -505,6 +505,16 @@ public final class UserProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_GenerateTOTPSecretRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_GenerateTOTPSecretRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_GenerateTOTPSecretResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_GenerateTOTPSecretResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -948,30 +958,34 @@ public final class UserProto {
       "UserMfaInfoRequest\"H\n\030GetMyUserMfaInfoRe" +
       "sponse\022,\n\004info\030\001 \001(\0132\030.api.commons.org.M" +
       "faInfoR\004info\"\037\n\035GetMyAllowedMfaMethodsRe" +
-      "quest\"\207\001\n\036GetMyAllowedMfaMethodsResponse" +
+      "quest\"\322\001\n\036GetMyAllowedMfaMethodsResponse" +
       "\022\037\n\013mfa_enabled\030\001 \001(\010R\nmfaEnabled\022#\n\rema" +
       "il_enabled\030\002 \001(\010R\014emailEnabled\022\037\n\013duo_en" +
-      "abled\030\003 \001(\010R\nduoEnabled\"R\n#AddGroupedUse" +
-      "rIPRestrictionsRequest\022\031\n\010user_ids\030\001 \003(\t",
-      "R\007userIds\022\020\n\003ips\030\002 \003(\tR\003ips\"&\n$AddGroupe" +
-      "dUserIPRestrictionsResponse\"U\n&RemoveGro" +
-      "upedUserIPRestrictionsRequest\022\031\n\010user_id" +
-      "s\030\001 \003(\tR\007userIds\022\020\n\003ips\030\002 \003(\tR\003ips\")\n\'Re" +
-      "moveGroupedUserIPRestrictionsResponse\"7\n" +
-      "\032ListUsersAllowedIpsRequest\022\031\n\010user_ids\030" +
-      "\001 \003(\tR\007userIds\"\264\002\n\033ListUsersAllowedIpsRe" +
-      "sponse\022u\n\024user_allowed_ips_map\030\001 \003(\0132D.a" +
-      "pi.v1alpha1.org.ListUsersAllowedIpsRespo" +
-      "nse.UserAllowedIpsMapEntryR\021userAllowedI" +
-      "psMap\032~\n\026UserAllowedIpsMapEntry\022\020\n\003key\030\001" +
-      " \001(\tR\003key\022N\n\005value\030\002 \001(\01328.api.v1alpha1." +
-      "org.ListUsersAllowedIpsResponse.AllowedI" +
-      "psR\005value:\0028\001\032\036\n\nAllowedIps\022\020\n\003ips\030\001 \003(\t" +
-      "R\003ipsB\221\001\n\"com.tcn.cloud.api.api.v1alpha1" +
-      ".orgB\tUserProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.O" +
-      "rg\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org" +
-      "\\GPBMetadata\352\002\022Api::V1alpha1::Orgb\006proto" +
-      "3"
+      "abled\030\003 \001(\010R\nduoEnabled\022I\n\014totp_enabled\030" +
+      "\004 \001(\0162&.api.commons.org.TotpAuthenticato",
+      "rTypeR\013totpEnabled\"\033\n\031GenerateTOTPSecret" +
+      "Request\"[\n\032GenerateTOTPSecretResponse\022\035\n" +
+      "\nsecret_key\030\001 \001(\tR\tsecretKey\022\036\n\013qr_code_" +
+      "url\030\002 \001(\tR\tqrCodeUrl\"R\n#AddGroupedUserIP" +
+      "RestrictionsRequest\022\031\n\010user_ids\030\001 \003(\tR\007u" +
+      "serIds\022\020\n\003ips\030\002 \003(\tR\003ips\"&\n$AddGroupedUs" +
+      "erIPRestrictionsResponse\"U\n&RemoveGroupe" +
+      "dUserIPRestrictionsRequest\022\031\n\010user_ids\030\001" +
+      " \003(\tR\007userIds\022\020\n\003ips\030\002 \003(\tR\003ips\")\n\'Remov" +
+      "eGroupedUserIPRestrictionsResponse\"7\n\032Li" +
+      "stUsersAllowedIpsRequest\022\031\n\010user_ids\030\001 \003" +
+      "(\tR\007userIds\"\264\002\n\033ListUsersAllowedIpsRespo" +
+      "nse\022u\n\024user_allowed_ips_map\030\001 \003(\0132D.api." +
+      "v1alpha1.org.ListUsersAllowedIpsResponse" +
+      ".UserAllowedIpsMapEntryR\021userAllowedIpsM" +
+      "ap\032~\n\026UserAllowedIpsMapEntry\022\020\n\003key\030\001 \001(" +
+      "\tR\003key\022N\n\005value\030\002 \001(\01328.api.v1alpha1.org" +
+      ".ListUsersAllowedIpsResponse.AllowedIpsR" +
+      "\005value:\0028\001\032\036\n\nAllowedIps\022\020\n\003ips\030\001 \003(\tR\003i" +
+      "psB\221\001\n\"com.tcn.cloud.api.api.v1alpha1.or" +
+      "gB\tUserProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312" +
+      "\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GP" +
+      "BMetadata\352\002\022Api::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1574,39 +1588,51 @@ public final class UserProto {
     internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetMyAllowedMfaMethodsResponse_descriptor,
-        new java.lang.String[] { "MfaEnabled", "EmailEnabled", "DuoEnabled", });
-    internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsRequest_descriptor =
+        new java.lang.String[] { "MfaEnabled", "EmailEnabled", "DuoEnabled", "TotpEnabled", });
+    internal_static_api_v1alpha1_org_GenerateTOTPSecretRequest_descriptor =
       getDescriptor().getMessageTypes().get(82);
+    internal_static_api_v1alpha1_org_GenerateTOTPSecretRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_GenerateTOTPSecretRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_GenerateTOTPSecretResponse_descriptor =
+      getDescriptor().getMessageTypes().get(83);
+    internal_static_api_v1alpha1_org_GenerateTOTPSecretResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_GenerateTOTPSecretResponse_descriptor,
+        new java.lang.String[] { "SecretKey", "QrCodeUrl", });
+    internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(84);
     internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsRequest_descriptor,
         new java.lang.String[] { "UserIds", "Ips", });
     internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(83);
+      getDescriptor().getMessageTypes().get(85);
     internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(84);
+      getDescriptor().getMessageTypes().get(86);
     internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsRequest_descriptor,
         new java.lang.String[] { "UserIds", "Ips", });
     internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(85);
+      getDescriptor().getMessageTypes().get(87);
     internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_RemoveGroupedUserIPRestrictionsResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_ListUsersAllowedIpsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(86);
+      getDescriptor().getMessageTypes().get(88);
     internal_static_api_v1alpha1_org_ListUsersAllowedIpsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListUsersAllowedIpsRequest_descriptor,
         new java.lang.String[] { "UserIds", });
     internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(87);
+      getDescriptor().getMessageTypes().get(89);
     internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_descriptor,

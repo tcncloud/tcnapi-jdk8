@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GetMyAllowedMfaMethodsResponse() {
+    totpEnabled_ = 0;
   }
 
   @java.lang.Override
@@ -87,6 +88,36 @@ private static final long serialVersionUID = 0L;
     return duoEnabled_;
   }
 
+  public static final int TOTP_ENABLED_FIELD_NUMBER = 4;
+  private int totpEnabled_ = 0;
+  /**
+   * <pre>
+   * The user is allowed to set up totp mfa if an
+   * authenticator type is provided/set by the orgaization.
+   * Unspecified means the totp method is not allowed.
+   * </pre>
+   *
+   * <code>.api.commons.org.TotpAuthenticatorType totp_enabled = 4 [json_name = "totpEnabled"];</code>
+   * @return The enum numeric value on the wire for totpEnabled.
+   */
+  @java.lang.Override public int getTotpEnabledValue() {
+    return totpEnabled_;
+  }
+  /**
+   * <pre>
+   * The user is allowed to set up totp mfa if an
+   * authenticator type is provided/set by the orgaization.
+   * Unspecified means the totp method is not allowed.
+   * </pre>
+   *
+   * <code>.api.commons.org.TotpAuthenticatorType totp_enabled = 4 [json_name = "totpEnabled"];</code>
+   * @return The totpEnabled.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType getTotpEnabled() {
+    com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType result = com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType.forNumber(totpEnabled_);
+    return result == null ? com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -110,6 +141,9 @@ private static final long serialVersionUID = 0L;
     if (duoEnabled_ != false) {
       output.writeBool(3, duoEnabled_);
     }
+    if (totpEnabled_ != com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType.TOTP_AUTHENTICATOR_TYPE_UNSPECIFIED.getNumber()) {
+      output.writeEnum(4, totpEnabled_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -130,6 +164,10 @@ private static final long serialVersionUID = 0L;
     if (duoEnabled_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, duoEnabled_);
+    }
+    if (totpEnabled_ != com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType.TOTP_AUTHENTICATOR_TYPE_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, totpEnabled_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -152,6 +190,7 @@ private static final long serialVersionUID = 0L;
         != other.getEmailEnabled()) return false;
     if (getDuoEnabled()
         != other.getDuoEnabled()) return false;
+    if (totpEnabled_ != other.totpEnabled_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -172,6 +211,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DUO_ENABLED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDuoEnabled());
+    hash = (37 * hash) + TOTP_ENABLED_FIELD_NUMBER;
+    hash = (53 * hash) + totpEnabled_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -310,6 +351,7 @@ private static final long serialVersionUID = 0L;
       mfaEnabled_ = false;
       emailEnabled_ = false;
       duoEnabled_ = false;
+      totpEnabled_ = 0;
       return this;
     }
 
@@ -351,6 +393,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.duoEnabled_ = duoEnabled_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.totpEnabled_ = totpEnabled_;
       }
     }
 
@@ -407,6 +452,9 @@ private static final long serialVersionUID = 0L;
       if (other.getDuoEnabled() != false) {
         setDuoEnabled(other.getDuoEnabled());
       }
+      if (other.totpEnabled_ != 0) {
+        setTotpEnabledValue(other.getTotpEnabledValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -448,6 +496,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 32: {
+              totpEnabled_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -593,6 +646,89 @@ private static final long serialVersionUID = 0L;
     public Builder clearDuoEnabled() {
       bitField0_ = (bitField0_ & ~0x00000004);
       duoEnabled_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int totpEnabled_ = 0;
+    /**
+     * <pre>
+     * The user is allowed to set up totp mfa if an
+     * authenticator type is provided/set by the orgaization.
+     * Unspecified means the totp method is not allowed.
+     * </pre>
+     *
+     * <code>.api.commons.org.TotpAuthenticatorType totp_enabled = 4 [json_name = "totpEnabled"];</code>
+     * @return The enum numeric value on the wire for totpEnabled.
+     */
+    @java.lang.Override public int getTotpEnabledValue() {
+      return totpEnabled_;
+    }
+    /**
+     * <pre>
+     * The user is allowed to set up totp mfa if an
+     * authenticator type is provided/set by the orgaization.
+     * Unspecified means the totp method is not allowed.
+     * </pre>
+     *
+     * <code>.api.commons.org.TotpAuthenticatorType totp_enabled = 4 [json_name = "totpEnabled"];</code>
+     * @param value The enum numeric value on the wire for totpEnabled to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotpEnabledValue(int value) {
+      totpEnabled_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The user is allowed to set up totp mfa if an
+     * authenticator type is provided/set by the orgaization.
+     * Unspecified means the totp method is not allowed.
+     * </pre>
+     *
+     * <code>.api.commons.org.TotpAuthenticatorType totp_enabled = 4 [json_name = "totpEnabled"];</code>
+     * @return The totpEnabled.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType getTotpEnabled() {
+      com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType result = com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType.forNumber(totpEnabled_);
+      return result == null ? com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The user is allowed to set up totp mfa if an
+     * authenticator type is provided/set by the orgaization.
+     * Unspecified means the totp method is not allowed.
+     * </pre>
+     *
+     * <code>.api.commons.org.TotpAuthenticatorType totp_enabled = 4 [json_name = "totpEnabled"];</code>
+     * @param value The totpEnabled to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotpEnabled(com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      totpEnabled_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The user is allowed to set up totp mfa if an
+     * authenticator type is provided/set by the orgaization.
+     * Unspecified means the totp method is not allowed.
+     * </pre>
+     *
+     * <code>.api.commons.org.TotpAuthenticatorType totp_enabled = 4 [json_name = "totpEnabled"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotpEnabled() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      totpEnabled_ = 0;
       onChanged();
       return this;
     }

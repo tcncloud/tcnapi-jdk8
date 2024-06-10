@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     allowedIps_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     agentApiKey_ = "";
+    authenticatorApp_ = 0;
   }
 
   @java.lang.Override
@@ -1646,6 +1647,32 @@ private static final long serialVersionUID = 0L;
     return forceSsoProvider_;
   }
 
+  public static final int AUTHENTICATOR_APP_FIELD_NUMBER = 21;
+  private int authenticatorApp_ = 0;
+  /**
+   * <pre>
+   * The type of authenticator app that is being used.
+   * </pre>
+   *
+   * <code>.api.commons.org.TotpAuthenticatorType authenticator_app = 21 [json_name = "authenticatorApp"];</code>
+   * @return The enum numeric value on the wire for authenticatorApp.
+   */
+  @java.lang.Override public int getAuthenticatorAppValue() {
+    return authenticatorApp_;
+  }
+  /**
+   * <pre>
+   * The type of authenticator app that is being used.
+   * </pre>
+   *
+   * <code>.api.commons.org.TotpAuthenticatorType authenticator_app = 21 [json_name = "authenticatorApp"];</code>
+   * @return The authenticatorApp.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType getAuthenticatorApp() {
+    com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType result = com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType.forNumber(authenticatorApp_);
+    return result == null ? com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1695,6 +1722,9 @@ private static final long serialVersionUID = 0L;
     }
     if (forceSsoProvider_ != false) {
       output.writeBool(20, forceSsoProvider_);
+    }
+    if (authenticatorApp_ != com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType.TOTP_AUTHENTICATOR_TYPE_UNSPECIFIED.getNumber()) {
+      output.writeEnum(21, authenticatorApp_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1755,6 +1785,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(20, forceSsoProvider_);
     }
+    if (authenticatorApp_ != com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType.TOTP_AUTHENTICATOR_TYPE_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(21, authenticatorApp_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1800,6 +1834,7 @@ private static final long serialVersionUID = 0L;
         != other.getUserAuthorizationViaIp()) return false;
     if (getForceSsoProvider()
         != other.getForceSsoProvider()) return false;
+    if (authenticatorApp_ != other.authenticatorApp_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1847,6 +1882,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + FORCE_SSO_PROVIDER_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getForceSsoProvider());
+    hash = (37 * hash) + AUTHENTICATOR_APP_FIELD_NUMBER;
+    hash = (53 * hash) + authenticatorApp_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2003,6 +2040,7 @@ private static final long serialVersionUID = 0L;
       passwordResetDayInterval_ = 0;
       userAuthorizationViaIp_ = false;
       forceSsoProvider_ = false;
+      authenticatorApp_ = 0;
       return this;
     }
 
@@ -2076,6 +2114,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.forceSsoProvider_ = forceSsoProvider_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.authenticatorApp_ = authenticatorApp_;
       }
     }
 
@@ -2170,6 +2211,9 @@ private static final long serialVersionUID = 0L;
       if (other.getForceSsoProvider() != false) {
         setForceSsoProvider(other.getForceSsoProvider());
       }
+      if (other.authenticatorApp_ != 0) {
+        setAuthenticatorAppValue(other.getAuthenticatorAppValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2261,6 +2305,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000800;
               break;
             } // case 160
+            case 168: {
+              authenticatorApp_ = input.readEnum();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 168
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3235,6 +3284,79 @@ private static final long serialVersionUID = 0L;
     public Builder clearForceSsoProvider() {
       bitField0_ = (bitField0_ & ~0x00000800);
       forceSsoProvider_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int authenticatorApp_ = 0;
+    /**
+     * <pre>
+     * The type of authenticator app that is being used.
+     * </pre>
+     *
+     * <code>.api.commons.org.TotpAuthenticatorType authenticator_app = 21 [json_name = "authenticatorApp"];</code>
+     * @return The enum numeric value on the wire for authenticatorApp.
+     */
+    @java.lang.Override public int getAuthenticatorAppValue() {
+      return authenticatorApp_;
+    }
+    /**
+     * <pre>
+     * The type of authenticator app that is being used.
+     * </pre>
+     *
+     * <code>.api.commons.org.TotpAuthenticatorType authenticator_app = 21 [json_name = "authenticatorApp"];</code>
+     * @param value The enum numeric value on the wire for authenticatorApp to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAuthenticatorAppValue(int value) {
+      authenticatorApp_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The type of authenticator app that is being used.
+     * </pre>
+     *
+     * <code>.api.commons.org.TotpAuthenticatorType authenticator_app = 21 [json_name = "authenticatorApp"];</code>
+     * @return The authenticatorApp.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType getAuthenticatorApp() {
+      com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType result = com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType.forNumber(authenticatorApp_);
+      return result == null ? com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The type of authenticator app that is being used.
+     * </pre>
+     *
+     * <code>.api.commons.org.TotpAuthenticatorType authenticator_app = 21 [json_name = "authenticatorApp"];</code>
+     * @param value The authenticatorApp to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAuthenticatorApp(com.tcn.cloud.api.api.commons.org.TotpAuthenticatorType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00001000;
+      authenticatorApp_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The type of authenticator app that is being used.
+     * </pre>
+     *
+     * <code>.api.commons.org.TotpAuthenticatorType authenticator_app = 21 [json_name = "authenticatorApp"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAuthenticatorApp() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      authenticatorApp_ = 0;
       onChanged();
       return this;
     }
