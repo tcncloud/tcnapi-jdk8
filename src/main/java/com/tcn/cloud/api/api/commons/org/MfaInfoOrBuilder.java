@@ -102,5 +102,20 @@ public interface MfaInfoOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.org.MfaInfo.DuoOrBuilder getDuoOrBuilder();
 
+  /**
+   * <code>.api.commons.org.MfaInfo.TotpType totp = 13 [json_name = "totp"];</code>
+   * @return Whether the totp field is set.
+   */
+  boolean hasTotp();
+  /**
+   * <code>.api.commons.org.MfaInfo.TotpType totp = 13 [json_name = "totp"];</code>
+   * @return The totp.
+   */
+  com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType getTotp();
+  /**
+   * <code>.api.commons.org.MfaInfo.TotpType totp = 13 [json_name = "totp"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.MfaInfo.TotpTypeOrBuilder getTotpOrBuilder();
+
   com.tcn.cloud.api.api.commons.org.MfaInfo.MfaTypeCase getMfaTypeCase();
 }
