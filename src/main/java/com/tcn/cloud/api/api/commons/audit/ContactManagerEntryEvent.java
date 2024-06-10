@@ -5,23 +5,21 @@ package com.tcn.cloud.api.api.commons.audit;
 
 /**
  * <pre>
- *payload for decrypt of ContactManagerEntry during KYC
+ *payload for add/edit/decrypt
  * </pre>
  *
- * Protobuf type {@code api.commons.audit.ContactManagerKycEvent}
+ * Protobuf type {@code api.commons.audit.ContactManagerEntryEvent}
  */
-public final class ContactManagerKycEvent extends
+public final class ContactManagerEntryEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.audit.ContactManagerKycEvent)
-    ContactManagerKycEventOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.audit.ContactManagerEntryEvent)
+    ContactManagerEntryEventOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ContactManagerKycEvent.newBuilder() to construct.
-  private ContactManagerKycEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ContactManagerEntryEvent.newBuilder() to construct.
+  private ContactManagerEntryEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ContactManagerKycEvent() {
-    types_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+  private ContactManagerEntryEvent() {
     contactManagerEntryListIds_ = emptyLongList();
   }
 
@@ -29,20 +27,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ContactManagerKycEvent();
+    return new ContactManagerEntryEvent();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.audit.ContactmanagerEventsProto.internal_static_api_commons_audit_ContactManagerKycEvent_descriptor;
+    return com.tcn.cloud.api.api.commons.audit.ContactmanagerEventsProto.internal_static_api_commons_audit_ContactManagerEntryEvent_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.audit.ContactmanagerEventsProto.internal_static_api_commons_audit_ContactManagerKycEvent_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.audit.ContactmanagerEventsProto.internal_static_api_commons_audit_ContactManagerEntryEvent_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.class, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder.class);
+            com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.class, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.Builder.class);
   }
 
   public static final int CONTACTMANAGERLISTID_FIELD_NUMBER = 1;
@@ -75,68 +73,15 @@ private static final long serialVersionUID = 0L;
     return contactManagerEntryId_;
   }
 
-  public static final int TYPES_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList types_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
-  /**
-   * <pre>
-   * kyc key (non pii) types
-   * </pre>
-   *
-   * <code>repeated string types = 3 [json_name = "types"];</code>
-   * @return A list containing the types.
-   */
-  public com.google.protobuf.ProtocolStringList
-      getTypesList() {
-    return types_;
-  }
-  /**
-   * <pre>
-   * kyc key (non pii) types
-   * </pre>
-   *
-   * <code>repeated string types = 3 [json_name = "types"];</code>
-   * @return The count of types.
-   */
-  public int getTypesCount() {
-    return types_.size();
-  }
-  /**
-   * <pre>
-   * kyc key (non pii) types
-   * </pre>
-   *
-   * <code>repeated string types = 3 [json_name = "types"];</code>
-   * @param index The index of the element to return.
-   * @return The types at the given index.
-   */
-  public java.lang.String getTypes(int index) {
-    return types_.get(index);
-  }
-  /**
-   * <pre>
-   * kyc key (non pii) types
-   * </pre>
-   *
-   * <code>repeated string types = 3 [json_name = "types"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the types at the given index.
-   */
-  public com.google.protobuf.ByteString
-      getTypesBytes(int index) {
-    return types_.getByteString(index);
-  }
-
-  public static final int CONTACTMANAGERENTRYLISTIDS_FIELD_NUMBER = 4;
+  public static final int CONTACTMANAGERENTRYLISTIDS_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList contactManagerEntryListIds_;
   /**
    * <pre>
-   *entry list Ids decrypted
+   *entry list Ids added/edited/decrypted
    * </pre>
    *
-   * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>
+   * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
    * @return A list containing the contactManagerEntryListIds.
    */
   @java.lang.Override
@@ -146,10 +91,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *entry list Ids decrypted
+   *entry list Ids added/edited/decrypted
    * </pre>
    *
-   * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>
+   * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
    * @return The count of contactManagerEntryListIds.
    */
   public int getContactManagerEntryListIdsCount() {
@@ -157,10 +102,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *entry list Ids decrypted
+   *entry list Ids added/edited/decrypted
    * </pre>
    *
-   * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>
+   * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
    * @param index The index of the element to return.
    * @return The contactManagerEntryListIds at the given index.
    */
@@ -190,11 +135,8 @@ private static final long serialVersionUID = 0L;
     if (contactManagerEntryId_ != 0L) {
       output.writeInt64(2, contactManagerEntryId_);
     }
-    for (int i = 0; i < types_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, types_.getRaw(i));
-    }
     if (getContactManagerEntryListIdsList().size() > 0) {
-      output.writeUInt32NoTag(34);
+      output.writeUInt32NoTag(26);
       output.writeUInt32NoTag(contactManagerEntryListIdsMemoizedSerializedSize);
     }
     for (int i = 0; i < contactManagerEntryListIds_.size(); i++) {
@@ -216,14 +158,6 @@ private static final long serialVersionUID = 0L;
     if (contactManagerEntryId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, contactManagerEntryId_);
-    }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < types_.size(); i++) {
-        dataSize += computeStringSizeNoTag(types_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getTypesList().size();
     }
     {
       int dataSize = 0;
@@ -249,17 +183,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent other = (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) obj;
+    com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent other = (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent) obj;
 
     if (getContactManagerListId()
         != other.getContactManagerListId()) return false;
     if (getContactManagerEntryId()
         != other.getContactManagerEntryId()) return false;
-    if (!getTypesList()
-        .equals(other.getTypesList())) return false;
     if (!getContactManagerEntryListIdsList()
         .equals(other.getContactManagerEntryListIdsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -279,10 +211,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + CONTACTMANAGERENTRYID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getContactManagerEntryId());
-    if (getTypesCount() > 0) {
-      hash = (37 * hash) + TYPES_FIELD_NUMBER;
-      hash = (53 * hash) + getTypesList().hashCode();
-    }
     if (getContactManagerEntryListIdsCount() > 0) {
       hash = (37 * hash) + CONTACTMANAGERENTRYLISTIDS_FIELD_NUMBER;
       hash = (53 * hash) + getContactManagerEntryListIdsList().hashCode();
@@ -292,44 +220,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -337,26 +265,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -369,7 +297,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -386,29 +314,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *payload for decrypt of ContactManagerEntry during KYC
+   *payload for add/edit/decrypt
    * </pre>
    *
-   * Protobuf type {@code api.commons.audit.ContactManagerKycEvent}
+   * Protobuf type {@code api.commons.audit.ContactManagerEntryEvent}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.audit.ContactManagerKycEvent)
-      com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.audit.ContactManagerEntryEvent)
+      com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEventOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.audit.ContactmanagerEventsProto.internal_static_api_commons_audit_ContactManagerKycEvent_descriptor;
+      return com.tcn.cloud.api.api.commons.audit.ContactmanagerEventsProto.internal_static_api_commons_audit_ContactManagerEntryEvent_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.audit.ContactmanagerEventsProto.internal_static_api_commons_audit_ContactManagerKycEvent_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.audit.ContactmanagerEventsProto.internal_static_api_commons_audit_ContactManagerEntryEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.class, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder.class);
+              com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.class, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.newBuilder()
     private Builder() {
 
     }
@@ -424,8 +352,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       contactManagerListId_ = 0L;
       contactManagerEntryId_ = 0L;
-      types_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
       contactManagerEntryListIds_ = emptyLongList();
       return this;
     }
@@ -433,17 +359,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.audit.ContactmanagerEventsProto.internal_static_api_commons_audit_ContactManagerKycEvent_descriptor;
+      return com.tcn.cloud.api.api.commons.audit.ContactmanagerEventsProto.internal_static_api_commons_audit_ContactManagerEntryEvent_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent build() {
-      com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent result = buildPartial();
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent build() {
+      com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -451,33 +377,29 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent buildPartial() {
-      com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent result = new com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent(this);
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent buildPartial() {
+      com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent result = new com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent result) {
-      if (((bitField0_ & 0x00000008) != 0)) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent result) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         contactManagerEntryListIds_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.contactManagerEntryListIds_ = contactManagerEntryListIds_;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.contactManagerListId_ = contactManagerListId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.contactManagerEntryId_ = contactManagerEntryId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        types_.makeImmutable();
-        result.types_ = types_;
       }
     }
 
@@ -515,36 +437,26 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent other) {
-      if (other == com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent other) {
+      if (other == com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.getDefaultInstance()) return this;
       if (other.getContactManagerListId() != 0L) {
         setContactManagerListId(other.getContactManagerListId());
       }
       if (other.getContactManagerEntryId() != 0L) {
         setContactManagerEntryId(other.getContactManagerEntryId());
       }
-      if (!other.types_.isEmpty()) {
-        if (types_.isEmpty()) {
-          types_ = other.types_;
-          bitField0_ |= 0x00000004;
-        } else {
-          ensureTypesIsMutable();
-          types_.addAll(other.types_);
-        }
-        onChanged();
-      }
       if (!other.contactManagerEntryListIds_.isEmpty()) {
         if (contactManagerEntryListIds_.isEmpty()) {
           contactManagerEntryListIds_ = other.contactManagerEntryListIds_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           ensureContactManagerEntryListIdsIsMutable();
           contactManagerEntryListIds_.addAll(other.contactManagerEntryListIds_);
@@ -587,19 +499,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureTypesIsMutable();
-              types_.add(s);
-              break;
-            } // case 26
-            case 32: {
+            case 24: {
               long v = input.readInt64();
               ensureContactManagerEntryListIdsIsMutable();
               contactManagerEntryListIds_.addLong(v);
               break;
-            } // case 32
-            case 34: {
+            } // case 24
+            case 26: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               ensureContactManagerEntryListIdsIsMutable();
@@ -608,7 +514,7 @@ private static final long serialVersionUID = 0L;
               }
               input.popLimit(limit);
               break;
-            } // case 34
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -714,179 +620,32 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList types_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureTypesIsMutable() {
-      if (!types_.isModifiable()) {
-        types_ = new com.google.protobuf.LazyStringArrayList(types_);
-      }
-      bitField0_ |= 0x00000004;
-    }
-    /**
-     * <pre>
-     * kyc key (non pii) types
-     * </pre>
-     *
-     * <code>repeated string types = 3 [json_name = "types"];</code>
-     * @return A list containing the types.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getTypesList() {
-      types_.makeImmutable();
-      return types_;
-    }
-    /**
-     * <pre>
-     * kyc key (non pii) types
-     * </pre>
-     *
-     * <code>repeated string types = 3 [json_name = "types"];</code>
-     * @return The count of types.
-     */
-    public int getTypesCount() {
-      return types_.size();
-    }
-    /**
-     * <pre>
-     * kyc key (non pii) types
-     * </pre>
-     *
-     * <code>repeated string types = 3 [json_name = "types"];</code>
-     * @param index The index of the element to return.
-     * @return The types at the given index.
-     */
-    public java.lang.String getTypes(int index) {
-      return types_.get(index);
-    }
-    /**
-     * <pre>
-     * kyc key (non pii) types
-     * </pre>
-     *
-     * <code>repeated string types = 3 [json_name = "types"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the types at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getTypesBytes(int index) {
-      return types_.getByteString(index);
-    }
-    /**
-     * <pre>
-     * kyc key (non pii) types
-     * </pre>
-     *
-     * <code>repeated string types = 3 [json_name = "types"];</code>
-     * @param index The index to set the value at.
-     * @param value The types to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTypes(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureTypesIsMutable();
-      types_.set(index, value);
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * kyc key (non pii) types
-     * </pre>
-     *
-     * <code>repeated string types = 3 [json_name = "types"];</code>
-     * @param value The types to add.
-     * @return This builder for chaining.
-     */
-    public Builder addTypes(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureTypesIsMutable();
-      types_.add(value);
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * kyc key (non pii) types
-     * </pre>
-     *
-     * <code>repeated string types = 3 [json_name = "types"];</code>
-     * @param values The types to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllTypes(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureTypesIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, types_);
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * kyc key (non pii) types
-     * </pre>
-     *
-     * <code>repeated string types = 3 [json_name = "types"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTypes() {
-      types_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * kyc key (non pii) types
-     * </pre>
-     *
-     * <code>repeated string types = 3 [json_name = "types"];</code>
-     * @param value The bytes of the types to add.
-     * @return This builder for chaining.
-     */
-    public Builder addTypesBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureTypesIsMutable();
-      types_.add(value);
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.Internal.LongList contactManagerEntryListIds_ = emptyLongList();
     private void ensureContactManagerEntryListIdsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         contactManagerEntryListIds_ = mutableCopy(contactManagerEntryListIds_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
       }
     }
     /**
      * <pre>
-     *entry list Ids decrypted
+     *entry list Ids added/edited/decrypted
      * </pre>
      *
-     * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>
+     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
      * @return A list containing the contactManagerEntryListIds.
      */
     public java.util.List<java.lang.Long>
         getContactManagerEntryListIdsList() {
-      return ((bitField0_ & 0x00000008) != 0) ?
+      return ((bitField0_ & 0x00000004) != 0) ?
                java.util.Collections.unmodifiableList(contactManagerEntryListIds_) : contactManagerEntryListIds_;
     }
     /**
      * <pre>
-     *entry list Ids decrypted
+     *entry list Ids added/edited/decrypted
      * </pre>
      *
-     * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>
+     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
      * @return The count of contactManagerEntryListIds.
      */
     public int getContactManagerEntryListIdsCount() {
@@ -894,10 +653,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *entry list Ids decrypted
+     *entry list Ids added/edited/decrypted
      * </pre>
      *
-     * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>
+     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
      * @param index The index of the element to return.
      * @return The contactManagerEntryListIds at the given index.
      */
@@ -906,10 +665,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *entry list Ids decrypted
+     *entry list Ids added/edited/decrypted
      * </pre>
      *
-     * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>
+     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
      * @param index The index to set the value at.
      * @param value The contactManagerEntryListIds to set.
      * @return This builder for chaining.
@@ -924,10 +683,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *entry list Ids decrypted
+     *entry list Ids added/edited/decrypted
      * </pre>
      *
-     * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>
+     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
      * @param value The contactManagerEntryListIds to add.
      * @return This builder for chaining.
      */
@@ -940,10 +699,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *entry list Ids decrypted
+     *entry list Ids added/edited/decrypted
      * </pre>
      *
-     * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>
+     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
      * @param values The contactManagerEntryListIds to add.
      * @return This builder for chaining.
      */
@@ -957,15 +716,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *entry list Ids decrypted
+     *entry list Ids added/edited/decrypted
      * </pre>
      *
-     * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>
+     * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
      * @return This builder for chaining.
      */
     public Builder clearContactManagerEntryListIds() {
       contactManagerEntryListIds_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -982,23 +741,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.audit.ContactManagerKycEvent)
+    // @@protoc_insertion_point(builder_scope:api.commons.audit.ContactManagerEntryEvent)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.audit.ContactManagerKycEvent)
-  private static final com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.audit.ContactManagerEntryEvent)
+  private static final com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent();
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ContactManagerKycEvent>
-      PARSER = new com.google.protobuf.AbstractParser<ContactManagerKycEvent>() {
+  private static final com.google.protobuf.Parser<ContactManagerEntryEvent>
+      PARSER = new com.google.protobuf.AbstractParser<ContactManagerEntryEvent>() {
     @java.lang.Override
-    public ContactManagerKycEvent parsePartialFrom(
+    public ContactManagerEntryEvent parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1017,17 +776,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ContactManagerKycEvent> parser() {
+  public static com.google.protobuf.Parser<ContactManagerEntryEvent> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ContactManagerKycEvent> getParserForType() {
+  public com.google.protobuf.Parser<ContactManagerEntryEvent> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

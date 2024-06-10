@@ -6,4 +6,94 @@ package com.tcn.cloud.api.api.commons.audit;
 public interface ContactManagerKycEventOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.audit.ContactManagerKycEvent)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   *contact manager list id
+   * </pre>
+   *
+   * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId"];</code>
+   * @return The contactManagerListId.
+   */
+  long getContactManagerListId();
+
+  /**
+   * <pre>
+   *contact manager entry id
+   * </pre>
+   *
+   * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
+   * @return The contactManagerEntryId.
+   */
+  long getContactManagerEntryId();
+
+  /**
+   * <pre>
+   * kyc key (non pii) types
+   * </pre>
+   *
+   * <code>repeated string types = 3 [json_name = "types"];</code>
+   * @return A list containing the types.
+   */
+  java.util.List<java.lang.String>
+      getTypesList();
+  /**
+   * <pre>
+   * kyc key (non pii) types
+   * </pre>
+   *
+   * <code>repeated string types = 3 [json_name = "types"];</code>
+   * @return The count of types.
+   */
+  int getTypesCount();
+  /**
+   * <pre>
+   * kyc key (non pii) types
+   * </pre>
+   *
+   * <code>repeated string types = 3 [json_name = "types"];</code>
+   * @param index The index of the element to return.
+   * @return The types at the given index.
+   */
+  java.lang.String getTypes(int index);
+  /**
+   * <pre>
+   * kyc key (non pii) types
+   * </pre>
+   *
+   * <code>repeated string types = 3 [json_name = "types"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the types at the given index.
+   */
+  com.google.protobuf.ByteString
+      getTypesBytes(int index);
+
+  /**
+   * <pre>
+   *entry list Ids decrypted
+   * </pre>
+   *
+   * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>
+   * @return A list containing the contactManagerEntryListIds.
+   */
+  java.util.List<java.lang.Long> getContactManagerEntryListIdsList();
+  /**
+   * <pre>
+   *entry list Ids decrypted
+   * </pre>
+   *
+   * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>
+   * @return The count of contactManagerEntryListIds.
+   */
+  int getContactManagerEntryListIdsCount();
+  /**
+   * <pre>
+   *entry list Ids decrypted
+   * </pre>
+   *
+   * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>
+   * @param index The index of the element to return.
+   * @return The contactManagerEntryListIds at the given index.
+   */
+  long getContactManagerEntryListIds(int index);
 }
