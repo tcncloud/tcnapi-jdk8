@@ -66,7 +66,7 @@ public interface TranscriptOrBuilder extends
    * The communication channel of the transcript.
    * </pre>
    *
-   * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
+   * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
    * @return The enum numeric value on the wire for channel.
    */
   int getChannelValue();
@@ -75,10 +75,10 @@ public interface TranscriptOrBuilder extends
    * The communication channel of the transcript.
    * </pre>
    *
-   * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
+   * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
    * @return The channel.
    */
-  com.tcn.cloud.api.wfo.vanalytics.v2.Channel getChannel();
+  com.tcn.cloud.api.api.commons.ChannelType getChannel();
 
   /**
    * <pre>

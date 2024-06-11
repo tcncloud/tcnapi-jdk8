@@ -959,6 +959,22 @@ public enum EventType
    * <code>EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT = 1203;</code>
    */
   EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT(1203),
+  /**
+   * <pre>
+   * edit event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_EDIT_EVENT = 1204;</code>
+   */
+  EVENT_TYPE_CONTACT_MANAGER_EDIT_EVENT(1204),
+  /**
+   * <pre>
+   * upload event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_UPLOAD_EVENT = 1205;</code>
+   */
+  EVENT_TYPE_CONTACT_MANAGER_UPLOAD_EVENT(1205),
   UNRECOGNIZED(-1),
   ;
 
@@ -1896,6 +1912,22 @@ public enum EventType
    * <code>EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT = 1203;</code>
    */
   public static final int EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT_VALUE = 1203;
+  /**
+   * <pre>
+   * edit event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_EDIT_EVENT = 1204;</code>
+   */
+  public static final int EVENT_TYPE_CONTACT_MANAGER_EDIT_EVENT_VALUE = 1204;
+  /**
+   * <pre>
+   * upload event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_UPLOAD_EVENT = 1205;</code>
+   */
+  public static final int EVENT_TYPE_CONTACT_MANAGER_UPLOAD_EVENT_VALUE = 1205;
 
 
   public final int getNumber() {
@@ -2052,6 +2084,8 @@ public enum EventType
       case 1201: return EVENT_TYPE_CONTACT_MANAGER_ENTRY_VIEW_EVENT;
       case 1202: return EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT;
       case 1203: return EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT;
+      case 1204: return EVENT_TYPE_CONTACT_MANAGER_EDIT_EVENT;
+      case 1205: return EVENT_TYPE_CONTACT_MANAGER_UPLOAD_EVENT;
       default: return null;
     }
   }
