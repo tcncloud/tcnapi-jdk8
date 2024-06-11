@@ -13348,16 +13348,16 @@ private static final long serialVersionUID = 0L;
      * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
-     * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+     * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
      * @return A list containing the any.
      */
-    java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Channel> getAnyList();
+    java.util.List<com.tcn.cloud.api.api.commons.ChannelType> getAnyList();
     /**
      * <pre>
      * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
-     * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+     * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
      * @return The count of any.
      */
     int getAnyCount();
@@ -13366,17 +13366,17 @@ private static final long serialVersionUID = 0L;
      * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
-     * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+     * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
      * @param index The index of the element to return.
      * @return The any at the given index.
      */
-    com.tcn.cloud.api.wfo.vanalytics.v2.Channel getAny(int index);
+    com.tcn.cloud.api.api.commons.ChannelType getAny(int index);
     /**
      * <pre>
      * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
-     * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+     * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
      * @return A list containing the enum numeric values on the wire for any.
      */
     java.util.List<java.lang.Integer>
@@ -13386,7 +13386,7 @@ private static final long serialVersionUID = 0L;
      * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
-     * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+     * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of any at the given index.
      */
@@ -13436,12 +13436,12 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> any_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
-        java.lang.Integer, com.tcn.cloud.api.wfo.vanalytics.v2.Channel> any_converter_ =
+        java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType> any_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
-                java.lang.Integer, com.tcn.cloud.api.wfo.vanalytics.v2.Channel>() {
-              public com.tcn.cloud.api.wfo.vanalytics.v2.Channel convert(java.lang.Integer from) {
-                com.tcn.cloud.api.wfo.vanalytics.v2.Channel result = com.tcn.cloud.api.wfo.vanalytics.v2.Channel.forNumber(from);
-                return result == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Channel.UNRECOGNIZED : result;
+                java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType>() {
+              public com.tcn.cloud.api.api.commons.ChannelType convert(java.lang.Integer from) {
+                com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(from);
+                return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
               }
             };
     /**
@@ -13449,20 +13449,20 @@ private static final long serialVersionUID = 0L;
      * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
-     * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+     * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
      * @return A list containing the any.
      */
     @java.lang.Override
-    public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Channel> getAnyList() {
+    public java.util.List<com.tcn.cloud.api.api.commons.ChannelType> getAnyList() {
       return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, com.tcn.cloud.api.wfo.vanalytics.v2.Channel>(any_, any_converter_);
+          java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType>(any_, any_converter_);
     }
     /**
      * <pre>
      * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
-     * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+     * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
      * @return The count of any.
      */
     @java.lang.Override
@@ -13474,12 +13474,12 @@ private static final long serialVersionUID = 0L;
      * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
-     * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+     * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
      * @param index The index of the element to return.
      * @return The any at the given index.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.wfo.vanalytics.v2.Channel getAny(int index) {
+    public com.tcn.cloud.api.api.commons.ChannelType getAny(int index) {
       return any_converter_.convert(any_.get(index));
     }
     /**
@@ -13487,7 +13487,7 @@ private static final long serialVersionUID = 0L;
      * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
-     * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+     * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
      * @return A list containing the enum numeric values on the wire for any.
      */
     @java.lang.Override
@@ -13500,7 +13500,7 @@ private static final long serialVersionUID = 0L;
      * Requires all transcript hits to have a channel in the list.
      * </pre>
      *
-     * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+     * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of any at the given index.
      */
@@ -13892,19 +13892,19 @@ private static final long serialVersionUID = 0L;
        * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
-       * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+       * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
        * @return A list containing the any.
        */
-      public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.Channel> getAnyList() {
+      public java.util.List<com.tcn.cloud.api.api.commons.ChannelType> getAnyList() {
         return new com.google.protobuf.Internal.ListAdapter<
-            java.lang.Integer, com.tcn.cloud.api.wfo.vanalytics.v2.Channel>(any_, any_converter_);
+            java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType>(any_, any_converter_);
       }
       /**
        * <pre>
        * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
-       * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+       * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
        * @return The count of any.
        */
       public int getAnyCount() {
@@ -13915,11 +13915,11 @@ private static final long serialVersionUID = 0L;
        * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
-       * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+       * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
        * @param index The index of the element to return.
        * @return The any at the given index.
        */
-      public com.tcn.cloud.api.wfo.vanalytics.v2.Channel getAny(int index) {
+      public com.tcn.cloud.api.api.commons.ChannelType getAny(int index) {
         return any_converter_.convert(any_.get(index));
       }
       /**
@@ -13927,13 +13927,13 @@ private static final long serialVersionUID = 0L;
        * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
-       * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+       * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
        * @param index The index to set the value at.
        * @param value The any to set.
        * @return This builder for chaining.
        */
       public Builder setAny(
-          int index, com.tcn.cloud.api.wfo.vanalytics.v2.Channel value) {
+          int index, com.tcn.cloud.api.api.commons.ChannelType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -13947,11 +13947,11 @@ private static final long serialVersionUID = 0L;
        * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
-       * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+       * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
        * @param value The any to add.
        * @return This builder for chaining.
        */
-      public Builder addAny(com.tcn.cloud.api.wfo.vanalytics.v2.Channel value) {
+      public Builder addAny(com.tcn.cloud.api.api.commons.ChannelType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -13965,14 +13965,14 @@ private static final long serialVersionUID = 0L;
        * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
-       * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+       * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
        * @param values The any to add.
        * @return This builder for chaining.
        */
       public Builder addAllAny(
-          java.lang.Iterable<? extends com.tcn.cloud.api.wfo.vanalytics.v2.Channel> values) {
+          java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.ChannelType> values) {
         ensureAnyIsMutable();
-        for (com.tcn.cloud.api.wfo.vanalytics.v2.Channel value : values) {
+        for (com.tcn.cloud.api.api.commons.ChannelType value : values) {
           any_.add(value.getNumber());
         }
         onChanged();
@@ -13983,7 +13983,7 @@ private static final long serialVersionUID = 0L;
        * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
-       * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+       * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
        * @return This builder for chaining.
        */
       public Builder clearAny() {
@@ -13997,7 +13997,7 @@ private static final long serialVersionUID = 0L;
        * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
-       * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+       * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
        * @return A list containing the enum numeric values on the wire for any.
        */
       public java.util.List<java.lang.Integer>
@@ -14009,7 +14009,7 @@ private static final long serialVersionUID = 0L;
        * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
-       * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+       * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
        * @param index The index of the value to return.
        * @return The enum numeric value on the wire of any at the given index.
        */
@@ -14021,7 +14021,7 @@ private static final long serialVersionUID = 0L;
        * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
-       * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+       * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
        * @param index The index to set the value at.
        * @param value The enum numeric value on the wire for any to set.
        * @return This builder for chaining.
@@ -14038,7 +14038,7 @@ private static final long serialVersionUID = 0L;
        * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
-       * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+       * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
        * @param value The enum numeric value on the wire for any to add.
        * @return This builder for chaining.
        */
@@ -14053,7 +14053,7 @@ private static final long serialVersionUID = 0L;
        * Requires all transcript hits to have a channel in the list.
        * </pre>
        *
-       * <code>repeated .wfo.vanalytics.v2.Channel any = 1 [json_name = "any"];</code>
+       * <code>repeated .api.commons.ChannelType any = 1 [json_name = "any"];</code>
        * @param values The enum numeric values on the wire for any to add.
        * @return This builder for chaining.
        */
