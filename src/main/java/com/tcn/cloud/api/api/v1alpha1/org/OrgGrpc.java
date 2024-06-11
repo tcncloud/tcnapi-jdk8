@@ -3738,6 +3738,37 @@ public final class OrgGrpc {
     return getDeleteAuthTokenByUserIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusResponse> getGetAuthTokenStatusMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAuthTokenStatus",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusResponse> getGetAuthTokenStatusMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusRequest, com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusResponse> getGetAuthTokenStatusMethod;
+    if ((getGetAuthTokenStatusMethod = OrgGrpc.getGetAuthTokenStatusMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getGetAuthTokenStatusMethod = OrgGrpc.getGetAuthTokenStatusMethod) == null) {
+          OrgGrpc.getGetAuthTokenStatusMethod = getGetAuthTokenStatusMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusRequest, com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAuthTokenStatus"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAuthTokenStatus"))
+              .build();
+        }
+      }
+    }
+    return getGetAuthTokenStatusMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupSettingsRequest,
       com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupSettingsResponse> getGetHuntGroupSettingsMethod;
 
@@ -8374,6 +8405,16 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * GetAuthTokenStatus gets that status of the auth token for the given user.
+     * </pre>
+     */
+    default void getAuthTokenStatus(com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAuthTokenStatusMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetHuntGroupSettings returns the field masked hunt group settings for the
      * provided hunt group.
      * </pre>
@@ -10866,6 +10907,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * GetAuthTokenStatus gets that status of the auth token for the given user.
+     * </pre>
+     */
+    public void getAuthTokenStatus(com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAuthTokenStatusMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetHuntGroupSettings returns the field masked hunt group settings for the
      * provided hunt group.
      * </pre>
@@ -13341,6 +13393,16 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * GetAuthTokenStatus gets that status of the auth token for the given user.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusResponse getAuthTokenStatus(com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAuthTokenStatusMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * GetHuntGroupSettings returns the field masked hunt group settings for the
      * provided hunt group.
      * </pre>
@@ -15721,6 +15783,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * GetAuthTokenStatus gets that status of the auth token for the given user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusResponse> getAuthTokenStatus(
+        com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAuthTokenStatusMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetHuntGroupSettings returns the field masked hunt group settings for the
      * provided hunt group.
      * </pre>
@@ -17040,114 +17113,115 @@ public final class OrgGrpc {
   private static final int METHODID_SET_AUTH_TOKEN_EXPIRATION_BY_USER_ID = 117;
   private static final int METHODID_DELETE_AUTH_TOKEN = 118;
   private static final int METHODID_DELETE_AUTH_TOKEN_BY_USER_ID = 119;
-  private static final int METHODID_GET_HUNT_GROUP_SETTINGS = 120;
-  private static final int METHODID_UPDATE_HUNT_GROUP_SETTINGS = 121;
-  private static final int METHODID_CREATE_HUNT_GROUP = 122;
-  private static final int METHODID_UPDATE_HUNT_GROUP_GENERAL_DETAILS = 123;
-  private static final int METHODID_DELETE_HUNT_GROUP = 124;
-  private static final int METHODID_GET_HUNT_GROUP_DETAILS = 125;
-  private static final int METHODID_LIST_CALLER_ID_BUCKETS = 126;
-  private static final int METHODID_GET_DATA_DIP_TEMPLATE = 127;
-  private static final int METHODID_LIST_DATA_DIP_TEMPLATES = 128;
-  private static final int METHODID_CREATE_DATA_DIP_TEMPLATE = 129;
-  private static final int METHODID_UPDATE_DATA_DIP_TEMPLATE = 130;
-  private static final int METHODID_DELETE_DATA_DIP_TEMPLATE = 131;
-  private static final int METHODID_COPY_DATA_DIP_TEMPLATE = 132;
-  private static final int METHODID_COPY_DATA_DIP_TEMPLATE_TO_ORGANIZATION = 133;
-  private static final int METHODID_LIST_BROADCAST_TEMPLATE_GENERAL_DETAILS = 134;
-  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 135;
-  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 136;
-  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 137;
-  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 138;
-  private static final int METHODID_LIST_HUNT_GROUP_WEB_LINKS = 139;
-  private static final int METHODID_COPY_HUNT_GROUP_WEB_LINK = 140;
-  private static final int METHODID_UPDATE_HUNT_GROUP_WEB_LINKS = 141;
-  private static final int METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS = 142;
-  private static final int METHODID_COPY_HUNT_GROUP_INTEGRATION_LINK = 143;
-  private static final int METHODID_UPDATE_HUNT_GROUP_INTEGRATION_LINKS = 144;
-  private static final int METHODID_GET_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 145;
-  private static final int METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 146;
-  private static final int METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 147;
-  private static final int METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 148;
-  private static final int METHODID_COPY_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 149;
-  private static final int METHODID_CREATE_CAMPAIGN_CLIENT_INFO_DISPLAY_TEMPLATE = 150;
-  private static final int METHODID_LIST_HUNT_GROUPS_WITH_CLIENT_INFO_TEMPLATE_DATA = 151;
-  private static final int METHODID_LIST_AGENT_TRIGGERS = 152;
-  private static final int METHODID_COPY_AGENT_TRIGGER = 153;
-  private static final int METHODID_UPDATE_AGENT_TRIGGERS = 154;
-  private static final int METHODID_LIST_HUNT_GROUP_SCRIPTS = 155;
-  private static final int METHODID_LIST_ORG_HUNT_GROUP_SCRIPTS = 156;
-  private static final int METHODID_GET_HUNT_GROUP_SCRIPT = 157;
-  private static final int METHODID_CREATE_HUNT_GROUP_SCRIPT = 158;
-  private static final int METHODID_UPDATE_HUNT_GROUP_SCRIPT = 159;
-  private static final int METHODID_DELETE_HUNT_GROUP_SCRIPT = 160;
-  private static final int METHODID_ASSIGN_SCRIPT_TO_HUNT_GROUPS = 161;
-  private static final int METHODID_UNASSIGN_SCRIPT_FROM_HUNT_GROUPS = 162;
-  private static final int METHODID_CREATE_TRUST = 163;
-  private static final int METHODID_ACCEPT_TRUST = 164;
-  private static final int METHODID_REJECT_TRUST = 165;
-  private static final int METHODID_GET_TRUST = 166;
-  private static final int METHODID_LIST_INCOMING_TRUSTS = 167;
-  private static final int METHODID_LIST_GIVEN_TRUSTS = 168;
-  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 169;
-  private static final int METHODID_DELETE_TRUST = 170;
-  private static final int METHODID_ASSIGN_TRUST = 171;
-  private static final int METHODID_UNASSIGN_TRUST = 172;
-  private static final int METHODID_CREATE_LABEL = 173;
-  private static final int METHODID_DELETE_LABEL = 174;
-  private static final int METHODID_LIST_LABELS = 175;
-  private static final int METHODID_GET_LABEL = 176;
-  private static final int METHODID_UPDATE_LABEL = 177;
-  private static final int METHODID_ASSIGN_LABEL = 178;
-  private static final int METHODID_UNASSIGN_LABEL = 179;
-  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 180;
-  private static final int METHODID_GET_ASSIGNABLE_LABELS = 181;
-  private static final int METHODID_GET_PERMISSIONS = 182;
-  private static final int METHODID_GET_USER_PERMISSIONS = 183;
-  private static final int METHODID_CREATE_PERMISSION_GROUP = 184;
-  private static final int METHODID_UPDATE_PERMISSION_GROUP = 185;
-  private static final int METHODID_DELETE_PERMISSION_GROUP = 186;
-  private static final int METHODID_LIST_PERMISSION_GROUPS = 187;
-  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 188;
-  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 189;
-  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 190;
-  private static final int METHODID_ASSIGN_LABELS = 191;
-  private static final int METHODID_REVOKE_LABELS = 192;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 193;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 194;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 195;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 196;
-  private static final int METHODID_GET_LICENSES = 197;
-  private static final int METHODID_GET_ORG_LICENSES = 198;
-  private static final int METHODID_UPDATE_LICENSES = 199;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 200;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 201;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 202;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 203;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 204;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 205;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 206;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 207;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 208;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT = 209;
-  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 210;
-  private static final int METHODID_SET_MFA_TYPE = 211;
-  private static final int METHODID_SET_MY_MFA_TYPE = 212;
-  private static final int METHODID_ENABLE_USER_MFA = 213;
-  private static final int METHODID_ENABLE_MY_USER_MFA = 214;
-  private static final int METHODID_GET_USER_MFA_INFO = 215;
-  private static final int METHODID_GET_MY_USER_MFA_INFO = 216;
-  private static final int METHODID_GET_MY_ALLOWED_MFA_METHODS = 217;
-  private static final int METHODID_CREATE_BUSINESS_HOURS = 218;
-  private static final int METHODID_UPDATE_BUSINESS_HOURS = 219;
-  private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 220;
-  private static final int METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS = 221;
-  private static final int METHODID_LIST_USERS_ALLOWED_IPS = 222;
-  private static final int METHODID_LIST_RESPONSE_EVALUATORS = 223;
-  private static final int METHODID_GET_RESPONSE_EVALUATOR = 224;
-  private static final int METHODID_CREATE_RESPONSE_EVALUATOR = 225;
-  private static final int METHODID_UPDATE_RESPONSE_EVALUATOR = 226;
-  private static final int METHODID_DELETE_RESPONSE_EVALUATOR = 227;
+  private static final int METHODID_GET_AUTH_TOKEN_STATUS = 120;
+  private static final int METHODID_GET_HUNT_GROUP_SETTINGS = 121;
+  private static final int METHODID_UPDATE_HUNT_GROUP_SETTINGS = 122;
+  private static final int METHODID_CREATE_HUNT_GROUP = 123;
+  private static final int METHODID_UPDATE_HUNT_GROUP_GENERAL_DETAILS = 124;
+  private static final int METHODID_DELETE_HUNT_GROUP = 125;
+  private static final int METHODID_GET_HUNT_GROUP_DETAILS = 126;
+  private static final int METHODID_LIST_CALLER_ID_BUCKETS = 127;
+  private static final int METHODID_GET_DATA_DIP_TEMPLATE = 128;
+  private static final int METHODID_LIST_DATA_DIP_TEMPLATES = 129;
+  private static final int METHODID_CREATE_DATA_DIP_TEMPLATE = 130;
+  private static final int METHODID_UPDATE_DATA_DIP_TEMPLATE = 131;
+  private static final int METHODID_DELETE_DATA_DIP_TEMPLATE = 132;
+  private static final int METHODID_COPY_DATA_DIP_TEMPLATE = 133;
+  private static final int METHODID_COPY_DATA_DIP_TEMPLATE_TO_ORGANIZATION = 134;
+  private static final int METHODID_LIST_BROADCAST_TEMPLATE_GENERAL_DETAILS = 135;
+  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 136;
+  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 137;
+  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 138;
+  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 139;
+  private static final int METHODID_LIST_HUNT_GROUP_WEB_LINKS = 140;
+  private static final int METHODID_COPY_HUNT_GROUP_WEB_LINK = 141;
+  private static final int METHODID_UPDATE_HUNT_GROUP_WEB_LINKS = 142;
+  private static final int METHODID_LIST_HUNT_GROUP_INTEGRATION_LINKS = 143;
+  private static final int METHODID_COPY_HUNT_GROUP_INTEGRATION_LINK = 144;
+  private static final int METHODID_UPDATE_HUNT_GROUP_INTEGRATION_LINKS = 145;
+  private static final int METHODID_GET_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 146;
+  private static final int METHODID_CREATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 147;
+  private static final int METHODID_UPDATE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 148;
+  private static final int METHODID_DELETE_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 149;
+  private static final int METHODID_COPY_HUNT_GROUP_CLIENT_INFO_DISPLAY_TEMPLATE = 150;
+  private static final int METHODID_CREATE_CAMPAIGN_CLIENT_INFO_DISPLAY_TEMPLATE = 151;
+  private static final int METHODID_LIST_HUNT_GROUPS_WITH_CLIENT_INFO_TEMPLATE_DATA = 152;
+  private static final int METHODID_LIST_AGENT_TRIGGERS = 153;
+  private static final int METHODID_COPY_AGENT_TRIGGER = 154;
+  private static final int METHODID_UPDATE_AGENT_TRIGGERS = 155;
+  private static final int METHODID_LIST_HUNT_GROUP_SCRIPTS = 156;
+  private static final int METHODID_LIST_ORG_HUNT_GROUP_SCRIPTS = 157;
+  private static final int METHODID_GET_HUNT_GROUP_SCRIPT = 158;
+  private static final int METHODID_CREATE_HUNT_GROUP_SCRIPT = 159;
+  private static final int METHODID_UPDATE_HUNT_GROUP_SCRIPT = 160;
+  private static final int METHODID_DELETE_HUNT_GROUP_SCRIPT = 161;
+  private static final int METHODID_ASSIGN_SCRIPT_TO_HUNT_GROUPS = 162;
+  private static final int METHODID_UNASSIGN_SCRIPT_FROM_HUNT_GROUPS = 163;
+  private static final int METHODID_CREATE_TRUST = 164;
+  private static final int METHODID_ACCEPT_TRUST = 165;
+  private static final int METHODID_REJECT_TRUST = 166;
+  private static final int METHODID_GET_TRUST = 167;
+  private static final int METHODID_LIST_INCOMING_TRUSTS = 168;
+  private static final int METHODID_LIST_GIVEN_TRUSTS = 169;
+  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 170;
+  private static final int METHODID_DELETE_TRUST = 171;
+  private static final int METHODID_ASSIGN_TRUST = 172;
+  private static final int METHODID_UNASSIGN_TRUST = 173;
+  private static final int METHODID_CREATE_LABEL = 174;
+  private static final int METHODID_DELETE_LABEL = 175;
+  private static final int METHODID_LIST_LABELS = 176;
+  private static final int METHODID_GET_LABEL = 177;
+  private static final int METHODID_UPDATE_LABEL = 178;
+  private static final int METHODID_ASSIGN_LABEL = 179;
+  private static final int METHODID_UNASSIGN_LABEL = 180;
+  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 181;
+  private static final int METHODID_GET_ASSIGNABLE_LABELS = 182;
+  private static final int METHODID_GET_PERMISSIONS = 183;
+  private static final int METHODID_GET_USER_PERMISSIONS = 184;
+  private static final int METHODID_CREATE_PERMISSION_GROUP = 185;
+  private static final int METHODID_UPDATE_PERMISSION_GROUP = 186;
+  private static final int METHODID_DELETE_PERMISSION_GROUP = 187;
+  private static final int METHODID_LIST_PERMISSION_GROUPS = 188;
+  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 189;
+  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 190;
+  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 191;
+  private static final int METHODID_ASSIGN_LABELS = 192;
+  private static final int METHODID_REVOKE_LABELS = 193;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 194;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 195;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 196;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 197;
+  private static final int METHODID_GET_LICENSES = 198;
+  private static final int METHODID_GET_ORG_LICENSES = 199;
+  private static final int METHODID_UPDATE_LICENSES = 200;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 201;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 202;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 203;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 204;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 205;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 206;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 207;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 208;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 209;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT = 210;
+  private static final int METHODID_REFRESH_MFA_LOCKOUT_BY_ORG_ID = 211;
+  private static final int METHODID_SET_MFA_TYPE = 212;
+  private static final int METHODID_SET_MY_MFA_TYPE = 213;
+  private static final int METHODID_ENABLE_USER_MFA = 214;
+  private static final int METHODID_ENABLE_MY_USER_MFA = 215;
+  private static final int METHODID_GET_USER_MFA_INFO = 216;
+  private static final int METHODID_GET_MY_USER_MFA_INFO = 217;
+  private static final int METHODID_GET_MY_ALLOWED_MFA_METHODS = 218;
+  private static final int METHODID_CREATE_BUSINESS_HOURS = 219;
+  private static final int METHODID_UPDATE_BUSINESS_HOURS = 220;
+  private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 221;
+  private static final int METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS = 222;
+  private static final int METHODID_LIST_USERS_ALLOWED_IPS = 223;
+  private static final int METHODID_LIST_RESPONSE_EVALUATORS = 224;
+  private static final int METHODID_GET_RESPONSE_EVALUATOR = 225;
+  private static final int METHODID_CREATE_RESPONSE_EVALUATOR = 226;
+  private static final int METHODID_UPDATE_RESPONSE_EVALUATOR = 227;
+  private static final int METHODID_DELETE_RESPONSE_EVALUATOR = 228;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -17645,6 +17719,10 @@ public final class OrgGrpc {
         case METHODID_DELETE_AUTH_TOKEN_BY_USER_ID:
           serviceImpl.deleteAuthTokenByUserId((com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdResponse>) responseObserver);
+          break;
+        case METHODID_GET_AUTH_TOKEN_STATUS:
+          serviceImpl.getAuthTokenStatus((com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusResponse>) responseObserver);
           break;
         case METHODID_GET_HUNT_GROUP_SETTINGS:
           serviceImpl.getHuntGroupSettings((com.tcn.cloud.api.api.v1alpha1.org.GetHuntGroupSettingsRequest) request,
@@ -18937,6 +19015,13 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthTokenByUserIdResponse>(
                 service, METHODID_DELETE_AUTH_TOKEN_BY_USER_ID)))
         .addMethod(
+          getGetAuthTokenStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.GetAuthTokenStatusResponse>(
+                service, METHODID_GET_AUTH_TOKEN_STATUS)))
+        .addMethod(
           getGetHuntGroupSettingsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -19860,6 +19945,7 @@ public final class OrgGrpc {
               .addMethod(getSetAuthTokenExpirationByUserIdMethod())
               .addMethod(getDeleteAuthTokenMethod())
               .addMethod(getDeleteAuthTokenByUserIdMethod())
+              .addMethod(getGetAuthTokenStatusMethod())
               .addMethod(getGetHuntGroupSettingsMethod())
               .addMethod(getUpdateHuntGroupSettingsMethod())
               .addMethod(getCreateHuntGroupMethod())

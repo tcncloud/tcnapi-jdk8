@@ -94,6 +94,16 @@ public final class AuthTokenProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_DeleteAuthTokenByUserIdResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_GetAuthTokenStatusRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_GetAuthTokenStatusRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_GetAuthTokenStatusResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_GetAuthTokenStatusResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -105,39 +115,46 @@ public final class AuthTokenProto {
     java.lang.String[] descriptorData = {
       "\n!api/v1alpha1/org/auth_token.proto\022\020api" +
       ".v1alpha1.org\032 api/commons/org/auth_toke" +
-      "n.proto\"\030\n\026CreateAuthTokenRequest\"T\n\027Cre" +
-      "ateAuthTokenResponse\0229\n\nauth_token\030\001 \001(\013" +
-      "2\032.api.commons.org.AuthTokenR\tauthToken\"" +
-      "9\n\036CreateAuthTokenByUserIdRequest\022\027\n\007use" +
-      "r_id\030\001 \001(\tR\006userId\"\\\n\037CreateAuthTokenByU" +
-      "serIdResponse\0229\n\nauth_token\030\001 \001(\0132\032.api." +
-      "commons.org.AuthTokenR\tauthToken\"\027\n\025List" +
-      "AuthTokensRequest\"U\n\026ListAuthTokensRespo" +
-      "nse\022;\n\013auth_tokens\030\001 \003(\0132\032.api.commons.o" +
-      "rg.AuthTokenR\nauthTokens\"8\n\035ListAuthToke" +
-      "nsByUserIdRequest\022\027\n\007user_id\030\001 \001(\tR\006user" +
-      "Id\"]\n\036ListAuthTokensByUserIdResponse\022;\n\013" +
+      "n.proto\032\037google/protobuf/timestamp.proto" +
+      "\"\030\n\026CreateAuthTokenRequest\"T\n\027CreateAuth" +
+      "TokenResponse\0229\n\nauth_token\030\001 \001(\0132\032.api." +
+      "commons.org.AuthTokenR\tauthToken\"9\n\036Crea" +
+      "teAuthTokenByUserIdRequest\022\027\n\007user_id\030\001 " +
+      "\001(\tR\006userId\"\\\n\037CreateAuthTokenByUserIdRe" +
+      "sponse\0229\n\nauth_token\030\001 \001(\0132\032.api.commons" +
+      ".org.AuthTokenR\tauthToken\"\027\n\025ListAuthTok" +
+      "ensRequest\"U\n\026ListAuthTokensResponse\022;\n\013" +
       "auth_tokens\030\001 \003(\0132\032.api.commons.org.Auth" +
-      "TokenR\nauthTokens\"5\n\035SetAuthTokenExpirat" +
-      "ionRequest\022\024\n\005token\030\001 \001(\tR\005token\" \n\036SetA" +
-      "uthTokenExpirationResponse\"V\n%SetAuthTok" +
-      "enExpirationByUserIdRequest\022\024\n\005token\030\001 \001" +
-      "(\tR\005token\022\027\n\007user_id\030\002 \001(\tR\006userId\"(\n&Se" +
-      "tAuthTokenExpirationByUserIdResponse\".\n\026" +
-      "DeleteAuthTokenRequest\022\024\n\005token\030\001 \001(\tR\005t" +
-      "oken\"\031\n\027DeleteAuthTokenResponse\"O\n\036Delet" +
-      "eAuthTokenByUserIdRequest\022\024\n\005token\030\001 \001(\t" +
-      "R\005token\022\027\n\007user_id\030\002 \001(\tR\006userId\"!\n\037Dele" +
-      "teAuthTokenByUserIdResponseB\226\001\n\"com.tcn." +
-      "cloud.api.api.v1alpha1.orgB\016AuthTokenPro" +
-      "toP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1al" +
-      "pha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetadata\352" +
-      "\002\022Api::V1alpha1::Orgb\006proto3"
+      "TokenR\nauthTokens\"8\n\035ListAuthTokensByUse" +
+      "rIdRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"]\n\036L" +
+      "istAuthTokensByUserIdResponse\022;\n\013auth_to" +
+      "kens\030\001 \003(\0132\032.api.commons.org.AuthTokenR\n" +
+      "authTokens\"5\n\035SetAuthTokenExpirationRequ" +
+      "est\022\024\n\005token\030\001 \001(\tR\005token\" \n\036SetAuthToke" +
+      "nExpirationResponse\"V\n%SetAuthTokenExpir" +
+      "ationByUserIdRequest\022\024\n\005token\030\001 \001(\tR\005tok" +
+      "en\022\027\n\007user_id\030\002 \001(\tR\006userId\"(\n&SetAuthTo" +
+      "kenExpirationByUserIdResponse\".\n\026DeleteA" +
+      "uthTokenRequest\022\024\n\005token\030\001 \001(\tR\005token\"\031\n" +
+      "\027DeleteAuthTokenResponse\"O\n\036DeleteAuthTo" +
+      "kenByUserIdRequest\022\024\n\005token\030\001 \001(\tR\005token" +
+      "\022\027\n\007user_id\030\002 \001(\tR\006userId\"!\n\037DeleteAuthT" +
+      "okenByUserIdResponse\"4\n\031GetAuthTokenStat" +
+      "usRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"}\n\032Ge" +
+      "tAuthTokenStatusResponse\022#\n\rdisplay_popu" +
+      "p\030\001 \001(\010R\014displayPopup\022:\n\nexpiration\030\002 \001(" +
+      "\0132\032.google.protobuf.TimestampR\nexpiratio" +
+      "nB\226\001\n\"com.tcn.cloud.api.api.v1alpha1.org" +
+      "B\016AuthTokenProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1." +
+      "Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Or" +
+      "g\\GPBMetadata\352\002\022Api::V1alpha1::Orgb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.org.AuthTokenProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_api_v1alpha1_org_CreateAuthTokenRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -235,7 +252,20 @@ public final class AuthTokenProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_DeleteAuthTokenByUserIdResponse_descriptor,
         new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_GetAuthTokenStatusRequest_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_api_v1alpha1_org_GetAuthTokenStatusRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_GetAuthTokenStatusRequest_descriptor,
+        new java.lang.String[] { "UserId", });
+    internal_static_api_v1alpha1_org_GetAuthTokenStatusResponse_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_api_v1alpha1_org_GetAuthTokenStatusResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_GetAuthTokenStatusResponse_descriptor,
+        new java.lang.String[] { "DisplayPopup", "Expiration", });
     com.tcn.cloud.api.api.commons.org.AuthTokenProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
