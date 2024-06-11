@@ -20,8 +20,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Action() {
-    workflowDefinitionName_ = "";
     pluginInstanceId_ = "";
+    actionDefinitionName_ = "";
   }
 
   @java.lang.Override
@@ -56,45 +56,6 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_Action_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.tcn.cloud.api.api.v1alpha1.integrations.Action.class, com.tcn.cloud.api.api.v1alpha1.integrations.Action.Builder.class);
-  }
-
-  public static final int WORKFLOW_DEFINITION_NAME_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object workflowDefinitionName_ = "";
-  /**
-   * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
-   * @return The workflowDefinitionName.
-   */
-  @java.lang.Override
-  public java.lang.String getWorkflowDefinitionName() {
-    java.lang.Object ref = workflowDefinitionName_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      workflowDefinitionName_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
-   * @return The bytes for workflowDefinitionName.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getWorkflowDefinitionNameBytes() {
-    java.lang.Object ref = workflowDefinitionName_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      workflowDefinitionName_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
   }
 
   public static final int PLUGIN_INSTANCE_ID_FIELD_NUMBER = 2;
@@ -326,6 +287,45 @@ java.lang.String defaultValue) {
     return map.get(key);
   }
 
+  public static final int ACTION_DEFINITION_NAME_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object actionDefinitionName_ = "";
+  /**
+   * <code>string action_definition_name = 7 [json_name = "actionDefinitionName"];</code>
+   * @return The actionDefinitionName.
+   */
+  @java.lang.Override
+  public java.lang.String getActionDefinitionName() {
+    java.lang.Object ref = actionDefinitionName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      actionDefinitionName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string action_definition_name = 7 [json_name = "actionDefinitionName"];</code>
+   * @return The bytes for actionDefinitionName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getActionDefinitionNameBytes() {
+    java.lang.Object ref = actionDefinitionName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      actionDefinitionName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -340,9 +340,6 @@ java.lang.String defaultValue) {
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowDefinitionName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, workflowDefinitionName_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginInstanceId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pluginInstanceId_);
     }
@@ -358,6 +355,9 @@ java.lang.String defaultValue) {
         internalGetRestructureAfter(),
         RestructureAfterDefaultEntryHolder.defaultEntry,
         6);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionDefinitionName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, actionDefinitionName_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -367,9 +367,6 @@ java.lang.String defaultValue) {
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowDefinitionName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, workflowDefinitionName_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginInstanceId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pluginInstanceId_);
     }
@@ -393,6 +390,9 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, restructureAfter__);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionDefinitionName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, actionDefinitionName_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -408,14 +408,14 @@ java.lang.String defaultValue) {
     }
     com.tcn.cloud.api.api.v1alpha1.integrations.Action other = (com.tcn.cloud.api.api.v1alpha1.integrations.Action) obj;
 
-    if (!getWorkflowDefinitionName()
-        .equals(other.getWorkflowDefinitionName())) return false;
     if (!getPluginInstanceId()
         .equals(other.getPluginInstanceId())) return false;
     if (!internalGetRestructureBefore().equals(
         other.internalGetRestructureBefore())) return false;
     if (!internalGetRestructureAfter().equals(
         other.internalGetRestructureAfter())) return false;
+    if (!getActionDefinitionName()
+        .equals(other.getActionDefinitionName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -427,8 +427,6 @@ java.lang.String defaultValue) {
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + WORKFLOW_DEFINITION_NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getWorkflowDefinitionName().hashCode();
     hash = (37 * hash) + PLUGIN_INSTANCE_ID_FIELD_NUMBER;
     hash = (53 * hash) + getPluginInstanceId().hashCode();
     if (!internalGetRestructureBefore().getMap().isEmpty()) {
@@ -439,6 +437,8 @@ java.lang.String defaultValue) {
       hash = (37 * hash) + RESTRUCTURE_AFTER_FIELD_NUMBER;
       hash = (53 * hash) + internalGetRestructureAfter().hashCode();
     }
+    hash = (37 * hash) + ACTION_DEFINITION_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getActionDefinitionName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -600,10 +600,10 @@ java.lang.String defaultValue) {
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      workflowDefinitionName_ = "";
       pluginInstanceId_ = "";
       internalGetMutableRestructureBefore().clear();
       internalGetMutableRestructureAfter().clear();
+      actionDefinitionName_ = "";
       return this;
     }
 
@@ -638,18 +638,18 @@ java.lang.String defaultValue) {
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.Action result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.workflowDefinitionName_ = workflowDefinitionName_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.pluginInstanceId_ = pluginInstanceId_;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.restructureBefore_ = internalGetRestructureBefore();
         result.restructureBefore_.makeImmutable();
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.restructureAfter_ = internalGetRestructureAfter();
         result.restructureAfter_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.actionDefinitionName_ = actionDefinitionName_;
       }
     }
 
@@ -697,22 +697,22 @@ java.lang.String defaultValue) {
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.integrations.Action other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.integrations.Action.getDefaultInstance()) return this;
-      if (!other.getWorkflowDefinitionName().isEmpty()) {
-        workflowDefinitionName_ = other.workflowDefinitionName_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
       if (!other.getPluginInstanceId().isEmpty()) {
         pluginInstanceId_ = other.pluginInstanceId_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       internalGetMutableRestructureBefore().mergeFrom(
           other.internalGetRestructureBefore());
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       internalGetMutableRestructureAfter().mergeFrom(
           other.internalGetRestructureAfter());
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
+      if (!other.getActionDefinitionName().isEmpty()) {
+        actionDefinitionName_ = other.actionDefinitionName_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -739,14 +739,9 @@ java.lang.String defaultValue) {
             case 0:
               done = true;
               break;
-            case 10: {
-              workflowDefinitionName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
             case 18: {
               pluginInstanceId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000001;
               break;
             } // case 18
             case 42: {
@@ -755,7 +750,7 @@ java.lang.String defaultValue) {
                   RestructureBeforeDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               internalGetMutableRestructureBefore().getMutableMap().put(
                   restructureBefore__.getKey(), restructureBefore__.getValue());
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               break;
             } // case 42
             case 50: {
@@ -764,9 +759,14 @@ java.lang.String defaultValue) {
                   RestructureAfterDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               internalGetMutableRestructureAfter().getMutableMap().put(
                   restructureAfter__.getKey(), restructureAfter__.getValue());
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               break;
             } // case 50
+            case 58: {
+              actionDefinitionName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -783,78 +783,6 @@ java.lang.String defaultValue) {
       return this;
     }
     private int bitField0_;
-
-    private java.lang.Object workflowDefinitionName_ = "";
-    /**
-     * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
-     * @return The workflowDefinitionName.
-     */
-    public java.lang.String getWorkflowDefinitionName() {
-      java.lang.Object ref = workflowDefinitionName_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        workflowDefinitionName_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
-     * @return The bytes for workflowDefinitionName.
-     */
-    public com.google.protobuf.ByteString
-        getWorkflowDefinitionNameBytes() {
-      java.lang.Object ref = workflowDefinitionName_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        workflowDefinitionName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
-     * @param value The workflowDefinitionName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setWorkflowDefinitionName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      workflowDefinitionName_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearWorkflowDefinitionName() {
-      workflowDefinitionName_ = getDefaultInstance().getWorkflowDefinitionName();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
-     * @param value The bytes for workflowDefinitionName to set.
-     * @return This builder for chaining.
-     */
-    public Builder setWorkflowDefinitionNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      workflowDefinitionName_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
 
     private java.lang.Object pluginInstanceId_ = "";
     /**
@@ -911,7 +839,7 @@ java.lang.String defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       pluginInstanceId_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -925,7 +853,7 @@ java.lang.String defaultValue) {
      */
     public Builder clearPluginInstanceId() {
       pluginInstanceId_ = getDefaultInstance().getPluginInstanceId();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -943,7 +871,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       pluginInstanceId_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -967,7 +895,7 @@ java.lang.String defaultValue) {
       if (!restructureBefore_.isMutable()) {
         restructureBefore_ = restructureBefore_.copy();
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return restructureBefore_;
     }
@@ -1051,7 +979,7 @@ java.lang.String defaultValue) {
       return map.get(key);
     }
     public Builder clearRestructureBefore() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       internalGetMutableRestructureBefore().getMutableMap()
           .clear();
       return this;
@@ -1078,7 +1006,7 @@ java.lang.String defaultValue) {
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
         getMutableRestructureBefore() {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       return internalGetMutableRestructureBefore().getMutableMap();
     }
     /**
@@ -1097,7 +1025,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableRestructureBefore().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       return this;
     }
     /**
@@ -1113,7 +1041,7 @@ java.lang.String defaultValue) {
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableRestructureBefore().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       return this;
     }
 
@@ -1136,7 +1064,7 @@ java.lang.String defaultValue) {
       if (!restructureAfter_.isMutable()) {
         restructureAfter_ = restructureAfter_.copy();
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return restructureAfter_;
     }
@@ -1196,7 +1124,7 @@ java.lang.String defaultValue) {
       return map.get(key);
     }
     public Builder clearRestructureAfter() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       internalGetMutableRestructureAfter().getMutableMap()
           .clear();
       return this;
@@ -1217,7 +1145,7 @@ java.lang.String defaultValue) {
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
         getMutableRestructureAfter() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       return internalGetMutableRestructureAfter().getMutableMap();
     }
     /**
@@ -1230,7 +1158,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableRestructureAfter().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       return this;
     }
     /**
@@ -1240,7 +1168,79 @@ java.lang.String defaultValue) {
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableRestructureAfter().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000004;
+      return this;
+    }
+
+    private java.lang.Object actionDefinitionName_ = "";
+    /**
+     * <code>string action_definition_name = 7 [json_name = "actionDefinitionName"];</code>
+     * @return The actionDefinitionName.
+     */
+    public java.lang.String getActionDefinitionName() {
+      java.lang.Object ref = actionDefinitionName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        actionDefinitionName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string action_definition_name = 7 [json_name = "actionDefinitionName"];</code>
+     * @return The bytes for actionDefinitionName.
+     */
+    public com.google.protobuf.ByteString
+        getActionDefinitionNameBytes() {
+      java.lang.Object ref = actionDefinitionName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        actionDefinitionName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string action_definition_name = 7 [json_name = "actionDefinitionName"];</code>
+     * @param value The actionDefinitionName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setActionDefinitionName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      actionDefinitionName_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string action_definition_name = 7 [json_name = "actionDefinitionName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearActionDefinitionName() {
+      actionDefinitionName_ = getDefaultInstance().getActionDefinitionName();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string action_definition_name = 7 [json_name = "actionDefinitionName"];</code>
+     * @param value The bytes for actionDefinitionName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setActionDefinitionNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      actionDefinitionName_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     @java.lang.Override
