@@ -81,6 +81,68 @@ public final class ScorecardsSupportGrpc {
     return getListAutoEvaluationsByOrgIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse> getBulkDeleteEvaluationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BulkDeleteEvaluations",
+      requestType = com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse> getBulkDeleteEvaluationsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse> getBulkDeleteEvaluationsMethod;
+    if ((getBulkDeleteEvaluationsMethod = ScorecardsSupportGrpc.getBulkDeleteEvaluationsMethod) == null) {
+      synchronized (ScorecardsSupportGrpc.class) {
+        if ((getBulkDeleteEvaluationsMethod = ScorecardsSupportGrpc.getBulkDeleteEvaluationsMethod) == null) {
+          ScorecardsSupportGrpc.getBulkDeleteEvaluationsMethod = getBulkDeleteEvaluationsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BulkDeleteEvaluations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ScorecardsSupportMethodDescriptorSupplier("BulkDeleteEvaluations"))
+              .build();
+        }
+      }
+    }
+    return getBulkDeleteEvaluationsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse> getBulkDeleteAutoEvaluationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BulkDeleteAutoEvaluations",
+      requestType = com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse> getBulkDeleteAutoEvaluationsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse> getBulkDeleteAutoEvaluationsMethod;
+    if ((getBulkDeleteAutoEvaluationsMethod = ScorecardsSupportGrpc.getBulkDeleteAutoEvaluationsMethod) == null) {
+      synchronized (ScorecardsSupportGrpc.class) {
+        if ((getBulkDeleteAutoEvaluationsMethod = ScorecardsSupportGrpc.getBulkDeleteAutoEvaluationsMethod) == null) {
+          ScorecardsSupportGrpc.getBulkDeleteAutoEvaluationsMethod = getBulkDeleteAutoEvaluationsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BulkDeleteAutoEvaluations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ScorecardsSupportMethodDescriptorSupplier("BulkDeleteAutoEvaluations"))
+              .build();
+        }
+      }
+    }
+    return getBulkDeleteAutoEvaluationsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationByOrgIdRequest,
       com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationResponse> getDeleteEvaluationByOrgIdMethod;
 
@@ -279,6 +341,26 @@ public final class ScorecardsSupportGrpc {
 
     /**
      * <pre>
+     * BulkDeleteEvaluations deletes a set of evaluations in a given org.
+     * </pre>
+     */
+    default void bulkDeleteEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBulkDeleteEvaluationsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * BulkDeleteAutoEvaluations deletes a set of auto evaluations in a given org.
+     * </pre>
+     */
+    default void bulkDeleteAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBulkDeleteAutoEvaluationsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * DeleteEvaluationByOrgId delete an evaluation in a specific org
      * </pre>
      */
@@ -377,6 +459,28 @@ public final class ScorecardsSupportGrpc {
 
     /**
      * <pre>
+     * BulkDeleteEvaluations deletes a set of evaluations in a given org.
+     * </pre>
+     */
+    public void bulkDeleteEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBulkDeleteEvaluationsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * BulkDeleteAutoEvaluations deletes a set of auto evaluations in a given org.
+     * </pre>
+     */
+    public void bulkDeleteAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBulkDeleteAutoEvaluationsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * DeleteEvaluationByOrgId delete an evaluation in a specific org
      * </pre>
      */
@@ -458,6 +562,26 @@ public final class ScorecardsSupportGrpc {
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse listAutoEvaluationsByOrgId(com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsByOrgIdRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAutoEvaluationsByOrgIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * BulkDeleteEvaluations deletes a set of evaluations in a given org.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse bulkDeleteEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBulkDeleteEvaluationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * BulkDeleteAutoEvaluations deletes a set of auto evaluations in a given org.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse bulkDeleteAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBulkDeleteAutoEvaluationsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -545,6 +669,28 @@ public final class ScorecardsSupportGrpc {
 
     /**
      * <pre>
+     * BulkDeleteEvaluations deletes a set of evaluations in a given org.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse> bulkDeleteEvaluations(
+        com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBulkDeleteEvaluationsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * BulkDeleteAutoEvaluations deletes a set of auto evaluations in a given org.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse> bulkDeleteAutoEvaluations(
+        com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBulkDeleteAutoEvaluationsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * DeleteEvaluationByOrgId delete an evaluation in a specific org
      * </pre>
      */
@@ -590,10 +736,12 @@ public final class ScorecardsSupportGrpc {
 
   private static final int METHODID_LIST_EVALUATIONS_BY_ORG_ID = 0;
   private static final int METHODID_LIST_AUTO_EVALUATIONS_BY_ORG_ID = 1;
-  private static final int METHODID_DELETE_EVALUATION_BY_ORG_ID = 2;
-  private static final int METHODID_DELETE_AUTO_EVALUATION_BY_ORG_ID = 3;
-  private static final int METHODID_LIST_SCORECARDS_BY_ORG_ID = 4;
-  private static final int METHODID_LIST_CATEGORIES_BY_ORG_ID = 5;
+  private static final int METHODID_BULK_DELETE_EVALUATIONS = 2;
+  private static final int METHODID_BULK_DELETE_AUTO_EVALUATIONS = 3;
+  private static final int METHODID_DELETE_EVALUATION_BY_ORG_ID = 4;
+  private static final int METHODID_DELETE_AUTO_EVALUATION_BY_ORG_ID = 5;
+  private static final int METHODID_LIST_SCORECARDS_BY_ORG_ID = 6;
+  private static final int METHODID_LIST_CATEGORIES_BY_ORG_ID = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -619,6 +767,14 @@ public final class ScorecardsSupportGrpc {
         case METHODID_LIST_AUTO_EVALUATIONS_BY_ORG_ID:
           serviceImpl.listAutoEvaluationsByOrgId((com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsByOrgIdRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse>) responseObserver);
+          break;
+        case METHODID_BULK_DELETE_EVALUATIONS:
+          serviceImpl.bulkDeleteEvaluations((com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse>) responseObserver);
+          break;
+        case METHODID_BULK_DELETE_AUTO_EVALUATIONS:
+          serviceImpl.bulkDeleteAutoEvaluations((com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse>) responseObserver);
           break;
         case METHODID_DELETE_EVALUATION_BY_ORG_ID:
           serviceImpl.deleteEvaluationByOrgId((com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationByOrgIdRequest) request,
@@ -668,6 +824,20 @@ public final class ScorecardsSupportGrpc {
               com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsByOrgIdRequest,
               com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse>(
                 service, METHODID_LIST_AUTO_EVALUATIONS_BY_ORG_ID)))
+        .addMethod(
+          getBulkDeleteEvaluationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse>(
+                service, METHODID_BULK_DELETE_EVALUATIONS)))
+        .addMethod(
+          getBulkDeleteAutoEvaluationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse>(
+                service, METHODID_BULK_DELETE_AUTO_EVALUATIONS)))
         .addMethod(
           getDeleteEvaluationByOrgIdMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -746,6 +916,8 @@ public final class ScorecardsSupportGrpc {
               .setSchemaDescriptor(new ScorecardsSupportFileDescriptorSupplier())
               .addMethod(getListEvaluationsByOrgIdMethod())
               .addMethod(getListAutoEvaluationsByOrgIdMethod())
+              .addMethod(getBulkDeleteEvaluationsMethod())
+              .addMethod(getBulkDeleteAutoEvaluationsMethod())
               .addMethod(getDeleteEvaluationByOrgIdMethod())
               .addMethod(getDeleteAutoEvaluationByOrgIdMethod())
               .addMethod(getListScorecardsByOrgIdMethod())
