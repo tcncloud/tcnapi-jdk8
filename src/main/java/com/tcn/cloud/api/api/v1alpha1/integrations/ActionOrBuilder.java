@@ -8,18 +8,6 @@ public interface ActionOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
-   * @return The workflowDefinitionName.
-   */
-  java.lang.String getWorkflowDefinitionName();
-  /**
-   * <code>string workflow_definition_name = 1 [json_name = "workflowDefinitionName"];</code>
-   * @return The bytes for workflowDefinitionName.
-   */
-  com.google.protobuf.ByteString
-      getWorkflowDefinitionNameBytes();
-
-  /**
    * <pre>
    * the global data for this action.
    * </pre>
@@ -136,4 +124,16 @@ java.lang.String defaultValue);
    */
   java.lang.String getRestructureAfterOrThrow(
       java.lang.String key);
+
+  /**
+   * <code>string action_definition_name = 7 [json_name = "actionDefinitionName"];</code>
+   * @return The actionDefinitionName.
+   */
+  java.lang.String getActionDefinitionName();
+  /**
+   * <code>string action_definition_name = 7 [json_name = "actionDefinitionName"];</code>
+   * @return The bytes for actionDefinitionName.
+   */
+  com.google.protobuf.ByteString
+      getActionDefinitionNameBytes();
 }

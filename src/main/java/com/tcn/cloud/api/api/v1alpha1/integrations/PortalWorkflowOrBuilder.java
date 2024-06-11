@@ -300,4 +300,16 @@ java.lang.String defaultValue);
    */
   java.lang.String getDemoResultsOrThrow(
       java.lang.String key);
+
+  /**
+   * <code>string workflow_definition_name = 12 [json_name = "workflowDefinitionName"];</code>
+   * @return The workflowDefinitionName.
+   */
+  java.lang.String getWorkflowDefinitionName();
+  /**
+   * <code>string workflow_definition_name = 12 [json_name = "workflowDefinitionName"];</code>
+   * @return The bytes for workflowDefinitionName.
+   */
+  com.google.protobuf.ByteString
+      getWorkflowDefinitionNameBytes();
 }
