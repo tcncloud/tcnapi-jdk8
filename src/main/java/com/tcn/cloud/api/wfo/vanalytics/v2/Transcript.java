@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
    * The communication channel of the transcript.
    * </pre>
    *
-   * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
+   * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
    * @return The enum numeric value on the wire for channel.
    */
   @java.lang.Override public int getChannelValue() {
@@ -189,12 +189,12 @@ private static final long serialVersionUID = 0L;
    * The communication channel of the transcript.
    * </pre>
    *
-   * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
+   * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
    * @return The channel.
    */
-  @java.lang.Override public com.tcn.cloud.api.wfo.vanalytics.v2.Channel getChannel() {
-    com.tcn.cloud.api.wfo.vanalytics.v2.Channel result = com.tcn.cloud.api.wfo.vanalytics.v2.Channel.forNumber(channel_);
-    return result == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Channel.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ChannelType getChannel() {
+    com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channel_);
+    return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
   }
 
   public static final int START_TIME_FIELD_NUMBER = 13;
@@ -384,7 +384,7 @@ private static final long serialVersionUID = 0L;
     if (metadataCase_ == 2) {
       output.writeMessage(2, (com.tcn.cloud.api.wfo.vanalytics.v2.Sms) metadata_);
     }
-    if (channel_ != com.tcn.cloud.api.wfo.vanalytics.v2.Channel.CHANNEL_CALL.getNumber()) {
+    if (channel_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       output.writeEnum(12, channel_);
     }
     if (startTime_ != null) {
@@ -419,7 +419,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, (com.tcn.cloud.api.wfo.vanalytics.v2.Sms) metadata_);
     }
-    if (channel_ != com.tcn.cloud.api.wfo.vanalytics.v2.Channel.CHANNEL_CALL.getNumber()) {
+    if (channel_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(12, channel_);
     }
@@ -1325,7 +1325,7 @@ private static final long serialVersionUID = 0L;
      * The communication channel of the transcript.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
+     * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
      * @return The enum numeric value on the wire for channel.
      */
     @java.lang.Override public int getChannelValue() {
@@ -1336,7 +1336,7 @@ private static final long serialVersionUID = 0L;
      * The communication channel of the transcript.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
+     * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
      * @param value The enum numeric value on the wire for channel to set.
      * @return This builder for chaining.
      */
@@ -1351,24 +1351,24 @@ private static final long serialVersionUID = 0L;
      * The communication channel of the transcript.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
+     * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
      * @return The channel.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.wfo.vanalytics.v2.Channel getChannel() {
-      com.tcn.cloud.api.wfo.vanalytics.v2.Channel result = com.tcn.cloud.api.wfo.vanalytics.v2.Channel.forNumber(channel_);
-      return result == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Channel.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.ChannelType getChannel() {
+      com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channel_);
+      return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * The communication channel of the transcript.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
+     * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
      * @param value The channel to set.
      * @return This builder for chaining.
      */
-    public Builder setChannel(com.tcn.cloud.api.wfo.vanalytics.v2.Channel value) {
+    public Builder setChannel(com.tcn.cloud.api.api.commons.ChannelType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1382,7 +1382,7 @@ private static final long serialVersionUID = 0L;
      * The communication channel of the transcript.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.Channel channel = 12 [json_name = "channel"];</code>
+     * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
      * @return This builder for chaining.
      */
     public Builder clearChannel() {

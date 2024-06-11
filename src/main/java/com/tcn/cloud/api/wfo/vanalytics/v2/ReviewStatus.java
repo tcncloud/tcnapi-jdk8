@@ -100,7 +100,7 @@ public enum ReviewStatus
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.getDescriptor().getEnumTypes().get(1);
+    return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final ReviewStatus[] VALUES = values();
