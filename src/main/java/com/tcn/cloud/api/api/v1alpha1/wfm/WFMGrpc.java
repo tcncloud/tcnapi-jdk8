@@ -5288,6 +5288,99 @@ public final class WFMGrpc {
     return getListAgentLeavePetitionsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionResponse> getArchiveAgentLeavePetitionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ArchiveAgentLeavePetition",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionResponse> getArchiveAgentLeavePetitionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionResponse> getArchiveAgentLeavePetitionMethod;
+    if ((getArchiveAgentLeavePetitionMethod = WFMGrpc.getArchiveAgentLeavePetitionMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getArchiveAgentLeavePetitionMethod = WFMGrpc.getArchiveAgentLeavePetitionMethod) == null) {
+          WFMGrpc.getArchiveAgentLeavePetitionMethod = getArchiveAgentLeavePetitionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ArchiveAgentLeavePetition"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ArchiveAgentLeavePetition"))
+              .build();
+        }
+      }
+    }
+    return getArchiveAgentLeavePetitionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionResponse> getResolveAgentLeavePetitionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ResolveAgentLeavePetition",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionResponse> getResolveAgentLeavePetitionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionResponse> getResolveAgentLeavePetitionMethod;
+    if ((getResolveAgentLeavePetitionMethod = WFMGrpc.getResolveAgentLeavePetitionMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getResolveAgentLeavePetitionMethod = WFMGrpc.getResolveAgentLeavePetitionMethod) == null) {
+          WFMGrpc.getResolveAgentLeavePetitionMethod = getResolveAgentLeavePetitionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResolveAgentLeavePetition"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ResolveAgentLeavePetition"))
+              .build();
+        }
+      }
+    }
+    return getResolveAgentLeavePetitionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse> getCancelAgentLeavePetitionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CancelAgentLeavePetition",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse> getCancelAgentLeavePetitionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse> getCancelAgentLeavePetitionMethod;
+    if ((getCancelAgentLeavePetitionMethod = WFMGrpc.getCancelAgentLeavePetitionMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCancelAgentLeavePetitionMethod = WFMGrpc.getCancelAgentLeavePetitionMethod) == null) {
+          WFMGrpc.getCancelAgentLeavePetitionMethod = getCancelAgentLeavePetitionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CancelAgentLeavePetition"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CancelAgentLeavePetition"))
+              .build();
+        }
+      }
+    }
+    return getCancelAgentLeavePetitionMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest,
       com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceResponse> getHelloWorldWFMAdherenceMethod;
 
@@ -8118,6 +8211,7 @@ public final class WFMGrpc {
      * <pre>
      * Lists agent leave petitions for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
      * If no &#64;wfm_agent_sids are provided, all agent leave petitions overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If no &#64;datetime_range is provided, petitions will be returned across all datetimes.
      * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
      * If no agent leave petitions are found for the given parameters, an empty slice will be returned.
      * Errors:
@@ -8128,6 +8222,58 @@ public final class WFMGrpc {
     default void listAgentLeavePetitions(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentLeavePetitionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Archives an agent leave petition with the given &#64;agent_leave_petition_id for the org sending the request.
+     * If the leave petition has the status of PENDING_PETITION, the petition must be resolved first, or the request will error.
+     * If the petition has a status of APPROVED_PETITION and a portion of the petitions &#64;requested_datetime_ranges lies in the future,
+     *   the petition may not be archived without being cancelled.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid, the agent leave petition is approved for a future datetime, still pending, or is already archived.
+     *   - grpc.Internal: error occurs when archiving the agent leave petition.
+     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
+     * </pre>
+     */
+    default void archiveAgentLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getArchiveAgentLeavePetitionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Resolves the given &#64;agent_leave_petition_id, setting the given parameters, for the org sending the request.
+     * May only resolve leave petitions that currently have a PENDING_PETITION status.
+     * May only set the &#64;petition_status to APPROVED_PETITION or DENIED_PETITION.
+     * If a petition is approved, time off shifts will be added to the agent's schedule across the requested_datetime_ranges.
+     * If &#64;retain_partial_shifts is true, partial shifts overlapping the requested_datetime_ranges will have the remaining portion of the shift retained.
+     * If &#64;retain_partial_shifts is false, the entirety of shifts overlapping the requested_datetime_ranges range will be deleted.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is not pending approval.
+     *   - grpc.Internal: error occurs when resolving the agent leave petition, or modifying the agent's schedule.
+     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
+     * </pre>
+     */
+    default void resolveAgentLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResolveAgentLeavePetitionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Cancels the given &#64;agent_leave_petition_id for the organization sending the request.
+     * If &#64;agent_leave_petition_id has a status of APPROVED_PETITION, the agent's schedule will have time off blocks removed,
+     *   but any desired shifts must be added by the user after that leave is canceled.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is already canceled.
+     *   - grpc.Internal: error occurs when canceling the agent leave petition, or removing time off shifts from the agent's schedule.
+     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
+     * </pre>
+     */
+    default void cancelAgentLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCancelAgentLeavePetitionMethod(), responseObserver);
     }
 
     /**
@@ -11040,6 +11186,7 @@ public final class WFMGrpc {
      * <pre>
      * Lists agent leave petitions for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
      * If no &#64;wfm_agent_sids are provided, all agent leave petitions overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If no &#64;datetime_range is provided, petitions will be returned across all datetimes.
      * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
      * If no agent leave petitions are found for the given parameters, an empty slice will be returned.
      * Errors:
@@ -11051,6 +11198,61 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAgentLeavePetitionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Archives an agent leave petition with the given &#64;agent_leave_petition_id for the org sending the request.
+     * If the leave petition has the status of PENDING_PETITION, the petition must be resolved first, or the request will error.
+     * If the petition has a status of APPROVED_PETITION and a portion of the petitions &#64;requested_datetime_ranges lies in the future,
+     *   the petition may not be archived without being cancelled.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid, the agent leave petition is approved for a future datetime, still pending, or is already archived.
+     *   - grpc.Internal: error occurs when archiving the agent leave petition.
+     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
+     * </pre>
+     */
+    public void archiveAgentLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getArchiveAgentLeavePetitionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Resolves the given &#64;agent_leave_petition_id, setting the given parameters, for the org sending the request.
+     * May only resolve leave petitions that currently have a PENDING_PETITION status.
+     * May only set the &#64;petition_status to APPROVED_PETITION or DENIED_PETITION.
+     * If a petition is approved, time off shifts will be added to the agent's schedule across the requested_datetime_ranges.
+     * If &#64;retain_partial_shifts is true, partial shifts overlapping the requested_datetime_ranges will have the remaining portion of the shift retained.
+     * If &#64;retain_partial_shifts is false, the entirety of shifts overlapping the requested_datetime_ranges range will be deleted.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is not pending approval.
+     *   - grpc.Internal: error occurs when resolving the agent leave petition, or modifying the agent's schedule.
+     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
+     * </pre>
+     */
+    public void resolveAgentLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getResolveAgentLeavePetitionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Cancels the given &#64;agent_leave_petition_id for the organization sending the request.
+     * If &#64;agent_leave_petition_id has a status of APPROVED_PETITION, the agent's schedule will have time off blocks removed,
+     *   but any desired shifts must be added by the user after that leave is canceled.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is already canceled.
+     *   - grpc.Internal: error occurs when canceling the agent leave petition, or removing time off shifts from the agent's schedule.
+     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
+     * </pre>
+     */
+    public void cancelAgentLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCancelAgentLeavePetitionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -13790,6 +13992,7 @@ public final class WFMGrpc {
      * <pre>
      * Lists agent leave petitions for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
      * If no &#64;wfm_agent_sids are provided, all agent leave petitions overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If no &#64;datetime_range is provided, petitions will be returned across all datetimes.
      * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
      * If no agent leave petitions are found for the given parameters, an empty slice will be returned.
      * Errors:
@@ -13800,6 +14003,58 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse listAgentLeavePetitions(com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAgentLeavePetitionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Archives an agent leave petition with the given &#64;agent_leave_petition_id for the org sending the request.
+     * If the leave petition has the status of PENDING_PETITION, the petition must be resolved first, or the request will error.
+     * If the petition has a status of APPROVED_PETITION and a portion of the petitions &#64;requested_datetime_ranges lies in the future,
+     *   the petition may not be archived without being cancelled.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid, the agent leave petition is approved for a future datetime, still pending, or is already archived.
+     *   - grpc.Internal: error occurs when archiving the agent leave petition.
+     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionResponse archiveAgentLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getArchiveAgentLeavePetitionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Resolves the given &#64;agent_leave_petition_id, setting the given parameters, for the org sending the request.
+     * May only resolve leave petitions that currently have a PENDING_PETITION status.
+     * May only set the &#64;petition_status to APPROVED_PETITION or DENIED_PETITION.
+     * If a petition is approved, time off shifts will be added to the agent's schedule across the requested_datetime_ranges.
+     * If &#64;retain_partial_shifts is true, partial shifts overlapping the requested_datetime_ranges will have the remaining portion of the shift retained.
+     * If &#64;retain_partial_shifts is false, the entirety of shifts overlapping the requested_datetime_ranges range will be deleted.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is not pending approval.
+     *   - grpc.Internal: error occurs when resolving the agent leave petition, or modifying the agent's schedule.
+     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionResponse resolveAgentLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getResolveAgentLeavePetitionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Cancels the given &#64;agent_leave_petition_id for the organization sending the request.
+     * If &#64;agent_leave_petition_id has a status of APPROVED_PETITION, the agent's schedule will have time off blocks removed,
+     *   but any desired shifts must be added by the user after that leave is canceled.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is already canceled.
+     *   - grpc.Internal: error occurs when canceling the agent leave petition, or removing time off shifts from the agent's schedule.
+     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse cancelAgentLeavePetition(com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCancelAgentLeavePetitionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -16596,6 +16851,7 @@ public final class WFMGrpc {
      * <pre>
      * Lists agent leave petitions for the &#64;wfm_agent_sids over &#64;datetime_range for the org sending the request.
      * If no &#64;wfm_agent_sids are provided, all agent leave petitions overlapping &#64;datetime_range for the org sending the request will be returned.
+     * If no &#64;datetime_range is provided, petitions will be returned across all datetimes.
      * If &#64;include_archived is true, archived agent leave petitions will be returned as well, otherwise archived requests will not be included.
      * If no agent leave petitions are found for the given parameters, an empty slice will be returned.
      * Errors:
@@ -16607,6 +16863,61 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAgentLeavePetitionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Archives an agent leave petition with the given &#64;agent_leave_petition_id for the org sending the request.
+     * If the leave petition has the status of PENDING_PETITION, the petition must be resolved first, or the request will error.
+     * If the petition has a status of APPROVED_PETITION and a portion of the petitions &#64;requested_datetime_ranges lies in the future,
+     *   the petition may not be archived without being cancelled.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid, the agent leave petition is approved for a future datetime, still pending, or is already archived.
+     *   - grpc.Internal: error occurs when archiving the agent leave petition.
+     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionResponse> archiveAgentLeavePetition(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getArchiveAgentLeavePetitionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Resolves the given &#64;agent_leave_petition_id, setting the given parameters, for the org sending the request.
+     * May only resolve leave petitions that currently have a PENDING_PETITION status.
+     * May only set the &#64;petition_status to APPROVED_PETITION or DENIED_PETITION.
+     * If a petition is approved, time off shifts will be added to the agent's schedule across the requested_datetime_ranges.
+     * If &#64;retain_partial_shifts is true, partial shifts overlapping the requested_datetime_ranges will have the remaining portion of the shift retained.
+     * If &#64;retain_partial_shifts is false, the entirety of shifts overlapping the requested_datetime_ranges range will be deleted.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is not pending approval.
+     *   - grpc.Internal: error occurs when resolving the agent leave petition, or modifying the agent's schedule.
+     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionResponse> resolveAgentLeavePetition(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getResolveAgentLeavePetitionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Cancels the given &#64;agent_leave_petition_id for the organization sending the request.
+     * If &#64;agent_leave_petition_id has a status of APPROVED_PETITION, the agent's schedule will have time off blocks removed,
+     *   but any desired shifts must be added by the user after that leave is canceled.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is already canceled.
+     *   - grpc.Internal: error occurs when canceling the agent leave petition, or removing time off shifts from the agent's schedule.
+     *   - grpc.NotFound: the &#64;agent_leave_petition_id does not exist for the org sending the request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse> cancelAgentLeavePetition(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCancelAgentLeavePetitionMethod(), getCallOptions()), request);
     }
 
     /**
@@ -16836,10 +17147,13 @@ public final class WFMGrpc {
   private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 167;
   private static final int METHODID_CREATE_AGENT_LEAVE_PETITION = 168;
   private static final int METHODID_LIST_AGENT_LEAVE_PETITIONS = 169;
-  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 170;
-  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 171;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 172;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 173;
+  private static final int METHODID_ARCHIVE_AGENT_LEAVE_PETITION = 170;
+  private static final int METHODID_RESOLVE_AGENT_LEAVE_PETITION = 171;
+  private static final int METHODID_CANCEL_AGENT_LEAVE_PETITION = 172;
+  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 173;
+  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 174;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 175;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 176;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -17537,6 +17851,18 @@ public final class WFMGrpc {
         case METHODID_LIST_AGENT_LEAVE_PETITIONS:
           serviceImpl.listAgentLeavePetitions((com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse>) responseObserver);
+          break;
+        case METHODID_ARCHIVE_AGENT_LEAVE_PETITION:
+          serviceImpl.archiveAgentLeavePetition((com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionResponse>) responseObserver);
+          break;
+        case METHODID_RESOLVE_AGENT_LEAVE_PETITION:
+          serviceImpl.resolveAgentLeavePetition((com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionResponse>) responseObserver);
+          break;
+        case METHODID_CANCEL_AGENT_LEAVE_PETITION:
+          serviceImpl.cancelAgentLeavePetition((com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse>) responseObserver);
           break;
         case METHODID_HELLO_WORLD_WFMADHERENCE:
           serviceImpl.helloWorldWFMAdherence((com.tcn.cloud.api.api.v1alpha1.wfm.HelloWorldWFMAdherenceRequest) request,
@@ -18763,6 +19089,27 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListAgentLeavePetitionsResponse>(
                 service, METHODID_LIST_AGENT_LEAVE_PETITIONS)))
         .addMethod(
+          getArchiveAgentLeavePetitionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ArchiveAgentLeavePetitionResponse>(
+                service, METHODID_ARCHIVE_AGENT_LEAVE_PETITION)))
+        .addMethod(
+          getResolveAgentLeavePetitionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ResolveAgentLeavePetitionResponse>(
+                service, METHODID_RESOLVE_AGENT_LEAVE_PETITION)))
+        .addMethod(
+          getCancelAgentLeavePetitionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse>(
+                service, METHODID_CANCEL_AGENT_LEAVE_PETITION)))
+        .addMethod(
           getHelloWorldWFMAdherenceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -19008,6 +19355,9 @@ public final class WFMGrpc {
               .addMethod(getRemoveAgentFromScheduleMethod())
               .addMethod(getCreateAgentLeavePetitionMethod())
               .addMethod(getListAgentLeavePetitionsMethod())
+              .addMethod(getArchiveAgentLeavePetitionMethod())
+              .addMethod(getResolveAgentLeavePetitionMethod())
+              .addMethod(getCancelAgentLeavePetitionMethod())
               .addMethod(getHelloWorldWFMAdherenceMethod())
               .addMethod(getListAgentStatesForDayMethod())
               .addMethod(getListRealTimeManagementStatesMethod())
