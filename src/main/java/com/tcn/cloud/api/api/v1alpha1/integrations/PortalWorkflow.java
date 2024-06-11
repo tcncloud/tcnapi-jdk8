@@ -30,6 +30,7 @@ private static final long serialVersionUID = 0L;
     footerText_ = "";
     demoFailConditions_ = java.util.Collections.emptyList();
     demoPassConditions_ = java.util.Collections.emptyList();
+    workflowDefinitionName_ = "";
   }
 
   @java.lang.Override
@@ -584,6 +585,45 @@ java.lang.String defaultValue) {
     return map.get(key);
   }
 
+  public static final int WORKFLOW_DEFINITION_NAME_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object workflowDefinitionName_ = "";
+  /**
+   * <code>string workflow_definition_name = 12 [json_name = "workflowDefinitionName"];</code>
+   * @return The workflowDefinitionName.
+   */
+  @java.lang.Override
+  public java.lang.String getWorkflowDefinitionName() {
+    java.lang.Object ref = workflowDefinitionName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      workflowDefinitionName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string workflow_definition_name = 12 [json_name = "workflowDefinitionName"];</code>
+   * @return The bytes for workflowDefinitionName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getWorkflowDefinitionNameBytes() {
+    java.lang.Object ref = workflowDefinitionName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      workflowDefinitionName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -634,6 +674,9 @@ java.lang.String defaultValue) {
         internalGetDemoResults(),
         DemoResultsDefaultEntryHolder.defaultEntry,
         11);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowDefinitionName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, workflowDefinitionName_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -693,6 +736,9 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, demoResults__);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(workflowDefinitionName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, workflowDefinitionName_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -731,6 +777,8 @@ java.lang.String defaultValue) {
         .equals(other.getDemoPassConditionsList())) return false;
     if (!internalGetDemoResults().equals(
         other.internalGetDemoResults())) return false;
+    if (!getWorkflowDefinitionName()
+        .equals(other.getWorkflowDefinitionName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -777,6 +825,8 @@ java.lang.String defaultValue) {
       hash = (37 * hash) + DEMO_RESULTS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetDemoResults().hashCode();
     }
+    hash = (37 * hash) + WORKFLOW_DEFINITION_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getWorkflowDefinitionName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -980,6 +1030,7 @@ java.lang.String defaultValue) {
       }
       bitField0_ = (bitField0_ & ~0x00000100);
       internalGetMutableDemoResults().clear();
+      workflowDefinitionName_ = "";
       return this;
     }
 
@@ -1074,6 +1125,9 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.demoResults_ = internalGetDemoResults();
         result.demoResults_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.workflowDefinitionName_ = workflowDefinitionName_;
       }
     }
 
@@ -1247,6 +1301,11 @@ java.lang.String defaultValue) {
       internalGetMutableDemoResults().mergeFrom(
           other.internalGetDemoResults());
       bitField0_ |= 0x00000200;
+      if (!other.getWorkflowDefinitionName().isEmpty()) {
+        workflowDefinitionName_ = other.workflowDefinitionName_;
+        bitField0_ |= 0x00000400;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1365,6 +1424,11 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00000200;
               break;
             } // case 90
+            case 98: {
+              workflowDefinitionName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3131,6 +3195,78 @@ java.lang.String defaultValue) {
       internalGetMutableDemoResults().getMutableMap()
           .putAll(values);
       bitField0_ |= 0x00000200;
+      return this;
+    }
+
+    private java.lang.Object workflowDefinitionName_ = "";
+    /**
+     * <code>string workflow_definition_name = 12 [json_name = "workflowDefinitionName"];</code>
+     * @return The workflowDefinitionName.
+     */
+    public java.lang.String getWorkflowDefinitionName() {
+      java.lang.Object ref = workflowDefinitionName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        workflowDefinitionName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string workflow_definition_name = 12 [json_name = "workflowDefinitionName"];</code>
+     * @return The bytes for workflowDefinitionName.
+     */
+    public com.google.protobuf.ByteString
+        getWorkflowDefinitionNameBytes() {
+      java.lang.Object ref = workflowDefinitionName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        workflowDefinitionName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string workflow_definition_name = 12 [json_name = "workflowDefinitionName"];</code>
+     * @param value The workflowDefinitionName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setWorkflowDefinitionName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      workflowDefinitionName_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string workflow_definition_name = 12 [json_name = "workflowDefinitionName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearWorkflowDefinitionName() {
+      workflowDefinitionName_ = getDefaultInstance().getWorkflowDefinitionName();
+      bitField0_ = (bitField0_ & ~0x00000400);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string workflow_definition_name = 12 [json_name = "workflowDefinitionName"];</code>
+     * @param value The bytes for workflowDefinitionName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setWorkflowDefinitionNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      workflowDefinitionName_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
       return this;
     }
     @java.lang.Override
