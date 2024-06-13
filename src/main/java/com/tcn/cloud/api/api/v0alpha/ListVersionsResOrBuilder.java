@@ -47,4 +47,48 @@ public interface ListVersionsResOrBuilder extends
    */
   com.google.protobuf.ByteString
       getVersionsBytes(int index);
+
+  /**
+   * <pre>
+   * all the details about versions
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v0alpha.VersionDetails> 
+      getVersionDetailsList();
+  /**
+   * <pre>
+   * all the details about versions
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.VersionDetails getVersionDetails(int index);
+  /**
+   * <pre>
+   * all the details about versions
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+   */
+  int getVersionDetailsCount();
+  /**
+   * <pre>
+   * all the details about versions
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v0alpha.VersionDetailsOrBuilder> 
+      getVersionDetailsOrBuilderList();
+  /**
+   * <pre>
+   * all the details about versions
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.VersionDetailsOrBuilder getVersionDetailsOrBuilder(
+      int index);
 }

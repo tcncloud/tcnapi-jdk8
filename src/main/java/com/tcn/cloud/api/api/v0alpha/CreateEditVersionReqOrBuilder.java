@@ -46,4 +46,24 @@ public interface CreateEditVersionReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDestVersionBytes();
+
+  /**
+   * <pre>
+   * dest version name
+   * </pre>
+   *
+   * <code>string dest_version_name = 3 [json_name = "destVersionName"];</code>
+   * @return The destVersionName.
+   */
+  java.lang.String getDestVersionName();
+  /**
+   * <pre>
+   * dest version name
+   * </pre>
+   *
+   * <code>string dest_version_name = 3 [json_name = "destVersionName"];</code>
+   * @return The bytes for destVersionName.
+   */
+  com.google.protobuf.ByteString
+      getDestVersionNameBytes();
 }

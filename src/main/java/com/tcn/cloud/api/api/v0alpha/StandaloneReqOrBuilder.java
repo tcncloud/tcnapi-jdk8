@@ -46,4 +46,24 @@ public interface StandaloneReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCategoryBytes();
+
+  /**
+   * <pre>
+   * version
+   * </pre>
+   *
+   * <code>string version = 3 [json_name = "version"];</code>
+   * @return The version.
+   */
+  java.lang.String getVersion();
+  /**
+   * <pre>
+   * version
+   * </pre>
+   *
+   * <code>string version = 3 [json_name = "version"];</code>
+   * @return The bytes for version.
+   */
+  com.google.protobuf.ByteString
+      getVersionBytes();
 }

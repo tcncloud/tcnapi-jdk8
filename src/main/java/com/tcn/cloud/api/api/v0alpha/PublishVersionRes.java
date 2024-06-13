@@ -42,6 +42,44 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.PublishVersionRes.class, com.tcn.cloud.api.api.v0alpha.PublishVersionRes.Builder.class);
   }
 
+  public static final int VERSION_DETAILS_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.api.v0alpha.VersionDetails versionDetails_;
+  /**
+   * <pre>
+   * details about version
+   * </pre>
+   *
+   * <code>.api.v0alpha.VersionDetails version_details = 1 [json_name = "versionDetails"];</code>
+   * @return Whether the versionDetails field is set.
+   */
+  @java.lang.Override
+  public boolean hasVersionDetails() {
+    return versionDetails_ != null;
+  }
+  /**
+   * <pre>
+   * details about version
+   * </pre>
+   *
+   * <code>.api.v0alpha.VersionDetails version_details = 1 [json_name = "versionDetails"];</code>
+   * @return The versionDetails.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.VersionDetails getVersionDetails() {
+    return versionDetails_ == null ? com.tcn.cloud.api.api.v0alpha.VersionDetails.getDefaultInstance() : versionDetails_;
+  }
+  /**
+   * <pre>
+   * details about version
+   * </pre>
+   *
+   * <code>.api.v0alpha.VersionDetails version_details = 1 [json_name = "versionDetails"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.VersionDetailsOrBuilder getVersionDetailsOrBuilder() {
+    return versionDetails_ == null ? com.tcn.cloud.api.api.v0alpha.VersionDetails.getDefaultInstance() : versionDetails_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -56,6 +94,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (versionDetails_ != null) {
+      output.writeMessage(1, getVersionDetails());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -65,6 +106,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (versionDetails_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getVersionDetails());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -80,6 +125,11 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v0alpha.PublishVersionRes other = (com.tcn.cloud.api.api.v0alpha.PublishVersionRes) obj;
 
+    if (hasVersionDetails() != other.hasVersionDetails()) return false;
+    if (hasVersionDetails()) {
+      if (!getVersionDetails()
+          .equals(other.getVersionDetails())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -91,6 +141,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasVersionDetails()) {
+      hash = (37 * hash) + VERSION_DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getVersionDetails().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -225,6 +279,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      versionDetails_ = null;
+      if (versionDetailsBuilder_ != null) {
+        versionDetailsBuilder_.dispose();
+        versionDetailsBuilder_ = null;
+      }
       return this;
     }
 
@@ -251,8 +311,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.PublishVersionRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.PublishVersionRes result = new com.tcn.cloud.api.api.v0alpha.PublishVersionRes(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PublishVersionRes result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.versionDetails_ = versionDetailsBuilder_ == null
+            ? versionDetails_
+            : versionDetailsBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -299,6 +369,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.PublishVersionRes other) {
       if (other == com.tcn.cloud.api.api.v0alpha.PublishVersionRes.getDefaultInstance()) return this;
+      if (other.hasVersionDetails()) {
+        mergeVersionDetails(other.getVersionDetails());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -325,6 +398,13 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              input.readMessage(
+                  getVersionDetailsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -339,6 +419,162 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } // finally
       return this;
+    }
+    private int bitField0_;
+
+    private com.tcn.cloud.api.api.v0alpha.VersionDetails versionDetails_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.VersionDetails, com.tcn.cloud.api.api.v0alpha.VersionDetails.Builder, com.tcn.cloud.api.api.v0alpha.VersionDetailsOrBuilder> versionDetailsBuilder_;
+    /**
+     * <pre>
+     * details about version
+     * </pre>
+     *
+     * <code>.api.v0alpha.VersionDetails version_details = 1 [json_name = "versionDetails"];</code>
+     * @return Whether the versionDetails field is set.
+     */
+    public boolean hasVersionDetails() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * details about version
+     * </pre>
+     *
+     * <code>.api.v0alpha.VersionDetails version_details = 1 [json_name = "versionDetails"];</code>
+     * @return The versionDetails.
+     */
+    public com.tcn.cloud.api.api.v0alpha.VersionDetails getVersionDetails() {
+      if (versionDetailsBuilder_ == null) {
+        return versionDetails_ == null ? com.tcn.cloud.api.api.v0alpha.VersionDetails.getDefaultInstance() : versionDetails_;
+      } else {
+        return versionDetailsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * details about version
+     * </pre>
+     *
+     * <code>.api.v0alpha.VersionDetails version_details = 1 [json_name = "versionDetails"];</code>
+     */
+    public Builder setVersionDetails(com.tcn.cloud.api.api.v0alpha.VersionDetails value) {
+      if (versionDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        versionDetails_ = value;
+      } else {
+        versionDetailsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * details about version
+     * </pre>
+     *
+     * <code>.api.v0alpha.VersionDetails version_details = 1 [json_name = "versionDetails"];</code>
+     */
+    public Builder setVersionDetails(
+        com.tcn.cloud.api.api.v0alpha.VersionDetails.Builder builderForValue) {
+      if (versionDetailsBuilder_ == null) {
+        versionDetails_ = builderForValue.build();
+      } else {
+        versionDetailsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * details about version
+     * </pre>
+     *
+     * <code>.api.v0alpha.VersionDetails version_details = 1 [json_name = "versionDetails"];</code>
+     */
+    public Builder mergeVersionDetails(com.tcn.cloud.api.api.v0alpha.VersionDetails value) {
+      if (versionDetailsBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          versionDetails_ != null &&
+          versionDetails_ != com.tcn.cloud.api.api.v0alpha.VersionDetails.getDefaultInstance()) {
+          getVersionDetailsBuilder().mergeFrom(value);
+        } else {
+          versionDetails_ = value;
+        }
+      } else {
+        versionDetailsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * details about version
+     * </pre>
+     *
+     * <code>.api.v0alpha.VersionDetails version_details = 1 [json_name = "versionDetails"];</code>
+     */
+    public Builder clearVersionDetails() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      versionDetails_ = null;
+      if (versionDetailsBuilder_ != null) {
+        versionDetailsBuilder_.dispose();
+        versionDetailsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * details about version
+     * </pre>
+     *
+     * <code>.api.v0alpha.VersionDetails version_details = 1 [json_name = "versionDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.VersionDetails.Builder getVersionDetailsBuilder() {
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return getVersionDetailsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * details about version
+     * </pre>
+     *
+     * <code>.api.v0alpha.VersionDetails version_details = 1 [json_name = "versionDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.VersionDetailsOrBuilder getVersionDetailsOrBuilder() {
+      if (versionDetailsBuilder_ != null) {
+        return versionDetailsBuilder_.getMessageOrBuilder();
+      } else {
+        return versionDetails_ == null ?
+            com.tcn.cloud.api.api.v0alpha.VersionDetails.getDefaultInstance() : versionDetails_;
+      }
+    }
+    /**
+     * <pre>
+     * details about version
+     * </pre>
+     *
+     * <code>.api.v0alpha.VersionDetails version_details = 1 [json_name = "versionDetails"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.VersionDetails, com.tcn.cloud.api.api.v0alpha.VersionDetails.Builder, com.tcn.cloud.api.api.v0alpha.VersionDetailsOrBuilder> 
+        getVersionDetailsFieldBuilder() {
+      if (versionDetailsBuilder_ == null) {
+        versionDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.VersionDetails, com.tcn.cloud.api.api.v0alpha.VersionDetails.Builder, com.tcn.cloud.api.api.v0alpha.VersionDetailsOrBuilder>(
+                getVersionDetails(),
+                getParentForChildren(),
+                isClean());
+        versionDetails_ = null;
+      }
+      return versionDetailsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

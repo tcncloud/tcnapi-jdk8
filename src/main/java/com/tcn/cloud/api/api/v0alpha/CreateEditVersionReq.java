@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private CreateEditVersionReq() {
     srcVersion_ = "";
     destVersion_ = "";
+    destVersionName_ = "";
   }
 
   @java.lang.Override
@@ -138,6 +139,53 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int DEST_VERSION_NAME_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object destVersionName_ = "";
+  /**
+   * <pre>
+   * dest version name
+   * </pre>
+   *
+   * <code>string dest_version_name = 3 [json_name = "destVersionName"];</code>
+   * @return The destVersionName.
+   */
+  @java.lang.Override
+  public java.lang.String getDestVersionName() {
+    java.lang.Object ref = destVersionName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      destVersionName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * dest version name
+   * </pre>
+   *
+   * <code>string dest_version_name = 3 [json_name = "destVersionName"];</code>
+   * @return The bytes for destVersionName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDestVersionNameBytes() {
+    java.lang.Object ref = destVersionName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      destVersionName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -158,6 +206,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destVersion_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destVersion_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destVersionName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, destVersionName_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -172,6 +223,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destVersion_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destVersion_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destVersionName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, destVersionName_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -192,6 +246,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getSrcVersion())) return false;
     if (!getDestVersion()
         .equals(other.getDestVersion())) return false;
+    if (!getDestVersionName()
+        .equals(other.getDestVersionName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -207,6 +263,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getSrcVersion().hashCode();
     hash = (37 * hash) + DEST_VERSION_FIELD_NUMBER;
     hash = (53 * hash) + getDestVersion().hashCode();
+    hash = (37 * hash) + DEST_VERSION_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getDestVersionName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -344,6 +402,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       srcVersion_ = "";
       destVersion_ = "";
+      destVersionName_ = "";
       return this;
     }
 
@@ -382,6 +441,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.destVersion_ = destVersion_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.destVersionName_ = destVersionName_;
       }
     }
 
@@ -439,6 +501,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (!other.getDestVersionName().isEmpty()) {
+        destVersionName_ = other.destVersionName_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -475,6 +542,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              destVersionName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -672,6 +744,98 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       destVersion_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object destVersionName_ = "";
+    /**
+     * <pre>
+     * dest version name
+     * </pre>
+     *
+     * <code>string dest_version_name = 3 [json_name = "destVersionName"];</code>
+     * @return The destVersionName.
+     */
+    public java.lang.String getDestVersionName() {
+      java.lang.Object ref = destVersionName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destVersionName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * dest version name
+     * </pre>
+     *
+     * <code>string dest_version_name = 3 [json_name = "destVersionName"];</code>
+     * @return The bytes for destVersionName.
+     */
+    public com.google.protobuf.ByteString
+        getDestVersionNameBytes() {
+      java.lang.Object ref = destVersionName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destVersionName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * dest version name
+     * </pre>
+     *
+     * <code>string dest_version_name = 3 [json_name = "destVersionName"];</code>
+     * @param value The destVersionName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDestVersionName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      destVersionName_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * dest version name
+     * </pre>
+     *
+     * <code>string dest_version_name = 3 [json_name = "destVersionName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDestVersionName() {
+      destVersionName_ = getDefaultInstance().getDestVersionName();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * dest version name
+     * </pre>
+     *
+     * <code>string dest_version_name = 3 [json_name = "destVersionName"];</code>
+     * @param value The bytes for destVersionName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDestVersionNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      destVersionName_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
