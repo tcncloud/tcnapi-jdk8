@@ -44,13 +44,18 @@ public final class TranscriptSummaryProto {
       "transcriptSid\"s\n\034GetTranscriptSummaryRes" +
       "ponse\022S\n\022transcript_summary\030\001 \001(\0132$.wfo." +
       "vanalytics.v2.TranscriptSummaryR\021transcr" +
-      "iptSummary\"8\n\021TranscriptSummary\022#\n\rbulle" +
-      "t_points\030\001 \003(\tR\014bulletPointsB\243\001\n#com.tcn" +
-      ".cloud.api.wfo.vanalytics.v2B\026Transcript" +
-      "SummaryProtoP\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V2" +
-      "\312\002\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\Vanalytics\\V2" +
-      "\\GPBMetadata\352\002\023Wfo::Vanalytics::V2b\006prot" +
-      "o3"
+      "iptSummary\"|\n\021TranscriptSummary\022#\n\rbulle" +
+      "t_points\030\001 \003(\tR\014bulletPoints\022B\n\006status\030\002" +
+      " \001(\0162*.wfo.vanalytics.v2.TranscriptSumma" +
+      "ryStatusR\006status*\200\001\n\027TranscriptSummarySt" +
+      "atus\022\n\n\006QUEUED\020\000\022\033\n\016QUEUED_ERRORED\020\377\377\377\377\377" +
+      "\377\377\377\377\001\022\016\n\nSUMMARIZED\020\001\022\037\n\022SUMMARIZED_ERRO" +
+      "RED\020\376\377\377\377\377\377\377\377\377\001\022\013\n\007VISIBLE\020\002B\243\001\n#com.tcn." +
+      "cloud.api.wfo.vanalytics.v2B\026TranscriptS" +
+      "ummaryProtoP\001\242\002\003WVX\252\002\021Wfo.Vanalytics.V2\312" +
+      "\002\021Wfo\\Vanalytics\\V2\342\002\035Wfo\\Vanalytics\\V2\\" +
+      "GPBMetadata\352\002\023Wfo::Vanalytics::V2b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -73,7 +78,7 @@ public final class TranscriptSummaryProto {
     internal_static_wfo_vanalytics_v2_TranscriptSummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wfo_vanalytics_v2_TranscriptSummary_descriptor,
-        new java.lang.String[] { "BulletPoints", });
+        new java.lang.String[] { "BulletPoints", "Status", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

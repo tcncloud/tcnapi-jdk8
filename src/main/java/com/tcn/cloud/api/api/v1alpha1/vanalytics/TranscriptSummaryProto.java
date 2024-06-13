@@ -44,14 +44,19 @@ public final class TranscriptSummaryProto {
       "_sid\030\002 \001(\003R\rtranscriptSid\"y\n\034GetTranscri" +
       "ptSummaryResponse\022Y\n\022transcript_summary\030" +
       "\001 \001(\0132*.api.v1alpha1.vanalytics.Transcri" +
-      "ptSummaryR\021transcriptSummary\"8\n\021Transcri" +
-      "ptSummary\022#\n\rbullet_points\030\001 \003(\tR\014bullet" +
-      "PointsB\301\001\n)com.tcn.cloud.api.api.v1alpha" +
-      "1.vanalyticsB\026TranscriptSummaryProtoP\001\242\002" +
-      "\003AVV\252\002\027Api.V1alpha1.Vanalytics\312\002\027Api\\V1a" +
-      "lpha1\\Vanalytics\342\002#Api\\V1alpha1\\Vanalyti" +
-      "cs\\GPBMetadata\352\002\031Api::V1alpha1::Vanalyti" +
-      "csb\006proto3"
+      "ptSummaryR\021transcriptSummary\"\202\001\n\021Transcr" +
+      "iptSummary\022#\n\rbullet_points\030\001 \003(\tR\014bulle" +
+      "tPoints\022H\n\006status\030\002 \001(\01620.api.v1alpha1.v" +
+      "analytics.TranscriptSummaryStatusR\006statu" +
+      "s*\200\001\n\027TranscriptSummaryStatus\022\n\n\006QUEUED\020" +
+      "\000\022\033\n\016QUEUED_ERRORED\020\377\377\377\377\377\377\377\377\377\001\022\016\n\nSUMMAR" +
+      "IZED\020\001\022\037\n\022SUMMARIZED_ERRORED\020\376\377\377\377\377\377\377\377\377\001\022" +
+      "\013\n\007VISIBLE\020\002B\301\001\n)com.tcn.cloud.api.api.v" +
+      "1alpha1.vanalyticsB\026TranscriptSummaryPro" +
+      "toP\001\242\002\003AVV\252\002\027Api.V1alpha1.Vanalytics\312\002\027A" +
+      "pi\\V1alpha1\\Vanalytics\342\002#Api\\V1alpha1\\Va" +
+      "nalytics\\GPBMetadata\352\002\031Api::V1alpha1::Va" +
+      "nalyticsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -74,7 +79,7 @@ public final class TranscriptSummaryProto {
     internal_static_api_v1alpha1_vanalytics_TranscriptSummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_vanalytics_TranscriptSummary_descriptor,
-        new java.lang.String[] { "BulletPoints", });
+        new java.lang.String[] { "BulletPoints", "Status", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

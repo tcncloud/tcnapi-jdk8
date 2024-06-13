@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private TranscriptSummary() {
     bulletPoints_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    status_ = 0;
   }
 
   @java.lang.Override
@@ -97,6 +98,32 @@ private static final long serialVersionUID = 0L;
     return bulletPoints_.getByteString(index);
   }
 
+  public static final int STATUS_FIELD_NUMBER = 2;
+  private int status_ = 0;
+  /**
+   * <pre>
+   * Status of the summary.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.TranscriptSummaryStatus status = 2 [json_name = "status"];</code>
+   * @return The enum numeric value on the wire for status.
+   */
+  @java.lang.Override public int getStatusValue() {
+    return status_;
+  }
+  /**
+   * <pre>
+   * Status of the summary.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.TranscriptSummaryStatus status = 2 [json_name = "status"];</code>
+   * @return The status.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryStatus getStatus() {
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryStatus result = com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryStatus.forNumber(status_);
+    return result == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryStatus.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -113,6 +140,9 @@ private static final long serialVersionUID = 0L;
                       throws java.io.IOException {
     for (int i = 0; i < bulletPoints_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bulletPoints_.getRaw(i));
+    }
+    if (status_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryStatus.QUEUED.getNumber()) {
+      output.writeEnum(2, status_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -131,6 +161,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getBulletPointsList().size();
     }
+    if (status_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryStatus.QUEUED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(2, status_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -148,6 +182,7 @@ private static final long serialVersionUID = 0L;
 
     if (!getBulletPointsList()
         .equals(other.getBulletPointsList())) return false;
+    if (status_ != other.status_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -163,6 +198,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BULLET_POINTS_FIELD_NUMBER;
       hash = (53 * hash) + getBulletPointsList().hashCode();
     }
+    hash = (37 * hash) + STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + status_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -300,6 +337,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       bulletPoints_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      status_ = 0;
       return this;
     }
 
@@ -336,6 +374,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         bulletPoints_.makeImmutable();
         result.bulletPoints_ = bulletPoints_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.status_ = status_;
       }
     }
 
@@ -393,6 +434,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.status_ != 0) {
+        setStatusValue(other.getStatusValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -425,6 +469,11 @@ private static final long serialVersionUID = 0L;
               bulletPoints_.add(s);
               break;
             } // case 10
+            case 16: {
+              status_ = input.readEnum();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -585,6 +634,79 @@ private static final long serialVersionUID = 0L;
       ensureBulletPointsIsMutable();
       bulletPoints_.add(value);
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private int status_ = 0;
+    /**
+     * <pre>
+     * Status of the summary.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.TranscriptSummaryStatus status = 2 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Status of the summary.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.TranscriptSummaryStatus status = 2 [json_name = "status"];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatusValue(int value) {
+      status_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Status of the summary.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.TranscriptSummaryStatus status = 2 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryStatus getStatus() {
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryStatus result = com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryStatus.forNumber(status_);
+      return result == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Status of the summary.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.TranscriptSummaryStatus status = 2 [json_name = "status"];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatus(com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptSummaryStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000002;
+      status_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Status of the summary.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.TranscriptSummaryStatus status = 2 [json_name = "status"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStatus() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      status_ = 0;
       onChanged();
       return this;
     }
