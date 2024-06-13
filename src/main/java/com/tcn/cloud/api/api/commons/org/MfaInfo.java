@@ -2372,6 +2372,602 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface TotpTypeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.commons.org.MfaInfo.TotpType)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The secret key that is generated when the user sets up the authenticator.
+     * </pre>
+     *
+     * <code>string secret_key = 1 [json_name = "secretKey"];</code>
+     * @return The secretKey.
+     */
+    java.lang.String getSecretKey();
+    /**
+     * <pre>
+     * The secret key that is generated when the user sets up the authenticator.
+     * </pre>
+     *
+     * <code>string secret_key = 1 [json_name = "secretKey"];</code>
+     * @return The bytes for secretKey.
+     */
+    com.google.protobuf.ByteString
+        getSecretKeyBytes();
+  }
+  /**
+   * <pre>
+   * TotpType is the type of MFA that uses a time-based one-time password.
+   * </pre>
+   *
+   * Protobuf type {@code api.commons.org.MfaInfo.TotpType}
+   */
+  public static final class TotpType extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.commons.org.MfaInfo.TotpType)
+      TotpTypeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TotpType.newBuilder() to construct.
+    private TotpType(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TotpType() {
+      secretKey_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TotpType();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_TotpType_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_TotpType_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.class, com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.Builder.class);
+    }
+
+    public static final int SECRET_KEY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object secretKey_ = "";
+    /**
+     * <pre>
+     * The secret key that is generated when the user sets up the authenticator.
+     * </pre>
+     *
+     * <code>string secret_key = 1 [json_name = "secretKey"];</code>
+     * @return The secretKey.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretKey() {
+      java.lang.Object ref = secretKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The secret key that is generated when the user sets up the authenticator.
+     * </pre>
+     *
+     * <code>string secret_key = 1 [json_name = "secretKey"];</code>
+     * @return The bytes for secretKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretKeyBytes() {
+      java.lang.Object ref = secretKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, secretKey_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, secretKey_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType other = (com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType) obj;
+
+      if (!getSecretKey()
+          .equals(other.getSecretKey())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SECRET_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretKey().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * TotpType is the type of MFA that uses a time-based one-time password.
+     * </pre>
+     *
+     * Protobuf type {@code api.commons.org.MfaInfo.TotpType}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.commons.org.MfaInfo.TotpType)
+        com.tcn.cloud.api.api.commons.org.MfaInfo.TotpTypeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_TotpType_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_TotpType_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.class, com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        secretKey_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.commons.org.UserProto.internal_static_api_commons_org_MfaInfo_TotpType_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType build() {
+        com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType buildPartial() {
+        com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType result = new com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.secretKey_ = secretKey_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType) {
+          return mergeFrom((com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType other) {
+        if (other == com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.getDefaultInstance()) return this;
+        if (!other.getSecretKey().isEmpty()) {
+          secretKey_ = other.secretKey_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                secretKey_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object secretKey_ = "";
+      /**
+       * <pre>
+       * The secret key that is generated when the user sets up the authenticator.
+       * </pre>
+       *
+       * <code>string secret_key = 1 [json_name = "secretKey"];</code>
+       * @return The secretKey.
+       */
+      public java.lang.String getSecretKey() {
+        java.lang.Object ref = secretKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The secret key that is generated when the user sets up the authenticator.
+       * </pre>
+       *
+       * <code>string secret_key = 1 [json_name = "secretKey"];</code>
+       * @return The bytes for secretKey.
+       */
+      public com.google.protobuf.ByteString
+          getSecretKeyBytes() {
+        java.lang.Object ref = secretKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The secret key that is generated when the user sets up the authenticator.
+       * </pre>
+       *
+       * <code>string secret_key = 1 [json_name = "secretKey"];</code>
+       * @param value The secretKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        secretKey_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The secret key that is generated when the user sets up the authenticator.
+       * </pre>
+       *
+       * <code>string secret_key = 1 [json_name = "secretKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretKey() {
+        secretKey_ = getDefaultInstance().getSecretKey();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The secret key that is generated when the user sets up the authenticator.
+       * </pre>
+       *
+       * <code>string secret_key = 1 [json_name = "secretKey"];</code>
+       * @param value The bytes for secretKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        secretKey_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.commons.org.MfaInfo.TotpType)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.commons.org.MfaInfo.TotpType)
+    private static final com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType();
+    }
+
+    public static com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TotpType>
+        PARSER = new com.google.protobuf.AbstractParser<TotpType>() {
+      @java.lang.Override
+      public TotpType parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TotpType> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TotpType> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int mfaTypeCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object mfaType_;
@@ -2381,6 +2977,7 @@ private static final long serialVersionUID = 0L;
     NONE(10),
     OTP(11),
     DUO(12),
+    TOTP(13),
     MFATYPE_NOT_SET(0);
     private final int value;
     private MfaTypeCase(int value) {
@@ -2401,6 +2998,7 @@ private static final long serialVersionUID = 0L;
         case 10: return NONE;
         case 11: return OTP;
         case 12: return DUO;
+        case 13: return TOTP;
         case 0: return MFATYPE_NOT_SET;
         default: return null;
       }
@@ -2618,6 +3216,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.org.MfaInfo.Duo.getDefaultInstance();
   }
 
+  public static final int TOTP_FIELD_NUMBER = 13;
+  /**
+   * <code>.api.commons.org.MfaInfo.TotpType totp = 13 [json_name = "totp"];</code>
+   * @return Whether the totp field is set.
+   */
+  @java.lang.Override
+  public boolean hasTotp() {
+    return mfaTypeCase_ == 13;
+  }
+  /**
+   * <code>.api.commons.org.MfaInfo.TotpType totp = 13 [json_name = "totp"];</code>
+   * @return The totp.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType getTotp() {
+    if (mfaTypeCase_ == 13) {
+       return (com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType) mfaType_;
+    }
+    return com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.org.MfaInfo.TotpType totp = 13 [json_name = "totp"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.MfaInfo.TotpTypeOrBuilder getTotpOrBuilder() {
+    if (mfaTypeCase_ == 13) {
+       return (com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType) mfaType_;
+    }
+    return com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2650,6 +3279,9 @@ private static final long serialVersionUID = 0L;
     if (mfaTypeCase_ == 12) {
       output.writeMessage(12, (com.tcn.cloud.api.api.commons.org.MfaInfo.Duo) mfaType_);
     }
+    if (mfaTypeCase_ == 13) {
+      output.writeMessage(13, (com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType) mfaType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -2680,6 +3312,10 @@ private static final long serialVersionUID = 0L;
     if (mfaTypeCase_ == 12) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, (com.tcn.cloud.api.api.commons.org.MfaInfo.Duo) mfaType_);
+    }
+    if (mfaTypeCase_ == 13) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, (com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType) mfaType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -2716,6 +3352,10 @@ private static final long serialVersionUID = 0L;
         if (!getDuo()
             .equals(other.getDuo())) return false;
         break;
+      case 13:
+        if (!getTotp()
+            .equals(other.getTotp())) return false;
+        break;
       case 0:
       default:
     }
@@ -2749,6 +3389,10 @@ private static final long serialVersionUID = 0L;
       case 12:
         hash = (37 * hash) + DUO_FIELD_NUMBER;
         hash = (53 * hash) + getDuo().hashCode();
+        break;
+      case 13:
+        hash = (37 * hash) + TOTP_FIELD_NUMBER;
+        hash = (53 * hash) + getTotp().hashCode();
         break;
       case 0:
       default:
@@ -2900,6 +3544,9 @@ private static final long serialVersionUID = 0L;
       if (duoBuilder_ != null) {
         duoBuilder_.clear();
       }
+      if (totpBuilder_ != null) {
+        totpBuilder_.clear();
+      }
       mfaTypeCase_ = 0;
       mfaType_ = null;
       return this;
@@ -2961,6 +3608,10 @@ private static final long serialVersionUID = 0L;
       if (mfaTypeCase_ == 12 &&
           duoBuilder_ != null) {
         result.mfaType_ = duoBuilder_.build();
+      }
+      if (mfaTypeCase_ == 13 &&
+          totpBuilder_ != null) {
+        result.mfaType_ = totpBuilder_.build();
       }
     }
 
@@ -3034,6 +3685,10 @@ private static final long serialVersionUID = 0L;
           mergeDuo(other.getDuo());
           break;
         }
+        case TOTP: {
+          mergeTotp(other.getTotp());
+          break;
+        }
         case MFATYPE_NOT_SET: {
           break;
         }
@@ -3100,6 +3755,13 @@ private static final long serialVersionUID = 0L;
               mfaTypeCase_ = 12;
               break;
             } // case 98
+            case 106: {
+              input.readMessage(
+                  getTotpFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              mfaTypeCase_ = 13;
+              break;
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3784,6 +4446,148 @@ private static final long serialVersionUID = 0L;
       mfaTypeCase_ = 12;
       onChanged();
       return duoBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType, com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.TotpTypeOrBuilder> totpBuilder_;
+    /**
+     * <code>.api.commons.org.MfaInfo.TotpType totp = 13 [json_name = "totp"];</code>
+     * @return Whether the totp field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotp() {
+      return mfaTypeCase_ == 13;
+    }
+    /**
+     * <code>.api.commons.org.MfaInfo.TotpType totp = 13 [json_name = "totp"];</code>
+     * @return The totp.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType getTotp() {
+      if (totpBuilder_ == null) {
+        if (mfaTypeCase_ == 13) {
+          return (com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType) mfaType_;
+        }
+        return com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.getDefaultInstance();
+      } else {
+        if (mfaTypeCase_ == 13) {
+          return totpBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.org.MfaInfo.TotpType totp = 13 [json_name = "totp"];</code>
+     */
+    public Builder setTotp(com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType value) {
+      if (totpBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        mfaType_ = value;
+        onChanged();
+      } else {
+        totpBuilder_.setMessage(value);
+      }
+      mfaTypeCase_ = 13;
+      return this;
+    }
+    /**
+     * <code>.api.commons.org.MfaInfo.TotpType totp = 13 [json_name = "totp"];</code>
+     */
+    public Builder setTotp(
+        com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.Builder builderForValue) {
+      if (totpBuilder_ == null) {
+        mfaType_ = builderForValue.build();
+        onChanged();
+      } else {
+        totpBuilder_.setMessage(builderForValue.build());
+      }
+      mfaTypeCase_ = 13;
+      return this;
+    }
+    /**
+     * <code>.api.commons.org.MfaInfo.TotpType totp = 13 [json_name = "totp"];</code>
+     */
+    public Builder mergeTotp(com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType value) {
+      if (totpBuilder_ == null) {
+        if (mfaTypeCase_ == 13 &&
+            mfaType_ != com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.getDefaultInstance()) {
+          mfaType_ = com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.newBuilder((com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType) mfaType_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          mfaType_ = value;
+        }
+        onChanged();
+      } else {
+        if (mfaTypeCase_ == 13) {
+          totpBuilder_.mergeFrom(value);
+        } else {
+          totpBuilder_.setMessage(value);
+        }
+      }
+      mfaTypeCase_ = 13;
+      return this;
+    }
+    /**
+     * <code>.api.commons.org.MfaInfo.TotpType totp = 13 [json_name = "totp"];</code>
+     */
+    public Builder clearTotp() {
+      if (totpBuilder_ == null) {
+        if (mfaTypeCase_ == 13) {
+          mfaTypeCase_ = 0;
+          mfaType_ = null;
+          onChanged();
+        }
+      } else {
+        if (mfaTypeCase_ == 13) {
+          mfaTypeCase_ = 0;
+          mfaType_ = null;
+        }
+        totpBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.org.MfaInfo.TotpType totp = 13 [json_name = "totp"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.Builder getTotpBuilder() {
+      return getTotpFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.org.MfaInfo.TotpType totp = 13 [json_name = "totp"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.MfaInfo.TotpTypeOrBuilder getTotpOrBuilder() {
+      if ((mfaTypeCase_ == 13) && (totpBuilder_ != null)) {
+        return totpBuilder_.getMessageOrBuilder();
+      } else {
+        if (mfaTypeCase_ == 13) {
+          return (com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType) mfaType_;
+        }
+        return com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.org.MfaInfo.TotpType totp = 13 [json_name = "totp"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType, com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.TotpTypeOrBuilder> 
+        getTotpFieldBuilder() {
+      if (totpBuilder_ == null) {
+        if (!(mfaTypeCase_ == 13)) {
+          mfaType_ = com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.getDefaultInstance();
+        }
+        totpBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType, com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType.Builder, com.tcn.cloud.api.api.commons.org.MfaInfo.TotpTypeOrBuilder>(
+                (com.tcn.cloud.api.api.commons.org.MfaInfo.TotpType) mfaType_,
+                getParentForChildren(),
+                isClean());
+        mfaType_ = null;
+      }
+      mfaTypeCase_ = 13;
+      onChanged();
+      return totpBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

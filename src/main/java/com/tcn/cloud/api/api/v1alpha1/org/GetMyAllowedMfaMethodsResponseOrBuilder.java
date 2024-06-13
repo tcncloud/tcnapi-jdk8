@@ -36,4 +36,14 @@ public interface GetMyAllowedMfaMethodsResponseOrBuilder extends
    * @return The duoEnabled.
    */
   boolean getDuoEnabled();
+
+  /**
+   * <pre>
+   * If the user is allowed to set TOTP mfa
+   * </pre>
+   *
+   * <code>bool totp_enabled = 4 [json_name = "totpEnabled"];</code>
+   * @return The totpEnabled.
+   */
+  boolean getTotpEnabled();
 }
