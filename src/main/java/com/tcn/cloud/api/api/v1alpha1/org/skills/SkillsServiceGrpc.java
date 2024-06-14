@@ -623,7 +623,7 @@ public final class SkillsServiceGrpc {
 
     /**
      * <pre>
-     * CreateSkillGroup creates a new skill group.
+     * CreateSkillGroup creates a new skill group
      * </pre>
      */
     default void createSkillGroup(com.tcn.cloud.api.api.v1alpha1.org.skills.CreateSkillGroupRequest request,
@@ -839,7 +839,7 @@ public final class SkillsServiceGrpc {
 
     /**
      * <pre>
-     * CreateSkillGroup creates a new skill group.
+     * CreateSkillGroup creates a new skill group
      * </pre>
      */
     public void createSkillGroup(com.tcn.cloud.api.api.v1alpha1.org.skills.CreateSkillGroupRequest request,
@@ -1062,7 +1062,7 @@ public final class SkillsServiceGrpc {
 
     /**
      * <pre>
-     * CreateSkillGroup creates a new skill group.
+     * CreateSkillGroup creates a new skill group
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.skills.CreateSkillGroupResponse createSkillGroup(com.tcn.cloud.api.api.v1alpha1.org.skills.CreateSkillGroupRequest request) {
@@ -1267,7 +1267,7 @@ public final class SkillsServiceGrpc {
 
     /**
      * <pre>
-     * CreateSkillGroup creates a new skill group.
+     * CreateSkillGroup creates a new skill group
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.skills.CreateSkillGroupResponse> createSkillGroup(
