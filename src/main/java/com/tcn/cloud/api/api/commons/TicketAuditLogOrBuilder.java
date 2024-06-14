@@ -72,10 +72,12 @@ public interface TicketAuditLogOrBuilder extends
    * ticket_sid
    * </pre>
    *
-   * <code>int64 ticket_sid = 4 [json_name = "ticketSid", jstype = JS_STRING];</code>
+   * <code>int64 ticket_sid = 4 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.commons.TicketAuditLog.ticket_sid is deprecated.
+   *     See api/commons/tickets.proto;l=370
    * @return The ticketSid.
    */
-  long getTicketSid();
+  @java.lang.Deprecated long getTicketSid();
 
   /**
    * <pre>
@@ -143,4 +145,24 @@ public interface TicketAuditLogOrBuilder extends
    * <code>.google.protobuf.Timestamp created_by_date = 7 [json_name = "createdByDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreatedByDateOrBuilder();
+
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 8 [json_name = "ticketCode"];</code>
+   * @return The ticketCode.
+   */
+  java.lang.String getTicketCode();
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 8 [json_name = "ticketCode"];</code>
+   * @return The bytes for ticketCode.
+   */
+  com.google.protobuf.ByteString
+      getTicketCodeBytes();
 }

@@ -12,10 +12,12 @@ public interface EditTicketOrBuilder extends
    * The ticket reference where the comment was added.
    * </pre>
    *
-   * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+   * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.commons.EditTicket.ticket_sid is deprecated.
+   *     See api/commons/tickets.proto;l=387
    * @return The ticketSid.
    */
-  long getTicketSid();
+  @java.lang.Deprecated long getTicketSid();
 
   /**
    * <pre>
@@ -43,4 +45,24 @@ public interface EditTicketOrBuilder extends
    * <code>.api.commons.EditAttribute edit_value = 2 [json_name = "editValue"];</code>
    */
   com.tcn.cloud.api.api.commons.EditAttributeOrBuilder getEditValueOrBuilder();
+
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 3 [json_name = "ticketCode"];</code>
+   * @return The ticketCode.
+   */
+  java.lang.String getTicketCode();
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 3 [json_name = "ticketCode"];</code>
+   * @return The bytes for ticketCode.
+   */
+  com.google.protobuf.ByteString
+      getTicketCodeBytes();
 }

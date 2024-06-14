@@ -57,7 +57,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
    * @deprecated api.commons.TicketTemplate.ticket_template_id is deprecated.
-   *     See api/commons/tickets.proto;l=55
+   *     See api/commons/tickets.proto;l=58
    * @return The ticketTemplateId.
    */
   @java.lang.Override
@@ -1055,7 +1055,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
      * @deprecated api.commons.TicketTemplate.ticket_template_id is deprecated.
-     *     See api/commons/tickets.proto;l=55
+     *     See api/commons/tickets.proto;l=58
      * @return The ticketTemplateId.
      */
     @java.lang.Override
@@ -1069,7 +1069,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
      * @deprecated api.commons.TicketTemplate.ticket_template_id is deprecated.
-     *     See api/commons/tickets.proto;l=55
+     *     See api/commons/tickets.proto;l=58
      * @param value The ticketTemplateId to set.
      * @return This builder for chaining.
      */
@@ -1087,7 +1087,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
      * @deprecated api.commons.TicketTemplate.ticket_template_id is deprecated.
-     *     See api/commons/tickets.proto;l=55
+     *     See api/commons/tickets.proto;l=58
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTicketTemplateId() {

@@ -14,7 +14,7 @@ public interface TicketTemplateOrBuilder extends
    *
    * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
    * @deprecated api.commons.TicketTemplate.ticket_template_id is deprecated.
-   *     See api/commons/tickets.proto;l=55
+   *     See api/commons/tickets.proto;l=58
    * @return The ticketTemplateId.
    */
   @java.lang.Deprecated long getTicketTemplateId();

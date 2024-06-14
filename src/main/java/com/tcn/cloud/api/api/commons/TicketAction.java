@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     actionSlaId_ = java.util.Collections.emptyList();
     workDoneBy_ = "";
+    ticketCode_ = "";
   }
 
   @java.lang.Override
@@ -168,11 +169,13 @@ private static final long serialVersionUID = 0L;
    * ticket id from ticket table
    * </pre>
    *
-   * <code>int64 ticket_id = 4 [json_name = "ticketId", jstype = JS_STRING];</code>
+   * <code>int64 ticket_id = 4 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.commons.TicketAction.ticket_id is deprecated.
+   *     See api/commons/tickets.proto;l=165
    * @return The ticketId.
    */
   @java.lang.Override
-  public long getTicketId() {
+  @java.lang.Deprecated public long getTicketId() {
     return ticketId_;
   }
 
@@ -599,6 +602,53 @@ private static final long serialVersionUID = 0L;
     return actionType_ == null ? com.tcn.cloud.api.api.commons.ActionType.getDefaultInstance() : actionType_;
   }
 
+  public static final int TICKET_CODE_FIELD_NUMBER = 16;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object ticketCode_ = "";
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 16 [json_name = "ticketCode"];</code>
+   * @return The ticketCode.
+   */
+  @java.lang.Override
+  public java.lang.String getTicketCode() {
+    java.lang.Object ref = ticketCode_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      ticketCode_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 16 [json_name = "ticketCode"];</code>
+   * @return The bytes for ticketCode.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTicketCodeBytes() {
+    java.lang.Object ref = ticketCode_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      ticketCode_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -654,6 +704,9 @@ private static final long serialVersionUID = 0L;
     }
     if (actionType_ != null) {
       output.writeMessage(15, getActionType());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 16, ticketCode_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -723,6 +776,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getActionType());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, ticketCode_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -772,6 +828,8 @@ private static final long serialVersionUID = 0L;
       if (!getActionType()
           .equals(other.getActionType())) return false;
     }
+    if (!getTicketCode()
+        .equals(other.getTicketCode())) return false;
     if (!getContextCase().equals(other.getContextCase())) return false;
     switch (contextCase_) {
       case 12:
@@ -838,6 +896,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ACTION_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getActionType().hashCode();
     }
+    hash = (37 * hash) + TICKET_CODE_FIELD_NUMBER;
+    hash = (53 * hash) + getTicketCode().hashCode();
     switch (contextCase_) {
       case 12:
         hash = (37 * hash) + VOICE_CONTEXT_FIELD_NUMBER;
@@ -1032,6 +1092,7 @@ private static final long serialVersionUID = 0L;
         actionTypeBuilder_.dispose();
         actionTypeBuilder_ = null;
       }
+      ticketCode_ = "";
       contextCase_ = 0;
       context_ = null;
       return this;
@@ -1119,6 +1180,9 @@ private static final long serialVersionUID = 0L;
         result.actionType_ = actionTypeBuilder_ == null
             ? actionType_
             : actionTypeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.ticketCode_ = ticketCode_;
       }
     }
 
@@ -1247,6 +1311,11 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasActionType()) {
         mergeActionType(other.getActionType());
+      }
+      if (!other.getTicketCode().isEmpty()) {
+        ticketCode_ = other.ticketCode_;
+        bitField0_ |= 0x00004000;
+        onChanged();
       }
       switch (other.getContextCase()) {
         case VOICE_CONTEXT: {
@@ -1384,6 +1453,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00002000;
               break;
             } // case 122
+            case 130: {
+              ticketCode_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 130
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1674,11 +1748,13 @@ private static final long serialVersionUID = 0L;
      * ticket id from ticket table
      * </pre>
      *
-     * <code>int64 ticket_id = 4 [json_name = "ticketId", jstype = JS_STRING];</code>
+     * <code>int64 ticket_id = 4 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.commons.TicketAction.ticket_id is deprecated.
+     *     See api/commons/tickets.proto;l=165
      * @return The ticketId.
      */
     @java.lang.Override
-    public long getTicketId() {
+    @java.lang.Deprecated public long getTicketId() {
       return ticketId_;
     }
     /**
@@ -1686,11 +1762,13 @@ private static final long serialVersionUID = 0L;
      * ticket id from ticket table
      * </pre>
      *
-     * <code>int64 ticket_id = 4 [json_name = "ticketId", jstype = JS_STRING];</code>
+     * <code>int64 ticket_id = 4 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.commons.TicketAction.ticket_id is deprecated.
+     *     See api/commons/tickets.proto;l=165
      * @param value The ticketId to set.
      * @return This builder for chaining.
      */
-    public Builder setTicketId(long value) {
+    @java.lang.Deprecated public Builder setTicketId(long value) {
 
       ticketId_ = value;
       bitField0_ |= 0x00000008;
@@ -1702,10 +1780,12 @@ private static final long serialVersionUID = 0L;
      * ticket id from ticket table
      * </pre>
      *
-     * <code>int64 ticket_id = 4 [json_name = "ticketId", jstype = JS_STRING];</code>
+     * <code>int64 ticket_id = 4 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.commons.TicketAction.ticket_id is deprecated.
+     *     See api/commons/tickets.proto;l=165
      * @return This builder for chaining.
      */
-    public Builder clearTicketId() {
+    @java.lang.Deprecated public Builder clearTicketId() {
       bitField0_ = (bitField0_ & ~0x00000008);
       ticketId_ = 0L;
       onChanged();
@@ -3313,6 +3393,98 @@ private static final long serialVersionUID = 0L;
         actionType_ = null;
       }
       return actionTypeBuilder_;
+    }
+
+    private java.lang.Object ticketCode_ = "";
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>string ticket_code = 16 [json_name = "ticketCode"];</code>
+     * @return The ticketCode.
+     */
+    public java.lang.String getTicketCode() {
+      java.lang.Object ref = ticketCode_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ticketCode_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>string ticket_code = 16 [json_name = "ticketCode"];</code>
+     * @return The bytes for ticketCode.
+     */
+    public com.google.protobuf.ByteString
+        getTicketCodeBytes() {
+      java.lang.Object ref = ticketCode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ticketCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>string ticket_code = 16 [json_name = "ticketCode"];</code>
+     * @param value The ticketCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTicketCode(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ticketCode_ = value;
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>string ticket_code = 16 [json_name = "ticketCode"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTicketCode() {
+      ticketCode_ = getDefaultInstance().getTicketCode();
+      bitField0_ = (bitField0_ & ~0x00004000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>string ticket_code = 16 [json_name = "ticketCode"];</code>
+     * @param value The bytes for ticketCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTicketCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ticketCode_ = value;
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

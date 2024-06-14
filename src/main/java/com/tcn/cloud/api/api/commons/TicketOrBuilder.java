@@ -12,10 +12,12 @@ public interface TicketOrBuilder extends
    * The snowflake id of a ticket row
    * </pre>
    *
-   * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+   * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.commons.Ticket.ticket_sid is deprecated.
+   *     See api/commons/tickets.proto;l=9
    * @return The ticketSid.
    */
-  long getTicketSid();
+  @java.lang.Deprecated long getTicketSid();
 
   /**
    * <pre>
