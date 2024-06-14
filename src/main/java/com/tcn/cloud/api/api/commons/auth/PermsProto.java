@@ -24,7 +24,7 @@ public final class PermsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034api/commons/auth/perms.proto\022\020api.comm" +
-      "ons.auth\032\033annotations/perms/tcn.proto*\307-" +
+      "ons.auth\032\033annotations/perms/tcn.proto*\357-" +
       "\n\nPermission\022\032\n\026PERMISSION_UNSPECIFIED\020\000" +
       "\022\022\n\016PERMISSION_DEV\020\001\022\031\n\025PERMISSION_LEARN" +
       "_EDIT\020\n\022!\n\023PERMISSION_ORG_EDIT\020d\032\010\212\265\030\004\020\t" +
@@ -128,7 +128,8 @@ public final class PermsProto {
       "\n\023PERMISSION_LMS_EDIT\020\351\007\032\006\212\265\030\002\020\006\022n\n\024PERM" +
       "ISSION_OMNI_BOSS\020\260\t\032S\212\265\030O\020\010\"\014SSO Setting" +
       "s\"\013Form Emails\"\017Canned Messages\"\014Disposi" +
-      "tions\"\021Unsubscribe Links\0222\n\034PERMISSION_O" +
+      "tions\"\021Unsubscribe Links\022&\n\031PERMISSION_O" +
+      "MNI_BOSS_EDIT\020\261\t\032\006\212\265\030\002\020\010\0222\n\034PERMISSION_O" +
       "MNI_PORTALS_VIEW\020\272\t\032\017\212\265\030\013\020\010\"\007Portals\022K\n\034" +
       "PERMISSION_INTEGRATIONS_VIEW\020\224\n\032(\212\265\030$\020\005\"" +
       "\016Configurations\"\007Plugins\"\007Portals\022B\n\037PER" +
