@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v1alpha1.org.skills;
 
 /**
  * <pre>
- * Response message for the ListAssignedSkillGroups RPC.
+ * Response message for the ListAssignedSkillGroups RPC
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.skills.ListAssignedSkillGroupsResponse}
@@ -265,7 +265,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for the ListAssignedSkillGroups RPC.
+   * Response message for the ListAssignedSkillGroups RPC
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.skills.ListAssignedSkillGroupsResponse}
