@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.api.commons.org.SkillGroup> skillGroups_;
   /**
    * <pre>
-   * The returned list of skill groups for current user
+   * The returned list of skill groups for current users
    * </pre>
    *
    * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -59,7 +59,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The returned list of skill groups for current user
+   * The returned list of skill groups for current users
    * </pre>
    *
    * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The returned list of skill groups for current user
+   * The returned list of skill groups for current users
    * </pre>
    *
    * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The returned list of skill groups for current user
+   * The returned list of skill groups for current users
    * </pre>
    *
    * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -93,7 +93,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The returned list of skill groups for current user
+   * The returned list of skill groups for current users
    * </pre>
    *
    * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -524,7 +524,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -538,7 +538,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -559,7 +559,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -577,7 +577,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -597,7 +597,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -636,7 +636,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -673,7 +673,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -707,7 +707,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -718,7 +718,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -758,7 +758,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -770,7 +770,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The returned list of skill groups for current user
+     * The returned list of skill groups for current users
      * </pre>
      *
      * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>

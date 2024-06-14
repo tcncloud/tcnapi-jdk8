@@ -9,7 +9,7 @@ public interface ListAssignedSkillGroupsResponseOrBuilder extends
 
   /**
    * <pre>
-   * The returned list of skill groups for current user
+   * The returned list of skill groups for current users
    * </pre>
    *
    * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -18,7 +18,7 @@ public interface ListAssignedSkillGroupsResponseOrBuilder extends
       getSkillGroupsList();
   /**
    * <pre>
-   * The returned list of skill groups for current user
+   * The returned list of skill groups for current users
    * </pre>
    *
    * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -26,7 +26,7 @@ public interface ListAssignedSkillGroupsResponseOrBuilder extends
   com.tcn.cloud.api.api.commons.org.SkillGroup getSkillGroups(int index);
   /**
    * <pre>
-   * The returned list of skill groups for current user
+   * The returned list of skill groups for current users
    * </pre>
    *
    * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -34,7 +34,7 @@ public interface ListAssignedSkillGroupsResponseOrBuilder extends
   int getSkillGroupsCount();
   /**
    * <pre>
-   * The returned list of skill groups for current user
+   * The returned list of skill groups for current users
    * </pre>
    *
    * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
@@ -43,7 +43,7 @@ public interface ListAssignedSkillGroupsResponseOrBuilder extends
       getSkillGroupsOrBuilderList();
   /**
    * <pre>
-   * The returned list of skill groups for current user
+   * The returned list of skill groups for current users
    * </pre>
    *
    * <code>repeated .api.commons.org.SkillGroup skill_groups = 1 [json_name = "skillGroups"];</code>
