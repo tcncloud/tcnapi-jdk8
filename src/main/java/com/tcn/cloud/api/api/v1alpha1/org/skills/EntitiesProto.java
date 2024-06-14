@@ -281,17 +281,18 @@ public final class EntitiesProto {
       ":\0028\001\" \n\036ListAssignedSkillGroupsRequest\"a" +
       "\n\037ListAssignedSkillGroupsResponse\022>\n\014ski" +
       "ll_groups\030\001 \003(\0132\033.api.commons.org.SkillG" +
-      "roupR\013skillGroups\"E\n\033AssignOwnSkillGroup" +
+      "roupR\013skillGroups\"b\n\033AssignOwnSkillGroup" +
       "sRequest\022&\n\017skill_group_ids\030\001 \003(\tR\rskill" +
-      "GroupIds\"\036\n\034AssignOwnSkillGroupsResponse" +
-      "\"E\n\033RevokeOwnSkillGroupsRequest\022&\n\017skill" +
-      "_group_ids\030\001 \003(\tR\rskillGroupIds\"\036\n\034Revok" +
-      "eOwnSkillGroupsResponseB\272\001\n)com.tcn.clou" +
-      "d.api.api.v1alpha1.org.skillsB\rEntitiesP" +
-      "rotoP\001\242\002\004AVOS\252\002\027Api.V1alpha1.Org.Skills\312" +
-      "\002\027Api\\V1alpha1\\Org\\Skills\342\002#Api\\V1alpha1" +
-      "\\Org\\Skills\\GPBMetadata\352\002\032Api::V1alpha1:" +
-      ":Org::Skillsb\006proto3"
+      "GroupIds\022\033\n\tnew_field\030\002 \001(\tR\010newField\"\036\n" +
+      "\034AssignOwnSkillGroupsResponse\"E\n\033RevokeO" +
+      "wnSkillGroupsRequest\022&\n\017skill_group_ids\030" +
+      "\001 \003(\tR\rskillGroupIds\"\036\n\034RevokeOwnSkillGr" +
+      "oupsResponseB\272\001\n)com.tcn.cloud.api.api.v" +
+      "1alpha1.org.skillsB\rEntitiesProtoP\001\242\002\004AV" +
+      "OS\252\002\027Api.V1alpha1.Org.Skills\312\002\027Api\\V1alp" +
+      "ha1\\Org\\Skills\342\002#Api\\V1alpha1\\Org\\Skills" +
+      "\\GPBMetadata\352\002\032Api::V1alpha1::Org::Skill" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -513,7 +514,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_org_skills_AssignOwnSkillGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_skills_AssignOwnSkillGroupsRequest_descriptor,
-        new java.lang.String[] { "SkillGroupIds", });
+        new java.lang.String[] { "SkillGroupIds", "NewField", });
     internal_static_api_v1alpha1_org_skills_AssignOwnSkillGroupsResponse_descriptor =
       getDescriptor().getMessageTypes().get(34);
     internal_static_api_v1alpha1_org_skills_AssignOwnSkillGroupsResponse_fieldAccessorTable = new

@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private AssignOwnSkillGroupsRequest() {
     skillGroupIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    newField_ = "";
   }
 
   @java.lang.Override
@@ -97,6 +98,45 @@ private static final long serialVersionUID = 0L;
     return skillGroupIds_.getByteString(index);
   }
 
+  public static final int NEW_FIELD_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object newField_ = "";
+  /**
+   * <code>string new_field = 2 [json_name = "newField"];</code>
+   * @return The newField.
+   */
+  @java.lang.Override
+  public java.lang.String getNewField() {
+    java.lang.Object ref = newField_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      newField_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string new_field = 2 [json_name = "newField"];</code>
+   * @return The bytes for newField.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getNewFieldBytes() {
+    java.lang.Object ref = newField_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      newField_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -113,6 +153,9 @@ private static final long serialVersionUID = 0L;
                       throws java.io.IOException {
     for (int i = 0; i < skillGroupIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, skillGroupIds_.getRaw(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newField_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, newField_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -131,6 +174,9 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getSkillGroupIdsList().size();
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newField_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, newField_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -148,6 +194,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getSkillGroupIdsList()
         .equals(other.getSkillGroupIdsList())) return false;
+    if (!getNewField()
+        .equals(other.getNewField())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -163,6 +211,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SKILL_GROUP_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getSkillGroupIdsList().hashCode();
     }
+    hash = (37 * hash) + NEW_FIELD_FIELD_NUMBER;
+    hash = (53 * hash) + getNewField().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -300,6 +350,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       skillGroupIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      newField_ = "";
       return this;
     }
 
@@ -336,6 +387,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         skillGroupIds_.makeImmutable();
         result.skillGroupIds_ = skillGroupIds_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.newField_ = newField_;
       }
     }
 
@@ -393,6 +447,11 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (!other.getNewField().isEmpty()) {
+        newField_ = other.newField_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -425,6 +484,11 @@ private static final long serialVersionUID = 0L;
               skillGroupIds_.add(s);
               break;
             } // case 10
+            case 18: {
+              newField_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -585,6 +649,78 @@ private static final long serialVersionUID = 0L;
       ensureSkillGroupIdsIsMutable();
       skillGroupIds_.add(value);
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object newField_ = "";
+    /**
+     * <code>string new_field = 2 [json_name = "newField"];</code>
+     * @return The newField.
+     */
+    public java.lang.String getNewField() {
+      java.lang.Object ref = newField_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newField_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string new_field = 2 [json_name = "newField"];</code>
+     * @return The bytes for newField.
+     */
+    public com.google.protobuf.ByteString
+        getNewFieldBytes() {
+      java.lang.Object ref = newField_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newField_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string new_field = 2 [json_name = "newField"];</code>
+     * @param value The newField to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNewField(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      newField_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string new_field = 2 [json_name = "newField"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNewField() {
+      newField_ = getDefaultInstance().getNewField();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string new_field = 2 [json_name = "newField"];</code>
+     * @param value The bytes for newField to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNewFieldBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      newField_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

@@ -47,4 +47,16 @@ public interface AssignOwnSkillGroupsRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getSkillGroupIdsBytes(int index);
+
+  /**
+   * <code>string new_field = 2 [json_name = "newField"];</code>
+   * @return The newField.
+   */
+  java.lang.String getNewField();
+  /**
+   * <code>string new_field = 2 [json_name = "newField"];</code>
+   * @return The bytes for newField.
+   */
+  com.google.protobuf.ByteString
+      getNewFieldBytes();
 }
