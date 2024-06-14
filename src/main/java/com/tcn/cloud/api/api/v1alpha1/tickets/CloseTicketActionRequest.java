@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private CloseTicketActionRequest() {
     comment_ = "";
+    ticketCode_ = "";
   }
 
   @java.lang.Override
@@ -53,11 +54,13 @@ private static final long serialVersionUID = 0L;
   public static final int TICKET_ID_FIELD_NUMBER = 2;
   private long ticketId_ = 0L;
   /**
-   * <code>int64 ticket_id = 2 [json_name = "ticketId", jstype = JS_STRING];</code>
+   * <code>int64 ticket_id = 2 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.ticket_id is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=402
    * @return The ticketId.
    */
   @java.lang.Override
-  public long getTicketId() {
+  @java.lang.Deprecated public long getTicketId() {
     return ticketId_;
   }
 
@@ -100,6 +103,53 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int TICKET_CODE_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object ticketCode_ = "";
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 4 [json_name = "ticketCode"];</code>
+   * @return The ticketCode.
+   */
+  @java.lang.Override
+  public java.lang.String getTicketCode() {
+    java.lang.Object ref = ticketCode_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      ticketCode_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 4 [json_name = "ticketCode"];</code>
+   * @return The bytes for ticketCode.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTicketCodeBytes() {
+    java.lang.Object ref = ticketCode_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      ticketCode_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -123,6 +173,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, comment_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, ticketCode_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -142,6 +195,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, comment_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, ticketCode_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -164,6 +220,8 @@ private static final long serialVersionUID = 0L;
         != other.getTicketId()) return false;
     if (!getComment()
         .equals(other.getComment())) return false;
+    if (!getTicketCode()
+        .equals(other.getTicketCode())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -183,6 +241,8 @@ private static final long serialVersionUID = 0L;
         getTicketId());
     hash = (37 * hash) + COMMENT_FIELD_NUMBER;
     hash = (53 * hash) + getComment().hashCode();
+    hash = (37 * hash) + TICKET_CODE_FIELD_NUMBER;
+    hash = (53 * hash) + getTicketCode().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -317,6 +377,7 @@ private static final long serialVersionUID = 0L;
       ticketActionId_ = 0L;
       ticketId_ = 0L;
       comment_ = "";
+      ticketCode_ = "";
       return this;
     }
 
@@ -358,6 +419,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.comment_ = comment_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.ticketCode_ = ticketCode_;
       }
     }
 
@@ -416,6 +480,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
+      if (!other.getTicketCode().isEmpty()) {
+        ticketCode_ = other.ticketCode_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -457,6 +526,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 34: {
+              ticketCode_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -508,19 +582,23 @@ private static final long serialVersionUID = 0L;
 
     private long ticketId_ ;
     /**
-     * <code>int64 ticket_id = 2 [json_name = "ticketId", jstype = JS_STRING];</code>
+     * <code>int64 ticket_id = 2 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.ticket_id is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=402
      * @return The ticketId.
      */
     @java.lang.Override
-    public long getTicketId() {
+    @java.lang.Deprecated public long getTicketId() {
       return ticketId_;
     }
     /**
-     * <code>int64 ticket_id = 2 [json_name = "ticketId", jstype = JS_STRING];</code>
+     * <code>int64 ticket_id = 2 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.ticket_id is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=402
      * @param value The ticketId to set.
      * @return This builder for chaining.
      */
-    public Builder setTicketId(long value) {
+    @java.lang.Deprecated public Builder setTicketId(long value) {
 
       ticketId_ = value;
       bitField0_ |= 0x00000002;
@@ -528,10 +606,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 ticket_id = 2 [json_name = "ticketId", jstype = JS_STRING];</code>
+     * <code>int64 ticket_id = 2 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.ticket_id is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=402
      * @return This builder for chaining.
      */
-    public Builder clearTicketId() {
+    @java.lang.Deprecated public Builder clearTicketId() {
       bitField0_ = (bitField0_ & ~0x00000002);
       ticketId_ = 0L;
       onChanged();
@@ -606,6 +686,98 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       comment_ = value;
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object ticketCode_ = "";
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>string ticket_code = 4 [json_name = "ticketCode"];</code>
+     * @return The ticketCode.
+     */
+    public java.lang.String getTicketCode() {
+      java.lang.Object ref = ticketCode_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ticketCode_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>string ticket_code = 4 [json_name = "ticketCode"];</code>
+     * @return The bytes for ticketCode.
+     */
+    public com.google.protobuf.ByteString
+        getTicketCodeBytes() {
+      java.lang.Object ref = ticketCode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ticketCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>string ticket_code = 4 [json_name = "ticketCode"];</code>
+     * @param value The ticketCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTicketCode(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ticketCode_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>string ticket_code = 4 [json_name = "ticketCode"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTicketCode() {
+      ticketCode_ = getDefaultInstance().getTicketCode();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>string ticket_code = 4 [json_name = "ticketCode"];</code>
+     * @param value The bytes for ticketCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTicketCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ticketCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

@@ -8,10 +8,12 @@ public interface ChangeTicketStatusRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 ticket_id = 1 [json_name = "ticketId", jstype = JS_STRING];</code>
+   * <code>int64 ticket_id = 1 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.tickets.ChangeTicketStatusRequest.ticket_id is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=424
    * @return The ticketId.
    */
-  long getTicketId();
+  @java.lang.Deprecated long getTicketId();
 
   /**
    * <code>int64 status_id = 2 [json_name = "statusId", jstype = JS_STRING];</code>
@@ -29,4 +31,24 @@ public interface ChangeTicketStatusRequestOrBuilder extends
    * @return The ticketStatus.
    */
   com.tcn.cloud.api.api.commons.TicketStatus getTicketStatus();
+
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 4 [json_name = "ticketCode"];</code>
+   * @return The ticketCode.
+   */
+  java.lang.String getTicketCode();
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 4 [json_name = "ticketCode"];</code>
+   * @return The bytes for ticketCode.
+   */
+  com.google.protobuf.ByteString
+      getTicketCodeBytes();
 }

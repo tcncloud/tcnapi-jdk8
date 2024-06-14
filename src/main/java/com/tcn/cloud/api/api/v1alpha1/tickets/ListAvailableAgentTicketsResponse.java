@@ -22,6 +22,8 @@ private static final long serialVersionUID = 0L;
   private ListAvailableAgentTicketsResponse() {
     ticketSid_ = emptyLongList();
     ticket_ = java.util.Collections.emptyList();
+    ticketCode_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -50,7 +52,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=156
+   *     See api/v1alpha1/tickets/ticket.proto;l=166
    * @return A list containing the ticketSid.
    */
   @java.lang.Override
@@ -61,7 +63,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=156
+   *     See api/v1alpha1/tickets/ticket.proto;l=166
    * @return The count of ticketSid.
    */
   @java.lang.Deprecated public int getTicketSidCount() {
@@ -70,7 +72,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=156
+   *     See api/v1alpha1/tickets/ticket.proto;l=166
    * @param index The index of the element to return.
    * @return The ticketSid at the given index.
    */
@@ -120,6 +122,59 @@ private static final long serialVersionUID = 0L;
     return ticket_.get(index);
   }
 
+  public static final int TICKET_CODE_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList ticketCode_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+   * @return A list containing the ticketCode.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getTicketCodeList() {
+    return ticketCode_;
+  }
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+   * @return The count of ticketCode.
+   */
+  public int getTicketCodeCount() {
+    return ticketCode_.size();
+  }
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+   * @param index The index of the element to return.
+   * @return The ticketCode at the given index.
+   */
+  public java.lang.String getTicketCode(int index) {
+    return ticketCode_.get(index);
+  }
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the ticketCode at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getTicketCodeBytes(int index) {
+    return ticketCode_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -144,6 +199,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < ticket_.size(); i++) {
       output.writeMessage(2, ticket_.get(i));
+    }
+    for (int i = 0; i < ticketCode_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ticketCode_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -172,6 +230,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, ticket_.get(i));
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < ticketCode_.size(); i++) {
+        dataSize += computeStringSizeNoTag(ticketCode_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getTicketCodeList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -191,6 +257,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTicketSidList())) return false;
     if (!getTicketList()
         .equals(other.getTicketList())) return false;
+    if (!getTicketCodeList()
+        .equals(other.getTicketCodeList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -209,6 +277,10 @@ private static final long serialVersionUID = 0L;
     if (getTicketCount() > 0) {
       hash = (37 * hash) + TICKET_FIELD_NUMBER;
       hash = (53 * hash) + getTicketList().hashCode();
+    }
+    if (getTicketCodeCount() > 0) {
+      hash = (37 * hash) + TICKET_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getTicketCodeList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -353,6 +425,8 @@ private static final long serialVersionUID = 0L;
         ticketBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
+      ticketCode_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -404,6 +478,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        ticketCode_.makeImmutable();
+        result.ticketCode_ = ticketCode_;
+      }
     }
 
     @java.lang.Override
@@ -486,6 +564,16 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.ticketCode_.isEmpty()) {
+        if (ticketCode_.isEmpty()) {
+          ticketCode_ = other.ticketCode_;
+          bitField0_ |= 0x00000004;
+        } else {
+          ensureTicketCodeIsMutable();
+          ticketCode_.addAll(other.ticketCode_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -541,6 +629,12 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 18
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureTicketCodeIsMutable();
+              ticketCode_.add(s);
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -568,7 +662,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=156
+     *     See api/v1alpha1/tickets/ticket.proto;l=166
      * @return A list containing the ticketSid.
      */
     @java.lang.Deprecated public java.util.List<java.lang.Long>
@@ -579,7 +673,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=156
+     *     See api/v1alpha1/tickets/ticket.proto;l=166
      * @return The count of ticketSid.
      */
     @java.lang.Deprecated public int getTicketSidCount() {
@@ -588,7 +682,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=156
+     *     See api/v1alpha1/tickets/ticket.proto;l=166
      * @param index The index of the element to return.
      * @return The ticketSid at the given index.
      */
@@ -598,7 +692,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=156
+     *     See api/v1alpha1/tickets/ticket.proto;l=166
      * @param index The index to set the value at.
      * @param value The ticketSid to set.
      * @return This builder for chaining.
@@ -614,7 +708,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=156
+     *     See api/v1alpha1/tickets/ticket.proto;l=166
      * @param value The ticketSid to add.
      * @return This builder for chaining.
      */
@@ -628,7 +722,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=156
+     *     See api/v1alpha1/tickets/ticket.proto;l=166
      * @param values The ticketSid to add.
      * @return This builder for chaining.
      */
@@ -643,7 +737,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=156
+     *     See api/v1alpha1/tickets/ticket.proto;l=166
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTicketSid() {
@@ -891,6 +985,153 @@ private static final long serialVersionUID = 0L;
         ticket_ = null;
       }
       return ticketBuilder_;
+    }
+
+    private com.google.protobuf.LazyStringArrayList ticketCode_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureTicketCodeIsMutable() {
+      if (!ticketCode_.isModifiable()) {
+        ticketCode_ = new com.google.protobuf.LazyStringArrayList(ticketCode_);
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+     * @return A list containing the ticketCode.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTicketCodeList() {
+      ticketCode_.makeImmutable();
+      return ticketCode_;
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+     * @return The count of ticketCode.
+     */
+    public int getTicketCodeCount() {
+      return ticketCode_.size();
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+     * @param index The index of the element to return.
+     * @return The ticketCode at the given index.
+     */
+    public java.lang.String getTicketCode(int index) {
+      return ticketCode_.get(index);
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ticketCode at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTicketCodeBytes(int index) {
+      return ticketCode_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+     * @param index The index to set the value at.
+     * @param value The ticketCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTicketCode(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureTicketCodeIsMutable();
+      ticketCode_.set(index, value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+     * @param value The ticketCode to add.
+     * @return This builder for chaining.
+     */
+    public Builder addTicketCode(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureTicketCodeIsMutable();
+      ticketCode_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+     * @param values The ticketCode to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllTicketCode(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureTicketCodeIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, ticketCode_);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTicketCode() {
+      ticketCode_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ticket_code
+     * </pre>
+     *
+     * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+     * @param value The bytes of the ticketCode to add.
+     * @return This builder for chaining.
+     */
+    public Builder addTicketCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureTicketCodeIsMutable();
+      ticketCode_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

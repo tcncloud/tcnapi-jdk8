@@ -12,10 +12,12 @@ public interface EditMaskTicketReqOrBuilder extends
    * Ticket Id
    * </pre>
    *
-   * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+   * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.tickets.EditMaskTicketReq.ticket_sid is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=119
    * @return The ticketSid.
    */
-  long getTicketSid();
+  @java.lang.Deprecated long getTicketSid();
 
   /**
    * <pre>
@@ -87,4 +89,24 @@ public interface EditMaskTicketReqOrBuilder extends
    */
   com.google.protobuf.FieldMaskOrBuilder getEditedFieldsMaskOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 4 [json_name = "ticketCode"];</code>
+   * @return The ticketCode.
+   */
+  java.lang.String getTicketCode();
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 4 [json_name = "ticketCode"];</code>
+   * @return The bytes for ticketCode.
+   */
+  com.google.protobuf.ByteString
+      getTicketCodeBytes();
 }

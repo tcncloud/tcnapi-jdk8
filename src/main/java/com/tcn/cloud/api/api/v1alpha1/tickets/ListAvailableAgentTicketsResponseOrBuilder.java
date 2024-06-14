@@ -10,21 +10,21 @@ public interface ListAvailableAgentTicketsResponseOrBuilder extends
   /**
    * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=156
+   *     See api/v1alpha1/tickets/ticket.proto;l=166
    * @return A list containing the ticketSid.
    */
   @java.lang.Deprecated java.util.List<java.lang.Long> getTicketSidList();
   /**
    * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=156
+   *     See api/v1alpha1/tickets/ticket.proto;l=166
    * @return The count of ticketSid.
    */
   @java.lang.Deprecated int getTicketSidCount();
   /**
    * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=156
+   *     See api/v1alpha1/tickets/ticket.proto;l=166
    * @param index The index of the element to return.
    * @return The ticketSid at the given index.
    */
@@ -53,4 +53,45 @@ public interface ListAvailableAgentTicketsResponseOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.TicketOrBuilder getTicketOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+   * @return A list containing the ticketCode.
+   */
+  java.util.List<java.lang.String>
+      getTicketCodeList();
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+   * @return The count of ticketCode.
+   */
+  int getTicketCodeCount();
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+   * @param index The index of the element to return.
+   * @return The ticketCode at the given index.
+   */
+  java.lang.String getTicketCode(int index);
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>repeated string ticket_code = 3 [json_name = "ticketCode"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the ticketCode at the given index.
+   */
+  com.google.protobuf.ByteString
+      getTicketCodeBytes(int index);
 }
