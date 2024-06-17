@@ -57,6 +57,7 @@ private static final long serialVersionUID = 0L;
     DIRECTED_CALL_RINGING(7),
     DIRECTED_CALL_HANGUP(8),
     AGENT_QUEUED_CALLS_NOTIFICATION(9),
+    AUTH_TOKEN_NOTIFICATION(10),
     PAYLOAD_NOT_SET(0);
     private final int value;
     private PayloadCase(int value) {
@@ -81,6 +82,7 @@ private static final long serialVersionUID = 0L;
         case 7: return DIRECTED_CALL_RINGING;
         case 8: return DIRECTED_CALL_HANGUP;
         case 9: return AGENT_QUEUED_CALLS_NOTIFICATION;
+        case 10: return AUTH_TOKEN_NOTIFICATION;
         case 0: return PAYLOAD_NOT_SET;
         default: return null;
       }
@@ -444,6 +446,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.getDefaultInstance();
   }
 
+  public static final int AUTH_TOKEN_NOTIFICATION_FIELD_NUMBER = 10;
+  /**
+   * <pre>
+   * alert that an auth token is about to expire
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthTokenNotification auth_token_notification = 10 [json_name = "authTokenNotification"];</code>
+   * @return Whether the authTokenNotification field is set.
+   */
+  @java.lang.Override
+  public boolean hasAuthTokenNotification() {
+    return payloadCase_ == 10;
+  }
+  /**
+   * <pre>
+   * alert that an auth token is about to expire
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthTokenNotification auth_token_notification = 10 [json_name = "authTokenNotification"];</code>
+   * @return The authTokenNotification.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.AuthTokenNotification getAuthTokenNotification() {
+    if (payloadCase_ == 10) {
+       return (com.tcn.cloud.api.api.commons.org.AuthTokenNotification) payload_;
+    }
+    return com.tcn.cloud.api.api.commons.org.AuthTokenNotification.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * alert that an auth token is about to expire
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthTokenNotification auth_token_notification = 10 [json_name = "authTokenNotification"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.org.AuthTokenNotificationOrBuilder getAuthTokenNotificationOrBuilder() {
+    if (payloadCase_ == 10) {
+       return (com.tcn.cloud.api.api.commons.org.AuthTokenNotification) payload_;
+    }
+    return com.tcn.cloud.api.api.commons.org.AuthTokenNotification.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -481,6 +526,9 @@ private static final long serialVersionUID = 0L;
     }
     if (payloadCase_ == 9) {
       output.writeMessage(9, (com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification) payload_);
+    }
+    if (payloadCase_ == 10) {
+      output.writeMessage(10, (com.tcn.cloud.api.api.commons.org.AuthTokenNotification) payload_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -521,6 +569,10 @@ private static final long serialVersionUID = 0L;
     if (payloadCase_ == 9) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, (com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification) payload_);
+    }
+    if (payloadCase_ == 10) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, (com.tcn.cloud.api.api.commons.org.AuthTokenNotification) payload_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -569,6 +621,10 @@ private static final long serialVersionUID = 0L;
         if (!getAgentQueuedCallsNotification()
             .equals(other.getAgentQueuedCallsNotification())) return false;
         break;
+      case 10:
+        if (!getAuthTokenNotification()
+            .equals(other.getAuthTokenNotification())) return false;
+        break;
       case 0:
       default:
     }
@@ -613,6 +669,10 @@ private static final long serialVersionUID = 0L;
       case 9:
         hash = (37 * hash) + AGENT_QUEUED_CALLS_NOTIFICATION_FIELD_NUMBER;
         hash = (53 * hash) + getAgentQueuedCallsNotification().hashCode();
+        break;
+      case 10:
+        hash = (37 * hash) + AUTH_TOKEN_NOTIFICATION_FIELD_NUMBER;
+        hash = (53 * hash) + getAuthTokenNotification().hashCode();
         break;
       case 0:
       default:
@@ -775,6 +835,9 @@ private static final long serialVersionUID = 0L;
       if (agentQueuedCallsNotificationBuilder_ != null) {
         agentQueuedCallsNotificationBuilder_.clear();
       }
+      if (authTokenNotificationBuilder_ != null) {
+        authTokenNotificationBuilder_.clear();
+      }
       payloadCase_ = 0;
       payload_ = null;
       return this;
@@ -846,6 +909,10 @@ private static final long serialVersionUID = 0L;
       if (payloadCase_ == 9 &&
           agentQueuedCallsNotificationBuilder_ != null) {
         result.payload_ = agentQueuedCallsNotificationBuilder_.build();
+      }
+      if (payloadCase_ == 10 &&
+          authTokenNotificationBuilder_ != null) {
+        result.payload_ = authTokenNotificationBuilder_.build();
       }
     }
 
@@ -925,6 +992,10 @@ private static final long serialVersionUID = 0L;
         }
         case AGENT_QUEUED_CALLS_NOTIFICATION: {
           mergeAgentQueuedCallsNotification(other.getAgentQueuedCallsNotification());
+          break;
+        }
+        case AUTH_TOKEN_NOTIFICATION: {
+          mergeAuthTokenNotification(other.getAuthTokenNotification());
           break;
         }
         case PAYLOAD_NOT_SET: {
@@ -1011,6 +1082,13 @@ private static final long serialVersionUID = 0L;
               payloadCase_ = 9;
               break;
             } // case 74
+            case 82: {
+              input.readMessage(
+                  getAuthTokenNotificationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 10;
+              break;
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2379,6 +2457,184 @@ private static final long serialVersionUID = 0L;
       payloadCase_ = 9;
       onChanged();
       return agentQueuedCallsNotificationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.AuthTokenNotification, com.tcn.cloud.api.api.commons.org.AuthTokenNotification.Builder, com.tcn.cloud.api.api.commons.org.AuthTokenNotificationOrBuilder> authTokenNotificationBuilder_;
+    /**
+     * <pre>
+     * alert that an auth token is about to expire
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthTokenNotification auth_token_notification = 10 [json_name = "authTokenNotification"];</code>
+     * @return Whether the authTokenNotification field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuthTokenNotification() {
+      return payloadCase_ == 10;
+    }
+    /**
+     * <pre>
+     * alert that an auth token is about to expire
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthTokenNotification auth_token_notification = 10 [json_name = "authTokenNotification"];</code>
+     * @return The authTokenNotification.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.AuthTokenNotification getAuthTokenNotification() {
+      if (authTokenNotificationBuilder_ == null) {
+        if (payloadCase_ == 10) {
+          return (com.tcn.cloud.api.api.commons.org.AuthTokenNotification) payload_;
+        }
+        return com.tcn.cloud.api.api.commons.org.AuthTokenNotification.getDefaultInstance();
+      } else {
+        if (payloadCase_ == 10) {
+          return authTokenNotificationBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.org.AuthTokenNotification.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * alert that an auth token is about to expire
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthTokenNotification auth_token_notification = 10 [json_name = "authTokenNotification"];</code>
+     */
+    public Builder setAuthTokenNotification(com.tcn.cloud.api.api.commons.org.AuthTokenNotification value) {
+      if (authTokenNotificationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        payload_ = value;
+        onChanged();
+      } else {
+        authTokenNotificationBuilder_.setMessage(value);
+      }
+      payloadCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * alert that an auth token is about to expire
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthTokenNotification auth_token_notification = 10 [json_name = "authTokenNotification"];</code>
+     */
+    public Builder setAuthTokenNotification(
+        com.tcn.cloud.api.api.commons.org.AuthTokenNotification.Builder builderForValue) {
+      if (authTokenNotificationBuilder_ == null) {
+        payload_ = builderForValue.build();
+        onChanged();
+      } else {
+        authTokenNotificationBuilder_.setMessage(builderForValue.build());
+      }
+      payloadCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * alert that an auth token is about to expire
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthTokenNotification auth_token_notification = 10 [json_name = "authTokenNotification"];</code>
+     */
+    public Builder mergeAuthTokenNotification(com.tcn.cloud.api.api.commons.org.AuthTokenNotification value) {
+      if (authTokenNotificationBuilder_ == null) {
+        if (payloadCase_ == 10 &&
+            payload_ != com.tcn.cloud.api.api.commons.org.AuthTokenNotification.getDefaultInstance()) {
+          payload_ = com.tcn.cloud.api.api.commons.org.AuthTokenNotification.newBuilder((com.tcn.cloud.api.api.commons.org.AuthTokenNotification) payload_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          payload_ = value;
+        }
+        onChanged();
+      } else {
+        if (payloadCase_ == 10) {
+          authTokenNotificationBuilder_.mergeFrom(value);
+        } else {
+          authTokenNotificationBuilder_.setMessage(value);
+        }
+      }
+      payloadCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * alert that an auth token is about to expire
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthTokenNotification auth_token_notification = 10 [json_name = "authTokenNotification"];</code>
+     */
+    public Builder clearAuthTokenNotification() {
+      if (authTokenNotificationBuilder_ == null) {
+        if (payloadCase_ == 10) {
+          payloadCase_ = 0;
+          payload_ = null;
+          onChanged();
+        }
+      } else {
+        if (payloadCase_ == 10) {
+          payloadCase_ = 0;
+          payload_ = null;
+        }
+        authTokenNotificationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * alert that an auth token is about to expire
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthTokenNotification auth_token_notification = 10 [json_name = "authTokenNotification"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.org.AuthTokenNotification.Builder getAuthTokenNotificationBuilder() {
+      return getAuthTokenNotificationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * alert that an auth token is about to expire
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthTokenNotification auth_token_notification = 10 [json_name = "authTokenNotification"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.AuthTokenNotificationOrBuilder getAuthTokenNotificationOrBuilder() {
+      if ((payloadCase_ == 10) && (authTokenNotificationBuilder_ != null)) {
+        return authTokenNotificationBuilder_.getMessageOrBuilder();
+      } else {
+        if (payloadCase_ == 10) {
+          return (com.tcn.cloud.api.api.commons.org.AuthTokenNotification) payload_;
+        }
+        return com.tcn.cloud.api.api.commons.org.AuthTokenNotification.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * alert that an auth token is about to expire
+     * </pre>
+     *
+     * <code>.api.commons.org.AuthTokenNotification auth_token_notification = 10 [json_name = "authTokenNotification"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.org.AuthTokenNotification, com.tcn.cloud.api.api.commons.org.AuthTokenNotification.Builder, com.tcn.cloud.api.api.commons.org.AuthTokenNotificationOrBuilder> 
+        getAuthTokenNotificationFieldBuilder() {
+      if (authTokenNotificationBuilder_ == null) {
+        if (!(payloadCase_ == 10)) {
+          payload_ = com.tcn.cloud.api.api.commons.org.AuthTokenNotification.getDefaultInstance();
+        }
+        authTokenNotificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.org.AuthTokenNotification, com.tcn.cloud.api.api.commons.org.AuthTokenNotification.Builder, com.tcn.cloud.api.api.commons.org.AuthTokenNotificationOrBuilder>(
+                (com.tcn.cloud.api.api.commons.org.AuthTokenNotification) payload_,
+                getParentForChildren(),
+                isClean());
+        payload_ = null;
+      }
+      payloadCase_ = 10;
+      onChanged();
+      return authTokenNotificationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
