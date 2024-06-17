@@ -26,14 +26,4 @@ public interface TestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getMessageBytes();
-
-  /**
-   * <pre>
-   * The test integer.
-   * </pre>
-   *
-   * <code>int32 integer = 2 [json_name = "integer"];</code>
-   * @return The integer.
-   */
-  int getInteger();
 }

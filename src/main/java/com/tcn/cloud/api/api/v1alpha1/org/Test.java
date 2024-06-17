@@ -90,21 +90,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int INTEGER_FIELD_NUMBER = 2;
-  private int integer_ = 0;
-  /**
-   * <pre>
-   * The test integer.
-   * </pre>
-   *
-   * <code>int32 integer = 2 [json_name = "integer"];</code>
-   * @return The integer.
-   */
-  @java.lang.Override
-  public int getInteger() {
-    return integer_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -122,9 +107,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
     }
-    if (integer_ != 0) {
-      output.writeInt32(2, integer_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -136,10 +118,6 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
-    }
-    if (integer_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(2, integer_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -158,8 +136,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getMessage()
         .equals(other.getMessage())) return false;
-    if (getInteger()
-        != other.getInteger()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -173,8 +149,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
     hash = (53 * hash) + getMessage().hashCode();
-    hash = (37 * hash) + INTEGER_FIELD_NUMBER;
-    hash = (53 * hash) + getInteger();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -311,7 +285,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       message_ = "";
-      integer_ = 0;
       return this;
     }
 
@@ -347,9 +320,6 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.message_ = message_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.integer_ = integer_;
       }
     }
 
@@ -402,9 +372,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (other.getInteger() != 0) {
-        setInteger(other.getInteger());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -436,11 +403,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 16: {
-              integer_ = input.readInt32();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -546,50 +508,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       message_ = value;
       bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
-    private int integer_ ;
-    /**
-     * <pre>
-     * The test integer.
-     * </pre>
-     *
-     * <code>int32 integer = 2 [json_name = "integer"];</code>
-     * @return The integer.
-     */
-    @java.lang.Override
-    public int getInteger() {
-      return integer_;
-    }
-    /**
-     * <pre>
-     * The test integer.
-     * </pre>
-     *
-     * <code>int32 integer = 2 [json_name = "integer"];</code>
-     * @param value The integer to set.
-     * @return This builder for chaining.
-     */
-    public Builder setInteger(int value) {
-
-      integer_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The test integer.
-     * </pre>
-     *
-     * <code>int32 integer = 2 [json_name = "integer"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearInteger() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      integer_ = 0;
       onChanged();
       return this;
     }

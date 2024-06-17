@@ -972,12 +972,11 @@ public final class UserProto {
       " \001(\tR\003key\022N\n\005value\030\002 \001(\01328.api.v1alpha1." +
       "org.ListUsersAllowedIpsResponse.AllowedI" +
       "psR\005value:\0028\001\032\036\n\nAllowedIps\022\020\n\003ips\030\001 \003(\t" +
-      "R\003ips\":\n\004Test\022\030\n\007message\030\001 \001(\tR\007message\022" +
-      "\030\n\007integer\030\002 \001(\005R\007integerB\221\001\n\"com.tcn.cl" +
-      "oud.api.api.v1alpha1.orgB\tUserProtoP\001\242\002\003" +
-      "AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\Or" +
-      "g\342\002\034Api\\V1alpha1\\Org\\GPBMetadata\352\002\022Api::" +
-      "V1alpha1::Orgb\006proto3"
+      "R\003ips\" \n\004Test\022\030\n\007message\030\001 \001(\tR\007messageB" +
+      "\221\001\n\"com.tcn.cloud.api.api.v1alpha1.orgB\t" +
+      "UserProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020A" +
+      "pi\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMe" +
+      "tadata\352\002\022Api::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1634,7 +1633,7 @@ public final class UserProto {
     internal_static_api_v1alpha1_org_Test_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_Test_descriptor,
-        new java.lang.String[] { "Message", "Integer", });
+        new java.lang.String[] { "Message", });
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.LabelsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.PermissionsProto.getDescriptor();
