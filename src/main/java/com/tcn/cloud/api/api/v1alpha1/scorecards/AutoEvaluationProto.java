@@ -145,16 +145,18 @@ public final class AutoEvaluationProto {
       "e\022\016\n\002gt\030\005 \001(\003R\002gt\022\016\n\002lt\030\006 \001(\003R\002lt\"i\n\"Del" +
       "eteAutoEvaluationByOrgIdRequest\022\025\n\006org_i" +
       "d\030\001 \001(\tR\005orgId\022,\n\022auto_evaluation_id\030\002 \001" +
-      "(\003R\020autoEvaluationId\"i\n BulkDeleteAutoEv" +
-      "aluationsRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022" +
-      ".\n\023auto_evaluation_ids\030\002 \003(\003R\021autoEvalua" +
-      "tionIds\"#\n!BulkDeleteAutoEvaluationsResp" +
-      "onseB\276\001\n)com.tcn.cloud.api.api.v1alpha1." +
-      "scorecardsB\023AutoEvaluationProtoP\001\242\002\003AVS\252" +
-      "\002\027Api.V1alpha1.Scorecards\312\002\027Api\\V1alpha1" +
-      "\\Scorecards\342\002#Api\\V1alpha1\\Scorecards\\GP" +
-      "BMetadata\352\002\031Api::V1alpha1::Scorecardsb\006p" +
-      "roto3"
+      "(\003R\020autoEvaluationId\"\245\001\n BulkDeleteAutoE" +
+      "valuationsRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId" +
+      "\022.\n\023auto_evaluation_ids\030\002 \003(\003R\021autoEvalu" +
+      "ationIds\022:\n\014completed_at\030\003 \001(\0132\027.api.com" +
+      "mons.TimeFilterR\013completedAt\"S\n!BulkDele" +
+      "teAutoEvaluationsResponse\022.\n\023auto_evalua" +
+      "tion_ids\030\001 \003(\003R\021autoEvaluationIdsB\276\001\n)co" +
+      "m.tcn.cloud.api.api.v1alpha1.scorecardsB" +
+      "\023AutoEvaluationProtoP\001\242\002\003AVS\252\002\027Api.V1alp" +
+      "ha1.Scorecards\312\002\027Api\\V1alpha1\\Scorecards" +
+      "\342\002#Api\\V1alpha1\\Scorecards\\GPBMetadata\352\002" +
+      "\031Api::V1alpha1::Scorecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -238,13 +240,13 @@ public final class AutoEvaluationProto {
     internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_descriptor,
-        new java.lang.String[] { "OrgId", "AutoEvaluationIds", });
+        new java.lang.String[] { "OrgId", "AutoEvaluationIds", "CompletedAt", });
     internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsResponse_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "AutoEvaluationIds", });
     com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor();
   }
 

@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private BulkDeleteEvaluationsResponse() {
+    evaluationIds_ = emptyLongList();
   }
 
   @java.lang.Override
@@ -42,6 +43,47 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse.class, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse.Builder.class);
   }
 
+  public static final int EVALUATION_IDS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.LongList evaluationIds_;
+  /**
+   * <pre>
+   * List of ids for deleted evaluations.
+   * </pre>
+   *
+   * <code>repeated int64 evaluation_ids = 1 [json_name = "evaluationIds"];</code>
+   * @return A list containing the evaluationIds.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Long>
+      getEvaluationIdsList() {
+    return evaluationIds_;
+  }
+  /**
+   * <pre>
+   * List of ids for deleted evaluations.
+   * </pre>
+   *
+   * <code>repeated int64 evaluation_ids = 1 [json_name = "evaluationIds"];</code>
+   * @return The count of evaluationIds.
+   */
+  public int getEvaluationIdsCount() {
+    return evaluationIds_.size();
+  }
+  /**
+   * <pre>
+   * List of ids for deleted evaluations.
+   * </pre>
+   *
+   * <code>repeated int64 evaluation_ids = 1 [json_name = "evaluationIds"];</code>
+   * @param index The index of the element to return.
+   * @return The evaluationIds at the given index.
+   */
+  public long getEvaluationIds(int index) {
+    return evaluationIds_.getLong(index);
+  }
+  private int evaluationIdsMemoizedSerializedSize = -1;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -56,6 +98,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
+    if (getEvaluationIdsList().size() > 0) {
+      output.writeUInt32NoTag(10);
+      output.writeUInt32NoTag(evaluationIdsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < evaluationIds_.size(); i++) {
+      output.writeInt64NoTag(evaluationIds_.getLong(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -65,6 +115,20 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    {
+      int dataSize = 0;
+      for (int i = 0; i < evaluationIds_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(evaluationIds_.getLong(i));
+      }
+      size += dataSize;
+      if (!getEvaluationIdsList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      evaluationIdsMemoizedSerializedSize = dataSize;
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -80,6 +144,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse other = (com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse) obj;
 
+    if (!getEvaluationIdsList()
+        .equals(other.getEvaluationIdsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -91,6 +157,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (getEvaluationIdsCount() > 0) {
+      hash = (37 * hash) + EVALUATION_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getEvaluationIdsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -225,6 +295,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      evaluationIds_ = emptyLongList();
       return this;
     }
 
@@ -251,8 +323,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse result = new com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse(this);
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse result) {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        evaluationIds_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.evaluationIds_ = evaluationIds_;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -299,6 +385,16 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse.getDefaultInstance()) return this;
+      if (!other.evaluationIds_.isEmpty()) {
+        if (evaluationIds_.isEmpty()) {
+          evaluationIds_ = other.evaluationIds_;
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          ensureEvaluationIdsIsMutable();
+          evaluationIds_.addAll(other.evaluationIds_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -325,6 +421,22 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              long v = input.readInt64();
+              ensureEvaluationIdsIsMutable();
+              evaluationIds_.addLong(v);
+              break;
+            } // case 8
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureEvaluationIdsIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                evaluationIds_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -338,6 +450,116 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private com.google.protobuf.Internal.LongList evaluationIds_ = emptyLongList();
+    private void ensureEvaluationIdsIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        evaluationIds_ = mutableCopy(evaluationIds_);
+        bitField0_ |= 0x00000001;
+      }
+    }
+    /**
+     * <pre>
+     * List of ids for deleted evaluations.
+     * </pre>
+     *
+     * <code>repeated int64 evaluation_ids = 1 [json_name = "evaluationIds"];</code>
+     * @return A list containing the evaluationIds.
+     */
+    public java.util.List<java.lang.Long>
+        getEvaluationIdsList() {
+      return ((bitField0_ & 0x00000001) != 0) ?
+               java.util.Collections.unmodifiableList(evaluationIds_) : evaluationIds_;
+    }
+    /**
+     * <pre>
+     * List of ids for deleted evaluations.
+     * </pre>
+     *
+     * <code>repeated int64 evaluation_ids = 1 [json_name = "evaluationIds"];</code>
+     * @return The count of evaluationIds.
+     */
+    public int getEvaluationIdsCount() {
+      return evaluationIds_.size();
+    }
+    /**
+     * <pre>
+     * List of ids for deleted evaluations.
+     * </pre>
+     *
+     * <code>repeated int64 evaluation_ids = 1 [json_name = "evaluationIds"];</code>
+     * @param index The index of the element to return.
+     * @return The evaluationIds at the given index.
+     */
+    public long getEvaluationIds(int index) {
+      return evaluationIds_.getLong(index);
+    }
+    /**
+     * <pre>
+     * List of ids for deleted evaluations.
+     * </pre>
+     *
+     * <code>repeated int64 evaluation_ids = 1 [json_name = "evaluationIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The evaluationIds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEvaluationIds(
+        int index, long value) {
+
+      ensureEvaluationIdsIsMutable();
+      evaluationIds_.setLong(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of ids for deleted evaluations.
+     * </pre>
+     *
+     * <code>repeated int64 evaluation_ids = 1 [json_name = "evaluationIds"];</code>
+     * @param value The evaluationIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addEvaluationIds(long value) {
+
+      ensureEvaluationIdsIsMutable();
+      evaluationIds_.addLong(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of ids for deleted evaluations.
+     * </pre>
+     *
+     * <code>repeated int64 evaluation_ids = 1 [json_name = "evaluationIds"];</code>
+     * @param values The evaluationIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllEvaluationIds(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureEvaluationIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, evaluationIds_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of ids for deleted evaluations.
+     * </pre>
+     *
+     * <code>repeated int64 evaluation_ids = 1 [json_name = "evaluationIds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEvaluationIds() {
+      evaluationIds_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
       return this;
     }
     @java.lang.Override

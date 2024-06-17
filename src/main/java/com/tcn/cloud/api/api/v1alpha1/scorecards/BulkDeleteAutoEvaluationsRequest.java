@@ -96,7 +96,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Internal.LongList autoEvaluationIds_;
   /**
    * <pre>
-   * Required - unique id of evaluation to get
+   * Optional. Unique ids of auto evaluations to delete.
    * </pre>
    *
    * <code>repeated int64 auto_evaluation_ids = 2 [json_name = "autoEvaluationIds"];</code>
@@ -109,7 +109,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required - unique id of evaluation to get
+   * Optional. Unique ids of auto evaluations to delete.
    * </pre>
    *
    * <code>repeated int64 auto_evaluation_ids = 2 [json_name = "autoEvaluationIds"];</code>
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required - unique id of evaluation to get
+   * Optional. Unique ids of auto evaluations to delete.
    * </pre>
    *
    * <code>repeated int64 auto_evaluation_ids = 2 [json_name = "autoEvaluationIds"];</code>
@@ -131,6 +131,44 @@ private static final long serialVersionUID = 0L;
     return autoEvaluationIds_.getLong(index);
   }
   private int autoEvaluationIdsMemoizedSerializedSize = -1;
+
+  public static final int COMPLETED_AT_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.commons.TimeFilter completedAt_;
+  /**
+   * <pre>
+   * Optional. Delete auto evaluations in a specific range.
+   * </pre>
+   *
+   * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+   * @return Whether the completedAt field is set.
+   */
+  @java.lang.Override
+  public boolean hasCompletedAt() {
+    return completedAt_ != null;
+  }
+  /**
+   * <pre>
+   * Optional. Delete auto evaluations in a specific range.
+   * </pre>
+   *
+   * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+   * @return The completedAt.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.TimeFilter getCompletedAt() {
+    return completedAt_ == null ? com.tcn.cloud.api.api.commons.TimeFilter.getDefaultInstance() : completedAt_;
+  }
+  /**
+   * <pre>
+   * Optional. Delete auto evaluations in a specific range.
+   * </pre>
+   *
+   * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.TimeFilterOrBuilder getCompletedAtOrBuilder() {
+    return completedAt_ == null ? com.tcn.cloud.api.api.commons.TimeFilter.getDefaultInstance() : completedAt_;
+  }
 
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
@@ -156,6 +194,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < autoEvaluationIds_.size(); i++) {
       output.writeInt64NoTag(autoEvaluationIds_.getLong(i));
+    }
+    if (completedAt_ != null) {
+      output.writeMessage(3, getCompletedAt());
     }
     getUnknownFields().writeTo(output);
   }
@@ -183,6 +224,10 @@ private static final long serialVersionUID = 0L;
       }
       autoEvaluationIdsMemoizedSerializedSize = dataSize;
     }
+    if (completedAt_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getCompletedAt());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -202,6 +247,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOrgId())) return false;
     if (!getAutoEvaluationIdsList()
         .equals(other.getAutoEvaluationIdsList())) return false;
+    if (hasCompletedAt() != other.hasCompletedAt()) return false;
+    if (hasCompletedAt()) {
+      if (!getCompletedAt()
+          .equals(other.getCompletedAt())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -218,6 +268,10 @@ private static final long serialVersionUID = 0L;
     if (getAutoEvaluationIdsCount() > 0) {
       hash = (37 * hash) + AUTO_EVALUATION_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getAutoEvaluationIdsList().hashCode();
+    }
+    if (hasCompletedAt()) {
+      hash = (37 * hash) + COMPLETED_AT_FIELD_NUMBER;
+      hash = (53 * hash) + getCompletedAt().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -356,6 +410,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       orgId_ = "";
       autoEvaluationIds_ = emptyLongList();
+      completedAt_ = null;
+      if (completedAtBuilder_ != null) {
+        completedAtBuilder_.dispose();
+        completedAtBuilder_ = null;
+      }
       return this;
     }
 
@@ -400,6 +459,11 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.orgId_ = orgId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.completedAt_ = completedAtBuilder_ == null
+            ? completedAt_
+            : completedAtBuilder_.build();
       }
     }
 
@@ -462,6 +526,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.hasCompletedAt()) {
+        mergeCompletedAt(other.getCompletedAt());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -509,6 +576,13 @@ private static final long serialVersionUID = 0L;
               input.popLimit(limit);
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getCompletedAtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -627,7 +701,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required - unique id of evaluation to get
+     * Optional. Unique ids of auto evaluations to delete.
      * </pre>
      *
      * <code>repeated int64 auto_evaluation_ids = 2 [json_name = "autoEvaluationIds"];</code>
@@ -640,7 +714,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required - unique id of evaluation to get
+     * Optional. Unique ids of auto evaluations to delete.
      * </pre>
      *
      * <code>repeated int64 auto_evaluation_ids = 2 [json_name = "autoEvaluationIds"];</code>
@@ -651,7 +725,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required - unique id of evaluation to get
+     * Optional. Unique ids of auto evaluations to delete.
      * </pre>
      *
      * <code>repeated int64 auto_evaluation_ids = 2 [json_name = "autoEvaluationIds"];</code>
@@ -663,7 +737,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required - unique id of evaluation to get
+     * Optional. Unique ids of auto evaluations to delete.
      * </pre>
      *
      * <code>repeated int64 auto_evaluation_ids = 2 [json_name = "autoEvaluationIds"];</code>
@@ -681,7 +755,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required - unique id of evaluation to get
+     * Optional. Unique ids of auto evaluations to delete.
      * </pre>
      *
      * <code>repeated int64 auto_evaluation_ids = 2 [json_name = "autoEvaluationIds"];</code>
@@ -697,7 +771,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required - unique id of evaluation to get
+     * Optional. Unique ids of auto evaluations to delete.
      * </pre>
      *
      * <code>repeated int64 auto_evaluation_ids = 2 [json_name = "autoEvaluationIds"];</code>
@@ -714,7 +788,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required - unique id of evaluation to get
+     * Optional. Unique ids of auto evaluations to delete.
      * </pre>
      *
      * <code>repeated int64 auto_evaluation_ids = 2 [json_name = "autoEvaluationIds"];</code>
@@ -725,6 +799,161 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.TimeFilter completedAt_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TimeFilter, com.tcn.cloud.api.api.commons.TimeFilter.Builder, com.tcn.cloud.api.api.commons.TimeFilterOrBuilder> completedAtBuilder_;
+    /**
+     * <pre>
+     * Optional. Delete auto evaluations in a specific range.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+     * @return Whether the completedAt field is set.
+     */
+    public boolean hasCompletedAt() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Optional. Delete auto evaluations in a specific range.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+     * @return The completedAt.
+     */
+    public com.tcn.cloud.api.api.commons.TimeFilter getCompletedAt() {
+      if (completedAtBuilder_ == null) {
+        return completedAt_ == null ? com.tcn.cloud.api.api.commons.TimeFilter.getDefaultInstance() : completedAt_;
+      } else {
+        return completedAtBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Delete auto evaluations in a specific range.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+     */
+    public Builder setCompletedAt(com.tcn.cloud.api.api.commons.TimeFilter value) {
+      if (completedAtBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        completedAt_ = value;
+      } else {
+        completedAtBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Delete auto evaluations in a specific range.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+     */
+    public Builder setCompletedAt(
+        com.tcn.cloud.api.api.commons.TimeFilter.Builder builderForValue) {
+      if (completedAtBuilder_ == null) {
+        completedAt_ = builderForValue.build();
+      } else {
+        completedAtBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Delete auto evaluations in a specific range.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+     */
+    public Builder mergeCompletedAt(com.tcn.cloud.api.api.commons.TimeFilter value) {
+      if (completedAtBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          completedAt_ != null &&
+          completedAt_ != com.tcn.cloud.api.api.commons.TimeFilter.getDefaultInstance()) {
+          getCompletedAtBuilder().mergeFrom(value);
+        } else {
+          completedAt_ = value;
+        }
+      } else {
+        completedAtBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Delete auto evaluations in a specific range.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+     */
+    public Builder clearCompletedAt() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      completedAt_ = null;
+      if (completedAtBuilder_ != null) {
+        completedAtBuilder_.dispose();
+        completedAtBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Delete auto evaluations in a specific range.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TimeFilter.Builder getCompletedAtBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getCompletedAtFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional. Delete auto evaluations in a specific range.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TimeFilterOrBuilder getCompletedAtOrBuilder() {
+      if (completedAtBuilder_ != null) {
+        return completedAtBuilder_.getMessageOrBuilder();
+      } else {
+        return completedAt_ == null ?
+            com.tcn.cloud.api.api.commons.TimeFilter.getDefaultInstance() : completedAt_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Delete auto evaluations in a specific range.
+     * </pre>
+     *
+     * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TimeFilter, com.tcn.cloud.api.api.commons.TimeFilter.Builder, com.tcn.cloud.api.api.commons.TimeFilterOrBuilder> 
+        getCompletedAtFieldBuilder() {
+      if (completedAtBuilder_ == null) {
+        completedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.TimeFilter, com.tcn.cloud.api.api.commons.TimeFilter.Builder, com.tcn.cloud.api.api.commons.TimeFilterOrBuilder>(
+                getCompletedAt(),
+                getParentForChildren(),
+                isClean());
+        completedAt_ = null;
+      }
+      return completedAtBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

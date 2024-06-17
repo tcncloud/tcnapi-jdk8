@@ -29,7 +29,7 @@ public interface BulkDeleteEvaluationsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required - unique id of evaluation to get
+   * Optional. Unique ids of evaluations to delete.
    * </pre>
    *
    * <code>repeated int64 evaluation_ids = 2 [json_name = "evaluationIds"];</code>
@@ -38,7 +38,7 @@ public interface BulkDeleteEvaluationsRequestOrBuilder extends
   java.util.List<java.lang.Long> getEvaluationIdsList();
   /**
    * <pre>
-   * Required - unique id of evaluation to get
+   * Optional. Unique ids of evaluations to delete.
    * </pre>
    *
    * <code>repeated int64 evaluation_ids = 2 [json_name = "evaluationIds"];</code>
@@ -47,7 +47,7 @@ public interface BulkDeleteEvaluationsRequestOrBuilder extends
   int getEvaluationIdsCount();
   /**
    * <pre>
-   * Required - unique id of evaluation to get
+   * Optional. Unique ids of evaluations to delete.
    * </pre>
    *
    * <code>repeated int64 evaluation_ids = 2 [json_name = "evaluationIds"];</code>
@@ -55,4 +55,31 @@ public interface BulkDeleteEvaluationsRequestOrBuilder extends
    * @return The evaluationIds at the given index.
    */
   long getEvaluationIds(int index);
+
+  /**
+   * <pre>
+   * Optional. Delete evaluations in a specific range.
+   * </pre>
+   *
+   * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+   * @return Whether the completedAt field is set.
+   */
+  boolean hasCompletedAt();
+  /**
+   * <pre>
+   * Optional. Delete evaluations in a specific range.
+   * </pre>
+   *
+   * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+   * @return The completedAt.
+   */
+  com.tcn.cloud.api.api.commons.TimeFilter getCompletedAt();
+  /**
+   * <pre>
+   * Optional. Delete evaluations in a specific range.
+   * </pre>
+   *
+   * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TimeFilterOrBuilder getCompletedAtOrBuilder();
 }

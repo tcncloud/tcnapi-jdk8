@@ -6,4 +6,33 @@ package com.tcn.cloud.api.api.v1alpha1.scorecards;
 public interface BulkDeleteAutoEvaluationsResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * List of auto evaluations deleted.
+   * </pre>
+   *
+   * <code>repeated int64 auto_evaluation_ids = 1 [json_name = "autoEvaluationIds"];</code>
+   * @return A list containing the autoEvaluationIds.
+   */
+  java.util.List<java.lang.Long> getAutoEvaluationIdsList();
+  /**
+   * <pre>
+   * List of auto evaluations deleted.
+   * </pre>
+   *
+   * <code>repeated int64 auto_evaluation_ids = 1 [json_name = "autoEvaluationIds"];</code>
+   * @return The count of autoEvaluationIds.
+   */
+  int getAutoEvaluationIdsCount();
+  /**
+   * <pre>
+   * List of auto evaluations deleted.
+   * </pre>
+   *
+   * <code>repeated int64 auto_evaluation_ids = 1 [json_name = "autoEvaluationIds"];</code>
+   * @param index The index of the element to return.
+   * @return The autoEvaluationIds at the given index.
+   */
+  long getAutoEvaluationIds(int index);
 }

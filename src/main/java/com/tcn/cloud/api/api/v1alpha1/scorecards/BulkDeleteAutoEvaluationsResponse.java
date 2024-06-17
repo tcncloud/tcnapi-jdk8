@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private BulkDeleteAutoEvaluationsResponse() {
+    autoEvaluationIds_ = emptyLongList();
   }
 
   @java.lang.Override
@@ -42,6 +43,47 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse.class, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse.Builder.class);
   }
 
+  public static final int AUTO_EVALUATION_IDS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.LongList autoEvaluationIds_;
+  /**
+   * <pre>
+   * List of auto evaluations deleted.
+   * </pre>
+   *
+   * <code>repeated int64 auto_evaluation_ids = 1 [json_name = "autoEvaluationIds"];</code>
+   * @return A list containing the autoEvaluationIds.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Long>
+      getAutoEvaluationIdsList() {
+    return autoEvaluationIds_;
+  }
+  /**
+   * <pre>
+   * List of auto evaluations deleted.
+   * </pre>
+   *
+   * <code>repeated int64 auto_evaluation_ids = 1 [json_name = "autoEvaluationIds"];</code>
+   * @return The count of autoEvaluationIds.
+   */
+  public int getAutoEvaluationIdsCount() {
+    return autoEvaluationIds_.size();
+  }
+  /**
+   * <pre>
+   * List of auto evaluations deleted.
+   * </pre>
+   *
+   * <code>repeated int64 auto_evaluation_ids = 1 [json_name = "autoEvaluationIds"];</code>
+   * @param index The index of the element to return.
+   * @return The autoEvaluationIds at the given index.
+   */
+  public long getAutoEvaluationIds(int index) {
+    return autoEvaluationIds_.getLong(index);
+  }
+  private int autoEvaluationIdsMemoizedSerializedSize = -1;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -56,6 +98,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
+    if (getAutoEvaluationIdsList().size() > 0) {
+      output.writeUInt32NoTag(10);
+      output.writeUInt32NoTag(autoEvaluationIdsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < autoEvaluationIds_.size(); i++) {
+      output.writeInt64NoTag(autoEvaluationIds_.getLong(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -65,6 +115,20 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    {
+      int dataSize = 0;
+      for (int i = 0; i < autoEvaluationIds_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(autoEvaluationIds_.getLong(i));
+      }
+      size += dataSize;
+      if (!getAutoEvaluationIdsList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      autoEvaluationIdsMemoizedSerializedSize = dataSize;
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -80,6 +144,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse other = (com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse) obj;
 
+    if (!getAutoEvaluationIdsList()
+        .equals(other.getAutoEvaluationIdsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -91,6 +157,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (getAutoEvaluationIdsCount() > 0) {
+      hash = (37 * hash) + AUTO_EVALUATION_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getAutoEvaluationIdsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -225,6 +295,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      autoEvaluationIds_ = emptyLongList();
       return this;
     }
 
@@ -251,8 +323,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse result = new com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse(this);
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse result) {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        autoEvaluationIds_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.autoEvaluationIds_ = autoEvaluationIds_;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -299,6 +385,16 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse.getDefaultInstance()) return this;
+      if (!other.autoEvaluationIds_.isEmpty()) {
+        if (autoEvaluationIds_.isEmpty()) {
+          autoEvaluationIds_ = other.autoEvaluationIds_;
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          ensureAutoEvaluationIdsIsMutable();
+          autoEvaluationIds_.addAll(other.autoEvaluationIds_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -325,6 +421,22 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              long v = input.readInt64();
+              ensureAutoEvaluationIdsIsMutable();
+              autoEvaluationIds_.addLong(v);
+              break;
+            } // case 8
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureAutoEvaluationIdsIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                autoEvaluationIds_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -338,6 +450,116 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private com.google.protobuf.Internal.LongList autoEvaluationIds_ = emptyLongList();
+    private void ensureAutoEvaluationIdsIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        autoEvaluationIds_ = mutableCopy(autoEvaluationIds_);
+        bitField0_ |= 0x00000001;
+      }
+    }
+    /**
+     * <pre>
+     * List of auto evaluations deleted.
+     * </pre>
+     *
+     * <code>repeated int64 auto_evaluation_ids = 1 [json_name = "autoEvaluationIds"];</code>
+     * @return A list containing the autoEvaluationIds.
+     */
+    public java.util.List<java.lang.Long>
+        getAutoEvaluationIdsList() {
+      return ((bitField0_ & 0x00000001) != 0) ?
+               java.util.Collections.unmodifiableList(autoEvaluationIds_) : autoEvaluationIds_;
+    }
+    /**
+     * <pre>
+     * List of auto evaluations deleted.
+     * </pre>
+     *
+     * <code>repeated int64 auto_evaluation_ids = 1 [json_name = "autoEvaluationIds"];</code>
+     * @return The count of autoEvaluationIds.
+     */
+    public int getAutoEvaluationIdsCount() {
+      return autoEvaluationIds_.size();
+    }
+    /**
+     * <pre>
+     * List of auto evaluations deleted.
+     * </pre>
+     *
+     * <code>repeated int64 auto_evaluation_ids = 1 [json_name = "autoEvaluationIds"];</code>
+     * @param index The index of the element to return.
+     * @return The autoEvaluationIds at the given index.
+     */
+    public long getAutoEvaluationIds(int index) {
+      return autoEvaluationIds_.getLong(index);
+    }
+    /**
+     * <pre>
+     * List of auto evaluations deleted.
+     * </pre>
+     *
+     * <code>repeated int64 auto_evaluation_ids = 1 [json_name = "autoEvaluationIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The autoEvaluationIds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAutoEvaluationIds(
+        int index, long value) {
+
+      ensureAutoEvaluationIdsIsMutable();
+      autoEvaluationIds_.setLong(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of auto evaluations deleted.
+     * </pre>
+     *
+     * <code>repeated int64 auto_evaluation_ids = 1 [json_name = "autoEvaluationIds"];</code>
+     * @param value The autoEvaluationIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAutoEvaluationIds(long value) {
+
+      ensureAutoEvaluationIdsIsMutable();
+      autoEvaluationIds_.addLong(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of auto evaluations deleted.
+     * </pre>
+     *
+     * <code>repeated int64 auto_evaluation_ids = 1 [json_name = "autoEvaluationIds"];</code>
+     * @param values The autoEvaluationIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllAutoEvaluationIds(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureAutoEvaluationIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, autoEvaluationIds_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * List of auto evaluations deleted.
+     * </pre>
+     *
+     * <code>repeated int64 auto_evaluation_ids = 1 [json_name = "autoEvaluationIds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAutoEvaluationIds() {
+      autoEvaluationIds_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
       return this;
     }
     @java.lang.Override
