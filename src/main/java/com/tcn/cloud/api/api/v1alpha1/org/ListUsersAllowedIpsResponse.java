@@ -832,11 +832,11 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
     return map.get(key);
   }
 
-  public static final int NEW_FIELD_FIELD_NUMBER = 2;
+  public static final int NEW_FIELD_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object newField_ = "";
   /**
-   * <code>string new_field = 2 [json_name = "newField"];</code>
+   * <code>string new_field = 4 [json_name = "newField"];</code>
    * @return The newField.
    */
   @java.lang.Override
@@ -853,7 +853,7 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
     }
   }
   /**
-   * <code>string new_field = 2 [json_name = "newField"];</code>
+   * <code>string new_field = 4 [json_name = "newField"];</code>
    * @return The bytes for newField.
    */
   @java.lang.Override
@@ -869,6 +869,17 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int NEW_BOOL_FIELD_NUMBER = 3;
+  private boolean newBool_ = false;
+  /**
+   * <code>bool new_bool = 3 [json_name = "newBool"];</code>
+   * @return The newBool.
+   */
+  @java.lang.Override
+  public boolean getNewBool() {
+    return newBool_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -891,8 +902,11 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
         internalGetUserAllowedIpsMap(),
         UserAllowedIpsMapDefaultEntryHolder.defaultEntry,
         1);
+    if (newBool_ != false) {
+      output.writeBool(3, newBool_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newField_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, newField_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, newField_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -913,8 +927,12 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, userAllowedIpsMap__);
     }
+    if (newBool_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, newBool_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newField_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, newField_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, newField_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -935,6 +953,8 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
         other.internalGetUserAllowedIpsMap())) return false;
     if (!getNewField()
         .equals(other.getNewField())) return false;
+    if (getNewBool()
+        != other.getNewBool()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -952,6 +972,9 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
     }
     hash = (37 * hash) + NEW_FIELD_FIELD_NUMBER;
     hash = (53 * hash) + getNewField().hashCode();
+    hash = (37 * hash) + NEW_BOOL_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getNewBool());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1107,6 +1130,7 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       bitField0_ = 0;
       internalGetMutableUserAllowedIpsMap().clear();
       newField_ = "";
+      newBool_ = false;
       return this;
     }
 
@@ -1146,6 +1170,9 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.newField_ = newField_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.newBool_ = newBool_;
       }
     }
 
@@ -1201,6 +1228,9 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (other.getNewBool() != false) {
+        setNewBool(other.getNewBool());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1236,11 +1266,16 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
+            case 24: {
+              newBool_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
               newField_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1415,7 +1450,7 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
 
     private java.lang.Object newField_ = "";
     /**
-     * <code>string new_field = 2 [json_name = "newField"];</code>
+     * <code>string new_field = 4 [json_name = "newField"];</code>
      * @return The newField.
      */
     public java.lang.String getNewField() {
@@ -1431,7 +1466,7 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       }
     }
     /**
-     * <code>string new_field = 2 [json_name = "newField"];</code>
+     * <code>string new_field = 4 [json_name = "newField"];</code>
      * @return The bytes for newField.
      */
     public com.google.protobuf.ByteString
@@ -1448,7 +1483,7 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       }
     }
     /**
-     * <code>string new_field = 2 [json_name = "newField"];</code>
+     * <code>string new_field = 4 [json_name = "newField"];</code>
      * @param value The newField to set.
      * @return This builder for chaining.
      */
@@ -1461,7 +1496,7 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       return this;
     }
     /**
-     * <code>string new_field = 2 [json_name = "newField"];</code>
+     * <code>string new_field = 4 [json_name = "newField"];</code>
      * @return This builder for chaining.
      */
     public Builder clearNewField() {
@@ -1471,7 +1506,7 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       return this;
     }
     /**
-     * <code>string new_field = 2 [json_name = "newField"];</code>
+     * <code>string new_field = 4 [json_name = "newField"];</code>
      * @param value The bytes for newField to set.
      * @return This builder for chaining.
      */
@@ -1481,6 +1516,38 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       checkByteStringIsUtf8(value);
       newField_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private boolean newBool_ ;
+    /**
+     * <code>bool new_bool = 3 [json_name = "newBool"];</code>
+     * @return The newBool.
+     */
+    @java.lang.Override
+    public boolean getNewBool() {
+      return newBool_;
+    }
+    /**
+     * <code>bool new_bool = 3 [json_name = "newBool"];</code>
+     * @param value The newBool to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNewBool(boolean value) {
+
+      newBool_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool new_bool = 3 [json_name = "newBool"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNewBool() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      newBool_ = false;
       onChanged();
       return this;
     }

@@ -62,14 +62,20 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
       java.lang.String key);
 
   /**
-   * <code>string new_field = 2 [json_name = "newField"];</code>
+   * <code>string new_field = 4 [json_name = "newField"];</code>
    * @return The newField.
    */
   java.lang.String getNewField();
   /**
-   * <code>string new_field = 2 [json_name = "newField"];</code>
+   * <code>string new_field = 4 [json_name = "newField"];</code>
    * @return The bytes for newField.
    */
   com.google.protobuf.ByteString
       getNewFieldBytes();
+
+  /**
+   * <code>bool new_bool = 3 [json_name = "newBool"];</code>
+   * @return The newBool.
+   */
+  boolean getNewBool();
 }

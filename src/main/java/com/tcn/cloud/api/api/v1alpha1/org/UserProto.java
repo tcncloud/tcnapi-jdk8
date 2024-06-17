@@ -959,19 +959,20 @@ public final class UserProto {
       "s\030\001 \003(\tR\007userIds\022\020\n\003ips\030\002 \003(\tR\003ips\")\n\'Re" +
       "moveGroupedUserIPRestrictionsResponse\"7\n" +
       "\032ListUsersAllowedIpsRequest\022\031\n\010user_ids\030" +
-      "\001 \003(\tR\007userIds\"\321\002\n\033ListUsersAllowedIpsRe" +
+      "\001 \003(\tR\007userIds\"\354\002\n\033ListUsersAllowedIpsRe" +
       "sponse\022u\n\024user_allowed_ips_map\030\001 \003(\0132D.a" +
       "pi.v1alpha1.org.ListUsersAllowedIpsRespo" +
       "nse.UserAllowedIpsMapEntryR\021userAllowedI" +
-      "psMap\022\033\n\tnew_field\030\002 \001(\tR\010newField\032~\n\026Us" +
-      "erAllowedIpsMapEntry\022\020\n\003key\030\001 \001(\tR\003key\022N" +
-      "\n\005value\030\002 \001(\01328.api.v1alpha1.org.ListUse" +
-      "rsAllowedIpsResponse.AllowedIpsR\005value:\002" +
-      "8\001\032\036\n\nAllowedIps\022\020\n\003ips\030\001 \003(\tR\003ipsB\221\001\n\"c" +
-      "om.tcn.cloud.api.api.v1alpha1.orgB\tUserP" +
-      "rotoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1" +
-      "alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetadat" +
-      "a\352\002\022Api::V1alpha1::Orgb\006proto3"
+      "psMap\022\033\n\tnew_field\030\004 \001(\tR\010newField\022\031\n\010ne" +
+      "w_bool\030\003 \001(\010R\007newBool\032~\n\026UserAllowedIpsM" +
+      "apEntry\022\020\n\003key\030\001 \001(\tR\003key\022N\n\005value\030\002 \001(\013" +
+      "28.api.v1alpha1.org.ListUsersAllowedIpsR" +
+      "esponse.AllowedIpsR\005value:\0028\001\032\036\n\nAllowed" +
+      "Ips\022\020\n\003ips\030\001 \003(\tR\003ipsB\221\001\n\"com.tcn.cloud." +
+      "api.api.v1alpha1.orgB\tUserProtoP\001\242\002\003AVO\252" +
+      "\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034" +
+      "Api\\V1alpha1\\Org\\GPBMetadata\352\002\022Api::V1al" +
+      "pha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1610,7 +1611,7 @@ public final class UserProto {
     internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_descriptor,
-        new java.lang.String[] { "UserAllowedIpsMap", "NewField", });
+        new java.lang.String[] { "UserAllowedIpsMap", "NewField", "NewBool", });
     internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_UserAllowedIpsMapEntry_descriptor =
       internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_org_ListUsersAllowedIpsResponse_UserAllowedIpsMapEntry_fieldAccessorTable = new
