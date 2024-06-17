@@ -60,4 +60,16 @@ com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps defaul
    */
   com.tcn.cloud.api.api.v1alpha1.org.ListUsersAllowedIpsResponse.AllowedIps getUserAllowedIpsMapOrThrow(
       java.lang.String key);
+
+  /**
+   * <code>string new_field = 2 [json_name = "newField"];</code>
+   * @return The newField.
+   */
+  java.lang.String getNewField();
+  /**
+   * <code>string new_field = 2 [json_name = "newField"];</code>
+   * @return The bytes for newField.
+   */
+  com.google.protobuf.ByteString
+      getNewFieldBytes();
 }
