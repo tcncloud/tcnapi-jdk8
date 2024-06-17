@@ -9,7 +9,7 @@ public interface TestOrBuilder extends
 
   /**
    * <pre>
-   * The test message.
+   * The test string.
    * </pre>
    *
    * <code>string message = 1 [json_name = "message"];</code>
@@ -18,7 +18,7 @@ public interface TestOrBuilder extends
   java.lang.String getMessage();
   /**
    * <pre>
-   * The test message.
+   * The test string.
    * </pre>
    *
    * <code>string message = 1 [json_name = "message"];</code>
@@ -26,4 +26,14 @@ public interface TestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getMessageBytes();
+
+  /**
+   * <pre>
+   * The test integer.
+   * </pre>
+   *
+   * <code>int32 integer = 2 [json_name = "integer"];</code>
+   * @return The integer.
+   */
+  int getInteger();
 }
