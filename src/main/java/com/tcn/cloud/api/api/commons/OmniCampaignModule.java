@@ -210,6 +210,33 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getFailedTaskCountOrBuilder();
+
+    /**
+     * <pre>
+     * the number of tasks that are canceled
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
+     * @return Whether the canceledTaskCount field is set.
+     */
+    boolean hasCanceledTaskCount();
+    /**
+     * <pre>
+     * the number of tasks that are canceled
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
+     * @return The canceledTaskCount.
+     */
+    com.google.protobuf.Int64Value getCanceledTaskCount();
+    /**
+     * <pre>
+     * the number of tasks that are canceled
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getCanceledTaskCountOrBuilder();
   }
   /**
    * <pre>
@@ -478,6 +505,44 @@ private static final long serialVersionUID = 0L;
       return failedTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : failedTaskCount_;
     }
 
+    public static final int CANCELED_TASK_COUNT_FIELD_NUMBER = 7;
+    private com.google.protobuf.Int64Value canceledTaskCount_;
+    /**
+     * <pre>
+     * the number of tasks that are canceled
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
+     * @return Whether the canceledTaskCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasCanceledTaskCount() {
+      return canceledTaskCount_ != null;
+    }
+    /**
+     * <pre>
+     * the number of tasks that are canceled
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
+     * @return The canceledTaskCount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getCanceledTaskCount() {
+      return canceledTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : canceledTaskCount_;
+    }
+    /**
+     * <pre>
+     * the number of tasks that are canceled
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getCanceledTaskCountOrBuilder() {
+      return canceledTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : canceledTaskCount_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -509,6 +574,9 @@ private static final long serialVersionUID = 0L;
       }
       if (failedTaskCount_ != null) {
         output.writeMessage(6, getFailedTaskCount());
+      }
+      if (canceledTaskCount_ != null) {
+        output.writeMessage(7, getCanceledTaskCount());
       }
       getUnknownFields().writeTo(output);
     }
@@ -542,6 +610,10 @@ private static final long serialVersionUID = 0L;
       if (failedTaskCount_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getFailedTaskCount());
+      }
+      if (canceledTaskCount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getCanceledTaskCount());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -588,6 +660,11 @@ private static final long serialVersionUID = 0L;
         if (!getFailedTaskCount()
             .equals(other.getFailedTaskCount())) return false;
       }
+      if (hasCanceledTaskCount() != other.hasCanceledTaskCount()) return false;
+      if (hasCanceledTaskCount()) {
+        if (!getCanceledTaskCount()
+            .equals(other.getCanceledTaskCount())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -622,6 +699,10 @@ private static final long serialVersionUID = 0L;
       if (hasFailedTaskCount()) {
         hash = (37 * hash) + FAILED_TASK_COUNT_FIELD_NUMBER;
         hash = (53 * hash) + getFailedTaskCount().hashCode();
+      }
+      if (hasCanceledTaskCount()) {
+        hash = (37 * hash) + CANCELED_TASK_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getCanceledTaskCount().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -788,6 +869,11 @@ private static final long serialVersionUID = 0L;
           failedTaskCountBuilder_.dispose();
           failedTaskCountBuilder_ = null;
         }
+        canceledTaskCount_ = null;
+        if (canceledTaskCountBuilder_ != null) {
+          canceledTaskCountBuilder_.dispose();
+          canceledTaskCountBuilder_ = null;
+        }
         return this;
       }
 
@@ -850,6 +936,11 @@ private static final long serialVersionUID = 0L;
           result.failedTaskCount_ = failedTaskCountBuilder_ == null
               ? failedTaskCount_
               : failedTaskCountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.canceledTaskCount_ = canceledTaskCountBuilder_ == null
+              ? canceledTaskCount_
+              : canceledTaskCountBuilder_.build();
         }
       }
 
@@ -914,6 +1005,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasFailedTaskCount()) {
           mergeFailedTaskCount(other.getFailedTaskCount());
+        }
+        if (other.hasCanceledTaskCount()) {
+          mergeCanceledTaskCount(other.getCanceledTaskCount());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -983,6 +1077,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000020;
                 break;
               } // case 50
+              case 58: {
+                input.readMessage(
+                    getCanceledTaskCountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1928,6 +2029,161 @@ private static final long serialVersionUID = 0L;
           failedTaskCount_ = null;
         }
         return failedTaskCountBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value canceledTaskCount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> canceledTaskCountBuilder_;
+      /**
+       * <pre>
+       * the number of tasks that are canceled
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
+       * @return Whether the canceledTaskCount field is set.
+       */
+      public boolean hasCanceledTaskCount() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * the number of tasks that are canceled
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
+       * @return The canceledTaskCount.
+       */
+      public com.google.protobuf.Int64Value getCanceledTaskCount() {
+        if (canceledTaskCountBuilder_ == null) {
+          return canceledTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : canceledTaskCount_;
+        } else {
+          return canceledTaskCountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * the number of tasks that are canceled
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
+       */
+      public Builder setCanceledTaskCount(com.google.protobuf.Int64Value value) {
+        if (canceledTaskCountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          canceledTaskCount_ = value;
+        } else {
+          canceledTaskCountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the number of tasks that are canceled
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
+       */
+      public Builder setCanceledTaskCount(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (canceledTaskCountBuilder_ == null) {
+          canceledTaskCount_ = builderForValue.build();
+        } else {
+          canceledTaskCountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the number of tasks that are canceled
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
+       */
+      public Builder mergeCanceledTaskCount(com.google.protobuf.Int64Value value) {
+        if (canceledTaskCountBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            canceledTaskCount_ != null &&
+            canceledTaskCount_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+            getCanceledTaskCountBuilder().mergeFrom(value);
+          } else {
+            canceledTaskCount_ = value;
+          }
+        } else {
+          canceledTaskCountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the number of tasks that are canceled
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
+       */
+      public Builder clearCanceledTaskCount() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        canceledTaskCount_ = null;
+        if (canceledTaskCountBuilder_ != null) {
+          canceledTaskCountBuilder_.dispose();
+          canceledTaskCountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the number of tasks that are canceled
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getCanceledTaskCountBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getCanceledTaskCountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * the number of tasks that are canceled
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getCanceledTaskCountOrBuilder() {
+        if (canceledTaskCountBuilder_ != null) {
+          return canceledTaskCountBuilder_.getMessageOrBuilder();
+        } else {
+          return canceledTaskCount_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : canceledTaskCount_;
+        }
+      }
+      /**
+       * <pre>
+       * the number of tasks that are canceled
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getCanceledTaskCountFieldBuilder() {
+        if (canceledTaskCountBuilder_ == null) {
+          canceledTaskCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getCanceledTaskCount(),
+                  getParentForChildren(),
+                  isClean());
+          canceledTaskCount_ = null;
+        }
+        return canceledTaskCountBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
