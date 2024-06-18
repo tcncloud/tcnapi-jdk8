@@ -975,6 +975,14 @@ public enum EventType
    * <code>EVENT_TYPE_CONTACT_MANAGER_UPLOAD_EVENT = 1205;</code>
    */
   EVENT_TYPE_CONTACT_MANAGER_UPLOAD_EVENT(1205),
+  /**
+   * <pre>
+   * KYC verification event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_VERIFICATION_EVENT = 1206;</code>
+   */
+  EVENT_TYPE_CONTACT_MANAGER_VERIFICATION_EVENT(1206),
   UNRECOGNIZED(-1),
   ;
 
@@ -1928,6 +1936,14 @@ public enum EventType
    * <code>EVENT_TYPE_CONTACT_MANAGER_UPLOAD_EVENT = 1205;</code>
    */
   public static final int EVENT_TYPE_CONTACT_MANAGER_UPLOAD_EVENT_VALUE = 1205;
+  /**
+   * <pre>
+   * KYC verification event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_VERIFICATION_EVENT = 1206;</code>
+   */
+  public static final int EVENT_TYPE_CONTACT_MANAGER_VERIFICATION_EVENT_VALUE = 1206;
 
 
   public final int getNumber() {
@@ -2086,6 +2102,7 @@ public enum EventType
       case 1203: return EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT;
       case 1204: return EVENT_TYPE_CONTACT_MANAGER_EDIT_EVENT;
       case 1205: return EVENT_TYPE_CONTACT_MANAGER_UPLOAD_EVENT;
+      case 1206: return EVENT_TYPE_CONTACT_MANAGER_VERIFICATION_EVENT;
       default: return null;
     }
   }

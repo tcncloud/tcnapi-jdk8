@@ -2914,5 +2914,50 @@ public interface AuditEventOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder getContactManagerKycEventOrBuilder();
 
+  /**
+   * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
+   * @return Whether the contactManagerEntryEditEvent field is set.
+   */
+  boolean hasContactManagerEntryEditEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
+   * @return The contactManagerEntryEditEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent getContactManagerEntryEditEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEventOrBuilder getContactManagerEntryEditEventOrBuilder();
+
+  /**
+   * <code>.api.commons.audit.ContactManagerListUploadEvent contact_manager_list_upload_event = 1205 [json_name = "contactManagerListUploadEvent"];</code>
+   * @return Whether the contactManagerListUploadEvent field is set.
+   */
+  boolean hasContactManagerListUploadEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerListUploadEvent contact_manager_list_upload_event = 1205 [json_name = "contactManagerListUploadEvent"];</code>
+   * @return The contactManagerListUploadEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent getContactManagerListUploadEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerListUploadEvent contact_manager_list_upload_event = 1205 [json_name = "contactManagerListUploadEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEventOrBuilder getContactManagerListUploadEventOrBuilder();
+
+  /**
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
+   * @return Whether the contactManagerKycVerificationEvent field is set.
+   */
+  boolean hasContactManagerKycVerificationEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
+   * @return The contactManagerKycVerificationEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getContactManagerKycVerificationEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder getContactManagerKycVerificationEventOrBuilder();
+
   com.tcn.cloud.api.api.commons.audit.AuditEvent.EventCase getEventCase();
 }

@@ -6,4 +6,31 @@ package com.tcn.cloud.api.api.commons.audit;
 public interface ContactManagerEntryGetEncEventOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.audit.ContactManagerEntryGetEncEvent)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   *View event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryEvent viewEvent = 1 [json_name = "viewEvent"];</code>
+   * @return Whether the viewEvent field is set.
+   */
+  boolean hasViewEvent();
+  /**
+   * <pre>
+   *View event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryEvent viewEvent = 1 [json_name = "viewEvent"];</code>
+   * @return The viewEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent getViewEvent();
+  /**
+   * <pre>
+   *View event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryEvent viewEvent = 1 [json_name = "viewEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEventOrBuilder getViewEventOrBuilder();
 }

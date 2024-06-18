@@ -6,4 +6,31 @@ package com.tcn.cloud.api.api.commons.audit;
 public interface ContactManagerEntryAddEventOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.audit.ContactManagerEntryAddEvent)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   *add event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryEvent addEvent = 1 [json_name = "addEvent"];</code>
+   * @return Whether the addEvent field is set.
+   */
+  boolean hasAddEvent();
+  /**
+   * <pre>
+   *add event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryEvent addEvent = 1 [json_name = "addEvent"];</code>
+   * @return The addEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent getAddEvent();
+  /**
+   * <pre>
+   *add event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryEvent addEvent = 1 [json_name = "addEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEventOrBuilder getAddEventOrBuilder();
 }
