@@ -45,54 +45,58 @@ public final class GhostnotifierProto {
     java.lang.String[] descriptorData = {
       "\n\037api/commons/ghostnotifier.proto\022\013api.c" +
       "ommons\032\025api/commons/acd.proto\032\035api/commo" +
-      "ns/omnichannel.proto\032\031google/protobuf/an" +
-      "y.proto\032\037google/protobuf/timestamp.proto" +
-      "\"\370\004\n\021GhostNotification\022!\n\014reference_id\030\001" +
-      " \001(\tR\013referenceId\022(\n\003any\030\002 \001(\0132\024.google." +
-      "protobuf.AnyH\000R\003any\022-\n\006status\030\003 \001(\0132\023.ap" +
-      "i.commons.StatusH\000R\006status\022L\n\021omni_conve" +
-      "rsation\030\004 \001(\0132\035.api.commons.OmniConversa" +
-      "tionH\000R\020omniConversation\022Y\n\022backoffice_m" +
-      "essage\030\006 \001(\0132(.api.commons.AgentBackoffi" +
-      "ceMessageAlertH\000R\021backofficeMessage\022`\n\025d" +
-      "irected_call_ringing\030\007 \001(\0132*.api.commons" +
-      ".AgentDirectedCallRingingAlertH\000R\023direct" +
-      "edCallRinging\022]\n\024directed_call_hangup\030\010 " +
-      "\001(\0132).api.commons.AgentDirectedCallHangu" +
-      "pAlertH\000R\022directedCallHangup\022r\n\037agent_qu" +
-      "eued_calls_notification\030\t \001(\0132).api.comm" +
-      "ons.AgentQueuedCallsNotificationH\000R\034agen" +
-      "tQueuedCallsNotificationB\t\n\007payload\"6\n\006S" +
-      "tatus\022\022\n\004code\030\001 \001(\005R\004code\022\030\n\007message\030\002 \001" +
-      "(\tR\007message\"\362\005\n\034AgentQueuedCallsNotifica" +
-      "tion\022d\n\021agent_queue_calls\030\020 \003(\01328.api.co" +
-      "mmons.AgentQueuedCallsNotification.Queue" +
-      "dCallDataR\017agentQueueCalls\022\\\n\ron_hold_ca" +
-      "lls\030\021 \003(\01328.api.commons.AgentQueuedCalls" +
-      "Notification.QueuedCallDataR\013onHoldCalls" +
-      "\022U\n\thqm_calls\030\022 \003(\01328.api.commons.AgentQ" +
-      "ueuedCallsNotification.QueuedCallDataR\010h" +
-      "qmCalls\032\266\003\n\016QueuedCallData\022\031\n\010call_sid\030\001" +
-      " \001(\003R\007callSid\022!\n\014phone_number\030\002 \001(\tR\013pho" +
-      "neNumber\022\033\n\tcaller_id\030\003 \001(\tR\010callerId\0227\n" +
-      "\tcall_type\030\004 \001(\0162\032.api.commons.CallType." +
-      "EnumR\010callType\0229\n\nstart_date\030\005 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\tstartDate\0227\n\thol" +
-      "d_date\030\006 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\010holdDate\022\026\n\006skills\030\007 \003(\tR\006skills\022%\n\016ag" +
-      "ent_specific\030\010 \001(\010R\ragentSpecific\022]\n\030que" +
-      "ued_notification_type\030\t \001(\0162#.api.common" +
-      "s.QueuedNotificationTypeR\026queuedNotifica" +
-      "tionTypeB\200\001\n\035com.tcn.cloud.api.api.commo" +
-      "nsB\022GhostnotifierProtoP\001\242\002\003ACX\252\002\013Api.Com" +
-      "mons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMeta" +
-      "data\352\002\014Api::Commonsb\006proto3"
+      "ns/omnichannel.proto\032 api/commons/org/au" +
+      "th_token.proto\032\031google/protobuf/any.prot" +
+      "o\032\037google/protobuf/timestamp.proto\"\324\005\n\021G" +
+      "hostNotification\022!\n\014reference_id\030\001 \001(\tR\013" +
+      "referenceId\022(\n\003any\030\002 \001(\0132\024.google.protob" +
+      "uf.AnyH\000R\003any\022-\n\006status\030\003 \001(\0132\023.api.comm" +
+      "ons.StatusH\000R\006status\022L\n\021omni_conversatio" +
+      "n\030\004 \001(\0132\035.api.commons.OmniConversationH\000" +
+      "R\020omniConversation\022Y\n\022backoffice_message" +
+      "\030\006 \001(\0132(.api.commons.AgentBackofficeMess" +
+      "ageAlertH\000R\021backofficeMessage\022`\n\025directe" +
+      "d_call_ringing\030\007 \001(\0132*.api.commons.Agent" +
+      "DirectedCallRingingAlertH\000R\023directedCall" +
+      "Ringing\022]\n\024directed_call_hangup\030\010 \001(\0132)." +
+      "api.commons.AgentDirectedCallHangupAlert" +
+      "H\000R\022directedCallHangup\022r\n\037agent_queued_c" +
+      "alls_notification\030\t \001(\0132).api.commons.Ag" +
+      "entQueuedCallsNotificationH\000R\034agentQueue" +
+      "dCallsNotification\022Z\n\025auth_token_expirat" +
+      "ion\030\n \001(\0132$.api.commons.org.AuthTokenExp" +
+      "irationH\000R\023authTokenExpirationB\t\n\007payloa" +
+      "d\"6\n\006Status\022\022\n\004code\030\001 \001(\005R\004code\022\030\n\007messa" +
+      "ge\030\002 \001(\tR\007message\"\362\005\n\034AgentQueuedCallsNo" +
+      "tification\022d\n\021agent_queue_calls\030\020 \003(\01328." +
+      "api.commons.AgentQueuedCallsNotification" +
+      ".QueuedCallDataR\017agentQueueCalls\022\\\n\ron_h" +
+      "old_calls\030\021 \003(\01328.api.commons.AgentQueue" +
+      "dCallsNotification.QueuedCallDataR\013onHol" +
+      "dCalls\022U\n\thqm_calls\030\022 \003(\01328.api.commons." +
+      "AgentQueuedCallsNotification.QueuedCallD" +
+      "ataR\010hqmCalls\032\266\003\n\016QueuedCallData\022\031\n\010call" +
+      "_sid\030\001 \001(\003R\007callSid\022!\n\014phone_number\030\002 \001(" +
+      "\tR\013phoneNumber\022\033\n\tcaller_id\030\003 \001(\tR\010calle" +
+      "rId\0227\n\tcall_type\030\004 \001(\0162\032.api.commons.Cal" +
+      "lType.EnumR\010callType\0229\n\nstart_date\030\005 \001(\013" +
+      "2\032.google.protobuf.TimestampR\tstartDate\022" +
+      "7\n\thold_date\030\006 \001(\0132\032.google.protobuf.Tim" +
+      "estampR\010holdDate\022\026\n\006skills\030\007 \003(\tR\006skills" +
+      "\022%\n\016agent_specific\030\010 \001(\010R\ragentSpecific\022" +
+      "]\n\030queued_notification_type\030\t \001(\0162#.api." +
+      "commons.QueuedNotificationTypeR\026queuedNo" +
+      "tificationTypeB\200\001\n\035com.tcn.cloud.api.api" +
+      ".commonsB\022GhostnotifierProtoP\001\242\002\003ACX\252\002\013A" +
+      "pi.Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\G" +
+      "PBMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.AcdProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor(),
+          com.tcn.cloud.api.api.commons.org.AuthTokenProto.getDescriptor(),
           com.google.protobuf.AnyProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
@@ -101,7 +105,7 @@ public final class GhostnotifierProto {
     internal_static_api_commons_GhostNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_GhostNotification_descriptor,
-        new java.lang.String[] { "ReferenceId", "Any", "Status", "OmniConversation", "BackofficeMessage", "DirectedCallRinging", "DirectedCallHangup", "AgentQueuedCallsNotification", "Payload", });
+        new java.lang.String[] { "ReferenceId", "Any", "Status", "OmniConversation", "BackofficeMessage", "DirectedCallRinging", "DirectedCallHangup", "AgentQueuedCallsNotification", "AuthTokenExpiration", "Payload", });
     internal_static_api_commons_Status_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_commons_Status_fieldAccessorTable = new
@@ -122,6 +126,7 @@ public final class GhostnotifierProto {
         new java.lang.String[] { "CallSid", "PhoneNumber", "CallerId", "CallType", "StartDate", "HoldDate", "Skills", "AgentSpecific", "QueuedNotificationType", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
+    com.tcn.cloud.api.api.commons.org.AuthTokenProto.getDescriptor();
     com.google.protobuf.AnyProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }

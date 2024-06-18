@@ -29,7 +29,7 @@ public interface BulkDeleteAutoEvaluationsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required - unique id of evaluation to get
+   * Optional. Unique ids of auto evaluations to delete.
    * </pre>
    *
    * <code>repeated int64 auto_evaluation_ids = 2 [json_name = "autoEvaluationIds"];</code>
@@ -38,7 +38,7 @@ public interface BulkDeleteAutoEvaluationsRequestOrBuilder extends
   java.util.List<java.lang.Long> getAutoEvaluationIdsList();
   /**
    * <pre>
-   * Required - unique id of evaluation to get
+   * Optional. Unique ids of auto evaluations to delete.
    * </pre>
    *
    * <code>repeated int64 auto_evaluation_ids = 2 [json_name = "autoEvaluationIds"];</code>
@@ -47,7 +47,7 @@ public interface BulkDeleteAutoEvaluationsRequestOrBuilder extends
   int getAutoEvaluationIdsCount();
   /**
    * <pre>
-   * Required - unique id of evaluation to get
+   * Optional. Unique ids of auto evaluations to delete.
    * </pre>
    *
    * <code>repeated int64 auto_evaluation_ids = 2 [json_name = "autoEvaluationIds"];</code>
@@ -55,4 +55,31 @@ public interface BulkDeleteAutoEvaluationsRequestOrBuilder extends
    * @return The autoEvaluationIds at the given index.
    */
   long getAutoEvaluationIds(int index);
+
+  /**
+   * <pre>
+   * Optional. Delete auto evaluations in a specific range.
+   * </pre>
+   *
+   * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+   * @return Whether the completedAt field is set.
+   */
+  boolean hasCompletedAt();
+  /**
+   * <pre>
+   * Optional. Delete auto evaluations in a specific range.
+   * </pre>
+   *
+   * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+   * @return The completedAt.
+   */
+  com.tcn.cloud.api.api.commons.TimeFilter getCompletedAt();
+  /**
+   * <pre>
+   * Optional. Delete auto evaluations in a specific range.
+   * </pre>
+   *
+   * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TimeFilterOrBuilder getCompletedAtOrBuilder();
 }

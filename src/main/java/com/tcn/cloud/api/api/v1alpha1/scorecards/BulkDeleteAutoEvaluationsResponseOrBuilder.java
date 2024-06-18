@@ -6,4 +6,14 @@ package com.tcn.cloud.api.api.v1alpha1.scorecards;
 public interface BulkDeleteAutoEvaluationsResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsResponse)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * Number of auto evaluations deleted.
+   * </pre>
+   *
+   * <code>int64 count = 1 [json_name = "count"];</code>
+   * @return The count.
+   */
+  long getCount();
 }

@@ -6,4 +6,14 @@ package com.tcn.cloud.api.api.v1alpha1.scorecards;
 public interface BulkDeleteEvaluationsResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.scorecards.BulkDeleteEvaluationsResponse)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * Number of evaluations deleted
+   * </pre>
+   *
+   * <code>int64 count = 1 [json_name = "count"];</code>
+   * @return The count.
+   */
+  long getCount();
 }

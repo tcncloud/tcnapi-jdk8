@@ -19,6 +19,11 @@ public final class AuthTokenProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_org_AuthToken_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_AuthTokenExpiration_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_AuthTokenExpiration_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -33,11 +38,14 @@ public final class AuthTokenProto {
       "roto\"\215\001\n\tAuthToken\022\024\n\005token\030\001 \001(\tR\005token" +
       "\022\027\n\007user_id\030\002 \001(\tR\006userId\022\025\n\006org_id\030\003 \001(" +
       "\tR\005orgId\022:\n\nexpiration\030\004 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\nexpirationB\221\001\n!com.tcn" +
-      ".cloud.api.api.commons.orgB\016AuthTokenPro" +
-      "toP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\Commo" +
-      "ns\\Org\342\002\033Api\\Commons\\Org\\GPBMetadata\352\002\021A" +
-      "pi::Commons::Orgb\006proto3"
+      "otobuf.TimestampR\nexpiration\"g\n\023AuthToke" +
+      "nExpiration\022\024\n\005token\030\001 \001(\tR\005token\022:\n\nexp" +
+      "iration\030\002 \001(\0132\032.google.protobuf.Timestam" +
+      "pR\nexpirationB\221\001\n!com.tcn.cloud.api.api." +
+      "commons.orgB\016AuthTokenProtoP\001\242\002\003ACO\252\002\017Ap" +
+      "i.Commons.Org\312\002\017Api\\Commons\\Org\342\002\033Api\\Co" +
+      "mmons\\Org\\GPBMetadata\352\002\021Api::Commons::Or" +
+      "gb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -50,6 +58,12 @@ public final class AuthTokenProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_AuthToken_descriptor,
         new java.lang.String[] { "Token", "UserId", "OrgId", "Expiration", });
+    internal_static_api_commons_org_AuthTokenExpiration_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_api_commons_org_AuthTokenExpiration_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_AuthTokenExpiration_descriptor,
+        new java.lang.String[] { "Token", "Expiration", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

@@ -216,5 +216,32 @@ public interface GhostNotificationOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.AgentQueuedCallsNotificationOrBuilder getAgentQueuedCallsNotificationOrBuilder();
 
+  /**
+   * <pre>
+   * notification that an auth token will soon expire
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
+   * @return Whether the authTokenExpiration field is set.
+   */
+  boolean hasAuthTokenExpiration();
+  /**
+   * <pre>
+   * notification that an auth token will soon expire
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
+   * @return The authTokenExpiration.
+   */
+  com.tcn.cloud.api.api.commons.org.AuthTokenExpiration getAuthTokenExpiration();
+  /**
+   * <pre>
+   * notification that an auth token will soon expire
+   * </pre>
+   *
+   * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
+   */
+  com.tcn.cloud.api.api.commons.org.AuthTokenExpirationOrBuilder getAuthTokenExpirationOrBuilder();
+
   com.tcn.cloud.api.api.commons.GhostNotification.PayloadCase getPayloadCase();
 }
