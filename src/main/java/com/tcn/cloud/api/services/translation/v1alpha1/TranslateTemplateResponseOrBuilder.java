@@ -8,17 +8,26 @@ public interface TranslateTemplateResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.services.translation.v1alpha1.Translation translation = 1 [json_name = "translation"];</code>
-   * @return Whether the translation field is set.
+   * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
    */
-  boolean hasTranslation();
+  java.util.List<com.tcn.cloud.api.services.translation.v1alpha1.Translation> 
+      getTranslationsList();
   /**
-   * <code>.services.translation.v1alpha1.Translation translation = 1 [json_name = "translation"];</code>
-   * @return The translation.
+   * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
    */
-  com.tcn.cloud.api.services.translation.v1alpha1.Translation getTranslation();
+  com.tcn.cloud.api.services.translation.v1alpha1.Translation getTranslations(int index);
   /**
-   * <code>.services.translation.v1alpha1.Translation translation = 1 [json_name = "translation"];</code>
+   * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
    */
-  com.tcn.cloud.api.services.translation.v1alpha1.TranslationOrBuilder getTranslationOrBuilder();
+  int getTranslationsCount();
+  /**
+   * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.services.translation.v1alpha1.TranslationOrBuilder> 
+      getTranslationsOrBuilderList();
+  /**
+   * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
+   */
+  com.tcn.cloud.api.services.translation.v1alpha1.TranslationOrBuilder getTranslationsOrBuilder(
+      int index);
 }

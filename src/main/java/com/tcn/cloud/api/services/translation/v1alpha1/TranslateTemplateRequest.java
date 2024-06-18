@@ -23,7 +23,6 @@ private static final long serialVersionUID = 0L;
   private TranslateTemplateRequest() {
     template_ = "";
     context_ = "";
-    language_ = 0;
   }
 
   @java.lang.Override
@@ -140,32 +139,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int LANGUAGE_FIELD_NUMBER = 3;
-  private int language_ = 0;
-  /**
-   * <pre>
-   * The language to translate to.
-   * </pre>
-   *
-   * <code>.services.translation.v1alpha1.Language language = 3 [json_name = "language"];</code>
-   * @return The enum numeric value on the wire for language.
-   */
-  @java.lang.Override public int getLanguageValue() {
-    return language_;
-  }
-  /**
-   * <pre>
-   * The language to translate to.
-   * </pre>
-   *
-   * <code>.services.translation.v1alpha1.Language language = 3 [json_name = "language"];</code>
-   * @return The language.
-   */
-  @java.lang.Override public com.tcn.cloud.api.services.translation.v1alpha1.Language getLanguage() {
-    com.tcn.cloud.api.services.translation.v1alpha1.Language result = com.tcn.cloud.api.services.translation.v1alpha1.Language.forNumber(language_);
-    return result == null ? com.tcn.cloud.api.services.translation.v1alpha1.Language.UNRECOGNIZED : result;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -186,9 +159,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(context_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, context_);
     }
-    if (language_ != com.tcn.cloud.api.services.translation.v1alpha1.Language.LANGUAGE_UNSPECIFIED.getNumber()) {
-      output.writeEnum(3, language_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -203,10 +173,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(context_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, context_);
-    }
-    if (language_ != com.tcn.cloud.api.services.translation.v1alpha1.Language.LANGUAGE_UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(3, language_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -227,7 +193,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTemplate())) return false;
     if (!getContext()
         .equals(other.getContext())) return false;
-    if (language_ != other.language_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -243,8 +208,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getTemplate().hashCode();
     hash = (37 * hash) + CONTEXT_FIELD_NUMBER;
     hash = (53 * hash) + getContext().hashCode();
-    hash = (37 * hash) + LANGUAGE_FIELD_NUMBER;
-    hash = (53 * hash) + language_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -383,7 +346,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       template_ = "";
       context_ = "";
-      language_ = 0;
       return this;
     }
 
@@ -422,9 +384,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.context_ = context_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.language_ = language_;
       }
     }
 
@@ -482,9 +441,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (other.language_ != 0) {
-        setLanguageValue(other.getLanguageValue());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -521,11 +477,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 24: {
-              language_ = input.readEnum();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -723,79 +674,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       context_ = value;
       bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
-    private int language_ = 0;
-    /**
-     * <pre>
-     * The language to translate to.
-     * </pre>
-     *
-     * <code>.services.translation.v1alpha1.Language language = 3 [json_name = "language"];</code>
-     * @return The enum numeric value on the wire for language.
-     */
-    @java.lang.Override public int getLanguageValue() {
-      return language_;
-    }
-    /**
-     * <pre>
-     * The language to translate to.
-     * </pre>
-     *
-     * <code>.services.translation.v1alpha1.Language language = 3 [json_name = "language"];</code>
-     * @param value The enum numeric value on the wire for language to set.
-     * @return This builder for chaining.
-     */
-    public Builder setLanguageValue(int value) {
-      language_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The language to translate to.
-     * </pre>
-     *
-     * <code>.services.translation.v1alpha1.Language language = 3 [json_name = "language"];</code>
-     * @return The language.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.services.translation.v1alpha1.Language getLanguage() {
-      com.tcn.cloud.api.services.translation.v1alpha1.Language result = com.tcn.cloud.api.services.translation.v1alpha1.Language.forNumber(language_);
-      return result == null ? com.tcn.cloud.api.services.translation.v1alpha1.Language.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * The language to translate to.
-     * </pre>
-     *
-     * <code>.services.translation.v1alpha1.Language language = 3 [json_name = "language"];</code>
-     * @param value The language to set.
-     * @return This builder for chaining.
-     */
-    public Builder setLanguage(com.tcn.cloud.api.services.translation.v1alpha1.Language value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000004;
-      language_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The language to translate to.
-     * </pre>
-     *
-     * <code>.services.translation.v1alpha1.Language language = 3 [json_name = "language"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearLanguage() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      language_ = 0;
       onChanged();
       return this;
     }

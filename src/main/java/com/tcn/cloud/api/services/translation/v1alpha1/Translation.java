@@ -23,7 +23,7 @@ private static final long serialVersionUID = 0L;
     translationId_ = "";
     originalTemplate_ = "";
     context_ = "";
-    language_ = 0;
+    languageTag_ = "";
     llmTranslation_ = "";
     manualTranslation_ = "";
   }
@@ -189,30 +189,51 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int LANGUAGE_FIELD_NUMBER = 4;
-  private int language_ = 0;
+  public static final int LANGUAGE_TAG_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object languageTag_ = "";
   /**
    * <pre>
-   * The language of the translation.
+   * The BCP 47 language tag of the translation.
    * </pre>
    *
-   * <code>.services.translation.v1alpha1.Language language = 4 [json_name = "language"];</code>
-   * @return The enum numeric value on the wire for language.
+   * <code>string language_tag = 4 [json_name = "languageTag"];</code>
+   * @return The languageTag.
    */
-  @java.lang.Override public int getLanguageValue() {
-    return language_;
+  @java.lang.Override
+  public java.lang.String getLanguageTag() {
+    java.lang.Object ref = languageTag_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      languageTag_ = s;
+      return s;
+    }
   }
   /**
    * <pre>
-   * The language of the translation.
+   * The BCP 47 language tag of the translation.
    * </pre>
    *
-   * <code>.services.translation.v1alpha1.Language language = 4 [json_name = "language"];</code>
-   * @return The language.
+   * <code>string language_tag = 4 [json_name = "languageTag"];</code>
+   * @return The bytes for languageTag.
    */
-  @java.lang.Override public com.tcn.cloud.api.services.translation.v1alpha1.Language getLanguage() {
-    com.tcn.cloud.api.services.translation.v1alpha1.Language result = com.tcn.cloud.api.services.translation.v1alpha1.Language.forNumber(language_);
-    return result == null ? com.tcn.cloud.api.services.translation.v1alpha1.Language.UNRECOGNIZED : result;
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getLanguageTagBytes() {
+    java.lang.Object ref = languageTag_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      languageTag_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int LLM_TRANSLATION_FIELD_NUMBER = 5;
@@ -332,8 +353,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(context_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, context_);
     }
-    if (language_ != com.tcn.cloud.api.services.translation.v1alpha1.Language.LANGUAGE_UNSPECIFIED.getNumber()) {
-      output.writeEnum(4, language_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageTag_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, languageTag_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(llmTranslation_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, llmTranslation_);
@@ -359,9 +380,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(context_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, context_);
     }
-    if (language_ != com.tcn.cloud.api.services.translation.v1alpha1.Language.LANGUAGE_UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(4, language_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageTag_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, languageTag_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(llmTranslation_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, llmTranslation_);
@@ -390,7 +410,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOriginalTemplate())) return false;
     if (!getContext()
         .equals(other.getContext())) return false;
-    if (language_ != other.language_) return false;
+    if (!getLanguageTag()
+        .equals(other.getLanguageTag())) return false;
     if (!getLlmTranslation()
         .equals(other.getLlmTranslation())) return false;
     if (!getManualTranslation()
@@ -412,8 +433,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getOriginalTemplate().hashCode();
     hash = (37 * hash) + CONTEXT_FIELD_NUMBER;
     hash = (53 * hash) + getContext().hashCode();
-    hash = (37 * hash) + LANGUAGE_FIELD_NUMBER;
-    hash = (53 * hash) + language_;
+    hash = (37 * hash) + LANGUAGE_TAG_FIELD_NUMBER;
+    hash = (53 * hash) + getLanguageTag().hashCode();
     hash = (37 * hash) + LLM_TRANSLATION_FIELD_NUMBER;
     hash = (53 * hash) + getLlmTranslation().hashCode();
     hash = (37 * hash) + MANUAL_TRANSLATION_FIELD_NUMBER;
@@ -556,7 +577,7 @@ private static final long serialVersionUID = 0L;
       translationId_ = "";
       originalTemplate_ = "";
       context_ = "";
-      language_ = 0;
+      languageTag_ = "";
       llmTranslation_ = "";
       manualTranslation_ = "";
       return this;
@@ -602,7 +623,7 @@ private static final long serialVersionUID = 0L;
         result.context_ = context_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.language_ = language_;
+        result.languageTag_ = languageTag_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.llmTranslation_ = llmTranslation_;
@@ -671,8 +692,10 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
-      if (other.language_ != 0) {
-        setLanguageValue(other.getLanguageValue());
+      if (!other.getLanguageTag().isEmpty()) {
+        languageTag_ = other.languageTag_;
+        bitField0_ |= 0x00000008;
+        onChanged();
       }
       if (!other.getLlmTranslation().isEmpty()) {
         llmTranslation_ = other.llmTranslation_;
@@ -725,11 +748,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
-            case 32: {
-              language_ = input.readEnum();
+            case 34: {
+              languageTag_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
-            } // case 32
+            } // case 34
             case 42: {
               llmTranslation_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000010;
@@ -1033,75 +1056,94 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int language_ = 0;
+    private java.lang.Object languageTag_ = "";
     /**
      * <pre>
-     * The language of the translation.
+     * The BCP 47 language tag of the translation.
      * </pre>
      *
-     * <code>.services.translation.v1alpha1.Language language = 4 [json_name = "language"];</code>
-     * @return The enum numeric value on the wire for language.
+     * <code>string language_tag = 4 [json_name = "languageTag"];</code>
+     * @return The languageTag.
      */
-    @java.lang.Override public int getLanguageValue() {
-      return language_;
-    }
-    /**
-     * <pre>
-     * The language of the translation.
-     * </pre>
-     *
-     * <code>.services.translation.v1alpha1.Language language = 4 [json_name = "language"];</code>
-     * @param value The enum numeric value on the wire for language to set.
-     * @return This builder for chaining.
-     */
-    public Builder setLanguageValue(int value) {
-      language_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The language of the translation.
-     * </pre>
-     *
-     * <code>.services.translation.v1alpha1.Language language = 4 [json_name = "language"];</code>
-     * @return The language.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.services.translation.v1alpha1.Language getLanguage() {
-      com.tcn.cloud.api.services.translation.v1alpha1.Language result = com.tcn.cloud.api.services.translation.v1alpha1.Language.forNumber(language_);
-      return result == null ? com.tcn.cloud.api.services.translation.v1alpha1.Language.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * The language of the translation.
-     * </pre>
-     *
-     * <code>.services.translation.v1alpha1.Language language = 4 [json_name = "language"];</code>
-     * @param value The language to set.
-     * @return This builder for chaining.
-     */
-    public Builder setLanguage(com.tcn.cloud.api.services.translation.v1alpha1.Language value) {
-      if (value == null) {
-        throw new NullPointerException();
+    public java.lang.String getLanguageTag() {
+      java.lang.Object ref = languageTag_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        languageTag_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
       }
+    }
+    /**
+     * <pre>
+     * The BCP 47 language tag of the translation.
+     * </pre>
+     *
+     * <code>string language_tag = 4 [json_name = "languageTag"];</code>
+     * @return The bytes for languageTag.
+     */
+    public com.google.protobuf.ByteString
+        getLanguageTagBytes() {
+      java.lang.Object ref = languageTag_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        languageTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The BCP 47 language tag of the translation.
+     * </pre>
+     *
+     * <code>string language_tag = 4 [json_name = "languageTag"];</code>
+     * @param value The languageTag to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLanguageTag(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      languageTag_ = value;
       bitField0_ |= 0x00000008;
-      language_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The language of the translation.
+     * The BCP 47 language tag of the translation.
      * </pre>
      *
-     * <code>.services.translation.v1alpha1.Language language = 4 [json_name = "language"];</code>
+     * <code>string language_tag = 4 [json_name = "languageTag"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearLanguage() {
+    public Builder clearLanguageTag() {
+      languageTag_ = getDefaultInstance().getLanguageTag();
       bitField0_ = (bitField0_ & ~0x00000008);
-      language_ = 0;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The BCP 47 language tag of the translation.
+     * </pre>
+     *
+     * <code>string language_tag = 4 [json_name = "languageTag"];</code>
+     * @param value The bytes for languageTag to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLanguageTagBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      languageTag_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

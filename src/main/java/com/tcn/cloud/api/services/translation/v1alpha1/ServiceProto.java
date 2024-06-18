@@ -24,33 +24,37 @@ public final class ServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n+services/translation/v1alpha1/service." +
-      "proto\022\035services.translation.v1alpha1\032\034go" +
-      "ogle/api/annotations.proto\032,services/tra" +
-      "nslation/v1alpha1/entities.proto2\355\001\n\022Tra" +
-      "nslationService\022\326\001\n\021TranslateTemplate\0227." +
-      "services.translation.v1alpha1.TranslateT" +
-      "emplateRequest\0328.services.translation.v1" +
-      "alpha1.TranslateTemplateResponse\"N\202\323\344\223\002H" +
-      "\"C/services/translation/v1alpha1/transla" +
-      "tionservice/translatetemplate:\001*B\325\001\n/com" +
-      ".tcn.cloud.api.services.translation.v1al" +
-      "pha1B\014ServiceProtoP\001\242\002\003STX\252\002\035Services.Tr" +
-      "anslation.V1alpha1\312\002\035Services\\Translatio" +
-      "n\\V1alpha1\342\002)Services\\Translation\\V1alph" +
-      "a1\\GPBMetadata\352\002\037Services::Translation::" +
-      "V1alpha1b\006proto3"
+      "proto\022\035services.translation.v1alpha1\032\027an" +
+      "notations/authz.proto\032\034google/api/annota" +
+      "tions.proto\032,services/translation/v1alph" +
+      "a1/entities.proto2\364\001\n\022TranslationService" +
+      "\022\335\001\n\021TranslateTemplate\0227.services.transl" +
+      "ation.v1alpha1.TranslateTemplateRequest\032" +
+      "8.services.translation.v1alpha1.Translat" +
+      "eTemplateResponse\"U\272\270\221\002\002\030\001\202\323\344\223\002H\"C/servi" +
+      "ces/translation/v1alpha1/translationserv" +
+      "ice/translatetemplate:\001*B\325\001\n/com.tcn.clo" +
+      "ud.api.services.translation.v1alpha1B\014Se" +
+      "rviceProtoP\001\242\002\003STX\252\002\035Services.Translatio" +
+      "n.V1alpha1\312\002\035Services\\Translation\\V1alph" +
+      "a1\342\002)Services\\Translation\\V1alpha1\\GPBMe" +
+      "tadata\352\002\037Services::Translation::V1alpha1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.tcn.cloud.api.services.translation.v1alpha1.EntitiesProto.getDescriptor(),
         });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.tcn.cloud.api.services.translation.v1alpha1.EntitiesProto.getDescriptor();
   }

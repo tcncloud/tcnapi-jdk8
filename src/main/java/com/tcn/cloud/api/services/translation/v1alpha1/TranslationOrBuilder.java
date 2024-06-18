@@ -69,22 +69,23 @@ public interface TranslationOrBuilder extends
 
   /**
    * <pre>
-   * The language of the translation.
+   * The BCP 47 language tag of the translation.
    * </pre>
    *
-   * <code>.services.translation.v1alpha1.Language language = 4 [json_name = "language"];</code>
-   * @return The enum numeric value on the wire for language.
+   * <code>string language_tag = 4 [json_name = "languageTag"];</code>
+   * @return The languageTag.
    */
-  int getLanguageValue();
+  java.lang.String getLanguageTag();
   /**
    * <pre>
-   * The language of the translation.
+   * The BCP 47 language tag of the translation.
    * </pre>
    *
-   * <code>.services.translation.v1alpha1.Language language = 4 [json_name = "language"];</code>
-   * @return The language.
+   * <code>string language_tag = 4 [json_name = "languageTag"];</code>
+   * @return The bytes for languageTag.
    */
-  com.tcn.cloud.api.services.translation.v1alpha1.Language getLanguage();
+  com.google.protobuf.ByteString
+      getLanguageTagBytes();
 
   /**
    * <pre>

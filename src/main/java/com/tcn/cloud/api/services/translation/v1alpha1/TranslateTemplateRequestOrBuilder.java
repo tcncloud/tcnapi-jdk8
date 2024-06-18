@@ -46,23 +46,4 @@ public interface TranslateTemplateRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getContextBytes();
-
-  /**
-   * <pre>
-   * The language to translate to.
-   * </pre>
-   *
-   * <code>.services.translation.v1alpha1.Language language = 3 [json_name = "language"];</code>
-   * @return The enum numeric value on the wire for language.
-   */
-  int getLanguageValue();
-  /**
-   * <pre>
-   * The language to translate to.
-   * </pre>
-   *
-   * <code>.services.translation.v1alpha1.Language language = 3 [json_name = "language"];</code>
-   * @return The language.
-   */
-  com.tcn.cloud.api.services.translation.v1alpha1.Language getLanguage();
 }

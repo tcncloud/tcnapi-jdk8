@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TranslateTemplateResponse() {
+    translations_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -42,30 +43,45 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse.class, com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse.Builder.class);
   }
 
-  public static final int TRANSLATION_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.services.translation.v1alpha1.Translation translation_;
+  public static final int TRANSLATIONS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.services.translation.v1alpha1.Translation> translations_;
   /**
-   * <code>.services.translation.v1alpha1.Translation translation = 1 [json_name = "translation"];</code>
-   * @return Whether the translation field is set.
+   * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
    */
   @java.lang.Override
-  public boolean hasTranslation() {
-    return translation_ != null;
+  public java.util.List<com.tcn.cloud.api.services.translation.v1alpha1.Translation> getTranslationsList() {
+    return translations_;
   }
   /**
-   * <code>.services.translation.v1alpha1.Translation translation = 1 [json_name = "translation"];</code>
-   * @return The translation.
+   * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.translation.v1alpha1.Translation getTranslation() {
-    return translation_ == null ? com.tcn.cloud.api.services.translation.v1alpha1.Translation.getDefaultInstance() : translation_;
+  public java.util.List<? extends com.tcn.cloud.api.services.translation.v1alpha1.TranslationOrBuilder> 
+      getTranslationsOrBuilderList() {
+    return translations_;
   }
   /**
-   * <code>.services.translation.v1alpha1.Translation translation = 1 [json_name = "translation"];</code>
+   * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.translation.v1alpha1.TranslationOrBuilder getTranslationOrBuilder() {
-    return translation_ == null ? com.tcn.cloud.api.services.translation.v1alpha1.Translation.getDefaultInstance() : translation_;
+  public int getTranslationsCount() {
+    return translations_.size();
+  }
+  /**
+   * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.translation.v1alpha1.Translation getTranslations(int index) {
+    return translations_.get(index);
+  }
+  /**
+   * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.translation.v1alpha1.TranslationOrBuilder getTranslationsOrBuilder(
+      int index) {
+    return translations_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -82,8 +98,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (translation_ != null) {
-      output.writeMessage(1, getTranslation());
+    for (int i = 0; i < translations_.size(); i++) {
+      output.writeMessage(1, translations_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -94,9 +110,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (translation_ != null) {
+    for (int i = 0; i < translations_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getTranslation());
+        .computeMessageSize(1, translations_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -113,11 +129,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse other = (com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse) obj;
 
-    if (hasTranslation() != other.hasTranslation()) return false;
-    if (hasTranslation()) {
-      if (!getTranslation()
-          .equals(other.getTranslation())) return false;
-    }
+    if (!getTranslationsList()
+        .equals(other.getTranslationsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -129,9 +142,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasTranslation()) {
-      hash = (37 * hash) + TRANSLATION_FIELD_NUMBER;
-      hash = (53 * hash) + getTranslation().hashCode();
+    if (getTranslationsCount() > 0) {
+      hash = (37 * hash) + TRANSLATIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getTranslationsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -268,11 +281,13 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      translation_ = null;
-      if (translationBuilder_ != null) {
-        translationBuilder_.dispose();
-        translationBuilder_ = null;
+      if (translationsBuilder_ == null) {
+        translations_ = java.util.Collections.emptyList();
+      } else {
+        translations_ = null;
+        translationsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -299,18 +314,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse buildPartial() {
       com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse result = new com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse result) {
+      if (translationsBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          translations_ = java.util.Collections.unmodifiableList(translations_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.translations_ = translations_;
+      } else {
+        result.translations_ = translationsBuilder_.build();
+      }
+    }
+
     private void buildPartial0(com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.translation_ = translationBuilder_ == null
-            ? translation_
-            : translationBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -357,8 +380,31 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse other) {
       if (other == com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse.getDefaultInstance()) return this;
-      if (other.hasTranslation()) {
-        mergeTranslation(other.getTranslation());
+      if (translationsBuilder_ == null) {
+        if (!other.translations_.isEmpty()) {
+          if (translations_.isEmpty()) {
+            translations_ = other.translations_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTranslationsIsMutable();
+            translations_.addAll(other.translations_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.translations_.isEmpty()) {
+          if (translationsBuilder_.isEmpty()) {
+            translationsBuilder_.dispose();
+            translationsBuilder_ = null;
+            translations_ = other.translations_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            translationsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getTranslationsFieldBuilder() : null;
+          } else {
+            translationsBuilder_.addAllMessages(other.translations_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -387,10 +433,16 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              input.readMessage(
-                  getTranslationFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
+              com.tcn.cloud.api.services.translation.v1alpha1.Translation m =
+                  input.readMessage(
+                      com.tcn.cloud.api.services.translation.v1alpha1.Translation.parser(),
+                      extensionRegistry);
+              if (translationsBuilder_ == null) {
+                ensureTranslationsIsMutable();
+                translations_.add(m);
+              } else {
+                translationsBuilder_.addMessage(m);
+              }
               break;
             } // case 10
             default: {
@@ -410,123 +462,244 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.services.translation.v1alpha1.Translation translation_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.translation.v1alpha1.Translation, com.tcn.cloud.api.services.translation.v1alpha1.Translation.Builder, com.tcn.cloud.api.services.translation.v1alpha1.TranslationOrBuilder> translationBuilder_;
-    /**
-     * <code>.services.translation.v1alpha1.Translation translation = 1 [json_name = "translation"];</code>
-     * @return Whether the translation field is set.
-     */
-    public boolean hasTranslation() {
-      return ((bitField0_ & 0x00000001) != 0);
+    private java.util.List<com.tcn.cloud.api.services.translation.v1alpha1.Translation> translations_ =
+      java.util.Collections.emptyList();
+    private void ensureTranslationsIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        translations_ = new java.util.ArrayList<com.tcn.cloud.api.services.translation.v1alpha1.Translation>(translations_);
+        bitField0_ |= 0x00000001;
+       }
     }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.translation.v1alpha1.Translation, com.tcn.cloud.api.services.translation.v1alpha1.Translation.Builder, com.tcn.cloud.api.services.translation.v1alpha1.TranslationOrBuilder> translationsBuilder_;
+
     /**
-     * <code>.services.translation.v1alpha1.Translation translation = 1 [json_name = "translation"];</code>
-     * @return The translation.
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
      */
-    public com.tcn.cloud.api.services.translation.v1alpha1.Translation getTranslation() {
-      if (translationBuilder_ == null) {
-        return translation_ == null ? com.tcn.cloud.api.services.translation.v1alpha1.Translation.getDefaultInstance() : translation_;
+    public java.util.List<com.tcn.cloud.api.services.translation.v1alpha1.Translation> getTranslationsList() {
+      if (translationsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(translations_);
       } else {
-        return translationBuilder_.getMessage();
+        return translationsBuilder_.getMessageList();
       }
     }
     /**
-     * <code>.services.translation.v1alpha1.Translation translation = 1 [json_name = "translation"];</code>
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
      */
-    public Builder setTranslation(com.tcn.cloud.api.services.translation.v1alpha1.Translation value) {
-      if (translationBuilder_ == null) {
+    public int getTranslationsCount() {
+      if (translationsBuilder_ == null) {
+        return translations_.size();
+      } else {
+        return translationsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
+     */
+    public com.tcn.cloud.api.services.translation.v1alpha1.Translation getTranslations(int index) {
+      if (translationsBuilder_ == null) {
+        return translations_.get(index);
+      } else {
+        return translationsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
+     */
+    public Builder setTranslations(
+        int index, com.tcn.cloud.api.services.translation.v1alpha1.Translation value) {
+      if (translationsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        translation_ = value;
+        ensureTranslationsIsMutable();
+        translations_.set(index, value);
+        onChanged();
       } else {
-        translationBuilder_.setMessage(value);
+        translationsBuilder_.setMessage(index, value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return this;
     }
     /**
-     * <code>.services.translation.v1alpha1.Translation translation = 1 [json_name = "translation"];</code>
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
      */
-    public Builder setTranslation(
-        com.tcn.cloud.api.services.translation.v1alpha1.Translation.Builder builderForValue) {
-      if (translationBuilder_ == null) {
-        translation_ = builderForValue.build();
+    public Builder setTranslations(
+        int index, com.tcn.cloud.api.services.translation.v1alpha1.Translation.Builder builderForValue) {
+      if (translationsBuilder_ == null) {
+        ensureTranslationsIsMutable();
+        translations_.set(index, builderForValue.build());
+        onChanged();
       } else {
-        translationBuilder_.setMessage(builderForValue.build());
+        translationsBuilder_.setMessage(index, builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return this;
     }
     /**
-     * <code>.services.translation.v1alpha1.Translation translation = 1 [json_name = "translation"];</code>
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
      */
-    public Builder mergeTranslation(com.tcn.cloud.api.services.translation.v1alpha1.Translation value) {
-      if (translationBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          translation_ != null &&
-          translation_ != com.tcn.cloud.api.services.translation.v1alpha1.Translation.getDefaultInstance()) {
-          getTranslationBuilder().mergeFrom(value);
-        } else {
-          translation_ = value;
+    public Builder addTranslations(com.tcn.cloud.api.services.translation.v1alpha1.Translation value) {
+      if (translationsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
         }
+        ensureTranslationsIsMutable();
+        translations_.add(value);
+        onChanged();
       } else {
-        translationBuilder_.mergeFrom(value);
+        translationsBuilder_.addMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return this;
     }
     /**
-     * <code>.services.translation.v1alpha1.Translation translation = 1 [json_name = "translation"];</code>
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
      */
-    public Builder clearTranslation() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      translation_ = null;
-      if (translationBuilder_ != null) {
-        translationBuilder_.dispose();
-        translationBuilder_ = null;
+    public Builder addTranslations(
+        int index, com.tcn.cloud.api.services.translation.v1alpha1.Translation value) {
+      if (translationsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTranslationsIsMutable();
+        translations_.add(index, value);
+        onChanged();
+      } else {
+        translationsBuilder_.addMessage(index, value);
       }
-      onChanged();
       return this;
     }
     /**
-     * <code>.services.translation.v1alpha1.Translation translation = 1 [json_name = "translation"];</code>
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
      */
-    public com.tcn.cloud.api.services.translation.v1alpha1.Translation.Builder getTranslationBuilder() {
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return getTranslationFieldBuilder().getBuilder();
+    public Builder addTranslations(
+        com.tcn.cloud.api.services.translation.v1alpha1.Translation.Builder builderForValue) {
+      if (translationsBuilder_ == null) {
+        ensureTranslationsIsMutable();
+        translations_.add(builderForValue.build());
+        onChanged();
+      } else {
+        translationsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
     }
     /**
-     * <code>.services.translation.v1alpha1.Translation translation = 1 [json_name = "translation"];</code>
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
      */
-    public com.tcn.cloud.api.services.translation.v1alpha1.TranslationOrBuilder getTranslationOrBuilder() {
-      if (translationBuilder_ != null) {
-        return translationBuilder_.getMessageOrBuilder();
+    public Builder addTranslations(
+        int index, com.tcn.cloud.api.services.translation.v1alpha1.Translation.Builder builderForValue) {
+      if (translationsBuilder_ == null) {
+        ensureTranslationsIsMutable();
+        translations_.add(index, builderForValue.build());
+        onChanged();
       } else {
-        return translation_ == null ?
-            com.tcn.cloud.api.services.translation.v1alpha1.Translation.getDefaultInstance() : translation_;
+        translationsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
+     */
+    public Builder addAllTranslations(
+        java.lang.Iterable<? extends com.tcn.cloud.api.services.translation.v1alpha1.Translation> values) {
+      if (translationsBuilder_ == null) {
+        ensureTranslationsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, translations_);
+        onChanged();
+      } else {
+        translationsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
+     */
+    public Builder clearTranslations() {
+      if (translationsBuilder_ == null) {
+        translations_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+      } else {
+        translationsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
+     */
+    public Builder removeTranslations(int index) {
+      if (translationsBuilder_ == null) {
+        ensureTranslationsIsMutable();
+        translations_.remove(index);
+        onChanged();
+      } else {
+        translationsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
+     */
+    public com.tcn.cloud.api.services.translation.v1alpha1.Translation.Builder getTranslationsBuilder(
+        int index) {
+      return getTranslationsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
+     */
+    public com.tcn.cloud.api.services.translation.v1alpha1.TranslationOrBuilder getTranslationsOrBuilder(
+        int index) {
+      if (translationsBuilder_ == null) {
+        return translations_.get(index);  } else {
+        return translationsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>.services.translation.v1alpha1.Translation translation = 1 [json_name = "translation"];</code>
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
      */
-    private com.google.protobuf.SingleFieldBuilderV3<
+    public java.util.List<? extends com.tcn.cloud.api.services.translation.v1alpha1.TranslationOrBuilder> 
+         getTranslationsOrBuilderList() {
+      if (translationsBuilder_ != null) {
+        return translationsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(translations_);
+      }
+    }
+    /**
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
+     */
+    public com.tcn.cloud.api.services.translation.v1alpha1.Translation.Builder addTranslationsBuilder() {
+      return getTranslationsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.services.translation.v1alpha1.Translation.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
+     */
+    public com.tcn.cloud.api.services.translation.v1alpha1.Translation.Builder addTranslationsBuilder(
+        int index) {
+      return getTranslationsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.services.translation.v1alpha1.Translation.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .services.translation.v1alpha1.Translation translations = 1 [json_name = "translations"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.translation.v1alpha1.Translation.Builder> 
+         getTranslationsBuilderList() {
+      return getTranslationsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
         com.tcn.cloud.api.services.translation.v1alpha1.Translation, com.tcn.cloud.api.services.translation.v1alpha1.Translation.Builder, com.tcn.cloud.api.services.translation.v1alpha1.TranslationOrBuilder> 
-        getTranslationFieldBuilder() {
-      if (translationBuilder_ == null) {
-        translationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getTranslationsFieldBuilder() {
+      if (translationsBuilder_ == null) {
+        translationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.services.translation.v1alpha1.Translation, com.tcn.cloud.api.services.translation.v1alpha1.Translation.Builder, com.tcn.cloud.api.services.translation.v1alpha1.TranslationOrBuilder>(
-                getTranslation(),
+                translations_,
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
-        translation_ = null;
+        translations_ = null;
       }
-      return translationBuilder_;
+      return translationsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

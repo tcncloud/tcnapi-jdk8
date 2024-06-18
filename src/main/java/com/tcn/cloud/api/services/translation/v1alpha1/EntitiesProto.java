@@ -39,38 +39,24 @@ public final class EntitiesProto {
   static {
     java.lang.String[] descriptorData = {
       "\n,services/translation/v1alpha1/entities" +
-      ".proto\022\035services.translation.v1alpha1\"\225\001" +
-      "\n\030TranslateTemplateRequest\022\032\n\010template\030\001" +
-      " \001(\tR\010template\022\030\n\007context\030\002 \001(\tR\007context" +
-      "\022C\n\010language\030\003 \001(\0162\'.services.translatio" +
-      "n.v1alpha1.LanguageR\010language\"i\n\031Transla" +
-      "teTemplateResponse\022L\n\013translation\030\001 \001(\0132" +
-      "*.services.translation.v1alpha1.Translat" +
-      "ionR\013translation\"\230\002\n\013Translation\022%\n\016tran" +
-      "slation_id\030\001 \001(\tR\rtranslationId\022+\n\021origi" +
-      "nal_template\030\002 \001(\tR\020originalTemplate\022\030\n\007" +
-      "context\030\003 \001(\tR\007context\022C\n\010language\030\004 \001(\016" +
-      "2\'.services.translation.v1alpha1.Languag" +
-      "eR\010language\022\'\n\017llm_translation\030\005 \001(\tR\016ll" +
-      "mTranslation\022-\n\022manual_translation\030\006 \001(\t" +
-      "R\021manualTranslation*\273\003\n\010Language\022\030\n\024LANG" +
-      "UAGE_UNSPECIFIED\020\000\022\t\n\005AR_SA\020\001\022\t\n\005CS_CZ\020\002" +
-      "\022\t\n\005DA_DK\020\003\022\t\n\005DE_DE\020\004\022\t\n\005EL_GR\020\005\022\t\n\005EN_" +
-      "AU\020\006\022\t\n\005EN_GB\020\007\022\t\n\005EN_IE\020\010\022\t\n\005EN_US\020\t\022\t\n" +
-      "\005EN_ZA\020\n\022\t\n\005ES_ES\020\013\022\t\n\005ES_MX\020\014\022\t\n\005FI_FI\020" +
-      "\r\022\t\n\005FR_CA\020\016\022\t\n\005FR_FR\020\017\022\t\n\005HE_IL\020\020\022\t\n\005HI" +
-      "_IN\020\021\022\t\n\005HU_HU\020\022\022\t\n\005ID_ID\020\023\022\t\n\005IT_IT\020\024\022\t" +
-      "\n\005JA_JP\020\025\022\t\n\005KO_KR\020\026\022\t\n\005NL_BE\020\027\022\t\n\005NL_NL" +
-      "\020\030\022\t\n\005NO_NO\020\031\022\t\n\005PL_PL\020\032\022\t\n\005PT_BR\020\033\022\t\n\005P" +
-      "T_PT\020\034\022\t\n\005RO_RO\020\035\022\t\n\005RU_RU\020\036\022\t\n\005SK_SK\020\037\022" +
-      "\t\n\005SV_SE\020 \022\t\n\005TH_TH\020!\022\t\n\005TR_TR\020\"\022\t\n\005ZH_C" +
-      "N\020#\022\t\n\005ZH_HK\020$\022\t\n\005ZH_TW\020%B\326\001\n/com.tcn.cl" +
-      "oud.api.services.translation.v1alpha1B\rE" +
-      "ntitiesProtoP\001\242\002\003STX\252\002\035Services.Translat" +
-      "ion.V1alpha1\312\002\035Services\\Translation\\V1al" +
-      "pha1\342\002)Services\\Translation\\V1alpha1\\GPB" +
-      "Metadata\352\002\037Services::Translation::V1alph" +
-      "a1b\006proto3"
+      ".proto\022\035services.translation.v1alpha1\"P\n" +
+      "\030TranslateTemplateRequest\022\032\n\010template\030\001 " +
+      "\001(\tR\010template\022\030\n\007context\030\002 \001(\tR\007context\"" +
+      "k\n\031TranslateTemplateResponse\022N\n\014translat" +
+      "ions\030\001 \003(\0132*.services.translation.v1alph" +
+      "a1.TranslationR\014translations\"\366\001\n\013Transla" +
+      "tion\022%\n\016translation_id\030\001 \001(\tR\rtranslatio" +
+      "nId\022+\n\021original_template\030\002 \001(\tR\020original" +
+      "Template\022\030\n\007context\030\003 \001(\tR\007context\022!\n\014la" +
+      "nguage_tag\030\004 \001(\tR\013languageTag\022\'\n\017llm_tra" +
+      "nslation\030\005 \001(\tR\016llmTranslation\022-\n\022manual" +
+      "_translation\030\006 \001(\tR\021manualTranslationB\326\001" +
+      "\n/com.tcn.cloud.api.services.translation" +
+      ".v1alpha1B\rEntitiesProtoP\001\242\002\003STX\252\002\035Servi" +
+      "ces.Translation.V1alpha1\312\002\035Services\\Tran" +
+      "slation\\V1alpha1\342\002)Services\\Translation\\" +
+      "V1alpha1\\GPBMetadata\352\002\037Services::Transla" +
+      "tion::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -81,19 +67,19 @@ public final class EntitiesProto {
     internal_static_services_translation_v1alpha1_TranslateTemplateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_translation_v1alpha1_TranslateTemplateRequest_descriptor,
-        new java.lang.String[] { "Template", "Context", "Language", });
+        new java.lang.String[] { "Template", "Context", });
     internal_static_services_translation_v1alpha1_TranslateTemplateResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_services_translation_v1alpha1_TranslateTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_translation_v1alpha1_TranslateTemplateResponse_descriptor,
-        new java.lang.String[] { "Translation", });
+        new java.lang.String[] { "Translations", });
     internal_static_services_translation_v1alpha1_Translation_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_services_translation_v1alpha1_Translation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_translation_v1alpha1_Translation_descriptor,
-        new java.lang.String[] { "TranslationId", "OriginalTemplate", "Context", "Language", "LlmTranslation", "ManualTranslation", });
+        new java.lang.String[] { "TranslationId", "OriginalTemplate", "Context", "LanguageTag", "LlmTranslation", "ManualTranslation", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
