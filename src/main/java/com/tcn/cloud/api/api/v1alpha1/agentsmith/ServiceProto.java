@@ -61,43 +61,44 @@ public final class ServiceProto {
       "\n%api/v1alpha1/agentsmith/service.proto\022" +
       "\027api.v1alpha1.agentsmith\032\027annotations/au" +
       "thz.proto\032\034google/api/annotations.proto\032" +
-      "\037google/protobuf/timestamp.proto\"[\n\016Foll" +
+      "\037google/protobuf/timestamp.proto\"~\n\016Foll" +
       "owAgentReq\022\031\n\007user_id\030\001 \001(\tH\000R\006userId\022(\n" +
-      "\017asm_session_sid\030\002 \001(\003H\000R\rasmSessionSidB" +
-      "\004\n\002id\"\266\003\n\016FollowAgentRes\022*\n\002ts\030\001 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\002ts\022^\n\022agent_st" +
-      "ate_change\030\n \001(\0132..api.v1alpha1.agentsmi" +
-      "th.AgentStateChangeEventH\000R\020agentStateCh" +
-      "ange\022[\n\021agent_voice_start\030\013 \001(\0132-.api.v1" +
-      "alpha1.agentsmith.AgentVoiceStartEventH\000" +
-      "R\017agentVoiceStart\022U\n\017agent_voice_end\030\014 \001" +
-      "(\0132+.api.v1alpha1.agentsmith.AgentVoiceE" +
-      "ndEventH\000R\ragentVoiceEnd\022[\n\021agent_sessio" +
-      "n_end\030\r \001(\0132-.api.v1alpha1.agentsmith.Ag" +
-      "entSessionEndEventH\000R\017agentSessionEndB\007\n" +
-      "\005event\"\351\001\n\025AgentStateChangeEvent\022@\n\told_" +
-      "state\030\001 \001(\0162#.api.v1alpha1.agentsmith.Ag" +
-      "entStateR\010oldState\022@\n\tnew_state\030\002 \001(\0162#." +
-      "api.v1alpha1.agentsmith.AgentStateR\010newS" +
-      "tate\022;\n\005empty\030\n \001(\0132#.api.v1alpha1.agent" +
-      "smith.EmptyStateH\000R\005emptyB\017\n\rstate_detai" +
-      "ls\"\014\n\nEmptyState\"8\n\024AgentVoiceStartEvent" +
-      "\022 \n\014sip_dial_url\030\001 \001(\tR\nsipDialUrl\"\024\n\022Ag" +
-      "entVoiceEndEvent\"\026\n\024AgentSessionEndEvent" +
-      "*\230\001\n\nAgentState\022\013\n\007UNKNOWN\020\000\022\017\n\013UNAVAILA" +
-      "BLE\020\001\022\010\n\004IDLE\020\002\022\t\n\005READY\020\003\022\n\n\006HUNGUP\020\004\022\r" +
-      "\n\tDESTROYED\020\005\022\n\n\006PEERED\020\006\022\n\n\006PAUSED\020\007\022\n\n" +
-      "\006WRAPUP\020\010\022\030\n\024PREPARING_AFTER_IDLE\020\n2\266\001\n\n" +
-      "AgentSmith\022\247\001\n\013FollowAgent\022\'.api.v1alpha" +
-      "1.agentsmith.FollowAgentReq\032\'.api.v1alph" +
-      "a1.agentsmith.FollowAgentRes\"D\272\270\221\002\005\n\003\010\254\002" +
-      "\202\323\344\223\0024\"//api/v1alpha1/agentsmith/agentsm" +
-      "ith/followagent:\001*0\001B\267\001\n)com.tcn.cloud.a" +
-      "pi.api.v1alpha1.agentsmithB\014ServiceProto" +
-      "P\001\242\002\003AVA\252\002\027Api.V1alpha1.Agentsmith\312\002\027Api" +
-      "\\V1alpha1\\Agentsmith\342\002#Api\\V1alpha1\\Agen" +
-      "tsmith\\GPBMetadata\352\002\031Api::V1alpha1::Agen" +
-      "tsmithb\006proto3"
+      "\017asm_session_sid\030\002 \001(\003H\000R\rasmSessionSid\022" +
+      "!\n\014bogus_field1\030\003 \001(\003R\013bogusField1B\004\n\002id" +
+      "\"\266\003\n\016FollowAgentRes\022*\n\002ts\030\001 \001(\0132\032.google" +
+      ".protobuf.TimestampR\002ts\022^\n\022agent_state_c" +
+      "hange\030\n \001(\0132..api.v1alpha1.agentsmith.Ag" +
+      "entStateChangeEventH\000R\020agentStateChange\022" +
+      "[\n\021agent_voice_start\030\013 \001(\0132-.api.v1alpha" +
+      "1.agentsmith.AgentVoiceStartEventH\000R\017age" +
+      "ntVoiceStart\022U\n\017agent_voice_end\030\014 \001(\0132+." +
+      "api.v1alpha1.agentsmith.AgentVoiceEndEve" +
+      "ntH\000R\ragentVoiceEnd\022[\n\021agent_session_end" +
+      "\030\r \001(\0132-.api.v1alpha1.agentsmith.AgentSe" +
+      "ssionEndEventH\000R\017agentSessionEndB\007\n\005even" +
+      "t\"\351\001\n\025AgentStateChangeEvent\022@\n\told_state" +
+      "\030\001 \001(\0162#.api.v1alpha1.agentsmith.AgentSt" +
+      "ateR\010oldState\022@\n\tnew_state\030\002 \001(\0162#.api.v" +
+      "1alpha1.agentsmith.AgentStateR\010newState\022" +
+      ";\n\005empty\030\n \001(\0132#.api.v1alpha1.agentsmith" +
+      ".EmptyStateH\000R\005emptyB\017\n\rstate_details\"\014\n" +
+      "\nEmptyState\"8\n\024AgentVoiceStartEvent\022 \n\014s" +
+      "ip_dial_url\030\001 \001(\tR\nsipDialUrl\"\024\n\022AgentVo" +
+      "iceEndEvent\"\026\n\024AgentSessionEndEvent*\230\001\n\n" +
+      "AgentState\022\013\n\007UNKNOWN\020\000\022\017\n\013UNAVAILABLE\020\001" +
+      "\022\010\n\004IDLE\020\002\022\t\n\005READY\020\003\022\n\n\006HUNGUP\020\004\022\r\n\tDES" +
+      "TROYED\020\005\022\n\n\006PEERED\020\006\022\n\n\006PAUSED\020\007\022\n\n\006WRAP" +
+      "UP\020\010\022\030\n\024PREPARING_AFTER_IDLE\020\n2\266\001\n\nAgent" +
+      "Smith\022\247\001\n\013FollowAgent\022\'.api.v1alpha1.age" +
+      "ntsmith.FollowAgentReq\032\'.api.v1alpha1.ag" +
+      "entsmith.FollowAgentRes\"D\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002" +
+      "4\"//api/v1alpha1/agentsmith/agentsmith/f" +
+      "ollowagent:\001*0\001B\267\001\n)com.tcn.cloud.api.ap" +
+      "i.v1alpha1.agentsmithB\014ServiceProtoP\001\242\002\003" +
+      "AVA\252\002\027Api.V1alpha1.Agentsmith\312\002\027Api\\V1al" +
+      "pha1\\Agentsmith\342\002#Api\\V1alpha1\\Agentsmit" +
+      "h\\GPBMetadata\352\002\031Api::V1alpha1::Agentsmit" +
+      "hb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -111,7 +112,7 @@ public final class ServiceProto {
     internal_static_api_v1alpha1_agentsmith_FollowAgentReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_agentsmith_FollowAgentReq_descriptor,
-        new java.lang.String[] { "UserId", "AsmSessionSid", "Id", });
+        new java.lang.String[] { "UserId", "AsmSessionSid", "BogusField1", "Id", });
     internal_static_api_v1alpha1_agentsmith_FollowAgentRes_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_v1alpha1_agentsmith_FollowAgentRes_fieldAccessorTable = new
