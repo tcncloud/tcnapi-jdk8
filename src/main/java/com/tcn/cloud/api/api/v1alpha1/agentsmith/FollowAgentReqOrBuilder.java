@@ -55,5 +55,11 @@ public interface FollowAgentReqOrBuilder extends
    */
   long getAsmSessionSid();
 
+  /**
+   * <code>int64 bogus_field1 = 3 [json_name = "bogusField1"];</code>
+   * @return The bogusField1.
+   */
+  long getBogusField1();
+
   com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq.IdCase getIdCase();
 }

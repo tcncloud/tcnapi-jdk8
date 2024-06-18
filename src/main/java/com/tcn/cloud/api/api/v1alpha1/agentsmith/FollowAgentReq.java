@@ -177,6 +177,17 @@ private static final long serialVersionUID = 0L;
     return 0L;
   }
 
+  public static final int BOGUS_FIELD1_FIELD_NUMBER = 3;
+  private long bogusField1_ = 0L;
+  /**
+   * <code>int64 bogus_field1 = 3 [json_name = "bogusField1"];</code>
+   * @return The bogusField1.
+   */
+  @java.lang.Override
+  public long getBogusField1() {
+    return bogusField1_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -198,6 +209,9 @@ private static final long serialVersionUID = 0L;
       output.writeInt64(
           2, (long)((java.lang.Long) id_));
     }
+    if (bogusField1_ != 0L) {
+      output.writeInt64(3, bogusField1_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -215,6 +229,10 @@ private static final long serialVersionUID = 0L;
         .computeInt64Size(
             2, (long)((java.lang.Long) id_));
     }
+    if (bogusField1_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, bogusField1_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -230,6 +248,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq other = (com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq) obj;
 
+    if (getBogusField1()
+        != other.getBogusField1()) return false;
     if (!getIdCase().equals(other.getIdCase())) return false;
     switch (idCase_) {
       case 1:
@@ -254,6 +274,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + BOGUS_FIELD1_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getBogusField1());
     switch (idCase_) {
       case 1:
         hash = (37 * hash) + USER_ID_FIELD_NUMBER;
@@ -402,6 +425,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      bogusField1_ = 0L;
       idCase_ = 0;
       id_ = null;
       return this;
@@ -438,6 +462,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.bogusField1_ = bogusField1_;
+      }
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq result) {
@@ -489,6 +516,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq.getDefaultInstance()) return this;
+      if (other.getBogusField1() != 0L) {
+        setBogusField1(other.getBogusField1());
+      }
       switch (other.getIdCase()) {
         case USER_ID: {
           idCase_ = 1;
@@ -541,6 +571,11 @@ private static final long serialVersionUID = 0L;
               idCase_ = 2;
               break;
             } // case 16
+            case 24: {
+              bogusField1_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -745,6 +780,38 @@ private static final long serialVersionUID = 0L;
         id_ = null;
         onChanged();
       }
+      return this;
+    }
+
+    private long bogusField1_ ;
+    /**
+     * <code>int64 bogus_field1 = 3 [json_name = "bogusField1"];</code>
+     * @return The bogusField1.
+     */
+    @java.lang.Override
+    public long getBogusField1() {
+      return bogusField1_;
+    }
+    /**
+     * <code>int64 bogus_field1 = 3 [json_name = "bogusField1"];</code>
+     * @param value The bogusField1 to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBogusField1(long value) {
+
+      bogusField1_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 bogus_field1 = 3 [json_name = "bogusField1"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBogusField1() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      bogusField1_ = 0L;
+      onChanged();
       return this;
     }
     @java.lang.Override
