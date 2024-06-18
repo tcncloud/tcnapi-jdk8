@@ -165,6 +165,9 @@ private static final long serialVersionUID = 0L;
     CONTACT_MANAGER_ENTRY_GET_ENC_EVENT(1201),
     CONTACT_MANAGER_DELETE_EVENT(1202),
     CONTACT_MANAGER_KYC_EVENT(1203),
+    CONTACT_MANAGER_ENTRY_EDIT_EVENT(1204),
+    CONTACT_MANAGER_LIST_UPLOAD_EVENT(1205),
+    CONTACT_MANAGER_KYC_VERIFICATION_EVENT(1206),
     EVENT_NOT_SET(0);
     private final int value;
     private EventCase(int value) {
@@ -294,6 +297,9 @@ private static final long serialVersionUID = 0L;
         case 1201: return CONTACT_MANAGER_ENTRY_GET_ENC_EVENT;
         case 1202: return CONTACT_MANAGER_DELETE_EVENT;
         case 1203: return CONTACT_MANAGER_KYC_EVENT;
+        case 1204: return CONTACT_MANAGER_ENTRY_EDIT_EVENT;
+        case 1205: return CONTACT_MANAGER_LIST_UPLOAD_EVENT;
+        case 1206: return CONTACT_MANAGER_KYC_VERIFICATION_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
       }
@@ -5134,6 +5140,99 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
   }
 
+  public static final int CONTACT_MANAGER_ENTRY_EDIT_EVENT_FIELD_NUMBER = 1204;
+  /**
+   * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
+   * @return Whether the contactManagerEntryEditEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactManagerEntryEditEvent() {
+    return eventCase_ == 1204;
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
+   * @return The contactManagerEntryEditEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent getContactManagerEntryEditEvent() {
+    if (eventCase_ == 1204) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEventOrBuilder getContactManagerEntryEditEventOrBuilder() {
+    if (eventCase_ == 1204) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent.getDefaultInstance();
+  }
+
+  public static final int CONTACT_MANAGER_LIST_UPLOAD_EVENT_FIELD_NUMBER = 1205;
+  /**
+   * <code>.api.commons.audit.ContactManagerListUploadEvent contact_manager_list_upload_event = 1205 [json_name = "contactManagerListUploadEvent"];</code>
+   * @return Whether the contactManagerListUploadEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactManagerListUploadEvent() {
+    return eventCase_ == 1205;
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerListUploadEvent contact_manager_list_upload_event = 1205 [json_name = "contactManagerListUploadEvent"];</code>
+   * @return The contactManagerListUploadEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent getContactManagerListUploadEvent() {
+    if (eventCase_ == 1205) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerListUploadEvent contact_manager_list_upload_event = 1205 [json_name = "contactManagerListUploadEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEventOrBuilder getContactManagerListUploadEventOrBuilder() {
+    if (eventCase_ == 1205) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent.getDefaultInstance();
+  }
+
+  public static final int CONTACT_MANAGER_KYC_VERIFICATION_EVENT_FIELD_NUMBER = 1206;
+  /**
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
+   * @return Whether the contactManagerKycVerificationEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactManagerKycVerificationEvent() {
+    return eventCase_ == 1206;
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
+   * @return The contactManagerKycVerificationEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getContactManagerKycVerificationEvent() {
+    if (eventCase_ == 1206) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder getContactManagerKycVerificationEventOrBuilder() {
+    if (eventCase_ == 1206) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -5501,6 +5600,15 @@ private static final long serialVersionUID = 0L;
     }
     if (eventCase_ == 1203) {
       output.writeMessage(1203, (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_);
+    }
+    if (eventCase_ == 1204) {
+      output.writeMessage(1204, (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent) event_);
+    }
+    if (eventCase_ == 1205) {
+      output.writeMessage(1205, (com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent) event_);
+    }
+    if (eventCase_ == 1206) {
+      output.writeMessage(1206, (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -5978,6 +6086,18 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 1203) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1203, (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_);
+    }
+    if (eventCase_ == 1204) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1204, (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent) event_);
+    }
+    if (eventCase_ == 1205) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1205, (com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent) event_);
+    }
+    if (eventCase_ == 1206) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1206, (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -6458,6 +6578,18 @@ private static final long serialVersionUID = 0L;
         if (!getContactManagerKycEvent()
             .equals(other.getContactManagerKycEvent())) return false;
         break;
+      case 1204:
+        if (!getContactManagerEntryEditEvent()
+            .equals(other.getContactManagerEntryEditEvent())) return false;
+        break;
+      case 1205:
+        if (!getContactManagerListUploadEvent()
+            .equals(other.getContactManagerListUploadEvent())) return false;
+        break;
+      case 1206:
+        if (!getContactManagerKycVerificationEvent()
+            .equals(other.getContactManagerKycVerificationEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -6934,6 +7066,18 @@ private static final long serialVersionUID = 0L;
       case 1203:
         hash = (37 * hash) + CONTACT_MANAGER_KYC_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getContactManagerKycEvent().hashCode();
+        break;
+      case 1204:
+        hash = (37 * hash) + CONTACT_MANAGER_ENTRY_EDIT_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContactManagerEntryEditEvent().hashCode();
+        break;
+      case 1205:
+        hash = (37 * hash) + CONTACT_MANAGER_LIST_UPLOAD_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContactManagerListUploadEvent().hashCode();
+        break;
+      case 1206:
+        hash = (37 * hash) + CONTACT_MANAGER_KYC_VERIFICATION_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContactManagerKycVerificationEvent().hashCode();
         break;
       case 0:
       default:
@@ -7421,6 +7565,15 @@ private static final long serialVersionUID = 0L;
       }
       if (contactManagerKycEventBuilder_ != null) {
         contactManagerKycEventBuilder_.clear();
+      }
+      if (contactManagerEntryEditEventBuilder_ != null) {
+        contactManagerEntryEditEventBuilder_.clear();
+      }
+      if (contactManagerListUploadEventBuilder_ != null) {
+        contactManagerListUploadEventBuilder_.clear();
+      }
+      if (contactManagerKycVerificationEventBuilder_ != null) {
+        contactManagerKycVerificationEventBuilder_.clear();
       }
       eventCase_ = 0;
       event_ = null;
@@ -7946,6 +8099,18 @@ private static final long serialVersionUID = 0L;
           contactManagerKycEventBuilder_ != null) {
         result.event_ = contactManagerKycEventBuilder_.build();
       }
+      if (eventCase_ == 1204 &&
+          contactManagerEntryEditEventBuilder_ != null) {
+        result.event_ = contactManagerEntryEditEventBuilder_.build();
+      }
+      if (eventCase_ == 1205 &&
+          contactManagerListUploadEventBuilder_ != null) {
+        result.event_ = contactManagerListUploadEventBuilder_.build();
+      }
+      if (eventCase_ == 1206 &&
+          contactManagerKycVerificationEventBuilder_ != null) {
+        result.event_ = contactManagerKycVerificationEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -8465,6 +8630,18 @@ private static final long serialVersionUID = 0L;
         }
         case CONTACT_MANAGER_KYC_EVENT: {
           mergeContactManagerKycEvent(other.getContactManagerKycEvent());
+          break;
+        }
+        case CONTACT_MANAGER_ENTRY_EDIT_EVENT: {
+          mergeContactManagerEntryEditEvent(other.getContactManagerEntryEditEvent());
+          break;
+        }
+        case CONTACT_MANAGER_LIST_UPLOAD_EVENT: {
+          mergeContactManagerListUploadEvent(other.getContactManagerListUploadEvent());
+          break;
+        }
+        case CONTACT_MANAGER_KYC_VERIFICATION_EVENT: {
+          mergeContactManagerKycVerificationEvent(other.getContactManagerKycVerificationEvent());
           break;
         }
         case EVENT_NOT_SET: {
@@ -9313,6 +9490,27 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 1203;
               break;
             } // case 9626
+            case 9634: {
+              input.readMessage(
+                  getContactManagerEntryEditEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1204;
+              break;
+            } // case 9634
+            case 9642: {
+              input.readMessage(
+                  getContactManagerListUploadEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1205;
+              break;
+            } // case 9642
+            case 9650: {
+              input.readMessage(
+                  getContactManagerKycVerificationEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1206;
+              break;
+            } // case 9650
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -29122,6 +29320,432 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 1203;
       onChanged();
       return contactManagerKycEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEventOrBuilder> contactManagerEntryEditEventBuilder_;
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
+     * @return Whether the contactManagerEntryEditEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactManagerEntryEditEvent() {
+      return eventCase_ == 1204;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
+     * @return The contactManagerEntryEditEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent getContactManagerEntryEditEvent() {
+      if (contactManagerEntryEditEventBuilder_ == null) {
+        if (eventCase_ == 1204) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1204) {
+          return contactManagerEntryEditEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
+     */
+    public Builder setContactManagerEntryEditEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent value) {
+      if (contactManagerEntryEditEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        contactManagerEntryEditEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1204;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
+     */
+    public Builder setContactManagerEntryEditEvent(
+        com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent.Builder builderForValue) {
+      if (contactManagerEntryEditEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        contactManagerEntryEditEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1204;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
+     */
+    public Builder mergeContactManagerEntryEditEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent value) {
+      if (contactManagerEntryEditEventBuilder_ == null) {
+        if (eventCase_ == 1204 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1204) {
+          contactManagerEntryEditEventBuilder_.mergeFrom(value);
+        } else {
+          contactManagerEntryEditEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1204;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
+     */
+    public Builder clearContactManagerEntryEditEvent() {
+      if (contactManagerEntryEditEventBuilder_ == null) {
+        if (eventCase_ == 1204) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1204) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        contactManagerEntryEditEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent.Builder getContactManagerEntryEditEventBuilder() {
+      return getContactManagerEntryEditEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEventOrBuilder getContactManagerEntryEditEventOrBuilder() {
+      if ((eventCase_ == 1204) && (contactManagerEntryEditEventBuilder_ != null)) {
+        return contactManagerEntryEditEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1204) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEventOrBuilder> 
+        getContactManagerEntryEditEventFieldBuilder() {
+      if (contactManagerEntryEditEventBuilder_ == null) {
+        if (!(eventCase_ == 1204)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent.getDefaultInstance();
+        }
+        contactManagerEntryEditEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEditEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1204;
+      onChanged();
+      return contactManagerEntryEditEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEventOrBuilder> contactManagerListUploadEventBuilder_;
+    /**
+     * <code>.api.commons.audit.ContactManagerListUploadEvent contact_manager_list_upload_event = 1205 [json_name = "contactManagerListUploadEvent"];</code>
+     * @return Whether the contactManagerListUploadEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactManagerListUploadEvent() {
+      return eventCase_ == 1205;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerListUploadEvent contact_manager_list_upload_event = 1205 [json_name = "contactManagerListUploadEvent"];</code>
+     * @return The contactManagerListUploadEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent getContactManagerListUploadEvent() {
+      if (contactManagerListUploadEventBuilder_ == null) {
+        if (eventCase_ == 1205) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1205) {
+          return contactManagerListUploadEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerListUploadEvent contact_manager_list_upload_event = 1205 [json_name = "contactManagerListUploadEvent"];</code>
+     */
+    public Builder setContactManagerListUploadEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent value) {
+      if (contactManagerListUploadEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        contactManagerListUploadEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1205;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerListUploadEvent contact_manager_list_upload_event = 1205 [json_name = "contactManagerListUploadEvent"];</code>
+     */
+    public Builder setContactManagerListUploadEvent(
+        com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent.Builder builderForValue) {
+      if (contactManagerListUploadEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        contactManagerListUploadEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1205;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerListUploadEvent contact_manager_list_upload_event = 1205 [json_name = "contactManagerListUploadEvent"];</code>
+     */
+    public Builder mergeContactManagerListUploadEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent value) {
+      if (contactManagerListUploadEventBuilder_ == null) {
+        if (eventCase_ == 1205 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1205) {
+          contactManagerListUploadEventBuilder_.mergeFrom(value);
+        } else {
+          contactManagerListUploadEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1205;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerListUploadEvent contact_manager_list_upload_event = 1205 [json_name = "contactManagerListUploadEvent"];</code>
+     */
+    public Builder clearContactManagerListUploadEvent() {
+      if (contactManagerListUploadEventBuilder_ == null) {
+        if (eventCase_ == 1205) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1205) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        contactManagerListUploadEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerListUploadEvent contact_manager_list_upload_event = 1205 [json_name = "contactManagerListUploadEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent.Builder getContactManagerListUploadEventBuilder() {
+      return getContactManagerListUploadEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerListUploadEvent contact_manager_list_upload_event = 1205 [json_name = "contactManagerListUploadEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEventOrBuilder getContactManagerListUploadEventOrBuilder() {
+      if ((eventCase_ == 1205) && (contactManagerListUploadEventBuilder_ != null)) {
+        return contactManagerListUploadEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1205) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerListUploadEvent contact_manager_list_upload_event = 1205 [json_name = "contactManagerListUploadEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEventOrBuilder> 
+        getContactManagerListUploadEventFieldBuilder() {
+      if (contactManagerListUploadEventBuilder_ == null) {
+        if (!(eventCase_ == 1205)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent.getDefaultInstance();
+        }
+        contactManagerListUploadEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.ContactManagerListUploadEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1205;
+      onChanged();
+      return contactManagerListUploadEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder> contactManagerKycVerificationEventBuilder_;
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
+     * @return Whether the contactManagerKycVerificationEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactManagerKycVerificationEvent() {
+      return eventCase_ == 1206;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
+     * @return The contactManagerKycVerificationEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getContactManagerKycVerificationEvent() {
+      if (contactManagerKycVerificationEventBuilder_ == null) {
+        if (eventCase_ == 1206) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1206) {
+          return contactManagerKycVerificationEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
+     */
+    public Builder setContactManagerKycVerificationEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent value) {
+      if (contactManagerKycVerificationEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        contactManagerKycVerificationEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1206;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
+     */
+    public Builder setContactManagerKycVerificationEvent(
+        com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder builderForValue) {
+      if (contactManagerKycVerificationEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        contactManagerKycVerificationEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1206;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
+     */
+    public Builder mergeContactManagerKycVerificationEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent value) {
+      if (contactManagerKycVerificationEventBuilder_ == null) {
+        if (eventCase_ == 1206 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1206) {
+          contactManagerKycVerificationEventBuilder_.mergeFrom(value);
+        } else {
+          contactManagerKycVerificationEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1206;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
+     */
+    public Builder clearContactManagerKycVerificationEvent() {
+      if (contactManagerKycVerificationEventBuilder_ == null) {
+        if (eventCase_ == 1206) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1206) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        contactManagerKycVerificationEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder getContactManagerKycVerificationEventBuilder() {
+      return getContactManagerKycVerificationEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder getContactManagerKycVerificationEventOrBuilder() {
+      if ((eventCase_ == 1206) && (contactManagerKycVerificationEventBuilder_ != null)) {
+        return contactManagerKycVerificationEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1206) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder> 
+        getContactManagerKycVerificationEventFieldBuilder() {
+      if (contactManagerKycVerificationEventBuilder_ == null) {
+        if (!(eventCase_ == 1206)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
+        }
+        contactManagerKycVerificationEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1206;
+      onChanged();
+      return contactManagerKycVerificationEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

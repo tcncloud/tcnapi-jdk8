@@ -38,6 +38,44 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.class, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.Builder.class);
   }
 
+  public static final int VIEWEVENT_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent viewEvent_;
+  /**
+   * <pre>
+   *View event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryEvent viewEvent = 1 [json_name = "viewEvent"];</code>
+   * @return Whether the viewEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasViewEvent() {
+    return viewEvent_ != null;
+  }
+  /**
+   * <pre>
+   *View event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryEvent viewEvent = 1 [json_name = "viewEvent"];</code>
+   * @return The viewEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent getViewEvent() {
+    return viewEvent_ == null ? com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.getDefaultInstance() : viewEvent_;
+  }
+  /**
+   * <pre>
+   *View event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryEvent viewEvent = 1 [json_name = "viewEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEventOrBuilder getViewEventOrBuilder() {
+    return viewEvent_ == null ? com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.getDefaultInstance() : viewEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -52,6 +90,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (viewEvent_ != null) {
+      output.writeMessage(1, getViewEvent());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -61,6 +102,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (viewEvent_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getViewEvent());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -76,6 +121,11 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent other = (com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent) obj;
 
+    if (hasViewEvent() != other.hasViewEvent()) return false;
+    if (hasViewEvent()) {
+      if (!getViewEvent()
+          .equals(other.getViewEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -87,6 +137,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasViewEvent()) {
+      hash = (37 * hash) + VIEWEVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getViewEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -217,6 +271,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      viewEvent_ = null;
+      if (viewEventBuilder_ != null) {
+        viewEventBuilder_.dispose();
+        viewEventBuilder_ = null;
+      }
       return this;
     }
 
@@ -243,8 +303,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent buildPartial() {
       com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent result = new com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.viewEvent_ = viewEventBuilder_ == null
+            ? viewEvent_
+            : viewEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -291,6 +361,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent other) {
       if (other == com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEvent.getDefaultInstance()) return this;
+      if (other.hasViewEvent()) {
+        mergeViewEvent(other.getViewEvent());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -317,6 +390,13 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              input.readMessage(
+                  getViewEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -331,6 +411,162 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } // finally
       return this;
+    }
+    private int bitField0_;
+
+    private com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent viewEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEventOrBuilder> viewEventBuilder_;
+    /**
+     * <pre>
+     *View event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent viewEvent = 1 [json_name = "viewEvent"];</code>
+     * @return Whether the viewEvent field is set.
+     */
+    public boolean hasViewEvent() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     *View event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent viewEvent = 1 [json_name = "viewEvent"];</code>
+     * @return The viewEvent.
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent getViewEvent() {
+      if (viewEventBuilder_ == null) {
+        return viewEvent_ == null ? com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.getDefaultInstance() : viewEvent_;
+      } else {
+        return viewEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     *View event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent viewEvent = 1 [json_name = "viewEvent"];</code>
+     */
+    public Builder setViewEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent value) {
+      if (viewEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        viewEvent_ = value;
+      } else {
+        viewEventBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *View event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent viewEvent = 1 [json_name = "viewEvent"];</code>
+     */
+    public Builder setViewEvent(
+        com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.Builder builderForValue) {
+      if (viewEventBuilder_ == null) {
+        viewEvent_ = builderForValue.build();
+      } else {
+        viewEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *View event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent viewEvent = 1 [json_name = "viewEvent"];</code>
+     */
+    public Builder mergeViewEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent value) {
+      if (viewEventBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          viewEvent_ != null &&
+          viewEvent_ != com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.getDefaultInstance()) {
+          getViewEventBuilder().mergeFrom(value);
+        } else {
+          viewEvent_ = value;
+        }
+      } else {
+        viewEventBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *View event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent viewEvent = 1 [json_name = "viewEvent"];</code>
+     */
+    public Builder clearViewEvent() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      viewEvent_ = null;
+      if (viewEventBuilder_ != null) {
+        viewEventBuilder_.dispose();
+        viewEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *View event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent viewEvent = 1 [json_name = "viewEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.Builder getViewEventBuilder() {
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return getViewEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     *View event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent viewEvent = 1 [json_name = "viewEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEventOrBuilder getViewEventOrBuilder() {
+      if (viewEventBuilder_ != null) {
+        return viewEventBuilder_.getMessageOrBuilder();
+      } else {
+        return viewEvent_ == null ?
+            com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.getDefaultInstance() : viewEvent_;
+      }
+    }
+    /**
+     * <pre>
+     *View event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent viewEvent = 1 [json_name = "viewEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEventOrBuilder> 
+        getViewEventFieldBuilder() {
+      if (viewEventBuilder_ == null) {
+        viewEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEventOrBuilder>(
+                getViewEvent(),
+                getParentForChildren(),
+                isClean());
+        viewEvent_ = null;
+      }
+      return viewEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

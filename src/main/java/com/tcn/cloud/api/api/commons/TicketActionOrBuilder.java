@@ -62,10 +62,12 @@ public interface TicketActionOrBuilder extends
    * ticket id from ticket table
    * </pre>
    *
-   * <code>int64 ticket_id = 4 [json_name = "ticketId", jstype = JS_STRING];</code>
+   * <code>int64 ticket_id = 4 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.commons.TicketAction.ticket_id is deprecated.
+   *     See api/commons/tickets.proto;l=165
    * @return The ticketId.
    */
-  long getTicketId();
+  @java.lang.Deprecated long getTicketId();
 
   /**
    * <pre>
@@ -347,6 +349,26 @@ public interface TicketActionOrBuilder extends
    * <code>.api.commons.ActionType action_type = 15 [json_name = "actionType"];</code>
    */
   com.tcn.cloud.api.api.commons.ActionTypeOrBuilder getActionTypeOrBuilder();
+
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 16 [json_name = "ticketCode"];</code>
+   * @return The ticketCode.
+   */
+  java.lang.String getTicketCode();
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 16 [json_name = "ticketCode"];</code>
+   * @return The bytes for ticketCode.
+   */
+  com.google.protobuf.ByteString
+      getTicketCodeBytes();
 
   com.tcn.cloud.api.api.commons.TicketAction.ContextCase getContextCase();
 }

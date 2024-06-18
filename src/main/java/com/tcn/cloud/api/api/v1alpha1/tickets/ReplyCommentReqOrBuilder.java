@@ -22,10 +22,12 @@ public interface ReplyCommentReqOrBuilder extends
    * The ticket reference where the comment was added.
    * </pre>
    *
-   * <code>int64 ticket_sid = 2 [json_name = "ticketSid", jstype = JS_STRING];</code>
+   * <code>int64 ticket_sid = 2 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.tickets.ReplyCommentReq.ticket_sid is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=318
    * @return The ticketSid.
    */
-  long getTicketSid();
+  @java.lang.Deprecated long getTicketSid();
 
   /**
    * <pre>
@@ -66,4 +68,24 @@ public interface ReplyCommentReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCreatedByIdBytes();
+
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 5 [json_name = "ticketCode"];</code>
+   * @return The ticketCode.
+   */
+  java.lang.String getTicketCode();
+  /**
+   * <pre>
+   * ticket_code
+   * </pre>
+   *
+   * <code>string ticket_code = 5 [json_name = "ticketCode"];</code>
+   * @return The bytes for ticketCode.
+   */
+  com.google.protobuf.ByteString
+      getTicketCodeBytes();
 }

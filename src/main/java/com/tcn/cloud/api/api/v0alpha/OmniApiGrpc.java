@@ -733,6 +733,68 @@ public final class OmniApiGrpc {
     return getGetAvailableHeadersMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsRequest,
+      com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsResult> getGetOmniExchangeElementsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetOmniExchangeElements",
+      requestType = com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsResult.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsRequest,
+      com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsResult> getGetOmniExchangeElementsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsRequest, com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsResult> getGetOmniExchangeElementsMethod;
+    if ((getGetOmniExchangeElementsMethod = OmniApiGrpc.getGetOmniExchangeElementsMethod) == null) {
+      synchronized (OmniApiGrpc.class) {
+        if ((getGetOmniExchangeElementsMethod = OmniApiGrpc.getGetOmniExchangeElementsMethod) == null) {
+          OmniApiGrpc.getGetOmniExchangeElementsMethod = getGetOmniExchangeElementsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsRequest, com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsResult>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOmniExchangeElements"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsResult.getDefaultInstance()))
+              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetOmniExchangeElements"))
+              .build();
+        }
+      }
+    }
+    return getGetOmniExchangeElementsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetFieldsForElementRequest,
+      com.tcn.cloud.api.api.v0alpha.GetFieldsForElementResult> getGetFieldsForElementMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetFieldsForElement",
+      requestType = com.tcn.cloud.api.api.v0alpha.GetFieldsForElementRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.GetFieldsForElementResult.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetFieldsForElementRequest,
+      com.tcn.cloud.api.api.v0alpha.GetFieldsForElementResult> getGetFieldsForElementMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetFieldsForElementRequest, com.tcn.cloud.api.api.v0alpha.GetFieldsForElementResult> getGetFieldsForElementMethod;
+    if ((getGetFieldsForElementMethod = OmniApiGrpc.getGetFieldsForElementMethod) == null) {
+      synchronized (OmniApiGrpc.class) {
+        if ((getGetFieldsForElementMethod = OmniApiGrpc.getGetFieldsForElementMethod) == null) {
+          OmniApiGrpc.getGetFieldsForElementMethod = getGetFieldsForElementMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetFieldsForElementRequest, com.tcn.cloud.api.api.v0alpha.GetFieldsForElementResult>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetFieldsForElement"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.GetFieldsForElementRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.GetFieldsForElementResult.getDefaultInstance()))
+              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetFieldsForElement"))
+              .build();
+        }
+      }
+    }
+    return getGetFieldsForElementMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ApproveTaskRequest,
       com.tcn.cloud.api.api.v0alpha.ApproveTaskResponse> getApproveTaskMethod;
 
@@ -2582,6 +2644,26 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
+     * GetOmniExchangeElements - retrieves all omni exchange elements from lms service
+     * </pre>
+     */
+    default void getOmniExchangeElements(com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsResult> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOmniExchangeElementsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetFieldsForElement - takes an omni exchange element and returns fields for it
+     * </pre>
+     */
+    default void getFieldsForElement(com.tcn.cloud.api.api.v0alpha.GetFieldsForElementRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetFieldsForElementResult> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetFieldsForElementMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * ApproveTask approves a task.
      * </pre>
      */
@@ -3506,6 +3588,28 @@ public final class OmniApiGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAvailableHeadersMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetOmniExchangeElements - retrieves all omni exchange elements from lms service
+     * </pre>
+     */
+    public void getOmniExchangeElements(com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsResult> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetOmniExchangeElementsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetFieldsForElement - takes an omni exchange element and returns fields for it
+     * </pre>
+     */
+    public void getFieldsForElement(com.tcn.cloud.api.api.v0alpha.GetFieldsForElementRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetFieldsForElementResult> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetFieldsForElementMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -4451,6 +4555,26 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
+     * GetOmniExchangeElements - retrieves all omni exchange elements from lms service
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsResult getOmniExchangeElements(com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetOmniExchangeElementsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetFieldsForElement - takes an omni exchange element and returns fields for it
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.GetFieldsForElementResult getFieldsForElement(com.tcn.cloud.api.api.v0alpha.GetFieldsForElementRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetFieldsForElementMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * ApproveTask approves a task.
      * </pre>
      */
@@ -5339,6 +5463,28 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
+     * GetOmniExchangeElements - retrieves all omni exchange elements from lms service
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsResult> getOmniExchangeElements(
+        com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetOmniExchangeElementsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetFieldsForElement - takes an omni exchange element and returns fields for it
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetFieldsForElementResult> getFieldsForElement(
+        com.tcn.cloud.api.api.v0alpha.GetFieldsForElementRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetFieldsForElementMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * ApproveTask approves a task.
      * </pre>
      */
@@ -6034,56 +6180,58 @@ public final class OmniApiGrpc {
   private static final int METHODID_MANAGER_LIST_CONVERSATIONS = 20;
   private static final int METHODID_LIST_CONTACT_LISTS = 21;
   private static final int METHODID_GET_AVAILABLE_HEADERS = 22;
-  private static final int METHODID_APPROVE_TASK = 23;
-  private static final int METHODID_GET_NEXT_QUEUED_TASK = 24;
-  private static final int METHODID_GET_TASK = 25;
-  private static final int METHODID_LIST_TASKS = 26;
-  private static final int METHODID_REJECT_TASK = 27;
-  private static final int METHODID_REQUEUE_TASK = 28;
-  private static final int METHODID_CREATE_CONNECTED_INBOX = 29;
-  private static final int METHODID_DELETE_CONNECTED_INBOX_BY_SID = 30;
-  private static final int METHODID_GET_CONNECTED_INBOX_BY_SID = 31;
-  private static final int METHODID_PERFORM_SENDGRID_ACCOUNT_CHECKS = 32;
-  private static final int METHODID_LIST_CONNECTED_INBOXES = 33;
-  private static final int METHODID_TEST_CONNECTED_INBOX = 34;
-  private static final int METHODID_UPDATE_CONNECTED_INBOX = 35;
-  private static final int METHODID_CREATE_VERIFIED_EMAIL = 36;
-  private static final int METHODID_DELETE_VERIFIED_EMAIL = 37;
-  private static final int METHODID_GET_VERIFIED_EMAIL_BY_SID = 38;
-  private static final int METHODID_LIST_VERIFIED_EMAILS = 39;
-  private static final int METHODID_RESEND_VERIFIED_EMAIL = 40;
-  private static final int METHODID_UPDATE_VERIFIED_EMAIL = 41;
-  private static final int METHODID_GET_PENDING_GOOGLE_XOAUTH2DATA = 42;
-  private static final int METHODID_SEND_EMAIL_NOTIFICATION = 43;
-  private static final int METHODID_SEND_FEEDBACK_EMAIL = 44;
-  private static final int METHODID_GET_OMNI_ATTACHMENT = 45;
-  private static final int METHODID_CREATE_TASKS = 46;
-  private static final int METHODID_CREATE_SIGNATURE = 47;
-  private static final int METHODID_DELETE_SIGNATURE = 48;
-  private static final int METHODID_LIST_SIGNATURES = 49;
-  private static final int METHODID_UPDATE_SIGNATURE = 50;
-  private static final int METHODID_SUGGEST_RESPONSE = 51;
-  private static final int METHODID_CREATE_PROJECT = 52;
-  private static final int METHODID_LIST_PROJECTS = 53;
-  private static final int METHODID_EDIT_PROJECT_BY_ID = 54;
-  private static final int METHODID_CLOSE_PROJECT_BY_ID = 55;
-  private static final int METHODID_GET_PROJECT_BY_ID = 56;
-  private static final int METHODID_CREATE_CANNED_MESSAGE = 57;
-  private static final int METHODID_LIST_CANNED_MESSAGES = 58;
-  private static final int METHODID_UPDATE_CANNED_MESSAGE = 59;
-  private static final int METHODID_GET_CANNED_MESSAGE_BY_ID = 60;
-  private static final int METHODID_DELETE_CANNED_MESSAGE_BY_ID = 61;
-  private static final int METHODID_CREATE_CANNED_MESSAGE_GROUP = 62;
-  private static final int METHODID_LIST_CANNED_MESSAGE_GROUPS = 63;
-  private static final int METHODID_UPDATE_CANNED_MESSAGE_GROUP = 64;
-  private static final int METHODID_DELETE_CANNED_MESSAGE_GROUP = 65;
-  private static final int METHODID_LIST_CANNED_MESSAGES_BY_GROUP_ID = 66;
-  private static final int METHODID_GET_CANNED_MESSAGE_GROUP_BY_ID = 67;
-  private static final int METHODID_LIST_USER_SKILLS = 68;
-  private static final int METHODID_LIST_WHATS_APP_NUMBERS = 69;
-  private static final int METHODID_CREATE_WHATS_APP_NUMBER = 70;
-  private static final int METHODID_UPDATE_WHATS_APP_NUMBER = 71;
-  private static final int METHODID_CREATE_MANUAL_TASK = 72;
+  private static final int METHODID_GET_OMNI_EXCHANGE_ELEMENTS = 23;
+  private static final int METHODID_GET_FIELDS_FOR_ELEMENT = 24;
+  private static final int METHODID_APPROVE_TASK = 25;
+  private static final int METHODID_GET_NEXT_QUEUED_TASK = 26;
+  private static final int METHODID_GET_TASK = 27;
+  private static final int METHODID_LIST_TASKS = 28;
+  private static final int METHODID_REJECT_TASK = 29;
+  private static final int METHODID_REQUEUE_TASK = 30;
+  private static final int METHODID_CREATE_CONNECTED_INBOX = 31;
+  private static final int METHODID_DELETE_CONNECTED_INBOX_BY_SID = 32;
+  private static final int METHODID_GET_CONNECTED_INBOX_BY_SID = 33;
+  private static final int METHODID_PERFORM_SENDGRID_ACCOUNT_CHECKS = 34;
+  private static final int METHODID_LIST_CONNECTED_INBOXES = 35;
+  private static final int METHODID_TEST_CONNECTED_INBOX = 36;
+  private static final int METHODID_UPDATE_CONNECTED_INBOX = 37;
+  private static final int METHODID_CREATE_VERIFIED_EMAIL = 38;
+  private static final int METHODID_DELETE_VERIFIED_EMAIL = 39;
+  private static final int METHODID_GET_VERIFIED_EMAIL_BY_SID = 40;
+  private static final int METHODID_LIST_VERIFIED_EMAILS = 41;
+  private static final int METHODID_RESEND_VERIFIED_EMAIL = 42;
+  private static final int METHODID_UPDATE_VERIFIED_EMAIL = 43;
+  private static final int METHODID_GET_PENDING_GOOGLE_XOAUTH2DATA = 44;
+  private static final int METHODID_SEND_EMAIL_NOTIFICATION = 45;
+  private static final int METHODID_SEND_FEEDBACK_EMAIL = 46;
+  private static final int METHODID_GET_OMNI_ATTACHMENT = 47;
+  private static final int METHODID_CREATE_TASKS = 48;
+  private static final int METHODID_CREATE_SIGNATURE = 49;
+  private static final int METHODID_DELETE_SIGNATURE = 50;
+  private static final int METHODID_LIST_SIGNATURES = 51;
+  private static final int METHODID_UPDATE_SIGNATURE = 52;
+  private static final int METHODID_SUGGEST_RESPONSE = 53;
+  private static final int METHODID_CREATE_PROJECT = 54;
+  private static final int METHODID_LIST_PROJECTS = 55;
+  private static final int METHODID_EDIT_PROJECT_BY_ID = 56;
+  private static final int METHODID_CLOSE_PROJECT_BY_ID = 57;
+  private static final int METHODID_GET_PROJECT_BY_ID = 58;
+  private static final int METHODID_CREATE_CANNED_MESSAGE = 59;
+  private static final int METHODID_LIST_CANNED_MESSAGES = 60;
+  private static final int METHODID_UPDATE_CANNED_MESSAGE = 61;
+  private static final int METHODID_GET_CANNED_MESSAGE_BY_ID = 62;
+  private static final int METHODID_DELETE_CANNED_MESSAGE_BY_ID = 63;
+  private static final int METHODID_CREATE_CANNED_MESSAGE_GROUP = 64;
+  private static final int METHODID_LIST_CANNED_MESSAGE_GROUPS = 65;
+  private static final int METHODID_UPDATE_CANNED_MESSAGE_GROUP = 66;
+  private static final int METHODID_DELETE_CANNED_MESSAGE_GROUP = 67;
+  private static final int METHODID_LIST_CANNED_MESSAGES_BY_GROUP_ID = 68;
+  private static final int METHODID_GET_CANNED_MESSAGE_GROUP_BY_ID = 69;
+  private static final int METHODID_LIST_USER_SKILLS = 70;
+  private static final int METHODID_LIST_WHATS_APP_NUMBERS = 71;
+  private static final int METHODID_CREATE_WHATS_APP_NUMBER = 72;
+  private static final int METHODID_UPDATE_WHATS_APP_NUMBER = 73;
+  private static final int METHODID_CREATE_MANUAL_TASK = 74;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -6193,6 +6341,14 @@ public final class OmniApiGrpc {
         case METHODID_GET_AVAILABLE_HEADERS:
           serviceImpl.getAvailableHeaders((com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersRes>) responseObserver);
+          break;
+        case METHODID_GET_OMNI_EXCHANGE_ELEMENTS:
+          serviceImpl.getOmniExchangeElements((com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsResult>) responseObserver);
+          break;
+        case METHODID_GET_FIELDS_FOR_ELEMENT:
+          serviceImpl.getFieldsForElement((com.tcn.cloud.api.api.v0alpha.GetFieldsForElementRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetFieldsForElementResult>) responseObserver);
           break;
         case METHODID_APPROVE_TASK:
           serviceImpl.approveTask((com.tcn.cloud.api.api.v0alpha.ApproveTaskRequest) request,
@@ -6573,6 +6729,20 @@ public final class OmniApiGrpc {
               com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersReq,
               com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersRes>(
                 service, METHODID_GET_AVAILABLE_HEADERS)))
+        .addMethod(
+          getGetOmniExchangeElementsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsRequest,
+              com.tcn.cloud.api.api.v0alpha.GetOmniExchangeElementsResult>(
+                service, METHODID_GET_OMNI_EXCHANGE_ELEMENTS)))
+        .addMethod(
+          getGetFieldsForElementMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetFieldsForElementRequest,
+              com.tcn.cloud.api.api.v0alpha.GetFieldsForElementResult>(
+                service, METHODID_GET_FIELDS_FOR_ELEMENT)))
         .addMethod(
           getApproveTaskMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -6994,6 +7164,8 @@ public final class OmniApiGrpc {
               .addMethod(getManagerListConversationsMethod())
               .addMethod(getListContactListsMethod())
               .addMethod(getGetAvailableHeadersMethod())
+              .addMethod(getGetOmniExchangeElementsMethod())
+              .addMethod(getGetFieldsForElementMethod())
               .addMethod(getApproveTaskMethod())
               .addMethod(getGetNextQueuedTaskMethod())
               .addMethod(getGetTaskMethod())

@@ -67,11 +67,13 @@ private static final long serialVersionUID = 0L;
    * The snowflake id of a ticket row
    * </pre>
    *
-   * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+   * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.commons.Ticket.ticket_sid is deprecated.
+   *     See api/commons/tickets.proto;l=9
    * @return The ticketSid.
    */
   @java.lang.Override
-  public long getTicketSid() {
+  @java.lang.Deprecated public long getTicketSid() {
     return ticketSid_;
   }
 
@@ -2028,11 +2030,13 @@ private static final long serialVersionUID = 0L;
      * The snowflake id of a ticket row
      * </pre>
      *
-     * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+     * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.commons.Ticket.ticket_sid is deprecated.
+     *     See api/commons/tickets.proto;l=9
      * @return The ticketSid.
      */
     @java.lang.Override
-    public long getTicketSid() {
+    @java.lang.Deprecated public long getTicketSid() {
       return ticketSid_;
     }
     /**
@@ -2040,11 +2044,13 @@ private static final long serialVersionUID = 0L;
      * The snowflake id of a ticket row
      * </pre>
      *
-     * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+     * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.commons.Ticket.ticket_sid is deprecated.
+     *     See api/commons/tickets.proto;l=9
      * @param value The ticketSid to set.
      * @return This builder for chaining.
      */
-    public Builder setTicketSid(long value) {
+    @java.lang.Deprecated public Builder setTicketSid(long value) {
 
       ticketSid_ = value;
       bitField0_ |= 0x00000001;
@@ -2056,10 +2062,12 @@ private static final long serialVersionUID = 0L;
      * The snowflake id of a ticket row
      * </pre>
      *
-     * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+     * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.commons.Ticket.ticket_sid is deprecated.
+     *     See api/commons/tickets.proto;l=9
      * @return This builder for chaining.
      */
-    public Builder clearTicketSid() {
+    @java.lang.Deprecated public Builder clearTicketSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
       ticketSid_ = 0L;
       onChanged();
