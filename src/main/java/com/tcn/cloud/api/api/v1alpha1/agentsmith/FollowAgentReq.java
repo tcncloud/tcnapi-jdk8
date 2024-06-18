@@ -188,6 +188,17 @@ private static final long serialVersionUID = 0L;
     return bogusField1_;
   }
 
+  public static final int BOGUS_FIELD2_FIELD_NUMBER = 4;
+  private long bogusField2_ = 0L;
+  /**
+   * <code>int64 bogus_field2 = 4 [json_name = "bogusField2"];</code>
+   * @return The bogusField2.
+   */
+  @java.lang.Override
+  public long getBogusField2() {
+    return bogusField2_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -212,6 +223,9 @@ private static final long serialVersionUID = 0L;
     if (bogusField1_ != 0L) {
       output.writeInt64(3, bogusField1_);
     }
+    if (bogusField2_ != 0L) {
+      output.writeInt64(4, bogusField2_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -233,6 +247,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, bogusField1_);
     }
+    if (bogusField2_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, bogusField2_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -250,6 +268,8 @@ private static final long serialVersionUID = 0L;
 
     if (getBogusField1()
         != other.getBogusField1()) return false;
+    if (getBogusField2()
+        != other.getBogusField2()) return false;
     if (!getIdCase().equals(other.getIdCase())) return false;
     switch (idCase_) {
       case 1:
@@ -277,6 +297,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + BOGUS_FIELD1_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getBogusField1());
+    hash = (37 * hash) + BOGUS_FIELD2_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getBogusField2());
     switch (idCase_) {
       case 1:
         hash = (37 * hash) + USER_ID_FIELD_NUMBER;
@@ -426,6 +449,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       bogusField1_ = 0L;
+      bogusField2_ = 0L;
       idCase_ = 0;
       id_ = null;
       return this;
@@ -464,6 +488,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.bogusField1_ = bogusField1_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.bogusField2_ = bogusField2_;
       }
     }
 
@@ -518,6 +545,9 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq.getDefaultInstance()) return this;
       if (other.getBogusField1() != 0L) {
         setBogusField1(other.getBogusField1());
+      }
+      if (other.getBogusField2() != 0L) {
+        setBogusField2(other.getBogusField2());
       }
       switch (other.getIdCase()) {
         case USER_ID: {
@@ -576,6 +606,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 32: {
+              bogusField2_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -811,6 +846,38 @@ private static final long serialVersionUID = 0L;
     public Builder clearBogusField1() {
       bitField0_ = (bitField0_ & ~0x00000004);
       bogusField1_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long bogusField2_ ;
+    /**
+     * <code>int64 bogus_field2 = 4 [json_name = "bogusField2"];</code>
+     * @return The bogusField2.
+     */
+    @java.lang.Override
+    public long getBogusField2() {
+      return bogusField2_;
+    }
+    /**
+     * <code>int64 bogus_field2 = 4 [json_name = "bogusField2"];</code>
+     * @param value The bogusField2 to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBogusField2(long value) {
+
+      bogusField2_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 bogus_field2 = 4 [json_name = "bogusField2"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBogusField2() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      bogusField2_ = 0L;
       onChanged();
       return this;
     }

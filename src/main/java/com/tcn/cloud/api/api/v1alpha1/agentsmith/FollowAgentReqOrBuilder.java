@@ -61,5 +61,11 @@ public interface FollowAgentReqOrBuilder extends
    */
   long getBogusField1();
 
+  /**
+   * <code>int64 bogus_field2 = 4 [json_name = "bogusField2"];</code>
+   * @return The bogusField2.
+   */
+  long getBogusField2();
+
   com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq.IdCase getIdCase();
 }
