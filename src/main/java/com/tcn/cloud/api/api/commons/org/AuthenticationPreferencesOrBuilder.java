@@ -215,4 +215,14 @@ public interface AuthenticationPreferencesOrBuilder extends
    * @return The forceSsoProvider.
    */
   boolean getForceSsoProvider();
+
+  /**
+   * <pre>
+   * Whether or not to enable TOTP for 2FA.
+   * </pre>
+   *
+   * <code>bool enable_totp = 21 [json_name = "enableTotp"];</code>
+   * @return The enableTotp.
+   */
+  boolean getEnableTotp();
 }

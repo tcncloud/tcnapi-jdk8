@@ -39,23 +39,26 @@ public final class TranscriptSummaryProto {
   static {
     java.lang.String[] descriptorData = {
       "\n0api/v1alpha1/vanalytics/transcript_sum" +
-      "mary.proto\022\027api.v1alpha1.vanalytics\"D\n\033G" +
-      "etTranscriptSummaryRequest\022%\n\016transcript" +
-      "_sid\030\002 \001(\003R\rtranscriptSid\"y\n\034GetTranscri" +
-      "ptSummaryResponse\022Y\n\022transcript_summary\030" +
-      "\001 \001(\0132*.api.v1alpha1.vanalytics.Transcri" +
-      "ptSummaryR\021transcriptSummary\"8\n\021Transcri" +
-      "ptSummary\022#\n\rbullet_points\030\001 \003(\tR\014bullet" +
-      "PointsB\301\001\n)com.tcn.cloud.api.api.v1alpha" +
-      "1.vanalyticsB\026TranscriptSummaryProtoP\001\242\002" +
-      "\003AVV\252\002\027Api.V1alpha1.Vanalytics\312\002\027Api\\V1a" +
-      "lpha1\\Vanalytics\342\002#Api\\V1alpha1\\Vanalyti" +
-      "cs\\GPBMetadata\352\002\031Api::V1alpha1::Vanalyti" +
-      "csb\006proto3"
+      "mary.proto\022\027api.v1alpha1.vanalytics\032\034api" +
+      "/commons/vanalytics.proto\"D\n\033GetTranscri" +
+      "ptSummaryRequest\022%\n\016transcript_sid\030\002 \001(\003" +
+      "R\rtranscriptSid\"y\n\034GetTranscriptSummaryR" +
+      "esponse\022Y\n\022transcript_summary\030\001 \001(\0132*.ap" +
+      "i.v1alpha1.vanalytics.TranscriptSummaryR" +
+      "\021transcriptSummary\"v\n\021TranscriptSummary\022" +
+      "#\n\rbullet_points\030\001 \003(\tR\014bulletPoints\022<\n\006" +
+      "status\030\002 \001(\0162$.api.commons.TranscriptSum" +
+      "maryStatusR\006statusB\301\001\n)com.tcn.cloud.api" +
+      ".api.v1alpha1.vanalyticsB\026TranscriptSumm" +
+      "aryProtoP\001\242\002\003AVV\252\002\027Api.V1alpha1.Vanalyti" +
+      "cs\312\002\027Api\\V1alpha1\\Vanalytics\342\002#Api\\V1alp" +
+      "ha1\\Vanalytics\\GPBMetadata\352\002\031Api::V1alph" +
+      "a1::Vanalyticsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.api.commons.VanalyticsProto.getDescriptor(),
         });
     internal_static_api_v1alpha1_vanalytics_GetTranscriptSummaryRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -74,7 +77,8 @@ public final class TranscriptSummaryProto {
     internal_static_api_v1alpha1_vanalytics_TranscriptSummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_vanalytics_TranscriptSummary_descriptor,
-        new java.lang.String[] { "BulletPoints", });
+        new java.lang.String[] { "BulletPoints", "Status", });
+    com.tcn.cloud.api.api.commons.VanalyticsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

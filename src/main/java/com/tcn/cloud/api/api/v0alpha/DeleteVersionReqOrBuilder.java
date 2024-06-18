@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface StandaloneReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.StandaloneReq)
+public interface DeleteVersionReqOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.DeleteVersionReq)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,30 +29,10 @@ public interface StandaloneReqOrBuilder extends
 
   /**
    * <pre>
-   * categorize the articles
-   * </pre>
-   *
-   * <code>string category = 2 [json_name = "category"];</code>
-   * @return The category.
-   */
-  java.lang.String getCategory();
-  /**
-   * <pre>
-   * categorize the articles
-   * </pre>
-   *
-   * <code>string category = 2 [json_name = "category"];</code>
-   * @return The bytes for category.
-   */
-  com.google.protobuf.ByteString
-      getCategoryBytes();
-
-  /**
-   * <pre>
    * version
    * </pre>
    *
-   * <code>string version = 3 [json_name = "version"];</code>
+   * <code>string version = 2 [json_name = "version"];</code>
    * @return The version.
    */
   java.lang.String getVersion();
@@ -61,7 +41,7 @@ public interface StandaloneReqOrBuilder extends
    * version
    * </pre>
    *
-   * <code>string version = 3 [json_name = "version"];</code>
+   * <code>string version = 2 [json_name = "version"];</code>
    * @return The bytes for version.
    */
   com.google.protobuf.ByteString

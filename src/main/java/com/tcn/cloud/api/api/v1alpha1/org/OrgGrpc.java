@@ -6776,6 +6776,37 @@ public final class OrgGrpc {
     return getGetMyAllowedMfaMethodsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretResponse> getGenerateTOTPSecretMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GenerateTOTPSecret",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretResponse> getGenerateTOTPSecretMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretRequest, com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretResponse> getGenerateTOTPSecretMethod;
+    if ((getGenerateTOTPSecretMethod = OrgGrpc.getGenerateTOTPSecretMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getGenerateTOTPSecretMethod = OrgGrpc.getGenerateTOTPSecretMethod) == null) {
+          OrgGrpc.getGenerateTOTPSecretMethod = getGenerateTOTPSecretMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretRequest, com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GenerateTOTPSecret"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GenerateTOTPSecret"))
+              .build();
+        }
+      }
+    }
+    return getGenerateTOTPSecretMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest,
       com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursResponse> getCreateBusinessHoursMethod;
 
@@ -9388,6 +9419,18 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * GenerateTOTPSecret generates a new TOTP secret key for the current user and
+     * returns it with a url to be displayed as a QR code that can be scanned
+     * by an authenticator app.
+     * </pre>
+     */
+    default void generateTOTPSecret(com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateTOTPSecretMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * CreateBusinessHours persists times businesses are available.
      * </pre>
      */
@@ -11978,6 +12021,19 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * GenerateTOTPSecret generates a new TOTP secret key for the current user and
+     * returns it with a url to be displayed as a QR code that can be scanned
+     * by an authenticator app.
+     * </pre>
+     */
+    public void generateTOTPSecret(com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGenerateTOTPSecretMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * CreateBusinessHours persists times businesses are available.
      * </pre>
      */
@@ -14352,6 +14408,18 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsResponse getMyAllowedMfaMethods(com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMyAllowedMfaMethodsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GenerateTOTPSecret generates a new TOTP secret key for the current user and
+     * returns it with a url to be displayed as a QR code that can be scanned
+     * by an authenticator app.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretResponse generateTOTPSecret(com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateTOTPSecretMethod(), getCallOptions(), request);
     }
 
     /**
@@ -16822,6 +16890,19 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * GenerateTOTPSecret generates a new TOTP secret key for the current user and
+     * returns it with a url to be displayed as a QR code that can be scanned
+     * by an authenticator app.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretResponse> generateTOTPSecret(
+        com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGenerateTOTPSecretMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * CreateBusinessHours persists times businesses are available.
      * </pre>
      */
@@ -17138,16 +17219,17 @@ public final class OrgGrpc {
   private static final int METHODID_GET_USER_MFA_INFO = 215;
   private static final int METHODID_GET_MY_USER_MFA_INFO = 216;
   private static final int METHODID_GET_MY_ALLOWED_MFA_METHODS = 217;
-  private static final int METHODID_CREATE_BUSINESS_HOURS = 218;
-  private static final int METHODID_UPDATE_BUSINESS_HOURS = 219;
-  private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 220;
-  private static final int METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS = 221;
-  private static final int METHODID_LIST_USERS_ALLOWED_IPS = 222;
-  private static final int METHODID_LIST_RESPONSE_EVALUATORS = 223;
-  private static final int METHODID_GET_RESPONSE_EVALUATOR = 224;
-  private static final int METHODID_CREATE_RESPONSE_EVALUATOR = 225;
-  private static final int METHODID_UPDATE_RESPONSE_EVALUATOR = 226;
-  private static final int METHODID_DELETE_RESPONSE_EVALUATOR = 227;
+  private static final int METHODID_GENERATE_TOTPSECRET = 218;
+  private static final int METHODID_CREATE_BUSINESS_HOURS = 219;
+  private static final int METHODID_UPDATE_BUSINESS_HOURS = 220;
+  private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 221;
+  private static final int METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS = 222;
+  private static final int METHODID_LIST_USERS_ALLOWED_IPS = 223;
+  private static final int METHODID_LIST_RESPONSE_EVALUATORS = 224;
+  private static final int METHODID_GET_RESPONSE_EVALUATOR = 225;
+  private static final int METHODID_CREATE_RESPONSE_EVALUATOR = 226;
+  private static final int METHODID_UPDATE_RESPONSE_EVALUATOR = 227;
+  private static final int METHODID_DELETE_RESPONSE_EVALUATOR = 228;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -18037,6 +18119,10 @@ public final class OrgGrpc {
         case METHODID_GET_MY_ALLOWED_MFA_METHODS:
           serviceImpl.getMyAllowedMfaMethods((com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsResponse>) responseObserver);
+          break;
+        case METHODID_GENERATE_TOTPSECRET:
+          serviceImpl.generateTOTPSecret((com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretResponse>) responseObserver);
           break;
         case METHODID_CREATE_BUSINESS_HOURS:
           serviceImpl.createBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest) request,
@@ -19623,6 +19709,13 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.GetMyAllowedMfaMethodsResponse>(
                 service, METHODID_GET_MY_ALLOWED_MFA_METHODS)))
         .addMethod(
+          getGenerateTOTPSecretMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretResponse>(
+                service, METHODID_GENERATE_TOTPSECRET)))
+        .addMethod(
           getCreateBusinessHoursMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -19958,6 +20051,7 @@ public final class OrgGrpc {
               .addMethod(getGetUserMfaInfoMethod())
               .addMethod(getGetMyUserMfaInfoMethod())
               .addMethod(getGetMyAllowedMfaMethodsMethod())
+              .addMethod(getGenerateTOTPSecretMethod())
               .addMethod(getCreateBusinessHoursMethod())
               .addMethod(getUpdateBusinessHoursMethod())
               .addMethod(getAddGroupedUserIPRestrictionsMethod())

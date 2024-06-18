@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private ListVersionsRes() {
     versions_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    versionDetails_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -97,6 +98,67 @@ private static final long serialVersionUID = 0L;
     return versions_.getByteString(index);
   }
 
+  public static final int VERSION_DETAILS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v0alpha.VersionDetails> versionDetails_;
+  /**
+   * <pre>
+   * all the details about versions
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v0alpha.VersionDetails> getVersionDetailsList() {
+    return versionDetails_;
+  }
+  /**
+   * <pre>
+   * all the details about versions
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.VersionDetailsOrBuilder> 
+      getVersionDetailsOrBuilderList() {
+    return versionDetails_;
+  }
+  /**
+   * <pre>
+   * all the details about versions
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+   */
+  @java.lang.Override
+  public int getVersionDetailsCount() {
+    return versionDetails_.size();
+  }
+  /**
+   * <pre>
+   * all the details about versions
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.VersionDetails getVersionDetails(int index) {
+    return versionDetails_.get(index);
+  }
+  /**
+   * <pre>
+   * all the details about versions
+   * </pre>
+   *
+   * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.VersionDetailsOrBuilder getVersionDetailsOrBuilder(
+      int index) {
+    return versionDetails_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -113,6 +175,9 @@ private static final long serialVersionUID = 0L;
                       throws java.io.IOException {
     for (int i = 0; i < versions_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, versions_.getRaw(i));
+    }
+    for (int i = 0; i < versionDetails_.size(); i++) {
+      output.writeMessage(2, versionDetails_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -131,6 +196,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getVersionsList().size();
     }
+    for (int i = 0; i < versionDetails_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, versionDetails_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -148,6 +217,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getVersionsList()
         .equals(other.getVersionsList())) return false;
+    if (!getVersionDetailsList()
+        .equals(other.getVersionDetailsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -162,6 +233,10 @@ private static final long serialVersionUID = 0L;
     if (getVersionsCount() > 0) {
       hash = (37 * hash) + VERSIONS_FIELD_NUMBER;
       hash = (53 * hash) + getVersionsList().hashCode();
+    }
+    if (getVersionDetailsCount() > 0) {
+      hash = (37 * hash) + VERSION_DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getVersionDetailsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -300,6 +375,13 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       versions_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      if (versionDetailsBuilder_ == null) {
+        versionDetails_ = java.util.Collections.emptyList();
+      } else {
+        versionDetails_ = null;
+        versionDetailsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -326,9 +408,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ListVersionsRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ListVersionsRes result = new com.tcn.cloud.api.api.v0alpha.ListVersionsRes(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.ListVersionsRes result) {
+      if (versionDetailsBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          versionDetails_ = java.util.Collections.unmodifiableList(versionDetails_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.versionDetails_ = versionDetails_;
+      } else {
+        result.versionDetails_ = versionDetailsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListVersionsRes result) {
@@ -393,6 +488,32 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (versionDetailsBuilder_ == null) {
+        if (!other.versionDetails_.isEmpty()) {
+          if (versionDetails_.isEmpty()) {
+            versionDetails_ = other.versionDetails_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureVersionDetailsIsMutable();
+            versionDetails_.addAll(other.versionDetails_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.versionDetails_.isEmpty()) {
+          if (versionDetailsBuilder_.isEmpty()) {
+            versionDetailsBuilder_.dispose();
+            versionDetailsBuilder_ = null;
+            versionDetails_ = other.versionDetails_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            versionDetailsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getVersionDetailsFieldBuilder() : null;
+          } else {
+            versionDetailsBuilder_.addAllMessages(other.versionDetails_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -425,6 +546,19 @@ private static final long serialVersionUID = 0L;
               versions_.add(s);
               break;
             } // case 10
+            case 18: {
+              com.tcn.cloud.api.api.v0alpha.VersionDetails m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v0alpha.VersionDetails.parser(),
+                      extensionRegistry);
+              if (versionDetailsBuilder_ == null) {
+                ensureVersionDetailsIsMutable();
+                versionDetails_.add(m);
+              } else {
+                versionDetailsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -587,6 +721,318 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v0alpha.VersionDetails> versionDetails_ =
+      java.util.Collections.emptyList();
+    private void ensureVersionDetailsIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        versionDetails_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.VersionDetails>(versionDetails_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.VersionDetails, com.tcn.cloud.api.api.v0alpha.VersionDetails.Builder, com.tcn.cloud.api.api.v0alpha.VersionDetailsOrBuilder> versionDetailsBuilder_;
+
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v0alpha.VersionDetails> getVersionDetailsList() {
+      if (versionDetailsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(versionDetails_);
+      } else {
+        return versionDetailsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public int getVersionDetailsCount() {
+      if (versionDetailsBuilder_ == null) {
+        return versionDetails_.size();
+      } else {
+        return versionDetailsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.VersionDetails getVersionDetails(int index) {
+      if (versionDetailsBuilder_ == null) {
+        return versionDetails_.get(index);
+      } else {
+        return versionDetailsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public Builder setVersionDetails(
+        int index, com.tcn.cloud.api.api.v0alpha.VersionDetails value) {
+      if (versionDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVersionDetailsIsMutable();
+        versionDetails_.set(index, value);
+        onChanged();
+      } else {
+        versionDetailsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public Builder setVersionDetails(
+        int index, com.tcn.cloud.api.api.v0alpha.VersionDetails.Builder builderForValue) {
+      if (versionDetailsBuilder_ == null) {
+        ensureVersionDetailsIsMutable();
+        versionDetails_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        versionDetailsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public Builder addVersionDetails(com.tcn.cloud.api.api.v0alpha.VersionDetails value) {
+      if (versionDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVersionDetailsIsMutable();
+        versionDetails_.add(value);
+        onChanged();
+      } else {
+        versionDetailsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public Builder addVersionDetails(
+        int index, com.tcn.cloud.api.api.v0alpha.VersionDetails value) {
+      if (versionDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVersionDetailsIsMutable();
+        versionDetails_.add(index, value);
+        onChanged();
+      } else {
+        versionDetailsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public Builder addVersionDetails(
+        com.tcn.cloud.api.api.v0alpha.VersionDetails.Builder builderForValue) {
+      if (versionDetailsBuilder_ == null) {
+        ensureVersionDetailsIsMutable();
+        versionDetails_.add(builderForValue.build());
+        onChanged();
+      } else {
+        versionDetailsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public Builder addVersionDetails(
+        int index, com.tcn.cloud.api.api.v0alpha.VersionDetails.Builder builderForValue) {
+      if (versionDetailsBuilder_ == null) {
+        ensureVersionDetailsIsMutable();
+        versionDetails_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        versionDetailsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public Builder addAllVersionDetails(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v0alpha.VersionDetails> values) {
+      if (versionDetailsBuilder_ == null) {
+        ensureVersionDetailsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, versionDetails_);
+        onChanged();
+      } else {
+        versionDetailsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public Builder clearVersionDetails() {
+      if (versionDetailsBuilder_ == null) {
+        versionDetails_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        versionDetailsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public Builder removeVersionDetails(int index) {
+      if (versionDetailsBuilder_ == null) {
+        ensureVersionDetailsIsMutable();
+        versionDetails_.remove(index);
+        onChanged();
+      } else {
+        versionDetailsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.VersionDetails.Builder getVersionDetailsBuilder(
+        int index) {
+      return getVersionDetailsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.VersionDetailsOrBuilder getVersionDetailsOrBuilder(
+        int index) {
+      if (versionDetailsBuilder_ == null) {
+        return versionDetails_.get(index);  } else {
+        return versionDetailsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.VersionDetailsOrBuilder> 
+         getVersionDetailsOrBuilderList() {
+      if (versionDetailsBuilder_ != null) {
+        return versionDetailsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(versionDetails_);
+      }
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.VersionDetails.Builder addVersionDetailsBuilder() {
+      return getVersionDetailsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v0alpha.VersionDetails.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.VersionDetails.Builder addVersionDetailsBuilder(
+        int index) {
+      return getVersionDetailsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v0alpha.VersionDetails.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * all the details about versions
+     * </pre>
+     *
+     * <code>repeated .api.v0alpha.VersionDetails version_details = 2 [json_name = "versionDetails"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v0alpha.VersionDetails.Builder> 
+         getVersionDetailsBuilderList() {
+      return getVersionDetailsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.VersionDetails, com.tcn.cloud.api.api.v0alpha.VersionDetails.Builder, com.tcn.cloud.api.api.v0alpha.VersionDetailsOrBuilder> 
+        getVersionDetailsFieldBuilder() {
+      if (versionDetailsBuilder_ == null) {
+        versionDetailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.VersionDetails, com.tcn.cloud.api.api.v0alpha.VersionDetails.Builder, com.tcn.cloud.api.api.v0alpha.VersionDetailsOrBuilder>(
+                versionDetails_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        versionDetails_ = null;
+      }
+      return versionDetailsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -81,6 +81,7 @@ private static final long serialVersionUID = 0L;
     SPLIT(75),
     EPIC_ENTRY_POINT(76),
     CONTACT_MANAGER_SINK(77),
+    SUM(78),
     PROC_NOT_SET(0);
     private final int value;
     private ProcCase(int value) {
@@ -134,6 +135,7 @@ private static final long serialVersionUID = 0L;
         case 75: return SPLIT;
         case 76: return EPIC_ENTRY_POINT;
         case 77: return CONTACT_MANAGER_SINK;
+        case 78: return SUM;
         case 0: return PROC_NOT_SET;
         default: return null;
       }
@@ -1451,6 +1453,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v0alpha.ContactManagerSink.getDefaultInstance();
   }
 
+  public static final int SUM_FIELD_NUMBER = 78;
+  /**
+   * <code>.api.v0alpha.SumProcess sum = 78 [json_name = "sum"];</code>
+   * @return Whether the sum field is set.
+   */
+  @java.lang.Override
+  public boolean hasSum() {
+    return procCase_ == 78;
+  }
+  /**
+   * <code>.api.v0alpha.SumProcess sum = 78 [json_name = "sum"];</code>
+   * @return The sum.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.SumProcess getSum() {
+    if (procCase_ == 78) {
+       return (com.tcn.cloud.api.api.v0alpha.SumProcess) proc_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.SumProcess.getDefaultInstance();
+  }
+  /**
+   * <code>.api.v0alpha.SumProcess sum = 78 [json_name = "sum"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.SumProcessOrBuilder getSumOrBuilder() {
+    if (procCase_ == 78) {
+       return (com.tcn.cloud.api.api.v0alpha.SumProcess) proc_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.SumProcess.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1575,6 +1608,9 @@ private static final long serialVersionUID = 0L;
     }
     if (procCase_ == 77) {
       output.writeMessage(77, (com.tcn.cloud.api.api.v0alpha.ContactManagerSink) proc_);
+    }
+    if (procCase_ == 78) {
+      output.writeMessage(78, (com.tcn.cloud.api.api.v0alpha.SumProcess) proc_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1731,6 +1767,10 @@ private static final long serialVersionUID = 0L;
     if (procCase_ == 77) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(77, (com.tcn.cloud.api.api.v0alpha.ContactManagerSink) proc_);
+    }
+    if (procCase_ == 78) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(78, (com.tcn.cloud.api.api.v0alpha.SumProcess) proc_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1895,6 +1935,10 @@ private static final long serialVersionUID = 0L;
         if (!getContactManagerSink()
             .equals(other.getContactManagerSink())) return false;
         break;
+      case 78:
+        if (!getSum()
+            .equals(other.getSum())) return false;
+        break;
       case 0:
       default:
     }
@@ -2055,6 +2099,10 @@ private static final long serialVersionUID = 0L;
       case 77:
         hash = (37 * hash) + CONTACT_MANAGER_SINK_FIELD_NUMBER;
         hash = (53 * hash) + getContactManagerSink().hashCode();
+        break;
+      case 78:
+        hash = (37 * hash) + SUM_FIELD_NUMBER;
+        hash = (53 * hash) + getSum().hashCode();
         break;
       case 0:
       default:
@@ -2300,6 +2348,9 @@ private static final long serialVersionUID = 0L;
       if (contactManagerSinkBuilder_ != null) {
         contactManagerSinkBuilder_.clear();
       }
+      if (sumBuilder_ != null) {
+        sumBuilder_.clear();
+      }
       procCase_ = 0;
       proc_ = null;
       return this;
@@ -2492,6 +2543,10 @@ private static final long serialVersionUID = 0L;
       if (procCase_ == 77 &&
           contactManagerSinkBuilder_ != null) {
         result.proc_ = contactManagerSinkBuilder_.build();
+      }
+      if (procCase_ == 78 &&
+          sumBuilder_ != null) {
+        result.proc_ = sumBuilder_.build();
       }
     }
 
@@ -2687,6 +2742,10 @@ private static final long serialVersionUID = 0L;
         }
         case CONTACT_MANAGER_SINK: {
           mergeContactManagerSink(other.getContactManagerSink());
+          break;
+        }
+        case SUM: {
+          mergeSum(other.getSum());
           break;
         }
         case PROC_NOT_SET: {
@@ -2976,6 +3035,13 @@ private static final long serialVersionUID = 0L;
               procCase_ = 77;
               break;
             } // case 618
+            case 626: {
+              input.readMessage(
+                  getSumFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 78;
+              break;
+            } // case 626
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -8608,6 +8674,148 @@ private static final long serialVersionUID = 0L;
       procCase_ = 77;
       onChanged();
       return contactManagerSinkBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.SumProcess, com.tcn.cloud.api.api.v0alpha.SumProcess.Builder, com.tcn.cloud.api.api.v0alpha.SumProcessOrBuilder> sumBuilder_;
+    /**
+     * <code>.api.v0alpha.SumProcess sum = 78 [json_name = "sum"];</code>
+     * @return Whether the sum field is set.
+     */
+    @java.lang.Override
+    public boolean hasSum() {
+      return procCase_ == 78;
+    }
+    /**
+     * <code>.api.v0alpha.SumProcess sum = 78 [json_name = "sum"];</code>
+     * @return The sum.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.SumProcess getSum() {
+      if (sumBuilder_ == null) {
+        if (procCase_ == 78) {
+          return (com.tcn.cloud.api.api.v0alpha.SumProcess) proc_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.SumProcess.getDefaultInstance();
+      } else {
+        if (procCase_ == 78) {
+          return sumBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v0alpha.SumProcess.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.SumProcess sum = 78 [json_name = "sum"];</code>
+     */
+    public Builder setSum(com.tcn.cloud.api.api.v0alpha.SumProcess value) {
+      if (sumBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        proc_ = value;
+        onChanged();
+      } else {
+        sumBuilder_.setMessage(value);
+      }
+      procCase_ = 78;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.SumProcess sum = 78 [json_name = "sum"];</code>
+     */
+    public Builder setSum(
+        com.tcn.cloud.api.api.v0alpha.SumProcess.Builder builderForValue) {
+      if (sumBuilder_ == null) {
+        proc_ = builderForValue.build();
+        onChanged();
+      } else {
+        sumBuilder_.setMessage(builderForValue.build());
+      }
+      procCase_ = 78;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.SumProcess sum = 78 [json_name = "sum"];</code>
+     */
+    public Builder mergeSum(com.tcn.cloud.api.api.v0alpha.SumProcess value) {
+      if (sumBuilder_ == null) {
+        if (procCase_ == 78 &&
+            proc_ != com.tcn.cloud.api.api.v0alpha.SumProcess.getDefaultInstance()) {
+          proc_ = com.tcn.cloud.api.api.v0alpha.SumProcess.newBuilder((com.tcn.cloud.api.api.v0alpha.SumProcess) proc_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          proc_ = value;
+        }
+        onChanged();
+      } else {
+        if (procCase_ == 78) {
+          sumBuilder_.mergeFrom(value);
+        } else {
+          sumBuilder_.setMessage(value);
+        }
+      }
+      procCase_ = 78;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.SumProcess sum = 78 [json_name = "sum"];</code>
+     */
+    public Builder clearSum() {
+      if (sumBuilder_ == null) {
+        if (procCase_ == 78) {
+          procCase_ = 0;
+          proc_ = null;
+          onChanged();
+        }
+      } else {
+        if (procCase_ == 78) {
+          procCase_ = 0;
+          proc_ = null;
+        }
+        sumBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.SumProcess sum = 78 [json_name = "sum"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.SumProcess.Builder getSumBuilder() {
+      return getSumFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v0alpha.SumProcess sum = 78 [json_name = "sum"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.SumProcessOrBuilder getSumOrBuilder() {
+      if ((procCase_ == 78) && (sumBuilder_ != null)) {
+        return sumBuilder_.getMessageOrBuilder();
+      } else {
+        if (procCase_ == 78) {
+          return (com.tcn.cloud.api.api.v0alpha.SumProcess) proc_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.SumProcess.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.SumProcess sum = 78 [json_name = "sum"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.SumProcess, com.tcn.cloud.api.api.v0alpha.SumProcess.Builder, com.tcn.cloud.api.api.v0alpha.SumProcessOrBuilder> 
+        getSumFieldBuilder() {
+      if (sumBuilder_ == null) {
+        if (!(procCase_ == 78)) {
+          proc_ = com.tcn.cloud.api.api.v0alpha.SumProcess.getDefaultInstance();
+        }
+        sumBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.SumProcess, com.tcn.cloud.api.api.v0alpha.SumProcess.Builder, com.tcn.cloud.api.api.v0alpha.SumProcessOrBuilder>(
+                (com.tcn.cloud.api.api.v0alpha.SumProcess) proc_,
+                getParentForChildren(),
+                isClean());
+        proc_ = null;
+      }
+      procCase_ = 78;
+      onChanged();
+      return sumBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -700,6 +700,68 @@ public final class LearnGrpc {
     return getListVersionsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ReviewVersionReq,
+      com.tcn.cloud.api.api.v0alpha.ReviewVersionRes> getReviewVersionStreamMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ReviewVersionStream",
+      requestType = com.tcn.cloud.api.api.v0alpha.ReviewVersionReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ReviewVersionRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ReviewVersionReq,
+      com.tcn.cloud.api.api.v0alpha.ReviewVersionRes> getReviewVersionStreamMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ReviewVersionReq, com.tcn.cloud.api.api.v0alpha.ReviewVersionRes> getReviewVersionStreamMethod;
+    if ((getReviewVersionStreamMethod = LearnGrpc.getReviewVersionStreamMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getReviewVersionStreamMethod = LearnGrpc.getReviewVersionStreamMethod) == null) {
+          LearnGrpc.getReviewVersionStreamMethod = getReviewVersionStreamMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ReviewVersionReq, com.tcn.cloud.api.api.v0alpha.ReviewVersionRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReviewVersionStream"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ReviewVersionReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ReviewVersionRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("ReviewVersionStream"))
+              .build();
+        }
+      }
+    }
+    return getReviewVersionStreamMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteVersionReq,
+      com.tcn.cloud.api.api.v0alpha.DeleteVersionRes> getDeleteVersionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteVersion",
+      requestType = com.tcn.cloud.api.api.v0alpha.DeleteVersionReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.DeleteVersionRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteVersionReq,
+      com.tcn.cloud.api.api.v0alpha.DeleteVersionRes> getDeleteVersionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteVersionReq, com.tcn.cloud.api.api.v0alpha.DeleteVersionRes> getDeleteVersionMethod;
+    if ((getDeleteVersionMethod = LearnGrpc.getDeleteVersionMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getDeleteVersionMethod = LearnGrpc.getDeleteVersionMethod) == null) {
+          LearnGrpc.getDeleteVersionMethod = getDeleteVersionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteVersionReq, com.tcn.cloud.api.api.v0alpha.DeleteVersionRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteVersion"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.DeleteVersionReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.DeleteVersionRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("DeleteVersion"))
+              .build();
+        }
+      }
+    }
+    return getDeleteVersionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -974,6 +1036,26 @@ public final class LearnGrpc {
     default void listVersions(com.tcn.cloud.api.api.v0alpha.ListVersionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListVersionsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListVersionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * returns urls as a stream after comparing version contents between both versions
+     * </pre>
+     */
+    default void reviewVersionStream(com.tcn.cloud.api.api.v0alpha.ReviewVersionReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ReviewVersionRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReviewVersionStreamMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * delete version from learn
+     * </pre>
+     */
+    default void deleteVersion(com.tcn.cloud.api.api.v0alpha.DeleteVersionReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteVersionRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteVersionMethod(), responseObserver);
     }
   }
 
@@ -1256,6 +1338,28 @@ public final class LearnGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListVersionsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * returns urls as a stream after comparing version contents between both versions
+     * </pre>
+     */
+    public void reviewVersionStream(com.tcn.cloud.api.api.v0alpha.ReviewVersionReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ReviewVersionRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getReviewVersionStreamMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * delete version from learn
+     * </pre>
+     */
+    public void deleteVersion(com.tcn.cloud.api.api.v0alpha.DeleteVersionReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteVersionRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteVersionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1504,6 +1608,27 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListVersionsMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * returns urls as a stream after comparing version contents between both versions
+     * </pre>
+     */
+    public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.ReviewVersionRes> reviewVersionStream(
+        com.tcn.cloud.api.api.v0alpha.ReviewVersionReq request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getReviewVersionStreamMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * delete version from learn
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.DeleteVersionRes deleteVersion(com.tcn.cloud.api.api.v0alpha.DeleteVersionReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteVersionMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -1736,6 +1861,17 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListVersionsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * delete version from learn
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteVersionRes> deleteVersion(
+        com.tcn.cloud.api.api.v0alpha.DeleteVersionReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteVersionMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_EXIST = 0;
@@ -1760,6 +1896,8 @@ public final class LearnGrpc {
   private static final int METHODID_REVIEW_VERSION = 19;
   private static final int METHODID_EXPORT_MANY_STREAM = 20;
   private static final int METHODID_LIST_VERSIONS = 21;
+  private static final int METHODID_REVIEW_VERSION_STREAM = 22;
+  private static final int METHODID_DELETE_VERSION = 23;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1865,6 +2003,14 @@ public final class LearnGrpc {
         case METHODID_LIST_VERSIONS:
           serviceImpl.listVersions((com.tcn.cloud.api.api.v0alpha.ListVersionsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListVersionsRes>) responseObserver);
+          break;
+        case METHODID_REVIEW_VERSION_STREAM:
+          serviceImpl.reviewVersionStream((com.tcn.cloud.api.api.v0alpha.ReviewVersionReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ReviewVersionRes>) responseObserver);
+          break;
+        case METHODID_DELETE_VERSION:
+          serviceImpl.deleteVersion((com.tcn.cloud.api.api.v0alpha.DeleteVersionReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteVersionRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2038,6 +2184,20 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.ListVersionsReq,
               com.tcn.cloud.api.api.v0alpha.ListVersionsRes>(
                 service, METHODID_LIST_VERSIONS)))
+        .addMethod(
+          getReviewVersionStreamMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ReviewVersionReq,
+              com.tcn.cloud.api.api.v0alpha.ReviewVersionRes>(
+                service, METHODID_REVIEW_VERSION_STREAM)))
+        .addMethod(
+          getDeleteVersionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteVersionReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteVersionRes>(
+                service, METHODID_DELETE_VERSION)))
         .build();
   }
 
@@ -2108,6 +2268,8 @@ public final class LearnGrpc {
               .addMethod(getReviewVersionMethod())
               .addMethod(getExportManyStreamMethod())
               .addMethod(getListVersionsMethod())
+              .addMethod(getReviewVersionStreamMethod())
+              .addMethod(getDeleteVersionMethod())
               .build();
         }
       }

@@ -706,5 +706,20 @@ public interface ProcessOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.ContactManagerSinkOrBuilder getContactManagerSinkOrBuilder();
 
+  /**
+   * <code>.api.v0alpha.SumProcess sum = 78 [json_name = "sum"];</code>
+   * @return Whether the sum field is set.
+   */
+  boolean hasSum();
+  /**
+   * <code>.api.v0alpha.SumProcess sum = 78 [json_name = "sum"];</code>
+   * @return The sum.
+   */
+  com.tcn.cloud.api.api.v0alpha.SumProcess getSum();
+  /**
+   * <code>.api.v0alpha.SumProcess sum = 78 [json_name = "sum"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.SumProcessOrBuilder getSumOrBuilder();
+
   com.tcn.cloud.api.api.v0alpha.Process.ProcCase getProcCase();
 }

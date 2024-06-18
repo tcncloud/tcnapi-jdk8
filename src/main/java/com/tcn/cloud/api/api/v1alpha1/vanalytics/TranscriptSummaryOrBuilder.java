@@ -47,4 +47,23 @@ public interface TranscriptSummaryOrBuilder extends
    */
   com.google.protobuf.ByteString
       getBulletPointsBytes(int index);
+
+  /**
+   * <pre>
+   * Status of the summary.
+   * </pre>
+   *
+   * <code>.api.commons.TranscriptSummaryStatus status = 2 [json_name = "status"];</code>
+   * @return The enum numeric value on the wire for status.
+   */
+  int getStatusValue();
+  /**
+   * <pre>
+   * Status of the summary.
+   * </pre>
+   *
+   * <code>.api.commons.TranscriptSummaryStatus status = 2 [json_name = "status"];</code>
+   * @return The status.
+   */
+  com.tcn.cloud.api.api.commons.TranscriptSummaryStatus getStatus();
 }

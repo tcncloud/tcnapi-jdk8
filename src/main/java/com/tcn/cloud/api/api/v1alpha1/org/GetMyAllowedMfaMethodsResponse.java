@@ -87,6 +87,21 @@ private static final long serialVersionUID = 0L;
     return duoEnabled_;
   }
 
+  public static final int TOTP_ENABLED_FIELD_NUMBER = 4;
+  private boolean totpEnabled_ = false;
+  /**
+   * <pre>
+   * If the user is allowed to set TOTP mfa
+   * </pre>
+   *
+   * <code>bool totp_enabled = 4 [json_name = "totpEnabled"];</code>
+   * @return The totpEnabled.
+   */
+  @java.lang.Override
+  public boolean getTotpEnabled() {
+    return totpEnabled_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -110,6 +125,9 @@ private static final long serialVersionUID = 0L;
     if (duoEnabled_ != false) {
       output.writeBool(3, duoEnabled_);
     }
+    if (totpEnabled_ != false) {
+      output.writeBool(4, totpEnabled_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -130,6 +148,10 @@ private static final long serialVersionUID = 0L;
     if (duoEnabled_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, duoEnabled_);
+    }
+    if (totpEnabled_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, totpEnabled_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -152,6 +174,8 @@ private static final long serialVersionUID = 0L;
         != other.getEmailEnabled()) return false;
     if (getDuoEnabled()
         != other.getDuoEnabled()) return false;
+    if (getTotpEnabled()
+        != other.getTotpEnabled()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -172,6 +196,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DUO_ENABLED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDuoEnabled());
+    hash = (37 * hash) + TOTP_ENABLED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getTotpEnabled());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -310,6 +337,7 @@ private static final long serialVersionUID = 0L;
       mfaEnabled_ = false;
       emailEnabled_ = false;
       duoEnabled_ = false;
+      totpEnabled_ = false;
       return this;
     }
 
@@ -351,6 +379,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.duoEnabled_ = duoEnabled_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.totpEnabled_ = totpEnabled_;
       }
     }
 
@@ -407,6 +438,9 @@ private static final long serialVersionUID = 0L;
       if (other.getDuoEnabled() != false) {
         setDuoEnabled(other.getDuoEnabled());
       }
+      if (other.getTotpEnabled() != false) {
+        setTotpEnabled(other.getTotpEnabled());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -448,6 +482,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 32: {
+              totpEnabled_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -593,6 +632,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearDuoEnabled() {
       bitField0_ = (bitField0_ & ~0x00000004);
       duoEnabled_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean totpEnabled_ ;
+    /**
+     * <pre>
+     * If the user is allowed to set TOTP mfa
+     * </pre>
+     *
+     * <code>bool totp_enabled = 4 [json_name = "totpEnabled"];</code>
+     * @return The totpEnabled.
+     */
+    @java.lang.Override
+    public boolean getTotpEnabled() {
+      return totpEnabled_;
+    }
+    /**
+     * <pre>
+     * If the user is allowed to set TOTP mfa
+     * </pre>
+     *
+     * <code>bool totp_enabled = 4 [json_name = "totpEnabled"];</code>
+     * @param value The totpEnabled to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotpEnabled(boolean value) {
+
+      totpEnabled_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If the user is allowed to set TOTP mfa
+     * </pre>
+     *
+     * <code>bool totp_enabled = 4 [json_name = "totpEnabled"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotpEnabled() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      totpEnabled_ = false;
       onChanged();
       return this;
     }

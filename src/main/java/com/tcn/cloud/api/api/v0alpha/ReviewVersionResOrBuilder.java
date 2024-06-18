@@ -46,4 +46,44 @@ public interface ReviewVersionResOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDiffFileNamesBytes();
+
+  /**
+   * <pre>
+   * src version content
+   * </pre>
+   *
+   * <code>string src_content = 3 [json_name = "srcContent"];</code>
+   * @return The srcContent.
+   */
+  java.lang.String getSrcContent();
+  /**
+   * <pre>
+   * src version content
+   * </pre>
+   *
+   * <code>string src_content = 3 [json_name = "srcContent"];</code>
+   * @return The bytes for srcContent.
+   */
+  com.google.protobuf.ByteString
+      getSrcContentBytes();
+
+  /**
+   * <pre>
+   * dest version content
+   * </pre>
+   *
+   * <code>string dest_content = 4 [json_name = "destContent"];</code>
+   * @return The destContent.
+   */
+  java.lang.String getDestContent();
+  /**
+   * <pre>
+   * dest version content
+   * </pre>
+   *
+   * <code>string dest_content = 4 [json_name = "destContent"];</code>
+   * @return The bytes for destContent.
+   */
+  com.google.protobuf.ByteString
+      getDestContentBytes();
 }

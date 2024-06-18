@@ -55,6 +55,11 @@ public final class UserProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_org_MfaInfo_Duo_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_org_MfaInfo_Totp_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_org_MfaInfo_Totp_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_org_Skill_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -118,30 +123,32 @@ public final class UserProto {
       "g.User.RegionSidsR\005value:\0028\001\032e\n\nRegionSi" +
       "ds\022\033\n\tlogin_sid\030\001 \001(\003R\010loginSid\022\033\n\tagent" +
       "_sid\030\002 \001(\003R\010agentSid\022\035\n\nclient_sid\030\003 \001(\003" +
-      "R\tclientSid\"\377\003\n\007MfaInfo\022\025\n\006org_id\030\001 \001(\tR" +
+      "R\tclientSid\"\274\004\n\007MfaInfo\022\025\n\006org_id\030\001 \001(\tR" +
       "\005orgId\022\027\n\007user_id\030\002 \001(\tR\006userId\022\037\n\013mfa_e" +
       "nabled\030\003 \001(\010R\nmfaEnabled\022;\n\004none\030\n \001(\0132%" +
       ".api.commons.org.MfaInfo.NoneSelectedH\000R" +
       "\004none\0224\n\003otp\030\013 \001(\0132 .api.commons.org.Mfa" +
       "Info.OtpTypeH\000R\003otp\0220\n\003duo\030\014 \001(\0132\034.api.c" +
-      "ommons.org.MfaInfo.DuoH\000R\003duo\032D\n\014NoneSel" +
-      "ected\0224\n\007timeout\030\001 \001(\0132\032.google.protobuf" +
-      ".TimestampR\007timeout\032\201\001\n\007OtpType\022L\n\005email" +
-      "\030\001 \001(\01324.api.commons.org.MfaInfo.OtpType" +
-      ".EmailDeliveryMethodH\000R\005email\032\025\n\023EmailDe" +
-      "liveryMethodB\021\n\017delivery_method\032(\n\003Duo\022!" +
-      "\n\014duo_username\030\001 \001(\tR\013duoUsernameB\n\n\010mfa" +
-      "_type\"p\n\005Skill\022\024\n\005level\030\001 \001(\003R\005level\022\022\n\004" +
-      "name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013d" +
-      "escription\022\033\n\tskill_sid\030\004 \001(\003R\010skillSid\"" +
-      "\230\001\n\021PasswordResetLink\022\027\n\007link_id\030\001 \001(\tR\006" +
-      "linkId\022\027\n\007user_id\030\002 \001(\tR\006userId\022\025\n\006org_i" +
-      "d\030\003 \001(\tR\005orgId\022:\n\nexpiration\030\004 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\nexpirationB\214\001\n!c" +
-      "om.tcn.cloud.api.api.commons.orgB\tUserPr" +
-      "otoP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\Comm" +
-      "ons\\Org\342\002\033Api\\Commons\\Org\\GPBMetadata\352\002\021" +
-      "Api::Commons::Orgb\006proto3"
+      "ommons.org.MfaInfo.DuoH\000R\003duo\0223\n\004totp\030\r " +
+      "\001(\0132\035.api.commons.org.MfaInfo.TotpH\000R\004to" +
+      "tp\032D\n\014NoneSelected\0224\n\007timeout\030\001 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\007timeout\032\201\001\n\007Otp" +
+      "Type\022L\n\005email\030\001 \001(\01324.api.commons.org.Mf" +
+      "aInfo.OtpType.EmailDeliveryMethodH\000R\005ema" +
+      "il\032\025\n\023EmailDeliveryMethodB\021\n\017delivery_me" +
+      "thod\032(\n\003Duo\022!\n\014duo_username\030\001 \001(\tR\013duoUs" +
+      "ername\032\006\n\004TotpB\n\n\010mfa_type\"p\n\005Skill\022\024\n\005l" +
+      "evel\030\001 \001(\003R\005level\022\022\n\004name\030\002 \001(\tR\004name\022 \n" +
+      "\013description\030\003 \001(\tR\013description\022\033\n\tskill" +
+      "_sid\030\004 \001(\003R\010skillSid\"\230\001\n\021PasswordResetLi" +
+      "nk\022\027\n\007link_id\030\001 \001(\tR\006linkId\022\027\n\007user_id\030\002" +
+      " \001(\tR\006userId\022\025\n\006org_id\030\003 \001(\tR\005orgId\022:\n\ne" +
+      "xpiration\030\004 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\nexpirationB\214\001\n!com.tcn.cloud.api.ap" +
+      "i.commons.orgB\tUserProtoP\001\242\002\003ACO\252\002\017Api.C" +
+      "ommons.Org\312\002\017Api\\Commons\\Org\342\002\033Api\\Commo" +
+      "ns\\Org\\GPBMetadata\352\002\021Api::Commons::Orgb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -173,7 +180,7 @@ public final class UserProto {
     internal_static_api_commons_org_MfaInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_MfaInfo_descriptor,
-        new java.lang.String[] { "OrgId", "UserId", "MfaEnabled", "None", "Otp", "Duo", "MfaType", });
+        new java.lang.String[] { "OrgId", "UserId", "MfaEnabled", "None", "Otp", "Duo", "Totp", "MfaType", });
     internal_static_api_commons_org_MfaInfo_NoneSelected_descriptor =
       internal_static_api_commons_org_MfaInfo_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_org_MfaInfo_NoneSelected_fieldAccessorTable = new
@@ -198,6 +205,12 @@ public final class UserProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_MfaInfo_Duo_descriptor,
         new java.lang.String[] { "DuoUsername", });
+    internal_static_api_commons_org_MfaInfo_Totp_descriptor =
+      internal_static_api_commons_org_MfaInfo_descriptor.getNestedTypes().get(3);
+    internal_static_api_commons_org_MfaInfo_Totp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_org_MfaInfo_Totp_descriptor,
+        new java.lang.String[] { });
     internal_static_api_commons_org_Skill_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_api_commons_org_Skill_fieldAccessorTable = new

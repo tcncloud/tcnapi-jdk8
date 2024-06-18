@@ -1646,6 +1646,21 @@ private static final long serialVersionUID = 0L;
     return forceSsoProvider_;
   }
 
+  public static final int ENABLE_TOTP_FIELD_NUMBER = 21;
+  private boolean enableTotp_ = false;
+  /**
+   * <pre>
+   * Whether or not to enable TOTP for 2FA.
+   * </pre>
+   *
+   * <code>bool enable_totp = 21 [json_name = "enableTotp"];</code>
+   * @return The enableTotp.
+   */
+  @java.lang.Override
+  public boolean getEnableTotp() {
+    return enableTotp_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1695,6 +1710,9 @@ private static final long serialVersionUID = 0L;
     }
     if (forceSsoProvider_ != false) {
       output.writeBool(20, forceSsoProvider_);
+    }
+    if (enableTotp_ != false) {
+      output.writeBool(21, enableTotp_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1755,6 +1773,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(20, forceSsoProvider_);
     }
+    if (enableTotp_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(21, enableTotp_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1800,6 +1822,8 @@ private static final long serialVersionUID = 0L;
         != other.getUserAuthorizationViaIp()) return false;
     if (getForceSsoProvider()
         != other.getForceSsoProvider()) return false;
+    if (getEnableTotp()
+        != other.getEnableTotp()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1847,6 +1871,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + FORCE_SSO_PROVIDER_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getForceSsoProvider());
+    hash = (37 * hash) + ENABLE_TOTP_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEnableTotp());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -2003,6 +2030,7 @@ private static final long serialVersionUID = 0L;
       passwordResetDayInterval_ = 0;
       userAuthorizationViaIp_ = false;
       forceSsoProvider_ = false;
+      enableTotp_ = false;
       return this;
     }
 
@@ -2076,6 +2104,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.forceSsoProvider_ = forceSsoProvider_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.enableTotp_ = enableTotp_;
       }
     }
 
@@ -2170,6 +2201,9 @@ private static final long serialVersionUID = 0L;
       if (other.getForceSsoProvider() != false) {
         setForceSsoProvider(other.getForceSsoProvider());
       }
+      if (other.getEnableTotp() != false) {
+        setEnableTotp(other.getEnableTotp());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2261,6 +2295,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000800;
               break;
             } // case 160
+            case 168: {
+              enableTotp_ = input.readBool();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 168
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3235,6 +3274,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearForceSsoProvider() {
       bitField0_ = (bitField0_ & ~0x00000800);
       forceSsoProvider_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean enableTotp_ ;
+    /**
+     * <pre>
+     * Whether or not to enable TOTP for 2FA.
+     * </pre>
+     *
+     * <code>bool enable_totp = 21 [json_name = "enableTotp"];</code>
+     * @return The enableTotp.
+     */
+    @java.lang.Override
+    public boolean getEnableTotp() {
+      return enableTotp_;
+    }
+    /**
+     * <pre>
+     * Whether or not to enable TOTP for 2FA.
+     * </pre>
+     *
+     * <code>bool enable_totp = 21 [json_name = "enableTotp"];</code>
+     * @param value The enableTotp to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEnableTotp(boolean value) {
+
+      enableTotp_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether or not to enable TOTP for 2FA.
+     * </pre>
+     *
+     * <code>bool enable_totp = 21 [json_name = "enableTotp"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEnableTotp() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      enableTotp_ = false;
       onChanged();
       return this;
     }

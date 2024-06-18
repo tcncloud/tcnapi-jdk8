@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     locale_ = "";
     articleNames_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    version_ = "";
   }
 
   @java.lang.Override
@@ -145,6 +146,53 @@ private static final long serialVersionUID = 0L;
     return articleNames_.getByteString(index);
   }
 
+  public static final int VERSION_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object version_ = "";
+  /**
+   * <pre>
+   * version
+   * </pre>
+   *
+   * <code>string version = 3 [json_name = "version"];</code>
+   * @return The version.
+   */
+  @java.lang.Override
+  public java.lang.String getVersion() {
+    java.lang.Object ref = version_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      version_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * version
+   * </pre>
+   *
+   * <code>string version = 3 [json_name = "version"];</code>
+   * @return The bytes for version.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getVersionBytes() {
+    java.lang.Object ref = version_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      version_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -164,6 +212,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < articleNames_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, articleNames_.getRaw(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, version_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -185,6 +236,9 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getArticleNamesList().size();
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, version_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -204,6 +258,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getLocale())) return false;
     if (!getArticleNamesList()
         .equals(other.getArticleNamesList())) return false;
+    if (!getVersion()
+        .equals(other.getVersion())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -221,6 +277,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ARTICLE_NAMES_FIELD_NUMBER;
       hash = (53 * hash) + getArticleNamesList().hashCode();
     }
+    hash = (37 * hash) + VERSION_FIELD_NUMBER;
+    hash = (53 * hash) + getVersion().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -359,6 +417,7 @@ private static final long serialVersionUID = 0L;
       locale_ = "";
       articleNames_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      version_ = "";
       return this;
     }
 
@@ -398,6 +457,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         articleNames_.makeImmutable();
         result.articleNames_ = articleNames_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.version_ = version_;
       }
     }
 
@@ -460,6 +522,11 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (!other.getVersion().isEmpty()) {
+        version_ = other.version_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -497,6 +564,11 @@ private static final long serialVersionUID = 0L;
               articleNames_.add(s);
               break;
             } // case 18
+            case 26: {
+              version_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -749,6 +821,98 @@ private static final long serialVersionUID = 0L;
       ensureArticleNamesIsMutable();
       articleNames_.add(value);
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object version_ = "";
+    /**
+     * <pre>
+     * version
+     * </pre>
+     *
+     * <code>string version = 3 [json_name = "version"];</code>
+     * @return The version.
+     */
+    public java.lang.String getVersion() {
+      java.lang.Object ref = version_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        version_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * version
+     * </pre>
+     *
+     * <code>string version = 3 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      java.lang.Object ref = version_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        version_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * version
+     * </pre>
+     *
+     * <code>string version = 3 [json_name = "version"];</code>
+     * @param value The version to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVersion(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      version_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * version
+     * </pre>
+     *
+     * <code>string version = 3 [json_name = "version"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearVersion() {
+      version_ = getDefaultInstance().getVersion();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * version
+     * </pre>
+     *
+     * <code>string version = 3 [json_name = "version"];</code>
+     * @param value The bytes for version to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      version_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

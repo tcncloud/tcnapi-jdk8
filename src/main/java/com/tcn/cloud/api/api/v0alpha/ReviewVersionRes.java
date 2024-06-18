@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v0alpha;
 
 /**
  * <pre>
- * response to list of differences after comparing different versions
+ * response to list of differences after comparing different version contents
  * </pre>
  *
  * Protobuf type {@code api.v0alpha.ReviewVersionRes}
@@ -22,6 +22,8 @@ private static final long serialVersionUID = 0L;
   private ReviewVersionRes() {
     diffUrls_ = "";
     diffFileNames_ = "";
+    srcContent_ = "";
+    destContent_ = "";
   }
 
   @java.lang.Override
@@ -138,6 +140,100 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int SRC_CONTENT_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object srcContent_ = "";
+  /**
+   * <pre>
+   * src version content
+   * </pre>
+   *
+   * <code>string src_content = 3 [json_name = "srcContent"];</code>
+   * @return The srcContent.
+   */
+  @java.lang.Override
+  public java.lang.String getSrcContent() {
+    java.lang.Object ref = srcContent_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      srcContent_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * src version content
+   * </pre>
+   *
+   * <code>string src_content = 3 [json_name = "srcContent"];</code>
+   * @return The bytes for srcContent.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSrcContentBytes() {
+    java.lang.Object ref = srcContent_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      srcContent_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int DEST_CONTENT_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object destContent_ = "";
+  /**
+   * <pre>
+   * dest version content
+   * </pre>
+   *
+   * <code>string dest_content = 4 [json_name = "destContent"];</code>
+   * @return The destContent.
+   */
+  @java.lang.Override
+  public java.lang.String getDestContent() {
+    java.lang.Object ref = destContent_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      destContent_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * dest version content
+   * </pre>
+   *
+   * <code>string dest_content = 4 [json_name = "destContent"];</code>
+   * @return The bytes for destContent.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDestContentBytes() {
+    java.lang.Object ref = destContent_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      destContent_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -158,6 +254,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diffFileNames_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, diffFileNames_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(srcContent_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, srcContent_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destContent_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, destContent_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -172,6 +274,12 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(diffFileNames_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, diffFileNames_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(srcContent_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, srcContent_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destContent_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, destContent_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -192,6 +300,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getDiffUrls())) return false;
     if (!getDiffFileNames()
         .equals(other.getDiffFileNames())) return false;
+    if (!getSrcContent()
+        .equals(other.getSrcContent())) return false;
+    if (!getDestContent()
+        .equals(other.getDestContent())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -207,6 +319,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getDiffUrls().hashCode();
     hash = (37 * hash) + DIFF_FILE_NAMES_FIELD_NUMBER;
     hash = (53 * hash) + getDiffFileNames().hashCode();
+    hash = (37 * hash) + SRC_CONTENT_FIELD_NUMBER;
+    hash = (53 * hash) + getSrcContent().hashCode();
+    hash = (37 * hash) + DEST_CONTENT_FIELD_NUMBER;
+    hash = (53 * hash) + getDestContent().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -306,7 +422,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * response to list of differences after comparing different versions
+   * response to list of differences after comparing different version contents
    * </pre>
    *
    * Protobuf type {@code api.v0alpha.ReviewVersionRes}
@@ -344,6 +460,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       diffUrls_ = "";
       diffFileNames_ = "";
+      srcContent_ = "";
+      destContent_ = "";
       return this;
     }
 
@@ -382,6 +500,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.diffFileNames_ = diffFileNames_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.srcContent_ = srcContent_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.destContent_ = destContent_;
       }
     }
 
@@ -439,6 +563,16 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (!other.getSrcContent().isEmpty()) {
+        srcContent_ = other.srcContent_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (!other.getDestContent().isEmpty()) {
+        destContent_ = other.destContent_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -475,6 +609,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              srcContent_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              destContent_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -672,6 +816,190 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       diffFileNames_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object srcContent_ = "";
+    /**
+     * <pre>
+     * src version content
+     * </pre>
+     *
+     * <code>string src_content = 3 [json_name = "srcContent"];</code>
+     * @return The srcContent.
+     */
+    public java.lang.String getSrcContent() {
+      java.lang.Object ref = srcContent_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        srcContent_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * src version content
+     * </pre>
+     *
+     * <code>string src_content = 3 [json_name = "srcContent"];</code>
+     * @return The bytes for srcContent.
+     */
+    public com.google.protobuf.ByteString
+        getSrcContentBytes() {
+      java.lang.Object ref = srcContent_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        srcContent_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * src version content
+     * </pre>
+     *
+     * <code>string src_content = 3 [json_name = "srcContent"];</code>
+     * @param value The srcContent to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSrcContent(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      srcContent_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * src version content
+     * </pre>
+     *
+     * <code>string src_content = 3 [json_name = "srcContent"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSrcContent() {
+      srcContent_ = getDefaultInstance().getSrcContent();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * src version content
+     * </pre>
+     *
+     * <code>string src_content = 3 [json_name = "srcContent"];</code>
+     * @param value The bytes for srcContent to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSrcContentBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      srcContent_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object destContent_ = "";
+    /**
+     * <pre>
+     * dest version content
+     * </pre>
+     *
+     * <code>string dest_content = 4 [json_name = "destContent"];</code>
+     * @return The destContent.
+     */
+    public java.lang.String getDestContent() {
+      java.lang.Object ref = destContent_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destContent_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * dest version content
+     * </pre>
+     *
+     * <code>string dest_content = 4 [json_name = "destContent"];</code>
+     * @return The bytes for destContent.
+     */
+    public com.google.protobuf.ByteString
+        getDestContentBytes() {
+      java.lang.Object ref = destContent_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destContent_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * dest version content
+     * </pre>
+     *
+     * <code>string dest_content = 4 [json_name = "destContent"];</code>
+     * @param value The destContent to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDestContent(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      destContent_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * dest version content
+     * </pre>
+     *
+     * <code>string dest_content = 4 [json_name = "destContent"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDestContent() {
+      destContent_ = getDefaultInstance().getDestContent();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * dest version content
+     * </pre>
+     *
+     * <code>string dest_content = 4 [json_name = "destContent"];</code>
+     * @param value The bytes for destContent to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDestContentBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      destContent_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
