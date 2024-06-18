@@ -221,27 +221,27 @@ public interface GhostNotificationOrBuilder extends
    * notification that an auth token will soon expire
    * </pre>
    *
-   * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
-   * @return Whether the authTokenExpiration field is set.
+   * <code>.api.commons.AuthTokenExpiration auth_token_expiration_notification = 11 [json_name = "authTokenExpirationNotification"];</code>
+   * @return Whether the authTokenExpirationNotification field is set.
    */
-  boolean hasAuthTokenExpiration();
+  boolean hasAuthTokenExpirationNotification();
   /**
    * <pre>
    * notification that an auth token will soon expire
    * </pre>
    *
-   * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
-   * @return The authTokenExpiration.
+   * <code>.api.commons.AuthTokenExpiration auth_token_expiration_notification = 11 [json_name = "authTokenExpirationNotification"];</code>
+   * @return The authTokenExpirationNotification.
    */
-  com.tcn.cloud.api.api.commons.org.AuthTokenExpiration getAuthTokenExpiration();
+  com.tcn.cloud.api.api.commons.AuthTokenExpiration getAuthTokenExpirationNotification();
   /**
    * <pre>
    * notification that an auth token will soon expire
    * </pre>
    *
-   * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
+   * <code>.api.commons.AuthTokenExpiration auth_token_expiration_notification = 11 [json_name = "authTokenExpirationNotification"];</code>
    */
-  com.tcn.cloud.api.api.commons.org.AuthTokenExpirationOrBuilder getAuthTokenExpirationOrBuilder();
+  com.tcn.cloud.api.api.commons.AuthTokenExpirationOrBuilder getAuthTokenExpirationNotificationOrBuilder();
 
   com.tcn.cloud.api.api.commons.GhostNotification.PayloadCase getPayloadCase();
 }

@@ -57,7 +57,7 @@ private static final long serialVersionUID = 0L;
     DIRECTED_CALL_RINGING(7),
     DIRECTED_CALL_HANGUP(8),
     AGENT_QUEUED_CALLS_NOTIFICATION(9),
-    AUTH_TOKEN_EXPIRATION(10),
+    AUTH_TOKEN_EXPIRATION_NOTIFICATION(11),
     PAYLOAD_NOT_SET(0);
     private final int value;
     private PayloadCase(int value) {
@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
         case 7: return DIRECTED_CALL_RINGING;
         case 8: return DIRECTED_CALL_HANGUP;
         case 9: return AGENT_QUEUED_CALLS_NOTIFICATION;
-        case 10: return AUTH_TOKEN_EXPIRATION;
+        case 11: return AUTH_TOKEN_EXPIRATION_NOTIFICATION;
         case 0: return PAYLOAD_NOT_SET;
         default: return null;
       }
@@ -446,47 +446,47 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.getDefaultInstance();
   }
 
-  public static final int AUTH_TOKEN_EXPIRATION_FIELD_NUMBER = 10;
+  public static final int AUTH_TOKEN_EXPIRATION_NOTIFICATION_FIELD_NUMBER = 11;
   /**
    * <pre>
    * notification that an auth token will soon expire
    * </pre>
    *
-   * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
-   * @return Whether the authTokenExpiration field is set.
+   * <code>.api.commons.AuthTokenExpiration auth_token_expiration_notification = 11 [json_name = "authTokenExpirationNotification"];</code>
+   * @return Whether the authTokenExpirationNotification field is set.
    */
   @java.lang.Override
-  public boolean hasAuthTokenExpiration() {
-    return payloadCase_ == 10;
+  public boolean hasAuthTokenExpirationNotification() {
+    return payloadCase_ == 11;
   }
   /**
    * <pre>
    * notification that an auth token will soon expire
    * </pre>
    *
-   * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
-   * @return The authTokenExpiration.
+   * <code>.api.commons.AuthTokenExpiration auth_token_expiration_notification = 11 [json_name = "authTokenExpirationNotification"];</code>
+   * @return The authTokenExpirationNotification.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.AuthTokenExpiration getAuthTokenExpiration() {
-    if (payloadCase_ == 10) {
-       return (com.tcn.cloud.api.api.commons.org.AuthTokenExpiration) payload_;
+  public com.tcn.cloud.api.api.commons.AuthTokenExpiration getAuthTokenExpirationNotification() {
+    if (payloadCase_ == 11) {
+       return (com.tcn.cloud.api.api.commons.AuthTokenExpiration) payload_;
     }
-    return com.tcn.cloud.api.api.commons.org.AuthTokenExpiration.getDefaultInstance();
+    return com.tcn.cloud.api.api.commons.AuthTokenExpiration.getDefaultInstance();
   }
   /**
    * <pre>
    * notification that an auth token will soon expire
    * </pre>
    *
-   * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
+   * <code>.api.commons.AuthTokenExpiration auth_token_expiration_notification = 11 [json_name = "authTokenExpirationNotification"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.org.AuthTokenExpirationOrBuilder getAuthTokenExpirationOrBuilder() {
-    if (payloadCase_ == 10) {
-       return (com.tcn.cloud.api.api.commons.org.AuthTokenExpiration) payload_;
+  public com.tcn.cloud.api.api.commons.AuthTokenExpirationOrBuilder getAuthTokenExpirationNotificationOrBuilder() {
+    if (payloadCase_ == 11) {
+       return (com.tcn.cloud.api.api.commons.AuthTokenExpiration) payload_;
     }
-    return com.tcn.cloud.api.api.commons.org.AuthTokenExpiration.getDefaultInstance();
+    return com.tcn.cloud.api.api.commons.AuthTokenExpiration.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -527,8 +527,8 @@ private static final long serialVersionUID = 0L;
     if (payloadCase_ == 9) {
       output.writeMessage(9, (com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification) payload_);
     }
-    if (payloadCase_ == 10) {
-      output.writeMessage(10, (com.tcn.cloud.api.api.commons.org.AuthTokenExpiration) payload_);
+    if (payloadCase_ == 11) {
+      output.writeMessage(11, (com.tcn.cloud.api.api.commons.AuthTokenExpiration) payload_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -570,9 +570,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, (com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification) payload_);
     }
-    if (payloadCase_ == 10) {
+    if (payloadCase_ == 11) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(10, (com.tcn.cloud.api.api.commons.org.AuthTokenExpiration) payload_);
+        .computeMessageSize(11, (com.tcn.cloud.api.api.commons.AuthTokenExpiration) payload_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -621,9 +621,9 @@ private static final long serialVersionUID = 0L;
         if (!getAgentQueuedCallsNotification()
             .equals(other.getAgentQueuedCallsNotification())) return false;
         break;
-      case 10:
-        if (!getAuthTokenExpiration()
-            .equals(other.getAuthTokenExpiration())) return false;
+      case 11:
+        if (!getAuthTokenExpirationNotification()
+            .equals(other.getAuthTokenExpirationNotification())) return false;
         break;
       case 0:
       default:
@@ -670,9 +670,9 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + AGENT_QUEUED_CALLS_NOTIFICATION_FIELD_NUMBER;
         hash = (53 * hash) + getAgentQueuedCallsNotification().hashCode();
         break;
-      case 10:
-        hash = (37 * hash) + AUTH_TOKEN_EXPIRATION_FIELD_NUMBER;
-        hash = (53 * hash) + getAuthTokenExpiration().hashCode();
+      case 11:
+        hash = (37 * hash) + AUTH_TOKEN_EXPIRATION_NOTIFICATION_FIELD_NUMBER;
+        hash = (53 * hash) + getAuthTokenExpirationNotification().hashCode();
         break;
       case 0:
       default:
@@ -835,8 +835,8 @@ private static final long serialVersionUID = 0L;
       if (agentQueuedCallsNotificationBuilder_ != null) {
         agentQueuedCallsNotificationBuilder_.clear();
       }
-      if (authTokenExpirationBuilder_ != null) {
-        authTokenExpirationBuilder_.clear();
+      if (authTokenExpirationNotificationBuilder_ != null) {
+        authTokenExpirationNotificationBuilder_.clear();
       }
       payloadCase_ = 0;
       payload_ = null;
@@ -910,9 +910,9 @@ private static final long serialVersionUID = 0L;
           agentQueuedCallsNotificationBuilder_ != null) {
         result.payload_ = agentQueuedCallsNotificationBuilder_.build();
       }
-      if (payloadCase_ == 10 &&
-          authTokenExpirationBuilder_ != null) {
-        result.payload_ = authTokenExpirationBuilder_.build();
+      if (payloadCase_ == 11 &&
+          authTokenExpirationNotificationBuilder_ != null) {
+        result.payload_ = authTokenExpirationNotificationBuilder_.build();
       }
     }
 
@@ -994,8 +994,8 @@ private static final long serialVersionUID = 0L;
           mergeAgentQueuedCallsNotification(other.getAgentQueuedCallsNotification());
           break;
         }
-        case AUTH_TOKEN_EXPIRATION: {
-          mergeAuthTokenExpiration(other.getAuthTokenExpiration());
+        case AUTH_TOKEN_EXPIRATION_NOTIFICATION: {
+          mergeAuthTokenExpirationNotification(other.getAuthTokenExpirationNotification());
           break;
         }
         case PAYLOAD_NOT_SET: {
@@ -1082,13 +1082,13 @@ private static final long serialVersionUID = 0L;
               payloadCase_ = 9;
               break;
             } // case 74
-            case 82: {
+            case 90: {
               input.readMessage(
-                  getAuthTokenExpirationFieldBuilder().getBuilder(),
+                  getAuthTokenExpirationNotificationFieldBuilder().getBuilder(),
                   extensionRegistry);
-              payloadCase_ = 10;
+              payloadCase_ = 11;
               break;
-            } // case 82
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2460,39 +2460,39 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.AuthTokenExpiration, com.tcn.cloud.api.api.commons.org.AuthTokenExpiration.Builder, com.tcn.cloud.api.api.commons.org.AuthTokenExpirationOrBuilder> authTokenExpirationBuilder_;
+        com.tcn.cloud.api.api.commons.AuthTokenExpiration, com.tcn.cloud.api.api.commons.AuthTokenExpiration.Builder, com.tcn.cloud.api.api.commons.AuthTokenExpirationOrBuilder> authTokenExpirationNotificationBuilder_;
     /**
      * <pre>
      * notification that an auth token will soon expire
      * </pre>
      *
-     * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
-     * @return Whether the authTokenExpiration field is set.
+     * <code>.api.commons.AuthTokenExpiration auth_token_expiration_notification = 11 [json_name = "authTokenExpirationNotification"];</code>
+     * @return Whether the authTokenExpirationNotification field is set.
      */
     @java.lang.Override
-    public boolean hasAuthTokenExpiration() {
-      return payloadCase_ == 10;
+    public boolean hasAuthTokenExpirationNotification() {
+      return payloadCase_ == 11;
     }
     /**
      * <pre>
      * notification that an auth token will soon expire
      * </pre>
      *
-     * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
-     * @return The authTokenExpiration.
+     * <code>.api.commons.AuthTokenExpiration auth_token_expiration_notification = 11 [json_name = "authTokenExpirationNotification"];</code>
+     * @return The authTokenExpirationNotification.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.AuthTokenExpiration getAuthTokenExpiration() {
-      if (authTokenExpirationBuilder_ == null) {
-        if (payloadCase_ == 10) {
-          return (com.tcn.cloud.api.api.commons.org.AuthTokenExpiration) payload_;
+    public com.tcn.cloud.api.api.commons.AuthTokenExpiration getAuthTokenExpirationNotification() {
+      if (authTokenExpirationNotificationBuilder_ == null) {
+        if (payloadCase_ == 11) {
+          return (com.tcn.cloud.api.api.commons.AuthTokenExpiration) payload_;
         }
-        return com.tcn.cloud.api.api.commons.org.AuthTokenExpiration.getDefaultInstance();
+        return com.tcn.cloud.api.api.commons.AuthTokenExpiration.getDefaultInstance();
       } else {
-        if (payloadCase_ == 10) {
-          return authTokenExpirationBuilder_.getMessage();
+        if (payloadCase_ == 11) {
+          return authTokenExpirationNotificationBuilder_.getMessage();
         }
-        return com.tcn.cloud.api.api.commons.org.AuthTokenExpiration.getDefaultInstance();
+        return com.tcn.cloud.api.api.commons.AuthTokenExpiration.getDefaultInstance();
       }
     }
     /**
@@ -2500,19 +2500,19 @@ private static final long serialVersionUID = 0L;
      * notification that an auth token will soon expire
      * </pre>
      *
-     * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
+     * <code>.api.commons.AuthTokenExpiration auth_token_expiration_notification = 11 [json_name = "authTokenExpirationNotification"];</code>
      */
-    public Builder setAuthTokenExpiration(com.tcn.cloud.api.api.commons.org.AuthTokenExpiration value) {
-      if (authTokenExpirationBuilder_ == null) {
+    public Builder setAuthTokenExpirationNotification(com.tcn.cloud.api.api.commons.AuthTokenExpiration value) {
+      if (authTokenExpirationNotificationBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         payload_ = value;
         onChanged();
       } else {
-        authTokenExpirationBuilder_.setMessage(value);
+        authTokenExpirationNotificationBuilder_.setMessage(value);
       }
-      payloadCase_ = 10;
+      payloadCase_ = 11;
       return this;
     }
     /**
@@ -2520,17 +2520,17 @@ private static final long serialVersionUID = 0L;
      * notification that an auth token will soon expire
      * </pre>
      *
-     * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
+     * <code>.api.commons.AuthTokenExpiration auth_token_expiration_notification = 11 [json_name = "authTokenExpirationNotification"];</code>
      */
-    public Builder setAuthTokenExpiration(
-        com.tcn.cloud.api.api.commons.org.AuthTokenExpiration.Builder builderForValue) {
-      if (authTokenExpirationBuilder_ == null) {
+    public Builder setAuthTokenExpirationNotification(
+        com.tcn.cloud.api.api.commons.AuthTokenExpiration.Builder builderForValue) {
+      if (authTokenExpirationNotificationBuilder_ == null) {
         payload_ = builderForValue.build();
         onChanged();
       } else {
-        authTokenExpirationBuilder_.setMessage(builderForValue.build());
+        authTokenExpirationNotificationBuilder_.setMessage(builderForValue.build());
       }
-      payloadCase_ = 10;
+      payloadCase_ = 11;
       return this;
     }
     /**
@@ -2538,26 +2538,26 @@ private static final long serialVersionUID = 0L;
      * notification that an auth token will soon expire
      * </pre>
      *
-     * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
+     * <code>.api.commons.AuthTokenExpiration auth_token_expiration_notification = 11 [json_name = "authTokenExpirationNotification"];</code>
      */
-    public Builder mergeAuthTokenExpiration(com.tcn.cloud.api.api.commons.org.AuthTokenExpiration value) {
-      if (authTokenExpirationBuilder_ == null) {
-        if (payloadCase_ == 10 &&
-            payload_ != com.tcn.cloud.api.api.commons.org.AuthTokenExpiration.getDefaultInstance()) {
-          payload_ = com.tcn.cloud.api.api.commons.org.AuthTokenExpiration.newBuilder((com.tcn.cloud.api.api.commons.org.AuthTokenExpiration) payload_)
+    public Builder mergeAuthTokenExpirationNotification(com.tcn.cloud.api.api.commons.AuthTokenExpiration value) {
+      if (authTokenExpirationNotificationBuilder_ == null) {
+        if (payloadCase_ == 11 &&
+            payload_ != com.tcn.cloud.api.api.commons.AuthTokenExpiration.getDefaultInstance()) {
+          payload_ = com.tcn.cloud.api.api.commons.AuthTokenExpiration.newBuilder((com.tcn.cloud.api.api.commons.AuthTokenExpiration) payload_)
               .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
         onChanged();
       } else {
-        if (payloadCase_ == 10) {
-          authTokenExpirationBuilder_.mergeFrom(value);
+        if (payloadCase_ == 11) {
+          authTokenExpirationNotificationBuilder_.mergeFrom(value);
         } else {
-          authTokenExpirationBuilder_.setMessage(value);
+          authTokenExpirationNotificationBuilder_.setMessage(value);
         }
       }
-      payloadCase_ = 10;
+      payloadCase_ = 11;
       return this;
     }
     /**
@@ -2565,21 +2565,21 @@ private static final long serialVersionUID = 0L;
      * notification that an auth token will soon expire
      * </pre>
      *
-     * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
+     * <code>.api.commons.AuthTokenExpiration auth_token_expiration_notification = 11 [json_name = "authTokenExpirationNotification"];</code>
      */
-    public Builder clearAuthTokenExpiration() {
-      if (authTokenExpirationBuilder_ == null) {
-        if (payloadCase_ == 10) {
+    public Builder clearAuthTokenExpirationNotification() {
+      if (authTokenExpirationNotificationBuilder_ == null) {
+        if (payloadCase_ == 11) {
           payloadCase_ = 0;
           payload_ = null;
           onChanged();
         }
       } else {
-        if (payloadCase_ == 10) {
+        if (payloadCase_ == 11) {
           payloadCase_ = 0;
           payload_ = null;
         }
-        authTokenExpirationBuilder_.clear();
+        authTokenExpirationNotificationBuilder_.clear();
       }
       return this;
     }
@@ -2588,27 +2588,27 @@ private static final long serialVersionUID = 0L;
      * notification that an auth token will soon expire
      * </pre>
      *
-     * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
+     * <code>.api.commons.AuthTokenExpiration auth_token_expiration_notification = 11 [json_name = "authTokenExpirationNotification"];</code>
      */
-    public com.tcn.cloud.api.api.commons.org.AuthTokenExpiration.Builder getAuthTokenExpirationBuilder() {
-      return getAuthTokenExpirationFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.api.commons.AuthTokenExpiration.Builder getAuthTokenExpirationNotificationBuilder() {
+      return getAuthTokenExpirationNotificationFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * notification that an auth token will soon expire
      * </pre>
      *
-     * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
+     * <code>.api.commons.AuthTokenExpiration auth_token_expiration_notification = 11 [json_name = "authTokenExpirationNotification"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.AuthTokenExpirationOrBuilder getAuthTokenExpirationOrBuilder() {
-      if ((payloadCase_ == 10) && (authTokenExpirationBuilder_ != null)) {
-        return authTokenExpirationBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.commons.AuthTokenExpirationOrBuilder getAuthTokenExpirationNotificationOrBuilder() {
+      if ((payloadCase_ == 11) && (authTokenExpirationNotificationBuilder_ != null)) {
+        return authTokenExpirationNotificationBuilder_.getMessageOrBuilder();
       } else {
-        if (payloadCase_ == 10) {
-          return (com.tcn.cloud.api.api.commons.org.AuthTokenExpiration) payload_;
+        if (payloadCase_ == 11) {
+          return (com.tcn.cloud.api.api.commons.AuthTokenExpiration) payload_;
         }
-        return com.tcn.cloud.api.api.commons.org.AuthTokenExpiration.getDefaultInstance();
+        return com.tcn.cloud.api.api.commons.AuthTokenExpiration.getDefaultInstance();
       }
     }
     /**
@@ -2616,25 +2616,25 @@ private static final long serialVersionUID = 0L;
      * notification that an auth token will soon expire
      * </pre>
      *
-     * <code>.api.commons.org.AuthTokenExpiration auth_token_expiration = 10 [json_name = "authTokenExpiration"];</code>
+     * <code>.api.commons.AuthTokenExpiration auth_token_expiration_notification = 11 [json_name = "authTokenExpirationNotification"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.org.AuthTokenExpiration, com.tcn.cloud.api.api.commons.org.AuthTokenExpiration.Builder, com.tcn.cloud.api.api.commons.org.AuthTokenExpirationOrBuilder> 
-        getAuthTokenExpirationFieldBuilder() {
-      if (authTokenExpirationBuilder_ == null) {
-        if (!(payloadCase_ == 10)) {
-          payload_ = com.tcn.cloud.api.api.commons.org.AuthTokenExpiration.getDefaultInstance();
+        com.tcn.cloud.api.api.commons.AuthTokenExpiration, com.tcn.cloud.api.api.commons.AuthTokenExpiration.Builder, com.tcn.cloud.api.api.commons.AuthTokenExpirationOrBuilder> 
+        getAuthTokenExpirationNotificationFieldBuilder() {
+      if (authTokenExpirationNotificationBuilder_ == null) {
+        if (!(payloadCase_ == 11)) {
+          payload_ = com.tcn.cloud.api.api.commons.AuthTokenExpiration.getDefaultInstance();
         }
-        authTokenExpirationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.org.AuthTokenExpiration, com.tcn.cloud.api.api.commons.org.AuthTokenExpiration.Builder, com.tcn.cloud.api.api.commons.org.AuthTokenExpirationOrBuilder>(
-                (com.tcn.cloud.api.api.commons.org.AuthTokenExpiration) payload_,
+        authTokenExpirationNotificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.AuthTokenExpiration, com.tcn.cloud.api.api.commons.AuthTokenExpiration.Builder, com.tcn.cloud.api.api.commons.AuthTokenExpirationOrBuilder>(
+                (com.tcn.cloud.api.api.commons.AuthTokenExpiration) payload_,
                 getParentForChildren(),
                 isClean());
         payload_ = null;
       }
-      payloadCase_ = 10;
+      payloadCase_ = 11;
       onChanged();
-      return authTokenExpirationBuilder_;
+      return authTokenExpirationNotificationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

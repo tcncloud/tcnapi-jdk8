@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateRateDefinitionRequest() {
-    billingPlanId_ = "";
+    rateDefinitionId_ = "";
   }
 
   @java.lang.Override
@@ -39,39 +39,39 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.billing.v1alpha3.CreateRateDefinitionRequest.class, com.tcn.cloud.api.services.billing.v1alpha3.CreateRateDefinitionRequest.Builder.class);
   }
 
-  public static final int BILLING_PLAN_ID_FIELD_NUMBER = 1;
+  public static final int RATE_DEFINITION_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object billingPlanId_ = "";
+  private volatile java.lang.Object rateDefinitionId_ = "";
   /**
-   * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
-   * @return The billingPlanId.
+   * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+   * @return The rateDefinitionId.
    */
   @java.lang.Override
-  public java.lang.String getBillingPlanId() {
-    java.lang.Object ref = billingPlanId_;
+  public java.lang.String getRateDefinitionId() {
+    java.lang.Object ref = rateDefinitionId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      billingPlanId_ = s;
+      rateDefinitionId_ = s;
       return s;
     }
   }
   /**
-   * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
-   * @return The bytes for billingPlanId.
+   * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+   * @return The bytes for rateDefinitionId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getBillingPlanIdBytes() {
-    java.lang.Object ref = billingPlanId_;
+      getRateDefinitionIdBytes() {
+    java.lang.Object ref = rateDefinitionId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      billingPlanId_ = b;
+      rateDefinitionId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -118,8 +118,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingPlanId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, billingPlanId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateDefinitionId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rateDefinitionId_);
     }
     if (rateDefinition_ != null) {
       output.writeMessage(2, getRateDefinition());
@@ -133,8 +133,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingPlanId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, billingPlanId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateDefinitionId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rateDefinitionId_);
     }
     if (rateDefinition_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -155,8 +155,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.billing.v1alpha3.CreateRateDefinitionRequest other = (com.tcn.cloud.api.services.billing.v1alpha3.CreateRateDefinitionRequest) obj;
 
-    if (!getBillingPlanId()
-        .equals(other.getBillingPlanId())) return false;
+    if (!getRateDefinitionId()
+        .equals(other.getRateDefinitionId())) return false;
     if (hasRateDefinition() != other.hasRateDefinition()) return false;
     if (hasRateDefinition()) {
       if (!getRateDefinition()
@@ -173,8 +173,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + BILLING_PLAN_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getBillingPlanId().hashCode();
+    hash = (37 * hash) + RATE_DEFINITION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getRateDefinitionId().hashCode();
     if (hasRateDefinition()) {
       hash = (37 * hash) + RATE_DEFINITION_FIELD_NUMBER;
       hash = (53 * hash) + getRateDefinition().hashCode();
@@ -310,7 +310,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      billingPlanId_ = "";
+      rateDefinitionId_ = "";
       rateDefinition_ = null;
       if (rateDefinitionBuilder_ != null) {
         rateDefinitionBuilder_.dispose();
@@ -350,7 +350,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.services.billing.v1alpha3.CreateRateDefinitionRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.billingPlanId_ = billingPlanId_;
+        result.rateDefinitionId_ = rateDefinitionId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.rateDefinition_ = rateDefinitionBuilder_ == null
@@ -403,8 +403,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.billing.v1alpha3.CreateRateDefinitionRequest other) {
       if (other == com.tcn.cloud.api.services.billing.v1alpha3.CreateRateDefinitionRequest.getDefaultInstance()) return this;
-      if (!other.getBillingPlanId().isEmpty()) {
-        billingPlanId_ = other.billingPlanId_;
+      if (!other.getRateDefinitionId().isEmpty()) {
+        rateDefinitionId_ = other.rateDefinitionId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -438,7 +438,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              billingPlanId_ = input.readStringRequireUtf8();
+              rateDefinitionId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -466,73 +466,73 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object billingPlanId_ = "";
+    private java.lang.Object rateDefinitionId_ = "";
     /**
-     * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
-     * @return The billingPlanId.
+     * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * @return The rateDefinitionId.
      */
-    public java.lang.String getBillingPlanId() {
-      java.lang.Object ref = billingPlanId_;
+    public java.lang.String getRateDefinitionId() {
+      java.lang.Object ref = rateDefinitionId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        billingPlanId_ = s;
+        rateDefinitionId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
-     * @return The bytes for billingPlanId.
+     * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * @return The bytes for rateDefinitionId.
      */
     public com.google.protobuf.ByteString
-        getBillingPlanIdBytes() {
-      java.lang.Object ref = billingPlanId_;
+        getRateDefinitionIdBytes() {
+      java.lang.Object ref = rateDefinitionId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        billingPlanId_ = b;
+        rateDefinitionId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
-     * @param value The billingPlanId to set.
+     * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * @param value The rateDefinitionId to set.
      * @return This builder for chaining.
      */
-    public Builder setBillingPlanId(
+    public Builder setRateDefinitionId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      billingPlanId_ = value;
+      rateDefinitionId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
+     * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearBillingPlanId() {
-      billingPlanId_ = getDefaultInstance().getBillingPlanId();
+    public Builder clearRateDefinitionId() {
+      rateDefinitionId_ = getDefaultInstance().getRateDefinitionId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
-     * @param value The bytes for billingPlanId to set.
+     * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+     * @param value The bytes for rateDefinitionId to set.
      * @return This builder for chaining.
      */
-    public Builder setBillingPlanIdBytes(
+    public Builder setRateDefinitionIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      billingPlanId_ = value;
+      rateDefinitionId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;

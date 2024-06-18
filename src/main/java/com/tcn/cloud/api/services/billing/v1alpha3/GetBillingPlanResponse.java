@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.services.billing.v1alpha3;
 
 /**
- * Protobuf type {@code services.billing.v1alpha3.GetOrgBillingPlanResponse}
+ * Protobuf type {@code services.billing.v1alpha3.GetBillingPlanResponse}
  */
-public final class GetOrgBillingPlanResponse extends
+public final class GetBillingPlanResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.billing.v1alpha3.GetOrgBillingPlanResponse)
-    GetOrgBillingPlanResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.billing.v1alpha3.GetBillingPlanResponse)
+    GetBillingPlanResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetOrgBillingPlanResponse.newBuilder() to construct.
-  private GetOrgBillingPlanResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use GetBillingPlanResponse.newBuilder() to construct.
+  private GetBillingPlanResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetOrgBillingPlanResponse() {
+  private GetBillingPlanResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetOrgBillingPlanResponse();
+    return new GetBillingPlanResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_GetOrgBillingPlanResponse_descriptor;
+    return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_GetBillingPlanResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_GetOrgBillingPlanResponse_fieldAccessorTable
+    return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_GetBillingPlanResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse.class, com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse.Builder.class);
+            com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse.class, com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse.Builder.class);
   }
 
   public static final int BILLING_PLAN_FIELD_NUMBER = 1;
@@ -104,10 +104,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse other = (com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse) obj;
+    com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse other = (com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse) obj;
 
     if (hasBillingPlan() != other.hasBillingPlan()) return false;
     if (hasBillingPlan()) {
@@ -134,44 +134,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -179,26 +179,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -227,26 +227,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code services.billing.v1alpha3.GetOrgBillingPlanResponse}
+   * Protobuf type {@code services.billing.v1alpha3.GetBillingPlanResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.billing.v1alpha3.GetOrgBillingPlanResponse)
-      com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.billing.v1alpha3.GetBillingPlanResponse)
+      com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_GetOrgBillingPlanResponse_descriptor;
+      return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_GetBillingPlanResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_GetOrgBillingPlanResponse_fieldAccessorTable
+      return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_GetBillingPlanResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse.class, com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse.Builder.class);
+              com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse.class, com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse.newBuilder()
     private Builder() {
 
     }
@@ -271,17 +271,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_GetOrgBillingPlanResponse_descriptor;
+      return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_GetBillingPlanResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse.getDefaultInstance();
+    public com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse build() {
-      com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse result = buildPartial();
+    public com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse build() {
+      com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -289,14 +289,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse buildPartial() {
-      com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse result = new com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse(this);
+    public com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse buildPartial() {
+      com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse result = new com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.billingPlan_ = billingPlanBuilder_ == null
@@ -339,16 +339,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse) {
-        return mergeFrom((com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse)other);
+      if (other instanceof com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse) {
+        return mergeFrom((com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse other) {
-      if (other == com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse other) {
+      if (other == com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse.getDefaultInstance()) return this;
       if (other.hasBillingPlan()) {
         mergeBillingPlan(other.getBillingPlan());
       }
@@ -533,23 +533,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.billing.v1alpha3.GetOrgBillingPlanResponse)
+    // @@protoc_insertion_point(builder_scope:services.billing.v1alpha3.GetBillingPlanResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:services.billing.v1alpha3.GetOrgBillingPlanResponse)
-  private static final com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.billing.v1alpha3.GetBillingPlanResponse)
+  private static final com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse();
   }
 
-  public static com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetOrgBillingPlanResponse>
-      PARSER = new com.google.protobuf.AbstractParser<GetOrgBillingPlanResponse>() {
+  private static final com.google.protobuf.Parser<GetBillingPlanResponse>
+      PARSER = new com.google.protobuf.AbstractParser<GetBillingPlanResponse>() {
     @java.lang.Override
-    public GetOrgBillingPlanResponse parsePartialFrom(
+    public GetBillingPlanResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -568,17 +568,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetOrgBillingPlanResponse> parser() {
+  public static com.google.protobuf.Parser<GetBillingPlanResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetOrgBillingPlanResponse> getParserForType() {
+  public com.google.protobuf.Parser<GetBillingPlanResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

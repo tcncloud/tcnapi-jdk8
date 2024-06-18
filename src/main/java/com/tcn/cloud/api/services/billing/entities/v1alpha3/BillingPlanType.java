@@ -13,9 +13,9 @@ public enum BillingPlanType
    */
   BILLING_PLAN_TYPE_UNSPECIFIED(0),
   /**
-   * <code>BILLING_PLAN_TYPE_TEMPLATE = 1;</code>
+   * <code>BILLING_PLAN_TYPE_DEFAULT = 1;</code>
    */
-  BILLING_PLAN_TYPE_TEMPLATE(1),
+  BILLING_PLAN_TYPE_DEFAULT(1),
   /**
    * <code>BILLING_PLAN_TYPE_ORG = 2;</code>
    */
@@ -28,9 +28,9 @@ public enum BillingPlanType
    */
   public static final int BILLING_PLAN_TYPE_UNSPECIFIED_VALUE = 0;
   /**
-   * <code>BILLING_PLAN_TYPE_TEMPLATE = 1;</code>
+   * <code>BILLING_PLAN_TYPE_DEFAULT = 1;</code>
    */
-  public static final int BILLING_PLAN_TYPE_TEMPLATE_VALUE = 1;
+  public static final int BILLING_PLAN_TYPE_DEFAULT_VALUE = 1;
   /**
    * <code>BILLING_PLAN_TYPE_ORG = 2;</code>
    */
@@ -62,7 +62,7 @@ public enum BillingPlanType
   public static BillingPlanType forNumber(int value) {
     switch (value) {
       case 0: return BILLING_PLAN_TYPE_UNSPECIFIED;
-      case 1: return BILLING_PLAN_TYPE_TEMPLATE;
+      case 1: return BILLING_PLAN_TYPE_DEFAULT;
       case 2: return BILLING_PLAN_TYPE_ORG;
       default: return null;
     }

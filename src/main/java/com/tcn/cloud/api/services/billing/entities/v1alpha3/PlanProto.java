@@ -42,16 +42,15 @@ public final class PlanProto {
       "ogle.protobuf.TimestampR\nupdateTime\022;\n\013d" +
       "elete_time\030\010 \001(\0132\032.google.protobuf.Times" +
       "tampR\ndeleteTime\022\027\n\007user_id\030\t \001(\tR\006userI" +
-      "d*o\n\017BillingPlanType\022!\n\035BILLING_PLAN_TYP" +
-      "E_UNSPECIFIED\020\000\022\036\n\032BILLING_PLAN_TYPE_TEM" +
-      "PLATE\020\001\022\031\n\025BILLING_PLAN_TYPE_ORG\020\002B\354\001\n4c" +
-      "om.tcn.cloud.api.services.billing.entiti" +
-      "es.v1alpha3B\tPlanProtoP\001\242\002\003SBE\252\002\"Service" +
-      "s.Billing.Entities.V1alpha3\312\002\"Services\\B" +
-      "illing\\Entities\\V1alpha3\342\002.Services\\Bill" +
-      "ing\\Entities\\V1alpha3\\GPBMetadata\352\002%Serv" +
-      "ices::Billing::Entities::V1alpha3b\006proto" +
-      "3"
+      "d*n\n\017BillingPlanType\022!\n\035BILLING_PLAN_TYP" +
+      "E_UNSPECIFIED\020\000\022\035\n\031BILLING_PLAN_TYPE_DEF" +
+      "AULT\020\001\022\031\n\025BILLING_PLAN_TYPE_ORG\020\002B\354\001\n4co" +
+      "m.tcn.cloud.api.services.billing.entitie" +
+      "s.v1alpha3B\tPlanProtoP\001\242\002\003SBE\252\002\"Services" +
+      ".Billing.Entities.V1alpha3\312\002\"Services\\Bi" +
+      "lling\\Entities\\V1alpha3\342\002.Services\\Billi" +
+      "ng\\Entities\\V1alpha3\\GPBMetadata\352\002%Servi" +
+      "ces::Billing::Entities::V1alpha3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -143,66 +143,66 @@ public final class BillingServiceGrpc {
     return getDeleteBillingPlanMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanRequest,
-      com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse> getGetOrgBillingPlanMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse> getGetBillingPlanMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetOrgBillingPlan",
-      requestType = com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanRequest.class,
-      responseType = com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "GetBillingPlan",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanRequest,
-      com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse> getGetOrgBillingPlanMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse> getGetOrgBillingPlanMethod;
-    if ((getGetOrgBillingPlanMethod = BillingServiceGrpc.getGetOrgBillingPlanMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse> getGetBillingPlanMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse> getGetBillingPlanMethod;
+    if ((getGetBillingPlanMethod = BillingServiceGrpc.getGetBillingPlanMethod) == null) {
       synchronized (BillingServiceGrpc.class) {
-        if ((getGetOrgBillingPlanMethod = BillingServiceGrpc.getGetOrgBillingPlanMethod) == null) {
-          BillingServiceGrpc.getGetOrgBillingPlanMethod = getGetOrgBillingPlanMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse>newBuilder()
+        if ((getGetBillingPlanMethod = BillingServiceGrpc.getGetBillingPlanMethod) == null) {
+          BillingServiceGrpc.getGetBillingPlanMethod = getGetBillingPlanMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrgBillingPlan"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetBillingPlan"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("GetOrgBillingPlan"))
+                  com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("GetBillingPlan"))
               .build();
         }
       }
     }
-    return getGetOrgBillingPlanMethod;
+    return getGetBillingPlanMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest,
-      com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansResponse> getListOrgBillingPlansMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest,
+      com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansResponse> getListBillingPlansMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListOrgBillingPlans",
-      requestType = com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest.class,
-      responseType = com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "ListBillingPlans",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest,
-      com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansResponse> getListOrgBillingPlansMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest, com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansResponse> getListOrgBillingPlansMethod;
-    if ((getListOrgBillingPlansMethod = BillingServiceGrpc.getListOrgBillingPlansMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest,
+      com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansResponse> getListBillingPlansMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest, com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansResponse> getListBillingPlansMethod;
+    if ((getListBillingPlansMethod = BillingServiceGrpc.getListBillingPlansMethod) == null) {
       synchronized (BillingServiceGrpc.class) {
-        if ((getListOrgBillingPlansMethod = BillingServiceGrpc.getListOrgBillingPlansMethod) == null) {
-          BillingServiceGrpc.getListOrgBillingPlansMethod = getListOrgBillingPlansMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest, com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansResponse>newBuilder()
+        if ((getListBillingPlansMethod = BillingServiceGrpc.getListBillingPlansMethod) == null) {
+          BillingServiceGrpc.getListBillingPlansMethod = getListBillingPlansMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest, com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOrgBillingPlans"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListBillingPlans"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("ListOrgBillingPlans"))
+                  com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("ListBillingPlans"))
               .build();
         }
       }
     }
-    return getListOrgBillingPlansMethod;
+    return getListBillingPlansMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.UpdateBillingPlanRequest,
@@ -888,7 +888,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Gets a billing plan for an ORG.
+     * Gets a billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -899,14 +899,14 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
-    default void getOrgBillingPlan(com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOrgBillingPlanMethod(), responseObserver);
+    default void getBillingPlan(com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBillingPlanMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * Lists billing plans for ORGs.
+     * Lists billing plans.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -916,9 +916,9 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
-    default void listOrgBillingPlans(com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOrgBillingPlansMethod(), responseObserver);
+    default void listBillingPlans(com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBillingPlansMethod(), responseObserver);
     }
 
     /**
@@ -1368,7 +1368,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Gets a billing plan for an ORG.
+     * Gets a billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -1379,15 +1379,15 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
-    public void getOrgBillingPlan(com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse> responseObserver) {
+    public void getBillingPlan(com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetOrgBillingPlanMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetBillingPlanMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      * <pre>
-     * Lists billing plans for ORGs.
+     * Lists billing plans.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -1397,10 +1397,10 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
-    public void listOrgBillingPlans(com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansResponse> responseObserver) {
+    public void listBillingPlans(com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListOrgBillingPlansMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListBillingPlansMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1849,7 +1849,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Gets a billing plan for an ORG.
+     * Gets a billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -1860,14 +1860,14 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
-    public com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse getOrgBillingPlan(com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanRequest request) {
+    public com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse getBillingPlan(com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetOrgBillingPlanMethod(), getCallOptions(), request);
+          getChannel(), getGetBillingPlanMethod(), getCallOptions(), request);
     }
 
     /**
      * <pre>
-     * Lists billing plans for ORGs.
+     * Lists billing plans.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -1877,9 +1877,9 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
-    public com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansResponse listOrgBillingPlans(com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest request) {
+    public com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansResponse listBillingPlans(com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListOrgBillingPlansMethod(), getCallOptions(), request);
+          getChannel(), getListBillingPlansMethod(), getCallOptions(), request);
     }
 
     /**
@@ -2314,7 +2314,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Gets a billing plan for an ORG.
+     * Gets a billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -2325,15 +2325,15 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse> getOrgBillingPlan(
-        com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse> getBillingPlan(
+        com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetOrgBillingPlanMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetBillingPlanMethod(), getCallOptions()), request);
     }
 
     /**
      * <pre>
-     * Lists billing plans for ORGs.
+     * Lists billing plans.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -2343,10 +2343,10 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansResponse> listOrgBillingPlans(
-        com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansResponse> listBillingPlans(
+        com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListOrgBillingPlansMethod(), getCallOptions()), request);
+          getChannel().newCall(getListBillingPlansMethod(), getCallOptions()), request);
     }
 
     /**
@@ -2706,8 +2706,8 @@ public final class BillingServiceGrpc {
   private static final int METHODID_APPLY_BILLING_PLAN_DRAFT = 1;
   private static final int METHODID_CREATE_BILLING_PLAN = 2;
   private static final int METHODID_DELETE_BILLING_PLAN = 3;
-  private static final int METHODID_GET_ORG_BILLING_PLAN = 4;
-  private static final int METHODID_LIST_ORG_BILLING_PLANS = 5;
+  private static final int METHODID_GET_BILLING_PLAN = 4;
+  private static final int METHODID_LIST_BILLING_PLANS = 5;
   private static final int METHODID_UPDATE_BILLING_PLAN = 6;
   private static final int METHODID_APPLY_DEFAULT_BILLING_PLAN_DRAFT = 7;
   private static final int METHODID_CREATE_DEFAULT_BILLING_PLAN = 8;
@@ -2760,13 +2760,13 @@ public final class BillingServiceGrpc {
           serviceImpl.deleteBillingPlan((com.tcn.cloud.api.services.billing.v1alpha3.DeleteBillingPlanRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.DeleteBillingPlanResponse>) responseObserver);
           break;
-        case METHODID_GET_ORG_BILLING_PLAN:
-          serviceImpl.getOrgBillingPlan((com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse>) responseObserver);
+        case METHODID_GET_BILLING_PLAN:
+          serviceImpl.getBillingPlan((com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse>) responseObserver);
           break;
-        case METHODID_LIST_ORG_BILLING_PLANS:
-          serviceImpl.listOrgBillingPlans((com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansResponse>) responseObserver);
+        case METHODID_LIST_BILLING_PLANS:
+          serviceImpl.listBillingPlans((com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansResponse>) responseObserver);
           break;
         case METHODID_UPDATE_BILLING_PLAN:
           serviceImpl.updateBillingPlan((com.tcn.cloud.api.services.billing.v1alpha3.UpdateBillingPlanRequest) request,
@@ -2887,19 +2887,19 @@ public final class BillingServiceGrpc {
               com.tcn.cloud.api.services.billing.v1alpha3.DeleteBillingPlanResponse>(
                 service, METHODID_DELETE_BILLING_PLAN)))
         .addMethod(
-          getGetOrgBillingPlanMethod(),
+          getGetBillingPlanMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanRequest,
-              com.tcn.cloud.api.services.billing.v1alpha3.GetOrgBillingPlanResponse>(
-                service, METHODID_GET_ORG_BILLING_PLAN)))
+              com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanRequest,
+              com.tcn.cloud.api.services.billing.v1alpha3.GetBillingPlanResponse>(
+                service, METHODID_GET_BILLING_PLAN)))
         .addMethod(
-          getListOrgBillingPlansMethod(),
+          getListBillingPlansMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest,
-              com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansResponse>(
-                service, METHODID_LIST_ORG_BILLING_PLANS)))
+              com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest,
+              com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansResponse>(
+                service, METHODID_LIST_BILLING_PLANS)))
         .addMethod(
           getUpdateBillingPlanMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -3078,8 +3078,8 @@ public final class BillingServiceGrpc {
               .addMethod(getApplyBillingPlanDraftMethod())
               .addMethod(getCreateBillingPlanMethod())
               .addMethod(getDeleteBillingPlanMethod())
-              .addMethod(getGetOrgBillingPlanMethod())
-              .addMethod(getListOrgBillingPlansMethod())
+              .addMethod(getGetBillingPlanMethod())
+              .addMethod(getListBillingPlansMethod())
               .addMethod(getUpdateBillingPlanMethod())
               .addMethod(getApplyDefaultBillingPlanDraftMethod())
               .addMethod(getCreateDefaultBillingPlanMethod())

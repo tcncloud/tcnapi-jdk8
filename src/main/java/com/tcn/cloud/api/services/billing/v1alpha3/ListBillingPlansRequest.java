@@ -4,18 +4,18 @@
 package com.tcn.cloud.api.services.billing.v1alpha3;
 
 /**
- * Protobuf type {@code services.billing.v1alpha3.ListOrgBillingPlansRequest}
+ * Protobuf type {@code services.billing.v1alpha3.ListBillingPlansRequest}
  */
-public final class ListOrgBillingPlansRequest extends
+public final class ListBillingPlansRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.billing.v1alpha3.ListOrgBillingPlansRequest)
-    ListOrgBillingPlansRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.billing.v1alpha3.ListBillingPlansRequest)
+    ListBillingPlansRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ListOrgBillingPlansRequest.newBuilder() to construct.
-  private ListOrgBillingPlansRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ListBillingPlansRequest.newBuilder() to construct.
+  private ListBillingPlansRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ListOrgBillingPlansRequest() {
+  private ListBillingPlansRequest() {
     billingPlanId_ = "";
     filter_ = "";
     sort_ = java.util.Collections.emptyList();
@@ -25,20 +25,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ListOrgBillingPlansRequest();
+    return new ListBillingPlansRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_ListOrgBillingPlansRequest_descriptor;
+    return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_ListBillingPlansRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_ListOrgBillingPlansRequest_fieldAccessorTable
+    return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_ListBillingPlansRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest.class, com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest.Builder.class);
+            com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest.class, com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest.Builder.class);
   }
 
   public static final int BILLING_PLAN_ID_FIELD_NUMBER = 1;
@@ -278,10 +278,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest other = (com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest) obj;
+    com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest other = (com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest) obj;
 
     if (!getBillingPlanId()
         .equals(other.getBillingPlanId())) return false;
@@ -331,44 +331,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -376,26 +376,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest parseFrom(
+  public static com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -408,7 +408,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -424,26 +424,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code services.billing.v1alpha3.ListOrgBillingPlansRequest}
+   * Protobuf type {@code services.billing.v1alpha3.ListBillingPlansRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.billing.v1alpha3.ListOrgBillingPlansRequest)
-      com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.billing.v1alpha3.ListBillingPlansRequest)
+      com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_ListOrgBillingPlansRequest_descriptor;
+      return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_ListBillingPlansRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_ListOrgBillingPlansRequest_fieldAccessorTable
+      return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_ListBillingPlansRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest.class, com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest.Builder.class);
+              com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest.class, com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest.newBuilder()
     private Builder() {
 
     }
@@ -482,17 +482,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_ListOrgBillingPlansRequest_descriptor;
+      return com.tcn.cloud.api.services.billing.v1alpha3.PlanProto.internal_static_services_billing_v1alpha3_ListBillingPlansRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest.getDefaultInstance();
+    public com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest build() {
-      com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest result = buildPartial();
+    public com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest build() {
+      com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -500,15 +500,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest buildPartial() {
-      com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest result = new com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest(this);
+    public com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest buildPartial() {
+      com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest result = new com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest result) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest result) {
       if (sortBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0)) {
           sort_ = java.util.Collections.unmodifiableList(sort_);
@@ -520,7 +520,7 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.billingPlanId_ = billingPlanId_;
@@ -574,16 +574,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest) {
-        return mergeFrom((com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest)other);
+      if (other instanceof com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest) {
+        return mergeFrom((com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest other) {
-      if (other == com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest other) {
+      if (other == com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest.getDefaultInstance()) return this;
       if (!other.getBillingPlanId().isEmpty()) {
         billingPlanId_ = other.billingPlanId_;
         bitField0_ |= 0x00000001;
@@ -1340,23 +1340,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.billing.v1alpha3.ListOrgBillingPlansRequest)
+    // @@protoc_insertion_point(builder_scope:services.billing.v1alpha3.ListBillingPlansRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:services.billing.v1alpha3.ListOrgBillingPlansRequest)
-  private static final com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.billing.v1alpha3.ListBillingPlansRequest)
+  private static final com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest();
   }
 
-  public static com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ListOrgBillingPlansRequest>
-      PARSER = new com.google.protobuf.AbstractParser<ListOrgBillingPlansRequest>() {
+  private static final com.google.protobuf.Parser<ListBillingPlansRequest>
+      PARSER = new com.google.protobuf.AbstractParser<ListBillingPlansRequest>() {
     @java.lang.Override
-    public ListOrgBillingPlansRequest parsePartialFrom(
+    public ListBillingPlansRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1375,17 +1375,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ListOrgBillingPlansRequest> parser() {
+  public static com.google.protobuf.Parser<ListBillingPlansRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ListOrgBillingPlansRequest> getParserForType() {
+  public com.google.protobuf.Parser<ListBillingPlansRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.v1alpha3.ListOrgBillingPlansRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.billing.v1alpha3.ListBillingPlansRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

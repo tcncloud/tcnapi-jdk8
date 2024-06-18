@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.services.billing.v1alpha3;
 
-public interface GetOrgBillingPlanResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.billing.v1alpha3.GetOrgBillingPlanResponse)
+public interface GetBillingPlanResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.billing.v1alpha3.GetBillingPlanResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

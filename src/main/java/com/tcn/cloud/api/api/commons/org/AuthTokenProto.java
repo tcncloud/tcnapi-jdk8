@@ -38,14 +38,14 @@ public final class AuthTokenProto {
       "roto\"\215\001\n\tAuthToken\022\024\n\005token\030\001 \001(\tR\005token" +
       "\022\027\n\007user_id\030\002 \001(\tR\006userId\022\025\n\006org_id\030\003 \001(" +
       "\tR\005orgId\022:\n\nexpiration\030\004 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\nexpiration\"g\n\023AuthToke" +
+      "otobuf.TimestampR\nexpiration\"k\n\023AuthToke" +
       "nExpiration\022\024\n\005token\030\001 \001(\tR\005token\022:\n\nexp" +
       "iration\030\002 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\nexpirationB\221\001\n!com.tcn.cloud.api.api." +
-      "commons.orgB\016AuthTokenProtoP\001\242\002\003ACO\252\002\017Ap" +
-      "i.Commons.Org\312\002\017Api\\Commons\\Org\342\002\033Api\\Co" +
-      "mmons\\Org\\GPBMetadata\352\002\021Api::Commons::Or" +
-      "gb\006proto3"
+      "pR\nexpiration:\002\030\001B\221\001\n!com.tcn.cloud.api." +
+      "api.commons.orgB\016AuthTokenProtoP\001\242\002\003ACO\252" +
+      "\002\017Api.Commons.Org\312\002\017Api\\Commons\\Org\342\002\033Ap" +
+      "i\\Commons\\Org\\GPBMetadata\352\002\021Api::Commons" +
+      "::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -8,16 +8,16 @@ public interface CreateDefaultRateDefinitionRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
-   * @return The billingPlanId.
+   * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+   * @return The rateDefinitionId.
    */
-  java.lang.String getBillingPlanId();
+  java.lang.String getRateDefinitionId();
   /**
-   * <code>string billing_plan_id = 1 [json_name = "billingPlanId"];</code>
-   * @return The bytes for billingPlanId.
+   * <code>string rate_definition_id = 1 [json_name = "rateDefinitionId"];</code>
+   * @return The bytes for rateDefinitionId.
    */
   com.google.protobuf.ByteString
-      getBillingPlanIdBytes();
+      getRateDefinitionIdBytes();
 
   /**
    * <code>.services.billing.entities.v1alpha3.RateDefinition rate_definition = 2 [json_name = "rateDefinition"];</code>
