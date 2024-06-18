@@ -387,6 +387,99 @@ public final class DashboardsGrpc {
     return getPublishDashboardMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardRequest,
+      com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardResponse> getCreateApplicationDashboardMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateApplicationDashboard",
+      requestType = com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardRequest,
+      com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardResponse> getCreateApplicationDashboardMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardRequest, com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardResponse> getCreateApplicationDashboardMethod;
+    if ((getCreateApplicationDashboardMethod = DashboardsGrpc.getCreateApplicationDashboardMethod) == null) {
+      synchronized (DashboardsGrpc.class) {
+        if ((getCreateApplicationDashboardMethod = DashboardsGrpc.getCreateApplicationDashboardMethod) == null) {
+          DashboardsGrpc.getCreateApplicationDashboardMethod = getCreateApplicationDashboardMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardRequest, com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateApplicationDashboard"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DashboardsMethodDescriptorSupplier("CreateApplicationDashboard"))
+              .build();
+        }
+      }
+    }
+    return getCreateApplicationDashboardMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsRequest,
+      com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsResponse> getListApplicationsDashboardsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListApplicationsDashboards",
+      requestType = com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsRequest,
+      com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsResponse> getListApplicationsDashboardsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsRequest, com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsResponse> getListApplicationsDashboardsMethod;
+    if ((getListApplicationsDashboardsMethod = DashboardsGrpc.getListApplicationsDashboardsMethod) == null) {
+      synchronized (DashboardsGrpc.class) {
+        if ((getListApplicationsDashboardsMethod = DashboardsGrpc.getListApplicationsDashboardsMethod) == null) {
+          DashboardsGrpc.getListApplicationsDashboardsMethod = getListApplicationsDashboardsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsRequest, com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListApplicationsDashboards"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DashboardsMethodDescriptorSupplier("ListApplicationsDashboards"))
+              .build();
+        }
+      }
+    }
+    return getListApplicationsDashboardsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardRequest,
+      com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardResponse> getDeleteApplicationDashboardMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteApplicationDashboard",
+      requestType = com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardRequest,
+      com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardResponse> getDeleteApplicationDashboardMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardRequest, com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardResponse> getDeleteApplicationDashboardMethod;
+    if ((getDeleteApplicationDashboardMethod = DashboardsGrpc.getDeleteApplicationDashboardMethod) == null) {
+      synchronized (DashboardsGrpc.class) {
+        if ((getDeleteApplicationDashboardMethod = DashboardsGrpc.getDeleteApplicationDashboardMethod) == null) {
+          DashboardsGrpc.getDeleteApplicationDashboardMethod = getDeleteApplicationDashboardMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardRequest, com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteApplicationDashboard"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DashboardsMethodDescriptorSupplier("DeleteApplicationDashboard"))
+              .build();
+        }
+      }
+    }
+    return getDeleteApplicationDashboardMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -548,6 +641,36 @@ public final class DashboardsGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPublishDashboardMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * CreateApplicationDashboard assigns a dashboard to an application
+     * </pre>
+     */
+    default void createApplicationDashboard(com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateApplicationDashboardMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListApplicationDashboards lists applications and their assigned dashboards
+     * </pre>
+     */
+    default void listApplicationsDashboards(com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListApplicationsDashboardsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteApplicationDashboard removes a dashboard from an application
+     * </pre>
+     */
+    default void deleteApplicationDashboard(com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteApplicationDashboardMethod(), responseObserver);
+    }
   }
 
   /**
@@ -702,6 +825,39 @@ public final class DashboardsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPublishDashboardMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * CreateApplicationDashboard assigns a dashboard to an application
+     * </pre>
+     */
+    public void createApplicationDashboard(com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateApplicationDashboardMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListApplicationDashboards lists applications and their assigned dashboards
+     * </pre>
+     */
+    public void listApplicationsDashboards(com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListApplicationsDashboardsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteApplicationDashboard removes a dashboard from an application
+     * </pre>
+     */
+    public void deleteApplicationDashboard(com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteApplicationDashboardMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -832,6 +988,36 @@ public final class DashboardsGrpc {
     public com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse publishDashboard(com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPublishDashboardMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateApplicationDashboard assigns a dashboard to an application
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardResponse createApplicationDashboard(com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateApplicationDashboardMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListApplicationDashboards lists applications and their assigned dashboards
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsResponse listApplicationsDashboards(com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListApplicationsDashboardsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteApplicationDashboard removes a dashboard from an application
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardResponse deleteApplicationDashboard(com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteApplicationDashboardMethod(), getCallOptions(), request);
     }
   }
 
@@ -976,6 +1162,39 @@ public final class DashboardsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPublishDashboardMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * CreateApplicationDashboard assigns a dashboard to an application
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardResponse> createApplicationDashboard(
+        com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateApplicationDashboardMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListApplicationDashboards lists applications and their assigned dashboards
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsResponse> listApplicationsDashboards(
+        com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListApplicationsDashboardsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteApplicationDashboard removes a dashboard from an application
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardResponse> deleteApplicationDashboard(
+        com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteApplicationDashboardMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_DASHBOARD = 0;
@@ -990,6 +1209,9 @@ public final class DashboardsGrpc {
   private static final int METHODID_UPDATE_DASHBOARD_VIEW = 9;
   private static final int METHODID_UPDATE_DASHBOARD_LAYOUT = 10;
   private static final int METHODID_PUBLISH_DASHBOARD = 11;
+  private static final int METHODID_CREATE_APPLICATION_DASHBOARD = 12;
+  private static final int METHODID_LIST_APPLICATIONS_DASHBOARDS = 13;
+  private static final int METHODID_DELETE_APPLICATION_DASHBOARD = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1055,6 +1277,18 @@ public final class DashboardsGrpc {
         case METHODID_PUBLISH_DASHBOARD:
           serviceImpl.publishDashboard((com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_APPLICATION_DASHBOARD:
+          serviceImpl.createApplicationDashboard((com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardResponse>) responseObserver);
+          break;
+        case METHODID_LIST_APPLICATIONS_DASHBOARDS:
+          serviceImpl.listApplicationsDashboards((com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_APPLICATION_DASHBOARD:
+          serviceImpl.deleteApplicationDashboard((com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1158,6 +1392,27 @@ public final class DashboardsGrpc {
               com.tcn.cloud.api.api.v0alpha.PublishDashboardRequest,
               com.tcn.cloud.api.api.v0alpha.PublishDashboardResponse>(
                 service, METHODID_PUBLISH_DASHBOARD)))
+        .addMethod(
+          getCreateApplicationDashboardMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardRequest,
+              com.tcn.cloud.api.api.v0alpha.CreateApplicationDashboardResponse>(
+                service, METHODID_CREATE_APPLICATION_DASHBOARD)))
+        .addMethod(
+          getListApplicationsDashboardsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsRequest,
+              com.tcn.cloud.api.api.v0alpha.ListApplicationsDashboardsResponse>(
+                service, METHODID_LIST_APPLICATIONS_DASHBOARDS)))
+        .addMethod(
+          getDeleteApplicationDashboardMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardRequest,
+              com.tcn.cloud.api.api.v0alpha.DeleteApplicationDashboardResponse>(
+                service, METHODID_DELETE_APPLICATION_DASHBOARD)))
         .build();
   }
 
@@ -1218,6 +1473,9 @@ public final class DashboardsGrpc {
               .addMethod(getUpdateDashboardViewMethod())
               .addMethod(getUpdateDashboardLayoutMethod())
               .addMethod(getPublishDashboardMethod())
+              .addMethod(getCreateApplicationDashboardMethod())
+              .addMethod(getListApplicationsDashboardsMethod())
+              .addMethod(getDeleteApplicationDashboardMethod())
               .build();
         }
       }
