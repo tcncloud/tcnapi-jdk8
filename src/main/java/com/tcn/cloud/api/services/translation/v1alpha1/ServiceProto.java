@@ -27,19 +27,18 @@ public final class ServiceProto {
       "proto\022\035services.translation.v1alpha1\032\027an" +
       "notations/authz.proto\032\034google/api/annota" +
       "tions.proto\032,services/translation/v1alph" +
-      "a1/entities.proto2\364\001\n\022TranslationService" +
-      "\022\335\001\n\021TranslateTemplate\0227.services.transl" +
+      "a1/entities.proto2\341\001\n\022TranslationService" +
+      "\022\312\001\n\021TranslateTemplate\0227.services.transl" +
       "ation.v1alpha1.TranslateTemplateRequest\032" +
       "8.services.translation.v1alpha1.Translat" +
-      "eTemplateResponse\"U\272\270\221\002\002\030\001\202\323\344\223\002H\"C/servi" +
-      "ces/translation/v1alpha1/translationserv" +
-      "ice/translatetemplate:\001*B\325\001\n/com.tcn.clo" +
-      "ud.api.services.translation.v1alpha1B\014Se" +
-      "rviceProtoP\001\242\002\003STX\252\002\035Services.Translatio" +
-      "n.V1alpha1\312\002\035Services\\Translation\\V1alph" +
-      "a1\342\002)Services\\Translation\\V1alpha1\\GPBMe" +
-      "tadata\352\002\037Services::Translation::V1alpha1" +
-      "b\006proto3"
+      "eTemplateResponse\"B\272\270\221\002\002\030\001\202\323\344\223\0025\"0/servi" +
+      "ces/translation/v1alpha1/translatetempla" +
+      "te:\001*B\325\001\n/com.tcn.cloud.api.services.tra" +
+      "nslation.v1alpha1B\014ServiceProtoP\001\242\002\003STX\252" +
+      "\002\035Services.Translation.V1alpha1\312\002\035Servic" +
+      "es\\Translation\\V1alpha1\342\002)Services\\Trans" +
+      "lation\\V1alpha1\\GPBMetadata\352\002\037Services::" +
+      "Translation::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
