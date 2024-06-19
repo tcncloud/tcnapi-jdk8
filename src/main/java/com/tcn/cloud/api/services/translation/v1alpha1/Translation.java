@@ -21,7 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private Translation() {
     translationId_ = "";
-    originalTemplate_ = "";
+    template_ = "";
     context_ = "";
     languageTag_ = "";
     llmTranslation_ = "";
@@ -95,47 +95,47 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ORIGINAL_TEMPLATE_FIELD_NUMBER = 2;
+  public static final int TEMPLATE_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object originalTemplate_ = "";
+  private volatile java.lang.Object template_ = "";
   /**
    * <pre>
-   * The original template.
+   * The template.
    * </pre>
    *
-   * <code>string original_template = 2 [json_name = "originalTemplate"];</code>
-   * @return The originalTemplate.
+   * <code>string template = 2 [json_name = "template"];</code>
+   * @return The template.
    */
   @java.lang.Override
-  public java.lang.String getOriginalTemplate() {
-    java.lang.Object ref = originalTemplate_;
+  public java.lang.String getTemplate() {
+    java.lang.Object ref = template_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      originalTemplate_ = s;
+      template_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * The original template.
+   * The template.
    * </pre>
    *
-   * <code>string original_template = 2 [json_name = "originalTemplate"];</code>
-   * @return The bytes for originalTemplate.
+   * <code>string template = 2 [json_name = "template"];</code>
+   * @return The bytes for template.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getOriginalTemplateBytes() {
-    java.lang.Object ref = originalTemplate_;
+      getTemplateBytes() {
+    java.lang.Object ref = template_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      originalTemplate_ = b;
+      template_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -347,8 +347,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(translationId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, translationId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(originalTemplate_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, originalTemplate_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(template_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, template_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(context_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, context_);
@@ -374,8 +374,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(translationId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, translationId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(originalTemplate_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, originalTemplate_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(template_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, template_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(context_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, context_);
@@ -406,8 +406,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getTranslationId()
         .equals(other.getTranslationId())) return false;
-    if (!getOriginalTemplate()
-        .equals(other.getOriginalTemplate())) return false;
+    if (!getTemplate()
+        .equals(other.getTemplate())) return false;
     if (!getContext()
         .equals(other.getContext())) return false;
     if (!getLanguageTag()
@@ -429,8 +429,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + TRANSLATION_ID_FIELD_NUMBER;
     hash = (53 * hash) + getTranslationId().hashCode();
-    hash = (37 * hash) + ORIGINAL_TEMPLATE_FIELD_NUMBER;
-    hash = (53 * hash) + getOriginalTemplate().hashCode();
+    hash = (37 * hash) + TEMPLATE_FIELD_NUMBER;
+    hash = (53 * hash) + getTemplate().hashCode();
     hash = (37 * hash) + CONTEXT_FIELD_NUMBER;
     hash = (53 * hash) + getContext().hashCode();
     hash = (37 * hash) + LANGUAGE_TAG_FIELD_NUMBER;
@@ -575,7 +575,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       translationId_ = "";
-      originalTemplate_ = "";
+      template_ = "";
       context_ = "";
       languageTag_ = "";
       llmTranslation_ = "";
@@ -617,7 +617,7 @@ private static final long serialVersionUID = 0L;
         result.translationId_ = translationId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.originalTemplate_ = originalTemplate_;
+        result.template_ = template_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.context_ = context_;
@@ -682,8 +682,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getOriginalTemplate().isEmpty()) {
-        originalTemplate_ = other.originalTemplate_;
+      if (!other.getTemplate().isEmpty()) {
+        template_ = other.template_;
         bitField0_ |= 0x00000002;
         onChanged();
       }
@@ -739,7 +739,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 18: {
-              originalTemplate_ = input.readStringRequireUtf8();
+              template_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
@@ -872,22 +872,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object originalTemplate_ = "";
+    private java.lang.Object template_ = "";
     /**
      * <pre>
-     * The original template.
+     * The template.
      * </pre>
      *
-     * <code>string original_template = 2 [json_name = "originalTemplate"];</code>
-     * @return The originalTemplate.
+     * <code>string template = 2 [json_name = "template"];</code>
+     * @return The template.
      */
-    public java.lang.String getOriginalTemplate() {
-      java.lang.Object ref = originalTemplate_;
+    public java.lang.String getTemplate() {
+      java.lang.Object ref = template_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        originalTemplate_ = s;
+        template_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -895,20 +895,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The original template.
+     * The template.
      * </pre>
      *
-     * <code>string original_template = 2 [json_name = "originalTemplate"];</code>
-     * @return The bytes for originalTemplate.
+     * <code>string template = 2 [json_name = "template"];</code>
+     * @return The bytes for template.
      */
     public com.google.protobuf.ByteString
-        getOriginalTemplateBytes() {
-      java.lang.Object ref = originalTemplate_;
+        getTemplateBytes() {
+      java.lang.Object ref = template_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        originalTemplate_ = b;
+        template_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -916,49 +916,49 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The original template.
+     * The template.
      * </pre>
      *
-     * <code>string original_template = 2 [json_name = "originalTemplate"];</code>
-     * @param value The originalTemplate to set.
+     * <code>string template = 2 [json_name = "template"];</code>
+     * @param value The template to set.
      * @return This builder for chaining.
      */
-    public Builder setOriginalTemplate(
+    public Builder setTemplate(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      originalTemplate_ = value;
+      template_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The original template.
+     * The template.
      * </pre>
      *
-     * <code>string original_template = 2 [json_name = "originalTemplate"];</code>
+     * <code>string template = 2 [json_name = "template"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearOriginalTemplate() {
-      originalTemplate_ = getDefaultInstance().getOriginalTemplate();
+    public Builder clearTemplate() {
+      template_ = getDefaultInstance().getTemplate();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The original template.
+     * The template.
      * </pre>
      *
-     * <code>string original_template = 2 [json_name = "originalTemplate"];</code>
-     * @param value The bytes for originalTemplate to set.
+     * <code>string template = 2 [json_name = "template"];</code>
+     * @param value The bytes for template to set.
      * @return This builder for chaining.
      */
-    public Builder setOriginalTemplateBytes(
+    public Builder setTemplateBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      originalTemplate_ = value;
+      template_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;

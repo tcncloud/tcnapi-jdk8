@@ -44,19 +44,19 @@ public final class EntitiesProto {
       "\001(\tR\010template\022\030\n\007context\030\002 \001(\tR\007context\"" +
       "k\n\031TranslateTemplateResponse\022N\n\014translat" +
       "ions\030\001 \003(\0132*.services.translation.v1alph" +
-      "a1.TranslationR\014translations\"\366\001\n\013Transla" +
+      "a1.TranslationR\014translations\"\345\001\n\013Transla" +
       "tion\022%\n\016translation_id\030\001 \001(\tR\rtranslatio" +
-      "nId\022+\n\021original_template\030\002 \001(\tR\020original" +
-      "Template\022\030\n\007context\030\003 \001(\tR\007context\022!\n\014la" +
-      "nguage_tag\030\004 \001(\tR\013languageTag\022\'\n\017llm_tra" +
-      "nslation\030\005 \001(\tR\016llmTranslation\022-\n\022manual" +
-      "_translation\030\006 \001(\tR\021manualTranslationB\326\001" +
-      "\n/com.tcn.cloud.api.services.translation" +
-      ".v1alpha1B\rEntitiesProtoP\001\242\002\003STX\252\002\035Servi" +
-      "ces.Translation.V1alpha1\312\002\035Services\\Tran" +
-      "slation\\V1alpha1\342\002)Services\\Translation\\" +
-      "V1alpha1\\GPBMetadata\352\002\037Services::Transla" +
-      "tion::V1alpha1b\006proto3"
+      "nId\022\032\n\010template\030\002 \001(\tR\010template\022\030\n\007conte" +
+      "xt\030\003 \001(\tR\007context\022!\n\014language_tag\030\004 \001(\tR" +
+      "\013languageTag\022\'\n\017llm_translation\030\005 \001(\tR\016l" +
+      "lmTranslation\022-\n\022manual_translation\030\006 \001(" +
+      "\tR\021manualTranslationB\326\001\n/com.tcn.cloud.a" +
+      "pi.services.translation.v1alpha1B\rEntiti" +
+      "esProtoP\001\242\002\003STX\252\002\035Services.Translation.V" +
+      "1alpha1\312\002\035Services\\Translation\\V1alpha1\342" +
+      "\002)Services\\Translation\\V1alpha1\\GPBMetad" +
+      "ata\352\002\037Services::Translation::V1alpha1b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -79,7 +79,7 @@ public final class EntitiesProto {
     internal_static_services_translation_v1alpha1_Translation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_translation_v1alpha1_Translation_descriptor,
-        new java.lang.String[] { "TranslationId", "OriginalTemplate", "Context", "LanguageTag", "LlmTranslation", "ManualTranslation", });
+        new java.lang.String[] { "TranslationId", "Template", "Context", "LanguageTag", "LlmTranslation", "ManualTranslation", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

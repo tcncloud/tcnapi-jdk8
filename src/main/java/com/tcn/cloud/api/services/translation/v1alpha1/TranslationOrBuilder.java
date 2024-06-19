@@ -29,23 +29,23 @@ public interface TranslationOrBuilder extends
 
   /**
    * <pre>
-   * The original template.
+   * The template.
    * </pre>
    *
-   * <code>string original_template = 2 [json_name = "originalTemplate"];</code>
-   * @return The originalTemplate.
+   * <code>string template = 2 [json_name = "template"];</code>
+   * @return The template.
    */
-  java.lang.String getOriginalTemplate();
+  java.lang.String getTemplate();
   /**
    * <pre>
-   * The original template.
+   * The template.
    * </pre>
    *
-   * <code>string original_template = 2 [json_name = "originalTemplate"];</code>
-   * @return The bytes for originalTemplate.
+   * <code>string template = 2 [json_name = "template"];</code>
+   * @return The bytes for template.
    */
   com.google.protobuf.ByteString
-      getOriginalTemplateBytes();
+      getTemplateBytes();
 
   /**
    * <pre>
