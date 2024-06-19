@@ -1042,6 +1042,44 @@ private static final long serialVersionUID = 0L;
     return completedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completedAt_;
   }
 
+  public static final int DELETED_AT_FIELD_NUMBER = 12;
+  private com.google.protobuf.Timestamp deletedAt_;
+  /**
+   * <pre>
+   * time evaluation was deleted
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+   * @return Whether the deletedAt field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeletedAt() {
+    return deletedAt_ != null;
+  }
+  /**
+   * <pre>
+   * time evaluation was deleted
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+   * @return The deletedAt.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getDeletedAt() {
+    return deletedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deletedAt_;
+  }
+  /**
+   * <pre>
+   * time evaluation was deleted
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getDeletedAtOrBuilder() {
+    return deletedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deletedAt_;
+  }
+
   public static final int AGENT_USER_ID_FIELD_NUMBER = 13;
   @SuppressWarnings("serial")
   private volatile java.lang.Object agentUserId_ = "";
@@ -1276,6 +1314,9 @@ private static final long serialVersionUID = 0L;
     if (completedAt_ != null) {
       output.writeMessage(10, getCompletedAt());
     }
+    if (deletedAt_ != null) {
+      output.writeMessage(12, getDeletedAt());
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentUserId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, agentUserId_);
     }
@@ -1331,6 +1372,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getCompletedAt());
     }
+    if (deletedAt_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, getDeletedAt());
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentUserId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, agentUserId_);
     }
@@ -1383,6 +1428,11 @@ private static final long serialVersionUID = 0L;
       if (!getCompletedAt()
           .equals(other.getCompletedAt())) return false;
     }
+    if (hasDeletedAt() != other.hasDeletedAt()) return false;
+    if (hasDeletedAt()) {
+      if (!getDeletedAt()
+          .equals(other.getDeletedAt())) return false;
+    }
     if (!getAgentUserId()
         .equals(other.getAgentUserId())) return false;
     if (callType_ != other.callType_) return false;
@@ -1426,6 +1476,10 @@ private static final long serialVersionUID = 0L;
     if (hasCompletedAt()) {
       hash = (37 * hash) + COMPLETED_AT_FIELD_NUMBER;
       hash = (53 * hash) + getCompletedAt().hashCode();
+    }
+    if (hasDeletedAt()) {
+      hash = (37 * hash) + DELETED_AT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeletedAt().hashCode();
     }
     hash = (37 * hash) + AGENT_USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getAgentUserId().hashCode();
@@ -1594,6 +1648,11 @@ private static final long serialVersionUID = 0L;
         completedAtBuilder_.dispose();
         completedAtBuilder_ = null;
       }
+      deletedAt_ = null;
+      if (deletedAtBuilder_ != null) {
+        deletedAtBuilder_.dispose();
+        deletedAtBuilder_ = null;
+      }
       agentUserId_ = "";
       callType_ = 0;
       transcriptSid_ = 0L;
@@ -1603,7 +1662,7 @@ private static final long serialVersionUID = 0L;
         customFields_ = null;
         customFieldsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00001000);
       deletedBy_ = "";
       return this;
     }
@@ -1648,9 +1707,9 @@ private static final long serialVersionUID = 0L;
         result.evaluationSections_ = evaluationSectionsBuilder_.build();
       }
       if (customFieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0)) {
+        if (((bitField0_ & 0x00001000) != 0)) {
           customFields_ = java.util.Collections.unmodifiableList(customFields_);
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00001000);
         }
         result.customFields_ = customFields_;
       } else {
@@ -1684,15 +1743,20 @@ private static final long serialVersionUID = 0L;
             : completedAtBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.agentUserId_ = agentUserId_;
+        result.deletedAt_ = deletedAtBuilder_ == null
+            ? deletedAt_
+            : deletedAtBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.callType_ = callType_;
+        result.agentUserId_ = agentUserId_;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.callType_ = callType_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
         result.transcriptSid_ = transcriptSid_;
       }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
+      if (((from_bitField0_ & 0x00002000) != 0)) {
         result.deletedBy_ = deletedBy_;
       }
     }
@@ -1790,9 +1854,12 @@ private static final long serialVersionUID = 0L;
       if (other.hasCompletedAt()) {
         mergeCompletedAt(other.getCompletedAt());
       }
+      if (other.hasDeletedAt()) {
+        mergeDeletedAt(other.getDeletedAt());
+      }
       if (!other.getAgentUserId().isEmpty()) {
         agentUserId_ = other.agentUserId_;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (other.callType_ != 0) {
@@ -1805,7 +1872,7 @@ private static final long serialVersionUID = 0L;
         if (!other.customFields_.isEmpty()) {
           if (customFields_.isEmpty()) {
             customFields_ = other.customFields_;
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00001000);
           } else {
             ensureCustomFieldsIsMutable();
             customFields_.addAll(other.customFields_);
@@ -1818,7 +1885,7 @@ private static final long serialVersionUID = 0L;
             customFieldsBuilder_.dispose();
             customFieldsBuilder_ = null;
             customFields_ = other.customFields_;
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00001000);
             customFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getCustomFieldsFieldBuilder() : null;
@@ -1829,7 +1896,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDeletedBy().isEmpty()) {
         deletedBy_ = other.deletedBy_;
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00002000;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -1908,19 +1975,26 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 82
+            case 98: {
+              input.readMessage(
+                  getDeletedAtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 98
             case 106: {
               agentUserId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               break;
             } // case 106
             case 112: {
               callType_ = input.readEnum();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000400;
               break;
             } // case 112
             case 120: {
               transcriptSid_ = input.readInt64();
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000800;
               break;
             } // case 120
             case 138: {
@@ -1938,7 +2012,7 @@ private static final long serialVersionUID = 0L;
             } // case 138
             case 146: {
               deletedBy_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00002000;
               break;
             } // case 146
             default: {
@@ -2694,6 +2768,161 @@ private static final long serialVersionUID = 0L;
       return completedAtBuilder_;
     }
 
+    private com.google.protobuf.Timestamp deletedAt_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deletedAtBuilder_;
+    /**
+     * <pre>
+     * time evaluation was deleted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+     * @return Whether the deletedAt field is set.
+     */
+    public boolean hasDeletedAt() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * time evaluation was deleted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+     * @return The deletedAt.
+     */
+    public com.google.protobuf.Timestamp getDeletedAt() {
+      if (deletedAtBuilder_ == null) {
+        return deletedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deletedAt_;
+      } else {
+        return deletedAtBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * time evaluation was deleted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+     */
+    public Builder setDeletedAt(com.google.protobuf.Timestamp value) {
+      if (deletedAtBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        deletedAt_ = value;
+      } else {
+        deletedAtBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * time evaluation was deleted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+     */
+    public Builder setDeletedAt(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (deletedAtBuilder_ == null) {
+        deletedAt_ = builderForValue.build();
+      } else {
+        deletedAtBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * time evaluation was deleted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+     */
+    public Builder mergeDeletedAt(com.google.protobuf.Timestamp value) {
+      if (deletedAtBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          deletedAt_ != null &&
+          deletedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getDeletedAtBuilder().mergeFrom(value);
+        } else {
+          deletedAt_ = value;
+        }
+      } else {
+        deletedAtBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * time evaluation was deleted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+     */
+    public Builder clearDeletedAt() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      deletedAt_ = null;
+      if (deletedAtBuilder_ != null) {
+        deletedAtBuilder_.dispose();
+        deletedAtBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * time evaluation was deleted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getDeletedAtBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getDeletedAtFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * time evaluation was deleted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDeletedAtOrBuilder() {
+      if (deletedAtBuilder_ != null) {
+        return deletedAtBuilder_.getMessageOrBuilder();
+      } else {
+        return deletedAt_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : deletedAt_;
+      }
+    }
+    /**
+     * <pre>
+     * time evaluation was deleted
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getDeletedAtFieldBuilder() {
+      if (deletedAtBuilder_ == null) {
+        deletedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getDeletedAt(),
+                getParentForChildren(),
+                isClean());
+        deletedAt_ = null;
+      }
+      return deletedAtBuilder_;
+    }
+
     private java.lang.Object agentUserId_ = "";
     /**
      * <pre>
@@ -2749,7 +2978,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       agentUserId_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2763,7 +2992,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAgentUserId() {
       agentUserId_ = getDefaultInstance().getAgentUserId();
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -2781,7 +3010,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       agentUserId_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2809,7 +3038,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallTypeValue(int value) {
       callType_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2839,7 +3068,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       callType_ = value.getNumber();
       onChanged();
       return this;
@@ -2853,7 +3082,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallType() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       callType_ = 0;
       onChanged();
       return this;
@@ -2884,7 +3113,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTranscriptSid(long value) {
 
       transcriptSid_ = value;
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2897,7 +3126,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTranscriptSid() {
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000800);
       transcriptSid_ = 0L;
       onChanged();
       return this;
@@ -2906,9 +3135,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.Evaluation.CustomField> customFields_ =
       java.util.Collections.emptyList();
     private void ensureCustomFieldsIsMutable() {
-      if (!((bitField0_ & 0x00000800) != 0)) {
+      if (!((bitField0_ & 0x00001000) != 0)) {
         customFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Evaluation.CustomField>(customFields_);
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
        }
     }
 
@@ -3102,7 +3331,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearCustomFields() {
       if (customFieldsBuilder_ == null) {
         customFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
       } else {
         customFieldsBuilder_.clear();
@@ -3207,7 +3436,7 @@ private static final long serialVersionUID = 0L;
         customFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.Evaluation.CustomField, com.tcn.cloud.api.api.commons.Evaluation.CustomField.Builder, com.tcn.cloud.api.api.commons.Evaluation.CustomFieldOrBuilder>(
                 customFields_,
-                ((bitField0_ & 0x00000800) != 0),
+                ((bitField0_ & 0x00001000) != 0),
                 getParentForChildren(),
                 isClean());
         customFields_ = null;
@@ -3270,7 +3499,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       deletedBy_ = value;
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -3284,7 +3513,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearDeletedBy() {
       deletedBy_ = getDefaultInstance().getDeletedBy();
-      bitField0_ = (bitField0_ & ~0x00001000);
+      bitField0_ = (bitField0_ & ~0x00002000);
       onChanged();
       return this;
     }
@@ -3302,7 +3531,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       deletedBy_ = value;
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }

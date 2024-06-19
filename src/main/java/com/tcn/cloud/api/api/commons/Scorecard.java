@@ -455,7 +455,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
    * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-   *     See api/commons/scorecards.proto;l=302
+   *     See api/commons/scorecards.proto;l=304
    * @return The isAdHoc.
    */
   @java.lang.Override
@@ -594,6 +594,44 @@ private static final long serialVersionUID = 0L;
   }
   private int callTypesMemoizedSerializedSize;
 
+  public static final int UPDATED_AT_FIELD_NUMBER = 21;
+  private com.google.protobuf.Timestamp updatedAt_;
+  /**
+   * <pre>
+   * time scorecard was last updated
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
+   * @return Whether the updatedAt field is set.
+   */
+  @java.lang.Override
+  public boolean hasUpdatedAt() {
+    return updatedAt_ != null;
+  }
+  /**
+   * <pre>
+   * time scorecard was last updated
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
+   * @return The updatedAt.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getUpdatedAt() {
+    return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+  }
+  /**
+   * <pre>
+   * time scorecard was last updated
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+    return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -660,6 +698,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < callTypes_.size(); i++) {
       output.writeEnumNoTag(callTypes_.get(i));
+    }
+    if (updatedAt_ != null) {
+      output.writeMessage(21, getUpdatedAt());
     }
     getUnknownFields().writeTo(output);
   }
@@ -743,6 +784,10 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }callTypesMemoizedSerializedSize = dataSize;
     }
+    if (updatedAt_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, getUpdatedAt());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -790,6 +835,11 @@ private static final long serialVersionUID = 0L;
     if (!getCustomFieldKeysList()
         .equals(other.getCustomFieldKeysList())) return false;
     if (!callTypes_.equals(other.callTypes_)) return false;
+    if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
+    if (hasUpdatedAt()) {
+      if (!getUpdatedAt()
+          .equals(other.getUpdatedAt())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -845,6 +895,10 @@ private static final long serialVersionUID = 0L;
     if (getCallTypesCount() > 0) {
       hash = (37 * hash) + CALL_TYPES_FIELD_NUMBER;
       hash = (53 * hash) + callTypes_.hashCode();
+    }
+    if (hasUpdatedAt()) {
+      hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
+      hash = (53 * hash) + getUpdatedAt().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1010,6 +1064,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.LazyStringArrayList.emptyList();
       callTypes_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00008000);
+      updatedAt_ = null;
+      if (updatedAtBuilder_ != null) {
+        updatedAtBuilder_.dispose();
+        updatedAtBuilder_ = null;
+      }
       return this;
     }
 
@@ -1105,6 +1164,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00004000) != 0)) {
         customFieldKeys_.makeImmutable();
         result.customFieldKeys_ = customFieldKeys_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.updatedAt_ = updatedAtBuilder_ == null
+            ? updatedAt_
+            : updatedAtBuilder_.build();
       }
     }
 
@@ -1243,6 +1307,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.hasUpdatedAt()) {
+        mergeUpdatedAt(other.getUpdatedAt());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1372,6 +1439,13 @@ private static final long serialVersionUID = 0L;
               input.popLimit(oldLimit);
               break;
             } // case 162
+            case 170: {
+              input.readMessage(
+                  getUpdatedAtFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 170
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2579,7 +2653,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
      * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-     *     See api/commons/scorecards.proto;l=302
+     *     See api/commons/scorecards.proto;l=304
      * @return The isAdHoc.
      */
     @java.lang.Override
@@ -2593,7 +2667,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
      * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-     *     See api/commons/scorecards.proto;l=302
+     *     See api/commons/scorecards.proto;l=304
      * @param value The isAdHoc to set.
      * @return This builder for chaining.
      */
@@ -2611,7 +2685,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
      * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-     *     See api/commons/scorecards.proto;l=302
+     *     See api/commons/scorecards.proto;l=304
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearIsAdHoc() {
@@ -2954,6 +3028,161 @@ private static final long serialVersionUID = 0L;
       }
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.Timestamp updatedAt_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
+    /**
+     * <pre>
+     * time scorecard was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
+     * @return Whether the updatedAt field is set.
+     */
+    public boolean hasUpdatedAt() {
+      return ((bitField0_ & 0x00010000) != 0);
+    }
+    /**
+     * <pre>
+     * time scorecard was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
+     * @return The updatedAt.
+     */
+    public com.google.protobuf.Timestamp getUpdatedAt() {
+      if (updatedAtBuilder_ == null) {
+        return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+      } else {
+        return updatedAtBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * time scorecard was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
+     */
+    public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
+      if (updatedAtBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        updatedAt_ = value;
+      } else {
+        updatedAtBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * time scorecard was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
+     */
+    public Builder setUpdatedAt(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (updatedAtBuilder_ == null) {
+        updatedAt_ = builderForValue.build();
+      } else {
+        updatedAtBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * time scorecard was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
+     */
+    public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
+      if (updatedAtBuilder_ == null) {
+        if (((bitField0_ & 0x00010000) != 0) &&
+          updatedAt_ != null &&
+          updatedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getUpdatedAtBuilder().mergeFrom(value);
+        } else {
+          updatedAt_ = value;
+        }
+      } else {
+        updatedAtBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * time scorecard was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
+     */
+    public Builder clearUpdatedAt() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      updatedAt_ = null;
+      if (updatedAtBuilder_ != null) {
+        updatedAtBuilder_.dispose();
+        updatedAtBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * time scorecard was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return getUpdatedAtFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * time scorecard was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+      if (updatedAtBuilder_ != null) {
+        return updatedAtBuilder_.getMessageOrBuilder();
+      } else {
+        return updatedAt_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+      }
+    }
+    /**
+     * <pre>
+     * time scorecard was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        getUpdatedAtFieldBuilder() {
+      if (updatedAtBuilder_ == null) {
+        updatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getUpdatedAt(),
+                getParentForChildren(),
+                isClean());
+        updatedAt_ = null;
+      }
+      return updatedAtBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
