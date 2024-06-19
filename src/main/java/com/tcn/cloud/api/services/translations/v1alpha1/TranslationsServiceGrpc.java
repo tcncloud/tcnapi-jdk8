@@ -1,4 +1,4 @@
-package com.tcn.cloud.api.services.translation.v1alpha1;
+package com.tcn.cloud.api.services.translations.v1alpha1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -6,39 +6,39 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.57.1)",
-    comments = "Source: services/translation/v1alpha1/service.proto")
+    comments = "Source: services/translations/v1alpha1/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
-public final class TranslationServiceGrpc {
+public final class TranslationsServiceGrpc {
 
-  private TranslationServiceGrpc() {}
+  private TranslationsServiceGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "services.translation.v1alpha1.TranslationService";
+  public static final java.lang.String SERVICE_NAME = "services.translations.v1alpha1.TranslationsService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateRequest,
-      com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse> getTranslateTemplateMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest,
+      com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateResponse> getTranslateTemplateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "TranslateTemplate",
-      requestType = com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateRequest.class,
-      responseType = com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse.class,
+      requestType = com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest.class,
+      responseType = com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateRequest,
-      com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse> getTranslateTemplateMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateRequest, com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse> getTranslateTemplateMethod;
-    if ((getTranslateTemplateMethod = TranslationServiceGrpc.getTranslateTemplateMethod) == null) {
-      synchronized (TranslationServiceGrpc.class) {
-        if ((getTranslateTemplateMethod = TranslationServiceGrpc.getTranslateTemplateMethod) == null) {
-          TranslationServiceGrpc.getTranslateTemplateMethod = getTranslateTemplateMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateRequest, com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse>newBuilder()
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest,
+      com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateResponse> getTranslateTemplateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest, com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateResponse> getTranslateTemplateMethod;
+    if ((getTranslateTemplateMethod = TranslationsServiceGrpc.getTranslateTemplateMethod) == null) {
+      synchronized (TranslationsServiceGrpc.class) {
+        if ((getTranslateTemplateMethod = TranslationsServiceGrpc.getTranslateTemplateMethod) == null) {
+          TranslationsServiceGrpc.getTranslateTemplateMethod = getTranslateTemplateMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest, com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TranslateTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new TranslationServiceMethodDescriptorSupplier("TranslateTemplate"))
+                  com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TranslationsServiceMethodDescriptorSupplier("TranslateTemplate"))
               .build();
         }
       }
@@ -49,45 +49,45 @@ public final class TranslationServiceGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static TranslationServiceStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<TranslationServiceStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<TranslationServiceStub>() {
+  public static TranslationsServiceStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<TranslationsServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TranslationsServiceStub>() {
         @java.lang.Override
-        public TranslationServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new TranslationServiceStub(channel, callOptions);
+        public TranslationsServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TranslationsServiceStub(channel, callOptions);
         }
       };
-    return TranslationServiceStub.newStub(factory, channel);
+    return TranslationsServiceStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static TranslationServiceBlockingStub newBlockingStub(
+  public static TranslationsServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<TranslationServiceBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<TranslationServiceBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<TranslationsServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TranslationsServiceBlockingStub>() {
         @java.lang.Override
-        public TranslationServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new TranslationServiceBlockingStub(channel, callOptions);
+        public TranslationsServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TranslationsServiceBlockingStub(channel, callOptions);
         }
       };
-    return TranslationServiceBlockingStub.newStub(factory, channel);
+    return TranslationsServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static TranslationServiceFutureStub newFutureStub(
+  public static TranslationsServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<TranslationServiceFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<TranslationServiceFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<TranslationsServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TranslationsServiceFutureStub>() {
         @java.lang.Override
-        public TranslationServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new TranslationServiceFutureStub(channel, callOptions);
+        public TranslationsServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TranslationsServiceFutureStub(channel, callOptions);
         }
       };
-    return TranslationServiceFutureStub.newStub(factory, channel);
+    return TranslationsServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -104,37 +104,37 @@ public final class TranslationServiceGrpc {
      *   - grpc.InvalidArgument: The request is not valid.
      * </pre>
      */
-    default void translateTemplate(com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse> responseObserver) {
+    default void translateTemplate(com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTranslateTemplateMethod(), responseObserver);
     }
   }
 
   /**
-   * Base class for the server implementation of the service TranslationService.
+   * Base class for the server implementation of the service TranslationsService.
    */
-  public static abstract class TranslationServiceImplBase
+  public static abstract class TranslationsServiceImplBase
       implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return TranslationServiceGrpc.bindService(this);
+      return TranslationsServiceGrpc.bindService(this);
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service TranslationService.
+   * A stub to allow clients to do asynchronous rpc calls to service TranslationsService.
    */
-  public static final class TranslationServiceStub
-      extends io.grpc.stub.AbstractAsyncStub<TranslationServiceStub> {
-    private TranslationServiceStub(
+  public static final class TranslationsServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<TranslationsServiceStub> {
+    private TranslationsServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TranslationServiceStub build(
+    protected TranslationsServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new TranslationServiceStub(channel, callOptions);
+      return new TranslationsServiceStub(channel, callOptions);
     }
 
     /**
@@ -147,27 +147,27 @@ public final class TranslationServiceGrpc {
      *   - grpc.InvalidArgument: The request is not valid.
      * </pre>
      */
-    public void translateTemplate(com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse> responseObserver) {
+    public void translateTemplate(com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getTranslateTemplateMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service TranslationService.
+   * A stub to allow clients to do synchronous rpc calls to service TranslationsService.
    */
-  public static final class TranslationServiceBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<TranslationServiceBlockingStub> {
-    private TranslationServiceBlockingStub(
+  public static final class TranslationsServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<TranslationsServiceBlockingStub> {
+    private TranslationsServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TranslationServiceBlockingStub build(
+    protected TranslationsServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new TranslationServiceBlockingStub(channel, callOptions);
+      return new TranslationsServiceBlockingStub(channel, callOptions);
     }
 
     /**
@@ -180,26 +180,26 @@ public final class TranslationServiceGrpc {
      *   - grpc.InvalidArgument: The request is not valid.
      * </pre>
      */
-    public com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse translateTemplate(com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateRequest request) {
+    public com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateResponse translateTemplate(com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getTranslateTemplateMethod(), getCallOptions(), request);
     }
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service TranslationService.
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service TranslationsService.
    */
-  public static final class TranslationServiceFutureStub
-      extends io.grpc.stub.AbstractFutureStub<TranslationServiceFutureStub> {
-    private TranslationServiceFutureStub(
+  public static final class TranslationsServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<TranslationsServiceFutureStub> {
+    private TranslationsServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TranslationServiceFutureStub build(
+    protected TranslationsServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new TranslationServiceFutureStub(channel, callOptions);
+      return new TranslationsServiceFutureStub(channel, callOptions);
     }
 
     /**
@@ -212,8 +212,8 @@ public final class TranslationServiceGrpc {
      *   - grpc.InvalidArgument: The request is not valid.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse> translateTemplate(
-        com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateResponse> translateTemplate(
+        com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getTranslateTemplateMethod(), getCallOptions()), request);
     }
@@ -239,8 +239,8 @@ public final class TranslationServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_TRANSLATE_TEMPLATE:
-          serviceImpl.translateTemplate((com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse>) responseObserver);
+          serviceImpl.translateTemplate((com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -264,38 +264,38 @@ public final class TranslationServiceGrpc {
           getTranslateTemplateMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateRequest,
-              com.tcn.cloud.api.services.translation.v1alpha1.TranslateTemplateResponse>(
+              com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest,
+              com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateResponse>(
                 service, METHODID_TRANSLATE_TEMPLATE)))
         .build();
   }
 
-  private static abstract class TranslationServiceBaseDescriptorSupplier
+  private static abstract class TranslationsServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    TranslationServiceBaseDescriptorSupplier() {}
+    TranslationsServiceBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.tcn.cloud.api.services.translation.v1alpha1.ServiceProto.getDescriptor();
+      return com.tcn.cloud.api.services.translations.v1alpha1.ServiceProto.getDescriptor();
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("TranslationService");
+      return getFileDescriptor().findServiceByName("TranslationsService");
     }
   }
 
-  private static final class TranslationServiceFileDescriptorSupplier
-      extends TranslationServiceBaseDescriptorSupplier {
-    TranslationServiceFileDescriptorSupplier() {}
+  private static final class TranslationsServiceFileDescriptorSupplier
+      extends TranslationsServiceBaseDescriptorSupplier {
+    TranslationsServiceFileDescriptorSupplier() {}
   }
 
-  private static final class TranslationServiceMethodDescriptorSupplier
-      extends TranslationServiceBaseDescriptorSupplier
+  private static final class TranslationsServiceMethodDescriptorSupplier
+      extends TranslationsServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final java.lang.String methodName;
 
-    TranslationServiceMethodDescriptorSupplier(java.lang.String methodName) {
+    TranslationsServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -310,11 +310,11 @@ public final class TranslationServiceGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (TranslationServiceGrpc.class) {
+      synchronized (TranslationsServiceGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new TranslationServiceFileDescriptorSupplier())
+              .setSchemaDescriptor(new TranslationsServiceFileDescriptorSupplier())
               .addMethod(getTranslateTemplateMethod())
               .build();
         }
