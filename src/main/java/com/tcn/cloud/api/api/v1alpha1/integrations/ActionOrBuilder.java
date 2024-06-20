@@ -136,4 +136,58 @@ java.lang.String defaultValue);
    */
   com.google.protobuf.ByteString
       getActionDefinitionNameBytes();
+
+  /**
+   * <pre>
+   * the data that controls optional functionality for some flows.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
+   */
+  int getOptsCount();
+  /**
+   * <pre>
+   * the data that controls optional functionality for some flows.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
+   */
+  boolean containsOpts(
+      java.lang.String key);
+  /**
+   * Use {@link #getOptsMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, java.lang.String>
+  getOpts();
+  /**
+   * <pre>
+   * the data that controls optional functionality for some flows.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
+   */
+  java.util.Map<java.lang.String, java.lang.String>
+  getOptsMap();
+  /**
+   * <pre>
+   * the data that controls optional functionality for some flows.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
+   */
+  /* nullable */
+java.lang.String getOptsOrDefault(
+      java.lang.String key,
+      /* nullable */
+java.lang.String defaultValue);
+  /**
+   * <pre>
+   * the data that controls optional functionality for some flows.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
+   */
+  java.lang.String getOptsOrThrow(
+      java.lang.String key);
 }
