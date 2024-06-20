@@ -9546,7 +9546,8 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * CreateCertificateInfo creates a new certificate info for the current organization.
+     * CreateCertificateInfo creates a new TLS certificate and
+     * returns the certificate info for the current organization.
      * </pre>
      */
     default void createCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.CreateCertificateInfoRequest request,
@@ -12181,7 +12182,8 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * CreateCertificateInfo creates a new certificate info for the current organization.
+     * CreateCertificateInfo creates a new TLS certificate and
+     * returns the certificate info for the current organization.
      * </pre>
      */
     public void createCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.CreateCertificateInfoRequest request,
@@ -14602,7 +14604,8 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * CreateCertificateInfo creates a new certificate info for the current organization.
+     * CreateCertificateInfo creates a new TLS certificate and
+     * returns the certificate info for the current organization.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.CreateCertificateInfoResponse createCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.CreateCertificateInfoRequest request) {
@@ -17113,7 +17116,8 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * CreateCertificateInfo creates a new certificate info for the current organization.
+     * CreateCertificateInfo creates a new TLS certificate and
+     * returns the certificate info for the current organization.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreateCertificateInfoResponse> createCertificateInfo(
