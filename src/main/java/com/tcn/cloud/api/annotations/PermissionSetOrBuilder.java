@@ -23,4 +23,42 @@ public interface PermissionSetOrBuilder extends
    * @return The permissions at the given index.
    */
   com.tcn.cloud.api.api.commons.auth.Permission getPermissions(int index);
+
+  /**
+   * <pre>
+   * id of the request message field that will be checked.
+   * </pre>
+   *
+   * <code>optional int32 taint_field_id = 2 [json_name = "taintFieldId"];</code>
+   * @return Whether the taintFieldId field is set.
+   */
+  boolean hasTaintFieldId();
+  /**
+   * <pre>
+   * id of the request message field that will be checked.
+   * </pre>
+   *
+   * <code>optional int32 taint_field_id = 2 [json_name = "taintFieldId"];</code>
+   * @return The taintFieldId.
+   */
+  int getTaintFieldId();
+
+  /**
+   * <pre>
+   * value that the request mesage field with id is required to match.
+   * </pre>
+   *
+   * <code>optional int32 taint_field_value = 3 [json_name = "taintFieldValue"];</code>
+   * @return Whether the taintFieldValue field is set.
+   */
+  boolean hasTaintFieldValue();
+  /**
+   * <pre>
+   * value that the request mesage field with id is required to match.
+   * </pre>
+   *
+   * <code>optional int32 taint_field_value = 3 [json_name = "taintFieldValue"];</code>
+   * @return The taintFieldValue.
+   */
+  int getTaintFieldValue();
 }
