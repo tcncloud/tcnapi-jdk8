@@ -559,6 +559,36 @@ public final class PreferencesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_EvaluateBusinessHoursResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_CreateCertificateInfoRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_CreateCertificateInfoRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_CreateCertificateInfoResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_CreateCertificateInfoResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_DeleteCertificateInfoRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_DeleteCertificateInfoRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_DeleteCertificateInfoResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_DeleteCertificateInfoResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListCertificateInfoRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListCertificateInfoRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListCertificateInfoResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListCertificateInfoResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -861,7 +891,17 @@ public final class PreferencesProto {
       "Request\022*\n\021business_hours_id\030\001 \001(\tR\017busi" +
       "nessHoursId:\002\030\001\"F\n\035EvaluateBusinessHours" +
       "Response\022!\n\014within_range\030\001 \001(\010R\013withinRa" +
-      "nge:\002\030\001B\230\001\n\"com.tcn.cloud.api.api.v1alph" +
+      "nge:\002\030\001\"T\n\034CreateCertificateInfoRequest\022" +
+      "\022\n\004name\030\001 \001(\tR\004name\022 \n\013description\030\002 \001(\t" +
+      "R\013description\"P\n\035CreateCertificateInfoRe" +
+      "sponse\022/\n\023encoded_certificate\030\001 \001(\tR\022enc" +
+      "odedCertificate\"2\n\034DeleteCertificateInfo" +
+      "Request\022\022\n\004hash\030\001 \001(\tR\004hash\"\037\n\035DeleteCer" +
+      "tificateInfoResponse\"\034\n\032ListCertificateI" +
+      "nfoRequest\"s\n\033ListCertificateInfoRespons" +
+      "e\022T\n\025certificate_info_list\030\001 \003(\0132 .api.c" +
+      "ommons.org.CertificateInfoR\023certificateI" +
+      "nfoListB\230\001\n\"com.tcn.cloud.api.api.v1alph" +
       "a1.orgB\020PreferencesProtoP\001\242\002\003AVO\252\002\020Api.V" +
       "1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1a" +
       "lpha1\\Org\\GPBMetadata\352\002\022Api::V1alpha1::O" +
@@ -1528,6 +1568,42 @@ public final class PreferencesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_EvaluateBusinessHoursResponse_descriptor,
         new java.lang.String[] { "WithinRange", });
+    internal_static_api_v1alpha1_org_CreateCertificateInfoRequest_descriptor =
+      getDescriptor().getMessageTypes().get(109);
+    internal_static_api_v1alpha1_org_CreateCertificateInfoRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_CreateCertificateInfoRequest_descriptor,
+        new java.lang.String[] { "Name", "Description", });
+    internal_static_api_v1alpha1_org_CreateCertificateInfoResponse_descriptor =
+      getDescriptor().getMessageTypes().get(110);
+    internal_static_api_v1alpha1_org_CreateCertificateInfoResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_CreateCertificateInfoResponse_descriptor,
+        new java.lang.String[] { "EncodedCertificate", });
+    internal_static_api_v1alpha1_org_DeleteCertificateInfoRequest_descriptor =
+      getDescriptor().getMessageTypes().get(111);
+    internal_static_api_v1alpha1_org_DeleteCertificateInfoRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_DeleteCertificateInfoRequest_descriptor,
+        new java.lang.String[] { "Hash", });
+    internal_static_api_v1alpha1_org_DeleteCertificateInfoResponse_descriptor =
+      getDescriptor().getMessageTypes().get(112);
+    internal_static_api_v1alpha1_org_DeleteCertificateInfoResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_DeleteCertificateInfoResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_ListCertificateInfoRequest_descriptor =
+      getDescriptor().getMessageTypes().get(113);
+    internal_static_api_v1alpha1_org_ListCertificateInfoRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListCertificateInfoRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_org_ListCertificateInfoResponse_descriptor =
+      getDescriptor().getMessageTypes().get(114);
+    internal_static_api_v1alpha1_org_ListCertificateInfoResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListCertificateInfoResponse_descriptor,
+        new java.lang.String[] { "CertificateInfoList", });
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.PreferencesProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();

@@ -55,6 +55,14 @@ public enum Permission
   PERMISSION_ORG_VIEW(101),
   /**
    * <pre>
+   * Enables creating new TLS certificate, deleting and viewing organization's certificate info.
+   * </pre>
+   *
+   * <code>PERMISSION_CERTIFICATE_MANAGEMENT = 102 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_CERTIFICATE_MANAGEMENT(102),
+  /**
+   * <pre>
    * Enables user account imitation for users within the p3 client hierarchy.
    * </pre>
    *
@@ -892,6 +900,14 @@ public enum Permission
   public static final int PERMISSION_ORG_VIEW_VALUE = 101;
   /**
    * <pre>
+   * Enables creating new TLS certificate, deleting and viewing organization's certificate info.
+   * </pre>
+   *
+   * <code>PERMISSION_CERTIFICATE_MANAGEMENT = 102 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_CERTIFICATE_MANAGEMENT_VALUE = 102;
+  /**
+   * <pre>
    * Enables user account imitation for users within the p3 client hierarchy.
    * </pre>
    *
@@ -1709,6 +1725,7 @@ public enum Permission
       case 10: return PERMISSION_LEARN_EDIT;
       case 100: return PERMISSION_ORG_EDIT;
       case 101: return PERMISSION_ORG_VIEW;
+      case 102: return PERMISSION_CERTIFICATE_MANAGEMENT;
       case 130: return PERMISSION_OWNING_ORG_IMITATION;
       case 118: return PERMISSION_USER_CREATE;
       case 119: return PERMISSION_USER_EDIT;
