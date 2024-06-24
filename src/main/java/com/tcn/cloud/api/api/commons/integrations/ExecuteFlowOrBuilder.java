@@ -3230,6 +3230,186 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteSutherlandrevPaymentConnectOrBuilder getSutherlandrevPaymentConnectOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+   * @return Whether the finviCreateCustomer field is set.
+   */
+  boolean hasFinviCreateCustomer();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+   * @return The finviCreateCustomer.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer getFinviCreateCustomer();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomerOrBuilder getFinviCreateCustomerOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransaction finvi_create_transaction = 4302 [json_name = "finviCreateTransaction"];</code>
+   * @return Whether the finviCreateTransaction field is set.
+   */
+  boolean hasFinviCreateTransaction();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransaction finvi_create_transaction = 4302 [json_name = "finviCreateTransaction"];</code>
+   * @return The finviCreateTransaction.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction getFinviCreateTransaction();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransaction finvi_create_transaction = 4302 [json_name = "finviCreateTransaction"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionOrBuilder getFinviCreateTransactionOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransaction finvi_process_new_transation = 4303 [json_name = "finviProcessNewTransation"];</code>
+   * @return Whether the finviProcessNewTransation field is set.
+   */
+  boolean hasFinviProcessNewTransation();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransaction finvi_process_new_transation = 4303 [json_name = "finviProcessNewTransation"];</code>
+   * @return The finviProcessNewTransation.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction getFinviProcessNewTransation();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransaction finvi_process_new_transation = 4303 [json_name = "finviProcessNewTransation"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionOrBuilder getFinviProcessNewTransationOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4304 [json_name = "finviQueryCustomerDetails"];</code>
+   * @return Whether the finviQueryCustomerDetails field is set.
+   */
+  boolean hasFinviQueryCustomerDetails();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4304 [json_name = "finviQueryCustomerDetails"];</code>
+   * @return The finviQueryCustomerDetails.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails getFinviQueryCustomerDetails();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4304 [json_name = "finviQueryCustomerDetails"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetailsOrBuilder getFinviQueryCustomerDetailsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4305 [json_name = "finviQueryCustomerTokenDetails"];</code>
+   * @return Whether the finviQueryCustomerTokenDetails field is set.
+   */
+  boolean hasFinviQueryCustomerTokenDetails();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4305 [json_name = "finviQueryCustomerTokenDetails"];</code>
+   * @return The finviQueryCustomerTokenDetails.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails getFinviQueryCustomerTokenDetails();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4305 [json_name = "finviQueryCustomerTokenDetails"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetailsOrBuilder getFinviQueryCustomerTokenDetailsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4306 [json_name = "finviQueryCustomerTokens"];</code>
+   * @return Whether the finviQueryCustomerTokens field is set.
+   */
+  boolean hasFinviQueryCustomerTokens();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4306 [json_name = "finviQueryCustomerTokens"];</code>
+   * @return The finviQueryCustomerTokens.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens getFinviQueryCustomerTokens();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4306 [json_name = "finviQueryCustomerTokens"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokensOrBuilder getFinviQueryCustomerTokensOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4307 [json_name = "finviQueryCustomerTransactions"];</code>
+   * @return Whether the finviQueryCustomerTransactions field is set.
+   */
+  boolean hasFinviQueryCustomerTransactions();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4307 [json_name = "finviQueryCustomerTransactions"];</code>
+   * @return The finviQueryCustomerTransactions.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions getFinviQueryCustomerTransactions();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4307 [json_name = "finviQueryCustomerTransactions"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactionsOrBuilder getFinviQueryCustomerTransactionsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4308 [json_name = "finviQueryCustomers"];</code>
+   * @return Whether the finviQueryCustomers field is set.
+   */
+  boolean hasFinviQueryCustomers();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4308 [json_name = "finviQueryCustomers"];</code>
+   * @return The finviQueryCustomers.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers getFinviQueryCustomers();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4308 [json_name = "finviQueryCustomers"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomersOrBuilder getFinviQueryCustomersOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4309 [json_name = "finviQueryTransactionDetails"];</code>
+   * @return Whether the finviQueryTransactionDetails field is set.
+   */
+  boolean hasFinviQueryTransactionDetails();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4309 [json_name = "finviQueryTransactionDetails"];</code>
+   * @return The finviQueryTransactionDetails.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails getFinviQueryTransactionDetails();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4309 [json_name = "finviQueryTransactionDetails"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetailsOrBuilder getFinviQueryTransactionDetailsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4310 [json_name = "finviQueryTransactions"];</code>
+   * @return Whether the finviQueryTransactions field is set.
+   */
+  boolean hasFinviQueryTransactions();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4310 [json_name = "finviQueryTransactions"];</code>
+   * @return The finviQueryTransactions.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions getFinviQueryTransactions();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4310 [json_name = "finviQueryTransactions"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactionsOrBuilder getFinviQueryTransactionsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4311 [json_name = "finviRemoveCustomerToken"];</code>
+   * @return Whether the finviRemoveCustomerToken field is set.
+   */
+  boolean hasFinviRemoveCustomerToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4311 [json_name = "finviRemoveCustomerToken"];</code>
+   * @return The finviRemoveCustomerToken.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken getFinviRemoveCustomerToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4311 [json_name = "finviRemoveCustomerToken"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerTokenOrBuilder getFinviRemoveCustomerTokenOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4312 [json_name = "finviUpdateCustomer"];</code>
+   * @return Whether the finviUpdateCustomer field is set.
+   */
+  boolean hasFinviUpdateCustomer();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4312 [json_name = "finviUpdateCustomer"];</code>
+   * @return The finviUpdateCustomer.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer getFinviUpdateCustomer();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4312 [json_name = "finviUpdateCustomer"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomerOrBuilder getFinviUpdateCustomerOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
    * @return Whether the debugEcho field is set.
    */

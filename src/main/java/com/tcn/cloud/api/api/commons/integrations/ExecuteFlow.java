@@ -266,6 +266,18 @@ private static final long serialVersionUID = 0L;
     NAVIGA_CHANGE_BILLING(4002),
     PAYNSECONDS_TOKENIZE_CARD(4101),
     SUTHERLANDREV_PAYMENT_CONNECT(4201),
+    FINVI_CREATE_CUSTOMER(4301),
+    FINVI_CREATE_TRANSACTION(4302),
+    FINVI_PROCESS_NEW_TRANSATION(4303),
+    FINVI_QUERY_CUSTOMER_DETAILS(4304),
+    FINVI_QUERY_CUSTOMER_TOKEN_DETAILS(4305),
+    FINVI_QUERY_CUSTOMER_TOKENS(4306),
+    FINVI_QUERY_CUSTOMER_TRANSACTIONS(4307),
+    FINVI_QUERY_CUSTOMERS(4308),
+    FINVI_QUERY_TRANSACTION_DETAILS(4309),
+    FINVI_QUERY_TRANSACTIONS(4310),
+    FINVI_REMOVE_CUSTOMER_TOKEN(4311),
+    FINVI_UPDATE_CUSTOMER(4312),
     DEBUG_ECHO(5001),
     DEBUG_VALIDATE(5002),
     VALUE_NOT_SET(0);
@@ -499,6 +511,18 @@ private static final long serialVersionUID = 0L;
         case 4002: return NAVIGA_CHANGE_BILLING;
         case 4101: return PAYNSECONDS_TOKENIZE_CARD;
         case 4201: return SUTHERLANDREV_PAYMENT_CONNECT;
+        case 4301: return FINVI_CREATE_CUSTOMER;
+        case 4302: return FINVI_CREATE_TRANSACTION;
+        case 4303: return FINVI_PROCESS_NEW_TRANSATION;
+        case 4304: return FINVI_QUERY_CUSTOMER_DETAILS;
+        case 4305: return FINVI_QUERY_CUSTOMER_TOKEN_DETAILS;
+        case 4306: return FINVI_QUERY_CUSTOMER_TOKENS;
+        case 4307: return FINVI_QUERY_CUSTOMER_TRANSACTIONS;
+        case 4308: return FINVI_QUERY_CUSTOMERS;
+        case 4309: return FINVI_QUERY_TRANSACTION_DETAILS;
+        case 4310: return FINVI_QUERY_TRANSACTIONS;
+        case 4311: return FINVI_REMOVE_CUSTOMER_TOKEN;
+        case 4312: return FINVI_UPDATE_CUSTOMER;
         case 5001: return DEBUG_ECHO;
         case 5002: return DEBUG_VALIDATE;
         case 0: return VALUE_NOT_SET;
@@ -7189,6 +7213,378 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteSutherlandrevPaymentConnect.getDefaultInstance();
   }
 
+  public static final int FINVI_CREATE_CUSTOMER_FIELD_NUMBER = 4301;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+   * @return Whether the finviCreateCustomer field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviCreateCustomer() {
+    return valueCase_ == 4301;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+   * @return The finviCreateCustomer.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer getFinviCreateCustomer() {
+    if (valueCase_ == 4301) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomerOrBuilder getFinviCreateCustomerOrBuilder() {
+    if (valueCase_ == 4301) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer.getDefaultInstance();
+  }
+
+  public static final int FINVI_CREATE_TRANSACTION_FIELD_NUMBER = 4302;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransaction finvi_create_transaction = 4302 [json_name = "finviCreateTransaction"];</code>
+   * @return Whether the finviCreateTransaction field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviCreateTransaction() {
+    return valueCase_ == 4302;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransaction finvi_create_transaction = 4302 [json_name = "finviCreateTransaction"];</code>
+   * @return The finviCreateTransaction.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction getFinviCreateTransaction() {
+    if (valueCase_ == 4302) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransaction finvi_create_transaction = 4302 [json_name = "finviCreateTransaction"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionOrBuilder getFinviCreateTransactionOrBuilder() {
+    if (valueCase_ == 4302) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction.getDefaultInstance();
+  }
+
+  public static final int FINVI_PROCESS_NEW_TRANSATION_FIELD_NUMBER = 4303;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransaction finvi_process_new_transation = 4303 [json_name = "finviProcessNewTransation"];</code>
+   * @return Whether the finviProcessNewTransation field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviProcessNewTransation() {
+    return valueCase_ == 4303;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransaction finvi_process_new_transation = 4303 [json_name = "finviProcessNewTransation"];</code>
+   * @return The finviProcessNewTransation.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction getFinviProcessNewTransation() {
+    if (valueCase_ == 4303) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransaction finvi_process_new_transation = 4303 [json_name = "finviProcessNewTransation"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionOrBuilder getFinviProcessNewTransationOrBuilder() {
+    if (valueCase_ == 4303) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction.getDefaultInstance();
+  }
+
+  public static final int FINVI_QUERY_CUSTOMER_DETAILS_FIELD_NUMBER = 4304;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4304 [json_name = "finviQueryCustomerDetails"];</code>
+   * @return Whether the finviQueryCustomerDetails field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviQueryCustomerDetails() {
+    return valueCase_ == 4304;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4304 [json_name = "finviQueryCustomerDetails"];</code>
+   * @return The finviQueryCustomerDetails.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails getFinviQueryCustomerDetails() {
+    if (valueCase_ == 4304) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4304 [json_name = "finviQueryCustomerDetails"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetailsOrBuilder getFinviQueryCustomerDetailsOrBuilder() {
+    if (valueCase_ == 4304) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails.getDefaultInstance();
+  }
+
+  public static final int FINVI_QUERY_CUSTOMER_TOKEN_DETAILS_FIELD_NUMBER = 4305;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4305 [json_name = "finviQueryCustomerTokenDetails"];</code>
+   * @return Whether the finviQueryCustomerTokenDetails field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviQueryCustomerTokenDetails() {
+    return valueCase_ == 4305;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4305 [json_name = "finviQueryCustomerTokenDetails"];</code>
+   * @return The finviQueryCustomerTokenDetails.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails getFinviQueryCustomerTokenDetails() {
+    if (valueCase_ == 4305) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4305 [json_name = "finviQueryCustomerTokenDetails"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetailsOrBuilder getFinviQueryCustomerTokenDetailsOrBuilder() {
+    if (valueCase_ == 4305) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails.getDefaultInstance();
+  }
+
+  public static final int FINVI_QUERY_CUSTOMER_TOKENS_FIELD_NUMBER = 4306;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4306 [json_name = "finviQueryCustomerTokens"];</code>
+   * @return Whether the finviQueryCustomerTokens field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviQueryCustomerTokens() {
+    return valueCase_ == 4306;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4306 [json_name = "finviQueryCustomerTokens"];</code>
+   * @return The finviQueryCustomerTokens.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens getFinviQueryCustomerTokens() {
+    if (valueCase_ == 4306) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4306 [json_name = "finviQueryCustomerTokens"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokensOrBuilder getFinviQueryCustomerTokensOrBuilder() {
+    if (valueCase_ == 4306) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens.getDefaultInstance();
+  }
+
+  public static final int FINVI_QUERY_CUSTOMER_TRANSACTIONS_FIELD_NUMBER = 4307;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4307 [json_name = "finviQueryCustomerTransactions"];</code>
+   * @return Whether the finviQueryCustomerTransactions field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviQueryCustomerTransactions() {
+    return valueCase_ == 4307;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4307 [json_name = "finviQueryCustomerTransactions"];</code>
+   * @return The finviQueryCustomerTransactions.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions getFinviQueryCustomerTransactions() {
+    if (valueCase_ == 4307) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4307 [json_name = "finviQueryCustomerTransactions"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactionsOrBuilder getFinviQueryCustomerTransactionsOrBuilder() {
+    if (valueCase_ == 4307) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions.getDefaultInstance();
+  }
+
+  public static final int FINVI_QUERY_CUSTOMERS_FIELD_NUMBER = 4308;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4308 [json_name = "finviQueryCustomers"];</code>
+   * @return Whether the finviQueryCustomers field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviQueryCustomers() {
+    return valueCase_ == 4308;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4308 [json_name = "finviQueryCustomers"];</code>
+   * @return The finviQueryCustomers.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers getFinviQueryCustomers() {
+    if (valueCase_ == 4308) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4308 [json_name = "finviQueryCustomers"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomersOrBuilder getFinviQueryCustomersOrBuilder() {
+    if (valueCase_ == 4308) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers.getDefaultInstance();
+  }
+
+  public static final int FINVI_QUERY_TRANSACTION_DETAILS_FIELD_NUMBER = 4309;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4309 [json_name = "finviQueryTransactionDetails"];</code>
+   * @return Whether the finviQueryTransactionDetails field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviQueryTransactionDetails() {
+    return valueCase_ == 4309;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4309 [json_name = "finviQueryTransactionDetails"];</code>
+   * @return The finviQueryTransactionDetails.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails getFinviQueryTransactionDetails() {
+    if (valueCase_ == 4309) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4309 [json_name = "finviQueryTransactionDetails"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetailsOrBuilder getFinviQueryTransactionDetailsOrBuilder() {
+    if (valueCase_ == 4309) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails.getDefaultInstance();
+  }
+
+  public static final int FINVI_QUERY_TRANSACTIONS_FIELD_NUMBER = 4310;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4310 [json_name = "finviQueryTransactions"];</code>
+   * @return Whether the finviQueryTransactions field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviQueryTransactions() {
+    return valueCase_ == 4310;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4310 [json_name = "finviQueryTransactions"];</code>
+   * @return The finviQueryTransactions.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions getFinviQueryTransactions() {
+    if (valueCase_ == 4310) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4310 [json_name = "finviQueryTransactions"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactionsOrBuilder getFinviQueryTransactionsOrBuilder() {
+    if (valueCase_ == 4310) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions.getDefaultInstance();
+  }
+
+  public static final int FINVI_REMOVE_CUSTOMER_TOKEN_FIELD_NUMBER = 4311;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4311 [json_name = "finviRemoveCustomerToken"];</code>
+   * @return Whether the finviRemoveCustomerToken field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviRemoveCustomerToken() {
+    return valueCase_ == 4311;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4311 [json_name = "finviRemoveCustomerToken"];</code>
+   * @return The finviRemoveCustomerToken.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken getFinviRemoveCustomerToken() {
+    if (valueCase_ == 4311) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4311 [json_name = "finviRemoveCustomerToken"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerTokenOrBuilder getFinviRemoveCustomerTokenOrBuilder() {
+    if (valueCase_ == 4311) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken.getDefaultInstance();
+  }
+
+  public static final int FINVI_UPDATE_CUSTOMER_FIELD_NUMBER = 4312;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4312 [json_name = "finviUpdateCustomer"];</code>
+   * @return Whether the finviUpdateCustomer field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviUpdateCustomer() {
+    return valueCase_ == 4312;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4312 [json_name = "finviUpdateCustomer"];</code>
+   * @return The finviUpdateCustomer.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer getFinviUpdateCustomer() {
+    if (valueCase_ == 4312) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4312 [json_name = "finviUpdateCustomer"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomerOrBuilder getFinviUpdateCustomerOrBuilder() {
+    if (valueCase_ == 4312) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer.getDefaultInstance();
+  }
+
   public static final int DEBUG_ECHO_FIELD_NUMBER = 5001;
   /**
    * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
@@ -7909,6 +8305,42 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 4201) {
       output.writeMessage(4201, (com.tcn.cloud.api.api.commons.integrations.ExecuteSutherlandrevPaymentConnect) value_);
+    }
+    if (valueCase_ == 4301) {
+      output.writeMessage(4301, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer) value_);
+    }
+    if (valueCase_ == 4302) {
+      output.writeMessage(4302, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction) value_);
+    }
+    if (valueCase_ == 4303) {
+      output.writeMessage(4303, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction) value_);
+    }
+    if (valueCase_ == 4304) {
+      output.writeMessage(4304, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails) value_);
+    }
+    if (valueCase_ == 4305) {
+      output.writeMessage(4305, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails) value_);
+    }
+    if (valueCase_ == 4306) {
+      output.writeMessage(4306, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens) value_);
+    }
+    if (valueCase_ == 4307) {
+      output.writeMessage(4307, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions) value_);
+    }
+    if (valueCase_ == 4308) {
+      output.writeMessage(4308, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers) value_);
+    }
+    if (valueCase_ == 4309) {
+      output.writeMessage(4309, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails) value_);
+    }
+    if (valueCase_ == 4310) {
+      output.writeMessage(4310, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions) value_);
+    }
+    if (valueCase_ == 4311) {
+      output.writeMessage(4311, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken) value_);
+    }
+    if (valueCase_ == 4312) {
+      output.writeMessage(4312, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer) value_);
     }
     if (valueCase_ == 5001) {
       output.writeMessage(5001, (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho) value_);
@@ -8783,6 +9215,54 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 4201) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4201, (com.tcn.cloud.api.api.commons.integrations.ExecuteSutherlandrevPaymentConnect) value_);
+    }
+    if (valueCase_ == 4301) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4301, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer) value_);
+    }
+    if (valueCase_ == 4302) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4302, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction) value_);
+    }
+    if (valueCase_ == 4303) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4303, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction) value_);
+    }
+    if (valueCase_ == 4304) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4304, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails) value_);
+    }
+    if (valueCase_ == 4305) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4305, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails) value_);
+    }
+    if (valueCase_ == 4306) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4306, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens) value_);
+    }
+    if (valueCase_ == 4307) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4307, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions) value_);
+    }
+    if (valueCase_ == 4308) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4308, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers) value_);
+    }
+    if (valueCase_ == 4309) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4309, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails) value_);
+    }
+    if (valueCase_ == 4310) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4310, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions) value_);
+    }
+    if (valueCase_ == 4311) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4311, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken) value_);
+    }
+    if (valueCase_ == 4312) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4312, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer) value_);
     }
     if (valueCase_ == 5001) {
       size += com.google.protobuf.CodedOutputStream
@@ -9667,6 +10147,54 @@ private static final long serialVersionUID = 0L;
         if (!getSutherlandrevPaymentConnect()
             .equals(other.getSutherlandrevPaymentConnect())) return false;
         break;
+      case 4301:
+        if (!getFinviCreateCustomer()
+            .equals(other.getFinviCreateCustomer())) return false;
+        break;
+      case 4302:
+        if (!getFinviCreateTransaction()
+            .equals(other.getFinviCreateTransaction())) return false;
+        break;
+      case 4303:
+        if (!getFinviProcessNewTransation()
+            .equals(other.getFinviProcessNewTransation())) return false;
+        break;
+      case 4304:
+        if (!getFinviQueryCustomerDetails()
+            .equals(other.getFinviQueryCustomerDetails())) return false;
+        break;
+      case 4305:
+        if (!getFinviQueryCustomerTokenDetails()
+            .equals(other.getFinviQueryCustomerTokenDetails())) return false;
+        break;
+      case 4306:
+        if (!getFinviQueryCustomerTokens()
+            .equals(other.getFinviQueryCustomerTokens())) return false;
+        break;
+      case 4307:
+        if (!getFinviQueryCustomerTransactions()
+            .equals(other.getFinviQueryCustomerTransactions())) return false;
+        break;
+      case 4308:
+        if (!getFinviQueryCustomers()
+            .equals(other.getFinviQueryCustomers())) return false;
+        break;
+      case 4309:
+        if (!getFinviQueryTransactionDetails()
+            .equals(other.getFinviQueryTransactionDetails())) return false;
+        break;
+      case 4310:
+        if (!getFinviQueryTransactions()
+            .equals(other.getFinviQueryTransactions())) return false;
+        break;
+      case 4311:
+        if (!getFinviRemoveCustomerToken()
+            .equals(other.getFinviRemoveCustomerToken())) return false;
+        break;
+      case 4312:
+        if (!getFinviUpdateCustomer()
+            .equals(other.getFinviUpdateCustomer())) return false;
+        break;
       case 5001:
         if (!getDebugEcho()
             .equals(other.getDebugEcho())) return false;
@@ -10548,6 +11076,54 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SUTHERLANDREV_PAYMENT_CONNECT_FIELD_NUMBER;
         hash = (53 * hash) + getSutherlandrevPaymentConnect().hashCode();
         break;
+      case 4301:
+        hash = (37 * hash) + FINVI_CREATE_CUSTOMER_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviCreateCustomer().hashCode();
+        break;
+      case 4302:
+        hash = (37 * hash) + FINVI_CREATE_TRANSACTION_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviCreateTransaction().hashCode();
+        break;
+      case 4303:
+        hash = (37 * hash) + FINVI_PROCESS_NEW_TRANSATION_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviProcessNewTransation().hashCode();
+        break;
+      case 4304:
+        hash = (37 * hash) + FINVI_QUERY_CUSTOMER_DETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviQueryCustomerDetails().hashCode();
+        break;
+      case 4305:
+        hash = (37 * hash) + FINVI_QUERY_CUSTOMER_TOKEN_DETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviQueryCustomerTokenDetails().hashCode();
+        break;
+      case 4306:
+        hash = (37 * hash) + FINVI_QUERY_CUSTOMER_TOKENS_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviQueryCustomerTokens().hashCode();
+        break;
+      case 4307:
+        hash = (37 * hash) + FINVI_QUERY_CUSTOMER_TRANSACTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviQueryCustomerTransactions().hashCode();
+        break;
+      case 4308:
+        hash = (37 * hash) + FINVI_QUERY_CUSTOMERS_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviQueryCustomers().hashCode();
+        break;
+      case 4309:
+        hash = (37 * hash) + FINVI_QUERY_TRANSACTION_DETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviQueryTransactionDetails().hashCode();
+        break;
+      case 4310:
+        hash = (37 * hash) + FINVI_QUERY_TRANSACTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviQueryTransactions().hashCode();
+        break;
+      case 4311:
+        hash = (37 * hash) + FINVI_REMOVE_CUSTOMER_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviRemoveCustomerToken().hashCode();
+        break;
+      case 4312:
+        hash = (37 * hash) + FINVI_UPDATE_CUSTOMER_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviUpdateCustomer().hashCode();
+        break;
       case 5001:
         hash = (37 * hash) + DEBUG_ECHO_FIELD_NUMBER;
         hash = (53 * hash) + getDebugEcho().hashCode();
@@ -10703,6 +11279,7 @@ private static final long serialVersionUID = 0L;
       bitField4_ = 0;
       bitField5_ = 0;
       bitField6_ = 0;
+      bitField7_ = 0;
       pluginInstanceId_ = "";
       if (braintreeCreditSaleBuilder_ != null) {
         braintreeCreditSaleBuilder_.clear();
@@ -11346,6 +11923,42 @@ private static final long serialVersionUID = 0L;
       if (sutherlandrevPaymentConnectBuilder_ != null) {
         sutherlandrevPaymentConnectBuilder_.clear();
       }
+      if (finviCreateCustomerBuilder_ != null) {
+        finviCreateCustomerBuilder_.clear();
+      }
+      if (finviCreateTransactionBuilder_ != null) {
+        finviCreateTransactionBuilder_.clear();
+      }
+      if (finviProcessNewTransationBuilder_ != null) {
+        finviProcessNewTransationBuilder_.clear();
+      }
+      if (finviQueryCustomerDetailsBuilder_ != null) {
+        finviQueryCustomerDetailsBuilder_.clear();
+      }
+      if (finviQueryCustomerTokenDetailsBuilder_ != null) {
+        finviQueryCustomerTokenDetailsBuilder_.clear();
+      }
+      if (finviQueryCustomerTokensBuilder_ != null) {
+        finviQueryCustomerTokensBuilder_.clear();
+      }
+      if (finviQueryCustomerTransactionsBuilder_ != null) {
+        finviQueryCustomerTransactionsBuilder_.clear();
+      }
+      if (finviQueryCustomersBuilder_ != null) {
+        finviQueryCustomersBuilder_.clear();
+      }
+      if (finviQueryTransactionDetailsBuilder_ != null) {
+        finviQueryTransactionDetailsBuilder_.clear();
+      }
+      if (finviQueryTransactionsBuilder_ != null) {
+        finviQueryTransactionsBuilder_.clear();
+      }
+      if (finviRemoveCustomerTokenBuilder_ != null) {
+        finviRemoveCustomerTokenBuilder_.clear();
+      }
+      if (finviUpdateCustomerBuilder_ != null) {
+        finviUpdateCustomerBuilder_.clear();
+      }
       if (debugEchoBuilder_ != null) {
         debugEchoBuilder_.clear();
       }
@@ -11387,6 +12000,7 @@ private static final long serialVersionUID = 0L;
       if (bitField4_ != 0) { buildPartial4(result); }
       if (bitField5_ != 0) { buildPartial5(result); }
       if (bitField6_ != 0) { buildPartial6(result); }
+      if (bitField7_ != 0) { buildPartial7(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -11421,6 +12035,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial6(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
       int from_bitField6_ = bitField6_;
+    }
+
+    private void buildPartial7(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
+      int from_bitField7_ = bitField7_;
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
@@ -12281,6 +12899,54 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 4201 &&
           sutherlandrevPaymentConnectBuilder_ != null) {
         result.value_ = sutherlandrevPaymentConnectBuilder_.build();
+      }
+      if (valueCase_ == 4301 &&
+          finviCreateCustomerBuilder_ != null) {
+        result.value_ = finviCreateCustomerBuilder_.build();
+      }
+      if (valueCase_ == 4302 &&
+          finviCreateTransactionBuilder_ != null) {
+        result.value_ = finviCreateTransactionBuilder_.build();
+      }
+      if (valueCase_ == 4303 &&
+          finviProcessNewTransationBuilder_ != null) {
+        result.value_ = finviProcessNewTransationBuilder_.build();
+      }
+      if (valueCase_ == 4304 &&
+          finviQueryCustomerDetailsBuilder_ != null) {
+        result.value_ = finviQueryCustomerDetailsBuilder_.build();
+      }
+      if (valueCase_ == 4305 &&
+          finviQueryCustomerTokenDetailsBuilder_ != null) {
+        result.value_ = finviQueryCustomerTokenDetailsBuilder_.build();
+      }
+      if (valueCase_ == 4306 &&
+          finviQueryCustomerTokensBuilder_ != null) {
+        result.value_ = finviQueryCustomerTokensBuilder_.build();
+      }
+      if (valueCase_ == 4307 &&
+          finviQueryCustomerTransactionsBuilder_ != null) {
+        result.value_ = finviQueryCustomerTransactionsBuilder_.build();
+      }
+      if (valueCase_ == 4308 &&
+          finviQueryCustomersBuilder_ != null) {
+        result.value_ = finviQueryCustomersBuilder_.build();
+      }
+      if (valueCase_ == 4309 &&
+          finviQueryTransactionDetailsBuilder_ != null) {
+        result.value_ = finviQueryTransactionDetailsBuilder_.build();
+      }
+      if (valueCase_ == 4310 &&
+          finviQueryTransactionsBuilder_ != null) {
+        result.value_ = finviQueryTransactionsBuilder_.build();
+      }
+      if (valueCase_ == 4311 &&
+          finviRemoveCustomerTokenBuilder_ != null) {
+        result.value_ = finviRemoveCustomerTokenBuilder_.build();
+      }
+      if (valueCase_ == 4312 &&
+          finviUpdateCustomerBuilder_ != null) {
+        result.value_ = finviUpdateCustomerBuilder_.build();
       }
       if (valueCase_ == 5001 &&
           debugEchoBuilder_ != null) {
@@ -13196,6 +13862,54 @@ private static final long serialVersionUID = 0L;
         }
         case SUTHERLANDREV_PAYMENT_CONNECT: {
           mergeSutherlandrevPaymentConnect(other.getSutherlandrevPaymentConnect());
+          break;
+        }
+        case FINVI_CREATE_CUSTOMER: {
+          mergeFinviCreateCustomer(other.getFinviCreateCustomer());
+          break;
+        }
+        case FINVI_CREATE_TRANSACTION: {
+          mergeFinviCreateTransaction(other.getFinviCreateTransaction());
+          break;
+        }
+        case FINVI_PROCESS_NEW_TRANSATION: {
+          mergeFinviProcessNewTransation(other.getFinviProcessNewTransation());
+          break;
+        }
+        case FINVI_QUERY_CUSTOMER_DETAILS: {
+          mergeFinviQueryCustomerDetails(other.getFinviQueryCustomerDetails());
+          break;
+        }
+        case FINVI_QUERY_CUSTOMER_TOKEN_DETAILS: {
+          mergeFinviQueryCustomerTokenDetails(other.getFinviQueryCustomerTokenDetails());
+          break;
+        }
+        case FINVI_QUERY_CUSTOMER_TOKENS: {
+          mergeFinviQueryCustomerTokens(other.getFinviQueryCustomerTokens());
+          break;
+        }
+        case FINVI_QUERY_CUSTOMER_TRANSACTIONS: {
+          mergeFinviQueryCustomerTransactions(other.getFinviQueryCustomerTransactions());
+          break;
+        }
+        case FINVI_QUERY_CUSTOMERS: {
+          mergeFinviQueryCustomers(other.getFinviQueryCustomers());
+          break;
+        }
+        case FINVI_QUERY_TRANSACTION_DETAILS: {
+          mergeFinviQueryTransactionDetails(other.getFinviQueryTransactionDetails());
+          break;
+        }
+        case FINVI_QUERY_TRANSACTIONS: {
+          mergeFinviQueryTransactions(other.getFinviQueryTransactions());
+          break;
+        }
+        case FINVI_REMOVE_CUSTOMER_TOKEN: {
+          mergeFinviRemoveCustomerToken(other.getFinviRemoveCustomerToken());
+          break;
+        }
+        case FINVI_UPDATE_CUSTOMER: {
+          mergeFinviUpdateCustomer(other.getFinviUpdateCustomer());
           break;
         }
         case DEBUG_ECHO: {
@@ -14739,6 +15453,90 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 4201;
               break;
             } // case 33610
+            case 34410: {
+              input.readMessage(
+                  getFinviCreateCustomerFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4301;
+              break;
+            } // case 34410
+            case 34418: {
+              input.readMessage(
+                  getFinviCreateTransactionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4302;
+              break;
+            } // case 34418
+            case 34426: {
+              input.readMessage(
+                  getFinviProcessNewTransationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4303;
+              break;
+            } // case 34426
+            case 34434: {
+              input.readMessage(
+                  getFinviQueryCustomerDetailsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4304;
+              break;
+            } // case 34434
+            case 34442: {
+              input.readMessage(
+                  getFinviQueryCustomerTokenDetailsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4305;
+              break;
+            } // case 34442
+            case 34450: {
+              input.readMessage(
+                  getFinviQueryCustomerTokensFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4306;
+              break;
+            } // case 34450
+            case 34458: {
+              input.readMessage(
+                  getFinviQueryCustomerTransactionsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4307;
+              break;
+            } // case 34458
+            case 34466: {
+              input.readMessage(
+                  getFinviQueryCustomersFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4308;
+              break;
+            } // case 34466
+            case 34474: {
+              input.readMessage(
+                  getFinviQueryTransactionDetailsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4309;
+              break;
+            } // case 34474
+            case 34482: {
+              input.readMessage(
+                  getFinviQueryTransactionsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4310;
+              break;
+            } // case 34482
+            case 34490: {
+              input.readMessage(
+                  getFinviRemoveCustomerTokenFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4311;
+              break;
+            } // case 34490
+            case 34498: {
+              input.readMessage(
+                  getFinviUpdateCustomerFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4312;
+              break;
+            } // case 34498
             case 40010: {
               input.readMessage(
                   getDebugEchoFieldBuilder().getBuilder(),
@@ -14790,6 +15588,7 @@ private static final long serialVersionUID = 0L;
     private int bitField4_;
     private int bitField5_;
     private int bitField6_;
+    private int bitField7_;
 
     private java.lang.Object pluginInstanceId_ = "";
     /**
@@ -45249,6 +46048,1710 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 4201;
       onChanged();
       return sutherlandrevPaymentConnectBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomerOrBuilder> finviCreateCustomerBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+     * @return Whether the finviCreateCustomer field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviCreateCustomer() {
+      return valueCase_ == 4301;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+     * @return The finviCreateCustomer.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer getFinviCreateCustomer() {
+      if (finviCreateCustomerBuilder_ == null) {
+        if (valueCase_ == 4301) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4301) {
+          return finviCreateCustomerBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+     */
+    public Builder setFinviCreateCustomer(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer value) {
+      if (finviCreateCustomerBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviCreateCustomerBuilder_.setMessage(value);
+      }
+      valueCase_ = 4301;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+     */
+    public Builder setFinviCreateCustomer(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer.Builder builderForValue) {
+      if (finviCreateCustomerBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviCreateCustomerBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4301;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+     */
+    public Builder mergeFinviCreateCustomer(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer value) {
+      if (finviCreateCustomerBuilder_ == null) {
+        if (valueCase_ == 4301 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4301) {
+          finviCreateCustomerBuilder_.mergeFrom(value);
+        } else {
+          finviCreateCustomerBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4301;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+     */
+    public Builder clearFinviCreateCustomer() {
+      if (finviCreateCustomerBuilder_ == null) {
+        if (valueCase_ == 4301) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4301) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviCreateCustomerBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer.Builder getFinviCreateCustomerBuilder() {
+      return getFinviCreateCustomerFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomerOrBuilder getFinviCreateCustomerOrBuilder() {
+      if ((valueCase_ == 4301) && (finviCreateCustomerBuilder_ != null)) {
+        return finviCreateCustomerBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4301) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomerOrBuilder> 
+        getFinviCreateCustomerFieldBuilder() {
+      if (finviCreateCustomerBuilder_ == null) {
+        if (!(valueCase_ == 4301)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer.getDefaultInstance();
+        }
+        finviCreateCustomerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomerOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4301;
+      onChanged();
+      return finviCreateCustomerBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionOrBuilder> finviCreateTransactionBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateTransaction finvi_create_transaction = 4302 [json_name = "finviCreateTransaction"];</code>
+     * @return Whether the finviCreateTransaction field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviCreateTransaction() {
+      return valueCase_ == 4302;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateTransaction finvi_create_transaction = 4302 [json_name = "finviCreateTransaction"];</code>
+     * @return The finviCreateTransaction.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction getFinviCreateTransaction() {
+      if (finviCreateTransactionBuilder_ == null) {
+        if (valueCase_ == 4302) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4302) {
+          return finviCreateTransactionBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateTransaction finvi_create_transaction = 4302 [json_name = "finviCreateTransaction"];</code>
+     */
+    public Builder setFinviCreateTransaction(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction value) {
+      if (finviCreateTransactionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviCreateTransactionBuilder_.setMessage(value);
+      }
+      valueCase_ = 4302;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateTransaction finvi_create_transaction = 4302 [json_name = "finviCreateTransaction"];</code>
+     */
+    public Builder setFinviCreateTransaction(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction.Builder builderForValue) {
+      if (finviCreateTransactionBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviCreateTransactionBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4302;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateTransaction finvi_create_transaction = 4302 [json_name = "finviCreateTransaction"];</code>
+     */
+    public Builder mergeFinviCreateTransaction(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction value) {
+      if (finviCreateTransactionBuilder_ == null) {
+        if (valueCase_ == 4302 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4302) {
+          finviCreateTransactionBuilder_.mergeFrom(value);
+        } else {
+          finviCreateTransactionBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4302;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateTransaction finvi_create_transaction = 4302 [json_name = "finviCreateTransaction"];</code>
+     */
+    public Builder clearFinviCreateTransaction() {
+      if (finviCreateTransactionBuilder_ == null) {
+        if (valueCase_ == 4302) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4302) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviCreateTransactionBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateTransaction finvi_create_transaction = 4302 [json_name = "finviCreateTransaction"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction.Builder getFinviCreateTransactionBuilder() {
+      return getFinviCreateTransactionFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateTransaction finvi_create_transaction = 4302 [json_name = "finviCreateTransaction"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionOrBuilder getFinviCreateTransactionOrBuilder() {
+      if ((valueCase_ == 4302) && (finviCreateTransactionBuilder_ != null)) {
+        return finviCreateTransactionBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4302) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviCreateTransaction finvi_create_transaction = 4302 [json_name = "finviCreateTransaction"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionOrBuilder> 
+        getFinviCreateTransactionFieldBuilder() {
+      if (finviCreateTransactionBuilder_ == null) {
+        if (!(valueCase_ == 4302)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction.getDefaultInstance();
+        }
+        finviCreateTransactionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransaction) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4302;
+      onChanged();
+      return finviCreateTransactionBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionOrBuilder> finviProcessNewTransationBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviProcessNewTransaction finvi_process_new_transation = 4303 [json_name = "finviProcessNewTransation"];</code>
+     * @return Whether the finviProcessNewTransation field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviProcessNewTransation() {
+      return valueCase_ == 4303;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviProcessNewTransaction finvi_process_new_transation = 4303 [json_name = "finviProcessNewTransation"];</code>
+     * @return The finviProcessNewTransation.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction getFinviProcessNewTransation() {
+      if (finviProcessNewTransationBuilder_ == null) {
+        if (valueCase_ == 4303) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4303) {
+          return finviProcessNewTransationBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviProcessNewTransaction finvi_process_new_transation = 4303 [json_name = "finviProcessNewTransation"];</code>
+     */
+    public Builder setFinviProcessNewTransation(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction value) {
+      if (finviProcessNewTransationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviProcessNewTransationBuilder_.setMessage(value);
+      }
+      valueCase_ = 4303;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviProcessNewTransaction finvi_process_new_transation = 4303 [json_name = "finviProcessNewTransation"];</code>
+     */
+    public Builder setFinviProcessNewTransation(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction.Builder builderForValue) {
+      if (finviProcessNewTransationBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviProcessNewTransationBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4303;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviProcessNewTransaction finvi_process_new_transation = 4303 [json_name = "finviProcessNewTransation"];</code>
+     */
+    public Builder mergeFinviProcessNewTransation(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction value) {
+      if (finviProcessNewTransationBuilder_ == null) {
+        if (valueCase_ == 4303 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4303) {
+          finviProcessNewTransationBuilder_.mergeFrom(value);
+        } else {
+          finviProcessNewTransationBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4303;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviProcessNewTransaction finvi_process_new_transation = 4303 [json_name = "finviProcessNewTransation"];</code>
+     */
+    public Builder clearFinviProcessNewTransation() {
+      if (finviProcessNewTransationBuilder_ == null) {
+        if (valueCase_ == 4303) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4303) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviProcessNewTransationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviProcessNewTransaction finvi_process_new_transation = 4303 [json_name = "finviProcessNewTransation"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction.Builder getFinviProcessNewTransationBuilder() {
+      return getFinviProcessNewTransationFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviProcessNewTransaction finvi_process_new_transation = 4303 [json_name = "finviProcessNewTransation"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionOrBuilder getFinviProcessNewTransationOrBuilder() {
+      if ((valueCase_ == 4303) && (finviProcessNewTransationBuilder_ != null)) {
+        return finviProcessNewTransationBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4303) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviProcessNewTransaction finvi_process_new_transation = 4303 [json_name = "finviProcessNewTransation"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionOrBuilder> 
+        getFinviProcessNewTransationFieldBuilder() {
+      if (finviProcessNewTransationBuilder_ == null) {
+        if (!(valueCase_ == 4303)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction.getDefaultInstance();
+        }
+        finviProcessNewTransationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransaction) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4303;
+      onChanged();
+      return finviProcessNewTransationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetailsOrBuilder> finviQueryCustomerDetailsBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4304 [json_name = "finviQueryCustomerDetails"];</code>
+     * @return Whether the finviQueryCustomerDetails field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviQueryCustomerDetails() {
+      return valueCase_ == 4304;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4304 [json_name = "finviQueryCustomerDetails"];</code>
+     * @return The finviQueryCustomerDetails.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails getFinviQueryCustomerDetails() {
+      if (finviQueryCustomerDetailsBuilder_ == null) {
+        if (valueCase_ == 4304) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4304) {
+          return finviQueryCustomerDetailsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4304 [json_name = "finviQueryCustomerDetails"];</code>
+     */
+    public Builder setFinviQueryCustomerDetails(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails value) {
+      if (finviQueryCustomerDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviQueryCustomerDetailsBuilder_.setMessage(value);
+      }
+      valueCase_ = 4304;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4304 [json_name = "finviQueryCustomerDetails"];</code>
+     */
+    public Builder setFinviQueryCustomerDetails(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails.Builder builderForValue) {
+      if (finviQueryCustomerDetailsBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviQueryCustomerDetailsBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4304;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4304 [json_name = "finviQueryCustomerDetails"];</code>
+     */
+    public Builder mergeFinviQueryCustomerDetails(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails value) {
+      if (finviQueryCustomerDetailsBuilder_ == null) {
+        if (valueCase_ == 4304 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4304) {
+          finviQueryCustomerDetailsBuilder_.mergeFrom(value);
+        } else {
+          finviQueryCustomerDetailsBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4304;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4304 [json_name = "finviQueryCustomerDetails"];</code>
+     */
+    public Builder clearFinviQueryCustomerDetails() {
+      if (finviQueryCustomerDetailsBuilder_ == null) {
+        if (valueCase_ == 4304) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4304) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviQueryCustomerDetailsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4304 [json_name = "finviQueryCustomerDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails.Builder getFinviQueryCustomerDetailsBuilder() {
+      return getFinviQueryCustomerDetailsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4304 [json_name = "finviQueryCustomerDetails"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetailsOrBuilder getFinviQueryCustomerDetailsOrBuilder() {
+      if ((valueCase_ == 4304) && (finviQueryCustomerDetailsBuilder_ != null)) {
+        return finviQueryCustomerDetailsBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4304) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4304 [json_name = "finviQueryCustomerDetails"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetailsOrBuilder> 
+        getFinviQueryCustomerDetailsFieldBuilder() {
+      if (finviQueryCustomerDetailsBuilder_ == null) {
+        if (!(valueCase_ == 4304)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails.getDefaultInstance();
+        }
+        finviQueryCustomerDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetailsOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4304;
+      onChanged();
+      return finviQueryCustomerDetailsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetailsOrBuilder> finviQueryCustomerTokenDetailsBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4305 [json_name = "finviQueryCustomerTokenDetails"];</code>
+     * @return Whether the finviQueryCustomerTokenDetails field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviQueryCustomerTokenDetails() {
+      return valueCase_ == 4305;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4305 [json_name = "finviQueryCustomerTokenDetails"];</code>
+     * @return The finviQueryCustomerTokenDetails.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails getFinviQueryCustomerTokenDetails() {
+      if (finviQueryCustomerTokenDetailsBuilder_ == null) {
+        if (valueCase_ == 4305) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4305) {
+          return finviQueryCustomerTokenDetailsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4305 [json_name = "finviQueryCustomerTokenDetails"];</code>
+     */
+    public Builder setFinviQueryCustomerTokenDetails(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails value) {
+      if (finviQueryCustomerTokenDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviQueryCustomerTokenDetailsBuilder_.setMessage(value);
+      }
+      valueCase_ = 4305;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4305 [json_name = "finviQueryCustomerTokenDetails"];</code>
+     */
+    public Builder setFinviQueryCustomerTokenDetails(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails.Builder builderForValue) {
+      if (finviQueryCustomerTokenDetailsBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviQueryCustomerTokenDetailsBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4305;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4305 [json_name = "finviQueryCustomerTokenDetails"];</code>
+     */
+    public Builder mergeFinviQueryCustomerTokenDetails(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails value) {
+      if (finviQueryCustomerTokenDetailsBuilder_ == null) {
+        if (valueCase_ == 4305 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4305) {
+          finviQueryCustomerTokenDetailsBuilder_.mergeFrom(value);
+        } else {
+          finviQueryCustomerTokenDetailsBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4305;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4305 [json_name = "finviQueryCustomerTokenDetails"];</code>
+     */
+    public Builder clearFinviQueryCustomerTokenDetails() {
+      if (finviQueryCustomerTokenDetailsBuilder_ == null) {
+        if (valueCase_ == 4305) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4305) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviQueryCustomerTokenDetailsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4305 [json_name = "finviQueryCustomerTokenDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails.Builder getFinviQueryCustomerTokenDetailsBuilder() {
+      return getFinviQueryCustomerTokenDetailsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4305 [json_name = "finviQueryCustomerTokenDetails"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetailsOrBuilder getFinviQueryCustomerTokenDetailsOrBuilder() {
+      if ((valueCase_ == 4305) && (finviQueryCustomerTokenDetailsBuilder_ != null)) {
+        return finviQueryCustomerTokenDetailsBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4305) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4305 [json_name = "finviQueryCustomerTokenDetails"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetailsOrBuilder> 
+        getFinviQueryCustomerTokenDetailsFieldBuilder() {
+      if (finviQueryCustomerTokenDetailsBuilder_ == null) {
+        if (!(valueCase_ == 4305)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails.getDefaultInstance();
+        }
+        finviQueryCustomerTokenDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetailsOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4305;
+      onChanged();
+      return finviQueryCustomerTokenDetailsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokensOrBuilder> finviQueryCustomerTokensBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4306 [json_name = "finviQueryCustomerTokens"];</code>
+     * @return Whether the finviQueryCustomerTokens field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviQueryCustomerTokens() {
+      return valueCase_ == 4306;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4306 [json_name = "finviQueryCustomerTokens"];</code>
+     * @return The finviQueryCustomerTokens.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens getFinviQueryCustomerTokens() {
+      if (finviQueryCustomerTokensBuilder_ == null) {
+        if (valueCase_ == 4306) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4306) {
+          return finviQueryCustomerTokensBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4306 [json_name = "finviQueryCustomerTokens"];</code>
+     */
+    public Builder setFinviQueryCustomerTokens(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens value) {
+      if (finviQueryCustomerTokensBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviQueryCustomerTokensBuilder_.setMessage(value);
+      }
+      valueCase_ = 4306;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4306 [json_name = "finviQueryCustomerTokens"];</code>
+     */
+    public Builder setFinviQueryCustomerTokens(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens.Builder builderForValue) {
+      if (finviQueryCustomerTokensBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviQueryCustomerTokensBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4306;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4306 [json_name = "finviQueryCustomerTokens"];</code>
+     */
+    public Builder mergeFinviQueryCustomerTokens(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens value) {
+      if (finviQueryCustomerTokensBuilder_ == null) {
+        if (valueCase_ == 4306 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4306) {
+          finviQueryCustomerTokensBuilder_.mergeFrom(value);
+        } else {
+          finviQueryCustomerTokensBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4306;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4306 [json_name = "finviQueryCustomerTokens"];</code>
+     */
+    public Builder clearFinviQueryCustomerTokens() {
+      if (finviQueryCustomerTokensBuilder_ == null) {
+        if (valueCase_ == 4306) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4306) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviQueryCustomerTokensBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4306 [json_name = "finviQueryCustomerTokens"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens.Builder getFinviQueryCustomerTokensBuilder() {
+      return getFinviQueryCustomerTokensFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4306 [json_name = "finviQueryCustomerTokens"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokensOrBuilder getFinviQueryCustomerTokensOrBuilder() {
+      if ((valueCase_ == 4306) && (finviQueryCustomerTokensBuilder_ != null)) {
+        return finviQueryCustomerTokensBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4306) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4306 [json_name = "finviQueryCustomerTokens"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokensOrBuilder> 
+        getFinviQueryCustomerTokensFieldBuilder() {
+      if (finviQueryCustomerTokensBuilder_ == null) {
+        if (!(valueCase_ == 4306)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens.getDefaultInstance();
+        }
+        finviQueryCustomerTokensBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokensOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4306;
+      onChanged();
+      return finviQueryCustomerTokensBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactionsOrBuilder> finviQueryCustomerTransactionsBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4307 [json_name = "finviQueryCustomerTransactions"];</code>
+     * @return Whether the finviQueryCustomerTransactions field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviQueryCustomerTransactions() {
+      return valueCase_ == 4307;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4307 [json_name = "finviQueryCustomerTransactions"];</code>
+     * @return The finviQueryCustomerTransactions.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions getFinviQueryCustomerTransactions() {
+      if (finviQueryCustomerTransactionsBuilder_ == null) {
+        if (valueCase_ == 4307) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4307) {
+          return finviQueryCustomerTransactionsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4307 [json_name = "finviQueryCustomerTransactions"];</code>
+     */
+    public Builder setFinviQueryCustomerTransactions(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions value) {
+      if (finviQueryCustomerTransactionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviQueryCustomerTransactionsBuilder_.setMessage(value);
+      }
+      valueCase_ = 4307;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4307 [json_name = "finviQueryCustomerTransactions"];</code>
+     */
+    public Builder setFinviQueryCustomerTransactions(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions.Builder builderForValue) {
+      if (finviQueryCustomerTransactionsBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviQueryCustomerTransactionsBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4307;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4307 [json_name = "finviQueryCustomerTransactions"];</code>
+     */
+    public Builder mergeFinviQueryCustomerTransactions(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions value) {
+      if (finviQueryCustomerTransactionsBuilder_ == null) {
+        if (valueCase_ == 4307 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4307) {
+          finviQueryCustomerTransactionsBuilder_.mergeFrom(value);
+        } else {
+          finviQueryCustomerTransactionsBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4307;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4307 [json_name = "finviQueryCustomerTransactions"];</code>
+     */
+    public Builder clearFinviQueryCustomerTransactions() {
+      if (finviQueryCustomerTransactionsBuilder_ == null) {
+        if (valueCase_ == 4307) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4307) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviQueryCustomerTransactionsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4307 [json_name = "finviQueryCustomerTransactions"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions.Builder getFinviQueryCustomerTransactionsBuilder() {
+      return getFinviQueryCustomerTransactionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4307 [json_name = "finviQueryCustomerTransactions"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactionsOrBuilder getFinviQueryCustomerTransactionsOrBuilder() {
+      if ((valueCase_ == 4307) && (finviQueryCustomerTransactionsBuilder_ != null)) {
+        return finviQueryCustomerTransactionsBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4307) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4307 [json_name = "finviQueryCustomerTransactions"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactionsOrBuilder> 
+        getFinviQueryCustomerTransactionsFieldBuilder() {
+      if (finviQueryCustomerTransactionsBuilder_ == null) {
+        if (!(valueCase_ == 4307)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions.getDefaultInstance();
+        }
+        finviQueryCustomerTransactionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactionsOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4307;
+      onChanged();
+      return finviQueryCustomerTransactionsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomersOrBuilder> finviQueryCustomersBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4308 [json_name = "finviQueryCustomers"];</code>
+     * @return Whether the finviQueryCustomers field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviQueryCustomers() {
+      return valueCase_ == 4308;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4308 [json_name = "finviQueryCustomers"];</code>
+     * @return The finviQueryCustomers.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers getFinviQueryCustomers() {
+      if (finviQueryCustomersBuilder_ == null) {
+        if (valueCase_ == 4308) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4308) {
+          return finviQueryCustomersBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4308 [json_name = "finviQueryCustomers"];</code>
+     */
+    public Builder setFinviQueryCustomers(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers value) {
+      if (finviQueryCustomersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviQueryCustomersBuilder_.setMessage(value);
+      }
+      valueCase_ = 4308;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4308 [json_name = "finviQueryCustomers"];</code>
+     */
+    public Builder setFinviQueryCustomers(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers.Builder builderForValue) {
+      if (finviQueryCustomersBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviQueryCustomersBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4308;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4308 [json_name = "finviQueryCustomers"];</code>
+     */
+    public Builder mergeFinviQueryCustomers(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers value) {
+      if (finviQueryCustomersBuilder_ == null) {
+        if (valueCase_ == 4308 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4308) {
+          finviQueryCustomersBuilder_.mergeFrom(value);
+        } else {
+          finviQueryCustomersBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4308;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4308 [json_name = "finviQueryCustomers"];</code>
+     */
+    public Builder clearFinviQueryCustomers() {
+      if (finviQueryCustomersBuilder_ == null) {
+        if (valueCase_ == 4308) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4308) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviQueryCustomersBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4308 [json_name = "finviQueryCustomers"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers.Builder getFinviQueryCustomersBuilder() {
+      return getFinviQueryCustomersFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4308 [json_name = "finviQueryCustomers"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomersOrBuilder getFinviQueryCustomersOrBuilder() {
+      if ((valueCase_ == 4308) && (finviQueryCustomersBuilder_ != null)) {
+        return finviQueryCustomersBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4308) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4308 [json_name = "finviQueryCustomers"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomersOrBuilder> 
+        getFinviQueryCustomersFieldBuilder() {
+      if (finviQueryCustomersBuilder_ == null) {
+        if (!(valueCase_ == 4308)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers.getDefaultInstance();
+        }
+        finviQueryCustomersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomersOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4308;
+      onChanged();
+      return finviQueryCustomersBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetailsOrBuilder> finviQueryTransactionDetailsBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4309 [json_name = "finviQueryTransactionDetails"];</code>
+     * @return Whether the finviQueryTransactionDetails field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviQueryTransactionDetails() {
+      return valueCase_ == 4309;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4309 [json_name = "finviQueryTransactionDetails"];</code>
+     * @return The finviQueryTransactionDetails.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails getFinviQueryTransactionDetails() {
+      if (finviQueryTransactionDetailsBuilder_ == null) {
+        if (valueCase_ == 4309) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4309) {
+          return finviQueryTransactionDetailsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4309 [json_name = "finviQueryTransactionDetails"];</code>
+     */
+    public Builder setFinviQueryTransactionDetails(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails value) {
+      if (finviQueryTransactionDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviQueryTransactionDetailsBuilder_.setMessage(value);
+      }
+      valueCase_ = 4309;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4309 [json_name = "finviQueryTransactionDetails"];</code>
+     */
+    public Builder setFinviQueryTransactionDetails(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails.Builder builderForValue) {
+      if (finviQueryTransactionDetailsBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviQueryTransactionDetailsBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4309;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4309 [json_name = "finviQueryTransactionDetails"];</code>
+     */
+    public Builder mergeFinviQueryTransactionDetails(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails value) {
+      if (finviQueryTransactionDetailsBuilder_ == null) {
+        if (valueCase_ == 4309 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4309) {
+          finviQueryTransactionDetailsBuilder_.mergeFrom(value);
+        } else {
+          finviQueryTransactionDetailsBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4309;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4309 [json_name = "finviQueryTransactionDetails"];</code>
+     */
+    public Builder clearFinviQueryTransactionDetails() {
+      if (finviQueryTransactionDetailsBuilder_ == null) {
+        if (valueCase_ == 4309) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4309) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviQueryTransactionDetailsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4309 [json_name = "finviQueryTransactionDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails.Builder getFinviQueryTransactionDetailsBuilder() {
+      return getFinviQueryTransactionDetailsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4309 [json_name = "finviQueryTransactionDetails"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetailsOrBuilder getFinviQueryTransactionDetailsOrBuilder() {
+      if ((valueCase_ == 4309) && (finviQueryTransactionDetailsBuilder_ != null)) {
+        return finviQueryTransactionDetailsBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4309) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4309 [json_name = "finviQueryTransactionDetails"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetailsOrBuilder> 
+        getFinviQueryTransactionDetailsFieldBuilder() {
+      if (finviQueryTransactionDetailsBuilder_ == null) {
+        if (!(valueCase_ == 4309)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails.getDefaultInstance();
+        }
+        finviQueryTransactionDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetailsOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4309;
+      onChanged();
+      return finviQueryTransactionDetailsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactionsOrBuilder> finviQueryTransactionsBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4310 [json_name = "finviQueryTransactions"];</code>
+     * @return Whether the finviQueryTransactions field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviQueryTransactions() {
+      return valueCase_ == 4310;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4310 [json_name = "finviQueryTransactions"];</code>
+     * @return The finviQueryTransactions.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions getFinviQueryTransactions() {
+      if (finviQueryTransactionsBuilder_ == null) {
+        if (valueCase_ == 4310) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4310) {
+          return finviQueryTransactionsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4310 [json_name = "finviQueryTransactions"];</code>
+     */
+    public Builder setFinviQueryTransactions(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions value) {
+      if (finviQueryTransactionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviQueryTransactionsBuilder_.setMessage(value);
+      }
+      valueCase_ = 4310;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4310 [json_name = "finviQueryTransactions"];</code>
+     */
+    public Builder setFinviQueryTransactions(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions.Builder builderForValue) {
+      if (finviQueryTransactionsBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviQueryTransactionsBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4310;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4310 [json_name = "finviQueryTransactions"];</code>
+     */
+    public Builder mergeFinviQueryTransactions(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions value) {
+      if (finviQueryTransactionsBuilder_ == null) {
+        if (valueCase_ == 4310 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4310) {
+          finviQueryTransactionsBuilder_.mergeFrom(value);
+        } else {
+          finviQueryTransactionsBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4310;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4310 [json_name = "finviQueryTransactions"];</code>
+     */
+    public Builder clearFinviQueryTransactions() {
+      if (finviQueryTransactionsBuilder_ == null) {
+        if (valueCase_ == 4310) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4310) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviQueryTransactionsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4310 [json_name = "finviQueryTransactions"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions.Builder getFinviQueryTransactionsBuilder() {
+      return getFinviQueryTransactionsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4310 [json_name = "finviQueryTransactions"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactionsOrBuilder getFinviQueryTransactionsOrBuilder() {
+      if ((valueCase_ == 4310) && (finviQueryTransactionsBuilder_ != null)) {
+        return finviQueryTransactionsBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4310) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4310 [json_name = "finviQueryTransactions"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactionsOrBuilder> 
+        getFinviQueryTransactionsFieldBuilder() {
+      if (finviQueryTransactionsBuilder_ == null) {
+        if (!(valueCase_ == 4310)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions.getDefaultInstance();
+        }
+        finviQueryTransactionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactionsOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4310;
+      onChanged();
+      return finviQueryTransactionsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerTokenOrBuilder> finviRemoveCustomerTokenBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4311 [json_name = "finviRemoveCustomerToken"];</code>
+     * @return Whether the finviRemoveCustomerToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviRemoveCustomerToken() {
+      return valueCase_ == 4311;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4311 [json_name = "finviRemoveCustomerToken"];</code>
+     * @return The finviRemoveCustomerToken.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken getFinviRemoveCustomerToken() {
+      if (finviRemoveCustomerTokenBuilder_ == null) {
+        if (valueCase_ == 4311) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4311) {
+          return finviRemoveCustomerTokenBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4311 [json_name = "finviRemoveCustomerToken"];</code>
+     */
+    public Builder setFinviRemoveCustomerToken(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken value) {
+      if (finviRemoveCustomerTokenBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviRemoveCustomerTokenBuilder_.setMessage(value);
+      }
+      valueCase_ = 4311;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4311 [json_name = "finviRemoveCustomerToken"];</code>
+     */
+    public Builder setFinviRemoveCustomerToken(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken.Builder builderForValue) {
+      if (finviRemoveCustomerTokenBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviRemoveCustomerTokenBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4311;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4311 [json_name = "finviRemoveCustomerToken"];</code>
+     */
+    public Builder mergeFinviRemoveCustomerToken(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken value) {
+      if (finviRemoveCustomerTokenBuilder_ == null) {
+        if (valueCase_ == 4311 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4311) {
+          finviRemoveCustomerTokenBuilder_.mergeFrom(value);
+        } else {
+          finviRemoveCustomerTokenBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4311;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4311 [json_name = "finviRemoveCustomerToken"];</code>
+     */
+    public Builder clearFinviRemoveCustomerToken() {
+      if (finviRemoveCustomerTokenBuilder_ == null) {
+        if (valueCase_ == 4311) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4311) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviRemoveCustomerTokenBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4311 [json_name = "finviRemoveCustomerToken"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken.Builder getFinviRemoveCustomerTokenBuilder() {
+      return getFinviRemoveCustomerTokenFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4311 [json_name = "finviRemoveCustomerToken"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerTokenOrBuilder getFinviRemoveCustomerTokenOrBuilder() {
+      if ((valueCase_ == 4311) && (finviRemoveCustomerTokenBuilder_ != null)) {
+        return finviRemoveCustomerTokenBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4311) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4311 [json_name = "finviRemoveCustomerToken"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerTokenOrBuilder> 
+        getFinviRemoveCustomerTokenFieldBuilder() {
+      if (finviRemoveCustomerTokenBuilder_ == null) {
+        if (!(valueCase_ == 4311)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken.getDefaultInstance();
+        }
+        finviRemoveCustomerTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerTokenOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4311;
+      onChanged();
+      return finviRemoveCustomerTokenBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomerOrBuilder> finviUpdateCustomerBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4312 [json_name = "finviUpdateCustomer"];</code>
+     * @return Whether the finviUpdateCustomer field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviUpdateCustomer() {
+      return valueCase_ == 4312;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4312 [json_name = "finviUpdateCustomer"];</code>
+     * @return The finviUpdateCustomer.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer getFinviUpdateCustomer() {
+      if (finviUpdateCustomerBuilder_ == null) {
+        if (valueCase_ == 4312) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4312) {
+          return finviUpdateCustomerBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4312 [json_name = "finviUpdateCustomer"];</code>
+     */
+    public Builder setFinviUpdateCustomer(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer value) {
+      if (finviUpdateCustomerBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviUpdateCustomerBuilder_.setMessage(value);
+      }
+      valueCase_ = 4312;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4312 [json_name = "finviUpdateCustomer"];</code>
+     */
+    public Builder setFinviUpdateCustomer(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer.Builder builderForValue) {
+      if (finviUpdateCustomerBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviUpdateCustomerBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4312;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4312 [json_name = "finviUpdateCustomer"];</code>
+     */
+    public Builder mergeFinviUpdateCustomer(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer value) {
+      if (finviUpdateCustomerBuilder_ == null) {
+        if (valueCase_ == 4312 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4312) {
+          finviUpdateCustomerBuilder_.mergeFrom(value);
+        } else {
+          finviUpdateCustomerBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4312;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4312 [json_name = "finviUpdateCustomer"];</code>
+     */
+    public Builder clearFinviUpdateCustomer() {
+      if (finviUpdateCustomerBuilder_ == null) {
+        if (valueCase_ == 4312) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4312) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviUpdateCustomerBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4312 [json_name = "finviUpdateCustomer"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer.Builder getFinviUpdateCustomerBuilder() {
+      return getFinviUpdateCustomerFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4312 [json_name = "finviUpdateCustomer"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomerOrBuilder getFinviUpdateCustomerOrBuilder() {
+      if ((valueCase_ == 4312) && (finviUpdateCustomerBuilder_ != null)) {
+        return finviUpdateCustomerBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4312) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4312 [json_name = "finviUpdateCustomer"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomerOrBuilder> 
+        getFinviUpdateCustomerFieldBuilder() {
+      if (finviUpdateCustomerBuilder_ == null) {
+        if (!(valueCase_ == 4312)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer.getDefaultInstance();
+        }
+        finviUpdateCustomerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomerOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4312;
+      onChanged();
+      return finviUpdateCustomerBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
