@@ -25,6 +25,7 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     description_ = "";
     hash_ = "";
+    requestBy_ = "";
   }
 
   @java.lang.Override
@@ -358,6 +359,53 @@ private static final long serialVersionUID = 0L;
     return creationDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : creationDate_;
   }
 
+  public static final int REQUEST_BY_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object requestBy_ = "";
+  /**
+   * <pre>
+   * The requestor of the certificate (user id or automated system)
+   * </pre>
+   *
+   * <code>string request_by = 8 [json_name = "requestBy"];</code>
+   * @return The requestBy.
+   */
+  @java.lang.Override
+  public java.lang.String getRequestBy() {
+    java.lang.Object ref = requestBy_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      requestBy_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The requestor of the certificate (user id or automated system)
+   * </pre>
+   *
+   * <code>string request_by = 8 [json_name = "requestBy"];</code>
+   * @return The bytes for requestBy.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getRequestByBytes() {
+    java.lang.Object ref = requestBy_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      requestBy_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -393,6 +441,9 @@ private static final long serialVersionUID = 0L;
     if (creationDate_ != null) {
       output.writeMessage(7, getCreationDate());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestBy_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, requestBy_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -424,6 +475,9 @@ private static final long serialVersionUID = 0L;
     if (creationDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getCreationDate());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestBy_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, requestBy_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -460,6 +514,8 @@ private static final long serialVersionUID = 0L;
       if (!getCreationDate()
           .equals(other.getCreationDate())) return false;
     }
+    if (!getRequestBy()
+        .equals(other.getRequestBy())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -489,6 +545,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CREATION_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getCreationDate().hashCode();
     }
+    hash = (37 * hash) + REQUEST_BY_FIELD_NUMBER;
+    hash = (53 * hash) + getRequestBy().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -639,6 +697,7 @@ private static final long serialVersionUID = 0L;
         creationDateBuilder_.dispose();
         creationDateBuilder_ = null;
       }
+      requestBy_ = "";
       return this;
     }
 
@@ -696,6 +755,9 @@ private static final long serialVersionUID = 0L;
         result.creationDate_ = creationDateBuilder_ == null
             ? creationDate_
             : creationDateBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.requestBy_ = requestBy_;
       }
     }
 
@@ -774,6 +836,11 @@ private static final long serialVersionUID = 0L;
       if (other.hasCreationDate()) {
         mergeCreationDate(other.getCreationDate());
       }
+      if (!other.getRequestBy().isEmpty()) {
+        requestBy_ = other.requestBy_;
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -839,6 +906,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 58
+            case 66: {
+              requestBy_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1624,6 +1696,98 @@ private static final long serialVersionUID = 0L;
         creationDate_ = null;
       }
       return creationDateBuilder_;
+    }
+
+    private java.lang.Object requestBy_ = "";
+    /**
+     * <pre>
+     * The requestor of the certificate (user id or automated system)
+     * </pre>
+     *
+     * <code>string request_by = 8 [json_name = "requestBy"];</code>
+     * @return The requestBy.
+     */
+    public java.lang.String getRequestBy() {
+      java.lang.Object ref = requestBy_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestBy_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The requestor of the certificate (user id or automated system)
+     * </pre>
+     *
+     * <code>string request_by = 8 [json_name = "requestBy"];</code>
+     * @return The bytes for requestBy.
+     */
+    public com.google.protobuf.ByteString
+        getRequestByBytes() {
+      java.lang.Object ref = requestBy_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The requestor of the certificate (user id or automated system)
+     * </pre>
+     *
+     * <code>string request_by = 8 [json_name = "requestBy"];</code>
+     * @param value The requestBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRequestBy(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      requestBy_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The requestor of the certificate (user id or automated system)
+     * </pre>
+     *
+     * <code>string request_by = 8 [json_name = "requestBy"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRequestBy() {
+      requestBy_ = getDefaultInstance().getRequestBy();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The requestor of the certificate (user id or automated system)
+     * </pre>
+     *
+     * <code>string request_by = 8 [json_name = "requestBy"];</code>
+     * @param value The bytes for requestBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRequestByBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      requestBy_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

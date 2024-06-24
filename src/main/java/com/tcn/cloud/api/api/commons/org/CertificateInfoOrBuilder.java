@@ -160,4 +160,24 @@ public interface CertificateInfoOrBuilder extends
    * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreationDateOrBuilder();
+
+  /**
+   * <pre>
+   * The requestor of the certificate (user id or automated system)
+   * </pre>
+   *
+   * <code>string request_by = 8 [json_name = "requestBy"];</code>
+   * @return The requestBy.
+   */
+  java.lang.String getRequestBy();
+  /**
+   * <pre>
+   * The requestor of the certificate (user id or automated system)
+   * </pre>
+   *
+   * <code>string request_by = 8 [json_name = "requestBy"];</code>
+   * @return The bytes for requestBy.
+   */
+  com.google.protobuf.ByteString
+      getRequestByBytes();
 }
