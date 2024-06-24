@@ -22,7 +22,6 @@ private static final long serialVersionUID = 0L;
   private GetDashboardRequest() {
     dashboardId_ = "";
     resourceId_ = "";
-    application_ = 0;
   }
 
   @java.lang.Override
@@ -139,32 +138,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int APPLICATION_FIELD_NUMBER = 3;
-  private int application_ = 0;
-  /**
-   * <pre>
-   * application retrieving the dashboard
-   * </pre>
-   *
-   * <code>.annotations.perms.Application application = 3 [json_name = "application"];</code>
-   * @return The enum numeric value on the wire for application.
-   */
-  @java.lang.Override public int getApplicationValue() {
-    return application_;
-  }
-  /**
-   * <pre>
-   * application retrieving the dashboard
-   * </pre>
-   *
-   * <code>.annotations.perms.Application application = 3 [json_name = "application"];</code>
-   * @return The application.
-   */
-  @java.lang.Override public com.tcn.cloud.api.annotations.perms.Application getApplication() {
-    com.tcn.cloud.api.annotations.perms.Application result = com.tcn.cloud.api.annotations.perms.Application.forNumber(application_);
-    return result == null ? com.tcn.cloud.api.annotations.perms.Application.UNRECOGNIZED : result;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -185,9 +158,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, resourceId_);
     }
-    if (application_ != com.tcn.cloud.api.annotations.perms.Application.APPLICATION_UNSPECIFIED.getNumber()) {
-      output.writeEnum(3, application_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -202,10 +172,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, resourceId_);
-    }
-    if (application_ != com.tcn.cloud.api.annotations.perms.Application.APPLICATION_UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(3, application_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -226,7 +192,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getDashboardId())) return false;
     if (!getResourceId()
         .equals(other.getResourceId())) return false;
-    if (application_ != other.application_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -242,8 +207,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getDashboardId().hashCode();
     hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
     hash = (53 * hash) + getResourceId().hashCode();
-    hash = (37 * hash) + APPLICATION_FIELD_NUMBER;
-    hash = (53 * hash) + application_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -381,7 +344,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       dashboardId_ = "";
       resourceId_ = "";
-      application_ = 0;
       return this;
     }
 
@@ -420,9 +382,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.resourceId_ = resourceId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.application_ = application_;
       }
     }
 
@@ -480,9 +439,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (other.application_ != 0) {
-        setApplicationValue(other.getApplicationValue());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -519,11 +475,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 24: {
-              application_ = input.readEnum();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -721,79 +672,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       resourceId_ = value;
       bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
-    private int application_ = 0;
-    /**
-     * <pre>
-     * application retrieving the dashboard
-     * </pre>
-     *
-     * <code>.annotations.perms.Application application = 3 [json_name = "application"];</code>
-     * @return The enum numeric value on the wire for application.
-     */
-    @java.lang.Override public int getApplicationValue() {
-      return application_;
-    }
-    /**
-     * <pre>
-     * application retrieving the dashboard
-     * </pre>
-     *
-     * <code>.annotations.perms.Application application = 3 [json_name = "application"];</code>
-     * @param value The enum numeric value on the wire for application to set.
-     * @return This builder for chaining.
-     */
-    public Builder setApplicationValue(int value) {
-      application_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * application retrieving the dashboard
-     * </pre>
-     *
-     * <code>.annotations.perms.Application application = 3 [json_name = "application"];</code>
-     * @return The application.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.annotations.perms.Application getApplication() {
-      com.tcn.cloud.api.annotations.perms.Application result = com.tcn.cloud.api.annotations.perms.Application.forNumber(application_);
-      return result == null ? com.tcn.cloud.api.annotations.perms.Application.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * application retrieving the dashboard
-     * </pre>
-     *
-     * <code>.annotations.perms.Application application = 3 [json_name = "application"];</code>
-     * @param value The application to set.
-     * @return This builder for chaining.
-     */
-    public Builder setApplication(com.tcn.cloud.api.annotations.perms.Application value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000004;
-      application_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * application retrieving the dashboard
-     * </pre>
-     *
-     * <code>.annotations.perms.Application application = 3 [json_name = "application"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearApplication() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      application_ = 0;
       onChanged();
       return this;
     }
