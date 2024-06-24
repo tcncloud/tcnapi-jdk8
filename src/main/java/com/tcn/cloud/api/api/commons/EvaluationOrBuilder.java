@@ -276,4 +276,14 @@ public interface EvaluationOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDeletedByBytes();
+
+  /**
+   * <pre>
+   * whether the evaluation can be recovered or not.
+   * </pre>
+   *
+   * <code>bool is_recoverable = 20 [json_name = "isRecoverable"];</code>
+   * @return The isRecoverable.
+   */
+  boolean getIsRecoverable();
 }

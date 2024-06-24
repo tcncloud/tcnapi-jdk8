@@ -1276,6 +1276,21 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int IS_RECOVERABLE_FIELD_NUMBER = 20;
+  private boolean isRecoverable_ = false;
+  /**
+   * <pre>
+   * whether the evaluation can be recovered or not.
+   * </pre>
+   *
+   * <code>bool is_recoverable = 20 [json_name = "isRecoverable"];</code>
+   * @return The isRecoverable.
+   */
+  @java.lang.Override
+  public boolean getIsRecoverable() {
+    return isRecoverable_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1331,6 +1346,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deletedBy_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 18, deletedBy_);
+    }
+    if (isRecoverable_ != false) {
+      output.writeBool(20, isRecoverable_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1394,6 +1412,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deletedBy_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, deletedBy_);
     }
+    if (isRecoverable_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(20, isRecoverable_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1442,6 +1464,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCustomFieldsList())) return false;
     if (!getDeletedBy()
         .equals(other.getDeletedBy())) return false;
+    if (getIsRecoverable()
+        != other.getIsRecoverable()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1494,6 +1518,9 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + DELETED_BY_FIELD_NUMBER;
     hash = (53 * hash) + getDeletedBy().hashCode();
+    hash = (37 * hash) + IS_RECOVERABLE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsRecoverable());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1664,6 +1691,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00001000);
       deletedBy_ = "";
+      isRecoverable_ = false;
       return this;
     }
 
@@ -1758,6 +1786,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.deletedBy_ = deletedBy_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.isRecoverable_ = isRecoverable_;
       }
     }
 
@@ -1899,6 +1930,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00002000;
         onChanged();
       }
+      if (other.getIsRecoverable() != false) {
+        setIsRecoverable(other.getIsRecoverable());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -2015,6 +2049,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00002000;
               break;
             } // case 146
+            case 160: {
+              isRecoverable_ = input.readBool();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 160
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3532,6 +3571,50 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       deletedBy_ = value;
       bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+
+    private boolean isRecoverable_ ;
+    /**
+     * <pre>
+     * whether the evaluation can be recovered or not.
+     * </pre>
+     *
+     * <code>bool is_recoverable = 20 [json_name = "isRecoverable"];</code>
+     * @return The isRecoverable.
+     */
+    @java.lang.Override
+    public boolean getIsRecoverable() {
+      return isRecoverable_;
+    }
+    /**
+     * <pre>
+     * whether the evaluation can be recovered or not.
+     * </pre>
+     *
+     * <code>bool is_recoverable = 20 [json_name = "isRecoverable"];</code>
+     * @param value The isRecoverable to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsRecoverable(boolean value) {
+
+      isRecoverable_ = value;
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * whether the evaluation can be recovered or not.
+     * </pre>
+     *
+     * <code>bool is_recoverable = 20 [json_name = "isRecoverable"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsRecoverable() {
+      bitField0_ = (bitField0_ & ~0x00004000);
+      isRecoverable_ = false;
       onChanged();
       return this;
     }
