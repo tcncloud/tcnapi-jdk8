@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CertificateInfo() {
+    certificateInfoId_ = "";
     orgId_ = "";
     name_ = "";
     description_ = "";
@@ -46,7 +47,54 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.org.CertificateInfo.class, com.tcn.cloud.api.api.commons.org.CertificateInfo.Builder.class);
   }
 
-  public static final int ORG_ID_FIELD_NUMBER = 1;
+  public static final int CERTIFICATE_INFO_ID_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object certificateInfoId_ = "";
+  /**
+   * <pre>
+   * The id of the certificate info.
+   * </pre>
+   *
+   * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+   * @return The certificateInfoId.
+   */
+  @java.lang.Override
+  public java.lang.String getCertificateInfoId() {
+    java.lang.Object ref = certificateInfoId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      certificateInfoId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The id of the certificate info.
+   * </pre>
+   *
+   * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+   * @return The bytes for certificateInfoId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCertificateInfoIdBytes() {
+    java.lang.Object ref = certificateInfoId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      certificateInfoId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int ORG_ID_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
   /**
@@ -54,7 +102,7 @@ private static final long serialVersionUID = 0L;
    * The id of the organization.
    * </pre>
    *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
    * @return The orgId.
    */
   @java.lang.Override
@@ -75,7 +123,7 @@ private static final long serialVersionUID = 0L;
    * The id of the organization.
    * </pre>
    *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
    * @return The bytes for orgId.
    */
   @java.lang.Override
@@ -93,7 +141,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int NAME_FIELD_NUMBER = 2;
+  public static final int NAME_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
@@ -101,7 +149,7 @@ private static final long serialVersionUID = 0L;
    * The certificate name.
    * </pre>
    *
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 3 [json_name = "name"];</code>
    * @return The name.
    */
   @java.lang.Override
@@ -122,7 +170,7 @@ private static final long serialVersionUID = 0L;
    * The certificate name.
    * </pre>
    *
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 3 [json_name = "name"];</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -140,7 +188,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int DESCRIPTION_FIELD_NUMBER = 3;
+  public static final int DESCRIPTION_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
   /**
@@ -148,7 +196,7 @@ private static final long serialVersionUID = 0L;
    * The certificate description.
    * </pre>
    *
-   * <code>string description = 3 [json_name = "description"];</code>
+   * <code>string description = 4 [json_name = "description"];</code>
    * @return The description.
    */
   @java.lang.Override
@@ -169,7 +217,7 @@ private static final long serialVersionUID = 0L;
    * The certificate description.
    * </pre>
    *
-   * <code>string description = 3 [json_name = "description"];</code>
+   * <code>string description = 4 [json_name = "description"];</code>
    * @return The bytes for description.
    */
   @java.lang.Override
@@ -187,7 +235,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int HASH_FIELD_NUMBER = 4;
+  public static final int HASH_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private volatile java.lang.Object hash_ = "";
   /**
@@ -195,7 +243,7 @@ private static final long serialVersionUID = 0L;
    * The certificate hash/fingerprint.
    * </pre>
    *
-   * <code>string hash = 4 [json_name = "hash"];</code>
+   * <code>string hash = 5 [json_name = "hash"];</code>
    * @return The hash.
    */
   @java.lang.Override
@@ -216,7 +264,7 @@ private static final long serialVersionUID = 0L;
    * The certificate hash/fingerprint.
    * </pre>
    *
-   * <code>string hash = 4 [json_name = "hash"];</code>
+   * <code>string hash = 5 [json_name = "hash"];</code>
    * @return The bytes for hash.
    */
   @java.lang.Override
@@ -234,14 +282,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int EXPIRATION_DATE_FIELD_NUMBER = 5;
+  public static final int EXPIRATION_DATE_FIELD_NUMBER = 6;
   private com.google.protobuf.Timestamp expirationDate_;
   /**
    * <pre>
    * The certificate expiration date.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expiration_date = 5 [json_name = "expirationDate"];</code>
+   * <code>.google.protobuf.Timestamp expiration_date = 6 [json_name = "expirationDate"];</code>
    * @return Whether the expirationDate field is set.
    */
   @java.lang.Override
@@ -253,7 +301,7 @@ private static final long serialVersionUID = 0L;
    * The certificate expiration date.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expiration_date = 5 [json_name = "expirationDate"];</code>
+   * <code>.google.protobuf.Timestamp expiration_date = 6 [json_name = "expirationDate"];</code>
    * @return The expirationDate.
    */
   @java.lang.Override
@@ -265,21 +313,21 @@ private static final long serialVersionUID = 0L;
    * The certificate expiration date.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expiration_date = 5 [json_name = "expirationDate"];</code>
+   * <code>.google.protobuf.Timestamp expiration_date = 6 [json_name = "expirationDate"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getExpirationDateOrBuilder() {
     return expirationDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expirationDate_;
   }
 
-  public static final int CREATION_DATE_FIELD_NUMBER = 6;
+  public static final int CREATION_DATE_FIELD_NUMBER = 7;
   private com.google.protobuf.Timestamp creationDate_;
   /**
    * <pre>
    * The certificate creation date.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp creation_date = 6 [json_name = "creationDate"];</code>
+   * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
    * @return Whether the creationDate field is set.
    */
   @java.lang.Override
@@ -291,7 +339,7 @@ private static final long serialVersionUID = 0L;
    * The certificate creation date.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp creation_date = 6 [json_name = "creationDate"];</code>
+   * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
    * @return The creationDate.
    */
   @java.lang.Override
@@ -303,7 +351,7 @@ private static final long serialVersionUID = 0L;
    * The certificate creation date.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp creation_date = 6 [json_name = "creationDate"];</code>
+   * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getCreationDateOrBuilder() {
@@ -324,23 +372,26 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateInfoId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, certificateInfoId_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, hash_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, hash_);
     }
     if (expirationDate_ != null) {
-      output.writeMessage(5, getExpirationDate());
+      output.writeMessage(6, getExpirationDate());
     }
     if (creationDate_ != null) {
-      output.writeMessage(6, getCreationDate());
+      output.writeMessage(7, getCreationDate());
     }
     getUnknownFields().writeTo(output);
   }
@@ -351,25 +402,28 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateInfoId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, certificateInfoId_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, hash_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, hash_);
     }
     if (expirationDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getExpirationDate());
+        .computeMessageSize(6, getExpirationDate());
     }
     if (creationDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getCreationDate());
+        .computeMessageSize(7, getCreationDate());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -386,6 +440,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.org.CertificateInfo other = (com.tcn.cloud.api.api.commons.org.CertificateInfo) obj;
 
+    if (!getCertificateInfoId()
+        .equals(other.getCertificateInfoId())) return false;
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
     if (!getName()
@@ -415,6 +471,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + CERTIFICATE_INFO_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getCertificateInfoId().hashCode();
     hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
@@ -566,6 +624,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      certificateInfoId_ = "";
       orgId_ = "";
       name_ = "";
       description_ = "";
@@ -614,23 +673,26 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.org.CertificateInfo result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.orgId_ = orgId_;
+        result.certificateInfoId_ = certificateInfoId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.name_ = name_;
+        result.orgId_ = orgId_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.description_ = description_;
+        result.name_ = name_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.hash_ = hash_;
+        result.description_ = description_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.hash_ = hash_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.expirationDate_ = expirationDateBuilder_ == null
             ? expirationDate_
             : expirationDateBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.creationDate_ = creationDateBuilder_ == null
             ? creationDate_
             : creationDateBuilder_.build();
@@ -681,24 +743,29 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.CertificateInfo other) {
       if (other == com.tcn.cloud.api.api.commons.org.CertificateInfo.getDefaultInstance()) return this;
+      if (!other.getCertificateInfoId().isEmpty()) {
+        certificateInfoId_ = other.certificateInfoId_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getHash().isEmpty()) {
         hash_ = other.hash_;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.hasExpirationDate()) {
@@ -734,39 +801,44 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              orgId_ = input.readStringRequireUtf8();
+              certificateInfoId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              name_ = input.readStringRequireUtf8();
+              orgId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
-              description_ = input.readStringRequireUtf8();
+              name_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
-              hash_ = input.readStringRequireUtf8();
+              description_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
-              input.readMessage(
-                  getExpirationDateFieldBuilder().getBuilder(),
-                  extensionRegistry);
+              hash_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
               input.readMessage(
-                  getCreationDateFieldBuilder().getBuilder(),
+                  getExpirationDateFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000020;
               break;
             } // case 50
+            case 58: {
+              input.readMessage(
+                  getCreationDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -784,13 +856,105 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private java.lang.Object certificateInfoId_ = "";
+    /**
+     * <pre>
+     * The id of the certificate info.
+     * </pre>
+     *
+     * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+     * @return The certificateInfoId.
+     */
+    public java.lang.String getCertificateInfoId() {
+      java.lang.Object ref = certificateInfoId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        certificateInfoId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The id of the certificate info.
+     * </pre>
+     *
+     * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+     * @return The bytes for certificateInfoId.
+     */
+    public com.google.protobuf.ByteString
+        getCertificateInfoIdBytes() {
+      java.lang.Object ref = certificateInfoId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        certificateInfoId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The id of the certificate info.
+     * </pre>
+     *
+     * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+     * @param value The certificateInfoId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCertificateInfoId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      certificateInfoId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The id of the certificate info.
+     * </pre>
+     *
+     * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCertificateInfoId() {
+      certificateInfoId_ = getDefaultInstance().getCertificateInfoId();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The id of the certificate info.
+     * </pre>
+     *
+     * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+     * @param value The bytes for certificateInfoId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCertificateInfoIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      certificateInfoId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object orgId_ = "";
     /**
      * <pre>
      * The id of the organization.
      * </pre>
      *
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
      * @return The orgId.
      */
     public java.lang.String getOrgId() {
@@ -810,7 +974,7 @@ private static final long serialVersionUID = 0L;
      * The id of the organization.
      * </pre>
      *
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
      * @return The bytes for orgId.
      */
     public com.google.protobuf.ByteString
@@ -831,7 +995,7 @@ private static final long serialVersionUID = 0L;
      * The id of the organization.
      * </pre>
      *
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
      * @param value The orgId to set.
      * @return This builder for chaining.
      */
@@ -839,7 +1003,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       orgId_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -848,12 +1012,12 @@ private static final long serialVersionUID = 0L;
      * The id of the organization.
      * </pre>
      *
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearOrgId() {
       orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -862,7 +1026,7 @@ private static final long serialVersionUID = 0L;
      * The id of the organization.
      * </pre>
      *
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
      * @param value The bytes for orgId to set.
      * @return This builder for chaining.
      */
@@ -871,7 +1035,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       orgId_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -882,7 +1046,7 @@ private static final long serialVersionUID = 0L;
      * The certificate name.
      * </pre>
      *
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 3 [json_name = "name"];</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -902,7 +1066,7 @@ private static final long serialVersionUID = 0L;
      * The certificate name.
      * </pre>
      *
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 3 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -923,7 +1087,7 @@ private static final long serialVersionUID = 0L;
      * The certificate name.
      * </pre>
      *
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 3 [json_name = "name"];</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -931,7 +1095,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       name_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -940,12 +1104,12 @@ private static final long serialVersionUID = 0L;
      * The certificate name.
      * </pre>
      *
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 3 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -954,7 +1118,7 @@ private static final long serialVersionUID = 0L;
      * The certificate name.
      * </pre>
      *
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 3 [json_name = "name"];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -963,7 +1127,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       name_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -974,7 +1138,7 @@ private static final long serialVersionUID = 0L;
      * The certificate description.
      * </pre>
      *
-     * <code>string description = 3 [json_name = "description"];</code>
+     * <code>string description = 4 [json_name = "description"];</code>
      * @return The description.
      */
     public java.lang.String getDescription() {
@@ -994,7 +1158,7 @@ private static final long serialVersionUID = 0L;
      * The certificate description.
      * </pre>
      *
-     * <code>string description = 3 [json_name = "description"];</code>
+     * <code>string description = 4 [json_name = "description"];</code>
      * @return The bytes for description.
      */
     public com.google.protobuf.ByteString
@@ -1015,7 +1179,7 @@ private static final long serialVersionUID = 0L;
      * The certificate description.
      * </pre>
      *
-     * <code>string description = 3 [json_name = "description"];</code>
+     * <code>string description = 4 [json_name = "description"];</code>
      * @param value The description to set.
      * @return This builder for chaining.
      */
@@ -1023,7 +1187,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       description_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1032,12 +1196,12 @@ private static final long serialVersionUID = 0L;
      * The certificate description.
      * </pre>
      *
-     * <code>string description = 3 [json_name = "description"];</code>
+     * <code>string description = 4 [json_name = "description"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1046,7 +1210,7 @@ private static final long serialVersionUID = 0L;
      * The certificate description.
      * </pre>
      *
-     * <code>string description = 3 [json_name = "description"];</code>
+     * <code>string description = 4 [json_name = "description"];</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
@@ -1055,7 +1219,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       description_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1066,7 +1230,7 @@ private static final long serialVersionUID = 0L;
      * The certificate hash/fingerprint.
      * </pre>
      *
-     * <code>string hash = 4 [json_name = "hash"];</code>
+     * <code>string hash = 5 [json_name = "hash"];</code>
      * @return The hash.
      */
     public java.lang.String getHash() {
@@ -1086,7 +1250,7 @@ private static final long serialVersionUID = 0L;
      * The certificate hash/fingerprint.
      * </pre>
      *
-     * <code>string hash = 4 [json_name = "hash"];</code>
+     * <code>string hash = 5 [json_name = "hash"];</code>
      * @return The bytes for hash.
      */
     public com.google.protobuf.ByteString
@@ -1107,7 +1271,7 @@ private static final long serialVersionUID = 0L;
      * The certificate hash/fingerprint.
      * </pre>
      *
-     * <code>string hash = 4 [json_name = "hash"];</code>
+     * <code>string hash = 5 [json_name = "hash"];</code>
      * @param value The hash to set.
      * @return This builder for chaining.
      */
@@ -1115,7 +1279,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       hash_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1124,12 +1288,12 @@ private static final long serialVersionUID = 0L;
      * The certificate hash/fingerprint.
      * </pre>
      *
-     * <code>string hash = 4 [json_name = "hash"];</code>
+     * <code>string hash = 5 [json_name = "hash"];</code>
      * @return This builder for chaining.
      */
     public Builder clearHash() {
       hash_ = getDefaultInstance().getHash();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1138,7 +1302,7 @@ private static final long serialVersionUID = 0L;
      * The certificate hash/fingerprint.
      * </pre>
      *
-     * <code>string hash = 4 [json_name = "hash"];</code>
+     * <code>string hash = 5 [json_name = "hash"];</code>
      * @param value The bytes for hash to set.
      * @return This builder for chaining.
      */
@@ -1147,7 +1311,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       hash_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1160,18 +1324,18 @@ private static final long serialVersionUID = 0L;
      * The certificate expiration date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiration_date = 5 [json_name = "expirationDate"];</code>
+     * <code>.google.protobuf.Timestamp expiration_date = 6 [json_name = "expirationDate"];</code>
      * @return Whether the expirationDate field is set.
      */
     public boolean hasExpirationDate() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
      * The certificate expiration date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiration_date = 5 [json_name = "expirationDate"];</code>
+     * <code>.google.protobuf.Timestamp expiration_date = 6 [json_name = "expirationDate"];</code>
      * @return The expirationDate.
      */
     public com.google.protobuf.Timestamp getExpirationDate() {
@@ -1186,7 +1350,7 @@ private static final long serialVersionUID = 0L;
      * The certificate expiration date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiration_date = 5 [json_name = "expirationDate"];</code>
+     * <code>.google.protobuf.Timestamp expiration_date = 6 [json_name = "expirationDate"];</code>
      */
     public Builder setExpirationDate(com.google.protobuf.Timestamp value) {
       if (expirationDateBuilder_ == null) {
@@ -1197,7 +1361,7 @@ private static final long serialVersionUID = 0L;
       } else {
         expirationDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1206,7 +1370,7 @@ private static final long serialVersionUID = 0L;
      * The certificate expiration date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiration_date = 5 [json_name = "expirationDate"];</code>
+     * <code>.google.protobuf.Timestamp expiration_date = 6 [json_name = "expirationDate"];</code>
      */
     public Builder setExpirationDate(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1215,7 +1379,7 @@ private static final long serialVersionUID = 0L;
       } else {
         expirationDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1224,11 +1388,11 @@ private static final long serialVersionUID = 0L;
      * The certificate expiration date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiration_date = 5 [json_name = "expirationDate"];</code>
+     * <code>.google.protobuf.Timestamp expiration_date = 6 [json_name = "expirationDate"];</code>
      */
     public Builder mergeExpirationDate(com.google.protobuf.Timestamp value) {
       if (expirationDateBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
+        if (((bitField0_ & 0x00000020) != 0) &&
           expirationDate_ != null &&
           expirationDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getExpirationDateBuilder().mergeFrom(value);
@@ -1238,7 +1402,7 @@ private static final long serialVersionUID = 0L;
       } else {
         expirationDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1247,10 +1411,10 @@ private static final long serialVersionUID = 0L;
      * The certificate expiration date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiration_date = 5 [json_name = "expirationDate"];</code>
+     * <code>.google.protobuf.Timestamp expiration_date = 6 [json_name = "expirationDate"];</code>
      */
     public Builder clearExpirationDate() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       expirationDate_ = null;
       if (expirationDateBuilder_ != null) {
         expirationDateBuilder_.dispose();
@@ -1264,10 +1428,10 @@ private static final long serialVersionUID = 0L;
      * The certificate expiration date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiration_date = 5 [json_name = "expirationDate"];</code>
+     * <code>.google.protobuf.Timestamp expiration_date = 6 [json_name = "expirationDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getExpirationDateBuilder() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return getExpirationDateFieldBuilder().getBuilder();
     }
@@ -1276,7 +1440,7 @@ private static final long serialVersionUID = 0L;
      * The certificate expiration date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiration_date = 5 [json_name = "expirationDate"];</code>
+     * <code>.google.protobuf.Timestamp expiration_date = 6 [json_name = "expirationDate"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getExpirationDateOrBuilder() {
       if (expirationDateBuilder_ != null) {
@@ -1291,7 +1455,7 @@ private static final long serialVersionUID = 0L;
      * The certificate expiration date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp expiration_date = 5 [json_name = "expirationDate"];</code>
+     * <code>.google.protobuf.Timestamp expiration_date = 6 [json_name = "expirationDate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1315,18 +1479,18 @@ private static final long serialVersionUID = 0L;
      * The certificate creation date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp creation_date = 6 [json_name = "creationDate"];</code>
+     * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
      * @return Whether the creationDate field is set.
      */
     public boolean hasCreationDate() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
      * The certificate creation date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp creation_date = 6 [json_name = "creationDate"];</code>
+     * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
      * @return The creationDate.
      */
     public com.google.protobuf.Timestamp getCreationDate() {
@@ -1341,7 +1505,7 @@ private static final long serialVersionUID = 0L;
      * The certificate creation date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp creation_date = 6 [json_name = "creationDate"];</code>
+     * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
      */
     public Builder setCreationDate(com.google.protobuf.Timestamp value) {
       if (creationDateBuilder_ == null) {
@@ -1352,7 +1516,7 @@ private static final long serialVersionUID = 0L;
       } else {
         creationDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1361,7 +1525,7 @@ private static final long serialVersionUID = 0L;
      * The certificate creation date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp creation_date = 6 [json_name = "creationDate"];</code>
+     * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
      */
     public Builder setCreationDate(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -1370,7 +1534,7 @@ private static final long serialVersionUID = 0L;
       } else {
         creationDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1379,11 +1543,11 @@ private static final long serialVersionUID = 0L;
      * The certificate creation date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp creation_date = 6 [json_name = "creationDate"];</code>
+     * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
      */
     public Builder mergeCreationDate(com.google.protobuf.Timestamp value) {
       if (creationDateBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
+        if (((bitField0_ & 0x00000040) != 0) &&
           creationDate_ != null &&
           creationDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreationDateBuilder().mergeFrom(value);
@@ -1393,7 +1557,7 @@ private static final long serialVersionUID = 0L;
       } else {
         creationDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1402,10 +1566,10 @@ private static final long serialVersionUID = 0L;
      * The certificate creation date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp creation_date = 6 [json_name = "creationDate"];</code>
+     * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
      */
     public Builder clearCreationDate() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       creationDate_ = null;
       if (creationDateBuilder_ != null) {
         creationDateBuilder_.dispose();
@@ -1419,10 +1583,10 @@ private static final long serialVersionUID = 0L;
      * The certificate creation date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp creation_date = 6 [json_name = "creationDate"];</code>
+     * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreationDateBuilder() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return getCreationDateFieldBuilder().getBuilder();
     }
@@ -1431,7 +1595,7 @@ private static final long serialVersionUID = 0L;
      * The certificate creation date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp creation_date = 6 [json_name = "creationDate"];</code>
+     * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreationDateOrBuilder() {
       if (creationDateBuilder_ != null) {
@@ -1446,7 +1610,7 @@ private static final long serialVersionUID = 0L;
      * The certificate creation date.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp creation_date = 6 [json_name = "creationDate"];</code>
+     * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 

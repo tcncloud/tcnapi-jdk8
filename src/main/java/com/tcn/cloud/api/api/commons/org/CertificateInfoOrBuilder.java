@@ -9,10 +9,30 @@ public interface CertificateInfoOrBuilder extends
 
   /**
    * <pre>
+   * The id of the certificate info.
+   * </pre>
+   *
+   * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+   * @return The certificateInfoId.
+   */
+  java.lang.String getCertificateInfoId();
+  /**
+   * <pre>
+   * The id of the certificate info.
+   * </pre>
+   *
+   * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+   * @return The bytes for certificateInfoId.
+   */
+  com.google.protobuf.ByteString
+      getCertificateInfoIdBytes();
+
+  /**
+   * <pre>
    * The id of the organization.
    * </pre>
    *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
    * @return The orgId.
    */
   java.lang.String getOrgId();
@@ -21,7 +41,7 @@ public interface CertificateInfoOrBuilder extends
    * The id of the organization.
    * </pre>
    *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
    * @return The bytes for orgId.
    */
   com.google.protobuf.ByteString
@@ -32,7 +52,7 @@ public interface CertificateInfoOrBuilder extends
    * The certificate name.
    * </pre>
    *
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 3 [json_name = "name"];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -41,7 +61,7 @@ public interface CertificateInfoOrBuilder extends
    * The certificate name.
    * </pre>
    *
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 3 [json_name = "name"];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -52,7 +72,7 @@ public interface CertificateInfoOrBuilder extends
    * The certificate description.
    * </pre>
    *
-   * <code>string description = 3 [json_name = "description"];</code>
+   * <code>string description = 4 [json_name = "description"];</code>
    * @return The description.
    */
   java.lang.String getDescription();
@@ -61,7 +81,7 @@ public interface CertificateInfoOrBuilder extends
    * The certificate description.
    * </pre>
    *
-   * <code>string description = 3 [json_name = "description"];</code>
+   * <code>string description = 4 [json_name = "description"];</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString
@@ -72,7 +92,7 @@ public interface CertificateInfoOrBuilder extends
    * The certificate hash/fingerprint.
    * </pre>
    *
-   * <code>string hash = 4 [json_name = "hash"];</code>
+   * <code>string hash = 5 [json_name = "hash"];</code>
    * @return The hash.
    */
   java.lang.String getHash();
@@ -81,7 +101,7 @@ public interface CertificateInfoOrBuilder extends
    * The certificate hash/fingerprint.
    * </pre>
    *
-   * <code>string hash = 4 [json_name = "hash"];</code>
+   * <code>string hash = 5 [json_name = "hash"];</code>
    * @return The bytes for hash.
    */
   com.google.protobuf.ByteString
@@ -92,7 +112,7 @@ public interface CertificateInfoOrBuilder extends
    * The certificate expiration date.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expiration_date = 5 [json_name = "expirationDate"];</code>
+   * <code>.google.protobuf.Timestamp expiration_date = 6 [json_name = "expirationDate"];</code>
    * @return Whether the expirationDate field is set.
    */
   boolean hasExpirationDate();
@@ -101,7 +121,7 @@ public interface CertificateInfoOrBuilder extends
    * The certificate expiration date.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expiration_date = 5 [json_name = "expirationDate"];</code>
+   * <code>.google.protobuf.Timestamp expiration_date = 6 [json_name = "expirationDate"];</code>
    * @return The expirationDate.
    */
   com.google.protobuf.Timestamp getExpirationDate();
@@ -110,7 +130,7 @@ public interface CertificateInfoOrBuilder extends
    * The certificate expiration date.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp expiration_date = 5 [json_name = "expirationDate"];</code>
+   * <code>.google.protobuf.Timestamp expiration_date = 6 [json_name = "expirationDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getExpirationDateOrBuilder();
 
@@ -119,7 +139,7 @@ public interface CertificateInfoOrBuilder extends
    * The certificate creation date.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp creation_date = 6 [json_name = "creationDate"];</code>
+   * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
    * @return Whether the creationDate field is set.
    */
   boolean hasCreationDate();
@@ -128,7 +148,7 @@ public interface CertificateInfoOrBuilder extends
    * The certificate creation date.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp creation_date = 6 [json_name = "creationDate"];</code>
+   * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
    * @return The creationDate.
    */
   com.google.protobuf.Timestamp getCreationDate();
@@ -137,7 +157,7 @@ public interface CertificateInfoOrBuilder extends
    * The certificate creation date.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp creation_date = 6 [json_name = "creationDate"];</code>
+   * <code>.google.protobuf.Timestamp creation_date = 7 [json_name = "creationDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreationDateOrBuilder();
 }

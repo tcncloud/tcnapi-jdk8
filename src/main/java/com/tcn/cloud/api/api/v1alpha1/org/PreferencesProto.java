@@ -895,17 +895,17 @@ public final class PreferencesProto {
       "\022\n\004name\030\001 \001(\tR\004name\022 \n\013description\030\002 \001(\t" +
       "R\013description\"P\n\035CreateCertificateInfoRe" +
       "sponse\022/\n\023encoded_certificate\030\001 \001(\tR\022enc" +
-      "odedCertificate\"2\n\034DeleteCertificateInfo" +
-      "Request\022\022\n\004hash\030\001 \001(\tR\004hash\"\037\n\035DeleteCer" +
-      "tificateInfoResponse\"\034\n\032ListCertificateI" +
-      "nfoRequest\"s\n\033ListCertificateInfoRespons" +
-      "e\022T\n\025certificate_info_list\030\001 \003(\0132 .api.c" +
-      "ommons.org.CertificateInfoR\023certificateI" +
-      "nfoListB\230\001\n\"com.tcn.cloud.api.api.v1alph" +
-      "a1.orgB\020PreferencesProtoP\001\242\002\003AVO\252\002\020Api.V" +
-      "1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1a" +
-      "lpha1\\Org\\GPBMetadata\352\002\022Api::V1alpha1::O" +
-      "rgb\006proto3"
+      "odedCertificate\"N\n\034DeleteCertificateInfo" +
+      "Request\022.\n\023certificate_info_id\030\001 \001(\tR\021ce" +
+      "rtificateInfoId\"\037\n\035DeleteCertificateInfo" +
+      "Response\"\034\n\032ListCertificateInfoRequest\"s" +
+      "\n\033ListCertificateInfoResponse\022T\n\025certifi" +
+      "cate_info_list\030\001 \003(\0132 .api.commons.org.C" +
+      "ertificateInfoR\023certificateInfoListB\230\001\n\"" +
+      "com.tcn.cloud.api.api.v1alpha1.orgB\020Pref" +
+      "erencesProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312" +
+      "\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GP" +
+      "BMetadata\352\002\022Api::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1585,7 +1585,7 @@ public final class PreferencesProto {
     internal_static_api_v1alpha1_org_DeleteCertificateInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_DeleteCertificateInfoRequest_descriptor,
-        new java.lang.String[] { "Hash", });
+        new java.lang.String[] { "CertificateInfoId", });
     internal_static_api_v1alpha1_org_DeleteCertificateInfoResponse_descriptor =
       getDescriptor().getMessageTypes().get(112);
     internal_static_api_v1alpha1_org_DeleteCertificateInfoResponse_fieldAccessorTable = new

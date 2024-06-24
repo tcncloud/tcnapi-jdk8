@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private DeleteCertificateInfoRequest() {
-    hash_ = "";
+    certificateInfoId_ = "";
   }
 
   @java.lang.Override
@@ -43,47 +43,47 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoRequest.class, com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoRequest.Builder.class);
   }
 
-  public static final int HASH_FIELD_NUMBER = 1;
+  public static final int CERTIFICATE_INFO_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object hash_ = "";
+  private volatile java.lang.Object certificateInfoId_ = "";
   /**
    * <pre>
-   * The hash/fingerprint of the certificate info to be deleted.
+   * The id of the certificate info to delete.
    * </pre>
    *
-   * <code>string hash = 1 [json_name = "hash"];</code>
-   * @return The hash.
+   * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+   * @return The certificateInfoId.
    */
   @java.lang.Override
-  public java.lang.String getHash() {
-    java.lang.Object ref = hash_;
+  public java.lang.String getCertificateInfoId() {
+    java.lang.Object ref = certificateInfoId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      hash_ = s;
+      certificateInfoId_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * The hash/fingerprint of the certificate info to be deleted.
+   * The id of the certificate info to delete.
    * </pre>
    *
-   * <code>string hash = 1 [json_name = "hash"];</code>
-   * @return The bytes for hash.
+   * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+   * @return The bytes for certificateInfoId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getHashBytes() {
-    java.lang.Object ref = hash_;
+      getCertificateInfoIdBytes() {
+    java.lang.Object ref = certificateInfoId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      hash_ = b;
+      certificateInfoId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -104,8 +104,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hash_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateInfoId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, certificateInfoId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -116,8 +116,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hash_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateInfoId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, certificateInfoId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -134,8 +134,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoRequest other = (com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoRequest) obj;
 
-    if (!getHash()
-        .equals(other.getHash())) return false;
+    if (!getCertificateInfoId()
+        .equals(other.getCertificateInfoId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -147,8 +147,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + HASH_FIELD_NUMBER;
-    hash = (53 * hash) + getHash().hashCode();
+    hash = (37 * hash) + CERTIFICATE_INFO_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getCertificateInfoId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -284,7 +284,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      hash_ = "";
+      certificateInfoId_ = "";
       return this;
     }
 
@@ -319,7 +319,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.hash_ = hash_;
+        result.certificateInfoId_ = certificateInfoId_;
       }
     }
 
@@ -367,8 +367,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoRequest.getDefaultInstance()) return this;
-      if (!other.getHash().isEmpty()) {
-        hash_ = other.hash_;
+      if (!other.getCertificateInfoId().isEmpty()) {
+        certificateInfoId_ = other.certificateInfoId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -399,7 +399,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              hash_ = input.readStringRequireUtf8();
+              certificateInfoId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -420,22 +420,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object hash_ = "";
+    private java.lang.Object certificateInfoId_ = "";
     /**
      * <pre>
-     * The hash/fingerprint of the certificate info to be deleted.
+     * The id of the certificate info to delete.
      * </pre>
      *
-     * <code>string hash = 1 [json_name = "hash"];</code>
-     * @return The hash.
+     * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+     * @return The certificateInfoId.
      */
-    public java.lang.String getHash() {
-      java.lang.Object ref = hash_;
+    public java.lang.String getCertificateInfoId() {
+      java.lang.Object ref = certificateInfoId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        hash_ = s;
+        certificateInfoId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -443,20 +443,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hash/fingerprint of the certificate info to be deleted.
+     * The id of the certificate info to delete.
      * </pre>
      *
-     * <code>string hash = 1 [json_name = "hash"];</code>
-     * @return The bytes for hash.
+     * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+     * @return The bytes for certificateInfoId.
      */
     public com.google.protobuf.ByteString
-        getHashBytes() {
-      java.lang.Object ref = hash_;
+        getCertificateInfoIdBytes() {
+      java.lang.Object ref = certificateInfoId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        hash_ = b;
+        certificateInfoId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -464,49 +464,49 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hash/fingerprint of the certificate info to be deleted.
+     * The id of the certificate info to delete.
      * </pre>
      *
-     * <code>string hash = 1 [json_name = "hash"];</code>
-     * @param value The hash to set.
+     * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+     * @param value The certificateInfoId to set.
      * @return This builder for chaining.
      */
-    public Builder setHash(
+    public Builder setCertificateInfoId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      hash_ = value;
+      certificateInfoId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The hash/fingerprint of the certificate info to be deleted.
+     * The id of the certificate info to delete.
      * </pre>
      *
-     * <code>string hash = 1 [json_name = "hash"];</code>
+     * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearHash() {
-      hash_ = getDefaultInstance().getHash();
+    public Builder clearCertificateInfoId() {
+      certificateInfoId_ = getDefaultInstance().getCertificateInfoId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The hash/fingerprint of the certificate info to be deleted.
+     * The id of the certificate info to delete.
      * </pre>
      *
-     * <code>string hash = 1 [json_name = "hash"];</code>
-     * @param value The bytes for hash to set.
+     * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+     * @param value The bytes for certificateInfoId to set.
      * @return This builder for chaining.
      */
-    public Builder setHashBytes(
+    public Builder setCertificateInfoIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      hash_ = value;
+      certificateInfoId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;

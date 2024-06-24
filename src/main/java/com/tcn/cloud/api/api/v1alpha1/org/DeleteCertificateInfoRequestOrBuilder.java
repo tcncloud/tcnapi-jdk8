@@ -9,21 +9,21 @@ public interface DeleteCertificateInfoRequestOrBuilder extends
 
   /**
    * <pre>
-   * The hash/fingerprint of the certificate info to be deleted.
+   * The id of the certificate info to delete.
    * </pre>
    *
-   * <code>string hash = 1 [json_name = "hash"];</code>
-   * @return The hash.
+   * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+   * @return The certificateInfoId.
    */
-  java.lang.String getHash();
+  java.lang.String getCertificateInfoId();
   /**
    * <pre>
-   * The hash/fingerprint of the certificate info to be deleted.
+   * The id of the certificate info to delete.
    * </pre>
    *
-   * <code>string hash = 1 [json_name = "hash"];</code>
-   * @return The bytes for hash.
+   * <code>string certificate_info_id = 1 [json_name = "certificateInfoId"];</code>
+   * @return The bytes for certificateInfoId.
    */
   com.google.protobuf.ByteString
-      getHashBytes();
+      getCertificateInfoIdBytes();
 }
