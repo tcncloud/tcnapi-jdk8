@@ -252,7 +252,7 @@ public interface ScorecardOrBuilder extends
    *
    * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
    * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-   *     See api/commons/scorecards.proto;l=302
+   *     See api/commons/scorecards.proto;l=304
    * @return The isAdHoc.
    */
   @java.lang.Deprecated boolean getIsAdHoc();
@@ -346,4 +346,31 @@ public interface ScorecardOrBuilder extends
    * @return The enum numeric value on the wire of callTypes at the given index.
    */
   int getCallTypesValue(int index);
+
+  /**
+   * <pre>
+   * time scorecard was last updated
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
+   * @return Whether the updatedAt field is set.
+   */
+  boolean hasUpdatedAt();
+  /**
+   * <pre>
+   * time scorecard was last updated
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
+   * @return The updatedAt.
+   */
+  com.google.protobuf.Timestamp getUpdatedAt();
+  /**
+   * <pre>
+   * time scorecard was last updated
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
 }

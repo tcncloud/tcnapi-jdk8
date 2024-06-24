@@ -139,6 +139,33 @@ public interface EvaluationOrBuilder extends
 
   /**
    * <pre>
+   * time evaluation was deleted
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+   * @return Whether the deletedAt field is set.
+   */
+  boolean hasDeletedAt();
+  /**
+   * <pre>
+   * time evaluation was deleted
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+   * @return The deletedAt.
+   */
+  com.google.protobuf.Timestamp getDeletedAt();
+  /**
+   * <pre>
+   * time evaluation was deleted
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDeletedAtOrBuilder();
+
+  /**
+   * <pre>
    * user_id of the agent being evaluated
    * </pre>
    *
