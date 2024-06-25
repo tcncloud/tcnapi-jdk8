@@ -35,15 +35,10 @@ public final class VanalyticsProto {
       "$TRANSCRIPT_SUMMARY_STATUS_SUMMARIZED\020\001\022" +
       "9\n,TRANSCRIPT_SUMMARY_STATUS_SUMMARIZED_" +
       "ERRORED\020\376\377\377\377\377\377\377\377\377\001\022%\n!TRANSCRIPT_SUMMARY" +
-      "_STATUS_VISIBLE\020\002*\267\001\n\027TranscriptSentimen" +
-      "tTone\022%\n!TRANSCRIPT_SENTIMENT_TONE_UNKNO" +
-      "WN\020\000\022&\n\"TRANSCRIPT_SENTIMENT_TONE_NEGATI" +
-      "VE\020\001\022%\n!TRANSCRIPT_SENTIMENT_TONE_NEUTRA" +
-      "L\020\002\022&\n\"TRANSCRIPT_SENTIMENT_TONE_POSITIV" +
-      "E\020\003B}\n\035com.tcn.cloud.api.api.commonsB\017Va" +
-      "nalyticsProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Ap" +
-      "i\\Commons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Ap" +
-      "i::Commonsb\006proto3"
+      "_STATUS_VISIBLE\020\002B}\n\035com.tcn.cloud.api.a" +
+      "pi.commonsB\017VanalyticsProtoP\001\242\002\003ACX\252\002\013Ap" +
+      "i.Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GP" +
+      "BMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
