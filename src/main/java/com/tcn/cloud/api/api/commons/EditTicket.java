@@ -145,21 +145,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TICKET_ACTION_ID_FIELD_NUMBER = 4;
-  private long ticketActionId_ = 0L;
-  /**
-   * <pre>
-   * ticket_action_id
-   * </pre>
-   *
-   * <code>int64 ticket_action_id = 4 [json_name = "ticketActionId"];</code>
-   * @return The ticketActionId.
-   */
-  @java.lang.Override
-  public long getTicketActionId() {
-    return ticketActionId_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -183,9 +168,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ticketCode_);
     }
-    if (ticketActionId_ != 0L) {
-      output.writeInt64(4, ticketActionId_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -205,10 +187,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ticketCode_);
-    }
-    if (ticketActionId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(4, ticketActionId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -234,8 +212,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!getTicketCode()
         .equals(other.getTicketCode())) return false;
-    if (getTicketActionId()
-        != other.getTicketActionId()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -256,9 +232,6 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + TICKET_CODE_FIELD_NUMBER;
     hash = (53 * hash) + getTicketCode().hashCode();
-    hash = (37 * hash) + TICKET_ACTION_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getTicketActionId());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -401,7 +374,6 @@ private static final long serialVersionUID = 0L;
         editValueBuilder_ = null;
       }
       ticketCode_ = "";
-      ticketActionId_ = 0L;
       return this;
     }
 
@@ -445,9 +417,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.ticketCode_ = ticketCode_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.ticketActionId_ = ticketActionId_;
       }
     }
 
@@ -506,9 +475,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
-      if (other.getTicketActionId() != 0L) {
-        setTicketActionId(other.getTicketActionId());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -552,11 +518,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
-            case 32: {
-              ticketActionId_ = input.readInt64();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -867,50 +828,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ticketCode_ = value;
       bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
-    private long ticketActionId_ ;
-    /**
-     * <pre>
-     * ticket_action_id
-     * </pre>
-     *
-     * <code>int64 ticket_action_id = 4 [json_name = "ticketActionId"];</code>
-     * @return The ticketActionId.
-     */
-    @java.lang.Override
-    public long getTicketActionId() {
-      return ticketActionId_;
-    }
-    /**
-     * <pre>
-     * ticket_action_id
-     * </pre>
-     *
-     * <code>int64 ticket_action_id = 4 [json_name = "ticketActionId"];</code>
-     * @param value The ticketActionId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTicketActionId(long value) {
-
-      ticketActionId_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * ticket_action_id
-     * </pre>
-     *
-     * <code>int64 ticket_action_id = 4 [json_name = "ticketActionId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTicketActionId() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      ticketActionId_ = 0L;
       onChanged();
       return this;
     }

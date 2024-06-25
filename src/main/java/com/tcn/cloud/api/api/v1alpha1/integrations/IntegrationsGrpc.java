@@ -945,37 +945,6 @@ public final class IntegrationsGrpc {
     return getPopulateIntegrationLinkMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq,
-      com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes> getProcessWorkflowMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ProcessWorkflow",
-      requestType = com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq,
-      com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes> getProcessWorkflowMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq, com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes> getProcessWorkflowMethod;
-    if ((getProcessWorkflowMethod = IntegrationsGrpc.getProcessWorkflowMethod) == null) {
-      synchronized (IntegrationsGrpc.class) {
-        if ((getProcessWorkflowMethod = IntegrationsGrpc.getProcessWorkflowMethod) == null) {
-          IntegrationsGrpc.getProcessWorkflowMethod = getProcessWorkflowMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq, com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ProcessWorkflow"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("ProcessWorkflow"))
-              .build();
-        }
-      }
-    }
-    return getProcessWorkflowMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1305,13 +1274,6 @@ public final class IntegrationsGrpc {
     default void populateIntegrationLink(com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPopulateIntegrationLinkMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void processWorkflow(com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessWorkflowMethod(), responseObserver);
     }
   }
 
@@ -1654,14 +1616,6 @@ public final class IntegrationsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPopulateIntegrationLinkMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     */
-    public void processWorkflow(com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getProcessWorkflowMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -1961,13 +1915,6 @@ public final class IntegrationsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes populateIntegrationLink(com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPopulateIntegrationLinkMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes processWorkflow(com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getProcessWorkflowMethod(), getCallOptions(), request);
     }
   }
 
@@ -2299,14 +2246,6 @@ public final class IntegrationsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPopulateIntegrationLinkMethod(), getCallOptions()), request);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes> processWorkflow(
-        com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getProcessWorkflowMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_PROCESS = 0;
@@ -2339,7 +2278,6 @@ public final class IntegrationsGrpc {
   private static final int METHODID_HANG_UP_EPIC_PATIENT_CALL = 27;
   private static final int METHODID_GENERATE_EPIC_KEY_PAIRS = 28;
   private static final int METHODID_POPULATE_INTEGRATION_LINK = 29;
-  private static final int METHODID_PROCESS_WORKFLOW = 30;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2477,10 +2415,6 @@ public final class IntegrationsGrpc {
         case METHODID_POPULATE_INTEGRATION_LINK:
           serviceImpl.populateIntegrationLink((com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes>) responseObserver);
-          break;
-        case METHODID_PROCESS_WORKFLOW:
-          serviceImpl.processWorkflow((com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2710,13 +2644,6 @@ public final class IntegrationsGrpc {
               com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkReq,
               com.tcn.cloud.api.api.v1alpha1.integrations.PopulateIntegrationLinkRes>(
                 service, METHODID_POPULATE_INTEGRATION_LINK)))
-        .addMethod(
-          getProcessWorkflowMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq,
-              com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes>(
-                service, METHODID_PROCESS_WORKFLOW)))
         .build();
   }
 
@@ -2795,7 +2722,6 @@ public final class IntegrationsGrpc {
               .addMethod(getHangUpEpicPatientCallMethod())
               .addMethod(getGenerateEpicKeyPairsMethod())
               .addMethod(getPopulateIntegrationLinkMethod())
-              .addMethod(getProcessWorkflowMethod())
               .build();
         }
       }
