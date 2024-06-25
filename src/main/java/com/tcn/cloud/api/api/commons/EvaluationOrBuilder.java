@@ -139,6 +139,33 @@ public interface EvaluationOrBuilder extends
 
   /**
    * <pre>
+   * time evaluation was deleted
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+   * @return Whether the deletedAt field is set.
+   */
+  boolean hasDeletedAt();
+  /**
+   * <pre>
+   * time evaluation was deleted
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+   * @return The deletedAt.
+   */
+  com.google.protobuf.Timestamp getDeletedAt();
+  /**
+   * <pre>
+   * time evaluation was deleted
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp deleted_at = 12 [json_name = "deletedAt"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDeletedAtOrBuilder();
+
+  /**
+   * <pre>
    * user_id of the agent being evaluated
    * </pre>
    *
@@ -249,4 +276,14 @@ public interface EvaluationOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDeletedByBytes();
+
+  /**
+   * <pre>
+   * whether the evaluation can be recovered or not.
+   * </pre>
+   *
+   * <code>bool is_recoverable = 20 [json_name = "isRecoverable"];</code>
+   * @return The isRecoverable.
+   */
+  boolean getIsRecoverable();
 }
