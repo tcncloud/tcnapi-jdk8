@@ -25,40 +25,17 @@ public interface PermissionSetOrBuilder extends
   com.tcn.cloud.api.api.commons.auth.Permission getPermissions(int index);
 
   /**
-   * <pre>
-   * id of the request message field that will be checked.
-   * </pre>
-   *
-   * <code>optional int32 taint_field_id = 2 [json_name = "taintFieldId"];</code>
-   * @return Whether the taintFieldId field is set.
+   * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
+   * @return Whether the taint field is set.
    */
-  boolean hasTaintFieldId();
+  boolean hasTaint();
   /**
-   * <pre>
-   * id of the request message field that will be checked.
-   * </pre>
-   *
-   * <code>optional int32 taint_field_id = 2 [json_name = "taintFieldId"];</code>
-   * @return The taintFieldId.
+   * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
+   * @return The taint.
    */
-  int getTaintFieldId();
-
+  com.tcn.cloud.api.annotations.Taint getTaint();
   /**
-   * <pre>
-   * value that the request mesage field with id is required to match.
-   * </pre>
-   *
-   * <code>optional int32 taint_field_value = 3 [json_name = "taintFieldValue"];</code>
-   * @return Whether the taintFieldValue field is set.
+   * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
    */
-  boolean hasTaintFieldValue();
-  /**
-   * <pre>
-   * value that the request mesage field with id is required to match.
-   * </pre>
-   *
-   * <code>optional int32 taint_field_value = 3 [json_name = "taintFieldValue"];</code>
-   * @return The taintFieldValue.
-   */
-  int getTaintFieldValue();
+  com.tcn.cloud.api.annotations.TaintOrBuilder getTaintOrBuilder();
 }
