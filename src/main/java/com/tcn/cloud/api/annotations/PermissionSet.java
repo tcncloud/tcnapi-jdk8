@@ -39,7 +39,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.annotations.PermissionSet.class, com.tcn.cloud.api.annotations.PermissionSet.Builder.class);
   }
 
-  private int bitField0_;
   public static final int PERMISSIONS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> permissions_;
@@ -79,32 +78,6 @@ private static final long serialVersionUID = 0L;
     return permissions_converter_.convert(permissions_.get(index));
   }
 
-  public static final int TAINT_FIELD_NUMBER = 2;
-  private com.tcn.cloud.api.annotations.Taint taint_;
-  /**
-   * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
-   * @return Whether the taint field is set.
-   */
-  @java.lang.Override
-  public boolean hasTaint() {
-    return ((bitField0_ & 0x00000001) != 0);
-  }
-  /**
-   * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
-   * @return The taint.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.annotations.Taint getTaint() {
-    return taint_ == null ? com.tcn.cloud.api.annotations.Taint.getDefaultInstance() : taint_;
-  }
-  /**
-   * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.annotations.TaintOrBuilder getTaintOrBuilder() {
-    return taint_ == null ? com.tcn.cloud.api.annotations.Taint.getDefaultInstance() : taint_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -121,9 +94,6 @@ private static final long serialVersionUID = 0L;
                       throws java.io.IOException {
     for (int i = 0; i < permissions_.size(); i++) {
       output.writeEnum(1, permissions_.get(i));
-    }
-    if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(2, getTaint());
     }
     getUnknownFields().writeTo(output);
   }
@@ -143,10 +113,6 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * permissions_.size();
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getTaint());
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -163,11 +129,6 @@ private static final long serialVersionUID = 0L;
     com.tcn.cloud.api.annotations.PermissionSet other = (com.tcn.cloud.api.annotations.PermissionSet) obj;
 
     if (!permissions_.equals(other.permissions_)) return false;
-    if (hasTaint() != other.hasTaint()) return false;
-    if (hasTaint()) {
-      if (!getTaint()
-          .equals(other.getTaint())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -182,10 +143,6 @@ private static final long serialVersionUID = 0L;
     if (getPermissionsCount() > 0) {
       hash = (37 * hash) + PERMISSIONS_FIELD_NUMBER;
       hash = (53 * hash) + permissions_.hashCode();
-    }
-    if (hasTaint()) {
-      hash = (37 * hash) + TAINT_FIELD_NUMBER;
-      hash = (53 * hash) + getTaint().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -306,19 +263,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.annotations.PermissionSet.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getTaintFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -326,11 +277,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       permissions_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
-      taint_ = null;
-      if (taintBuilder_ != null) {
-        taintBuilder_.dispose();
-        taintBuilder_ = null;
-      }
       return this;
     }
 
@@ -373,14 +319,6 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.annotations.PermissionSet result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.taint_ = taintBuilder_ == null
-            ? taint_
-            : taintBuilder_.build();
-        to_bitField0_ |= 0x00000001;
-      }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -437,9 +375,6 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      if (other.hasTaint()) {
-        mergeTaint(other.getTaint());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -495,13 +430,6 @@ private static final long serialVersionUID = 0L;
               input.popLimit(oldLimit);
               break;
             } // case 10
-            case 18: {
-              input.readMessage(
-                  getTaintFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -603,125 +531,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
-    }
-
-    private com.tcn.cloud.api.annotations.Taint taint_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.annotations.Taint, com.tcn.cloud.api.annotations.Taint.Builder, com.tcn.cloud.api.annotations.TaintOrBuilder> taintBuilder_;
-    /**
-     * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
-     * @return Whether the taint field is set.
-     */
-    public boolean hasTaint() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
-     * @return The taint.
-     */
-    public com.tcn.cloud.api.annotations.Taint getTaint() {
-      if (taintBuilder_ == null) {
-        return taint_ == null ? com.tcn.cloud.api.annotations.Taint.getDefaultInstance() : taint_;
-      } else {
-        return taintBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
-     */
-    public Builder setTaint(com.tcn.cloud.api.annotations.Taint value) {
-      if (taintBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        taint_ = value;
-      } else {
-        taintBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
-     */
-    public Builder setTaint(
-        com.tcn.cloud.api.annotations.Taint.Builder builderForValue) {
-      if (taintBuilder_ == null) {
-        taint_ = builderForValue.build();
-      } else {
-        taintBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
-     */
-    public Builder mergeTaint(com.tcn.cloud.api.annotations.Taint value) {
-      if (taintBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          taint_ != null &&
-          taint_ != com.tcn.cloud.api.annotations.Taint.getDefaultInstance()) {
-          getTaintBuilder().mergeFrom(value);
-        } else {
-          taint_ = value;
-        }
-      } else {
-        taintBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
-     */
-    public Builder clearTaint() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      taint_ = null;
-      if (taintBuilder_ != null) {
-        taintBuilder_.dispose();
-        taintBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
-     */
-    public com.tcn.cloud.api.annotations.Taint.Builder getTaintBuilder() {
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return getTaintFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
-     */
-    public com.tcn.cloud.api.annotations.TaintOrBuilder getTaintOrBuilder() {
-      if (taintBuilder_ != null) {
-        return taintBuilder_.getMessageOrBuilder();
-      } else {
-        return taint_ == null ?
-            com.tcn.cloud.api.annotations.Taint.getDefaultInstance() : taint_;
-      }
-    }
-    /**
-     * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.annotations.Taint, com.tcn.cloud.api.annotations.Taint.Builder, com.tcn.cloud.api.annotations.TaintOrBuilder> 
-        getTaintFieldBuilder() {
-      if (taintBuilder_ == null) {
-        taintBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.annotations.Taint, com.tcn.cloud.api.annotations.Taint.Builder, com.tcn.cloud.api.annotations.TaintOrBuilder>(
-                getTaint(),
-                getParentForChildren(),
-                isClean());
-        taint_ = null;
-      }
-      return taintBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

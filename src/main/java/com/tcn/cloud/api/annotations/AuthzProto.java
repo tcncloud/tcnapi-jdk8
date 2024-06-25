@@ -40,11 +40,6 @@ public final class AuthzProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_annotations_PermissionSet_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_annotations_Taint_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_annotations_Taint_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -60,16 +55,14 @@ public final class AuthzProto {
       "\n\004sets\030\001 \003(\0132\032.annotations.PermissionSet" +
       "R\004sets\022\033\n\003wip\030\002 \001(\010:\005falseB\002\030\001R\003wip\022,\n\016n" +
       "o_permissions\030\003 \001(\010:\005falseR\rnoPermission" +
-      "s\"y\n\rPermissionSet\022>\n\013permissions\030\001 \003(\0162" +
+      "s\"O\n\rPermissionSet\022>\n\013permissions\030\001 \003(\0162" +
       "\034.api.commons.auth.PermissionR\013permissio" +
-      "ns\022(\n\005taint\030\002 \001(\0132\022.annotations.TaintR\005t" +
-      "aint\"-\n\005Taint\022\016\n\002id\030\001 \001(\005R\002id\022\024\n\005value\030\002" +
-      " \001(\005R\005value:P\n\005authz\022\036.google.protobuf.M" +
-      "ethodOptions\030\207\227\" \001(\0132\030.annotations.Permi" +
-      "ssionsR\005authzBw\n\035com.tcn.cloud.api.annot" +
-      "ationsB\nAuthzProtoP\001\242\002\003AXX\252\002\013Annotations" +
-      "\312\002\013Annotations\342\002\027Annotations\\GPBMetadata" +
-      "\352\002\013Annotations"
+      "ns:P\n\005authz\022\036.google.protobuf.MethodOpti" +
+      "ons\030\207\227\" \001(\0132\030.annotations.PermissionsR\005a" +
+      "uthzBw\n\035com.tcn.cloud.api.annotationsB\nA" +
+      "uthzProtoP\001\242\002\003AXX\252\002\013Annotations\312\002\013Annota" +
+      "tions\342\002\027Annotations\\GPBMetadata\352\002\013Annota" +
+      "tions"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -88,13 +81,7 @@ public final class AuthzProto {
     internal_static_annotations_PermissionSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_annotations_PermissionSet_descriptor,
-        new java.lang.String[] { "Permissions", "Taint", });
-    internal_static_annotations_Taint_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_annotations_Taint_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_annotations_Taint_descriptor,
-        new java.lang.String[] { "Id", "Value", });
+        new java.lang.String[] { "Permissions", });
     authz.internalInit(descriptor.getExtensions().get(0));
     com.tcn.cloud.api.api.commons.auth.PermsProto.getDescriptor();
     com.google.protobuf.DescriptorProtos.getDescriptor();
