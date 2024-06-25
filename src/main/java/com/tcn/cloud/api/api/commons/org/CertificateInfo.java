@@ -406,6 +406,21 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int DELETED_FIELD_NUMBER = 9;
+  private boolean deleted_ = false;
+  /**
+   * <pre>
+   * Whether the certificate is deleted.
+   * </pre>
+   *
+   * <code>bool deleted = 9 [json_name = "deleted"];</code>
+   * @return The deleted.
+   */
+  @java.lang.Override
+  public boolean getDeleted() {
+    return deleted_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -444,6 +459,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestBy_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, requestBy_);
     }
+    if (deleted_ != false) {
+      output.writeBool(9, deleted_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -478,6 +496,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestBy_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, requestBy_);
+    }
+    if (deleted_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(9, deleted_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -516,6 +538,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getRequestBy()
         .equals(other.getRequestBy())) return false;
+    if (getDeleted()
+        != other.getDeleted()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -547,6 +571,9 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + REQUEST_BY_FIELD_NUMBER;
     hash = (53 * hash) + getRequestBy().hashCode();
+    hash = (37 * hash) + DELETED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDeleted());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -698,6 +725,7 @@ private static final long serialVersionUID = 0L;
         creationDateBuilder_ = null;
       }
       requestBy_ = "";
+      deleted_ = false;
       return this;
     }
 
@@ -758,6 +786,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.requestBy_ = requestBy_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.deleted_ = deleted_;
       }
     }
 
@@ -841,6 +872,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000080;
         onChanged();
       }
+      if (other.getDeleted() != false) {
+        setDeleted(other.getDeleted());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -911,6 +945,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 66
+            case 72: {
+              deleted_ = input.readBool();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1786,6 +1825,50 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       requestBy_ = value;
       bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+
+    private boolean deleted_ ;
+    /**
+     * <pre>
+     * Whether the certificate is deleted.
+     * </pre>
+     *
+     * <code>bool deleted = 9 [json_name = "deleted"];</code>
+     * @return The deleted.
+     */
+    @java.lang.Override
+    public boolean getDeleted() {
+      return deleted_;
+    }
+    /**
+     * <pre>
+     * Whether the certificate is deleted.
+     * </pre>
+     *
+     * <code>bool deleted = 9 [json_name = "deleted"];</code>
+     * @param value The deleted to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeleted(boolean value) {
+
+      deleted_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the certificate is deleted.
+     * </pre>
+     *
+     * <code>bool deleted = 9 [json_name = "deleted"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDeleted() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      deleted_ = false;
       onChanged();
       return this;
     }
