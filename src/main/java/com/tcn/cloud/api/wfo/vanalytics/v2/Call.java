@@ -1359,6 +1359,33 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getUserIdBytes();
+
+    /**
+     * <pre>
+     * The sentiment of the thread.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
+     * @return Whether the sentiment field is set.
+     */
+    boolean hasSentiment();
+    /**
+     * <pre>
+     * The sentiment of the thread.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
+     * @return The sentiment.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment getSentiment();
+    /**
+     * <pre>
+     * The sentiment of the thread.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.SentimentOrBuilder getSentimentOrBuilder();
   }
   /**
    * <pre>
@@ -1524,6 +1551,44 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int SENTIMENT_FIELD_NUMBER = 4;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment sentiment_;
+    /**
+     * <pre>
+     * The sentiment of the thread.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
+     * @return Whether the sentiment field is set.
+     */
+    @java.lang.Override
+    public boolean hasSentiment() {
+      return sentiment_ != null;
+    }
+    /**
+     * <pre>
+     * The sentiment of the thread.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
+     * @return The sentiment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment getSentiment() {
+      return sentiment_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment.getDefaultInstance() : sentiment_;
+    }
+    /**
+     * <pre>
+     * The sentiment of the thread.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.SentimentOrBuilder getSentimentOrBuilder() {
+      return sentiment_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment.getDefaultInstance() : sentiment_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1547,6 +1612,9 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userId_);
       }
+      if (sentiment_ != null) {
+        output.writeMessage(4, getSentiment());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1566,6 +1634,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userId_);
+      }
+      if (sentiment_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getSentiment());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1588,6 +1660,11 @@ private static final long serialVersionUID = 0L;
           .equals(other.getSegmentsList())) return false;
       if (!getUserId()
           .equals(other.getUserId())) return false;
+      if (hasSentiment() != other.hasSentiment()) return false;
+      if (hasSentiment()) {
+        if (!getSentiment()
+            .equals(other.getSentiment())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1607,6 +1684,10 @@ private static final long serialVersionUID = 0L;
       }
       hash = (37 * hash) + USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getUserId().hashCode();
+      if (hasSentiment()) {
+        hash = (37 * hash) + SENTIMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getSentiment().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1751,6 +1832,11 @@ private static final long serialVersionUID = 0L;
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         userId_ = "";
+        sentiment_ = null;
+        if (sentimentBuilder_ != null) {
+          sentimentBuilder_.dispose();
+          sentimentBuilder_ = null;
+        }
         return this;
       }
 
@@ -1802,6 +1888,11 @@ private static final long serialVersionUID = 0L;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.userId_ = userId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.sentiment_ = sentimentBuilder_ == null
+              ? sentiment_
+              : sentimentBuilder_.build();
         }
       }
 
@@ -1883,6 +1974,9 @@ private static final long serialVersionUID = 0L;
           bitField0_ |= 0x00000004;
           onChanged();
         }
+        if (other.hasSentiment()) {
+          mergeSentiment(other.getSentiment());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1932,6 +2026,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 34: {
+                input.readMessage(
+                    getSentimentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2395,6 +2496,161 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment sentiment_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment, com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.SentimentOrBuilder> sentimentBuilder_;
+      /**
+       * <pre>
+       * The sentiment of the thread.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
+       * @return Whether the sentiment field is set.
+       */
+      public boolean hasSentiment() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * The sentiment of the thread.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
+       * @return The sentiment.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment getSentiment() {
+        if (sentimentBuilder_ == null) {
+          return sentiment_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment.getDefaultInstance() : sentiment_;
+        } else {
+          return sentimentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The sentiment of the thread.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
+       */
+      public Builder setSentiment(com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment value) {
+        if (sentimentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sentiment_ = value;
+        } else {
+          sentimentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The sentiment of the thread.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
+       */
+      public Builder setSentiment(
+          com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment.Builder builderForValue) {
+        if (sentimentBuilder_ == null) {
+          sentiment_ = builderForValue.build();
+        } else {
+          sentimentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The sentiment of the thread.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
+       */
+      public Builder mergeSentiment(com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment value) {
+        if (sentimentBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            sentiment_ != null &&
+            sentiment_ != com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment.getDefaultInstance()) {
+            getSentimentBuilder().mergeFrom(value);
+          } else {
+            sentiment_ = value;
+          }
+        } else {
+          sentimentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The sentiment of the thread.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
+       */
+      public Builder clearSentiment() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        sentiment_ = null;
+        if (sentimentBuilder_ != null) {
+          sentimentBuilder_.dispose();
+          sentimentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The sentiment of the thread.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment.Builder getSentimentBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getSentimentFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The sentiment of the thread.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.SentimentOrBuilder getSentimentOrBuilder() {
+        if (sentimentBuilder_ != null) {
+          return sentimentBuilder_.getMessageOrBuilder();
+        } else {
+          return sentiment_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment.getDefaultInstance() : sentiment_;
+        }
+      }
+      /**
+       * <pre>
+       * The sentiment of the thread.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment, com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.SentimentOrBuilder> 
+          getSentimentFieldBuilder() {
+        if (sentimentBuilder_ == null) {
+          sentimentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment, com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.SentimentOrBuilder>(
+                  getSentiment(),
+                  getParentForChildren(),
+                  isClean());
+          sentiment_ = null;
+        }
+        return sentimentBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

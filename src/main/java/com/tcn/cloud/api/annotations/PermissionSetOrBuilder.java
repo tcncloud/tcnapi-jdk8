@@ -23,4 +23,19 @@ public interface PermissionSetOrBuilder extends
    * @return The permissions at the given index.
    */
   com.tcn.cloud.api.api.commons.auth.Permission getPermissions(int index);
+
+  /**
+   * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
+   * @return Whether the taint field is set.
+   */
+  boolean hasTaint();
+  /**
+   * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
+   * @return The taint.
+   */
+  com.tcn.cloud.api.annotations.Taint getTaint();
+  /**
+   * <code>optional .annotations.Taint taint = 2 [json_name = "taint"];</code>
+   */
+  com.tcn.cloud.api.annotations.TaintOrBuilder getTaintOrBuilder();
 }
