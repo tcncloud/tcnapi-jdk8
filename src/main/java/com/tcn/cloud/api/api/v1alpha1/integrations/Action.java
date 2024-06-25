@@ -45,8 +45,6 @@ private static final long serialVersionUID = 0L;
         return internalGetRestructureBefore();
       case 6:
         return internalGetRestructureAfter();
-      case 8:
-        return internalGetOpts();
       default:
         throw new RuntimeException(
             "Invalid map field number: " + number);
@@ -328,101 +326,6 @@ java.lang.String defaultValue) {
     }
   }
 
-  public static final int OPTS_FIELD_NUMBER = 8;
-  private static final class OptsDefaultEntryHolder {
-    static final com.google.protobuf.MapEntry<
-        java.lang.String, java.lang.String> defaultEntry =
-            com.google.protobuf.MapEntry
-            .<java.lang.String, java.lang.String>newDefaultInstance(
-                com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_Action_OptsEntry_descriptor, 
-                com.google.protobuf.WireFormat.FieldType.STRING,
-                "",
-                com.google.protobuf.WireFormat.FieldType.STRING,
-                "");
-  }
-  @SuppressWarnings("serial")
-  private com.google.protobuf.MapField<
-      java.lang.String, java.lang.String> opts_;
-  private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-  internalGetOpts() {
-    if (opts_ == null) {
-      return com.google.protobuf.MapField.emptyMapField(
-          OptsDefaultEntryHolder.defaultEntry);
-    }
-    return opts_;
-  }
-  public int getOptsCount() {
-    return internalGetOpts().getMap().size();
-  }
-  /**
-   * <pre>
-   * the data that controls optional functionality for some flows.
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
-   */
-  @java.lang.Override
-  public boolean containsOpts(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    return internalGetOpts().getMap().containsKey(key);
-  }
-  /**
-   * Use {@link #getOptsMap()} instead.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated
-  public java.util.Map<java.lang.String, java.lang.String> getOpts() {
-    return getOptsMap();
-  }
-  /**
-   * <pre>
-   * the data that controls optional functionality for some flows.
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
-   */
-  @java.lang.Override
-  public java.util.Map<java.lang.String, java.lang.String> getOptsMap() {
-    return internalGetOpts().getMap();
-  }
-  /**
-   * <pre>
-   * the data that controls optional functionality for some flows.
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
-   */
-  @java.lang.Override
-  public /* nullable */
-java.lang.String getOptsOrDefault(
-      java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, java.lang.String> map =
-        internalGetOpts().getMap();
-    return map.containsKey(key) ? map.get(key) : defaultValue;
-  }
-  /**
-   * <pre>
-   * the data that controls optional functionality for some flows.
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
-   */
-  @java.lang.Override
-  public java.lang.String getOptsOrThrow(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, java.lang.String> map =
-        internalGetOpts().getMap();
-    if (!map.containsKey(key)) {
-      throw new java.lang.IllegalArgumentException();
-    }
-    return map.get(key);
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -455,12 +358,6 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionDefinitionName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, actionDefinitionName_);
     }
-    com.google.protobuf.GeneratedMessageV3
-      .serializeStringMapTo(
-        output,
-        internalGetOpts(),
-        OptsDefaultEntryHolder.defaultEntry,
-        8);
     getUnknownFields().writeTo(output);
   }
 
@@ -496,16 +393,6 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(actionDefinitionName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, actionDefinitionName_);
     }
-    for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-         : internalGetOpts().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-      opts__ = OptsDefaultEntryHolder.defaultEntry.newBuilderForType()
-          .setKey(entry.getKey())
-          .setValue(entry.getValue())
-          .build();
-      size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, opts__);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -529,8 +416,6 @@ java.lang.String defaultValue) {
         other.internalGetRestructureAfter())) return false;
     if (!getActionDefinitionName()
         .equals(other.getActionDefinitionName())) return false;
-    if (!internalGetOpts().equals(
-        other.internalGetOpts())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -554,10 +439,6 @@ java.lang.String defaultValue) {
     }
     hash = (37 * hash) + ACTION_DEFINITION_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getActionDefinitionName().hashCode();
-    if (!internalGetOpts().getMap().isEmpty()) {
-      hash = (37 * hash) + OPTS_FIELD_NUMBER;
-      hash = (53 * hash) + internalGetOpts().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -679,8 +560,6 @@ java.lang.String defaultValue) {
           return internalGetRestructureBefore();
         case 6:
           return internalGetRestructureAfter();
-        case 8:
-          return internalGetOpts();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -694,8 +573,6 @@ java.lang.String defaultValue) {
           return internalGetMutableRestructureBefore();
         case 6:
           return internalGetMutableRestructureAfter();
-        case 8:
-          return internalGetMutableOpts();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -727,7 +604,6 @@ java.lang.String defaultValue) {
       internalGetMutableRestructureBefore().clear();
       internalGetMutableRestructureAfter().clear();
       actionDefinitionName_ = "";
-      internalGetMutableOpts().clear();
       return this;
     }
 
@@ -774,10 +650,6 @@ java.lang.String defaultValue) {
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.actionDefinitionName_ = actionDefinitionName_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.opts_ = internalGetOpts();
-        result.opts_.makeImmutable();
       }
     }
 
@@ -841,9 +713,6 @@ java.lang.String defaultValue) {
         bitField0_ |= 0x00000008;
         onChanged();
       }
-      internalGetMutableOpts().mergeFrom(
-          other.internalGetOpts());
-      bitField0_ |= 0x00000010;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -898,15 +767,6 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00000008;
               break;
             } // case 58
-            case 66: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              opts__ = input.readMessage(
-                  OptsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableOpts().getMutableMap().put(
-                  opts__.getKey(), opts__.getValue());
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1381,161 +1241,6 @@ java.lang.String defaultValue) {
       actionDefinitionName_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> opts_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetOpts() {
-      if (opts_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            OptsDefaultEntryHolder.defaultEntry);
-      }
-      return opts_;
-    }
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableOpts() {
-      if (opts_ == null) {
-        opts_ = com.google.protobuf.MapField.newMapField(
-            OptsDefaultEntryHolder.defaultEntry);
-      }
-      if (!opts_.isMutable()) {
-        opts_ = opts_.copy();
-      }
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return opts_;
-    }
-    public int getOptsCount() {
-      return internalGetOpts().getMap().size();
-    }
-    /**
-     * <pre>
-     * the data that controls optional functionality for some flows.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
-     */
-    @java.lang.Override
-    public boolean containsOpts(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetOpts().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getOptsMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getOpts() {
-      return getOptsMap();
-    }
-    /**
-     * <pre>
-     * the data that controls optional functionality for some flows.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.String, java.lang.String> getOptsMap() {
-      return internalGetOpts().getMap();
-    }
-    /**
-     * <pre>
-     * the data that controls optional functionality for some flows.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
-     */
-    @java.lang.Override
-    public /* nullable */
-java.lang.String getOptsOrDefault(
-        java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetOpts().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <pre>
-     * the data that controls optional functionality for some flows.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
-     */
-    @java.lang.Override
-    public java.lang.String getOptsOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetOpts().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-    public Builder clearOpts() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      internalGetMutableOpts().getMutableMap()
-          .clear();
-      return this;
-    }
-    /**
-     * <pre>
-     * the data that controls optional functionality for some flows.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
-     */
-    public Builder removeOpts(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      internalGetMutableOpts().getMutableMap()
-          .remove(key);
-      return this;
-    }
-    /**
-     * Use alternate mutation accessors instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String>
-        getMutableOpts() {
-      bitField0_ |= 0x00000010;
-      return internalGetMutableOpts().getMutableMap();
-    }
-    /**
-     * <pre>
-     * the data that controls optional functionality for some flows.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
-     */
-    public Builder putOpts(
-        java.lang.String key,
-        java.lang.String value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
-      internalGetMutableOpts().getMutableMap()
-          .put(key, value);
-      bitField0_ |= 0x00000010;
-      return this;
-    }
-    /**
-     * <pre>
-     * the data that controls optional functionality for some flows.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; opts = 8 [json_name = "opts"];</code>
-     */
-    public Builder putAllOpts(
-        java.util.Map<java.lang.String, java.lang.String> values) {
-      internalGetMutableOpts().getMutableMap()
-          .putAll(values);
-      bitField0_ |= 0x00000010;
       return this;
     }
     @java.lang.Override
