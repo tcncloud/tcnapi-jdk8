@@ -55,14 +55,16 @@ public final class AuthzProto {
       "\n\004sets\030\001 \003(\0132\032.annotations.PermissionSet" +
       "R\004sets\022\033\n\003wip\030\002 \001(\010:\005falseB\002\030\001R\003wip\022,\n\016n" +
       "o_permissions\030\003 \001(\010:\005falseR\rnoPermission" +
-      "s\"O\n\rPermissionSet\022>\n\013permissions\030\001 \003(\0162" +
-      "\034.api.commons.auth.PermissionR\013permissio" +
-      "ns:P\n\005authz\022\036.google.protobuf.MethodOpti" +
-      "ons\030\207\227\" \001(\0132\030.annotations.PermissionsR\005a" +
-      "uthzBw\n\035com.tcn.cloud.api.annotationsB\nA" +
-      "uthzProtoP\001\242\002\003AXX\252\002\013Annotations\312\002\013Annota" +
-      "tions\342\002\027Annotations\\GPBMetadata\352\002\013Annota" +
-      "tions"
+      "s\"\241\001\n\rPermissionSet\022>\n\013permissions\030\001 \003(\016" +
+      "2\034.api.commons.auth.PermissionR\013permissi" +
+      "ons\022$\n\016taint_field_id\030\002 \001(\005R\014taintFieldI" +
+      "d\022*\n\021taint_field_value\030\003 \001(\005R\017taintField" +
+      "Value:P\n\005authz\022\036.google.protobuf.MethodO" +
+      "ptions\030\207\227\" \001(\0132\030.annotations.Permissions" +
+      "R\005authzBw\n\035com.tcn.cloud.api.annotations" +
+      "B\nAuthzProtoP\001\242\002\003AXX\252\002\013Annotations\312\002\013Ann" +
+      "otations\342\002\027Annotations\\GPBMetadata\352\002\013Ann" +
+      "otations"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -81,7 +83,7 @@ public final class AuthzProto {
     internal_static_annotations_PermissionSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_annotations_PermissionSet_descriptor,
-        new java.lang.String[] { "Permissions", });
+        new java.lang.String[] { "Permissions", "TaintFieldId", "TaintFieldValue", });
     authz.internalInit(descriptor.getExtensions().get(0));
     com.tcn.cloud.api.api.commons.auth.PermsProto.getDescriptor();
     com.google.protobuf.DescriptorProtos.getDescriptor();

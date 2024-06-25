@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.annotations.PermissionSet.class, com.tcn.cloud.api.annotations.PermissionSet.Builder.class);
   }
 
+  private int bitField0_;
   public static final int PERMISSIONS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> permissions_;
@@ -78,6 +79,60 @@ private static final long serialVersionUID = 0L;
     return permissions_converter_.convert(permissions_.get(index));
   }
 
+  public static final int TAINT_FIELD_ID_FIELD_NUMBER = 2;
+  private int taintFieldId_ = 0;
+  /**
+   * <pre>
+   * id of the request message field that will be checked.
+   * </pre>
+   *
+   * <code>optional int32 taint_field_id = 2 [json_name = "taintFieldId"];</code>
+   * @return Whether the taintFieldId field is set.
+   */
+  @java.lang.Override
+  public boolean hasTaintFieldId() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * id of the request message field that will be checked.
+   * </pre>
+   *
+   * <code>optional int32 taint_field_id = 2 [json_name = "taintFieldId"];</code>
+   * @return The taintFieldId.
+   */
+  @java.lang.Override
+  public int getTaintFieldId() {
+    return taintFieldId_;
+  }
+
+  public static final int TAINT_FIELD_VALUE_FIELD_NUMBER = 3;
+  private int taintFieldValue_ = 0;
+  /**
+   * <pre>
+   * value that the request mesage field with id is required to match.
+   * </pre>
+   *
+   * <code>optional int32 taint_field_value = 3 [json_name = "taintFieldValue"];</code>
+   * @return Whether the taintFieldValue field is set.
+   */
+  @java.lang.Override
+  public boolean hasTaintFieldValue() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * value that the request mesage field with id is required to match.
+   * </pre>
+   *
+   * <code>optional int32 taint_field_value = 3 [json_name = "taintFieldValue"];</code>
+   * @return The taintFieldValue.
+   */
+  @java.lang.Override
+  public int getTaintFieldValue() {
+    return taintFieldValue_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -94,6 +149,12 @@ private static final long serialVersionUID = 0L;
                       throws java.io.IOException {
     for (int i = 0; i < permissions_.size(); i++) {
       output.writeEnum(1, permissions_.get(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeInt32(2, taintFieldId_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeInt32(3, taintFieldValue_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -113,6 +174,14 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * permissions_.size();
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(2, taintFieldId_);
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(3, taintFieldValue_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -129,6 +198,16 @@ private static final long serialVersionUID = 0L;
     com.tcn.cloud.api.annotations.PermissionSet other = (com.tcn.cloud.api.annotations.PermissionSet) obj;
 
     if (!permissions_.equals(other.permissions_)) return false;
+    if (hasTaintFieldId() != other.hasTaintFieldId()) return false;
+    if (hasTaintFieldId()) {
+      if (getTaintFieldId()
+          != other.getTaintFieldId()) return false;
+    }
+    if (hasTaintFieldValue() != other.hasTaintFieldValue()) return false;
+    if (hasTaintFieldValue()) {
+      if (getTaintFieldValue()
+          != other.getTaintFieldValue()) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -143,6 +222,14 @@ private static final long serialVersionUID = 0L;
     if (getPermissionsCount() > 0) {
       hash = (37 * hash) + PERMISSIONS_FIELD_NUMBER;
       hash = (53 * hash) + permissions_.hashCode();
+    }
+    if (hasTaintFieldId()) {
+      hash = (37 * hash) + TAINT_FIELD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTaintFieldId();
+    }
+    if (hasTaintFieldValue()) {
+      hash = (37 * hash) + TAINT_FIELD_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getTaintFieldValue();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -277,6 +364,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       permissions_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
+      taintFieldId_ = 0;
+      taintFieldValue_ = 0;
       return this;
     }
 
@@ -319,6 +408,16 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.annotations.PermissionSet result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.taintFieldId_ = taintFieldId_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.taintFieldValue_ = taintFieldValue_;
+        to_bitField0_ |= 0x00000002;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -375,6 +474,12 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.hasTaintFieldId()) {
+        setTaintFieldId(other.getTaintFieldId());
+      }
+      if (other.hasTaintFieldValue()) {
+        setTaintFieldValue(other.getTaintFieldValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -430,6 +535,16 @@ private static final long serialVersionUID = 0L;
               input.popLimit(oldLimit);
               break;
             } // case 10
+            case 16: {
+              taintFieldId_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              taintFieldValue_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -529,6 +644,118 @@ private static final long serialVersionUID = 0L;
     public Builder clearPermissions() {
       permissions_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+
+    private int taintFieldId_ ;
+    /**
+     * <pre>
+     * id of the request message field that will be checked.
+     * </pre>
+     *
+     * <code>optional int32 taint_field_id = 2 [json_name = "taintFieldId"];</code>
+     * @return Whether the taintFieldId field is set.
+     */
+    @java.lang.Override
+    public boolean hasTaintFieldId() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * id of the request message field that will be checked.
+     * </pre>
+     *
+     * <code>optional int32 taint_field_id = 2 [json_name = "taintFieldId"];</code>
+     * @return The taintFieldId.
+     */
+    @java.lang.Override
+    public int getTaintFieldId() {
+      return taintFieldId_;
+    }
+    /**
+     * <pre>
+     * id of the request message field that will be checked.
+     * </pre>
+     *
+     * <code>optional int32 taint_field_id = 2 [json_name = "taintFieldId"];</code>
+     * @param value The taintFieldId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTaintFieldId(int value) {
+
+      taintFieldId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * id of the request message field that will be checked.
+     * </pre>
+     *
+     * <code>optional int32 taint_field_id = 2 [json_name = "taintFieldId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTaintFieldId() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      taintFieldId_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int taintFieldValue_ ;
+    /**
+     * <pre>
+     * value that the request mesage field with id is required to match.
+     * </pre>
+     *
+     * <code>optional int32 taint_field_value = 3 [json_name = "taintFieldValue"];</code>
+     * @return Whether the taintFieldValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasTaintFieldValue() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * value that the request mesage field with id is required to match.
+     * </pre>
+     *
+     * <code>optional int32 taint_field_value = 3 [json_name = "taintFieldValue"];</code>
+     * @return The taintFieldValue.
+     */
+    @java.lang.Override
+    public int getTaintFieldValue() {
+      return taintFieldValue_;
+    }
+    /**
+     * <pre>
+     * value that the request mesage field with id is required to match.
+     * </pre>
+     *
+     * <code>optional int32 taint_field_value = 3 [json_name = "taintFieldValue"];</code>
+     * @param value The taintFieldValue to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTaintFieldValue(int value) {
+
+      taintFieldValue_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * value that the request mesage field with id is required to match.
+     * </pre>
+     *
+     * <code>optional int32 taint_field_value = 3 [json_name = "taintFieldValue"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTaintFieldValue() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      taintFieldValue_ = 0;
       onChanged();
       return this;
     }
