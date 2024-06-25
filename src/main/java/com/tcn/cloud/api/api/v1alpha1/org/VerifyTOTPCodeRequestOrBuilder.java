@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface RegisterTOTPRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.RegisterTOTPRequest)
+public interface VerifyTOTPCodeRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.VerifyTOTPCodeRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

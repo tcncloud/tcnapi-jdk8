@@ -35,7 +35,7 @@ public final class ServiceProto {
       "ons.proto\032\"api/v1alpha1/org/preferences." +
       "proto\032\035api/v1alpha1/org/trusts.proto\032\033ap" +
       "i/v1alpha1/org/user.proto\032\034google/api/an" +
-      "notations.proto2\377\326\002\n\003Org\022\236\001\n\022CreateOrgan" +
+      "notations.proto2\207\327\002\n\003Org\022\236\001\n\022CreateOrgan" +
       "ization\022+.api.v1alpha1.org.CreateOrganiz" +
       "ationRequest\032,.api.v1alpha1.org.CreateOr" +
       "ganizationResponse\"-\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\035\"\030/a" +
@@ -1080,64 +1080,64 @@ public final class ServiceProto {
       "\022+.api.v1alpha1.org.GenerateTOTPSecretRe" +
       "quest\032,.api.v1alpha1.org.GenerateTOTPSec" +
       "retResponse\"9\272\270\221\002\004\n\002\010y\202\323\344\223\002*\"%/api/v1alp" +
-      "ha1/user/generatetotpsecret:\001*\022\222\001\n\014Regis" +
-      "terTOTP\022%.api.v1alpha1.org.RegisterTOTPR" +
-      "equest\032&.api.v1alpha1.org.RegisterTOTPRe" +
-      "sponse\"3\272\270\221\002\004\n\002\010y\202\323\344\223\002$\"\037/api/v1alpha1/u" +
-      "ser/registertotp:\001*\022\275\001\n\023CreateBusinessHo" +
-      "urs\022,.api.v1alpha1.org.CreateBusinessHou" +
-      "rsRequest\032-.api.v1alpha1.org.CreateBusin" +
+      "ha1/user/generatetotpsecret:\001*\022\232\001\n\016Verif" +
+      "yTOTPCode\022\'.api.v1alpha1.org.VerifyTOTPC" +
+      "odeRequest\032(.api.v1alpha1.org.VerifyTOTP" +
+      "CodeResponse\"5\272\270\221\002\004\n\002\010y\202\323\344\223\002&\"!/api/v1al" +
+      "pha1/user/verifytotpcode:\001*\022\275\001\n\023CreateBu" +
+      "sinessHours\022,.api.v1alpha1.org.CreateBus" +
+      "inessHoursRequest\032-.api.v1alpha1.org.Cre" +
+      "ateBusinessHoursResponse\"I\210\002\001\272\270\221\002\004\n\002\010d\202\323" +
+      "\344\223\0027\"2/api/v1alpha1/org/preferences/busi" +
+      "nesshours/create:\001*\022\275\001\n\023UpdateBusinessHo" +
+      "urs\022,.api.v1alpha1.org.UpdateBusinessHou" +
+      "rsRequest\032-.api.v1alpha1.org.UpdateBusin" +
       "essHoursResponse\"I\210\002\001\272\270\221\002\004\n\002\010d\202\323\344\223\0027\"2/a" +
       "pi/v1alpha1/org/preferences/businesshour" +
-      "s/create:\001*\022\275\001\n\023UpdateBusinessHours\022,.ap" +
-      "i.v1alpha1.org.UpdateBusinessHoursReques" +
-      "t\032-.api.v1alpha1.org.UpdateBusinessHours" +
-      "Response\"I\210\002\001\272\270\221\002\004\n\002\010d\202\323\344\223\0027\"2/api/v1alp" +
-      "ha1/org/preferences/businesshours/update" +
-      ":\001*\022\322\001\n\034AddGroupedUserIPRestrictions\0225.a" +
-      "pi.v1alpha1.org.AddGroupedUserIPRestrict" +
-      "ionsRequest\0326.api.v1alpha1.org.AddGroupe" +
-      "dUserIPRestrictionsResponse\"C\272\270\221\002\004\n\002\010w\202\323" +
-      "\344\223\0024\"//api/v1alpha1/user/addgroupeduseri" +
-      "prestrictions:\001*\022\336\001\n\037RemoveGroupedUserIP" +
-      "Restrictions\0228.api.v1alpha1.org.RemoveGr" +
-      "oupedUserIPRestrictionsRequest\0329.api.v1a" +
-      "lpha1.org.RemoveGroupedUserIPRestriction" +
-      "sResponse\"F\272\270\221\002\004\n\002\010w\202\323\344\223\0027\"2/api/v1alpha" +
-      "1/user/removegroupeduseriprestrictions:\001" +
-      "*\022\256\001\n\023ListUsersAllowedIps\022,.api.v1alpha1" +
-      ".org.ListUsersAllowedIpsRequest\032-.api.v1" +
-      "alpha1.org.ListUsersAllowedIpsResponse\":" +
-      "\272\270\221\002\004\n\002\010e\202\323\344\223\002+\"&/api/v1alpha1/user/list" +
-      "UsersAllowedIps:\001*\022\271\001\n\026ListResponseEvalu" +
-      "ators\022/.api.v1alpha1.org.ListResponseEva" +
-      "luatorsRequest\0320.api.v1alpha1.org.ListRe" +
-      "sponseEvaluatorsResponse\"<\272\270\221\002\004\n\002\010e\202\323\344\223\002" +
-      "-\"(/api/v1alpha1/org/listresponseevaluat" +
-      "ors:\001*\022\261\001\n\024GetResponseEvaluator\022-.api.v1" +
-      "alpha1.org.GetResponseEvaluatorRequest\032." +
-      ".api.v1alpha1.org.GetResponseEvaluatorRe" +
-      "sponse\":\272\270\221\002\004\n\002\010e\202\323\344\223\002+\"&/api/v1alpha1/o" +
-      "rg/getresponseevaluator:\001*\022\275\001\n\027CreateRes" +
-      "ponseEvaluator\0220.api.v1alpha1.org.Create" +
+      "s/update:\001*\022\322\001\n\034AddGroupedUserIPRestrict" +
+      "ions\0225.api.v1alpha1.org.AddGroupedUserIP" +
+      "RestrictionsRequest\0326.api.v1alpha1.org.A" +
+      "ddGroupedUserIPRestrictionsResponse\"C\272\270\221" +
+      "\002\004\n\002\010w\202\323\344\223\0024\"//api/v1alpha1/user/addgrou" +
+      "peduseriprestrictions:\001*\022\336\001\n\037RemoveGroup" +
+      "edUserIPRestrictions\0228.api.v1alpha1.org." +
+      "RemoveGroupedUserIPRestrictionsRequest\0329" +
+      ".api.v1alpha1.org.RemoveGroupedUserIPRes" +
+      "trictionsResponse\"F\272\270\221\002\004\n\002\010w\202\323\344\223\0027\"2/api" +
+      "/v1alpha1/user/removegroupeduseriprestri" +
+      "ctions:\001*\022\256\001\n\023ListUsersAllowedIps\022,.api." +
+      "v1alpha1.org.ListUsersAllowedIpsRequest\032" +
+      "-.api.v1alpha1.org.ListUsersAllowedIpsRe" +
+      "sponse\":\272\270\221\002\004\n\002\010e\202\323\344\223\002+\"&/api/v1alpha1/u" +
+      "ser/listUsersAllowedIps:\001*\022\271\001\n\026ListRespo" +
+      "nseEvaluators\022/.api.v1alpha1.org.ListRes" +
+      "ponseEvaluatorsRequest\0320.api.v1alpha1.or" +
+      "g.ListResponseEvaluatorsResponse\"<\272\270\221\002\004\n" +
+      "\002\010e\202\323\344\223\002-\"(/api/v1alpha1/org/listrespons" +
+      "eevaluators:\001*\022\261\001\n\024GetResponseEvaluator\022" +
+      "-.api.v1alpha1.org.GetResponseEvaluatorR" +
+      "equest\032..api.v1alpha1.org.GetResponseEva" +
+      "luatorResponse\":\272\270\221\002\004\n\002\010e\202\323\344\223\002+\"&/api/v1" +
+      "alpha1/org/getresponseevaluator:\001*\022\275\001\n\027C" +
+      "reateResponseEvaluator\0220.api.v1alpha1.or" +
+      "g.CreateResponseEvaluatorRequest\0321.api.v" +
+      "1alpha1.org.CreateResponseEvaluatorRespo" +
+      "nse\"=\272\270\221\002\004\n\002\010d\202\323\344\223\002.\")/api/v1alpha1/org/" +
+      "createresponseevaluator:\001*\022\275\001\n\027UpdateRes" +
+      "ponseEvaluator\0220.api.v1alpha1.org.Update" +
       "ResponseEvaluatorRequest\0321.api.v1alpha1." +
-      "org.CreateResponseEvaluatorResponse\"=\272\270\221" +
-      "\002\004\n\002\010d\202\323\344\223\002.\")/api/v1alpha1/org/createre" +
-      "sponseevaluator:\001*\022\275\001\n\027UpdateResponseEva" +
-      "luator\0220.api.v1alpha1.org.UpdateResponse" +
-      "EvaluatorRequest\0321.api.v1alpha1.org.Upda" +
+      "org.UpdateResponseEvaluatorResponse\"=\272\270\221" +
+      "\002\004\n\002\010d\202\323\344\223\002.\")/api/v1alpha1/org/updatere" +
+      "sponseevaluator:\001*\022\275\001\n\027DeleteResponseEva" +
+      "luator\0220.api.v1alpha1.org.DeleteResponse" +
+      "EvaluatorRequest\0321.api.v1alpha1.org.Dele" +
       "teResponseEvaluatorResponse\"=\272\270\221\002\004\n\002\010d\202\323" +
-      "\344\223\002.\")/api/v1alpha1/org/updateresponseev" +
-      "aluator:\001*\022\275\001\n\027DeleteResponseEvaluator\0220" +
-      ".api.v1alpha1.org.DeleteResponseEvaluato" +
-      "rRequest\0321.api.v1alpha1.org.DeleteRespon" +
-      "seEvaluatorResponse\"=\272\270\221\002\004\n\002\010d\202\323\344\223\002.\")/a" +
-      "pi/v1alpha1/org/deleteresponseevaluator:" +
-      "\001*B\224\001\n\"com.tcn.cloud.api.api.v1alpha1.or" +
-      "gB\014ServiceProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.O" +
-      "rg\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org" +
-      "\\GPBMetadata\352\002\022Api::V1alpha1::Orgb\006proto" +
-      "3"
+      "\344\223\002.\")/api/v1alpha1/org/deleteresponseev" +
+      "aluator:\001*B\224\001\n\"com.tcn.cloud.api.api.v1a" +
+      "lpha1.orgB\014ServiceProtoP\001\242\002\003AVO\252\002\020Api.V1" +
+      "alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1al" +
+      "pha1\\Org\\GPBMetadata\352\002\022Api::V1alpha1::Or" +
+      "gb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

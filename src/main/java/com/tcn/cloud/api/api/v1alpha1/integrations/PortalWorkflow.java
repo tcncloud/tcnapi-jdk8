@@ -50,8 +50,6 @@ private static final long serialVersionUID = 0L;
   protected com.google.protobuf.MapField internalGetMapField(
       int number) {
     switch (number) {
-      case 5:
-        return internalGetOpts();
       case 11:
         return internalGetDemoResults();
       default:
@@ -225,101 +223,6 @@ private static final long serialVersionUID = 0L;
   public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getFormFieldsOrBuilder(
       int index) {
     return formFields_.get(index);
-  }
-
-  public static final int OPTS_FIELD_NUMBER = 5;
-  private static final class OptsDefaultEntryHolder {
-    static final com.google.protobuf.MapEntry<
-        java.lang.String, java.lang.String> defaultEntry =
-            com.google.protobuf.MapEntry
-            .<java.lang.String, java.lang.String>newDefaultInstance(
-                com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_PortalWorkflow_OptsEntry_descriptor, 
-                com.google.protobuf.WireFormat.FieldType.STRING,
-                "",
-                com.google.protobuf.WireFormat.FieldType.STRING,
-                "");
-  }
-  @SuppressWarnings("serial")
-  private com.google.protobuf.MapField<
-      java.lang.String, java.lang.String> opts_;
-  private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-  internalGetOpts() {
-    if (opts_ == null) {
-      return com.google.protobuf.MapField.emptyMapField(
-          OptsDefaultEntryHolder.defaultEntry);
-    }
-    return opts_;
-  }
-  public int getOptsCount() {
-    return internalGetOpts().getMap().size();
-  }
-  /**
-   * <pre>
-   * the data that controls optional functionality for some flows.
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; opts = 5 [json_name = "opts"];</code>
-   */
-  @java.lang.Override
-  public boolean containsOpts(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    return internalGetOpts().getMap().containsKey(key);
-  }
-  /**
-   * Use {@link #getOptsMap()} instead.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated
-  public java.util.Map<java.lang.String, java.lang.String> getOpts() {
-    return getOptsMap();
-  }
-  /**
-   * <pre>
-   * the data that controls optional functionality for some flows.
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; opts = 5 [json_name = "opts"];</code>
-   */
-  @java.lang.Override
-  public java.util.Map<java.lang.String, java.lang.String> getOptsMap() {
-    return internalGetOpts().getMap();
-  }
-  /**
-   * <pre>
-   * the data that controls optional functionality for some flows.
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; opts = 5 [json_name = "opts"];</code>
-   */
-  @java.lang.Override
-  public /* nullable */
-java.lang.String getOptsOrDefault(
-      java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, java.lang.String> map =
-        internalGetOpts().getMap();
-    return map.containsKey(key) ? map.get(key) : defaultValue;
-  }
-  /**
-   * <pre>
-   * the data that controls optional functionality for some flows.
-   * </pre>
-   *
-   * <code>map&lt;string, string&gt; opts = 5 [json_name = "opts"];</code>
-   */
-  @java.lang.Override
-  public java.lang.String getOptsOrThrow(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, java.lang.String> map =
-        internalGetOpts().getMap();
-    if (!map.containsKey(key)) {
-      throw new java.lang.IllegalArgumentException();
-    }
-    return map.get(key);
   }
 
   public static final int HEADER_TEXT_FIELD_NUMBER = 6;
@@ -647,12 +550,6 @@ java.lang.String defaultValue) {
     for (int i = 0; i < formFields_.size(); i++) {
       output.writeMessage(4, formFields_.get(i));
     }
-    com.google.protobuf.GeneratedMessageV3
-      .serializeStringMapTo(
-        output,
-        internalGetOpts(),
-        OptsDefaultEntryHolder.defaultEntry,
-        5);
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerText_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, headerText_);
     }
@@ -697,16 +594,6 @@ java.lang.String defaultValue) {
     for (int i = 0; i < formFields_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, formFields_.get(i));
-    }
-    for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-         : internalGetOpts().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-      opts__ = OptsDefaultEntryHolder.defaultEntry.newBuilderForType()
-          .setKey(entry.getKey())
-          .setValue(entry.getValue())
-          .build();
-      size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, opts__);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerText_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, headerText_);
@@ -763,8 +650,6 @@ java.lang.String defaultValue) {
     }
     if (!getFormFieldsList()
         .equals(other.getFormFieldsList())) return false;
-    if (!internalGetOpts().equals(
-        other.internalGetOpts())) return false;
     if (!getHeaderText()
         .equals(other.getHeaderText())) return false;
     if (!getFooterText()
@@ -801,10 +686,6 @@ java.lang.String defaultValue) {
     if (getFormFieldsCount() > 0) {
       hash = (37 * hash) + FORM_FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + getFormFieldsList().hashCode();
-    }
-    if (!internalGetOpts().getMap().isEmpty()) {
-      hash = (37 * hash) + OPTS_FIELD_NUMBER;
-      hash = (53 * hash) + internalGetOpts().hashCode();
     }
     hash = (37 * hash) + HEADER_TEXT_FIELD_NUMBER;
     hash = (53 * hash) + getHeaderText().hashCode();
@@ -948,8 +829,6 @@ java.lang.String defaultValue) {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 5:
-          return internalGetOpts();
         case 11:
           return internalGetDemoResults();
         default:
@@ -961,8 +840,6 @@ java.lang.String defaultValue) {
     protected com.google.protobuf.MapField internalGetMutableMapField(
         int number) {
       switch (number) {
-        case 5:
-          return internalGetMutableOpts();
         case 11:
           return internalGetMutableDemoResults();
         default:
@@ -1011,7 +888,6 @@ java.lang.String defaultValue) {
         formFieldsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
-      internalGetMutableOpts().clear();
       headerText_ = "";
       footerText_ = "";
       demoMode_ = false;
@@ -1021,14 +897,14 @@ java.lang.String defaultValue) {
         demoFailConditions_ = null;
         demoFailConditionsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000040);
       if (demoPassConditionsBuilder_ == null) {
         demoPassConditions_ = java.util.Collections.emptyList();
       } else {
         demoPassConditions_ = null;
         demoPassConditionsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000080);
       internalGetMutableDemoResults().clear();
       workflowDefinitionName_ = "";
       return this;
@@ -1083,18 +959,18 @@ java.lang.String defaultValue) {
         result.formFields_ = formFieldsBuilder_.build();
       }
       if (demoFailConditionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           demoFailConditions_ = java.util.Collections.unmodifiableList(demoFailConditions_);
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.demoFailConditions_ = demoFailConditions_;
       } else {
         result.demoFailConditions_ = demoFailConditionsBuilder_.build();
       }
       if (demoPassConditionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
+        if (((bitField0_ & 0x00000080) != 0)) {
           demoPassConditions_ = java.util.Collections.unmodifiableList(demoPassConditions_);
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.demoPassConditions_ = demoPassConditions_;
       } else {
@@ -1110,23 +986,19 @@ java.lang.String defaultValue) {
             : templateBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.opts_ = internalGetOpts();
-        result.opts_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.headerText_ = headerText_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.footerText_ = footerText_;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.demoMode_ = demoMode_;
       }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.demoResults_ = internalGetDemoResults();
         result.demoResults_.makeImmutable();
       }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.workflowDefinitionName_ = workflowDefinitionName_;
       }
     }
@@ -1230,17 +1102,14 @@ java.lang.String defaultValue) {
           }
         }
       }
-      internalGetMutableOpts().mergeFrom(
-          other.internalGetOpts());
-      bitField0_ |= 0x00000008;
       if (!other.getHeaderText().isEmpty()) {
         headerText_ = other.headerText_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getFooterText().isEmpty()) {
         footerText_ = other.footerText_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.getDemoMode() != false) {
@@ -1250,7 +1119,7 @@ java.lang.String defaultValue) {
         if (!other.demoFailConditions_.isEmpty()) {
           if (demoFailConditions_.isEmpty()) {
             demoFailConditions_ = other.demoFailConditions_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureDemoFailConditionsIsMutable();
             demoFailConditions_.addAll(other.demoFailConditions_);
@@ -1263,7 +1132,7 @@ java.lang.String defaultValue) {
             demoFailConditionsBuilder_.dispose();
             demoFailConditionsBuilder_ = null;
             demoFailConditions_ = other.demoFailConditions_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000040);
             demoFailConditionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDemoFailConditionsFieldBuilder() : null;
@@ -1276,7 +1145,7 @@ java.lang.String defaultValue) {
         if (!other.demoPassConditions_.isEmpty()) {
           if (demoPassConditions_.isEmpty()) {
             demoPassConditions_ = other.demoPassConditions_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureDemoPassConditionsIsMutable();
             demoPassConditions_.addAll(other.demoPassConditions_);
@@ -1289,7 +1158,7 @@ java.lang.String defaultValue) {
             demoPassConditionsBuilder_.dispose();
             demoPassConditionsBuilder_ = null;
             demoPassConditions_ = other.demoPassConditions_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000080);
             demoPassConditionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDemoPassConditionsFieldBuilder() : null;
@@ -1300,10 +1169,10 @@ java.lang.String defaultValue) {
       }
       internalGetMutableDemoResults().mergeFrom(
           other.internalGetDemoResults());
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000100;
       if (!other.getWorkflowDefinitionName().isEmpty()) {
         workflowDefinitionName_ = other.workflowDefinitionName_;
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -1365,28 +1234,19 @@ java.lang.String defaultValue) {
               }
               break;
             } // case 34
-            case 42: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              opts__ = input.readMessage(
-                  OptsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableOpts().getMutableMap().put(
-                  opts__.getKey(), opts__.getValue());
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 42
             case 50: {
               headerText_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               break;
             } // case 50
             case 58: {
               footerText_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000010;
               break;
             } // case 58
             case 64: {
               demoMode_ = input.readBool();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000020;
               break;
             } // case 64
             case 74: {
@@ -1421,12 +1281,12 @@ java.lang.String defaultValue) {
                   DemoResultsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               internalGetMutableDemoResults().getMutableMap().put(
                   demoResults__.getKey(), demoResults__.getValue());
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000100;
               break;
             } // case 90
             case 98: {
               workflowDefinitionName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000200;
               break;
             } // case 98
             default: {
@@ -2225,161 +2085,6 @@ java.lang.String defaultValue) {
       return formFieldsBuilder_;
     }
 
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> opts_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetOpts() {
-      if (opts_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            OptsDefaultEntryHolder.defaultEntry);
-      }
-      return opts_;
-    }
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableOpts() {
-      if (opts_ == null) {
-        opts_ = com.google.protobuf.MapField.newMapField(
-            OptsDefaultEntryHolder.defaultEntry);
-      }
-      if (!opts_.isMutable()) {
-        opts_ = opts_.copy();
-      }
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return opts_;
-    }
-    public int getOptsCount() {
-      return internalGetOpts().getMap().size();
-    }
-    /**
-     * <pre>
-     * the data that controls optional functionality for some flows.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; opts = 5 [json_name = "opts"];</code>
-     */
-    @java.lang.Override
-    public boolean containsOpts(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetOpts().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getOptsMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getOpts() {
-      return getOptsMap();
-    }
-    /**
-     * <pre>
-     * the data that controls optional functionality for some flows.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; opts = 5 [json_name = "opts"];</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.String, java.lang.String> getOptsMap() {
-      return internalGetOpts().getMap();
-    }
-    /**
-     * <pre>
-     * the data that controls optional functionality for some flows.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; opts = 5 [json_name = "opts"];</code>
-     */
-    @java.lang.Override
-    public /* nullable */
-java.lang.String getOptsOrDefault(
-        java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetOpts().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <pre>
-     * the data that controls optional functionality for some flows.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; opts = 5 [json_name = "opts"];</code>
-     */
-    @java.lang.Override
-    public java.lang.String getOptsOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetOpts().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-    public Builder clearOpts() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      internalGetMutableOpts().getMutableMap()
-          .clear();
-      return this;
-    }
-    /**
-     * <pre>
-     * the data that controls optional functionality for some flows.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; opts = 5 [json_name = "opts"];</code>
-     */
-    public Builder removeOpts(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      internalGetMutableOpts().getMutableMap()
-          .remove(key);
-      return this;
-    }
-    /**
-     * Use alternate mutation accessors instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String>
-        getMutableOpts() {
-      bitField0_ |= 0x00000008;
-      return internalGetMutableOpts().getMutableMap();
-    }
-    /**
-     * <pre>
-     * the data that controls optional functionality for some flows.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; opts = 5 [json_name = "opts"];</code>
-     */
-    public Builder putOpts(
-        java.lang.String key,
-        java.lang.String value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
-      internalGetMutableOpts().getMutableMap()
-          .put(key, value);
-      bitField0_ |= 0x00000008;
-      return this;
-    }
-    /**
-     * <pre>
-     * the data that controls optional functionality for some flows.
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; opts = 5 [json_name = "opts"];</code>
-     */
-    public Builder putAllOpts(
-        java.util.Map<java.lang.String, java.lang.String> values) {
-      internalGetMutableOpts().getMutableMap()
-          .putAll(values);
-      bitField0_ |= 0x00000008;
-      return this;
-    }
-
     private java.lang.Object headerText_ = "";
     /**
      * <pre>
@@ -2435,7 +2140,7 @@ java.lang.String defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       headerText_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2449,7 +2154,7 @@ java.lang.String defaultValue) {
      */
     public Builder clearHeaderText() {
       headerText_ = getDefaultInstance().getHeaderText();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -2467,7 +2172,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       headerText_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2515,7 +2220,7 @@ java.lang.String defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       footerText_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2525,7 +2230,7 @@ java.lang.String defaultValue) {
      */
     public Builder clearFooterText() {
       footerText_ = getDefaultInstance().getFooterText();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -2539,7 +2244,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       footerText_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2571,7 +2276,7 @@ java.lang.String defaultValue) {
     public Builder setDemoMode(boolean value) {
 
       demoMode_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2585,7 +2290,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearDemoMode() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000020);
       demoMode_ = false;
       onChanged();
       return this;
@@ -2594,9 +2299,9 @@ java.lang.String defaultValue) {
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Condition> demoFailConditions_ =
       java.util.Collections.emptyList();
     private void ensureDemoFailConditionsIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
+      if (!((bitField0_ & 0x00000040) != 0)) {
         demoFailConditions_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.Condition>(demoFailConditions_);
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000040;
        }
     }
 
@@ -2746,7 +2451,7 @@ java.lang.String defaultValue) {
     public Builder clearDemoFailConditions() {
       if (demoFailConditionsBuilder_ == null) {
         demoFailConditions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
       } else {
         demoFailConditionsBuilder_.clear();
@@ -2823,7 +2528,7 @@ java.lang.String defaultValue) {
         demoFailConditionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.integrations.Condition, com.tcn.cloud.api.api.v1alpha1.integrations.Condition.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.ConditionOrBuilder>(
                 demoFailConditions_,
-                ((bitField0_ & 0x00000080) != 0),
+                ((bitField0_ & 0x00000040) != 0),
                 getParentForChildren(),
                 isClean());
         demoFailConditions_ = null;
@@ -2834,9 +2539,9 @@ java.lang.String defaultValue) {
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Condition> demoPassConditions_ =
       java.util.Collections.emptyList();
     private void ensureDemoPassConditionsIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!((bitField0_ & 0x00000080) != 0)) {
         demoPassConditions_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.Condition>(demoPassConditions_);
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000080;
        }
     }
 
@@ -2986,7 +2691,7 @@ java.lang.String defaultValue) {
     public Builder clearDemoPassConditions() {
       if (demoPassConditionsBuilder_ == null) {
         demoPassConditions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
       } else {
         demoPassConditionsBuilder_.clear();
@@ -3063,7 +2768,7 @@ java.lang.String defaultValue) {
         demoPassConditionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.integrations.Condition, com.tcn.cloud.api.api.v1alpha1.integrations.Condition.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.ConditionOrBuilder>(
                 demoPassConditions_,
-                ((bitField0_ & 0x00000100) != 0),
+                ((bitField0_ & 0x00000080) != 0),
                 getParentForChildren(),
                 isClean());
         demoPassConditions_ = null;
@@ -3090,7 +2795,7 @@ java.lang.String defaultValue) {
       if (!demoResults_.isMutable()) {
         demoResults_ = demoResults_.copy();
       }
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000100;
       onChanged();
       return demoResults_;
     }
@@ -3150,7 +2855,7 @@ java.lang.String defaultValue) {
       return map.get(key);
     }
     public Builder clearDemoResults() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000100);
       internalGetMutableDemoResults().getMutableMap()
           .clear();
       return this;
@@ -3171,7 +2876,7 @@ java.lang.String defaultValue) {
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
         getMutableDemoResults() {
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000100;
       return internalGetMutableDemoResults().getMutableMap();
     }
     /**
@@ -3184,7 +2889,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableDemoResults().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000100;
       return this;
     }
     /**
@@ -3194,7 +2899,7 @@ java.lang.String defaultValue) {
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableDemoResults().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000100;
       return this;
     }
 
@@ -3241,7 +2946,7 @@ java.lang.String defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       workflowDefinitionName_ = value;
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -3251,7 +2956,7 @@ java.lang.String defaultValue) {
      */
     public Builder clearWorkflowDefinitionName() {
       workflowDefinitionName_ = getDefaultInstance().getWorkflowDefinitionName();
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -3265,7 +2970,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       workflowDefinitionName_ = value;
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }

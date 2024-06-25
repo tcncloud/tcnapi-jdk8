@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface RegisterTOTPResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.RegisterTOTPResponse)
+public interface VerifyTOTPCodeResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.VerifyTOTPCodeResponse)
     com.google.protobuf.MessageOrBuilder {
 }

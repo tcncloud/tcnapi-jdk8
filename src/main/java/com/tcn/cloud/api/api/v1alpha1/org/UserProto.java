@@ -515,15 +515,15 @@ public final class UserProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_GenerateTOTPSecretResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_RegisterTOTPRequest_descriptor;
+    internal_static_api_v1alpha1_org_VerifyTOTPCodeRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_RegisterTOTPRequest_fieldAccessorTable;
+      internal_static_api_v1alpha1_org_VerifyTOTPCodeRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_RegisterTOTPResponse_descriptor;
+    internal_static_api_v1alpha1_org_VerifyTOTPCodeResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_RegisterTOTPResponse_fieldAccessorTable;
+      internal_static_api_v1alpha1_org_VerifyTOTPCodeResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsRequest_descriptor;
   static final 
@@ -975,28 +975,28 @@ public final class UserProto {
       "\004 \001(\010R\013totpEnabled\"\033\n\031GenerateTOTPSecret",
       "Request\"[\n\032GenerateTOTPSecretResponse\022\035\n" +
       "\nsecret_key\030\001 \001(\tR\tsecretKey\022\036\n\013qr_code_" +
-      "url\030\002 \001(\tR\tqrCodeUrl\")\n\023RegisterTOTPRequ" +
-      "est\022\022\n\004code\030\001 \001(\tR\004code\"\026\n\024RegisterTOTPR" +
-      "esponse\"R\n#AddGroupedUserIPRestrictionsR" +
-      "equest\022\031\n\010user_ids\030\001 \003(\tR\007userIds\022\020\n\003ips" +
-      "\030\002 \003(\tR\003ips\"&\n$AddGroupedUserIPRestricti" +
-      "onsResponse\"U\n&RemoveGroupedUserIPRestri" +
-      "ctionsRequest\022\031\n\010user_ids\030\001 \003(\tR\007userIds" +
-      "\022\020\n\003ips\030\002 \003(\tR\003ips\")\n\'RemoveGroupedUserI" +
-      "PRestrictionsResponse\"7\n\032ListUsersAllowe" +
-      "dIpsRequest\022\031\n\010user_ids\030\001 \003(\tR\007userIds\"\264" +
-      "\002\n\033ListUsersAllowedIpsResponse\022u\n\024user_a" +
-      "llowed_ips_map\030\001 \003(\0132D.api.v1alpha1.org." +
-      "ListUsersAllowedIpsResponse.UserAllowedI" +
-      "psMapEntryR\021userAllowedIpsMap\032~\n\026UserAll" +
-      "owedIpsMapEntry\022\020\n\003key\030\001 \001(\tR\003key\022N\n\005val" +
-      "ue\030\002 \001(\01328.api.v1alpha1.org.ListUsersAll" +
-      "owedIpsResponse.AllowedIpsR\005value:\0028\001\032\036\n" +
-      "\nAllowedIps\022\020\n\003ips\030\001 \003(\tR\003ipsB\221\001\n\"com.tc" +
-      "n.cloud.api.api.v1alpha1.orgB\tUserProtoP" +
-      "\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha" +
-      "1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetadata\352\002\022A" +
-      "pi::V1alpha1::Orgb\006proto3"
+      "url\030\002 \001(\tR\tqrCodeUrl\"+\n\025VerifyTOTPCodeRe" +
+      "quest\022\022\n\004code\030\001 \001(\tR\004code\"\030\n\026VerifyTOTPC" +
+      "odeResponse\"R\n#AddGroupedUserIPRestricti" +
+      "onsRequest\022\031\n\010user_ids\030\001 \003(\tR\007userIds\022\020\n" +
+      "\003ips\030\002 \003(\tR\003ips\"&\n$AddGroupedUserIPRestr" +
+      "ictionsResponse\"U\n&RemoveGroupedUserIPRe" +
+      "strictionsRequest\022\031\n\010user_ids\030\001 \003(\tR\007use" +
+      "rIds\022\020\n\003ips\030\002 \003(\tR\003ips\")\n\'RemoveGroupedU" +
+      "serIPRestrictionsResponse\"7\n\032ListUsersAl" +
+      "lowedIpsRequest\022\031\n\010user_ids\030\001 \003(\tR\007userI" +
+      "ds\"\264\002\n\033ListUsersAllowedIpsResponse\022u\n\024us" +
+      "er_allowed_ips_map\030\001 \003(\0132D.api.v1alpha1." +
+      "org.ListUsersAllowedIpsResponse.UserAllo" +
+      "wedIpsMapEntryR\021userAllowedIpsMap\032~\n\026Use" +
+      "rAllowedIpsMapEntry\022\020\n\003key\030\001 \001(\tR\003key\022N\n" +
+      "\005value\030\002 \001(\01328.api.v1alpha1.org.ListUser" +
+      "sAllowedIpsResponse.AllowedIpsR\005value:\0028" +
+      "\001\032\036\n\nAllowedIps\022\020\n\003ips\030\001 \003(\tR\003ipsB\221\001\n\"co" +
+      "m.tcn.cloud.api.api.v1alpha1.orgB\tUserPr" +
+      "otoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1a" +
+      "lpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetadata" +
+      "\352\002\022Api::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1612,17 +1612,17 @@ public final class UserProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GenerateTOTPSecretResponse_descriptor,
         new java.lang.String[] { "SecretKey", "QrCodeUrl", });
-    internal_static_api_v1alpha1_org_RegisterTOTPRequest_descriptor =
+    internal_static_api_v1alpha1_org_VerifyTOTPCodeRequest_descriptor =
       getDescriptor().getMessageTypes().get(84);
-    internal_static_api_v1alpha1_org_RegisterTOTPRequest_fieldAccessorTable = new
+    internal_static_api_v1alpha1_org_VerifyTOTPCodeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_RegisterTOTPRequest_descriptor,
+        internal_static_api_v1alpha1_org_VerifyTOTPCodeRequest_descriptor,
         new java.lang.String[] { "Code", });
-    internal_static_api_v1alpha1_org_RegisterTOTPResponse_descriptor =
+    internal_static_api_v1alpha1_org_VerifyTOTPCodeResponse_descriptor =
       getDescriptor().getMessageTypes().get(85);
-    internal_static_api_v1alpha1_org_RegisterTOTPResponse_fieldAccessorTable = new
+    internal_static_api_v1alpha1_org_VerifyTOTPCodeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_RegisterTOTPResponse_descriptor,
+        internal_static_api_v1alpha1_org_VerifyTOTPCodeResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_AddGroupedUserIPRestrictionsRequest_descriptor =
       getDescriptor().getMessageTypes().get(86);

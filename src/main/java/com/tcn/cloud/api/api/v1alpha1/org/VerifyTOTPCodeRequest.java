@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 
 /**
  * <pre>
- * RegisterTOTPRequest is the request message for the RegisterTOTP rpc.
+ * VerifyTOTPCodeRequest is the request message for the VerifyTOTPCode rpc.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.org.RegisterTOTPRequest}
+ * Protobuf type {@code api.v1alpha1.org.VerifyTOTPCodeRequest}
  */
-public final class RegisterTOTPRequest extends
+public final class VerifyTOTPCodeRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.RegisterTOTPRequest)
-    RegisterTOTPRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.org.VerifyTOTPCodeRequest)
+    VerifyTOTPCodeRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use RegisterTOTPRequest.newBuilder() to construct.
-  private RegisterTOTPRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use VerifyTOTPCodeRequest.newBuilder() to construct.
+  private VerifyTOTPCodeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private RegisterTOTPRequest() {
+  private VerifyTOTPCodeRequest() {
     code_ = "";
   }
 
@@ -27,20 +27,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new RegisterTOTPRequest();
+    return new VerifyTOTPCodeRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_RegisterTOTPRequest_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_VerifyTOTPCodeRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_RegisterTOTPRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_VerifyTOTPCodeRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest.class, com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest.class, com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest.Builder.class);
   }
 
   public static final int CODE_FIELD_NUMBER = 1;
@@ -129,10 +129,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest other = (com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest) obj;
+    com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest other = (com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest) obj;
 
     if (!getCode()
         .equals(other.getCode())) return false;
@@ -154,44 +154,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -199,26 +199,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -231,7 +231,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -248,29 +248,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * RegisterTOTPRequest is the request message for the RegisterTOTP rpc.
+   * VerifyTOTPCodeRequest is the request message for the VerifyTOTPCode rpc.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.org.RegisterTOTPRequest}
+   * Protobuf type {@code api.v1alpha1.org.VerifyTOTPCodeRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.RegisterTOTPRequest)
-      com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.VerifyTOTPCodeRequest)
+      com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_RegisterTOTPRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_VerifyTOTPCodeRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_RegisterTOTPRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_VerifyTOTPCodeRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest.class, com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest.class, com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest.newBuilder()
     private Builder() {
 
     }
@@ -291,17 +291,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_RegisterTOTPRequest_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_VerifyTOTPCodeRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest build() {
-      com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -309,14 +309,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest result = new com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest(this);
+    public com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest result = new com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.code_ = code_;
@@ -357,16 +357,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest.getDefaultInstance()) return this;
       if (!other.getCode().isEmpty()) {
         code_ = other.code_;
         bitField0_ |= 0x00000001;
@@ -524,23 +524,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.RegisterTOTPRequest)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.VerifyTOTPCodeRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.RegisterTOTPRequest)
-  private static final com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.org.VerifyTOTPCodeRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<RegisterTOTPRequest>
-      PARSER = new com.google.protobuf.AbstractParser<RegisterTOTPRequest>() {
+  private static final com.google.protobuf.Parser<VerifyTOTPCodeRequest>
+      PARSER = new com.google.protobuf.AbstractParser<VerifyTOTPCodeRequest>() {
     @java.lang.Override
-    public RegisterTOTPRequest parsePartialFrom(
+    public VerifyTOTPCodeRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -559,17 +559,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<RegisterTOTPRequest> parser() {
+  public static com.google.protobuf.Parser<VerifyTOTPCodeRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<RegisterTOTPRequest> getParserForType() {
+  public com.google.protobuf.Parser<VerifyTOTPCodeRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

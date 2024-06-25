@@ -6807,35 +6807,35 @@ public final class OrgGrpc {
     return getGenerateTOTPSecretMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPResponse> getRegisterTOTPMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse> getVerifyTOTPCodeMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "RegisterTOTP",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "VerifyTOTPCode",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPResponse> getRegisterTOTPMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest, com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPResponse> getRegisterTOTPMethod;
-    if ((getRegisterTOTPMethod = OrgGrpc.getRegisterTOTPMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse> getVerifyTOTPCodeMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest, com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse> getVerifyTOTPCodeMethod;
+    if ((getVerifyTOTPCodeMethod = OrgGrpc.getVerifyTOTPCodeMethod) == null) {
       synchronized (OrgGrpc.class) {
-        if ((getRegisterTOTPMethod = OrgGrpc.getRegisterTOTPMethod) == null) {
-          OrgGrpc.getRegisterTOTPMethod = getRegisterTOTPMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest, com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPResponse>newBuilder()
+        if ((getVerifyTOTPCodeMethod = OrgGrpc.getVerifyTOTPCodeMethod) == null) {
+          OrgGrpc.getVerifyTOTPCodeMethod = getVerifyTOTPCodeMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest, com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RegisterTOTP"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "VerifyTOTPCode"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RegisterTOTP"))
+                  com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("VerifyTOTPCode"))
               .build();
         }
       }
     }
-    return getRegisterTOTPMethod;
+    return getVerifyTOTPCodeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest,
@@ -9462,12 +9462,12 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * RegisterTOTP validates the given TOTP code and enables TOTP for the current user.
+     * VerifyTOTPCode validates that the given TOTP code and verifies that the user has setup TOTP correctly.
      * </pre>
      */
-    default void registerTOTP(com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisterTOTPMethod(), responseObserver);
+    default void verifyTOTPCode(com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getVerifyTOTPCodeMethod(), responseObserver);
     }
 
     /**
@@ -12075,13 +12075,13 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * RegisterTOTP validates the given TOTP code and enables TOTP for the current user.
+     * VerifyTOTPCode validates that the given TOTP code and verifies that the user has setup TOTP correctly.
      * </pre>
      */
-    public void registerTOTP(com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPResponse> responseObserver) {
+    public void verifyTOTPCode(com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getRegisterTOTPMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getVerifyTOTPCodeMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -14476,12 +14476,12 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * RegisterTOTP validates the given TOTP code and enables TOTP for the current user.
+     * VerifyTOTPCode validates that the given TOTP code and verifies that the user has setup TOTP correctly.
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPResponse registerTOTP(com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest request) {
+    public com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse verifyTOTPCode(com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getRegisterTOTPMethod(), getCallOptions(), request);
+          getChannel(), getVerifyTOTPCodeMethod(), getCallOptions(), request);
     }
 
     /**
@@ -16965,13 +16965,13 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * RegisterTOTP validates the given TOTP code and enables TOTP for the current user.
+     * VerifyTOTPCode validates that the given TOTP code and verifies that the user has setup TOTP correctly.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPResponse> registerTOTP(
-        com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse> verifyTOTPCode(
+        com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getRegisterTOTPMethod(), getCallOptions()), request);
+          getChannel().newCall(getVerifyTOTPCodeMethod(), getCallOptions()), request);
     }
 
     /**
@@ -17293,7 +17293,7 @@ public final class OrgGrpc {
   private static final int METHODID_GET_MY_USER_MFA_INFO = 216;
   private static final int METHODID_GET_MY_ALLOWED_MFA_METHODS = 217;
   private static final int METHODID_GENERATE_TOTPSECRET = 218;
-  private static final int METHODID_REGISTER_TOTP = 219;
+  private static final int METHODID_VERIFY_TOTPCODE = 219;
   private static final int METHODID_CREATE_BUSINESS_HOURS = 220;
   private static final int METHODID_UPDATE_BUSINESS_HOURS = 221;
   private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 222;
@@ -18198,9 +18198,9 @@ public final class OrgGrpc {
           serviceImpl.generateTOTPSecret((com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretResponse>) responseObserver);
           break;
-        case METHODID_REGISTER_TOTP:
-          serviceImpl.registerTOTP((com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPResponse>) responseObserver);
+        case METHODID_VERIFY_TOTPCODE:
+          serviceImpl.verifyTOTPCode((com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse>) responseObserver);
           break;
         case METHODID_CREATE_BUSINESS_HOURS:
           serviceImpl.createBusinessHours((com.tcn.cloud.api.api.v1alpha1.org.CreateBusinessHoursRequest) request,
@@ -19794,12 +19794,12 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.GenerateTOTPSecretResponse>(
                 service, METHODID_GENERATE_TOTPSECRET)))
         .addMethod(
-          getRegisterTOTPMethod(),
+          getVerifyTOTPCodeMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.RegisterTOTPResponse>(
-                service, METHODID_REGISTER_TOTP)))
+              com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse>(
+                service, METHODID_VERIFY_TOTPCODE)))
         .addMethod(
           getCreateBusinessHoursMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -20137,7 +20137,7 @@ public final class OrgGrpc {
               .addMethod(getGetMyUserMfaInfoMethod())
               .addMethod(getGetMyAllowedMfaMethodsMethod())
               .addMethod(getGenerateTOTPSecretMethod())
-              .addMethod(getRegisterTOTPMethod())
+              .addMethod(getVerifyTOTPCodeMethod())
               .addMethod(getCreateBusinessHoursMethod())
               .addMethod(getUpdateBusinessHoursMethod())
               .addMethod(getAddGroupedUserIPRestrictionsMethod())
