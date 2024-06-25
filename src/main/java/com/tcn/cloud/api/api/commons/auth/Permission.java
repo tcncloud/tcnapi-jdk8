@@ -621,6 +621,14 @@ public enum Permission
    */
   PERMISSION_OMNI_BOSS(1200),
   /**
+   * <pre>
+   * enables write access in omni boss app and dashboards.
+   * </pre>
+   *
+   * <code>PERMISSION_OMNI_BOSS_EDIT = 1201 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_OMNI_BOSS_EDIT(1201),
+  /**
    * <code>PERMISSION_OMNI_PORTALS_VIEW = 1210 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_OMNI_PORTALS_VIEW(1210),
@@ -1453,6 +1461,14 @@ public enum Permission
    */
   public static final int PERMISSION_OMNI_BOSS_VALUE = 1200;
   /**
+   * <pre>
+   * enables write access in omni boss app and dashboards.
+   * </pre>
+   *
+   * <code>PERMISSION_OMNI_BOSS_EDIT = 1201 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_OMNI_BOSS_EDIT_VALUE = 1201;
+  /**
    * <code>PERMISSION_OMNI_PORTALS_VIEW = 1210 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_OMNI_PORTALS_VIEW_VALUE = 1210;
@@ -1779,6 +1795,7 @@ public enum Permission
       case 1000: return PERMISSION_LMS_VIEW;
       case 1001: return PERMISSION_LMS_EDIT;
       case 1200: return PERMISSION_OMNI_BOSS;
+      case 1201: return PERMISSION_OMNI_BOSS_EDIT;
       case 1210: return PERMISSION_OMNI_PORTALS_VIEW;
       case 1300: return PERMISSION_INTEGRATIONS_VIEW;
       case 1301: return PERMISSION_INTEGRATIONS_PAYMENT;
