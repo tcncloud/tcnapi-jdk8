@@ -615,7 +615,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value origin_sid = 13 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.CallCenterNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4332
+   *     See api/v1alpha1/wfm/wfm.proto;l=4314
    * @return Whether the originSid field is set.
    */
   @java.lang.Override
@@ -630,7 +630,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value origin_sid = 13 [json_name = "originSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.CallCenterNode.origin_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4332
+   *     See api/v1alpha1/wfm/wfm.proto;l=4314
    * @return The originSid.
    */
   @java.lang.Override
@@ -4015,7 +4015,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value origin_sid = 13 [json_name = "originSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.CallCenterNode.origin_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=4332
+     *     See api/v1alpha1/wfm/wfm.proto;l=4314
      * @return Whether the originSid field is set.
      */
     @java.lang.Deprecated public boolean hasOriginSid() {
@@ -4029,7 +4029,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value origin_sid = 13 [json_name = "originSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.CallCenterNode.origin_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=4332
+     *     See api/v1alpha1/wfm/wfm.proto;l=4314
      * @return The originSid.
      */
     @java.lang.Deprecated public com.google.protobuf.Int64Value getOriginSid() {
