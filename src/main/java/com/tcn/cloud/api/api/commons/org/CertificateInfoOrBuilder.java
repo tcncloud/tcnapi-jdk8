@@ -183,7 +183,7 @@ public interface CertificateInfoOrBuilder extends
 
   /**
    * <pre>
-   * Whether the certificate is deleted.
+   * Whether the certificate info is deleted.
    * </pre>
    *
    * <code>bool deleted = 9 [json_name = "deleted"];</code>

@@ -410,7 +410,7 @@ private static final long serialVersionUID = 0L;
   private boolean deleted_ = false;
   /**
    * <pre>
-   * Whether the certificate is deleted.
+   * Whether the certificate info is deleted.
    * </pre>
    *
    * <code>bool deleted = 9 [json_name = "deleted"];</code>
@@ -1832,7 +1832,7 @@ private static final long serialVersionUID = 0L;
     private boolean deleted_ ;
     /**
      * <pre>
-     * Whether the certificate is deleted.
+     * Whether the certificate info is deleted.
      * </pre>
      *
      * <code>bool deleted = 9 [json_name = "deleted"];</code>
@@ -1844,7 +1844,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the certificate is deleted.
+     * Whether the certificate info is deleted.
      * </pre>
      *
      * <code>bool deleted = 9 [json_name = "deleted"];</code>
@@ -1860,7 +1860,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the certificate is deleted.
+     * Whether the certificate info is deleted.
      * </pre>
      *
      * <code>bool deleted = 9 [json_name = "deleted"];</code>
