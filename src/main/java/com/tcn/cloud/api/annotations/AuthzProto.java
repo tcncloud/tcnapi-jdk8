@@ -63,8 +63,8 @@ public final class AuthzProto {
       "s\"y\n\rPermissionSet\022>\n\013permissions\030\001 \003(\0162" +
       "\034.api.commons.auth.PermissionR\013permissio" +
       "ns\022(\n\005taint\030\002 \001(\0132\022.annotations.TaintR\005t" +
-      "aint\"-\n\005Taint\022\016\n\002id\030\001 \001(\005R\002id\022\024\n\005value\030\002" +
-      " \001(\005R\005value:P\n\005authz\022\036.google.protobuf.M" +
+      "aint\"-\n\005Taint\022\016\n\002id\030\001 \002(\005R\002id\022\024\n\005value\030\002" +
+      " \002(\005R\005value:P\n\005authz\022\036.google.protobuf.M" +
       "ethodOptions\030\207\227\" \001(\0132\030.annotations.Permi" +
       "ssionsR\005authzBw\n\035com.tcn.cloud.api.annot" +
       "ationsB\nAuthzProtoP\001\242\002\003AXX\252\002\013Annotations" +

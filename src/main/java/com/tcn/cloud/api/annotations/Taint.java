@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
    * id of the request message field that will be checked.
    * </pre>
    *
-   * <code>optional int32 id = 1 [json_name = "id"];</code>
+   * <code>required int32 id = 1 [json_name = "id"];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -58,7 +58,7 @@ private static final long serialVersionUID = 0L;
    * id of the request message field that will be checked.
    * </pre>
    *
-   * <code>optional int32 id = 1 [json_name = "id"];</code>
+   * <code>required int32 id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -73,7 +73,7 @@ private static final long serialVersionUID = 0L;
    * value that the request mesage field with id is required to match.
    * </pre>
    *
-   * <code>optional int32 value = 2 [json_name = "value"];</code>
+   * <code>required int32 value = 2 [json_name = "value"];</code>
    * @return Whether the value field is set.
    */
   @java.lang.Override
@@ -85,7 +85,7 @@ private static final long serialVersionUID = 0L;
    * value that the request mesage field with id is required to match.
    * </pre>
    *
-   * <code>optional int32 value = 2 [json_name = "value"];</code>
+   * <code>required int32 value = 2 [json_name = "value"];</code>
    * @return The value.
    */
   @java.lang.Override
@@ -100,6 +100,14 @@ private static final long serialVersionUID = 0L;
     if (isInitialized == 1) return true;
     if (isInitialized == 0) return false;
 
+    if (!hasId()) {
+      memoizedIsInitialized = 0;
+      return false;
+    }
+    if (!hasValue()) {
+      memoizedIsInitialized = 0;
+      return false;
+    }
     memoizedIsInitialized = 1;
     return true;
   }
@@ -409,6 +417,12 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public final boolean isInitialized() {
+      if (!hasId()) {
+        return false;
+      }
+      if (!hasValue()) {
+        return false;
+      }
       return true;
     }
 
@@ -461,7 +475,7 @@ private static final long serialVersionUID = 0L;
      * id of the request message field that will be checked.
      * </pre>
      *
-     * <code>optional int32 id = 1 [json_name = "id"];</code>
+     * <code>required int32 id = 1 [json_name = "id"];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -473,7 +487,7 @@ private static final long serialVersionUID = 0L;
      * id of the request message field that will be checked.
      * </pre>
      *
-     * <code>optional int32 id = 1 [json_name = "id"];</code>
+     * <code>required int32 id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -485,7 +499,7 @@ private static final long serialVersionUID = 0L;
      * id of the request message field that will be checked.
      * </pre>
      *
-     * <code>optional int32 id = 1 [json_name = "id"];</code>
+     * <code>required int32 id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -501,7 +515,7 @@ private static final long serialVersionUID = 0L;
      * id of the request message field that will be checked.
      * </pre>
      *
-     * <code>optional int32 id = 1 [json_name = "id"];</code>
+     * <code>required int32 id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -517,7 +531,7 @@ private static final long serialVersionUID = 0L;
      * value that the request mesage field with id is required to match.
      * </pre>
      *
-     * <code>optional int32 value = 2 [json_name = "value"];</code>
+     * <code>required int32 value = 2 [json_name = "value"];</code>
      * @return Whether the value field is set.
      */
     @java.lang.Override
@@ -529,7 +543,7 @@ private static final long serialVersionUID = 0L;
      * value that the request mesage field with id is required to match.
      * </pre>
      *
-     * <code>optional int32 value = 2 [json_name = "value"];</code>
+     * <code>required int32 value = 2 [json_name = "value"];</code>
      * @return The value.
      */
     @java.lang.Override
@@ -541,7 +555,7 @@ private static final long serialVersionUID = 0L;
      * value that the request mesage field with id is required to match.
      * </pre>
      *
-     * <code>optional int32 value = 2 [json_name = "value"];</code>
+     * <code>required int32 value = 2 [json_name = "value"];</code>
      * @param value The value to set.
      * @return This builder for chaining.
      */
@@ -557,7 +571,7 @@ private static final long serialVersionUID = 0L;
      * value that the request mesage field with id is required to match.
      * </pre>
      *
-     * <code>optional int32 value = 2 [json_name = "value"];</code>
+     * <code>required int32 value = 2 [json_name = "value"];</code>
      * @return This builder for chaining.
      */
     public Builder clearValue() {

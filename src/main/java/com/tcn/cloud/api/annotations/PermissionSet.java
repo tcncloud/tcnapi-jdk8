@@ -112,6 +112,12 @@ private static final long serialVersionUID = 0L;
     if (isInitialized == 1) return true;
     if (isInitialized == 0) return false;
 
+    if (hasTaint()) {
+      if (!getTaint().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+    }
     memoizedIsInitialized = 1;
     return true;
   }
@@ -447,6 +453,11 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public final boolean isInitialized() {
+      if (hasTaint()) {
+        if (!getTaint().isInitialized()) {
+          return false;
+        }
+      }
       return true;
     }
 

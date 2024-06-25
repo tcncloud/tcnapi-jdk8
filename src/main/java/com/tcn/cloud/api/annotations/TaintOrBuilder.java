@@ -12,7 +12,7 @@ public interface TaintOrBuilder extends
    * id of the request message field that will be checked.
    * </pre>
    *
-   * <code>optional int32 id = 1 [json_name = "id"];</code>
+   * <code>required int32 id = 1 [json_name = "id"];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -21,7 +21,7 @@ public interface TaintOrBuilder extends
    * id of the request message field that will be checked.
    * </pre>
    *
-   * <code>optional int32 id = 1 [json_name = "id"];</code>
+   * <code>required int32 id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   int getId();
@@ -31,7 +31,7 @@ public interface TaintOrBuilder extends
    * value that the request mesage field with id is required to match.
    * </pre>
    *
-   * <code>optional int32 value = 2 [json_name = "value"];</code>
+   * <code>required int32 value = 2 [json_name = "value"];</code>
    * @return Whether the value field is set.
    */
   boolean hasValue();
@@ -40,7 +40,7 @@ public interface TaintOrBuilder extends
    * value that the request mesage field with id is required to match.
    * </pre>
    *
-   * <code>optional int32 value = 2 [json_name = "value"];</code>
+   * <code>required int32 value = 2 [json_name = "value"];</code>
    * @return The value.
    */
   int getValue();
