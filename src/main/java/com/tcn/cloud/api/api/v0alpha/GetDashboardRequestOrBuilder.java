@@ -46,4 +46,23 @@ public interface GetDashboardRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getResourceIdBytes();
+
+  /**
+   * <pre>
+   * application retrieving the dashboard
+   * </pre>
+   *
+   * <code>.annotations.perms.Application application = 3 [json_name = "application"];</code>
+   * @return The enum numeric value on the wire for application.
+   */
+  int getApplicationValue();
+  /**
+   * <pre>
+   * application retrieving the dashboard
+   * </pre>
+   *
+   * <code>.annotations.perms.Application application = 3 [json_name = "application"];</code>
+   * @return The application.
+   */
+  com.tcn.cloud.api.annotations.perms.Application getApplication();
 }
