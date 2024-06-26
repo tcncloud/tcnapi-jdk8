@@ -65,4 +65,14 @@ public interface EditTicketOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTicketCodeBytes();
+
+  /**
+   * <pre>
+   * ticket_action_id
+   * </pre>
+   *
+   * <code>int64 ticket_action_id = 4 [json_name = "ticketActionId"];</code>
+   * @return The ticketActionId.
+   */
+  long getTicketActionId();
 }
