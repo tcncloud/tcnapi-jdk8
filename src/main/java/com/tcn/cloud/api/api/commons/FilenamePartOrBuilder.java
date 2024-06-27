@@ -48,42 +48,42 @@ public interface FilenamePartOrBuilder extends
 
   /**
    * <pre>
-   * date_components are the parts to format the date times.
+   * date_parts are the parts to format the date times.
    * </pre>
    *
-   * <code>repeated string date_components = 3 [json_name = "dateComponents"];</code>
-   * @return A list containing the dateComponents.
+   * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+   * @return A list containing the dateParts.
    */
   java.util.List<java.lang.String>
-      getDateComponentsList();
+      getDatePartsList();
   /**
    * <pre>
-   * date_components are the parts to format the date times.
+   * date_parts are the parts to format the date times.
    * </pre>
    *
-   * <code>repeated string date_components = 3 [json_name = "dateComponents"];</code>
-   * @return The count of dateComponents.
+   * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+   * @return The count of dateParts.
    */
-  int getDateComponentsCount();
+  int getDatePartsCount();
   /**
    * <pre>
-   * date_components are the parts to format the date times.
+   * date_parts are the parts to format the date times.
    * </pre>
    *
-   * <code>repeated string date_components = 3 [json_name = "dateComponents"];</code>
+   * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
    * @param index The index of the element to return.
-   * @return The dateComponents at the given index.
+   * @return The dateParts at the given index.
    */
-  java.lang.String getDateComponents(int index);
+  java.lang.String getDateParts(int index);
   /**
    * <pre>
-   * date_components are the parts to format the date times.
+   * date_parts are the parts to format the date times.
    * </pre>
    *
-   * <code>repeated string date_components = 3 [json_name = "dateComponents"];</code>
+   * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
    * @param index The index of the value to return.
-   * @return The bytes of the dateComponents at the given index.
+   * @return The bytes of the dateParts at the given index.
    */
   com.google.protobuf.ByteString
-      getDateComponentsBytes(int index);
+      getDatePartsBytes(int index);
 }
