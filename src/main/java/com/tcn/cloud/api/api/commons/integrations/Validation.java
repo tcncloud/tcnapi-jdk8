@@ -131,6 +131,14 @@ public enum Validation
    * <code>VALIDATION_REGEX = 402;</code>
    */
   VALIDATION_REGEX(402),
+  /**
+   * <code>VALIDATION_ROUTING = 501;</code>
+   */
+  VALIDATION_ROUTING(501),
+  /**
+   * <code>VALIDATION_ACCOUNT = 502;</code>
+   */
+  VALIDATION_ACCOUNT(502),
   UNRECOGNIZED(-1),
   ;
 
@@ -251,6 +259,14 @@ public enum Validation
    * <code>VALIDATION_REGEX = 402;</code>
    */
   public static final int VALIDATION_REGEX_VALUE = 402;
+  /**
+   * <code>VALIDATION_ROUTING = 501;</code>
+   */
+  public static final int VALIDATION_ROUTING_VALUE = 501;
+  /**
+   * <code>VALIDATION_ACCOUNT = 502;</code>
+   */
+  public static final int VALIDATION_ACCOUNT_VALUE = 502;
 
 
   public final int getNumber() {
@@ -291,6 +307,8 @@ public enum Validation
       case 302: return VALIDATION_DOB;
       case 401: return VALIDATION_BOOL;
       case 402: return VALIDATION_REGEX;
+      case 501: return VALIDATION_ROUTING;
+      case 502: return VALIDATION_ACCOUNT;
       default: return null;
     }
   }
