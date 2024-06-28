@@ -201,6 +201,37 @@ public final class IntegrationsPublicGrpc {
     return getGetReceiptMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowReq,
+      com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowRes> getProcessWorkflowMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ProcessWorkflow",
+      requestType = com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowReq,
+      com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowRes> getProcessWorkflowMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowReq, com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowRes> getProcessWorkflowMethod;
+    if ((getProcessWorkflowMethod = IntegrationsPublicGrpc.getProcessWorkflowMethod) == null) {
+      synchronized (IntegrationsPublicGrpc.class) {
+        if ((getProcessWorkflowMethod = IntegrationsPublicGrpc.getProcessWorkflowMethod) == null) {
+          IntegrationsPublicGrpc.getProcessWorkflowMethod = getProcessWorkflowMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowReq, com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ProcessWorkflow"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowRes.getDefaultInstance()))
+              .setSchemaDescriptor(new IntegrationsPublicMethodDescriptorSupplier("ProcessWorkflow"))
+              .build();
+        }
+      }
+    }
+    return getProcessWorkflowMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -290,6 +321,13 @@ public final class IntegrationsPublicGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetReceiptMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void processWorkflow(com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessWorkflowMethod(), responseObserver);
+    }
   }
 
   /**
@@ -366,6 +404,14 @@ public final class IntegrationsPublicGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetReceiptMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void processWorkflow(com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getProcessWorkflowMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -424,6 +470,13 @@ public final class IntegrationsPublicGrpc {
     public com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptRes getReceipt(com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetReceiptMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowRes processWorkflow(com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getProcessWorkflowMethod(), getCallOptions(), request);
     }
   }
 
@@ -490,6 +543,14 @@ public final class IntegrationsPublicGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetReceiptMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowRes> processWorkflow(
+        com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getProcessWorkflowMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_LINK_DATA = 0;
@@ -498,6 +559,7 @@ public final class IntegrationsPublicGrpc {
   private static final int METHODID_GET_INVOICE = 3;
   private static final int METHODID_SUBMIT_PAYMENT = 4;
   private static final int METHODID_GET_RECEIPT = 5;
+  private static final int METHODID_PROCESS_WORKFLOW = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -539,6 +601,10 @@ public final class IntegrationsPublicGrpc {
         case METHODID_GET_RECEIPT:
           serviceImpl.getReceipt((com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptRes>) responseObserver);
+          break;
+        case METHODID_PROCESS_WORKFLOW:
+          serviceImpl.processWorkflow((com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -600,6 +666,13 @@ public final class IntegrationsPublicGrpc {
               com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptReq,
               com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptRes>(
                 service, METHODID_GET_RECEIPT)))
+        .addMethod(
+          getProcessWorkflowMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowReq,
+              com.tcn.cloud.api.api.v1alpha1.integrationspublic.ProcessWorkflowRes>(
+                service, METHODID_PROCESS_WORKFLOW)))
         .build();
   }
 
@@ -654,6 +727,7 @@ public final class IntegrationsPublicGrpc {
               .addMethod(getGetInvoiceMethod())
               .addMethod(getSubmitPaymentMethod())
               .addMethod(getGetReceiptMethod())
+              .addMethod(getProcessWorkflowMethod())
               .build();
         }
       }
