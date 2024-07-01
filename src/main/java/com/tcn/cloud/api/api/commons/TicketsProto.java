@@ -305,24 +305,25 @@ public final class TicketsProto {
       "ype\022\"\n\rcreated_by_id\030\006 \001(\tR\013createdById\022" +
       "B\n\017created_by_date\030\007 \001(\0132\032.google.protob" +
       "uf.TimestampR\rcreatedByDate\022\037\n\013ticket_co" +
-      "de\030\010 \001(\tR\nticketCode\"\215\001\n\nEditTicket\022#\n\nt" +
+      "de\030\010 \001(\tR\nticketCode\"\267\001\n\nEditTicket\022#\n\nt" +
       "icket_sid\030\001 \001(\003B\004\030\0010\001R\tticketSid\0229\n\nedit" +
       "_value\030\002 \001(\0132\032.api.commons.EditAttribute" +
       "R\teditValue\022\037\n\013ticket_code\030\003 \001(\tR\nticket" +
-      "Code\"}\n\rEditAttribute\022\035\n\010col_desc\030\001 \001(\003B" +
-      "\0020\001R\007colDesc\022\031\n\010from_val\030\002 \001(\tR\007fromVal\022" +
-      "\025\n\006to_val\030\003 \001(\tR\005toVal\022\033\n\tis_edited\030\004 \001(" +
-      "\010R\010isEdited*\213\001\n\tTimeScale\022\025\n\021TIME_SCALE_" +
-      "MINUTE\020\000\022\023\n\017TIME_SCALE_HOUR\020\001\022\022\n\016TIME_SC" +
-      "ALE_DAY\020\002\022\023\n\017TIME_SCALE_WEEK\020\003\022\024\n\020TIME_S" +
-      "CALE_MONTH\020\004\022\023\n\017TIME_SCALE_YEAR\020\005*V\n\014Tic" +
-      "ketStatus\022\025\n\021TICKET_STATUS_NEW\020\000\022\026\n\022TICK" +
-      "ET_STATUS_OPEN\020\001\022\027\n\023TICKET_STATUS_CLOSE\020" +
-      "\002*;\n\017PhoneNumberType\022\n\n\006MOBILE\020\000\022\t\n\005OTHE" +
-      "R\020\001\022\021\n\rINVALID_ERROR\020\002Bz\n\035com.tcn.cloud." +
-      "api.api.commonsB\014TicketsProtoP\001\242\002\003ACX\252\002\013" +
-      "Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\" +
-      "GPBMetadata\352\002\014Api::Commonsb\006proto3"
+      "Code\022(\n\020ticket_action_id\030\004 \001(\003R\016ticketAc" +
+      "tionId\"}\n\rEditAttribute\022\035\n\010col_desc\030\001 \001(" +
+      "\003B\0020\001R\007colDesc\022\031\n\010from_val\030\002 \001(\tR\007fromVa" +
+      "l\022\025\n\006to_val\030\003 \001(\tR\005toVal\022\033\n\tis_edited\030\004 " +
+      "\001(\010R\010isEdited*\213\001\n\tTimeScale\022\025\n\021TIME_SCAL" +
+      "E_MINUTE\020\000\022\023\n\017TIME_SCALE_HOUR\020\001\022\022\n\016TIME_" +
+      "SCALE_DAY\020\002\022\023\n\017TIME_SCALE_WEEK\020\003\022\024\n\020TIME" +
+      "_SCALE_MONTH\020\004\022\023\n\017TIME_SCALE_YEAR\020\005*V\n\014T" +
+      "icketStatus\022\025\n\021TICKET_STATUS_NEW\020\000\022\026\n\022TI" +
+      "CKET_STATUS_OPEN\020\001\022\027\n\023TICKET_STATUS_CLOS" +
+      "E\020\002*;\n\017PhoneNumberType\022\n\n\006MOBILE\020\000\022\t\n\005OT" +
+      "HER\020\001\022\021\n\rINVALID_ERROR\020\002Bz\n\035com.tcn.clou" +
+      "d.api.api.commonsB\014TicketsProtoP\001\242\002\003ACX\252" +
+      "\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Common" +
+      "s\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -484,7 +485,7 @@ public final class TicketsProto {
     internal_static_api_commons_EditTicket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_EditTicket_descriptor,
-        new java.lang.String[] { "TicketSid", "EditValue", "TicketCode", });
+        new java.lang.String[] { "TicketSid", "EditValue", "TicketCode", "TicketActionId", });
     internal_static_api_commons_EditAttribute_descriptor =
       getDescriptor().getMessageTypes().get(26);
     internal_static_api_commons_EditAttribute_fieldAccessorTable = new
