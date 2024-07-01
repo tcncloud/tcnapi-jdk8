@@ -6,6 +6,7 @@ package com.tcn.cloud.api.api.commons.audit;
 /**
  * <pre>
  *payload for contact list upload
+ *payload for contact list upload
  * </pre>
  *
  * Protobuf type {@code api.commons.audit.ContactManagerListUploadEvent}
@@ -46,7 +47,7 @@ private static final long serialVersionUID = 0L;
   private long contactManagerListId_ = 0L;
   /**
    * <pre>
-   *contact manager list id
+   * Contact manager list ID
    * </pre>
    *
    * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId"];</code>
@@ -61,7 +62,7 @@ private static final long serialVersionUID = 0L;
   private long numberOfContactsUploaded_ = 0L;
   /**
    * <pre>
-   *number of contacts inserted
+   * Number of contacts received from LMS
    * </pre>
    *
    * <code>int64 NumberOfContactsUploaded = 2 [json_name = "NumberOfContactsUploaded"];</code>
@@ -70,6 +71,36 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public long getNumberOfContactsUploaded() {
     return numberOfContactsUploaded_;
+  }
+
+  public static final int NUMBEROFSUCCESSFULCONTACTSUPLOADED_FIELD_NUMBER = 3;
+  private long numberOfSuccessfulContactsUploaded_ = 0L;
+  /**
+   * <pre>
+   * Number of contacts inserted
+   * </pre>
+   *
+   * <code>int64 NumberOfSuccessfulContactsUploaded = 3 [json_name = "NumberOfSuccessfulContactsUploaded"];</code>
+   * @return The numberOfSuccessfulContactsUploaded.
+   */
+  @java.lang.Override
+  public long getNumberOfSuccessfulContactsUploaded() {
+    return numberOfSuccessfulContactsUploaded_;
+  }
+
+  public static final int NUMBEROFFAILEDCONTACTS_FIELD_NUMBER = 4;
+  private long numberOfFailedContacts_ = 0L;
+  /**
+   * <pre>
+   * Number of contacts failed to be inserted
+   * </pre>
+   *
+   * <code>int64 NumberOfFailedContacts = 4 [json_name = "NumberOfFailedContacts"];</code>
+   * @return The numberOfFailedContacts.
+   */
+  @java.lang.Override
+  public long getNumberOfFailedContacts() {
+    return numberOfFailedContacts_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -92,6 +123,12 @@ private static final long serialVersionUID = 0L;
     if (numberOfContactsUploaded_ != 0L) {
       output.writeInt64(2, numberOfContactsUploaded_);
     }
+    if (numberOfSuccessfulContactsUploaded_ != 0L) {
+      output.writeInt64(3, numberOfSuccessfulContactsUploaded_);
+    }
+    if (numberOfFailedContacts_ != 0L) {
+      output.writeInt64(4, numberOfFailedContacts_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -108,6 +145,14 @@ private static final long serialVersionUID = 0L;
     if (numberOfContactsUploaded_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, numberOfContactsUploaded_);
+    }
+    if (numberOfSuccessfulContactsUploaded_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, numberOfSuccessfulContactsUploaded_);
+    }
+    if (numberOfFailedContacts_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, numberOfFailedContacts_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -128,6 +173,10 @@ private static final long serialVersionUID = 0L;
         != other.getContactManagerListId()) return false;
     if (getNumberOfContactsUploaded()
         != other.getNumberOfContactsUploaded()) return false;
+    if (getNumberOfSuccessfulContactsUploaded()
+        != other.getNumberOfSuccessfulContactsUploaded()) return false;
+    if (getNumberOfFailedContacts()
+        != other.getNumberOfFailedContacts()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -145,6 +194,12 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + NUMBEROFCONTACTSUPLOADED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getNumberOfContactsUploaded());
+    hash = (37 * hash) + NUMBEROFSUCCESSFULCONTACTSUPLOADED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getNumberOfSuccessfulContactsUploaded());
+    hash = (37 * hash) + NUMBEROFFAILEDCONTACTS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getNumberOfFailedContacts());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -245,6 +300,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    *payload for contact list upload
+   *payload for contact list upload
    * </pre>
    *
    * Protobuf type {@code api.commons.audit.ContactManagerListUploadEvent}
@@ -282,6 +338,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       contactManagerListId_ = 0L;
       numberOfContactsUploaded_ = 0L;
+      numberOfSuccessfulContactsUploaded_ = 0L;
+      numberOfFailedContacts_ = 0L;
       return this;
     }
 
@@ -320,6 +378,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.numberOfContactsUploaded_ = numberOfContactsUploaded_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.numberOfSuccessfulContactsUploaded_ = numberOfSuccessfulContactsUploaded_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.numberOfFailedContacts_ = numberOfFailedContacts_;
       }
     }
 
@@ -373,6 +437,12 @@ private static final long serialVersionUID = 0L;
       if (other.getNumberOfContactsUploaded() != 0L) {
         setNumberOfContactsUploaded(other.getNumberOfContactsUploaded());
       }
+      if (other.getNumberOfSuccessfulContactsUploaded() != 0L) {
+        setNumberOfSuccessfulContactsUploaded(other.getNumberOfSuccessfulContactsUploaded());
+      }
+      if (other.getNumberOfFailedContacts() != 0L) {
+        setNumberOfFailedContacts(other.getNumberOfFailedContacts());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -409,6 +479,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 24: {
+              numberOfSuccessfulContactsUploaded_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              numberOfFailedContacts_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -429,7 +509,7 @@ private static final long serialVersionUID = 0L;
     private long contactManagerListId_ ;
     /**
      * <pre>
-     *contact manager list id
+     * Contact manager list ID
      * </pre>
      *
      * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId"];</code>
@@ -441,7 +521,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *contact manager list id
+     * Contact manager list ID
      * </pre>
      *
      * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId"];</code>
@@ -457,7 +537,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *contact manager list id
+     * Contact manager list ID
      * </pre>
      *
      * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId"];</code>
@@ -473,7 +553,7 @@ private static final long serialVersionUID = 0L;
     private long numberOfContactsUploaded_ ;
     /**
      * <pre>
-     *number of contacts inserted
+     * Number of contacts received from LMS
      * </pre>
      *
      * <code>int64 NumberOfContactsUploaded = 2 [json_name = "NumberOfContactsUploaded"];</code>
@@ -485,7 +565,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *number of contacts inserted
+     * Number of contacts received from LMS
      * </pre>
      *
      * <code>int64 NumberOfContactsUploaded = 2 [json_name = "NumberOfContactsUploaded"];</code>
@@ -501,7 +581,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *number of contacts inserted
+     * Number of contacts received from LMS
      * </pre>
      *
      * <code>int64 NumberOfContactsUploaded = 2 [json_name = "NumberOfContactsUploaded"];</code>
@@ -510,6 +590,94 @@ private static final long serialVersionUID = 0L;
     public Builder clearNumberOfContactsUploaded() {
       bitField0_ = (bitField0_ & ~0x00000002);
       numberOfContactsUploaded_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long numberOfSuccessfulContactsUploaded_ ;
+    /**
+     * <pre>
+     * Number of contacts inserted
+     * </pre>
+     *
+     * <code>int64 NumberOfSuccessfulContactsUploaded = 3 [json_name = "NumberOfSuccessfulContactsUploaded"];</code>
+     * @return The numberOfSuccessfulContactsUploaded.
+     */
+    @java.lang.Override
+    public long getNumberOfSuccessfulContactsUploaded() {
+      return numberOfSuccessfulContactsUploaded_;
+    }
+    /**
+     * <pre>
+     * Number of contacts inserted
+     * </pre>
+     *
+     * <code>int64 NumberOfSuccessfulContactsUploaded = 3 [json_name = "NumberOfSuccessfulContactsUploaded"];</code>
+     * @param value The numberOfSuccessfulContactsUploaded to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNumberOfSuccessfulContactsUploaded(long value) {
+
+      numberOfSuccessfulContactsUploaded_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of contacts inserted
+     * </pre>
+     *
+     * <code>int64 NumberOfSuccessfulContactsUploaded = 3 [json_name = "NumberOfSuccessfulContactsUploaded"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNumberOfSuccessfulContactsUploaded() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      numberOfSuccessfulContactsUploaded_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long numberOfFailedContacts_ ;
+    /**
+     * <pre>
+     * Number of contacts failed to be inserted
+     * </pre>
+     *
+     * <code>int64 NumberOfFailedContacts = 4 [json_name = "NumberOfFailedContacts"];</code>
+     * @return The numberOfFailedContacts.
+     */
+    @java.lang.Override
+    public long getNumberOfFailedContacts() {
+      return numberOfFailedContacts_;
+    }
+    /**
+     * <pre>
+     * Number of contacts failed to be inserted
+     * </pre>
+     *
+     * <code>int64 NumberOfFailedContacts = 4 [json_name = "NumberOfFailedContacts"];</code>
+     * @param value The numberOfFailedContacts to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNumberOfFailedContacts(long value) {
+
+      numberOfFailedContacts_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of contacts failed to be inserted
+     * </pre>
+     *
+     * <code>int64 NumberOfFailedContacts = 4 [json_name = "NumberOfFailedContacts"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNumberOfFailedContacts() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      numberOfFailedContacts_ = 0L;
       onChanged();
       return this;
     }

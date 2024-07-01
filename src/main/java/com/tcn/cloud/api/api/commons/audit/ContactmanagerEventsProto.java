@@ -74,21 +74,24 @@ public final class ContactmanagerEventsProto {
       " \001(\003R\024ContactManagerListId\0224\n\025ContactMan" +
       "agerEntryId\030\002 \001(\003R\025ContactManagerEntryId" +
       "\022>\n\032ContactManagerEntryListIds\030\003 \003(\003R\032Co" +
-      "ntactManagerEntryListIds\"\217\001\n\035ContactMana" +
+      "ntactManagerEntryListIds\"\227\002\n\035ContactMana" +
       "gerListUploadEvent\0222\n\024ContactManagerList" +
       "Id\030\001 \001(\003R\024ContactManagerListId\022:\n\030Number" +
       "OfContactsUploaded\030\002 \001(\003R\030NumberOfContac" +
-      "tsUploaded\"\330\001\n\026ContactManagerKycEvent\0222\n" +
-      "\024ContactManagerListId\030\001 \001(\003R\024ContactMana" +
-      "gerListId\0224\n\025ContactManagerEntryId\030\002 \001(\003" +
-      "R\025ContactManagerEntryId\022\024\n\005types\030\003 \003(\tR\005" +
-      "types\022>\n\032ContactManagerEntryListIds\030\004 \003(" +
-      "\003R\032ContactManagerEntryListIdsB\246\001\n#com.tc" +
-      "n.cloud.api.api.commons.auditB\031Contactma" +
-      "nagerEventsProtoP\001\242\002\003ACA\252\002\021Api.Commons.A" +
-      "udit\312\002\021Api\\Commons\\Audit\342\002\035Api\\Commons\\A" +
-      "udit\\GPBMetadata\352\002\023Api::Commons::Auditb\006" +
-      "proto3"
+      "tsUploaded\022N\n\"NumberOfSuccessfulContacts" +
+      "Uploaded\030\003 \001(\003R\"NumberOfSuccessfulContac" +
+      "tsUploaded\0226\n\026NumberOfFailedContacts\030\004 \001" +
+      "(\003R\026NumberOfFailedContacts\"\330\001\n\026ContactMa" +
+      "nagerKycEvent\0222\n\024ContactManagerListId\030\001 " +
+      "\001(\003R\024ContactManagerListId\0224\n\025ContactMana" +
+      "gerEntryId\030\002 \001(\003R\025ContactManagerEntryId\022" +
+      "\024\n\005types\030\003 \003(\tR\005types\022>\n\032ContactManagerE" +
+      "ntryListIds\030\004 \003(\003R\032ContactManagerEntryLi" +
+      "stIdsB\246\001\n#com.tcn.cloud.api.api.commons." +
+      "auditB\031ContactmanagerEventsProtoP\001\242\002\003ACA" +
+      "\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Audit" +
+      "\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Api::" +
+      "Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -130,7 +133,7 @@ public final class ContactmanagerEventsProto {
     internal_static_api_commons_audit_ContactManagerListUploadEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_ContactManagerListUploadEvent_descriptor,
-        new java.lang.String[] { "ContactManagerListId", "NumberOfContactsUploaded", });
+        new java.lang.String[] { "ContactManagerListId", "NumberOfContactsUploaded", "NumberOfSuccessfulContactsUploaded", "NumberOfFailedContacts", });
     internal_static_api_commons_audit_ContactManagerKycEvent_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_api_commons_audit_ContactManagerKycEvent_fieldAccessorTable = new

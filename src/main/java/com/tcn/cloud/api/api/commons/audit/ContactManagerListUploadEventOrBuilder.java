@@ -9,7 +9,7 @@ public interface ContactManagerListUploadEventOrBuilder extends
 
   /**
    * <pre>
-   *contact manager list id
+   * Contact manager list ID
    * </pre>
    *
    * <code>int64 ContactManagerListId = 1 [json_name = "ContactManagerListId"];</code>
@@ -19,11 +19,31 @@ public interface ContactManagerListUploadEventOrBuilder extends
 
   /**
    * <pre>
-   *number of contacts inserted
+   * Number of contacts received from LMS
    * </pre>
    *
    * <code>int64 NumberOfContactsUploaded = 2 [json_name = "NumberOfContactsUploaded"];</code>
    * @return The numberOfContactsUploaded.
    */
   long getNumberOfContactsUploaded();
+
+  /**
+   * <pre>
+   * Number of contacts inserted
+   * </pre>
+   *
+   * <code>int64 NumberOfSuccessfulContactsUploaded = 3 [json_name = "NumberOfSuccessfulContactsUploaded"];</code>
+   * @return The numberOfSuccessfulContactsUploaded.
+   */
+  long getNumberOfSuccessfulContactsUploaded();
+
+  /**
+   * <pre>
+   * Number of contacts failed to be inserted
+   * </pre>
+   *
+   * <code>int64 NumberOfFailedContacts = 4 [json_name = "NumberOfFailedContacts"];</code>
+   * @return The numberOfFailedContacts.
+   */
+  long getNumberOfFailedContacts();
 }
