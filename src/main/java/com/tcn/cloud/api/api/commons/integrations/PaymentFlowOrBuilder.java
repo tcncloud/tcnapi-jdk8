@@ -245,6 +245,36 @@ public interface PaymentFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.PaymentVisionACHOrBuilder getPaymentvisionAchOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.PaymentStellaCc paymentstella_cc = 17 [json_name = "paymentstellaCc"];</code>
+   * @return Whether the paymentstellaCc field is set.
+   */
+  boolean hasPaymentstellaCc();
+  /**
+   * <code>.api.commons.integrations.PaymentStellaCc paymentstella_cc = 17 [json_name = "paymentstellaCc"];</code>
+   * @return The paymentstellaCc.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc getPaymentstellaCc();
+  /**
+   * <code>.api.commons.integrations.PaymentStellaCc paymentstella_cc = 17 [json_name = "paymentstellaCc"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentStellaCcOrBuilder getPaymentstellaCcOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.PaymentStellaECheck paymentstella_echeck = 18 [json_name = "paymentstellaEcheck"];</code>
+   * @return Whether the paymentstellaEcheck field is set.
+   */
+  boolean hasPaymentstellaEcheck();
+  /**
+   * <code>.api.commons.integrations.PaymentStellaECheck paymentstella_echeck = 18 [json_name = "paymentstellaEcheck"];</code>
+   * @return The paymentstellaEcheck.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck getPaymentstellaEcheck();
+  /**
+   * <code>.api.commons.integrations.PaymentStellaECheck paymentstella_echeck = 18 [json_name = "paymentstellaEcheck"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheckOrBuilder getPaymentstellaEcheckOrBuilder();
+
+  /**
    * <pre>
    * the fields the user will use for the payment form
    * must be a subset of fields that is enough data to make the api call.
