@@ -27,7 +27,7 @@ public final class ServiceProto {
       ".proto\022\036services.translations.v1alpha1\032\027" +
       "annotations/authz.proto\032\034google/api/anno" +
       "tations.proto\032-services/translations/v1a" +
-      "lpha1/entities.proto2\210\n\n\023TranslationsSer" +
+      "lpha1/entities.proto2\302\r\n\023TranslationsSer" +
       "vice\022\315\001\n\021TranslateTemplate\0228.services.tr" +
       "anslations.v1alpha1.TranslateTemplateReq" +
       "uest\0329.services.translations.v1alpha1.Tr" +
@@ -49,23 +49,34 @@ public final class ServiceProto {
       ".services.translations.v1alpha1.TriggerL" +
       "LMTranslationResponse\"J\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002:\"" +
       "5/services/translations/v1alpha1/trigger" +
-      "llmtranslation:\001*\022\314\001\n\020SetSystemMessage\0227" +
-      ".services.translations.v1alpha1.SetSyste" +
-      "mMessageRequest\0328.services.translations." +
-      "v1alpha1.SetSystemMessageResponse\"E\272\270\221\002\005" +
-      "\n\003\010\310\001\202\323\344\223\0025\"0/services/translations/v1al" +
-      "pha1/setsystemmessage:\001*\022\314\001\n\020GetSystemMe" +
-      "ssage\0227.services.translations.v1alpha1.G" +
-      "etSystemMessageRequest\0328.services.transl" +
-      "ations.v1alpha1.GetSystemMessageResponse" +
-      "\"E\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0025\"0/services/translatio" +
-      "ns/v1alpha1/getsystemmessage:\001*B\332\001\n0com." +
-      "tcn.cloud.api.services.translations.v1al" +
-      "pha1B\014ServiceProtoP\001\242\002\003STX\252\002\036Services.Tr" +
-      "anslations.V1alpha1\312\002\036Services\\Translati" +
-      "ons\\V1alpha1\342\002*Services\\Translations\\V1a" +
-      "lpha1\\GPBMetadata\352\002 Services::Translatio" +
-      "ns::V1alpha1b\006proto3"
+      "llmtranslation:\001*\022\344\001\n\026TriggerLLMTranslat" +
+      "ions\022=.services.translations.v1alpha1.Tr" +
+      "iggerLLMTranslationsRequest\032>.services.t" +
+      "ranslations.v1alpha1.TriggerLLMTranslati" +
+      "onsResponse\"K\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002;\"6/services" +
+      "/translations/v1alpha1/triggerllmtransla" +
+      "tions:\001*\022\314\001\n\020SetSystemMessage\0227.services" +
+      ".translations.v1alpha1.SetSystemMessageR" +
+      "equest\0328.services.translations.v1alpha1." +
+      "SetSystemMessageResponse\"E\272\270\221\002\005\n\003\010\310\001\202\323\344\223" +
+      "\0025\"0/services/translations/v1alpha1/sets" +
+      "ystemmessage:\001*\022\314\001\n\020GetSystemMessage\0227.s" +
+      "ervices.translations.v1alpha1.GetSystemM" +
+      "essageRequest\0328.services.translations.v1" +
+      "alpha1.GetSystemMessageResponse\"E\272\270\221\002\005\n\003" +
+      "\010\310\001\202\323\344\223\0025\"0/services/translations/v1alph" +
+      "a1/getsystemmessage:\001*\022\320\001\n\021TestSystemMes" +
+      "sage\0228.services.translations.v1alpha1.Te" +
+      "stSystemMessageRequest\0329.services.transl" +
+      "ations.v1alpha1.TestSystemMessageRespons" +
+      "e\"F\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0026\"1/services/translati" +
+      "ons/v1alpha1/testsystemmessage:\001*B\332\001\n0co" +
+      "m.tcn.cloud.api.services.translations.v1" +
+      "alpha1B\014ServiceProtoP\001\242\002\003STX\252\002\036Services." +
+      "Translations.V1alpha1\312\002\036Services\\Transla" +
+      "tions\\V1alpha1\342\002*Services\\Translations\\V" +
+      "1alpha1\\GPBMetadata\352\002 Services::Translat" +
+      "ions::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

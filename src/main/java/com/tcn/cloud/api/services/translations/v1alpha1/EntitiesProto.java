@@ -79,6 +79,26 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_translations_v1alpha1_GetSystemMessageResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_translations_v1alpha1_TestSystemMessageRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_translations_v1alpha1_TestSystemMessageRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_translations_v1alpha1_TestSystemMessageResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_translations_v1alpha1_TestSystemMessageResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_translations_v1alpha1_TriggerLLMTranslationsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_translations_v1alpha1_TriggerLLMTranslationsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_translations_v1alpha1_TriggerLLMTranslationsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_translations_v1alpha1_TriggerLLMTranslationsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -121,13 +141,20 @@ public final class EntitiesProto {
       "sageResponse\"3\n\027GetSystemMessageRequest\022" +
       "\030\n\007context\030\001 \001(\tR\007context\"A\n\030GetSystemMe" +
       "ssageResponse\022%\n\016system_message\030\001 \001(\tR\rs" +
-      "ystemMessageB\333\001\n0com.tcn.cloud.api.servi" +
-      "ces.translations.v1alpha1B\rEntitiesProto" +
-      "P\001\242\002\003STX\252\002\036Services.Translations.V1alpha" +
-      "1\312\002\036Services\\Translations\\V1alpha1\342\002*Ser" +
-      "vices\\Translations\\V1alpha1\\GPBMetadata\352" +
-      "\002 Services::Translations::V1alpha1b\006prot" +
-      "o3"
+      "ystemMessage\"\200\001\n\030TestSystemMessageReques" +
+      "t\022%\n\016system_message\030\001 \001(\tR\rsystemMessage" +
+      "\022\032\n\010template\030\002 \001(\tR\010template\022!\n\014language" +
+      "_tag\030\003 \001(\tR\013languageTag\"=\n\031TestSystemMes" +
+      "sageResponse\022 \n\013translation\030\001 \001(\tR\013trans" +
+      "lation\"9\n\035TriggerLLMTranslationsRequest\022" +
+      "\030\n\007context\030\001 \001(\tR\007context\" \n\036TriggerLLMT" +
+      "ranslationsResponseB\333\001\n0com.tcn.cloud.ap" +
+      "i.services.translations.v1alpha1B\rEntiti" +
+      "esProtoP\001\242\002\003STX\252\002\036Services.Translations." +
+      "V1alpha1\312\002\036Services\\Translations\\V1alpha" +
+      "1\342\002*Services\\Translations\\V1alpha1\\GPBMe" +
+      "tadata\352\002 Services::Translations::V1alpha" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -211,6 +238,30 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_translations_v1alpha1_GetSystemMessageResponse_descriptor,
         new java.lang.String[] { "SystemMessage", });
+    internal_static_services_translations_v1alpha1_TestSystemMessageRequest_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_services_translations_v1alpha1_TestSystemMessageRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_translations_v1alpha1_TestSystemMessageRequest_descriptor,
+        new java.lang.String[] { "SystemMessage", "Template", "LanguageTag", });
+    internal_static_services_translations_v1alpha1_TestSystemMessageResponse_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_services_translations_v1alpha1_TestSystemMessageResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_translations_v1alpha1_TestSystemMessageResponse_descriptor,
+        new java.lang.String[] { "Translation", });
+    internal_static_services_translations_v1alpha1_TriggerLLMTranslationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_services_translations_v1alpha1_TriggerLLMTranslationsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_translations_v1alpha1_TriggerLLMTranslationsRequest_descriptor,
+        new java.lang.String[] { "Context", });
+    internal_static_services_translations_v1alpha1_TriggerLLMTranslationsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_services_translations_v1alpha1_TriggerLLMTranslationsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_translations_v1alpha1_TriggerLLMTranslationsResponse_descriptor,
+        new java.lang.String[] { });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

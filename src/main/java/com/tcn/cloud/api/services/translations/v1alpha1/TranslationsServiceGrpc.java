@@ -139,6 +139,37 @@ public final class TranslationsServiceGrpc {
     return getTriggerLLMTranslationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsRequest,
+      com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsResponse> getTriggerLLMTranslationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TriggerLLMTranslations",
+      requestType = com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsRequest.class,
+      responseType = com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsRequest,
+      com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsResponse> getTriggerLLMTranslationsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsRequest, com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsResponse> getTriggerLLMTranslationsMethod;
+    if ((getTriggerLLMTranslationsMethod = TranslationsServiceGrpc.getTriggerLLMTranslationsMethod) == null) {
+      synchronized (TranslationsServiceGrpc.class) {
+        if ((getTriggerLLMTranslationsMethod = TranslationsServiceGrpc.getTriggerLLMTranslationsMethod) == null) {
+          TranslationsServiceGrpc.getTriggerLLMTranslationsMethod = getTriggerLLMTranslationsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsRequest, com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TriggerLLMTranslations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TranslationsServiceMethodDescriptorSupplier("TriggerLLMTranslations"))
+              .build();
+        }
+      }
+    }
+    return getTriggerLLMTranslationsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.SetSystemMessageRequest,
       com.tcn.cloud.api.services.translations.v1alpha1.SetSystemMessageResponse> getSetSystemMessageMethod;
 
@@ -199,6 +230,37 @@ public final class TranslationsServiceGrpc {
       }
     }
     return getGetSystemMessageMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageRequest,
+      com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageResponse> getTestSystemMessageMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TestSystemMessage",
+      requestType = com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageRequest.class,
+      responseType = com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageRequest,
+      com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageResponse> getTestSystemMessageMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageRequest, com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageResponse> getTestSystemMessageMethod;
+    if ((getTestSystemMessageMethod = TranslationsServiceGrpc.getTestSystemMessageMethod) == null) {
+      synchronized (TranslationsServiceGrpc.class) {
+        if ((getTestSystemMessageMethod = TranslationsServiceGrpc.getTestSystemMessageMethod) == null) {
+          TranslationsServiceGrpc.getTestSystemMessageMethod = getTestSystemMessageMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageRequest, com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TestSystemMessage"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TranslationsServiceMethodDescriptorSupplier("TestSystemMessage"))
+              .build();
+        }
+      }
+    }
+    return getTestSystemMessageMethod;
   }
 
   /**
@@ -309,6 +371,20 @@ public final class TranslationsServiceGrpc {
 
     /**
      * <pre>
+     * re-run all translations for a given context (WARNING - this should be ran sparingly as it is a heavy operation and costs money)
+     * Required permissions:
+     *   - PERMISSION_CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.InvalidArgument: The request is not valid.
+     * </pre>
+     */
+    default void triggerLLMTranslations(com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTriggerLLMTranslationsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * set/get context system message to give more tuned LLMs when translating for that context (WARNING - this overrides the previous system message for the context if exists)
      * Required permissions:
      *   - PERMISSION_CUSTOMER_SUPPORT
@@ -326,6 +402,20 @@ public final class TranslationsServiceGrpc {
     default void getSystemMessage(com.tcn.cloud.api.services.translations.v1alpha1.GetSystemMessageRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.GetSystemMessageResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSystemMessageMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gives a translation for a system message, template and language with no side effects (Used for testing system messages)
+     * Required permissions:
+     *   - PERMISSION_CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.InvalidArgument: The request is not valid.
+     * </pre>
+     */
+    default void testSystemMessage(com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTestSystemMessageMethod(), responseObserver);
     }
   }
 
@@ -420,6 +510,21 @@ public final class TranslationsServiceGrpc {
 
     /**
      * <pre>
+     * re-run all translations for a given context (WARNING - this should be ran sparingly as it is a heavy operation and costs money)
+     * Required permissions:
+     *   - PERMISSION_CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.InvalidArgument: The request is not valid.
+     * </pre>
+     */
+    public void triggerLLMTranslations(com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTriggerLLMTranslationsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * set/get context system message to give more tuned LLMs when translating for that context (WARNING - this overrides the previous system message for the context if exists)
      * Required permissions:
      *   - PERMISSION_CUSTOMER_SUPPORT
@@ -439,6 +544,21 @@ public final class TranslationsServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.GetSystemMessageResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSystemMessageMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gives a translation for a system message, template and language with no side effects (Used for testing system messages)
+     * Required permissions:
+     *   - PERMISSION_CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.InvalidArgument: The request is not valid.
+     * </pre>
+     */
+    public void testSystemMessage(com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTestSystemMessageMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -518,6 +638,20 @@ public final class TranslationsServiceGrpc {
 
     /**
      * <pre>
+     * re-run all translations for a given context (WARNING - this should be ran sparingly as it is a heavy operation and costs money)
+     * Required permissions:
+     *   - PERMISSION_CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.InvalidArgument: The request is not valid.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsResponse triggerLLMTranslations(com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTriggerLLMTranslationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * set/get context system message to give more tuned LLMs when translating for that context (WARNING - this overrides the previous system message for the context if exists)
      * Required permissions:
      *   - PERMISSION_CUSTOMER_SUPPORT
@@ -535,6 +669,20 @@ public final class TranslationsServiceGrpc {
     public com.tcn.cloud.api.services.translations.v1alpha1.GetSystemMessageResponse getSystemMessage(com.tcn.cloud.api.services.translations.v1alpha1.GetSystemMessageRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSystemMessageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gives a translation for a system message, template and language with no side effects (Used for testing system messages)
+     * Required permissions:
+     *   - PERMISSION_CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.InvalidArgument: The request is not valid.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageResponse testSystemMessage(com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTestSystemMessageMethod(), getCallOptions(), request);
     }
   }
 
@@ -618,6 +766,21 @@ public final class TranslationsServiceGrpc {
 
     /**
      * <pre>
+     * re-run all translations for a given context (WARNING - this should be ran sparingly as it is a heavy operation and costs money)
+     * Required permissions:
+     *   - PERMISSION_CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.InvalidArgument: The request is not valid.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsResponse> triggerLLMTranslations(
+        com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTriggerLLMTranslationsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * set/get context system message to give more tuned LLMs when translating for that context (WARNING - this overrides the previous system message for the context if exists)
      * Required permissions:
      *   - PERMISSION_CUSTOMER_SUPPORT
@@ -638,14 +801,31 @@ public final class TranslationsServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSystemMessageMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Gives a translation for a system message, template and language with no side effects (Used for testing system messages)
+     * Required permissions:
+     *   - PERMISSION_CUSTOMER_SUPPORT
+     * Errors:
+     *   - grpc.InvalidArgument: The request is not valid.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageResponse> testSystemMessage(
+        com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTestSystemMessageMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_TRANSLATE_TEMPLATE = 0;
   private static final int METHODID_LIST_TRANSLATIONS = 1;
   private static final int METHODID_UPDATE_TRANSLATION = 2;
   private static final int METHODID_TRIGGER_LLMTRANSLATION = 3;
-  private static final int METHODID_SET_SYSTEM_MESSAGE = 4;
-  private static final int METHODID_GET_SYSTEM_MESSAGE = 5;
+  private static final int METHODID_TRIGGER_LLMTRANSLATIONS = 4;
+  private static final int METHODID_SET_SYSTEM_MESSAGE = 5;
+  private static final int METHODID_GET_SYSTEM_MESSAGE = 6;
+  private static final int METHODID_TEST_SYSTEM_MESSAGE = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -680,6 +860,10 @@ public final class TranslationsServiceGrpc {
           serviceImpl.triggerLLMTranslation((com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationResponse>) responseObserver);
           break;
+        case METHODID_TRIGGER_LLMTRANSLATIONS:
+          serviceImpl.triggerLLMTranslations((com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsResponse>) responseObserver);
+          break;
         case METHODID_SET_SYSTEM_MESSAGE:
           serviceImpl.setSystemMessage((com.tcn.cloud.api.services.translations.v1alpha1.SetSystemMessageRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.SetSystemMessageResponse>) responseObserver);
@@ -687,6 +871,10 @@ public final class TranslationsServiceGrpc {
         case METHODID_GET_SYSTEM_MESSAGE:
           serviceImpl.getSystemMessage((com.tcn.cloud.api.services.translations.v1alpha1.GetSystemMessageRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.GetSystemMessageResponse>) responseObserver);
+          break;
+        case METHODID_TEST_SYSTEM_MESSAGE:
+          serviceImpl.testSystemMessage((com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -735,6 +923,13 @@ public final class TranslationsServiceGrpc {
               com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationResponse>(
                 service, METHODID_TRIGGER_LLMTRANSLATION)))
         .addMethod(
+          getTriggerLLMTranslationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsRequest,
+              com.tcn.cloud.api.services.translations.v1alpha1.TriggerLLMTranslationsResponse>(
+                service, METHODID_TRIGGER_LLMTRANSLATIONS)))
+        .addMethod(
           getSetSystemMessageMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -748,6 +943,13 @@ public final class TranslationsServiceGrpc {
               com.tcn.cloud.api.services.translations.v1alpha1.GetSystemMessageRequest,
               com.tcn.cloud.api.services.translations.v1alpha1.GetSystemMessageResponse>(
                 service, METHODID_GET_SYSTEM_MESSAGE)))
+        .addMethod(
+          getTestSystemMessageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageRequest,
+              com.tcn.cloud.api.services.translations.v1alpha1.TestSystemMessageResponse>(
+                service, METHODID_TEST_SYSTEM_MESSAGE)))
         .build();
   }
 
@@ -800,8 +1002,10 @@ public final class TranslationsServiceGrpc {
               .addMethod(getListTranslationsMethod())
               .addMethod(getUpdateTranslationMethod())
               .addMethod(getTriggerLLMTranslationMethod())
+              .addMethod(getTriggerLLMTranslationsMethod())
               .addMethod(getSetSystemMessageMethod())
               .addMethod(getGetSystemMessageMethod())
+              .addMethod(getTestSystemMessageMethod())
               .build();
         }
       }
