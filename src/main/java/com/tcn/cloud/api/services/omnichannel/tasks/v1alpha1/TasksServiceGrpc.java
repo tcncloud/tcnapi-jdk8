@@ -46,29 +46,29 @@ public final class TasksServiceGrpc {
     return getCancelTasksMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksRequest,
-      com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksResponse> getCancelAllTasksMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest,
+      com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse> getCancelAllTasksMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CancelAllTasks",
-      requestType = com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksRequest.class,
-      responseType = com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksResponse.class,
+      requestType = com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest.class,
+      responseType = com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksRequest,
-      com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksResponse> getCancelAllTasksMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksRequest, com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksResponse> getCancelAllTasksMethod;
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest,
+      com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse> getCancelAllTasksMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest, com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse> getCancelAllTasksMethod;
     if ((getCancelAllTasksMethod = TasksServiceGrpc.getCancelAllTasksMethod) == null) {
       synchronized (TasksServiceGrpc.class) {
         if ((getCancelAllTasksMethod = TasksServiceGrpc.getCancelAllTasksMethod) == null) {
           TasksServiceGrpc.getCancelAllTasksMethod = getCancelAllTasksMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksRequest, com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest, com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CancelAllTasks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksResponse.getDefaultInstance()))
+                  com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse.getDefaultInstance()))
               .setSchemaDescriptor(new TasksServiceMethodDescriptorSupplier("CancelAllTasks"))
               .build();
         }
@@ -134,8 +134,8 @@ public final class TasksServiceGrpc {
 
     /**
      */
-    default void cancelAllTasks(com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksResponse> responseObserver) {
+    default void cancelAllTasks(com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCancelAllTasksMethod(), responseObserver);
     }
   }
@@ -177,8 +177,8 @@ public final class TasksServiceGrpc {
 
     /**
      */
-    public void cancelAllTasks(com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksResponse> responseObserver) {
+    public void cancelAllTasks(com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCancelAllTasksMethod(), getCallOptions()), request, responseObserver);
     }
@@ -209,7 +209,7 @@ public final class TasksServiceGrpc {
 
     /**
      */
-    public com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksResponse cancelAllTasks(com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksRequest request) {
+    public com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse cancelAllTasks(com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCancelAllTasksMethod(), getCallOptions(), request);
     }
@@ -241,8 +241,8 @@ public final class TasksServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksResponse> cancelAllTasks(
-        com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse> cancelAllTasks(
+        com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCancelAllTasksMethod(), getCallOptions()), request);
     }
@@ -273,8 +273,8 @@ public final class TasksServiceGrpc {
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelTasksResponse>) responseObserver);
           break;
         case METHODID_CANCEL_ALL_TASKS:
-          serviceImpl.cancelAllTasks((com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksResponse>) responseObserver);
+          serviceImpl.cancelAllTasks((com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -305,8 +305,8 @@ public final class TasksServiceGrpc {
           getCancelAllTasksMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksRequest,
-              com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.CancelAllTasksResponse>(
+              com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest,
+              com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse>(
                 service, METHODID_CANCEL_ALL_TASKS)))
         .build();
   }

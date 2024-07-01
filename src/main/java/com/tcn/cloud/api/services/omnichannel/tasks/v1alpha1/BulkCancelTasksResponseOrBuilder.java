@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1;
 
-public interface CancelAllTasksResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.omnichannel.tasks.v1alpha1.CancelAllTasksResponse)
+public interface BulkCancelTasksResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse)
     com.google.protobuf.MessageOrBuilder {
 }
