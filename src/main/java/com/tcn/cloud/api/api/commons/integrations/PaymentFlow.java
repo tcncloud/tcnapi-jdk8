@@ -61,6 +61,8 @@ private static final long serialVersionUID = 0L;
     PRIOCOMMERCE_ACH(14),
     PAYMENTVISION_CC(15),
     PAYMENTVISION_ACH(16),
+    PAYMENTSTELLA_CC(17),
+    PAYMENTSTELLA_ECHECK(18),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -93,6 +95,8 @@ private static final long serialVersionUID = 0L;
         case 14: return PRIOCOMMERCE_ACH;
         case 15: return PAYMENTVISION_CC;
         case 16: return PAYMENTVISION_ACH;
+        case 17: return PAYMENTSTELLA_CC;
+        case 18: return PAYMENTSTELLA_ECHECK;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -612,6 +616,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH.getDefaultInstance();
   }
 
+  public static final int PAYMENTSTELLA_CC_FIELD_NUMBER = 17;
+  /**
+   * <code>.api.commons.integrations.PaymentStellaCc paymentstella_cc = 17 [json_name = "paymentstellaCc"];</code>
+   * @return Whether the paymentstellaCc field is set.
+   */
+  @java.lang.Override
+  public boolean hasPaymentstellaCc() {
+    return valueCase_ == 17;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentStellaCc paymentstella_cc = 17 [json_name = "paymentstellaCc"];</code>
+   * @return The paymentstellaCc.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc getPaymentstellaCc() {
+    if (valueCase_ == 17) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentStellaCc paymentstella_cc = 17 [json_name = "paymentstellaCc"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentStellaCcOrBuilder getPaymentstellaCcOrBuilder() {
+    if (valueCase_ == 17) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc.getDefaultInstance();
+  }
+
+  public static final int PAYMENTSTELLA_ECHECK_FIELD_NUMBER = 18;
+  /**
+   * <code>.api.commons.integrations.PaymentStellaECheck paymentstella_echeck = 18 [json_name = "paymentstellaEcheck"];</code>
+   * @return Whether the paymentstellaEcheck field is set.
+   */
+  @java.lang.Override
+  public boolean hasPaymentstellaEcheck() {
+    return valueCase_ == 18;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentStellaECheck paymentstella_echeck = 18 [json_name = "paymentstellaEcheck"];</code>
+   * @return The paymentstellaEcheck.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck getPaymentstellaEcheck() {
+    if (valueCase_ == 18) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentStellaECheck paymentstella_echeck = 18 [json_name = "paymentstellaEcheck"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheckOrBuilder getPaymentstellaEcheckOrBuilder() {
+    if (valueCase_ == 18) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck.getDefaultInstance();
+  }
+
   public static final int PAYMENT_FIELDS_FIELD_NUMBER = 20;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_;
@@ -750,6 +816,12 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 16) {
       output.writeMessage(16, (com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH) value_);
     }
+    if (valueCase_ == 17) {
+      output.writeMessage(17, (com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc) value_);
+    }
+    if (valueCase_ == 18) {
+      output.writeMessage(18, (com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck) value_);
+    }
     for (int i = 0; i < paymentFields_.size(); i++) {
       output.writeMessage(20, paymentFields_.get(i));
     }
@@ -824,6 +896,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 16) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, (com.tcn.cloud.api.api.commons.integrations.PaymentVisionACH) value_);
+    }
+    if (valueCase_ == 17) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(17, (com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc) value_);
+    }
+    if (valueCase_ == 18) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(18, (com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck) value_);
     }
     for (int i = 0; i < paymentFields_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -910,6 +990,14 @@ private static final long serialVersionUID = 0L;
         if (!getPaymentvisionAch()
             .equals(other.getPaymentvisionAch())) return false;
         break;
+      case 17:
+        if (!getPaymentstellaCc()
+            .equals(other.getPaymentstellaCc())) return false;
+        break;
+      case 18:
+        if (!getPaymentstellaEcheck()
+            .equals(other.getPaymentstellaEcheck())) return false;
+        break;
       case 0:
       default:
     }
@@ -990,6 +1078,14 @@ private static final long serialVersionUID = 0L;
       case 16:
         hash = (37 * hash) + PAYMENTVISION_ACH_FIELD_NUMBER;
         hash = (53 * hash) + getPaymentvisionAch().hashCode();
+        break;
+      case 17:
+        hash = (37 * hash) + PAYMENTSTELLA_CC_FIELD_NUMBER;
+        hash = (53 * hash) + getPaymentstellaCc().hashCode();
+        break;
+      case 18:
+        hash = (37 * hash) + PAYMENTSTELLA_ECHECK_FIELD_NUMBER;
+        hash = (53 * hash) + getPaymentstellaEcheck().hashCode();
         break;
       case 0:
       default:
@@ -1171,13 +1267,19 @@ private static final long serialVersionUID = 0L;
       if (paymentvisionAchBuilder_ != null) {
         paymentvisionAchBuilder_.clear();
       }
+      if (paymentstellaCcBuilder_ != null) {
+        paymentstellaCcBuilder_.clear();
+      }
+      if (paymentstellaEcheckBuilder_ != null) {
+        paymentstellaEcheckBuilder_.clear();
+      }
       if (paymentFieldsBuilder_ == null) {
         paymentFields_ = java.util.Collections.emptyList();
       } else {
         paymentFields_ = null;
         paymentFieldsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00010000);
+      bitField0_ = (bitField0_ & ~0x00040000);
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -1215,9 +1317,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.integrations.PaymentFlow result) {
       if (paymentFieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00010000) != 0)) {
+        if (((bitField0_ & 0x00040000) != 0)) {
           paymentFields_ = java.util.Collections.unmodifiableList(paymentFields_);
-          bitField0_ = (bitField0_ & ~0x00010000);
+          bitField0_ = (bitField0_ & ~0x00040000);
         }
         result.paymentFields_ = paymentFields_;
       } else {
@@ -1295,6 +1397,14 @@ private static final long serialVersionUID = 0L;
           paymentvisionAchBuilder_ != null) {
         result.value_ = paymentvisionAchBuilder_.build();
       }
+      if (valueCase_ == 17 &&
+          paymentstellaCcBuilder_ != null) {
+        result.value_ = paymentstellaCcBuilder_.build();
+      }
+      if (valueCase_ == 18 &&
+          paymentstellaEcheckBuilder_ != null) {
+        result.value_ = paymentstellaEcheckBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1350,7 +1460,7 @@ private static final long serialVersionUID = 0L;
         if (!other.paymentFields_.isEmpty()) {
           if (paymentFields_.isEmpty()) {
             paymentFields_ = other.paymentFields_;
-            bitField0_ = (bitField0_ & ~0x00010000);
+            bitField0_ = (bitField0_ & ~0x00040000);
           } else {
             ensurePaymentFieldsIsMutable();
             paymentFields_.addAll(other.paymentFields_);
@@ -1363,7 +1473,7 @@ private static final long serialVersionUID = 0L;
             paymentFieldsBuilder_.dispose();
             paymentFieldsBuilder_ = null;
             paymentFields_ = other.paymentFields_;
-            bitField0_ = (bitField0_ & ~0x00010000);
+            bitField0_ = (bitField0_ & ~0x00040000);
             paymentFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPaymentFieldsFieldBuilder() : null;
@@ -1431,6 +1541,14 @@ private static final long serialVersionUID = 0L;
         }
         case PAYMENTVISION_ACH: {
           mergePaymentvisionAch(other.getPaymentvisionAch());
+          break;
+        }
+        case PAYMENTSTELLA_CC: {
+          mergePaymentstellaCc(other.getPaymentstellaCc());
+          break;
+        }
+        case PAYMENTSTELLA_ECHECK: {
+          mergePaymentstellaEcheck(other.getPaymentstellaEcheck());
           break;
         }
         case VALUE_NOT_SET: {
@@ -1573,6 +1691,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 16;
               break;
             } // case 130
+            case 138: {
+              input.readMessage(
+                  getPaymentstellaCcFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 17;
+              break;
+            } // case 138
+            case 146: {
+              input.readMessage(
+                  getPaymentstellaEcheckFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 18;
+              break;
+            } // case 146
             case 162: {
               com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
                   input.readMessage(
@@ -3820,12 +3952,296 @@ private static final long serialVersionUID = 0L;
       return paymentvisionAchBuilder_;
     }
 
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc, com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentStellaCcOrBuilder> paymentstellaCcBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentStellaCc paymentstella_cc = 17 [json_name = "paymentstellaCc"];</code>
+     * @return Whether the paymentstellaCc field is set.
+     */
+    @java.lang.Override
+    public boolean hasPaymentstellaCc() {
+      return valueCase_ == 17;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaCc paymentstella_cc = 17 [json_name = "paymentstellaCc"];</code>
+     * @return The paymentstellaCc.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc getPaymentstellaCc() {
+      if (paymentstellaCcBuilder_ == null) {
+        if (valueCase_ == 17) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc.getDefaultInstance();
+      } else {
+        if (valueCase_ == 17) {
+          return paymentstellaCcBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaCc paymentstella_cc = 17 [json_name = "paymentstellaCc"];</code>
+     */
+    public Builder setPaymentstellaCc(com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc value) {
+      if (paymentstellaCcBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        paymentstellaCcBuilder_.setMessage(value);
+      }
+      valueCase_ = 17;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaCc paymentstella_cc = 17 [json_name = "paymentstellaCc"];</code>
+     */
+    public Builder setPaymentstellaCc(
+        com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc.Builder builderForValue) {
+      if (paymentstellaCcBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        paymentstellaCcBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 17;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaCc paymentstella_cc = 17 [json_name = "paymentstellaCc"];</code>
+     */
+    public Builder mergePaymentstellaCc(com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc value) {
+      if (paymentstellaCcBuilder_ == null) {
+        if (valueCase_ == 17 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 17) {
+          paymentstellaCcBuilder_.mergeFrom(value);
+        } else {
+          paymentstellaCcBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 17;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaCc paymentstella_cc = 17 [json_name = "paymentstellaCc"];</code>
+     */
+    public Builder clearPaymentstellaCc() {
+      if (paymentstellaCcBuilder_ == null) {
+        if (valueCase_ == 17) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 17) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        paymentstellaCcBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaCc paymentstella_cc = 17 [json_name = "paymentstellaCc"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc.Builder getPaymentstellaCcBuilder() {
+      return getPaymentstellaCcFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaCc paymentstella_cc = 17 [json_name = "paymentstellaCc"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentStellaCcOrBuilder getPaymentstellaCcOrBuilder() {
+      if ((valueCase_ == 17) && (paymentstellaCcBuilder_ != null)) {
+        return paymentstellaCcBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 17) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaCc paymentstella_cc = 17 [json_name = "paymentstellaCc"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc, com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentStellaCcOrBuilder> 
+        getPaymentstellaCcFieldBuilder() {
+      if (paymentstellaCcBuilder_ == null) {
+        if (!(valueCase_ == 17)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc.getDefaultInstance();
+        }
+        paymentstellaCcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc, com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentStellaCcOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentStellaCc) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 17;
+      onChanged();
+      return paymentstellaCcBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck, com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheckOrBuilder> paymentstellaEcheckBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentStellaECheck paymentstella_echeck = 18 [json_name = "paymentstellaEcheck"];</code>
+     * @return Whether the paymentstellaEcheck field is set.
+     */
+    @java.lang.Override
+    public boolean hasPaymentstellaEcheck() {
+      return valueCase_ == 18;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaECheck paymentstella_echeck = 18 [json_name = "paymentstellaEcheck"];</code>
+     * @return The paymentstellaEcheck.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck getPaymentstellaEcheck() {
+      if (paymentstellaEcheckBuilder_ == null) {
+        if (valueCase_ == 18) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck.getDefaultInstance();
+      } else {
+        if (valueCase_ == 18) {
+          return paymentstellaEcheckBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaECheck paymentstella_echeck = 18 [json_name = "paymentstellaEcheck"];</code>
+     */
+    public Builder setPaymentstellaEcheck(com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck value) {
+      if (paymentstellaEcheckBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        paymentstellaEcheckBuilder_.setMessage(value);
+      }
+      valueCase_ = 18;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaECheck paymentstella_echeck = 18 [json_name = "paymentstellaEcheck"];</code>
+     */
+    public Builder setPaymentstellaEcheck(
+        com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck.Builder builderForValue) {
+      if (paymentstellaEcheckBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        paymentstellaEcheckBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 18;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaECheck paymentstella_echeck = 18 [json_name = "paymentstellaEcheck"];</code>
+     */
+    public Builder mergePaymentstellaEcheck(com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck value) {
+      if (paymentstellaEcheckBuilder_ == null) {
+        if (valueCase_ == 18 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 18) {
+          paymentstellaEcheckBuilder_.mergeFrom(value);
+        } else {
+          paymentstellaEcheckBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 18;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaECheck paymentstella_echeck = 18 [json_name = "paymentstellaEcheck"];</code>
+     */
+    public Builder clearPaymentstellaEcheck() {
+      if (paymentstellaEcheckBuilder_ == null) {
+        if (valueCase_ == 18) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 18) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        paymentstellaEcheckBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaECheck paymentstella_echeck = 18 [json_name = "paymentstellaEcheck"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck.Builder getPaymentstellaEcheckBuilder() {
+      return getPaymentstellaEcheckFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaECheck paymentstella_echeck = 18 [json_name = "paymentstellaEcheck"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheckOrBuilder getPaymentstellaEcheckOrBuilder() {
+      if ((valueCase_ == 18) && (paymentstellaEcheckBuilder_ != null)) {
+        return paymentstellaEcheckBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 18) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentStellaECheck paymentstella_echeck = 18 [json_name = "paymentstellaEcheck"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck, com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheckOrBuilder> 
+        getPaymentstellaEcheckFieldBuilder() {
+      if (paymentstellaEcheckBuilder_ == null) {
+        if (!(valueCase_ == 18)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck.getDefaultInstance();
+        }
+        paymentstellaEcheckBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck, com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheckOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 18;
+      onChanged();
+      return paymentstellaEcheckBuilder_;
+    }
+
     private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_ =
       java.util.Collections.emptyList();
     private void ensurePaymentFieldsIsMutable() {
-      if (!((bitField0_ & 0x00010000) != 0)) {
+      if (!((bitField0_ & 0x00040000) != 0)) {
         paymentFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(paymentFields_);
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00040000;
        }
     }
 
@@ -4052,7 +4468,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPaymentFields() {
       if (paymentFieldsBuilder_ == null) {
         paymentFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         onChanged();
       } else {
         paymentFieldsBuilder_.clear();
@@ -4178,7 +4594,7 @@ private static final long serialVersionUID = 0L;
         paymentFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
                 paymentFields_,
-                ((bitField0_ & 0x00010000) != 0),
+                ((bitField0_ & 0x00040000) != 0),
                 getParentForChildren(),
                 isClean());
         paymentFields_ = null;
