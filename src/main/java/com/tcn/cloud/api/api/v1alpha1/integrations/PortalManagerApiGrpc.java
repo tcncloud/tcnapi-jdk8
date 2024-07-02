@@ -821,37 +821,6 @@ public final class PortalManagerApiGrpc {
     return getListAllActionDefinitionsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq,
-      com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes> getListPluginsByMethodMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListPluginsByMethod",
-      requestType = com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq,
-      com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes> getListPluginsByMethodMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes> getListPluginsByMethodMethod;
-    if ((getListPluginsByMethodMethod = PortalManagerApiGrpc.getListPluginsByMethodMethod) == null) {
-      synchronized (PortalManagerApiGrpc.class) {
-        if ((getListPluginsByMethodMethod = PortalManagerApiGrpc.getListPluginsByMethodMethod) == null) {
-          PortalManagerApiGrpc.getListPluginsByMethodMethod = getListPluginsByMethodMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPluginsByMethod"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes.getDefaultInstance()))
-              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListPluginsByMethod"))
-              .build();
-        }
-      }
-    }
-    return getListPluginsByMethodMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1095,13 +1064,6 @@ public final class PortalManagerApiGrpc {
     default void listAllActionDefinitions(com.tcn.cloud.api.api.v1alpha1.integrations.ListAllActionDefinitionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListAllActionDefinitionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAllActionDefinitionsMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void listPluginsByMethod(com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPluginsByMethodMethod(), responseObserver);
     }
   }
 
@@ -1354,14 +1316,6 @@ public final class PortalManagerApiGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAllActionDefinitionsMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     */
-    public void listPluginsByMethod(com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListPluginsByMethodMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -1575,13 +1529,6 @@ public final class PortalManagerApiGrpc {
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListAllActionDefinitionsResponse listAllActionDefinitions(com.tcn.cloud.api.api.v1alpha1.integrations.ListAllActionDefinitionsReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAllActionDefinitionsMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes listPluginsByMethod(com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListPluginsByMethodMethod(), getCallOptions(), request);
     }
   }
 
@@ -1823,14 +1770,6 @@ public final class PortalManagerApiGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAllActionDefinitionsMethod(), getCallOptions()), request);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes> listPluginsByMethod(
-        com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListPluginsByMethodMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_UPSERT_PORTAL_CONFIG = 0;
@@ -1859,7 +1798,6 @@ public final class PortalManagerApiGrpc {
   private static final int METHODID_LIST_PORTAL_TYPES = 23;
   private static final int METHODID_LIST_PORTAL_WORKFLOWS = 24;
   private static final int METHODID_LIST_ALL_ACTION_DEFINITIONS = 25;
-  private static final int METHODID_LIST_PLUGINS_BY_METHOD = 26;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1981,10 +1919,6 @@ public final class PortalManagerApiGrpc {
         case METHODID_LIST_ALL_ACTION_DEFINITIONS:
           serviceImpl.listAllActionDefinitions((com.tcn.cloud.api.api.v1alpha1.integrations.ListAllActionDefinitionsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListAllActionDefinitionsResponse>) responseObserver);
-          break;
-        case METHODID_LIST_PLUGINS_BY_METHOD:
-          serviceImpl.listPluginsByMethod((com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2186,13 +2120,6 @@ public final class PortalManagerApiGrpc {
               com.tcn.cloud.api.api.v1alpha1.integrations.ListAllActionDefinitionsReq,
               com.tcn.cloud.api.api.v1alpha1.integrations.ListAllActionDefinitionsResponse>(
                 service, METHODID_LIST_ALL_ACTION_DEFINITIONS)))
-        .addMethod(
-          getListPluginsByMethodMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodReq,
-              com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginsByMethodRes>(
-                service, METHODID_LIST_PLUGINS_BY_METHOD)))
         .build();
   }
 
@@ -2267,7 +2194,6 @@ public final class PortalManagerApiGrpc {
               .addMethod(getListPortalTypesMethod())
               .addMethod(getListPortalWorkflowsMethod())
               .addMethod(getListAllActionDefinitionsMethod())
-              .addMethod(getListPluginsByMethodMethod())
               .build();
         }
       }
