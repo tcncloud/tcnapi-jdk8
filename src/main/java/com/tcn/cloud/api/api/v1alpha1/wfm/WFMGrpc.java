@@ -7170,7 +7170,6 @@ public final class WFMGrpc {
      * Gets config entities that match the org sending the request and given &#64;entity_type and that belong to the &#64;belongs_to_entity and &#64;schedule_scenario_sid parameters.
      * If &#64;include_member_lists is set to true the member lists of the entities retrieved will be included.
      * Any nodes in the returned set of entities will have inherited nonskill associations applied to the node's member_nonskill_activity fields.
-     * Prior to listing the entities it will Resync TCN Agents and skill proficiencies.
      * Errors:
      *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
@@ -10060,7 +10059,6 @@ public final class WFMGrpc {
      * Gets config entities that match the org sending the request and given &#64;entity_type and that belong to the &#64;belongs_to_entity and &#64;schedule_scenario_sid parameters.
      * If &#64;include_member_lists is set to true the member lists of the entities retrieved will be included.
      * Any nodes in the returned set of entities will have inherited nonskill associations applied to the node's member_nonskill_activity fields.
-     * Prior to listing the entities it will Resync TCN Agents and skill proficiencies.
      * Errors:
      *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
@@ -12910,7 +12908,6 @@ public final class WFMGrpc {
      * Gets config entities that match the org sending the request and given &#64;entity_type and that belong to the &#64;belongs_to_entity and &#64;schedule_scenario_sid parameters.
      * If &#64;include_member_lists is set to true the member lists of the entities retrieved will be included.
      * Any nodes in the returned set of entities will have inherited nonskill associations applied to the node's member_nonskill_activity fields.
-     * Prior to listing the entities it will Resync TCN Agents and skill proficiencies.
      * Errors:
      *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
@@ -15684,7 +15681,6 @@ public final class WFMGrpc {
      * Gets config entities that match the org sending the request and given &#64;entity_type and that belong to the &#64;belongs_to_entity and &#64;schedule_scenario_sid parameters.
      * If &#64;include_member_lists is set to true the member lists of the entities retrieved will be included.
      * Any nodes in the returned set of entities will have inherited nonskill associations applied to the node's member_nonskill_activity fields.
-     * Prior to listing the entities it will Resync TCN Agents and skill proficiencies.
      * Errors:
      *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
