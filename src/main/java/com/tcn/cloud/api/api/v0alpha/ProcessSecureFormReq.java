@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ProcessSecureFormReq() {
+    portalId_ = "";
   }
 
   @java.lang.Override
@@ -129,6 +130,75 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     return map.get(key);
   }
 
+  public static final int PORTAL_ID_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object portalId_ = "";
+  /**
+   * <code>string portal_id = 2 [json_name = "portalId"];</code>
+   * @return The portalId.
+   */
+  @java.lang.Override
+  public java.lang.String getPortalId() {
+    java.lang.Object ref = portalId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      portalId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string portal_id = 2 [json_name = "portalId"];</code>
+   * @return The bytes for portalId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPortalIdBytes() {
+    java.lang.Object ref = portalId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      portalId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int SEGMENT_FIELD_NUMBER = 3;
+  private int segment_ = 0;
+  /**
+   * <pre>
+   * segment tells us which workflow segment needs processing
+   * </pre>
+   *
+   * <code>int32 segment = 3 [json_name = "segment"];</code>
+   * @return The segment.
+   */
+  @java.lang.Override
+  public int getSegment() {
+    return segment_;
+  }
+
+  public static final int CHOICE_FIELD_NUMBER = 4;
+  private int choice_ = 0;
+  /**
+   * <pre>
+   * which choice in the workflow array to be processed
+   * </pre>
+   *
+   * <code>int32 choice = 4 [json_name = "choice"];</code>
+   * @return The choice.
+   */
+  @java.lang.Override
+  public int getChoice() {
+    return choice_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -149,6 +219,15 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         internalGetValues(),
         ValuesDefaultEntryHolder.defaultEntry,
         1);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portalId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, portalId_);
+    }
+    if (segment_ != 0) {
+      output.writeInt32(3, segment_);
+    }
+    if (choice_ != 0) {
+      output.writeInt32(4, choice_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -168,6 +247,17 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, values__);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portalId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, portalId_);
+    }
+    if (segment_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(3, segment_);
+    }
+    if (choice_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(4, choice_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -185,6 +275,12 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
 
     if (!internalGetValues().equals(
         other.internalGetValues())) return false;
+    if (!getPortalId()
+        .equals(other.getPortalId())) return false;
+    if (getSegment()
+        != other.getSegment()) return false;
+    if (getChoice()
+        != other.getChoice()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -200,6 +296,12 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       hash = (37 * hash) + VALUES_FIELD_NUMBER;
       hash = (53 * hash) + internalGetValues().hashCode();
     }
+    hash = (37 * hash) + PORTAL_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getPortalId().hashCode();
+    hash = (37 * hash) + SEGMENT_FIELD_NUMBER;
+    hash = (53 * hash) + getSegment();
+    hash = (37 * hash) + CHOICE_FIELD_NUMBER;
+    hash = (53 * hash) + getChoice();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -354,6 +456,9 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       super.clear();
       bitField0_ = 0;
       internalGetMutableValues().clear();
+      portalId_ = "";
+      segment_ = 0;
+      choice_ = 0;
       return this;
     }
 
@@ -390,6 +495,15 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.values_ = internalGetValues();
         result.values_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.portalId_ = portalId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.segment_ = segment_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.choice_ = choice_;
       }
     }
 
@@ -440,6 +554,17 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       internalGetMutableValues().mergeFrom(
           other.internalGetValues());
       bitField0_ |= 0x00000001;
+      if (!other.getPortalId().isEmpty()) {
+        portalId_ = other.portalId_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (other.getSegment() != 0) {
+        setSegment(other.getSegment());
+      }
+      if (other.getChoice() != 0) {
+        setChoice(other.getChoice());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -475,6 +600,21 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              portalId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              segment_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              choice_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -616,6 +756,166 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       internalGetMutableValues().getMutableMap()
           .putAll(values);
       bitField0_ |= 0x00000001;
+      return this;
+    }
+
+    private java.lang.Object portalId_ = "";
+    /**
+     * <code>string portal_id = 2 [json_name = "portalId"];</code>
+     * @return The portalId.
+     */
+    public java.lang.String getPortalId() {
+      java.lang.Object ref = portalId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        portalId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string portal_id = 2 [json_name = "portalId"];</code>
+     * @return The bytes for portalId.
+     */
+    public com.google.protobuf.ByteString
+        getPortalIdBytes() {
+      java.lang.Object ref = portalId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        portalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string portal_id = 2 [json_name = "portalId"];</code>
+     * @param value The portalId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPortalId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      portalId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string portal_id = 2 [json_name = "portalId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPortalId() {
+      portalId_ = getDefaultInstance().getPortalId();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string portal_id = 2 [json_name = "portalId"];</code>
+     * @param value The bytes for portalId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPortalIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      portalId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private int segment_ ;
+    /**
+     * <pre>
+     * segment tells us which workflow segment needs processing
+     * </pre>
+     *
+     * <code>int32 segment = 3 [json_name = "segment"];</code>
+     * @return The segment.
+     */
+    @java.lang.Override
+    public int getSegment() {
+      return segment_;
+    }
+    /**
+     * <pre>
+     * segment tells us which workflow segment needs processing
+     * </pre>
+     *
+     * <code>int32 segment = 3 [json_name = "segment"];</code>
+     * @param value The segment to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSegment(int value) {
+
+      segment_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * segment tells us which workflow segment needs processing
+     * </pre>
+     *
+     * <code>int32 segment = 3 [json_name = "segment"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSegment() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      segment_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int choice_ ;
+    /**
+     * <pre>
+     * which choice in the workflow array to be processed
+     * </pre>
+     *
+     * <code>int32 choice = 4 [json_name = "choice"];</code>
+     * @return The choice.
+     */
+    @java.lang.Override
+    public int getChoice() {
+      return choice_;
+    }
+    /**
+     * <pre>
+     * which choice in the workflow array to be processed
+     * </pre>
+     *
+     * <code>int32 choice = 4 [json_name = "choice"];</code>
+     * @param value The choice to set.
+     * @return This builder for chaining.
+     */
+    public Builder setChoice(int value) {
+
+      choice_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * which choice in the workflow array to be processed
+     * </pre>
+     *
+     * <code>int32 choice = 4 [json_name = "choice"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearChoice() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      choice_ = 0;
+      onChanged();
       return this;
     }
     @java.lang.Override

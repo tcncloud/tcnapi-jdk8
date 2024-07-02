@@ -8,16 +8,16 @@ public interface FinishSecureFormHandlingReqOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string email = 1 [json_name = "email"];</code>
-   * @return The email.
+   * <code>string reason = 1 [json_name = "reason"];</code>
+   * @return The reason.
    */
-  java.lang.String getEmail();
+  java.lang.String getReason();
   /**
-   * <code>string email = 1 [json_name = "email"];</code>
-   * @return The bytes for email.
+   * <code>string reason = 1 [json_name = "reason"];</code>
+   * @return The bytes for reason.
    */
   com.google.protobuf.ByteString
-      getEmailBytes();
+      getReasonBytes();
 
   /**
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 2 [json_name = "data"];</code>

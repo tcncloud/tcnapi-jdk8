@@ -225,44 +225,12 @@ private static final long serialVersionUID = 0L;
     COLD_AGENT_TRANSFER_STARTED(39),
     /**
      * <pre>
-     * ready to select which portal to be processed
+     * the agent is moving through a portal
      * </pre>
      *
-     * <code>SECURE_FORM_HANDLING_PREPARED = 40;</code>
+     * <code>SECURE_FORM_HANDLING = 40;</code>
      */
-    SECURE_FORM_HANDLING_PREPARED(40),
-    /**
-     * <pre>
-     * agent can fill out form fields on the portal
-     * </pre>
-     *
-     * <code>SECURE_FORM_HANDLING_AGENT_PROCESSING = 41;</code>
-     */
-    SECURE_FORM_HANDLING_AGENT_PROCESSING(41),
-    /**
-     * <pre>
-     * the caller inputting forms on portal using dtmf tones
-     * </pre>
-     *
-     * <code>SECURE_FORM_HANDLING_CALLER_COLLECT = 42;</code>
-     */
-    SECURE_FORM_HANDLING_CALLER_COLLECT(42),
-    /**
-     * <pre>
-     * portal did not finish
-     * </pre>
-     *
-     * <code>SECURE_FORM_HANDLING_CANCELLED = 43;</code>
-     */
-    SECURE_FORM_HANDLING_CANCELLED(43),
-    /**
-     * <pre>
-     * portal finished
-     * </pre>
-     *
-     * <code>SECURE_FORM_HANDLING_FINISHED = 44;</code>
-     */
-    SECURE_FORM_HANDLING_FINISHED(44),
+    SECURE_FORM_HANDLING(40),
     UNRECOGNIZED(-1),
     ;
 
@@ -448,44 +416,12 @@ private static final long serialVersionUID = 0L;
     public static final int COLD_AGENT_TRANSFER_STARTED_VALUE = 39;
     /**
      * <pre>
-     * ready to select which portal to be processed
+     * the agent is moving through a portal
      * </pre>
      *
-     * <code>SECURE_FORM_HANDLING_PREPARED = 40;</code>
+     * <code>SECURE_FORM_HANDLING = 40;</code>
      */
-    public static final int SECURE_FORM_HANDLING_PREPARED_VALUE = 40;
-    /**
-     * <pre>
-     * agent can fill out form fields on the portal
-     * </pre>
-     *
-     * <code>SECURE_FORM_HANDLING_AGENT_PROCESSING = 41;</code>
-     */
-    public static final int SECURE_FORM_HANDLING_AGENT_PROCESSING_VALUE = 41;
-    /**
-     * <pre>
-     * the caller inputting forms on portal using dtmf tones
-     * </pre>
-     *
-     * <code>SECURE_FORM_HANDLING_CALLER_COLLECT = 42;</code>
-     */
-    public static final int SECURE_FORM_HANDLING_CALLER_COLLECT_VALUE = 42;
-    /**
-     * <pre>
-     * portal did not finish
-     * </pre>
-     *
-     * <code>SECURE_FORM_HANDLING_CANCELLED = 43;</code>
-     */
-    public static final int SECURE_FORM_HANDLING_CANCELLED_VALUE = 43;
-    /**
-     * <pre>
-     * portal finished
-     * </pre>
-     *
-     * <code>SECURE_FORM_HANDLING_FINISHED = 44;</code>
-     */
-    public static final int SECURE_FORM_HANDLING_FINISHED_VALUE = 44;
+    public static final int SECURE_FORM_HANDLING_VALUE = 40;
 
 
     public final int getNumber() {
@@ -552,11 +488,7 @@ private static final long serialVersionUID = 0L;
         case 37: return CALLER_TRANSFER_LOST_MERGED_CALLER;
         case 38: return COLD_OUTBOUND_TRANSFER_STARTED;
         case 39: return COLD_AGENT_TRANSFER_STARTED;
-        case 40: return SECURE_FORM_HANDLING_PREPARED;
-        case 41: return SECURE_FORM_HANDLING_AGENT_PROCESSING;
-        case 42: return SECURE_FORM_HANDLING_CALLER_COLLECT;
-        case 43: return SECURE_FORM_HANDLING_CANCELLED;
-        case 44: return SECURE_FORM_HANDLING_FINISHED;
+        case 40: return SECURE_FORM_HANDLING;
         default: return null;
       }
     }

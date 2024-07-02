@@ -40,4 +40,36 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
    */
   com.tcn.cloud.api.api.v1alpha1.integrations.Value getValuesOrThrow(
       java.lang.String key);
+
+  /**
+   * <code>string portal_id = 2 [json_name = "portalId"];</code>
+   * @return The portalId.
+   */
+  java.lang.String getPortalId();
+  /**
+   * <code>string portal_id = 2 [json_name = "portalId"];</code>
+   * @return The bytes for portalId.
+   */
+  com.google.protobuf.ByteString
+      getPortalIdBytes();
+
+  /**
+   * <pre>
+   * segment tells us which workflow segment needs processing
+   * </pre>
+   *
+   * <code>int32 segment = 3 [json_name = "segment"];</code>
+   * @return The segment.
+   */
+  int getSegment();
+
+  /**
+   * <pre>
+   * which choice in the workflow array to be processed
+   * </pre>
+   *
+   * <code>int32 choice = 4 [json_name = "choice"];</code>
+   * @return The choice.
+   */
+  int getChoice();
 }

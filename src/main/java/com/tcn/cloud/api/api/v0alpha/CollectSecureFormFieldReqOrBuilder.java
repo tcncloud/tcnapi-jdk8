@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface CollectCallerSecureFormFieldReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.CollectCallerSecureFormFieldReq)
+public interface CollectSecureFormFieldReqOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.CollectSecureFormFieldReq)
     com.google.protobuf.MessageOrBuilder {
 
   /**

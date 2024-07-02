@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
- * Protobuf type {@code api.v0alpha.ProcessCallerSecureFormFieldRes}
+ * Protobuf type {@code api.v0alpha.ResetSecureFormFieldRes}
  */
-public final class ProcessCallerSecureFormFieldRes extends
+public final class ResetSecureFormFieldRes extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v0alpha.ProcessCallerSecureFormFieldRes)
-    ProcessCallerSecureFormFieldResOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v0alpha.ResetSecureFormFieldRes)
+    ResetSecureFormFieldResOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ProcessCallerSecureFormFieldRes.newBuilder() to construct.
-  private ProcessCallerSecureFormFieldRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ResetSecureFormFieldRes.newBuilder() to construct.
+  private ResetSecureFormFieldRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ProcessCallerSecureFormFieldRes() {
+  private ResetSecureFormFieldRes() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ProcessCallerSecureFormFieldRes();
+    return new ResetSecureFormFieldRes();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_ProcessCallerSecureFormFieldRes_descriptor;
+    return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_ResetSecureFormFieldRes_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_ProcessCallerSecureFormFieldRes_fieldAccessorTable
+    return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_ResetSecureFormFieldRes_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes.class, com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes.Builder.class);
+            com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes.class, com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,10 +71,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes other = (com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes) obj;
+    com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes other = (com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -92,44 +92,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -137,26 +137,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -185,26 +185,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v0alpha.ProcessCallerSecureFormFieldRes}
+   * Protobuf type {@code api.v0alpha.ResetSecureFormFieldRes}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v0alpha.ProcessCallerSecureFormFieldRes)
-      com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldResOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v0alpha.ResetSecureFormFieldRes)
+      com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldResOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_ProcessCallerSecureFormFieldRes_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_ResetSecureFormFieldRes_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_ProcessCallerSecureFormFieldRes_fieldAccessorTable
+      return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_ResetSecureFormFieldRes_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes.class, com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes.Builder.class);
+              com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes.class, com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes.newBuilder()
     private Builder() {
 
     }
@@ -223,17 +223,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_ProcessCallerSecureFormFieldRes_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_ResetSecureFormFieldRes_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes.getDefaultInstance();
+    public com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes build() {
-      com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes result = buildPartial();
+    public com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes build() {
+      com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -241,8 +241,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes buildPartial() {
-      com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes result = new com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes(this);
+    public com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes buildPartial() {
+      com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes result = new com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes(this);
       onBuilt();
       return result;
     }
@@ -281,16 +281,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes) {
-        return mergeFrom((com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes)other);
+      if (other instanceof com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes) {
+        return mergeFrom((com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes other) {
-      if (other == com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes other) {
+      if (other == com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -345,23 +345,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v0alpha.ProcessCallerSecureFormFieldRes)
+    // @@protoc_insertion_point(builder_scope:api.v0alpha.ResetSecureFormFieldRes)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v0alpha.ProcessCallerSecureFormFieldRes)
-  private static final com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v0alpha.ResetSecureFormFieldRes)
+  private static final com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes();
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ProcessCallerSecureFormFieldRes>
-      PARSER = new com.google.protobuf.AbstractParser<ProcessCallerSecureFormFieldRes>() {
+  private static final com.google.protobuf.Parser<ResetSecureFormFieldRes>
+      PARSER = new com.google.protobuf.AbstractParser<ResetSecureFormFieldRes>() {
     @java.lang.Override
-    public ProcessCallerSecureFormFieldRes parsePartialFrom(
+    public ResetSecureFormFieldRes parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -380,17 +380,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ProcessCallerSecureFormFieldRes> parser() {
+  public static com.google.protobuf.Parser<ResetSecureFormFieldRes> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ProcessCallerSecureFormFieldRes> getParserForType() {
+  public com.google.protobuf.Parser<ResetSecureFormFieldRes> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ProcessCallerSecureFormFieldRes getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v0alpha.ResetSecureFormFieldRes getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

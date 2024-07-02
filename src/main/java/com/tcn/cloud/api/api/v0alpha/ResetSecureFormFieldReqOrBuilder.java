@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface CancelSecureFormHandlingResOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.CancelSecureFormHandlingRes)
+public interface ResetSecureFormFieldReqOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.ResetSecureFormFieldReq)
     com.google.protobuf.MessageOrBuilder {
 }

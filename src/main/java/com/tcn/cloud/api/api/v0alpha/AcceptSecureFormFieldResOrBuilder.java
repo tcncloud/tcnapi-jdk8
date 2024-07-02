@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface ProcessCallerSecureFormFieldResOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.ProcessCallerSecureFormFieldRes)
+public interface AcceptSecureFormFieldResOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.AcceptSecureFormFieldRes)
     com.google.protobuf.MessageOrBuilder {
 }

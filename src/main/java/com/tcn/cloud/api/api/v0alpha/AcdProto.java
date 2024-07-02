@@ -560,16 +560,6 @@ public final class AcdProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v0alpha_AgentUnmuteReply_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_SecureFormHandlingPrepareReq_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_SecureFormHandlingPrepareReq_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_SecureFormHandlingPrepareRes_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_SecureFormHandlingPrepareRes_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v0alpha_StartSecureFormReq_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -580,35 +570,35 @@ public final class AcdProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v0alpha_StartSecureFormRes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_CollectCallerSecureFormFieldReq_descriptor;
+    internal_static_api_v0alpha_CollectSecureFormFieldReq_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_CollectCallerSecureFormFieldReq_fieldAccessorTable;
+      internal_static_api_v0alpha_CollectSecureFormFieldReq_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_CollectCallerSecureFormFieldRes_descriptor;
+    internal_static_api_v0alpha_CollectSecureFormFieldRes_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_CollectCallerSecureFormFieldRes_fieldAccessorTable;
+      internal_static_api_v0alpha_CollectSecureFormFieldRes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_ResetCallerSecureFormFieldReq_descriptor;
+    internal_static_api_v0alpha_ResetSecureFormFieldReq_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_ResetCallerSecureFormFieldReq_fieldAccessorTable;
+      internal_static_api_v0alpha_ResetSecureFormFieldReq_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_ResetCallerSecureFormFieldRes_descriptor;
+    internal_static_api_v0alpha_ResetSecureFormFieldRes_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_ResetCallerSecureFormFieldRes_fieldAccessorTable;
+      internal_static_api_v0alpha_ResetSecureFormFieldRes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_ProcessCallerSecureFormFieldReq_descriptor;
+    internal_static_api_v0alpha_AcceptSecureFormFieldReq_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_ProcessCallerSecureFormFieldReq_fieldAccessorTable;
+      internal_static_api_v0alpha_AcceptSecureFormFieldReq_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_ProcessCallerSecureFormFieldRes_descriptor;
+    internal_static_api_v0alpha_AcceptSecureFormFieldRes_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_ProcessCallerSecureFormFieldRes_fieldAccessorTable;
+      internal_static_api_v0alpha_AcceptSecureFormFieldRes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v0alpha_ProcessSecureFormReq_descriptor;
   static final 
@@ -629,16 +619,6 @@ public final class AcdProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v0alpha_ProcessSecureFormRes_DataEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_CancelSecureFormHandlingReq_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_CancelSecureFormHandlingReq_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_CancelSecureFormHandlingRes_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_CancelSecureFormHandlingRes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v0alpha_FinishSecureFormHandlingReq_descriptor;
   static final 
@@ -884,21 +864,18 @@ public final class AcdProto {
       "uteRequest\022\037\n\013session_sid\030\001 \001(\003R\nsession" +
       "Sid\"\020\n\016AgentMuteReply\"5\n\022AgentUnmuteRequ" +
       "est\022\037\n\013session_sid\030\001 \001(\003R\nsessionSid\"\022\n\020" +
-      "AgentUnmuteReply\"\036\n\034SecureFormHandlingPr" +
-      "epareReq\"\036\n\034SecureFormHandlingPrepareRes" +
-      "\"1\n\022StartSecureFormReq\022\033\n\tportal_id\030\001 \001(" +
-      "\tR\010portalId\"\024\n\022StartSecureFormRes\"@\n\037Col" +
-      "lectCallerSecureFormFieldReq\022\035\n\nfield_na" +
-      "me\030\001 \001(\tR\tfieldName\"D\n\037CollectCallerSecu" +
-      "reFormFieldRes\022!\n\014dtmf_pressed\030\001 \001(\005R\013dt" +
-      "mfPressed\">\n\035ResetCallerSecureFormFieldR" +
-      "eq\022\035\n\nfield_name\030\001 \001(\tR\tfieldName\"\037\n\035Res" +
-      "etCallerSecureFormFieldRes\"@\n\037ProcessCal" +
-      "lerSecureFormFieldReq\022\035\n\nfield_name\030\001 \001(" +
-      "\tR\tfieldName\"!\n\037ProcessCallerSecureFormF" +
-      "ieldRes\"\272\001\n\024ProcessSecureFormReq\022E\n\006valu" +
-      "es\030\001 \003(\0132-.api.v0alpha.ProcessSecureForm" +
-      "Req.ValuesEntryR\006values\032[\n\013ValuesEntry\022\020" +
+      "AgentUnmuteReply\"1\n\022StartSecureFormReq\022\033" +
+      "\n\tportal_id\030\001 \001(\tR\010portalId\"\024\n\022StartSecu" +
+      "reFormRes\":\n\031CollectSecureFormFieldReq\022\035" +
+      "\n\nfield_name\030\001 \001(\tR\tfieldName\"\033\n\031Collect" +
+      "SecureFormFieldRes\"\031\n\027ResetSecureFormFie" +
+      "ldReq\"\031\n\027ResetSecureFormFieldRes\"\032\n\030Acce" +
+      "ptSecureFormFieldReq\"\032\n\030AcceptSecureForm" +
+      "FieldRes\"\211\002\n\024ProcessSecureFormReq\022E\n\006val" +
+      "ues\030\001 \003(\0132-.api.v0alpha.ProcessSecureFor" +
+      "mReq.ValuesEntryR\006values\022\033\n\tportal_id\030\002 " +
+      "\001(\tR\010portalId\022\030\n\007segment\030\003 \001(\005R\007segment\022" +
+      "\026\n\006choice\030\004 \001(\005R\006choice\032[\n\013ValuesEntry\022\020" +
       "\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132 .api.v1" +
       "alpha1.integrations.ValueR\005value:\0028\001\"\314\001\n" +
       "\024ProcessSecureFormRes\022\030\n\007success\030\001 \001(\010R\007" +
@@ -906,266 +883,253 @@ public final class AcdProto {
       "essSecureFormRes.DataEntryR\004data\032Y\n\tData" +
       "Entry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132 " +
       ".api.v1alpha1.integrations.ValueR\005value:" +
-      "\0028\001\"5\n\033CancelSecureFormHandlingReq\022\026\n\006re" +
-      "ason\030\001 \001(\tR\006reason\"\035\n\033CancelSecureFormHa" +
-      "ndlingRes\"\326\001\n\033FinishSecureFormHandlingRe" +
-      "q\022\024\n\005email\030\001 \001(\tR\005email\022F\n\004data\030\002 \003(\01322." +
-      "api.v0alpha.FinishSecureFormHandlingReq." +
-      "DataEntryR\004data\032Y\n\tDataEntry\022\020\n\003key\030\001 \001(" +
-      "\tR\003key\0226\n\005value\030\002 \001(\0132 .api.v1alpha1.int" +
-      "egrations.ValueR\005value:\0028\001\"\035\n\033FinishSecu" +
-      "reFormHandlingRes2\245M\n\003Acd\022\227\001\n\024AgentGetSt" +
-      "atusStream\022\".api.v0alpha.AgentGetStatusR" +
-      "equest\032 .api.v0alpha.AgentGetStatusReply" +
-      "\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v0alpha/acd/agentg" +
-      "etstatusstream:\001*0\001\022\211\001\n\016AgentGetStatus\022\"" +
-      ".api.v0alpha.AgentGetStatusRequest\032 .api" +
-      ".v0alpha.AgentGetStatusReply\"1\272\270\221\002\002\030\001\202\323\344" +
-      "\223\002$\"\037/api/v0alpha/acd/agentgetstatus:\001*\022" +
-      "\254\001\n\026AgentGetConnectedParty\022*.api.v0alpha" +
-      ".AgentGetConnectedPartyRequest\032(.api.v0a" +
-      "lpha.AgentGetConnectedPartyReply\"<\272\270\221\002\005\n" +
-      "\003\010\254\002\202\323\344\223\002,\"\'/api/v0alpha/acd/agentgetcon" +
-      "nectedparty:\001*\022\310\001\n\035ManagerAgentGetConnec" +
-      "tedParty\0221.api.v0alpha.ManagerAgentGetCo" +
-      "nnectedPartyRequest\032/.api.v0alpha.Manage" +
-      "rAgentGetConnectedPartyReply\"C\272\270\221\002\005\n\003\010\220\003" +
-      "\202\323\344\223\0023\"./api/v0alpha/acd/manageragentget" +
-      "connectedparty:\001*\022\205\001\n\rAgentIntercom\022!.ap" +
-      "i.v0alpha.AgentIntercomRequest\032\037.api.v0a" +
-      "lpha.AgentIntercomReply\"0\272\270\221\002\002\030\001\202\323\344\223\002#\"\036" +
-      "/api/v0alpha/acd/agentIntercom:\001*\022\235\001\n\023Ag" +
-      "entIntercomAccept\022\'.api.v0alpha.AgentInt" +
-      "ercomAcceptRequest\032%.api.v0alpha.AgentIn" +
-      "tercomAcceptReply\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v" +
-      "0alpha/acd/agentintercomaccept:\001*\022\235\001\n\023Ag" +
-      "entIntercomReject\022\'.api.v0alpha.AgentInt" +
-      "ercomRejectRequest\032%.api.v0alpha.AgentIn" +
-      "tercomRejectReply\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v" +
-      "0alpha/acd/agentintercomreject:\001*\022\235\001\n\023Ag" +
-      "entIntercomCancel\022\'.api.v0alpha.AgentInt" +
-      "ercomCancelRequest\032%.api.v0alpha.AgentIn" +
-      "tercomCancelReply\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v" +
-      "0alpha/acd/agentintercomcancel:\001*\022\225\001\n\021Di" +
-      "alManualPrepare\022%.api.v0alpha.DialManual" +
-      "PrepareRequest\032#.api.v0alpha.DialManualP" +
-      "repareReply\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha" +
-      "/acd/dialmanualprepare:\001*\022\221\001\n\020DialManual" +
-      "Cancel\022$.api.v0alpha.DialManualCancelReq" +
-      "uest\032\".api.v0alpha.DialManualCancelReply" +
-      "\"3\272\270\221\002\002\030\001\202\323\344\223\002&\"!/api/v0alpha/acd/dialma" +
-      "nualcancel:\001*\022\231\001\n\022DialPreviewPrepare\022&.a" +
-      "pi.v0alpha.DialPreviewPrepareRequest\032$.a" +
-      "pi.v0alpha.DialPreviewPrepareReply\"5\272\270\221\002" +
-      "\002\030\001\202\323\344\223\002(\"#/api/v0alpha/acd/dialpreviewp" +
-      "repare:\001*\022y\n\nAgentPause\022\036.api.v0alpha.Ag" +
-      "entPauseRequest\032\034.api.v0alpha.AgentPause" +
-      "Reply\"-\272\270\221\002\002\030\001\202\323\344\223\002 \"\033/api/v0alpha/acd/a" +
-      "gentpause:\001*\022\205\001\n\rAgentSetReady\022!.api.v0a" +
-      "lpha.AgentSetReadyRequest\032\037.api.v0alpha." +
-      "AgentSetReadyReply\"0\272\270\221\002\002\030\001\202\323\344\223\002#\"\036/api/" +
-      "v0alpha/acd/agentsetready:\001*\022\201\001\n\014AgentGU" +
-      "IBusy\022 .api.v0alpha.AgentGUIBusyRequest\032" +
-      "\036.api.v0alpha.AgentGUIBusyReply\"/\272\270\221\002\002\030\001" +
-      "\202\323\344\223\002\"\"\035/api/v0alpha/acd/agentguibusy:\001*" +
-      "\022\233\001\n\027ReportAgentSessionEvent\022!.api.v0alp" +
-      "ha.AgentSessionEventReq\032!.api.v0alpha.Ag" +
-      "entSessionEventRes\":\272\270\221\002\002\030\001\202\323\344\223\002-\"(/api/" +
-      "v0alpha/acd/reportagentsessionevent:\001*\022\205" +
-      "\001\n\rCallerRequeue\022!.api.v0alpha.CallerReq" +
-      "ueueRequest\032\037.api.v0alpha.CallerRequeueR" +
-      "eply\"0\272\270\221\002\002\030\001\202\323\344\223\002#\"\036/api/v0alpha/acd/ca" +
-      "llerrequeue:\001*\022\215\001\n\017AgentDisconnect\022#.api" +
-      ".v0alpha.AgentDisconnectRequest\032!.api.v0" +
-      "alpha.AgentDisconnectReply\"2\272\270\221\002\002\030\001\202\323\344\223\002" +
-      "%\" /api/v0alpha/acd/agentdisconnect:\001*\022\301" +
-      "\001\n\034TransferWarmToOutboundCancel\0220.api.v0" +
-      "alpha.TransferWarmToOutboundCancelReques" +
-      "t\032..api.v0alpha.TransferWarmToOutboundCa" +
-      "ncelReply\"?\272\270\221\002\002\030\001\202\323\344\223\0022\"-/api/v0alpha/a" +
-      "cd/transferwarmtooutboundcancel:\001*\022\265\001\n\031T" +
-      "ransferWarmToAgentCancel\022-.api.v0alpha.T" +
-      "ransferWarmToAgentCancelRequest\032+.api.v0" +
-      "alpha.TransferWarmToAgentCancelReply\"<\272\270" +
-      "\221\002\002\030\001\202\323\344\223\002/\"*/api/v0alpha/acd/transferwa" +
-      "rmtoagentcancel:\001*\022\310\001\n\035TransferWarmToOut" +
-      "boundApprove\0221.api.v0alpha.TransferWarmT" +
-      "oOutboundApproveRequest\032/.api.v0alpha.Tr" +
-      "ansferWarmToOutboundApproveReply\"C\272\270\221\002\005\n" +
-      "\003\010\254\002\202\323\344\223\0023\"./api/v0alpha/acd/transferwar" +
-      "mtooutboundapprove:\001*\022\271\001\n\032TransferWarmTo" +
-      "AgentApprove\022..api.v0alpha.TransferWarmT" +
-      "oAgentApproveRequest\032,.api.v0alpha.Trans" +
-      "ferWarmToAgentApproveReply\"=\272\270\221\002\002\030\001\202\323\344\223\002" +
-      "0\"+/api/v0alpha/acd/transferwarmtoagenta" +
-      "pprove:\001*\022\245\001\n\025CallerSendToVoicemail\022).ap" +
-      "i.v0alpha.CallerSendToVoicemailRequest\032\'" +
-      ".api.v0alpha.CallerSendToVoicemailReply\"" +
-      "8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alpha/acd/callers" +
-      "endtovoicemail:\001*\022\345\001\n%AgentInviteTransfe" +
-      "rCallerToConference\0229.api.v0alpha.AgentI" +
-      "nviteTransferCallerToConferenceRequest\0327" +
-      ".api.v0alpha.AgentInviteTransferCallerTo" +
-      "ConferenceReply\"H\272\270\221\002\002\030\001\202\323\344\223\002;\"6/api/v0a" +
-      "lpha/acd/agentinvitetransfercallertoconf" +
-      "erence:\001*\022\225\001\n\021AgentMonitorCalls\022%.api.v0" +
-      "alpha.AgentMonitorCallsRequest\032#.api.v0a" +
-      "lpha.AgentMonitorCallsReply\"4\272\270\221\002\002\030\001\202\323\344\223" +
-      "\002\'\"\"/api/v0alpha/acd/agentmonitorcalls:\001" +
-      "*\022\251\001\n\026TransferColdToOutbound\022*.api.v0alp" +
-      "ha.TransferColdToOutboundRequest\032(.api.v" +
-      "0alpha.TransferColdToOutboundReply\"9\272\270\221\002" +
-      "\002\030\001\202\323\344\223\002,\"\'/api/v0alpha/acd/transfercold" +
-      "tooutbound:\001*\022\235\001\n\023TransferColdToAgent\022\'." +
-      "api.v0alpha.TransferColdToAgentRequest\032%" +
-      ".api.v0alpha.TransferColdToAgentReply\"6\272" +
-      "\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v0alpha/acd/transferc" +
-      "oldtoagent:\001*\022\275\001\n\033TransferWarmToOutbound" +
-      "Start\022/.api.v0alpha.TransferWarmToOutbou" +
-      "ndStartRequest\032-.api.v0alpha.TransferWar" +
-      "mToOutboundStartReply\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/a" +
-      "pi/v0alpha/acd/transferwarmtooutboundsta" +
-      "rt:\001*\022\325\001\n CreateWarmOutboundTransferMemb" +
-      "er\0224.api.v0alpha.CreateWarmOutboundTrans" +
-      "ferMemberRequest\0322.api.v0alpha.CreateWar" +
-      "mOutboundTransferMemberReply\"G\272\270\221\002\005\n\003\010\254\002" +
-      "\202\323\344\223\0027\"2/api/v0alpha/acd/createwarmoutbo" +
-      "undtransferdmember:\001*\022\261\001\n\024RemoveTransfer" +
-      "Member\022(.api.v0alpha.RemoveTransferMembe" +
-      "rRequest\032&.api.v0alpha.RemoveTransferMem" +
-      "berReply\"G\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0027\"2/api/v0alpha" +
-      "/acd/deletewarmoutboundtransferdmember:\001" +
-      "*\022\261\001\n\030TransferWarmToAgentStart\022,.api.v0a" +
-      "lpha.TransferWarmToAgentStartRequest\032*.a" +
-      "pi.v0alpha.TransferWarmToAgentStartReply" +
-      "\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api/v0alpha/acd/transf" +
-      "erwarmtoagentstart:\001*\022\241\001\n\024AgentGetCallFr" +
-      "omHold\022(.api.v0alpha.AgentGetCallFromHol" +
-      "dRequest\032&.api.v0alpha.AgentGetCallFromH" +
-      "oldReply\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v0alpha/ac" +
-      "d/agentgetcallfromhold:\001*\022\301\001\n\034AgentGetSp" +
-      "ecificCallFromHold\0220.api.v0alpha.AgentGe" +
-      "tSpecificCallFromHoldRequest\032..api.v0alp" +
-      "ha.AgentGetSpecificCallFromHoldReply\"?\272\270" +
-      "\221\002\002\030\001\202\323\344\223\0022\"-/api/v0alpha/acd/agentgetsp" +
-      "ecificcallfromhold:\001*\022\255\001\n\027ACDGetAllAgent" +
-      "sStatuses\022+.api.v0alpha.ACDGetAllAgentsS" +
-      "tatusesRequest\032).api.v0alpha.ACDGetAllAg" +
-      "entsStatusesReply\":\272\270\221\002\002\030\001\202\323\344\223\002-\"(/api/v" +
-      "0alpha/acd/acdgetallagentsstatuses:\001*\022\231\001" +
-      "\n\022AgentPutCallOnHold\022&.api.v0alpha.Agent" +
-      "PutCallOnHoldRequest\032$.api.v0alpha.Agent" +
-      "PutCallOnHoldReply\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/" +
-      "v0alpha/acd/agentputcallonhold:\001*\022\235\001\n\023Ag" +
-      "entReceiveMessage\022\'.api.v0alpha.AgentRec" +
-      "eiveMessageRequest\032%.api.v0alpha.AgentRe" +
-      "ceiveMessageReply\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v" +
-      "0alpha/acd/agentreceivemessage:\001*\022\235\001\n\023Ag" +
-      "entPBXApproveCall\022\'.api.v0alpha.AgentPBX" +
-      "ApproveCallRequest\032%.api.v0alpha.AgentPB",
-      "XApproveCallReply\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v" +
-      "0alpha/acd/agentpbxapprovecall:\001*\022\231\001\n\022Ag" +
-      "entPBXRejectCall\022&.api.v0alpha.AgentPBXR" +
-      "ejectCallRequest\032$.api.v0alpha.AgentPBXR" +
-      "ejectCallReply\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v0al" +
-      "pha/acd/agentpbxrejectcall:\001*\022\225\001\n\021GetCal" +
-      "lerLostPeer\022%.api.v0alpha.GetCallerLostP" +
-      "eerRequest\032#.api.v0alpha.GetCallerLostPe" +
-      "erReply\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha/acd" +
-      "/getcallerlostpeer:\001*\022\235\001\n\021CallerGetRawEv" +
-      "ent\022%.api.v0alpha.CallerGetRawEventReque" +
-      "st\032#.api.v0alpha.CallerGetRawEventReply\"" +
-      "<\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002,\"\'/api/v0alpha/acd/getc" +
-      "allerraweventreply:\001*\022\240\001\n\023PeerAgentWithC" +
-      "aller\022\'.api.v0alpha.PeerAgentWithCallerR" +
-      "equest\032%.api.v0alpha.PeerAgentWithCaller" +
-      "Reply\"9\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002)\"$/api/v0alpha/ac" +
-      "d/peeragentwithcaller:\001*\022\233\001\n\022HoldTransfe" +
-      "rMember\022\".api.v0alpha.HoldTransferMember" +
-      "Req\032\".api.v0alpha.HoldTransferMemberRes\"" +
-      "=\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002-\"(/api/v0alpha/acd/mute" +
-      "transferpartymember:\001*\022\236\001\n\024UnholdTransfe" +
-      "rMember\022$.api.v0alpha.UnholdTransferMemb" +
-      "erReq\032$.api.v0alpha.UnholdTransferMember" +
-      "Res\":\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002*\"%/api/v0alpha/acd/" +
-      "unmutetransfermember:\001*\022\226\001\n\022GetAgentCall" +
-      "Counts\022\".api.v0alpha.GetAgentCallCountsR" +
-      "eq\032\".api.v0alpha.GetAgentCallCountsRes\"8" +
-      "\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002(\"#/api/v0alpha/acd/getag" +
-      "entcallcounts:\001*\022\252\001\n\027WarmCallerTransferS" +
-      "tart\022\'.api.v0alpha.WarmCallerTransferSta" +
-      "rtReq\032\'.api.v0alpha.WarmCallerTransferSt" +
-      "artRes\"=\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002-\"(/api/v0alpha/a" +
-      "cd/warmcallertransferstart:\001*\022\256\001\n\030WarmCa" +
-      "llerTransferCancel\022(.api.v0alpha.WarmCal" +
-      "lerTransferCancelReq\032(.api.v0alpha.WarmC" +
-      "allerTransferCancelRes\">\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002." +
-      "\")/api/v0alpha/acd/warmcallertransfercan" +
-      "cel:\001*\022\262\001\n\031WarmCallerTransferApprove\022).a" +
-      "pi.v0alpha.WarmCallerTransferApproveReq\032" +
-      ").api.v0alpha.WarmCallerTransferApproveR" +
-      "es\"?\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002/\"*/api/v0alpha/acd/w" +
-      "armcallertransferapprove:\001*\022\236\001\n\024PlaySoun" +
-      "dboardEntity\022$.api.v0alpha.PlaySoundboar" +
-      "dEntityReq\032$.api.v0alpha.PlaySoundboardE" +
-      "ntityRes\":\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002*\"%/api/v0alpha" +
-      "/acd/playsoundboardentity:\001*\022\236\001\n\024StopSou" +
-      "ndboardEntity\022$.api.v0alpha.StopSoundboa" +
-      "rdEntityReq\032$.api.v0alpha.StopSoundboard" +
-      "EntityRes\":\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002*\"%/api/v0alph" +
-      "a/acd/stopsoundboardentity:\001*\022\230\001\n\021Update" +
-      "AgentSkills\022%.api.v0alpha.UpdateAgentSki" +
-      "llsRequest\032#.api.v0alpha.UpdateAgentSkil" +
-      "lsReply\"7\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002\'\"\"/api/v0alpha/" +
-      "acd/updateagentskills:\001*\022t\n\010PlayDTMF\022\034.a" +
-      "pi.v0alpha.PlayDTMFRequest\032\032.api.v0alpha" +
-      ".PlayDTMFReply\".\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002\036\"\031/api/v" +
-      "0alpha/acd/playdtmf:\001*\022x\n\tAgentMute\022\035.ap" +
-      "i.v0alpha.AgentMuteRequest\032\033.api.v0alpha" +
-      ".AgentMuteReply\"/\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002\037\"\032/api/" +
-      "v0alpha/acd/agentmute:\001*\022\200\001\n\013AgentUnmute" +
-      "\022\037.api.v0alpha.AgentUnmuteRequest\032\035.api." +
-      "v0alpha.AgentUnmuteReply\"1\272\270\221\002\005\n\003\010\254\002\202\323\344\223" +
-      "\002!\"\034/api/v0alpha/acd/agentunmute:\001*\022\262\001\n\031" +
-      "SecureFormHandlingPrepare\022).api.v0alpha." +
-      "SecureFormHandlingPrepareReq\032).api.v0alp" +
-      "ha.SecureFormHandlingPrepareRes\"?\272\270\221\002\005\n\003" +
-      "\010\254\002\202\323\344\223\002/\"*/api/v0alpha/acd/secureformha" +
-      "ndlingprepare:\001*\022\212\001\n\017StartSecureForm\022\037.a" +
-      "pi.v0alpha.StartSecureFormReq\032\037.api.v0al" +
-      "pha.StartSecureFormRes\"5\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002%" +
-      "\" /api/v0alpha/acd/startsecureform:\001*\022\300\001" +
-      "\n\034CollectCallerSecureFormField\022,.api.v0a" +
-      "lpha.CollectCallerSecureFormFieldReq\032,.a" +
-      "pi.v0alpha.CollectCallerSecureFormFieldR" +
-      "es\"B\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0022\"-/api/v0alpha/acd/c" +
-      "ollectcallersecureformfield:\001*0\001\022\266\001\n\032Res" +
-      "etCallerSecureFormField\022*.api.v0alpha.Re" +
-      "setCallerSecureFormFieldReq\032*.api.v0alph" +
-      "a.ResetCallerSecureFormFieldRes\"@\272\270\221\002\005\n\003" +
-      "\010\254\002\202\323\344\223\0020\"+/api/v0alpha/acd/resetcallers" +
-      "ecureformfield:\001*\022\276\001\n\034ProcessCallerSecur" +
-      "eFormField\022,.api.v0alpha.ProcessCallerSe" +
-      "cureFormFieldReq\032,.api.v0alpha.ProcessCa" +
-      "llerSecureFormFieldRes\"B\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0022" +
-      "\"-/api/v0alpha/acd/processcallersecurefo" +
-      "rmfield:\001*\022\222\001\n\021ProcessSecureForm\022!.api.v" +
-      "0alpha.ProcessSecureFormReq\032!.api.v0alph" +
-      "a.ProcessSecureFormRes\"7\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002\'" +
-      "\"\"/api/v0alpha/acd/processsecureform:\001*\022" +
-      "\256\001\n\030CancelSecureFormHandling\022(.api.v0alp" +
-      "ha.CancelSecureFormHandlingReq\032(.api.v0a" +
-      "lpha.CancelSecureFormHandlingRes\">\272\270\221\002\005\n" +
-      "\003\010\254\002\202\323\344\223\002.\")/api/v0alpha/acd/cancelsecur" +
-      "eformhandling:\001*\022\256\001\n\030FinishSecureFormHan" +
-      "dling\022(.api.v0alpha.FinishSecureFormHand" +
-      "lingReq\032(.api.v0alpha.FinishSecureFormHa" +
-      "ndlingRes\">\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002.\")/api/v0alph" +
-      "a/acd/finishsecureformhandling:\001*Bv\n\035com" +
-      ".tcn.cloud.api.api.v0alphaB\010AcdProtoP\001\242\002" +
-      "\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V" +
-      "0alpha\\GPBMetadata\352\002\014Api::V0alphab\006proto" +
-      "3"
+      "\0028\001\"\330\001\n\033FinishSecureFormHandlingReq\022\026\n\006r" +
+      "eason\030\001 \001(\tR\006reason\022F\n\004data\030\002 \003(\01322.api." +
+      "v0alpha.FinishSecureFormHandlingReq.Data" +
+      "EntryR\004data\032Y\n\tDataEntry\022\020\n\003key\030\001 \001(\tR\003k" +
+      "ey\0226\n\005value\030\002 \001(\0132 .api.v1alpha1.integra" +
+      "tions.ValueR\005value:\0028\001\"\035\n\033FinishSecureFo" +
+      "rmHandlingRes2\363I\n\003Acd\022\227\001\n\024AgentGetStatus" +
+      "Stream\022\".api.v0alpha.AgentGetStatusReque" +
+      "st\032 .api.v0alpha.AgentGetStatusReply\"7\272\270" +
+      "\221\002\002\030\001\202\323\344\223\002*\"%/api/v0alpha/acd/agentgetst" +
+      "atusstream:\001*0\001\022\211\001\n\016AgentGetStatus\022\".api" +
+      ".v0alpha.AgentGetStatusRequest\032 .api.v0a" +
+      "lpha.AgentGetStatusReply\"1\272\270\221\002\002\030\001\202\323\344\223\002$\"" +
+      "\037/api/v0alpha/acd/agentgetstatus:\001*\022\254\001\n\026" +
+      "AgentGetConnectedParty\022*.api.v0alpha.Age" +
+      "ntGetConnectedPartyRequest\032(.api.v0alpha" +
+      ".AgentGetConnectedPartyReply\"<\272\270\221\002\005\n\003\010\254\002" +
+      "\202\323\344\223\002,\"\'/api/v0alpha/acd/agentgetconnect" +
+      "edparty:\001*\022\310\001\n\035ManagerAgentGetConnectedP" +
+      "arty\0221.api.v0alpha.ManagerAgentGetConnec" +
+      "tedPartyRequest\032/.api.v0alpha.ManagerAge" +
+      "ntGetConnectedPartyReply\"C\272\270\221\002\005\n\003\010\220\003\202\323\344\223" +
+      "\0023\"./api/v0alpha/acd/manageragentgetconn" +
+      "ectedparty:\001*\022\205\001\n\rAgentIntercom\022!.api.v0" +
+      "alpha.AgentIntercomRequest\032\037.api.v0alpha" +
+      ".AgentIntercomReply\"0\272\270\221\002\002\030\001\202\323\344\223\002#\"\036/api" +
+      "/v0alpha/acd/agentIntercom:\001*\022\235\001\n\023AgentI" +
+      "ntercomAccept\022\'.api.v0alpha.AgentInterco" +
+      "mAcceptRequest\032%.api.v0alpha.AgentInterc" +
+      "omAcceptReply\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v0alp" +
+      "ha/acd/agentintercomaccept:\001*\022\235\001\n\023AgentI" +
+      "ntercomReject\022\'.api.v0alpha.AgentInterco" +
+      "mRejectRequest\032%.api.v0alpha.AgentInterc" +
+      "omRejectReply\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v0alp" +
+      "ha/acd/agentintercomreject:\001*\022\235\001\n\023AgentI" +
+      "ntercomCancel\022\'.api.v0alpha.AgentInterco" +
+      "mCancelRequest\032%.api.v0alpha.AgentInterc" +
+      "omCancelReply\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v0alp" +
+      "ha/acd/agentintercomcancel:\001*\022\225\001\n\021DialMa" +
+      "nualPrepare\022%.api.v0alpha.DialManualPrep" +
+      "areRequest\032#.api.v0alpha.DialManualPrepa" +
+      "reReply\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha/acd" +
+      "/dialmanualprepare:\001*\022\221\001\n\020DialManualCanc" +
+      "el\022$.api.v0alpha.DialManualCancelRequest" +
+      "\032\".api.v0alpha.DialManualCancelReply\"3\272\270" +
+      "\221\002\002\030\001\202\323\344\223\002&\"!/api/v0alpha/acd/dialmanual" +
+      "cancel:\001*\022\231\001\n\022DialPreviewPrepare\022&.api.v" +
+      "0alpha.DialPreviewPrepareRequest\032$.api.v" +
+      "0alpha.DialPreviewPrepareReply\"5\272\270\221\002\002\030\001\202" +
+      "\323\344\223\002(\"#/api/v0alpha/acd/dialpreviewprepa" +
+      "re:\001*\022y\n\nAgentPause\022\036.api.v0alpha.AgentP" +
+      "auseRequest\032\034.api.v0alpha.AgentPauseRepl" +
+      "y\"-\272\270\221\002\002\030\001\202\323\344\223\002 \"\033/api/v0alpha/acd/agent" +
+      "pause:\001*\022\205\001\n\rAgentSetReady\022!.api.v0alpha" +
+      ".AgentSetReadyRequest\032\037.api.v0alpha.Agen" +
+      "tSetReadyReply\"0\272\270\221\002\002\030\001\202\323\344\223\002#\"\036/api/v0al" +
+      "pha/acd/agentsetready:\001*\022\201\001\n\014AgentGUIBus" +
+      "y\022 .api.v0alpha.AgentGUIBusyRequest\032\036.ap" +
+      "i.v0alpha.AgentGUIBusyReply\"/\272\270\221\002\002\030\001\202\323\344\223" +
+      "\002\"\"\035/api/v0alpha/acd/agentguibusy:\001*\022\233\001\n" +
+      "\027ReportAgentSessionEvent\022!.api.v0alpha.A" +
+      "gentSessionEventReq\032!.api.v0alpha.AgentS" +
+      "essionEventRes\":\272\270\221\002\002\030\001\202\323\344\223\002-\"(/api/v0al" +
+      "pha/acd/reportagentsessionevent:\001*\022\205\001\n\rC" +
+      "allerRequeue\022!.api.v0alpha.CallerRequeue" +
+      "Request\032\037.api.v0alpha.CallerRequeueReply" +
+      "\"0\272\270\221\002\002\030\001\202\323\344\223\002#\"\036/api/v0alpha/acd/caller" +
+      "requeue:\001*\022\215\001\n\017AgentDisconnect\022#.api.v0a" +
+      "lpha.AgentDisconnectRequest\032!.api.v0alph" +
+      "a.AgentDisconnectReply\"2\272\270\221\002\002\030\001\202\323\344\223\002%\" /" +
+      "api/v0alpha/acd/agentdisconnect:\001*\022\301\001\n\034T" +
+      "ransferWarmToOutboundCancel\0220.api.v0alph" +
+      "a.TransferWarmToOutboundCancelRequest\032.." +
+      "api.v0alpha.TransferWarmToOutboundCancel" +
+      "Reply\"?\272\270\221\002\002\030\001\202\323\344\223\0022\"-/api/v0alpha/acd/t" +
+      "ransferwarmtooutboundcancel:\001*\022\265\001\n\031Trans" +
+      "ferWarmToAgentCancel\022-.api.v0alpha.Trans" +
+      "ferWarmToAgentCancelRequest\032+.api.v0alph" +
+      "a.TransferWarmToAgentCancelReply\"<\272\270\221\002\002\030" +
+      "\001\202\323\344\223\002/\"*/api/v0alpha/acd/transferwarmto" +
+      "agentcancel:\001*\022\310\001\n\035TransferWarmToOutboun" +
+      "dApprove\0221.api.v0alpha.TransferWarmToOut" +
+      "boundApproveRequest\032/.api.v0alpha.Transf" +
+      "erWarmToOutboundApproveReply\"C\272\270\221\002\005\n\003\010\254\002" +
+      "\202\323\344\223\0023\"./api/v0alpha/acd/transferwarmtoo" +
+      "utboundapprove:\001*\022\271\001\n\032TransferWarmToAgen" +
+      "tApprove\022..api.v0alpha.TransferWarmToAge" +
+      "ntApproveRequest\032,.api.v0alpha.TransferW" +
+      "armToAgentApproveReply\"=\272\270\221\002\002\030\001\202\323\344\223\0020\"+/" +
+      "api/v0alpha/acd/transferwarmtoagentappro" +
+      "ve:\001*\022\245\001\n\025CallerSendToVoicemail\022).api.v0" +
+      "alpha.CallerSendToVoicemailRequest\032\'.api" +
+      ".v0alpha.CallerSendToVoicemailReply\"8\272\270\221" +
+      "\002\002\030\001\202\323\344\223\002+\"&/api/v0alpha/acd/callersendt" +
+      "ovoicemail:\001*\022\345\001\n%AgentInviteTransferCal" +
+      "lerToConference\0229.api.v0alpha.AgentInvit" +
+      "eTransferCallerToConferenceRequest\0327.api" +
+      ".v0alpha.AgentInviteTransferCallerToConf" +
+      "erenceReply\"H\272\270\221\002\002\030\001\202\323\344\223\002;\"6/api/v0alpha" +
+      "/acd/agentinvitetransfercallertoconferen" +
+      "ce:\001*\022\225\001\n\021AgentMonitorCalls\022%.api.v0alph" +
+      "a.AgentMonitorCallsRequest\032#.api.v0alpha" +
+      ".AgentMonitorCallsReply\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"" +
+      "/api/v0alpha/acd/agentmonitorcalls:\001*\022\251\001" +
+      "\n\026TransferColdToOutbound\022*.api.v0alpha.T" +
+      "ransferColdToOutboundRequest\032(.api.v0alp" +
+      "ha.TransferColdToOutboundReply\"9\272\270\221\002\002\030\001\202" +
+      "\323\344\223\002,\"\'/api/v0alpha/acd/transfercoldtoou" +
+      "tbound:\001*\022\235\001\n\023TransferColdToAgent\022\'.api." +
+      "v0alpha.TransferColdToAgentRequest\032%.api" +
+      ".v0alpha.TransferColdToAgentReply\"6\272\270\221\002\002" +
+      "\030\001\202\323\344\223\002)\"$/api/v0alpha/acd/transfercoldt" +
+      "oagent:\001*\022\275\001\n\033TransferWarmToOutboundStar" +
+      "t\022/.api.v0alpha.TransferWarmToOutboundSt" +
+      "artRequest\032-.api.v0alpha.TransferWarmToO" +
+      "utboundStartReply\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v" +
+      "0alpha/acd/transferwarmtooutboundstart:\001" +
+      "*\022\325\001\n CreateWarmOutboundTransferMember\0224" +
+      ".api.v0alpha.CreateWarmOutboundTransferM" +
+      "emberRequest\0322.api.v0alpha.CreateWarmOut" +
+      "boundTransferMemberReply\"G\272\270\221\002\005\n\003\010\254\002\202\323\344\223" +
+      "\0027\"2/api/v0alpha/acd/createwarmoutboundt" +
+      "ransferdmember:\001*\022\261\001\n\024RemoveTransferMemb" +
+      "er\022(.api.v0alpha.RemoveTransferMemberReq" +
+      "uest\032&.api.v0alpha.RemoveTransferMemberR" +
+      "eply\"G\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0027\"2/api/v0alpha/acd" +
+      "/deletewarmoutboundtransferdmember:\001*\022\261\001" +
+      "\n\030TransferWarmToAgentStart\022,.api.v0alpha" +
+      ".TransferWarmToAgentStartRequest\032*.api.v" +
+      "0alpha.TransferWarmToAgentStartReply\";\272\270" +
+      "\221\002\002\030\001\202\323\344\223\002.\")/api/v0alpha/acd/transferwa" +
+      "rmtoagentstart:\001*\022\241\001\n\024AgentGetCallFromHo" +
+      "ld\022(.api.v0alpha.AgentGetCallFromHoldReq" +
+      "uest\032&.api.v0alpha.AgentGetCallFromHoldR" +
+      "eply\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v0alpha/acd/ag" +
+      "entgetcallfromhold:\001*\022\301\001\n\034AgentGetSpecif" +
+      "icCallFromHold\0220.api.v0alpha.AgentGetSpe" +
+      "cificCallFromHoldRequest\032..api.v0alpha.A" +
+      "gentGetSpecificCallFromHoldReply\"?\272\270\221\002\002\030" +
+      "\001\202\323\344\223\0022\"-/api/v0alpha/acd/agentgetspecif" +
+      "iccallfromhold:\001*\022\255\001\n\027ACDGetAllAgentsSta" +
+      "tuses\022+.api.v0alpha.ACDGetAllAgentsStatu" +
+      "sesRequest\032).api.v0alpha.ACDGetAllAgents" +
+      "StatusesReply\":\272\270\221\002\002\030\001\202\323\344\223\002-\"(/api/v0alp" +
+      "ha/acd/acdgetallagentsstatuses:\001*\022\231\001\n\022Ag" +
+      "entPutCallOnHold\022&.api.v0alpha.AgentPutC" +
+      "allOnHoldRequest\032$.api.v0alpha.AgentPutC" +
+      "allOnHoldReply\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v0al" +
+      "pha/acd/agentputcallonhold:\001*\022\235\001\n\023AgentR" +
+      "eceiveMessage\022\'.api.v0alpha.AgentReceive" +
+      "MessageRequest\032%.api.v0alpha.AgentReceiv" +
+      "eMessageReply\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v0alp" +
+      "ha/acd/agentreceivemessage:\001*\022\235\001\n\023AgentP" +
+      "BXApproveCall\022\'.api.v0alpha.AgentPBXAppr" +
+      "oveCallRequest\032%.api.v0alpha.AgentPBXApp" +
+      "roveCallReply\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v0alp" +
+      "ha/acd/agentpbxapprovecall:\001*\022\231\001\n\022AgentP" +
+      "BXRejectCall\022&.api.v0alpha.AgentPBXRejec" +
+      "tCallRequest\032$.api.v0alpha.AgentPBXRejec" +
+      "tCallReply\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v0alpha/",
+      "acd/agentpbxrejectcall:\001*\022\225\001\n\021GetCallerL" +
+      "ostPeer\022%.api.v0alpha.GetCallerLostPeerR" +
+      "equest\032#.api.v0alpha.GetCallerLostPeerRe" +
+      "ply\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha/acd/get" +
+      "callerlostpeer:\001*\022\235\001\n\021CallerGetRawEvent\022" +
+      "%.api.v0alpha.CallerGetRawEventRequest\032#" +
+      ".api.v0alpha.CallerGetRawEventReply\"<\272\270\221" +
+      "\002\005\n\003\010\254\002\202\323\344\223\002,\"\'/api/v0alpha/acd/getcalle" +
+      "rraweventreply:\001*\022\240\001\n\023PeerAgentWithCalle" +
+      "r\022\'.api.v0alpha.PeerAgentWithCallerReque" +
+      "st\032%.api.v0alpha.PeerAgentWithCallerRepl" +
+      "y\"9\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002)\"$/api/v0alpha/acd/pe" +
+      "eragentwithcaller:\001*\022\233\001\n\022HoldTransferMem" +
+      "ber\022\".api.v0alpha.HoldTransferMemberReq\032" +
+      "\".api.v0alpha.HoldTransferMemberRes\"=\272\270\221" +
+      "\002\005\n\003\010\254\002\202\323\344\223\002-\"(/api/v0alpha/acd/mutetran" +
+      "sferpartymember:\001*\022\236\001\n\024UnholdTransferMem" +
+      "ber\022$.api.v0alpha.UnholdTransferMemberRe" +
+      "q\032$.api.v0alpha.UnholdTransferMemberRes\"" +
+      ":\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002*\"%/api/v0alpha/acd/unmu" +
+      "tetransfermember:\001*\022\226\001\n\022GetAgentCallCoun" +
+      "ts\022\".api.v0alpha.GetAgentCallCountsReq\032\"" +
+      ".api.v0alpha.GetAgentCallCountsRes\"8\272\270\221\002" +
+      "\005\n\003\010\254\002\202\323\344\223\002(\"#/api/v0alpha/acd/getagentc" +
+      "allcounts:\001*\022\252\001\n\027WarmCallerTransferStart" +
+      "\022\'.api.v0alpha.WarmCallerTransferStartRe" +
+      "q\032\'.api.v0alpha.WarmCallerTransferStartR" +
+      "es\"=\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002-\"(/api/v0alpha/acd/w" +
+      "armcallertransferstart:\001*\022\256\001\n\030WarmCaller" +
+      "TransferCancel\022(.api.v0alpha.WarmCallerT" +
+      "ransferCancelReq\032(.api.v0alpha.WarmCalle" +
+      "rTransferCancelRes\">\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002.\")/a" +
+      "pi/v0alpha/acd/warmcallertransfercancel:" +
+      "\001*\022\262\001\n\031WarmCallerTransferApprove\022).api.v" +
+      "0alpha.WarmCallerTransferApproveReq\032).ap" +
+      "i.v0alpha.WarmCallerTransferApproveRes\"?" +
+      "\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002/\"*/api/v0alpha/acd/warmc" +
+      "allertransferapprove:\001*\022\236\001\n\024PlaySoundboa" +
+      "rdEntity\022$.api.v0alpha.PlaySoundboardEnt" +
+      "ityReq\032$.api.v0alpha.PlaySoundboardEntit" +
+      "yRes\":\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002*\"%/api/v0alpha/acd" +
+      "/playsoundboardentity:\001*\022\236\001\n\024StopSoundbo" +
+      "ardEntity\022$.api.v0alpha.StopSoundboardEn" +
+      "tityReq\032$.api.v0alpha.StopSoundboardEnti" +
+      "tyRes\":\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002*\"%/api/v0alpha/ac" +
+      "d/stopsoundboardentity:\001*\022\230\001\n\021UpdateAgen" +
+      "tSkills\022%.api.v0alpha.UpdateAgentSkillsR" +
+      "equest\032#.api.v0alpha.UpdateAgentSkillsRe" +
+      "ply\"7\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002\'\"\"/api/v0alpha/acd/" +
+      "updateagentskills:\001*\022t\n\010PlayDTMF\022\034.api.v" +
+      "0alpha.PlayDTMFRequest\032\032.api.v0alpha.Pla" +
+      "yDTMFReply\".\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002\036\"\031/api/v0alp" +
+      "ha/acd/playdtmf:\001*\022x\n\tAgentMute\022\035.api.v0" +
+      "alpha.AgentMuteRequest\032\033.api.v0alpha.Age" +
+      "ntMuteReply\"/\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002\037\"\032/api/v0al" +
+      "pha/acd/agentmute:\001*\022\200\001\n\013AgentUnmute\022\037.a" +
+      "pi.v0alpha.AgentUnmuteRequest\032\035.api.v0al" +
+      "pha.AgentUnmuteReply\"1\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002!\"\034" +
+      "/api/v0alpha/acd/agentunmute:\001*\022\212\001\n\017Star" +
+      "tSecureForm\022\037.api.v0alpha.StartSecureFor" +
+      "mReq\032\037.api.v0alpha.StartSecureFormRes\"5\272" +
+      "\270\221\002\005\n\003\010\254\002\202\323\344\223\002%\" /api/v0alpha/acd/starts" +
+      "ecureform:\001*\022\250\001\n\026CollectSecureFormField\022" +
+      "&.api.v0alpha.CollectSecureFormFieldReq\032" +
+      "&.api.v0alpha.CollectSecureFormFieldRes\"" +
+      "<\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002,\"\'/api/v0alpha/acd/coll" +
+      "ectsecureformfield:\001*0\001\022\236\001\n\024ResetSecureF" +
+      "ormField\022$.api.v0alpha.ResetSecureFormFi" +
+      "eldReq\032$.api.v0alpha.ResetSecureFormFiel" +
+      "dRes\":\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002*\"%/api/v0alpha/acd" +
+      "/resetsecureformfield:\001*\022\242\001\n\025AcceptSecur" +
+      "eFormField\022%.api.v0alpha.AcceptSecureFor" +
+      "mFieldReq\032%.api.v0alpha.AcceptSecureForm" +
+      "FieldRes\";\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002+\"&/api/v0alpha" +
+      "/acd/acceptsecureformfield:\001*\022\222\001\n\021Proces" +
+      "sSecureForm\022!.api.v0alpha.ProcessSecureF" +
+      "ormReq\032!.api.v0alpha.ProcessSecureFormRe" +
+      "s\"7\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002\'\"\"/api/v0alpha/acd/pr" +
+      "ocesssecureform:\001*\022\256\001\n\030FinishSecureFormH" +
+      "andling\022(.api.v0alpha.FinishSecureFormHa" +
+      "ndlingReq\032(.api.v0alpha.FinishSecureForm" +
+      "HandlingRes\">\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002.\")/api/v0al" +
+      "pha/acd/finishsecureformhandling:\001*Bv\n\035c" +
+      "om.tcn.cloud.api.api.v0alphaB\010AcdProtoP\001" +
+      "\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api" +
+      "\\V0alpha\\GPBMetadata\352\002\014Api::V0alphab\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1829,72 +1793,60 @@ public final class AcdProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_AgentUnmuteReply_descriptor,
         new java.lang.String[] { });
-    internal_static_api_v0alpha_SecureFormHandlingPrepareReq_descriptor =
-      getDescriptor().getMessageTypes().get(104);
-    internal_static_api_v0alpha_SecureFormHandlingPrepareReq_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_SecureFormHandlingPrepareReq_descriptor,
-        new java.lang.String[] { });
-    internal_static_api_v0alpha_SecureFormHandlingPrepareRes_descriptor =
-      getDescriptor().getMessageTypes().get(105);
-    internal_static_api_v0alpha_SecureFormHandlingPrepareRes_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_SecureFormHandlingPrepareRes_descriptor,
-        new java.lang.String[] { });
     internal_static_api_v0alpha_StartSecureFormReq_descriptor =
-      getDescriptor().getMessageTypes().get(106);
+      getDescriptor().getMessageTypes().get(104);
     internal_static_api_v0alpha_StartSecureFormReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_StartSecureFormReq_descriptor,
         new java.lang.String[] { "PortalId", });
     internal_static_api_v0alpha_StartSecureFormRes_descriptor =
-      getDescriptor().getMessageTypes().get(107);
+      getDescriptor().getMessageTypes().get(105);
     internal_static_api_v0alpha_StartSecureFormRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_StartSecureFormRes_descriptor,
         new java.lang.String[] { });
-    internal_static_api_v0alpha_CollectCallerSecureFormFieldReq_descriptor =
-      getDescriptor().getMessageTypes().get(108);
-    internal_static_api_v0alpha_CollectCallerSecureFormFieldReq_fieldAccessorTable = new
+    internal_static_api_v0alpha_CollectSecureFormFieldReq_descriptor =
+      getDescriptor().getMessageTypes().get(106);
+    internal_static_api_v0alpha_CollectSecureFormFieldReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_CollectCallerSecureFormFieldReq_descriptor,
+        internal_static_api_v0alpha_CollectSecureFormFieldReq_descriptor,
         new java.lang.String[] { "FieldName", });
-    internal_static_api_v0alpha_CollectCallerSecureFormFieldRes_descriptor =
-      getDescriptor().getMessageTypes().get(109);
-    internal_static_api_v0alpha_CollectCallerSecureFormFieldRes_fieldAccessorTable = new
+    internal_static_api_v0alpha_CollectSecureFormFieldRes_descriptor =
+      getDescriptor().getMessageTypes().get(107);
+    internal_static_api_v0alpha_CollectSecureFormFieldRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_CollectCallerSecureFormFieldRes_descriptor,
-        new java.lang.String[] { "DtmfPressed", });
-    internal_static_api_v0alpha_ResetCallerSecureFormFieldReq_descriptor =
-      getDescriptor().getMessageTypes().get(110);
-    internal_static_api_v0alpha_ResetCallerSecureFormFieldReq_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_ResetCallerSecureFormFieldReq_descriptor,
-        new java.lang.String[] { "FieldName", });
-    internal_static_api_v0alpha_ResetCallerSecureFormFieldRes_descriptor =
-      getDescriptor().getMessageTypes().get(111);
-    internal_static_api_v0alpha_ResetCallerSecureFormFieldRes_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_ResetCallerSecureFormFieldRes_descriptor,
+        internal_static_api_v0alpha_CollectSecureFormFieldRes_descriptor,
         new java.lang.String[] { });
-    internal_static_api_v0alpha_ProcessCallerSecureFormFieldReq_descriptor =
-      getDescriptor().getMessageTypes().get(112);
-    internal_static_api_v0alpha_ProcessCallerSecureFormFieldReq_fieldAccessorTable = new
+    internal_static_api_v0alpha_ResetSecureFormFieldReq_descriptor =
+      getDescriptor().getMessageTypes().get(108);
+    internal_static_api_v0alpha_ResetSecureFormFieldReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_ProcessCallerSecureFormFieldReq_descriptor,
-        new java.lang.String[] { "FieldName", });
-    internal_static_api_v0alpha_ProcessCallerSecureFormFieldRes_descriptor =
-      getDescriptor().getMessageTypes().get(113);
-    internal_static_api_v0alpha_ProcessCallerSecureFormFieldRes_fieldAccessorTable = new
+        internal_static_api_v0alpha_ResetSecureFormFieldReq_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v0alpha_ResetSecureFormFieldRes_descriptor =
+      getDescriptor().getMessageTypes().get(109);
+    internal_static_api_v0alpha_ResetSecureFormFieldRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_ProcessCallerSecureFormFieldRes_descriptor,
+        internal_static_api_v0alpha_ResetSecureFormFieldRes_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v0alpha_AcceptSecureFormFieldReq_descriptor =
+      getDescriptor().getMessageTypes().get(110);
+    internal_static_api_v0alpha_AcceptSecureFormFieldReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_AcceptSecureFormFieldReq_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v0alpha_AcceptSecureFormFieldRes_descriptor =
+      getDescriptor().getMessageTypes().get(111);
+    internal_static_api_v0alpha_AcceptSecureFormFieldRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_AcceptSecureFormFieldRes_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_ProcessSecureFormReq_descriptor =
-      getDescriptor().getMessageTypes().get(114);
+      getDescriptor().getMessageTypes().get(112);
     internal_static_api_v0alpha_ProcessSecureFormReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ProcessSecureFormReq_descriptor,
-        new java.lang.String[] { "Values", });
+        new java.lang.String[] { "Values", "PortalId", "Segment", "Choice", });
     internal_static_api_v0alpha_ProcessSecureFormReq_ValuesEntry_descriptor =
       internal_static_api_v0alpha_ProcessSecureFormReq_descriptor.getNestedTypes().get(0);
     internal_static_api_v0alpha_ProcessSecureFormReq_ValuesEntry_fieldAccessorTable = new
@@ -1902,7 +1854,7 @@ public final class AcdProto {
         internal_static_api_v0alpha_ProcessSecureFormReq_ValuesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v0alpha_ProcessSecureFormRes_descriptor =
-      getDescriptor().getMessageTypes().get(115);
+      getDescriptor().getMessageTypes().get(113);
     internal_static_api_v0alpha_ProcessSecureFormRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ProcessSecureFormRes_descriptor,
@@ -1913,24 +1865,12 @@ public final class AcdProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ProcessSecureFormRes_DataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_api_v0alpha_CancelSecureFormHandlingReq_descriptor =
-      getDescriptor().getMessageTypes().get(116);
-    internal_static_api_v0alpha_CancelSecureFormHandlingReq_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_CancelSecureFormHandlingReq_descriptor,
-        new java.lang.String[] { "Reason", });
-    internal_static_api_v0alpha_CancelSecureFormHandlingRes_descriptor =
-      getDescriptor().getMessageTypes().get(117);
-    internal_static_api_v0alpha_CancelSecureFormHandlingRes_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_CancelSecureFormHandlingRes_descriptor,
-        new java.lang.String[] { });
     internal_static_api_v0alpha_FinishSecureFormHandlingReq_descriptor =
-      getDescriptor().getMessageTypes().get(118);
+      getDescriptor().getMessageTypes().get(114);
     internal_static_api_v0alpha_FinishSecureFormHandlingReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FinishSecureFormHandlingReq_descriptor,
-        new java.lang.String[] { "Email", "Data", });
+        new java.lang.String[] { "Reason", "Data", });
     internal_static_api_v0alpha_FinishSecureFormHandlingReq_DataEntry_descriptor =
       internal_static_api_v0alpha_FinishSecureFormHandlingReq_descriptor.getNestedTypes().get(0);
     internal_static_api_v0alpha_FinishSecureFormHandlingReq_DataEntry_fieldAccessorTable = new
@@ -1938,7 +1878,7 @@ public final class AcdProto {
         internal_static_api_v0alpha_FinishSecureFormHandlingReq_DataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_api_v0alpha_FinishSecureFormHandlingRes_descriptor =
-      getDescriptor().getMessageTypes().get(119);
+      getDescriptor().getMessageTypes().get(115);
     internal_static_api_v0alpha_FinishSecureFormHandlingRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_FinishSecureFormHandlingRes_descriptor,
