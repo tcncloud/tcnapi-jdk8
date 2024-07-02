@@ -22,6 +22,8 @@ private static final long serialVersionUID = 0L;
   private FilenamePart() {
     type_ = 0;
     staticText_ = "";
+    dateParts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -117,6 +119,59 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int DATE_PARTS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList dateParts_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * date_parts are the parts to format the date times.
+   * </pre>
+   *
+   * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+   * @return A list containing the dateParts.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getDatePartsList() {
+    return dateParts_;
+  }
+  /**
+   * <pre>
+   * date_parts are the parts to format the date times.
+   * </pre>
+   *
+   * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+   * @return The count of dateParts.
+   */
+  public int getDatePartsCount() {
+    return dateParts_.size();
+  }
+  /**
+   * <pre>
+   * date_parts are the parts to format the date times.
+   * </pre>
+   *
+   * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+   * @param index The index of the element to return.
+   * @return The dateParts at the given index.
+   */
+  public java.lang.String getDateParts(int index) {
+    return dateParts_.get(index);
+  }
+  /**
+   * <pre>
+   * date_parts are the parts to format the date times.
+   * </pre>
+   *
+   * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the dateParts at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getDatePartsBytes(int index) {
+    return dateParts_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -137,6 +192,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staticText_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, staticText_);
     }
+    for (int i = 0; i < dateParts_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, dateParts_.getRaw(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -152,6 +210,14 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staticText_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, staticText_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < dateParts_.size(); i++) {
+        dataSize += computeStringSizeNoTag(dateParts_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getDatePartsList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -171,6 +237,8 @@ private static final long serialVersionUID = 0L;
     if (type_ != other.type_) return false;
     if (!getStaticText()
         .equals(other.getStaticText())) return false;
+    if (!getDatePartsList()
+        .equals(other.getDatePartsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -186,6 +254,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + type_;
     hash = (37 * hash) + STATIC_TEXT_FIELD_NUMBER;
     hash = (53 * hash) + getStaticText().hashCode();
+    if (getDatePartsCount() > 0) {
+      hash = (37 * hash) + DATE_PARTS_FIELD_NUMBER;
+      hash = (53 * hash) + getDatePartsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -323,6 +395,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       type_ = 0;
       staticText_ = "";
+      dateParts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -361,6 +435,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.staticText_ = staticText_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        dateParts_.makeImmutable();
+        result.dateParts_ = dateParts_;
       }
     }
 
@@ -416,6 +494,16 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (!other.dateParts_.isEmpty()) {
+        if (dateParts_.isEmpty()) {
+          dateParts_ = other.dateParts_;
+          bitField0_ |= 0x00000004;
+        } else {
+          ensureDatePartsIsMutable();
+          dateParts_.addAll(other.dateParts_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -452,6 +540,12 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureDatePartsIsMutable();
+              dateParts_.add(s);
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -630,6 +724,153 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       staticText_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList dateParts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureDatePartsIsMutable() {
+      if (!dateParts_.isModifiable()) {
+        dateParts_ = new com.google.protobuf.LazyStringArrayList(dateParts_);
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * date_parts are the parts to format the date times.
+     * </pre>
+     *
+     * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+     * @return A list containing the dateParts.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDatePartsList() {
+      dateParts_.makeImmutable();
+      return dateParts_;
+    }
+    /**
+     * <pre>
+     * date_parts are the parts to format the date times.
+     * </pre>
+     *
+     * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+     * @return The count of dateParts.
+     */
+    public int getDatePartsCount() {
+      return dateParts_.size();
+    }
+    /**
+     * <pre>
+     * date_parts are the parts to format the date times.
+     * </pre>
+     *
+     * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+     * @param index The index of the element to return.
+     * @return The dateParts at the given index.
+     */
+    public java.lang.String getDateParts(int index) {
+      return dateParts_.get(index);
+    }
+    /**
+     * <pre>
+     * date_parts are the parts to format the date times.
+     * </pre>
+     *
+     * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the dateParts at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDatePartsBytes(int index) {
+      return dateParts_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * date_parts are the parts to format the date times.
+     * </pre>
+     *
+     * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+     * @param index The index to set the value at.
+     * @param value The dateParts to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDateParts(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureDatePartsIsMutable();
+      dateParts_.set(index, value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * date_parts are the parts to format the date times.
+     * </pre>
+     *
+     * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+     * @param value The dateParts to add.
+     * @return This builder for chaining.
+     */
+    public Builder addDateParts(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureDatePartsIsMutable();
+      dateParts_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * date_parts are the parts to format the date times.
+     * </pre>
+     *
+     * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+     * @param values The dateParts to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllDateParts(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureDatePartsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, dateParts_);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * date_parts are the parts to format the date times.
+     * </pre>
+     *
+     * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDateParts() {
+      dateParts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * date_parts are the parts to format the date times.
+     * </pre>
+     *
+     * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+     * @param value The bytes of the dateParts to add.
+     * @return This builder for chaining.
+     */
+    public Builder addDatePartsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureDatePartsIsMutable();
+      dateParts_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

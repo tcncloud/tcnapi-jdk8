@@ -45,4 +45,45 @@ public interface FilenamePartOrBuilder extends
    */
   com.google.protobuf.ByteString
       getStaticTextBytes();
+
+  /**
+   * <pre>
+   * date_parts are the parts to format the date times.
+   * </pre>
+   *
+   * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+   * @return A list containing the dateParts.
+   */
+  java.util.List<java.lang.String>
+      getDatePartsList();
+  /**
+   * <pre>
+   * date_parts are the parts to format the date times.
+   * </pre>
+   *
+   * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+   * @return The count of dateParts.
+   */
+  int getDatePartsCount();
+  /**
+   * <pre>
+   * date_parts are the parts to format the date times.
+   * </pre>
+   *
+   * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+   * @param index The index of the element to return.
+   * @return The dateParts at the given index.
+   */
+  java.lang.String getDateParts(int index);
+  /**
+   * <pre>
+   * date_parts are the parts to format the date times.
+   * </pre>
+   *
+   * <code>repeated string date_parts = 3 [json_name = "dateParts"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the dateParts at the given index.
+   */
+  com.google.protobuf.ByteString
+      getDatePartsBytes(int index);
 }
