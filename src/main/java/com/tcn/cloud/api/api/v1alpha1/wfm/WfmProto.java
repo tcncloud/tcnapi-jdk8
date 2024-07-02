@@ -3345,65 +3345,70 @@ public final class WfmProto {
       "IntervalR\025serviceLevelIntervals\022t\n\033metri" +
       "cs_by_skill_collection\030\r \003(\01325.api.v1alp" +
       "ha1.wfm.PerformanceMetricForSkillCollect" +
-      "ionR\030metricsBySkillCollection:\002\030\001\"\362\010\n%Pe" +
+      "ionR\030metricsBySkillCollection:\002\030\001\"\326\t\n%Pe" +
       "rformanceMetricForSkillCollectionV2\0229\n\nd" +
       "ate_range\030\001 \001(\0132\032.api.commons.DatetimeRa" +
-      "ngeR\tdateRange\022?\n\034total_fte_intervals_re" +
-      "quired\030\002 \001(\002R\031totalFteIntervalsRequired\022" +
-      "?\n\034total_fte_intervals_achieved\030\003 \001(\002R\031t" +
-      "otalFteIntervalsAchieved\0220\n\024total_produc" +
-      "tive_fte\030\017 \001(\002R\022totalProductiveFte\022>\n\034nu" +
-      "m_intervals_with_call_ftes\030\004 \001(\005R\030numInt" +
-      "ervalsWithCallFtes\022@\n\035num_intervals_with" +
-      "_shift_ftes\030\005 \001(\005R\031numIntervalsWithShift" +
-      "Ftes\022W\n*num_intervals_with_call_ftes_but" +
-      "_no_shifts\030\006 \001(\005R#numIntervalsWithCallFt" +
-      "esButNoShifts\022W\n*num_intervals_with_shif" +
-      "ts_but_no_call_ftes\030\007 \001(\005R#numIntervalsW" +
-      "ithShiftsButNoCallFtes\022C\n\036total_undersch" +
-      "eduled_call_ftes\030\010 \001(\002R\033totalUnderschedu" +
-      "ledCallFtes\022A\n\035total_overscheduled_call_" +
-      "ftes\030\t \001(\002R\032totalOverscheduledCallFtes\0229" +
-      "\n\031interval_width_in_minutes\030\n \001(\005R\026inter" +
-      "valWidthInMinutes\022C\n\013metric_type\030\013 \001(\0162\"" +
-      ".api.commons.PerformanceMetricTypeR\nmetr" +
-      "icType\022p\n\027fte_occupancy_intervals\030\014 \003(\0132" +
-      "8.api.v1alpha1.wfm.FTERequiredVsAchieved" +
-      "OccupancyIntervalR\025fteOccupancyIntervals" +
-      "\022^\n\027service_level_intervals\030\r \003(\0132&.api." +
-      "v1alpha1.wfm.ServiceLevelIntervalR\025servi" +
-      "ceLevelIntervals\022L\n\020skill_collection\030\016 \001" +
-      "(\0132!.api.commons.SkillProfileCategoryR\017s" +
-      "killCollection\"\212\t\n\023PerformanceMetricV2\0229" +
-      "\n\ndate_range\030\001 \001(\0132\032.api.commons.Datetim" +
-      "eRangeR\tdateRange\022?\n\034total_fte_intervals" +
-      "_required\030\002 \001(\002R\031totalFteIntervalsRequir" +
-      "ed\022?\n\034total_fte_intervals_achieved\030\003 \001(\002" +
-      "R\031totalFteIntervalsAchieved\0220\n\024total_pro" +
-      "ductive_fte\030\017 \001(\002R\022totalProductiveFte\022>\n" +
-      "\034num_intervals_with_call_ftes\030\004 \001(\005R\030num" +
-      "IntervalsWithCallFtes\022@\n\035num_intervals_w" +
-      "ith_shift_ftes\030\005 \001(\005R\031numIntervalsWithSh" +
-      "iftFtes\022W\n*num_intervals_with_call_ftes_" +
-      "but_no_shifts\030\006 \001(\005R#numIntervalsWithCal" +
-      "lFtesButNoShifts\022W\n*num_intervals_with_s" +
-      "hifts_but_no_call_ftes\030\007 \001(\005R#numInterva" +
-      "lsWithShiftsButNoCallFtes\022C\n\036total_under" +
-      "scheduled_call_ftes\030\010 \001(\002R\033totalUndersch" +
-      "eduledCallFtes\022A\n\035total_overscheduled_ca" +
-      "ll_ftes\030\t \001(\002R\032totalOverscheduledCallFte" +
-      "s\0229\n\031interval_width_in_minutes\030\n \001(\005R\026in" +
-      "tervalWidthInMinutes\022C\n\013metric_type\030\013 \001(" +
-      "\0162\".api.commons.PerformanceMetricTypeR\nm" +
-      "etricType\022p\n\027fte_occupancy_intervals\030\014 \003" +
-      "(\01328.api.v1alpha1.wfm.FTERequiredVsAchie" +
-      "vedOccupancyIntervalR\025fteOccupancyInterv" +
-      "als\022^\n\027service_level_intervals\030\r \003(\0132&.a" +
-      "pi.v1alpha1.wfm.ServiceLevelIntervalR\025se" +
-      "rviceLevelIntervals\022v\n\033metrics_by_skill_" +
-      "collection\030\016 \003(\01327.api.v1alpha1.wfm.Perf" +
-      "ormanceMetricForSkillCollectionV2R\030metri" +
-      "csBySkillCollection\"\217\001\n\024ServiceLevelInte" +
+      "ngeR\tdateRange\022C\n\034total_fte_intervals_re" +
+      "quired\030\002 \001(\002B\002\030\001R\031totalFteIntervalsRequi" +
+      "red\022C\n\034total_fte_intervals_achieved\030\003 \001(" +
+      "\002B\002\030\001R\031totalFteIntervalsAchieved\022>\n\034num_" +
+      "intervals_with_call_ftes\030\004 \001(\005R\030numInter" +
+      "valsWithCallFtes\022@\n\035num_intervals_with_s" +
+      "hift_ftes\030\005 \001(\005R\031numIntervalsWithShiftFt" +
+      "es\022W\n*num_intervals_with_call_ftes_but_n" +
+      "o_shifts\030\006 \001(\005R#numIntervalsWithCallFtes" +
+      "ButNoShifts\022W\n*num_intervals_with_shifts" +
+      "_but_no_call_ftes\030\007 \001(\005R#numIntervalsWit" +
+      "hShiftsButNoCallFtes\022C\n\036total_undersched" +
+      "uled_call_ftes\030\010 \001(\002R\033totalUnderschedule" +
+      "dCallFtes\022A\n\035total_overscheduled_call_ft" +
+      "es\030\t \001(\002R\032totalOverscheduledCallFtes\0229\n\031" +
+      "interval_width_in_minutes\030\n \001(\005R\026interva" +
+      "lWidthInMinutes\022C\n\013metric_type\030\013 \001(\0162\".a" +
+      "pi.commons.PerformanceMetricTypeR\nmetric" +
+      "Type\022p\n\027fte_occupancy_intervals\030\014 \003(\01328." +
+      "api.v1alpha1.wfm.FTERequiredVsAchievedOc" +
+      "cupancyIntervalR\025fteOccupancyIntervals\022^" +
+      "\n\027service_level_intervals\030\r \003(\0132&.api.v1" +
+      "alpha1.wfm.ServiceLevelIntervalR\025service" +
+      "LevelIntervals\022L\n\020skill_collection\030\016 \001(\013" +
+      "2!.api.commons.SkillProfileCategoryR\017ski" +
+      "llCollection\022,\n\022total_required_fte\030\017 \001(\002" +
+      "R\020totalRequiredFte\022,\n\022total_achieved_fte" +
+      "\030\020 \001(\002R\020totalAchievedFte\0220\n\024total_produc" +
+      "tive_fte\030\021 \001(\002R\022totalProductiveFte\"\356\t\n\023P" +
+      "erformanceMetricV2\0229\n\ndate_range\030\001 \001(\0132\032" +
+      ".api.commons.DatetimeRangeR\tdateRange\022C\n" +
+      "\034total_fte_intervals_required\030\002 \001(\002B\002\030\001R" +
+      "\031totalFteIntervalsRequired\022C\n\034total_fte_" +
+      "intervals_achieved\030\003 \001(\002B\002\030\001R\031totalFteIn" +
+      "tervalsAchieved\022>\n\034num_intervals_with_ca" +
+      "ll_ftes\030\004 \001(\005R\030numIntervalsWithCallFtes\022" +
+      "@\n\035num_intervals_with_shift_ftes\030\005 \001(\005R\031" +
+      "numIntervalsWithShiftFtes\022W\n*num_interva" +
+      "ls_with_call_ftes_but_no_shifts\030\006 \001(\005R#n" +
+      "umIntervalsWithCallFtesButNoShifts\022W\n*nu" +
+      "m_intervals_with_shifts_but_no_call_ftes" +
+      "\030\007 \001(\005R#numIntervalsWithShiftsButNoCallF" +
+      "tes\022C\n\036total_underscheduled_call_ftes\030\010 " +
+      "\001(\002R\033totalUnderscheduledCallFtes\022A\n\035tota" +
+      "l_overscheduled_call_ftes\030\t \001(\002R\032totalOv" +
+      "erscheduledCallFtes\0229\n\031interval_width_in" +
+      "_minutes\030\n \001(\005R\026intervalWidthInMinutes\022C" +
+      "\n\013metric_type\030\013 \001(\0162\".api.commons.Perfor" +
+      "manceMetricTypeR\nmetricType\022p\n\027fte_occup" +
+      "ancy_intervals\030\014 \003(\01328.api.v1alpha1.wfm." +
+      "FTERequiredVsAchievedOccupancyIntervalR\025" +
+      "fteOccupancyIntervals\022^\n\027service_level_i" +
+      "ntervals\030\r \003(\0132&.api.v1alpha1.wfm.Servic" +
+      "eLevelIntervalR\025serviceLevelIntervals\022v\n" +
+      "\033metrics_by_skill_collection\030\016 \003(\01327.api" +
+      ".v1alpha1.wfm.PerformanceMetricForSkillC" +
+      "ollectionV2R\030metricsBySkillCollection\022,\n" +
+      "\022total_required_fte\030\017 \001(\002R\020totalRequired" +
+      "Fte\022,\n\022total_achieved_fte\030\020 \001(\002R\020totalAc" +
+      "hievedFte\0220\n\024total_productive_fte\030\021 \001(\002R" +
+      "\022totalProductiveFte\"\217\001\n\024ServiceLevelInte" +
       "rval\022A\n\016start_datetime\030\001 \001(\0132\032.google.pr" +
       "otobuf.TimestampR\rstartDatetime\0224\n\026servi" +
       "ce_level_achieved\030\002 \001(\002R\024serviceLevelAch" +
@@ -3722,12 +3727,12 @@ public final class WfmProto {
       "wfm.ShiftSegmentR\rshiftSegments\"\320\001\n\032Perf" +
       "ormanceMetricParameter\022C\n\013metric_type\030\001 " +
       "\001(\0162\".api.commons.PerformanceMetricTypeR" +
-      "\nmetricType\022m\n%service_level_target_dura" +
+      "\nmetricType\022m\n%service_level_target_dura",
       "tion_seconds\030\002 \001(\0132\033.google.protobuf.Int" +
       "64ValueR!serviceLevelTargetDurationSecon" +
       "ds\"\250\003\n\030GetPerformanceMetricsReq\022J\n\021sched" +
       "ule_selector\030\001 \001(\0132\035.api.commons.Schedul" +
-      "eSelectorR\020scheduleSelector\022C\n\rnode_sele",
+      "eSelectorR\020scheduleSelector\022C\n\rnode_sele" +
       "ctor\030\002 \001(\0132\036.api.v1alpha1.wfm.ParentEnti" +
       "tyR\014nodeSelector\022A\n\016datetime_range\030\003 \001(\013" +
       "2\032.api.commons.DatetimeRangeR\rdatetimeRa" +
@@ -4122,12 +4127,12 @@ public final class WfmProto {
       "i.v1alpha1.wfm.GetAvailableRegressionFor" +
       "ecasterModelTypesReq\032?.api.v1alpha1.wfm." +
       "GetAvailableRegressionForecasterModelTyp" +
-      "esRes\"Q\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002A\"</api/v1alpha1/w" +
+      "esRes\"Q\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002A\"</api/v1alpha1/w",
       "fm/getavailableregressionforecastermodel" +
       "types:\001*\022\360\001\n%DisconnectInactiveSkillProf" +
       "ileMapping\022:.api.v1alpha1.wfm.Disconnect" +
       "InactiveSkillProfileMappingReq\032:.api.v1a" +
-      "lpha1.wfm.DisconnectInactiveSkillProfile",
+      "lpha1.wfm.DisconnectInactiveSkillProfile" +
       "MappingRes\"O\210\002\001\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002<\"7/api/v1" +
       "alpha1/wfm/disconnectinactiveskillprofil" +
       "emapping:\001*\022\272\001\n\027CreateSkillProfileGroup\022" +
@@ -4522,12 +4527,12 @@ public final class WfmProto {
       "\202\323\344\223\002-\"(/api/v1alpha1/wfm/deleteskillpro" +
       "ficiency:\001*\022\211\001\n\014CopyScenario\022!.api.v1alp" +
       "ha1.wfm.CopyScenarioReq\032!.api.v1alpha1.w" +
-      "fm.CopyScenarioRes\"3\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002#\"\036/a" +
+      "fm.CopyScenarioRes\"3\272\270\221\002\005\n\003\010\334\013\202\323\344\223\002#\"\036/a",
       "pi/v1alpha1/wfm/copyscenario:\001*\022\325\001\n\037Crea" +
       "teScheduleScenarioWithNodes\0224.api.v1alph" +
       "a1.wfm.CreateScheduleScenarioWithNodesRe" +
       "q\0324.api.v1alpha1.wfm.CreateScheduleScena" +
-      "rioWithNodesRes\"F\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0026\"1/api/",
+      "rioWithNodesRes\"F\272\270\221\002\005\n\003\010\334\013\202\323\344\223\0026\"1/api/" +
       "v1alpha1/wfm/createschedulescenariowithn" +
       "odes:\001*\022\261\001\n\026UpdateScheduleScenario\022+.api" +
       ".v1alpha1.wfm.UpdateScheduleScenarioReq\032" +
@@ -6502,13 +6507,13 @@ public final class WfmProto {
     internal_static_api_v1alpha1_wfm_PerformanceMetricForSkillCollectionV2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_wfm_PerformanceMetricForSkillCollectionV2_descriptor,
-        new java.lang.String[] { "DateRange", "TotalFteIntervalsRequired", "TotalFteIntervalsAchieved", "TotalProductiveFte", "NumIntervalsWithCallFtes", "NumIntervalsWithShiftFtes", "NumIntervalsWithCallFtesButNoShifts", "NumIntervalsWithShiftsButNoCallFtes", "TotalUnderscheduledCallFtes", "TotalOverscheduledCallFtes", "IntervalWidthInMinutes", "MetricType", "FteOccupancyIntervals", "ServiceLevelIntervals", "SkillCollection", });
+        new java.lang.String[] { "DateRange", "TotalFteIntervalsRequired", "TotalFteIntervalsAchieved", "NumIntervalsWithCallFtes", "NumIntervalsWithShiftFtes", "NumIntervalsWithCallFtesButNoShifts", "NumIntervalsWithShiftsButNoCallFtes", "TotalUnderscheduledCallFtes", "TotalOverscheduledCallFtes", "IntervalWidthInMinutes", "MetricType", "FteOccupancyIntervals", "ServiceLevelIntervals", "SkillCollection", "TotalRequiredFte", "TotalAchievedFte", "TotalProductiveFte", });
     internal_static_api_v1alpha1_wfm_PerformanceMetricV2_descriptor =
       getDescriptor().getMessageTypes().get(247);
     internal_static_api_v1alpha1_wfm_PerformanceMetricV2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_wfm_PerformanceMetricV2_descriptor,
-        new java.lang.String[] { "DateRange", "TotalFteIntervalsRequired", "TotalFteIntervalsAchieved", "TotalProductiveFte", "NumIntervalsWithCallFtes", "NumIntervalsWithShiftFtes", "NumIntervalsWithCallFtesButNoShifts", "NumIntervalsWithShiftsButNoCallFtes", "TotalUnderscheduledCallFtes", "TotalOverscheduledCallFtes", "IntervalWidthInMinutes", "MetricType", "FteOccupancyIntervals", "ServiceLevelIntervals", "MetricsBySkillCollection", });
+        new java.lang.String[] { "DateRange", "TotalFteIntervalsRequired", "TotalFteIntervalsAchieved", "NumIntervalsWithCallFtes", "NumIntervalsWithShiftFtes", "NumIntervalsWithCallFtesButNoShifts", "NumIntervalsWithShiftsButNoCallFtes", "TotalUnderscheduledCallFtes", "TotalOverscheduledCallFtes", "IntervalWidthInMinutes", "MetricType", "FteOccupancyIntervals", "ServiceLevelIntervals", "MetricsBySkillCollection", "TotalRequiredFte", "TotalAchievedFte", "TotalProductiveFte", });
     internal_static_api_v1alpha1_wfm_ServiceLevelInterval_descriptor =
       getDescriptor().getMessageTypes().get(248);
     internal_static_api_v1alpha1_wfm_ServiceLevelInterval_fieldAccessorTable = new

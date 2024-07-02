@@ -35,26 +35,20 @@ public interface PerformanceMetricForSkillCollectionV2OrBuilder extends
   com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDateRangeOrBuilder();
 
   /**
-   * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired"];</code>
+   * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.total_fte_intervals_required is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=5826
    * @return The totalFteIntervalsRequired.
    */
-  float getTotalFteIntervalsRequired();
+  @java.lang.Deprecated float getTotalFteIntervalsRequired();
 
   /**
-   * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved"];</code>
+   * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.total_fte_intervals_achieved is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=5827
    * @return The totalFteIntervalsAchieved.
    */
-  float getTotalFteIntervalsAchieved();
-
-  /**
-   * <pre>
-   * Total count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
-   * </pre>
-   *
-   * <code>float total_productive_fte = 15 [json_name = "totalProductiveFte"];</code>
-   * @return The totalProductiveFte.
-   */
-  float getTotalProductiveFte();
+  @java.lang.Deprecated float getTotalFteIntervalsAchieved();
 
   /**
    * <code>int32 num_intervals_with_call_ftes = 4 [json_name = "numIntervalsWithCallFtes"];</code>
@@ -250,4 +244,34 @@ public interface PerformanceMetricForSkillCollectionV2OrBuilder extends
    * <code>.api.commons.SkillProfileCategory skill_collection = 14 [json_name = "skillCollection"];</code>
    */
   com.tcn.cloud.api.api.commons.SkillProfileCategoryOrBuilder getSkillCollectionOrBuilder();
+
+  /**
+   * <pre>
+   * The total FTE required over the &#64;date_range, as determined by the forecast.
+   * </pre>
+   *
+   * <code>float total_required_fte = 15 [json_name = "totalRequiredFte"];</code>
+   * @return The totalRequiredFte.
+   */
+  float getTotalRequiredFte();
+
+  /**
+   * <pre>
+   * The total FTE the the schedule is likely to address with the current shift instances.
+   * </pre>
+   *
+   * <code>float total_achieved_fte = 16 [json_name = "totalAchievedFte"];</code>
+   * @return The totalAchievedFte.
+   */
+  float getTotalAchievedFte();
+
+  /**
+   * <pre>
+   * Total count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+   * </pre>
+   *
+   * <code>float total_productive_fte = 17 [json_name = "totalProductiveFte"];</code>
+   * @return The totalProductiveFte.
+   */
+  float getTotalProductiveFte();
 }

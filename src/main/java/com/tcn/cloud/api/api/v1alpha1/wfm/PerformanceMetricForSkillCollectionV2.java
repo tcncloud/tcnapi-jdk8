@@ -90,38 +90,27 @@ private static final long serialVersionUID = 0L;
   public static final int TOTAL_FTE_INTERVALS_REQUIRED_FIELD_NUMBER = 2;
   private float totalFteIntervalsRequired_ = 0F;
   /**
-   * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired"];</code>
+   * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.total_fte_intervals_required is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=5826
    * @return The totalFteIntervalsRequired.
    */
   @java.lang.Override
-  public float getTotalFteIntervalsRequired() {
+  @java.lang.Deprecated public float getTotalFteIntervalsRequired() {
     return totalFteIntervalsRequired_;
   }
 
   public static final int TOTAL_FTE_INTERVALS_ACHIEVED_FIELD_NUMBER = 3;
   private float totalFteIntervalsAchieved_ = 0F;
   /**
-   * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved"];</code>
+   * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.total_fte_intervals_achieved is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=5827
    * @return The totalFteIntervalsAchieved.
    */
   @java.lang.Override
-  public float getTotalFteIntervalsAchieved() {
+  @java.lang.Deprecated public float getTotalFteIntervalsAchieved() {
     return totalFteIntervalsAchieved_;
-  }
-
-  public static final int TOTAL_PRODUCTIVE_FTE_FIELD_NUMBER = 15;
-  private float totalProductiveFte_ = 0F;
-  /**
-   * <pre>
-   * Total count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
-   * </pre>
-   *
-   * <code>float total_productive_fte = 15 [json_name = "totalProductiveFte"];</code>
-   * @return The totalProductiveFte.
-   */
-  @java.lang.Override
-  public float getTotalProductiveFte() {
-    return totalProductiveFte_;
   }
 
   public static final int NUM_INTERVALS_WITH_CALL_FTES_FIELD_NUMBER = 4;
@@ -406,6 +395,51 @@ private static final long serialVersionUID = 0L;
     return skillCollection_ == null ? com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance() : skillCollection_;
   }
 
+  public static final int TOTAL_REQUIRED_FTE_FIELD_NUMBER = 15;
+  private float totalRequiredFte_ = 0F;
+  /**
+   * <pre>
+   * The total FTE required over the &#64;date_range, as determined by the forecast.
+   * </pre>
+   *
+   * <code>float total_required_fte = 15 [json_name = "totalRequiredFte"];</code>
+   * @return The totalRequiredFte.
+   */
+  @java.lang.Override
+  public float getTotalRequiredFte() {
+    return totalRequiredFte_;
+  }
+
+  public static final int TOTAL_ACHIEVED_FTE_FIELD_NUMBER = 16;
+  private float totalAchievedFte_ = 0F;
+  /**
+   * <pre>
+   * The total FTE the the schedule is likely to address with the current shift instances.
+   * </pre>
+   *
+   * <code>float total_achieved_fte = 16 [json_name = "totalAchievedFte"];</code>
+   * @return The totalAchievedFte.
+   */
+  @java.lang.Override
+  public float getTotalAchievedFte() {
+    return totalAchievedFte_;
+  }
+
+  public static final int TOTAL_PRODUCTIVE_FTE_FIELD_NUMBER = 17;
+  private float totalProductiveFte_ = 0F;
+  /**
+   * <pre>
+   * Total count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+   * </pre>
+   *
+   * <code>float total_productive_fte = 17 [json_name = "totalProductiveFte"];</code>
+   * @return The totalProductiveFte.
+   */
+  @java.lang.Override
+  public float getTotalProductiveFte() {
+    return totalProductiveFte_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -462,8 +496,14 @@ private static final long serialVersionUID = 0L;
     if (skillCollection_ != null) {
       output.writeMessage(14, getSkillCollection());
     }
+    if (java.lang.Float.floatToRawIntBits(totalRequiredFte_) != 0) {
+      output.writeFloat(15, totalRequiredFte_);
+    }
+    if (java.lang.Float.floatToRawIntBits(totalAchievedFte_) != 0) {
+      output.writeFloat(16, totalAchievedFte_);
+    }
     if (java.lang.Float.floatToRawIntBits(totalProductiveFte_) != 0) {
-      output.writeFloat(15, totalProductiveFte_);
+      output.writeFloat(17, totalProductiveFte_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -530,9 +570,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getSkillCollection());
     }
+    if (java.lang.Float.floatToRawIntBits(totalRequiredFte_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(15, totalRequiredFte_);
+    }
+    if (java.lang.Float.floatToRawIntBits(totalAchievedFte_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(16, totalAchievedFte_);
+    }
     if (java.lang.Float.floatToRawIntBits(totalProductiveFte_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(15, totalProductiveFte_);
+        .computeFloatSize(17, totalProductiveFte_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -560,9 +608,6 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToIntBits(getTotalFteIntervalsAchieved())
         != java.lang.Float.floatToIntBits(
             other.getTotalFteIntervalsAchieved())) return false;
-    if (java.lang.Float.floatToIntBits(getTotalProductiveFte())
-        != java.lang.Float.floatToIntBits(
-            other.getTotalProductiveFte())) return false;
     if (getNumIntervalsWithCallFtes()
         != other.getNumIntervalsWithCallFtes()) return false;
     if (getNumIntervalsWithShiftFtes()
@@ -589,6 +634,15 @@ private static final long serialVersionUID = 0L;
       if (!getSkillCollection()
           .equals(other.getSkillCollection())) return false;
     }
+    if (java.lang.Float.floatToIntBits(getTotalRequiredFte())
+        != java.lang.Float.floatToIntBits(
+            other.getTotalRequiredFte())) return false;
+    if (java.lang.Float.floatToIntBits(getTotalAchievedFte())
+        != java.lang.Float.floatToIntBits(
+            other.getTotalAchievedFte())) return false;
+    if (java.lang.Float.floatToIntBits(getTotalProductiveFte())
+        != java.lang.Float.floatToIntBits(
+            other.getTotalProductiveFte())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -610,9 +664,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TOTAL_FTE_INTERVALS_ACHIEVED_FIELD_NUMBER;
     hash = (53 * hash) + java.lang.Float.floatToIntBits(
         getTotalFteIntervalsAchieved());
-    hash = (37 * hash) + TOTAL_PRODUCTIVE_FTE_FIELD_NUMBER;
-    hash = (53 * hash) + java.lang.Float.floatToIntBits(
-        getTotalProductiveFte());
     hash = (37 * hash) + NUM_INTERVALS_WITH_CALL_FTES_FIELD_NUMBER;
     hash = (53 * hash) + getNumIntervalsWithCallFtes();
     hash = (37 * hash) + NUM_INTERVALS_WITH_SHIFT_FTES_FIELD_NUMBER;
@@ -643,6 +694,15 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SKILL_COLLECTION_FIELD_NUMBER;
       hash = (53 * hash) + getSkillCollection().hashCode();
     }
+    hash = (37 * hash) + TOTAL_REQUIRED_FTE_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getTotalRequiredFte());
+    hash = (37 * hash) + TOTAL_ACHIEVED_FTE_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getTotalAchievedFte());
+    hash = (37 * hash) + TOTAL_PRODUCTIVE_FTE_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getTotalProductiveFte());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -789,7 +849,6 @@ private static final long serialVersionUID = 0L;
       }
       totalFteIntervalsRequired_ = 0F;
       totalFteIntervalsAchieved_ = 0F;
-      totalProductiveFte_ = 0F;
       numIntervalsWithCallFtes_ = 0;
       numIntervalsWithShiftFtes_ = 0;
       numIntervalsWithCallFtesButNoShifts_ = 0;
@@ -804,19 +863,22 @@ private static final long serialVersionUID = 0L;
         fteOccupancyIntervals_ = null;
         fteOccupancyIntervalsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00001000);
+      bitField0_ = (bitField0_ & ~0x00000800);
       if (serviceLevelIntervalsBuilder_ == null) {
         serviceLevelIntervals_ = java.util.Collections.emptyList();
       } else {
         serviceLevelIntervals_ = null;
         serviceLevelIntervalsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00002000);
+      bitField0_ = (bitField0_ & ~0x00001000);
       skillCollection_ = null;
       if (skillCollectionBuilder_ != null) {
         skillCollectionBuilder_.dispose();
         skillCollectionBuilder_ = null;
       }
+      totalRequiredFte_ = 0F;
+      totalAchievedFte_ = 0F;
+      totalProductiveFte_ = 0F;
       return this;
     }
 
@@ -851,18 +913,18 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2 result) {
       if (fteOccupancyIntervalsBuilder_ == null) {
-        if (((bitField0_ & 0x00001000) != 0)) {
+        if (((bitField0_ & 0x00000800) != 0)) {
           fteOccupancyIntervals_ = java.util.Collections.unmodifiableList(fteOccupancyIntervals_);
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ = (bitField0_ & ~0x00000800);
         }
         result.fteOccupancyIntervals_ = fteOccupancyIntervals_;
       } else {
         result.fteOccupancyIntervals_ = fteOccupancyIntervalsBuilder_.build();
       }
       if (serviceLevelIntervalsBuilder_ == null) {
-        if (((bitField0_ & 0x00002000) != 0)) {
+        if (((bitField0_ & 0x00001000) != 0)) {
           serviceLevelIntervals_ = java.util.Collections.unmodifiableList(serviceLevelIntervals_);
-          bitField0_ = (bitField0_ & ~0x00002000);
+          bitField0_ = (bitField0_ & ~0x00001000);
         }
         result.serviceLevelIntervals_ = serviceLevelIntervals_;
       } else {
@@ -884,36 +946,42 @@ private static final long serialVersionUID = 0L;
         result.totalFteIntervalsAchieved_ = totalFteIntervalsAchieved_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.totalProductiveFte_ = totalProductiveFte_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.numIntervalsWithCallFtes_ = numIntervalsWithCallFtes_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.numIntervalsWithShiftFtes_ = numIntervalsWithShiftFtes_;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.numIntervalsWithCallFtesButNoShifts_ = numIntervalsWithCallFtesButNoShifts_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.numIntervalsWithShiftsButNoCallFtes_ = numIntervalsWithShiftsButNoCallFtes_;
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.totalUnderscheduledCallFtes_ = totalUnderscheduledCallFtes_;
       }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.totalOverscheduledCallFtes_ = totalOverscheduledCallFtes_;
       }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.intervalWidthInMinutes_ = intervalWidthInMinutes_;
       }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.metricType_ = metricType_;
       }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
+      if (((from_bitField0_ & 0x00002000) != 0)) {
         result.skillCollection_ = skillCollectionBuilder_ == null
             ? skillCollection_
             : skillCollectionBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.totalRequiredFte_ = totalRequiredFte_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.totalAchievedFte_ = totalAchievedFte_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.totalProductiveFte_ = totalProductiveFte_;
       }
     }
 
@@ -970,9 +1038,6 @@ private static final long serialVersionUID = 0L;
       if (other.getTotalFteIntervalsAchieved() != 0F) {
         setTotalFteIntervalsAchieved(other.getTotalFteIntervalsAchieved());
       }
-      if (other.getTotalProductiveFte() != 0F) {
-        setTotalProductiveFte(other.getTotalProductiveFte());
-      }
       if (other.getNumIntervalsWithCallFtes() != 0) {
         setNumIntervalsWithCallFtes(other.getNumIntervalsWithCallFtes());
       }
@@ -1001,7 +1066,7 @@ private static final long serialVersionUID = 0L;
         if (!other.fteOccupancyIntervals_.isEmpty()) {
           if (fteOccupancyIntervals_.isEmpty()) {
             fteOccupancyIntervals_ = other.fteOccupancyIntervals_;
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00000800);
           } else {
             ensureFteOccupancyIntervalsIsMutable();
             fteOccupancyIntervals_.addAll(other.fteOccupancyIntervals_);
@@ -1014,7 +1079,7 @@ private static final long serialVersionUID = 0L;
             fteOccupancyIntervalsBuilder_.dispose();
             fteOccupancyIntervalsBuilder_ = null;
             fteOccupancyIntervals_ = other.fteOccupancyIntervals_;
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00000800);
             fteOccupancyIntervalsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFteOccupancyIntervalsFieldBuilder() : null;
@@ -1027,7 +1092,7 @@ private static final long serialVersionUID = 0L;
         if (!other.serviceLevelIntervals_.isEmpty()) {
           if (serviceLevelIntervals_.isEmpty()) {
             serviceLevelIntervals_ = other.serviceLevelIntervals_;
-            bitField0_ = (bitField0_ & ~0x00002000);
+            bitField0_ = (bitField0_ & ~0x00001000);
           } else {
             ensureServiceLevelIntervalsIsMutable();
             serviceLevelIntervals_.addAll(other.serviceLevelIntervals_);
@@ -1040,7 +1105,7 @@ private static final long serialVersionUID = 0L;
             serviceLevelIntervalsBuilder_.dispose();
             serviceLevelIntervalsBuilder_ = null;
             serviceLevelIntervals_ = other.serviceLevelIntervals_;
-            bitField0_ = (bitField0_ & ~0x00002000);
+            bitField0_ = (bitField0_ & ~0x00001000);
             serviceLevelIntervalsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getServiceLevelIntervalsFieldBuilder() : null;
@@ -1051,6 +1116,15 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSkillCollection()) {
         mergeSkillCollection(other.getSkillCollection());
+      }
+      if (other.getTotalRequiredFte() != 0F) {
+        setTotalRequiredFte(other.getTotalRequiredFte());
+      }
+      if (other.getTotalAchievedFte() != 0F) {
+        setTotalAchievedFte(other.getTotalAchievedFte());
+      }
+      if (other.getTotalProductiveFte() != 0F) {
+        setTotalProductiveFte(other.getTotalProductiveFte());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1097,42 +1171,42 @@ private static final long serialVersionUID = 0L;
             } // case 29
             case 32: {
               numIntervalsWithCallFtes_ = input.readInt32();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 40: {
               numIntervalsWithShiftFtes_ = input.readInt32();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 48: {
               numIntervalsWithCallFtesButNoShifts_ = input.readInt32();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000020;
               break;
             } // case 48
             case 56: {
               numIntervalsWithShiftsButNoCallFtes_ = input.readInt32();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000040;
               break;
             } // case 56
             case 69: {
               totalUnderscheduledCallFtes_ = input.readFloat();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000080;
               break;
             } // case 69
             case 77: {
               totalOverscheduledCallFtes_ = input.readFloat();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000100;
               break;
             } // case 77
             case 80: {
               intervalWidthInMinutes_ = input.readInt32();
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000200;
               break;
             } // case 80
             case 88: {
               metricType_ = input.readEnum();
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00000400;
               break;
             } // case 88
             case 98: {
@@ -1165,14 +1239,24 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getSkillCollectionFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00004000;
+              bitField0_ |= 0x00002000;
               break;
             } // case 114
             case 125: {
-              totalProductiveFte_ = input.readFloat();
-              bitField0_ |= 0x00000008;
+              totalRequiredFte_ = input.readFloat();
+              bitField0_ |= 0x00004000;
               break;
             } // case 125
+            case 133: {
+              totalAchievedFte_ = input.readFloat();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 133
+            case 141: {
+              totalProductiveFte_ = input.readFloat();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 141
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1347,19 +1431,23 @@ private static final long serialVersionUID = 0L;
 
     private float totalFteIntervalsRequired_ ;
     /**
-     * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired"];</code>
+     * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.total_fte_intervals_required is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5826
      * @return The totalFteIntervalsRequired.
      */
     @java.lang.Override
-    public float getTotalFteIntervalsRequired() {
+    @java.lang.Deprecated public float getTotalFteIntervalsRequired() {
       return totalFteIntervalsRequired_;
     }
     /**
-     * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired"];</code>
+     * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.total_fte_intervals_required is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5826
      * @param value The totalFteIntervalsRequired to set.
      * @return This builder for chaining.
      */
-    public Builder setTotalFteIntervalsRequired(float value) {
+    @java.lang.Deprecated public Builder setTotalFteIntervalsRequired(float value) {
 
       totalFteIntervalsRequired_ = value;
       bitField0_ |= 0x00000002;
@@ -1367,10 +1455,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired"];</code>
+     * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.total_fte_intervals_required is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5826
      * @return This builder for chaining.
      */
-    public Builder clearTotalFteIntervalsRequired() {
+    @java.lang.Deprecated public Builder clearTotalFteIntervalsRequired() {
       bitField0_ = (bitField0_ & ~0x00000002);
       totalFteIntervalsRequired_ = 0F;
       onChanged();
@@ -1379,19 +1469,23 @@ private static final long serialVersionUID = 0L;
 
     private float totalFteIntervalsAchieved_ ;
     /**
-     * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved"];</code>
+     * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.total_fte_intervals_achieved is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5827
      * @return The totalFteIntervalsAchieved.
      */
     @java.lang.Override
-    public float getTotalFteIntervalsAchieved() {
+    @java.lang.Deprecated public float getTotalFteIntervalsAchieved() {
       return totalFteIntervalsAchieved_;
     }
     /**
-     * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved"];</code>
+     * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.total_fte_intervals_achieved is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5827
      * @param value The totalFteIntervalsAchieved to set.
      * @return This builder for chaining.
      */
-    public Builder setTotalFteIntervalsAchieved(float value) {
+    @java.lang.Deprecated public Builder setTotalFteIntervalsAchieved(float value) {
 
       totalFteIntervalsAchieved_ = value;
       bitField0_ |= 0x00000004;
@@ -1399,56 +1493,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved"];</code>
+     * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.PerformanceMetricForSkillCollectionV2.total_fte_intervals_achieved is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5827
      * @return This builder for chaining.
      */
-    public Builder clearTotalFteIntervalsAchieved() {
+    @java.lang.Deprecated public Builder clearTotalFteIntervalsAchieved() {
       bitField0_ = (bitField0_ & ~0x00000004);
       totalFteIntervalsAchieved_ = 0F;
-      onChanged();
-      return this;
-    }
-
-    private float totalProductiveFte_ ;
-    /**
-     * <pre>
-     * Total count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
-     * </pre>
-     *
-     * <code>float total_productive_fte = 15 [json_name = "totalProductiveFte"];</code>
-     * @return The totalProductiveFte.
-     */
-    @java.lang.Override
-    public float getTotalProductiveFte() {
-      return totalProductiveFte_;
-    }
-    /**
-     * <pre>
-     * Total count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
-     * </pre>
-     *
-     * <code>float total_productive_fte = 15 [json_name = "totalProductiveFte"];</code>
-     * @param value The totalProductiveFte to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTotalProductiveFte(float value) {
-
-      totalProductiveFte_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Total count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
-     * </pre>
-     *
-     * <code>float total_productive_fte = 15 [json_name = "totalProductiveFte"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTotalProductiveFte() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      totalProductiveFte_ = 0F;
       onChanged();
       return this;
     }
@@ -1470,7 +1522,7 @@ private static final long serialVersionUID = 0L;
     public Builder setNumIntervalsWithCallFtes(int value) {
 
       numIntervalsWithCallFtes_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1479,7 +1531,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNumIntervalsWithCallFtes() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       numIntervalsWithCallFtes_ = 0;
       onChanged();
       return this;
@@ -1502,7 +1554,7 @@ private static final long serialVersionUID = 0L;
     public Builder setNumIntervalsWithShiftFtes(int value) {
 
       numIntervalsWithShiftFtes_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1511,7 +1563,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNumIntervalsWithShiftFtes() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       numIntervalsWithShiftFtes_ = 0;
       onChanged();
       return this;
@@ -1534,7 +1586,7 @@ private static final long serialVersionUID = 0L;
     public Builder setNumIntervalsWithCallFtesButNoShifts(int value) {
 
       numIntervalsWithCallFtesButNoShifts_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1543,7 +1595,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNumIntervalsWithCallFtesButNoShifts() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000020);
       numIntervalsWithCallFtesButNoShifts_ = 0;
       onChanged();
       return this;
@@ -1566,7 +1618,7 @@ private static final long serialVersionUID = 0L;
     public Builder setNumIntervalsWithShiftsButNoCallFtes(int value) {
 
       numIntervalsWithShiftsButNoCallFtes_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1575,7 +1627,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNumIntervalsWithShiftsButNoCallFtes() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000040);
       numIntervalsWithShiftsButNoCallFtes_ = 0;
       onChanged();
       return this;
@@ -1598,7 +1650,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTotalUnderscheduledCallFtes(float value) {
 
       totalUnderscheduledCallFtes_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1607,7 +1659,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalUnderscheduledCallFtes() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000080);
       totalUnderscheduledCallFtes_ = 0F;
       onChanged();
       return this;
@@ -1630,7 +1682,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTotalOverscheduledCallFtes(float value) {
 
       totalOverscheduledCallFtes_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1639,7 +1691,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalOverscheduledCallFtes() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000100);
       totalOverscheduledCallFtes_ = 0F;
       onChanged();
       return this;
@@ -1670,7 +1722,7 @@ private static final long serialVersionUID = 0L;
     public Builder setIntervalWidthInMinutes(int value) {
 
       intervalWidthInMinutes_ = value;
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1683,7 +1735,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIntervalWidthInMinutes() {
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000200);
       intervalWidthInMinutes_ = 0;
       onChanged();
       return this;
@@ -1712,7 +1764,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMetricTypeValue(int value) {
       metricType_ = value;
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1742,7 +1794,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00000400;
       metricType_ = value.getNumber();
       onChanged();
       return this;
@@ -1756,7 +1808,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMetricType() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00000400);
       metricType_ = 0;
       onChanged();
       return this;
@@ -1765,9 +1817,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval> fteOccupancyIntervals_ =
       java.util.Collections.emptyList();
     private void ensureFteOccupancyIntervalsIsMutable() {
-      if (!((bitField0_ & 0x00001000) != 0)) {
+      if (!((bitField0_ & 0x00000800) != 0)) {
         fteOccupancyIntervals_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval>(fteOccupancyIntervals_);
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00000800;
        }
     }
 
@@ -1994,7 +2046,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFteOccupancyIntervals() {
       if (fteOccupancyIntervalsBuilder_ == null) {
         fteOccupancyIntervals_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
       } else {
         fteOccupancyIntervalsBuilder_.clear();
@@ -2120,7 +2172,7 @@ private static final long serialVersionUID = 0L;
         fteOccupancyIntervalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyIntervalOrBuilder>(
                 fteOccupancyIntervals_,
-                ((bitField0_ & 0x00001000) != 0),
+                ((bitField0_ & 0x00000800) != 0),
                 getParentForChildren(),
                 isClean());
         fteOccupancyIntervals_ = null;
@@ -2131,9 +2183,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval> serviceLevelIntervals_ =
       java.util.Collections.emptyList();
     private void ensureServiceLevelIntervalsIsMutable() {
-      if (!((bitField0_ & 0x00002000) != 0)) {
+      if (!((bitField0_ & 0x00001000) != 0)) {
         serviceLevelIntervals_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval>(serviceLevelIntervals_);
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00001000;
        }
     }
 
@@ -2327,7 +2379,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearServiceLevelIntervals() {
       if (serviceLevelIntervalsBuilder_ == null) {
         serviceLevelIntervals_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
       } else {
         serviceLevelIntervalsBuilder_.clear();
@@ -2432,7 +2484,7 @@ private static final long serialVersionUID = 0L;
         serviceLevelIntervalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder>(
                 serviceLevelIntervals_,
-                ((bitField0_ & 0x00002000) != 0),
+                ((bitField0_ & 0x00001000) != 0),
                 getParentForChildren(),
                 isClean());
         serviceLevelIntervals_ = null;
@@ -2452,7 +2504,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the skillCollection field is set.
      */
     public boolean hasSkillCollection() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -2485,7 +2537,7 @@ private static final long serialVersionUID = 0L;
       } else {
         skillCollectionBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2503,7 +2555,7 @@ private static final long serialVersionUID = 0L;
       } else {
         skillCollectionBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2516,7 +2568,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSkillCollection(com.tcn.cloud.api.api.commons.SkillProfileCategory value) {
       if (skillCollectionBuilder_ == null) {
-        if (((bitField0_ & 0x00004000) != 0) &&
+        if (((bitField0_ & 0x00002000) != 0) &&
           skillCollection_ != null &&
           skillCollection_ != com.tcn.cloud.api.api.commons.SkillProfileCategory.getDefaultInstance()) {
           getSkillCollectionBuilder().mergeFrom(value);
@@ -2526,7 +2578,7 @@ private static final long serialVersionUID = 0L;
       } else {
         skillCollectionBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2538,7 +2590,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.SkillProfileCategory skill_collection = 14 [json_name = "skillCollection"];</code>
      */
     public Builder clearSkillCollection() {
-      bitField0_ = (bitField0_ & ~0x00004000);
+      bitField0_ = (bitField0_ & ~0x00002000);
       skillCollection_ = null;
       if (skillCollectionBuilder_ != null) {
         skillCollectionBuilder_.dispose();
@@ -2555,7 +2607,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.SkillProfileCategory skill_collection = 14 [json_name = "skillCollection"];</code>
      */
     public com.tcn.cloud.api.api.commons.SkillProfileCategory.Builder getSkillCollectionBuilder() {
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00002000;
       onChanged();
       return getSkillCollectionFieldBuilder().getBuilder();
     }
@@ -2593,6 +2645,138 @@ private static final long serialVersionUID = 0L;
         skillCollection_ = null;
       }
       return skillCollectionBuilder_;
+    }
+
+    private float totalRequiredFte_ ;
+    /**
+     * <pre>
+     * The total FTE required over the &#64;date_range, as determined by the forecast.
+     * </pre>
+     *
+     * <code>float total_required_fte = 15 [json_name = "totalRequiredFte"];</code>
+     * @return The totalRequiredFte.
+     */
+    @java.lang.Override
+    public float getTotalRequiredFte() {
+      return totalRequiredFte_;
+    }
+    /**
+     * <pre>
+     * The total FTE required over the &#64;date_range, as determined by the forecast.
+     * </pre>
+     *
+     * <code>float total_required_fte = 15 [json_name = "totalRequiredFte"];</code>
+     * @param value The totalRequiredFte to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalRequiredFte(float value) {
+
+      totalRequiredFte_ = value;
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The total FTE required over the &#64;date_range, as determined by the forecast.
+     * </pre>
+     *
+     * <code>float total_required_fte = 15 [json_name = "totalRequiredFte"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalRequiredFte() {
+      bitField0_ = (bitField0_ & ~0x00004000);
+      totalRequiredFte_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float totalAchievedFte_ ;
+    /**
+     * <pre>
+     * The total FTE the the schedule is likely to address with the current shift instances.
+     * </pre>
+     *
+     * <code>float total_achieved_fte = 16 [json_name = "totalAchievedFte"];</code>
+     * @return The totalAchievedFte.
+     */
+    @java.lang.Override
+    public float getTotalAchievedFte() {
+      return totalAchievedFte_;
+    }
+    /**
+     * <pre>
+     * The total FTE the the schedule is likely to address with the current shift instances.
+     * </pre>
+     *
+     * <code>float total_achieved_fte = 16 [json_name = "totalAchievedFte"];</code>
+     * @param value The totalAchievedFte to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalAchievedFte(float value) {
+
+      totalAchievedFte_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The total FTE the the schedule is likely to address with the current shift instances.
+     * </pre>
+     *
+     * <code>float total_achieved_fte = 16 [json_name = "totalAchievedFte"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalAchievedFte() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      totalAchievedFte_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float totalProductiveFte_ ;
+    /**
+     * <pre>
+     * Total count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+     * </pre>
+     *
+     * <code>float total_productive_fte = 17 [json_name = "totalProductiveFte"];</code>
+     * @return The totalProductiveFte.
+     */
+    @java.lang.Override
+    public float getTotalProductiveFte() {
+      return totalProductiveFte_;
+    }
+    /**
+     * <pre>
+     * Total count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+     * </pre>
+     *
+     * <code>float total_productive_fte = 17 [json_name = "totalProductiveFte"];</code>
+     * @param value The totalProductiveFte to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalProductiveFte(float value) {
+
+      totalProductiveFte_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Total count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+     * </pre>
+     *
+     * <code>float total_productive_fte = 17 [json_name = "totalProductiveFte"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalProductiveFte() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      totalProductiveFte_ = 0F;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
