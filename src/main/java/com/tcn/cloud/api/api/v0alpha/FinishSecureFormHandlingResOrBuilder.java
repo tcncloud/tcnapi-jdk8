@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface CancelSecureFromHandlingResOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.CancelSecureFromHandlingRes)
+public interface FinishSecureFormHandlingResOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.FinishSecureFormHandlingRes)
     com.google.protobuf.MessageOrBuilder {
 }

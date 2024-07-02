@@ -4,18 +4,18 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
- * Protobuf type {@code api.v0alpha.FinishSecureFromHandlingReq}
+ * Protobuf type {@code api.v0alpha.FinishSecureFormHandlingReq}
  */
-public final class FinishSecureFromHandlingReq extends
+public final class FinishSecureFormHandlingReq extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v0alpha.FinishSecureFromHandlingReq)
-    FinishSecureFromHandlingReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v0alpha.FinishSecureFormHandlingReq)
+    FinishSecureFormHandlingReqOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use FinishSecureFromHandlingReq.newBuilder() to construct.
-  private FinishSecureFromHandlingReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use FinishSecureFormHandlingReq.newBuilder() to construct.
+  private FinishSecureFormHandlingReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private FinishSecureFromHandlingReq() {
+  private FinishSecureFormHandlingReq() {
     email_ = "";
   }
 
@@ -23,12 +23,12 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new FinishSecureFromHandlingReq();
+    return new FinishSecureFormHandlingReq();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_FinishSecureFromHandlingReq_descriptor;
+    return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_FinishSecureFormHandlingReq_descriptor;
   }
 
   @SuppressWarnings({"rawtypes"})
@@ -46,9 +46,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_FinishSecureFromHandlingReq_fieldAccessorTable
+    return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_FinishSecureFormHandlingReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq.class, com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq.Builder.class);
+            com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq.class, com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq.Builder.class);
   }
 
   public static final int EMAIL_FIELD_NUMBER = 1;
@@ -96,7 +96,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> defaultEntry =
             com.google.protobuf.MapEntry
             .<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>newDefaultInstance(
-                com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_FinishSecureFromHandlingReq_DataEntry_descriptor, 
+                com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_FinishSecureFormHandlingReq_DataEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
@@ -224,10 +224,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq other = (com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq) obj;
+    com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq other = (com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq) obj;
 
     if (!getEmail()
         .equals(other.getEmail())) return false;
@@ -255,44 +255,44 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -300,26 +300,26 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -332,7 +332,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -348,15 +348,15 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     return builder;
   }
   /**
-   * Protobuf type {@code api.v0alpha.FinishSecureFromHandlingReq}
+   * Protobuf type {@code api.v0alpha.FinishSecureFormHandlingReq}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v0alpha.FinishSecureFromHandlingReq)
-      com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v0alpha.FinishSecureFormHandlingReq)
+      com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_FinishSecureFromHandlingReq_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_FinishSecureFormHandlingReq_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -384,12 +384,12 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_FinishSecureFromHandlingReq_fieldAccessorTable
+      return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_FinishSecureFormHandlingReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq.class, com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq.Builder.class);
+              com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq.class, com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq.newBuilder()
     private Builder() {
 
     }
@@ -411,17 +411,17 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_FinishSecureFromHandlingReq_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_FinishSecureFormHandlingReq_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq.getDefaultInstance();
+    public com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq build() {
-      com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq result = buildPartial();
+    public com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq build() {
+      com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -429,14 +429,14 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq buildPartial() {
-      com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq result = new com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq(this);
+    public com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq buildPartial() {
+      com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq result = new com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.email_ = email_;
@@ -481,16 +481,16 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq) {
-        return mergeFrom((com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq)other);
+      if (other instanceof com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq) {
+        return mergeFrom((com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq other) {
-      if (other == com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq other) {
+      if (other == com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq.getDefaultInstance()) return this;
       if (!other.getEmail().isEmpty()) {
         email_ = other.email_;
         bitField0_ |= 0x00000001;
@@ -767,23 +767,23 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v0alpha.FinishSecureFromHandlingReq)
+    // @@protoc_insertion_point(builder_scope:api.v0alpha.FinishSecureFormHandlingReq)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v0alpha.FinishSecureFromHandlingReq)
-  private static final com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v0alpha.FinishSecureFormHandlingReq)
+  private static final com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq();
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<FinishSecureFromHandlingReq>
-      PARSER = new com.google.protobuf.AbstractParser<FinishSecureFromHandlingReq>() {
+  private static final com.google.protobuf.Parser<FinishSecureFormHandlingReq>
+      PARSER = new com.google.protobuf.AbstractParser<FinishSecureFormHandlingReq>() {
     @java.lang.Override
-    public FinishSecureFromHandlingReq parsePartialFrom(
+    public FinishSecureFormHandlingReq parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -802,17 +802,17 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     }
   };
 
-  public static com.google.protobuf.Parser<FinishSecureFromHandlingReq> parser() {
+  public static com.google.protobuf.Parser<FinishSecureFormHandlingReq> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<FinishSecureFromHandlingReq> getParserForType() {
+  public com.google.protobuf.Parser<FinishSecureFormHandlingReq> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

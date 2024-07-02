@@ -1818,66 +1818,66 @@ public final class AcdGrpc {
     return getProcessSecureFormMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingReq,
-      com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingRes> getCancelSecureFromHandlingMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingReq,
+      com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingRes> getCancelSecureFormHandlingMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CancelSecureFromHandling",
-      requestType = com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingRes.class,
+      fullMethodName = SERVICE_NAME + '/' + "CancelSecureFormHandling",
+      requestType = com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingRes.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingReq,
-      com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingRes> getCancelSecureFromHandlingMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingReq, com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingRes> getCancelSecureFromHandlingMethod;
-    if ((getCancelSecureFromHandlingMethod = AcdGrpc.getCancelSecureFromHandlingMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingReq,
+      com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingRes> getCancelSecureFormHandlingMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingReq, com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingRes> getCancelSecureFormHandlingMethod;
+    if ((getCancelSecureFormHandlingMethod = AcdGrpc.getCancelSecureFormHandlingMethod) == null) {
       synchronized (AcdGrpc.class) {
-        if ((getCancelSecureFromHandlingMethod = AcdGrpc.getCancelSecureFromHandlingMethod) == null) {
-          AcdGrpc.getCancelSecureFromHandlingMethod = getCancelSecureFromHandlingMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingReq, com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingRes>newBuilder()
+        if ((getCancelSecureFormHandlingMethod = AcdGrpc.getCancelSecureFormHandlingMethod) == null) {
+          AcdGrpc.getCancelSecureFormHandlingMethod = getCancelSecureFormHandlingMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingReq, com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CancelSecureFromHandling"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CancelSecureFormHandling"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingReq.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingRes.getDefaultInstance()))
-              .setSchemaDescriptor(new AcdMethodDescriptorSupplier("CancelSecureFromHandling"))
+                  com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingRes.getDefaultInstance()))
+              .setSchemaDescriptor(new AcdMethodDescriptorSupplier("CancelSecureFormHandling"))
               .build();
         }
       }
     }
-    return getCancelSecureFromHandlingMethod;
+    return getCancelSecureFormHandlingMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq,
-      com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingRes> getFinishSecureFromHandlingMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq,
+      com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes> getFinishSecureFormHandlingMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "FinishSecureFromHandling",
-      requestType = com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingRes.class,
+      fullMethodName = SERVICE_NAME + '/' + "FinishSecureFormHandling",
+      requestType = com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq,
-      com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingRes> getFinishSecureFromHandlingMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq, com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingRes> getFinishSecureFromHandlingMethod;
-    if ((getFinishSecureFromHandlingMethod = AcdGrpc.getFinishSecureFromHandlingMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq,
+      com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes> getFinishSecureFormHandlingMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq, com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes> getFinishSecureFormHandlingMethod;
+    if ((getFinishSecureFormHandlingMethod = AcdGrpc.getFinishSecureFormHandlingMethod) == null) {
       synchronized (AcdGrpc.class) {
-        if ((getFinishSecureFromHandlingMethod = AcdGrpc.getFinishSecureFromHandlingMethod) == null) {
-          AcdGrpc.getFinishSecureFromHandlingMethod = getFinishSecureFromHandlingMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq, com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingRes>newBuilder()
+        if ((getFinishSecureFormHandlingMethod = AcdGrpc.getFinishSecureFormHandlingMethod) == null) {
+          AcdGrpc.getFinishSecureFormHandlingMethod = getFinishSecureFormHandlingMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq, com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FinishSecureFromHandling"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FinishSecureFormHandling"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingRes.getDefaultInstance()))
-              .setSchemaDescriptor(new AcdMethodDescriptorSupplier("FinishSecureFromHandling"))
+                  com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes.getDefaultInstance()))
+              .setSchemaDescriptor(new AcdMethodDescriptorSupplier("FinishSecureFormHandling"))
               .build();
         }
       }
     }
-    return getFinishSecureFromHandlingMethod;
+    return getFinishSecureFormHandlingMethod;
   }
 
   /**
@@ -2374,16 +2374,16 @@ public final class AcdGrpc {
 
     /**
      */
-    default void cancelSecureFromHandling(com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCancelSecureFromHandlingMethod(), responseObserver);
+    default void cancelSecureFormHandling(com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCancelSecureFormHandlingMethod(), responseObserver);
     }
 
     /**
      */
-    default void finishSecureFromHandling(com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFinishSecureFromHandlingMethod(), responseObserver);
+    default void finishSecureFormHandling(com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFinishSecureFormHandlingMethod(), responseObserver);
     }
   }
 
@@ -2923,18 +2923,18 @@ public final class AcdGrpc {
 
     /**
      */
-    public void cancelSecureFromHandling(com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingRes> responseObserver) {
+    public void cancelSecureFormHandling(com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCancelSecureFromHandlingMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCancelSecureFormHandlingMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void finishSecureFromHandling(com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingRes> responseObserver) {
+    public void finishSecureFormHandling(com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getFinishSecureFromHandlingMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getFinishSecureFormHandlingMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -3402,16 +3402,16 @@ public final class AcdGrpc {
 
     /**
      */
-    public com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingRes cancelSecureFromHandling(com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingReq request) {
+    public com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingRes cancelSecureFormHandling(com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCancelSecureFromHandlingMethod(), getCallOptions(), request);
+          getChannel(), getCancelSecureFormHandlingMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingRes finishSecureFromHandling(com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq request) {
+    public com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes finishSecureFormHandling(com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getFinishSecureFromHandlingMethod(), getCallOptions(), request);
+          getChannel(), getFinishSecureFormHandlingMethod(), getCallOptions(), request);
     }
   }
 
@@ -3919,18 +3919,18 @@ public final class AcdGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingRes> cancelSecureFromHandling(
-        com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingRes> cancelSecureFormHandling(
+        com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCancelSecureFromHandlingMethod(), getCallOptions()), request);
+          getChannel().newCall(getCancelSecureFormHandlingMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingRes> finishSecureFromHandling(
-        com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes> finishSecureFormHandling(
+        com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getFinishSecureFromHandlingMethod(), getCallOptions()), request);
+          getChannel().newCall(getFinishSecureFormHandlingMethod(), getCallOptions()), request);
     }
   }
 
@@ -3992,8 +3992,8 @@ public final class AcdGrpc {
   private static final int METHODID_RESET_CALLER_SECURE_FORM_FIELD = 55;
   private static final int METHODID_PROCESS_CALLER_SECURE_FORM_FIELD = 56;
   private static final int METHODID_PROCESS_SECURE_FORM = 57;
-  private static final int METHODID_CANCEL_SECURE_FROM_HANDLING = 58;
-  private static final int METHODID_FINISH_SECURE_FROM_HANDLING = 59;
+  private static final int METHODID_CANCEL_SECURE_FORM_HANDLING = 58;
+  private static final int METHODID_FINISH_SECURE_FORM_HANDLING = 59;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -4244,13 +4244,13 @@ public final class AcdGrpc {
           serviceImpl.processSecureForm((com.tcn.cloud.api.api.v0alpha.ProcessSecureFormReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessSecureFormRes>) responseObserver);
           break;
-        case METHODID_CANCEL_SECURE_FROM_HANDLING:
-          serviceImpl.cancelSecureFromHandling((com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingRes>) responseObserver);
+        case METHODID_CANCEL_SECURE_FORM_HANDLING:
+          serviceImpl.cancelSecureFormHandling((com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingRes>) responseObserver);
           break;
-        case METHODID_FINISH_SECURE_FROM_HANDLING:
-          serviceImpl.finishSecureFromHandling((com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingRes>) responseObserver);
+        case METHODID_FINISH_SECURE_FORM_HANDLING:
+          serviceImpl.finishSecureFormHandling((com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -4677,19 +4677,19 @@ public final class AcdGrpc {
               com.tcn.cloud.api.api.v0alpha.ProcessSecureFormRes>(
                 service, METHODID_PROCESS_SECURE_FORM)))
         .addMethod(
-          getCancelSecureFromHandlingMethod(),
+          getCancelSecureFormHandlingMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingReq,
-              com.tcn.cloud.api.api.v0alpha.CancelSecureFromHandlingRes>(
-                service, METHODID_CANCEL_SECURE_FROM_HANDLING)))
+              com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingReq,
+              com.tcn.cloud.api.api.v0alpha.CancelSecureFormHandlingRes>(
+                service, METHODID_CANCEL_SECURE_FORM_HANDLING)))
         .addMethod(
-          getFinishSecureFromHandlingMethod(),
+          getFinishSecureFormHandlingMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingReq,
-              com.tcn.cloud.api.api.v0alpha.FinishSecureFromHandlingRes>(
-                service, METHODID_FINISH_SECURE_FROM_HANDLING)))
+              com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq,
+              com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes>(
+                service, METHODID_FINISH_SECURE_FORM_HANDLING)))
         .build();
   }
 
@@ -4796,8 +4796,8 @@ public final class AcdGrpc {
               .addMethod(getResetCallerSecureFormFieldMethod())
               .addMethod(getProcessCallerSecureFormFieldMethod())
               .addMethod(getProcessSecureFormMethod())
-              .addMethod(getCancelSecureFromHandlingMethod())
-              .addMethod(getFinishSecureFromHandlingMethod())
+              .addMethod(getCancelSecureFormHandlingMethod())
+              .addMethod(getFinishSecureFormHandlingMethod())
               .build();
         }
       }
