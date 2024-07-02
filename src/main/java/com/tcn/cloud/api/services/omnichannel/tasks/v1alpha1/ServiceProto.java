@@ -27,19 +27,25 @@ public final class ServiceProto {
       "rvice.proto\022#services.omnichannel.tasks." +
       "v1alpha1\032\027annotations/authz.proto\032\034googl" +
       "e/api/annotations.proto\0322services/omnich" +
-      "annel/tasks/v1alpha1/entities.proto2\330\001\n\014" +
+      "annel/tasks/v1alpha1/entities.proto2\261\003\n\014" +
       "TasksService\022\307\001\n\013CancelTasks\0227.services." +
       "omnichannel.tasks.v1alpha1.CancelTasksRe" +
       "quest\0328.services.omnichannel.tasks.v1alp" +
       "ha1.CancelTasksResponse\"E\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002" +
       "5\"0/services/omnichannel/tasks/v1alpha1/" +
-      "canceltasks:\001*B\364\001\n5com.tcn.cloud.api.ser" +
-      "vices.omnichannel.tasks.v1alpha1B\014Servic" +
-      "eProtoP\001\242\002\003SOT\252\002#Services.Omnichannel.Ta" +
-      "sks.V1alpha1\312\002#Services\\Omnichannel\\Task" +
-      "s\\V1alpha1\342\002/Services\\Omnichannel\\Tasks\\" +
-      "V1alpha1\\GPBMetadata\352\002&Services::Omnicha" +
-      "nnel::Tasks::V1alpha1b\006proto3"
+      "canceltasks:\001*\022\326\001\n\016CancelAllTasks\022;.serv" +
+      "ices.omnichannel.tasks.v1alpha1.BulkCanc" +
+      "elTasksRequest\032<.services.omnichannel.ta" +
+      "sks.v1alpha1.BulkCancelTasksResponse\"I\272\270" +
+      "\221\002\005\n\003\010\260\t\202\323\344\223\0029\"4/services/omnichannel/ta" +
+      "sks/v1alpha1/bulkcanceltasks:\001*B\364\001\n5com." +
+      "tcn.cloud.api.services.omnichannel.tasks" +
+      ".v1alpha1B\014ServiceProtoP\001\242\002\003SOT\252\002#Servic" +
+      "es.Omnichannel.Tasks.V1alpha1\312\002#Services" +
+      "\\Omnichannel\\Tasks\\V1alpha1\342\002/Services\\O" +
+      "mnichannel\\Tasks\\V1alpha1\\GPBMetadata\352\002&" +
+      "Services::Omnichannel::Tasks::V1alpha1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
