@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private UpdateShiftInstanceRes() {
     performanceMetrics_ = java.util.Collections.emptyList();
+    performanceMetricsV2_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -86,60 +87,121 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> performanceMetrics_;
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Deprecated. Performance metrics that this shift instance has.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> getPerformanceMetricsList() {
+  @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> getPerformanceMetricsList() {
     return performanceMetrics_;
   }
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Deprecated. Performance metrics that this shift instance has.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder> 
+  @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder> 
       getPerformanceMetricsOrBuilderList() {
     return performanceMetrics_;
   }
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Deprecated. Performance metrics that this shift instance has.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
    */
   @java.lang.Override
-  public int getPerformanceMetricsCount() {
+  @java.lang.Deprecated public int getPerformanceMetricsCount() {
     return performanceMetrics_.size();
   }
   /**
    * <pre>
+   * Deprecated. Performance metrics that this shift instance has.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
+   */
+  @java.lang.Override
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric getPerformanceMetrics(int index) {
+    return performanceMetrics_.get(index);
+  }
+  /**
+   * <pre>
+   * Deprecated. Performance metrics that this shift instance has.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
+   */
+  @java.lang.Override
+  @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder getPerformanceMetricsOrBuilder(
+      int index) {
+    return performanceMetrics_.get(index);
+  }
+
+  public static final int PERFORMANCE_METRICS_V2_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2> performanceMetricsV2_;
+  /**
+   * <pre>
    * Performance metrics that this shift instance has.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric getPerformanceMetrics(int index) {
-    return performanceMetrics_.get(index);
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2> getPerformanceMetricsV2List() {
+    return performanceMetricsV2_;
   }
   /**
    * <pre>
    * Performance metrics that this shift instance has.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder getPerformanceMetricsOrBuilder(
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2OrBuilder> 
+      getPerformanceMetricsV2OrBuilderList() {
+    return performanceMetricsV2_;
+  }
+  /**
+   * <pre>
+   * Performance metrics that this shift instance has.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+   */
+  @java.lang.Override
+  public int getPerformanceMetricsV2Count() {
+    return performanceMetricsV2_.size();
+  }
+  /**
+   * <pre>
+   * Performance metrics that this shift instance has.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2 getPerformanceMetricsV2(int index) {
+    return performanceMetricsV2_.get(index);
+  }
+  /**
+   * <pre>
+   * Performance metrics that this shift instance has.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2OrBuilder getPerformanceMetricsV2OrBuilder(
       int index) {
-    return performanceMetrics_.get(index);
+    return performanceMetricsV2_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -162,6 +224,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < performanceMetrics_.size(); i++) {
       output.writeMessage(2, performanceMetrics_.get(i));
     }
+    for (int i = 0; i < performanceMetricsV2_.size(); i++) {
+      output.writeMessage(3, performanceMetricsV2_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -178,6 +243,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < performanceMetrics_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, performanceMetrics_.get(i));
+    }
+    for (int i = 0; i < performanceMetricsV2_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, performanceMetricsV2_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -201,6 +270,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getPerformanceMetricsList()
         .equals(other.getPerformanceMetricsList())) return false;
+    if (!getPerformanceMetricsV2List()
+        .equals(other.getPerformanceMetricsV2List())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -219,6 +290,10 @@ private static final long serialVersionUID = 0L;
     if (getPerformanceMetricsCount() > 0) {
       hash = (37 * hash) + PERFORMANCE_METRICS_FIELD_NUMBER;
       hash = (53 * hash) + getPerformanceMetricsList().hashCode();
+    }
+    if (getPerformanceMetricsV2Count() > 0) {
+      hash = (37 * hash) + PERFORMANCE_METRICS_V2_FIELD_NUMBER;
+      hash = (53 * hash) + getPerformanceMetricsV2List().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -367,6 +442,13 @@ private static final long serialVersionUID = 0L;
         performanceMetricsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
+      if (performanceMetricsV2Builder_ == null) {
+        performanceMetricsV2_ = java.util.Collections.emptyList();
+      } else {
+        performanceMetricsV2_ = null;
+        performanceMetricsV2Builder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -408,6 +490,15 @@ private static final long serialVersionUID = 0L;
         result.performanceMetrics_ = performanceMetrics_;
       } else {
         result.performanceMetrics_ = performanceMetricsBuilder_.build();
+      }
+      if (performanceMetricsV2Builder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          performanceMetricsV2_ = java.util.Collections.unmodifiableList(performanceMetricsV2_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.performanceMetricsV2_ = performanceMetricsV2_;
+      } else {
+        result.performanceMetricsV2_ = performanceMetricsV2Builder_.build();
       }
     }
 
@@ -493,6 +584,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (performanceMetricsV2Builder_ == null) {
+        if (!other.performanceMetricsV2_.isEmpty()) {
+          if (performanceMetricsV2_.isEmpty()) {
+            performanceMetricsV2_ = other.performanceMetricsV2_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensurePerformanceMetricsV2IsMutable();
+            performanceMetricsV2_.addAll(other.performanceMetricsV2_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.performanceMetricsV2_.isEmpty()) {
+          if (performanceMetricsV2Builder_.isEmpty()) {
+            performanceMetricsV2Builder_.dispose();
+            performanceMetricsV2Builder_ = null;
+            performanceMetricsV2_ = other.performanceMetricsV2_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            performanceMetricsV2Builder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getPerformanceMetricsV2FieldBuilder() : null;
+          } else {
+            performanceMetricsV2Builder_.addAllMessages(other.performanceMetricsV2_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -539,6 +656,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 18
+            case 26: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2 m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.parser(),
+                      extensionRegistry);
+              if (performanceMetricsV2Builder_ == null) {
+                ensurePerformanceMetricsV2IsMutable();
+                performanceMetricsV2_.add(m);
+              } else {
+                performanceMetricsV2Builder_.addMessage(m);
+              }
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -725,12 +855,12 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> getPerformanceMetricsList() {
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> getPerformanceMetricsList() {
       if (performanceMetricsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(performanceMetrics_);
       } else {
@@ -739,12 +869,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public int getPerformanceMetricsCount() {
+    @java.lang.Deprecated public int getPerformanceMetricsCount() {
       if (performanceMetricsBuilder_ == null) {
         return performanceMetrics_.size();
       } else {
@@ -753,12 +883,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric getPerformanceMetrics(int index) {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric getPerformanceMetrics(int index) {
       if (performanceMetricsBuilder_ == null) {
         return performanceMetrics_.get(index);
       } else {
@@ -767,12 +897,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public Builder setPerformanceMetrics(
+    @java.lang.Deprecated public Builder setPerformanceMetrics(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric value) {
       if (performanceMetricsBuilder_ == null) {
         if (value == null) {
@@ -788,12 +918,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public Builder setPerformanceMetrics(
+    @java.lang.Deprecated public Builder setPerformanceMetrics(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder builderForValue) {
       if (performanceMetricsBuilder_ == null) {
         ensurePerformanceMetricsIsMutable();
@@ -806,12 +936,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public Builder addPerformanceMetrics(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric value) {
+    @java.lang.Deprecated public Builder addPerformanceMetrics(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric value) {
       if (performanceMetricsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -826,12 +956,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public Builder addPerformanceMetrics(
+    @java.lang.Deprecated public Builder addPerformanceMetrics(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric value) {
       if (performanceMetricsBuilder_ == null) {
         if (value == null) {
@@ -847,12 +977,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public Builder addPerformanceMetrics(
+    @java.lang.Deprecated public Builder addPerformanceMetrics(
         com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder builderForValue) {
       if (performanceMetricsBuilder_ == null) {
         ensurePerformanceMetricsIsMutable();
@@ -865,12 +995,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public Builder addPerformanceMetrics(
+    @java.lang.Deprecated public Builder addPerformanceMetrics(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder builderForValue) {
       if (performanceMetricsBuilder_ == null) {
         ensurePerformanceMetricsIsMutable();
@@ -883,12 +1013,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public Builder addAllPerformanceMetrics(
+    @java.lang.Deprecated public Builder addAllPerformanceMetrics(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> values) {
       if (performanceMetricsBuilder_ == null) {
         ensurePerformanceMetricsIsMutable();
@@ -902,12 +1032,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public Builder clearPerformanceMetrics() {
+    @java.lang.Deprecated public Builder clearPerformanceMetrics() {
       if (performanceMetricsBuilder_ == null) {
         performanceMetrics_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -919,12 +1049,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public Builder removePerformanceMetrics(int index) {
+    @java.lang.Deprecated public Builder removePerformanceMetrics(int index) {
       if (performanceMetricsBuilder_ == null) {
         ensurePerformanceMetricsIsMutable();
         performanceMetrics_.remove(index);
@@ -936,23 +1066,23 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder getPerformanceMetricsBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder getPerformanceMetricsBuilder(
         int index) {
       return getPerformanceMetricsFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder getPerformanceMetricsOrBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder getPerformanceMetricsOrBuilder(
         int index) {
       if (performanceMetricsBuilder_ == null) {
         return performanceMetrics_.get(index);  } else {
@@ -961,12 +1091,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder> 
          getPerformanceMetricsOrBuilderList() {
       if (performanceMetricsBuilder_ != null) {
         return performanceMetricsBuilder_.getMessageOrBuilderList();
@@ -976,35 +1106,35 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder addPerformanceMetricsBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder addPerformanceMetricsBuilder() {
       return getPerformanceMetricsFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.getDefaultInstance());
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder addPerformanceMetricsBuilder(
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder addPerformanceMetricsBuilder(
         int index) {
       return getPerformanceMetricsFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.getDefaultInstance());
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Deprecated. Performance metrics that this shift instance has.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder> 
+    @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder> 
          getPerformanceMetricsBuilderList() {
       return getPerformanceMetricsFieldBuilder().getBuilderList();
     }
@@ -1021,6 +1151,318 @@ private static final long serialVersionUID = 0L;
         performanceMetrics_ = null;
       }
       return performanceMetricsBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2> performanceMetricsV2_ =
+      java.util.Collections.emptyList();
+    private void ensurePerformanceMetricsV2IsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        performanceMetricsV2_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2>(performanceMetricsV2_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2OrBuilder> performanceMetricsV2Builder_;
+
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2> getPerformanceMetricsV2List() {
+      if (performanceMetricsV2Builder_ == null) {
+        return java.util.Collections.unmodifiableList(performanceMetricsV2_);
+      } else {
+        return performanceMetricsV2Builder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public int getPerformanceMetricsV2Count() {
+      if (performanceMetricsV2Builder_ == null) {
+        return performanceMetricsV2_.size();
+      } else {
+        return performanceMetricsV2Builder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2 getPerformanceMetricsV2(int index) {
+      if (performanceMetricsV2Builder_ == null) {
+        return performanceMetricsV2_.get(index);
+      } else {
+        return performanceMetricsV2Builder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public Builder setPerformanceMetricsV2(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2 value) {
+      if (performanceMetricsV2Builder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePerformanceMetricsV2IsMutable();
+        performanceMetricsV2_.set(index, value);
+        onChanged();
+      } else {
+        performanceMetricsV2Builder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public Builder setPerformanceMetricsV2(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.Builder builderForValue) {
+      if (performanceMetricsV2Builder_ == null) {
+        ensurePerformanceMetricsV2IsMutable();
+        performanceMetricsV2_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        performanceMetricsV2Builder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public Builder addPerformanceMetricsV2(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2 value) {
+      if (performanceMetricsV2Builder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePerformanceMetricsV2IsMutable();
+        performanceMetricsV2_.add(value);
+        onChanged();
+      } else {
+        performanceMetricsV2Builder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public Builder addPerformanceMetricsV2(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2 value) {
+      if (performanceMetricsV2Builder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePerformanceMetricsV2IsMutable();
+        performanceMetricsV2_.add(index, value);
+        onChanged();
+      } else {
+        performanceMetricsV2Builder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public Builder addPerformanceMetricsV2(
+        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.Builder builderForValue) {
+      if (performanceMetricsV2Builder_ == null) {
+        ensurePerformanceMetricsV2IsMutable();
+        performanceMetricsV2_.add(builderForValue.build());
+        onChanged();
+      } else {
+        performanceMetricsV2Builder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public Builder addPerformanceMetricsV2(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.Builder builderForValue) {
+      if (performanceMetricsV2Builder_ == null) {
+        ensurePerformanceMetricsV2IsMutable();
+        performanceMetricsV2_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        performanceMetricsV2Builder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public Builder addAllPerformanceMetricsV2(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2> values) {
+      if (performanceMetricsV2Builder_ == null) {
+        ensurePerformanceMetricsV2IsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, performanceMetricsV2_);
+        onChanged();
+      } else {
+        performanceMetricsV2Builder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public Builder clearPerformanceMetricsV2() {
+      if (performanceMetricsV2Builder_ == null) {
+        performanceMetricsV2_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        performanceMetricsV2Builder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public Builder removePerformanceMetricsV2(int index) {
+      if (performanceMetricsV2Builder_ == null) {
+        ensurePerformanceMetricsV2IsMutable();
+        performanceMetricsV2_.remove(index);
+        onChanged();
+      } else {
+        performanceMetricsV2Builder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.Builder getPerformanceMetricsV2Builder(
+        int index) {
+      return getPerformanceMetricsV2FieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2OrBuilder getPerformanceMetricsV2OrBuilder(
+        int index) {
+      if (performanceMetricsV2Builder_ == null) {
+        return performanceMetricsV2_.get(index);  } else {
+        return performanceMetricsV2Builder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2OrBuilder> 
+         getPerformanceMetricsV2OrBuilderList() {
+      if (performanceMetricsV2Builder_ != null) {
+        return performanceMetricsV2Builder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(performanceMetricsV2_);
+      }
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.Builder addPerformanceMetricsV2Builder() {
+      return getPerformanceMetricsV2FieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.Builder addPerformanceMetricsV2Builder(
+        int index) {
+      return getPerformanceMetricsV2FieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Performance metrics that this shift instance has.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.Builder> 
+         getPerformanceMetricsV2BuilderList() {
+      return getPerformanceMetricsV2FieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2OrBuilder> 
+        getPerformanceMetricsV2FieldBuilder() {
+      if (performanceMetricsV2Builder_ == null) {
+        performanceMetricsV2Builder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2OrBuilder>(
+                performanceMetricsV2_,
+                ((bitField0_ & 0x00000004) != 0),
+                getParentForChildren(),
+                isClean());
+        performanceMetricsV2_ = null;
+      }
+      return performanceMetricsV2Builder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

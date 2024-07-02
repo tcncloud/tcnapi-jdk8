@@ -9,45 +9,89 @@ public interface GetPerformanceMetricsResOrBuilder extends
 
   /**
    * <pre>
-   * Requested set of performance metrics.
+   * Deprecated. Requested set of performance metrics.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 1 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 1 [json_name = "performanceMetrics", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> 
       getPerformanceMetricsList();
   /**
    * <pre>
-   * Requested set of performance metrics.
+   * Deprecated. Requested set of performance metrics.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 1 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 1 [json_name = "performanceMetrics", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric getPerformanceMetrics(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric getPerformanceMetrics(int index);
   /**
    * <pre>
-   * Requested set of performance metrics.
+   * Deprecated. Requested set of performance metrics.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 1 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 1 [json_name = "performanceMetrics", deprecated = true];</code>
    */
-  int getPerformanceMetricsCount();
+  @java.lang.Deprecated int getPerformanceMetricsCount();
   /**
    * <pre>
-   * Requested set of performance metrics.
+   * Deprecated. Requested set of performance metrics.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 1 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 1 [json_name = "performanceMetrics", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder> 
       getPerformanceMetricsOrBuilderList();
   /**
    * <pre>
+   * Deprecated. Requested set of performance metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 1 [json_name = "performanceMetrics", deprecated = true];</code>
+   */
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder getPerformanceMetricsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
    * Requested set of performance metrics.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 1 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder getPerformanceMetricsOrBuilder(
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2> 
+      getPerformanceMetricsV2List();
+  /**
+   * <pre>
+   * Requested set of performance metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2 getPerformanceMetricsV2(int index);
+  /**
+   * <pre>
+   * Requested set of performance metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
+   */
+  int getPerformanceMetricsV2Count();
+  /**
+   * <pre>
+   * Requested set of performance metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2OrBuilder> 
+      getPerformanceMetricsV2OrBuilderList();
+  /**
+   * <pre>
+   * Requested set of performance metrics.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 2 [json_name = "performanceMetricsV2"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2OrBuilder getPerformanceMetricsV2OrBuilder(
       int index);
 }

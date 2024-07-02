@@ -5,12 +5,13 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
+ * Deprecated.
  * Represents a performance metric
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.wfm.PerformanceMetric}
  */
-public final class PerformanceMetric extends
+@java.lang.Deprecated public final class PerformanceMetric extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.PerformanceMetric)
     PerformanceMetricOrBuilder {
@@ -729,6 +730,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * Deprecated.
    * Represents a performance metric
    * </pre>
    *

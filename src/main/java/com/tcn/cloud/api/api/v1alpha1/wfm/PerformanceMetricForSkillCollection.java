@@ -5,6 +5,7 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
+ * Deprecated.
  * PerformanceMetricForSkillCollection.
  * Not a top-level entity:
  * * No primary-key field.
@@ -14,7 +15,7 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
  *
  * Protobuf type {@code api.v1alpha1.wfm.PerformanceMetricForSkillCollection}
  */
-public final class PerformanceMetricForSkillCollection extends
+@java.lang.Deprecated public final class PerformanceMetricForSkillCollection extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.PerformanceMetricForSkillCollection)
     PerformanceMetricForSkillCollectionOrBuilder {
@@ -712,6 +713,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * Deprecated.
    * PerformanceMetricForSkillCollection.
    * Not a top-level entity:
    * * No primary-key field.

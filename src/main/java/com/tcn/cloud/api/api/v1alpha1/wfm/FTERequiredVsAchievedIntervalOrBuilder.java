@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface FTERequiredVsAchievedIntervalOrBuilder extends
+@java.lang.Deprecated public interface FTERequiredVsAchievedIntervalOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.FTERequiredVsAchievedInterval)
     com.google.protobuf.MessageOrBuilder {
 

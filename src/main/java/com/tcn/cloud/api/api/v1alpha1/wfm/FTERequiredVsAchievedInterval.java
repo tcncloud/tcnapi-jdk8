@@ -5,12 +5,13 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
+ * Deprecated.
  * Represents an fte required vs achieved interval.
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.wfm.FTERequiredVsAchievedInterval}
  */
-public final class FTERequiredVsAchievedInterval extends
+@java.lang.Deprecated public final class FTERequiredVsAchievedInterval extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.FTERequiredVsAchievedInterval)
     FTERequiredVsAchievedIntervalOrBuilder {
@@ -296,6 +297,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * Deprecated.
    * Represents an fte required vs achieved interval.
    * </pre>
    *

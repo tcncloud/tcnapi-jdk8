@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface PerformanceMetricOrBuilder extends
+@java.lang.Deprecated public interface PerformanceMetricOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.PerformanceMetric)
     com.google.protobuf.MessageOrBuilder {
 

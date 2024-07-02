@@ -67,23 +67,72 @@ private static final long serialVersionUID = 0L;
   public static final int REQUIRED_FTE_OCCUPANCY_FIELD_NUMBER = 2;
   private float requiredFteOccupancy_ = 0F;
   /**
-   * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy"];</code>
+   * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.required_fte_occupancy is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=5911
    * @return The requiredFteOccupancy.
    */
   @java.lang.Override
-  public float getRequiredFteOccupancy() {
+  @java.lang.Deprecated public float getRequiredFteOccupancy() {
     return requiredFteOccupancy_;
   }
 
   public static final int ACHIEVED_FTE_OCCUPANCY_FIELD_NUMBER = 3;
   private float achievedFteOccupancy_ = 0F;
   /**
-   * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy"];</code>
+   * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.achieved_fte_occupancy is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=5912
    * @return The achievedFteOccupancy.
    */
   @java.lang.Override
-  public float getAchievedFteOccupancy() {
+  @java.lang.Deprecated public float getAchievedFteOccupancy() {
     return achievedFteOccupancy_;
+  }
+
+  public static final int REQUIRED_FTE_FIELD_NUMBER = 4;
+  private float requiredFte_ = 0F;
+  /**
+   * <pre>
+   * Number of required FTE in the interval.
+   * </pre>
+   *
+   * <code>float required_fte = 4 [json_name = "requiredFte"];</code>
+   * @return The requiredFte.
+   */
+  @java.lang.Override
+  public float getRequiredFte() {
+    return requiredFte_;
+  }
+
+  public static final int ACHIEVED_FTE_FIELD_NUMBER = 5;
+  private float achievedFte_ = 0F;
+  /**
+   * <pre>
+   * Number of achieved FTE's in the interval.
+   * </pre>
+   *
+   * <code>float achieved_fte = 5 [json_name = "achievedFte"];</code>
+   * @return The achievedFte.
+   */
+  @java.lang.Override
+  public float getAchievedFte() {
+    return achievedFte_;
+  }
+
+  public static final int PRODUCTIVE_FTE_FIELD_NUMBER = 6;
+  private float productiveFte_ = 0F;
+  /**
+   * <pre>
+   * Count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+   * </pre>
+   *
+   * <code>float productive_fte = 6 [json_name = "productiveFte"];</code>
+   * @return The productiveFte.
+   */
+  @java.lang.Override
+  public float getProductiveFte() {
+    return productiveFte_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -109,6 +158,15 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToRawIntBits(achievedFteOccupancy_) != 0) {
       output.writeFloat(3, achievedFteOccupancy_);
     }
+    if (java.lang.Float.floatToRawIntBits(requiredFte_) != 0) {
+      output.writeFloat(4, requiredFte_);
+    }
+    if (java.lang.Float.floatToRawIntBits(achievedFte_) != 0) {
+      output.writeFloat(5, achievedFte_);
+    }
+    if (java.lang.Float.floatToRawIntBits(productiveFte_) != 0) {
+      output.writeFloat(6, productiveFte_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -129,6 +187,18 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToRawIntBits(achievedFteOccupancy_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(3, achievedFteOccupancy_);
+    }
+    if (java.lang.Float.floatToRawIntBits(requiredFte_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(4, requiredFte_);
+    }
+    if (java.lang.Float.floatToRawIntBits(achievedFte_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(5, achievedFte_);
+    }
+    if (java.lang.Float.floatToRawIntBits(productiveFte_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(6, productiveFte_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -156,6 +226,15 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToIntBits(getAchievedFteOccupancy())
         != java.lang.Float.floatToIntBits(
             other.getAchievedFteOccupancy())) return false;
+    if (java.lang.Float.floatToIntBits(getRequiredFte())
+        != java.lang.Float.floatToIntBits(
+            other.getRequiredFte())) return false;
+    if (java.lang.Float.floatToIntBits(getAchievedFte())
+        != java.lang.Float.floatToIntBits(
+            other.getAchievedFte())) return false;
+    if (java.lang.Float.floatToIntBits(getProductiveFte())
+        != java.lang.Float.floatToIntBits(
+            other.getProductiveFte())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -177,6 +256,15 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ACHIEVED_FTE_OCCUPANCY_FIELD_NUMBER;
     hash = (53 * hash) + java.lang.Float.floatToIntBits(
         getAchievedFteOccupancy());
+    hash = (37 * hash) + REQUIRED_FTE_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getRequiredFte());
+    hash = (37 * hash) + ACHIEVED_FTE_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getAchievedFte());
+    hash = (37 * hash) + PRODUCTIVE_FTE_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getProductiveFte());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -315,6 +403,9 @@ private static final long serialVersionUID = 0L;
       }
       requiredFteOccupancy_ = 0F;
       achievedFteOccupancy_ = 0F;
+      requiredFte_ = 0F;
+      achievedFte_ = 0F;
+      productiveFte_ = 0F;
       return this;
     }
 
@@ -358,6 +449,15 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.achievedFteOccupancy_ = achievedFteOccupancy_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.requiredFte_ = requiredFte_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.achievedFte_ = achievedFte_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.productiveFte_ = productiveFte_;
       }
     }
 
@@ -414,6 +514,15 @@ private static final long serialVersionUID = 0L;
       if (other.getAchievedFteOccupancy() != 0F) {
         setAchievedFteOccupancy(other.getAchievedFteOccupancy());
       }
+      if (other.getRequiredFte() != 0F) {
+        setRequiredFte(other.getRequiredFte());
+      }
+      if (other.getAchievedFte() != 0F) {
+        setAchievedFte(other.getAchievedFte());
+      }
+      if (other.getProductiveFte() != 0F) {
+        setProductiveFte(other.getProductiveFte());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -457,6 +566,21 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 29
+            case 37: {
+              requiredFte_ = input.readFloat();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 37
+            case 45: {
+              achievedFte_ = input.readFloat();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 45
+            case 53: {
+              productiveFte_ = input.readFloat();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 53
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -595,19 +719,23 @@ private static final long serialVersionUID = 0L;
 
     private float requiredFteOccupancy_ ;
     /**
-     * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy"];</code>
+     * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.required_fte_occupancy is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5911
      * @return The requiredFteOccupancy.
      */
     @java.lang.Override
-    public float getRequiredFteOccupancy() {
+    @java.lang.Deprecated public float getRequiredFteOccupancy() {
       return requiredFteOccupancy_;
     }
     /**
-     * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy"];</code>
+     * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.required_fte_occupancy is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5911
      * @param value The requiredFteOccupancy to set.
      * @return This builder for chaining.
      */
-    public Builder setRequiredFteOccupancy(float value) {
+    @java.lang.Deprecated public Builder setRequiredFteOccupancy(float value) {
 
       requiredFteOccupancy_ = value;
       bitField0_ |= 0x00000002;
@@ -615,10 +743,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy"];</code>
+     * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.required_fte_occupancy is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5911
      * @return This builder for chaining.
      */
-    public Builder clearRequiredFteOccupancy() {
+    @java.lang.Deprecated public Builder clearRequiredFteOccupancy() {
       bitField0_ = (bitField0_ & ~0x00000002);
       requiredFteOccupancy_ = 0F;
       onChanged();
@@ -627,19 +757,23 @@ private static final long serialVersionUID = 0L;
 
     private float achievedFteOccupancy_ ;
     /**
-     * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy"];</code>
+     * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.achieved_fte_occupancy is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5912
      * @return The achievedFteOccupancy.
      */
     @java.lang.Override
-    public float getAchievedFteOccupancy() {
+    @java.lang.Deprecated public float getAchievedFteOccupancy() {
       return achievedFteOccupancy_;
     }
     /**
-     * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy"];</code>
+     * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.achieved_fte_occupancy is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5912
      * @param value The achievedFteOccupancy to set.
      * @return This builder for chaining.
      */
-    public Builder setAchievedFteOccupancy(float value) {
+    @java.lang.Deprecated public Builder setAchievedFteOccupancy(float value) {
 
       achievedFteOccupancy_ = value;
       bitField0_ |= 0x00000004;
@@ -647,12 +781,146 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy"];</code>
+     * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy", deprecated = true];</code>
+     * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.achieved_fte_occupancy is deprecated.
+     *     See api/v1alpha1/wfm/wfm.proto;l=5912
      * @return This builder for chaining.
      */
-    public Builder clearAchievedFteOccupancy() {
+    @java.lang.Deprecated public Builder clearAchievedFteOccupancy() {
       bitField0_ = (bitField0_ & ~0x00000004);
       achievedFteOccupancy_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float requiredFte_ ;
+    /**
+     * <pre>
+     * Number of required FTE in the interval.
+     * </pre>
+     *
+     * <code>float required_fte = 4 [json_name = "requiredFte"];</code>
+     * @return The requiredFte.
+     */
+    @java.lang.Override
+    public float getRequiredFte() {
+      return requiredFte_;
+    }
+    /**
+     * <pre>
+     * Number of required FTE in the interval.
+     * </pre>
+     *
+     * <code>float required_fte = 4 [json_name = "requiredFte"];</code>
+     * @param value The requiredFte to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRequiredFte(float value) {
+
+      requiredFte_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of required FTE in the interval.
+     * </pre>
+     *
+     * <code>float required_fte = 4 [json_name = "requiredFte"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRequiredFte() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      requiredFte_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float achievedFte_ ;
+    /**
+     * <pre>
+     * Number of achieved FTE's in the interval.
+     * </pre>
+     *
+     * <code>float achieved_fte = 5 [json_name = "achievedFte"];</code>
+     * @return The achievedFte.
+     */
+    @java.lang.Override
+    public float getAchievedFte() {
+      return achievedFte_;
+    }
+    /**
+     * <pre>
+     * Number of achieved FTE's in the interval.
+     * </pre>
+     *
+     * <code>float achieved_fte = 5 [json_name = "achievedFte"];</code>
+     * @param value The achievedFte to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAchievedFte(float value) {
+
+      achievedFte_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of achieved FTE's in the interval.
+     * </pre>
+     *
+     * <code>float achieved_fte = 5 [json_name = "achievedFte"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAchievedFte() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      achievedFte_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float productiveFte_ ;
+    /**
+     * <pre>
+     * Count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+     * </pre>
+     *
+     * <code>float productive_fte = 6 [json_name = "productiveFte"];</code>
+     * @return The productiveFte.
+     */
+    @java.lang.Override
+    public float getProductiveFte() {
+      return productiveFte_;
+    }
+    /**
+     * <pre>
+     * Count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+     * </pre>
+     *
+     * <code>float productive_fte = 6 [json_name = "productiveFte"];</code>
+     * @param value The productiveFte to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProductiveFte(float value) {
+
+      productiveFte_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+     * </pre>
+     *
+     * <code>float productive_fte = 6 [json_name = "productiveFte"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProductiveFte() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      productiveFte_ = 0F;
       onChanged();
       return this;
     }

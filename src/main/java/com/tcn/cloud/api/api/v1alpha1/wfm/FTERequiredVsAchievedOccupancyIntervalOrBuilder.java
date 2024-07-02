@@ -23,14 +23,48 @@ public interface FTERequiredVsAchievedOccupancyIntervalOrBuilder extends
   com.google.protobuf.TimestampOrBuilder getStartDatetimeOrBuilder();
 
   /**
-   * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy"];</code>
+   * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.required_fte_occupancy is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=5911
    * @return The requiredFteOccupancy.
    */
-  float getRequiredFteOccupancy();
+  @java.lang.Deprecated float getRequiredFteOccupancy();
 
   /**
-   * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy"];</code>
+   * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy", deprecated = true];</code>
+   * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.achieved_fte_occupancy is deprecated.
+   *     See api/v1alpha1/wfm/wfm.proto;l=5912
    * @return The achievedFteOccupancy.
    */
-  float getAchievedFteOccupancy();
+  @java.lang.Deprecated float getAchievedFteOccupancy();
+
+  /**
+   * <pre>
+   * Number of required FTE in the interval.
+   * </pre>
+   *
+   * <code>float required_fte = 4 [json_name = "requiredFte"];</code>
+   * @return The requiredFte.
+   */
+  float getRequiredFte();
+
+  /**
+   * <pre>
+   * Number of achieved FTE's in the interval.
+   * </pre>
+   *
+   * <code>float achieved_fte = 5 [json_name = "achievedFte"];</code>
+   * @return The achievedFte.
+   */
+  float getAchievedFte();
+
+  /**
+   * <pre>
+   * Count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+   * </pre>
+   *
+   * <code>float productive_fte = 6 [json_name = "productiveFte"];</code>
+   * @return The productiveFte.
+   */
+  float getProductiveFte();
 }
