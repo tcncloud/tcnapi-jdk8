@@ -178,10 +178,12 @@ private static final long serialVersionUID = 0L;
    * The communication channel of the transcript.
    * </pre>
    *
-   * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
+   * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
+   * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
+   *     See wfo/vanalytics/v2/transcript.proto;l=36
    * @return The enum numeric value on the wire for channel.
    */
-  @java.lang.Override public int getChannelValue() {
+  @java.lang.Override @java.lang.Deprecated public int getChannelValue() {
     return channel_;
   }
   /**
@@ -189,10 +191,12 @@ private static final long serialVersionUID = 0L;
    * The communication channel of the transcript.
    * </pre>
    *
-   * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
+   * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
+   * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
+   *     See wfo/vanalytics/v2/transcript.proto;l=36
    * @return The channel.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.ChannelType getChannel() {
+  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ChannelType getChannel() {
     com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channel_);
     return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
   }
@@ -1325,10 +1329,12 @@ private static final long serialVersionUID = 0L;
      * The communication channel of the transcript.
      * </pre>
      *
-     * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
+     * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
+     * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
+     *     See wfo/vanalytics/v2/transcript.proto;l=36
      * @return The enum numeric value on the wire for channel.
      */
-    @java.lang.Override public int getChannelValue() {
+    @java.lang.Override @java.lang.Deprecated public int getChannelValue() {
       return channel_;
     }
     /**
@@ -1336,11 +1342,13 @@ private static final long serialVersionUID = 0L;
      * The communication channel of the transcript.
      * </pre>
      *
-     * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
+     * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
+     * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
+     *     See wfo/vanalytics/v2/transcript.proto;l=36
      * @param value The enum numeric value on the wire for channel to set.
      * @return This builder for chaining.
      */
-    public Builder setChannelValue(int value) {
+    @java.lang.Deprecated public Builder setChannelValue(int value) {
       channel_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1351,11 +1359,13 @@ private static final long serialVersionUID = 0L;
      * The communication channel of the transcript.
      * </pre>
      *
-     * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
+     * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
+     * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
+     *     See wfo/vanalytics/v2/transcript.proto;l=36
      * @return The channel.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ChannelType getChannel() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.ChannelType getChannel() {
       com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channel_);
       return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
     }
@@ -1364,11 +1374,13 @@ private static final long serialVersionUID = 0L;
      * The communication channel of the transcript.
      * </pre>
      *
-     * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
+     * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
+     * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
+     *     See wfo/vanalytics/v2/transcript.proto;l=36
      * @param value The channel to set.
      * @return This builder for chaining.
      */
-    public Builder setChannel(com.tcn.cloud.api.api.commons.ChannelType value) {
+    @java.lang.Deprecated public Builder setChannel(com.tcn.cloud.api.api.commons.ChannelType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1382,10 +1394,12 @@ private static final long serialVersionUID = 0L;
      * The communication channel of the transcript.
      * </pre>
      *
-     * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
+     * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
+     * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
+     *     See wfo/vanalytics/v2/transcript.proto;l=36
      * @return This builder for chaining.
      */
-    public Builder clearChannel() {
+    @java.lang.Deprecated public Builder clearChannel() {
       bitField0_ = (bitField0_ & ~0x00000004);
       channel_ = 0;
       onChanged();
