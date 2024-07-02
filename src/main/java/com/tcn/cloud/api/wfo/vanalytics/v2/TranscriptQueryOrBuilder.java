@@ -39,27 +39,31 @@ public interface TranscriptQueryOrBuilder extends
    * Query constraints on channel.
    * </pre>
    *
-   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
+   * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
+   *     See wfo/vanalytics/v2/transcript.proto;l=458
    * @return Whether the channel field is set.
    */
-  boolean hasChannel();
+  @java.lang.Deprecated boolean hasChannel();
   /**
    * <pre>
    * Query constraints on channel.
    * </pre>
    *
-   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
+   * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
+   *     See wfo/vanalytics/v2/transcript.proto;l=458
    * @return The channel.
    */
-  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel();
+  @java.lang.Deprecated com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel();
   /**
    * <pre>
    * Query constraints on channel.
    * </pre>
    *
-   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    */
-  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder getChannelOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder getChannelOrBuilder();
 
   /**
    * <pre>
@@ -222,4 +226,31 @@ public interface TranscriptQueryOrBuilder extends
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Phone phone = 8 [json_name = "phone"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.PhoneOrBuilder getPhoneOrBuilder();
+
+  /**
+   * <pre>
+   * Query constraints on channel type.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
+   * @return Whether the channelType field is set.
+   */
+  boolean hasChannelType();
+  /**
+   * <pre>
+   * Query constraints on channel type.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
+   * @return The channelType.
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannelType();
+  /**
+   * <pre>
+   * Query constraints on channel type.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder getChannelTypeOrBuilder();
 }

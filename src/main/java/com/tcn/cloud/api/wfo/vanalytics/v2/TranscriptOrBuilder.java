@@ -66,19 +66,23 @@ public interface TranscriptOrBuilder extends
    * The communication channel of the transcript.
    * </pre>
    *
-   * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
+   * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
+   * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
+   *     See wfo/vanalytics/v2/transcript.proto;l=36
    * @return The enum numeric value on the wire for channel.
    */
-  int getChannelValue();
+  @java.lang.Deprecated int getChannelValue();
   /**
    * <pre>
    * The communication channel of the transcript.
    * </pre>
    *
-   * <code>.api.commons.ChannelType channel = 12 [json_name = "channel"];</code>
+   * <code>.api.commons.ChannelType channel = 12 [json_name = "channel", deprecated = true];</code>
+   * @deprecated wfo.vanalytics.v2.Transcript.channel is deprecated.
+   *     See wfo/vanalytics/v2/transcript.proto;l=36
    * @return The channel.
    */
-  com.tcn.cloud.api.api.commons.ChannelType getChannel();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.ChannelType getChannel();
 
   /**
    * <pre>

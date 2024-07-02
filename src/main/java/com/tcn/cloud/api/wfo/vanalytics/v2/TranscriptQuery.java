@@ -64269,11 +64269,13 @@ private static final long serialVersionUID = 0L;
    * Query constraints on channel.
    * </pre>
    *
-   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
+   * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
+   *     See wfo/vanalytics/v2/transcript.proto;l=458
    * @return Whether the channel field is set.
    */
   @java.lang.Override
-  public boolean hasChannel() {
+  @java.lang.Deprecated public boolean hasChannel() {
     return channel_ != null;
   }
   /**
@@ -64281,11 +64283,13 @@ private static final long serialVersionUID = 0L;
    * Query constraints on channel.
    * </pre>
    *
-   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
+   * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
+   *     See wfo/vanalytics/v2/transcript.proto;l=458
    * @return The channel.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel() {
+  @java.lang.Deprecated public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel() {
     return channel_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.getDefaultInstance() : channel_;
   }
   /**
@@ -64293,10 +64297,10 @@ private static final long serialVersionUID = 0L;
    * Query constraints on channel.
    * </pre>
    *
-   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder getChannelOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder getChannelOrBuilder() {
     return channel_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.getDefaultInstance() : channel_;
   }
 
@@ -64528,6 +64532,44 @@ private static final long serialVersionUID = 0L;
     return phone_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Phone.getDefaultInstance() : phone_;
   }
 
+  public static final int CHANNEL_TYPE_FIELD_NUMBER = 9;
+  private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel channelType_;
+  /**
+   * <pre>
+   * Query constraints on channel type.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
+   * @return Whether the channelType field is set.
+   */
+  @java.lang.Override
+  public boolean hasChannelType() {
+    return channelType_ != null;
+  }
+  /**
+   * <pre>
+   * Query constraints on channel type.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
+   * @return The channelType.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannelType() {
+    return channelType_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.getDefaultInstance() : channelType_;
+  }
+  /**
+   * <pre>
+   * Query constraints on channel type.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder getChannelTypeOrBuilder() {
+    return channelType_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.getDefaultInstance() : channelType_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -64565,6 +64607,9 @@ private static final long serialVersionUID = 0L;
     }
     if (phone_ != null) {
       output.writeMessage(8, getPhone());
+    }
+    if (channelType_ != null) {
+      output.writeMessage(9, getChannelType());
     }
     getUnknownFields().writeTo(output);
   }
@@ -64606,6 +64651,10 @@ private static final long serialVersionUID = 0L;
     if (phone_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getPhone());
+    }
+    if (channelType_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getChannelType());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -64662,6 +64711,11 @@ private static final long serialVersionUID = 0L;
       if (!getPhone()
           .equals(other.getPhone())) return false;
     }
+    if (hasChannelType() != other.hasChannelType()) return false;
+    if (hasChannelType()) {
+      if (!getChannelType()
+          .equals(other.getChannelType())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -64704,6 +64758,10 @@ private static final long serialVersionUID = 0L;
     if (hasPhone()) {
       hash = (37 * hash) + PHONE_FIELD_NUMBER;
       hash = (53 * hash) + getPhone().hashCode();
+    }
+    if (hasChannelType()) {
+      hash = (37 * hash) + CHANNEL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getChannelType().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -64880,6 +64938,11 @@ private static final long serialVersionUID = 0L;
         phoneBuilder_.dispose();
         phoneBuilder_ = null;
       }
+      channelType_ = null;
+      if (channelTypeBuilder_ != null) {
+        channelTypeBuilder_.dispose();
+        channelTypeBuilder_ = null;
+      }
       return this;
     }
 
@@ -64953,6 +65016,11 @@ private static final long serialVersionUID = 0L;
             ? phone_
             : phoneBuilder_.build();
       }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.channelType_ = channelTypeBuilder_ == null
+            ? channelType_
+            : channelTypeBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -65022,6 +65090,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPhone()) {
         mergePhone(other.getPhone());
+      }
+      if (other.hasChannelType()) {
+        mergeChannelType(other.getChannelType());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -65105,6 +65176,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 66
+            case 74: {
+              input.readMessage(
+                  getChannelTypeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -65285,10 +65363,12 @@ private static final long serialVersionUID = 0L;
      * Query constraints on channel.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
+     * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
+     *     See wfo/vanalytics/v2/transcript.proto;l=458
      * @return Whether the channel field is set.
      */
-    public boolean hasChannel() {
+    @java.lang.Deprecated public boolean hasChannel() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
@@ -65296,10 +65376,12 @@ private static final long serialVersionUID = 0L;
      * Query constraints on channel.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
+     * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
+     *     See wfo/vanalytics/v2/transcript.proto;l=458
      * @return The channel.
      */
-    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel() {
+    @java.lang.Deprecated public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel() {
       if (channelBuilder_ == null) {
         return channel_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.getDefaultInstance() : channel_;
       } else {
@@ -65311,9 +65393,9 @@ private static final long serialVersionUID = 0L;
      * Query constraints on channel.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      */
-    public Builder setChannel(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel value) {
+    @java.lang.Deprecated public Builder setChannel(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel value) {
       if (channelBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -65331,9 +65413,9 @@ private static final long serialVersionUID = 0L;
      * Query constraints on channel.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      */
-    public Builder setChannel(
+    @java.lang.Deprecated public Builder setChannel(
         com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.Builder builderForValue) {
       if (channelBuilder_ == null) {
         channel_ = builderForValue.build();
@@ -65349,9 +65431,9 @@ private static final long serialVersionUID = 0L;
      * Query constraints on channel.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      */
-    public Builder mergeChannel(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel value) {
+    @java.lang.Deprecated public Builder mergeChannel(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel value) {
       if (channelBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
           channel_ != null &&
@@ -65372,9 +65454,9 @@ private static final long serialVersionUID = 0L;
      * Query constraints on channel.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      */
-    public Builder clearChannel() {
+    @java.lang.Deprecated public Builder clearChannel() {
       bitField0_ = (bitField0_ & ~0x00000002);
       channel_ = null;
       if (channelBuilder_ != null) {
@@ -65389,9 +65471,9 @@ private static final long serialVersionUID = 0L;
      * Query constraints on channel.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.Builder getChannelBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.Builder getChannelBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getChannelFieldBuilder().getBuilder();
@@ -65401,9 +65483,9 @@ private static final long serialVersionUID = 0L;
      * Query constraints on channel.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder getChannelOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder getChannelOrBuilder() {
       if (channelBuilder_ != null) {
         return channelBuilder_.getMessageOrBuilder();
       } else {
@@ -65416,7 +65498,7 @@ private static final long serialVersionUID = 0L;
      * Query constraints on channel.
      * </pre>
      *
-     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel"];</code>
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder> 
@@ -66360,6 +66442,161 @@ private static final long serialVersionUID = 0L;
         phone_ = null;
       }
       return phoneBuilder_;
+    }
+
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel channelType_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder> channelTypeBuilder_;
+    /**
+     * <pre>
+     * Query constraints on channel type.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
+     * @return Whether the channelType field is set.
+     */
+    public boolean hasChannelType() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * Query constraints on channel type.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
+     * @return The channelType.
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannelType() {
+      if (channelTypeBuilder_ == null) {
+        return channelType_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.getDefaultInstance() : channelType_;
+      } else {
+        return channelTypeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Query constraints on channel type.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
+     */
+    public Builder setChannelType(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel value) {
+      if (channelTypeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        channelType_ = value;
+      } else {
+        channelTypeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on channel type.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
+     */
+    public Builder setChannelType(
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.Builder builderForValue) {
+      if (channelTypeBuilder_ == null) {
+        channelType_ = builderForValue.build();
+      } else {
+        channelTypeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on channel type.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
+     */
+    public Builder mergeChannelType(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel value) {
+      if (channelTypeBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          channelType_ != null &&
+          channelType_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.getDefaultInstance()) {
+          getChannelTypeBuilder().mergeFrom(value);
+        } else {
+          channelType_ = value;
+        }
+      } else {
+        channelTypeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on channel type.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
+     */
+    public Builder clearChannelType() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      channelType_ = null;
+      if (channelTypeBuilder_ != null) {
+        channelTypeBuilder_.dispose();
+        channelTypeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on channel type.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.Builder getChannelTypeBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getChannelTypeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Query constraints on channel type.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder getChannelTypeOrBuilder() {
+      if (channelTypeBuilder_ != null) {
+        return channelTypeBuilder_.getMessageOrBuilder();
+      } else {
+        return channelType_ == null ?
+            com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.getDefaultInstance() : channelType_;
+      }
+    }
+    /**
+     * <pre>
+     * Query constraints on channel type.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder> 
+        getChannelTypeFieldBuilder() {
+      if (channelTypeBuilder_ == null) {
+        channelTypeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder>(
+                getChannelType(),
+                getParentForChildren(),
+                isClean());
+        channelType_ = null;
+      }
+      return channelTypeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
