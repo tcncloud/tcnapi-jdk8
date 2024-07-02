@@ -5,7 +5,8 @@ package com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1;
 
 /**
  * <pre>
- * follows google's aip 160 but this only supports campaign_sid = {int}
+ * filter follows google's aip 160 and currently supports:
+ *  - campaign_sid = {int}
  * </pre>
  *
  * Protobuf type {@code services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest}
@@ -240,7 +241,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * follows google's aip 160 but this only supports campaign_sid = {int}
+   * filter follows google's aip 160 and currently supports:
+   *  - campaign_sid = {int}
    * </pre>
    *
    * Protobuf type {@code services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest}
