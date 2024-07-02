@@ -5,134 +5,134 @@ package com.tcn.cloud.api.services.translations.v1alpha1;
 
 /**
  * <pre>
- * TranslateTemplateRequest is the request message for the Translate method.
- * Takes a template, context, and translates to all available languages.
+ * UpdateTranslationRequest is the request message for the UpdateTranslation method.
+ * Takes a translation ID and a new translation.
  * </pre>
  *
- * Protobuf type {@code services.translations.v1alpha1.TranslateTemplateRequest}
+ * Protobuf type {@code services.translations.v1alpha1.UpdateTranslationRequest}
  */
-public final class TranslateTemplateRequest extends
+public final class UpdateTranslationRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.translations.v1alpha1.TranslateTemplateRequest)
-    TranslateTemplateRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.translations.v1alpha1.UpdateTranslationRequest)
+    UpdateTranslationRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use TranslateTemplateRequest.newBuilder() to construct.
-  private TranslateTemplateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UpdateTranslationRequest.newBuilder() to construct.
+  private UpdateTranslationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private TranslateTemplateRequest() {
-    template_ = "";
-    context_ = "";
+  private UpdateTranslationRequest() {
+    translationId_ = "";
+    translation_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new TranslateTemplateRequest();
+    return new UpdateTranslationRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.translations.v1alpha1.EntitiesProto.internal_static_services_translations_v1alpha1_TranslateTemplateRequest_descriptor;
+    return com.tcn.cloud.api.services.translations.v1alpha1.EntitiesProto.internal_static_services_translations_v1alpha1_UpdateTranslationRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.translations.v1alpha1.EntitiesProto.internal_static_services_translations_v1alpha1_TranslateTemplateRequest_fieldAccessorTable
+    return com.tcn.cloud.api.services.translations.v1alpha1.EntitiesProto.internal_static_services_translations_v1alpha1_UpdateTranslationRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest.class, com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest.Builder.class);
+            com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest.class, com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest.Builder.class);
   }
 
-  public static final int TEMPLATE_FIELD_NUMBER = 1;
+  public static final int TRANSLATION_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object template_ = "";
+  private volatile java.lang.Object translationId_ = "";
   /**
    * <pre>
-   * The template to translate.
+   * The ID of the translation to update.
    * </pre>
    *
-   * <code>string template = 1 [json_name = "template"];</code>
-   * @return The template.
+   * <code>string translation_id = 1 [json_name = "translationId"];</code>
+   * @return The translationId.
    */
   @java.lang.Override
-  public java.lang.String getTemplate() {
-    java.lang.Object ref = template_;
+  public java.lang.String getTranslationId() {
+    java.lang.Object ref = translationId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      template_ = s;
+      translationId_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * The template to translate.
+   * The ID of the translation to update.
    * </pre>
    *
-   * <code>string template = 1 [json_name = "template"];</code>
-   * @return The bytes for template.
+   * <code>string translation_id = 1 [json_name = "translationId"];</code>
+   * @return The bytes for translationId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getTemplateBytes() {
-    java.lang.Object ref = template_;
+      getTranslationIdBytes() {
+    java.lang.Object ref = translationId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      template_ = b;
+      translationId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int CONTEXT_FIELD_NUMBER = 2;
+  public static final int TRANSLATION_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object context_ = "";
+  private volatile java.lang.Object translation_ = "";
   /**
    * <pre>
-   * The context of the template.
+   * The new translation.
    * </pre>
    *
-   * <code>string context = 2 [json_name = "context"];</code>
-   * @return The context.
+   * <code>string translation = 2 [json_name = "translation"];</code>
+   * @return The translation.
    */
   @java.lang.Override
-  public java.lang.String getContext() {
-    java.lang.Object ref = context_;
+  public java.lang.String getTranslation() {
+    java.lang.Object ref = translation_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      context_ = s;
+      translation_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * The context of the template.
+   * The new translation.
    * </pre>
    *
-   * <code>string context = 2 [json_name = "context"];</code>
-   * @return The bytes for context.
+   * <code>string translation = 2 [json_name = "translation"];</code>
+   * @return The bytes for translation.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getContextBytes() {
-    java.lang.Object ref = context_;
+      getTranslationBytes() {
+    java.lang.Object ref = translation_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      context_ = b;
+      translation_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -153,11 +153,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(template_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, template_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(translationId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, translationId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(context_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, context_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(translation_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, translation_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -168,11 +168,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(template_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, template_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(translationId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, translationId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(context_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, context_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(translation_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, translation_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -184,15 +184,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest other = (com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest) obj;
+    com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest other = (com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest) obj;
 
-    if (!getTemplate()
-        .equals(other.getTemplate())) return false;
-    if (!getContext()
-        .equals(other.getContext())) return false;
+    if (!getTranslationId()
+        .equals(other.getTranslationId())) return false;
+    if (!getTranslation()
+        .equals(other.getTranslation())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -204,53 +204,53 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + TEMPLATE_FIELD_NUMBER;
-    hash = (53 * hash) + getTemplate().hashCode();
-    hash = (37 * hash) + CONTEXT_FIELD_NUMBER;
-    hash = (53 * hash) + getContext().hashCode();
+    hash = (37 * hash) + TRANSLATION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getTranslationId().hashCode();
+    hash = (37 * hash) + TRANSLATION_FIELD_NUMBER;
+    hash = (53 * hash) + getTranslation().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest parseFrom(
+  public static com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest parseFrom(
+  public static com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest parseFrom(
+  public static com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest parseFrom(
+  public static com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest parseFrom(
+  public static com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest parseFrom(
+  public static com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -258,26 +258,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest parseFrom(
+  public static com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest parseFrom(
+  public static com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -290,7 +290,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -307,30 +307,30 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * TranslateTemplateRequest is the request message for the Translate method.
-   * Takes a template, context, and translates to all available languages.
+   * UpdateTranslationRequest is the request message for the UpdateTranslation method.
+   * Takes a translation ID and a new translation.
    * </pre>
    *
-   * Protobuf type {@code services.translations.v1alpha1.TranslateTemplateRequest}
+   * Protobuf type {@code services.translations.v1alpha1.UpdateTranslationRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.translations.v1alpha1.TranslateTemplateRequest)
-      com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.translations.v1alpha1.UpdateTranslationRequest)
+      com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.translations.v1alpha1.EntitiesProto.internal_static_services_translations_v1alpha1_TranslateTemplateRequest_descriptor;
+      return com.tcn.cloud.api.services.translations.v1alpha1.EntitiesProto.internal_static_services_translations_v1alpha1_UpdateTranslationRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.translations.v1alpha1.EntitiesProto.internal_static_services_translations_v1alpha1_TranslateTemplateRequest_fieldAccessorTable
+      return com.tcn.cloud.api.services.translations.v1alpha1.EntitiesProto.internal_static_services_translations_v1alpha1_UpdateTranslationRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest.class, com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest.Builder.class);
+              com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest.class, com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest.newBuilder()
     private Builder() {
 
     }
@@ -344,25 +344,25 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      template_ = "";
-      context_ = "";
+      translationId_ = "";
+      translation_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.translations.v1alpha1.EntitiesProto.internal_static_services_translations_v1alpha1_TranslateTemplateRequest_descriptor;
+      return com.tcn.cloud.api.services.translations.v1alpha1.EntitiesProto.internal_static_services_translations_v1alpha1_UpdateTranslationRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest.getDefaultInstance();
+    public com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest build() {
-      com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest result = buildPartial();
+    public com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest build() {
+      com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -370,20 +370,20 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest buildPartial() {
-      com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest result = new com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest(this);
+    public com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest buildPartial() {
+      com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest result = new com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.template_ = template_;
+        result.translationId_ = translationId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.context_ = context_;
+        result.translation_ = translation_;
       }
     }
 
@@ -421,23 +421,23 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest) {
-        return mergeFrom((com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest)other);
+      if (other instanceof com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest) {
+        return mergeFrom((com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest other) {
-      if (other == com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest.getDefaultInstance()) return this;
-      if (!other.getTemplate().isEmpty()) {
-        template_ = other.template_;
+    public Builder mergeFrom(com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest other) {
+      if (other == com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest.getDefaultInstance()) return this;
+      if (!other.getTranslationId().isEmpty()) {
+        translationId_ = other.translationId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getContext().isEmpty()) {
-        context_ = other.context_;
+      if (!other.getTranslation().isEmpty()) {
+        translation_ = other.translation_;
         bitField0_ |= 0x00000002;
         onChanged();
       }
@@ -468,12 +468,12 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              template_ = input.readStringRequireUtf8();
+              translationId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              context_ = input.readStringRequireUtf8();
+              translation_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
@@ -494,22 +494,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object template_ = "";
+    private java.lang.Object translationId_ = "";
     /**
      * <pre>
-     * The template to translate.
+     * The ID of the translation to update.
      * </pre>
      *
-     * <code>string template = 1 [json_name = "template"];</code>
-     * @return The template.
+     * <code>string translation_id = 1 [json_name = "translationId"];</code>
+     * @return The translationId.
      */
-    public java.lang.String getTemplate() {
-      java.lang.Object ref = template_;
+    public java.lang.String getTranslationId() {
+      java.lang.Object ref = translationId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        template_ = s;
+        translationId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -517,20 +517,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The template to translate.
+     * The ID of the translation to update.
      * </pre>
      *
-     * <code>string template = 1 [json_name = "template"];</code>
-     * @return The bytes for template.
+     * <code>string translation_id = 1 [json_name = "translationId"];</code>
+     * @return The bytes for translationId.
      */
     public com.google.protobuf.ByteString
-        getTemplateBytes() {
-      java.lang.Object ref = template_;
+        getTranslationIdBytes() {
+      java.lang.Object ref = translationId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        template_ = b;
+        translationId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -538,70 +538,70 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The template to translate.
+     * The ID of the translation to update.
      * </pre>
      *
-     * <code>string template = 1 [json_name = "template"];</code>
-     * @param value The template to set.
+     * <code>string translation_id = 1 [json_name = "translationId"];</code>
+     * @param value The translationId to set.
      * @return This builder for chaining.
      */
-    public Builder setTemplate(
+    public Builder setTranslationId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      template_ = value;
+      translationId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The template to translate.
+     * The ID of the translation to update.
      * </pre>
      *
-     * <code>string template = 1 [json_name = "template"];</code>
+     * <code>string translation_id = 1 [json_name = "translationId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearTemplate() {
-      template_ = getDefaultInstance().getTemplate();
+    public Builder clearTranslationId() {
+      translationId_ = getDefaultInstance().getTranslationId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The template to translate.
+     * The ID of the translation to update.
      * </pre>
      *
-     * <code>string template = 1 [json_name = "template"];</code>
-     * @param value The bytes for template to set.
+     * <code>string translation_id = 1 [json_name = "translationId"];</code>
+     * @param value The bytes for translationId to set.
      * @return This builder for chaining.
      */
-    public Builder setTemplateBytes(
+    public Builder setTranslationIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      template_ = value;
+      translationId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
-    private java.lang.Object context_ = "";
+    private java.lang.Object translation_ = "";
     /**
      * <pre>
-     * The context of the template.
+     * The new translation.
      * </pre>
      *
-     * <code>string context = 2 [json_name = "context"];</code>
-     * @return The context.
+     * <code>string translation = 2 [json_name = "translation"];</code>
+     * @return The translation.
      */
-    public java.lang.String getContext() {
-      java.lang.Object ref = context_;
+    public java.lang.String getTranslation() {
+      java.lang.Object ref = translation_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        context_ = s;
+        translation_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -609,20 +609,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The context of the template.
+     * The new translation.
      * </pre>
      *
-     * <code>string context = 2 [json_name = "context"];</code>
-     * @return The bytes for context.
+     * <code>string translation = 2 [json_name = "translation"];</code>
+     * @return The bytes for translation.
      */
     public com.google.protobuf.ByteString
-        getContextBytes() {
-      java.lang.Object ref = context_;
+        getTranslationBytes() {
+      java.lang.Object ref = translation_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        context_ = b;
+        translation_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -630,49 +630,49 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The context of the template.
+     * The new translation.
      * </pre>
      *
-     * <code>string context = 2 [json_name = "context"];</code>
-     * @param value The context to set.
+     * <code>string translation = 2 [json_name = "translation"];</code>
+     * @param value The translation to set.
      * @return This builder for chaining.
      */
-    public Builder setContext(
+    public Builder setTranslation(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      context_ = value;
+      translation_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The context of the template.
+     * The new translation.
      * </pre>
      *
-     * <code>string context = 2 [json_name = "context"];</code>
+     * <code>string translation = 2 [json_name = "translation"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearContext() {
-      context_ = getDefaultInstance().getContext();
+    public Builder clearTranslation() {
+      translation_ = getDefaultInstance().getTranslation();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The context of the template.
+     * The new translation.
      * </pre>
      *
-     * <code>string context = 2 [json_name = "context"];</code>
-     * @param value The bytes for context to set.
+     * <code>string translation = 2 [json_name = "translation"];</code>
+     * @param value The bytes for translation to set.
      * @return This builder for chaining.
      */
-    public Builder setContextBytes(
+    public Builder setTranslationBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      context_ = value;
+      translation_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
@@ -690,23 +690,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.translations.v1alpha1.TranslateTemplateRequest)
+    // @@protoc_insertion_point(builder_scope:services.translations.v1alpha1.UpdateTranslationRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:services.translations.v1alpha1.TranslateTemplateRequest)
-  private static final com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.translations.v1alpha1.UpdateTranslationRequest)
+  private static final com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest();
   }
 
-  public static com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<TranslateTemplateRequest>
-      PARSER = new com.google.protobuf.AbstractParser<TranslateTemplateRequest>() {
+  private static final com.google.protobuf.Parser<UpdateTranslationRequest>
+      PARSER = new com.google.protobuf.AbstractParser<UpdateTranslationRequest>() {
     @java.lang.Override
-    public TranslateTemplateRequest parsePartialFrom(
+    public UpdateTranslationRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -725,17 +725,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<TranslateTemplateRequest> parser() {
+  public static com.google.protobuf.Parser<UpdateTranslationRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<TranslateTemplateRequest> getParserForType() {
+  public com.google.protobuf.Parser<UpdateTranslationRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.translations.v1alpha1.TranslateTemplateRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
