@@ -4,11 +4,6 @@
 package com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1;
 
 /**
- * <pre>
- * filter follows google's aip 160 and currently supports:
- *  - campaign_sid = {int}
- * </pre>
- *
  * Protobuf type {@code services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest}
  */
 public final class BulkCancelTasksRequest extends
@@ -48,6 +43,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object filter_ = "";
   /**
+   * <pre>
+   * filter follows google's aip 160 and currently supports:
+   *  - campaign_sid = {int}
+   * </pre>
+   *
    * <code>string filter = 1 [json_name = "filter"];</code>
    * @return The filter.
    */
@@ -65,6 +65,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * filter follows google's aip 160 and currently supports:
+   *  - campaign_sid = {int}
+   * </pre>
+   *
    * <code>string filter = 1 [json_name = "filter"];</code>
    * @return The bytes for filter.
    */
@@ -240,11 +245,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * filter follows google's aip 160 and currently supports:
-   *  - campaign_sid = {int}
-   * </pre>
-   *
    * Protobuf type {@code services.omnichannel.tasks.v1alpha1.BulkCancelTasksRequest}
    */
   public static final class Builder extends
@@ -416,6 +416,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object filter_ = "";
     /**
+     * <pre>
+     * filter follows google's aip 160 and currently supports:
+     *  - campaign_sid = {int}
+     * </pre>
+     *
      * <code>string filter = 1 [json_name = "filter"];</code>
      * @return The filter.
      */
@@ -432,6 +437,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * filter follows google's aip 160 and currently supports:
+     *  - campaign_sid = {int}
+     * </pre>
+     *
      * <code>string filter = 1 [json_name = "filter"];</code>
      * @return The bytes for filter.
      */
@@ -449,6 +459,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * filter follows google's aip 160 and currently supports:
+     *  - campaign_sid = {int}
+     * </pre>
+     *
      * <code>string filter = 1 [json_name = "filter"];</code>
      * @param value The filter to set.
      * @return This builder for chaining.
@@ -462,6 +477,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * filter follows google's aip 160 and currently supports:
+     *  - campaign_sid = {int}
+     * </pre>
+     *
      * <code>string filter = 1 [json_name = "filter"];</code>
      * @return This builder for chaining.
      */
@@ -472,6 +492,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * filter follows google's aip 160 and currently supports:
+     *  - campaign_sid = {int}
+     * </pre>
+     *
      * <code>string filter = 1 [json_name = "filter"];</code>
      * @param value The bytes for filter to set.
      * @return This builder for chaining.

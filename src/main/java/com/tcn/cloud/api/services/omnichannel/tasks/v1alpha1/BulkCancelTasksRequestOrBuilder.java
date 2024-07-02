@@ -8,11 +8,21 @@ public interface BulkCancelTasksRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * filter follows google's aip 160 and currently supports:
+   *  - campaign_sid = {int}
+   * </pre>
+   *
    * <code>string filter = 1 [json_name = "filter"];</code>
    * @return The filter.
    */
   java.lang.String getFilter();
   /**
+   * <pre>
+   * filter follows google's aip 160 and currently supports:
+   *  - campaign_sid = {int}
+   * </pre>
+   *
    * <code>string filter = 1 [json_name = "filter"];</code>
    * @return The bytes for filter.
    */
