@@ -6962,37 +6962,6 @@ public final class OrgGrpc {
     return getDeleteCertificateInfoMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse> getRevokeCertificateInfoMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "RevokeCertificateInfo",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse> getRevokeCertificateInfoMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest, com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse> getRevokeCertificateInfoMethod;
-    if ((getRevokeCertificateInfoMethod = OrgGrpc.getRevokeCertificateInfoMethod) == null) {
-      synchronized (OrgGrpc.class) {
-        if ((getRevokeCertificateInfoMethod = OrgGrpc.getRevokeCertificateInfoMethod) == null) {
-          OrgGrpc.getRevokeCertificateInfoMethod = getRevokeCertificateInfoMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest, com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RevokeCertificateInfo"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RevokeCertificateInfo"))
-              .build();
-        }
-      }
-    }
-    return getRevokeCertificateInfoMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListCertificateInfoRequest,
       com.tcn.cloud.api.api.v1alpha1.org.ListCertificateInfoResponse> getListCertificateInfoMethod;
 
@@ -9635,16 +9604,6 @@ public final class OrgGrpc {
     default void deleteCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCertificateInfoMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * RevokeCertificateInfo deletes a certificate info for the current organization.
-     * </pre>
-     */
-    default void revokeCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeCertificateInfoMethod(), responseObserver);
     }
 
     /**
@@ -12298,17 +12257,6 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * RevokeCertificateInfo deletes a certificate info for the current organization.
-     * </pre>
-     */
-    public void revokeCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getRevokeCertificateInfoMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * ListCertificateInfo returns a list of certificate info for the current organization.
      * </pre>
      */
@@ -14735,16 +14683,6 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoResponse deleteCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteCertificateInfoMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * RevokeCertificateInfo deletes a certificate info for the current organization.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse revokeCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getRevokeCertificateInfoMethod(), getCallOptions(), request);
     }
 
     /**
@@ -17274,17 +17212,6 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * RevokeCertificateInfo deletes a certificate info for the current organization.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse> revokeCertificateInfo(
-        com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getRevokeCertificateInfoMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * ListCertificateInfo returns a list of certificate info for the current organization.
      * </pre>
      */
@@ -17594,16 +17521,15 @@ public final class OrgGrpc {
   private static final int METHODID_UPDATE_BUSINESS_HOURS = 221;
   private static final int METHODID_CREATE_CERTIFICATE_INFO = 222;
   private static final int METHODID_DELETE_CERTIFICATE_INFO = 223;
-  private static final int METHODID_REVOKE_CERTIFICATE_INFO = 224;
-  private static final int METHODID_LIST_CERTIFICATE_INFO = 225;
-  private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 226;
-  private static final int METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS = 227;
-  private static final int METHODID_LIST_USERS_ALLOWED_IPS = 228;
-  private static final int METHODID_LIST_RESPONSE_EVALUATORS = 229;
-  private static final int METHODID_GET_RESPONSE_EVALUATOR = 230;
-  private static final int METHODID_CREATE_RESPONSE_EVALUATOR = 231;
-  private static final int METHODID_UPDATE_RESPONSE_EVALUATOR = 232;
-  private static final int METHODID_DELETE_RESPONSE_EVALUATOR = 233;
+  private static final int METHODID_LIST_CERTIFICATE_INFO = 224;
+  private static final int METHODID_ADD_GROUPED_USER_IPRESTRICTIONS = 225;
+  private static final int METHODID_REMOVE_GROUPED_USER_IPRESTRICTIONS = 226;
+  private static final int METHODID_LIST_USERS_ALLOWED_IPS = 227;
+  private static final int METHODID_LIST_RESPONSE_EVALUATORS = 228;
+  private static final int METHODID_GET_RESPONSE_EVALUATOR = 229;
+  private static final int METHODID_CREATE_RESPONSE_EVALUATOR = 230;
+  private static final int METHODID_UPDATE_RESPONSE_EVALUATOR = 231;
+  private static final int METHODID_DELETE_RESPONSE_EVALUATOR = 232;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -18517,10 +18443,6 @@ public final class OrgGrpc {
         case METHODID_DELETE_CERTIFICATE_INFO:
           serviceImpl.deleteCertificateInfo((com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoResponse>) responseObserver);
-          break;
-        case METHODID_REVOKE_CERTIFICATE_INFO:
-          serviceImpl.revokeCertificateInfo((com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse>) responseObserver);
           break;
         case METHODID_LIST_CERTIFICATE_INFO:
           serviceImpl.listCertificateInfo((com.tcn.cloud.api.api.v1alpha1.org.ListCertificateInfoRequest) request,
@@ -20145,13 +20067,6 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoResponse>(
                 service, METHODID_DELETE_CERTIFICATE_INFO)))
         .addMethod(
-          getRevokeCertificateInfoMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse>(
-                service, METHODID_REVOKE_CERTIFICATE_INFO)))
-        .addMethod(
           getListCertificateInfoMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -20486,7 +20401,6 @@ public final class OrgGrpc {
               .addMethod(getUpdateBusinessHoursMethod())
               .addMethod(getCreateCertificateInfoMethod())
               .addMethod(getDeleteCertificateInfoMethod())
-              .addMethod(getRevokeCertificateInfoMethod())
               .addMethod(getListCertificateInfoMethod())
               .addMethod(getAddGroupedUserIPRestrictionsMethod())
               .addMethod(getRemoveGroupedUserIPRestrictionsMethod())

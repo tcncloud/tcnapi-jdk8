@@ -190,14 +190,4 @@ public interface CertificateInfoOrBuilder extends
    * @return The deleted.
    */
   boolean getDeleted();
-
-  /**
-   * <pre>
-   * Whether or not the certifcate has been revoked
-   * </pre>
-   *
-   * <code>bool revoked = 10 [json_name = "revoked"];</code>
-   * @return The revoked.
-   */
-  boolean getRevoked();
 }
