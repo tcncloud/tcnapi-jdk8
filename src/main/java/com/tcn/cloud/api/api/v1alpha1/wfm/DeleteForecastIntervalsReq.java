@@ -864,7 +864,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.DeleteForecastIntervalsReq.skill_profile_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4206
+   *     See api/v1alpha1/wfm/wfm.proto;l=4248
    * @return Whether the skillProfileSid field is set.
    */
   @java.lang.Override
@@ -879,7 +879,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.DeleteForecastIntervalsReq.skill_profile_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4206
+   *     See api/v1alpha1/wfm/wfm.proto;l=4248
    * @return The skillProfileSid.
    */
   @java.lang.Override
@@ -1468,7 +1468,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.DeleteForecastIntervalsReq.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=4206
+     *     See api/v1alpha1/wfm/wfm.proto;l=4248
      * @return Whether the skillProfileSid field is set.
      */
     @java.lang.Deprecated public boolean hasSkillProfileSid() {
@@ -1482,7 +1482,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.DeleteForecastIntervalsReq.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=4206
+     *     See api/v1alpha1/wfm/wfm.proto;l=4248
      * @return The skillProfileSid.
      */
     @java.lang.Deprecated public long getSkillProfileSid() {
@@ -1499,7 +1499,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.DeleteForecastIntervalsReq.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=4206
+     *     See api/v1alpha1/wfm/wfm.proto;l=4248
      * @param value The skillProfileSid to set.
      * @return This builder for chaining.
      */
@@ -1518,7 +1518,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.DeleteForecastIntervalsReq.skill_profile_sid is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=4206
+     *     See api/v1alpha1/wfm/wfm.proto;l=4248
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearSkillProfileSid() {
