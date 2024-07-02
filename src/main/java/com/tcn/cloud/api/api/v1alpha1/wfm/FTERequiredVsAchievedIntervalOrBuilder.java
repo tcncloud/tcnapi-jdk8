@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface FTERequiredVsAchievedIntervalOrBuilder extends
+@java.lang.Deprecated public interface FTERequiredVsAchievedIntervalOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.FTERequiredVsAchievedInterval)
     com.google.protobuf.MessageOrBuilder {
 
@@ -53,14 +53,4 @@ public interface FTERequiredVsAchievedIntervalOrBuilder extends
    * @return The achievedFtes.
    */
   int getAchievedFtes();
-
-  /**
-   * <pre>
-   * Count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
-   * </pre>
-   *
-   * <code>float productive_fte = 4 [json_name = "productiveFte"];</code>
-   * @return The productiveFte.
-   */
-  float getProductiveFte();
 }

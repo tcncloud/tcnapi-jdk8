@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
-public interface PerformanceMetricOrBuilder extends
+@java.lang.Deprecated public interface PerformanceMetricOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.wfm.PerformanceMetric)
     com.google.protobuf.MessageOrBuilder {
 
@@ -53,16 +53,6 @@ public interface PerformanceMetricOrBuilder extends
    * @return The totalFtesAchieved.
    */
   int getTotalFtesAchieved();
-
-  /**
-   * <pre>
-   * Total count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
-   * </pre>
-   *
-   * <code>float total_productive_fte = 14 [json_name = "totalProductiveFte"];</code>
-   * @return The totalProductiveFte.
-   */
-  float getTotalProductiveFte();
 
   /**
    * <pre>

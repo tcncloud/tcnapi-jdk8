@@ -36,45 +36,89 @@ public interface UpdateShiftInstanceResOrBuilder extends
 
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Deprecated. Performance metrics that this shift instance has.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> 
       getPerformanceMetricsList();
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Deprecated. Performance metrics that this shift instance has.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric getPerformanceMetrics(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric getPerformanceMetrics(int index);
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Deprecated. Performance metrics that this shift instance has.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
    */
-  int getPerformanceMetricsCount();
+  @java.lang.Deprecated int getPerformanceMetricsCount();
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Deprecated. Performance metrics that this shift instance has.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder> 
       getPerformanceMetricsOrBuilderList();
   /**
    * <pre>
+   * Deprecated. Performance metrics that this shift instance has.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics", deprecated = true];</code>
+   */
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder getPerformanceMetricsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
    * Performance metrics that this shift instance has.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder getPerformanceMetricsOrBuilder(
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2> 
+      getPerformanceMetricsV2List();
+  /**
+   * <pre>
+   * Performance metrics that this shift instance has.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2 getPerformanceMetricsV2(int index);
+  /**
+   * <pre>
+   * Performance metrics that this shift instance has.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+   */
+  int getPerformanceMetricsV2Count();
+  /**
+   * <pre>
+   * Performance metrics that this shift instance has.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2OrBuilder> 
+      getPerformanceMetricsV2OrBuilderList();
+  /**
+   * <pre>
+   * Performance metrics that this shift instance has.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.PerformanceMetricV2 performance_metrics_v2 = 3 [json_name = "performanceMetricsV2"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricV2OrBuilder getPerformanceMetricsV2OrBuilder(
       int index);
 }
