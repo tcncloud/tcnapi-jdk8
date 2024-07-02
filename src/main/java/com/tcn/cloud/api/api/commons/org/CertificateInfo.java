@@ -421,6 +421,21 @@ private static final long serialVersionUID = 0L;
     return deleted_;
   }
 
+  public static final int REVOKED_FIELD_NUMBER = 10;
+  private boolean revoked_ = false;
+  /**
+   * <pre>
+   * Whether or not the certifcate has been revoked
+   * </pre>
+   *
+   * <code>bool revoked = 10 [json_name = "revoked"];</code>
+   * @return The revoked.
+   */
+  @java.lang.Override
+  public boolean getRevoked() {
+    return revoked_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -462,6 +477,9 @@ private static final long serialVersionUID = 0L;
     if (deleted_ != false) {
       output.writeBool(9, deleted_);
     }
+    if (revoked_ != false) {
+      output.writeBool(10, revoked_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -500,6 +518,10 @@ private static final long serialVersionUID = 0L;
     if (deleted_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(9, deleted_);
+    }
+    if (revoked_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(10, revoked_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -540,6 +562,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getRequestBy())) return false;
     if (getDeleted()
         != other.getDeleted()) return false;
+    if (getRevoked()
+        != other.getRevoked()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -574,6 +598,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DELETED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDeleted());
+    hash = (37 * hash) + REVOKED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getRevoked());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -726,6 +753,7 @@ private static final long serialVersionUID = 0L;
       }
       requestBy_ = "";
       deleted_ = false;
+      revoked_ = false;
       return this;
     }
 
@@ -789,6 +817,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.deleted_ = deleted_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.revoked_ = revoked_;
       }
     }
 
@@ -875,6 +906,9 @@ private static final long serialVersionUID = 0L;
       if (other.getDeleted() != false) {
         setDeleted(other.getDeleted());
       }
+      if (other.getRevoked() != false) {
+        setRevoked(other.getRevoked());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -950,6 +984,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 72
+            case 80: {
+              revoked_ = input.readBool();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1869,6 +1908,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearDeleted() {
       bitField0_ = (bitField0_ & ~0x00000100);
       deleted_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean revoked_ ;
+    /**
+     * <pre>
+     * Whether or not the certifcate has been revoked
+     * </pre>
+     *
+     * <code>bool revoked = 10 [json_name = "revoked"];</code>
+     * @return The revoked.
+     */
+    @java.lang.Override
+    public boolean getRevoked() {
+      return revoked_;
+    }
+    /**
+     * <pre>
+     * Whether or not the certifcate has been revoked
+     * </pre>
+     *
+     * <code>bool revoked = 10 [json_name = "revoked"];</code>
+     * @param value The revoked to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRevoked(boolean value) {
+
+      revoked_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether or not the certifcate has been revoked
+     * </pre>
+     *
+     * <code>bool revoked = 10 [json_name = "revoked"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRevoked() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      revoked_ = false;
       onChanged();
       return this;
     }
