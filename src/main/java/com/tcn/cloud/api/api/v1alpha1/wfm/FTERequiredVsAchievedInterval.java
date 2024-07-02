@@ -110,6 +110,21 @@ private static final long serialVersionUID = 0L;
     return achievedFtes_;
   }
 
+  public static final int PRODUCTIVE_FTE_FIELD_NUMBER = 4;
+  private float productiveFte_ = 0F;
+  /**
+   * <pre>
+   * Count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+   * </pre>
+   *
+   * <code>float productive_fte = 4 [json_name = "productiveFte"];</code>
+   * @return The productiveFte.
+   */
+  @java.lang.Override
+  public float getProductiveFte() {
+    return productiveFte_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -133,6 +148,9 @@ private static final long serialVersionUID = 0L;
     if (achievedFtes_ != 0) {
       output.writeInt32(3, achievedFtes_);
     }
+    if (java.lang.Float.floatToRawIntBits(productiveFte_) != 0) {
+      output.writeFloat(4, productiveFte_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -153,6 +171,10 @@ private static final long serialVersionUID = 0L;
     if (achievedFtes_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(3, achievedFtes_);
+    }
+    if (java.lang.Float.floatToRawIntBits(productiveFte_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(4, productiveFte_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -178,6 +200,9 @@ private static final long serialVersionUID = 0L;
         != other.getRequiredCalls()) return false;
     if (getAchievedFtes()
         != other.getAchievedFtes()) return false;
+    if (java.lang.Float.floatToIntBits(getProductiveFte())
+        != java.lang.Float.floatToIntBits(
+            other.getProductiveFte())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -197,6 +222,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getRequiredCalls();
     hash = (37 * hash) + ACHIEVED_FTES_FIELD_NUMBER;
     hash = (53 * hash) + getAchievedFtes();
+    hash = (37 * hash) + PRODUCTIVE_FTE_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getProductiveFte());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -339,6 +367,7 @@ private static final long serialVersionUID = 0L;
       }
       requiredCalls_ = 0;
       achievedFtes_ = 0;
+      productiveFte_ = 0F;
       return this;
     }
 
@@ -382,6 +411,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.achievedFtes_ = achievedFtes_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.productiveFte_ = productiveFte_;
       }
     }
 
@@ -438,6 +470,9 @@ private static final long serialVersionUID = 0L;
       if (other.getAchievedFtes() != 0) {
         setAchievedFtes(other.getAchievedFtes());
       }
+      if (other.getProductiveFte() != 0F) {
+        setProductiveFte(other.getProductiveFte());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -481,6 +516,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 37: {
+              productiveFte_ = input.readFloat();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 37
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -737,6 +777,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearAchievedFtes() {
       bitField0_ = (bitField0_ & ~0x00000004);
       achievedFtes_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private float productiveFte_ ;
+    /**
+     * <pre>
+     * Count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+     * </pre>
+     *
+     * <code>float productive_fte = 4 [json_name = "productiveFte"];</code>
+     * @return The productiveFte.
+     */
+    @java.lang.Override
+    public float getProductiveFte() {
+      return productiveFte_;
+    }
+    /**
+     * <pre>
+     * Count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+     * </pre>
+     *
+     * <code>float productive_fte = 4 [json_name = "productiveFte"];</code>
+     * @param value The productiveFte to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProductiveFte(float value) {
+
+      productiveFte_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+     * </pre>
+     *
+     * <code>float productive_fte = 4 [json_name = "productiveFte"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProductiveFte() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      productiveFte_ = 0F;
       onChanged();
       return this;
     }

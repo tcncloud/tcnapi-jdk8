@@ -53,4 +53,14 @@ public interface FTERequiredVsAchievedIntervalOrBuilder extends
    * @return The achievedFtes.
    */
   int getAchievedFtes();
+
+  /**
+   * <pre>
+   * Count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+   * </pre>
+   *
+   * <code>float productive_fte = 4 [json_name = "productiveFte"];</code>
+   * @return The productiveFte.
+   */
+  float getProductiveFte();
 }

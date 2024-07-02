@@ -47,6 +47,16 @@ public interface PerformanceMetricV2OrBuilder extends
   float getTotalFteIntervalsAchieved();
 
   /**
+   * <pre>
+   * Total count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+   * </pre>
+   *
+   * <code>float total_productive_fte = 15 [json_name = "totalProductiveFte"];</code>
+   * @return The totalProductiveFte.
+   */
+  float getTotalProductiveFte();
+
+  /**
    * <code>int32 num_intervals_with_call_ftes = 4 [json_name = "numIntervalsWithCallFtes"];</code>
    * @return The numIntervalsWithCallFtes.
    */

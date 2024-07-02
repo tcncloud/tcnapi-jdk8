@@ -56,6 +56,16 @@ public interface PerformanceMetricForSkillCollectionOrBuilder extends
 
   /**
    * <pre>
+   * Total count of FTE scheduled to be on the phone / productive for a specific interval / duration of time.
+   * </pre>
+   *
+   * <code>float total_productive_fte = 14 [json_name = "totalProductiveFte"];</code>
+   * @return The totalProductiveFte.
+   */
+  float getTotalProductiveFte();
+
+  /**
+   * <pre>
    * The number of intervals with required calls.
    * </pre>
    *
