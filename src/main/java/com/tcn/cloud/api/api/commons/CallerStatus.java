@@ -135,6 +135,14 @@ private static final long serialVersionUID = 0L;
      * <code>CALLER_PEERED = 19;</code>
      */
     CALLER_PEERED(19),
+    /**
+     * <code>SECURE_FORM_HANDLING = 20;</code>
+     */
+    SECURE_FORM_HANDLING(20),
+    /**
+     * <code>SECURE_FORM_HANDLING_CALLER_COLLECT = 21;</code>
+     */
+    SECURE_FORM_HANDLING_CALLER_COLLECT(21),
     UNRECOGNIZED(-1),
     ;
 
@@ -230,6 +238,14 @@ private static final long serialVersionUID = 0L;
      * <code>CALLER_PEERED = 19;</code>
      */
     public static final int CALLER_PEERED_VALUE = 19;
+    /**
+     * <code>SECURE_FORM_HANDLING = 20;</code>
+     */
+    public static final int SECURE_FORM_HANDLING_VALUE = 20;
+    /**
+     * <code>SECURE_FORM_HANDLING_CALLER_COLLECT = 21;</code>
+     */
+    public static final int SECURE_FORM_HANDLING_CALLER_COLLECT_VALUE = 21;
 
 
     public final int getNumber() {
@@ -276,6 +292,8 @@ private static final long serialVersionUID = 0L;
         case 17: return CALLER_TRANSFER_PEER;
         case 18: return CALLER_TRANSFER_MERGED_CALLER;
         case 19: return CALLER_PEERED;
+        case 20: return SECURE_FORM_HANDLING;
+        case 21: return SECURE_FORM_HANDLING_CALLER_COLLECT;
         default: return null;
       }
     }
