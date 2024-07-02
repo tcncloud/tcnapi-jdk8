@@ -223,6 +223,14 @@ private static final long serialVersionUID = 0L;
      * <code>COLD_AGENT_TRANSFER_STARTED = 39;</code>
      */
     COLD_AGENT_TRANSFER_STARTED(39),
+    /**
+     * <pre>
+     * the agent is moving through a portal
+     * </pre>
+     *
+     * <code>SECURE_FORM_HANDLING = 40;</code>
+     */
+    SECURE_FORM_HANDLING(40),
     UNRECOGNIZED(-1),
     ;
 
@@ -406,6 +414,14 @@ private static final long serialVersionUID = 0L;
      * <code>COLD_AGENT_TRANSFER_STARTED = 39;</code>
      */
     public static final int COLD_AGENT_TRANSFER_STARTED_VALUE = 39;
+    /**
+     * <pre>
+     * the agent is moving through a portal
+     * </pre>
+     *
+     * <code>SECURE_FORM_HANDLING = 40;</code>
+     */
+    public static final int SECURE_FORM_HANDLING_VALUE = 40;
 
 
     public final int getNumber() {
@@ -472,6 +488,7 @@ private static final long serialVersionUID = 0L;
         case 37: return CALLER_TRANSFER_LOST_MERGED_CALLER;
         case 38: return COLD_OUTBOUND_TRANSFER_STARTED;
         case 39: return COLD_AGENT_TRANSFER_STARTED;
+        case 40: return SECURE_FORM_HANDLING;
         default: return null;
       }
     }
