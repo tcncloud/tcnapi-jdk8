@@ -3380,6 +3380,186 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomerOrBuilder getFinviUpdateCustomerOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionAuth finvi_create_transaction_auth = 4311 [json_name = "finviCreateTransactionAuth"];</code>
+   * @return Whether the finviCreateTransactionAuth field is set.
+   */
+  boolean hasFinviCreateTransactionAuth();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionAuth finvi_create_transaction_auth = 4311 [json_name = "finviCreateTransactionAuth"];</code>
+   * @return The finviCreateTransactionAuth.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionAuth getFinviCreateTransactionAuth();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionAuth finvi_create_transaction_auth = 4311 [json_name = "finviCreateTransactionAuth"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionAuthOrBuilder getFinviCreateTransactionAuthOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionCapture finvi_create_transaction_capture = 4312 [json_name = "finviCreateTransactionCapture"];</code>
+   * @return Whether the finviCreateTransactionCapture field is set.
+   */
+  boolean hasFinviCreateTransactionCapture();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionCapture finvi_create_transaction_capture = 4312 [json_name = "finviCreateTransactionCapture"];</code>
+   * @return The finviCreateTransactionCapture.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionCapture getFinviCreateTransactionCapture();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionCapture finvi_create_transaction_capture = 4312 [json_name = "finviCreateTransactionCapture"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionCaptureOrBuilder getFinviCreateTransactionCaptureOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionCredit finvi_create_transaction_credit = 4313 [json_name = "finviCreateTransactionCredit"];</code>
+   * @return Whether the finviCreateTransactionCredit field is set.
+   */
+  boolean hasFinviCreateTransactionCredit();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionCredit finvi_create_transaction_credit = 4313 [json_name = "finviCreateTransactionCredit"];</code>
+   * @return The finviCreateTransactionCredit.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionCredit getFinviCreateTransactionCredit();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionCredit finvi_create_transaction_credit = 4313 [json_name = "finviCreateTransactionCredit"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionCreditOrBuilder getFinviCreateTransactionCreditOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionRefund finvi_create_transaction_refund = 4314 [json_name = "finviCreateTransactionRefund"];</code>
+   * @return Whether the finviCreateTransactionRefund field is set.
+   */
+  boolean hasFinviCreateTransactionRefund();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionRefund finvi_create_transaction_refund = 4314 [json_name = "finviCreateTransactionRefund"];</code>
+   * @return The finviCreateTransactionRefund.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionRefund getFinviCreateTransactionRefund();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionRefund finvi_create_transaction_refund = 4314 [json_name = "finviCreateTransactionRefund"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionRefundOrBuilder getFinviCreateTransactionRefundOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionSale finvi_create_transaction_sale = 4315 [json_name = "finviCreateTransactionSale"];</code>
+   * @return Whether the finviCreateTransactionSale field is set.
+   */
+  boolean hasFinviCreateTransactionSale();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionSale finvi_create_transaction_sale = 4315 [json_name = "finviCreateTransactionSale"];</code>
+   * @return The finviCreateTransactionSale.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionSale getFinviCreateTransactionSale();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionSale finvi_create_transaction_sale = 4315 [json_name = "finviCreateTransactionSale"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionSaleOrBuilder getFinviCreateTransactionSaleOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionValidate finvi_create_transaction_validate = 4316 [json_name = "finviCreateTransactionValidate"];</code>
+   * @return Whether the finviCreateTransactionValidate field is set.
+   */
+  boolean hasFinviCreateTransactionValidate();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionValidate finvi_create_transaction_validate = 4316 [json_name = "finviCreateTransactionValidate"];</code>
+   * @return The finviCreateTransactionValidate.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionValidate getFinviCreateTransactionValidate();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionValidate finvi_create_transaction_validate = 4316 [json_name = "finviCreateTransactionValidate"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionValidateOrBuilder getFinviCreateTransactionValidateOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionAuth finvi_process_new_transaction_auth = 4317 [json_name = "finviProcessNewTransactionAuth"];</code>
+   * @return Whether the finviProcessNewTransactionAuth field is set.
+   */
+  boolean hasFinviProcessNewTransactionAuth();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionAuth finvi_process_new_transaction_auth = 4317 [json_name = "finviProcessNewTransactionAuth"];</code>
+   * @return The finviProcessNewTransactionAuth.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionAuth getFinviProcessNewTransactionAuth();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionAuth finvi_process_new_transaction_auth = 4317 [json_name = "finviProcessNewTransactionAuth"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionAuthOrBuilder getFinviProcessNewTransactionAuthOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionCapture finvi_process_new_transaction_capture = 4318 [json_name = "finviProcessNewTransactionCapture"];</code>
+   * @return Whether the finviProcessNewTransactionCapture field is set.
+   */
+  boolean hasFinviProcessNewTransactionCapture();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionCapture finvi_process_new_transaction_capture = 4318 [json_name = "finviProcessNewTransactionCapture"];</code>
+   * @return The finviProcessNewTransactionCapture.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionCapture getFinviProcessNewTransactionCapture();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionCapture finvi_process_new_transaction_capture = 4318 [json_name = "finviProcessNewTransactionCapture"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionCaptureOrBuilder getFinviProcessNewTransactionCaptureOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionCredit finvi_process_new_transaction_credit = 4319 [json_name = "finviProcessNewTransactionCredit"];</code>
+   * @return Whether the finviProcessNewTransactionCredit field is set.
+   */
+  boolean hasFinviProcessNewTransactionCredit();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionCredit finvi_process_new_transaction_credit = 4319 [json_name = "finviProcessNewTransactionCredit"];</code>
+   * @return The finviProcessNewTransactionCredit.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionCredit getFinviProcessNewTransactionCredit();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionCredit finvi_process_new_transaction_credit = 4319 [json_name = "finviProcessNewTransactionCredit"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionCreditOrBuilder getFinviProcessNewTransactionCreditOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionRefund finvi_process_new_transaction_refund = 4320 [json_name = "finviProcessNewTransactionRefund"];</code>
+   * @return Whether the finviProcessNewTransactionRefund field is set.
+   */
+  boolean hasFinviProcessNewTransactionRefund();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionRefund finvi_process_new_transaction_refund = 4320 [json_name = "finviProcessNewTransactionRefund"];</code>
+   * @return The finviProcessNewTransactionRefund.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionRefund getFinviProcessNewTransactionRefund();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionRefund finvi_process_new_transaction_refund = 4320 [json_name = "finviProcessNewTransactionRefund"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionRefundOrBuilder getFinviProcessNewTransactionRefundOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionSale finvi_process_new_transaction_sale = 4321 [json_name = "finviProcessNewTransactionSale"];</code>
+   * @return Whether the finviProcessNewTransactionSale field is set.
+   */
+  boolean hasFinviProcessNewTransactionSale();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionSale finvi_process_new_transaction_sale = 4321 [json_name = "finviProcessNewTransactionSale"];</code>
+   * @return The finviProcessNewTransactionSale.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionSale getFinviProcessNewTransactionSale();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionSale finvi_process_new_transaction_sale = 4321 [json_name = "finviProcessNewTransactionSale"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionSaleOrBuilder getFinviProcessNewTransactionSaleOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionValidate finvi_process_new_transaction_validate = 4322 [json_name = "finviProcessNewTransactionValidate"];</code>
+   * @return Whether the finviProcessNewTransactionValidate field is set.
+   */
+  boolean hasFinviProcessNewTransactionValidate();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionValidate finvi_process_new_transaction_validate = 4322 [json_name = "finviProcessNewTransactionValidate"];</code>
+   * @return The finviProcessNewTransactionValidate.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionValidate getFinviProcessNewTransactionValidate();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionValidate finvi_process_new_transaction_validate = 4322 [json_name = "finviProcessNewTransactionValidate"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionValidateOrBuilder getFinviProcessNewTransactionValidateOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
    * @return Whether the debugEcho field is set.
    */
