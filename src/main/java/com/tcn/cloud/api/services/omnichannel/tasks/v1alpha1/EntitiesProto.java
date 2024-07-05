@@ -24,6 +24,16 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_omnichannel_tasks_v1alpha1_CancelTasksResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_omnichannel_tasks_v1alpha1_BulkCancelTasksRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_omnichannel_tasks_v1alpha1_BulkCancelTasksRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_omnichannel_tasks_v1alpha1_BulkCancelTasksResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_omnichannel_tasks_v1alpha1_BulkCancelTasksResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -37,14 +47,16 @@ public final class EntitiesProto {
       "tities.proto\022#services.omnichannel.tasks" +
       ".v1alpha1\032\035api/commons/omnichannel.proto" +
       "\"3\n\022CancelTasksRequest\022\035\n\010task_sid\030\001 \003(\003" +
-      "B\0020\001R\007taskSid\"\025\n\023CancelTasksResponseB\365\001\n" +
-      "5com.tcn.cloud.api.services.omnichannel." +
-      "tasks.v1alpha1B\rEntitiesProtoP\001\242\002\003SOT\252\002#" +
-      "Services.Omnichannel.Tasks.V1alpha1\312\002#Se" +
-      "rvices\\Omnichannel\\Tasks\\V1alpha1\342\002/Serv" +
-      "ices\\Omnichannel\\Tasks\\V1alpha1\\GPBMetad" +
-      "ata\352\002&Services::Omnichannel::Tasks::V1al" +
-      "pha1b\006proto3"
+      "B\0020\001R\007taskSid\"\025\n\023CancelTasksResponse\"0\n\026" +
+      "BulkCancelTasksRequest\022\026\n\006filter\030\001 \001(\tR\006" +
+      "filter\"\031\n\027BulkCancelTasksResponseB\365\001\n5co" +
+      "m.tcn.cloud.api.services.omnichannel.tas" +
+      "ks.v1alpha1B\rEntitiesProtoP\001\242\002\003SOT\252\002#Ser" +
+      "vices.Omnichannel.Tasks.V1alpha1\312\002#Servi" +
+      "ces\\Omnichannel\\Tasks\\V1alpha1\342\002/Service" +
+      "s\\Omnichannel\\Tasks\\V1alpha1\\GPBMetadata" +
+      "\352\002&Services::Omnichannel::Tasks::V1alpha" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -62,6 +74,18 @@ public final class EntitiesProto {
     internal_static_services_omnichannel_tasks_v1alpha1_CancelTasksResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_omnichannel_tasks_v1alpha1_CancelTasksResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_services_omnichannel_tasks_v1alpha1_BulkCancelTasksRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_services_omnichannel_tasks_v1alpha1_BulkCancelTasksRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_omnichannel_tasks_v1alpha1_BulkCancelTasksRequest_descriptor,
+        new java.lang.String[] { "Filter", });
+    internal_static_services_omnichannel_tasks_v1alpha1_BulkCancelTasksResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_services_omnichannel_tasks_v1alpha1_BulkCancelTasksResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_omnichannel_tasks_v1alpha1_BulkCancelTasksResponse_descriptor,
         new java.lang.String[] { });
     com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
   }
