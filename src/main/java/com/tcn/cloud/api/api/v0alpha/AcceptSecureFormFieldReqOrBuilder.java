@@ -6,4 +6,10 @@ package com.tcn.cloud.api.api.v0alpha;
 public interface AcceptSecureFormFieldReqOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v0alpha.AcceptSecureFormFieldReq)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>int64 session_sid = 1 [json_name = "sessionSid"];</code>
+   * @return The sessionSid.
+   */
+  long getSessionSid();
 }

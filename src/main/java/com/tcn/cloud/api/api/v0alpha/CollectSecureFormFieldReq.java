@@ -78,6 +78,17 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int SESSION_SID_FIELD_NUMBER = 2;
+  private long sessionSid_ = 0L;
+  /**
+   * <code>int64 session_sid = 2 [json_name = "sessionSid"];</code>
+   * @return The sessionSid.
+   */
+  @java.lang.Override
+  public long getSessionSid() {
+    return sessionSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -95,6 +106,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fieldName_);
     }
+    if (sessionSid_ != 0L) {
+      output.writeInt64(2, sessionSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -106,6 +120,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fieldName_);
+    }
+    if (sessionSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, sessionSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -124,6 +142,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getFieldName()
         .equals(other.getFieldName())) return false;
+    if (getSessionSid()
+        != other.getSessionSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -137,6 +157,9 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + FIELD_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getFieldName().hashCode();
+    hash = (37 * hash) + SESSION_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getSessionSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -269,6 +292,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       fieldName_ = "";
+      sessionSid_ = 0L;
       return this;
     }
 
@@ -304,6 +328,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.fieldName_ = fieldName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.sessionSid_ = sessionSid_;
       }
     }
 
@@ -356,6 +383,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (other.getSessionSid() != 0L) {
+        setSessionSid(other.getSessionSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -387,6 +417,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 16: {
+              sessionSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -472,6 +507,38 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       fieldName_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private long sessionSid_ ;
+    /**
+     * <code>int64 session_sid = 2 [json_name = "sessionSid"];</code>
+     * @return The sessionSid.
+     */
+    @java.lang.Override
+    public long getSessionSid() {
+      return sessionSid_;
+    }
+    /**
+     * <code>int64 session_sid = 2 [json_name = "sessionSid"];</code>
+     * @param value The sessionSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSessionSid(long value) {
+
+      sessionSid_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 session_sid = 2 [json_name = "sessionSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSessionSid() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      sessionSid_ = 0L;
       onChanged();
       return this;
     }

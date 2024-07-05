@@ -18,4 +18,10 @@ public interface CollectSecureFormFieldReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getFieldNameBytes();
+
+  /**
+   * <code>int64 session_sid = 2 [json_name = "sessionSid"];</code>
+   * @return The sessionSid.
+   */
+  long getSessionSid();
 }

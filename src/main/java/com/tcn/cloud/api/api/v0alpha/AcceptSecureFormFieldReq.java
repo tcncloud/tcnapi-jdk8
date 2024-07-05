@@ -38,6 +38,17 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq.class, com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq.Builder.class);
   }
 
+  public static final int SESSION_SID_FIELD_NUMBER = 1;
+  private long sessionSid_ = 0L;
+  /**
+   * <code>int64 session_sid = 1 [json_name = "sessionSid"];</code>
+   * @return The sessionSid.
+   */
+  @java.lang.Override
+  public long getSessionSid() {
+    return sessionSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -52,6 +63,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (sessionSid_ != 0L) {
+      output.writeInt64(1, sessionSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -61,6 +75,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (sessionSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, sessionSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -76,6 +94,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq other = (com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq) obj;
 
+    if (getSessionSid()
+        != other.getSessionSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -87,6 +107,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + SESSION_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getSessionSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -217,6 +240,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      sessionSid_ = 0L;
       return this;
     }
 
@@ -243,8 +268,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq result = new com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.sessionSid_ = sessionSid_;
+      }
     }
 
     @java.lang.Override
@@ -291,6 +324,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq other) {
       if (other == com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq.getDefaultInstance()) return this;
+      if (other.getSessionSid() != 0L) {
+        setSessionSid(other.getSessionSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -317,6 +353,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 8: {
+              sessionSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -330,6 +371,39 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private long sessionSid_ ;
+    /**
+     * <code>int64 session_sid = 1 [json_name = "sessionSid"];</code>
+     * @return The sessionSid.
+     */
+    @java.lang.Override
+    public long getSessionSid() {
+      return sessionSid_;
+    }
+    /**
+     * <code>int64 session_sid = 1 [json_name = "sessionSid"];</code>
+     * @param value The sessionSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSessionSid(long value) {
+
+      sessionSid_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 session_sid = 1 [json_name = "sessionSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSessionSid() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      sessionSid_ = 0L;
+      onChanged();
       return this;
     }
     @java.lang.Override
