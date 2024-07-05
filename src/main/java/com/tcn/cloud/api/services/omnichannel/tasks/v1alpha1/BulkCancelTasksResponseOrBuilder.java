@@ -9,21 +9,21 @@ public interface BulkCancelTasksResponseOrBuilder extends
 
   /**
    * <pre>
-   *send back ghost notifier ID
+   *send back ghost notifier reference ID
    * </pre>
    *
-   * <code>string ghost_notifier_id = 1 [json_name = "ghostNotifierId"];</code>
-   * @return The ghostNotifierId.
+   * <code>string ghost_reference_id = 1 [json_name = "ghostReferenceId"];</code>
+   * @return The ghostReferenceId.
    */
-  java.lang.String getGhostNotifierId();
+  java.lang.String getGhostReferenceId();
   /**
    * <pre>
-   *send back ghost notifier ID
+   *send back ghost notifier reference ID
    * </pre>
    *
-   * <code>string ghost_notifier_id = 1 [json_name = "ghostNotifierId"];</code>
-   * @return The bytes for ghostNotifierId.
+   * <code>string ghost_reference_id = 1 [json_name = "ghostReferenceId"];</code>
+   * @return The bytes for ghostReferenceId.
    */
   com.google.protobuf.ByteString
-      getGhostNotifierIdBytes();
+      getGhostReferenceIdBytes();
 }

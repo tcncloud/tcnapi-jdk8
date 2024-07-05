@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private BulkCancelTasksResponse() {
-    ghostNotifierId_ = "";
+    ghostReferenceId_ = "";
   }
 
   @java.lang.Override
@@ -39,47 +39,47 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse.class, com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse.Builder.class);
   }
 
-  public static final int GHOST_NOTIFIER_ID_FIELD_NUMBER = 1;
+  public static final int GHOST_REFERENCE_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object ghostNotifierId_ = "";
+  private volatile java.lang.Object ghostReferenceId_ = "";
   /**
    * <pre>
-   *send back ghost notifier ID
+   *send back ghost notifier reference ID
    * </pre>
    *
-   * <code>string ghost_notifier_id = 1 [json_name = "ghostNotifierId"];</code>
-   * @return The ghostNotifierId.
+   * <code>string ghost_reference_id = 1 [json_name = "ghostReferenceId"];</code>
+   * @return The ghostReferenceId.
    */
   @java.lang.Override
-  public java.lang.String getGhostNotifierId() {
-    java.lang.Object ref = ghostNotifierId_;
+  public java.lang.String getGhostReferenceId() {
+    java.lang.Object ref = ghostReferenceId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      ghostNotifierId_ = s;
+      ghostReferenceId_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   *send back ghost notifier ID
+   *send back ghost notifier reference ID
    * </pre>
    *
-   * <code>string ghost_notifier_id = 1 [json_name = "ghostNotifierId"];</code>
-   * @return The bytes for ghostNotifierId.
+   * <code>string ghost_reference_id = 1 [json_name = "ghostReferenceId"];</code>
+   * @return The bytes for ghostReferenceId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getGhostNotifierIdBytes() {
-    java.lang.Object ref = ghostNotifierId_;
+      getGhostReferenceIdBytes() {
+    java.lang.Object ref = ghostReferenceId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      ghostNotifierId_ = b;
+      ghostReferenceId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -100,8 +100,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ghostNotifierId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ghostNotifierId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ghostReferenceId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ghostReferenceId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -112,8 +112,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ghostNotifierId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ghostNotifierId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ghostReferenceId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ghostReferenceId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -130,8 +130,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse other = (com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse) obj;
 
-    if (!getGhostNotifierId()
-        .equals(other.getGhostNotifierId())) return false;
+    if (!getGhostReferenceId()
+        .equals(other.getGhostReferenceId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -143,8 +143,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + GHOST_NOTIFIER_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getGhostNotifierId().hashCode();
+    hash = (37 * hash) + GHOST_REFERENCE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getGhostReferenceId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -276,7 +276,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      ghostNotifierId_ = "";
+      ghostReferenceId_ = "";
       return this;
     }
 
@@ -311,7 +311,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.ghostNotifierId_ = ghostNotifierId_;
+        result.ghostReferenceId_ = ghostReferenceId_;
       }
     }
 
@@ -359,8 +359,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse other) {
       if (other == com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse.getDefaultInstance()) return this;
-      if (!other.getGhostNotifierId().isEmpty()) {
-        ghostNotifierId_ = other.ghostNotifierId_;
+      if (!other.getGhostReferenceId().isEmpty()) {
+        ghostReferenceId_ = other.ghostReferenceId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -391,7 +391,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              ghostNotifierId_ = input.readStringRequireUtf8();
+              ghostReferenceId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -412,22 +412,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object ghostNotifierId_ = "";
+    private java.lang.Object ghostReferenceId_ = "";
     /**
      * <pre>
-     *send back ghost notifier ID
+     *send back ghost notifier reference ID
      * </pre>
      *
-     * <code>string ghost_notifier_id = 1 [json_name = "ghostNotifierId"];</code>
-     * @return The ghostNotifierId.
+     * <code>string ghost_reference_id = 1 [json_name = "ghostReferenceId"];</code>
+     * @return The ghostReferenceId.
      */
-    public java.lang.String getGhostNotifierId() {
-      java.lang.Object ref = ghostNotifierId_;
+    public java.lang.String getGhostReferenceId() {
+      java.lang.Object ref = ghostReferenceId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        ghostNotifierId_ = s;
+        ghostReferenceId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -435,20 +435,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *send back ghost notifier ID
+     *send back ghost notifier reference ID
      * </pre>
      *
-     * <code>string ghost_notifier_id = 1 [json_name = "ghostNotifierId"];</code>
-     * @return The bytes for ghostNotifierId.
+     * <code>string ghost_reference_id = 1 [json_name = "ghostReferenceId"];</code>
+     * @return The bytes for ghostReferenceId.
      */
     public com.google.protobuf.ByteString
-        getGhostNotifierIdBytes() {
-      java.lang.Object ref = ghostNotifierId_;
+        getGhostReferenceIdBytes() {
+      java.lang.Object ref = ghostReferenceId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        ghostNotifierId_ = b;
+        ghostReferenceId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -456,49 +456,49 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *send back ghost notifier ID
+     *send back ghost notifier reference ID
      * </pre>
      *
-     * <code>string ghost_notifier_id = 1 [json_name = "ghostNotifierId"];</code>
-     * @param value The ghostNotifierId to set.
+     * <code>string ghost_reference_id = 1 [json_name = "ghostReferenceId"];</code>
+     * @param value The ghostReferenceId to set.
      * @return This builder for chaining.
      */
-    public Builder setGhostNotifierId(
+    public Builder setGhostReferenceId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      ghostNotifierId_ = value;
+      ghostReferenceId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     *send back ghost notifier ID
+     *send back ghost notifier reference ID
      * </pre>
      *
-     * <code>string ghost_notifier_id = 1 [json_name = "ghostNotifierId"];</code>
+     * <code>string ghost_reference_id = 1 [json_name = "ghostReferenceId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearGhostNotifierId() {
-      ghostNotifierId_ = getDefaultInstance().getGhostNotifierId();
+    public Builder clearGhostReferenceId() {
+      ghostReferenceId_ = getDefaultInstance().getGhostReferenceId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     *send back ghost notifier ID
+     *send back ghost notifier reference ID
      * </pre>
      *
-     * <code>string ghost_notifier_id = 1 [json_name = "ghostNotifierId"];</code>
-     * @param value The bytes for ghostNotifierId to set.
+     * <code>string ghost_reference_id = 1 [json_name = "ghostReferenceId"];</code>
+     * @param value The bytes for ghostReferenceId to set.
      * @return This builder for chaining.
      */
-    public Builder setGhostNotifierIdBytes(
+    public Builder setGhostReferenceIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      ghostNotifierId_ = value;
+      ghostReferenceId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
