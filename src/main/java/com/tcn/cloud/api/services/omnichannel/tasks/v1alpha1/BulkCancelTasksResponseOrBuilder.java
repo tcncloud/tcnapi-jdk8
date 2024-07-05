@@ -6,4 +6,24 @@ package com.tcn.cloud.api.services.omnichannel.tasks.v1alpha1;
 public interface BulkCancelTasksResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:services.omnichannel.tasks.v1alpha1.BulkCancelTasksResponse)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   *send back ghost notifier ID
+   * </pre>
+   *
+   * <code>string ghost_notifier_id = 1 [json_name = "ghostNotifierId"];</code>
+   * @return The ghostNotifierId.
+   */
+  java.lang.String getGhostNotifierId();
+  /**
+   * <pre>
+   *send back ghost notifier ID
+   * </pre>
+   *
+   * <code>string ghost_notifier_id = 1 [json_name = "ghostNotifierId"];</code>
+   * @return The bytes for ghostNotifierId.
+   */
+  com.google.protobuf.ByteString
+      getGhostNotifierIdBytes();
 }
