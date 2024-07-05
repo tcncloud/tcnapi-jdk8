@@ -233,105 +233,106 @@ public final class ComplianceProto {
       "s.MonthR\005month\022\020\n\003day\030\002 \001(\003R\003day\022\022\n\004year" +
       "\030\003 \001(\003R\004year\"N\n\nHolidayExp\022\022\n\004name\030\001 \001(\t" +
       "R\004name\022\030\n\007country\030\002 \001(\tR\007country\022\022\n\004type" +
-      "\030\003 \001(\tR\004type\"$\n\014MetaFieldExp\022\024\n\005field\030\001 " +
-      "\001(\tR\005field\"\223\004\n\tPluginExp\022+\n\004type\030\001 \001(\0162\027" +
-      ".api.commons.PluginTypeR\004type\022\035\n\ntcn_str" +
-      "ict\030\004 \001(\010R\ttcnStrict\022\035\n\nlicense_id\030\002 \001(\t" +
-      "R\tlicenseId\022#\n\rreference_key\030\003 \001(\tR\014refe" +
-      "renceKey\022\037\n\013from_number\030\005 \001(\tR\nfromNumbe" +
-      "r\022*\n\003env\030\006 \001(\0162\030.api.commons.Environment" +
-      "R\003env\022!\n\014profile_name\030\007 \001(\tR\013profileName" +
-      "\022#\n\rcontent_field\030\010 \001(\tR\014contentField\022\024\n" +
-      "\005topic\030\t \001(\tR\005topic\022E\n\rabsent_action\030\013 \001" +
-      "(\0162 .api.commons.ConsentAbsentActionR\014ab" +
-      "sentAction\022*\n\021date_last_contact\030\n \001(\tR\017d" +
-      "ateLastContact\022\016\n\002lu\030\014 \001(\tR\002lu\022\030\n\007accoun" +
-      "t\030\r \001(\tR\007account\022\026\n\006master\030\016 \001(\tR\006master" +
-      "\022\026\n\006client\030\017 \001(\tR\006client\"o\n\tEntityExp\0225\n" +
-      "\nsub_entity\030\001 \001(\0162\026.api.commons.SubEntit" +
-      "yR\tsubEntity\022+\n\006entity\030\002 \001(\0162\023.api.commo" +
-      "ns.EntityR\006entity\"D\n\rFieldNamesMod\0223\n\013fi" +
-      "eld_names\030\001 \003(\0132\022.api.commons.FieldR\nfie" +
-      "ldNames\"&\n\nResultsMod\022\030\n\007results\030\001 \003(\tR\007" +
-      "results\"S\n\016DispositionMod\022A\n\014disposition" +
-      "s\030\001 \003(\0132\035.api.commons.DispositionFieldR\014" +
-      "dispositions\"n\n\020DispositionField\022\020\n\003key\030" +
-      "\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value\0222\n\005pair" +
-      "s\030\003 \003(\0132\034.api.commons.DispositionPairR\005p" +
-      "airs\"9\n\017DispositionPair\022\020\n\003key\030\001 \001(\tR\003ke" +
-      "y\022\024\n\005value\030\002 \001(\tR\005value\"7\n\005Field\022\024\n\005Fiel" +
-      "d\030\001 \001(\tR\005Field\022\030\n\007Content\030\002 \001(\tR\007Content" +
-      "\"\343\002\n\020ConsentCondition\0220\n\024consent_conditi" +
-      "on_id\030\001 \001(\003R\022consentConditionId\022\035\n\nconse" +
-      "nt_id\030\002 \001(\003R\tconsentId\022B\n\020days_of_the_we" +
-      "ek\030\n \003(\0162\031.api.commons.Weekday.EnumR\rday" +
-      "sOfTheWeek\022\'\n\020time_of_day_from\030\013 \001(\tR\rti" +
-      "meOfDayFrom\022#\n\016time_of_day_to\030\014 \001(\tR\013tim" +
-      "eOfDayTo\0227\n\tfrom_date\030\r \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\010fromDate\0223\n\007to_date\030\016 \001" +
-      "(\0132\032.google.protobuf.TimestampR\006toDate\"\232" +
-      "\006\n\014ScenarioData\0222\n\tcomm_type\030\001 \001(\0132\025.api" +
-      ".commons.CommTypeR\010commType\022!\n\014phone_num" +
-      "ber\030\002 \001(\tR\013phoneNumber\022%\n\014country_code\030\003" +
-      " \001(\tB\002\030\001R\013countryCode\022\024\n\005email\030\004 \001(\tR\005em" +
-      "ail\022P\n\rcall_metadata\030\005 \003(\0132+.api.commons" +
-      ".ScenarioData.CallMetadataEntryR\014callMet" +
-      "adata\022<\n\014time_of_call\030\006 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\ntimeOfCall\022\'\n\017frequency" +
-      "_count\030\007 \001(\003R\016frequencyCount\022-\n\022frequenc" +
-      "y_duration\030\010 \001(\003R\021frequencyDuration\022\037\n\013d" +
-      "ncl_blocks\030\t \001(\010R\ndnclBlocks\022\030\n\007country\030" +
-      "\n \001(\tR\007country\022\024\n\005state\030\013 \001(\tR\005state\022\026\n\006" +
-      "county\030\014 \001(\tR\006county\022\022\n\004city\030\r \001(\tR\004city" +
-      "\022\032\n\010province\030\016 \001(\tR\010province\0225\n\nphone_ty" +
-      "pe\030\017 \001(\0162\026.api.commons.PhoneTypeR\tphoneT" +
-      "ype\022\033\n\ttime_zone\030\020 \001(\tR\010timeZone\022\032\n\010holi" +
-      "days\030\021 \003(\tR\010holidays\022D\n\021country_code_dat" +
-      "a\030\022 \001(\0132\030.api.commons.CountryCodeR\017count" +
-      "ryCodeData\032?\n\021CallMetadataEntry\022\020\n\003key\030\001" +
-      " \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"r\n\013C" +
-      "ountryCode\022!\n\014country_code\030\001 \001(\003R\013countr" +
-      "yCode\022!\n\014country_name\030\002 \001(\tR\013countryName" +
-      "\022\035\n\ncountry_id\030\003 \001(\tR\tcountryId\"\216\002\n\016Scen" +
-      "arioResult\022!\n\014passed_value\030\005 \001(\010R\013passed" +
-      "Value\022W\n\026should_allow_responses\030\002 \003(\0132!." +
-      "api.commons.ScenarioRuleResponseR\024should" +
-      "AllowResponses\022U\n\025should_deny_responses\030" +
-      "\003 \003(\0132!.api.commons.ScenarioRuleResponse" +
-      "R\023shouldDenyResponses\022#\n\rscenario_name\030\004" +
-      " \001(\tR\014scenarioNameJ\004\010\001\020\002\"\\\n\024ScenarioRule" +
-      "Response\022\033\n\trule_text\030\001 \001(\tR\010ruleText\022!\n" +
-      "\014permit_value\030\003 \001(\010R\013permitValueJ\004\010\002\020\003\"\246" +
-      "\001\n\021ScrubEntryDetails\022\030\n\007content\030\001 \001(\tR\007c" +
-      "ontent\022C\n\017expiration_date\030\002 \001(\0132\032.google" +
-      ".protobuf.TimestampR\016expirationDate\0222\n\005n" +
-      "otes\030\003 \001(\0132\034.google.protobuf.StringValue" +
-      "R\005notes\"l\n\014RuleResponse\022\033\n\trule_text\030\001 \001" +
-      "(\tR\010ruleText\022\026\n\006permit\030\002 \001(\010R\006permit\022\'\n\017" +
-      "plugin_response\030\003 \001(\tR\016pluginResponse*K\n" +
-      "\004Verb\022\r\n\tV_UNKNOWN\020\000\022\013\n\007V_ALLOW\020\001\022\n\n\006V_D" +
-      "ENY\020\002\022\013\n\007V_SCRUB\020\003\022\016\n\nV_OVERRIDE\020\004*K\n\006En" +
-      "tity\022\r\n\tE_UNKNOWN\020\000\022\n\n\006E_CALL\020\001\022\013\n\007E_EMA" +
-      "IL\020\002\022\t\n\005E_SMS\020\003\022\016\n\nE_WHATSAPP\020\004*u\n\tSubEn" +
-      "tity\022\n\n\006SE_ALL\020\000\022\016\n\nSE_INBOUND\020\001\022\017\n\013SE_O" +
-      "UTBOUND\020\002\022\r\n\tSE_MANUAL\020\003\022\016\n\nSE_PREVIEW\020\004" +
-      "\022\n\n\006SE_MAC\020\005\022\020\n\014SE_BROADCAST\020\006*.\n\tPhoneT" +
-      "ype\022\010\n\004CELL\020\000\022\010\n\004LAND\020\001\022\r\n\tTOLL_FREE\020\002*r" +
-      "\n\013ContentType\022\023\n\017CT_PHONE_NUMBER\020\000\022\014\n\010CT" +
-      "_EMAIL\020\001\022\n\n\006CT_SMS\020\002\022\014\n\010CT_OTHER\020\003\022\025\n\021CT" +
-      "_ACCOUNT_NUMBER\020\004\022\017\n\013CT_WHATSAPP\020\005*U\n\007Ch" +
-      "annel\022\020\n\014CHANNEL_CALL\020\000\022\021\n\rCHANNEL_EMAIL" +
-      "\020\001\022\017\n\013CHANNEL_SMS\020\002\022\024\n\020CHANNEL_WHATSAPP\020" +
-      "\003*[\n\nPluginType\022\022\n\016UNKNOWN_PLUGIN\020\000\022\013\n\007G" +
-      "RYPHON\020\001\022\017\n\013TCN_CONSENT\020\002\022\007\n\003RND\020\003\022\022\n\016MR" +
-      "S_COMPLIANCE\020\004*8\n\013Environment\022\017\n\013INVALID" +
-      "_ENV\020\000\022\010\n\004TEST\020\001\022\016\n\nPRODUCTION\020\002*V\n\023Cons" +
-      "entAbsentAction\022\037\n\033CONSENT_ABSENT_ACTION" +
-      "_ALLOW\020\000\022\036\n\032CONSENT_ABSENT_ACTION_DENY\020\001" +
-      "B}\n\035com.tcn.cloud.api.api.commonsB\017Compl" +
-      "ianceProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\C" +
-      "ommons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::" +
-      "Commonsb\006proto3"
+      "\030\003 \001(\tR\004type\"@\n\014MetaFieldExp\022\030\n\005field\030\001 " +
+      "\001(\tB\002\030\001R\005field\022\026\n\006fields\030\002 \003(\tR\006fields\"\223" +
+      "\004\n\tPluginExp\022+\n\004type\030\001 \001(\0162\027.api.commons" +
+      ".PluginTypeR\004type\022\035\n\ntcn_strict\030\004 \001(\010R\tt" +
+      "cnStrict\022\035\n\nlicense_id\030\002 \001(\tR\tlicenseId\022" +
+      "#\n\rreference_key\030\003 \001(\tR\014referenceKey\022\037\n\013" +
+      "from_number\030\005 \001(\tR\nfromNumber\022*\n\003env\030\006 \001" +
+      "(\0162\030.api.commons.EnvironmentR\003env\022!\n\014pro" +
+      "file_name\030\007 \001(\tR\013profileName\022#\n\rcontent_" +
+      "field\030\010 \001(\tR\014contentField\022\024\n\005topic\030\t \001(\t" +
+      "R\005topic\022E\n\rabsent_action\030\013 \001(\0162 .api.com" +
+      "mons.ConsentAbsentActionR\014absentAction\022*" +
+      "\n\021date_last_contact\030\n \001(\tR\017dateLastConta" +
+      "ct\022\016\n\002lu\030\014 \001(\tR\002lu\022\030\n\007account\030\r \001(\tR\007acc" +
+      "ount\022\026\n\006master\030\016 \001(\tR\006master\022\026\n\006client\030\017" +
+      " \001(\tR\006client\"o\n\tEntityExp\0225\n\nsub_entity\030" +
+      "\001 \001(\0162\026.api.commons.SubEntityR\tsubEntity" +
+      "\022+\n\006entity\030\002 \001(\0162\023.api.commons.EntityR\006e" +
+      "ntity\"D\n\rFieldNamesMod\0223\n\013field_names\030\001 " +
+      "\003(\0132\022.api.commons.FieldR\nfieldNames\"&\n\nR" +
+      "esultsMod\022\030\n\007results\030\001 \003(\tR\007results\"S\n\016D" +
+      "ispositionMod\022A\n\014dispositions\030\001 \003(\0132\035.ap" +
+      "i.commons.DispositionFieldR\014dispositions" +
+      "\"n\n\020DispositionField\022\020\n\003key\030\001 \001(\tR\003key\022\024" +
+      "\n\005value\030\002 \001(\tR\005value\0222\n\005pairs\030\003 \003(\0132\034.ap" +
+      "i.commons.DispositionPairR\005pairs\"9\n\017Disp" +
+      "ositionPair\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002" +
+      " \001(\tR\005value\"7\n\005Field\022\024\n\005Field\030\001 \001(\tR\005Fie" +
+      "ld\022\030\n\007Content\030\002 \001(\tR\007Content\"\343\002\n\020Consent" +
+      "Condition\0220\n\024consent_condition_id\030\001 \001(\003R" +
+      "\022consentConditionId\022\035\n\nconsent_id\030\002 \001(\003R" +
+      "\tconsentId\022B\n\020days_of_the_week\030\n \003(\0162\031.a" +
+      "pi.commons.Weekday.EnumR\rdaysOfTheWeek\022\'" +
+      "\n\020time_of_day_from\030\013 \001(\tR\rtimeOfDayFrom\022" +
+      "#\n\016time_of_day_to\030\014 \001(\tR\013timeOfDayTo\0227\n\t" +
+      "from_date\030\r \001(\0132\032.google.protobuf.Timest" +
+      "ampR\010fromDate\0223\n\007to_date\030\016 \001(\0132\032.google." +
+      "protobuf.TimestampR\006toDate\"\232\006\n\014ScenarioD" +
+      "ata\0222\n\tcomm_type\030\001 \001(\0132\025.api.commons.Com" +
+      "mTypeR\010commType\022!\n\014phone_number\030\002 \001(\tR\013p" +
+      "honeNumber\022%\n\014country_code\030\003 \001(\tB\002\030\001R\013co" +
+      "untryCode\022\024\n\005email\030\004 \001(\tR\005email\022P\n\rcall_" +
+      "metadata\030\005 \003(\0132+.api.commons.ScenarioDat" +
+      "a.CallMetadataEntryR\014callMetadata\022<\n\014tim" +
+      "e_of_call\030\006 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\ntimeOfCall\022\'\n\017frequency_count\030\007 \001(\003" +
+      "R\016frequencyCount\022-\n\022frequency_duration\030\010" +
+      " \001(\003R\021frequencyDuration\022\037\n\013dncl_blocks\030\t" +
+      " \001(\010R\ndnclBlocks\022\030\n\007country\030\n \001(\tR\007count" +
+      "ry\022\024\n\005state\030\013 \001(\tR\005state\022\026\n\006county\030\014 \001(\t" +
+      "R\006county\022\022\n\004city\030\r \001(\tR\004city\022\032\n\010province" +
+      "\030\016 \001(\tR\010province\0225\n\nphone_type\030\017 \001(\0162\026.a" +
+      "pi.commons.PhoneTypeR\tphoneType\022\033\n\ttime_" +
+      "zone\030\020 \001(\tR\010timeZone\022\032\n\010holidays\030\021 \003(\tR\010" +
+      "holidays\022D\n\021country_code_data\030\022 \001(\0132\030.ap" +
+      "i.commons.CountryCodeR\017countryCodeData\032?" +
+      "\n\021CallMetadataEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n" +
+      "\005value\030\002 \001(\tR\005value:\0028\001\"r\n\013CountryCode\022!" +
+      "\n\014country_code\030\001 \001(\003R\013countryCode\022!\n\014cou" +
+      "ntry_name\030\002 \001(\tR\013countryName\022\035\n\ncountry_" +
+      "id\030\003 \001(\tR\tcountryId\"\216\002\n\016ScenarioResult\022!" +
+      "\n\014passed_value\030\005 \001(\010R\013passedValue\022W\n\026sho" +
+      "uld_allow_responses\030\002 \003(\0132!.api.commons." +
+      "ScenarioRuleResponseR\024shouldAllowRespons" +
+      "es\022U\n\025should_deny_responses\030\003 \003(\0132!.api." +
+      "commons.ScenarioRuleResponseR\023shouldDeny" +
+      "Responses\022#\n\rscenario_name\030\004 \001(\tR\014scenar" +
+      "ioNameJ\004\010\001\020\002\"\\\n\024ScenarioRuleResponse\022\033\n\t" +
+      "rule_text\030\001 \001(\tR\010ruleText\022!\n\014permit_valu" +
+      "e\030\003 \001(\010R\013permitValueJ\004\010\002\020\003\"\246\001\n\021ScrubEntr" +
+      "yDetails\022\030\n\007content\030\001 \001(\tR\007content\022C\n\017ex" +
+      "piration_date\030\002 \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\016expirationDate\0222\n\005notes\030\003 \001(\0132\034" +
+      ".google.protobuf.StringValueR\005notes\"l\n\014R" +
+      "uleResponse\022\033\n\trule_text\030\001 \001(\tR\010ruleText" +
+      "\022\026\n\006permit\030\002 \001(\010R\006permit\022\'\n\017plugin_respo" +
+      "nse\030\003 \001(\tR\016pluginResponse*K\n\004Verb\022\r\n\tV_U" +
+      "NKNOWN\020\000\022\013\n\007V_ALLOW\020\001\022\n\n\006V_DENY\020\002\022\013\n\007V_S" +
+      "CRUB\020\003\022\016\n\nV_OVERRIDE\020\004*K\n\006Entity\022\r\n\tE_UN" +
+      "KNOWN\020\000\022\n\n\006E_CALL\020\001\022\013\n\007E_EMAIL\020\002\022\t\n\005E_SM" +
+      "S\020\003\022\016\n\nE_WHATSAPP\020\004*u\n\tSubEntity\022\n\n\006SE_A" +
+      "LL\020\000\022\016\n\nSE_INBOUND\020\001\022\017\n\013SE_OUTBOUND\020\002\022\r\n" +
+      "\tSE_MANUAL\020\003\022\016\n\nSE_PREVIEW\020\004\022\n\n\006SE_MAC\020\005" +
+      "\022\020\n\014SE_BROADCAST\020\006*.\n\tPhoneType\022\010\n\004CELL\020" +
+      "\000\022\010\n\004LAND\020\001\022\r\n\tTOLL_FREE\020\002*r\n\013ContentTyp" +
+      "e\022\023\n\017CT_PHONE_NUMBER\020\000\022\014\n\010CT_EMAIL\020\001\022\n\n\006" +
+      "CT_SMS\020\002\022\014\n\010CT_OTHER\020\003\022\025\n\021CT_ACCOUNT_NUM" +
+      "BER\020\004\022\017\n\013CT_WHATSAPP\020\005*U\n\007Channel\022\020\n\014CHA" +
+      "NNEL_CALL\020\000\022\021\n\rCHANNEL_EMAIL\020\001\022\017\n\013CHANNE" +
+      "L_SMS\020\002\022\024\n\020CHANNEL_WHATSAPP\020\003*[\n\nPluginT" +
+      "ype\022\022\n\016UNKNOWN_PLUGIN\020\000\022\013\n\007GRYPHON\020\001\022\017\n\013" +
+      "TCN_CONSENT\020\002\022\007\n\003RND\020\003\022\022\n\016MRS_COMPLIANCE" +
+      "\020\004*8\n\013Environment\022\017\n\013INVALID_ENV\020\000\022\010\n\004TE" +
+      "ST\020\001\022\016\n\nPRODUCTION\020\002*V\n\023ConsentAbsentAct" +
+      "ion\022\037\n\033CONSENT_ABSENT_ACTION_ALLOW\020\000\022\036\n\032" +
+      "CONSENT_ABSENT_ACTION_DENY\020\001B}\n\035com.tcn." +
+      "cloud.api.api.commonsB\017ComplianceProtoP\001" +
+      "\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api" +
+      "\\Commons\\GPBMetadata\352\002\014Api::Commonsb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -424,7 +425,7 @@ public final class ComplianceProto {
     internal_static_api_commons_MetaFieldExp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_MetaFieldExp_descriptor,
-        new java.lang.String[] { "Field", });
+        new java.lang.String[] { "Field", "Fields", });
     internal_static_api_commons_PluginExp_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_api_commons_PluginExp_fieldAccessorTable = new

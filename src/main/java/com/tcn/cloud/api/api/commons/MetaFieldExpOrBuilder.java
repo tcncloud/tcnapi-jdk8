@@ -8,14 +8,43 @@ public interface MetaFieldExpOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string field = 1 [json_name = "field"];</code>
+   * <code>string field = 1 [json_name = "field", deprecated = true];</code>
+   * @deprecated api.commons.MetaFieldExp.field is deprecated.
+   *     See api/commons/compliance.proto;l=170
    * @return The field.
    */
-  java.lang.String getField();
+  @java.lang.Deprecated java.lang.String getField();
   /**
-   * <code>string field = 1 [json_name = "field"];</code>
+   * <code>string field = 1 [json_name = "field", deprecated = true];</code>
+   * @deprecated api.commons.MetaFieldExp.field is deprecated.
+   *     See api/commons/compliance.proto;l=170
    * @return The bytes for field.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getFieldBytes();
+
+  /**
+   * <code>repeated string fields = 2 [json_name = "fields"];</code>
+   * @return A list containing the fields.
+   */
+  java.util.List<java.lang.String>
+      getFieldsList();
+  /**
+   * <code>repeated string fields = 2 [json_name = "fields"];</code>
+   * @return The count of fields.
+   */
+  int getFieldsCount();
+  /**
+   * <code>repeated string fields = 2 [json_name = "fields"];</code>
+   * @param index The index of the element to return.
+   * @return The fields at the given index.
+   */
+  java.lang.String getFields(int index);
+  /**
+   * <code>repeated string fields = 2 [json_name = "fields"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the fields at the given index.
+   */
+  com.google.protobuf.ByteString
+      getFieldsBytes(int index);
 }

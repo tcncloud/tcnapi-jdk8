@@ -17,6 +17,8 @@ private static final long serialVersionUID = 0L;
   }
   private MetaFieldExp() {
     field_ = "";
+    fields_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -43,11 +45,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object field_ = "";
   /**
-   * <code>string field = 1 [json_name = "field"];</code>
+   * <code>string field = 1 [json_name = "field", deprecated = true];</code>
+   * @deprecated api.commons.MetaFieldExp.field is deprecated.
+   *     See api/commons/compliance.proto;l=170
    * @return The field.
    */
   @java.lang.Override
-  public java.lang.String getField() {
+  @java.lang.Deprecated public java.lang.String getField() {
     java.lang.Object ref = field_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -60,11 +64,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string field = 1 [json_name = "field"];</code>
+   * <code>string field = 1 [json_name = "field", deprecated = true];</code>
+   * @deprecated api.commons.MetaFieldExp.field is deprecated.
+   *     See api/commons/compliance.proto;l=170
    * @return The bytes for field.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getFieldBytes() {
     java.lang.Object ref = field_;
     if (ref instanceof java.lang.String) {
@@ -76,6 +82,43 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int FIELDS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList fields_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string fields = 2 [json_name = "fields"];</code>
+   * @return A list containing the fields.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getFieldsList() {
+    return fields_;
+  }
+  /**
+   * <code>repeated string fields = 2 [json_name = "fields"];</code>
+   * @return The count of fields.
+   */
+  public int getFieldsCount() {
+    return fields_.size();
+  }
+  /**
+   * <code>repeated string fields = 2 [json_name = "fields"];</code>
+   * @param index The index of the element to return.
+   * @return The fields at the given index.
+   */
+  public java.lang.String getFields(int index) {
+    return fields_.get(index);
+  }
+  /**
+   * <code>repeated string fields = 2 [json_name = "fields"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the fields at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getFieldsBytes(int index) {
+    return fields_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -95,6 +138,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(field_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, field_);
     }
+    for (int i = 0; i < fields_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fields_.getRaw(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -106,6 +152,14 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(field_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, field_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < fields_.size(); i++) {
+        dataSize += computeStringSizeNoTag(fields_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getFieldsList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -124,6 +178,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getField()
         .equals(other.getField())) return false;
+    if (!getFieldsList()
+        .equals(other.getFieldsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -137,6 +193,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + FIELD_FIELD_NUMBER;
     hash = (53 * hash) + getField().hashCode();
+    if (getFieldsCount() > 0) {
+      hash = (37 * hash) + FIELDS_FIELD_NUMBER;
+      hash = (53 * hash) + getFieldsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -269,6 +329,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       field_ = "";
+      fields_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -304,6 +366,10 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.field_ = field_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        fields_.makeImmutable();
+        result.fields_ = fields_;
       }
     }
 
@@ -356,6 +422,16 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (!other.fields_.isEmpty()) {
+        if (fields_.isEmpty()) {
+          fields_ = other.fields_;
+          bitField0_ |= 0x00000002;
+        } else {
+          ensureFieldsIsMutable();
+          fields_.addAll(other.fields_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -387,6 +463,12 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureFieldsIsMutable();
+              fields_.add(s);
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -406,10 +488,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object field_ = "";
     /**
-     * <code>string field = 1 [json_name = "field"];</code>
+     * <code>string field = 1 [json_name = "field", deprecated = true];</code>
+     * @deprecated api.commons.MetaFieldExp.field is deprecated.
+     *     See api/commons/compliance.proto;l=170
      * @return The field.
      */
-    public java.lang.String getField() {
+    @java.lang.Deprecated public java.lang.String getField() {
       java.lang.Object ref = field_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -422,10 +506,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string field = 1 [json_name = "field"];</code>
+     * <code>string field = 1 [json_name = "field", deprecated = true];</code>
+     * @deprecated api.commons.MetaFieldExp.field is deprecated.
+     *     See api/commons/compliance.proto;l=170
      * @return The bytes for field.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getFieldBytes() {
       java.lang.Object ref = field_;
       if (ref instanceof String) {
@@ -439,11 +525,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string field = 1 [json_name = "field"];</code>
+     * <code>string field = 1 [json_name = "field", deprecated = true];</code>
+     * @deprecated api.commons.MetaFieldExp.field is deprecated.
+     *     See api/commons/compliance.proto;l=170
      * @param value The field to set.
      * @return This builder for chaining.
      */
-    public Builder setField(
+    @java.lang.Deprecated public Builder setField(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       field_ = value;
@@ -452,26 +540,141 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string field = 1 [json_name = "field"];</code>
+     * <code>string field = 1 [json_name = "field", deprecated = true];</code>
+     * @deprecated api.commons.MetaFieldExp.field is deprecated.
+     *     See api/commons/compliance.proto;l=170
      * @return This builder for chaining.
      */
-    public Builder clearField() {
+    @java.lang.Deprecated public Builder clearField() {
       field_ = getDefaultInstance().getField();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string field = 1 [json_name = "field"];</code>
+     * <code>string field = 1 [json_name = "field", deprecated = true];</code>
+     * @deprecated api.commons.MetaFieldExp.field is deprecated.
+     *     See api/commons/compliance.proto;l=170
      * @param value The bytes for field to set.
      * @return This builder for chaining.
      */
-    public Builder setFieldBytes(
+    @java.lang.Deprecated public Builder setFieldBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       field_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList fields_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureFieldsIsMutable() {
+      if (!fields_.isModifiable()) {
+        fields_ = new com.google.protobuf.LazyStringArrayList(fields_);
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>repeated string fields = 2 [json_name = "fields"];</code>
+     * @return A list containing the fields.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFieldsList() {
+      fields_.makeImmutable();
+      return fields_;
+    }
+    /**
+     * <code>repeated string fields = 2 [json_name = "fields"];</code>
+     * @return The count of fields.
+     */
+    public int getFieldsCount() {
+      return fields_.size();
+    }
+    /**
+     * <code>repeated string fields = 2 [json_name = "fields"];</code>
+     * @param index The index of the element to return.
+     * @return The fields at the given index.
+     */
+    public java.lang.String getFields(int index) {
+      return fields_.get(index);
+    }
+    /**
+     * <code>repeated string fields = 2 [json_name = "fields"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fields at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFieldsBytes(int index) {
+      return fields_.getByteString(index);
+    }
+    /**
+     * <code>repeated string fields = 2 [json_name = "fields"];</code>
+     * @param index The index to set the value at.
+     * @param value The fields to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFields(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureFieldsIsMutable();
+      fields_.set(index, value);
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string fields = 2 [json_name = "fields"];</code>
+     * @param value The fields to add.
+     * @return This builder for chaining.
+     */
+    public Builder addFields(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureFieldsIsMutable();
+      fields_.add(value);
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string fields = 2 [json_name = "fields"];</code>
+     * @param values The fields to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllFields(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureFieldsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, fields_);
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string fields = 2 [json_name = "fields"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFields() {
+      fields_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string fields = 2 [json_name = "fields"];</code>
+     * @param value The bytes of the fields to add.
+     * @return This builder for chaining.
+     */
+    public Builder addFieldsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureFieldsIsMutable();
+      fields_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
