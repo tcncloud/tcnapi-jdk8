@@ -63,6 +63,12 @@ private static final long serialVersionUID = 0L;
     PAYMENTVISION_ACH(16),
     PAYMENTSTELLA_CC(17),
     PAYMENTSTELLA_ECHECK(18),
+    FINVI_CREATE_TRANSACTION_AUTH(19),
+    FINVI_CREATE_TRANSACTION_CAPTURE(21),
+    FINVI_CREATE_TRANSACTION_CREDIT(22),
+    FINVI_CREATE_TRANSACTION_REFUND(23),
+    FINVI_CREATE_TRANSACTION_SALE(24),
+    FINVI_CREATE_TRANSACTION_VALIDATE(25),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -97,6 +103,12 @@ private static final long serialVersionUID = 0L;
         case 16: return PAYMENTVISION_ACH;
         case 17: return PAYMENTSTELLA_CC;
         case 18: return PAYMENTSTELLA_ECHECK;
+        case 19: return FINVI_CREATE_TRANSACTION_AUTH;
+        case 21: return FINVI_CREATE_TRANSACTION_CAPTURE;
+        case 22: return FINVI_CREATE_TRANSACTION_CREDIT;
+        case 23: return FINVI_CREATE_TRANSACTION_REFUND;
+        case 24: return FINVI_CREATE_TRANSACTION_SALE;
+        case 25: return FINVI_CREATE_TRANSACTION_VALIDATE;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -678,6 +690,204 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck.getDefaultInstance();
   }
 
+  public static final int FINVI_CREATE_TRANSACTION_AUTH_FIELD_NUMBER = 19;
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionAuth finvi_create_transaction_auth = 19 [json_name = "finviCreateTransactionAuth"];</code>
+   * @return Whether the finviCreateTransactionAuth field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviCreateTransactionAuth() {
+    return valueCase_ == 19;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionAuth finvi_create_transaction_auth = 19 [json_name = "finviCreateTransactionAuth"];</code>
+   * @return The finviCreateTransactionAuth.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth getFinviCreateTransactionAuth() {
+    if (valueCase_ == 19) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionAuth finvi_create_transaction_auth = 19 [json_name = "finviCreateTransactionAuth"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuthOrBuilder getFinviCreateTransactionAuthOrBuilder() {
+    if (valueCase_ == 19) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth.getDefaultInstance();
+  }
+
+  public static final int FINVI_CREATE_TRANSACTION_CAPTURE_FIELD_NUMBER = 21;
+  /**
+   * <pre>
+   * Had to skip ID 20 here because it is already used for payment_fields
+   * </pre>
+   *
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionCapture finvi_create_transaction_capture = 21 [json_name = "finviCreateTransactionCapture"];</code>
+   * @return Whether the finviCreateTransactionCapture field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviCreateTransactionCapture() {
+    return valueCase_ == 21;
+  }
+  /**
+   * <pre>
+   * Had to skip ID 20 here because it is already used for payment_fields
+   * </pre>
+   *
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionCapture finvi_create_transaction_capture = 21 [json_name = "finviCreateTransactionCapture"];</code>
+   * @return The finviCreateTransactionCapture.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture getFinviCreateTransactionCapture() {
+    if (valueCase_ == 21) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Had to skip ID 20 here because it is already used for payment_fields
+   * </pre>
+   *
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionCapture finvi_create_transaction_capture = 21 [json_name = "finviCreateTransactionCapture"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCaptureOrBuilder getFinviCreateTransactionCaptureOrBuilder() {
+    if (valueCase_ == 21) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture.getDefaultInstance();
+  }
+
+  public static final int FINVI_CREATE_TRANSACTION_CREDIT_FIELD_NUMBER = 22;
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionCredit finvi_create_transaction_credit = 22 [json_name = "finviCreateTransactionCredit"];</code>
+   * @return Whether the finviCreateTransactionCredit field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviCreateTransactionCredit() {
+    return valueCase_ == 22;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionCredit finvi_create_transaction_credit = 22 [json_name = "finviCreateTransactionCredit"];</code>
+   * @return The finviCreateTransactionCredit.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit getFinviCreateTransactionCredit() {
+    if (valueCase_ == 22) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionCredit finvi_create_transaction_credit = 22 [json_name = "finviCreateTransactionCredit"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCreditOrBuilder getFinviCreateTransactionCreditOrBuilder() {
+    if (valueCase_ == 22) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit.getDefaultInstance();
+  }
+
+  public static final int FINVI_CREATE_TRANSACTION_REFUND_FIELD_NUMBER = 23;
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionRefund finvi_create_transaction_refund = 23 [json_name = "finviCreateTransactionRefund"];</code>
+   * @return Whether the finviCreateTransactionRefund field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviCreateTransactionRefund() {
+    return valueCase_ == 23;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionRefund finvi_create_transaction_refund = 23 [json_name = "finviCreateTransactionRefund"];</code>
+   * @return The finviCreateTransactionRefund.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund getFinviCreateTransactionRefund() {
+    if (valueCase_ == 23) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionRefund finvi_create_transaction_refund = 23 [json_name = "finviCreateTransactionRefund"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefundOrBuilder getFinviCreateTransactionRefundOrBuilder() {
+    if (valueCase_ == 23) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund.getDefaultInstance();
+  }
+
+  public static final int FINVI_CREATE_TRANSACTION_SALE_FIELD_NUMBER = 24;
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionSale finvi_create_transaction_sale = 24 [json_name = "finviCreateTransactionSale"];</code>
+   * @return Whether the finviCreateTransactionSale field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviCreateTransactionSale() {
+    return valueCase_ == 24;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionSale finvi_create_transaction_sale = 24 [json_name = "finviCreateTransactionSale"];</code>
+   * @return The finviCreateTransactionSale.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale getFinviCreateTransactionSale() {
+    if (valueCase_ == 24) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionSale finvi_create_transaction_sale = 24 [json_name = "finviCreateTransactionSale"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSaleOrBuilder getFinviCreateTransactionSaleOrBuilder() {
+    if (valueCase_ == 24) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale.getDefaultInstance();
+  }
+
+  public static final int FINVI_CREATE_TRANSACTION_VALIDATE_FIELD_NUMBER = 25;
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionValidate finvi_create_transaction_validate = 25 [json_name = "finviCreateTransactionValidate"];</code>
+   * @return Whether the finviCreateTransactionValidate field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviCreateTransactionValidate() {
+    return valueCase_ == 25;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionValidate finvi_create_transaction_validate = 25 [json_name = "finviCreateTransactionValidate"];</code>
+   * @return The finviCreateTransactionValidate.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate getFinviCreateTransactionValidate() {
+    if (valueCase_ == 25) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionValidate finvi_create_transaction_validate = 25 [json_name = "finviCreateTransactionValidate"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidateOrBuilder getFinviCreateTransactionValidateOrBuilder() {
+    if (valueCase_ == 25) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate.getDefaultInstance();
+  }
+
   public static final int PAYMENT_FIELDS_FIELD_NUMBER = 20;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_;
@@ -822,8 +1032,26 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 18) {
       output.writeMessage(18, (com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck) value_);
     }
+    if (valueCase_ == 19) {
+      output.writeMessage(19, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth) value_);
+    }
     for (int i = 0; i < paymentFields_.size(); i++) {
       output.writeMessage(20, paymentFields_.get(i));
+    }
+    if (valueCase_ == 21) {
+      output.writeMessage(21, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture) value_);
+    }
+    if (valueCase_ == 22) {
+      output.writeMessage(22, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit) value_);
+    }
+    if (valueCase_ == 23) {
+      output.writeMessage(23, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund) value_);
+    }
+    if (valueCase_ == 24) {
+      output.writeMessage(24, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale) value_);
+    }
+    if (valueCase_ == 25) {
+      output.writeMessage(25, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -905,9 +1133,33 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, (com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck) value_);
     }
+    if (valueCase_ == 19) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(19, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth) value_);
+    }
     for (int i = 0; i < paymentFields_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, paymentFields_.get(i));
+    }
+    if (valueCase_ == 21) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture) value_);
+    }
+    if (valueCase_ == 22) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(22, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit) value_);
+    }
+    if (valueCase_ == 23) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(23, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund) value_);
+    }
+    if (valueCase_ == 24) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(24, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale) value_);
+    }
+    if (valueCase_ == 25) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(25, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -998,6 +1250,30 @@ private static final long serialVersionUID = 0L;
         if (!getPaymentstellaEcheck()
             .equals(other.getPaymentstellaEcheck())) return false;
         break;
+      case 19:
+        if (!getFinviCreateTransactionAuth()
+            .equals(other.getFinviCreateTransactionAuth())) return false;
+        break;
+      case 21:
+        if (!getFinviCreateTransactionCapture()
+            .equals(other.getFinviCreateTransactionCapture())) return false;
+        break;
+      case 22:
+        if (!getFinviCreateTransactionCredit()
+            .equals(other.getFinviCreateTransactionCredit())) return false;
+        break;
+      case 23:
+        if (!getFinviCreateTransactionRefund()
+            .equals(other.getFinviCreateTransactionRefund())) return false;
+        break;
+      case 24:
+        if (!getFinviCreateTransactionSale()
+            .equals(other.getFinviCreateTransactionSale())) return false;
+        break;
+      case 25:
+        if (!getFinviCreateTransactionValidate()
+            .equals(other.getFinviCreateTransactionValidate())) return false;
+        break;
       case 0:
       default:
     }
@@ -1086,6 +1362,30 @@ private static final long serialVersionUID = 0L;
       case 18:
         hash = (37 * hash) + PAYMENTSTELLA_ECHECK_FIELD_NUMBER;
         hash = (53 * hash) + getPaymentstellaEcheck().hashCode();
+        break;
+      case 19:
+        hash = (37 * hash) + FINVI_CREATE_TRANSACTION_AUTH_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviCreateTransactionAuth().hashCode();
+        break;
+      case 21:
+        hash = (37 * hash) + FINVI_CREATE_TRANSACTION_CAPTURE_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviCreateTransactionCapture().hashCode();
+        break;
+      case 22:
+        hash = (37 * hash) + FINVI_CREATE_TRANSACTION_CREDIT_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviCreateTransactionCredit().hashCode();
+        break;
+      case 23:
+        hash = (37 * hash) + FINVI_CREATE_TRANSACTION_REFUND_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviCreateTransactionRefund().hashCode();
+        break;
+      case 24:
+        hash = (37 * hash) + FINVI_CREATE_TRANSACTION_SALE_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviCreateTransactionSale().hashCode();
+        break;
+      case 25:
+        hash = (37 * hash) + FINVI_CREATE_TRANSACTION_VALIDATE_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviCreateTransactionValidate().hashCode();
         break;
       case 0:
       default:
@@ -1273,13 +1573,31 @@ private static final long serialVersionUID = 0L;
       if (paymentstellaEcheckBuilder_ != null) {
         paymentstellaEcheckBuilder_.clear();
       }
+      if (finviCreateTransactionAuthBuilder_ != null) {
+        finviCreateTransactionAuthBuilder_.clear();
+      }
+      if (finviCreateTransactionCaptureBuilder_ != null) {
+        finviCreateTransactionCaptureBuilder_.clear();
+      }
+      if (finviCreateTransactionCreditBuilder_ != null) {
+        finviCreateTransactionCreditBuilder_.clear();
+      }
+      if (finviCreateTransactionRefundBuilder_ != null) {
+        finviCreateTransactionRefundBuilder_.clear();
+      }
+      if (finviCreateTransactionSaleBuilder_ != null) {
+        finviCreateTransactionSaleBuilder_.clear();
+      }
+      if (finviCreateTransactionValidateBuilder_ != null) {
+        finviCreateTransactionValidateBuilder_.clear();
+      }
       if (paymentFieldsBuilder_ == null) {
         paymentFields_ = java.util.Collections.emptyList();
       } else {
         paymentFields_ = null;
         paymentFieldsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00040000);
+      bitField0_ = (bitField0_ & ~0x01000000);
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -1317,9 +1635,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.integrations.PaymentFlow result) {
       if (paymentFieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00040000) != 0)) {
+        if (((bitField0_ & 0x01000000) != 0)) {
           paymentFields_ = java.util.Collections.unmodifiableList(paymentFields_);
-          bitField0_ = (bitField0_ & ~0x00040000);
+          bitField0_ = (bitField0_ & ~0x01000000);
         }
         result.paymentFields_ = paymentFields_;
       } else {
@@ -1405,6 +1723,30 @@ private static final long serialVersionUID = 0L;
           paymentstellaEcheckBuilder_ != null) {
         result.value_ = paymentstellaEcheckBuilder_.build();
       }
+      if (valueCase_ == 19 &&
+          finviCreateTransactionAuthBuilder_ != null) {
+        result.value_ = finviCreateTransactionAuthBuilder_.build();
+      }
+      if (valueCase_ == 21 &&
+          finviCreateTransactionCaptureBuilder_ != null) {
+        result.value_ = finviCreateTransactionCaptureBuilder_.build();
+      }
+      if (valueCase_ == 22 &&
+          finviCreateTransactionCreditBuilder_ != null) {
+        result.value_ = finviCreateTransactionCreditBuilder_.build();
+      }
+      if (valueCase_ == 23 &&
+          finviCreateTransactionRefundBuilder_ != null) {
+        result.value_ = finviCreateTransactionRefundBuilder_.build();
+      }
+      if (valueCase_ == 24 &&
+          finviCreateTransactionSaleBuilder_ != null) {
+        result.value_ = finviCreateTransactionSaleBuilder_.build();
+      }
+      if (valueCase_ == 25 &&
+          finviCreateTransactionValidateBuilder_ != null) {
+        result.value_ = finviCreateTransactionValidateBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1460,7 +1802,7 @@ private static final long serialVersionUID = 0L;
         if (!other.paymentFields_.isEmpty()) {
           if (paymentFields_.isEmpty()) {
             paymentFields_ = other.paymentFields_;
-            bitField0_ = (bitField0_ & ~0x00040000);
+            bitField0_ = (bitField0_ & ~0x01000000);
           } else {
             ensurePaymentFieldsIsMutable();
             paymentFields_.addAll(other.paymentFields_);
@@ -1473,7 +1815,7 @@ private static final long serialVersionUID = 0L;
             paymentFieldsBuilder_.dispose();
             paymentFieldsBuilder_ = null;
             paymentFields_ = other.paymentFields_;
-            bitField0_ = (bitField0_ & ~0x00040000);
+            bitField0_ = (bitField0_ & ~0x01000000);
             paymentFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPaymentFieldsFieldBuilder() : null;
@@ -1549,6 +1891,30 @@ private static final long serialVersionUID = 0L;
         }
         case PAYMENTSTELLA_ECHECK: {
           mergePaymentstellaEcheck(other.getPaymentstellaEcheck());
+          break;
+        }
+        case FINVI_CREATE_TRANSACTION_AUTH: {
+          mergeFinviCreateTransactionAuth(other.getFinviCreateTransactionAuth());
+          break;
+        }
+        case FINVI_CREATE_TRANSACTION_CAPTURE: {
+          mergeFinviCreateTransactionCapture(other.getFinviCreateTransactionCapture());
+          break;
+        }
+        case FINVI_CREATE_TRANSACTION_CREDIT: {
+          mergeFinviCreateTransactionCredit(other.getFinviCreateTransactionCredit());
+          break;
+        }
+        case FINVI_CREATE_TRANSACTION_REFUND: {
+          mergeFinviCreateTransactionRefund(other.getFinviCreateTransactionRefund());
+          break;
+        }
+        case FINVI_CREATE_TRANSACTION_SALE: {
+          mergeFinviCreateTransactionSale(other.getFinviCreateTransactionSale());
+          break;
+        }
+        case FINVI_CREATE_TRANSACTION_VALIDATE: {
+          mergeFinviCreateTransactionValidate(other.getFinviCreateTransactionValidate());
           break;
         }
         case VALUE_NOT_SET: {
@@ -1705,6 +2071,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 18;
               break;
             } // case 146
+            case 154: {
+              input.readMessage(
+                  getFinviCreateTransactionAuthFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 19;
+              break;
+            } // case 154
             case 162: {
               com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
                   input.readMessage(
@@ -1718,6 +2091,41 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 162
+            case 170: {
+              input.readMessage(
+                  getFinviCreateTransactionCaptureFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 21;
+              break;
+            } // case 170
+            case 178: {
+              input.readMessage(
+                  getFinviCreateTransactionCreditFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 22;
+              break;
+            } // case 178
+            case 186: {
+              input.readMessage(
+                  getFinviCreateTransactionRefundFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 23;
+              break;
+            } // case 186
+            case 194: {
+              input.readMessage(
+                  getFinviCreateTransactionSaleFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 24;
+              break;
+            } // case 194
+            case 202: {
+              input.readMessage(
+                  getFinviCreateTransactionValidateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 25;
+              break;
+            } // case 202
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -4236,12 +4644,900 @@ private static final long serialVersionUID = 0L;
       return paymentstellaEcheckBuilder_;
     }
 
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuthOrBuilder> finviCreateTransactionAuthBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionAuth finvi_create_transaction_auth = 19 [json_name = "finviCreateTransactionAuth"];</code>
+     * @return Whether the finviCreateTransactionAuth field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviCreateTransactionAuth() {
+      return valueCase_ == 19;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionAuth finvi_create_transaction_auth = 19 [json_name = "finviCreateTransactionAuth"];</code>
+     * @return The finviCreateTransactionAuth.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth getFinviCreateTransactionAuth() {
+      if (finviCreateTransactionAuthBuilder_ == null) {
+        if (valueCase_ == 19) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth.getDefaultInstance();
+      } else {
+        if (valueCase_ == 19) {
+          return finviCreateTransactionAuthBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionAuth finvi_create_transaction_auth = 19 [json_name = "finviCreateTransactionAuth"];</code>
+     */
+    public Builder setFinviCreateTransactionAuth(com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth value) {
+      if (finviCreateTransactionAuthBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviCreateTransactionAuthBuilder_.setMessage(value);
+      }
+      valueCase_ = 19;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionAuth finvi_create_transaction_auth = 19 [json_name = "finviCreateTransactionAuth"];</code>
+     */
+    public Builder setFinviCreateTransactionAuth(
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth.Builder builderForValue) {
+      if (finviCreateTransactionAuthBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviCreateTransactionAuthBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 19;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionAuth finvi_create_transaction_auth = 19 [json_name = "finviCreateTransactionAuth"];</code>
+     */
+    public Builder mergeFinviCreateTransactionAuth(com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth value) {
+      if (finviCreateTransactionAuthBuilder_ == null) {
+        if (valueCase_ == 19 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 19) {
+          finviCreateTransactionAuthBuilder_.mergeFrom(value);
+        } else {
+          finviCreateTransactionAuthBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 19;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionAuth finvi_create_transaction_auth = 19 [json_name = "finviCreateTransactionAuth"];</code>
+     */
+    public Builder clearFinviCreateTransactionAuth() {
+      if (finviCreateTransactionAuthBuilder_ == null) {
+        if (valueCase_ == 19) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 19) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviCreateTransactionAuthBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionAuth finvi_create_transaction_auth = 19 [json_name = "finviCreateTransactionAuth"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth.Builder getFinviCreateTransactionAuthBuilder() {
+      return getFinviCreateTransactionAuthFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionAuth finvi_create_transaction_auth = 19 [json_name = "finviCreateTransactionAuth"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuthOrBuilder getFinviCreateTransactionAuthOrBuilder() {
+      if ((valueCase_ == 19) && (finviCreateTransactionAuthBuilder_ != null)) {
+        return finviCreateTransactionAuthBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 19) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionAuth finvi_create_transaction_auth = 19 [json_name = "finviCreateTransactionAuth"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuthOrBuilder> 
+        getFinviCreateTransactionAuthFieldBuilder() {
+      if (finviCreateTransactionAuthBuilder_ == null) {
+        if (!(valueCase_ == 19)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth.getDefaultInstance();
+        }
+        finviCreateTransactionAuthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuthOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 19;
+      onChanged();
+      return finviCreateTransactionAuthBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCaptureOrBuilder> finviCreateTransactionCaptureBuilder_;
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCapture finvi_create_transaction_capture = 21 [json_name = "finviCreateTransactionCapture"];</code>
+     * @return Whether the finviCreateTransactionCapture field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviCreateTransactionCapture() {
+      return valueCase_ == 21;
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCapture finvi_create_transaction_capture = 21 [json_name = "finviCreateTransactionCapture"];</code>
+     * @return The finviCreateTransactionCapture.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture getFinviCreateTransactionCapture() {
+      if (finviCreateTransactionCaptureBuilder_ == null) {
+        if (valueCase_ == 21) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture.getDefaultInstance();
+      } else {
+        if (valueCase_ == 21) {
+          return finviCreateTransactionCaptureBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCapture finvi_create_transaction_capture = 21 [json_name = "finviCreateTransactionCapture"];</code>
+     */
+    public Builder setFinviCreateTransactionCapture(com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture value) {
+      if (finviCreateTransactionCaptureBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviCreateTransactionCaptureBuilder_.setMessage(value);
+      }
+      valueCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCapture finvi_create_transaction_capture = 21 [json_name = "finviCreateTransactionCapture"];</code>
+     */
+    public Builder setFinviCreateTransactionCapture(
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture.Builder builderForValue) {
+      if (finviCreateTransactionCaptureBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviCreateTransactionCaptureBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCapture finvi_create_transaction_capture = 21 [json_name = "finviCreateTransactionCapture"];</code>
+     */
+    public Builder mergeFinviCreateTransactionCapture(com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture value) {
+      if (finviCreateTransactionCaptureBuilder_ == null) {
+        if (valueCase_ == 21 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 21) {
+          finviCreateTransactionCaptureBuilder_.mergeFrom(value);
+        } else {
+          finviCreateTransactionCaptureBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCapture finvi_create_transaction_capture = 21 [json_name = "finviCreateTransactionCapture"];</code>
+     */
+    public Builder clearFinviCreateTransactionCapture() {
+      if (finviCreateTransactionCaptureBuilder_ == null) {
+        if (valueCase_ == 21) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 21) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviCreateTransactionCaptureBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCapture finvi_create_transaction_capture = 21 [json_name = "finviCreateTransactionCapture"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture.Builder getFinviCreateTransactionCaptureBuilder() {
+      return getFinviCreateTransactionCaptureFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCapture finvi_create_transaction_capture = 21 [json_name = "finviCreateTransactionCapture"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCaptureOrBuilder getFinviCreateTransactionCaptureOrBuilder() {
+      if ((valueCase_ == 21) && (finviCreateTransactionCaptureBuilder_ != null)) {
+        return finviCreateTransactionCaptureBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 21) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCapture finvi_create_transaction_capture = 21 [json_name = "finviCreateTransactionCapture"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCaptureOrBuilder> 
+        getFinviCreateTransactionCaptureFieldBuilder() {
+      if (finviCreateTransactionCaptureBuilder_ == null) {
+        if (!(valueCase_ == 21)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture.getDefaultInstance();
+        }
+        finviCreateTransactionCaptureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCaptureOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 21;
+      onChanged();
+      return finviCreateTransactionCaptureBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCreditOrBuilder> finviCreateTransactionCreditBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCredit finvi_create_transaction_credit = 22 [json_name = "finviCreateTransactionCredit"];</code>
+     * @return Whether the finviCreateTransactionCredit field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviCreateTransactionCredit() {
+      return valueCase_ == 22;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCredit finvi_create_transaction_credit = 22 [json_name = "finviCreateTransactionCredit"];</code>
+     * @return The finviCreateTransactionCredit.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit getFinviCreateTransactionCredit() {
+      if (finviCreateTransactionCreditBuilder_ == null) {
+        if (valueCase_ == 22) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit.getDefaultInstance();
+      } else {
+        if (valueCase_ == 22) {
+          return finviCreateTransactionCreditBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCredit finvi_create_transaction_credit = 22 [json_name = "finviCreateTransactionCredit"];</code>
+     */
+    public Builder setFinviCreateTransactionCredit(com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit value) {
+      if (finviCreateTransactionCreditBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviCreateTransactionCreditBuilder_.setMessage(value);
+      }
+      valueCase_ = 22;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCredit finvi_create_transaction_credit = 22 [json_name = "finviCreateTransactionCredit"];</code>
+     */
+    public Builder setFinviCreateTransactionCredit(
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit.Builder builderForValue) {
+      if (finviCreateTransactionCreditBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviCreateTransactionCreditBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 22;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCredit finvi_create_transaction_credit = 22 [json_name = "finviCreateTransactionCredit"];</code>
+     */
+    public Builder mergeFinviCreateTransactionCredit(com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit value) {
+      if (finviCreateTransactionCreditBuilder_ == null) {
+        if (valueCase_ == 22 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 22) {
+          finviCreateTransactionCreditBuilder_.mergeFrom(value);
+        } else {
+          finviCreateTransactionCreditBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 22;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCredit finvi_create_transaction_credit = 22 [json_name = "finviCreateTransactionCredit"];</code>
+     */
+    public Builder clearFinviCreateTransactionCredit() {
+      if (finviCreateTransactionCreditBuilder_ == null) {
+        if (valueCase_ == 22) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 22) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviCreateTransactionCreditBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCredit finvi_create_transaction_credit = 22 [json_name = "finviCreateTransactionCredit"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit.Builder getFinviCreateTransactionCreditBuilder() {
+      return getFinviCreateTransactionCreditFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCredit finvi_create_transaction_credit = 22 [json_name = "finviCreateTransactionCredit"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCreditOrBuilder getFinviCreateTransactionCreditOrBuilder() {
+      if ((valueCase_ == 22) && (finviCreateTransactionCreditBuilder_ != null)) {
+        return finviCreateTransactionCreditBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 22) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionCredit finvi_create_transaction_credit = 22 [json_name = "finviCreateTransactionCredit"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCreditOrBuilder> 
+        getFinviCreateTransactionCreditFieldBuilder() {
+      if (finviCreateTransactionCreditBuilder_ == null) {
+        if (!(valueCase_ == 22)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit.getDefaultInstance();
+        }
+        finviCreateTransactionCreditBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCreditOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 22;
+      onChanged();
+      return finviCreateTransactionCreditBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefundOrBuilder> finviCreateTransactionRefundBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionRefund finvi_create_transaction_refund = 23 [json_name = "finviCreateTransactionRefund"];</code>
+     * @return Whether the finviCreateTransactionRefund field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviCreateTransactionRefund() {
+      return valueCase_ == 23;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionRefund finvi_create_transaction_refund = 23 [json_name = "finviCreateTransactionRefund"];</code>
+     * @return The finviCreateTransactionRefund.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund getFinviCreateTransactionRefund() {
+      if (finviCreateTransactionRefundBuilder_ == null) {
+        if (valueCase_ == 23) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund.getDefaultInstance();
+      } else {
+        if (valueCase_ == 23) {
+          return finviCreateTransactionRefundBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionRefund finvi_create_transaction_refund = 23 [json_name = "finviCreateTransactionRefund"];</code>
+     */
+    public Builder setFinviCreateTransactionRefund(com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund value) {
+      if (finviCreateTransactionRefundBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviCreateTransactionRefundBuilder_.setMessage(value);
+      }
+      valueCase_ = 23;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionRefund finvi_create_transaction_refund = 23 [json_name = "finviCreateTransactionRefund"];</code>
+     */
+    public Builder setFinviCreateTransactionRefund(
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund.Builder builderForValue) {
+      if (finviCreateTransactionRefundBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviCreateTransactionRefundBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 23;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionRefund finvi_create_transaction_refund = 23 [json_name = "finviCreateTransactionRefund"];</code>
+     */
+    public Builder mergeFinviCreateTransactionRefund(com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund value) {
+      if (finviCreateTransactionRefundBuilder_ == null) {
+        if (valueCase_ == 23 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 23) {
+          finviCreateTransactionRefundBuilder_.mergeFrom(value);
+        } else {
+          finviCreateTransactionRefundBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 23;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionRefund finvi_create_transaction_refund = 23 [json_name = "finviCreateTransactionRefund"];</code>
+     */
+    public Builder clearFinviCreateTransactionRefund() {
+      if (finviCreateTransactionRefundBuilder_ == null) {
+        if (valueCase_ == 23) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 23) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviCreateTransactionRefundBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionRefund finvi_create_transaction_refund = 23 [json_name = "finviCreateTransactionRefund"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund.Builder getFinviCreateTransactionRefundBuilder() {
+      return getFinviCreateTransactionRefundFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionRefund finvi_create_transaction_refund = 23 [json_name = "finviCreateTransactionRefund"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefundOrBuilder getFinviCreateTransactionRefundOrBuilder() {
+      if ((valueCase_ == 23) && (finviCreateTransactionRefundBuilder_ != null)) {
+        return finviCreateTransactionRefundBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 23) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionRefund finvi_create_transaction_refund = 23 [json_name = "finviCreateTransactionRefund"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefundOrBuilder> 
+        getFinviCreateTransactionRefundFieldBuilder() {
+      if (finviCreateTransactionRefundBuilder_ == null) {
+        if (!(valueCase_ == 23)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund.getDefaultInstance();
+        }
+        finviCreateTransactionRefundBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefundOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 23;
+      onChanged();
+      return finviCreateTransactionRefundBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSaleOrBuilder> finviCreateTransactionSaleBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionSale finvi_create_transaction_sale = 24 [json_name = "finviCreateTransactionSale"];</code>
+     * @return Whether the finviCreateTransactionSale field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviCreateTransactionSale() {
+      return valueCase_ == 24;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionSale finvi_create_transaction_sale = 24 [json_name = "finviCreateTransactionSale"];</code>
+     * @return The finviCreateTransactionSale.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale getFinviCreateTransactionSale() {
+      if (finviCreateTransactionSaleBuilder_ == null) {
+        if (valueCase_ == 24) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale.getDefaultInstance();
+      } else {
+        if (valueCase_ == 24) {
+          return finviCreateTransactionSaleBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionSale finvi_create_transaction_sale = 24 [json_name = "finviCreateTransactionSale"];</code>
+     */
+    public Builder setFinviCreateTransactionSale(com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale value) {
+      if (finviCreateTransactionSaleBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviCreateTransactionSaleBuilder_.setMessage(value);
+      }
+      valueCase_ = 24;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionSale finvi_create_transaction_sale = 24 [json_name = "finviCreateTransactionSale"];</code>
+     */
+    public Builder setFinviCreateTransactionSale(
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale.Builder builderForValue) {
+      if (finviCreateTransactionSaleBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviCreateTransactionSaleBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 24;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionSale finvi_create_transaction_sale = 24 [json_name = "finviCreateTransactionSale"];</code>
+     */
+    public Builder mergeFinviCreateTransactionSale(com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale value) {
+      if (finviCreateTransactionSaleBuilder_ == null) {
+        if (valueCase_ == 24 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 24) {
+          finviCreateTransactionSaleBuilder_.mergeFrom(value);
+        } else {
+          finviCreateTransactionSaleBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 24;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionSale finvi_create_transaction_sale = 24 [json_name = "finviCreateTransactionSale"];</code>
+     */
+    public Builder clearFinviCreateTransactionSale() {
+      if (finviCreateTransactionSaleBuilder_ == null) {
+        if (valueCase_ == 24) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 24) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviCreateTransactionSaleBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionSale finvi_create_transaction_sale = 24 [json_name = "finviCreateTransactionSale"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale.Builder getFinviCreateTransactionSaleBuilder() {
+      return getFinviCreateTransactionSaleFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionSale finvi_create_transaction_sale = 24 [json_name = "finviCreateTransactionSale"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSaleOrBuilder getFinviCreateTransactionSaleOrBuilder() {
+      if ((valueCase_ == 24) && (finviCreateTransactionSaleBuilder_ != null)) {
+        return finviCreateTransactionSaleBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 24) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionSale finvi_create_transaction_sale = 24 [json_name = "finviCreateTransactionSale"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSaleOrBuilder> 
+        getFinviCreateTransactionSaleFieldBuilder() {
+      if (finviCreateTransactionSaleBuilder_ == null) {
+        if (!(valueCase_ == 24)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale.getDefaultInstance();
+        }
+        finviCreateTransactionSaleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSaleOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 24;
+      onChanged();
+      return finviCreateTransactionSaleBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidateOrBuilder> finviCreateTransactionValidateBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionValidate finvi_create_transaction_validate = 25 [json_name = "finviCreateTransactionValidate"];</code>
+     * @return Whether the finviCreateTransactionValidate field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviCreateTransactionValidate() {
+      return valueCase_ == 25;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionValidate finvi_create_transaction_validate = 25 [json_name = "finviCreateTransactionValidate"];</code>
+     * @return The finviCreateTransactionValidate.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate getFinviCreateTransactionValidate() {
+      if (finviCreateTransactionValidateBuilder_ == null) {
+        if (valueCase_ == 25) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate.getDefaultInstance();
+      } else {
+        if (valueCase_ == 25) {
+          return finviCreateTransactionValidateBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionValidate finvi_create_transaction_validate = 25 [json_name = "finviCreateTransactionValidate"];</code>
+     */
+    public Builder setFinviCreateTransactionValidate(com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate value) {
+      if (finviCreateTransactionValidateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviCreateTransactionValidateBuilder_.setMessage(value);
+      }
+      valueCase_ = 25;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionValidate finvi_create_transaction_validate = 25 [json_name = "finviCreateTransactionValidate"];</code>
+     */
+    public Builder setFinviCreateTransactionValidate(
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate.Builder builderForValue) {
+      if (finviCreateTransactionValidateBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviCreateTransactionValidateBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 25;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionValidate finvi_create_transaction_validate = 25 [json_name = "finviCreateTransactionValidate"];</code>
+     */
+    public Builder mergeFinviCreateTransactionValidate(com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate value) {
+      if (finviCreateTransactionValidateBuilder_ == null) {
+        if (valueCase_ == 25 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 25) {
+          finviCreateTransactionValidateBuilder_.mergeFrom(value);
+        } else {
+          finviCreateTransactionValidateBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 25;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionValidate finvi_create_transaction_validate = 25 [json_name = "finviCreateTransactionValidate"];</code>
+     */
+    public Builder clearFinviCreateTransactionValidate() {
+      if (finviCreateTransactionValidateBuilder_ == null) {
+        if (valueCase_ == 25) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 25) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviCreateTransactionValidateBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionValidate finvi_create_transaction_validate = 25 [json_name = "finviCreateTransactionValidate"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate.Builder getFinviCreateTransactionValidateBuilder() {
+      return getFinviCreateTransactionValidateFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionValidate finvi_create_transaction_validate = 25 [json_name = "finviCreateTransactionValidate"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidateOrBuilder getFinviCreateTransactionValidateOrBuilder() {
+      if ((valueCase_ == 25) && (finviCreateTransactionValidateBuilder_ != null)) {
+        return finviCreateTransactionValidateBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 25) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCreateTransactionValidate finvi_create_transaction_validate = 25 [json_name = "finviCreateTransactionValidate"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidateOrBuilder> 
+        getFinviCreateTransactionValidateFieldBuilder() {
+      if (finviCreateTransactionValidateBuilder_ == null) {
+        if (!(valueCase_ == 25)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate.getDefaultInstance();
+        }
+        finviCreateTransactionValidateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidateOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 25;
+      onChanged();
+      return finviCreateTransactionValidateBuilder_;
+    }
+
     private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_ =
       java.util.Collections.emptyList();
     private void ensurePaymentFieldsIsMutable() {
-      if (!((bitField0_ & 0x00040000) != 0)) {
+      if (!((bitField0_ & 0x01000000) != 0)) {
         paymentFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(paymentFields_);
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x01000000;
        }
     }
 
@@ -4468,7 +5764,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPaymentFields() {
       if (paymentFieldsBuilder_ == null) {
         paymentFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x01000000);
         onChanged();
       } else {
         paymentFieldsBuilder_.clear();
@@ -4594,7 +5890,7 @@ private static final long serialVersionUID = 0L;
         paymentFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
                 paymentFields_,
-                ((bitField0_ & 0x00040000) != 0),
+                ((bitField0_ & 0x01000000) != 0),
                 getParentForChildren(),
                 isClean());
         paymentFields_ = null;

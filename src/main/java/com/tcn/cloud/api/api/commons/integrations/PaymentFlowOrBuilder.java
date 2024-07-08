@@ -275,6 +275,108 @@ public interface PaymentFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheckOrBuilder getPaymentstellaEcheckOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionAuth finvi_create_transaction_auth = 19 [json_name = "finviCreateTransactionAuth"];</code>
+   * @return Whether the finviCreateTransactionAuth field is set.
+   */
+  boolean hasFinviCreateTransactionAuth();
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionAuth finvi_create_transaction_auth = 19 [json_name = "finviCreateTransactionAuth"];</code>
+   * @return The finviCreateTransactionAuth.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuth getFinviCreateTransactionAuth();
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionAuth finvi_create_transaction_auth = 19 [json_name = "finviCreateTransactionAuth"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionAuthOrBuilder getFinviCreateTransactionAuthOrBuilder();
+
+  /**
+   * <pre>
+   * Had to skip ID 20 here because it is already used for payment_fields
+   * </pre>
+   *
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionCapture finvi_create_transaction_capture = 21 [json_name = "finviCreateTransactionCapture"];</code>
+   * @return Whether the finviCreateTransactionCapture field is set.
+   */
+  boolean hasFinviCreateTransactionCapture();
+  /**
+   * <pre>
+   * Had to skip ID 20 here because it is already used for payment_fields
+   * </pre>
+   *
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionCapture finvi_create_transaction_capture = 21 [json_name = "finviCreateTransactionCapture"];</code>
+   * @return The finviCreateTransactionCapture.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCapture getFinviCreateTransactionCapture();
+  /**
+   * <pre>
+   * Had to skip ID 20 here because it is already used for payment_fields
+   * </pre>
+   *
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionCapture finvi_create_transaction_capture = 21 [json_name = "finviCreateTransactionCapture"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCaptureOrBuilder getFinviCreateTransactionCaptureOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionCredit finvi_create_transaction_credit = 22 [json_name = "finviCreateTransactionCredit"];</code>
+   * @return Whether the finviCreateTransactionCredit field is set.
+   */
+  boolean hasFinviCreateTransactionCredit();
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionCredit finvi_create_transaction_credit = 22 [json_name = "finviCreateTransactionCredit"];</code>
+   * @return The finviCreateTransactionCredit.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCredit getFinviCreateTransactionCredit();
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionCredit finvi_create_transaction_credit = 22 [json_name = "finviCreateTransactionCredit"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionCreditOrBuilder getFinviCreateTransactionCreditOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionRefund finvi_create_transaction_refund = 23 [json_name = "finviCreateTransactionRefund"];</code>
+   * @return Whether the finviCreateTransactionRefund field is set.
+   */
+  boolean hasFinviCreateTransactionRefund();
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionRefund finvi_create_transaction_refund = 23 [json_name = "finviCreateTransactionRefund"];</code>
+   * @return The finviCreateTransactionRefund.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefund getFinviCreateTransactionRefund();
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionRefund finvi_create_transaction_refund = 23 [json_name = "finviCreateTransactionRefund"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionRefundOrBuilder getFinviCreateTransactionRefundOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionSale finvi_create_transaction_sale = 24 [json_name = "finviCreateTransactionSale"];</code>
+   * @return Whether the finviCreateTransactionSale field is set.
+   */
+  boolean hasFinviCreateTransactionSale();
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionSale finvi_create_transaction_sale = 24 [json_name = "finviCreateTransactionSale"];</code>
+   * @return The finviCreateTransactionSale.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSale getFinviCreateTransactionSale();
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionSale finvi_create_transaction_sale = 24 [json_name = "finviCreateTransactionSale"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionSaleOrBuilder getFinviCreateTransactionSaleOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionValidate finvi_create_transaction_validate = 25 [json_name = "finviCreateTransactionValidate"];</code>
+   * @return Whether the finviCreateTransactionValidate field is set.
+   */
+  boolean hasFinviCreateTransactionValidate();
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionValidate finvi_create_transaction_validate = 25 [json_name = "finviCreateTransactionValidate"];</code>
+   * @return The finviCreateTransactionValidate.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidate getFinviCreateTransactionValidate();
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCreateTransactionValidate finvi_create_transaction_validate = 25 [json_name = "finviCreateTransactionValidate"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCreateTransactionValidateOrBuilder getFinviCreateTransactionValidateOrBuilder();
+
+  /**
    * <pre>
    * the fields the user will use for the payment form
    * must be a subset of fields that is enough data to make the api call.
