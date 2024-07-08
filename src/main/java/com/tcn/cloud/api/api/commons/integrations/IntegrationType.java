@@ -189,6 +189,14 @@ public enum IntegrationType
    */
   INTEGRATION_TYPE_FINVI(4300),
   /**
+   * <code>INTEGRATION_TYPE_NAVIGA_DTI_CIRC = 4400;</code>
+   */
+  INTEGRATION_TYPE_NAVIGA_DTI_CIRC(4400),
+  /**
+   * <code>INTEGRATION_TYPE_NAVIGA_DTI_CS = 4500;</code>
+   */
+  INTEGRATION_TYPE_NAVIGA_DTI_CS(4500),
+  /**
    * <code>INTEGRATION_TYPE_DEBUG = 5000;</code>
    */
   INTEGRATION_TYPE_DEBUG(5000),
@@ -372,6 +380,14 @@ public enum IntegrationType
    */
   public static final int INTEGRATION_TYPE_FINVI_VALUE = 4300;
   /**
+   * <code>INTEGRATION_TYPE_NAVIGA_DTI_CIRC = 4400;</code>
+   */
+  public static final int INTEGRATION_TYPE_NAVIGA_DTI_CIRC_VALUE = 4400;
+  /**
+   * <code>INTEGRATION_TYPE_NAVIGA_DTI_CS = 4500;</code>
+   */
+  public static final int INTEGRATION_TYPE_NAVIGA_DTI_CS_VALUE = 4500;
+  /**
    * <code>INTEGRATION_TYPE_DEBUG = 5000;</code>
    */
   public static final int INTEGRATION_TYPE_DEBUG_VALUE = 5000;
@@ -445,6 +461,8 @@ public enum IntegrationType
       case 4100: return INTEGRATION_TYPE_PAYNSECONDS;
       case 4200: return INTEGRATION_TYPE_SUTHERLANDREV;
       case 4300: return INTEGRATION_TYPE_FINVI;
+      case 4400: return INTEGRATION_TYPE_NAVIGA_DTI_CIRC;
+      case 4500: return INTEGRATION_TYPE_NAVIGA_DTI_CS;
       case 5000: return INTEGRATION_TYPE_DEBUG;
       default: return null;
     }
