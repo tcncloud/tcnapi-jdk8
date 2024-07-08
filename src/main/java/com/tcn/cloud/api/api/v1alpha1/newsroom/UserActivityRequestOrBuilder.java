@@ -16,4 +16,14 @@ public interface UserActivityRequestOrBuilder extends
    * @return The publishedArticleSid.
    */
   long getPublishedArticleSid();
+
+  /**
+   * <pre>
+   * this flag determines whether to allow news article popups while imitating/impersonating
+   * </pre>
+   *
+   * <code>bool force_flag = 2 [json_name = "forceFlag"];</code>
+   * @return The forceFlag.
+   */
+  boolean getForceFlag();
 }

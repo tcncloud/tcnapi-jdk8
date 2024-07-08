@@ -57,6 +57,21 @@ private static final long serialVersionUID = 0L;
     return publishedArticleSid_;
   }
 
+  public static final int FORCE_FLAG_FIELD_NUMBER = 2;
+  private boolean forceFlag_ = false;
+  /**
+   * <pre>
+   * this flag determines whether to allow news article popups while imitating/impersonating
+   * </pre>
+   *
+   * <code>bool force_flag = 2 [json_name = "forceFlag"];</code>
+   * @return The forceFlag.
+   */
+  @java.lang.Override
+  public boolean getForceFlag() {
+    return forceFlag_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -74,6 +89,9 @@ private static final long serialVersionUID = 0L;
     if (publishedArticleSid_ != 0L) {
       output.writeInt64(1, publishedArticleSid_);
     }
+    if (forceFlag_ != false) {
+      output.writeBool(2, forceFlag_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -86,6 +104,10 @@ private static final long serialVersionUID = 0L;
     if (publishedArticleSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, publishedArticleSid_);
+    }
+    if (forceFlag_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, forceFlag_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -104,6 +126,8 @@ private static final long serialVersionUID = 0L;
 
     if (getPublishedArticleSid()
         != other.getPublishedArticleSid()) return false;
+    if (getForceFlag()
+        != other.getForceFlag()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -118,6 +142,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PUBLISHED_ARTICLE_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getPublishedArticleSid());
+    hash = (37 * hash) + FORCE_FLAG_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getForceFlag());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -254,6 +281,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       publishedArticleSid_ = 0L;
+      forceFlag_ = false;
       return this;
     }
 
@@ -289,6 +317,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.publishedArticleSid_ = publishedArticleSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.forceFlag_ = forceFlag_;
       }
     }
 
@@ -339,6 +370,9 @@ private static final long serialVersionUID = 0L;
       if (other.getPublishedArticleSid() != 0L) {
         setPublishedArticleSid(other.getPublishedArticleSid());
       }
+      if (other.getForceFlag() != false) {
+        setForceFlag(other.getForceFlag());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -370,6 +404,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
+            case 16: {
+              forceFlag_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -427,6 +466,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearPublishedArticleSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
       publishedArticleSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private boolean forceFlag_ ;
+    /**
+     * <pre>
+     * this flag determines whether to allow news article popups while imitating/impersonating
+     * </pre>
+     *
+     * <code>bool force_flag = 2 [json_name = "forceFlag"];</code>
+     * @return The forceFlag.
+     */
+    @java.lang.Override
+    public boolean getForceFlag() {
+      return forceFlag_;
+    }
+    /**
+     * <pre>
+     * this flag determines whether to allow news article popups while imitating/impersonating
+     * </pre>
+     *
+     * <code>bool force_flag = 2 [json_name = "forceFlag"];</code>
+     * @param value The forceFlag to set.
+     * @return This builder for chaining.
+     */
+    public Builder setForceFlag(boolean value) {
+
+      forceFlag_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * this flag determines whether to allow news article popups while imitating/impersonating
+     * </pre>
+     *
+     * <code>bool force_flag = 2 [json_name = "forceFlag"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearForceFlag() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      forceFlag_ = false;
       onChanged();
       return this;
     }
