@@ -85,6 +85,16 @@ public final class LearningOpportunityProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_agenttraining_GetLearningOpportunityResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_agenttraining_ListDashboardsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_agenttraining_ListDashboardsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_agenttraining_ListDashboardsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_agenttraining_ListDashboardsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_agenttraining_ListLearningOpportunitiesByOrgIdRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -106,76 +116,81 @@ public final class LearningOpportunityProto {
       "\n5api/v1alpha1/agenttraining/learning_op" +
       "portunity.proto\022\032api.v1alpha1.agenttrain" +
       "ing\032 api/commons/agent_training.proto\032\034a" +
-      "pi/commons/scorecards.proto\032 google/prot" +
-      "obuf/field_mask.proto\"w\n CreateLearningO" +
-      "pportunityRequest\022S\n\024learning_opportunit" +
-      "y\030\001 \001(\0132 .api.commons.LearningOpportunit" +
-      "yR\023learningOpportunity\"x\n!CreateLearning" +
-      "OpportunityResponse\022S\n\024learning_opportun" +
-      "ity\030\001 \001(\0132 .api.commons.LearningOpportun" +
-      "ityR\023learningOpportunity\"\361\001\n ListLearnin" +
-      "gOpportunitiesRequest\022F\n\020call_identifier" +
-      "s\030\002 \003(\0132\033.api.commons.CallIdentifierR\017ca" +
-      "llIdentifiers\022\'\n\017transcript_sids\030\003 \003(\003R\016" +
-      "transcriptSids\022$\n\016agent_user_ids\030\004 \003(\tR\014" +
-      "agentUserIds\0226\n\ncreated_at\030\005 \001(\0132\027.api.c" +
-      "ommons.TimeFilterR\tcreatedAt\"|\n!ListLear" +
-      "ningOpportunitiesResponse\022W\n\026learning_op" +
-      "portunities\030\001 \003(\0132 .api.commons.Learning" +
-      "OpportunityR\025learningOpportunities\"\320\001\n%L" +
-      "istAgentLearningOpportunitiesRequest\022F\n\020" +
-      "call_identifiers\030\002 \003(\0132\033.api.commons.Cal" +
-      "lIdentifierR\017callIdentifiers\022\'\n\017transcri" +
-      "pt_sids\030\003 \003(\003R\016transcriptSids\0226\n\ncreated" +
-      "_at\030\004 \001(\0132\027.api.commons.TimeFilterR\tcrea" +
-      "tedAt\"\201\001\n&ListAgentLearningOpportunities" +
-      "Response\022W\n\026learning_opportunities\030\001 \003(\013" +
-      "2 .api.commons.LearningOpportunityR\025lear" +
-      "ningOpportunities\"\264\001\n UpdateLearningOppo" +
-      "rtunityRequest\022S\n\024learning_opportunity\030\002" +
-      " \001(\0132 .api.commons.LearningOpportunityR\023" +
-      "learningOpportunity\022;\n\013update_mask\030\003 \001(\013" +
-      "2\032.google.protobuf.FieldMaskR\nupdateMask" +
-      "\"x\n!UpdateLearningOpportunityResponse\022S\n" +
-      "\024learning_opportunity\030\001 \001(\0132 .api.common" +
-      "s.LearningOpportunityR\023learningOpportuni" +
-      "ty\"a\n\'CompleteAgentLearningOpportunityRe" +
-      "quest\0226\n\027learning_opportunity_id\030\003 \001(\003R\025" +
-      "learningOpportunityId\"\177\n(CompleteAgentLe" +
-      "arningOpportunityResponse\022S\n\024learning_op" +
-      "portunity\030\001 \001(\0132 .api.commons.LearningOp" +
-      "portunityR\023learningOpportunity\"Z\n Delete" +
-      "LearningOpportunityRequest\0226\n\027learning_o" +
-      "pportunity_id\030\003 \001(\003R\025learningOpportunity" +
-      "Id\"x\n!DeleteLearningOpportunityResponse\022" +
-      "S\n\024learning_opportunity\030\001 \001(\0132 .api.comm" +
-      "ons.LearningOpportunityR\023learningOpportu" +
-      "nity\"R\n\035GetLearningOpportunityRequest\0221\n" +
-      "\024learning_opportunity\030\002 \001(\003R\023learningOpp" +
-      "ortunity\"u\n\036GetLearningOpportunityRespon" +
-      "se\022S\n\024learning_opportunity\030\001 \001(\0132 .api.c" +
-      "ommons.LearningOpportunityR\023learningOppo" +
-      "rtunity\"\217\002\n\'ListLearningOpportunitiesByO" +
-      "rgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022F\n\020ca" +
-      "ll_identifiers\030\002 \003(\0132\033.api.commons.CallI" +
-      "dentifierR\017callIdentifiers\022\'\n\017transcript" +
-      "_sids\030\003 \003(\003R\016transcriptSids\022$\n\016agent_use" +
-      "r_ids\030\004 \003(\tR\014agentUserIds\0226\n\ncreated_at\030" +
-      "\005 \001(\0132\027.api.commons.TimeFilterR\tcreatedA" +
-      "t\"x\n\'DeleteLearningOpportunityByOrgIdReq" +
-      "uest\022\025\n\006org_id\030\001 \001(\tR\005orgId\0226\n\027learning_" +
-      "opportunity_id\030\003 \001(\003R\025learningOpportunit" +
-      "yIdB\322\001\n,com.tcn.cloud.api.api.v1alpha1.a" +
-      "genttrainingB\030LearningOpportunityProtoP\001" +
-      "\242\002\003AVA\252\002\032Api.V1alpha1.Agenttraining\312\002\032Ap" +
-      "i\\V1alpha1\\Agenttraining\342\002&Api\\V1alpha1\\" +
-      "Agenttraining\\GPBMetadata\352\002\034Api::V1alpha" +
-      "1::Agenttrainingb\006proto3"
+      "pi/commons/dashboards.proto\032\034api/commons" +
+      "/scorecards.proto\032 google/protobuf/field" +
+      "_mask.proto\"w\n CreateLearningOpportunity" +
+      "Request\022S\n\024learning_opportunity\030\001 \001(\0132 ." +
+      "api.commons.LearningOpportunityR\023learnin" +
+      "gOpportunity\"x\n!CreateLearningOpportunit" +
+      "yResponse\022S\n\024learning_opportunity\030\001 \001(\0132" +
+      " .api.commons.LearningOpportunityR\023learn" +
+      "ingOpportunity\"\361\001\n ListLearningOpportuni" +
+      "tiesRequest\022F\n\020call_identifiers\030\002 \003(\0132\033." +
+      "api.commons.CallIdentifierR\017callIdentifi" +
+      "ers\022\'\n\017transcript_sids\030\003 \003(\003R\016transcript" +
+      "Sids\022$\n\016agent_user_ids\030\004 \003(\tR\014agentUserI" +
+      "ds\0226\n\ncreated_at\030\005 \001(\0132\027.api.commons.Tim" +
+      "eFilterR\tcreatedAt\"|\n!ListLearningOpport" +
+      "unitiesResponse\022W\n\026learning_opportunitie" +
+      "s\030\001 \003(\0132 .api.commons.LearningOpportunit" +
+      "yR\025learningOpportunities\"\320\001\n%ListAgentLe" +
+      "arningOpportunitiesRequest\022F\n\020call_ident" +
+      "ifiers\030\002 \003(\0132\033.api.commons.CallIdentifie" +
+      "rR\017callIdentifiers\022\'\n\017transcript_sids\030\003 " +
+      "\003(\003R\016transcriptSids\0226\n\ncreated_at\030\004 \001(\0132" +
+      "\027.api.commons.TimeFilterR\tcreatedAt\"\201\001\n&" +
+      "ListAgentLearningOpportunitiesResponse\022W" +
+      "\n\026learning_opportunities\030\001 \003(\0132 .api.com" +
+      "mons.LearningOpportunityR\025learningOpport" +
+      "unities\"\264\001\n UpdateLearningOpportunityReq" +
+      "uest\022S\n\024learning_opportunity\030\002 \001(\0132 .api" +
+      ".commons.LearningOpportunityR\023learningOp" +
+      "portunity\022;\n\013update_mask\030\003 \001(\0132\032.google." +
+      "protobuf.FieldMaskR\nupdateMask\"x\n!Update" +
+      "LearningOpportunityResponse\022S\n\024learning_" +
+      "opportunity\030\001 \001(\0132 .api.commons.Learning" +
+      "OpportunityR\023learningOpportunity\"a\n\'Comp" +
+      "leteAgentLearningOpportunityRequest\0226\n\027l" +
+      "earning_opportunity_id\030\003 \001(\003R\025learningOp" +
+      "portunityId\"\177\n(CompleteAgentLearningOppo" +
+      "rtunityResponse\022S\n\024learning_opportunity\030" +
+      "\001 \001(\0132 .api.commons.LearningOpportunityR" +
+      "\023learningOpportunity\"Z\n DeleteLearningOp" +
+      "portunityRequest\0226\n\027learning_opportunity" +
+      "_id\030\003 \001(\003R\025learningOpportunityId\"x\n!Dele" +
+      "teLearningOpportunityResponse\022S\n\024learnin" +
+      "g_opportunity\030\001 \001(\0132 .api.commons.Learni" +
+      "ngOpportunityR\023learningOpportunity\"R\n\035Ge" +
+      "tLearningOpportunityRequest\0221\n\024learning_" +
+      "opportunity\030\002 \001(\003R\023learningOpportunity\"u" +
+      "\n\036GetLearningOpportunityResponse\022S\n\024lear" +
+      "ning_opportunity\030\001 \001(\0132 .api.commons.Lea" +
+      "rningOpportunityR\023learningOpportunity\".\n" +
+      "\025ListDashboardsRequest\022\025\n\006org_id\030\001 \001(\tR\005" +
+      "orgId\"W\n\026ListDashboardsResponse\022=\n\ndashb" +
+      "oards\030\001 \003(\0132\035.api.commons.DashboardSumma" +
+      "ryR\ndashboards\"\217\002\n\'ListLearningOpportuni" +
+      "tiesByOrgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgI" +
+      "d\022F\n\020call_identifiers\030\002 \003(\0132\033.api.common" +
+      "s.CallIdentifierR\017callIdentifiers\022\'\n\017tra" +
+      "nscript_sids\030\003 \003(\003R\016transcriptSids\022$\n\016ag" +
+      "ent_user_ids\030\004 \003(\tR\014agentUserIds\0226\n\ncrea" +
+      "ted_at\030\005 \001(\0132\027.api.commons.TimeFilterR\tc" +
+      "reatedAt\"x\n\'DeleteLearningOpportunityByO" +
+      "rgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\0226\n\027le" +
+      "arning_opportunity_id\030\003 \001(\003R\025learningOpp" +
+      "ortunityIdB\322\001\n,com.tcn.cloud.api.api.v1a" +
+      "lpha1.agenttrainingB\030LearningOpportunity" +
+      "ProtoP\001\242\002\003AVA\252\002\032Api.V1alpha1.Agenttraini" +
+      "ng\312\002\032Api\\V1alpha1\\Agenttraining\342\002&Api\\V1" +
+      "alpha1\\Agenttraining\\GPBMetadata\352\002\034Api::" +
+      "V1alpha1::Agenttrainingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.AgentTrainingProto.getDescriptor(),
+          com.tcn.cloud.api.api.commons.DashboardsProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
         });
@@ -263,19 +278,32 @@ public final class LearningOpportunityProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_agenttraining_GetLearningOpportunityResponse_descriptor,
         new java.lang.String[] { "LearningOpportunity", });
-    internal_static_api_v1alpha1_agenttraining_ListLearningOpportunitiesByOrgIdRequest_descriptor =
+    internal_static_api_v1alpha1_agenttraining_ListDashboardsRequest_descriptor =
       getDescriptor().getMessageTypes().get(14);
+    internal_static_api_v1alpha1_agenttraining_ListDashboardsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_agenttraining_ListDashboardsRequest_descriptor,
+        new java.lang.String[] { "OrgId", });
+    internal_static_api_v1alpha1_agenttraining_ListDashboardsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_api_v1alpha1_agenttraining_ListDashboardsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_agenttraining_ListDashboardsResponse_descriptor,
+        new java.lang.String[] { "Dashboards", });
+    internal_static_api_v1alpha1_agenttraining_ListLearningOpportunitiesByOrgIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(16);
     internal_static_api_v1alpha1_agenttraining_ListLearningOpportunitiesByOrgIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_agenttraining_ListLearningOpportunitiesByOrgIdRequest_descriptor,
         new java.lang.String[] { "OrgId", "CallIdentifiers", "TranscriptSids", "AgentUserIds", "CreatedAt", });
     internal_static_api_v1alpha1_agenttraining_DeleteLearningOpportunityByOrgIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_api_v1alpha1_agenttraining_DeleteLearningOpportunityByOrgIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_agenttraining_DeleteLearningOpportunityByOrgIdRequest_descriptor,
         new java.lang.String[] { "OrgId", "LearningOpportunityId", });
     com.tcn.cloud.api.api.commons.AgentTrainingProto.getDescriptor();
+    com.tcn.cloud.api.api.commons.DashboardsProto.getDescriptor();
     com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
   }
