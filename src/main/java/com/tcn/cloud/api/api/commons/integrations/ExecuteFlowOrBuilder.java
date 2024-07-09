@@ -3560,6 +3560,216 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionValidateOrBuilder getFinviProcessNewTransactionValidateOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICircCreatePayment naviga_dti_circ_create_payment = 4401 [json_name = "navigaDtiCircCreatePayment"];</code>
+   * @return Whether the navigaDtiCircCreatePayment field is set.
+   */
+  boolean hasNavigaDtiCircCreatePayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICircCreatePayment naviga_dti_circ_create_payment = 4401 [json_name = "navigaDtiCircCreatePayment"];</code>
+   * @return The navigaDtiCircCreatePayment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICircCreatePayment getNavigaDtiCircCreatePayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICircCreatePayment naviga_dti_circ_create_payment = 4401 [json_name = "navigaDtiCircCreatePayment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICircCreatePaymentOrBuilder getNavigaDtiCircCreatePaymentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICircChangeBilling naviga_dti_circ_change_billing = 4402 [json_name = "navigaDtiCircChangeBilling"];</code>
+   * @return Whether the navigaDtiCircChangeBilling field is set.
+   */
+  boolean hasNavigaDtiCircChangeBilling();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICircChangeBilling naviga_dti_circ_change_billing = 4402 [json_name = "navigaDtiCircChangeBilling"];</code>
+   * @return The navigaDtiCircChangeBilling.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICircChangeBilling getNavigaDtiCircChangeBilling();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICircChangeBilling naviga_dti_circ_change_billing = 4402 [json_name = "navigaDtiCircChangeBilling"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICircChangeBillingOrBuilder getNavigaDtiCircChangeBillingOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSAutoRenewInfo naviga_dti_cs_auto_renew_info = 4501 [json_name = "navigaDtiCsAutoRenewInfo"];</code>
+   * @return Whether the navigaDtiCsAutoRenewInfo field is set.
+   */
+  boolean hasNavigaDtiCsAutoRenewInfo();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSAutoRenewInfo naviga_dti_cs_auto_renew_info = 4501 [json_name = "navigaDtiCsAutoRenewInfo"];</code>
+   * @return The navigaDtiCsAutoRenewInfo.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSAutoRenewInfo getNavigaDtiCsAutoRenewInfo();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSAutoRenewInfo naviga_dti_cs_auto_renew_info = 4501 [json_name = "navigaDtiCsAutoRenewInfo"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSAutoRenewInfoOrBuilder getNavigaDtiCsAutoRenewInfoOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSAutoTran naviga_dti_cs_auto_tran = 4502 [json_name = "navigaDtiCsAutoTran"];</code>
+   * @return Whether the navigaDtiCsAutoTran field is set.
+   */
+  boolean hasNavigaDtiCsAutoTran();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSAutoTran naviga_dti_cs_auto_tran = 4502 [json_name = "navigaDtiCsAutoTran"];</code>
+   * @return The navigaDtiCsAutoTran.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSAutoTran getNavigaDtiCsAutoTran();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSAutoTran naviga_dti_cs_auto_tran = 4502 [json_name = "navigaDtiCsAutoTran"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSAutoTranOrBuilder getNavigaDtiCsAutoTranOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSBillingInfo naviga_dti_cs_billing_info = 4503 [json_name = "navigaDtiCsBillingInfo"];</code>
+   * @return Whether the navigaDtiCsBillingInfo field is set.
+   */
+  boolean hasNavigaDtiCsBillingInfo();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSBillingInfo naviga_dti_cs_billing_info = 4503 [json_name = "navigaDtiCsBillingInfo"];</code>
+   * @return The navigaDtiCsBillingInfo.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSBillingInfo getNavigaDtiCsBillingInfo();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSBillingInfo naviga_dti_cs_billing_info = 4503 [json_name = "navigaDtiCsBillingInfo"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSBillingInfoOrBuilder getNavigaDtiCsBillingInfoOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSLogin naviga_dti_cs_login = 4504 [json_name = "navigaDtiCsLogin"];</code>
+   * @return Whether the navigaDtiCsLogin field is set.
+   */
+  boolean hasNavigaDtiCsLogin();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSLogin naviga_dti_cs_login = 4504 [json_name = "navigaDtiCsLogin"];</code>
+   * @return The navigaDtiCsLogin.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSLogin getNavigaDtiCsLogin();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSLogin naviga_dti_cs_login = 4504 [json_name = "navigaDtiCsLogin"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSLoginOrBuilder getNavigaDtiCsLoginOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSPayInfo naviga_dti_cs_pay_info = 4505 [json_name = "navigaDtiCsPayInfo"];</code>
+   * @return Whether the navigaDtiCsPayInfo field is set.
+   */
+  boolean hasNavigaDtiCsPayInfo();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSPayInfo naviga_dti_cs_pay_info = 4505 [json_name = "navigaDtiCsPayInfo"];</code>
+   * @return The navigaDtiCsPayInfo.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSPayInfo getNavigaDtiCsPayInfo();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSPayInfo naviga_dti_cs_pay_info = 4505 [json_name = "navigaDtiCsPayInfo"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSPayInfoOrBuilder getNavigaDtiCsPayInfoOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSPayTran naviga_dti_cs_pay_tran = 4506 [json_name = "navigaDtiCsPayTran"];</code>
+   * @return Whether the navigaDtiCsPayTran field is set.
+   */
+  boolean hasNavigaDtiCsPayTran();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSPayTran naviga_dti_cs_pay_tran = 4506 [json_name = "navigaDtiCsPayTran"];</code>
+   * @return The navigaDtiCsPayTran.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSPayTran getNavigaDtiCsPayTran();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSPayTran naviga_dti_cs_pay_tran = 4506 [json_name = "navigaDtiCsPayTran"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSPayTranOrBuilder getNavigaDtiCsPayTranOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSRenewInfo naviga_dti_cs_renew_info = 4507 [json_name = "navigaDtiCsRenewInfo"];</code>
+   * @return Whether the navigaDtiCsRenewInfo field is set.
+   */
+  boolean hasNavigaDtiCsRenewInfo();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSRenewInfo naviga_dti_cs_renew_info = 4507 [json_name = "navigaDtiCsRenewInfo"];</code>
+   * @return The navigaDtiCsRenewInfo.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSRenewInfo getNavigaDtiCsRenewInfo();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSRenewInfo naviga_dti_cs_renew_info = 4507 [json_name = "navigaDtiCsRenewInfo"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSRenewInfoOrBuilder getNavigaDtiCsRenewInfoOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSSearchPage naviga_dti_cs_search_page = 4508 [json_name = "navigaDtiCsSearchPage"];</code>
+   * @return Whether the navigaDtiCsSearchPage field is set.
+   */
+  boolean hasNavigaDtiCsSearchPage();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSSearchPage naviga_dti_cs_search_page = 4508 [json_name = "navigaDtiCsSearchPage"];</code>
+   * @return The navigaDtiCsSearchPage.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSSearchPage getNavigaDtiCsSearchPage();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSSearchPage naviga_dti_cs_search_page = 4508 [json_name = "navigaDtiCsSearchPage"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSSearchPageOrBuilder getNavigaDtiCsSearchPageOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSServiceErrorInfo naviga_dti_cs_service_error_info = 4509 [json_name = "navigaDtiCsServiceErrorInfo"];</code>
+   * @return Whether the navigaDtiCsServiceErrorInfo field is set.
+   */
+  boolean hasNavigaDtiCsServiceErrorInfo();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSServiceErrorInfo naviga_dti_cs_service_error_info = 4509 [json_name = "navigaDtiCsServiceErrorInfo"];</code>
+   * @return The navigaDtiCsServiceErrorInfo.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSServiceErrorInfo getNavigaDtiCsServiceErrorInfo();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSServiceErrorInfo naviga_dti_cs_service_error_info = 4509 [json_name = "navigaDtiCsServiceErrorInfo"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSServiceErrorInfoOrBuilder getNavigaDtiCsServiceErrorInfoOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSServiceErrorTrans naviga_dti_cs_service_error_trans = 4510 [json_name = "navigaDtiCsServiceErrorTrans"];</code>
+   * @return Whether the navigaDtiCsServiceErrorTrans field is set.
+   */
+  boolean hasNavigaDtiCsServiceErrorTrans();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSServiceErrorTrans naviga_dti_cs_service_error_trans = 4510 [json_name = "navigaDtiCsServiceErrorTrans"];</code>
+   * @return The navigaDtiCsServiceErrorTrans.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSServiceErrorTrans getNavigaDtiCsServiceErrorTrans();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSServiceErrorTrans naviga_dti_cs_service_error_trans = 4510 [json_name = "navigaDtiCsServiceErrorTrans"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSServiceErrorTransOrBuilder getNavigaDtiCsServiceErrorTransOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSStopInfo naviga_dti_cs_stop_info = 4511 [json_name = "navigaDtiCsStopInfo"];</code>
+   * @return Whether the navigaDtiCsStopInfo field is set.
+   */
+  boolean hasNavigaDtiCsStopInfo();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSStopInfo naviga_dti_cs_stop_info = 4511 [json_name = "navigaDtiCsStopInfo"];</code>
+   * @return The navigaDtiCsStopInfo.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSStopInfo getNavigaDtiCsStopInfo();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSStopInfo naviga_dti_cs_stop_info = 4511 [json_name = "navigaDtiCsStopInfo"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSStopInfoOrBuilder getNavigaDtiCsStopInfoOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSStopTrans naviga_dti_cs_stop_trans = 4512 [json_name = "navigaDtiCsStopTrans"];</code>
+   * @return Whether the navigaDtiCsStopTrans field is set.
+   */
+  boolean hasNavigaDtiCsStopTrans();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSStopTrans naviga_dti_cs_stop_trans = 4512 [json_name = "navigaDtiCsStopTrans"];</code>
+   * @return The navigaDtiCsStopTrans.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSStopTrans getNavigaDtiCsStopTrans();
+  /**
+   * <code>.api.commons.integrations.ExecuteNavigaDTICSStopTrans naviga_dti_cs_stop_trans = 4512 [json_name = "navigaDtiCsStopTrans"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSStopTransOrBuilder getNavigaDtiCsStopTransOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
    * @return Whether the debugEcho field is set.
    */
