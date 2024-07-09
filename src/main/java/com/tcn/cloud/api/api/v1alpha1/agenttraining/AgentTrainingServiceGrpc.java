@@ -139,37 +139,6 @@ public final class AgentTrainingServiceGrpc {
     return getCompleteAgentLearningOpportunityMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsRequest,
-      com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsResponse> getListDashboardsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListDashboards",
-      requestType = com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsRequest,
-      com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsResponse> getListDashboardsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsRequest, com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsResponse> getListDashboardsMethod;
-    if ((getListDashboardsMethod = AgentTrainingServiceGrpc.getListDashboardsMethod) == null) {
-      synchronized (AgentTrainingServiceGrpc.class) {
-        if ((getListDashboardsMethod = AgentTrainingServiceGrpc.getListDashboardsMethod) == null) {
-          AgentTrainingServiceGrpc.getListDashboardsMethod = getListDashboardsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsRequest, com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListDashboards"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentTrainingServiceMethodDescriptorSupplier("ListDashboards"))
-              .build();
-        }
-      }
-    }
-    return getListDashboardsMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.agenttraining.UpdateLearningOpportunityRequest,
       com.tcn.cloud.api.api.v1alpha1.agenttraining.UpdateLearningOpportunityResponse> getUpdateLearningOpportunityMethod;
 
@@ -353,16 +322,6 @@ public final class AgentTrainingServiceGrpc {
 
     /**
      * <pre>
-     * ListDashboards lists dashboards.
-     * </pre>
-     */
-    default void listDashboards(com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDashboardsMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * UpdateLearningOpportunity updates a learning opportunity.
      * </pre>
      */
@@ -465,17 +424,6 @@ public final class AgentTrainingServiceGrpc {
 
     /**
      * <pre>
-     * ListDashboards lists dashboards.
-     * </pre>
-     */
-    public void listDashboards(com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListDashboardsMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * UpdateLearningOpportunity updates a learning opportunity.
      * </pre>
      */
@@ -562,16 +510,6 @@ public final class AgentTrainingServiceGrpc {
     public com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityResponse completeAgentLearningOpportunity(com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCompleteAgentLearningOpportunityMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * ListDashboards lists dashboards.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsResponse listDashboards(com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListDashboardsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -667,17 +605,6 @@ public final class AgentTrainingServiceGrpc {
 
     /**
      * <pre>
-     * ListDashboards lists dashboards.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsResponse> listDashboards(
-        com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListDashboardsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * UpdateLearningOpportunity updates a learning opportunity.
      * </pre>
      */
@@ -714,10 +641,9 @@ public final class AgentTrainingServiceGrpc {
   private static final int METHODID_LIST_LEARNING_OPPORTUNITIES = 1;
   private static final int METHODID_LIST_AGENT_LEARNING_OPPORTUNITIES = 2;
   private static final int METHODID_COMPLETE_AGENT_LEARNING_OPPORTUNITY = 3;
-  private static final int METHODID_LIST_DASHBOARDS = 4;
-  private static final int METHODID_UPDATE_LEARNING_OPPORTUNITY = 5;
-  private static final int METHODID_DELETE_LEARNING_OPPORTUNITY = 6;
-  private static final int METHODID_GET_LEARNING_OPPORTUNITY = 7;
+  private static final int METHODID_UPDATE_LEARNING_OPPORTUNITY = 4;
+  private static final int METHODID_DELETE_LEARNING_OPPORTUNITY = 5;
+  private static final int METHODID_GET_LEARNING_OPPORTUNITY = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -751,10 +677,6 @@ public final class AgentTrainingServiceGrpc {
         case METHODID_COMPLETE_AGENT_LEARNING_OPPORTUNITY:
           serviceImpl.completeAgentLearningOpportunity((com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityResponse>) responseObserver);
-          break;
-        case METHODID_LIST_DASHBOARDS:
-          serviceImpl.listDashboards((com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsResponse>) responseObserver);
           break;
         case METHODID_UPDATE_LEARNING_OPPORTUNITY:
           serviceImpl.updateLearningOpportunity((com.tcn.cloud.api.api.v1alpha1.agenttraining.UpdateLearningOpportunityRequest) request,
@@ -814,13 +736,6 @@ public final class AgentTrainingServiceGrpc {
               com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityRequest,
               com.tcn.cloud.api.api.v1alpha1.agenttraining.CompleteAgentLearningOpportunityResponse>(
                 service, METHODID_COMPLETE_AGENT_LEARNING_OPPORTUNITY)))
-        .addMethod(
-          getListDashboardsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsRequest,
-              com.tcn.cloud.api.api.v1alpha1.agenttraining.ListDashboardsResponse>(
-                service, METHODID_LIST_DASHBOARDS)))
         .addMethod(
           getUpdateLearningOpportunityMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -894,7 +809,6 @@ public final class AgentTrainingServiceGrpc {
               .addMethod(getListLearningOpportunitiesMethod())
               .addMethod(getListAgentLearningOpportunitiesMethod())
               .addMethod(getCompleteAgentLearningOpportunityMethod())
-              .addMethod(getListDashboardsMethod())
               .addMethod(getUpdateLearningOpportunityMethod())
               .addMethod(getDeleteLearningOpportunityMethod())
               .addMethod(getGetLearningOpportunityMethod())
