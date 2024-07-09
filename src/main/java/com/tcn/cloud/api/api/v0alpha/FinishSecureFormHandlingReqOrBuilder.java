@@ -52,4 +52,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
    */
   com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrThrow(
       java.lang.String key);
+
+  /**
+   * <code>int64 session_sid = 3 [json_name = "sessionSid"];</code>
+   * @return The sessionSid.
+   */
+  long getSessionSid();
 }

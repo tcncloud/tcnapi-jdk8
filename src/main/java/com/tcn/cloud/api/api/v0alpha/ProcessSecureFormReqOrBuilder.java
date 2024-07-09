@@ -72,4 +72,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
    * @return The choice.
    */
   int getChoice();
+
+  /**
+   * <code>int64 session_sid = 5 [json_name = "sessionSid"];</code>
+   * @return The sessionSid.
+   */
+  long getSessionSid();
 }

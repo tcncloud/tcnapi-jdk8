@@ -18,4 +18,10 @@ public interface StartSecureFormReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPortalIdBytes();
+
+  /**
+   * <code>int64 session_sid = 2 [json_name = "sessionSid"];</code>
+   * @return The sessionSid.
+   */
+  long getSessionSid();
 }

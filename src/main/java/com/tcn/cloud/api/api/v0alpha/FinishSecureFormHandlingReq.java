@@ -169,6 +169,17 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     return map.get(key);
   }
 
+  public static final int SESSION_SID_FIELD_NUMBER = 3;
+  private long sessionSid_ = 0L;
+  /**
+   * <code>int64 session_sid = 3 [json_name = "sessionSid"];</code>
+   * @return The sessionSid.
+   */
+  @java.lang.Override
+  public long getSessionSid() {
+    return sessionSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -192,6 +203,9 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         internalGetData(),
         DataDefaultEntryHolder.defaultEntry,
         2);
+    if (sessionSid_ != 0L) {
+      output.writeInt64(3, sessionSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -214,6 +228,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, data__);
     }
+    if (sessionSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, sessionSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -233,6 +251,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         .equals(other.getReason())) return false;
     if (!internalGetData().equals(
         other.internalGetData())) return false;
+    if (getSessionSid()
+        != other.getSessionSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -250,6 +270,9 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       hash = (37 * hash) + DATA_FIELD_NUMBER;
       hash = (53 * hash) + internalGetData().hashCode();
     }
+    hash = (37 * hash) + SESSION_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getSessionSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -405,6 +428,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       bitField0_ = 0;
       reason_ = "";
       internalGetMutableData().clear();
+      sessionSid_ = 0L;
       return this;
     }
 
@@ -444,6 +468,9 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.data_ = internalGetData();
         result.data_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.sessionSid_ = sessionSid_;
       }
     }
 
@@ -499,6 +526,9 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       internalGetMutableData().mergeFrom(
           other.internalGetData());
       bitField0_ |= 0x00000002;
+      if (other.getSessionSid() != 0L) {
+        setSessionSid(other.getSessionSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -539,6 +569,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 24: {
+              sessionSid_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -752,6 +787,38 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       internalGetMutableData().getMutableMap()
           .putAll(values);
       bitField0_ |= 0x00000002;
+      return this;
+    }
+
+    private long sessionSid_ ;
+    /**
+     * <code>int64 session_sid = 3 [json_name = "sessionSid"];</code>
+     * @return The sessionSid.
+     */
+    @java.lang.Override
+    public long getSessionSid() {
+      return sessionSid_;
+    }
+    /**
+     * <code>int64 session_sid = 3 [json_name = "sessionSid"];</code>
+     * @param value The sessionSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSessionSid(long value) {
+
+      sessionSid_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 session_sid = 3 [json_name = "sessionSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSessionSid() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      sessionSid_ = 0L;
+      onChanged();
       return this;
     }
     @java.lang.Override
