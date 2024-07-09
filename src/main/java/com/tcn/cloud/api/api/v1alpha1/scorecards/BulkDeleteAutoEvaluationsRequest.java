@@ -22,6 +22,11 @@ private static final long serialVersionUID = 0L;
   private BulkDeleteAutoEvaluationsRequest() {
     orgId_ = "";
     autoEvaluationIds_ = emptyLongList();
+    scorecardIds_ = emptyLongList();
+    categoryIds_ = emptyLongList();
+    agentUserIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    riskLevels_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -170,6 +175,219 @@ private static final long serialVersionUID = 0L;
     return completedAt_ == null ? com.tcn.cloud.api.api.commons.TimeFilter.getDefaultInstance() : completedAt_;
   }
 
+  public static final int SCORECARD_IDS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.LongList scorecardIds_;
+  /**
+   * <pre>
+   * Optional - filter by scorecard ids.
+   * </pre>
+   *
+   * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+   * @return A list containing the scorecardIds.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Long>
+      getScorecardIdsList() {
+    return scorecardIds_;
+  }
+  /**
+   * <pre>
+   * Optional - filter by scorecard ids.
+   * </pre>
+   *
+   * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+   * @return The count of scorecardIds.
+   */
+  public int getScorecardIdsCount() {
+    return scorecardIds_.size();
+  }
+  /**
+   * <pre>
+   * Optional - filter by scorecard ids.
+   * </pre>
+   *
+   * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+   * @param index The index of the element to return.
+   * @return The scorecardIds at the given index.
+   */
+  public long getScorecardIds(int index) {
+    return scorecardIds_.getLong(index);
+  }
+  private int scorecardIdsMemoizedSerializedSize = -1;
+
+  public static final int CATEGORY_IDS_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.LongList categoryIds_;
+  /**
+   * <pre>
+   * Optional - filter by category ids.
+   * </pre>
+   *
+   * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+   * @return A list containing the categoryIds.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Long>
+      getCategoryIdsList() {
+    return categoryIds_;
+  }
+  /**
+   * <pre>
+   * Optional - filter by category ids.
+   * </pre>
+   *
+   * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+   * @return The count of categoryIds.
+   */
+  public int getCategoryIdsCount() {
+    return categoryIds_.size();
+  }
+  /**
+   * <pre>
+   * Optional - filter by category ids.
+   * </pre>
+   *
+   * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+   * @param index The index of the element to return.
+   * @return The categoryIds at the given index.
+   */
+  public long getCategoryIds(int index) {
+    return categoryIds_.getLong(index);
+  }
+  private int categoryIdsMemoizedSerializedSize = -1;
+
+  public static final int AGENT_USER_IDS_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList agentUserIds_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+   * @return A list containing the agentUserIds.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getAgentUserIdsList() {
+    return agentUserIds_;
+  }
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+   * @return The count of agentUserIds.
+   */
+  public int getAgentUserIdsCount() {
+    return agentUserIds_.size();
+  }
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+   * @param index The index of the element to return.
+   * @return The agentUserIds at the given index.
+   */
+  public java.lang.String getAgentUserIds(int index) {
+    return agentUserIds_.get(index);
+  }
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the agentUserIds at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getAgentUserIdsBytes(int index) {
+    return agentUserIds_.getByteString(index);
+  }
+
+  public static final int RISK_LEVELS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> riskLevels_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.api.commons.RiskLevel> riskLevels_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.RiskLevel>() {
+            public com.tcn.cloud.api.api.commons.RiskLevel convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.commons.RiskLevel result = com.tcn.cloud.api.api.commons.RiskLevel.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.commons.RiskLevel.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+   * @return A list containing the riskLevels.
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.RiskLevel> getRiskLevelsList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.RiskLevel>(riskLevels_, riskLevels_converter_);
+  }
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+   * @return The count of riskLevels.
+   */
+  @java.lang.Override
+  public int getRiskLevelsCount() {
+    return riskLevels_.size();
+  }
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+   * @param index The index of the element to return.
+   * @return The riskLevels at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.RiskLevel getRiskLevels(int index) {
+    return riskLevels_converter_.convert(riskLevels_.get(index));
+  }
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+   * @return A list containing the enum numeric values on the wire for riskLevels.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getRiskLevelsValueList() {
+    return riskLevels_;
+  }
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of riskLevels at the given index.
+   */
+  @java.lang.Override
+  public int getRiskLevelsValue(int index) {
+    return riskLevels_.get(index);
+  }
+  private int riskLevelsMemoizedSerializedSize;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -197,6 +415,30 @@ private static final long serialVersionUID = 0L;
     }
     if (completedAt_ != null) {
       output.writeMessage(3, getCompletedAt());
+    }
+    if (getScorecardIdsList().size() > 0) {
+      output.writeUInt32NoTag(34);
+      output.writeUInt32NoTag(scorecardIdsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < scorecardIds_.size(); i++) {
+      output.writeInt64NoTag(scorecardIds_.getLong(i));
+    }
+    if (getCategoryIdsList().size() > 0) {
+      output.writeUInt32NoTag(42);
+      output.writeUInt32NoTag(categoryIdsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < categoryIds_.size(); i++) {
+      output.writeInt64NoTag(categoryIds_.getLong(i));
+    }
+    for (int i = 0; i < agentUserIds_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, agentUserIds_.getRaw(i));
+    }
+    if (getRiskLevelsList().size() > 0) {
+      output.writeUInt32NoTag(58);
+      output.writeUInt32NoTag(riskLevelsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < riskLevels_.size(); i++) {
+      output.writeEnumNoTag(riskLevels_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -228,6 +470,54 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getCompletedAt());
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < scorecardIds_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(scorecardIds_.getLong(i));
+      }
+      size += dataSize;
+      if (!getScorecardIdsList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      scorecardIdsMemoizedSerializedSize = dataSize;
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < categoryIds_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(categoryIds_.getLong(i));
+      }
+      size += dataSize;
+      if (!getCategoryIdsList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      categoryIdsMemoizedSerializedSize = dataSize;
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < agentUserIds_.size(); i++) {
+        dataSize += computeStringSizeNoTag(agentUserIds_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getAgentUserIdsList().size();
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < riskLevels_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(riskLevels_.get(i));
+      }
+      size += dataSize;
+      if (!getRiskLevelsList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }riskLevelsMemoizedSerializedSize = dataSize;
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -252,6 +542,13 @@ private static final long serialVersionUID = 0L;
       if (!getCompletedAt()
           .equals(other.getCompletedAt())) return false;
     }
+    if (!getScorecardIdsList()
+        .equals(other.getScorecardIdsList())) return false;
+    if (!getCategoryIdsList()
+        .equals(other.getCategoryIdsList())) return false;
+    if (!getAgentUserIdsList()
+        .equals(other.getAgentUserIdsList())) return false;
+    if (!riskLevels_.equals(other.riskLevels_)) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -272,6 +569,22 @@ private static final long serialVersionUID = 0L;
     if (hasCompletedAt()) {
       hash = (37 * hash) + COMPLETED_AT_FIELD_NUMBER;
       hash = (53 * hash) + getCompletedAt().hashCode();
+    }
+    if (getScorecardIdsCount() > 0) {
+      hash = (37 * hash) + SCORECARD_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getScorecardIdsList().hashCode();
+    }
+    if (getCategoryIdsCount() > 0) {
+      hash = (37 * hash) + CATEGORY_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getCategoryIdsList().hashCode();
+    }
+    if (getAgentUserIdsCount() > 0) {
+      hash = (37 * hash) + AGENT_USER_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getAgentUserIdsList().hashCode();
+    }
+    if (getRiskLevelsCount() > 0) {
+      hash = (37 * hash) + RISK_LEVELS_FIELD_NUMBER;
+      hash = (53 * hash) + riskLevels_.hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -415,6 +728,12 @@ private static final long serialVersionUID = 0L;
         completedAtBuilder_.dispose();
         completedAtBuilder_ = null;
       }
+      scorecardIds_ = emptyLongList();
+      categoryIds_ = emptyLongList();
+      agentUserIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      riskLevels_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -453,6 +772,21 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.autoEvaluationIds_ = autoEvaluationIds_;
+      if (((bitField0_ & 0x00000008) != 0)) {
+        scorecardIds_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.scorecardIds_ = scorecardIds_;
+      if (((bitField0_ & 0x00000010) != 0)) {
+        categoryIds_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.categoryIds_ = categoryIds_;
+      if (((bitField0_ & 0x00000040) != 0)) {
+        riskLevels_ = java.util.Collections.unmodifiableList(riskLevels_);
+        bitField0_ = (bitField0_ & ~0x00000040);
+      }
+      result.riskLevels_ = riskLevels_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest result) {
@@ -464,6 +798,10 @@ private static final long serialVersionUID = 0L;
         result.completedAt_ = completedAtBuilder_ == null
             ? completedAt_
             : completedAtBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        agentUserIds_.makeImmutable();
+        result.agentUserIds_ = agentUserIds_;
       }
     }
 
@@ -529,6 +867,46 @@ private static final long serialVersionUID = 0L;
       if (other.hasCompletedAt()) {
         mergeCompletedAt(other.getCompletedAt());
       }
+      if (!other.scorecardIds_.isEmpty()) {
+        if (scorecardIds_.isEmpty()) {
+          scorecardIds_ = other.scorecardIds_;
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          ensureScorecardIdsIsMutable();
+          scorecardIds_.addAll(other.scorecardIds_);
+        }
+        onChanged();
+      }
+      if (!other.categoryIds_.isEmpty()) {
+        if (categoryIds_.isEmpty()) {
+          categoryIds_ = other.categoryIds_;
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          ensureCategoryIdsIsMutable();
+          categoryIds_.addAll(other.categoryIds_);
+        }
+        onChanged();
+      }
+      if (!other.agentUserIds_.isEmpty()) {
+        if (agentUserIds_.isEmpty()) {
+          agentUserIds_ = other.agentUserIds_;
+          bitField0_ |= 0x00000020;
+        } else {
+          ensureAgentUserIdsIsMutable();
+          agentUserIds_.addAll(other.agentUserIds_);
+        }
+        onChanged();
+      }
+      if (!other.riskLevels_.isEmpty()) {
+        if (riskLevels_.isEmpty()) {
+          riskLevels_ = other.riskLevels_;
+          bitField0_ = (bitField0_ & ~0x00000040);
+        } else {
+          ensureRiskLevelsIsMutable();
+          riskLevels_.addAll(other.riskLevels_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -583,6 +961,61 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              long v = input.readInt64();
+              ensureScorecardIdsIsMutable();
+              scorecardIds_.addLong(v);
+              break;
+            } // case 32
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureScorecardIdsIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                scorecardIds_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 34
+            case 40: {
+              long v = input.readInt64();
+              ensureCategoryIdsIsMutable();
+              categoryIds_.addLong(v);
+              break;
+            } // case 40
+            case 42: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureCategoryIdsIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                categoryIds_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 42
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureAgentUserIdsIsMutable();
+              agentUserIds_.add(s);
+              break;
+            } // case 50
+            case 56: {
+              int tmpRaw = input.readEnum();
+              ensureRiskLevelsIsMutable();
+              riskLevels_.add(tmpRaw);
+              break;
+            } // case 56
+            case 58: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureRiskLevelsIsMutable();
+                riskLevels_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -954,6 +1387,559 @@ private static final long serialVersionUID = 0L;
         completedAt_ = null;
       }
       return completedAtBuilder_;
+    }
+
+    private com.google.protobuf.Internal.LongList scorecardIds_ = emptyLongList();
+    private void ensureScorecardIdsIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        scorecardIds_ = mutableCopy(scorecardIds_);
+        bitField0_ |= 0x00000008;
+      }
+    }
+    /**
+     * <pre>
+     * Optional - filter by scorecard ids.
+     * </pre>
+     *
+     * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+     * @return A list containing the scorecardIds.
+     */
+    public java.util.List<java.lang.Long>
+        getScorecardIdsList() {
+      return ((bitField0_ & 0x00000008) != 0) ?
+               java.util.Collections.unmodifiableList(scorecardIds_) : scorecardIds_;
+    }
+    /**
+     * <pre>
+     * Optional - filter by scorecard ids.
+     * </pre>
+     *
+     * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+     * @return The count of scorecardIds.
+     */
+    public int getScorecardIdsCount() {
+      return scorecardIds_.size();
+    }
+    /**
+     * <pre>
+     * Optional - filter by scorecard ids.
+     * </pre>
+     *
+     * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+     * @param index The index of the element to return.
+     * @return The scorecardIds at the given index.
+     */
+    public long getScorecardIds(int index) {
+      return scorecardIds_.getLong(index);
+    }
+    /**
+     * <pre>
+     * Optional - filter by scorecard ids.
+     * </pre>
+     *
+     * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The scorecardIds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setScorecardIds(
+        int index, long value) {
+
+      ensureScorecardIdsIsMutable();
+      scorecardIds_.setLong(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by scorecard ids.
+     * </pre>
+     *
+     * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+     * @param value The scorecardIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addScorecardIds(long value) {
+
+      ensureScorecardIdsIsMutable();
+      scorecardIds_.addLong(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by scorecard ids.
+     * </pre>
+     *
+     * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+     * @param values The scorecardIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllScorecardIds(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureScorecardIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, scorecardIds_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by scorecard ids.
+     * </pre>
+     *
+     * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearScorecardIds() {
+      scorecardIds_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Internal.LongList categoryIds_ = emptyLongList();
+    private void ensureCategoryIdsIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        categoryIds_ = mutableCopy(categoryIds_);
+        bitField0_ |= 0x00000010;
+      }
+    }
+    /**
+     * <pre>
+     * Optional - filter by category ids.
+     * </pre>
+     *
+     * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+     * @return A list containing the categoryIds.
+     */
+    public java.util.List<java.lang.Long>
+        getCategoryIdsList() {
+      return ((bitField0_ & 0x00000010) != 0) ?
+               java.util.Collections.unmodifiableList(categoryIds_) : categoryIds_;
+    }
+    /**
+     * <pre>
+     * Optional - filter by category ids.
+     * </pre>
+     *
+     * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+     * @return The count of categoryIds.
+     */
+    public int getCategoryIdsCount() {
+      return categoryIds_.size();
+    }
+    /**
+     * <pre>
+     * Optional - filter by category ids.
+     * </pre>
+     *
+     * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+     * @param index The index of the element to return.
+     * @return The categoryIds at the given index.
+     */
+    public long getCategoryIds(int index) {
+      return categoryIds_.getLong(index);
+    }
+    /**
+     * <pre>
+     * Optional - filter by category ids.
+     * </pre>
+     *
+     * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The categoryIds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCategoryIds(
+        int index, long value) {
+
+      ensureCategoryIdsIsMutable();
+      categoryIds_.setLong(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by category ids.
+     * </pre>
+     *
+     * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+     * @param value The categoryIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addCategoryIds(long value) {
+
+      ensureCategoryIdsIsMutable();
+      categoryIds_.addLong(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by category ids.
+     * </pre>
+     *
+     * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+     * @param values The categoryIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllCategoryIds(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureCategoryIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, categoryIds_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by category ids.
+     * </pre>
+     *
+     * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCategoryIds() {
+      categoryIds_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList agentUserIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureAgentUserIdsIsMutable() {
+      if (!agentUserIds_.isModifiable()) {
+        agentUserIds_ = new com.google.protobuf.LazyStringArrayList(agentUserIds_);
+      }
+      bitField0_ |= 0x00000020;
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+     * @return A list containing the agentUserIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAgentUserIdsList() {
+      agentUserIds_.makeImmutable();
+      return agentUserIds_;
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+     * @return The count of agentUserIds.
+     */
+    public int getAgentUserIdsCount() {
+      return agentUserIds_.size();
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+     * @param index The index of the element to return.
+     * @return The agentUserIds at the given index.
+     */
+    public java.lang.String getAgentUserIds(int index) {
+      return agentUserIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the agentUserIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAgentUserIdsBytes(int index) {
+      return agentUserIds_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The agentUserIds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentUserIds(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureAgentUserIdsIsMutable();
+      agentUserIds_.set(index, value);
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+     * @param value The agentUserIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAgentUserIds(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureAgentUserIdsIsMutable();
+      agentUserIds_.add(value);
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+     * @param values The agentUserIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllAgentUserIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureAgentUserIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, agentUserIds_);
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentUserIds() {
+      agentUserIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000020);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+     * @param value The bytes of the agentUserIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAgentUserIdsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureAgentUserIdsIsMutable();
+      agentUserIds_.add(value);
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> riskLevels_ =
+      java.util.Collections.emptyList();
+    private void ensureRiskLevelsIsMutable() {
+      if (!((bitField0_ & 0x00000040) != 0)) {
+        riskLevels_ = new java.util.ArrayList<java.lang.Integer>(riskLevels_);
+        bitField0_ |= 0x00000040;
+      }
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+     * @return A list containing the riskLevels.
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.RiskLevel> getRiskLevelsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.RiskLevel>(riskLevels_, riskLevels_converter_);
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+     * @return The count of riskLevels.
+     */
+    public int getRiskLevelsCount() {
+      return riskLevels_.size();
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+     * @param index The index of the element to return.
+     * @return The riskLevels at the given index.
+     */
+    public com.tcn.cloud.api.api.commons.RiskLevel getRiskLevels(int index) {
+      return riskLevels_converter_.convert(riskLevels_.get(index));
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+     * @param index The index to set the value at.
+     * @param value The riskLevels to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRiskLevels(
+        int index, com.tcn.cloud.api.api.commons.RiskLevel value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureRiskLevelsIsMutable();
+      riskLevels_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+     * @param value The riskLevels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addRiskLevels(com.tcn.cloud.api.api.commons.RiskLevel value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureRiskLevelsIsMutable();
+      riskLevels_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+     * @param values The riskLevels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllRiskLevels(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.RiskLevel> values) {
+      ensureRiskLevelsIsMutable();
+      for (com.tcn.cloud.api.api.commons.RiskLevel value : values) {
+        riskLevels_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRiskLevels() {
+      riskLevels_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+     * @return A list containing the enum numeric values on the wire for riskLevels.
+     */
+    public java.util.List<java.lang.Integer>
+    getRiskLevelsValueList() {
+      return java.util.Collections.unmodifiableList(riskLevels_);
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of riskLevels at the given index.
+     */
+    public int getRiskLevelsValue(int index) {
+      return riskLevels_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for riskLevels to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRiskLevelsValue(
+        int index, int value) {
+      ensureRiskLevelsIsMutable();
+      riskLevels_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+     * @param value The enum numeric value on the wire for riskLevels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addRiskLevelsValue(int value) {
+      ensureRiskLevelsIsMutable();
+      riskLevels_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+     * @param values The enum numeric values on the wire for riskLevels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllRiskLevelsValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureRiskLevelsIsMutable();
+      for (int value : values) {
+        riskLevels_.add(value);
+      }
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

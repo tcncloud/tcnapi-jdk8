@@ -82,4 +82,144 @@ public interface BulkDeleteEvaluationsRequestOrBuilder extends
    * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
    */
   com.tcn.cloud.api.api.commons.TimeFilterOrBuilder getCompletedAtOrBuilder();
+
+  /**
+   * <pre>
+   * Optional. Filter by category ids.
+   * </pre>
+   *
+   * <code>repeated int64 category_ids = 4 [json_name = "categoryIds"];</code>
+   * @return A list containing the categoryIds.
+   */
+  java.util.List<java.lang.Long> getCategoryIdsList();
+  /**
+   * <pre>
+   * Optional. Filter by category ids.
+   * </pre>
+   *
+   * <code>repeated int64 category_ids = 4 [json_name = "categoryIds"];</code>
+   * @return The count of categoryIds.
+   */
+  int getCategoryIdsCount();
+  /**
+   * <pre>
+   * Optional. Filter by category ids.
+   * </pre>
+   *
+   * <code>repeated int64 category_ids = 4 [json_name = "categoryIds"];</code>
+   * @param index The index of the element to return.
+   * @return The categoryIds at the given index.
+   */
+  long getCategoryIds(int index);
+
+  /**
+   * <pre>
+   * Optional. Filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 5 [json_name = "agentUserIds"];</code>
+   * @return A list containing the agentUserIds.
+   */
+  java.util.List<java.lang.String>
+      getAgentUserIdsList();
+  /**
+   * <pre>
+   * Optional. Filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 5 [json_name = "agentUserIds"];</code>
+   * @return The count of agentUserIds.
+   */
+  int getAgentUserIdsCount();
+  /**
+   * <pre>
+   * Optional. Filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 5 [json_name = "agentUserIds"];</code>
+   * @param index The index of the element to return.
+   * @return The agentUserIds at the given index.
+   */
+  java.lang.String getAgentUserIds(int index);
+  /**
+   * <pre>
+   * Optional. Filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 5 [json_name = "agentUserIds"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the agentUserIds at the given index.
+   */
+  com.google.protobuf.ByteString
+      getAgentUserIdsBytes(int index);
+
+  /**
+   * <pre>
+   * Optional. Filter by scorecard ids.
+   * </pre>
+   *
+   * <code>repeated int64 scorecard_ids = 6 [json_name = "scorecardIds"];</code>
+   * @return A list containing the scorecardIds.
+   */
+  java.util.List<java.lang.Long> getScorecardIdsList();
+  /**
+   * <pre>
+   * Optional. Filter by scorecard ids.
+   * </pre>
+   *
+   * <code>repeated int64 scorecard_ids = 6 [json_name = "scorecardIds"];</code>
+   * @return The count of scorecardIds.
+   */
+  int getScorecardIdsCount();
+  /**
+   * <pre>
+   * Optional. Filter by scorecard ids.
+   * </pre>
+   *
+   * <code>repeated int64 scorecard_ids = 6 [json_name = "scorecardIds"];</code>
+   * @param index The index of the element to return.
+   * @return The scorecardIds at the given index.
+   */
+  long getScorecardIds(int index);
+
+  /**
+   * <pre>
+   * Optional. Filter by scorer id.
+   * </pre>
+   *
+   * <code>repeated string scorer_id = 7 [json_name = "scorerId"];</code>
+   * @return A list containing the scorerId.
+   */
+  java.util.List<java.lang.String>
+      getScorerIdList();
+  /**
+   * <pre>
+   * Optional. Filter by scorer id.
+   * </pre>
+   *
+   * <code>repeated string scorer_id = 7 [json_name = "scorerId"];</code>
+   * @return The count of scorerId.
+   */
+  int getScorerIdCount();
+  /**
+   * <pre>
+   * Optional. Filter by scorer id.
+   * </pre>
+   *
+   * <code>repeated string scorer_id = 7 [json_name = "scorerId"];</code>
+   * @param index The index of the element to return.
+   * @return The scorerId at the given index.
+   */
+  java.lang.String getScorerId(int index);
+  /**
+   * <pre>
+   * Optional. Filter by scorer id.
+   * </pre>
+   *
+   * <code>repeated string scorer_id = 7 [json_name = "scorerId"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the scorerId at the given index.
+   */
+  com.google.protobuf.ByteString
+      getScorerIdBytes(int index);
 }

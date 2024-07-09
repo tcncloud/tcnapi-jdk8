@@ -82,4 +82,152 @@ public interface BulkDeleteAutoEvaluationsRequestOrBuilder extends
    * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
    */
   com.tcn.cloud.api.api.commons.TimeFilterOrBuilder getCompletedAtOrBuilder();
+
+  /**
+   * <pre>
+   * Optional - filter by scorecard ids.
+   * </pre>
+   *
+   * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+   * @return A list containing the scorecardIds.
+   */
+  java.util.List<java.lang.Long> getScorecardIdsList();
+  /**
+   * <pre>
+   * Optional - filter by scorecard ids.
+   * </pre>
+   *
+   * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+   * @return The count of scorecardIds.
+   */
+  int getScorecardIdsCount();
+  /**
+   * <pre>
+   * Optional - filter by scorecard ids.
+   * </pre>
+   *
+   * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+   * @param index The index of the element to return.
+   * @return The scorecardIds at the given index.
+   */
+  long getScorecardIds(int index);
+
+  /**
+   * <pre>
+   * Optional - filter by category ids.
+   * </pre>
+   *
+   * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+   * @return A list containing the categoryIds.
+   */
+  java.util.List<java.lang.Long> getCategoryIdsList();
+  /**
+   * <pre>
+   * Optional - filter by category ids.
+   * </pre>
+   *
+   * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+   * @return The count of categoryIds.
+   */
+  int getCategoryIdsCount();
+  /**
+   * <pre>
+   * Optional - filter by category ids.
+   * </pre>
+   *
+   * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+   * @param index The index of the element to return.
+   * @return The categoryIds at the given index.
+   */
+  long getCategoryIds(int index);
+
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+   * @return A list containing the agentUserIds.
+   */
+  java.util.List<java.lang.String>
+      getAgentUserIdsList();
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+   * @return The count of agentUserIds.
+   */
+  int getAgentUserIdsCount();
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+   * @param index The index of the element to return.
+   * @return The agentUserIds at the given index.
+   */
+  java.lang.String getAgentUserIds(int index);
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the agentUserIds at the given index.
+   */
+  com.google.protobuf.ByteString
+      getAgentUserIdsBytes(int index);
+
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+   * @return A list containing the riskLevels.
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.RiskLevel> getRiskLevelsList();
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+   * @return The count of riskLevels.
+   */
+  int getRiskLevelsCount();
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+   * @param index The index of the element to return.
+   * @return The riskLevels at the given index.
+   */
+  com.tcn.cloud.api.api.commons.RiskLevel getRiskLevels(int index);
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+   * @return A list containing the enum numeric values on the wire for riskLevels.
+   */
+  java.util.List<java.lang.Integer>
+  getRiskLevelsValueList();
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of riskLevels at the given index.
+   */
+  int getRiskLevelsValue(int index);
 }
