@@ -143,37 +143,10 @@ public interface BulkDeleteAutoEvaluationsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Optional - filter by call sid.
-   * </pre>
-   *
-   * <code>.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
-   * @return Whether the callSid field is set.
-   */
-  boolean hasCallSid();
-  /**
-   * <pre>
-   * Optional - filter by call sid.
-   * </pre>
-   *
-   * <code>.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
-   * @return The callSid.
-   */
-  com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter getCallSid();
-  /**
-   * <pre>
-   * Optional - filter by call sid.
-   * </pre>
-   *
-   * <code>.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilterOrBuilder getCallSidOrBuilder();
-
-  /**
-   * <pre>
    * Optional - filter by agent user ids.
    * </pre>
    *
-   * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+   * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
    * @return A list containing the agentUserIds.
    */
   java.util.List<java.lang.String>
@@ -183,7 +156,7 @@ public interface BulkDeleteAutoEvaluationsRequestOrBuilder extends
    * Optional - filter by agent user ids.
    * </pre>
    *
-   * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+   * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
    * @return The count of agentUserIds.
    */
   int getAgentUserIdsCount();
@@ -192,7 +165,7 @@ public interface BulkDeleteAutoEvaluationsRequestOrBuilder extends
    * Optional - filter by agent user ids.
    * </pre>
    *
-   * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+   * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
    * @param index The index of the element to return.
    * @return The agentUserIds at the given index.
    */
@@ -202,7 +175,7 @@ public interface BulkDeleteAutoEvaluationsRequestOrBuilder extends
    * Optional - filter by agent user ids.
    * </pre>
    *
-   * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+   * <code>repeated string agent_user_ids = 6 [json_name = "agentUserIds"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the agentUserIds at the given index.
    */
@@ -214,7 +187,7 @@ public interface BulkDeleteAutoEvaluationsRequestOrBuilder extends
    * Optional - filter by risk level.
    * </pre>
    *
-   * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+   * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
    * @return A list containing the riskLevels.
    */
   java.util.List<com.tcn.cloud.api.api.commons.RiskLevel> getRiskLevelsList();
@@ -223,7 +196,7 @@ public interface BulkDeleteAutoEvaluationsRequestOrBuilder extends
    * Optional - filter by risk level.
    * </pre>
    *
-   * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+   * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
    * @return The count of riskLevels.
    */
   int getRiskLevelsCount();
@@ -232,7 +205,7 @@ public interface BulkDeleteAutoEvaluationsRequestOrBuilder extends
    * Optional - filter by risk level.
    * </pre>
    *
-   * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+   * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
    * @param index The index of the element to return.
    * @return The riskLevels at the given index.
    */
@@ -242,7 +215,7 @@ public interface BulkDeleteAutoEvaluationsRequestOrBuilder extends
    * Optional - filter by risk level.
    * </pre>
    *
-   * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+   * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
    * @return A list containing the enum numeric values on the wire for riskLevels.
    */
   java.util.List<java.lang.Integer>
@@ -252,7 +225,7 @@ public interface BulkDeleteAutoEvaluationsRequestOrBuilder extends
    * Optional - filter by risk level.
    * </pre>
    *
-   * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+   * <code>repeated .api.commons.RiskLevel risk_levels = 7 [json_name = "riskLevels"];</code>
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of riskLevels at the given index.
    */
