@@ -78,6 +78,17 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int VOICE_SESSION_SID_FIELD_NUMBER = 2;
+  private long voiceSessionSid_ = 0L;
+  /**
+   * <code>int64 voice_session_sid = 2 [json_name = "voiceSessionSid"];</code>
+   * @return The voiceSessionSid.
+   */
+  @java.lang.Override
+  public long getVoiceSessionSid() {
+    return voiceSessionSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -95,6 +106,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portalId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, portalId_);
     }
+    if (voiceSessionSid_ != 0L) {
+      output.writeInt64(2, voiceSessionSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -106,6 +120,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portalId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, portalId_);
+    }
+    if (voiceSessionSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(2, voiceSessionSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -124,6 +142,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getPortalId()
         .equals(other.getPortalId())) return false;
+    if (getVoiceSessionSid()
+        != other.getVoiceSessionSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -137,6 +157,9 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PORTAL_ID_FIELD_NUMBER;
     hash = (53 * hash) + getPortalId().hashCode();
+    hash = (37 * hash) + VOICE_SESSION_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getVoiceSessionSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -269,6 +292,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       portalId_ = "";
+      voiceSessionSid_ = 0L;
       return this;
     }
 
@@ -304,6 +328,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.portalId_ = portalId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.voiceSessionSid_ = voiceSessionSid_;
       }
     }
 
@@ -356,6 +383,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (other.getVoiceSessionSid() != 0L) {
+        setVoiceSessionSid(other.getVoiceSessionSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -387,6 +417,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 16: {
+              voiceSessionSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -472,6 +507,38 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       portalId_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private long voiceSessionSid_ ;
+    /**
+     * <code>int64 voice_session_sid = 2 [json_name = "voiceSessionSid"];</code>
+     * @return The voiceSessionSid.
+     */
+    @java.lang.Override
+    public long getVoiceSessionSid() {
+      return voiceSessionSid_;
+    }
+    /**
+     * <code>int64 voice_session_sid = 2 [json_name = "voiceSessionSid"];</code>
+     * @param value The voiceSessionSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVoiceSessionSid(long value) {
+
+      voiceSessionSid_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 voice_session_sid = 2 [json_name = "voiceSessionSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearVoiceSessionSid() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      voiceSessionSid_ = 0L;
       onChanged();
       return this;
     }

@@ -72,4 +72,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
    * @return The choice.
    */
   int getChoice();
+
+  /**
+   * <code>int64 voice_session_sid = 5 [json_name = "voiceSessionSid"];</code>
+   * @return The voiceSessionSid.
+   */
+  long getVoiceSessionSid();
 }

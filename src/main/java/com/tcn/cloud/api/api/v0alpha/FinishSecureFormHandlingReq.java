@@ -169,6 +169,17 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     return map.get(key);
   }
 
+  public static final int VOICE_SESSION_SID_FIELD_NUMBER = 3;
+  private long voiceSessionSid_ = 0L;
+  /**
+   * <code>int64 voice_session_sid = 3 [json_name = "voiceSessionSid"];</code>
+   * @return The voiceSessionSid.
+   */
+  @java.lang.Override
+  public long getVoiceSessionSid() {
+    return voiceSessionSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -192,6 +203,9 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         internalGetData(),
         DataDefaultEntryHolder.defaultEntry,
         2);
+    if (voiceSessionSid_ != 0L) {
+      output.writeInt64(3, voiceSessionSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -214,6 +228,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, data__);
     }
+    if (voiceSessionSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(3, voiceSessionSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -233,6 +251,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         .equals(other.getReason())) return false;
     if (!internalGetData().equals(
         other.internalGetData())) return false;
+    if (getVoiceSessionSid()
+        != other.getVoiceSessionSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -250,6 +270,9 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       hash = (37 * hash) + DATA_FIELD_NUMBER;
       hash = (53 * hash) + internalGetData().hashCode();
     }
+    hash = (37 * hash) + VOICE_SESSION_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getVoiceSessionSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -405,6 +428,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       bitField0_ = 0;
       reason_ = "";
       internalGetMutableData().clear();
+      voiceSessionSid_ = 0L;
       return this;
     }
 
@@ -444,6 +468,9 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.data_ = internalGetData();
         result.data_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.voiceSessionSid_ = voiceSessionSid_;
       }
     }
 
@@ -499,6 +526,9 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       internalGetMutableData().mergeFrom(
           other.internalGetData());
       bitField0_ |= 0x00000002;
+      if (other.getVoiceSessionSid() != 0L) {
+        setVoiceSessionSid(other.getVoiceSessionSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -539,6 +569,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 24: {
+              voiceSessionSid_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -752,6 +787,38 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       internalGetMutableData().getMutableMap()
           .putAll(values);
       bitField0_ |= 0x00000002;
+      return this;
+    }
+
+    private long voiceSessionSid_ ;
+    /**
+     * <code>int64 voice_session_sid = 3 [json_name = "voiceSessionSid"];</code>
+     * @return The voiceSessionSid.
+     */
+    @java.lang.Override
+    public long getVoiceSessionSid() {
+      return voiceSessionSid_;
+    }
+    /**
+     * <code>int64 voice_session_sid = 3 [json_name = "voiceSessionSid"];</code>
+     * @param value The voiceSessionSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVoiceSessionSid(long value) {
+
+      voiceSessionSid_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 voice_session_sid = 3 [json_name = "voiceSessionSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearVoiceSessionSid() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      voiceSessionSid_ = 0L;
+      onChanged();
       return this;
     }
     @java.lang.Override

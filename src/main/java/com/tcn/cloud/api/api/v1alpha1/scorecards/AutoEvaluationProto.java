@@ -145,18 +145,22 @@ public final class AutoEvaluationProto {
       "e\022\016\n\002gt\030\005 \001(\003R\002gt\022\016\n\002lt\030\006 \001(\003R\002lt\"i\n\"Del" +
       "eteAutoEvaluationByOrgIdRequest\022\025\n\006org_i" +
       "d\030\001 \001(\tR\005orgId\022,\n\022auto_evaluation_id\030\002 \001" +
-      "(\003R\020autoEvaluationId\"\245\001\n BulkDeleteAutoE" +
+      "(\003R\020autoEvaluationId\"\314\002\n BulkDeleteAutoE" +
       "valuationsRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId" +
       "\022.\n\023auto_evaluation_ids\030\002 \003(\003R\021autoEvalu" +
       "ationIds\022:\n\014completed_at\030\003 \001(\0132\027.api.com" +
-      "mons.TimeFilterR\013completedAt\"9\n!BulkDele" +
-      "teAutoEvaluationsResponse\022\024\n\005count\030\001 \001(\003" +
-      "R\005countB\276\001\n)com.tcn.cloud.api.api.v1alph" +
-      "a1.scorecardsB\023AutoEvaluationProtoP\001\242\002\003A" +
-      "VS\252\002\027Api.V1alpha1.Scorecards\312\002\027Api\\V1alp" +
-      "ha1\\Scorecards\342\002#Api\\V1alpha1\\Scorecards" +
-      "\\GPBMetadata\352\002\031Api::V1alpha1::Scorecards" +
-      "b\006proto3"
+      "mons.TimeFilterR\013completedAt\022#\n\rscorecar" +
+      "d_ids\030\004 \003(\003R\014scorecardIds\022!\n\014category_id" +
+      "s\030\005 \003(\003R\013categoryIds\022$\n\016agent_user_ids\030\006" +
+      " \003(\tR\014agentUserIds\0227\n\013risk_levels\030\007 \003(\0162" +
+      "\026.api.commons.RiskLevelR\nriskLevels\"9\n!B" +
+      "ulkDeleteAutoEvaluationsResponse\022\024\n\005coun" +
+      "t\030\001 \001(\003R\005countB\276\001\n)com.tcn.cloud.api.api" +
+      ".v1alpha1.scorecardsB\023AutoEvaluationProt" +
+      "oP\001\242\002\003AVS\252\002\027Api.V1alpha1.Scorecards\312\002\027Ap" +
+      "i\\V1alpha1\\Scorecards\342\002#Api\\V1alpha1\\Sco" +
+      "recards\\GPBMetadata\352\002\031Api::V1alpha1::Sco" +
+      "recardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -240,7 +244,7 @@ public final class AutoEvaluationProto {
     internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_descriptor,
-        new java.lang.String[] { "OrgId", "AutoEvaluationIds", "CompletedAt", });
+        new java.lang.String[] { "OrgId", "AutoEvaluationIds", "CompletedAt", "ScorecardIds", "CategoryIds", "AgentUserIds", "RiskLevels", });
     internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsResponse_fieldAccessorTable = new

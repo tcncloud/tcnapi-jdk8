@@ -52,4 +52,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
    */
   com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrThrow(
       java.lang.String key);
+
+  /**
+   * <code>int64 voice_session_sid = 3 [json_name = "voiceSessionSid"];</code>
+   * @return The voiceSessionSid.
+   */
+  long getVoiceSessionSid();
 }
