@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.integrations;
 
-public interface PaymentFinviCreateTransactionSaleOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.integrations.PaymentFinviCreateTransactionSale)
+public interface PaymentFinviCCOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.integrations.PaymentFinviCC)
     com.google.protobuf.MessageOrBuilder {
 }
