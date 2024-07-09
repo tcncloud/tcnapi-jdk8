@@ -9427,6 +9427,26 @@ private static final long serialVersionUID = 0L;
        */
       com.tcn.cloud.api.api.v0alpha.QueueConfig.AttentionTones.TonesOrBuilder getTonesOrBuilder(
           int index);
+
+      /**
+       * <pre>
+       * play a sound file instead of attention tones.
+       * </pre>
+       *
+       * <code>bool play_sound_file = 4 [json_name = "playSoundFile"];</code>
+       * @return The playSoundFile.
+       */
+      boolean getPlaySoundFile();
+
+      /**
+       * <pre>
+       * available only for playing sound file.
+       * </pre>
+       *
+       * <code>bool agent_status_on_call = 5 [json_name = "agentStatusOnCall"];</code>
+       * @return The agentStatusOnCall.
+       */
+      boolean getAgentStatusOnCall();
     }
     /**
      * Protobuf type {@code api.v0alpha.QueueConfig.AttentionTones.Config}
@@ -9551,6 +9571,36 @@ private static final long serialVersionUID = 0L;
         return tones_.get(index);
       }
 
+      public static final int PLAY_SOUND_FILE_FIELD_NUMBER = 4;
+      private boolean playSoundFile_ = false;
+      /**
+       * <pre>
+       * play a sound file instead of attention tones.
+       * </pre>
+       *
+       * <code>bool play_sound_file = 4 [json_name = "playSoundFile"];</code>
+       * @return The playSoundFile.
+       */
+      @java.lang.Override
+      public boolean getPlaySoundFile() {
+        return playSoundFile_;
+      }
+
+      public static final int AGENT_STATUS_ON_CALL_FIELD_NUMBER = 5;
+      private boolean agentStatusOnCall_ = false;
+      /**
+       * <pre>
+       * available only for playing sound file.
+       * </pre>
+       *
+       * <code>bool agent_status_on_call = 5 [json_name = "agentStatusOnCall"];</code>
+       * @return The agentStatusOnCall.
+       */
+      @java.lang.Override
+      public boolean getAgentStatusOnCall() {
+        return agentStatusOnCall_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -9574,6 +9624,12 @@ private static final long serialVersionUID = 0L;
         for (int i = 0; i < tones_.size(); i++) {
           output.writeMessage(3, tones_.get(i));
         }
+        if (playSoundFile_ != false) {
+          output.writeBool(4, playSoundFile_);
+        }
+        if (agentStatusOnCall_ != false) {
+          output.writeBool(5, agentStatusOnCall_);
+        }
         getUnknownFields().writeTo(output);
       }
 
@@ -9594,6 +9650,14 @@ private static final long serialVersionUID = 0L;
         for (int i = 0; i < tones_.size(); i++) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, tones_.get(i));
+        }
+        if (playSoundFile_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(4, playSoundFile_);
+        }
+        if (agentStatusOnCall_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(5, agentStatusOnCall_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -9616,6 +9680,10 @@ private static final long serialVersionUID = 0L;
             != other.getAgentStatusWrapUp()) return false;
         if (!getTonesList()
             .equals(other.getTonesList())) return false;
+        if (getPlaySoundFile()
+            != other.getPlaySoundFile()) return false;
+        if (getAgentStatusOnCall()
+            != other.getAgentStatusOnCall()) return false;
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -9637,6 +9705,12 @@ private static final long serialVersionUID = 0L;
           hash = (37 * hash) + TONES_FIELD_NUMBER;
           hash = (53 * hash) + getTonesList().hashCode();
         }
+        hash = (37 * hash) + PLAY_SOUND_FILE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getPlaySoundFile());
+        hash = (37 * hash) + AGENT_STATUS_ON_CALL_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getAgentStatusOnCall());
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -9777,6 +9851,8 @@ private static final long serialVersionUID = 0L;
             tonesBuilder_.clear();
           }
           bitField0_ = (bitField0_ & ~0x00000004);
+          playSoundFile_ = false;
+          agentStatusOnCall_ = false;
           return this;
         }
 
@@ -9828,6 +9904,12 @@ private static final long serialVersionUID = 0L;
           }
           if (((from_bitField0_ & 0x00000002) != 0)) {
             result.agentStatusWrapUp_ = agentStatusWrapUp_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.playSoundFile_ = playSoundFile_;
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.agentStatusOnCall_ = agentStatusOnCall_;
           }
         }
 
@@ -9907,6 +9989,12 @@ private static final long serialVersionUID = 0L;
               }
             }
           }
+          if (other.getPlaySoundFile() != false) {
+            setPlaySoundFile(other.getPlaySoundFile());
+          }
+          if (other.getAgentStatusOnCall() != false) {
+            setAgentStatusOnCall(other.getAgentStatusOnCall());
+          }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -9956,6 +10044,16 @@ private static final long serialVersionUID = 0L;
                   }
                   break;
                 } // case 26
+                case 32: {
+                  playSoundFile_ = input.readBool();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 32
+                case 40: {
+                  agentStatusOnCall_ = input.readBool();
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 40
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -10359,6 +10457,94 @@ private static final long serialVersionUID = 0L;
             tones_ = null;
           }
           return tonesBuilder_;
+        }
+
+        private boolean playSoundFile_ ;
+        /**
+         * <pre>
+         * play a sound file instead of attention tones.
+         * </pre>
+         *
+         * <code>bool play_sound_file = 4 [json_name = "playSoundFile"];</code>
+         * @return The playSoundFile.
+         */
+        @java.lang.Override
+        public boolean getPlaySoundFile() {
+          return playSoundFile_;
+        }
+        /**
+         * <pre>
+         * play a sound file instead of attention tones.
+         * </pre>
+         *
+         * <code>bool play_sound_file = 4 [json_name = "playSoundFile"];</code>
+         * @param value The playSoundFile to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPlaySoundFile(boolean value) {
+
+          playSoundFile_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * play a sound file instead of attention tones.
+         * </pre>
+         *
+         * <code>bool play_sound_file = 4 [json_name = "playSoundFile"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPlaySoundFile() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          playSoundFile_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean agentStatusOnCall_ ;
+        /**
+         * <pre>
+         * available only for playing sound file.
+         * </pre>
+         *
+         * <code>bool agent_status_on_call = 5 [json_name = "agentStatusOnCall"];</code>
+         * @return The agentStatusOnCall.
+         */
+        @java.lang.Override
+        public boolean getAgentStatusOnCall() {
+          return agentStatusOnCall_;
+        }
+        /**
+         * <pre>
+         * available only for playing sound file.
+         * </pre>
+         *
+         * <code>bool agent_status_on_call = 5 [json_name = "agentStatusOnCall"];</code>
+         * @param value The agentStatusOnCall to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAgentStatusOnCall(boolean value) {
+
+          agentStatusOnCall_ = value;
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * available only for playing sound file.
+         * </pre>
+         *
+         * <code>bool agent_status_on_call = 5 [json_name = "agentStatusOnCall"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAgentStatusOnCall() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          agentStatusOnCall_ = false;
+          onChanged();
+          return this;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -29002,6 +29188,16 @@ private static final long serialVersionUID = 0L;
        */
       long getAgentScoreMemory();
 
+      /**
+       * <pre>
+       * Time before moving to next agent.
+       * </pre>
+       *
+       * <code>int64 timeout = 6 [json_name = "timeout"];</code>
+       * @return The timeout.
+       */
+      long getTimeout();
+
       com.tcn.cloud.api.api.v0alpha.QueueConfig.PbxRingStrategy.Config.StrategyCase getStrategyCase();
     }
     /**
@@ -29278,6 +29474,21 @@ private static final long serialVersionUID = 0L;
         return 0L;
       }
 
+      public static final int TIMEOUT_FIELD_NUMBER = 6;
+      private long timeout_ = 0L;
+      /**
+       * <pre>
+       * Time before moving to next agent.
+       * </pre>
+       *
+       * <code>int64 timeout = 6 [json_name = "timeout"];</code>
+       * @return The timeout.
+       */
+      @java.lang.Override
+      public long getTimeout() {
+        return timeout_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -29308,6 +29519,9 @@ private static final long serialVersionUID = 0L;
         if (strategyCase_ == 5) {
           output.writeInt64(
               5, (long)((java.lang.Long) strategy_));
+        }
+        if (timeout_ != 0L) {
+          output.writeInt64(6, timeout_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -29340,6 +29554,10 @@ private static final long serialVersionUID = 0L;
             .computeInt64Size(
                 5, (long)((java.lang.Long) strategy_));
         }
+        if (timeout_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(6, timeout_);
+        }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
@@ -29355,6 +29573,8 @@ private static final long serialVersionUID = 0L;
         }
         com.tcn.cloud.api.api.v0alpha.QueueConfig.PbxRingStrategy.Config other = (com.tcn.cloud.api.api.v0alpha.QueueConfig.PbxRingStrategy.Config) obj;
 
+        if (getTimeout()
+            != other.getTimeout()) return false;
         if (!getStrategyCase().equals(other.getStrategyCase())) return false;
         switch (strategyCase_) {
           case 1:
@@ -29391,6 +29611,9 @@ private static final long serialVersionUID = 0L;
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getTimeout());
         switch (strategyCase_) {
           case 1:
             hash = (37 * hash) + RING_ALL_FIELD_NUMBER;
@@ -29557,6 +29780,7 @@ private static final long serialVersionUID = 0L;
           if (randomBuilder_ != null) {
             randomBuilder_.clear();
           }
+          timeout_ = 0L;
           strategyCase_ = 0;
           strategy_ = null;
           return this;
@@ -29593,6 +29817,9 @@ private static final long serialVersionUID = 0L;
 
         private void buildPartial0(com.tcn.cloud.api.api.v0alpha.QueueConfig.PbxRingStrategy.Config result) {
           int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000020) != 0)) {
+            result.timeout_ = timeout_;
+          }
         }
 
         private void buildPartialOneofs(com.tcn.cloud.api.api.v0alpha.QueueConfig.PbxRingStrategy.Config result) {
@@ -29656,6 +29883,9 @@ private static final long serialVersionUID = 0L;
 
         public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.QueueConfig.PbxRingStrategy.Config other) {
           if (other == com.tcn.cloud.api.api.v0alpha.QueueConfig.PbxRingStrategy.Config.getDefaultInstance()) return this;
+          if (other.getTimeout() != 0L) {
+            setTimeout(other.getTimeout());
+          }
           switch (other.getStrategyCase()) {
             case RING_ALL: {
               mergeRingAll(other.getRingAll());
@@ -29738,6 +29968,11 @@ private static final long serialVersionUID = 0L;
                   strategyCase_ = 5;
                   break;
                 } // case 40
+                case 48: {
+                  timeout_ = input.readInt64();
+                  bitField0_ |= 0x00000020;
+                  break;
+                } // case 48
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -30425,6 +30660,50 @@ private static final long serialVersionUID = 0L;
             strategy_ = null;
             onChanged();
           }
+          return this;
+        }
+
+        private long timeout_ ;
+        /**
+         * <pre>
+         * Time before moving to next agent.
+         * </pre>
+         *
+         * <code>int64 timeout = 6 [json_name = "timeout"];</code>
+         * @return The timeout.
+         */
+        @java.lang.Override
+        public long getTimeout() {
+          return timeout_;
+        }
+        /**
+         * <pre>
+         * Time before moving to next agent.
+         * </pre>
+         *
+         * <code>int64 timeout = 6 [json_name = "timeout"];</code>
+         * @param value The timeout to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTimeout(long value) {
+
+          timeout_ = value;
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Time before moving to next agent.
+         * </pre>
+         *
+         * <code>int64 timeout = 6 [json_name = "timeout"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTimeout() {
+          bitField0_ = (bitField0_ & ~0x00000020);
+          timeout_ = 0L;
+          onChanged();
           return this;
         }
         @java.lang.Override
@@ -33917,6 +34196,21 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.IntercomConnection.UNRECOGNIZED : result;
   }
 
+  public static final int PASS_THROUGH_DTMF_FIELD_NUMBER = 18;
+  private boolean passThroughDtmf_ = false;
+  /**
+   * <pre>
+   * general config setting regarding passing DTMF through to agent.
+   * </pre>
+   *
+   * <code>bool pass_through_dtmf = 18 [json_name = "passThroughDtmf"];</code>
+   * @return The passThroughDtmf.
+   */
+  @java.lang.Override
+  public boolean getPassThroughDtmf() {
+    return passThroughDtmf_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -33981,6 +34275,9 @@ private static final long serialVersionUID = 0L;
     }
     if (intercomConnection_ != com.tcn.cloud.api.api.commons.IntercomConnection.INTERCOM_CONNECTION_AUTOMATIC.getNumber()) {
       output.writeEnum(17, intercomConnection_);
+    }
+    if (passThroughDtmf_ != false) {
+      output.writeBool(18, passThroughDtmf_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -34055,6 +34352,10 @@ private static final long serialVersionUID = 0L;
     if (intercomConnection_ != com.tcn.cloud.api.api.commons.IntercomConnection.INTERCOM_CONNECTION_AUTOMATIC.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(17, intercomConnection_);
+    }
+    if (passThroughDtmf_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(18, passThroughDtmf_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -34133,6 +34434,8 @@ private static final long serialVersionUID = 0L;
         != other.getNumberUpdate()) return false;
     if (inboundOverride_ != other.inboundOverride_) return false;
     if (intercomConnection_ != other.intercomConnection_) return false;
+    if (getPassThroughDtmf()
+        != other.getPassThroughDtmf()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -34200,6 +34503,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + inboundOverride_;
     hash = (37 * hash) + INTERCOM_CONNECTION_FIELD_NUMBER;
     hash = (53 * hash) + intercomConnection_;
+    hash = (37 * hash) + PASS_THROUGH_DTMF_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getPassThroughDtmf());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -34388,6 +34694,7 @@ private static final long serialVersionUID = 0L;
       numberUpdate_ = false;
       inboundOverride_ = 0;
       intercomConnection_ = 0;
+      passThroughDtmf_ = false;
       return this;
     }
 
@@ -34492,6 +34799,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00010000) != 0)) {
         result.intercomConnection_ = intercomConnection_;
       }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.passThroughDtmf_ = passThroughDtmf_;
+      }
     }
 
     @java.lang.Override
@@ -34594,6 +34904,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.intercomConnection_ != 0) {
         setIntercomConnectionValue(other.getIntercomConnectionValue());
+      }
+      if (other.getPassThroughDtmf() != false) {
+        setPassThroughDtmf(other.getPassThroughDtmf());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -34726,6 +35039,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00010000;
               break;
             } // case 136
+            case 144: {
+              passThroughDtmf_ = input.readBool();
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 144
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -36418,6 +36736,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearIntercomConnection() {
       bitField0_ = (bitField0_ & ~0x00010000);
       intercomConnection_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean passThroughDtmf_ ;
+    /**
+     * <pre>
+     * general config setting regarding passing DTMF through to agent.
+     * </pre>
+     *
+     * <code>bool pass_through_dtmf = 18 [json_name = "passThroughDtmf"];</code>
+     * @return The passThroughDtmf.
+     */
+    @java.lang.Override
+    public boolean getPassThroughDtmf() {
+      return passThroughDtmf_;
+    }
+    /**
+     * <pre>
+     * general config setting regarding passing DTMF through to agent.
+     * </pre>
+     *
+     * <code>bool pass_through_dtmf = 18 [json_name = "passThroughDtmf"];</code>
+     * @param value The passThroughDtmf to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPassThroughDtmf(boolean value) {
+
+      passThroughDtmf_ = value;
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * general config setting regarding passing DTMF through to agent.
+     * </pre>
+     *
+     * <code>bool pass_through_dtmf = 18 [json_name = "passThroughDtmf"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPassThroughDtmf() {
+      bitField0_ = (bitField0_ & ~0x00020000);
+      passThroughDtmf_ = false;
       onChanged();
       return this;
     }

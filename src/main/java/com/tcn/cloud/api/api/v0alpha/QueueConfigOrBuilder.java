@@ -264,4 +264,14 @@ public interface QueueConfigOrBuilder extends
    * @return The intercomConnection.
    */
   com.tcn.cloud.api.api.commons.IntercomConnection getIntercomConnection();
+
+  /**
+   * <pre>
+   * general config setting regarding passing DTMF through to agent.
+   * </pre>
+   *
+   * <code>bool pass_through_dtmf = 18 [json_name = "passThroughDtmf"];</code>
+   * @return The passThroughDtmf.
+   */
+  boolean getPassThroughDtmf();
 }
