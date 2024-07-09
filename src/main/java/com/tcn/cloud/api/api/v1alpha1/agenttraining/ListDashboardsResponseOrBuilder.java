@@ -8,26 +8,26 @@ public interface ListDashboardsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+   * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.DashboardSummary> 
+  java.util.List<com.tcn.cloud.api.api.commons.DashboardReference> 
       getDashboardsList();
   /**
-   * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+   * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
    */
-  com.tcn.cloud.api.api.commons.DashboardSummary getDashboards(int index);
+  com.tcn.cloud.api.api.commons.DashboardReference getDashboards(int index);
   /**
-   * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+   * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
    */
   int getDashboardsCount();
   /**
-   * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+   * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.DashboardSummaryOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.commons.DashboardReferenceOrBuilder> 
       getDashboardsOrBuilderList();
   /**
-   * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+   * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
    */
-  com.tcn.cloud.api.api.commons.DashboardSummaryOrBuilder getDashboardsOrBuilder(
+  com.tcn.cloud.api.api.commons.DashboardReferenceOrBuilder getDashboardsOrBuilder(
       int index);
 }

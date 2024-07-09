@@ -166,25 +166,25 @@ public final class LearningOpportunityProto {
       "\n\036GetLearningOpportunityResponse\022S\n\024lear" +
       "ning_opportunity\030\001 \001(\0132 .api.commons.Lea" +
       "rningOpportunityR\023learningOpportunity\"\027\n" +
-      "\025ListDashboardsRequest\"W\n\026ListDashboards" +
-      "Response\022=\n\ndashboards\030\001 \003(\0132\035.api.commo" +
-      "ns.DashboardSummaryR\ndashboards\"\217\002\n\'List" +
-      "LearningOpportunitiesByOrgIdRequest\022\025\n\006o" +
-      "rg_id\030\001 \001(\tR\005orgId\022F\n\020call_identifiers\030\002" +
-      " \003(\0132\033.api.commons.CallIdentifierR\017callI" +
-      "dentifiers\022\'\n\017transcript_sids\030\003 \003(\003R\016tra" +
-      "nscriptSids\022$\n\016agent_user_ids\030\004 \003(\tR\014age" +
-      "ntUserIds\0226\n\ncreated_at\030\005 \001(\0132\027.api.comm" +
-      "ons.TimeFilterR\tcreatedAt\"x\n\'DeleteLearn" +
-      "ingOpportunityByOrgIdRequest\022\025\n\006org_id\030\001" +
-      " \001(\tR\005orgId\0226\n\027learning_opportunity_id\030\003" +
-      " \001(\003R\025learningOpportunityIdB\322\001\n,com.tcn." +
-      "cloud.api.api.v1alpha1.agenttrainingB\030Le" +
-      "arningOpportunityProtoP\001\242\002\003AVA\252\002\032Api.V1a" +
-      "lpha1.Agenttraining\312\002\032Api\\V1alpha1\\Agent" +
-      "training\342\002&Api\\V1alpha1\\Agenttraining\\GP" +
-      "BMetadata\352\002\034Api::V1alpha1::Agenttraining" +
-      "b\006proto3"
+      "\025ListDashboardsRequest\"Y\n\026ListDashboards" +
+      "Response\022?\n\ndashboards\030\001 \003(\0132\037.api.commo" +
+      "ns.DashboardReferenceR\ndashboards\"\217\002\n\'Li" +
+      "stLearningOpportunitiesByOrgIdRequest\022\025\n" +
+      "\006org_id\030\001 \001(\tR\005orgId\022F\n\020call_identifiers" +
+      "\030\002 \003(\0132\033.api.commons.CallIdentifierR\017cal" +
+      "lIdentifiers\022\'\n\017transcript_sids\030\003 \003(\003R\016t" +
+      "ranscriptSids\022$\n\016agent_user_ids\030\004 \003(\tR\014a" +
+      "gentUserIds\0226\n\ncreated_at\030\005 \001(\0132\027.api.co" +
+      "mmons.TimeFilterR\tcreatedAt\"x\n\'DeleteLea" +
+      "rningOpportunityByOrgIdRequest\022\025\n\006org_id" +
+      "\030\001 \001(\tR\005orgId\0226\n\027learning_opportunity_id" +
+      "\030\003 \001(\003R\025learningOpportunityIdB\322\001\n,com.tc" +
+      "n.cloud.api.api.v1alpha1.agenttrainingB\030" +
+      "LearningOpportunityProtoP\001\242\002\003AVA\252\002\032Api.V" +
+      "1alpha1.Agenttraining\312\002\032Api\\V1alpha1\\Age" +
+      "nttraining\342\002&Api\\V1alpha1\\Agenttraining\\" +
+      "GPBMetadata\352\002\034Api::V1alpha1::Agenttraini" +
+      "ngb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

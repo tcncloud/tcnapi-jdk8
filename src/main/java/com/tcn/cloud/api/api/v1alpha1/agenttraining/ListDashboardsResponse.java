@@ -45,41 +45,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int DASHBOARDS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.DashboardSummary> dashboards_;
+  private java.util.List<com.tcn.cloud.api.api.commons.DashboardReference> dashboards_;
   /**
-   * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+   * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.DashboardSummary> getDashboardsList() {
+  public java.util.List<com.tcn.cloud.api.api.commons.DashboardReference> getDashboardsList() {
     return dashboards_;
   }
   /**
-   * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+   * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.DashboardSummaryOrBuilder> 
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.DashboardReferenceOrBuilder> 
       getDashboardsOrBuilderList() {
     return dashboards_;
   }
   /**
-   * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+   * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
    */
   @java.lang.Override
   public int getDashboardsCount() {
     return dashboards_.size();
   }
   /**
-   * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+   * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.DashboardSummary getDashboards(int index) {
+  public com.tcn.cloud.api.api.commons.DashboardReference getDashboards(int index) {
     return dashboards_.get(index);
   }
   /**
-   * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+   * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.DashboardSummaryOrBuilder getDashboardsOrBuilder(
+  public com.tcn.cloud.api.api.commons.DashboardReferenceOrBuilder getDashboardsOrBuilder(
       int index) {
     return dashboards_.get(index);
   }
@@ -433,9 +433,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              com.tcn.cloud.api.api.commons.DashboardSummary m =
+              com.tcn.cloud.api.api.commons.DashboardReference m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.commons.DashboardSummary.parser(),
+                      com.tcn.cloud.api.api.commons.DashboardReference.parser(),
                       extensionRegistry);
               if (dashboardsBuilder_ == null) {
                 ensureDashboardsIsMutable();
@@ -462,22 +462,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.api.commons.DashboardSummary> dashboards_ =
+    private java.util.List<com.tcn.cloud.api.api.commons.DashboardReference> dashboards_ =
       java.util.Collections.emptyList();
     private void ensureDashboardsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        dashboards_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.DashboardSummary>(dashboards_);
+        dashboards_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.DashboardReference>(dashboards_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.DashboardSummary, com.tcn.cloud.api.api.commons.DashboardSummary.Builder, com.tcn.cloud.api.api.commons.DashboardSummaryOrBuilder> dashboardsBuilder_;
+        com.tcn.cloud.api.api.commons.DashboardReference, com.tcn.cloud.api.api.commons.DashboardReference.Builder, com.tcn.cloud.api.api.commons.DashboardReferenceOrBuilder> dashboardsBuilder_;
 
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.DashboardSummary> getDashboardsList() {
+    public java.util.List<com.tcn.cloud.api.api.commons.DashboardReference> getDashboardsList() {
       if (dashboardsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(dashboards_);
       } else {
@@ -485,7 +485,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
     public int getDashboardsCount() {
       if (dashboardsBuilder_ == null) {
@@ -495,9 +495,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
-    public com.tcn.cloud.api.api.commons.DashboardSummary getDashboards(int index) {
+    public com.tcn.cloud.api.api.commons.DashboardReference getDashboards(int index) {
       if (dashboardsBuilder_ == null) {
         return dashboards_.get(index);
       } else {
@@ -505,10 +505,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
     public Builder setDashboards(
-        int index, com.tcn.cloud.api.api.commons.DashboardSummary value) {
+        int index, com.tcn.cloud.api.api.commons.DashboardReference value) {
       if (dashboardsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -522,10 +522,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
     public Builder setDashboards(
-        int index, com.tcn.cloud.api.api.commons.DashboardSummary.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.commons.DashboardReference.Builder builderForValue) {
       if (dashboardsBuilder_ == null) {
         ensureDashboardsIsMutable();
         dashboards_.set(index, builderForValue.build());
@@ -536,9 +536,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
-    public Builder addDashboards(com.tcn.cloud.api.api.commons.DashboardSummary value) {
+    public Builder addDashboards(com.tcn.cloud.api.api.commons.DashboardReference value) {
       if (dashboardsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -552,10 +552,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
     public Builder addDashboards(
-        int index, com.tcn.cloud.api.api.commons.DashboardSummary value) {
+        int index, com.tcn.cloud.api.api.commons.DashboardReference value) {
       if (dashboardsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -569,10 +569,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
     public Builder addDashboards(
-        com.tcn.cloud.api.api.commons.DashboardSummary.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.DashboardReference.Builder builderForValue) {
       if (dashboardsBuilder_ == null) {
         ensureDashboardsIsMutable();
         dashboards_.add(builderForValue.build());
@@ -583,10 +583,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
     public Builder addDashboards(
-        int index, com.tcn.cloud.api.api.commons.DashboardSummary.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.commons.DashboardReference.Builder builderForValue) {
       if (dashboardsBuilder_ == null) {
         ensureDashboardsIsMutable();
         dashboards_.add(index, builderForValue.build());
@@ -597,10 +597,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
     public Builder addAllDashboards(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.DashboardSummary> values) {
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.DashboardReference> values) {
       if (dashboardsBuilder_ == null) {
         ensureDashboardsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
     public Builder clearDashboards() {
       if (dashboardsBuilder_ == null) {
@@ -625,7 +625,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
     public Builder removeDashboards(int index) {
       if (dashboardsBuilder_ == null) {
@@ -638,16 +638,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
-    public com.tcn.cloud.api.api.commons.DashboardSummary.Builder getDashboardsBuilder(
+    public com.tcn.cloud.api.api.commons.DashboardReference.Builder getDashboardsBuilder(
         int index) {
       return getDashboardsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
-    public com.tcn.cloud.api.api.commons.DashboardSummaryOrBuilder getDashboardsOrBuilder(
+    public com.tcn.cloud.api.api.commons.DashboardReferenceOrBuilder getDashboardsOrBuilder(
         int index) {
       if (dashboardsBuilder_ == null) {
         return dashboards_.get(index);  } else {
@@ -655,9 +655,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.DashboardSummaryOrBuilder> 
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.DashboardReferenceOrBuilder> 
          getDashboardsOrBuilderList() {
       if (dashboardsBuilder_ != null) {
         return dashboardsBuilder_.getMessageOrBuilderList();
@@ -666,33 +666,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
-    public com.tcn.cloud.api.api.commons.DashboardSummary.Builder addDashboardsBuilder() {
+    public com.tcn.cloud.api.api.commons.DashboardReference.Builder addDashboardsBuilder() {
       return getDashboardsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.commons.DashboardSummary.getDefaultInstance());
+          com.tcn.cloud.api.api.commons.DashboardReference.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
-    public com.tcn.cloud.api.api.commons.DashboardSummary.Builder addDashboardsBuilder(
+    public com.tcn.cloud.api.api.commons.DashboardReference.Builder addDashboardsBuilder(
         int index) {
       return getDashboardsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.commons.DashboardSummary.getDefaultInstance());
+          index, com.tcn.cloud.api.api.commons.DashboardReference.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.DashboardSummary dashboards = 1 [json_name = "dashboards"];</code>
+     * <code>repeated .api.commons.DashboardReference dashboards = 1 [json_name = "dashboards"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.DashboardSummary.Builder> 
+    public java.util.List<com.tcn.cloud.api.api.commons.DashboardReference.Builder> 
          getDashboardsBuilderList() {
       return getDashboardsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.DashboardSummary, com.tcn.cloud.api.api.commons.DashboardSummary.Builder, com.tcn.cloud.api.api.commons.DashboardSummaryOrBuilder> 
+        com.tcn.cloud.api.api.commons.DashboardReference, com.tcn.cloud.api.api.commons.DashboardReference.Builder, com.tcn.cloud.api.api.commons.DashboardReferenceOrBuilder> 
         getDashboardsFieldBuilder() {
       if (dashboardsBuilder_ == null) {
         dashboardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.DashboardSummary, com.tcn.cloud.api.api.commons.DashboardSummary.Builder, com.tcn.cloud.api.api.commons.DashboardSummaryOrBuilder>(
+            com.tcn.cloud.api.api.commons.DashboardReference, com.tcn.cloud.api.api.commons.DashboardReference.Builder, com.tcn.cloud.api.api.commons.DashboardReferenceOrBuilder>(
                 dashboards_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
