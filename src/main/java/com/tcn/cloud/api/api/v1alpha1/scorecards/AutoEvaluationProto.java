@@ -80,6 +80,11 @@ public final class AutoEvaluationProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_CallSidFilter_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_CallSidFilter_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -145,18 +150,27 @@ public final class AutoEvaluationProto {
       "e\022\016\n\002gt\030\005 \001(\003R\002gt\022\016\n\002lt\030\006 \001(\003R\002lt\"i\n\"Del" +
       "eteAutoEvaluationByOrgIdRequest\022\025\n\006org_i" +
       "d\030\001 \001(\tR\005orgId\022,\n\022auto_evaluation_id\030\002 \001" +
-      "(\003R\020autoEvaluationId\"\245\001\n BulkDeleteAutoE" +
+      "(\003R\020autoEvaluationId\"\254\004\n BulkDeleteAutoE" +
       "valuationsRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId" +
       "\022.\n\023auto_evaluation_ids\030\002 \003(\003R\021autoEvalu" +
       "ationIds\022:\n\014completed_at\030\003 \001(\0132\027.api.com" +
-      "mons.TimeFilterR\013completedAt\"9\n!BulkDele" +
-      "teAutoEvaluationsResponse\022\024\n\005count\030\001 \001(\003" +
-      "R\005countB\276\001\n)com.tcn.cloud.api.api.v1alph" +
-      "a1.scorecardsB\023AutoEvaluationProtoP\001\242\002\003A" +
-      "VS\252\002\027Api.V1alpha1.Scorecards\312\002\027Api\\V1alp" +
-      "ha1\\Scorecards\342\002#Api\\V1alpha1\\Scorecards" +
-      "\\GPBMetadata\352\002\031Api::V1alpha1::Scorecards" +
-      "b\006proto3"
+      "mons.TimeFilterR\013completedAt\022#\n\rscorecar" +
+      "d_ids\030\004 \003(\003R\014scorecardIds\022!\n\014category_id" +
+      "s\030\005 \003(\003R\013categoryIds\022b\n\010call_sid\030\006 \001(\0132G" +
+      ".api.v1alpha1.scorecards.BulkDeleteAutoE" +
+      "valuationsRequest.CallSidFilterR\007callSid" +
+      "\022$\n\016agent_user_ids\030\007 \003(\tR\014agentUserIds\0227" +
+      "\n\013risk_levels\030\010 \003(\0162\026.api.commons.RiskLe" +
+      "velR\nriskLevels\032z\n\rCallSidFilter\022\025\n\006any_" +
+      "of\030\001 \003(\003R\005anyOf\022\016\n\002eq\030\002 \001(\003R\002eq\022\020\n\003gte\030\003" +
+      " \001(\003R\003gte\022\020\n\003lte\030\004 \001(\003R\003lte\022\016\n\002gt\030\005 \001(\003R" +
+      "\002gt\022\016\n\002lt\030\006 \001(\003R\002lt\"9\n!BulkDeleteAutoEva" +
+      "luationsResponse\022\024\n\005count\030\001 \001(\003R\005countB\276" +
+      "\001\n)com.tcn.cloud.api.api.v1alpha1.scorec" +
+      "ardsB\023AutoEvaluationProtoP\001\242\002\003AVS\252\002\027Api." +
+      "V1alpha1.Scorecards\312\002\027Api\\V1alpha1\\Score" +
+      "cards\342\002#Api\\V1alpha1\\Scorecards\\GPBMetad" +
+      "ata\352\002\031Api::V1alpha1::Scorecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -240,7 +254,13 @@ public final class AutoEvaluationProto {
     internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_descriptor,
-        new java.lang.String[] { "OrgId", "AutoEvaluationIds", "CompletedAt", });
+        new java.lang.String[] { "OrgId", "AutoEvaluationIds", "CompletedAt", "ScorecardIds", "CategoryIds", "CallSid", "AgentUserIds", "RiskLevels", });
+    internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_CallSidFilter_descriptor =
+      internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_CallSidFilter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_CallSidFilter_descriptor,
+        new java.lang.String[] { "AnyOf", "Eq", "Gte", "Lte", "Gt", "Lt", });
     internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsResponse_fieldAccessorTable = new

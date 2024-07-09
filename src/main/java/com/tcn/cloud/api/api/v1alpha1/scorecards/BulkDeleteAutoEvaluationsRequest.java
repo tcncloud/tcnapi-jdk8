@@ -22,6 +22,11 @@ private static final long serialVersionUID = 0L;
   private BulkDeleteAutoEvaluationsRequest() {
     orgId_ = "";
     autoEvaluationIds_ = emptyLongList();
+    scorecardIds_ = emptyLongList();
+    categoryIds_ = emptyLongList();
+    agentUserIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    riskLevels_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -42,6 +47,1119 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.scorecards.AutoEvaluationProto.internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.class, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.Builder.class);
+  }
+
+  public interface CallSidFilterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional - filter by any of the provided sids.
+     * </pre>
+     *
+     * <code>repeated int64 any_of = 1 [json_name = "anyOf"];</code>
+     * @return A list containing the anyOf.
+     */
+    java.util.List<java.lang.Long> getAnyOfList();
+    /**
+     * <pre>
+     * Optional - filter by any of the provided sids.
+     * </pre>
+     *
+     * <code>repeated int64 any_of = 1 [json_name = "anyOf"];</code>
+     * @return The count of anyOf.
+     */
+    int getAnyOfCount();
+    /**
+     * <pre>
+     * Optional - filter by any of the provided sids.
+     * </pre>
+     *
+     * <code>repeated int64 any_of = 1 [json_name = "anyOf"];</code>
+     * @param index The index of the element to return.
+     * @return The anyOf at the given index.
+     */
+    long getAnyOf(int index);
+
+    /**
+     * <pre>
+     * filter values must be non-zero to be applied
+     * </pre>
+     *
+     * <code>int64 eq = 2 [json_name = "eq"];</code>
+     * @return The eq.
+     */
+    long getEq();
+
+    /**
+     * <pre>
+     * Optional - filter by greater than or equal to.
+     * </pre>
+     *
+     * <code>int64 gte = 3 [json_name = "gte"];</code>
+     * @return The gte.
+     */
+    long getGte();
+
+    /**
+     * <pre>
+     * Optional - filter by less than or equal to.
+     * </pre>
+     *
+     * <code>int64 lte = 4 [json_name = "lte"];</code>
+     * @return The lte.
+     */
+    long getLte();
+
+    /**
+     * <pre>
+     * Optional - filter by greater than.
+     * </pre>
+     *
+     * <code>int64 gt = 5 [json_name = "gt"];</code>
+     * @return The gt.
+     */
+    long getGt();
+
+    /**
+     * <pre>
+     * Optional - filter by less than.
+     * </pre>
+     *
+     * <code>int64 lt = 6 [json_name = "lt"];</code>
+     * @return The lt.
+     */
+    long getLt();
+  }
+  /**
+   * Protobuf type {@code api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter}
+   */
+  public static final class CallSidFilter extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter)
+      CallSidFilterOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CallSidFilter.newBuilder() to construct.
+    private CallSidFilter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CallSidFilter() {
+      anyOf_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CallSidFilter();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.scorecards.AutoEvaluationProto.internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_CallSidFilter_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.scorecards.AutoEvaluationProto.internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_CallSidFilter_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.class, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.Builder.class);
+    }
+
+    public static final int ANY_OF_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList anyOf_;
+    /**
+     * <pre>
+     * Optional - filter by any of the provided sids.
+     * </pre>
+     *
+     * <code>repeated int64 any_of = 1 [json_name = "anyOf"];</code>
+     * @return A list containing the anyOf.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getAnyOfList() {
+      return anyOf_;
+    }
+    /**
+     * <pre>
+     * Optional - filter by any of the provided sids.
+     * </pre>
+     *
+     * <code>repeated int64 any_of = 1 [json_name = "anyOf"];</code>
+     * @return The count of anyOf.
+     */
+    public int getAnyOfCount() {
+      return anyOf_.size();
+    }
+    /**
+     * <pre>
+     * Optional - filter by any of the provided sids.
+     * </pre>
+     *
+     * <code>repeated int64 any_of = 1 [json_name = "anyOf"];</code>
+     * @param index The index of the element to return.
+     * @return The anyOf at the given index.
+     */
+    public long getAnyOf(int index) {
+      return anyOf_.getLong(index);
+    }
+    private int anyOfMemoizedSerializedSize = -1;
+
+    public static final int EQ_FIELD_NUMBER = 2;
+    private long eq_ = 0L;
+    /**
+     * <pre>
+     * filter values must be non-zero to be applied
+     * </pre>
+     *
+     * <code>int64 eq = 2 [json_name = "eq"];</code>
+     * @return The eq.
+     */
+    @java.lang.Override
+    public long getEq() {
+      return eq_;
+    }
+
+    public static final int GTE_FIELD_NUMBER = 3;
+    private long gte_ = 0L;
+    /**
+     * <pre>
+     * Optional - filter by greater than or equal to.
+     * </pre>
+     *
+     * <code>int64 gte = 3 [json_name = "gte"];</code>
+     * @return The gte.
+     */
+    @java.lang.Override
+    public long getGte() {
+      return gte_;
+    }
+
+    public static final int LTE_FIELD_NUMBER = 4;
+    private long lte_ = 0L;
+    /**
+     * <pre>
+     * Optional - filter by less than or equal to.
+     * </pre>
+     *
+     * <code>int64 lte = 4 [json_name = "lte"];</code>
+     * @return The lte.
+     */
+    @java.lang.Override
+    public long getLte() {
+      return lte_;
+    }
+
+    public static final int GT_FIELD_NUMBER = 5;
+    private long gt_ = 0L;
+    /**
+     * <pre>
+     * Optional - filter by greater than.
+     * </pre>
+     *
+     * <code>int64 gt = 5 [json_name = "gt"];</code>
+     * @return The gt.
+     */
+    @java.lang.Override
+    public long getGt() {
+      return gt_;
+    }
+
+    public static final int LT_FIELD_NUMBER = 6;
+    private long lt_ = 0L;
+    /**
+     * <pre>
+     * Optional - filter by less than.
+     * </pre>
+     *
+     * <code>int64 lt = 6 [json_name = "lt"];</code>
+     * @return The lt.
+     */
+    @java.lang.Override
+    public long getLt() {
+      return lt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getAnyOfList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(anyOfMemoizedSerializedSize);
+      }
+      for (int i = 0; i < anyOf_.size(); i++) {
+        output.writeInt64NoTag(anyOf_.getLong(i));
+      }
+      if (eq_ != 0L) {
+        output.writeInt64(2, eq_);
+      }
+      if (gte_ != 0L) {
+        output.writeInt64(3, gte_);
+      }
+      if (lte_ != 0L) {
+        output.writeInt64(4, lte_);
+      }
+      if (gt_ != 0L) {
+        output.writeInt64(5, gt_);
+      }
+      if (lt_ != 0L) {
+        output.writeInt64(6, lt_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < anyOf_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(anyOf_.getLong(i));
+        }
+        size += dataSize;
+        if (!getAnyOfList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        anyOfMemoizedSerializedSize = dataSize;
+      }
+      if (eq_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, eq_);
+      }
+      if (gte_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, gte_);
+      }
+      if (lte_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, lte_);
+      }
+      if (gt_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, gt_);
+      }
+      if (lt_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, lt_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter other = (com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter) obj;
+
+      if (!getAnyOfList()
+          .equals(other.getAnyOfList())) return false;
+      if (getEq()
+          != other.getEq()) return false;
+      if (getGte()
+          != other.getGte()) return false;
+      if (getLte()
+          != other.getLte()) return false;
+      if (getGt()
+          != other.getGt()) return false;
+      if (getLt()
+          != other.getLt()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAnyOfCount() > 0) {
+        hash = (37 * hash) + ANY_OF_FIELD_NUMBER;
+        hash = (53 * hash) + getAnyOfList().hashCode();
+      }
+      hash = (37 * hash) + EQ_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEq());
+      hash = (37 * hash) + GTE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGte());
+      hash = (37 * hash) + LTE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLte());
+      hash = (37 * hash) + GT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGt());
+      hash = (37 * hash) + LT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLt());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter)
+        com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilterOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.scorecards.AutoEvaluationProto.internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_CallSidFilter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.scorecards.AutoEvaluationProto.internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_CallSidFilter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.class, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        anyOf_ = emptyLongList();
+        eq_ = 0L;
+        gte_ = 0L;
+        lte_ = 0L;
+        gt_ = 0L;
+        lt_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.scorecards.AutoEvaluationProto.internal_static_api_v1alpha1_scorecards_BulkDeleteAutoEvaluationsRequest_CallSidFilter_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter build() {
+        com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter result = new com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          anyOf_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.anyOf_ = anyOf_;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.eq_ = eq_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.gte_ = gte_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.lte_ = lte_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.gt_ = gt_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.lt_ = lt_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.getDefaultInstance()) return this;
+        if (!other.anyOf_.isEmpty()) {
+          if (anyOf_.isEmpty()) {
+            anyOf_ = other.anyOf_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureAnyOfIsMutable();
+            anyOf_.addAll(other.anyOf_);
+          }
+          onChanged();
+        }
+        if (other.getEq() != 0L) {
+          setEq(other.getEq());
+        }
+        if (other.getGte() != 0L) {
+          setGte(other.getGte());
+        }
+        if (other.getLte() != 0L) {
+          setLte(other.getLte());
+        }
+        if (other.getGt() != 0L) {
+          setGt(other.getGt());
+        }
+        if (other.getLt() != 0L) {
+          setLt(other.getLt());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                long v = input.readInt64();
+                ensureAnyOfIsMutable();
+                anyOf_.addLong(v);
+                break;
+              } // case 8
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureAnyOfIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  anyOf_.addLong(input.readInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 10
+              case 16: {
+                eq_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                gte_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                lte_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                gt_ = input.readInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                lt_ = input.readInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.LongList anyOf_ = emptyLongList();
+      private void ensureAnyOfIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          anyOf_ = mutableCopy(anyOf_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <pre>
+       * Optional - filter by any of the provided sids.
+       * </pre>
+       *
+       * <code>repeated int64 any_of = 1 [json_name = "anyOf"];</code>
+       * @return A list containing the anyOf.
+       */
+      public java.util.List<java.lang.Long>
+          getAnyOfList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(anyOf_) : anyOf_;
+      }
+      /**
+       * <pre>
+       * Optional - filter by any of the provided sids.
+       * </pre>
+       *
+       * <code>repeated int64 any_of = 1 [json_name = "anyOf"];</code>
+       * @return The count of anyOf.
+       */
+      public int getAnyOfCount() {
+        return anyOf_.size();
+      }
+      /**
+       * <pre>
+       * Optional - filter by any of the provided sids.
+       * </pre>
+       *
+       * <code>repeated int64 any_of = 1 [json_name = "anyOf"];</code>
+       * @param index The index of the element to return.
+       * @return The anyOf at the given index.
+       */
+      public long getAnyOf(int index) {
+        return anyOf_.getLong(index);
+      }
+      /**
+       * <pre>
+       * Optional - filter by any of the provided sids.
+       * </pre>
+       *
+       * <code>repeated int64 any_of = 1 [json_name = "anyOf"];</code>
+       * @param index The index to set the value at.
+       * @param value The anyOf to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAnyOf(
+          int index, long value) {
+
+        ensureAnyOfIsMutable();
+        anyOf_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional - filter by any of the provided sids.
+       * </pre>
+       *
+       * <code>repeated int64 any_of = 1 [json_name = "anyOf"];</code>
+       * @param value The anyOf to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAnyOf(long value) {
+
+        ensureAnyOfIsMutable();
+        anyOf_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional - filter by any of the provided sids.
+       * </pre>
+       *
+       * <code>repeated int64 any_of = 1 [json_name = "anyOf"];</code>
+       * @param values The anyOf to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAnyOf(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureAnyOfIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, anyOf_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional - filter by any of the provided sids.
+       * </pre>
+       *
+       * <code>repeated int64 any_of = 1 [json_name = "anyOf"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAnyOf() {
+        anyOf_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private long eq_ ;
+      /**
+       * <pre>
+       * filter values must be non-zero to be applied
+       * </pre>
+       *
+       * <code>int64 eq = 2 [json_name = "eq"];</code>
+       * @return The eq.
+       */
+      @java.lang.Override
+      public long getEq() {
+        return eq_;
+      }
+      /**
+       * <pre>
+       * filter values must be non-zero to be applied
+       * </pre>
+       *
+       * <code>int64 eq = 2 [json_name = "eq"];</code>
+       * @param value The eq to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEq(long value) {
+
+        eq_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * filter values must be non-zero to be applied
+       * </pre>
+       *
+       * <code>int64 eq = 2 [json_name = "eq"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEq() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        eq_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long gte_ ;
+      /**
+       * <pre>
+       * Optional - filter by greater than or equal to.
+       * </pre>
+       *
+       * <code>int64 gte = 3 [json_name = "gte"];</code>
+       * @return The gte.
+       */
+      @java.lang.Override
+      public long getGte() {
+        return gte_;
+      }
+      /**
+       * <pre>
+       * Optional - filter by greater than or equal to.
+       * </pre>
+       *
+       * <code>int64 gte = 3 [json_name = "gte"];</code>
+       * @param value The gte to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGte(long value) {
+
+        gte_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional - filter by greater than or equal to.
+       * </pre>
+       *
+       * <code>int64 gte = 3 [json_name = "gte"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGte() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        gte_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lte_ ;
+      /**
+       * <pre>
+       * Optional - filter by less than or equal to.
+       * </pre>
+       *
+       * <code>int64 lte = 4 [json_name = "lte"];</code>
+       * @return The lte.
+       */
+      @java.lang.Override
+      public long getLte() {
+        return lte_;
+      }
+      /**
+       * <pre>
+       * Optional - filter by less than or equal to.
+       * </pre>
+       *
+       * <code>int64 lte = 4 [json_name = "lte"];</code>
+       * @param value The lte to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLte(long value) {
+
+        lte_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional - filter by less than or equal to.
+       * </pre>
+       *
+       * <code>int64 lte = 4 [json_name = "lte"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLte() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        lte_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long gt_ ;
+      /**
+       * <pre>
+       * Optional - filter by greater than.
+       * </pre>
+       *
+       * <code>int64 gt = 5 [json_name = "gt"];</code>
+       * @return The gt.
+       */
+      @java.lang.Override
+      public long getGt() {
+        return gt_;
+      }
+      /**
+       * <pre>
+       * Optional - filter by greater than.
+       * </pre>
+       *
+       * <code>int64 gt = 5 [json_name = "gt"];</code>
+       * @param value The gt to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGt(long value) {
+
+        gt_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional - filter by greater than.
+       * </pre>
+       *
+       * <code>int64 gt = 5 [json_name = "gt"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGt() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        gt_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lt_ ;
+      /**
+       * <pre>
+       * Optional - filter by less than.
+       * </pre>
+       *
+       * <code>int64 lt = 6 [json_name = "lt"];</code>
+       * @return The lt.
+       */
+      @java.lang.Override
+      public long getLt() {
+        return lt_;
+      }
+      /**
+       * <pre>
+       * Optional - filter by less than.
+       * </pre>
+       *
+       * <code>int64 lt = 6 [json_name = "lt"];</code>
+       * @param value The lt to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLt(long value) {
+
+        lt_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional - filter by less than.
+       * </pre>
+       *
+       * <code>int64 lt = 6 [json_name = "lt"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLt() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        lt_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter)
+    private static final com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CallSidFilter>
+        PARSER = new com.google.protobuf.AbstractParser<CallSidFilter>() {
+      @java.lang.Override
+      public CallSidFilter parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CallSidFilter> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CallSidFilter> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 1;
@@ -170,6 +1288,257 @@ private static final long serialVersionUID = 0L;
     return completedAt_ == null ? com.tcn.cloud.api.api.commons.TimeFilter.getDefaultInstance() : completedAt_;
   }
 
+  public static final int SCORECARD_IDS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.LongList scorecardIds_;
+  /**
+   * <pre>
+   * Optional - filter by scorecard ids.
+   * </pre>
+   *
+   * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+   * @return A list containing the scorecardIds.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Long>
+      getScorecardIdsList() {
+    return scorecardIds_;
+  }
+  /**
+   * <pre>
+   * Optional - filter by scorecard ids.
+   * </pre>
+   *
+   * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+   * @return The count of scorecardIds.
+   */
+  public int getScorecardIdsCount() {
+    return scorecardIds_.size();
+  }
+  /**
+   * <pre>
+   * Optional - filter by scorecard ids.
+   * </pre>
+   *
+   * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+   * @param index The index of the element to return.
+   * @return The scorecardIds at the given index.
+   */
+  public long getScorecardIds(int index) {
+    return scorecardIds_.getLong(index);
+  }
+  private int scorecardIdsMemoizedSerializedSize = -1;
+
+  public static final int CATEGORY_IDS_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.LongList categoryIds_;
+  /**
+   * <pre>
+   * Optional - filter by category ids.
+   * </pre>
+   *
+   * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+   * @return A list containing the categoryIds.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Long>
+      getCategoryIdsList() {
+    return categoryIds_;
+  }
+  /**
+   * <pre>
+   * Optional - filter by category ids.
+   * </pre>
+   *
+   * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+   * @return The count of categoryIds.
+   */
+  public int getCategoryIdsCount() {
+    return categoryIds_.size();
+  }
+  /**
+   * <pre>
+   * Optional - filter by category ids.
+   * </pre>
+   *
+   * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+   * @param index The index of the element to return.
+   * @return The categoryIds at the given index.
+   */
+  public long getCategoryIds(int index) {
+    return categoryIds_.getLong(index);
+  }
+  private int categoryIdsMemoizedSerializedSize = -1;
+
+  public static final int CALL_SID_FIELD_NUMBER = 6;
+  private com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter callSid_;
+  /**
+   * <pre>
+   * Optional - filter by call sid.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
+   * @return Whether the callSid field is set.
+   */
+  @java.lang.Override
+  public boolean hasCallSid() {
+    return callSid_ != null;
+  }
+  /**
+   * <pre>
+   * Optional - filter by call sid.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
+   * @return The callSid.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter getCallSid() {
+    return callSid_ == null ? com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.getDefaultInstance() : callSid_;
+  }
+  /**
+   * <pre>
+   * Optional - filter by call sid.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilterOrBuilder getCallSidOrBuilder() {
+    return callSid_ == null ? com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.getDefaultInstance() : callSid_;
+  }
+
+  public static final int AGENT_USER_IDS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList agentUserIds_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+   * @return A list containing the agentUserIds.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getAgentUserIdsList() {
+    return agentUserIds_;
+  }
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+   * @return The count of agentUserIds.
+   */
+  public int getAgentUserIdsCount() {
+    return agentUserIds_.size();
+  }
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+   * @param index The index of the element to return.
+   * @return The agentUserIds at the given index.
+   */
+  public java.lang.String getAgentUserIds(int index) {
+    return agentUserIds_.get(index);
+  }
+  /**
+   * <pre>
+   * Optional - filter by agent user ids.
+   * </pre>
+   *
+   * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the agentUserIds at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getAgentUserIdsBytes(int index) {
+    return agentUserIds_.getByteString(index);
+  }
+
+  public static final int RISK_LEVELS_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> riskLevels_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.api.commons.RiskLevel> riskLevels_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.RiskLevel>() {
+            public com.tcn.cloud.api.api.commons.RiskLevel convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.commons.RiskLevel result = com.tcn.cloud.api.api.commons.RiskLevel.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.commons.RiskLevel.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+   * @return A list containing the riskLevels.
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.RiskLevel> getRiskLevelsList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.RiskLevel>(riskLevels_, riskLevels_converter_);
+  }
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+   * @return The count of riskLevels.
+   */
+  @java.lang.Override
+  public int getRiskLevelsCount() {
+    return riskLevels_.size();
+  }
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+   * @param index The index of the element to return.
+   * @return The riskLevels at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.RiskLevel getRiskLevels(int index) {
+    return riskLevels_converter_.convert(riskLevels_.get(index));
+  }
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+   * @return A list containing the enum numeric values on the wire for riskLevels.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getRiskLevelsValueList() {
+    return riskLevels_;
+  }
+  /**
+   * <pre>
+   * Optional - filter by risk level.
+   * </pre>
+   *
+   * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of riskLevels at the given index.
+   */
+  @java.lang.Override
+  public int getRiskLevelsValue(int index) {
+    return riskLevels_.get(index);
+  }
+  private int riskLevelsMemoizedSerializedSize;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -197,6 +1566,33 @@ private static final long serialVersionUID = 0L;
     }
     if (completedAt_ != null) {
       output.writeMessage(3, getCompletedAt());
+    }
+    if (getScorecardIdsList().size() > 0) {
+      output.writeUInt32NoTag(34);
+      output.writeUInt32NoTag(scorecardIdsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < scorecardIds_.size(); i++) {
+      output.writeInt64NoTag(scorecardIds_.getLong(i));
+    }
+    if (getCategoryIdsList().size() > 0) {
+      output.writeUInt32NoTag(42);
+      output.writeUInt32NoTag(categoryIdsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < categoryIds_.size(); i++) {
+      output.writeInt64NoTag(categoryIds_.getLong(i));
+    }
+    if (callSid_ != null) {
+      output.writeMessage(6, getCallSid());
+    }
+    for (int i = 0; i < agentUserIds_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, agentUserIds_.getRaw(i));
+    }
+    if (getRiskLevelsList().size() > 0) {
+      output.writeUInt32NoTag(66);
+      output.writeUInt32NoTag(riskLevelsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < riskLevels_.size(); i++) {
+      output.writeEnumNoTag(riskLevels_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -228,6 +1624,58 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getCompletedAt());
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < scorecardIds_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(scorecardIds_.getLong(i));
+      }
+      size += dataSize;
+      if (!getScorecardIdsList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      scorecardIdsMemoizedSerializedSize = dataSize;
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < categoryIds_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(categoryIds_.getLong(i));
+      }
+      size += dataSize;
+      if (!getCategoryIdsList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      categoryIdsMemoizedSerializedSize = dataSize;
+    }
+    if (callSid_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getCallSid());
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < agentUserIds_.size(); i++) {
+        dataSize += computeStringSizeNoTag(agentUserIds_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getAgentUserIdsList().size();
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < riskLevels_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(riskLevels_.get(i));
+      }
+      size += dataSize;
+      if (!getRiskLevelsList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }riskLevelsMemoizedSerializedSize = dataSize;
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -252,6 +1700,18 @@ private static final long serialVersionUID = 0L;
       if (!getCompletedAt()
           .equals(other.getCompletedAt())) return false;
     }
+    if (!getScorecardIdsList()
+        .equals(other.getScorecardIdsList())) return false;
+    if (!getCategoryIdsList()
+        .equals(other.getCategoryIdsList())) return false;
+    if (hasCallSid() != other.hasCallSid()) return false;
+    if (hasCallSid()) {
+      if (!getCallSid()
+          .equals(other.getCallSid())) return false;
+    }
+    if (!getAgentUserIdsList()
+        .equals(other.getAgentUserIdsList())) return false;
+    if (!riskLevels_.equals(other.riskLevels_)) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -272,6 +1732,26 @@ private static final long serialVersionUID = 0L;
     if (hasCompletedAt()) {
       hash = (37 * hash) + COMPLETED_AT_FIELD_NUMBER;
       hash = (53 * hash) + getCompletedAt().hashCode();
+    }
+    if (getScorecardIdsCount() > 0) {
+      hash = (37 * hash) + SCORECARD_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getScorecardIdsList().hashCode();
+    }
+    if (getCategoryIdsCount() > 0) {
+      hash = (37 * hash) + CATEGORY_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getCategoryIdsList().hashCode();
+    }
+    if (hasCallSid()) {
+      hash = (37 * hash) + CALL_SID_FIELD_NUMBER;
+      hash = (53 * hash) + getCallSid().hashCode();
+    }
+    if (getAgentUserIdsCount() > 0) {
+      hash = (37 * hash) + AGENT_USER_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getAgentUserIdsList().hashCode();
+    }
+    if (getRiskLevelsCount() > 0) {
+      hash = (37 * hash) + RISK_LEVELS_FIELD_NUMBER;
+      hash = (53 * hash) + riskLevels_.hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -415,6 +1895,17 @@ private static final long serialVersionUID = 0L;
         completedAtBuilder_.dispose();
         completedAtBuilder_ = null;
       }
+      scorecardIds_ = emptyLongList();
+      categoryIds_ = emptyLongList();
+      callSid_ = null;
+      if (callSidBuilder_ != null) {
+        callSidBuilder_.dispose();
+        callSidBuilder_ = null;
+      }
+      agentUserIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      riskLevels_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000080);
       return this;
     }
 
@@ -453,6 +1944,21 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.autoEvaluationIds_ = autoEvaluationIds_;
+      if (((bitField0_ & 0x00000008) != 0)) {
+        scorecardIds_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.scorecardIds_ = scorecardIds_;
+      if (((bitField0_ & 0x00000010) != 0)) {
+        categoryIds_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.categoryIds_ = categoryIds_;
+      if (((bitField0_ & 0x00000080) != 0)) {
+        riskLevels_ = java.util.Collections.unmodifiableList(riskLevels_);
+        bitField0_ = (bitField0_ & ~0x00000080);
+      }
+      result.riskLevels_ = riskLevels_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest result) {
@@ -464,6 +1970,15 @@ private static final long serialVersionUID = 0L;
         result.completedAt_ = completedAtBuilder_ == null
             ? completedAt_
             : completedAtBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.callSid_ = callSidBuilder_ == null
+            ? callSid_
+            : callSidBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        agentUserIds_.makeImmutable();
+        result.agentUserIds_ = agentUserIds_;
       }
     }
 
@@ -529,6 +2044,49 @@ private static final long serialVersionUID = 0L;
       if (other.hasCompletedAt()) {
         mergeCompletedAt(other.getCompletedAt());
       }
+      if (!other.scorecardIds_.isEmpty()) {
+        if (scorecardIds_.isEmpty()) {
+          scorecardIds_ = other.scorecardIds_;
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          ensureScorecardIdsIsMutable();
+          scorecardIds_.addAll(other.scorecardIds_);
+        }
+        onChanged();
+      }
+      if (!other.categoryIds_.isEmpty()) {
+        if (categoryIds_.isEmpty()) {
+          categoryIds_ = other.categoryIds_;
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          ensureCategoryIdsIsMutable();
+          categoryIds_.addAll(other.categoryIds_);
+        }
+        onChanged();
+      }
+      if (other.hasCallSid()) {
+        mergeCallSid(other.getCallSid());
+      }
+      if (!other.agentUserIds_.isEmpty()) {
+        if (agentUserIds_.isEmpty()) {
+          agentUserIds_ = other.agentUserIds_;
+          bitField0_ |= 0x00000040;
+        } else {
+          ensureAgentUserIdsIsMutable();
+          agentUserIds_.addAll(other.agentUserIds_);
+        }
+        onChanged();
+      }
+      if (!other.riskLevels_.isEmpty()) {
+        if (riskLevels_.isEmpty()) {
+          riskLevels_ = other.riskLevels_;
+          bitField0_ = (bitField0_ & ~0x00000080);
+        } else {
+          ensureRiskLevelsIsMutable();
+          riskLevels_.addAll(other.riskLevels_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -583,6 +2141,68 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              long v = input.readInt64();
+              ensureScorecardIdsIsMutable();
+              scorecardIds_.addLong(v);
+              break;
+            } // case 32
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureScorecardIdsIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                scorecardIds_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 34
+            case 40: {
+              long v = input.readInt64();
+              ensureCategoryIdsIsMutable();
+              categoryIds_.addLong(v);
+              break;
+            } // case 40
+            case 42: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureCategoryIdsIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                categoryIds_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getCallSidFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureAgentUserIdsIsMutable();
+              agentUserIds_.add(s);
+              break;
+            } // case 58
+            case 64: {
+              int tmpRaw = input.readEnum();
+              ensureRiskLevelsIsMutable();
+              riskLevels_.add(tmpRaw);
+              break;
+            } // case 64
+            case 66: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureRiskLevelsIsMutable();
+                riskLevels_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -954,6 +2574,714 @@ private static final long serialVersionUID = 0L;
         completedAt_ = null;
       }
       return completedAtBuilder_;
+    }
+
+    private com.google.protobuf.Internal.LongList scorecardIds_ = emptyLongList();
+    private void ensureScorecardIdsIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        scorecardIds_ = mutableCopy(scorecardIds_);
+        bitField0_ |= 0x00000008;
+      }
+    }
+    /**
+     * <pre>
+     * Optional - filter by scorecard ids.
+     * </pre>
+     *
+     * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+     * @return A list containing the scorecardIds.
+     */
+    public java.util.List<java.lang.Long>
+        getScorecardIdsList() {
+      return ((bitField0_ & 0x00000008) != 0) ?
+               java.util.Collections.unmodifiableList(scorecardIds_) : scorecardIds_;
+    }
+    /**
+     * <pre>
+     * Optional - filter by scorecard ids.
+     * </pre>
+     *
+     * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+     * @return The count of scorecardIds.
+     */
+    public int getScorecardIdsCount() {
+      return scorecardIds_.size();
+    }
+    /**
+     * <pre>
+     * Optional - filter by scorecard ids.
+     * </pre>
+     *
+     * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+     * @param index The index of the element to return.
+     * @return The scorecardIds at the given index.
+     */
+    public long getScorecardIds(int index) {
+      return scorecardIds_.getLong(index);
+    }
+    /**
+     * <pre>
+     * Optional - filter by scorecard ids.
+     * </pre>
+     *
+     * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The scorecardIds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setScorecardIds(
+        int index, long value) {
+
+      ensureScorecardIdsIsMutable();
+      scorecardIds_.setLong(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by scorecard ids.
+     * </pre>
+     *
+     * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+     * @param value The scorecardIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addScorecardIds(long value) {
+
+      ensureScorecardIdsIsMutable();
+      scorecardIds_.addLong(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by scorecard ids.
+     * </pre>
+     *
+     * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+     * @param values The scorecardIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllScorecardIds(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureScorecardIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, scorecardIds_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by scorecard ids.
+     * </pre>
+     *
+     * <code>repeated int64 scorecard_ids = 4 [json_name = "scorecardIds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearScorecardIds() {
+      scorecardIds_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Internal.LongList categoryIds_ = emptyLongList();
+    private void ensureCategoryIdsIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        categoryIds_ = mutableCopy(categoryIds_);
+        bitField0_ |= 0x00000010;
+      }
+    }
+    /**
+     * <pre>
+     * Optional - filter by category ids.
+     * </pre>
+     *
+     * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+     * @return A list containing the categoryIds.
+     */
+    public java.util.List<java.lang.Long>
+        getCategoryIdsList() {
+      return ((bitField0_ & 0x00000010) != 0) ?
+               java.util.Collections.unmodifiableList(categoryIds_) : categoryIds_;
+    }
+    /**
+     * <pre>
+     * Optional - filter by category ids.
+     * </pre>
+     *
+     * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+     * @return The count of categoryIds.
+     */
+    public int getCategoryIdsCount() {
+      return categoryIds_.size();
+    }
+    /**
+     * <pre>
+     * Optional - filter by category ids.
+     * </pre>
+     *
+     * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+     * @param index The index of the element to return.
+     * @return The categoryIds at the given index.
+     */
+    public long getCategoryIds(int index) {
+      return categoryIds_.getLong(index);
+    }
+    /**
+     * <pre>
+     * Optional - filter by category ids.
+     * </pre>
+     *
+     * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The categoryIds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCategoryIds(
+        int index, long value) {
+
+      ensureCategoryIdsIsMutable();
+      categoryIds_.setLong(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by category ids.
+     * </pre>
+     *
+     * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+     * @param value The categoryIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addCategoryIds(long value) {
+
+      ensureCategoryIdsIsMutable();
+      categoryIds_.addLong(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by category ids.
+     * </pre>
+     *
+     * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+     * @param values The categoryIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllCategoryIds(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureCategoryIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, categoryIds_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by category ids.
+     * </pre>
+     *
+     * <code>repeated int64 category_ids = 5 [json_name = "categoryIds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCategoryIds() {
+      categoryIds_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter callSid_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.Builder, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilterOrBuilder> callSidBuilder_;
+    /**
+     * <pre>
+     * Optional - filter by call sid.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
+     * @return Whether the callSid field is set.
+     */
+    public boolean hasCallSid() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Optional - filter by call sid.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
+     * @return The callSid.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter getCallSid() {
+      if (callSidBuilder_ == null) {
+        return callSid_ == null ? com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.getDefaultInstance() : callSid_;
+      } else {
+        return callSidBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional - filter by call sid.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
+     */
+    public Builder setCallSid(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter value) {
+      if (callSidBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        callSid_ = value;
+      } else {
+        callSidBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by call sid.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
+     */
+    public Builder setCallSid(
+        com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.Builder builderForValue) {
+      if (callSidBuilder_ == null) {
+        callSid_ = builderForValue.build();
+      } else {
+        callSidBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by call sid.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
+     */
+    public Builder mergeCallSid(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter value) {
+      if (callSidBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          callSid_ != null &&
+          callSid_ != com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.getDefaultInstance()) {
+          getCallSidBuilder().mergeFrom(value);
+        } else {
+          callSid_ = value;
+        }
+      } else {
+        callSidBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by call sid.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
+     */
+    public Builder clearCallSid() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      callSid_ = null;
+      if (callSidBuilder_ != null) {
+        callSidBuilder_.dispose();
+        callSidBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by call sid.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.Builder getCallSidBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getCallSidFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional - filter by call sid.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilterOrBuilder getCallSidOrBuilder() {
+      if (callSidBuilder_ != null) {
+        return callSidBuilder_.getMessageOrBuilder();
+      } else {
+        return callSid_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.getDefaultInstance() : callSid_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional - filter by call sid.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter call_sid = 6 [json_name = "callSid"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.Builder, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilterOrBuilder> 
+        getCallSidFieldBuilder() {
+      if (callSidBuilder_ == null) {
+        callSidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilter.Builder, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkDeleteAutoEvaluationsRequest.CallSidFilterOrBuilder>(
+                getCallSid(),
+                getParentForChildren(),
+                isClean());
+        callSid_ = null;
+      }
+      return callSidBuilder_;
+    }
+
+    private com.google.protobuf.LazyStringArrayList agentUserIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureAgentUserIdsIsMutable() {
+      if (!agentUserIds_.isModifiable()) {
+        agentUserIds_ = new com.google.protobuf.LazyStringArrayList(agentUserIds_);
+      }
+      bitField0_ |= 0x00000040;
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+     * @return A list containing the agentUserIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAgentUserIdsList() {
+      agentUserIds_.makeImmutable();
+      return agentUserIds_;
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+     * @return The count of agentUserIds.
+     */
+    public int getAgentUserIdsCount() {
+      return agentUserIds_.size();
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+     * @param index The index of the element to return.
+     * @return The agentUserIds at the given index.
+     */
+    public java.lang.String getAgentUserIds(int index) {
+      return agentUserIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the agentUserIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAgentUserIdsBytes(int index) {
+      return agentUserIds_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The agentUserIds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAgentUserIds(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureAgentUserIdsIsMutable();
+      agentUserIds_.set(index, value);
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+     * @param value The agentUserIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAgentUserIds(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureAgentUserIdsIsMutable();
+      agentUserIds_.add(value);
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+     * @param values The agentUserIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllAgentUserIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureAgentUserIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, agentUserIds_);
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAgentUserIds() {
+      agentUserIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by agent user ids.
+     * </pre>
+     *
+     * <code>repeated string agent_user_ids = 7 [json_name = "agentUserIds"];</code>
+     * @param value The bytes of the agentUserIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAgentUserIdsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureAgentUserIdsIsMutable();
+      agentUserIds_.add(value);
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> riskLevels_ =
+      java.util.Collections.emptyList();
+    private void ensureRiskLevelsIsMutable() {
+      if (!((bitField0_ & 0x00000080) != 0)) {
+        riskLevels_ = new java.util.ArrayList<java.lang.Integer>(riskLevels_);
+        bitField0_ |= 0x00000080;
+      }
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+     * @return A list containing the riskLevels.
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.RiskLevel> getRiskLevelsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.RiskLevel>(riskLevels_, riskLevels_converter_);
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+     * @return The count of riskLevels.
+     */
+    public int getRiskLevelsCount() {
+      return riskLevels_.size();
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+     * @param index The index of the element to return.
+     * @return The riskLevels at the given index.
+     */
+    public com.tcn.cloud.api.api.commons.RiskLevel getRiskLevels(int index) {
+      return riskLevels_converter_.convert(riskLevels_.get(index));
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+     * @param index The index to set the value at.
+     * @param value The riskLevels to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRiskLevels(
+        int index, com.tcn.cloud.api.api.commons.RiskLevel value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureRiskLevelsIsMutable();
+      riskLevels_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+     * @param value The riskLevels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addRiskLevels(com.tcn.cloud.api.api.commons.RiskLevel value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureRiskLevelsIsMutable();
+      riskLevels_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+     * @param values The riskLevels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllRiskLevels(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.RiskLevel> values) {
+      ensureRiskLevelsIsMutable();
+      for (com.tcn.cloud.api.api.commons.RiskLevel value : values) {
+        riskLevels_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRiskLevels() {
+      riskLevels_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+     * @return A list containing the enum numeric values on the wire for riskLevels.
+     */
+    public java.util.List<java.lang.Integer>
+    getRiskLevelsValueList() {
+      return java.util.Collections.unmodifiableList(riskLevels_);
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of riskLevels at the given index.
+     */
+    public int getRiskLevelsValue(int index) {
+      return riskLevels_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for riskLevels to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRiskLevelsValue(
+        int index, int value) {
+      ensureRiskLevelsIsMutable();
+      riskLevels_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+     * @param value The enum numeric value on the wire for riskLevels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addRiskLevelsValue(int value) {
+      ensureRiskLevelsIsMutable();
+      riskLevels_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - filter by risk level.
+     * </pre>
+     *
+     * <code>repeated .api.commons.RiskLevel risk_levels = 8 [json_name = "riskLevels"];</code>
+     * @param values The enum numeric values on the wire for riskLevels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllRiskLevelsValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureRiskLevelsIsMutable();
+      for (int value : values) {
+        riskLevels_.add(value);
+      }
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
