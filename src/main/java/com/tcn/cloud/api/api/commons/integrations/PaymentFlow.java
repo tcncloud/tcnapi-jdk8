@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
     PAYMENTVISION_ACH(16),
     PAYMENTSTELLA_CC(17),
     PAYMENTSTELLA_ECHECK(18),
+    FINVI_CC(19),
+    FINVI_ACH(21),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -97,6 +99,8 @@ private static final long serialVersionUID = 0L;
         case 16: return PAYMENTVISION_ACH;
         case 17: return PAYMENTSTELLA_CC;
         case 18: return PAYMENTSTELLA_ECHECK;
+        case 19: return FINVI_CC;
+        case 21: return FINVI_ACH;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -678,6 +682,80 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck.getDefaultInstance();
   }
 
+  public static final int FINVI_CC_FIELD_NUMBER = 19;
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+   * @return Whether the finviCc field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviCc() {
+    return valueCase_ == 19;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+   * @return The finviCc.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC getFinviCc() {
+    if (valueCase_ == 19) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCCOrBuilder getFinviCcOrBuilder() {
+    if (valueCase_ == 19) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC.getDefaultInstance();
+  }
+
+  public static final int FINVI_ACH_FIELD_NUMBER = 21;
+  /**
+   * <pre>
+   * Had to skip ID 20 here because it is already used for payment_fields
+   * </pre>
+   *
+   * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+   * @return Whether the finviAch field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviAch() {
+    return valueCase_ == 21;
+  }
+  /**
+   * <pre>
+   * Had to skip ID 20 here because it is already used for payment_fields
+   * </pre>
+   *
+   * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+   * @return The finviAch.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH getFinviAch() {
+    if (valueCase_ == 21) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Had to skip ID 20 here because it is already used for payment_fields
+   * </pre>
+   *
+   * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFinviACHOrBuilder getFinviAchOrBuilder() {
+    if (valueCase_ == 21) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH.getDefaultInstance();
+  }
+
   public static final int PAYMENT_FIELDS_FIELD_NUMBER = 20;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_;
@@ -822,8 +900,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 18) {
       output.writeMessage(18, (com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck) value_);
     }
+    if (valueCase_ == 19) {
+      output.writeMessage(19, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC) value_);
+    }
     for (int i = 0; i < paymentFields_.size(); i++) {
       output.writeMessage(20, paymentFields_.get(i));
+    }
+    if (valueCase_ == 21) {
+      output.writeMessage(21, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -905,9 +989,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, (com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheck) value_);
     }
+    if (valueCase_ == 19) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(19, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC) value_);
+    }
     for (int i = 0; i < paymentFields_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, paymentFields_.get(i));
+    }
+    if (valueCase_ == 21) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(21, (com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -998,6 +1090,14 @@ private static final long serialVersionUID = 0L;
         if (!getPaymentstellaEcheck()
             .equals(other.getPaymentstellaEcheck())) return false;
         break;
+      case 19:
+        if (!getFinviCc()
+            .equals(other.getFinviCc())) return false;
+        break;
+      case 21:
+        if (!getFinviAch()
+            .equals(other.getFinviAch())) return false;
+        break;
       case 0:
       default:
     }
@@ -1086,6 +1186,14 @@ private static final long serialVersionUID = 0L;
       case 18:
         hash = (37 * hash) + PAYMENTSTELLA_ECHECK_FIELD_NUMBER;
         hash = (53 * hash) + getPaymentstellaEcheck().hashCode();
+        break;
+      case 19:
+        hash = (37 * hash) + FINVI_CC_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviCc().hashCode();
+        break;
+      case 21:
+        hash = (37 * hash) + FINVI_ACH_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviAch().hashCode();
         break;
       case 0:
       default:
@@ -1273,13 +1381,19 @@ private static final long serialVersionUID = 0L;
       if (paymentstellaEcheckBuilder_ != null) {
         paymentstellaEcheckBuilder_.clear();
       }
+      if (finviCcBuilder_ != null) {
+        finviCcBuilder_.clear();
+      }
+      if (finviAchBuilder_ != null) {
+        finviAchBuilder_.clear();
+      }
       if (paymentFieldsBuilder_ == null) {
         paymentFields_ = java.util.Collections.emptyList();
       } else {
         paymentFields_ = null;
         paymentFieldsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00040000);
+      bitField0_ = (bitField0_ & ~0x00100000);
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -1317,9 +1431,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.integrations.PaymentFlow result) {
       if (paymentFieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00040000) != 0)) {
+        if (((bitField0_ & 0x00100000) != 0)) {
           paymentFields_ = java.util.Collections.unmodifiableList(paymentFields_);
-          bitField0_ = (bitField0_ & ~0x00040000);
+          bitField0_ = (bitField0_ & ~0x00100000);
         }
         result.paymentFields_ = paymentFields_;
       } else {
@@ -1405,6 +1519,14 @@ private static final long serialVersionUID = 0L;
           paymentstellaEcheckBuilder_ != null) {
         result.value_ = paymentstellaEcheckBuilder_.build();
       }
+      if (valueCase_ == 19 &&
+          finviCcBuilder_ != null) {
+        result.value_ = finviCcBuilder_.build();
+      }
+      if (valueCase_ == 21 &&
+          finviAchBuilder_ != null) {
+        result.value_ = finviAchBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1460,7 +1582,7 @@ private static final long serialVersionUID = 0L;
         if (!other.paymentFields_.isEmpty()) {
           if (paymentFields_.isEmpty()) {
             paymentFields_ = other.paymentFields_;
-            bitField0_ = (bitField0_ & ~0x00040000);
+            bitField0_ = (bitField0_ & ~0x00100000);
           } else {
             ensurePaymentFieldsIsMutable();
             paymentFields_.addAll(other.paymentFields_);
@@ -1473,7 +1595,7 @@ private static final long serialVersionUID = 0L;
             paymentFieldsBuilder_.dispose();
             paymentFieldsBuilder_ = null;
             paymentFields_ = other.paymentFields_;
-            bitField0_ = (bitField0_ & ~0x00040000);
+            bitField0_ = (bitField0_ & ~0x00100000);
             paymentFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPaymentFieldsFieldBuilder() : null;
@@ -1549,6 +1671,14 @@ private static final long serialVersionUID = 0L;
         }
         case PAYMENTSTELLA_ECHECK: {
           mergePaymentstellaEcheck(other.getPaymentstellaEcheck());
+          break;
+        }
+        case FINVI_CC: {
+          mergeFinviCc(other.getFinviCc());
+          break;
+        }
+        case FINVI_ACH: {
+          mergeFinviAch(other.getFinviAch());
           break;
         }
         case VALUE_NOT_SET: {
@@ -1705,6 +1835,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 18;
               break;
             } // case 146
+            case 154: {
+              input.readMessage(
+                  getFinviCcFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 19;
+              break;
+            } // case 154
             case 162: {
               com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
                   input.readMessage(
@@ -1718,6 +1855,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 162
+            case 170: {
+              input.readMessage(
+                  getFinviAchFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 21;
+              break;
+            } // case 170
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -4236,12 +4380,332 @@ private static final long serialVersionUID = 0L;
       return paymentstellaEcheckBuilder_;
     }
 
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCCOrBuilder> finviCcBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+     * @return Whether the finviCc field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviCc() {
+      return valueCase_ == 19;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+     * @return The finviCc.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC getFinviCc() {
+      if (finviCcBuilder_ == null) {
+        if (valueCase_ == 19) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC.getDefaultInstance();
+      } else {
+        if (valueCase_ == 19) {
+          return finviCcBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+     */
+    public Builder setFinviCc(com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC value) {
+      if (finviCcBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviCcBuilder_.setMessage(value);
+      }
+      valueCase_ = 19;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+     */
+    public Builder setFinviCc(
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC.Builder builderForValue) {
+      if (finviCcBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviCcBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 19;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+     */
+    public Builder mergeFinviCc(com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC value) {
+      if (finviCcBuilder_ == null) {
+        if (valueCase_ == 19 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 19) {
+          finviCcBuilder_.mergeFrom(value);
+        } else {
+          finviCcBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 19;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+     */
+    public Builder clearFinviCc() {
+      if (finviCcBuilder_ == null) {
+        if (valueCase_ == 19) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 19) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviCcBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC.Builder getFinviCcBuilder() {
+      return getFinviCcFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviCCOrBuilder getFinviCcOrBuilder() {
+      if ((valueCase_ == 19) && (finviCcBuilder_ != null)) {
+        return finviCcBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 19) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCCOrBuilder> 
+        getFinviCcFieldBuilder() {
+      if (finviCcBuilder_ == null) {
+        if (!(valueCase_ == 19)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC.getDefaultInstance();
+        }
+        finviCcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviCCOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 19;
+      onChanged();
+      return finviCcBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH, com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviACHOrBuilder> finviAchBuilder_;
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+     * @return Whether the finviAch field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviAch() {
+      return valueCase_ == 21;
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+     * @return The finviAch.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH getFinviAch() {
+      if (finviAchBuilder_ == null) {
+        if (valueCase_ == 21) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH.getDefaultInstance();
+      } else {
+        if (valueCase_ == 21) {
+          return finviAchBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+     */
+    public Builder setFinviAch(com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH value) {
+      if (finviAchBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviAchBuilder_.setMessage(value);
+      }
+      valueCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+     */
+    public Builder setFinviAch(
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH.Builder builderForValue) {
+      if (finviAchBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviAchBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+     */
+    public Builder mergeFinviAch(com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH value) {
+      if (finviAchBuilder_ == null) {
+        if (valueCase_ == 21 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 21) {
+          finviAchBuilder_.mergeFrom(value);
+        } else {
+          finviAchBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 21;
+      return this;
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+     */
+    public Builder clearFinviAch() {
+      if (finviAchBuilder_ == null) {
+        if (valueCase_ == 21) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 21) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviAchBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH.Builder getFinviAchBuilder() {
+      return getFinviAchFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFinviACHOrBuilder getFinviAchOrBuilder() {
+      if ((valueCase_ == 21) && (finviAchBuilder_ != null)) {
+        return finviAchBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 21) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Had to skip ID 20 here because it is already used for payment_fields
+     * </pre>
+     *
+     * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH, com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviACHOrBuilder> 
+        getFinviAchFieldBuilder() {
+      if (finviAchBuilder_ == null) {
+        if (!(valueCase_ == 21)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH.getDefaultInstance();
+        }
+        finviAchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH, com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFinviACHOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 21;
+      onChanged();
+      return finviAchBuilder_;
+    }
+
     private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_ =
       java.util.Collections.emptyList();
     private void ensurePaymentFieldsIsMutable() {
-      if (!((bitField0_ & 0x00040000) != 0)) {
+      if (!((bitField0_ & 0x00100000) != 0)) {
         paymentFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(paymentFields_);
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00100000;
        }
     }
 
@@ -4468,7 +4932,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPaymentFields() {
       if (paymentFieldsBuilder_ == null) {
         paymentFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         onChanged();
       } else {
         paymentFieldsBuilder_.clear();
@@ -4594,7 +5058,7 @@ private static final long serialVersionUID = 0L;
         paymentFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
                 paymentFields_,
-                ((bitField0_ & 0x00040000) != 0),
+                ((bitField0_ & 0x00100000) != 0),
                 getParentForChildren(),
                 isClean());
         paymentFields_ = null;

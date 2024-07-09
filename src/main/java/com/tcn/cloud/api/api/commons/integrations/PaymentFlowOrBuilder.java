@@ -275,6 +275,48 @@ public interface PaymentFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheckOrBuilder getPaymentstellaEcheckOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+   * @return Whether the finviCc field is set.
+   */
+  boolean hasFinviCc();
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+   * @return The finviCc.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC getFinviCc();
+  /**
+   * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCCOrBuilder getFinviCcOrBuilder();
+
+  /**
+   * <pre>
+   * Had to skip ID 20 here because it is already used for payment_fields
+   * </pre>
+   *
+   * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+   * @return Whether the finviAch field is set.
+   */
+  boolean hasFinviAch();
+  /**
+   * <pre>
+   * Had to skip ID 20 here because it is already used for payment_fields
+   * </pre>
+   *
+   * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+   * @return The finviAch.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH getFinviAch();
+  /**
+   * <pre>
+   * Had to skip ID 20 here because it is already used for payment_fields
+   * </pre>
+   *
+   * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentFinviACHOrBuilder getFinviAchOrBuilder();
+
+  /**
    * <pre>
    * the fields the user will use for the payment form
    * must be a subset of fields that is enough data to make the api call.
