@@ -8,8 +8,8 @@ public interface ResetSecureFormFieldReqOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 session_sid = 1 [json_name = "sessionSid"];</code>
-   * @return The sessionSid.
+   * <code>int64 voice_session_sid = 1 [json_name = "voiceSessionSid"];</code>
+   * @return The voiceSessionSid.
    */
-  long getSessionSid();
+  long getVoiceSessionSid();
 }

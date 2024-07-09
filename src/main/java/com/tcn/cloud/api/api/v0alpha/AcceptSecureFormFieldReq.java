@@ -38,15 +38,15 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq.class, com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq.Builder.class);
   }
 
-  public static final int SESSION_SID_FIELD_NUMBER = 1;
-  private long sessionSid_ = 0L;
+  public static final int VOICE_SESSION_SID_FIELD_NUMBER = 1;
+  private long voiceSessionSid_ = 0L;
   /**
-   * <code>int64 session_sid = 1 [json_name = "sessionSid"];</code>
-   * @return The sessionSid.
+   * <code>int64 voice_session_sid = 1 [json_name = "voiceSessionSid"];</code>
+   * @return The voiceSessionSid.
    */
   @java.lang.Override
-  public long getSessionSid() {
-    return sessionSid_;
+  public long getVoiceSessionSid() {
+    return voiceSessionSid_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -63,8 +63,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (sessionSid_ != 0L) {
-      output.writeInt64(1, sessionSid_);
+    if (voiceSessionSid_ != 0L) {
+      output.writeInt64(1, voiceSessionSid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -75,9 +75,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (sessionSid_ != 0L) {
+    if (voiceSessionSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, sessionSid_);
+        .computeInt64Size(1, voiceSessionSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -94,8 +94,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq other = (com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq) obj;
 
-    if (getSessionSid()
-        != other.getSessionSid()) return false;
+    if (getVoiceSessionSid()
+        != other.getVoiceSessionSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -107,9 +107,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + SESSION_SID_FIELD_NUMBER;
+    hash = (37 * hash) + VOICE_SESSION_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getSessionSid());
+        getVoiceSessionSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -241,7 +241,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      sessionSid_ = 0L;
+      voiceSessionSid_ = 0L;
       return this;
     }
 
@@ -276,7 +276,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.sessionSid_ = sessionSid_;
+        result.voiceSessionSid_ = voiceSessionSid_;
       }
     }
 
@@ -324,8 +324,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq other) {
       if (other == com.tcn.cloud.api.api.v0alpha.AcceptSecureFormFieldReq.getDefaultInstance()) return this;
-      if (other.getSessionSid() != 0L) {
-        setSessionSid(other.getSessionSid());
+      if (other.getVoiceSessionSid() != 0L) {
+        setVoiceSessionSid(other.getVoiceSessionSid());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -354,7 +354,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              sessionSid_ = input.readInt64();
+              voiceSessionSid_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
@@ -375,34 +375,34 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long sessionSid_ ;
+    private long voiceSessionSid_ ;
     /**
-     * <code>int64 session_sid = 1 [json_name = "sessionSid"];</code>
-     * @return The sessionSid.
+     * <code>int64 voice_session_sid = 1 [json_name = "voiceSessionSid"];</code>
+     * @return The voiceSessionSid.
      */
     @java.lang.Override
-    public long getSessionSid() {
-      return sessionSid_;
+    public long getVoiceSessionSid() {
+      return voiceSessionSid_;
     }
     /**
-     * <code>int64 session_sid = 1 [json_name = "sessionSid"];</code>
-     * @param value The sessionSid to set.
+     * <code>int64 voice_session_sid = 1 [json_name = "voiceSessionSid"];</code>
+     * @param value The voiceSessionSid to set.
      * @return This builder for chaining.
      */
-    public Builder setSessionSid(long value) {
+    public Builder setVoiceSessionSid(long value) {
 
-      sessionSid_ = value;
+      voiceSessionSid_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 session_sid = 1 [json_name = "sessionSid"];</code>
+     * <code>int64 voice_session_sid = 1 [json_name = "voiceSessionSid"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearSessionSid() {
+    public Builder clearVoiceSessionSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      sessionSid_ = 0L;
+      voiceSessionSid_ = 0L;
       onChanged();
       return this;
     }
