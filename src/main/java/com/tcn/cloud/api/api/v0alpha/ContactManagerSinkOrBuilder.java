@@ -117,7 +117,7 @@ public interface ContactManagerSinkOrBuilder extends
   /**
    * <code>int64 ttl = 7 [json_name = "ttl", deprecated = true];</code>
    * @deprecated api.v0alpha.ContactManagerSink.ttl is deprecated.
-   *     See api/v0alpha/lms.proto;l=2355
+   *     See api/v0alpha/lms.proto;l=2356
    * @return The ttl.
    */
   @java.lang.Deprecated long getTtl();

@@ -721,5 +721,20 @@ public interface ProcessOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.SumProcessOrBuilder getSumOrBuilder();
 
+  /**
+   * <code>.api.v0alpha.FinviEntrypoint finvi_entrypoint = 79 [json_name = "finviEntrypoint"];</code>
+   * @return Whether the finviEntrypoint field is set.
+   */
+  boolean hasFinviEntrypoint();
+  /**
+   * <code>.api.v0alpha.FinviEntrypoint finvi_entrypoint = 79 [json_name = "finviEntrypoint"];</code>
+   * @return The finviEntrypoint.
+   */
+  com.tcn.cloud.api.api.v0alpha.FinviEntrypoint getFinviEntrypoint();
+  /**
+   * <code>.api.v0alpha.FinviEntrypoint finvi_entrypoint = 79 [json_name = "finviEntrypoint"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.FinviEntrypointOrBuilder getFinviEntrypointOrBuilder();
+
   com.tcn.cloud.api.api.v0alpha.Process.ProcCase getProcCase();
 }
