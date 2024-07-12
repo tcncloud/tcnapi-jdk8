@@ -83,4 +83,23 @@ public interface SchedulingActivityOrBuilder extends
    * <code>.api.v1alpha1.wfm.NonSkillActivity member_non_skill_activity = 4 [json_name = "memberNonSkillActivity"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivityOrBuilder getMemberNonSkillActivityOrBuilder();
+
+  /**
+   * <pre>
+   * Distinguishes if this is a special scheduling activity.
+   * </pre>
+   *
+   * <code>.api.commons.ActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+   * @return The enum numeric value on the wire for activityClassification.
+   */
+  int getActivityClassificationValue();
+  /**
+   * <pre>
+   * Distinguishes if this is a special scheduling activity.
+   * </pre>
+   *
+   * <code>.api.commons.ActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+   * @return The activityClassification.
+   */
+  com.tcn.cloud.api.api.commons.ActivityClassification getActivityClassification();
 }

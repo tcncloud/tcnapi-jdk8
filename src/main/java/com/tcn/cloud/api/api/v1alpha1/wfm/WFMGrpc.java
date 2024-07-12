@@ -8241,6 +8241,10 @@ public final class WFMGrpc {
      * Creates an agent leave petition to request time off for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
      * The &#64;petition_comment must be set with a value.
      * The &#64;requested_datetime_ranges may not overlap each other.
+     * The number of working hours requested off should be set in &#64;requested_hours_off.
+     *   This does not need to relate directly to the datetime range being requested off.
+     *   For example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
+     *   The usage of these hours will depend on org policy, but is not yet implemented.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when creating the time off request.
@@ -8294,7 +8298,10 @@ public final class WFMGrpc {
      * If a petition is approved, time off shifts will be added to the agent's schedule across the requested_datetime_ranges.
      * If &#64;retain_partial_shifts is true, partial shifts overlapping the requested_datetime_ranges will have the remaining portion of the shift retained,
      *    if the remaining portion of the shift is at least 30 minutes in length.
-     * If &#64;retain_partial_shifts is false, the entirety of shifts overlapping the requested_datetime_ranges range will be deleted.
+     * If &#64;retain_partial_shifts is false, the entirety of shifts overlapping the requested_datetime_ranges range will be deleted or transfered depending on &#64;replace_with_unassigned_agent.
+     * If &#64;replace_with_unassigned_agent is true, an unassigned agent sid will be assigned to the covered shifts instead of deleting them.
+     * When true, if &#64;retain_partial_shifts is also true, only the portion of the shift in the requested datetime ranges will be transfered.
+     * When true, if &#64;retain_partial_shifts is false, the entirety of any overlapping shifts will be transfered.
      * Errors:
      *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is not pending approval.
      *   - grpc.Internal: error occurs when resolving the agent leave petition, or modifying the agent's schedule.
@@ -11231,6 +11238,10 @@ public final class WFMGrpc {
      * Creates an agent leave petition to request time off for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
      * The &#64;petition_comment must be set with a value.
      * The &#64;requested_datetime_ranges may not overlap each other.
+     * The number of working hours requested off should be set in &#64;requested_hours_off.
+     *   This does not need to relate directly to the datetime range being requested off.
+     *   For example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
+     *   The usage of these hours will depend on org policy, but is not yet implemented.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when creating the time off request.
@@ -11287,7 +11298,10 @@ public final class WFMGrpc {
      * If a petition is approved, time off shifts will be added to the agent's schedule across the requested_datetime_ranges.
      * If &#64;retain_partial_shifts is true, partial shifts overlapping the requested_datetime_ranges will have the remaining portion of the shift retained,
      *    if the remaining portion of the shift is at least 30 minutes in length.
-     * If &#64;retain_partial_shifts is false, the entirety of shifts overlapping the requested_datetime_ranges range will be deleted.
+     * If &#64;retain_partial_shifts is false, the entirety of shifts overlapping the requested_datetime_ranges range will be deleted or transfered depending on &#64;replace_with_unassigned_agent.
+     * If &#64;replace_with_unassigned_agent is true, an unassigned agent sid will be assigned to the covered shifts instead of deleting them.
+     * When true, if &#64;retain_partial_shifts is also true, only the portion of the shift in the requested datetime ranges will be transfered.
+     * When true, if &#64;retain_partial_shifts is false, the entirety of any overlapping shifts will be transfered.
      * Errors:
      *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is not pending approval.
      *   - grpc.Internal: error occurs when resolving the agent leave petition, or modifying the agent's schedule.
@@ -14053,6 +14067,10 @@ public final class WFMGrpc {
      * Creates an agent leave petition to request time off for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
      * The &#64;petition_comment must be set with a value.
      * The &#64;requested_datetime_ranges may not overlap each other.
+     * The number of working hours requested off should be set in &#64;requested_hours_off.
+     *   This does not need to relate directly to the datetime range being requested off.
+     *   For example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
+     *   The usage of these hours will depend on org policy, but is not yet implemented.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when creating the time off request.
@@ -14106,7 +14124,10 @@ public final class WFMGrpc {
      * If a petition is approved, time off shifts will be added to the agent's schedule across the requested_datetime_ranges.
      * If &#64;retain_partial_shifts is true, partial shifts overlapping the requested_datetime_ranges will have the remaining portion of the shift retained,
      *    if the remaining portion of the shift is at least 30 minutes in length.
-     * If &#64;retain_partial_shifts is false, the entirety of shifts overlapping the requested_datetime_ranges range will be deleted.
+     * If &#64;retain_partial_shifts is false, the entirety of shifts overlapping the requested_datetime_ranges range will be deleted or transfered depending on &#64;replace_with_unassigned_agent.
+     * If &#64;replace_with_unassigned_agent is true, an unassigned agent sid will be assigned to the covered shifts instead of deleting them.
+     * When true, if &#64;retain_partial_shifts is also true, only the portion of the shift in the requested datetime ranges will be transfered.
+     * When true, if &#64;retain_partial_shifts is false, the entirety of any overlapping shifts will be transfered.
      * Errors:
      *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is not pending approval.
      *   - grpc.Internal: error occurs when resolving the agent leave petition, or modifying the agent's schedule.
@@ -16927,6 +16948,10 @@ public final class WFMGrpc {
      * Creates an agent leave petition to request time off for the &#64;wfm_agent_sid over the &#64;requested_datetime_ranges for the org sending the request.
      * The &#64;petition_comment must be set with a value.
      * The &#64;requested_datetime_ranges may not overlap each other.
+     * The number of working hours requested off should be set in &#64;requested_hours_off.
+     *   This does not need to relate directly to the datetime range being requested off.
+     *   For example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
+     *   The usage of these hours will depend on org policy, but is not yet implemented.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when creating the time off request.
@@ -16983,7 +17008,10 @@ public final class WFMGrpc {
      * If a petition is approved, time off shifts will be added to the agent's schedule across the requested_datetime_ranges.
      * If &#64;retain_partial_shifts is true, partial shifts overlapping the requested_datetime_ranges will have the remaining portion of the shift retained,
      *    if the remaining portion of the shift is at least 30 minutes in length.
-     * If &#64;retain_partial_shifts is false, the entirety of shifts overlapping the requested_datetime_ranges range will be deleted.
+     * If &#64;retain_partial_shifts is false, the entirety of shifts overlapping the requested_datetime_ranges range will be deleted or transfered depending on &#64;replace_with_unassigned_agent.
+     * If &#64;replace_with_unassigned_agent is true, an unassigned agent sid will be assigned to the covered shifts instead of deleting them.
+     * When true, if &#64;retain_partial_shifts is also true, only the portion of the shift in the requested datetime ranges will be transfered.
+     * When true, if &#64;retain_partial_shifts is false, the entirety of any overlapping shifts will be transfered.
      * Errors:
      *   - grpc.Invalid: the request data is invalid, the &#64;agent_leave_petition_id is not pending approval.
      *   - grpc.Internal: error occurs when resolving the agent leave petition, or modifying the agent's schedule.

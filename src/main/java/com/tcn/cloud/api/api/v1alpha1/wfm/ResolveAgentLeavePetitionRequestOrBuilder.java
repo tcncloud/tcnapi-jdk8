@@ -60,11 +60,23 @@ public interface ResolveAgentLeavePetitionRequestOrBuilder extends
    * <pre>
    * If true, partial shifts overlapping the requested_datetime_ranges will have the remaining portion of the shift retained
    *    if the remaining portion is at least 30 minutes wide.
-   * If false, the entirety of shifts overlapping the requested_datetime_ranges will be deleted.
+   * If false, the entirety of shifts overlapping the requested_datetime_ranges will be deleted or transfered, depending on &#64;replace_with_unassigned_agent.
    * </pre>
    *
    * <code>bool retain_partial_shifts = 4 [json_name = "retainPartialShifts"];</code>
    * @return The retainPartialShifts.
    */
   boolean getRetainPartialShifts();
+
+  /**
+   * <pre>
+   * If true, an unassigned agent sid will be assigned to the shifts instead of deleting them.
+   * If &#64;retain_partial_shifts is also true, only the portion of the shift in the requested datetime ranges will be transfered.
+   * if &#64;retain_partial_shifts is false, the entirety of any overlapping shifts will be transfered.
+   * </pre>
+   *
+   * <code>bool replace_with_unassigned_agent = 5 [json_name = "replaceWithUnassignedAgent"];</code>
+   * @return The replaceWithUnassignedAgent.
+   */
+  boolean getReplaceWithUnassignedAgent();
 }

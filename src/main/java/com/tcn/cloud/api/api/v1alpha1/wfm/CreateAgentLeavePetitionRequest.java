@@ -172,6 +172,24 @@ private static final long serialVersionUID = 0L;
     return wfmAgentSid_;
   }
 
+  public static final int REQUESTED_HOURS_OFF_FIELD_NUMBER = 11;
+  private float requestedHoursOff_ = 0F;
+  /**
+   * <pre>
+   * The number of working hours requested off.
+   * This does not need to relate directly to the datetime range being requested off,
+   *   for example in the case where a 14 hour schedulable range is being taken off
+   *   but 8 hours of work will be paid out with PTO.
+   * </pre>
+   *
+   * <code>float requested_hours_off = 11 [json_name = "requestedHoursOff"];</code>
+   * @return The requestedHoursOff.
+   */
+  @java.lang.Override
+  public float getRequestedHoursOff() {
+    return requestedHoursOff_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -195,6 +213,9 @@ private static final long serialVersionUID = 0L;
     if (wfmAgentSid_ != 0L) {
       output.writeInt64(3, wfmAgentSid_);
     }
+    if (java.lang.Float.floatToRawIntBits(requestedHoursOff_) != 0) {
+      output.writeFloat(11, requestedHoursOff_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -214,6 +235,10 @@ private static final long serialVersionUID = 0L;
     if (wfmAgentSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, wfmAgentSid_);
+    }
+    if (java.lang.Float.floatToRawIntBits(requestedHoursOff_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(11, requestedHoursOff_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -236,6 +261,9 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPetitionComment())) return false;
     if (getWfmAgentSid()
         != other.getWfmAgentSid()) return false;
+    if (java.lang.Float.floatToIntBits(getRequestedHoursOff())
+        != java.lang.Float.floatToIntBits(
+            other.getRequestedHoursOff())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -256,6 +284,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + WFM_AGENT_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getWfmAgentSid());
+    hash = (37 * hash) + REQUESTED_HOURS_OFF_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getRequestedHoursOff());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -400,6 +431,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000001);
       petitionComment_ = "";
       wfmAgentSid_ = 0L;
+      requestedHoursOff_ = 0F;
       return this;
     }
 
@@ -451,6 +483,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.wfmAgentSid_ = wfmAgentSid_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.requestedHoursOff_ = requestedHoursOff_;
       }
     }
 
@@ -532,6 +567,9 @@ private static final long serialVersionUID = 0L;
       if (other.getWfmAgentSid() != 0L) {
         setWfmAgentSid(other.getWfmAgentSid());
       }
+      if (other.getRequestedHoursOff() != 0F) {
+        setRequestedHoursOff(other.getRequestedHoursOff());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -581,6 +619,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 93: {
+              requestedHoursOff_ = input.readFloat();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 93
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1060,6 +1103,59 @@ private static final long serialVersionUID = 0L;
     public Builder clearWfmAgentSid() {
       bitField0_ = (bitField0_ & ~0x00000004);
       wfmAgentSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private float requestedHoursOff_ ;
+    /**
+     * <pre>
+     * The number of working hours requested off.
+     * This does not need to relate directly to the datetime range being requested off,
+     *   for example in the case where a 14 hour schedulable range is being taken off
+     *   but 8 hours of work will be paid out with PTO.
+     * </pre>
+     *
+     * <code>float requested_hours_off = 11 [json_name = "requestedHoursOff"];</code>
+     * @return The requestedHoursOff.
+     */
+    @java.lang.Override
+    public float getRequestedHoursOff() {
+      return requestedHoursOff_;
+    }
+    /**
+     * <pre>
+     * The number of working hours requested off.
+     * This does not need to relate directly to the datetime range being requested off,
+     *   for example in the case where a 14 hour schedulable range is being taken off
+     *   but 8 hours of work will be paid out with PTO.
+     * </pre>
+     *
+     * <code>float requested_hours_off = 11 [json_name = "requestedHoursOff"];</code>
+     * @param value The requestedHoursOff to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRequestedHoursOff(float value) {
+
+      requestedHoursOff_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of working hours requested off.
+     * This does not need to relate directly to the datetime range being requested off,
+     *   for example in the case where a 14 hour schedulable range is being taken off
+     *   but 8 hours of work will be paid out with PTO.
+     * </pre>
+     *
+     * <code>float requested_hours_off = 11 [json_name = "requestedHoursOff"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRequestedHoursOff() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      requestedHoursOff_ = 0F;
       onChanged();
       return this;
     }

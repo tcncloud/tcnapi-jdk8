@@ -118,6 +118,33 @@ private static final long serialVersionUID = 0L;
      */
     com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOWOrBuilder getDayMapsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * An optional value to relate the weekmap to a specific type of scheduling activity, such as time off.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+     * @return Whether the schedulingActivitySid field is set.
+     */
+    boolean hasSchedulingActivitySid();
+    /**
+     * <pre>
+     * An optional value to relate the weekmap to a specific type of scheduling activity, such as time off.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+     * @return The schedulingActivitySid.
+     */
+    com.google.protobuf.Int64Value getSchedulingActivitySid();
+    /**
+     * <pre>
+     * An optional value to relate the weekmap to a specific type of scheduling activity, such as time off.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSchedulingActivitySidOrBuilder();
   }
   /**
    * Protobuf type {@code api.v1alpha1.wfm.DatetimePattern.WeekMap}
@@ -1239,6 +1266,44 @@ private static final long serialVersionUID = 0L;
       return dayMaps_.get(index);
     }
 
+    public static final int SCHEDULING_ACTIVITY_SID_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value schedulingActivitySid_;
+    /**
+     * <pre>
+     * An optional value to relate the weekmap to a specific type of scheduling activity, such as time off.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+     * @return Whether the schedulingActivitySid field is set.
+     */
+    @java.lang.Override
+    public boolean hasSchedulingActivitySid() {
+      return schedulingActivitySid_ != null;
+    }
+    /**
+     * <pre>
+     * An optional value to relate the weekmap to a specific type of scheduling activity, such as time off.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+     * @return The schedulingActivitySid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getSchedulingActivitySid() {
+      return schedulingActivitySid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : schedulingActivitySid_;
+    }
+    /**
+     * <pre>
+     * An optional value to relate the weekmap to a specific type of scheduling activity, such as time off.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getSchedulingActivitySidOrBuilder() {
+      return schedulingActivitySid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : schedulingActivitySid_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1259,6 +1324,9 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < dayMaps_.size(); i++) {
         output.writeMessage(2, dayMaps_.get(i));
       }
+      if (schedulingActivitySid_ != null) {
+        output.writeMessage(3, getSchedulingActivitySid());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1275,6 +1343,10 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < dayMaps_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, dayMaps_.get(i));
+      }
+      if (schedulingActivitySid_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getSchedulingActivitySid());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1298,6 +1370,11 @@ private static final long serialVersionUID = 0L;
       }
       if (!getDayMapsList()
           .equals(other.getDayMapsList())) return false;
+      if (hasSchedulingActivitySid() != other.hasSchedulingActivitySid()) return false;
+      if (hasSchedulingActivitySid()) {
+        if (!getSchedulingActivitySid()
+            .equals(other.getSchedulingActivitySid())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1316,6 +1393,10 @@ private static final long serialVersionUID = 0L;
       if (getDayMapsCount() > 0) {
         hash = (37 * hash) + DAY_MAPS_FIELD_NUMBER;
         hash = (53 * hash) + getDayMapsList().hashCode();
+      }
+      if (hasSchedulingActivitySid()) {
+        hash = (37 * hash) + SCHEDULING_ACTIVITY_SID_FIELD_NUMBER;
+        hash = (53 * hash) + getSchedulingActivitySid().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1460,6 +1541,11 @@ private static final long serialVersionUID = 0L;
           dayMapsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
+        schedulingActivitySid_ = null;
+        if (schedulingActivitySidBuilder_ != null) {
+          schedulingActivitySidBuilder_.dispose();
+          schedulingActivitySidBuilder_ = null;
+        }
         return this;
       }
 
@@ -1510,6 +1596,11 @@ private static final long serialVersionUID = 0L;
           result.datetimeRange_ = datetimeRangeBuilder_ == null
               ? datetimeRange_
               : datetimeRangeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.schedulingActivitySid_ = schedulingActivitySidBuilder_ == null
+              ? schedulingActivitySid_
+              : schedulingActivitySidBuilder_.build();
         }
       }
 
@@ -1586,6 +1677,9 @@ private static final long serialVersionUID = 0L;
             }
           }
         }
+        if (other.hasSchedulingActivitySid()) {
+          mergeSchedulingActivitySid(other.getSchedulingActivitySid());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1632,6 +1726,13 @@ private static final long serialVersionUID = 0L;
                 }
                 break;
               } // case 18
+              case 26: {
+                input.readMessage(
+                    getSchedulingActivitySidFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2115,6 +2216,161 @@ private static final long serialVersionUID = 0L;
         }
         return dayMapsBuilder_;
       }
+
+      private com.google.protobuf.Int64Value schedulingActivitySid_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> schedulingActivitySidBuilder_;
+      /**
+       * <pre>
+       * An optional value to relate the weekmap to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       * @return Whether the schedulingActivitySid field is set.
+       */
+      public boolean hasSchedulingActivitySid() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * An optional value to relate the weekmap to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       * @return The schedulingActivitySid.
+       */
+      public com.google.protobuf.Int64Value getSchedulingActivitySid() {
+        if (schedulingActivitySidBuilder_ == null) {
+          return schedulingActivitySid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : schedulingActivitySid_;
+        } else {
+          return schedulingActivitySidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * An optional value to relate the weekmap to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       */
+      public Builder setSchedulingActivitySid(com.google.protobuf.Int64Value value) {
+        if (schedulingActivitySidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          schedulingActivitySid_ = value;
+        } else {
+          schedulingActivitySidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An optional value to relate the weekmap to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       */
+      public Builder setSchedulingActivitySid(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (schedulingActivitySidBuilder_ == null) {
+          schedulingActivitySid_ = builderForValue.build();
+        } else {
+          schedulingActivitySidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An optional value to relate the weekmap to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       */
+      public Builder mergeSchedulingActivitySid(com.google.protobuf.Int64Value value) {
+        if (schedulingActivitySidBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            schedulingActivitySid_ != null &&
+            schedulingActivitySid_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+            getSchedulingActivitySidBuilder().mergeFrom(value);
+          } else {
+            schedulingActivitySid_ = value;
+          }
+        } else {
+          schedulingActivitySidBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An optional value to relate the weekmap to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       */
+      public Builder clearSchedulingActivitySid() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        schedulingActivitySid_ = null;
+        if (schedulingActivitySidBuilder_ != null) {
+          schedulingActivitySidBuilder_.dispose();
+          schedulingActivitySidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An optional value to relate the weekmap to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSchedulingActivitySidBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getSchedulingActivitySidFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * An optional value to relate the weekmap to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSchedulingActivitySidOrBuilder() {
+        if (schedulingActivitySidBuilder_ != null) {
+          return schedulingActivitySidBuilder_.getMessageOrBuilder();
+        } else {
+          return schedulingActivitySid_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : schedulingActivitySid_;
+        }
+      }
+      /**
+       * <pre>
+       * An optional value to relate the weekmap to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSchedulingActivitySidFieldBuilder() {
+        if (schedulingActivitySidBuilder_ == null) {
+          schedulingActivitySidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSchedulingActivitySid(),
+                  getParentForChildren(),
+                  isClean());
+          schedulingActivitySid_ = null;
+        }
+        return schedulingActivitySidBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2236,6 +2492,33 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.OptionTypes value = 2 [json_name = "value"];</code>
      */
     com.tcn.cloud.api.api.commons.OptionTypesOrBuilder getValueOrBuilder();
+
+    /**
+     * <pre>
+     * An optional value to relate the calendar item to a specific type of scheduling activity, such as time off.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+     * @return Whether the schedulingActivitySid field is set.
+     */
+    boolean hasSchedulingActivitySid();
+    /**
+     * <pre>
+     * An optional value to relate the calendar item to a specific type of scheduling activity, such as time off.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+     * @return The schedulingActivitySid.
+     */
+    com.google.protobuf.Int64Value getSchedulingActivitySid();
+    /**
+     * <pre>
+     * An optional value to relate the calendar item to a specific type of scheduling activity, such as time off.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSchedulingActivitySidOrBuilder();
   }
   /**
    * Protobuf type {@code api.v1alpha1.wfm.DatetimePattern.CalendarItem}
@@ -2348,6 +2631,44 @@ private static final long serialVersionUID = 0L;
       return value_ == null ? com.tcn.cloud.api.api.commons.OptionTypes.getDefaultInstance() : value_;
     }
 
+    public static final int SCHEDULING_ACTIVITY_SID_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value schedulingActivitySid_;
+    /**
+     * <pre>
+     * An optional value to relate the calendar item to a specific type of scheduling activity, such as time off.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+     * @return Whether the schedulingActivitySid field is set.
+     */
+    @java.lang.Override
+    public boolean hasSchedulingActivitySid() {
+      return schedulingActivitySid_ != null;
+    }
+    /**
+     * <pre>
+     * An optional value to relate the calendar item to a specific type of scheduling activity, such as time off.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+     * @return The schedulingActivitySid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getSchedulingActivitySid() {
+      return schedulingActivitySid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : schedulingActivitySid_;
+    }
+    /**
+     * <pre>
+     * An optional value to relate the calendar item to a specific type of scheduling activity, such as time off.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getSchedulingActivitySidOrBuilder() {
+      return schedulingActivitySid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : schedulingActivitySid_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2368,6 +2689,9 @@ private static final long serialVersionUID = 0L;
       if (value_ != null) {
         output.writeMessage(2, getValue());
       }
+      if (schedulingActivitySid_ != null) {
+        output.writeMessage(3, getSchedulingActivitySid());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2384,6 +2708,10 @@ private static final long serialVersionUID = 0L;
       if (value_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getValue());
+      }
+      if (schedulingActivitySid_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getSchedulingActivitySid());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2410,6 +2738,11 @@ private static final long serialVersionUID = 0L;
         if (!getValue()
             .equals(other.getValue())) return false;
       }
+      if (hasSchedulingActivitySid() != other.hasSchedulingActivitySid()) return false;
+      if (hasSchedulingActivitySid()) {
+        if (!getSchedulingActivitySid()
+            .equals(other.getSchedulingActivitySid())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2428,6 +2761,10 @@ private static final long serialVersionUID = 0L;
       if (hasValue()) {
         hash = (37 * hash) + VALUE_FIELD_NUMBER;
         hash = (53 * hash) + getValue().hashCode();
+      }
+      if (hasSchedulingActivitySid()) {
+        hash = (37 * hash) + SCHEDULING_ACTIVITY_SID_FIELD_NUMBER;
+        hash = (53 * hash) + getSchedulingActivitySid().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -2570,6 +2907,11 @@ private static final long serialVersionUID = 0L;
           valueBuilder_.dispose();
           valueBuilder_ = null;
         }
+        schedulingActivitySid_ = null;
+        if (schedulingActivitySidBuilder_ != null) {
+          schedulingActivitySidBuilder_.dispose();
+          schedulingActivitySidBuilder_ = null;
+        }
         return this;
       }
 
@@ -2612,6 +2954,11 @@ private static final long serialVersionUID = 0L;
           result.value_ = valueBuilder_ == null
               ? value_
               : valueBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.schedulingActivitySid_ = schedulingActivitySidBuilder_ == null
+              ? schedulingActivitySid_
+              : schedulingActivitySidBuilder_.build();
         }
       }
 
@@ -2665,6 +3012,9 @@ private static final long serialVersionUID = 0L;
         if (other.hasValue()) {
           mergeValue(other.getValue());
         }
+        if (other.hasSchedulingActivitySid()) {
+          mergeSchedulingActivitySid(other.getSchedulingActivitySid());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2705,6 +3055,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                input.readMessage(
+                    getSchedulingActivitySidFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3030,6 +3387,161 @@ private static final long serialVersionUID = 0L;
           value_ = null;
         }
         return valueBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value schedulingActivitySid_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> schedulingActivitySidBuilder_;
+      /**
+       * <pre>
+       * An optional value to relate the calendar item to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       * @return Whether the schedulingActivitySid field is set.
+       */
+      public boolean hasSchedulingActivitySid() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * An optional value to relate the calendar item to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       * @return The schedulingActivitySid.
+       */
+      public com.google.protobuf.Int64Value getSchedulingActivitySid() {
+        if (schedulingActivitySidBuilder_ == null) {
+          return schedulingActivitySid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : schedulingActivitySid_;
+        } else {
+          return schedulingActivitySidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * An optional value to relate the calendar item to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       */
+      public Builder setSchedulingActivitySid(com.google.protobuf.Int64Value value) {
+        if (schedulingActivitySidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          schedulingActivitySid_ = value;
+        } else {
+          schedulingActivitySidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An optional value to relate the calendar item to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       */
+      public Builder setSchedulingActivitySid(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (schedulingActivitySidBuilder_ == null) {
+          schedulingActivitySid_ = builderForValue.build();
+        } else {
+          schedulingActivitySidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An optional value to relate the calendar item to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       */
+      public Builder mergeSchedulingActivitySid(com.google.protobuf.Int64Value value) {
+        if (schedulingActivitySidBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            schedulingActivitySid_ != null &&
+            schedulingActivitySid_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+            getSchedulingActivitySidBuilder().mergeFrom(value);
+          } else {
+            schedulingActivitySid_ = value;
+          }
+        } else {
+          schedulingActivitySidBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An optional value to relate the calendar item to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       */
+      public Builder clearSchedulingActivitySid() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        schedulingActivitySid_ = null;
+        if (schedulingActivitySidBuilder_ != null) {
+          schedulingActivitySidBuilder_.dispose();
+          schedulingActivitySidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An optional value to relate the calendar item to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSchedulingActivitySidBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getSchedulingActivitySidFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * An optional value to relate the calendar item to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSchedulingActivitySidOrBuilder() {
+        if (schedulingActivitySidBuilder_ != null) {
+          return schedulingActivitySidBuilder_.getMessageOrBuilder();
+        } else {
+          return schedulingActivitySid_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : schedulingActivitySid_;
+        }
+      }
+      /**
+       * <pre>
+       * An optional value to relate the calendar item to a specific type of scheduling activity, such as time off.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSchedulingActivitySidFieldBuilder() {
+        if (schedulingActivitySidBuilder_ == null) {
+          schedulingActivitySidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSchedulingActivitySid(),
+                  getParentForChildren(),
+                  isClean());
+          schedulingActivitySid_ = null;
+        }
+        return schedulingActivitySidBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

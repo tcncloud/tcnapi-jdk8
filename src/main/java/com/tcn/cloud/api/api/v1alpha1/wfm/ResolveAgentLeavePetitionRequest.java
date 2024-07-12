@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * If true, partial shifts overlapping the requested_datetime_ranges will have the remaining portion of the shift retained
    *    if the remaining portion is at least 30 minutes wide.
-   * If false, the entirety of shifts overlapping the requested_datetime_ranges will be deleted.
+   * If false, the entirety of shifts overlapping the requested_datetime_ranges will be deleted or transfered, depending on &#64;replace_with_unassigned_agent.
    * </pre>
    *
    * <code>bool retain_partial_shifts = 4 [json_name = "retainPartialShifts"];</code>
@@ -147,6 +147,23 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public boolean getRetainPartialShifts() {
     return retainPartialShifts_;
+  }
+
+  public static final int REPLACE_WITH_UNASSIGNED_AGENT_FIELD_NUMBER = 5;
+  private boolean replaceWithUnassignedAgent_ = false;
+  /**
+   * <pre>
+   * If true, an unassigned agent sid will be assigned to the shifts instead of deleting them.
+   * If &#64;retain_partial_shifts is also true, only the portion of the shift in the requested datetime ranges will be transfered.
+   * if &#64;retain_partial_shifts is false, the entirety of any overlapping shifts will be transfered.
+   * </pre>
+   *
+   * <code>bool replace_with_unassigned_agent = 5 [json_name = "replaceWithUnassignedAgent"];</code>
+   * @return The replaceWithUnassignedAgent.
+   */
+  @java.lang.Override
+  public boolean getReplaceWithUnassignedAgent() {
+    return replaceWithUnassignedAgent_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -175,6 +192,9 @@ private static final long serialVersionUID = 0L;
     if (retainPartialShifts_ != false) {
       output.writeBool(4, retainPartialShifts_);
     }
+    if (replaceWithUnassignedAgent_ != false) {
+      output.writeBool(5, replaceWithUnassignedAgent_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -199,6 +219,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, retainPartialShifts_);
     }
+    if (replaceWithUnassignedAgent_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, replaceWithUnassignedAgent_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -221,6 +245,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getResponseComment())) return false;
     if (getRetainPartialShifts()
         != other.getRetainPartialShifts()) return false;
+    if (getReplaceWithUnassignedAgent()
+        != other.getReplaceWithUnassignedAgent()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -242,6 +268,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + RETAIN_PARTIAL_SHIFTS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getRetainPartialShifts());
+    hash = (37 * hash) + REPLACE_WITH_UNASSIGNED_AGENT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getReplaceWithUnassignedAgent());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -381,6 +410,7 @@ private static final long serialVersionUID = 0L;
       petitionStatus_ = 0;
       responseComment_ = "";
       retainPartialShifts_ = false;
+      replaceWithUnassignedAgent_ = false;
       return this;
     }
 
@@ -425,6 +455,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.retainPartialShifts_ = retainPartialShifts_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.replaceWithUnassignedAgent_ = replaceWithUnassignedAgent_;
       }
     }
 
@@ -486,6 +519,9 @@ private static final long serialVersionUID = 0L;
       if (other.getRetainPartialShifts() != false) {
         setRetainPartialShifts(other.getRetainPartialShifts());
       }
+      if (other.getReplaceWithUnassignedAgent() != false) {
+        setReplaceWithUnassignedAgent(other.getReplaceWithUnassignedAgent());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -532,6 +568,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 40: {
+              replaceWithUnassignedAgent_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -763,7 +804,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * If true, partial shifts overlapping the requested_datetime_ranges will have the remaining portion of the shift retained
      *    if the remaining portion is at least 30 minutes wide.
-     * If false, the entirety of shifts overlapping the requested_datetime_ranges will be deleted.
+     * If false, the entirety of shifts overlapping the requested_datetime_ranges will be deleted or transfered, depending on &#64;replace_with_unassigned_agent.
      * </pre>
      *
      * <code>bool retain_partial_shifts = 4 [json_name = "retainPartialShifts"];</code>
@@ -777,7 +818,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * If true, partial shifts overlapping the requested_datetime_ranges will have the remaining portion of the shift retained
      *    if the remaining portion is at least 30 minutes wide.
-     * If false, the entirety of shifts overlapping the requested_datetime_ranges will be deleted.
+     * If false, the entirety of shifts overlapping the requested_datetime_ranges will be deleted or transfered, depending on &#64;replace_with_unassigned_agent.
      * </pre>
      *
      * <code>bool retain_partial_shifts = 4 [json_name = "retainPartialShifts"];</code>
@@ -795,7 +836,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * If true, partial shifts overlapping the requested_datetime_ranges will have the remaining portion of the shift retained
      *    if the remaining portion is at least 30 minutes wide.
-     * If false, the entirety of shifts overlapping the requested_datetime_ranges will be deleted.
+     * If false, the entirety of shifts overlapping the requested_datetime_ranges will be deleted or transfered, depending on &#64;replace_with_unassigned_agent.
      * </pre>
      *
      * <code>bool retain_partial_shifts = 4 [json_name = "retainPartialShifts"];</code>
@@ -804,6 +845,56 @@ private static final long serialVersionUID = 0L;
     public Builder clearRetainPartialShifts() {
       bitField0_ = (bitField0_ & ~0x00000008);
       retainPartialShifts_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean replaceWithUnassignedAgent_ ;
+    /**
+     * <pre>
+     * If true, an unassigned agent sid will be assigned to the shifts instead of deleting them.
+     * If &#64;retain_partial_shifts is also true, only the portion of the shift in the requested datetime ranges will be transfered.
+     * if &#64;retain_partial_shifts is false, the entirety of any overlapping shifts will be transfered.
+     * </pre>
+     *
+     * <code>bool replace_with_unassigned_agent = 5 [json_name = "replaceWithUnassignedAgent"];</code>
+     * @return The replaceWithUnassignedAgent.
+     */
+    @java.lang.Override
+    public boolean getReplaceWithUnassignedAgent() {
+      return replaceWithUnassignedAgent_;
+    }
+    /**
+     * <pre>
+     * If true, an unassigned agent sid will be assigned to the shifts instead of deleting them.
+     * If &#64;retain_partial_shifts is also true, only the portion of the shift in the requested datetime ranges will be transfered.
+     * if &#64;retain_partial_shifts is false, the entirety of any overlapping shifts will be transfered.
+     * </pre>
+     *
+     * <code>bool replace_with_unassigned_agent = 5 [json_name = "replaceWithUnassignedAgent"];</code>
+     * @param value The replaceWithUnassignedAgent to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReplaceWithUnassignedAgent(boolean value) {
+
+      replaceWithUnassignedAgent_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * If true, an unassigned agent sid will be assigned to the shifts instead of deleting them.
+     * If &#64;retain_partial_shifts is also true, only the portion of the shift in the requested datetime ranges will be transfered.
+     * if &#64;retain_partial_shifts is false, the entirety of any overlapping shifts will be transfered.
+     * </pre>
+     *
+     * <code>bool replace_with_unassigned_agent = 5 [json_name = "replaceWithUnassignedAgent"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReplaceWithUnassignedAgent() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      replaceWithUnassignedAgent_ = false;
       onChanged();
       return this;
     }
