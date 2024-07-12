@@ -16,6 +16,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private FinviEntrypoint() {
+    poolId_ = "";
+    cronInterval_ = "";
   }
 
   @java.lang.Override
@@ -38,6 +40,115 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.class, com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.Builder.class);
   }
 
+  public static final int POOL_ID_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object poolId_ = "";
+  /**
+   * <pre>
+   * the pool we are going to pull into the lms pipeline
+   * </pre>
+   *
+   * <code>string pool_id = 1 [json_name = "poolId"];</code>
+   * @return The poolId.
+   */
+  @java.lang.Override
+  public java.lang.String getPoolId() {
+    java.lang.Object ref = poolId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      poolId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the pool we are going to pull into the lms pipeline
+   * </pre>
+   *
+   * <code>string pool_id = 1 [json_name = "poolId"];</code>
+   * @return The bytes for poolId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPoolIdBytes() {
+    java.lang.Object ref = poolId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      poolId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CRON_INTERVAL_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object cronInterval_ = "";
+  /**
+   * <pre>
+   * how often we attempt to pull in data if the pool is OK status, and we don't have a  pull in progress
+   * </pre>
+   *
+   * <code>string cron_interval = 2 [json_name = "cronInterval"];</code>
+   * @return The cronInterval.
+   */
+  @java.lang.Override
+  public java.lang.String getCronInterval() {
+    java.lang.Object ref = cronInterval_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      cronInterval_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * how often we attempt to pull in data if the pool is OK status, and we don't have a  pull in progress
+   * </pre>
+   *
+   * <code>string cron_interval = 2 [json_name = "cronInterval"];</code>
+   * @return The bytes for cronInterval.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCronIntervalBytes() {
+    java.lang.Object ref = cronInterval_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      cronInterval_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int DISABLED_FIELD_NUMBER = 3;
+  private boolean disabled_ = false;
+  /**
+   * <pre>
+   * if true we do not do anything when cron rings
+   * </pre>
+   *
+   * <code>bool disabled = 3 [json_name = "disabled"];</code>
+   * @return The disabled.
+   */
+  @java.lang.Override
+  public boolean getDisabled() {
+    return disabled_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -52,6 +163,15 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, poolId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cronInterval_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, cronInterval_);
+    }
+    if (disabled_ != false) {
+      output.writeBool(3, disabled_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -61,6 +181,16 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, poolId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cronInterval_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, cronInterval_);
+    }
+    if (disabled_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, disabled_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -76,6 +206,12 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v0alpha.FinviEntrypoint other = (com.tcn.cloud.api.api.v0alpha.FinviEntrypoint) obj;
 
+    if (!getPoolId()
+        .equals(other.getPoolId())) return false;
+    if (!getCronInterval()
+        .equals(other.getCronInterval())) return false;
+    if (getDisabled()
+        != other.getDisabled()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -87,6 +223,13 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getPoolId().hashCode();
+    hash = (37 * hash) + CRON_INTERVAL_FIELD_NUMBER;
+    hash = (53 * hash) + getCronInterval().hashCode();
+    hash = (37 * hash) + DISABLED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDisabled());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -217,6 +360,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      poolId_ = "";
+      cronInterval_ = "";
+      disabled_ = false;
       return this;
     }
 
@@ -243,8 +390,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.FinviEntrypoint buildPartial() {
       com.tcn.cloud.api.api.v0alpha.FinviEntrypoint result = new com.tcn.cloud.api.api.v0alpha.FinviEntrypoint(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.FinviEntrypoint result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.poolId_ = poolId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.cronInterval_ = cronInterval_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.disabled_ = disabled_;
+      }
     }
 
     @java.lang.Override
@@ -291,6 +452,19 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.FinviEntrypoint other) {
       if (other == com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.getDefaultInstance()) return this;
+      if (!other.getPoolId().isEmpty()) {
+        poolId_ = other.poolId_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (!other.getCronInterval().isEmpty()) {
+        cronInterval_ = other.cronInterval_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (other.getDisabled() != false) {
+        setDisabled(other.getDisabled());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -317,6 +491,21 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              poolId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              cronInterval_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              disabled_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -330,6 +519,235 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private java.lang.Object poolId_ = "";
+    /**
+     * <pre>
+     * the pool we are going to pull into the lms pipeline
+     * </pre>
+     *
+     * <code>string pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    public java.lang.String getPoolId() {
+      java.lang.Object ref = poolId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        poolId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the pool we are going to pull into the lms pipeline
+     * </pre>
+     *
+     * <code>string pool_id = 1 [json_name = "poolId"];</code>
+     * @return The bytes for poolId.
+     */
+    public com.google.protobuf.ByteString
+        getPoolIdBytes() {
+      java.lang.Object ref = poolId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        poolId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the pool we are going to pull into the lms pipeline
+     * </pre>
+     *
+     * <code>string pool_id = 1 [json_name = "poolId"];</code>
+     * @param value The poolId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPoolId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      poolId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the pool we are going to pull into the lms pipeline
+     * </pre>
+     *
+     * <code>string pool_id = 1 [json_name = "poolId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPoolId() {
+      poolId_ = getDefaultInstance().getPoolId();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the pool we are going to pull into the lms pipeline
+     * </pre>
+     *
+     * <code>string pool_id = 1 [json_name = "poolId"];</code>
+     * @param value The bytes for poolId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPoolIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      poolId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object cronInterval_ = "";
+    /**
+     * <pre>
+     * how often we attempt to pull in data if the pool is OK status, and we don't have a  pull in progress
+     * </pre>
+     *
+     * <code>string cron_interval = 2 [json_name = "cronInterval"];</code>
+     * @return The cronInterval.
+     */
+    public java.lang.String getCronInterval() {
+      java.lang.Object ref = cronInterval_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cronInterval_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * how often we attempt to pull in data if the pool is OK status, and we don't have a  pull in progress
+     * </pre>
+     *
+     * <code>string cron_interval = 2 [json_name = "cronInterval"];</code>
+     * @return The bytes for cronInterval.
+     */
+    public com.google.protobuf.ByteString
+        getCronIntervalBytes() {
+      java.lang.Object ref = cronInterval_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cronInterval_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * how often we attempt to pull in data if the pool is OK status, and we don't have a  pull in progress
+     * </pre>
+     *
+     * <code>string cron_interval = 2 [json_name = "cronInterval"];</code>
+     * @param value The cronInterval to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCronInterval(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      cronInterval_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * how often we attempt to pull in data if the pool is OK status, and we don't have a  pull in progress
+     * </pre>
+     *
+     * <code>string cron_interval = 2 [json_name = "cronInterval"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCronInterval() {
+      cronInterval_ = getDefaultInstance().getCronInterval();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * how often we attempt to pull in data if the pool is OK status, and we don't have a  pull in progress
+     * </pre>
+     *
+     * <code>string cron_interval = 2 [json_name = "cronInterval"];</code>
+     * @param value The bytes for cronInterval to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCronIntervalBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      cronInterval_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private boolean disabled_ ;
+    /**
+     * <pre>
+     * if true we do not do anything when cron rings
+     * </pre>
+     *
+     * <code>bool disabled = 3 [json_name = "disabled"];</code>
+     * @return The disabled.
+     */
+    @java.lang.Override
+    public boolean getDisabled() {
+      return disabled_;
+    }
+    /**
+     * <pre>
+     * if true we do not do anything when cron rings
+     * </pre>
+     *
+     * <code>bool disabled = 3 [json_name = "disabled"];</code>
+     * @param value The disabled to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDisabled(boolean value) {
+
+      disabled_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * if true we do not do anything when cron rings
+     * </pre>
+     *
+     * <code>bool disabled = 3 [json_name = "disabled"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDisabled() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      disabled_ = false;
+      onChanged();
       return this;
     }
     @java.lang.Override

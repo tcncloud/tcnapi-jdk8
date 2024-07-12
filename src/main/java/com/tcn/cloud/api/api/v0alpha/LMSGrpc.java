@@ -2359,6 +2359,9 @@ public final class LMSGrpc {
     }
 
     /**
+     * <pre>
+     * List pools is a unary call to show finvi pools through exile
+     * </pre>
      */
     default void listPools(com.tcn.cloud.api.api.v0alpha.ListPoolsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPoolsResponse> responseObserver) {
@@ -2918,6 +2921,9 @@ public final class LMSGrpc {
     }
 
     /**
+     * <pre>
+     * List pools is a unary call to show finvi pools through exile
+     * </pre>
      */
     public void listPools(com.tcn.cloud.api.api.v0alpha.ListPoolsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPoolsResponse> responseObserver) {
@@ -3407,6 +3413,9 @@ public final class LMSGrpc {
     }
 
     /**
+     * <pre>
+     * List pools is a unary call to show finvi pools through exile
+     * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListPoolsResponse listPools(com.tcn.cloud.api.api.v0alpha.ListPoolsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -3897,6 +3906,9 @@ public final class LMSGrpc {
     }
 
     /**
+     * <pre>
+     * List pools is a unary call to show finvi pools through exile
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListPoolsResponse> listPools(
         com.tcn.cloud.api.api.v0alpha.ListPoolsRequest request) {
