@@ -94,31 +94,4 @@ public interface DatetimePatternOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.CalendarItemOrBuilder getCalendarItemsOrBuilder(
       int index);
-
-  /**
-   * <pre>
-   * An optional value to relate the week maps and calendar items to a specific type of scheduling activity, such as time off.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
-   * @return Whether the schedulingActivitySid field is set.
-   */
-  boolean hasSchedulingActivitySid();
-  /**
-   * <pre>
-   * An optional value to relate the week maps and calendar items to a specific type of scheduling activity, such as time off.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
-   * @return The schedulingActivitySid.
-   */
-  com.google.protobuf.Int64Value getSchedulingActivitySid();
-  /**
-   * <pre>
-   * An optional value to relate the week maps and calendar items to a specific type of scheduling activity, such as time off.
-   * </pre>
-   *
-   * <code>.google.protobuf.Int64Value scheduling_activity_sid = 3 [json_name = "schedulingActivitySid"];</code>
-   */
-  com.google.protobuf.Int64ValueOrBuilder getSchedulingActivitySidOrBuilder();
 }
