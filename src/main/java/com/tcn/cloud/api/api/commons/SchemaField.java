@@ -112,6 +112,17 @@ private static final long serialVersionUID = 0L;
     return isPrimaryKey_;
   }
 
+  public static final int IS_LOW_CARDINALITY_FIELD_NUMBER = 4;
+  private boolean isLowCardinality_ = false;
+  /**
+   * <code>bool is_low_cardinality = 4 [json_name = "isLowCardinality"];</code>
+   * @return The isLowCardinality.
+   */
+  @java.lang.Override
+  public boolean getIsLowCardinality() {
+    return isLowCardinality_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -135,6 +146,9 @@ private static final long serialVersionUID = 0L;
     if (isPrimaryKey_ != false) {
       output.writeBool(3, isPrimaryKey_);
     }
+    if (isLowCardinality_ != false) {
+      output.writeBool(4, isLowCardinality_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -154,6 +168,10 @@ private static final long serialVersionUID = 0L;
     if (isPrimaryKey_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, isPrimaryKey_);
+    }
+    if (isLowCardinality_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, isLowCardinality_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -175,6 +193,8 @@ private static final long serialVersionUID = 0L;
     if (columnType_ != other.columnType_) return false;
     if (getIsPrimaryKey()
         != other.getIsPrimaryKey()) return false;
+    if (getIsLowCardinality()
+        != other.getIsLowCardinality()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -193,6 +213,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_PRIMARY_KEY_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsPrimaryKey());
+    hash = (37 * hash) + IS_LOW_CARDINALITY_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsLowCardinality());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -331,6 +354,7 @@ private static final long serialVersionUID = 0L;
       name_ = "";
       columnType_ = 0;
       isPrimaryKey_ = false;
+      isLowCardinality_ = false;
       return this;
     }
 
@@ -372,6 +396,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.isPrimaryKey_ = isPrimaryKey_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.isLowCardinality_ = isLowCardinality_;
       }
     }
 
@@ -430,6 +457,9 @@ private static final long serialVersionUID = 0L;
       if (other.getIsPrimaryKey() != false) {
         setIsPrimaryKey(other.getIsPrimaryKey());
       }
+      if (other.getIsLowCardinality() != false) {
+        setIsLowCardinality(other.getIsLowCardinality());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -471,6 +501,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 32: {
+              isLowCardinality_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -641,6 +676,38 @@ private static final long serialVersionUID = 0L;
     public Builder clearIsPrimaryKey() {
       bitField0_ = (bitField0_ & ~0x00000004);
       isPrimaryKey_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean isLowCardinality_ ;
+    /**
+     * <code>bool is_low_cardinality = 4 [json_name = "isLowCardinality"];</code>
+     * @return The isLowCardinality.
+     */
+    @java.lang.Override
+    public boolean getIsLowCardinality() {
+      return isLowCardinality_;
+    }
+    /**
+     * <code>bool is_low_cardinality = 4 [json_name = "isLowCardinality"];</code>
+     * @param value The isLowCardinality to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsLowCardinality(boolean value) {
+
+      isLowCardinality_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool is_low_cardinality = 4 [json_name = "isLowCardinality"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsLowCardinality() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      isLowCardinality_ = false;
       onChanged();
       return this;
     }

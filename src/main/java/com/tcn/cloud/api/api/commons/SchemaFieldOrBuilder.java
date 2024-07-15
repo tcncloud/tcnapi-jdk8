@@ -35,4 +35,10 @@ public interface SchemaFieldOrBuilder extends
    * @return The isPrimaryKey.
    */
   boolean getIsPrimaryKey();
+
+  /**
+   * <code>bool is_low_cardinality = 4 [json_name = "isLowCardinality"];</code>
+   * @return The isLowCardinality.
+   */
+  boolean getIsLowCardinality();
 }

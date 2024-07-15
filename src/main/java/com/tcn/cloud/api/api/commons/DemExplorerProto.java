@@ -34,27 +34,28 @@ public final class DemExplorerProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\036api/commons/dem_explorer.proto\022\013api.co" +
-      "mmons\"\201\001\n\013SchemaField\022\022\n\004name\030\001 \001(\tR\004nam" +
+      "mmons\"\257\001\n\013SchemaField\022\022\n\004name\030\001 \001(\tR\004nam" +
       "e\0228\n\013column_type\030\002 \001(\0162\027.api.commons.Sch" +
       "emaTypeR\ncolumnType\022$\n\016is_primary_key\030\003 " +
-      "\001(\010R\014isPrimaryKey\"\224\001\n\006Schema\022\022\n\004name\030\001 \001" +
-      "(\tR\004name\022D\n\017datasource_type\030\002 \001(\0162\033.api." +
-      "commons.DatasourceTypeR\016datasourceType\0220" +
-      "\n\006fields\030\003 \003(\0132\030.api.commons.SchemaField" +
-      "R\006fields*\220\002\n\nSchemaType\022\033\n\027SCHEMA_TYPE_U" +
-      "NSPECIFIED\020\000\022\023\n\017SCHEMA_TYPE_INT\020\002\022\025\n\021SCH" +
-      "EMA_TYPE_FLOAT\020\003\022\026\n\022SCHEMA_TYPE_STRING\020\005" +
-      "\022\024\n\020SCHEMA_TYPE_BOOL\020\006\022\031\n\025SCHEMA_TYPE_TI" +
-      "MESTAMP\020\007\022\031\n\025SCHEMA_TYPE_INT_ARRAY\020\010\022\033\n\027" +
-      "SCHEMA_TYPE_FLOAT_ARRAY\020\t\022\034\n\030SCHEMA_TYPE" +
-      "_STRING_ARRAY\020\n\022\032\n\026SCHEMA_TYPE_BOOL_ARRA" +
-      "Y\020\013*j\n\016DatasourceType\022\037\n\033DATASOURCE_TYPE" +
-      "_UNSPECIFIED\020\000\022\027\n\023DATASOURCE_TYPE_VFS\020\001\022" +
-      "\036\n\032DATASOURCE_TYPE_CLICKHOUSE\020\002B~\n\035com.t" +
-      "cn.cloud.api.api.commonsB\020DemExplorerPro" +
-      "toP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002" +
-      "\027Api\\Commons\\GPBMetadata\352\002\014Api::Commonsb" +
-      "\006proto3"
+      "\001(\010R\014isPrimaryKey\022,\n\022is_low_cardinality\030" +
+      "\004 \001(\010R\020isLowCardinality\"\224\001\n\006Schema\022\022\n\004na" +
+      "me\030\001 \001(\tR\004name\022D\n\017datasource_type\030\002 \001(\0162" +
+      "\033.api.commons.DatasourceTypeR\016datasource" +
+      "Type\0220\n\006fields\030\003 \003(\0132\030.api.commons.Schem" +
+      "aFieldR\006fields*\220\002\n\nSchemaType\022\033\n\027SCHEMA_" +
+      "TYPE_UNSPECIFIED\020\000\022\023\n\017SCHEMA_TYPE_INT\020\002\022" +
+      "\025\n\021SCHEMA_TYPE_FLOAT\020\003\022\026\n\022SCHEMA_TYPE_ST" +
+      "RING\020\005\022\024\n\020SCHEMA_TYPE_BOOL\020\006\022\031\n\025SCHEMA_T" +
+      "YPE_TIMESTAMP\020\007\022\031\n\025SCHEMA_TYPE_INT_ARRAY" +
+      "\020\010\022\033\n\027SCHEMA_TYPE_FLOAT_ARRAY\020\t\022\034\n\030SCHEM" +
+      "A_TYPE_STRING_ARRAY\020\n\022\032\n\026SCHEMA_TYPE_BOO" +
+      "L_ARRAY\020\013*j\n\016DatasourceType\022\037\n\033DATASOURC" +
+      "E_TYPE_UNSPECIFIED\020\000\022\027\n\023DATASOURCE_TYPE_" +
+      "VFS\020\001\022\036\n\032DATASOURCE_TYPE_CLICKHOUSE\020\002B~\n" +
+      "\035com.tcn.cloud.api.api.commonsB\020DemExplo" +
+      "rerProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Com" +
+      "mons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Co" +
+      "mmonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -65,7 +66,7 @@ public final class DemExplorerProto {
     internal_static_api_commons_SchemaField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_SchemaField_descriptor,
-        new java.lang.String[] { "Name", "ColumnType", "IsPrimaryKey", });
+        new java.lang.String[] { "Name", "ColumnType", "IsPrimaryKey", "IsLowCardinality", });
     internal_static_api_commons_Schema_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_commons_Schema_fieldAccessorTable = new
