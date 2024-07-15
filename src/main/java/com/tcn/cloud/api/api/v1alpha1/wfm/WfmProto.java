@@ -3007,76 +3007,76 @@ public final class WfmProto {
       "cementRule\"\030\n\026UpdatePlacementRuleRes\"F\n\026" +
       "DeletePlacementRuleReq\022,\n\022placement_rule" +
       "_sid\030\001 \001(\003R\020placementRuleSid\"\030\n\026DeletePl" +
-      "acementRuleRes\"\317\006\n\017DatetimePattern\022F\n\twe" +
+      "acementRuleRes\"\245\005\n\017DatetimePattern\022F\n\twe" +
       "ek_maps\030\001 \003(\0132).api.v1alpha1.wfm.Datetim" +
       "ePattern.WeekMapR\010weekMaps\022U\n\016calendar_i" +
       "tems\030\002 \003(\0132..api.v1alpha1.wfm.DatetimePa" +
-      "ttern.CalendarItemR\rcalendarItems\032\303\003\n\007We" +
+      "ttern.CalendarItemR\rcalendarItems\032\356\002\n\007We" +
       "ekMap\022A\n\016datetime_range\030\001 \001(\0132\032.api.comm" +
       "ons.DatetimeRangeR\rdatetimeRange\022O\n\010day_" +
       "maps\030\002 \003(\01324.api.v1alpha1.wfm.DatetimePa" +
-      "ttern.WeekMap.WeekMapDOWR\007dayMaps\032\243\002\n\nWe" +
+      "ttern.WeekMap.WeekMapDOWR\007dayMaps\032\316\001\n\nWe" +
       "ekMapDOW\0226\n\013day_of_week\030\001 \001(\0162\026.api.comm" +
       "ons.DayOfWeekR\tdayOfWeek\022-\n\023start_minute" +
       "_in_day\030\002 \001(\005R\020startMinuteInDay\022)\n\021end_m" +
       "inute_in_day\030\003 \001(\005R\016endMinuteInDay\022.\n\005va" +
       "lue\030\004 \001(\0132\030.api.commons.OptionTypesR\005val" +
-      "ue\022S\n\027scheduling_activity_sid\030\005 \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueR\025schedulingActi" +
-      "vitySid\032\326\001\n\014CalendarItem\022A\n\016datetime_ran" +
-      "ge\030\001 \001(\0132\032.api.commons.DatetimeRangeR\rda" +
-      "tetimeRange\022.\n\005value\030\002 \001(\0132\030.api.commons" +
-      ".OptionTypesR\005value\022S\n\027scheduling_activi" +
-      "ty_sid\030\003 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eR\025schedulingActivitySid\"\216\002\n\020OpenTimesPa" +
-      "ttern\0223\n\026open_times_pattern_sid\030\001 \001(\003R\023o" +
-      "penTimesPatternSid\022C\n\rparent_entity\030\002 \001(" +
-      "\0132\036.api.v1alpha1.wfm.ParentEntityR\014paren" +
-      "tEntity\022L\n\020datetime_pattern\030\003 \001(\0132!.api." +
-      "v1alpha1.wfm.DatetimePatternR\017datetimePa" +
-      "ttern\0222\n\025schedule_scenario_sid\030\004 \001(\003R\023sc" +
-      "heduleScenarioSid\"m\n\031CreateOpenTimesPatt" +
-      "ernReq\022P\n\022open_times_pattern\030\001 \001(\0132\".api" +
-      ".v1alpha1.wfm.OpenTimesPatternR\020openTime" +
-      "sPattern\"P\n\031CreateOpenTimesPatternRes\0223\n" +
-      "\026open_times_pattern_sid\030\001 \001(\003R\023openTimes" +
-      "PatternSid\"m\n\031UpdateOpenTimesPatternReq\022" +
-      "P\n\022open_times_pattern\030\001 \001(\0132\".api.v1alph" +
-      "a1.wfm.OpenTimesPatternR\020openTimesPatter" +
-      "n\"\033\n\031UpdateOpenTimesPatternRes\"P\n\031Delete" +
-      "OpenTimesPatternReq\0223\n\026open_times_patter" +
-      "n_sid\030\001 \001(\003R\023openTimesPatternSid\"\033\n\031Dele" +
-      "teOpenTimesPatternRes\"\270\002\n\026GetOpenTimesBi" +
-      "tmapsReq\022B\n\rnode_to_check\030\001 \001(\0132\036.api.v1" +
-      "alpha1.wfm.ParentEntityR\013nodeToCheck\0222\n\025" +
-      "schedule_scenario_sid\030\002 \001(\003R\023scheduleSce" +
-      "narioSid\022)\n\020include_inactive\030\003 \001(\010R\017incl" +
-      "udeInactive\022A\n\016datetime_range\030\004 \001(\0132\032.ap" +
-      "i.commons.DatetimeRangeR\rdatetimeRange\0228" +
-      "\n\013bitmap_type\030\005 \001(\0162\027.api.commons.Bitmap" +
-      "TypeR\nbitmapType\"\347\001\n\026GetOpenTimesBitmaps" +
-      "Res\022G\n\020inherited_bitmap\030\001 \003(\0162\034.api.comm" +
-      "ons.OpenTimesOptionR\017inheritedBitmap\022;\n\n" +
-      "own_bitmap\030\002 \003(\0162\034.api.commons.OpenTimes" +
-      "OptionR\townBitmap\022G\n\020resulting_bitmap\030\003 " +
-      "\003(\0162\034.api.commons.OpenTimesOptionR\017resul" +
-      "tingBitmap\"\356\001\n0ListOpenDateRangesForNode" +
-      "OpenTimesBitmapsRequest\022A\n\016datetime_rang" +
-      "e\030\001 \001(\0132\032.api.commons.DatetimeRangeR\rdat" +
-      "etimeRange\022C\n\rnode_selector\030\002 \001(\0132\036.api." +
-      "v1alpha1.wfm.ParentEntityR\014nodeSelector\022" +
-      "2\n\025schedule_scenario_sid\030\003 \001(\003R\023schedule" +
-      "ScenarioSid\"{\n1ListOpenDateRangesForNode" +
-      "OpenTimesBitmapsResponse\022F\n\021open_close_r" +
-      "anges\030\001 \003(\0132\032.api.commons.DatetimeRangeR" +
-      "\017openCloseRanges\"\246\002\n\030AgentAvailabilityPa" +
-      "ttern\022C\n\036agent_availability_pattern_sid\030" +
-      "\001 \001(\003R\033agentAvailabilityPatternSid\022C\n\rpa" +
-      "rent_entity\030\002 \001(\0132\036.api.v1alpha1.wfm.Par" +
-      "entEntityR\014parentEntity\022L\n\020datetime_patt" +
-      "ern\030\003 \001(\0132!.api.v1alpha1.wfm.DatetimePat" +
-      "ternR\017datetimePattern\0222\n\025schedule_scenar" +
-      "io_sid\030\004 \001(\003R\023scheduleScenarioSid\"\215\001\n!Cr" +
+      "ue\032\201\001\n\014CalendarItem\022A\n\016datetime_range\030\001 " +
+      "\001(\0132\032.api.commons.DatetimeRangeR\rdatetim" +
+      "eRange\022.\n\005value\030\002 \001(\0132\030.api.commons.Opti" +
+      "onTypesR\005value\"\343\002\n\020OpenTimesPattern\0223\n\026o" +
+      "pen_times_pattern_sid\030\001 \001(\003R\023openTimesPa" +
+      "tternSid\022C\n\rparent_entity\030\002 \001(\0132\036.api.v1" +
+      "alpha1.wfm.ParentEntityR\014parentEntity\022L\n" +
+      "\020datetime_pattern\030\003 \001(\0132!.api.v1alpha1.w" +
+      "fm.DatetimePatternR\017datetimePattern\0222\n\025s" +
+      "chedule_scenario_sid\030\004 \001(\003R\023scheduleScen" +
+      "arioSid\022S\n\027scheduling_activity_sid\030\005 \001(\013" +
+      "2\033.google.protobuf.Int64ValueR\025schedulin" +
+      "gActivitySid\"m\n\031CreateOpenTimesPatternRe" +
+      "q\022P\n\022open_times_pattern\030\001 \001(\0132\".api.v1al" +
+      "pha1.wfm.OpenTimesPatternR\020openTimesPatt" +
+      "ern\"P\n\031CreateOpenTimesPatternRes\0223\n\026open" +
+      "_times_pattern_sid\030\001 \001(\003R\023openTimesPatte" +
+      "rnSid\"m\n\031UpdateOpenTimesPatternReq\022P\n\022op" +
+      "en_times_pattern\030\001 \001(\0132\".api.v1alpha1.wf" +
+      "m.OpenTimesPatternR\020openTimesPattern\"\033\n\031" +
+      "UpdateOpenTimesPatternRes\"P\n\031DeleteOpenT" +
+      "imesPatternReq\0223\n\026open_times_pattern_sid" +
+      "\030\001 \001(\003R\023openTimesPatternSid\"\033\n\031DeleteOpe" +
+      "nTimesPatternRes\"\270\002\n\026GetOpenTimesBitmaps" +
+      "Req\022B\n\rnode_to_check\030\001 \001(\0132\036.api.v1alpha" +
+      "1.wfm.ParentEntityR\013nodeToCheck\0222\n\025sched" +
+      "ule_scenario_sid\030\002 \001(\003R\023scheduleScenario" +
+      "Sid\022)\n\020include_inactive\030\003 \001(\010R\017includeIn" +
+      "active\022A\n\016datetime_range\030\004 \001(\0132\032.api.com" +
+      "mons.DatetimeRangeR\rdatetimeRange\0228\n\013bit" +
+      "map_type\030\005 \001(\0162\027.api.commons.BitmapTypeR" +
+      "\nbitmapType\"\347\001\n\026GetOpenTimesBitmapsRes\022G" +
+      "\n\020inherited_bitmap\030\001 \003(\0162\034.api.commons.O" +
+      "penTimesOptionR\017inheritedBitmap\022;\n\nown_b" +
+      "itmap\030\002 \003(\0162\034.api.commons.OpenTimesOptio" +
+      "nR\townBitmap\022G\n\020resulting_bitmap\030\003 \003(\0162\034" +
+      ".api.commons.OpenTimesOptionR\017resultingB" +
+      "itmap\"\356\001\n0ListOpenDateRangesForNodeOpenT" +
+      "imesBitmapsRequest\022A\n\016datetime_range\030\001 \001" +
+      "(\0132\032.api.commons.DatetimeRangeR\rdatetime" +
+      "Range\022C\n\rnode_selector\030\002 \001(\0132\036.api.v1alp" +
+      "ha1.wfm.ParentEntityR\014nodeSelector\0222\n\025sc" +
+      "hedule_scenario_sid\030\003 \001(\003R\023scheduleScena" +
+      "rioSid\"{\n1ListOpenDateRangesForNodeOpenT" +
+      "imesBitmapsResponse\022F\n\021open_close_ranges" +
+      "\030\001 \003(\0132\032.api.commons.DatetimeRangeR\017open" +
+      "CloseRanges\"\373\002\n\030AgentAvailabilityPattern" +
+      "\022C\n\036agent_availability_pattern_sid\030\001 \001(\003" +
+      "R\033agentAvailabilityPatternSid\022C\n\rparent_" +
+      "entity\030\002 \001(\0132\036.api.v1alpha1.wfm.ParentEn" +
+      "tityR\014parentEntity\022L\n\020datetime_pattern\030\003" +
+      " \001(\0132!.api.v1alpha1.wfm.DatetimePatternR" +
+      "\017datetimePattern\0222\n\025schedule_scenario_si" +
+      "d\030\004 \001(\003R\023scheduleScenarioSid\022S\n\027scheduli" +
+      "ng_activity_sid\030\005 \001(\0132\033.google.protobuf." +
+      "Int64ValueR\025schedulingActivitySid\"\215\001\n!Cr" +
       "eateAgentAvailabilityPatternReq\022h\n\032agent" +
       "_availability_pattern\030\001 \001(\0132*.api.v1alph" +
       "a1.wfm.AgentAvailabilityPatternR\030agentAv" +
@@ -6164,19 +6164,19 @@ public final class WfmProto {
     internal_static_api_v1alpha1_wfm_DatetimePattern_WeekMap_WeekMapDOW_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_wfm_DatetimePattern_WeekMap_WeekMapDOW_descriptor,
-        new java.lang.String[] { "DayOfWeek", "StartMinuteInDay", "EndMinuteInDay", "Value", "SchedulingActivitySid", });
+        new java.lang.String[] { "DayOfWeek", "StartMinuteInDay", "EndMinuteInDay", "Value", });
     internal_static_api_v1alpha1_wfm_DatetimePattern_CalendarItem_descriptor =
       internal_static_api_v1alpha1_wfm_DatetimePattern_descriptor.getNestedTypes().get(1);
     internal_static_api_v1alpha1_wfm_DatetimePattern_CalendarItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_wfm_DatetimePattern_CalendarItem_descriptor,
-        new java.lang.String[] { "DatetimeRange", "Value", "SchedulingActivitySid", });
+        new java.lang.String[] { "DatetimeRange", "Value", });
     internal_static_api_v1alpha1_wfm_OpenTimesPattern_descriptor =
       getDescriptor().getMessageTypes().get(195);
     internal_static_api_v1alpha1_wfm_OpenTimesPattern_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_wfm_OpenTimesPattern_descriptor,
-        new java.lang.String[] { "OpenTimesPatternSid", "ParentEntity", "DatetimePattern", "ScheduleScenarioSid", });
+        new java.lang.String[] { "OpenTimesPatternSid", "ParentEntity", "DatetimePattern", "ScheduleScenarioSid", "SchedulingActivitySid", });
     internal_static_api_v1alpha1_wfm_CreateOpenTimesPatternReq_descriptor =
       getDescriptor().getMessageTypes().get(196);
     internal_static_api_v1alpha1_wfm_CreateOpenTimesPatternReq_fieldAccessorTable = new
@@ -6242,7 +6242,7 @@ public final class WfmProto {
     internal_static_api_v1alpha1_wfm_AgentAvailabilityPattern_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_wfm_AgentAvailabilityPattern_descriptor,
-        new java.lang.String[] { "AgentAvailabilityPatternSid", "ParentEntity", "DatetimePattern", "ScheduleScenarioSid", });
+        new java.lang.String[] { "AgentAvailabilityPatternSid", "ParentEntity", "DatetimePattern", "ScheduleScenarioSid", "SchedulingActivitySid", });
     internal_static_api_v1alpha1_wfm_CreateAgentAvailabilityPatternReq_descriptor =
       getDescriptor().getMessageTypes().get(207);
     internal_static_api_v1alpha1_wfm_CreateAgentAvailabilityPatternReq_fieldAccessorTable = new
