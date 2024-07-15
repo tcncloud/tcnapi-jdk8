@@ -1818,6 +1818,37 @@ public final class AcdGrpc {
     return getFinishSecureFormHandlingMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsReq,
+      com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsRes> getPopulateWorkflowFieldsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "PopulateWorkflowFields",
+      requestType = com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsReq,
+      com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsRes> getPopulateWorkflowFieldsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsReq, com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsRes> getPopulateWorkflowFieldsMethod;
+    if ((getPopulateWorkflowFieldsMethod = AcdGrpc.getPopulateWorkflowFieldsMethod) == null) {
+      synchronized (AcdGrpc.class) {
+        if ((getPopulateWorkflowFieldsMethod = AcdGrpc.getPopulateWorkflowFieldsMethod) == null) {
+          AcdGrpc.getPopulateWorkflowFieldsMethod = getPopulateWorkflowFieldsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsReq, com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PopulateWorkflowFields"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new AcdMethodDescriptorSupplier("PopulateWorkflowFields"))
+              .build();
+        }
+      }
+    }
+    return getPopulateWorkflowFieldsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -2308,6 +2339,13 @@ public final class AcdGrpc {
     default void finishSecureFormHandling(com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFinishSecureFormHandlingMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void populateWorkflowFields(com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPopulateWorkflowFieldsMethod(), responseObserver);
     }
   }
 
@@ -2844,6 +2882,14 @@ public final class AcdGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getFinishSecureFormHandlingMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void populateWorkflowFields(com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getPopulateWorkflowFieldsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -3306,6 +3352,13 @@ public final class AcdGrpc {
     public com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes finishSecureFormHandling(com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getFinishSecureFormHandlingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsRes populateWorkflowFields(com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPopulateWorkflowFieldsMethod(), getCallOptions(), request);
     }
   }
 
@@ -3810,6 +3863,14 @@ public final class AcdGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getFinishSecureFormHandlingMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsRes> populateWorkflowFields(
+        com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getPopulateWorkflowFieldsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_AGENT_GET_STATUS_STREAM = 0;
@@ -3870,6 +3931,7 @@ public final class AcdGrpc {
   private static final int METHODID_ACCEPT_SECURE_FORM_FIELD = 55;
   private static final int METHODID_PROCESS_SECURE_FORM = 56;
   private static final int METHODID_FINISH_SECURE_FORM_HANDLING = 57;
+  private static final int METHODID_POPULATE_WORKFLOW_FIELDS = 58;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -4119,6 +4181,10 @@ public final class AcdGrpc {
         case METHODID_FINISH_SECURE_FORM_HANDLING:
           serviceImpl.finishSecureFormHandling((com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes>) responseObserver);
+          break;
+        case METHODID_POPULATE_WORKFLOW_FIELDS:
+          serviceImpl.populateWorkflowFields((com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -4544,6 +4610,13 @@ public final class AcdGrpc {
               com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingReq,
               com.tcn.cloud.api.api.v0alpha.FinishSecureFormHandlingRes>(
                 service, METHODID_FINISH_SECURE_FORM_HANDLING)))
+        .addMethod(
+          getPopulateWorkflowFieldsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsReq,
+              com.tcn.cloud.api.api.v0alpha.PopulateWorkflowFieldsRes>(
+                service, METHODID_POPULATE_WORKFLOW_FIELDS)))
         .build();
   }
 
@@ -4650,6 +4723,7 @@ public final class AcdGrpc {
               .addMethod(getAcceptSecureFormFieldMethod())
               .addMethod(getProcessSecureFormMethod())
               .addMethod(getFinishSecureFormHandlingMethod())
+              .addMethod(getPopulateWorkflowFieldsMethod())
               .build();
         }
       }
