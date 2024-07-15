@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
    * Distinguishes if this is a special scheduling activity.
    * </pre>
    *
-   * <code>.api.commons.ActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+   * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
    * @return The enum numeric value on the wire for activityClassification.
    */
   @java.lang.Override public int getActivityClassificationValue() {
@@ -170,12 +170,12 @@ private static final long serialVersionUID = 0L;
    * Distinguishes if this is a special scheduling activity.
    * </pre>
    *
-   * <code>.api.commons.ActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+   * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
    * @return The activityClassification.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.ActivityClassification getActivityClassification() {
-    com.tcn.cloud.api.api.commons.ActivityClassification result = com.tcn.cloud.api.api.commons.ActivityClassification.forNumber(activityClassification_);
-    return result == null ? com.tcn.cloud.api.api.commons.ActivityClassification.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.SchedulingActivityClassification getActivityClassification() {
+    com.tcn.cloud.api.api.commons.SchedulingActivityClassification result = com.tcn.cloud.api.api.commons.SchedulingActivityClassification.forNumber(activityClassification_);
+    return result == null ? com.tcn.cloud.api.api.commons.SchedulingActivityClassification.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -204,7 +204,7 @@ private static final long serialVersionUID = 0L;
     if (memberNonSkillActivity_ != null) {
       output.writeMessage(4, getMemberNonSkillActivity());
     }
-    if (activityClassification_ != com.tcn.cloud.api.api.commons.ActivityClassification.STANDARD_NONSKILL_ACTIVITY.getNumber()) {
+    if (activityClassification_ != com.tcn.cloud.api.api.commons.SchedulingActivityClassification.STANDARD_SCHEDULING_ACTIVITY.getNumber()) {
       output.writeEnum(5, activityClassification_);
     }
     getUnknownFields().writeTo(output);
@@ -232,7 +232,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getMemberNonSkillActivity());
     }
-    if (activityClassification_ != com.tcn.cloud.api.api.commons.ActivityClassification.STANDARD_NONSKILL_ACTIVITY.getNumber()) {
+    if (activityClassification_ != com.tcn.cloud.api.api.commons.SchedulingActivityClassification.STANDARD_SCHEDULING_ACTIVITY.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(5, activityClassification_);
     }
@@ -1039,7 +1039,7 @@ private static final long serialVersionUID = 0L;
      * Distinguishes if this is a special scheduling activity.
      * </pre>
      *
-     * <code>.api.commons.ActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+     * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
      * @return The enum numeric value on the wire for activityClassification.
      */
     @java.lang.Override public int getActivityClassificationValue() {
@@ -1050,7 +1050,7 @@ private static final long serialVersionUID = 0L;
      * Distinguishes if this is a special scheduling activity.
      * </pre>
      *
-     * <code>.api.commons.ActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+     * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
      * @param value The enum numeric value on the wire for activityClassification to set.
      * @return This builder for chaining.
      */
@@ -1065,24 +1065,24 @@ private static final long serialVersionUID = 0L;
      * Distinguishes if this is a special scheduling activity.
      * </pre>
      *
-     * <code>.api.commons.ActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+     * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
      * @return The activityClassification.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ActivityClassification getActivityClassification() {
-      com.tcn.cloud.api.api.commons.ActivityClassification result = com.tcn.cloud.api.api.commons.ActivityClassification.forNumber(activityClassification_);
-      return result == null ? com.tcn.cloud.api.api.commons.ActivityClassification.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.SchedulingActivityClassification getActivityClassification() {
+      com.tcn.cloud.api.api.commons.SchedulingActivityClassification result = com.tcn.cloud.api.api.commons.SchedulingActivityClassification.forNumber(activityClassification_);
+      return result == null ? com.tcn.cloud.api.api.commons.SchedulingActivityClassification.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * Distinguishes if this is a special scheduling activity.
      * </pre>
      *
-     * <code>.api.commons.ActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+     * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
      * @param value The activityClassification to set.
      * @return This builder for chaining.
      */
-    public Builder setActivityClassification(com.tcn.cloud.api.api.commons.ActivityClassification value) {
+    public Builder setActivityClassification(com.tcn.cloud.api.api.commons.SchedulingActivityClassification value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1096,7 +1096,7 @@ private static final long serialVersionUID = 0L;
      * Distinguishes if this is a special scheduling activity.
      * </pre>
      *
-     * <code>.api.commons.ActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+     * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
      * @return This builder for chaining.
      */
     public Builder clearActivityClassification() {

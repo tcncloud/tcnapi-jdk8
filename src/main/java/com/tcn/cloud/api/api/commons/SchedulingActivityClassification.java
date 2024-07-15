@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * The ActivityClassification, which is used to distinguish use cases for the Scheduling Activity.
+ * The SchedulingActivityClassification, which is used to distinguish use cases for the Scheduling Activity.
  * </pre>
  *
- * Protobuf enum {@code api.commons.ActivityClassification}
+ * Protobuf enum {@code api.commons.SchedulingActivityClassification}
  */
-public enum ActivityClassification
+public enum SchedulingActivityClassification
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
-   * This wraps a generic Non Skill Activity.
+   * This wraps a generic Skill or Non Skill Activity.
    * </pre>
    *
-   * <code>STANDARD_NONSKILL_ACTIVITY = 0;</code>
+   * <code>STANDARD_SCHEDULING_ACTIVITY = 0;</code>
    */
-  STANDARD_NONSKILL_ACTIVITY(0),
+  STANDARD_SCHEDULING_ACTIVITY(0),
   /**
    * <pre>
    * This wraps the On Call Skill Activity.
@@ -41,12 +41,12 @@ public enum ActivityClassification
 
   /**
    * <pre>
-   * This wraps a generic Non Skill Activity.
+   * This wraps a generic Skill or Non Skill Activity.
    * </pre>
    *
-   * <code>STANDARD_NONSKILL_ACTIVITY = 0;</code>
+   * <code>STANDARD_SCHEDULING_ACTIVITY = 0;</code>
    */
-  public static final int STANDARD_NONSKILL_ACTIVITY_VALUE = 0;
+  public static final int STANDARD_SCHEDULING_ACTIVITY_VALUE = 0;
   /**
    * <pre>
    * This wraps the On Call Skill Activity.
@@ -79,7 +79,7 @@ public enum ActivityClassification
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static ActivityClassification valueOf(int value) {
+  public static SchedulingActivityClassification valueOf(int value) {
     return forNumber(value);
   }
 
@@ -87,24 +87,24 @@ public enum ActivityClassification
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static ActivityClassification forNumber(int value) {
+  public static SchedulingActivityClassification forNumber(int value) {
     switch (value) {
-      case 0: return STANDARD_NONSKILL_ACTIVITY;
+      case 0: return STANDARD_SCHEDULING_ACTIVITY;
       case 1: return ON_CALL_ACTIVITY;
       case 2: return TIME_OFF_ACTIVITY;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<ActivityClassification>
+  public static com.google.protobuf.Internal.EnumLiteMap<SchedulingActivityClassification>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      ActivityClassification> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<ActivityClassification>() {
-          public ActivityClassification findValueByNumber(int number) {
-            return ActivityClassification.forNumber(number);
+      SchedulingActivityClassification> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<SchedulingActivityClassification>() {
+          public SchedulingActivityClassification findValueByNumber(int number) {
+            return SchedulingActivityClassification.forNumber(number);
           }
         };
 
@@ -125,9 +125,9 @@ public enum ActivityClassification
     return com.tcn.cloud.api.api.commons.WfmProto.getDescriptor().getEnumTypes().get(21);
   }
 
-  private static final ActivityClassification[] VALUES = values();
+  private static final SchedulingActivityClassification[] VALUES = values();
 
-  public static ActivityClassification valueOf(
+  public static SchedulingActivityClassification valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -141,10 +141,10 @@ public enum ActivityClassification
 
   private final int value;
 
-  private ActivityClassification(int value) {
+  private SchedulingActivityClassification(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.commons.ActivityClassification)
+  // @@protoc_insertion_point(enum_scope:api.commons.SchedulingActivityClassification)
 }
 

@@ -409,13 +409,13 @@ public final class WfmProto {
       "avePetitionStatus\022\037\n\033UNSPECIFIED_PETITIO" +
       "N_STATUS\020\000\022\024\n\020PENDING_PETITION\020\001\022\025\n\021APPR" +
       "OVED_PETITION\020\002\022\023\n\017DENIED_PETITION\020\003\022\026\n\022" +
-      "CANCELLED_PETITION\020\004*e\n\026ActivityClassifi" +
-      "cation\022\036\n\032STANDARD_NONSKILL_ACTIVITY\020\000\022\024" +
-      "\n\020ON_CALL_ACTIVITY\020\001\022\025\n\021TIME_OFF_ACTIVIT" +
-      "Y\020\002Bv\n\035com.tcn.cloud.api.api.commonsB\010Wf" +
-      "mProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commo" +
-      "ns\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Comm" +
-      "onsb\006proto3"
+      "CANCELLED_PETITION\020\004*q\n SchedulingActivi" +
+      "tyClassification\022 \n\034STANDARD_SCHEDULING_" +
+      "ACTIVITY\020\000\022\024\n\020ON_CALL_ACTIVITY\020\001\022\025\n\021TIME" +
+      "_OFF_ACTIVITY\020\002Bv\n\035com.tcn.cloud.api.api" +
+      ".commonsB\010WfmProtoP\001\242\002\003ACX\252\002\013Api.Commons" +
+      "\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata" +
+      "\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

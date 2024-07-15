@@ -89,7 +89,7 @@ public interface SchedulingActivityOrBuilder extends
    * Distinguishes if this is a special scheduling activity.
    * </pre>
    *
-   * <code>.api.commons.ActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+   * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
    * @return The enum numeric value on the wire for activityClassification.
    */
   int getActivityClassificationValue();
@@ -98,8 +98,8 @@ public interface SchedulingActivityOrBuilder extends
    * Distinguishes if this is a special scheduling activity.
    * </pre>
    *
-   * <code>.api.commons.ActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+   * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
    * @return The activityClassification.
    */
-  com.tcn.cloud.api.api.commons.ActivityClassification getActivityClassification();
+  com.tcn.cloud.api.api.commons.SchedulingActivityClassification getActivityClassification();
 }

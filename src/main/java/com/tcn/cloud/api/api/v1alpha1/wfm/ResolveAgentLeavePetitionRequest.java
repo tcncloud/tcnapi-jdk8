@@ -153,7 +153,7 @@ private static final long serialVersionUID = 0L;
   private boolean replaceWithUnassignedAgent_ = false;
   /**
    * <pre>
-   * If true, an unassigned agent sid will be assigned to the shifts instead of deleting them.
+   * If &#64;replace_with_unassigned_agent is true, an unassigned agent sid will be assigned to the shifts instead of deleting them.
    * If &#64;retain_partial_shifts is also true, only the portion of the shift in the requested datetime ranges will be transfered.
    * if &#64;retain_partial_shifts is false, the entirety of any overlapping shifts will be transfered.
    * </pre>
@@ -852,7 +852,7 @@ private static final long serialVersionUID = 0L;
     private boolean replaceWithUnassignedAgent_ ;
     /**
      * <pre>
-     * If true, an unassigned agent sid will be assigned to the shifts instead of deleting them.
+     * If &#64;replace_with_unassigned_agent is true, an unassigned agent sid will be assigned to the shifts instead of deleting them.
      * If &#64;retain_partial_shifts is also true, only the portion of the shift in the requested datetime ranges will be transfered.
      * if &#64;retain_partial_shifts is false, the entirety of any overlapping shifts will be transfered.
      * </pre>
@@ -866,7 +866,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If true, an unassigned agent sid will be assigned to the shifts instead of deleting them.
+     * If &#64;replace_with_unassigned_agent is true, an unassigned agent sid will be assigned to the shifts instead of deleting them.
      * If &#64;retain_partial_shifts is also true, only the portion of the shift in the requested datetime ranges will be transfered.
      * if &#64;retain_partial_shifts is false, the entirety of any overlapping shifts will be transfered.
      * </pre>
@@ -884,7 +884,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If true, an unassigned agent sid will be assigned to the shifts instead of deleting them.
+     * If &#64;replace_with_unassigned_agent is true, an unassigned agent sid will be assigned to the shifts instead of deleting them.
      * If &#64;retain_partial_shifts is also true, only the portion of the shift in the requested datetime ranges will be transfered.
      * if &#64;retain_partial_shifts is false, the entirety of any overlapping shifts will be transfered.
      * </pre>

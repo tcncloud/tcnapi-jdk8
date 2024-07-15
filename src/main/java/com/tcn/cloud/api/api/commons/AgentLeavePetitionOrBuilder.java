@@ -248,8 +248,7 @@ public interface AgentLeavePetitionOrBuilder extends
    * <pre>
    * The number of working hours requested off.
    * This does not need to relate directly to the datetime range being requested off,
-   *   for example in the case where a 14 hour schedulable range is being taken off
-   *   but 8 hours of work will be paid out with PTO.
+   * For example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
    * </pre>
    *
    * <code>float requested_hours_off = 11 [json_name = "requestedHoursOff"];</code>
