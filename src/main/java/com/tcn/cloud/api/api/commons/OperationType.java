@@ -53,26 +53,50 @@ public enum OperationType
    */
   OPERATION_TYPE_DURATION(4),
   /**
+   * <pre>
+   * Add operation
+   * </pre>
+   *
    * <code>OPERATION_TYPE_ADD = 5;</code>
    */
   OPERATION_TYPE_ADD(5),
   /**
+   * <pre>
+   * Subract operation
+   * </pre>
+   *
    * <code>OPERATION_TYPE_SUBTRACT = 6;</code>
    */
   OPERATION_TYPE_SUBTRACT(6),
   /**
+   * <pre>
+   * Multiply operation
+   * </pre>
+   *
    * <code>OPERATION_TYPE_MULTIPLY = 7;</code>
    */
   OPERATION_TYPE_MULTIPLY(7),
   /**
+   * <pre>
+   * Divide operation
+   * </pre>
+   *
    * <code>OPERATION_TYPE_DIVIDE = 8;</code>
    */
   OPERATION_TYPE_DIVIDE(8),
   /**
+   * <pre>
+   * Format number operation
+   * </pre>
+   *
    * <code>OPERATION_TYPE_FORMAT_NUMBER = 9;</code>
    */
   OPERATION_TYPE_FORMAT_NUMBER(9),
   /**
+   * <pre>
+   * Precision operation
+   * </pre>
+   *
    * <code>OPERATION_TYPE_PRECISION = 10;</code>
    */
   OPERATION_TYPE_PRECISION(10),
@@ -120,26 +144,50 @@ public enum OperationType
    */
   public static final int OPERATION_TYPE_DURATION_VALUE = 4;
   /**
+   * <pre>
+   * Add operation
+   * </pre>
+   *
    * <code>OPERATION_TYPE_ADD = 5;</code>
    */
   public static final int OPERATION_TYPE_ADD_VALUE = 5;
   /**
+   * <pre>
+   * Subract operation
+   * </pre>
+   *
    * <code>OPERATION_TYPE_SUBTRACT = 6;</code>
    */
   public static final int OPERATION_TYPE_SUBTRACT_VALUE = 6;
   /**
+   * <pre>
+   * Multiply operation
+   * </pre>
+   *
    * <code>OPERATION_TYPE_MULTIPLY = 7;</code>
    */
   public static final int OPERATION_TYPE_MULTIPLY_VALUE = 7;
   /**
+   * <pre>
+   * Divide operation
+   * </pre>
+   *
    * <code>OPERATION_TYPE_DIVIDE = 8;</code>
    */
   public static final int OPERATION_TYPE_DIVIDE_VALUE = 8;
   /**
+   * <pre>
+   * Format number operation
+   * </pre>
+   *
    * <code>OPERATION_TYPE_FORMAT_NUMBER = 9;</code>
    */
   public static final int OPERATION_TYPE_FORMAT_NUMBER_VALUE = 9;
   /**
+   * <pre>
+   * Precision operation
+   * </pre>
+   *
    * <code>OPERATION_TYPE_PRECISION = 10;</code>
    */
   public static final int OPERATION_TYPE_PRECISION_VALUE = 10;

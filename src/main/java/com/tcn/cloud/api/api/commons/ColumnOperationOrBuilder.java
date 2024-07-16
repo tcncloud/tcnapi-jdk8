@@ -27,27 +27,47 @@ public interface ColumnOperationOrBuilder extends
   com.tcn.cloud.api.api.commons.OperationType getOperationType();
 
   /**
+   * <pre>
+   * Float value for operation
+   * </pre>
+   *
    * <code>double float_value = 2 [json_name = "floatValue"];</code>
    * @return Whether the floatValue field is set.
    */
   boolean hasFloatValue();
   /**
+   * <pre>
+   * Float value for operation
+   * </pre>
+   *
    * <code>double float_value = 2 [json_name = "floatValue"];</code>
    * @return The floatValue.
    */
   double getFloatValue();
 
   /**
+   * <pre>
+   * Series values for operation
+   * </pre>
+   *
    * <code>.api.commons.FormatSeries format_series = 3 [json_name = "formatSeries"];</code>
    * @return Whether the formatSeries field is set.
    */
   boolean hasFormatSeries();
   /**
+   * <pre>
+   * Series values for operation
+   * </pre>
+   *
    * <code>.api.commons.FormatSeries format_series = 3 [json_name = "formatSeries"];</code>
    * @return The formatSeries.
    */
   com.tcn.cloud.api.api.commons.FormatSeries getFormatSeries();
   /**
+   * <pre>
+   * Series values for operation
+   * </pre>
+   *
    * <code>.api.commons.FormatSeries format_series = 3 [json_name = "formatSeries"];</code>
    */
   com.tcn.cloud.api.api.commons.FormatSeriesOrBuilder getFormatSeriesOrBuilder();

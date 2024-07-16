@@ -113,6 +113,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int FLOAT_VALUE_FIELD_NUMBER = 2;
   /**
+   * <pre>
+   * Float value for operation
+   * </pre>
+   *
    * <code>double float_value = 2 [json_name = "floatValue"];</code>
    * @return Whether the floatValue field is set.
    */
@@ -121,6 +125,10 @@ private static final long serialVersionUID = 0L;
     return operationValueCase_ == 2;
   }
   /**
+   * <pre>
+   * Float value for operation
+   * </pre>
+   *
    * <code>double float_value = 2 [json_name = "floatValue"];</code>
    * @return The floatValue.
    */
@@ -134,6 +142,10 @@ private static final long serialVersionUID = 0L;
 
   public static final int FORMAT_SERIES_FIELD_NUMBER = 3;
   /**
+   * <pre>
+   * Series values for operation
+   * </pre>
+   *
    * <code>.api.commons.FormatSeries format_series = 3 [json_name = "formatSeries"];</code>
    * @return Whether the formatSeries field is set.
    */
@@ -142,6 +154,10 @@ private static final long serialVersionUID = 0L;
     return operationValueCase_ == 3;
   }
   /**
+   * <pre>
+   * Series values for operation
+   * </pre>
+   *
    * <code>.api.commons.FormatSeries format_series = 3 [json_name = "formatSeries"];</code>
    * @return The formatSeries.
    */
@@ -153,6 +169,10 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.FormatSeries.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Series values for operation
+   * </pre>
+   *
    * <code>.api.commons.FormatSeries format_series = 3 [json_name = "formatSeries"];</code>
    */
   @java.lang.Override
@@ -663,6 +683,10 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
+     * <pre>
+     * Float value for operation
+     * </pre>
+     *
      * <code>double float_value = 2 [json_name = "floatValue"];</code>
      * @return Whether the floatValue field is set.
      */
@@ -670,6 +694,10 @@ private static final long serialVersionUID = 0L;
       return operationValueCase_ == 2;
     }
     /**
+     * <pre>
+     * Float value for operation
+     * </pre>
+     *
      * <code>double float_value = 2 [json_name = "floatValue"];</code>
      * @return The floatValue.
      */
@@ -680,6 +708,10 @@ private static final long serialVersionUID = 0L;
       return 0D;
     }
     /**
+     * <pre>
+     * Float value for operation
+     * </pre>
+     *
      * <code>double float_value = 2 [json_name = "floatValue"];</code>
      * @param value The floatValue to set.
      * @return This builder for chaining.
@@ -692,6 +724,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Float value for operation
+     * </pre>
+     *
      * <code>double float_value = 2 [json_name = "floatValue"];</code>
      * @return This builder for chaining.
      */
@@ -707,6 +743,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.FormatSeries, com.tcn.cloud.api.api.commons.FormatSeries.Builder, com.tcn.cloud.api.api.commons.FormatSeriesOrBuilder> formatSeriesBuilder_;
     /**
+     * <pre>
+     * Series values for operation
+     * </pre>
+     *
      * <code>.api.commons.FormatSeries format_series = 3 [json_name = "formatSeries"];</code>
      * @return Whether the formatSeries field is set.
      */
@@ -715,6 +755,10 @@ private static final long serialVersionUID = 0L;
       return operationValueCase_ == 3;
     }
     /**
+     * <pre>
+     * Series values for operation
+     * </pre>
+     *
      * <code>.api.commons.FormatSeries format_series = 3 [json_name = "formatSeries"];</code>
      * @return The formatSeries.
      */
@@ -733,6 +777,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Series values for operation
+     * </pre>
+     *
      * <code>.api.commons.FormatSeries format_series = 3 [json_name = "formatSeries"];</code>
      */
     public Builder setFormatSeries(com.tcn.cloud.api.api.commons.FormatSeries value) {
@@ -749,6 +797,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Series values for operation
+     * </pre>
+     *
      * <code>.api.commons.FormatSeries format_series = 3 [json_name = "formatSeries"];</code>
      */
     public Builder setFormatSeries(
@@ -763,6 +815,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Series values for operation
+     * </pre>
+     *
      * <code>.api.commons.FormatSeries format_series = 3 [json_name = "formatSeries"];</code>
      */
     public Builder mergeFormatSeries(com.tcn.cloud.api.api.commons.FormatSeries value) {
@@ -786,6 +842,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Series values for operation
+     * </pre>
+     *
      * <code>.api.commons.FormatSeries format_series = 3 [json_name = "formatSeries"];</code>
      */
     public Builder clearFormatSeries() {
@@ -805,12 +865,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Series values for operation
+     * </pre>
+     *
      * <code>.api.commons.FormatSeries format_series = 3 [json_name = "formatSeries"];</code>
      */
     public com.tcn.cloud.api.api.commons.FormatSeries.Builder getFormatSeriesBuilder() {
       return getFormatSeriesFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Series values for operation
+     * </pre>
+     *
      * <code>.api.commons.FormatSeries format_series = 3 [json_name = "formatSeries"];</code>
      */
     @java.lang.Override
@@ -825,6 +893,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Series values for operation
+     * </pre>
+     *
      * <code>.api.commons.FormatSeries format_series = 3 [json_name = "formatSeries"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

@@ -8,23 +8,39 @@ public interface FormatSeriesOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The series of format parts
+   * </pre>
+   *
    * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
    * @return A list containing the formatParts.
    */
   java.util.List<java.lang.String>
       getFormatPartsList();
   /**
+   * <pre>
+   * The series of format parts
+   * </pre>
+   *
    * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
    * @return The count of formatParts.
    */
   int getFormatPartsCount();
   /**
+   * <pre>
+   * The series of format parts
+   * </pre>
+   *
    * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
    * @param index The index of the element to return.
    * @return The formatParts at the given index.
    */
   java.lang.String getFormatParts(int index);
   /**
+   * <pre>
+   * The series of format parts
+   * </pre>
+   *
    * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the formatParts at the given index.

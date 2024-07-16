@@ -49,6 +49,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList formatParts_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * The series of format parts
+   * </pre>
+   *
    * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
    * @return A list containing the formatParts.
    */
@@ -57,6 +61,10 @@ private static final long serialVersionUID = 0L;
     return formatParts_;
   }
   /**
+   * <pre>
+   * The series of format parts
+   * </pre>
+   *
    * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
    * @return The count of formatParts.
    */
@@ -64,6 +72,10 @@ private static final long serialVersionUID = 0L;
     return formatParts_.size();
   }
   /**
+   * <pre>
+   * The series of format parts
+   * </pre>
+   *
    * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
    * @param index The index of the element to return.
    * @return The formatParts at the given index.
@@ -72,6 +84,10 @@ private static final long serialVersionUID = 0L;
     return formatParts_.get(index);
   }
   /**
+   * <pre>
+   * The series of format parts
+   * </pre>
+   *
    * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the formatParts at the given index.
@@ -435,6 +451,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
     }
     /**
+     * <pre>
+     * The series of format parts
+     * </pre>
+     *
      * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
      * @return A list containing the formatParts.
      */
@@ -444,6 +464,10 @@ private static final long serialVersionUID = 0L;
       return formatParts_;
     }
     /**
+     * <pre>
+     * The series of format parts
+     * </pre>
+     *
      * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
      * @return The count of formatParts.
      */
@@ -451,6 +475,10 @@ private static final long serialVersionUID = 0L;
       return formatParts_.size();
     }
     /**
+     * <pre>
+     * The series of format parts
+     * </pre>
+     *
      * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
      * @param index The index of the element to return.
      * @return The formatParts at the given index.
@@ -459,6 +487,10 @@ private static final long serialVersionUID = 0L;
       return formatParts_.get(index);
     }
     /**
+     * <pre>
+     * The series of format parts
+     * </pre>
+     *
      * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the formatParts at the given index.
@@ -468,6 +500,10 @@ private static final long serialVersionUID = 0L;
       return formatParts_.getByteString(index);
     }
     /**
+     * <pre>
+     * The series of format parts
+     * </pre>
+     *
      * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
      * @param index The index to set the value at.
      * @param value The formatParts to set.
@@ -483,6 +519,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The series of format parts
+     * </pre>
+     *
      * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
      * @param value The formatParts to add.
      * @return This builder for chaining.
@@ -497,6 +537,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The series of format parts
+     * </pre>
+     *
      * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
      * @param values The formatParts to add.
      * @return This builder for chaining.
@@ -511,6 +555,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The series of format parts
+     * </pre>
+     *
      * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
      * @return This builder for chaining.
      */
@@ -522,6 +570,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The series of format parts
+     * </pre>
+     *
      * <code>repeated string format_parts = 1 [json_name = "formatParts"];</code>
      * @param value The bytes of the formatParts to add.
      * @return This builder for chaining.

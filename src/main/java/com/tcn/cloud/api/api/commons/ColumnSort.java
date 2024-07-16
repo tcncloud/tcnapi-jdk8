@@ -4,19 +4,35 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
+ * <pre>
+ * ColumnSort specifies how a column should be sorted
+ * </pre>
+ *
  * Protobuf enum {@code api.commons.ColumnSort}
  */
 public enum ColumnSort
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * Unspecified
+   * </pre>
+   *
    * <code>COLUMN_SORT_UNSPECIFIED = 0;</code>
    */
   COLUMN_SORT_UNSPECIFIED(0),
   /**
+   * <pre>
+   * Ascending order
+   * </pre>
+   *
    * <code>COLUMN_SORT_ASCENDING = 1;</code>
    */
   COLUMN_SORT_ASCENDING(1),
   /**
+   * <pre>
+   * Descending order
+   * </pre>
+   *
    * <code>COLUMN_SORT_DESCENDING = 2;</code>
    */
   COLUMN_SORT_DESCENDING(2),
@@ -24,14 +40,26 @@ public enum ColumnSort
   ;
 
   /**
+   * <pre>
+   * Unspecified
+   * </pre>
+   *
    * <code>COLUMN_SORT_UNSPECIFIED = 0;</code>
    */
   public static final int COLUMN_SORT_UNSPECIFIED_VALUE = 0;
   /**
+   * <pre>
+   * Ascending order
+   * </pre>
+   *
    * <code>COLUMN_SORT_ASCENDING = 1;</code>
    */
   public static final int COLUMN_SORT_ASCENDING_VALUE = 1;
   /**
+   * <pre>
+   * Descending order
+   * </pre>
+   *
    * <code>COLUMN_SORT_DESCENDING = 2;</code>
    */
   public static final int COLUMN_SORT_DESCENDING_VALUE = 2;
