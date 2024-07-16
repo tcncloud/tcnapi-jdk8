@@ -48,6 +48,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object insightId_ = "";
   /**
+   * <pre>
+   * Insight id
+   * </pre>
+   *
    * <code>string insight_id = 1 [json_name = "insightId"];</code>
    * @return The insightId.
    */
@@ -65,6 +69,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Insight id
+   * </pre>
+   *
    * <code>string insight_id = 1 [json_name = "insightId"];</code>
    * @return The bytes for insightId.
    */
@@ -87,6 +95,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object outputConfigurationId_ = "";
   /**
+   * <pre>
+   * Output configuration id
+   * </pre>
+   *
    * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
    * @return The outputConfigurationId.
    */
@@ -104,6 +116,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Output configuration id
+   * </pre>
+   *
    * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
    * @return The bytes for outputConfigurationId.
    */
@@ -478,6 +494,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object insightId_ = "";
     /**
+     * <pre>
+     * Insight id
+     * </pre>
+     *
      * <code>string insight_id = 1 [json_name = "insightId"];</code>
      * @return The insightId.
      */
@@ -494,6 +514,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Insight id
+     * </pre>
+     *
      * <code>string insight_id = 1 [json_name = "insightId"];</code>
      * @return The bytes for insightId.
      */
@@ -511,6 +535,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Insight id
+     * </pre>
+     *
      * <code>string insight_id = 1 [json_name = "insightId"];</code>
      * @param value The insightId to set.
      * @return This builder for chaining.
@@ -524,6 +552,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Insight id
+     * </pre>
+     *
      * <code>string insight_id = 1 [json_name = "insightId"];</code>
      * @return This builder for chaining.
      */
@@ -534,6 +566,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Insight id
+     * </pre>
+     *
      * <code>string insight_id = 1 [json_name = "insightId"];</code>
      * @param value The bytes for insightId to set.
      * @return This builder for chaining.
@@ -550,6 +586,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object outputConfigurationId_ = "";
     /**
+     * <pre>
+     * Output configuration id
+     * </pre>
+     *
      * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
      * @return The outputConfigurationId.
      */
@@ -566,6 +606,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Output configuration id
+     * </pre>
+     *
      * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
      * @return The bytes for outputConfigurationId.
      */
@@ -583,6 +627,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Output configuration id
+     * </pre>
+     *
      * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
      * @param value The outputConfigurationId to set.
      * @return This builder for chaining.
@@ -596,6 +644,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Output configuration id
+     * </pre>
+     *
      * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
      * @return This builder for chaining.
      */
@@ -606,6 +658,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Output configuration id
+     * </pre>
+     *
      * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
      * @param value The bytes for outputConfigurationId to set.
      * @return This builder for chaining.

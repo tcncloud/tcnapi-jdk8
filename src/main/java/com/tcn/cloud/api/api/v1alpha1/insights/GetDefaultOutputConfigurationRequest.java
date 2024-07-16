@@ -47,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object insightId_ = "";
   /**
+   * <pre>
+   * Insight id
+   * </pre>
+   *
    * <code>string insight_id = 1 [json_name = "insightId"];</code>
    * @return The insightId.
    */
@@ -64,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Insight id
+   * </pre>
+   *
    * <code>string insight_id = 1 [json_name = "insightId"];</code>
    * @return The bytes for insightId.
    */
@@ -414,6 +422,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object insightId_ = "";
     /**
+     * <pre>
+     * Insight id
+     * </pre>
+     *
      * <code>string insight_id = 1 [json_name = "insightId"];</code>
      * @return The insightId.
      */
@@ -430,6 +442,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Insight id
+     * </pre>
+     *
      * <code>string insight_id = 1 [json_name = "insightId"];</code>
      * @return The bytes for insightId.
      */
@@ -447,6 +463,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Insight id
+     * </pre>
+     *
      * <code>string insight_id = 1 [json_name = "insightId"];</code>
      * @param value The insightId to set.
      * @return This builder for chaining.
@@ -460,6 +480,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Insight id
+     * </pre>
+     *
      * <code>string insight_id = 1 [json_name = "insightId"];</code>
      * @return This builder for chaining.
      */
@@ -470,6 +494,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Insight id
+     * </pre>
+     *
      * <code>string insight_id = 1 [json_name = "insightId"];</code>
      * @param value The bytes for insightId to set.
      * @return This builder for chaining.

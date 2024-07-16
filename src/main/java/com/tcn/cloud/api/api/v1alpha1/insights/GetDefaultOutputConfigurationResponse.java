@@ -45,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int OUTPUT_CONFIGURATION_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration outputConfiguration_;
   /**
+   * <pre>
+   * Default ouptut configuration
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
    * @return Whether the outputConfiguration field is set.
    */
@@ -53,6 +57,10 @@ private static final long serialVersionUID = 0L;
     return outputConfiguration_ != null;
   }
   /**
+   * <pre>
+   * Default ouptut configuration
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
    * @return The outputConfiguration.
    */
@@ -61,6 +69,10 @@ private static final long serialVersionUID = 0L;
     return outputConfiguration_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.getDefaultInstance() : outputConfiguration_;
   }
   /**
+   * <pre>
+   * Default ouptut configuration
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
    */
   @java.lang.Override
@@ -414,6 +426,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder> outputConfigurationBuilder_;
     /**
+     * <pre>
+     * Default ouptut configuration
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
      * @return Whether the outputConfiguration field is set.
      */
@@ -421,6 +437,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Default ouptut configuration
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
      * @return The outputConfiguration.
      */
@@ -432,6 +452,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Default ouptut configuration
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
      */
     public Builder setOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration value) {
@@ -448,6 +472,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Default ouptut configuration
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
      */
     public Builder setOutputConfiguration(
@@ -462,6 +490,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Default ouptut configuration
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
      */
     public Builder mergeOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration value) {
@@ -481,6 +513,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Default ouptut configuration
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
      */
     public Builder clearOutputConfiguration() {
@@ -494,6 +530,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Default ouptut configuration
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder getOutputConfigurationBuilder() {
@@ -502,6 +542,10 @@ private static final long serialVersionUID = 0L;
       return getOutputConfigurationFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Default ouptut configuration
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder getOutputConfigurationOrBuilder() {
@@ -513,6 +557,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Default ouptut configuration
+     * </pre>
+     *
      * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

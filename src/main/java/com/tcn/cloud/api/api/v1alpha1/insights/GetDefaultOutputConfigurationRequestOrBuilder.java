@@ -8,11 +8,19 @@ public interface GetDefaultOutputConfigurationRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Insight id
+   * </pre>
+   *
    * <code>string insight_id = 1 [json_name = "insightId"];</code>
    * @return The insightId.
    */
   java.lang.String getInsightId();
   /**
+   * <pre>
+   * Insight id
+   * </pre>
+   *
    * <code>string insight_id = 1 [json_name = "insightId"];</code>
    * @return The bytes for insightId.
    */

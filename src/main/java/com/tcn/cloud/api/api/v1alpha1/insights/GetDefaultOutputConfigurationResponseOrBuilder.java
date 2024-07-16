@@ -8,16 +8,28 @@ public interface GetDefaultOutputConfigurationResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Default ouptut configuration
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
    * @return Whether the outputConfiguration field is set.
    */
   boolean hasOutputConfiguration();
   /**
+   * <pre>
+   * Default ouptut configuration
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
    * @return The outputConfiguration.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration getOutputConfiguration();
   /**
+   * <pre>
+   * Default ouptut configuration
+   * </pre>
+   *
    * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder getOutputConfigurationOrBuilder();
