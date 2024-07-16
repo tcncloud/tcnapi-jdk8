@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * Operation value
+ * FormatSeries contains the series of operations for a column operation
  * </pre>
  *
  * Protobuf type {@code api.commons.FormatSeries}
@@ -246,7 +246,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Operation value
+   * FormatSeries contains the series of operations for a column operation
    * </pre>
    *
    * Protobuf type {@code api.commons.FormatSeries}
