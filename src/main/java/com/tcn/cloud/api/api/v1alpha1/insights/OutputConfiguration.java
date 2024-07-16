@@ -23,7 +23,6 @@ private static final long serialVersionUID = 0L;
     outputConfigurationId_ = "";
     outputConfigurationTitle_ = "";
     outputConfigurationType_ = 0;
-    orgId_ = "";
     insightId_ = "";
   }
 
@@ -89,7 +88,7 @@ private static final long serialVersionUID = 0L;
         bodyCase_);
   }
 
-  public static final int OUTPUT_CONFIGURATION_ID_FIELD_NUMBER = 1;
+  public static final int OUTPUT_CONFIGURATION_ID_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object outputConfigurationId_ = "";
   /**
@@ -97,7 +96,7 @@ private static final long serialVersionUID = 0L;
    * Unique identifier for the output configuration
    * </pre>
    *
-   * <code>string output_configuration_id = 1 [json_name = "outputConfigurationId"];</code>
+   * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
    * @return The outputConfigurationId.
    */
   @java.lang.Override
@@ -118,7 +117,7 @@ private static final long serialVersionUID = 0L;
    * Unique identifier for the output configuration
    * </pre>
    *
-   * <code>string output_configuration_id = 1 [json_name = "outputConfigurationId"];</code>
+   * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
    * @return The bytes for outputConfigurationId.
    */
   @java.lang.Override
@@ -136,7 +135,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int OUTPUT_CONFIGURATION_TITLE_FIELD_NUMBER = 2;
+  public static final int OUTPUT_CONFIGURATION_TITLE_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object outputConfigurationTitle_ = "";
   /**
@@ -144,7 +143,7 @@ private static final long serialVersionUID = 0L;
    * Title of the output configuration
    * </pre>
    *
-   * <code>string output_configuration_title = 2 [json_name = "outputConfigurationTitle"];</code>
+   * <code>string output_configuration_title = 3 [json_name = "outputConfigurationTitle"];</code>
    * @return The outputConfigurationTitle.
    */
   @java.lang.Override
@@ -165,7 +164,7 @@ private static final long serialVersionUID = 0L;
    * Title of the output configuration
    * </pre>
    *
-   * <code>string output_configuration_title = 2 [json_name = "outputConfigurationTitle"];</code>
+   * <code>string output_configuration_title = 3 [json_name = "outputConfigurationTitle"];</code>
    * @return The bytes for outputConfigurationTitle.
    */
   @java.lang.Override
@@ -183,14 +182,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int OUTPUT_CONFIGURATION_TYPE_FIELD_NUMBER = 3;
+  public static final int OUTPUT_CONFIGURATION_TYPE_FIELD_NUMBER = 4;
   private int outputConfigurationType_ = 0;
   /**
    * <pre>
    * Type of the output configuration
    * </pre>
    *
-   * <code>.api.commons.OutputConfigurationType output_configuration_type = 3 [json_name = "outputConfigurationType"];</code>
+   * <code>.api.commons.OutputConfigurationType output_configuration_type = 4 [json_name = "outputConfigurationType"];</code>
    * @return The enum numeric value on the wire for outputConfigurationType.
    */
   @java.lang.Override public int getOutputConfigurationTypeValue() {
@@ -201,59 +200,12 @@ private static final long serialVersionUID = 0L;
    * Type of the output configuration
    * </pre>
    *
-   * <code>.api.commons.OutputConfigurationType output_configuration_type = 3 [json_name = "outputConfigurationType"];</code>
+   * <code>.api.commons.OutputConfigurationType output_configuration_type = 4 [json_name = "outputConfigurationType"];</code>
    * @return The outputConfigurationType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.OutputConfigurationType getOutputConfigurationType() {
     com.tcn.cloud.api.api.commons.OutputConfigurationType result = com.tcn.cloud.api.api.commons.OutputConfigurationType.forNumber(outputConfigurationType_);
     return result == null ? com.tcn.cloud.api.api.commons.OutputConfigurationType.UNRECOGNIZED : result;
-  }
-
-  public static final int ORG_ID_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
-  /**
-   * <pre>
-   * Organization ID associated with the output configuration
-   * </pre>
-   *
-   * <code>string org_id = 4 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  @java.lang.Override
-  public java.lang.String getOrgId() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      orgId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Organization ID associated with the output configuration
-   * </pre>
-   *
-   * <code>string org_id = 4 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOrgIdBytes() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      orgId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
   }
 
   public static final int INSIGHT_ID_FIELD_NUMBER = 5;
@@ -373,7 +325,7 @@ private static final long serialVersionUID = 0L;
    * Table visualization data for the output configuration
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+   * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
    * @return Whether the tableVisualization field is set.
    */
   @java.lang.Override
@@ -385,29 +337,29 @@ private static final long serialVersionUID = 0L;
    * Table visualization data for the output configuration
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+   * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
    * @return The tableVisualization.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization getTableVisualization() {
+  public com.tcn.cloud.api.api.commons.TableVisualization getTableVisualization() {
     if (bodyCase_ == 7) {
-       return (com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization) body_;
+       return (com.tcn.cloud.api.api.commons.TableVisualization) body_;
     }
-    return com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization.getDefaultInstance();
+    return com.tcn.cloud.api.api.commons.TableVisualization.getDefaultInstance();
   }
   /**
    * <pre>
    * Table visualization data for the output configuration
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+   * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.insights.TableVisualizationOrBuilder getTableVisualizationOrBuilder() {
+  public com.tcn.cloud.api.api.commons.TableVisualizationOrBuilder getTableVisualizationOrBuilder() {
     if (bodyCase_ == 7) {
-       return (com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization) body_;
+       return (com.tcn.cloud.api.api.commons.TableVisualization) body_;
     }
-    return com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization.getDefaultInstance();
+    return com.tcn.cloud.api.api.commons.TableVisualization.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -425,16 +377,13 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputConfigurationId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, outputConfigurationId_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, outputConfigurationId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputConfigurationTitle_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, outputConfigurationTitle_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, outputConfigurationTitle_);
     }
     if (outputConfigurationType_ != com.tcn.cloud.api.api.commons.OutputConfigurationType.OUTPUT_CONFIGURATION_TYPE_UNSPECIFIED.getNumber()) {
-      output.writeEnum(3, outputConfigurationType_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, orgId_);
+      output.writeEnum(4, outputConfigurationType_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(insightId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, insightId_);
@@ -443,7 +392,7 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, body_);
     }
     if (bodyCase_ == 7) {
-      output.writeMessage(7, (com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization) body_);
+      output.writeMessage(7, (com.tcn.cloud.api.api.commons.TableVisualization) body_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -455,17 +404,14 @@ private static final long serialVersionUID = 0L;
 
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputConfigurationId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, outputConfigurationId_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, outputConfigurationId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputConfigurationTitle_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, outputConfigurationTitle_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, outputConfigurationTitle_);
     }
     if (outputConfigurationType_ != com.tcn.cloud.api.api.commons.OutputConfigurationType.OUTPUT_CONFIGURATION_TYPE_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(3, outputConfigurationType_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, orgId_);
+        .computeEnumSize(4, outputConfigurationType_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(insightId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, insightId_);
@@ -475,7 +421,7 @@ private static final long serialVersionUID = 0L;
     }
     if (bodyCase_ == 7) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, (com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization) body_);
+        .computeMessageSize(7, (com.tcn.cloud.api.api.commons.TableVisualization) body_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -497,8 +443,6 @@ private static final long serialVersionUID = 0L;
     if (!getOutputConfigurationTitle()
         .equals(other.getOutputConfigurationTitle())) return false;
     if (outputConfigurationType_ != other.outputConfigurationType_) return false;
-    if (!getOrgId()
-        .equals(other.getOrgId())) return false;
     if (!getInsightId()
         .equals(other.getInsightId())) return false;
     if (!getBodyCase().equals(other.getBodyCase())) return false;
@@ -531,8 +475,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getOutputConfigurationTitle().hashCode();
     hash = (37 * hash) + OUTPUT_CONFIGURATION_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + outputConfigurationType_;
-    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + INSIGHT_ID_FIELD_NUMBER;
     hash = (53 * hash) + getInsightId().hashCode();
     switch (bodyCase_) {
@@ -685,7 +627,6 @@ private static final long serialVersionUID = 0L;
       outputConfigurationId_ = "";
       outputConfigurationTitle_ = "";
       outputConfigurationType_ = 0;
-      orgId_ = "";
       insightId_ = "";
       if (tableVisualizationBuilder_ != null) {
         tableVisualizationBuilder_.clear();
@@ -736,9 +677,6 @@ private static final long serialVersionUID = 0L;
         result.outputConfigurationType_ = outputConfigurationType_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.orgId_ = orgId_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.insightId_ = insightId_;
       }
     }
@@ -809,14 +747,9 @@ private static final long serialVersionUID = 0L;
       if (other.outputConfigurationType_ != 0) {
         setOutputConfigurationTypeValue(other.getOutputConfigurationTypeValue());
       }
-      if (!other.getOrgId().isEmpty()) {
-        orgId_ = other.orgId_;
-        bitField0_ |= 0x00000008;
-        onChanged();
-      }
       if (!other.getInsightId().isEmpty()) {
         insightId_ = other.insightId_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       switch (other.getBodyCase()) {
@@ -860,29 +793,24 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
+            case 18: {
               outputConfigurationId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
-            } // case 10
-            case 18: {
+            } // case 18
+            case 26: {
               outputConfigurationTitle_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
-            case 24: {
+            } // case 26
+            case 32: {
               outputConfigurationType_ = input.readEnum();
               bitField0_ |= 0x00000004;
               break;
-            } // case 24
-            case 34: {
-              orgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
+            } // case 32
             case 42: {
               insightId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               break;
             } // case 42
             case 50: {
@@ -936,7 +864,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier for the output configuration
      * </pre>
      *
-     * <code>string output_configuration_id = 1 [json_name = "outputConfigurationId"];</code>
+     * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
      * @return The outputConfigurationId.
      */
     public java.lang.String getOutputConfigurationId() {
@@ -956,7 +884,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier for the output configuration
      * </pre>
      *
-     * <code>string output_configuration_id = 1 [json_name = "outputConfigurationId"];</code>
+     * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
      * @return The bytes for outputConfigurationId.
      */
     public com.google.protobuf.ByteString
@@ -977,7 +905,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier for the output configuration
      * </pre>
      *
-     * <code>string output_configuration_id = 1 [json_name = "outputConfigurationId"];</code>
+     * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
      * @param value The outputConfigurationId to set.
      * @return This builder for chaining.
      */
@@ -994,7 +922,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier for the output configuration
      * </pre>
      *
-     * <code>string output_configuration_id = 1 [json_name = "outputConfigurationId"];</code>
+     * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearOutputConfigurationId() {
@@ -1008,7 +936,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier for the output configuration
      * </pre>
      *
-     * <code>string output_configuration_id = 1 [json_name = "outputConfigurationId"];</code>
+     * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
      * @param value The bytes for outputConfigurationId to set.
      * @return This builder for chaining.
      */
@@ -1028,7 +956,7 @@ private static final long serialVersionUID = 0L;
      * Title of the output configuration
      * </pre>
      *
-     * <code>string output_configuration_title = 2 [json_name = "outputConfigurationTitle"];</code>
+     * <code>string output_configuration_title = 3 [json_name = "outputConfigurationTitle"];</code>
      * @return The outputConfigurationTitle.
      */
     public java.lang.String getOutputConfigurationTitle() {
@@ -1048,7 +976,7 @@ private static final long serialVersionUID = 0L;
      * Title of the output configuration
      * </pre>
      *
-     * <code>string output_configuration_title = 2 [json_name = "outputConfigurationTitle"];</code>
+     * <code>string output_configuration_title = 3 [json_name = "outputConfigurationTitle"];</code>
      * @return The bytes for outputConfigurationTitle.
      */
     public com.google.protobuf.ByteString
@@ -1069,7 +997,7 @@ private static final long serialVersionUID = 0L;
      * Title of the output configuration
      * </pre>
      *
-     * <code>string output_configuration_title = 2 [json_name = "outputConfigurationTitle"];</code>
+     * <code>string output_configuration_title = 3 [json_name = "outputConfigurationTitle"];</code>
      * @param value The outputConfigurationTitle to set.
      * @return This builder for chaining.
      */
@@ -1086,7 +1014,7 @@ private static final long serialVersionUID = 0L;
      * Title of the output configuration
      * </pre>
      *
-     * <code>string output_configuration_title = 2 [json_name = "outputConfigurationTitle"];</code>
+     * <code>string output_configuration_title = 3 [json_name = "outputConfigurationTitle"];</code>
      * @return This builder for chaining.
      */
     public Builder clearOutputConfigurationTitle() {
@@ -1100,7 +1028,7 @@ private static final long serialVersionUID = 0L;
      * Title of the output configuration
      * </pre>
      *
-     * <code>string output_configuration_title = 2 [json_name = "outputConfigurationTitle"];</code>
+     * <code>string output_configuration_title = 3 [json_name = "outputConfigurationTitle"];</code>
      * @param value The bytes for outputConfigurationTitle to set.
      * @return This builder for chaining.
      */
@@ -1120,7 +1048,7 @@ private static final long serialVersionUID = 0L;
      * Type of the output configuration
      * </pre>
      *
-     * <code>.api.commons.OutputConfigurationType output_configuration_type = 3 [json_name = "outputConfigurationType"];</code>
+     * <code>.api.commons.OutputConfigurationType output_configuration_type = 4 [json_name = "outputConfigurationType"];</code>
      * @return The enum numeric value on the wire for outputConfigurationType.
      */
     @java.lang.Override public int getOutputConfigurationTypeValue() {
@@ -1131,7 +1059,7 @@ private static final long serialVersionUID = 0L;
      * Type of the output configuration
      * </pre>
      *
-     * <code>.api.commons.OutputConfigurationType output_configuration_type = 3 [json_name = "outputConfigurationType"];</code>
+     * <code>.api.commons.OutputConfigurationType output_configuration_type = 4 [json_name = "outputConfigurationType"];</code>
      * @param value The enum numeric value on the wire for outputConfigurationType to set.
      * @return This builder for chaining.
      */
@@ -1146,7 +1074,7 @@ private static final long serialVersionUID = 0L;
      * Type of the output configuration
      * </pre>
      *
-     * <code>.api.commons.OutputConfigurationType output_configuration_type = 3 [json_name = "outputConfigurationType"];</code>
+     * <code>.api.commons.OutputConfigurationType output_configuration_type = 4 [json_name = "outputConfigurationType"];</code>
      * @return The outputConfigurationType.
      */
     @java.lang.Override
@@ -1159,7 +1087,7 @@ private static final long serialVersionUID = 0L;
      * Type of the output configuration
      * </pre>
      *
-     * <code>.api.commons.OutputConfigurationType output_configuration_type = 3 [json_name = "outputConfigurationType"];</code>
+     * <code>.api.commons.OutputConfigurationType output_configuration_type = 4 [json_name = "outputConfigurationType"];</code>
      * @param value The outputConfigurationType to set.
      * @return This builder for chaining.
      */
@@ -1177,104 +1105,12 @@ private static final long serialVersionUID = 0L;
      * Type of the output configuration
      * </pre>
      *
-     * <code>.api.commons.OutputConfigurationType output_configuration_type = 3 [json_name = "outputConfigurationType"];</code>
+     * <code>.api.commons.OutputConfigurationType output_configuration_type = 4 [json_name = "outputConfigurationType"];</code>
      * @return This builder for chaining.
      */
     public Builder clearOutputConfigurationType() {
       bitField0_ = (bitField0_ & ~0x00000004);
       outputConfigurationType_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object orgId_ = "";
-    /**
-     * <pre>
-     * Organization ID associated with the output configuration
-     * </pre>
-     *
-     * <code>string org_id = 4 [json_name = "orgId"];</code>
-     * @return The orgId.
-     */
-    public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Organization ID associated with the output configuration
-     * </pre>
-     *
-     * <code>string org_id = 4 [json_name = "orgId"];</code>
-     * @return The bytes for orgId.
-     */
-    public com.google.protobuf.ByteString
-        getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Organization ID associated with the output configuration
-     * </pre>
-     *
-     * <code>string org_id = 4 [json_name = "orgId"];</code>
-     * @param value The orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      orgId_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Organization ID associated with the output configuration
-     * </pre>
-     *
-     * <code>string org_id = 4 [json_name = "orgId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOrgId() {
-      orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Organization ID associated with the output configuration
-     * </pre>
-     *
-     * <code>string org_id = 4 [json_name = "orgId"];</code>
-     * @param value The bytes for orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      orgId_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1334,7 +1170,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       insightId_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1348,7 +1184,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearInsightId() {
       insightId_ = getDefaultInstance().getInsightId();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1366,7 +1202,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       insightId_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1489,13 +1325,13 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization, com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization.Builder, com.tcn.cloud.api.api.v1alpha1.insights.TableVisualizationOrBuilder> tableVisualizationBuilder_;
+        com.tcn.cloud.api.api.commons.TableVisualization, com.tcn.cloud.api.api.commons.TableVisualization.Builder, com.tcn.cloud.api.api.commons.TableVisualizationOrBuilder> tableVisualizationBuilder_;
     /**
      * <pre>
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
      * @return Whether the tableVisualization field is set.
      */
     @java.lang.Override
@@ -1507,21 +1343,21 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
      * @return The tableVisualization.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization getTableVisualization() {
+    public com.tcn.cloud.api.api.commons.TableVisualization getTableVisualization() {
       if (tableVisualizationBuilder_ == null) {
         if (bodyCase_ == 7) {
-          return (com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization) body_;
+          return (com.tcn.cloud.api.api.commons.TableVisualization) body_;
         }
-        return com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization.getDefaultInstance();
+        return com.tcn.cloud.api.api.commons.TableVisualization.getDefaultInstance();
       } else {
         if (bodyCase_ == 7) {
           return tableVisualizationBuilder_.getMessage();
         }
-        return com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization.getDefaultInstance();
+        return com.tcn.cloud.api.api.commons.TableVisualization.getDefaultInstance();
       }
     }
     /**
@@ -1529,9 +1365,9 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
      */
-    public Builder setTableVisualization(com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization value) {
+    public Builder setTableVisualization(com.tcn.cloud.api.api.commons.TableVisualization value) {
       if (tableVisualizationBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1549,10 +1385,10 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
      */
     public Builder setTableVisualization(
-        com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.TableVisualization.Builder builderForValue) {
       if (tableVisualizationBuilder_ == null) {
         body_ = builderForValue.build();
         onChanged();
@@ -1567,13 +1403,13 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
      */
-    public Builder mergeTableVisualization(com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization value) {
+    public Builder mergeTableVisualization(com.tcn.cloud.api.api.commons.TableVisualization value) {
       if (tableVisualizationBuilder_ == null) {
         if (bodyCase_ == 7 &&
-            body_ != com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization.getDefaultInstance()) {
-          body_ = com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization.newBuilder((com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization) body_)
+            body_ != com.tcn.cloud.api.api.commons.TableVisualization.getDefaultInstance()) {
+          body_ = com.tcn.cloud.api.api.commons.TableVisualization.newBuilder((com.tcn.cloud.api.api.commons.TableVisualization) body_)
               .mergeFrom(value).buildPartial();
         } else {
           body_ = value;
@@ -1594,7 +1430,7 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
      */
     public Builder clearTableVisualization() {
       if (tableVisualizationBuilder_ == null) {
@@ -1617,9 +1453,9 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization.Builder getTableVisualizationBuilder() {
+    public com.tcn.cloud.api.api.commons.TableVisualization.Builder getTableVisualizationBuilder() {
       return getTableVisualizationFieldBuilder().getBuilder();
     }
     /**
@@ -1627,17 +1463,17 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.TableVisualizationOrBuilder getTableVisualizationOrBuilder() {
+    public com.tcn.cloud.api.api.commons.TableVisualizationOrBuilder getTableVisualizationOrBuilder() {
       if ((bodyCase_ == 7) && (tableVisualizationBuilder_ != null)) {
         return tableVisualizationBuilder_.getMessageOrBuilder();
       } else {
         if (bodyCase_ == 7) {
-          return (com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization) body_;
+          return (com.tcn.cloud.api.api.commons.TableVisualization) body_;
         }
-        return com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization.getDefaultInstance();
+        return com.tcn.cloud.api.api.commons.TableVisualization.getDefaultInstance();
       }
     }
     /**
@@ -1645,18 +1481,18 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization, com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization.Builder, com.tcn.cloud.api.api.v1alpha1.insights.TableVisualizationOrBuilder> 
+        com.tcn.cloud.api.api.commons.TableVisualization, com.tcn.cloud.api.api.commons.TableVisualization.Builder, com.tcn.cloud.api.api.commons.TableVisualizationOrBuilder> 
         getTableVisualizationFieldBuilder() {
       if (tableVisualizationBuilder_ == null) {
         if (!(bodyCase_ == 7)) {
-          body_ = com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization.getDefaultInstance();
+          body_ = com.tcn.cloud.api.api.commons.TableVisualization.getDefaultInstance();
         }
         tableVisualizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization, com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization.Builder, com.tcn.cloud.api.api.v1alpha1.insights.TableVisualizationOrBuilder>(
-                (com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization) body_,
+            com.tcn.cloud.api.api.commons.TableVisualization, com.tcn.cloud.api.api.commons.TableVisualization.Builder, com.tcn.cloud.api.api.commons.TableVisualizationOrBuilder>(
+                (com.tcn.cloud.api.api.commons.TableVisualization) body_,
                 getParentForChildren(),
                 isClean());
         body_ = null;

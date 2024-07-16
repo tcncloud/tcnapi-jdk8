@@ -156,7 +156,7 @@ public enum OutputConfigurationColumnSummaryType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.InsightsProto.getDescriptor().getEnumTypes().get(5);
+    return com.tcn.cloud.api.api.commons.InsightsProto.getDescriptor().getEnumTypes().get(6);
   }
 
   private static final OutputConfigurationColumnSummaryType[] VALUES = values();

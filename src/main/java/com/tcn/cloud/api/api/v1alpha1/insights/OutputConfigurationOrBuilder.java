@@ -12,7 +12,7 @@ public interface OutputConfigurationOrBuilder extends
    * Unique identifier for the output configuration
    * </pre>
    *
-   * <code>string output_configuration_id = 1 [json_name = "outputConfigurationId"];</code>
+   * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
    * @return The outputConfigurationId.
    */
   java.lang.String getOutputConfigurationId();
@@ -21,7 +21,7 @@ public interface OutputConfigurationOrBuilder extends
    * Unique identifier for the output configuration
    * </pre>
    *
-   * <code>string output_configuration_id = 1 [json_name = "outputConfigurationId"];</code>
+   * <code>string output_configuration_id = 2 [json_name = "outputConfigurationId"];</code>
    * @return The bytes for outputConfigurationId.
    */
   com.google.protobuf.ByteString
@@ -32,7 +32,7 @@ public interface OutputConfigurationOrBuilder extends
    * Title of the output configuration
    * </pre>
    *
-   * <code>string output_configuration_title = 2 [json_name = "outputConfigurationTitle"];</code>
+   * <code>string output_configuration_title = 3 [json_name = "outputConfigurationTitle"];</code>
    * @return The outputConfigurationTitle.
    */
   java.lang.String getOutputConfigurationTitle();
@@ -41,7 +41,7 @@ public interface OutputConfigurationOrBuilder extends
    * Title of the output configuration
    * </pre>
    *
-   * <code>string output_configuration_title = 2 [json_name = "outputConfigurationTitle"];</code>
+   * <code>string output_configuration_title = 3 [json_name = "outputConfigurationTitle"];</code>
    * @return The bytes for outputConfigurationTitle.
    */
   com.google.protobuf.ByteString
@@ -52,7 +52,7 @@ public interface OutputConfigurationOrBuilder extends
    * Type of the output configuration
    * </pre>
    *
-   * <code>.api.commons.OutputConfigurationType output_configuration_type = 3 [json_name = "outputConfigurationType"];</code>
+   * <code>.api.commons.OutputConfigurationType output_configuration_type = 4 [json_name = "outputConfigurationType"];</code>
    * @return The enum numeric value on the wire for outputConfigurationType.
    */
   int getOutputConfigurationTypeValue();
@@ -61,30 +61,10 @@ public interface OutputConfigurationOrBuilder extends
    * Type of the output configuration
    * </pre>
    *
-   * <code>.api.commons.OutputConfigurationType output_configuration_type = 3 [json_name = "outputConfigurationType"];</code>
+   * <code>.api.commons.OutputConfigurationType output_configuration_type = 4 [json_name = "outputConfigurationType"];</code>
    * @return The outputConfigurationType.
    */
   com.tcn.cloud.api.api.commons.OutputConfigurationType getOutputConfigurationType();
-
-  /**
-   * <pre>
-   * Organization ID associated with the output configuration
-   * </pre>
-   *
-   * <code>string org_id = 4 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  java.lang.String getOrgId();
-  /**
-   * <pre>
-   * Organization ID associated with the output configuration
-   * </pre>
-   *
-   * <code>string org_id = 4 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  com.google.protobuf.ByteString
-      getOrgIdBytes();
 
   /**
    * <pre>
@@ -140,7 +120,7 @@ public interface OutputConfigurationOrBuilder extends
    * Table visualization data for the output configuration
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+   * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
    * @return Whether the tableVisualization field is set.
    */
   boolean hasTableVisualization();
@@ -149,18 +129,18 @@ public interface OutputConfigurationOrBuilder extends
    * Table visualization data for the output configuration
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+   * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
    * @return The tableVisualization.
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.TableVisualization getTableVisualization();
+  com.tcn.cloud.api.api.commons.TableVisualization getTableVisualization();
   /**
    * <pre>
    * Table visualization data for the output configuration
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+   * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.TableVisualizationOrBuilder getTableVisualizationOrBuilder();
+  com.tcn.cloud.api.api.commons.TableVisualizationOrBuilder getTableVisualizationOrBuilder();
 
   com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.BodyCase getBodyCase();
 }

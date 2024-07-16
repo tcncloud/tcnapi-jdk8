@@ -14,6 +14,21 @@ public final class InsightsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_TableVisualization_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_TableVisualization_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_TableVisualization_TableColumnDetailsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_TableVisualization_TableColumnDetailsEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_TableColumnConfig_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_TableColumnConfig_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -24,48 +39,87 @@ public final class InsightsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\032api/commons/insights.proto\022\013api.common" +
-      "s*d\n\025InsightPermissionType\022*\n&INSIGHT_PE" +
-      "RMISSION_TYPE_COMMON_LIBRARY\020\000\022\037\n\033INSIGH" +
-      "T_PERMISSION_TYPE_ORG\020\001**\n\013InsightType\022\033" +
-      "\n\027INSIGHT_TYPE_TABLE_VIEW\020\000*\315\001\n\024InsightV" +
-      "fsSchemaType\022\"\n\036INSIGHT_VFS_SCHEMA_TYPE_" +
-      "STRING\020\000\022!\n\035INSIGHT_VFS_SCHEMA_TYPE_INT6" +
-      "4\020\001\022#\n\037INSIGHT_VFS_SCHEMA_TYPE_FLOAT64\020\002" +
-      "\022#\n\037INSIGHT_VFS_SCHEMA_TYPE_BOOLEAN\020\003\022$\n" +
-      " INSIGHT_VFS_SCHEMA_TYPE_DATETIME\020\004*\225\001\n\027" +
-      "OutputConfigurationType\022)\n%OUTPUT_CONFIG" +
-      "URATION_TYPE_UNSPECIFIED\020\000\022#\n\037OUTPUT_CON" +
-      "FIGURATION_TYPE_TABLE\020\001\022*\n&OUTPUT_CONFIG" +
-      "URATION_TYPE_MULTI_SERIES\020\002*\215\004\n#OutputCo" +
-      "nfigurationColumnFormatType\0227\n3OUTPUT_CO" +
-      "NFIGURATION_COLUMN_FORMAT_TYPE_UNSPECIFI" +
-      "ED\020\000\0226\n2OUTPUT_CONFIGURATION_COLUMN_FORM" +
-      "AT_TYPE_PERCENTAGE\020\001\0223\n/OUTPUT_CONFIGURA" +
-      "TION_COLUMN_FORMAT_TYPE_DOLLARS\020\002\0220\n,OUT" +
-      "PUT_CONFIGURATION_COLUMN_FORMAT_TYPE_DAT" +
-      "E\020\003\0222\n.OUTPUT_CONFIGURATION_COLUMN_FORMA" +
-      "T_TYPE_PREFIX\020\004\0222\n.OUTPUT_CONFIGURATION_" +
-      "COLUMN_FORMAT_TYPE_SUFFIX\020\005\0224\n0OUTPUT_CO" +
-      "NFIGURATION_COLUMN_FORMAT_TYPE_DURATION\020" +
-      "\006\022<\n8OUTPUT_CONFIGURATION_COLUMN_FORMAT_" +
-      "TYPE_DURATION_SECONDS\020\007\0222\n.OUTPUT_CONFIG" +
-      "URATION_COLUMN_FORMAT_TYPE_NUMBER\020\010*\250\002\n$" +
-      "OutputConfigurationColumnSummaryType\0228\n4" +
-      "OUTPUT_CONFIGURATION_COLUMN_SUMMARY_TYPE" +
-      "_UNSPECIFIED\020\000\0220\n,OUTPUT_CONFIGURATION_C" +
-      "OLUMN_SUMMARY_TYPE_AVG\020\001\0220\n,OUTPUT_CONFI" +
-      "GURATION_COLUMN_SUMMARY_TYPE_SUM\020\002\0220\n,OU" +
-      "TPUT_CONFIGURATION_COLUMN_SUMMARY_TYPE_M" +
-      "IN\020\003\0220\n,OUTPUT_CONFIGURATION_COLUMN_SUMM" +
-      "ARY_TYPE_MAX\020\004B{\n\035com.tcn.cloud.api.api." +
-      "commonsB\rInsightsProtoP\001\242\002\003ACX\252\002\013Api.Com" +
-      "mons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMeta" +
-      "data\352\002\014Api::Commonsb\006proto3"
+      "s\"\230\002\n\022TableVisualization\022i\n\024table_column" +
+      "_details\030\001 \003(\01327.api.commons.TableVisual" +
+      "ization.TableColumnDetailsEntryR\022tableCo" +
+      "lumnDetails\0220\n\024default_column_width\030\002 \001(" +
+      "\003R\022defaultColumnWidth\032e\n\027TableColumnDeta" +
+      "ilsEntry\022\020\n\003key\030\001 \001(\tR\003key\0224\n\005value\030\002 \001(" +
+      "\0132\036.api.commons.TableColumnConfigR\005value" +
+      ":\0028\001\"\343\003\n\021TableColumnConfig\022\020\n\003key\030\001 \001(\tR" +
+      "\003key\022!\n\014column_width\030\002 \001(\003R\013columnWidth\022" +
+      "\037\n\013hide_column\030\003 \001(\010R\nhideColumn\022\024\n\005labe" +
+      "l\030\004 \001(\tR\005label\022^\n\022column_format_type\030\005 \001" +
+      "(\01620.api.commons.OutputConfigurationColu" +
+      "mnFormatTypeR\020columnFormatType\0220\n\024column" +
+      "_format_values\030\006 \003(\tR\022columnFormatValues" +
+      "\022X\n\016column_summary\030\007 \001(\01621.api.commons.O" +
+      "utputConfigurationColumnSummaryTypeR\rcol" +
+      "umnSummary\022 \n\013description\030\010 \001(\tR\013descrip" +
+      "tion\022\024\n\005order\030\t \001(\003R\005order\022>\n\016sort_direc" +
+      "tion\030\n \001(\0162\027.api.commons.ColumnSortR\rsor" +
+      "tDirection*d\n\025InsightPermissionType\022*\n&I" +
+      "NSIGHT_PERMISSION_TYPE_COMMON_LIBRARY\020\000\022" +
+      "\037\n\033INSIGHT_PERMISSION_TYPE_ORG\020\001**\n\013Insi" +
+      "ghtType\022\033\n\027INSIGHT_TYPE_TABLE_VIEW\020\000*\315\001\n" +
+      "\024InsightVfsSchemaType\022\"\n\036INSIGHT_VFS_SCH" +
+      "EMA_TYPE_STRING\020\000\022!\n\035INSIGHT_VFS_SCHEMA_" +
+      "TYPE_INT64\020\001\022#\n\037INSIGHT_VFS_SCHEMA_TYPE_" +
+      "FLOAT64\020\002\022#\n\037INSIGHT_VFS_SCHEMA_TYPE_BOO" +
+      "LEAN\020\003\022$\n INSIGHT_VFS_SCHEMA_TYPE_DATETI" +
+      "ME\020\004*\225\001\n\027OutputConfigurationType\022)\n%OUTP" +
+      "UT_CONFIGURATION_TYPE_UNSPECIFIED\020\000\022#\n\037O" +
+      "UTPUT_CONFIGURATION_TYPE_TABLE\020\001\022*\n&OUTP" +
+      "UT_CONFIGURATION_TYPE_MULTI_SERIES\020\002*\215\004\n" +
+      "#OutputConfigurationColumnFormatType\0227\n3" +
+      "OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_" +
+      "UNSPECIFIED\020\000\0226\n2OUTPUT_CONFIGURATION_CO" +
+      "LUMN_FORMAT_TYPE_PERCENTAGE\020\001\0223\n/OUTPUT_" +
+      "CONFIGURATION_COLUMN_FORMAT_TYPE_DOLLARS" +
+      "\020\002\0220\n,OUTPUT_CONFIGURATION_COLUMN_FORMAT" +
+      "_TYPE_DATE\020\003\0222\n.OUTPUT_CONFIGURATION_COL" +
+      "UMN_FORMAT_TYPE_PREFIX\020\004\0222\n.OUTPUT_CONFI" +
+      "GURATION_COLUMN_FORMAT_TYPE_SUFFIX\020\005\0224\n0" +
+      "OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_" +
+      "DURATION\020\006\022<\n8OUTPUT_CONFIGURATION_COLUM" +
+      "N_FORMAT_TYPE_DURATION_SECONDS\020\007\0222\n.OUTP" +
+      "UT_CONFIGURATION_COLUMN_FORMAT_TYPE_NUMB" +
+      "ER\020\010*C\n\nColumnSort\022\031\n\025COLUMN_SORT_ASCEND" +
+      "ING\020\000\022\032\n\026COLUMN_SORT_DESCENDING\020\001*\250\002\n$Ou" +
+      "tputConfigurationColumnSummaryType\0228\n4OU" +
+      "TPUT_CONFIGURATION_COLUMN_SUMMARY_TYPE_U" +
+      "NSPECIFIED\020\000\0220\n,OUTPUT_CONFIGURATION_COL" +
+      "UMN_SUMMARY_TYPE_AVG\020\001\0220\n,OUTPUT_CONFIGU" +
+      "RATION_COLUMN_SUMMARY_TYPE_SUM\020\002\0220\n,OUTP" +
+      "UT_CONFIGURATION_COLUMN_SUMMARY_TYPE_MIN" +
+      "\020\003\0220\n,OUTPUT_CONFIGURATION_COLUMN_SUMMAR" +
+      "Y_TYPE_MAX\020\004B{\n\035com.tcn.cloud.api.api.co" +
+      "mmonsB\rInsightsProtoP\001\242\002\003ACX\252\002\013Api.Commo" +
+      "ns\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetada" +
+      "ta\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
+    internal_static_api_commons_TableVisualization_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_api_commons_TableVisualization_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_TableVisualization_descriptor,
+        new java.lang.String[] { "TableColumnDetails", "DefaultColumnWidth", });
+    internal_static_api_commons_TableVisualization_TableColumnDetailsEntry_descriptor =
+      internal_static_api_commons_TableVisualization_descriptor.getNestedTypes().get(0);
+    internal_static_api_commons_TableVisualization_TableColumnDetailsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_TableVisualization_TableColumnDetailsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_api_commons_TableColumnConfig_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_api_commons_TableColumnConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_TableColumnConfig_descriptor,
+        new java.lang.String[] { "Key", "ColumnWidth", "HideColumn", "Label", "ColumnFormatType", "ColumnFormatValues", "ColumnSummary", "Description", "Order", "SortDirection", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

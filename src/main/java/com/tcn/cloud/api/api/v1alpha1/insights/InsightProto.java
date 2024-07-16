@@ -135,73 +135,78 @@ public final class InsightProto {
     java.lang.String[] descriptorData = {
       "\n#api/v1alpha1/insights/insight.proto\022\025a" +
       "pi.v1alpha1.insights\032\032api/commons/insigh" +
-      "ts.proto\032 google/protobuf/field_mask.pro" +
-      "to\"\204\003\n\007Insight\022!\n\ninsight_id\030\002 \001(\003B\0020\001R\t" +
-      "insightId\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013descrip" +
-      "tion\030\004 \001(\tR\013description\022;\n\014insight_type\030" +
-      "\005 \001(\0162\030.api.commons.InsightTypeR\013insight" +
-      "Type\022\'\n\017insight_version\030\006 \001(\rR\016insightVe" +
-      "rsion\022\022\n\004body\030\007 \001(\tR\004body\022Z\n\027insight_per" +
-      "mission_type\030\010 \001(\0162\".api.commons.Insight" +
-      "PermissionTypeR\025insightPermissionType\022\037\n" +
-      "\013resource_id\030\t \001(\tR\nresourceId\022)\n\020standa" +
-      "rd_insight\030\n \001(\010R\017standardInsight\"p\n\025Pub" +
-      "lishInsightRequest\022\037\n\013resource_id\030\001 \001(\tR" +
-      "\nresourceId\0226\n\027destination_resource_id\030\002" +
-      " \001(\tR\025destinationResourceId\"R\n\026PublishIn" +
-      "sightResponse\0228\n\007insight\030\001 \001(\0132\036.api.v1a" +
-      "lpha1.insights.InsightR\007insight\"P\n\024Creat" +
-      "eInsightRequest\0228\n\007insight\030\001 \001(\0132\036.api.v" +
-      "1alpha1.insights.InsightR\007insight\"Q\n\025Cre" +
-      "ateInsightResponse\0228\n\007insight\030\001 \001(\0132\036.ap" +
-      "i.v1alpha1.insights.InsightR\007insight\"s\n\023" +
-      "ListInsightsRequest\022\\\n\030insight_permissio" +
-      "n_types\030\002 \003(\0162\".api.commons.InsightPermi" +
-      "ssionTypeR\026insightPermissionTypes\"R\n\024Lis" +
-      "tInsightsResponse\022:\n\010insights\030\001 \003(\0132\036.ap" +
-      "i.v1alpha1.insights.InsightR\010insights\"/\n" +
-      "\026ListOrgInsightsRequest\022\025\n\006org_id\030\001 \001(\tR" +
-      "\005orgId\"U\n\027ListOrgInsightsResponse\022:\n\010ins" +
-      "ights\030\001 \003(\0132\036.api.v1alpha1.insights.Insi" +
-      "ghtR\010insights\"\215\001\n\024UpdateInsightRequest\0228" +
-      "\n\007insight\030\001 \001(\0132\036.api.v1alpha1.insights." +
-      "InsightR\007insight\022;\n\013update_mask\030\002 \001(\0132\032." +
-      "google.protobuf.FieldMaskR\nupdateMask\"Q\n" +
-      "\025UpdateInsightResponse\0228\n\007insight\030\001 \001(\0132" +
-      "\036.api.v1alpha1.insights.InsightR\007insight" +
-      "\"Z\n\024DeleteInsightRequest\022!\n\ninsight_id\030\001" +
-      " \001(\003B\0020\001R\tinsightId\022\037\n\013resource_id\030\002 \001(\t" +
-      "R\nresourceId\"Q\n\025DeleteInsightResponse\0228\n" +
-      "\007insight\030\001 \001(\0132\036.api.v1alpha1.insights.I" +
-      "nsightR\007insight\"W\n\021GetInsightRequest\022!\n\n" +
-      "insight_id\030\001 \001(\003B\0020\001R\tinsightId\022\037\n\013resou" +
-      "rce_id\030\002 \001(\tR\nresourceId\"N\n\022GetInsightRe" +
-      "sponse\0228\n\007insight\030\001 \001(\0132\036.api.v1alpha1.i" +
-      "nsights.InsightR\007insight\"4\n\023GetVfsSchema" +
-      "Request\022\035\n\nalias_name\030\001 \001(\tR\taliasName\"\307" +
-      "\002\n\024GetVfsSchemaResponse\022I\n\006fields\030\001 \003(\0132" +
-      "1.api.v1alpha1.insights.GetVfsSchemaResp" +
-      "onse.FieldR\006fields\022\'\n\017vfs_description\030\002 " +
-      "\001(\tR\016vfsDescription\022\035\n\nalias_name\030\003 \001(\tR" +
-      "\taliasName\032\233\001\n\005Field\022\037\n\013column_name\030\001 \001(" +
-      "\tR\ncolumnName\022B\n\013column_type\030\002 \001(\0162!.api" +
-      ".commons.InsightVfsSchemaTypeR\ncolumnTyp" +
-      "e\022-\n\022column_description\030\003 \001(\tR\021columnDes" +
-      "cription\"\022\n\020ListVfsesRequest\"-\n\021ListVfse" +
-      "sResponse\022\030\n\007aliases\030\001 \003(\tR\007aliases\"\027\n\025L" +
-      "istVfsSchemasRequest\"f\n\026ListVfsSchemasRe" +
-      "sponse\022L\n\013vfs_schemas\030\001 \003(\0132+.api.v1alph" +
-      "a1.insights.GetVfsSchemaResponseR\nvfsSch" +
-      "emasB\255\001\n\'com.tcn.cloud.api.api.v1alpha1." +
-      "insightsB\014InsightProtoP\001\242\002\003AVI\252\002\025Api.V1a" +
-      "lpha1.Insights\312\002\025Api\\V1alpha1\\Insights\342\002" +
-      "!Api\\V1alpha1\\Insights\\GPBMetadata\352\002\027Api" +
-      "::V1alpha1::Insightsb\006proto3"
+      "ts.proto\0320api/v1alpha1/insights/output_c" +
+      "onfiguration.proto\032 google/protobuf/fiel" +
+      "d_mask.proto\"\345\003\n\007Insight\022!\n\ninsight_id\030\002" +
+      " \001(\003B\0020\001R\tinsightId\022\022\n\004name\030\003 \001(\tR\004name\022" +
+      " \n\013description\030\004 \001(\tR\013description\022;\n\014ins" +
+      "ight_type\030\005 \001(\0162\030.api.commons.InsightTyp" +
+      "eR\013insightType\022\'\n\017insight_version\030\006 \001(\rR" +
+      "\016insightVersion\022\022\n\004body\030\007 \001(\tR\004body\022Z\n\027i" +
+      "nsight_permission_type\030\010 \001(\0162\".api.commo" +
+      "ns.InsightPermissionTypeR\025insightPermiss" +
+      "ionType\022\037\n\013resource_id\030\t \001(\tR\nresourceId" +
+      "\022)\n\020standard_insight\030\n \001(\010R\017standardInsi" +
+      "ght\022_\n\025output_configurations\030\013 \003(\0132*.api" +
+      ".v1alpha1.insights.OutputConfigurationR\024" +
+      "outputConfigurations\"p\n\025PublishInsightRe" +
+      "quest\022\037\n\013resource_id\030\001 \001(\tR\nresourceId\0226" +
+      "\n\027destination_resource_id\030\002 \001(\tR\025destina" +
+      "tionResourceId\"R\n\026PublishInsightResponse" +
+      "\0228\n\007insight\030\001 \001(\0132\036.api.v1alpha1.insight" +
+      "s.InsightR\007insight\"P\n\024CreateInsightReque" +
+      "st\0228\n\007insight\030\001 \001(\0132\036.api.v1alpha1.insig" +
+      "hts.InsightR\007insight\"Q\n\025CreateInsightRes" +
+      "ponse\0228\n\007insight\030\001 \001(\0132\036.api.v1alpha1.in" +
+      "sights.InsightR\007insight\"s\n\023ListInsightsR" +
+      "equest\022\\\n\030insight_permission_types\030\002 \003(\016" +
+      "2\".api.commons.InsightPermissionTypeR\026in" +
+      "sightPermissionTypes\"R\n\024ListInsightsResp" +
+      "onse\022:\n\010insights\030\001 \003(\0132\036.api.v1alpha1.in" +
+      "sights.InsightR\010insights\"/\n\026ListOrgInsig" +
+      "htsRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"U\n\027Lis" +
+      "tOrgInsightsResponse\022:\n\010insights\030\001 \003(\0132\036" +
+      ".api.v1alpha1.insights.InsightR\010insights" +
+      "\"\215\001\n\024UpdateInsightRequest\0228\n\007insight\030\001 \001" +
+      "(\0132\036.api.v1alpha1.insights.InsightR\007insi" +
+      "ght\022;\n\013update_mask\030\002 \001(\0132\032.google.protob" +
+      "uf.FieldMaskR\nupdateMask\"Q\n\025UpdateInsigh" +
+      "tResponse\0228\n\007insight\030\001 \001(\0132\036.api.v1alpha" +
+      "1.insights.InsightR\007insight\"Z\n\024DeleteIns" +
+      "ightRequest\022!\n\ninsight_id\030\001 \001(\003B\0020\001R\tins" +
+      "ightId\022\037\n\013resource_id\030\002 \001(\tR\nresourceId\"" +
+      "Q\n\025DeleteInsightResponse\0228\n\007insight\030\001 \001(" +
+      "\0132\036.api.v1alpha1.insights.InsightR\007insig" +
+      "ht\"W\n\021GetInsightRequest\022!\n\ninsight_id\030\001 " +
+      "\001(\003B\0020\001R\tinsightId\022\037\n\013resource_id\030\002 \001(\tR" +
+      "\nresourceId\"N\n\022GetInsightResponse\0228\n\007ins" +
+      "ight\030\001 \001(\0132\036.api.v1alpha1.insights.Insig" +
+      "htR\007insight\"4\n\023GetVfsSchemaRequest\022\035\n\nal" +
+      "ias_name\030\001 \001(\tR\taliasName\"\307\002\n\024GetVfsSche" +
+      "maResponse\022I\n\006fields\030\001 \003(\01321.api.v1alpha" +
+      "1.insights.GetVfsSchemaResponse.FieldR\006f" +
+      "ields\022\'\n\017vfs_description\030\002 \001(\tR\016vfsDescr" +
+      "iption\022\035\n\nalias_name\030\003 \001(\tR\taliasName\032\233\001" +
+      "\n\005Field\022\037\n\013column_name\030\001 \001(\tR\ncolumnName" +
+      "\022B\n\013column_type\030\002 \001(\0162!.api.commons.Insi" +
+      "ghtVfsSchemaTypeR\ncolumnType\022-\n\022column_d" +
+      "escription\030\003 \001(\tR\021columnDescription\"\022\n\020L" +
+      "istVfsesRequest\"-\n\021ListVfsesResponse\022\030\n\007" +
+      "aliases\030\001 \003(\tR\007aliases\"\027\n\025ListVfsSchemas" +
+      "Request\"f\n\026ListVfsSchemasResponse\022L\n\013vfs" +
+      "_schemas\030\001 \003(\0132+.api.v1alpha1.insights.G" +
+      "etVfsSchemaResponseR\nvfsSchemasB\255\001\n\'com." +
+      "tcn.cloud.api.api.v1alpha1.insightsB\014Ins" +
+      "ightProtoP\001\242\002\003AVI\252\002\025Api.V1alpha1.Insight" +
+      "s\312\002\025Api\\V1alpha1\\Insights\342\002!Api\\V1alpha1" +
+      "\\Insights\\GPBMetadata\352\002\027Api::V1alpha1::I" +
+      "nsightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.InsightsProto.getDescriptor(),
+          com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
         });
     internal_static_api_v1alpha1_insights_Insight_descriptor =
@@ -209,7 +214,7 @@ public final class InsightProto {
     internal_static_api_v1alpha1_insights_Insight_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_Insight_descriptor,
-        new java.lang.String[] { "InsightId", "Name", "Description", "InsightType", "InsightVersion", "Body", "InsightPermissionType", "ResourceId", "StandardInsight", });
+        new java.lang.String[] { "InsightId", "Name", "Description", "InsightType", "InsightVersion", "Body", "InsightPermissionType", "ResourceId", "StandardInsight", "OutputConfigurations", });
     internal_static_api_v1alpha1_insights_PublishInsightRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_v1alpha1_insights_PublishInsightRequest_fieldAccessorTable = new
@@ -337,6 +342,7 @@ public final class InsightProto {
         internal_static_api_v1alpha1_insights_ListVfsSchemasResponse_descriptor,
         new java.lang.String[] { "VfsSchemas", });
     com.tcn.cloud.api.api.commons.InsightsProto.getDescriptor();
+    com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
   }
 
