@@ -752,6 +752,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * ListOutputConfigurations lists output configurations
+     * </pre>
      */
     default void listOutputConfigurations(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> responseObserver) {
@@ -759,6 +762,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * GetOutputConfiguration gets an output configuration
+     * </pre>
      */
     default void getOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse> responseObserver) {
@@ -766,6 +772,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * CreateOutputConfiguration creates an output configuration
+     * </pre>
      */
     default void createOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse> responseObserver) {
@@ -773,6 +782,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * UpdateOutputConfiguration updates an output configuration
+     * </pre>
      */
     default void updateOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse> responseObserver) {
@@ -780,6 +792,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteOutputConfiguration deletes an output configuration
+     * </pre>
      */
     default void deleteOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse> responseObserver) {
@@ -958,6 +973,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * ListOutputConfigurations lists output configurations
+     * </pre>
      */
     public void listOutputConfigurations(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> responseObserver) {
@@ -966,6 +984,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * GetOutputConfiguration gets an output configuration
+     * </pre>
      */
     public void getOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse> responseObserver) {
@@ -974,6 +995,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * CreateOutputConfiguration creates an output configuration
+     * </pre>
      */
     public void createOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse> responseObserver) {
@@ -982,6 +1006,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * UpdateOutputConfiguration updates an output configuration
+     * </pre>
      */
     public void updateOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse> responseObserver) {
@@ -990,6 +1017,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteOutputConfiguration deletes an output configuration
+     * </pre>
      */
     public void deleteOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse> responseObserver) {
@@ -1145,6 +1175,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * ListOutputConfigurations lists output configurations
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse listOutputConfigurations(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1152,6 +1185,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * GetOutputConfiguration gets an output configuration
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse getOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1159,6 +1195,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * CreateOutputConfiguration creates an output configuration
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse createOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1166,6 +1205,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * UpdateOutputConfiguration updates an output configuration
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse updateOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1173,6 +1215,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteOutputConfiguration deletes an output configuration
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse deleteOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1340,6 +1385,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * ListOutputConfigurations lists output configurations
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> listOutputConfigurations(
         com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request) {
@@ -1348,6 +1396,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * GetOutputConfiguration gets an output configuration
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse> getOutputConfiguration(
         com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest request) {
@@ -1356,6 +1407,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * CreateOutputConfiguration creates an output configuration
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse> createOutputConfiguration(
         com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest request) {
@@ -1364,6 +1418,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * UpdateOutputConfiguration updates an output configuration
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse> updateOutputConfiguration(
         com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest request) {
@@ -1372,6 +1429,9 @@ public final class InsightsGrpc {
     }
 
     /**
+     * <pre>
+     * DeleteOutputConfiguration deletes an output configuration
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse> deleteOutputConfiguration(
         com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest request) {
