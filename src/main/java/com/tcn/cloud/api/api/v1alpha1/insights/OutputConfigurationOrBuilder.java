@@ -88,10 +88,20 @@ public interface OutputConfigurationOrBuilder extends
 
   /**
    * <pre>
+   * is_default flag for the output configuration
+   * </pre>
+   *
+   * <code>bool is_default = 6 [json_name = "isDefault"];</code>
+   * @return The isDefault.
+   */
+  boolean getIsDefault();
+
+  /**
+   * <pre>
    * Blob data for the output configuration
    * </pre>
    *
-   * <code>string blob = 6 [json_name = "blob"];</code>
+   * <code>string blob = 7 [json_name = "blob"];</code>
    * @return Whether the blob field is set.
    */
   boolean hasBlob();
@@ -100,7 +110,7 @@ public interface OutputConfigurationOrBuilder extends
    * Blob data for the output configuration
    * </pre>
    *
-   * <code>string blob = 6 [json_name = "blob"];</code>
+   * <code>string blob = 7 [json_name = "blob"];</code>
    * @return The blob.
    */
   java.lang.String getBlob();
@@ -109,7 +119,7 @@ public interface OutputConfigurationOrBuilder extends
    * Blob data for the output configuration
    * </pre>
    *
-   * <code>string blob = 6 [json_name = "blob"];</code>
+   * <code>string blob = 7 [json_name = "blob"];</code>
    * @return The bytes for blob.
    */
   com.google.protobuf.ByteString
@@ -120,7 +130,7 @@ public interface OutputConfigurationOrBuilder extends
    * Table visualization data for the output configuration
    * </pre>
    *
-   * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+   * <code>.api.commons.TableVisualization table_visualization = 8 [json_name = "tableVisualization"];</code>
    * @return Whether the tableVisualization field is set.
    */
   boolean hasTableVisualization();
@@ -129,7 +139,7 @@ public interface OutputConfigurationOrBuilder extends
    * Table visualization data for the output configuration
    * </pre>
    *
-   * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+   * <code>.api.commons.TableVisualization table_visualization = 8 [json_name = "tableVisualization"];</code>
    * @return The tableVisualization.
    */
   com.tcn.cloud.api.api.commons.TableVisualization getTableVisualization();
@@ -138,7 +148,7 @@ public interface OutputConfigurationOrBuilder extends
    * Table visualization data for the output configuration
    * </pre>
    *
-   * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+   * <code>.api.commons.TableVisualization table_visualization = 8 [json_name = "tableVisualization"];</code>
    */
   com.tcn.cloud.api.api.commons.TableVisualizationOrBuilder getTableVisualizationOrBuilder();
 

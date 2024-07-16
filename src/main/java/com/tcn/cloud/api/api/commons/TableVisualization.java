@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TableVisualization() {
+    tableColumnDetails_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -34,18 +35,6 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.InsightsProto.internal_static_api_commons_TableVisualization_descriptor;
   }
 
-  @SuppressWarnings({"rawtypes"})
-  @java.lang.Override
-  protected com.google.protobuf.MapField internalGetMapField(
-      int number) {
-    switch (number) {
-      case 1:
-        return internalGetTableColumnDetails();
-      default:
-        throw new RuntimeException(
-            "Invalid map field number: " + number);
-    }
-  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
@@ -55,113 +44,64 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TABLE_COLUMN_DETAILS_FIELD_NUMBER = 1;
-  private static final class TableColumnDetailsDefaultEntryHolder {
-    static final com.google.protobuf.MapEntry<
-        java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig> defaultEntry =
-            com.google.protobuf.MapEntry
-            .<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig>newDefaultInstance(
-                com.tcn.cloud.api.api.commons.InsightsProto.internal_static_api_commons_TableVisualization_TableColumnDetailsEntry_descriptor, 
-                com.google.protobuf.WireFormat.FieldType.STRING,
-                "",
-                com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                com.tcn.cloud.api.api.commons.TableColumnConfig.getDefaultInstance());
-  }
   @SuppressWarnings("serial")
-  private com.google.protobuf.MapField<
-      java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig> tableColumnDetails_;
-  private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig>
-  internalGetTableColumnDetails() {
-    if (tableColumnDetails_ == null) {
-      return com.google.protobuf.MapField.emptyMapField(
-          TableColumnDetailsDefaultEntryHolder.defaultEntry);
-    }
+  private java.util.List<com.tcn.cloud.api.api.commons.TableColumnConfig> tableColumnDetails_;
+  /**
+   * <pre>
+   * Map of table column details
+   * </pre>
+   *
+   * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.TableColumnConfig> getTableColumnDetailsList() {
     return tableColumnDetails_;
   }
+  /**
+   * <pre>
+   * Map of table column details
+   * </pre>
+   *
+   * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.TableColumnConfigOrBuilder> 
+      getTableColumnDetailsOrBuilderList() {
+    return tableColumnDetails_;
+  }
+  /**
+   * <pre>
+   * Map of table column details
+   * </pre>
+   *
+   * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+   */
+  @java.lang.Override
   public int getTableColumnDetailsCount() {
-    return internalGetTableColumnDetails().getMap().size();
+    return tableColumnDetails_.size();
   }
   /**
    * <pre>
    * Map of table column details
    * </pre>
    *
-   * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+   * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
    */
   @java.lang.Override
-  public boolean containsTableColumnDetails(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    return internalGetTableColumnDetails().getMap().containsKey(key);
-  }
-  /**
-   * Use {@link #getTableColumnDetailsMap()} instead.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated
-  public java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig> getTableColumnDetails() {
-    return getTableColumnDetailsMap();
+  public com.tcn.cloud.api.api.commons.TableColumnConfig getTableColumnDetails(int index) {
+    return tableColumnDetails_.get(index);
   }
   /**
    * <pre>
    * Map of table column details
    * </pre>
    *
-   * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+   * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
    */
   @java.lang.Override
-  public java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig> getTableColumnDetailsMap() {
-    return internalGetTableColumnDetails().getMap();
-  }
-  /**
-   * <pre>
-   * Map of table column details
-   * </pre>
-   *
-   * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
-   */
-  @java.lang.Override
-  public /* nullable */
-com.tcn.cloud.api.api.commons.TableColumnConfig getTableColumnDetailsOrDefault(
-      java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.commons.TableColumnConfig defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig> map =
-        internalGetTableColumnDetails().getMap();
-    return map.containsKey(key) ? map.get(key) : defaultValue;
-  }
-  /**
-   * <pre>
-   * Map of table column details
-   * </pre>
-   *
-   * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.TableColumnConfig getTableColumnDetailsOrThrow(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig> map =
-        internalGetTableColumnDetails().getMap();
-    if (!map.containsKey(key)) {
-      throw new java.lang.IllegalArgumentException();
-    }
-    return map.get(key);
-  }
-
-  public static final int DEFAULT_COLUMN_WIDTH_FIELD_NUMBER = 2;
-  private long defaultColumnWidth_ = 0L;
-  /**
-   * <pre>
-   * Default width for columns in the table
-   * </pre>
-   *
-   * <code>int64 default_column_width = 2 [json_name = "defaultColumnWidth"];</code>
-   * @return The defaultColumnWidth.
-   */
-  @java.lang.Override
-  public long getDefaultColumnWidth() {
-    return defaultColumnWidth_;
+  public com.tcn.cloud.api.api.commons.TableColumnConfigOrBuilder getTableColumnDetailsOrBuilder(
+      int index) {
+    return tableColumnDetails_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -178,14 +118,8 @@ com.tcn.cloud.api.api.commons.TableColumnConfig defaultValue) {
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    com.google.protobuf.GeneratedMessageV3
-      .serializeStringMapTo(
-        output,
-        internalGetTableColumnDetails(),
-        TableColumnDetailsDefaultEntryHolder.defaultEntry,
-        1);
-    if (defaultColumnWidth_ != 0L) {
-      output.writeInt64(2, defaultColumnWidth_);
+    for (int i = 0; i < tableColumnDetails_.size(); i++) {
+      output.writeMessage(1, tableColumnDetails_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -196,19 +130,9 @@ com.tcn.cloud.api.api.commons.TableColumnConfig defaultValue) {
     if (size != -1) return size;
 
     size = 0;
-    for (java.util.Map.Entry<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig> entry
-         : internalGetTableColumnDetails().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig>
-      tableColumnDetails__ = TableColumnDetailsDefaultEntryHolder.defaultEntry.newBuilderForType()
-          .setKey(entry.getKey())
-          .setValue(entry.getValue())
-          .build();
+    for (int i = 0; i < tableColumnDetails_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, tableColumnDetails__);
-    }
-    if (defaultColumnWidth_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, defaultColumnWidth_);
+        .computeMessageSize(1, tableColumnDetails_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -225,10 +149,8 @@ com.tcn.cloud.api.api.commons.TableColumnConfig defaultValue) {
     }
     com.tcn.cloud.api.api.commons.TableVisualization other = (com.tcn.cloud.api.api.commons.TableVisualization) obj;
 
-    if (!internalGetTableColumnDetails().equals(
-        other.internalGetTableColumnDetails())) return false;
-    if (getDefaultColumnWidth()
-        != other.getDefaultColumnWidth()) return false;
+    if (!getTableColumnDetailsList()
+        .equals(other.getTableColumnDetailsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -240,13 +162,10 @@ com.tcn.cloud.api.api.commons.TableColumnConfig defaultValue) {
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (!internalGetTableColumnDetails().getMap().isEmpty()) {
+    if (getTableColumnDetailsCount() > 0) {
       hash = (37 * hash) + TABLE_COLUMN_DETAILS_FIELD_NUMBER;
-      hash = (53 * hash) + internalGetTableColumnDetails().hashCode();
+      hash = (53 * hash) + getTableColumnDetailsList().hashCode();
     }
-    hash = (37 * hash) + DEFAULT_COLUMN_WIDTH_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getDefaultColumnWidth());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -360,28 +279,6 @@ com.tcn.cloud.api.api.commons.TableColumnConfig defaultValue) {
       return com.tcn.cloud.api.api.commons.InsightsProto.internal_static_api_commons_TableVisualization_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 1:
-          return internalGetTableColumnDetails();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapField internalGetMutableMapField(
-        int number) {
-      switch (number) {
-        case 1:
-          return internalGetMutableTableColumnDetails();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -404,8 +301,13 @@ com.tcn.cloud.api.api.commons.TableColumnConfig defaultValue) {
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      internalGetMutableTableColumnDetails().clear();
-      defaultColumnWidth_ = 0L;
+      if (tableColumnDetailsBuilder_ == null) {
+        tableColumnDetails_ = java.util.Collections.emptyList();
+      } else {
+        tableColumnDetails_ = null;
+        tableColumnDetailsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -432,20 +334,26 @@ com.tcn.cloud.api.api.commons.TableColumnConfig defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.TableVisualization buildPartial() {
       com.tcn.cloud.api.api.commons.TableVisualization result = new com.tcn.cloud.api.api.commons.TableVisualization(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.TableVisualization result) {
+      if (tableColumnDetailsBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          tableColumnDetails_ = java.util.Collections.unmodifiableList(tableColumnDetails_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.tableColumnDetails_ = tableColumnDetails_;
+      } else {
+        result.tableColumnDetails_ = tableColumnDetailsBuilder_.build();
+      }
+    }
+
     private void buildPartial0(com.tcn.cloud.api.api.commons.TableVisualization result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.tableColumnDetails_ = internalGetTableColumnDetails();
-        result.tableColumnDetails_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.defaultColumnWidth_ = defaultColumnWidth_;
-      }
     }
 
     @java.lang.Override
@@ -492,11 +400,31 @@ com.tcn.cloud.api.api.commons.TableColumnConfig defaultValue) {
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.TableVisualization other) {
       if (other == com.tcn.cloud.api.api.commons.TableVisualization.getDefaultInstance()) return this;
-      internalGetMutableTableColumnDetails().mergeFrom(
-          other.internalGetTableColumnDetails());
-      bitField0_ |= 0x00000001;
-      if (other.getDefaultColumnWidth() != 0L) {
-        setDefaultColumnWidth(other.getDefaultColumnWidth());
+      if (tableColumnDetailsBuilder_ == null) {
+        if (!other.tableColumnDetails_.isEmpty()) {
+          if (tableColumnDetails_.isEmpty()) {
+            tableColumnDetails_ = other.tableColumnDetails_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTableColumnDetailsIsMutable();
+            tableColumnDetails_.addAll(other.tableColumnDetails_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.tableColumnDetails_.isEmpty()) {
+          if (tableColumnDetailsBuilder_.isEmpty()) {
+            tableColumnDetailsBuilder_.dispose();
+            tableColumnDetailsBuilder_ = null;
+            tableColumnDetails_ = other.tableColumnDetails_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            tableColumnDetailsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getTableColumnDetailsFieldBuilder() : null;
+          } else {
+            tableColumnDetailsBuilder_.addAllMessages(other.tableColumnDetails_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -525,19 +453,18 @@ com.tcn.cloud.api.api.commons.TableColumnConfig defaultValue) {
               done = true;
               break;
             case 10: {
-              com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig>
-              tableColumnDetails__ = input.readMessage(
-                  TableColumnDetailsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableTableColumnDetails().getMutableMap().put(
-                  tableColumnDetails__.getKey(), tableColumnDetails__.getValue());
-              bitField0_ |= 0x00000001;
+              com.tcn.cloud.api.api.commons.TableColumnConfig m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.TableColumnConfig.parser(),
+                      extensionRegistry);
+              if (tableColumnDetailsBuilder_ == null) {
+                ensureTableColumnDetailsIsMutable();
+                tableColumnDetails_.add(m);
+              } else {
+                tableColumnDetailsBuilder_.addMessage(m);
+              }
               break;
             } // case 10
-            case 16: {
-              defaultColumnWidth_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -555,104 +482,210 @@ com.tcn.cloud.api.api.commons.TableColumnConfig defaultValue) {
     }
     private int bitField0_;
 
-    private com.google.protobuf.MapField<
-        java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig> tableColumnDetails_;
-    private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig>
-        internalGetTableColumnDetails() {
-      if (tableColumnDetails_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            TableColumnDetailsDefaultEntryHolder.defaultEntry);
-      }
-      return tableColumnDetails_;
+    private java.util.List<com.tcn.cloud.api.api.commons.TableColumnConfig> tableColumnDetails_ =
+      java.util.Collections.emptyList();
+    private void ensureTableColumnDetailsIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        tableColumnDetails_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.TableColumnConfig>(tableColumnDetails_);
+        bitField0_ |= 0x00000001;
+       }
     }
-    private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig>
-        internalGetMutableTableColumnDetails() {
-      if (tableColumnDetails_ == null) {
-        tableColumnDetails_ = com.google.protobuf.MapField.newMapField(
-            TableColumnDetailsDefaultEntryHolder.defaultEntry);
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TableColumnConfig, com.tcn.cloud.api.api.commons.TableColumnConfig.Builder, com.tcn.cloud.api.api.commons.TableColumnConfigOrBuilder> tableColumnDetailsBuilder_;
+
+    /**
+     * <pre>
+     * Map of table column details
+     * </pre>
+     *
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.TableColumnConfig> getTableColumnDetailsList() {
+      if (tableColumnDetailsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(tableColumnDetails_);
+      } else {
+        return tableColumnDetailsBuilder_.getMessageList();
       }
-      if (!tableColumnDetails_.isMutable()) {
-        tableColumnDetails_ = tableColumnDetails_.copy();
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return tableColumnDetails_;
     }
+    /**
+     * <pre>
+     * Map of table column details
+     * </pre>
+     *
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     */
     public int getTableColumnDetailsCount() {
-      return internalGetTableColumnDetails().getMap().size();
-    }
-    /**
-     * <pre>
-     * Map of table column details
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
-     */
-    @java.lang.Override
-    public boolean containsTableColumnDetails(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetTableColumnDetails().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getTableColumnDetailsMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig> getTableColumnDetails() {
-      return getTableColumnDetailsMap();
-    }
-    /**
-     * <pre>
-     * Map of table column details
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig> getTableColumnDetailsMap() {
-      return internalGetTableColumnDetails().getMap();
-    }
-    /**
-     * <pre>
-     * Map of table column details
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
-     */
-    @java.lang.Override
-    public /* nullable */
-com.tcn.cloud.api.api.commons.TableColumnConfig getTableColumnDetailsOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.tcn.cloud.api.api.commons.TableColumnConfig defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig> map =
-          internalGetTableColumnDetails().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <pre>
-     * Map of table column details
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.TableColumnConfig getTableColumnDetailsOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig> map =
-          internalGetTableColumnDetails().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
+      if (tableColumnDetailsBuilder_ == null) {
+        return tableColumnDetails_.size();
+      } else {
+        return tableColumnDetailsBuilder_.getCount();
       }
-      return map.get(key);
     }
+    /**
+     * <pre>
+     * Map of table column details
+     * </pre>
+     *
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TableColumnConfig getTableColumnDetails(int index) {
+      if (tableColumnDetailsBuilder_ == null) {
+        return tableColumnDetails_.get(index);
+      } else {
+        return tableColumnDetailsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Map of table column details
+     * </pre>
+     *
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     */
+    public Builder setTableColumnDetails(
+        int index, com.tcn.cloud.api.api.commons.TableColumnConfig value) {
+      if (tableColumnDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTableColumnDetailsIsMutable();
+        tableColumnDetails_.set(index, value);
+        onChanged();
+      } else {
+        tableColumnDetailsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Map of table column details
+     * </pre>
+     *
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     */
+    public Builder setTableColumnDetails(
+        int index, com.tcn.cloud.api.api.commons.TableColumnConfig.Builder builderForValue) {
+      if (tableColumnDetailsBuilder_ == null) {
+        ensureTableColumnDetailsIsMutable();
+        tableColumnDetails_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        tableColumnDetailsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Map of table column details
+     * </pre>
+     *
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     */
+    public Builder addTableColumnDetails(com.tcn.cloud.api.api.commons.TableColumnConfig value) {
+      if (tableColumnDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTableColumnDetailsIsMutable();
+        tableColumnDetails_.add(value);
+        onChanged();
+      } else {
+        tableColumnDetailsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Map of table column details
+     * </pre>
+     *
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     */
+    public Builder addTableColumnDetails(
+        int index, com.tcn.cloud.api.api.commons.TableColumnConfig value) {
+      if (tableColumnDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTableColumnDetailsIsMutable();
+        tableColumnDetails_.add(index, value);
+        onChanged();
+      } else {
+        tableColumnDetailsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Map of table column details
+     * </pre>
+     *
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     */
+    public Builder addTableColumnDetails(
+        com.tcn.cloud.api.api.commons.TableColumnConfig.Builder builderForValue) {
+      if (tableColumnDetailsBuilder_ == null) {
+        ensureTableColumnDetailsIsMutable();
+        tableColumnDetails_.add(builderForValue.build());
+        onChanged();
+      } else {
+        tableColumnDetailsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Map of table column details
+     * </pre>
+     *
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     */
+    public Builder addTableColumnDetails(
+        int index, com.tcn.cloud.api.api.commons.TableColumnConfig.Builder builderForValue) {
+      if (tableColumnDetailsBuilder_ == null) {
+        ensureTableColumnDetailsIsMutable();
+        tableColumnDetails_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        tableColumnDetailsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Map of table column details
+     * </pre>
+     *
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     */
+    public Builder addAllTableColumnDetails(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.TableColumnConfig> values) {
+      if (tableColumnDetailsBuilder_ == null) {
+        ensureTableColumnDetailsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tableColumnDetails_);
+        onChanged();
+      } else {
+        tableColumnDetailsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Map of table column details
+     * </pre>
+     *
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     */
     public Builder clearTableColumnDetails() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      internalGetMutableTableColumnDetails().getMutableMap()
-          .clear();
+      if (tableColumnDetailsBuilder_ == null) {
+        tableColumnDetails_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+      } else {
+        tableColumnDetailsBuilder_.clear();
+      }
       return this;
     }
     /**
@@ -660,39 +693,16 @@ com.tcn.cloud.api.api.commons.TableColumnConfig defaultValue) {
      * Map of table column details
      * </pre>
      *
-     * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
-    public Builder removeTableColumnDetails(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      internalGetMutableTableColumnDetails().getMutableMap()
-          .remove(key);
-      return this;
-    }
-    /**
-     * Use alternate mutation accessors instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig>
-        getMutableTableColumnDetails() {
-      bitField0_ |= 0x00000001;
-      return internalGetMutableTableColumnDetails().getMutableMap();
-    }
-    /**
-     * <pre>
-     * Map of table column details
-     * </pre>
-     *
-     * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
-     */
-    public Builder putTableColumnDetails(
-        java.lang.String key,
-        com.tcn.cloud.api.api.commons.TableColumnConfig value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
-      internalGetMutableTableColumnDetails().getMutableMap()
-          .put(key, value);
-      bitField0_ |= 0x00000001;
+    public Builder removeTableColumnDetails(int index) {
+      if (tableColumnDetailsBuilder_ == null) {
+        ensureTableColumnDetailsIsMutable();
+        tableColumnDetails_.remove(index);
+        onChanged();
+      } else {
+        tableColumnDetailsBuilder_.remove(index);
+      }
       return this;
     }
     /**
@@ -700,58 +710,88 @@ com.tcn.cloud.api.api.commons.TableColumnConfig defaultValue) {
      * Map of table column details
      * </pre>
      *
-     * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
-    public Builder putAllTableColumnDetails(
-        java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig> values) {
-      internalGetMutableTableColumnDetails().getMutableMap()
-          .putAll(values);
-      bitField0_ |= 0x00000001;
-      return this;
-    }
-
-    private long defaultColumnWidth_ ;
-    /**
-     * <pre>
-     * Default width for columns in the table
-     * </pre>
-     *
-     * <code>int64 default_column_width = 2 [json_name = "defaultColumnWidth"];</code>
-     * @return The defaultColumnWidth.
-     */
-    @java.lang.Override
-    public long getDefaultColumnWidth() {
-      return defaultColumnWidth_;
+    public com.tcn.cloud.api.api.commons.TableColumnConfig.Builder getTableColumnDetailsBuilder(
+        int index) {
+      return getTableColumnDetailsFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
-     * Default width for columns in the table
+     * Map of table column details
      * </pre>
      *
-     * <code>int64 default_column_width = 2 [json_name = "defaultColumnWidth"];</code>
-     * @param value The defaultColumnWidth to set.
-     * @return This builder for chaining.
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
-    public Builder setDefaultColumnWidth(long value) {
-
-      defaultColumnWidth_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
+    public com.tcn.cloud.api.api.commons.TableColumnConfigOrBuilder getTableColumnDetailsOrBuilder(
+        int index) {
+      if (tableColumnDetailsBuilder_ == null) {
+        return tableColumnDetails_.get(index);  } else {
+        return tableColumnDetailsBuilder_.getMessageOrBuilder(index);
+      }
     }
     /**
      * <pre>
-     * Default width for columns in the table
+     * Map of table column details
      * </pre>
      *
-     * <code>int64 default_column_width = 2 [json_name = "defaultColumnWidth"];</code>
-     * @return This builder for chaining.
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
-    public Builder clearDefaultColumnWidth() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      defaultColumnWidth_ = 0L;
-      onChanged();
-      return this;
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.TableColumnConfigOrBuilder> 
+         getTableColumnDetailsOrBuilderList() {
+      if (tableColumnDetailsBuilder_ != null) {
+        return tableColumnDetailsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(tableColumnDetails_);
+      }
+    }
+    /**
+     * <pre>
+     * Map of table column details
+     * </pre>
+     *
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TableColumnConfig.Builder addTableColumnDetailsBuilder() {
+      return getTableColumnDetailsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.TableColumnConfig.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Map of table column details
+     * </pre>
+     *
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TableColumnConfig.Builder addTableColumnDetailsBuilder(
+        int index) {
+      return getTableColumnDetailsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.TableColumnConfig.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Map of table column details
+     * </pre>
+     *
+     * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.TableColumnConfig.Builder> 
+         getTableColumnDetailsBuilderList() {
+      return getTableColumnDetailsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.TableColumnConfig, com.tcn.cloud.api.api.commons.TableColumnConfig.Builder, com.tcn.cloud.api.api.commons.TableColumnConfigOrBuilder> 
+        getTableColumnDetailsFieldBuilder() {
+      if (tableColumnDetailsBuilder_ == null) {
+        tableColumnDetailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.TableColumnConfig, com.tcn.cloud.api.api.commons.TableColumnConfig.Builder, com.tcn.cloud.api.api.commons.TableColumnConfigOrBuilder>(
+                tableColumnDetails_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
+        tableColumnDetails_ = null;
+      }
+      return tableColumnDetailsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

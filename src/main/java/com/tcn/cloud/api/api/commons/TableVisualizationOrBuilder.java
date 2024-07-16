@@ -12,7 +12,24 @@ public interface TableVisualizationOrBuilder extends
    * Map of table column details
    * </pre>
    *
-   * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+   * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.TableColumnConfig> 
+      getTableColumnDetailsList();
+  /**
+   * <pre>
+   * Map of table column details
+   * </pre>
+   *
+   * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TableColumnConfig getTableColumnDetails(int index);
+  /**
+   * <pre>
+   * Map of table column details
+   * </pre>
+   *
+   * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
    */
   int getTableColumnDetailsCount();
   /**
@@ -20,54 +37,17 @@ public interface TableVisualizationOrBuilder extends
    * Map of table column details
    * </pre>
    *
-   * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+   * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
    */
-  boolean containsTableColumnDetails(
-      java.lang.String key);
-  /**
-   * Use {@link #getTableColumnDetailsMap()} instead.
-   */
-  @java.lang.Deprecated
-  java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig>
-  getTableColumnDetails();
+  java.util.List<? extends com.tcn.cloud.api.api.commons.TableColumnConfigOrBuilder> 
+      getTableColumnDetailsOrBuilderList();
   /**
    * <pre>
    * Map of table column details
    * </pre>
    *
-   * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
+   * <code>repeated .api.commons.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
    */
-  java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.TableColumnConfig>
-  getTableColumnDetailsMap();
-  /**
-   * <pre>
-   * Map of table column details
-   * </pre>
-   *
-   * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
-   */
-  /* nullable */
-com.tcn.cloud.api.api.commons.TableColumnConfig getTableColumnDetailsOrDefault(
-      java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.commons.TableColumnConfig defaultValue);
-  /**
-   * <pre>
-   * Map of table column details
-   * </pre>
-   *
-   * <code>map&lt;string, .api.commons.TableColumnConfig&gt; table_column_details = 1 [json_name = "tableColumnDetails"];</code>
-   */
-  com.tcn.cloud.api.api.commons.TableColumnConfig getTableColumnDetailsOrThrow(
-      java.lang.String key);
-
-  /**
-   * <pre>
-   * Default width for columns in the table
-   * </pre>
-   *
-   * <code>int64 default_column_width = 2 [json_name = "defaultColumnWidth"];</code>
-   * @return The defaultColumnWidth.
-   */
-  long getDefaultColumnWidth();
+  com.tcn.cloud.api.api.commons.TableColumnConfigOrBuilder getTableColumnDetailsOrBuilder(
+      int index);
 }

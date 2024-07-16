@@ -36,6 +36,14 @@ public enum OutputConfigurationType
    * <code>OUTPUT_CONFIGURATION_TYPE_MULTI_SERIES = 2;</code>
    */
   OUTPUT_CONFIGURATION_TYPE_MULTI_SERIES(2),
+  /**
+   * <pre>
+   * Output configuration for pie chart format
+   * </pre>
+   *
+   * <code>OUTPUT_CONFIGURATION_TYPE_PIE_CHART = 3;</code>
+   */
+  OUTPUT_CONFIGURATION_TYPE_PIE_CHART(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -63,6 +71,14 @@ public enum OutputConfigurationType
    * <code>OUTPUT_CONFIGURATION_TYPE_MULTI_SERIES = 2;</code>
    */
   public static final int OUTPUT_CONFIGURATION_TYPE_MULTI_SERIES_VALUE = 2;
+  /**
+   * <pre>
+   * Output configuration for pie chart format
+   * </pre>
+   *
+   * <code>OUTPUT_CONFIGURATION_TYPE_PIE_CHART = 3;</code>
+   */
+  public static final int OUTPUT_CONFIGURATION_TYPE_PIE_CHART_VALUE = 3;
 
 
   public final int getNumber() {
@@ -92,6 +108,7 @@ public enum OutputConfigurationType
       case 0: return OUTPUT_CONFIGURATION_TYPE_UNSPECIFIED;
       case 1: return OUTPUT_CONFIGURATION_TYPE_TABLE;
       case 2: return OUTPUT_CONFIGURATION_TYPE_MULTI_SERIES;
+      case 3: return OUTPUT_CONFIGURATION_TYPE_PIE_CHART;
       default: return null;
     }
   }

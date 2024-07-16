@@ -28,7 +28,6 @@ private static final long serialVersionUID = 0L;
     body_ = "";
     insightPermissionType_ = 0;
     resourceId_ = "";
-    outputConfigurations_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -336,67 +335,6 @@ private static final long serialVersionUID = 0L;
     return standardInsight_;
   }
 
-  public static final int OUTPUT_CONFIGURATIONS_FIELD_NUMBER = 11;
-  @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration> outputConfigurations_;
-  /**
-   * <pre>
-   * the output configurations for the insight
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration> getOutputConfigurationsList() {
-    return outputConfigurations_;
-  }
-  /**
-   * <pre>
-   * the output configurations for the insight
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder> 
-      getOutputConfigurationsOrBuilderList() {
-    return outputConfigurations_;
-  }
-  /**
-   * <pre>
-   * the output configurations for the insight
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-   */
-  @java.lang.Override
-  public int getOutputConfigurationsCount() {
-    return outputConfigurations_.size();
-  }
-  /**
-   * <pre>
-   * the output configurations for the insight
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration getOutputConfigurations(int index) {
-    return outputConfigurations_.get(index);
-  }
-  /**
-   * <pre>
-   * the output configurations for the insight
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder getOutputConfigurationsOrBuilder(
-      int index) {
-    return outputConfigurations_.get(index);
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -437,9 +375,6 @@ private static final long serialVersionUID = 0L;
     }
     if (standardInsight_ != false) {
       output.writeBool(10, standardInsight_);
-    }
-    for (int i = 0; i < outputConfigurations_.size(); i++) {
-      output.writeMessage(11, outputConfigurations_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -482,10 +417,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(10, standardInsight_);
     }
-    for (int i = 0; i < outputConfigurations_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(11, outputConfigurations_.get(i));
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -517,8 +448,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getResourceId())) return false;
     if (getStandardInsight()
         != other.getStandardInsight()) return false;
-    if (!getOutputConfigurationsList()
-        .equals(other.getOutputConfigurationsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -550,10 +479,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + STANDARD_INSIGHT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getStandardInsight());
-    if (getOutputConfigurationsCount() > 0) {
-      hash = (37 * hash) + OUTPUT_CONFIGURATIONS_FIELD_NUMBER;
-      hash = (53 * hash) + getOutputConfigurationsList().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -700,13 +625,6 @@ private static final long serialVersionUID = 0L;
       insightPermissionType_ = 0;
       resourceId_ = "";
       standardInsight_ = false;
-      if (outputConfigurationsBuilder_ == null) {
-        outputConfigurations_ = java.util.Collections.emptyList();
-      } else {
-        outputConfigurations_ = null;
-        outputConfigurationsBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000200);
       return this;
     }
 
@@ -733,22 +651,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.insights.Insight buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.insights.Insight result = new com.tcn.cloud.api.api.v1alpha1.insights.Insight(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.insights.Insight result) {
-      if (outputConfigurationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)) {
-          outputConfigurations_ = java.util.Collections.unmodifiableList(outputConfigurations_);
-          bitField0_ = (bitField0_ & ~0x00000200);
-        }
-        result.outputConfigurations_ = outputConfigurations_;
-      } else {
-        result.outputConfigurations_ = outputConfigurationsBuilder_.build();
-      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.insights.Insight result) {
@@ -861,32 +766,6 @@ private static final long serialVersionUID = 0L;
       if (other.getStandardInsight() != false) {
         setStandardInsight(other.getStandardInsight());
       }
-      if (outputConfigurationsBuilder_ == null) {
-        if (!other.outputConfigurations_.isEmpty()) {
-          if (outputConfigurations_.isEmpty()) {
-            outputConfigurations_ = other.outputConfigurations_;
-            bitField0_ = (bitField0_ & ~0x00000200);
-          } else {
-            ensureOutputConfigurationsIsMutable();
-            outputConfigurations_.addAll(other.outputConfigurations_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.outputConfigurations_.isEmpty()) {
-          if (outputConfigurationsBuilder_.isEmpty()) {
-            outputConfigurationsBuilder_.dispose();
-            outputConfigurationsBuilder_ = null;
-            outputConfigurations_ = other.outputConfigurations_;
-            bitField0_ = (bitField0_ & ~0x00000200);
-            outputConfigurationsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getOutputConfigurationsFieldBuilder() : null;
-          } else {
-            outputConfigurationsBuilder_.addAllMessages(other.outputConfigurations_);
-          }
-        }
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -958,19 +837,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 80
-            case 90: {
-              com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.parser(),
-                      extensionRegistry);
-              if (outputConfigurationsBuilder_ == null) {
-                ensureOutputConfigurationsIsMutable();
-                outputConfigurations_.add(m);
-              } else {
-                outputConfigurationsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1632,318 +1498,6 @@ private static final long serialVersionUID = 0L;
       standardInsight_ = false;
       onChanged();
       return this;
-    }
-
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration> outputConfigurations_ =
-      java.util.Collections.emptyList();
-    private void ensureOutputConfigurationsIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
-        outputConfigurations_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration>(outputConfigurations_);
-        bitField0_ |= 0x00000200;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder> outputConfigurationsBuilder_;
-
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration> getOutputConfigurationsList() {
-      if (outputConfigurationsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(outputConfigurations_);
-      } else {
-        return outputConfigurationsBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public int getOutputConfigurationsCount() {
-      if (outputConfigurationsBuilder_ == null) {
-        return outputConfigurations_.size();
-      } else {
-        return outputConfigurationsBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration getOutputConfigurations(int index) {
-      if (outputConfigurationsBuilder_ == null) {
-        return outputConfigurations_.get(index);
-      } else {
-        return outputConfigurationsBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public Builder setOutputConfigurations(
-        int index, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration value) {
-      if (outputConfigurationsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureOutputConfigurationsIsMutable();
-        outputConfigurations_.set(index, value);
-        onChanged();
-      } else {
-        outputConfigurationsBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public Builder setOutputConfigurations(
-        int index, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder builderForValue) {
-      if (outputConfigurationsBuilder_ == null) {
-        ensureOutputConfigurationsIsMutable();
-        outputConfigurations_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        outputConfigurationsBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public Builder addOutputConfigurations(com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration value) {
-      if (outputConfigurationsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureOutputConfigurationsIsMutable();
-        outputConfigurations_.add(value);
-        onChanged();
-      } else {
-        outputConfigurationsBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public Builder addOutputConfigurations(
-        int index, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration value) {
-      if (outputConfigurationsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureOutputConfigurationsIsMutable();
-        outputConfigurations_.add(index, value);
-        onChanged();
-      } else {
-        outputConfigurationsBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public Builder addOutputConfigurations(
-        com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder builderForValue) {
-      if (outputConfigurationsBuilder_ == null) {
-        ensureOutputConfigurationsIsMutable();
-        outputConfigurations_.add(builderForValue.build());
-        onChanged();
-      } else {
-        outputConfigurationsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public Builder addOutputConfigurations(
-        int index, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder builderForValue) {
-      if (outputConfigurationsBuilder_ == null) {
-        ensureOutputConfigurationsIsMutable();
-        outputConfigurations_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        outputConfigurationsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public Builder addAllOutputConfigurations(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration> values) {
-      if (outputConfigurationsBuilder_ == null) {
-        ensureOutputConfigurationsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, outputConfigurations_);
-        onChanged();
-      } else {
-        outputConfigurationsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public Builder clearOutputConfigurations() {
-      if (outputConfigurationsBuilder_ == null) {
-        outputConfigurations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
-        onChanged();
-      } else {
-        outputConfigurationsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public Builder removeOutputConfigurations(int index) {
-      if (outputConfigurationsBuilder_ == null) {
-        ensureOutputConfigurationsIsMutable();
-        outputConfigurations_.remove(index);
-        onChanged();
-      } else {
-        outputConfigurationsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder getOutputConfigurationsBuilder(
-        int index) {
-      return getOutputConfigurationsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder getOutputConfigurationsOrBuilder(
-        int index) {
-      if (outputConfigurationsBuilder_ == null) {
-        return outputConfigurations_.get(index);  } else {
-        return outputConfigurationsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder> 
-         getOutputConfigurationsOrBuilderList() {
-      if (outputConfigurationsBuilder_ != null) {
-        return outputConfigurationsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(outputConfigurations_);
-      }
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder addOutputConfigurationsBuilder() {
-      return getOutputConfigurationsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder addOutputConfigurationsBuilder(
-        int index) {
-      return getOutputConfigurationsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * the output configurations for the insight
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder> 
-         getOutputConfigurationsBuilderList() {
-      return getOutputConfigurationsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder> 
-        getOutputConfigurationsFieldBuilder() {
-      if (outputConfigurationsBuilder_ == null) {
-        outputConfigurationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder>(
-                outputConfigurations_,
-                ((bitField0_ & 0x00000200) != 0),
-                getParentForChildren(),
-                isClean());
-        outputConfigurations_ = null;
-      }
-      return outputConfigurationsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -22,9 +22,7 @@ private static final long serialVersionUID = 0L;
   private TableColumnConfig() {
     columnName_ = "";
     renamedAs_ = "";
-    columnFormatType_ = 0;
-    columnFormatValues_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    operations_ = java.util.Collections.emptyList();
     columnSummary_ = 0;
     description_ = "";
     sortDirection_ = 0;
@@ -174,93 +172,75 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int COLUMN_FORMAT_TYPE_FIELD_NUMBER = 5;
-  private int columnFormatType_ = 0;
-  /**
-   * <pre>
-   * Format type for the column
-   * </pre>
-   *
-   * <code>.api.commons.OutputConfigurationColumnFormatType column_format_type = 5 [json_name = "columnFormatType"];</code>
-   * @return The enum numeric value on the wire for columnFormatType.
-   */
-  @java.lang.Override public int getColumnFormatTypeValue() {
-    return columnFormatType_;
-  }
-  /**
-   * <pre>
-   * Format type for the column
-   * </pre>
-   *
-   * <code>.api.commons.OutputConfigurationColumnFormatType column_format_type = 5 [json_name = "columnFormatType"];</code>
-   * @return The columnFormatType.
-   */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.OutputConfigurationColumnFormatType getColumnFormatType() {
-    com.tcn.cloud.api.api.commons.OutputConfigurationColumnFormatType result = com.tcn.cloud.api.api.commons.OutputConfigurationColumnFormatType.forNumber(columnFormatType_);
-    return result == null ? com.tcn.cloud.api.api.commons.OutputConfigurationColumnFormatType.UNRECOGNIZED : result;
-  }
-
-  public static final int COLUMN_FORMAT_VALUES_FIELD_NUMBER = 6;
+  public static final int OPERATIONS_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList columnFormatValues_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private java.util.List<com.tcn.cloud.api.api.commons.ColumnOperation> operations_;
   /**
    * <pre>
-   * Format values for the column
+   * Operations to be performed on the column
    * </pre>
    *
-   * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-   * @return A list containing the columnFormatValues.
+   * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
    */
-  public com.google.protobuf.ProtocolStringList
-      getColumnFormatValuesList() {
-    return columnFormatValues_;
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.ColumnOperation> getOperationsList() {
+    return operations_;
   }
   /**
    * <pre>
-   * Format values for the column
+   * Operations to be performed on the column
    * </pre>
    *
-   * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-   * @return The count of columnFormatValues.
+   * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
    */
-  public int getColumnFormatValuesCount() {
-    return columnFormatValues_.size();
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.ColumnOperationOrBuilder> 
+      getOperationsOrBuilderList() {
+    return operations_;
   }
   /**
    * <pre>
-   * Format values for the column
+   * Operations to be performed on the column
    * </pre>
    *
-   * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-   * @param index The index of the element to return.
-   * @return The columnFormatValues at the given index.
+   * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
    */
-  public java.lang.String getColumnFormatValues(int index) {
-    return columnFormatValues_.get(index);
+  @java.lang.Override
+  public int getOperationsCount() {
+    return operations_.size();
   }
   /**
    * <pre>
-   * Format values for the column
+   * Operations to be performed on the column
    * </pre>
    *
-   * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the columnFormatValues at the given index.
+   * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
    */
-  public com.google.protobuf.ByteString
-      getColumnFormatValuesBytes(int index) {
-    return columnFormatValues_.getByteString(index);
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ColumnOperation getOperations(int index) {
+    return operations_.get(index);
+  }
+  /**
+   * <pre>
+   * Operations to be performed on the column
+   * </pre>
+   *
+   * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ColumnOperationOrBuilder getOperationsOrBuilder(
+      int index) {
+    return operations_.get(index);
   }
 
-  public static final int COLUMN_SUMMARY_FIELD_NUMBER = 7;
+  public static final int COLUMN_SUMMARY_FIELD_NUMBER = 6;
   private int columnSummary_ = 0;
   /**
    * <pre>
    * Summary for the column (AVG, SUM, MIN, MAX)
    * </pre>
    *
-   * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 7 [json_name = "columnSummary"];</code>
+   * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 6 [json_name = "columnSummary"];</code>
    * @return The enum numeric value on the wire for columnSummary.
    */
   @java.lang.Override public int getColumnSummaryValue() {
@@ -271,7 +251,7 @@ private static final long serialVersionUID = 0L;
    * Summary for the column (AVG, SUM, MIN, MAX)
    * </pre>
    *
-   * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 7 [json_name = "columnSummary"];</code>
+   * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 6 [json_name = "columnSummary"];</code>
    * @return The columnSummary.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.OutputConfigurationColumnSummaryType getColumnSummary() {
@@ -279,7 +259,7 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.OutputConfigurationColumnSummaryType.UNRECOGNIZED : result;
   }
 
-  public static final int DESCRIPTION_FIELD_NUMBER = 8;
+  public static final int DESCRIPTION_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
   /**
@@ -287,7 +267,7 @@ private static final long serialVersionUID = 0L;
    * Description of the column
    * </pre>
    *
-   * <code>string description = 8 [json_name = "description"];</code>
+   * <code>string description = 7 [json_name = "description"];</code>
    * @return The description.
    */
   @java.lang.Override
@@ -308,7 +288,7 @@ private static final long serialVersionUID = 0L;
    * Description of the column
    * </pre>
    *
-   * <code>string description = 8 [json_name = "description"];</code>
+   * <code>string description = 7 [json_name = "description"];</code>
    * @return The bytes for description.
    */
   @java.lang.Override
@@ -326,29 +306,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ORDER_FIELD_NUMBER = 9;
-  private long order_ = 0L;
-  /**
-   * <pre>
-   * Order of the column
-   * </pre>
-   *
-   * <code>int64 order = 9 [json_name = "order"];</code>
-   * @return The order.
-   */
-  @java.lang.Override
-  public long getOrder() {
-    return order_;
-  }
-
-  public static final int SORT_DIRECTION_FIELD_NUMBER = 10;
+  public static final int SORT_DIRECTION_FIELD_NUMBER = 8;
   private int sortDirection_ = 0;
   /**
    * <pre>
    * The sorting direction of the column
    * </pre>
    *
-   * <code>.api.commons.ColumnSort sort_direction = 10 [json_name = "sortDirection"];</code>
+   * <code>.api.commons.ColumnSort sort_direction = 8 [json_name = "sortDirection"];</code>
    * @return The enum numeric value on the wire for sortDirection.
    */
   @java.lang.Override public int getSortDirectionValue() {
@@ -359,7 +324,7 @@ private static final long serialVersionUID = 0L;
    * The sorting direction of the column
    * </pre>
    *
-   * <code>.api.commons.ColumnSort sort_direction = 10 [json_name = "sortDirection"];</code>
+   * <code>.api.commons.ColumnSort sort_direction = 8 [json_name = "sortDirection"];</code>
    * @return The sortDirection.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ColumnSort getSortDirection() {
@@ -393,23 +358,17 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(renamedAs_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, renamedAs_);
     }
-    if (columnFormatType_ != com.tcn.cloud.api.api.commons.OutputConfigurationColumnFormatType.OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_UNSPECIFIED.getNumber()) {
-      output.writeEnum(5, columnFormatType_);
-    }
-    for (int i = 0; i < columnFormatValues_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, columnFormatValues_.getRaw(i));
+    for (int i = 0; i < operations_.size(); i++) {
+      output.writeMessage(5, operations_.get(i));
     }
     if (columnSummary_ != com.tcn.cloud.api.api.commons.OutputConfigurationColumnSummaryType.OUTPUT_CONFIGURATION_COLUMN_SUMMARY_TYPE_UNSPECIFIED.getNumber()) {
-      output.writeEnum(7, columnSummary_);
+      output.writeEnum(6, columnSummary_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, description_);
-    }
-    if (order_ != 0L) {
-      output.writeInt64(9, order_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, description_);
     }
     if (sortDirection_ != com.tcn.cloud.api.api.commons.ColumnSort.COLUMN_SORT_UNSPECIFIED.getNumber()) {
-      output.writeEnum(10, sortDirection_);
+      output.writeEnum(8, sortDirection_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -434,32 +393,20 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(renamedAs_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, renamedAs_);
     }
-    if (columnFormatType_ != com.tcn.cloud.api.api.commons.OutputConfigurationColumnFormatType.OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_UNSPECIFIED.getNumber()) {
+    for (int i = 0; i < operations_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(5, columnFormatType_);
-    }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < columnFormatValues_.size(); i++) {
-        dataSize += computeStringSizeNoTag(columnFormatValues_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getColumnFormatValuesList().size();
+        .computeMessageSize(5, operations_.get(i));
     }
     if (columnSummary_ != com.tcn.cloud.api.api.commons.OutputConfigurationColumnSummaryType.OUTPUT_CONFIGURATION_COLUMN_SUMMARY_TYPE_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(7, columnSummary_);
+        .computeEnumSize(6, columnSummary_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, description_);
-    }
-    if (order_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(9, order_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, description_);
     }
     if (sortDirection_ != com.tcn.cloud.api.api.commons.ColumnSort.COLUMN_SORT_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(10, sortDirection_);
+        .computeEnumSize(8, sortDirection_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -484,14 +431,11 @@ private static final long serialVersionUID = 0L;
         != other.getHideColumn()) return false;
     if (!getRenamedAs()
         .equals(other.getRenamedAs())) return false;
-    if (columnFormatType_ != other.columnFormatType_) return false;
-    if (!getColumnFormatValuesList()
-        .equals(other.getColumnFormatValuesList())) return false;
+    if (!getOperationsList()
+        .equals(other.getOperationsList())) return false;
     if (columnSummary_ != other.columnSummary_) return false;
     if (!getDescription()
         .equals(other.getDescription())) return false;
-    if (getOrder()
-        != other.getOrder()) return false;
     if (sortDirection_ != other.sortDirection_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -514,19 +458,14 @@ private static final long serialVersionUID = 0L;
         getHideColumn());
     hash = (37 * hash) + RENAMED_AS_FIELD_NUMBER;
     hash = (53 * hash) + getRenamedAs().hashCode();
-    hash = (37 * hash) + COLUMN_FORMAT_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + columnFormatType_;
-    if (getColumnFormatValuesCount() > 0) {
-      hash = (37 * hash) + COLUMN_FORMAT_VALUES_FIELD_NUMBER;
-      hash = (53 * hash) + getColumnFormatValuesList().hashCode();
+    if (getOperationsCount() > 0) {
+      hash = (37 * hash) + OPERATIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getOperationsList().hashCode();
     }
     hash = (37 * hash) + COLUMN_SUMMARY_FIELD_NUMBER;
     hash = (53 * hash) + columnSummary_;
     hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getDescription().hashCode();
-    hash = (37 * hash) + ORDER_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getOrder());
     hash = (37 * hash) + SORT_DIRECTION_FIELD_NUMBER;
     hash = (53 * hash) + sortDirection_;
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -668,12 +607,15 @@ private static final long serialVersionUID = 0L;
       columnWidth_ = 0L;
       hideColumn_ = false;
       renamedAs_ = "";
-      columnFormatType_ = 0;
-      columnFormatValues_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      if (operationsBuilder_ == null) {
+        operations_ = java.util.Collections.emptyList();
+      } else {
+        operations_ = null;
+        operationsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000010);
       columnSummary_ = 0;
       description_ = "";
-      order_ = 0L;
       sortDirection_ = 0;
       return this;
     }
@@ -701,9 +643,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.TableColumnConfig buildPartial() {
       com.tcn.cloud.api.api.commons.TableColumnConfig result = new com.tcn.cloud.api.api.commons.TableColumnConfig(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.TableColumnConfig result) {
+      if (operationsBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          operations_ = java.util.Collections.unmodifiableList(operations_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.operations_ = operations_;
+      } else {
+        result.operations_ = operationsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.TableColumnConfig result) {
@@ -720,23 +675,13 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.renamedAs_ = renamedAs_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.columnFormatType_ = columnFormatType_;
-      }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        columnFormatValues_.makeImmutable();
-        result.columnFormatValues_ = columnFormatValues_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.columnSummary_ = columnSummary_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.description_ = description_;
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.order_ = order_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.sortDirection_ = sortDirection_;
       }
     }
@@ -801,29 +746,39 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
-      if (other.columnFormatType_ != 0) {
-        setColumnFormatTypeValue(other.getColumnFormatTypeValue());
-      }
-      if (!other.columnFormatValues_.isEmpty()) {
-        if (columnFormatValues_.isEmpty()) {
-          columnFormatValues_ = other.columnFormatValues_;
-          bitField0_ |= 0x00000020;
-        } else {
-          ensureColumnFormatValuesIsMutable();
-          columnFormatValues_.addAll(other.columnFormatValues_);
+      if (operationsBuilder_ == null) {
+        if (!other.operations_.isEmpty()) {
+          if (operations_.isEmpty()) {
+            operations_ = other.operations_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureOperationsIsMutable();
+            operations_.addAll(other.operations_);
+          }
+          onChanged();
         }
-        onChanged();
+      } else {
+        if (!other.operations_.isEmpty()) {
+          if (operationsBuilder_.isEmpty()) {
+            operationsBuilder_.dispose();
+            operationsBuilder_ = null;
+            operations_ = other.operations_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+            operationsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getOperationsFieldBuilder() : null;
+          } else {
+            operationsBuilder_.addAllMessages(other.operations_);
+          }
+        }
       }
       if (other.columnSummary_ != 0) {
         setColumnSummaryValue(other.getColumnSummaryValue());
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000040;
         onChanged();
-      }
-      if (other.getOrder() != 0L) {
-        setOrder(other.getOrder());
       }
       if (other.sortDirection_ != 0) {
         setSortDirectionValue(other.getSortDirectionValue());
@@ -874,37 +829,34 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
-            case 40: {
-              columnFormatType_ = input.readEnum();
-              bitField0_ |= 0x00000010;
+            case 42: {
+              com.tcn.cloud.api.api.commons.ColumnOperation m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.ColumnOperation.parser(),
+                      extensionRegistry);
+              if (operationsBuilder_ == null) {
+                ensureOperationsIsMutable();
+                operations_.add(m);
+              } else {
+                operationsBuilder_.addMessage(m);
+              }
               break;
-            } // case 40
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureColumnFormatValuesIsMutable();
-              columnFormatValues_.add(s);
-              break;
-            } // case 50
-            case 56: {
+            } // case 42
+            case 48: {
               columnSummary_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 58: {
+              description_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000040;
               break;
-            } // case 56
-            case 66: {
-              description_ = input.readStringRequireUtf8();
+            } // case 58
+            case 64: {
+              sortDirection_ = input.readEnum();
               bitField0_ |= 0x00000080;
               break;
-            } // case 66
-            case 72: {
-              order_ = input.readInt64();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 72
-            case 80: {
-              sortDirection_ = input.readEnum();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 80
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1194,224 +1146,316 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int columnFormatType_ = 0;
-    /**
-     * <pre>
-     * Format type for the column
-     * </pre>
-     *
-     * <code>.api.commons.OutputConfigurationColumnFormatType column_format_type = 5 [json_name = "columnFormatType"];</code>
-     * @return The enum numeric value on the wire for columnFormatType.
-     */
-    @java.lang.Override public int getColumnFormatTypeValue() {
-      return columnFormatType_;
-    }
-    /**
-     * <pre>
-     * Format type for the column
-     * </pre>
-     *
-     * <code>.api.commons.OutputConfigurationColumnFormatType column_format_type = 5 [json_name = "columnFormatType"];</code>
-     * @param value The enum numeric value on the wire for columnFormatType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setColumnFormatTypeValue(int value) {
-      columnFormatType_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Format type for the column
-     * </pre>
-     *
-     * <code>.api.commons.OutputConfigurationColumnFormatType column_format_type = 5 [json_name = "columnFormatType"];</code>
-     * @return The columnFormatType.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.OutputConfigurationColumnFormatType getColumnFormatType() {
-      com.tcn.cloud.api.api.commons.OutputConfigurationColumnFormatType result = com.tcn.cloud.api.api.commons.OutputConfigurationColumnFormatType.forNumber(columnFormatType_);
-      return result == null ? com.tcn.cloud.api.api.commons.OutputConfigurationColumnFormatType.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * Format type for the column
-     * </pre>
-     *
-     * <code>.api.commons.OutputConfigurationColumnFormatType column_format_type = 5 [json_name = "columnFormatType"];</code>
-     * @param value The columnFormatType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setColumnFormatType(com.tcn.cloud.api.api.commons.OutputConfigurationColumnFormatType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000010;
-      columnFormatType_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Format type for the column
-     * </pre>
-     *
-     * <code>.api.commons.OutputConfigurationColumnFormatType column_format_type = 5 [json_name = "columnFormatType"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearColumnFormatType() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      columnFormatType_ = 0;
-      onChanged();
-      return this;
+    private java.util.List<com.tcn.cloud.api.api.commons.ColumnOperation> operations_ =
+      java.util.Collections.emptyList();
+    private void ensureOperationsIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        operations_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.ColumnOperation>(operations_);
+        bitField0_ |= 0x00000010;
+       }
     }
 
-    private com.google.protobuf.LazyStringArrayList columnFormatValues_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureColumnFormatValuesIsMutable() {
-      if (!columnFormatValues_.isModifiable()) {
-        columnFormatValues_ = new com.google.protobuf.LazyStringArrayList(columnFormatValues_);
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ColumnOperation, com.tcn.cloud.api.api.commons.ColumnOperation.Builder, com.tcn.cloud.api.api.commons.ColumnOperationOrBuilder> operationsBuilder_;
+
+    /**
+     * <pre>
+     * Operations to be performed on the column
+     * </pre>
+     *
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.ColumnOperation> getOperationsList() {
+      if (operationsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(operations_);
+      } else {
+        return operationsBuilder_.getMessageList();
       }
-      bitField0_ |= 0x00000020;
     }
     /**
      * <pre>
-     * Format values for the column
+     * Operations to be performed on the column
      * </pre>
      *
-     * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-     * @return A list containing the columnFormatValues.
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
      */
-    public com.google.protobuf.ProtocolStringList
-        getColumnFormatValuesList() {
-      columnFormatValues_.makeImmutable();
-      return columnFormatValues_;
+    public int getOperationsCount() {
+      if (operationsBuilder_ == null) {
+        return operations_.size();
+      } else {
+        return operationsBuilder_.getCount();
+      }
     }
     /**
      * <pre>
-     * Format values for the column
+     * Operations to be performed on the column
      * </pre>
      *
-     * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-     * @return The count of columnFormatValues.
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
      */
-    public int getColumnFormatValuesCount() {
-      return columnFormatValues_.size();
+    public com.tcn.cloud.api.api.commons.ColumnOperation getOperations(int index) {
+      if (operationsBuilder_ == null) {
+        return operations_.get(index);
+      } else {
+        return operationsBuilder_.getMessage(index);
+      }
     }
     /**
      * <pre>
-     * Format values for the column
+     * Operations to be performed on the column
      * </pre>
      *
-     * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-     * @param index The index of the element to return.
-     * @return The columnFormatValues at the given index.
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
      */
-    public java.lang.String getColumnFormatValues(int index) {
-      return columnFormatValues_.get(index);
-    }
-    /**
-     * <pre>
-     * Format values for the column
-     * </pre>
-     *
-     * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the columnFormatValues at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getColumnFormatValuesBytes(int index) {
-      return columnFormatValues_.getByteString(index);
-    }
-    /**
-     * <pre>
-     * Format values for the column
-     * </pre>
-     *
-     * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-     * @param index The index to set the value at.
-     * @param value The columnFormatValues to set.
-     * @return This builder for chaining.
-     */
-    public Builder setColumnFormatValues(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureColumnFormatValuesIsMutable();
-      columnFormatValues_.set(index, value);
-      bitField0_ |= 0x00000020;
-      onChanged();
+    public Builder setOperations(
+        int index, com.tcn.cloud.api.api.commons.ColumnOperation value) {
+      if (operationsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOperationsIsMutable();
+        operations_.set(index, value);
+        onChanged();
+      } else {
+        operationsBuilder_.setMessage(index, value);
+      }
       return this;
     }
     /**
      * <pre>
-     * Format values for the column
+     * Operations to be performed on the column
      * </pre>
      *
-     * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-     * @param value The columnFormatValues to add.
-     * @return This builder for chaining.
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
      */
-    public Builder addColumnFormatValues(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureColumnFormatValuesIsMutable();
-      columnFormatValues_.add(value);
-      bitField0_ |= 0x00000020;
-      onChanged();
+    public Builder setOperations(
+        int index, com.tcn.cloud.api.api.commons.ColumnOperation.Builder builderForValue) {
+      if (operationsBuilder_ == null) {
+        ensureOperationsIsMutable();
+        operations_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        operationsBuilder_.setMessage(index, builderForValue.build());
+      }
       return this;
     }
     /**
      * <pre>
-     * Format values for the column
+     * Operations to be performed on the column
      * </pre>
      *
-     * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-     * @param values The columnFormatValues to add.
-     * @return This builder for chaining.
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
      */
-    public Builder addAllColumnFormatValues(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureColumnFormatValuesIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, columnFormatValues_);
-      bitField0_ |= 0x00000020;
-      onChanged();
+    public Builder addOperations(com.tcn.cloud.api.api.commons.ColumnOperation value) {
+      if (operationsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOperationsIsMutable();
+        operations_.add(value);
+        onChanged();
+      } else {
+        operationsBuilder_.addMessage(value);
+      }
       return this;
     }
     /**
      * <pre>
-     * Format values for the column
+     * Operations to be performed on the column
      * </pre>
      *
-     * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-     * @return This builder for chaining.
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
      */
-    public Builder clearColumnFormatValues() {
-      columnFormatValues_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000020);;
-      onChanged();
+    public Builder addOperations(
+        int index, com.tcn.cloud.api.api.commons.ColumnOperation value) {
+      if (operationsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOperationsIsMutable();
+        operations_.add(index, value);
+        onChanged();
+      } else {
+        operationsBuilder_.addMessage(index, value);
+      }
       return this;
     }
     /**
      * <pre>
-     * Format values for the column
+     * Operations to be performed on the column
      * </pre>
      *
-     * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-     * @param value The bytes of the columnFormatValues to add.
-     * @return This builder for chaining.
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
      */
-    public Builder addColumnFormatValuesBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureColumnFormatValuesIsMutable();
-      columnFormatValues_.add(value);
-      bitField0_ |= 0x00000020;
-      onChanged();
+    public Builder addOperations(
+        com.tcn.cloud.api.api.commons.ColumnOperation.Builder builderForValue) {
+      if (operationsBuilder_ == null) {
+        ensureOperationsIsMutable();
+        operations_.add(builderForValue.build());
+        onChanged();
+      } else {
+        operationsBuilder_.addMessage(builderForValue.build());
+      }
       return this;
+    }
+    /**
+     * <pre>
+     * Operations to be performed on the column
+     * </pre>
+     *
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
+     */
+    public Builder addOperations(
+        int index, com.tcn.cloud.api.api.commons.ColumnOperation.Builder builderForValue) {
+      if (operationsBuilder_ == null) {
+        ensureOperationsIsMutable();
+        operations_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        operationsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Operations to be performed on the column
+     * </pre>
+     *
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
+     */
+    public Builder addAllOperations(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.ColumnOperation> values) {
+      if (operationsBuilder_ == null) {
+        ensureOperationsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, operations_);
+        onChanged();
+      } else {
+        operationsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Operations to be performed on the column
+     * </pre>
+     *
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
+     */
+    public Builder clearOperations() {
+      if (operationsBuilder_ == null) {
+        operations_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+      } else {
+        operationsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Operations to be performed on the column
+     * </pre>
+     *
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
+     */
+    public Builder removeOperations(int index) {
+      if (operationsBuilder_ == null) {
+        ensureOperationsIsMutable();
+        operations_.remove(index);
+        onChanged();
+      } else {
+        operationsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Operations to be performed on the column
+     * </pre>
+     *
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ColumnOperation.Builder getOperationsBuilder(
+        int index) {
+      return getOperationsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Operations to be performed on the column
+     * </pre>
+     *
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ColumnOperationOrBuilder getOperationsOrBuilder(
+        int index) {
+      if (operationsBuilder_ == null) {
+        return operations_.get(index);  } else {
+        return operationsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Operations to be performed on the column
+     * </pre>
+     *
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.ColumnOperationOrBuilder> 
+         getOperationsOrBuilderList() {
+      if (operationsBuilder_ != null) {
+        return operationsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(operations_);
+      }
+    }
+    /**
+     * <pre>
+     * Operations to be performed on the column
+     * </pre>
+     *
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ColumnOperation.Builder addOperationsBuilder() {
+      return getOperationsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.ColumnOperation.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Operations to be performed on the column
+     * </pre>
+     *
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ColumnOperation.Builder addOperationsBuilder(
+        int index) {
+      return getOperationsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.ColumnOperation.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Operations to be performed on the column
+     * </pre>
+     *
+     * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.ColumnOperation.Builder> 
+         getOperationsBuilderList() {
+      return getOperationsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ColumnOperation, com.tcn.cloud.api.api.commons.ColumnOperation.Builder, com.tcn.cloud.api.api.commons.ColumnOperationOrBuilder> 
+        getOperationsFieldBuilder() {
+      if (operationsBuilder_ == null) {
+        operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.ColumnOperation, com.tcn.cloud.api.api.commons.ColumnOperation.Builder, com.tcn.cloud.api.api.commons.ColumnOperationOrBuilder>(
+                operations_,
+                ((bitField0_ & 0x00000010) != 0),
+                getParentForChildren(),
+                isClean());
+        operations_ = null;
+      }
+      return operationsBuilder_;
     }
 
     private int columnSummary_ = 0;
@@ -1420,7 +1464,7 @@ private static final long serialVersionUID = 0L;
      * Summary for the column (AVG, SUM, MIN, MAX)
      * </pre>
      *
-     * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 7 [json_name = "columnSummary"];</code>
+     * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 6 [json_name = "columnSummary"];</code>
      * @return The enum numeric value on the wire for columnSummary.
      */
     @java.lang.Override public int getColumnSummaryValue() {
@@ -1431,13 +1475,13 @@ private static final long serialVersionUID = 0L;
      * Summary for the column (AVG, SUM, MIN, MAX)
      * </pre>
      *
-     * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 7 [json_name = "columnSummary"];</code>
+     * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 6 [json_name = "columnSummary"];</code>
      * @param value The enum numeric value on the wire for columnSummary to set.
      * @return This builder for chaining.
      */
     public Builder setColumnSummaryValue(int value) {
       columnSummary_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1446,7 +1490,7 @@ private static final long serialVersionUID = 0L;
      * Summary for the column (AVG, SUM, MIN, MAX)
      * </pre>
      *
-     * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 7 [json_name = "columnSummary"];</code>
+     * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 6 [json_name = "columnSummary"];</code>
      * @return The columnSummary.
      */
     @java.lang.Override
@@ -1459,7 +1503,7 @@ private static final long serialVersionUID = 0L;
      * Summary for the column (AVG, SUM, MIN, MAX)
      * </pre>
      *
-     * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 7 [json_name = "columnSummary"];</code>
+     * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 6 [json_name = "columnSummary"];</code>
      * @param value The columnSummary to set.
      * @return This builder for chaining.
      */
@@ -1467,7 +1511,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       columnSummary_ = value.getNumber();
       onChanged();
       return this;
@@ -1477,11 +1521,11 @@ private static final long serialVersionUID = 0L;
      * Summary for the column (AVG, SUM, MIN, MAX)
      * </pre>
      *
-     * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 7 [json_name = "columnSummary"];</code>
+     * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 6 [json_name = "columnSummary"];</code>
      * @return This builder for chaining.
      */
     public Builder clearColumnSummary() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000020);
       columnSummary_ = 0;
       onChanged();
       return this;
@@ -1493,7 +1537,7 @@ private static final long serialVersionUID = 0L;
      * Description of the column
      * </pre>
      *
-     * <code>string description = 8 [json_name = "description"];</code>
+     * <code>string description = 7 [json_name = "description"];</code>
      * @return The description.
      */
     public java.lang.String getDescription() {
@@ -1513,7 +1557,7 @@ private static final long serialVersionUID = 0L;
      * Description of the column
      * </pre>
      *
-     * <code>string description = 8 [json_name = "description"];</code>
+     * <code>string description = 7 [json_name = "description"];</code>
      * @return The bytes for description.
      */
     public com.google.protobuf.ByteString
@@ -1534,7 +1578,7 @@ private static final long serialVersionUID = 0L;
      * Description of the column
      * </pre>
      *
-     * <code>string description = 8 [json_name = "description"];</code>
+     * <code>string description = 7 [json_name = "description"];</code>
      * @param value The description to set.
      * @return This builder for chaining.
      */
@@ -1542,7 +1586,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       description_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1551,12 +1595,12 @@ private static final long serialVersionUID = 0L;
      * Description of the column
      * </pre>
      *
-     * <code>string description = 8 [json_name = "description"];</code>
+     * <code>string description = 7 [json_name = "description"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1565,7 +1609,7 @@ private static final long serialVersionUID = 0L;
      * Description of the column
      * </pre>
      *
-     * <code>string description = 8 [json_name = "description"];</code>
+     * <code>string description = 7 [json_name = "description"];</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
@@ -1574,51 +1618,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       description_ = value;
-      bitField0_ |= 0x00000080;
-      onChanged();
-      return this;
-    }
-
-    private long order_ ;
-    /**
-     * <pre>
-     * Order of the column
-     * </pre>
-     *
-     * <code>int64 order = 9 [json_name = "order"];</code>
-     * @return The order.
-     */
-    @java.lang.Override
-    public long getOrder() {
-      return order_;
-    }
-    /**
-     * <pre>
-     * Order of the column
-     * </pre>
-     *
-     * <code>int64 order = 9 [json_name = "order"];</code>
-     * @param value The order to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrder(long value) {
-
-      order_ = value;
-      bitField0_ |= 0x00000100;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Order of the column
-     * </pre>
-     *
-     * <code>int64 order = 9 [json_name = "order"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOrder() {
-      bitField0_ = (bitField0_ & ~0x00000100);
-      order_ = 0L;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1629,7 +1629,7 @@ private static final long serialVersionUID = 0L;
      * The sorting direction of the column
      * </pre>
      *
-     * <code>.api.commons.ColumnSort sort_direction = 10 [json_name = "sortDirection"];</code>
+     * <code>.api.commons.ColumnSort sort_direction = 8 [json_name = "sortDirection"];</code>
      * @return The enum numeric value on the wire for sortDirection.
      */
     @java.lang.Override public int getSortDirectionValue() {
@@ -1640,13 +1640,13 @@ private static final long serialVersionUID = 0L;
      * The sorting direction of the column
      * </pre>
      *
-     * <code>.api.commons.ColumnSort sort_direction = 10 [json_name = "sortDirection"];</code>
+     * <code>.api.commons.ColumnSort sort_direction = 8 [json_name = "sortDirection"];</code>
      * @param value The enum numeric value on the wire for sortDirection to set.
      * @return This builder for chaining.
      */
     public Builder setSortDirectionValue(int value) {
       sortDirection_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1655,7 +1655,7 @@ private static final long serialVersionUID = 0L;
      * The sorting direction of the column
      * </pre>
      *
-     * <code>.api.commons.ColumnSort sort_direction = 10 [json_name = "sortDirection"];</code>
+     * <code>.api.commons.ColumnSort sort_direction = 8 [json_name = "sortDirection"];</code>
      * @return The sortDirection.
      */
     @java.lang.Override
@@ -1668,7 +1668,7 @@ private static final long serialVersionUID = 0L;
      * The sorting direction of the column
      * </pre>
      *
-     * <code>.api.commons.ColumnSort sort_direction = 10 [json_name = "sortDirection"];</code>
+     * <code>.api.commons.ColumnSort sort_direction = 8 [json_name = "sortDirection"];</code>
      * @param value The sortDirection to set.
      * @return This builder for chaining.
      */
@@ -1676,7 +1676,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000080;
       sortDirection_ = value.getNumber();
       onChanged();
       return this;
@@ -1686,11 +1686,11 @@ private static final long serialVersionUID = 0L;
      * The sorting direction of the column
      * </pre>
      *
-     * <code>.api.commons.ColumnSort sort_direction = 10 [json_name = "sortDirection"];</code>
+     * <code>.api.commons.ColumnSort sort_direction = 8 [json_name = "sortDirection"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSortDirection() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000080);
       sortDirection_ = 0;
       onChanged();
       return this;

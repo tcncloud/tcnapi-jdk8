@@ -154,48 +154,4 @@ public interface InsightOrBuilder extends
    * @return The standardInsight.
    */
   boolean getStandardInsight();
-
-  /**
-   * <pre>
-   * the output configurations for the insight
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration> 
-      getOutputConfigurationsList();
-  /**
-   * <pre>
-   * the output configurations for the insight
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration getOutputConfigurations(int index);
-  /**
-   * <pre>
-   * the output configurations for the insight
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-   */
-  int getOutputConfigurationsCount();
-  /**
-   * <pre>
-   * the output configurations for the insight
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder> 
-      getOutputConfigurationsOrBuilderList();
-  /**
-   * <pre>
-   * the output configurations for the insight
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.insights.OutputConfiguration output_configurations = 11 [json_name = "outputConfigurations"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder getOutputConfigurationsOrBuilder(
-      int index);
 }

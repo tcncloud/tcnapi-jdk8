@@ -52,8 +52,8 @@ private static final long serialVersionUID = 0L;
   public enum BodyCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    BLOB(6),
-    TABLE_VISUALIZATION(7),
+    BLOB(7),
+    TABLE_VISUALIZATION(8),
     BODY_NOT_SET(0);
     private final int value;
     private BodyCase(int value) {
@@ -71,8 +71,8 @@ private static final long serialVersionUID = 0L;
 
     public static BodyCase forNumber(int value) {
       switch (value) {
-        case 6: return BLOB;
-        case 7: return TABLE_VISUALIZATION;
+        case 7: return BLOB;
+        case 8: return TABLE_VISUALIZATION;
         case 0: return BODY_NOT_SET;
         default: return null;
       }
@@ -255,29 +255,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int BLOB_FIELD_NUMBER = 6;
+  public static final int IS_DEFAULT_FIELD_NUMBER = 6;
+  private boolean isDefault_ = false;
+  /**
+   * <pre>
+   * is_default flag for the output configuration
+   * </pre>
+   *
+   * <code>bool is_default = 6 [json_name = "isDefault"];</code>
+   * @return The isDefault.
+   */
+  @java.lang.Override
+  public boolean getIsDefault() {
+    return isDefault_;
+  }
+
+  public static final int BLOB_FIELD_NUMBER = 7;
   /**
    * <pre>
    * Blob data for the output configuration
    * </pre>
    *
-   * <code>string blob = 6 [json_name = "blob"];</code>
+   * <code>string blob = 7 [json_name = "blob"];</code>
    * @return Whether the blob field is set.
    */
   public boolean hasBlob() {
-    return bodyCase_ == 6;
+    return bodyCase_ == 7;
   }
   /**
    * <pre>
    * Blob data for the output configuration
    * </pre>
    *
-   * <code>string blob = 6 [json_name = "blob"];</code>
+   * <code>string blob = 7 [json_name = "blob"];</code>
    * @return The blob.
    */
   public java.lang.String getBlob() {
     java.lang.Object ref = "";
-    if (bodyCase_ == 6) {
+    if (bodyCase_ == 7) {
       ref = body_;
     }
     if (ref instanceof java.lang.String) {
@@ -286,7 +301,7 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      if (bodyCase_ == 6) {
+      if (bodyCase_ == 7) {
         body_ = s;
       }
       return s;
@@ -297,20 +312,20 @@ private static final long serialVersionUID = 0L;
    * Blob data for the output configuration
    * </pre>
    *
-   * <code>string blob = 6 [json_name = "blob"];</code>
+   * <code>string blob = 7 [json_name = "blob"];</code>
    * @return The bytes for blob.
    */
   public com.google.protobuf.ByteString
       getBlobBytes() {
     java.lang.Object ref = "";
-    if (bodyCase_ == 6) {
+    if (bodyCase_ == 7) {
       ref = body_;
     }
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      if (bodyCase_ == 6) {
+      if (bodyCase_ == 7) {
         body_ = b;
       }
       return b;
@@ -319,30 +334,30 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TABLE_VISUALIZATION_FIELD_NUMBER = 7;
+  public static final int TABLE_VISUALIZATION_FIELD_NUMBER = 8;
   /**
    * <pre>
    * Table visualization data for the output configuration
    * </pre>
    *
-   * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+   * <code>.api.commons.TableVisualization table_visualization = 8 [json_name = "tableVisualization"];</code>
    * @return Whether the tableVisualization field is set.
    */
   @java.lang.Override
   public boolean hasTableVisualization() {
-    return bodyCase_ == 7;
+    return bodyCase_ == 8;
   }
   /**
    * <pre>
    * Table visualization data for the output configuration
    * </pre>
    *
-   * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+   * <code>.api.commons.TableVisualization table_visualization = 8 [json_name = "tableVisualization"];</code>
    * @return The tableVisualization.
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.TableVisualization getTableVisualization() {
-    if (bodyCase_ == 7) {
+    if (bodyCase_ == 8) {
        return (com.tcn.cloud.api.api.commons.TableVisualization) body_;
     }
     return com.tcn.cloud.api.api.commons.TableVisualization.getDefaultInstance();
@@ -352,11 +367,11 @@ private static final long serialVersionUID = 0L;
    * Table visualization data for the output configuration
    * </pre>
    *
-   * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+   * <code>.api.commons.TableVisualization table_visualization = 8 [json_name = "tableVisualization"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.TableVisualizationOrBuilder getTableVisualizationOrBuilder() {
-    if (bodyCase_ == 7) {
+    if (bodyCase_ == 8) {
        return (com.tcn.cloud.api.api.commons.TableVisualization) body_;
     }
     return com.tcn.cloud.api.api.commons.TableVisualization.getDefaultInstance();
@@ -388,11 +403,14 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(insightId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, insightId_);
     }
-    if (bodyCase_ == 6) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, body_);
+    if (isDefault_ != false) {
+      output.writeBool(6, isDefault_);
     }
     if (bodyCase_ == 7) {
-      output.writeMessage(7, (com.tcn.cloud.api.api.commons.TableVisualization) body_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, body_);
+    }
+    if (bodyCase_ == 8) {
+      output.writeMessage(8, (com.tcn.cloud.api.api.commons.TableVisualization) body_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -416,12 +434,16 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(insightId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, insightId_);
     }
-    if (bodyCase_ == 6) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, body_);
+    if (isDefault_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(6, isDefault_);
     }
     if (bodyCase_ == 7) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, body_);
+    }
+    if (bodyCase_ == 8) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, (com.tcn.cloud.api.api.commons.TableVisualization) body_);
+        .computeMessageSize(8, (com.tcn.cloud.api.api.commons.TableVisualization) body_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -445,13 +467,15 @@ private static final long serialVersionUID = 0L;
     if (outputConfigurationType_ != other.outputConfigurationType_) return false;
     if (!getInsightId()
         .equals(other.getInsightId())) return false;
+    if (getIsDefault()
+        != other.getIsDefault()) return false;
     if (!getBodyCase().equals(other.getBodyCase())) return false;
     switch (bodyCase_) {
-      case 6:
+      case 7:
         if (!getBlob()
             .equals(other.getBlob())) return false;
         break;
-      case 7:
+      case 8:
         if (!getTableVisualization()
             .equals(other.getTableVisualization())) return false;
         break;
@@ -477,12 +501,15 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + outputConfigurationType_;
     hash = (37 * hash) + INSIGHT_ID_FIELD_NUMBER;
     hash = (53 * hash) + getInsightId().hashCode();
+    hash = (37 * hash) + IS_DEFAULT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsDefault());
     switch (bodyCase_) {
-      case 6:
+      case 7:
         hash = (37 * hash) + BLOB_FIELD_NUMBER;
         hash = (53 * hash) + getBlob().hashCode();
         break;
-      case 7:
+      case 8:
         hash = (37 * hash) + TABLE_VISUALIZATION_FIELD_NUMBER;
         hash = (53 * hash) + getTableVisualization().hashCode();
         break;
@@ -628,6 +655,7 @@ private static final long serialVersionUID = 0L;
       outputConfigurationTitle_ = "";
       outputConfigurationType_ = 0;
       insightId_ = "";
+      isDefault_ = false;
       if (tableVisualizationBuilder_ != null) {
         tableVisualizationBuilder_.clear();
       }
@@ -679,12 +707,15 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.insightId_ = insightId_;
       }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.isDefault_ = isDefault_;
+      }
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration result) {
       result.bodyCase_ = bodyCase_;
       result.body_ = this.body_;
-      if (bodyCase_ == 7 &&
+      if (bodyCase_ == 8 &&
           tableVisualizationBuilder_ != null) {
         result.body_ = tableVisualizationBuilder_.build();
       }
@@ -752,9 +783,12 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (other.getIsDefault() != false) {
+        setIsDefault(other.getIsDefault());
+      }
       switch (other.getBodyCase()) {
         case BLOB: {
-          bodyCase_ = 6;
+          bodyCase_ = 7;
           body_ = other.body_;
           onChanged();
           break;
@@ -813,19 +847,24 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 42
-            case 50: {
+            case 48: {
+              isDefault_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 48
+            case 58: {
               java.lang.String s = input.readStringRequireUtf8();
-              bodyCase_ = 6;
+              bodyCase_ = 7;
               body_ = s;
               break;
-            } // case 50
-            case 58: {
+            } // case 58
+            case 66: {
               input.readMessage(
                   getTableVisualizationFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bodyCase_ = 7;
+              bodyCase_ = 8;
               break;
-            } // case 58
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1207,37 +1246,81 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private boolean isDefault_ ;
+    /**
+     * <pre>
+     * is_default flag for the output configuration
+     * </pre>
+     *
+     * <code>bool is_default = 6 [json_name = "isDefault"];</code>
+     * @return The isDefault.
+     */
+    @java.lang.Override
+    public boolean getIsDefault() {
+      return isDefault_;
+    }
+    /**
+     * <pre>
+     * is_default flag for the output configuration
+     * </pre>
+     *
+     * <code>bool is_default = 6 [json_name = "isDefault"];</code>
+     * @param value The isDefault to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsDefault(boolean value) {
+
+      isDefault_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * is_default flag for the output configuration
+     * </pre>
+     *
+     * <code>bool is_default = 6 [json_name = "isDefault"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsDefault() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      isDefault_ = false;
+      onChanged();
+      return this;
+    }
+
     /**
      * <pre>
      * Blob data for the output configuration
      * </pre>
      *
-     * <code>string blob = 6 [json_name = "blob"];</code>
+     * <code>string blob = 7 [json_name = "blob"];</code>
      * @return Whether the blob field is set.
      */
     @java.lang.Override
     public boolean hasBlob() {
-      return bodyCase_ == 6;
+      return bodyCase_ == 7;
     }
     /**
      * <pre>
      * Blob data for the output configuration
      * </pre>
      *
-     * <code>string blob = 6 [json_name = "blob"];</code>
+     * <code>string blob = 7 [json_name = "blob"];</code>
      * @return The blob.
      */
     @java.lang.Override
     public java.lang.String getBlob() {
       java.lang.Object ref = "";
-      if (bodyCase_ == 6) {
+      if (bodyCase_ == 7) {
         ref = body_;
       }
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        if (bodyCase_ == 6) {
+        if (bodyCase_ == 7) {
           body_ = s;
         }
         return s;
@@ -1250,21 +1333,21 @@ private static final long serialVersionUID = 0L;
      * Blob data for the output configuration
      * </pre>
      *
-     * <code>string blob = 6 [json_name = "blob"];</code>
+     * <code>string blob = 7 [json_name = "blob"];</code>
      * @return The bytes for blob.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
         getBlobBytes() {
       java.lang.Object ref = "";
-      if (bodyCase_ == 6) {
+      if (bodyCase_ == 7) {
         ref = body_;
       }
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        if (bodyCase_ == 6) {
+        if (bodyCase_ == 7) {
           body_ = b;
         }
         return b;
@@ -1277,14 +1360,14 @@ private static final long serialVersionUID = 0L;
      * Blob data for the output configuration
      * </pre>
      *
-     * <code>string blob = 6 [json_name = "blob"];</code>
+     * <code>string blob = 7 [json_name = "blob"];</code>
      * @param value The blob to set.
      * @return This builder for chaining.
      */
     public Builder setBlob(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      bodyCase_ = 6;
+      bodyCase_ = 7;
       body_ = value;
       onChanged();
       return this;
@@ -1294,11 +1377,11 @@ private static final long serialVersionUID = 0L;
      * Blob data for the output configuration
      * </pre>
      *
-     * <code>string blob = 6 [json_name = "blob"];</code>
+     * <code>string blob = 7 [json_name = "blob"];</code>
      * @return This builder for chaining.
      */
     public Builder clearBlob() {
-      if (bodyCase_ == 6) {
+      if (bodyCase_ == 7) {
         bodyCase_ = 0;
         body_ = null;
         onChanged();
@@ -1310,7 +1393,7 @@ private static final long serialVersionUID = 0L;
      * Blob data for the output configuration
      * </pre>
      *
-     * <code>string blob = 6 [json_name = "blob"];</code>
+     * <code>string blob = 7 [json_name = "blob"];</code>
      * @param value The bytes for blob to set.
      * @return This builder for chaining.
      */
@@ -1318,7 +1401,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      bodyCase_ = 6;
+      bodyCase_ = 7;
       body_ = value;
       onChanged();
       return this;
@@ -1331,30 +1414,30 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 8 [json_name = "tableVisualization"];</code>
      * @return Whether the tableVisualization field is set.
      */
     @java.lang.Override
     public boolean hasTableVisualization() {
-      return bodyCase_ == 7;
+      return bodyCase_ == 8;
     }
     /**
      * <pre>
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 8 [json_name = "tableVisualization"];</code>
      * @return The tableVisualization.
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.TableVisualization getTableVisualization() {
       if (tableVisualizationBuilder_ == null) {
-        if (bodyCase_ == 7) {
+        if (bodyCase_ == 8) {
           return (com.tcn.cloud.api.api.commons.TableVisualization) body_;
         }
         return com.tcn.cloud.api.api.commons.TableVisualization.getDefaultInstance();
       } else {
-        if (bodyCase_ == 7) {
+        if (bodyCase_ == 8) {
           return tableVisualizationBuilder_.getMessage();
         }
         return com.tcn.cloud.api.api.commons.TableVisualization.getDefaultInstance();
@@ -1365,7 +1448,7 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 8 [json_name = "tableVisualization"];</code>
      */
     public Builder setTableVisualization(com.tcn.cloud.api.api.commons.TableVisualization value) {
       if (tableVisualizationBuilder_ == null) {
@@ -1377,7 +1460,7 @@ private static final long serialVersionUID = 0L;
       } else {
         tableVisualizationBuilder_.setMessage(value);
       }
-      bodyCase_ = 7;
+      bodyCase_ = 8;
       return this;
     }
     /**
@@ -1385,7 +1468,7 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 8 [json_name = "tableVisualization"];</code>
      */
     public Builder setTableVisualization(
         com.tcn.cloud.api.api.commons.TableVisualization.Builder builderForValue) {
@@ -1395,7 +1478,7 @@ private static final long serialVersionUID = 0L;
       } else {
         tableVisualizationBuilder_.setMessage(builderForValue.build());
       }
-      bodyCase_ = 7;
+      bodyCase_ = 8;
       return this;
     }
     /**
@@ -1403,11 +1486,11 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 8 [json_name = "tableVisualization"];</code>
      */
     public Builder mergeTableVisualization(com.tcn.cloud.api.api.commons.TableVisualization value) {
       if (tableVisualizationBuilder_ == null) {
-        if (bodyCase_ == 7 &&
+        if (bodyCase_ == 8 &&
             body_ != com.tcn.cloud.api.api.commons.TableVisualization.getDefaultInstance()) {
           body_ = com.tcn.cloud.api.api.commons.TableVisualization.newBuilder((com.tcn.cloud.api.api.commons.TableVisualization) body_)
               .mergeFrom(value).buildPartial();
@@ -1416,13 +1499,13 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       } else {
-        if (bodyCase_ == 7) {
+        if (bodyCase_ == 8) {
           tableVisualizationBuilder_.mergeFrom(value);
         } else {
           tableVisualizationBuilder_.setMessage(value);
         }
       }
-      bodyCase_ = 7;
+      bodyCase_ = 8;
       return this;
     }
     /**
@@ -1430,17 +1513,17 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 8 [json_name = "tableVisualization"];</code>
      */
     public Builder clearTableVisualization() {
       if (tableVisualizationBuilder_ == null) {
-        if (bodyCase_ == 7) {
+        if (bodyCase_ == 8) {
           bodyCase_ = 0;
           body_ = null;
           onChanged();
         }
       } else {
-        if (bodyCase_ == 7) {
+        if (bodyCase_ == 8) {
           bodyCase_ = 0;
           body_ = null;
         }
@@ -1453,7 +1536,7 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 8 [json_name = "tableVisualization"];</code>
      */
     public com.tcn.cloud.api.api.commons.TableVisualization.Builder getTableVisualizationBuilder() {
       return getTableVisualizationFieldBuilder().getBuilder();
@@ -1463,14 +1546,14 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 8 [json_name = "tableVisualization"];</code>
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.TableVisualizationOrBuilder getTableVisualizationOrBuilder() {
-      if ((bodyCase_ == 7) && (tableVisualizationBuilder_ != null)) {
+      if ((bodyCase_ == 8) && (tableVisualizationBuilder_ != null)) {
         return tableVisualizationBuilder_.getMessageOrBuilder();
       } else {
-        if (bodyCase_ == 7) {
+        if (bodyCase_ == 8) {
           return (com.tcn.cloud.api.api.commons.TableVisualization) body_;
         }
         return com.tcn.cloud.api.api.commons.TableVisualization.getDefaultInstance();
@@ -1481,13 +1564,13 @@ private static final long serialVersionUID = 0L;
      * Table visualization data for the output configuration
      * </pre>
      *
-     * <code>.api.commons.TableVisualization table_visualization = 7 [json_name = "tableVisualization"];</code>
+     * <code>.api.commons.TableVisualization table_visualization = 8 [json_name = "tableVisualization"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.TableVisualization, com.tcn.cloud.api.api.commons.TableVisualization.Builder, com.tcn.cloud.api.api.commons.TableVisualizationOrBuilder> 
         getTableVisualizationFieldBuilder() {
       if (tableVisualizationBuilder_ == null) {
-        if (!(bodyCase_ == 7)) {
+        if (!(bodyCase_ == 8)) {
           body_ = com.tcn.cloud.api.api.commons.TableVisualization.getDefaultInstance();
         }
         tableVisualizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -1497,7 +1580,7 @@ private static final long serialVersionUID = 0L;
                 isClean());
         body_ = null;
       }
-      bodyCase_ = 7;
+      bodyCase_ = 8;
       onChanged();
       return tableVisualizationBuilder_;
     }

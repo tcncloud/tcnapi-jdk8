@@ -69,70 +69,54 @@ public interface TableColumnConfigOrBuilder extends
 
   /**
    * <pre>
-   * Format type for the column
+   * Operations to be performed on the column
    * </pre>
    *
-   * <code>.api.commons.OutputConfigurationColumnFormatType column_format_type = 5 [json_name = "columnFormatType"];</code>
-   * @return The enum numeric value on the wire for columnFormatType.
+   * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
    */
-  int getColumnFormatTypeValue();
+  java.util.List<com.tcn.cloud.api.api.commons.ColumnOperation> 
+      getOperationsList();
   /**
    * <pre>
-   * Format type for the column
+   * Operations to be performed on the column
    * </pre>
    *
-   * <code>.api.commons.OutputConfigurationColumnFormatType column_format_type = 5 [json_name = "columnFormatType"];</code>
-   * @return The columnFormatType.
+   * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
    */
-  com.tcn.cloud.api.api.commons.OutputConfigurationColumnFormatType getColumnFormatType();
-
+  com.tcn.cloud.api.api.commons.ColumnOperation getOperations(int index);
   /**
    * <pre>
-   * Format values for the column
+   * Operations to be performed on the column
    * </pre>
    *
-   * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-   * @return A list containing the columnFormatValues.
+   * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
    */
-  java.util.List<java.lang.String>
-      getColumnFormatValuesList();
+  int getOperationsCount();
   /**
    * <pre>
-   * Format values for the column
+   * Operations to be performed on the column
    * </pre>
    *
-   * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-   * @return The count of columnFormatValues.
+   * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
    */
-  int getColumnFormatValuesCount();
+  java.util.List<? extends com.tcn.cloud.api.api.commons.ColumnOperationOrBuilder> 
+      getOperationsOrBuilderList();
   /**
    * <pre>
-   * Format values for the column
+   * Operations to be performed on the column
    * </pre>
    *
-   * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-   * @param index The index of the element to return.
-   * @return The columnFormatValues at the given index.
+   * <code>repeated .api.commons.ColumnOperation operations = 5 [json_name = "operations"];</code>
    */
-  java.lang.String getColumnFormatValues(int index);
-  /**
-   * <pre>
-   * Format values for the column
-   * </pre>
-   *
-   * <code>repeated string column_format_values = 6 [json_name = "columnFormatValues"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the columnFormatValues at the given index.
-   */
-  com.google.protobuf.ByteString
-      getColumnFormatValuesBytes(int index);
+  com.tcn.cloud.api.api.commons.ColumnOperationOrBuilder getOperationsOrBuilder(
+      int index);
 
   /**
    * <pre>
    * Summary for the column (AVG, SUM, MIN, MAX)
    * </pre>
    *
-   * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 7 [json_name = "columnSummary"];</code>
+   * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 6 [json_name = "columnSummary"];</code>
    * @return The enum numeric value on the wire for columnSummary.
    */
   int getColumnSummaryValue();
@@ -141,7 +125,7 @@ public interface TableColumnConfigOrBuilder extends
    * Summary for the column (AVG, SUM, MIN, MAX)
    * </pre>
    *
-   * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 7 [json_name = "columnSummary"];</code>
+   * <code>.api.commons.OutputConfigurationColumnSummaryType column_summary = 6 [json_name = "columnSummary"];</code>
    * @return The columnSummary.
    */
   com.tcn.cloud.api.api.commons.OutputConfigurationColumnSummaryType getColumnSummary();
@@ -151,7 +135,7 @@ public interface TableColumnConfigOrBuilder extends
    * Description of the column
    * </pre>
    *
-   * <code>string description = 8 [json_name = "description"];</code>
+   * <code>string description = 7 [json_name = "description"];</code>
    * @return The description.
    */
   java.lang.String getDescription();
@@ -160,7 +144,7 @@ public interface TableColumnConfigOrBuilder extends
    * Description of the column
    * </pre>
    *
-   * <code>string description = 8 [json_name = "description"];</code>
+   * <code>string description = 7 [json_name = "description"];</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString
@@ -168,20 +152,10 @@ public interface TableColumnConfigOrBuilder extends
 
   /**
    * <pre>
-   * Order of the column
-   * </pre>
-   *
-   * <code>int64 order = 9 [json_name = "order"];</code>
-   * @return The order.
-   */
-  long getOrder();
-
-  /**
-   * <pre>
    * The sorting direction of the column
    * </pre>
    *
-   * <code>.api.commons.ColumnSort sort_direction = 10 [json_name = "sortDirection"];</code>
+   * <code>.api.commons.ColumnSort sort_direction = 8 [json_name = "sortDirection"];</code>
    * @return The enum numeric value on the wire for sortDirection.
    */
   int getSortDirectionValue();
@@ -190,7 +164,7 @@ public interface TableColumnConfigOrBuilder extends
    * The sorting direction of the column
    * </pre>
    *
-   * <code>.api.commons.ColumnSort sort_direction = 10 [json_name = "sortDirection"];</code>
+   * <code>.api.commons.ColumnSort sort_direction = 8 [json_name = "sortDirection"];</code>
    * @return The sortDirection.
    */
   com.tcn.cloud.api.api.commons.ColumnSort getSortDirection();

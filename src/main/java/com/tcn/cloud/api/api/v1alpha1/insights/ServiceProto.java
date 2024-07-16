@@ -26,7 +26,7 @@ public final class ServiceProto {
       "\n#api/v1alpha1/insights/service.proto\022\025a" +
       "pi.v1alpha1.insights\032\027annotations/authz." +
       "proto\032#api/v1alpha1/insights/insight.pro" +
-      "to\032\034google/api/annotations.proto2\333\033\n\010Ins" +
+      "to\032\034google/api/annotations.proto2\314\037\n\010Ins" +
       "ights\022\263\001\n\rCreateInsight\022+.api.v1alpha1.i" +
       "nsights.CreateInsightRequest\032,.api.v1alp" +
       "ha1.insights.CreateInsightResponse\"G\272\270\221\002" +
@@ -115,12 +115,24 @@ public final class ServiceProto {
       "\0325.api.v1alpha1.insights.GetOutputConfig" +
       "urationResponse\"U\272\270\221\002\017\n\003\010\372\001\n\003\010\331\004\n\003\010\332\004\202\323\344" +
       "\223\002;\"6/api/v1alpha1/insights/insights/get" +
-      "outputconfiguration:\001*B\255\001\n\'com.tcn.cloud" +
-      ".api.api.v1alpha1.insightsB\014ServiceProto" +
-      "P\001\242\002\003AVI\252\002\025Api.V1alpha1.Insights\312\002\025Api\\V" +
-      "1alpha1\\Insights\342\002!Api\\V1alpha1\\Insights" +
-      "\\GPBMetadata\352\002\027Api::V1alpha1::Insightsb\006" +
-      "proto3"
+      "outputconfiguration:\001*\022\363\001\n\035SetDefaultOut" +
+      "putConfiguration\022;.api.v1alpha1.insights" +
+      ".SetDefaultOutputConfigurationRequest\032<." +
+      "api.v1alpha1.insights.SetDefaultOutputCo" +
+      "nfigurationResponse\"W\272\270\221\002\n\n\003\010\372\001\n\003\010\336\004\202\323\344\223" +
+      "\002B\"=/api/v1alpha1/insights/insights/setd" +
+      "efaultoutputconfiguration:\001*\022\370\001\n\035GetDefa" +
+      "ultOutputConfiguration\022;.api.v1alpha1.in" +
+      "sights.GetDefaultOutputConfigurationRequ" +
+      "est\032<.api.v1alpha1.insights.GetDefaultOu" +
+      "tputConfigurationResponse\"\\\272\270\221\002\017\n\003\010\372\001\n\003\010" +
+      "\331\004\n\003\010\332\004\202\323\344\223\002B\"=/api/v1alpha1/insights/in" +
+      "sights/getdefaultoutputconfiguration:\001*B" +
+      "\255\001\n\'com.tcn.cloud.api.api.v1alpha1.insig" +
+      "htsB\014ServiceProtoP\001\242\002\003AVI\252\002\025Api.V1alpha1" +
+      ".Insights\312\002\025Api\\V1alpha1\\Insights\342\002!Api\\" +
+      "V1alpha1\\Insights\\GPBMetadata\352\002\027Api::V1a" +
+      "lpha1::Insightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
