@@ -150,7 +150,7 @@ private static final long serialVersionUID = 0L;
     return disabled_;
   }
 
-  public static final int TIMEZONE_FIELD_NUMBER = 11;
+  public static final int TIMEZONE_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object timezone_ = "";
   /**
@@ -158,7 +158,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the timezone to be used by the cron
    * </pre>
    *
-   * <code>string timezone = 11 [json_name = "timezone"];</code>
+   * <code>string timezone = 4 [json_name = "timezone"];</code>
    * @return The timezone.
    */
   @java.lang.Override
@@ -179,7 +179,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the timezone to be used by the cron
    * </pre>
    *
-   * <code>string timezone = 11 [json_name = "timezone"];</code>
+   * <code>string timezone = 4 [json_name = "timezone"];</code>
    * @return The bytes for timezone.
    */
   @java.lang.Override
@@ -221,7 +221,7 @@ private static final long serialVersionUID = 0L;
       output.writeBool(3, disabled_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, timezone_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, timezone_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -243,7 +243,7 @@ private static final long serialVersionUID = 0L;
         .computeBoolSize(3, disabled_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, timezone_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, timezone_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -573,11 +573,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
-            case 90: {
+            case 34: {
               timezone_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
-            } // case 90
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -829,7 +829,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the timezone to be used by the cron
      * </pre>
      *
-     * <code>string timezone = 11 [json_name = "timezone"];</code>
+     * <code>string timezone = 4 [json_name = "timezone"];</code>
      * @return The timezone.
      */
     public java.lang.String getTimezone() {
@@ -849,7 +849,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the timezone to be used by the cron
      * </pre>
      *
-     * <code>string timezone = 11 [json_name = "timezone"];</code>
+     * <code>string timezone = 4 [json_name = "timezone"];</code>
      * @return The bytes for timezone.
      */
     public com.google.protobuf.ByteString
@@ -870,7 +870,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the timezone to be used by the cron
      * </pre>
      *
-     * <code>string timezone = 11 [json_name = "timezone"];</code>
+     * <code>string timezone = 4 [json_name = "timezone"];</code>
      * @param value The timezone to set.
      * @return This builder for chaining.
      */
@@ -887,7 +887,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the timezone to be used by the cron
      * </pre>
      *
-     * <code>string timezone = 11 [json_name = "timezone"];</code>
+     * <code>string timezone = 4 [json_name = "timezone"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTimezone() {
@@ -901,7 +901,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the timezone to be used by the cron
      * </pre>
      *
-     * <code>string timezone = 11 [json_name = "timezone"];</code>
+     * <code>string timezone = 4 [json_name = "timezone"];</code>
      * @param value The bytes for timezone to set.
      * @return This builder for chaining.
      */

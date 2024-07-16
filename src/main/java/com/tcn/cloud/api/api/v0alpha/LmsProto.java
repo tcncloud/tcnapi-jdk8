@@ -2131,7 +2131,7 @@ public final class LmsProto {
       "TypeR\nepicEntity\"\207\001\n\017FinviEntrypoint\022\027\n\007" +
       "pool_id\030\001 \001(\tR\006poolId\022#\n\rcron_interval\030\002" +
       " \001(\tR\014cronInterval\022\032\n\010disabled\030\003 \001(\010R\010di" +
-      "sabled\022\032\n\010timezone\030\013 \001(\tR\010timezone*F\n\010Ti" +
+      "sabled\022\032\n\010timezone\030\004 \001(\tR\010timezone*F\n\010Ti" +
       "meUnit\022\013\n\007DEFAULT\020\000\022\016\n\nTIME_WEEKS\020\001\022\r\n\tT" +
       "IME_DAYS\020\002\022\016\n\nTIME_HOURS\020\003*\317\001\n\016EpicEntit" +
       "yType\022\025\n\021EPIC_UNKNOWN_TYPE\020\000\022\034\n\030EPIC_ENT" +
