@@ -48609,6 +48609,33 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.UserId user_id = 6 [json_name = "userId"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.UserIdOrBuilder getUserIdOrBuilder();
+
+    /**
+     * <pre>
+     * Query constraints on username.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username = 7 [json_name = "username"];</code>
+     * @return Whether the username field is set.
+     */
+    boolean hasUsername();
+    /**
+     * <pre>
+     * Query constraints on username.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username = 7 [json_name = "username"];</code>
+     * @return The username.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username getUsername();
+    /**
+     * <pre>
+     * Query constraints on username.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username = 7 [json_name = "username"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.UsernameOrBuilder getUsernameOrBuilder();
   }
   /**
    * <pre>
@@ -49340,6 +49367,700 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.UserId getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface UsernameOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Threads.Username)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Requires all transcript hits to have a username in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return A list containing the any.
+       */
+      java.util.List<java.lang.String>
+          getAnyList();
+      /**
+       * <pre>
+       * Requires all transcript hits to have a username in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return The count of any.
+       */
+      int getAnyCount();
+      /**
+       * <pre>
+       * Requires all transcript hits to have a username in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      java.lang.String getAny(int index);
+      /**
+       * <pre>
+       * Requires all transcript hits to have a username in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the any at the given index.
+       */
+      com.google.protobuf.ByteString
+          getAnyBytes(int index);
+    }
+    /**
+     * <pre>
+     * Query constraints on username.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Threads.Username}
+     */
+    public static final class Username extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.Threads.Username)
+        UsernameOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Username.newBuilder() to construct.
+      private Username(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Username() {
+        any_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Username();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Threads_Username_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Threads_Username_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.Builder.class);
+      }
+
+      public static final int ANY_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.LazyStringArrayList any_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      /**
+       * <pre>
+       * Requires all transcript hits to have a username in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return A list containing the any.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAnyList() {
+        return any_;
+      }
+      /**
+       * <pre>
+       * Requires all transcript hits to have a username in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return The count of any.
+       */
+      public int getAnyCount() {
+        return any_.size();
+      }
+      /**
+       * <pre>
+       * Requires all transcript hits to have a username in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      public java.lang.String getAny(int index) {
+        return any_.get(index);
+      }
+      /**
+       * <pre>
+       * Requires all transcript hits to have a username in the list.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the any at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAnyBytes(int index) {
+        return any_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < any_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, any_.getRaw(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < any_.size(); i++) {
+            dataSize += computeStringSizeNoTag(any_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getAnyList().size();
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username) obj;
+
+        if (!getAnyList()
+            .equals(other.getAnyList())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getAnyCount() > 0) {
+          hash = (37 * hash) + ANY_FIELD_NUMBER;
+          hash = (53 * hash) + getAnyList().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Query constraints on username.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Threads.Username}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.Threads.Username)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.UsernameOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Threads_Username_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Threads_Username_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          any_ =
+              com.google.protobuf.LazyStringArrayList.emptyList();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Threads_Username_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            any_.makeImmutable();
+            result.any_ = any_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.getDefaultInstance()) return this;
+          if (!other.any_.isEmpty()) {
+            if (any_.isEmpty()) {
+              any_ = other.any_;
+              bitField0_ |= 0x00000001;
+            } else {
+              ensureAnyIsMutable();
+              any_.addAll(other.any_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  java.lang.String s = input.readStringRequireUtf8();
+                  ensureAnyIsMutable();
+                  any_.add(s);
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringArrayList any_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        private void ensureAnyIsMutable() {
+          if (!any_.isModifiable()) {
+            any_ = new com.google.protobuf.LazyStringArrayList(any_);
+          }
+          bitField0_ |= 0x00000001;
+        }
+        /**
+         * <pre>
+         * Requires all transcript hits to have a username in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @return A list containing the any.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getAnyList() {
+          any_.makeImmutable();
+          return any_;
+        }
+        /**
+         * <pre>
+         * Requires all transcript hits to have a username in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @return The count of any.
+         */
+        public int getAnyCount() {
+          return any_.size();
+        }
+        /**
+         * <pre>
+         * Requires all transcript hits to have a username in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param index The index of the element to return.
+         * @return The any at the given index.
+         */
+        public java.lang.String getAny(int index) {
+          return any_.get(index);
+        }
+        /**
+         * <pre>
+         * Requires all transcript hits to have a username in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the any at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getAnyBytes(int index) {
+          return any_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * Requires all transcript hits to have a username in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param index The index to set the value at.
+         * @param value The any to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAny(
+            int index, java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          ensureAnyIsMutable();
+          any_.set(index, value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all transcript hits to have a username in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param value The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAny(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          ensureAnyIsMutable();
+          any_.add(value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all transcript hits to have a username in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param values The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllAny(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureAnyIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, any_);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all transcript hits to have a username in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAny() {
+          any_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all transcript hits to have a username in the list.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param value The bytes of the any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAnyBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          ensureAnyIsMutable();
+          any_.add(value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.Threads.Username)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.Threads.Username)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Username>
+          PARSER = new com.google.protobuf.AbstractParser<Username>() {
+        @java.lang.Override
+        public Username parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Username> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Username> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -52584,6 +53305,44 @@ private static final long serialVersionUID = 0L;
       return userId_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.UserId.getDefaultInstance() : userId_;
     }
 
+    public static final int USERNAME_FIELD_NUMBER = 7;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username_;
+    /**
+     * <pre>
+     * Query constraints on username.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username = 7 [json_name = "username"];</code>
+     * @return Whether the username field is set.
+     */
+    @java.lang.Override
+    public boolean hasUsername() {
+      return username_ != null;
+    }
+    /**
+     * <pre>
+     * Query constraints on username.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username = 7 [json_name = "username"];</code>
+     * @return The username.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username getUsername() {
+      return username_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.getDefaultInstance() : username_;
+    }
+    /**
+     * <pre>
+     * Query constraints on username.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username = 7 [json_name = "username"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.UsernameOrBuilder getUsernameOrBuilder() {
+      return username_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.getDefaultInstance() : username_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -52613,6 +53372,9 @@ private static final long serialVersionUID = 0L;
       if (userId_ != null) {
         output.writeMessage(6, getUserId());
       }
+      if (username_ != null) {
+        output.writeMessage(7, getUsername());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -52641,6 +53403,10 @@ private static final long serialVersionUID = 0L;
       if (userId_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getUserId());
+      }
+      if (username_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getUsername());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -52676,6 +53442,11 @@ private static final long serialVersionUID = 0L;
         if (!getUserId()
             .equals(other.getUserId())) return false;
       }
+      if (hasUsername() != other.hasUsername()) return false;
+      if (hasUsername()) {
+        if (!getUsername()
+            .equals(other.getUsername())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -52706,6 +53477,10 @@ private static final long serialVersionUID = 0L;
       if (hasUserId()) {
         hash = (37 * hash) + USER_ID_FIELD_NUMBER;
         hash = (53 * hash) + getUserId().hashCode();
+      }
+      if (hasUsername()) {
+        hash = (37 * hash) + USERNAME_FIELD_NUMBER;
+        hash = (53 * hash) + getUsername().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -52871,6 +53646,11 @@ private static final long serialVersionUID = 0L;
           userIdBuilder_.dispose();
           userIdBuilder_ = null;
         }
+        username_ = null;
+        if (usernameBuilder_ != null) {
+          usernameBuilder_.dispose();
+          usernameBuilder_ = null;
+        }
         return this;
       }
 
@@ -52940,6 +53720,11 @@ private static final long serialVersionUID = 0L;
           result.userId_ = userIdBuilder_ == null
               ? userId_
               : userIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.username_ = usernameBuilder_ == null
+              ? username_
+              : usernameBuilder_.build();
         }
       }
 
@@ -53048,6 +53833,9 @@ private static final long serialVersionUID = 0L;
         if (other.hasUserId()) {
           mergeUserId(other.getUserId());
         }
+        if (other.hasUsername()) {
+          mergeUsername(other.getUsername());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -53121,6 +53909,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000010;
                 break;
               } // case 50
+              case 58: {
+                input.readMessage(
+                    getUsernameFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -54225,6 +55020,161 @@ private static final long serialVersionUID = 0L;
           userId_ = null;
         }
         return userIdBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.UsernameOrBuilder> usernameBuilder_;
+      /**
+       * <pre>
+       * Query constraints on username.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username = 7 [json_name = "username"];</code>
+       * @return Whether the username field is set.
+       */
+      public boolean hasUsername() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * Query constraints on username.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username = 7 [json_name = "username"];</code>
+       * @return The username.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username getUsername() {
+        if (usernameBuilder_ == null) {
+          return username_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.getDefaultInstance() : username_;
+        } else {
+          return usernameBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on username.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username = 7 [json_name = "username"];</code>
+       */
+      public Builder setUsername(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username value) {
+        if (usernameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          username_ = value;
+        } else {
+          usernameBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on username.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username = 7 [json_name = "username"];</code>
+       */
+      public Builder setUsername(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.Builder builderForValue) {
+        if (usernameBuilder_ == null) {
+          username_ = builderForValue.build();
+        } else {
+          usernameBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on username.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username = 7 [json_name = "username"];</code>
+       */
+      public Builder mergeUsername(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username value) {
+        if (usernameBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            username_ != null &&
+            username_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.getDefaultInstance()) {
+            getUsernameBuilder().mergeFrom(value);
+          } else {
+            username_ = value;
+          }
+        } else {
+          usernameBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on username.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username = 7 [json_name = "username"];</code>
+       */
+      public Builder clearUsername() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        username_ = null;
+        if (usernameBuilder_ != null) {
+          usernameBuilder_.dispose();
+          usernameBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on username.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username = 7 [json_name = "username"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.Builder getUsernameBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getUsernameFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Query constraints on username.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username = 7 [json_name = "username"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.UsernameOrBuilder getUsernameOrBuilder() {
+        if (usernameBuilder_ != null) {
+          return usernameBuilder_.getMessageOrBuilder();
+        } else {
+          return username_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.getDefaultInstance() : username_;
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on username.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Threads.Username username = 7 [json_name = "username"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.UsernameOrBuilder> 
+          getUsernameFieldBuilder() {
+        if (usernameBuilder_ == null) {
+          usernameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.Username.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Threads.UsernameOrBuilder>(
+                  getUsername(),
+                  getParentForChildren(),
+                  isClean());
+          username_ = null;
+        }
+        return usernameBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -64271,7 +65221,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=458
+   *     See wfo/vanalytics/v2/transcript.proto;l=464
    * @return Whether the channel field is set.
    */
   @java.lang.Override
@@ -64285,7 +65235,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=458
+   *     See wfo/vanalytics/v2/transcript.proto;l=464
    * @return The channel.
    */
   @java.lang.Override
@@ -65365,7 +66315,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=458
+     *     See wfo/vanalytics/v2/transcript.proto;l=464
      * @return Whether the channel field is set.
      */
     @java.lang.Deprecated public boolean hasChannel() {
@@ -65378,7 +66328,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=458
+     *     See wfo/vanalytics/v2/transcript.proto;l=464
      * @return The channel.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel() {

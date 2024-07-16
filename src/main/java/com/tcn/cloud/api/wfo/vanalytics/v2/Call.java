@@ -1386,6 +1386,26 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.Sentiment sentiment = 4 [json_name = "sentiment"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.SentimentOrBuilder getSentimentOrBuilder();
+
+    /**
+     * <pre>
+     * The username of the participant on this thread.
+     * </pre>
+     *
+     * <code>string username = 5 [json_name = "username"];</code>
+     * @return The username.
+     */
+    java.lang.String getUsername();
+    /**
+     * <pre>
+     * The username of the participant on this thread.
+     * </pre>
+     *
+     * <code>string username = 5 [json_name = "username"];</code>
+     * @return The bytes for username.
+     */
+    com.google.protobuf.ByteString
+        getUsernameBytes();
   }
   /**
    * <pre>
@@ -1406,6 +1426,7 @@ private static final long serialVersionUID = 0L;
     private Thread() {
       segments_ = java.util.Collections.emptyList();
       userId_ = "";
+      username_ = "";
     }
 
     @java.lang.Override
@@ -1589,6 +1610,53 @@ private static final long serialVersionUID = 0L;
       return sentiment_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.Sentiment.getDefaultInstance() : sentiment_;
     }
 
+    public static final int USERNAME_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object username_ = "";
+    /**
+     * <pre>
+     * The username of the participant on this thread.
+     * </pre>
+     *
+     * <code>string username = 5 [json_name = "username"];</code>
+     * @return The username.
+     */
+    @java.lang.Override
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        username_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The username of the participant on this thread.
+     * </pre>
+     *
+     * <code>string username = 5 [json_name = "username"];</code>
+     * @return The bytes for username.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUsernameBytes() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        username_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1615,6 +1683,9 @@ private static final long serialVersionUID = 0L;
       if (sentiment_ != null) {
         output.writeMessage(4, getSentiment());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, username_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1638,6 +1709,9 @@ private static final long serialVersionUID = 0L;
       if (sentiment_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getSentiment());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, username_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1665,6 +1739,8 @@ private static final long serialVersionUID = 0L;
         if (!getSentiment()
             .equals(other.getSentiment())) return false;
       }
+      if (!getUsername()
+          .equals(other.getUsername())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1688,6 +1764,8 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SENTIMENT_FIELD_NUMBER;
         hash = (53 * hash) + getSentiment().hashCode();
       }
+      hash = (37 * hash) + USERNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getUsername().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1837,6 +1915,7 @@ private static final long serialVersionUID = 0L;
           sentimentBuilder_.dispose();
           sentimentBuilder_ = null;
         }
+        username_ = "";
         return this;
       }
 
@@ -1893,6 +1972,9 @@ private static final long serialVersionUID = 0L;
           result.sentiment_ = sentimentBuilder_ == null
               ? sentiment_
               : sentimentBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.username_ = username_;
         }
       }
 
@@ -1977,6 +2059,11 @@ private static final long serialVersionUID = 0L;
         if (other.hasSentiment()) {
           mergeSentiment(other.getSentiment());
         }
+        if (!other.getUsername().isEmpty()) {
+          username_ = other.username_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2033,6 +2120,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
+              case 42: {
+                username_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2651,6 +2743,98 @@ private static final long serialVersionUID = 0L;
           sentiment_ = null;
         }
         return sentimentBuilder_;
+      }
+
+      private java.lang.Object username_ = "";
+      /**
+       * <pre>
+       * The username of the participant on this thread.
+       * </pre>
+       *
+       * <code>string username = 5 [json_name = "username"];</code>
+       * @return The username.
+       */
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          username_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The username of the participant on this thread.
+       * </pre>
+       *
+       * <code>string username = 5 [json_name = "username"];</code>
+       * @return The bytes for username.
+       */
+      public com.google.protobuf.ByteString
+          getUsernameBytes() {
+        java.lang.Object ref = username_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          username_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The username of the participant on this thread.
+       * </pre>
+       *
+       * <code>string username = 5 [json_name = "username"];</code>
+       * @param value The username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsername(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        username_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The username of the participant on this thread.
+       * </pre>
+       *
+       * <code>string username = 5 [json_name = "username"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUsername() {
+        username_ = getDefaultInstance().getUsername();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The username of the participant on this thread.
+       * </pre>
+       *
+       * <code>string username = 5 [json_name = "username"];</code>
+       * @param value The bytes for username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsernameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        username_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
