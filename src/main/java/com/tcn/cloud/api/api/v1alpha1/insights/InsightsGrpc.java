@@ -763,7 +763,7 @@ public final class InsightsGrpc {
 
     /**
      * <pre>
-     * ListOutputConfigurations lists output configurations
+     * ListOutputConfigurations lists output configurations for an insight
      * </pre>
      */
     default void listOutputConfigurations(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request,
@@ -985,7 +985,7 @@ public final class InsightsGrpc {
 
     /**
      * <pre>
-     * ListOutputConfigurations lists output configurations
+     * ListOutputConfigurations lists output configurations for an insight
      * </pre>
      */
     public void listOutputConfigurations(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request,
@@ -1186,7 +1186,7 @@ public final class InsightsGrpc {
 
     /**
      * <pre>
-     * ListOutputConfigurations lists output configurations
+     * ListOutputConfigurations lists output configurations for an insight
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse listOutputConfigurations(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request) {
@@ -1397,7 +1397,7 @@ public final class InsightsGrpc {
 
     /**
      * <pre>
-     * ListOutputConfigurations lists output configurations
+     * ListOutputConfigurations lists output configurations for an insight
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> listOutputConfigurations(
