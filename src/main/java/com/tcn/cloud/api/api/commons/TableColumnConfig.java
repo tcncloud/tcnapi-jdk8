@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TableColumnConfig() {
-    key_ = "";
+    columnName_ = "";
     renamedAs_ = "";
     columnFormatType_ = 0;
     columnFormatValues_ =
@@ -50,47 +50,47 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.TableColumnConfig.class, com.tcn.cloud.api.api.commons.TableColumnConfig.Builder.class);
   }
 
-  public static final int KEY_FIELD_NUMBER = 1;
+  public static final int COLUMN_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object key_ = "";
+  private volatile java.lang.Object columnName_ = "";
   /**
    * <pre>
-   * Key for the table column
+   * Name for the table column
    * </pre>
    *
-   * <code>string key = 1 [json_name = "key"];</code>
-   * @return The key.
+   * <code>string column_name = 1 [json_name = "columnName"];</code>
+   * @return The columnName.
    */
   @java.lang.Override
-  public java.lang.String getKey() {
-    java.lang.Object ref = key_;
+  public java.lang.String getColumnName() {
+    java.lang.Object ref = columnName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      key_ = s;
+      columnName_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * Key for the table column
+   * Name for the table column
    * </pre>
    *
-   * <code>string key = 1 [json_name = "key"];</code>
-   * @return The bytes for key.
+   * <code>string column_name = 1 [json_name = "columnName"];</code>
+   * @return The bytes for columnName.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getKeyBytes() {
-    java.lang.Object ref = key_;
+      getColumnNameBytes() {
+    java.lang.Object ref = columnName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      key_ = b;
+      columnName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -381,8 +381,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(columnName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, columnName_);
     }
     if (columnWidth_ != 0L) {
       output.writeInt64(2, columnWidth_);
@@ -408,7 +408,7 @@ private static final long serialVersionUID = 0L;
     if (order_ != 0L) {
       output.writeInt64(9, order_);
     }
-    if (sortDirection_ != com.tcn.cloud.api.api.commons.ColumnSort.COLUMN_SORT_ASCENDING.getNumber()) {
+    if (sortDirection_ != com.tcn.cloud.api.api.commons.ColumnSort.COLUMN_SORT_UNSPECIFIED.getNumber()) {
       output.writeEnum(10, sortDirection_);
     }
     getUnknownFields().writeTo(output);
@@ -420,8 +420,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(columnName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, columnName_);
     }
     if (columnWidth_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
@@ -457,7 +457,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(9, order_);
     }
-    if (sortDirection_ != com.tcn.cloud.api.api.commons.ColumnSort.COLUMN_SORT_ASCENDING.getNumber()) {
+    if (sortDirection_ != com.tcn.cloud.api.api.commons.ColumnSort.COLUMN_SORT_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(10, sortDirection_);
     }
@@ -476,8 +476,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.TableColumnConfig other = (com.tcn.cloud.api.api.commons.TableColumnConfig) obj;
 
-    if (!getKey()
-        .equals(other.getKey())) return false;
+    if (!getColumnName()
+        .equals(other.getColumnName())) return false;
     if (getColumnWidth()
         != other.getColumnWidth()) return false;
     if (getHideColumn()
@@ -504,8 +504,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + KEY_FIELD_NUMBER;
-    hash = (53 * hash) + getKey().hashCode();
+    hash = (37 * hash) + COLUMN_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getColumnName().hashCode();
     hash = (37 * hash) + COLUMN_WIDTH_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getColumnWidth());
@@ -664,7 +664,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      key_ = "";
+      columnName_ = "";
       columnWidth_ = 0L;
       hideColumn_ = false;
       renamedAs_ = "";
@@ -709,7 +709,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.TableColumnConfig result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.key_ = key_;
+        result.columnName_ = columnName_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.columnWidth_ = columnWidth_;
@@ -785,8 +785,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.TableColumnConfig other) {
       if (other == com.tcn.cloud.api.api.commons.TableColumnConfig.getDefaultInstance()) return this;
-      if (!other.getKey().isEmpty()) {
-        key_ = other.key_;
+      if (!other.getColumnName().isEmpty()) {
+        columnName_ = other.columnName_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -855,7 +855,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              key_ = input.readStringRequireUtf8();
+              columnName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -922,22 +922,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object key_ = "";
+    private java.lang.Object columnName_ = "";
     /**
      * <pre>
-     * Key for the table column
+     * Name for the table column
      * </pre>
      *
-     * <code>string key = 1 [json_name = "key"];</code>
-     * @return The key.
+     * <code>string column_name = 1 [json_name = "columnName"];</code>
+     * @return The columnName.
      */
-    public java.lang.String getKey() {
-      java.lang.Object ref = key_;
+    public java.lang.String getColumnName() {
+      java.lang.Object ref = columnName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        key_ = s;
+        columnName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -945,20 +945,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Key for the table column
+     * Name for the table column
      * </pre>
      *
-     * <code>string key = 1 [json_name = "key"];</code>
-     * @return The bytes for key.
+     * <code>string column_name = 1 [json_name = "columnName"];</code>
+     * @return The bytes for columnName.
      */
     public com.google.protobuf.ByteString
-        getKeyBytes() {
-      java.lang.Object ref = key_;
+        getColumnNameBytes() {
+      java.lang.Object ref = columnName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        key_ = b;
+        columnName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -966,49 +966,49 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Key for the table column
+     * Name for the table column
      * </pre>
      *
-     * <code>string key = 1 [json_name = "key"];</code>
-     * @param value The key to set.
+     * <code>string column_name = 1 [json_name = "columnName"];</code>
+     * @param value The columnName to set.
      * @return This builder for chaining.
      */
-    public Builder setKey(
+    public Builder setColumnName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      key_ = value;
+      columnName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Key for the table column
+     * Name for the table column
      * </pre>
      *
-     * <code>string key = 1 [json_name = "key"];</code>
+     * <code>string column_name = 1 [json_name = "columnName"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearKey() {
-      key_ = getDefaultInstance().getKey();
+    public Builder clearColumnName() {
+      columnName_ = getDefaultInstance().getColumnName();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Key for the table column
+     * Name for the table column
      * </pre>
      *
-     * <code>string key = 1 [json_name = "key"];</code>
-     * @param value The bytes for key to set.
+     * <code>string column_name = 1 [json_name = "columnName"];</code>
+     * @param value The bytes for columnName to set.
      * @return This builder for chaining.
      */
-    public Builder setKeyBytes(
+    public Builder setColumnNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      key_ = value;
+      columnName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;

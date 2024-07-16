@@ -22,22 +22,6 @@ public enum OutputConfigurationColumnFormatType
   OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_UNSPECIFIED(0),
   /**
    * <pre>
-   * Percentage format type
-   * </pre>
-   *
-   * <code>OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_PERCENTAGE = 1;</code>
-   */
-  OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_PERCENTAGE(1),
-  /**
-   * <pre>
-   * Dollars format type
-   * </pre>
-   *
-   * <code>OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_DOLLARS = 2;</code>
-   */
-  OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_DOLLARS(2),
-  /**
-   * <pre>
    * Date format type
    * </pre>
    *
@@ -76,14 +60,6 @@ public enum OutputConfigurationColumnFormatType
    * <code>OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_DURATION_SECONDS = 7;</code>
    */
   OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_DURATION_SECONDS(7),
-  /**
-   * <pre>
-   * Number format type
-   * </pre>
-   *
-   * <code>OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_NUMBER = 8;</code>
-   */
-  OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_NUMBER(8),
   UNRECOGNIZED(-1),
   ;
 
@@ -95,22 +71,6 @@ public enum OutputConfigurationColumnFormatType
    * <code>OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_UNSPECIFIED = 0;</code>
    */
   public static final int OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_UNSPECIFIED_VALUE = 0;
-  /**
-   * <pre>
-   * Percentage format type
-   * </pre>
-   *
-   * <code>OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_PERCENTAGE = 1;</code>
-   */
-  public static final int OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_PERCENTAGE_VALUE = 1;
-  /**
-   * <pre>
-   * Dollars format type
-   * </pre>
-   *
-   * <code>OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_DOLLARS = 2;</code>
-   */
-  public static final int OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_DOLLARS_VALUE = 2;
   /**
    * <pre>
    * Date format type
@@ -151,14 +111,6 @@ public enum OutputConfigurationColumnFormatType
    * <code>OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_DURATION_SECONDS = 7;</code>
    */
   public static final int OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_DURATION_SECONDS_VALUE = 7;
-  /**
-   * <pre>
-   * Number format type
-   * </pre>
-   *
-   * <code>OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_NUMBER = 8;</code>
-   */
-  public static final int OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_NUMBER_VALUE = 8;
 
 
   public final int getNumber() {
@@ -186,14 +138,11 @@ public enum OutputConfigurationColumnFormatType
   public static OutputConfigurationColumnFormatType forNumber(int value) {
     switch (value) {
       case 0: return OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_UNSPECIFIED;
-      case 1: return OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_PERCENTAGE;
-      case 2: return OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_DOLLARS;
       case 3: return OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_DATE;
       case 4: return OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_PREFIX;
       case 5: return OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_SUFFIX;
       case 6: return OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_DURATION;
       case 7: return OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_DURATION_SECONDS;
-      case 8: return OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_NUMBER;
       default: return null;
     }
   }

@@ -9,24 +9,32 @@ package com.tcn.cloud.api.api.commons;
 public enum ColumnSort
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>COLUMN_SORT_ASCENDING = 0;</code>
+   * <code>COLUMN_SORT_UNSPECIFIED = 0;</code>
    */
-  COLUMN_SORT_ASCENDING(0),
+  COLUMN_SORT_UNSPECIFIED(0),
   /**
-   * <code>COLUMN_SORT_DESCENDING = 1;</code>
+   * <code>COLUMN_SORT_ASCENDING = 1;</code>
    */
-  COLUMN_SORT_DESCENDING(1),
+  COLUMN_SORT_ASCENDING(1),
+  /**
+   * <code>COLUMN_SORT_DESCENDING = 2;</code>
+   */
+  COLUMN_SORT_DESCENDING(2),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>COLUMN_SORT_ASCENDING = 0;</code>
+   * <code>COLUMN_SORT_UNSPECIFIED = 0;</code>
    */
-  public static final int COLUMN_SORT_ASCENDING_VALUE = 0;
+  public static final int COLUMN_SORT_UNSPECIFIED_VALUE = 0;
   /**
-   * <code>COLUMN_SORT_DESCENDING = 1;</code>
+   * <code>COLUMN_SORT_ASCENDING = 1;</code>
    */
-  public static final int COLUMN_SORT_DESCENDING_VALUE = 1;
+  public static final int COLUMN_SORT_ASCENDING_VALUE = 1;
+  /**
+   * <code>COLUMN_SORT_DESCENDING = 2;</code>
+   */
+  public static final int COLUMN_SORT_DESCENDING_VALUE = 2;
 
 
   public final int getNumber() {
@@ -53,8 +61,9 @@ public enum ColumnSort
    */
   public static ColumnSort forNumber(int value) {
     switch (value) {
-      case 0: return COLUMN_SORT_ASCENDING;
-      case 1: return COLUMN_SORT_DESCENDING;
+      case 0: return COLUMN_SORT_UNSPECIFIED;
+      case 1: return COLUMN_SORT_ASCENDING;
+      case 2: return COLUMN_SORT_DESCENDING;
       default: return null;
     }
   }

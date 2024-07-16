@@ -9,23 +9,23 @@ public interface TableColumnConfigOrBuilder extends
 
   /**
    * <pre>
-   * Key for the table column
+   * Name for the table column
    * </pre>
    *
-   * <code>string key = 1 [json_name = "key"];</code>
-   * @return The key.
+   * <code>string column_name = 1 [json_name = "columnName"];</code>
+   * @return The columnName.
    */
-  java.lang.String getKey();
+  java.lang.String getColumnName();
   /**
    * <pre>
-   * Key for the table column
+   * Name for the table column
    * </pre>
    *
-   * <code>string key = 1 [json_name = "key"];</code>
-   * @return The bytes for key.
+   * <code>string column_name = 1 [json_name = "columnName"];</code>
+   * @return The bytes for columnName.
    */
   com.google.protobuf.ByteString
-      getKeyBytes();
+      getColumnNameBytes();
 
   /**
    * <pre>
