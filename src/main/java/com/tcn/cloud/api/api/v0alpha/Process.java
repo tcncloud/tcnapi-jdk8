@@ -82,6 +82,7 @@ private static final long serialVersionUID = 0L;
     EPIC_ENTRY_POINT(76),
     CONTACT_MANAGER_SINK(77),
     SUM(78),
+    FINVI_ENTRYPOINT(79),
     PROC_NOT_SET(0);
     private final int value;
     private ProcCase(int value) {
@@ -136,6 +137,7 @@ private static final long serialVersionUID = 0L;
         case 76: return EPIC_ENTRY_POINT;
         case 77: return CONTACT_MANAGER_SINK;
         case 78: return SUM;
+        case 79: return FINVI_ENTRYPOINT;
         case 0: return PROC_NOT_SET;
         default: return null;
       }
@@ -353,7 +355,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.v0alpha.ComplProcess compl = 45 [json_name = "compl", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.compl is deprecated.
-   *     See api/v0alpha/lms.proto;l=1021
+   *     See api/v0alpha/lms.proto;l=1044
    * @return Whether the compl field is set.
    */
   @java.lang.Override
@@ -367,7 +369,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.v0alpha.ComplProcess compl = 45 [json_name = "compl", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.compl is deprecated.
-   *     See api/v0alpha/lms.proto;l=1021
+   *     See api/v0alpha/lms.proto;l=1044
    * @return The compl.
    */
   @java.lang.Override
@@ -555,7 +557,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.v0alpha.EntrypointProcess entrypoint = 51 [json_name = "entrypoint", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.entrypoint is deprecated.
-   *     See api/v0alpha/lms.proto;l=1028
+   *     See api/v0alpha/lms.proto;l=1051
    * @return Whether the entrypoint field is set.
    */
   @java.lang.Override
@@ -569,7 +571,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.v0alpha.EntrypointProcess entrypoint = 51 [json_name = "entrypoint", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.entrypoint is deprecated.
-   *     See api/v0alpha/lms.proto;l=1028
+   *     See api/v0alpha/lms.proto;l=1051
    * @return The entrypoint.
    */
   @java.lang.Override
@@ -987,7 +989,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.v0alpha.PaymentLinkEnrichment link_enrich = 64 [json_name = "linkEnrich", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.link_enrich is deprecated.
-   *     See api/v0alpha/lms.proto;l=1047
+   *     See api/v0alpha/lms.proto;l=1070
    * @return Whether the linkEnrich field is set.
    */
   @java.lang.Override
@@ -997,7 +999,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.v0alpha.PaymentLinkEnrichment link_enrich = 64 [json_name = "linkEnrich", deprecated = true];</code>
    * @deprecated api.v0alpha.Process.link_enrich is deprecated.
-   *     See api/v0alpha/lms.proto;l=1047
+   *     See api/v0alpha/lms.proto;l=1070
    * @return The linkEnrich.
    */
   @java.lang.Override
@@ -1484,6 +1486,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v0alpha.SumProcess.getDefaultInstance();
   }
 
+  public static final int FINVI_ENTRYPOINT_FIELD_NUMBER = 79;
+  /**
+   * <code>.api.v0alpha.FinviEntrypoint finvi_entrypoint = 79 [json_name = "finviEntrypoint"];</code>
+   * @return Whether the finviEntrypoint field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviEntrypoint() {
+    return procCase_ == 79;
+  }
+  /**
+   * <code>.api.v0alpha.FinviEntrypoint finvi_entrypoint = 79 [json_name = "finviEntrypoint"];</code>
+   * @return The finviEntrypoint.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.FinviEntrypoint getFinviEntrypoint() {
+    if (procCase_ == 79) {
+       return (com.tcn.cloud.api.api.v0alpha.FinviEntrypoint) proc_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.getDefaultInstance();
+  }
+  /**
+   * <code>.api.v0alpha.FinviEntrypoint finvi_entrypoint = 79 [json_name = "finviEntrypoint"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.FinviEntrypointOrBuilder getFinviEntrypointOrBuilder() {
+    if (procCase_ == 79) {
+       return (com.tcn.cloud.api.api.v0alpha.FinviEntrypoint) proc_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1611,6 +1644,9 @@ private static final long serialVersionUID = 0L;
     }
     if (procCase_ == 78) {
       output.writeMessage(78, (com.tcn.cloud.api.api.v0alpha.SumProcess) proc_);
+    }
+    if (procCase_ == 79) {
+      output.writeMessage(79, (com.tcn.cloud.api.api.v0alpha.FinviEntrypoint) proc_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1771,6 +1807,10 @@ private static final long serialVersionUID = 0L;
     if (procCase_ == 78) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(78, (com.tcn.cloud.api.api.v0alpha.SumProcess) proc_);
+    }
+    if (procCase_ == 79) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(79, (com.tcn.cloud.api.api.v0alpha.FinviEntrypoint) proc_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1939,6 +1979,10 @@ private static final long serialVersionUID = 0L;
         if (!getSum()
             .equals(other.getSum())) return false;
         break;
+      case 79:
+        if (!getFinviEntrypoint()
+            .equals(other.getFinviEntrypoint())) return false;
+        break;
       case 0:
       default:
     }
@@ -2103,6 +2147,10 @@ private static final long serialVersionUID = 0L;
       case 78:
         hash = (37 * hash) + SUM_FIELD_NUMBER;
         hash = (53 * hash) + getSum().hashCode();
+        break;
+      case 79:
+        hash = (37 * hash) + FINVI_ENTRYPOINT_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviEntrypoint().hashCode();
         break;
       case 0:
       default:
@@ -2351,6 +2399,9 @@ private static final long serialVersionUID = 0L;
       if (sumBuilder_ != null) {
         sumBuilder_.clear();
       }
+      if (finviEntrypointBuilder_ != null) {
+        finviEntrypointBuilder_.clear();
+      }
       procCase_ = 0;
       proc_ = null;
       return this;
@@ -2547,6 +2598,10 @@ private static final long serialVersionUID = 0L;
       if (procCase_ == 78 &&
           sumBuilder_ != null) {
         result.proc_ = sumBuilder_.build();
+      }
+      if (procCase_ == 79 &&
+          finviEntrypointBuilder_ != null) {
+        result.proc_ = finviEntrypointBuilder_.build();
       }
     }
 
@@ -2746,6 +2801,10 @@ private static final long serialVersionUID = 0L;
         }
         case SUM: {
           mergeSum(other.getSum());
+          break;
+        }
+        case FINVI_ENTRYPOINT: {
+          mergeFinviEntrypoint(other.getFinviEntrypoint());
           break;
         }
         case PROC_NOT_SET: {
@@ -3042,6 +3101,13 @@ private static final long serialVersionUID = 0L;
               procCase_ = 78;
               break;
             } // case 626
+            case 634: {
+              input.readMessage(
+                  getFinviEntrypointFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 79;
+              break;
+            } // case 634
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3866,7 +3932,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.v0alpha.ComplProcess compl = 45 [json_name = "compl", deprecated = true];</code>
      * @deprecated api.v0alpha.Process.compl is deprecated.
-     *     See api/v0alpha/lms.proto;l=1021
+     *     See api/v0alpha/lms.proto;l=1044
      * @return Whether the compl field is set.
      */
     @java.lang.Override
@@ -3880,7 +3946,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.v0alpha.ComplProcess compl = 45 [json_name = "compl", deprecated = true];</code>
      * @deprecated api.v0alpha.Process.compl is deprecated.
-     *     See api/v0alpha/lms.proto;l=1021
+     *     See api/v0alpha/lms.proto;l=1044
      * @return The compl.
      */
     @java.lang.Override
@@ -4758,7 +4824,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.v0alpha.EntrypointProcess entrypoint = 51 [json_name = "entrypoint", deprecated = true];</code>
      * @deprecated api.v0alpha.Process.entrypoint is deprecated.
-     *     See api/v0alpha/lms.proto;l=1028
+     *     See api/v0alpha/lms.proto;l=1051
      * @return Whether the entrypoint field is set.
      */
     @java.lang.Override
@@ -4772,7 +4838,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.v0alpha.EntrypointProcess entrypoint = 51 [json_name = "entrypoint", deprecated = true];</code>
      * @deprecated api.v0alpha.Process.entrypoint is deprecated.
-     *     See api/v0alpha/lms.proto;l=1028
+     *     See api/v0alpha/lms.proto;l=1051
      * @return The entrypoint.
      */
     @java.lang.Override
@@ -6642,7 +6708,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.v0alpha.PaymentLinkEnrichment link_enrich = 64 [json_name = "linkEnrich", deprecated = true];</code>
      * @deprecated api.v0alpha.Process.link_enrich is deprecated.
-     *     See api/v0alpha/lms.proto;l=1047
+     *     See api/v0alpha/lms.proto;l=1070
      * @return Whether the linkEnrich field is set.
      */
     @java.lang.Override
@@ -6652,7 +6718,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.v0alpha.PaymentLinkEnrichment link_enrich = 64 [json_name = "linkEnrich", deprecated = true];</code>
      * @deprecated api.v0alpha.Process.link_enrich is deprecated.
-     *     See api/v0alpha/lms.proto;l=1047
+     *     See api/v0alpha/lms.proto;l=1070
      * @return The linkEnrich.
      */
     @java.lang.Override
@@ -8816,6 +8882,148 @@ private static final long serialVersionUID = 0L;
       procCase_ = 78;
       onChanged();
       return sumBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.FinviEntrypoint, com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.Builder, com.tcn.cloud.api.api.v0alpha.FinviEntrypointOrBuilder> finviEntrypointBuilder_;
+    /**
+     * <code>.api.v0alpha.FinviEntrypoint finvi_entrypoint = 79 [json_name = "finviEntrypoint"];</code>
+     * @return Whether the finviEntrypoint field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviEntrypoint() {
+      return procCase_ == 79;
+    }
+    /**
+     * <code>.api.v0alpha.FinviEntrypoint finvi_entrypoint = 79 [json_name = "finviEntrypoint"];</code>
+     * @return The finviEntrypoint.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.FinviEntrypoint getFinviEntrypoint() {
+      if (finviEntrypointBuilder_ == null) {
+        if (procCase_ == 79) {
+          return (com.tcn.cloud.api.api.v0alpha.FinviEntrypoint) proc_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.getDefaultInstance();
+      } else {
+        if (procCase_ == 79) {
+          return finviEntrypointBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.FinviEntrypoint finvi_entrypoint = 79 [json_name = "finviEntrypoint"];</code>
+     */
+    public Builder setFinviEntrypoint(com.tcn.cloud.api.api.v0alpha.FinviEntrypoint value) {
+      if (finviEntrypointBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        proc_ = value;
+        onChanged();
+      } else {
+        finviEntrypointBuilder_.setMessage(value);
+      }
+      procCase_ = 79;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.FinviEntrypoint finvi_entrypoint = 79 [json_name = "finviEntrypoint"];</code>
+     */
+    public Builder setFinviEntrypoint(
+        com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.Builder builderForValue) {
+      if (finviEntrypointBuilder_ == null) {
+        proc_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviEntrypointBuilder_.setMessage(builderForValue.build());
+      }
+      procCase_ = 79;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.FinviEntrypoint finvi_entrypoint = 79 [json_name = "finviEntrypoint"];</code>
+     */
+    public Builder mergeFinviEntrypoint(com.tcn.cloud.api.api.v0alpha.FinviEntrypoint value) {
+      if (finviEntrypointBuilder_ == null) {
+        if (procCase_ == 79 &&
+            proc_ != com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.getDefaultInstance()) {
+          proc_ = com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.newBuilder((com.tcn.cloud.api.api.v0alpha.FinviEntrypoint) proc_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          proc_ = value;
+        }
+        onChanged();
+      } else {
+        if (procCase_ == 79) {
+          finviEntrypointBuilder_.mergeFrom(value);
+        } else {
+          finviEntrypointBuilder_.setMessage(value);
+        }
+      }
+      procCase_ = 79;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.FinviEntrypoint finvi_entrypoint = 79 [json_name = "finviEntrypoint"];</code>
+     */
+    public Builder clearFinviEntrypoint() {
+      if (finviEntrypointBuilder_ == null) {
+        if (procCase_ == 79) {
+          procCase_ = 0;
+          proc_ = null;
+          onChanged();
+        }
+      } else {
+        if (procCase_ == 79) {
+          procCase_ = 0;
+          proc_ = null;
+        }
+        finviEntrypointBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.FinviEntrypoint finvi_entrypoint = 79 [json_name = "finviEntrypoint"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.Builder getFinviEntrypointBuilder() {
+      return getFinviEntrypointFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v0alpha.FinviEntrypoint finvi_entrypoint = 79 [json_name = "finviEntrypoint"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.FinviEntrypointOrBuilder getFinviEntrypointOrBuilder() {
+      if ((procCase_ == 79) && (finviEntrypointBuilder_ != null)) {
+        return finviEntrypointBuilder_.getMessageOrBuilder();
+      } else {
+        if (procCase_ == 79) {
+          return (com.tcn.cloud.api.api.v0alpha.FinviEntrypoint) proc_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.FinviEntrypoint finvi_entrypoint = 79 [json_name = "finviEntrypoint"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.FinviEntrypoint, com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.Builder, com.tcn.cloud.api.api.v0alpha.FinviEntrypointOrBuilder> 
+        getFinviEntrypointFieldBuilder() {
+      if (finviEntrypointBuilder_ == null) {
+        if (!(procCase_ == 79)) {
+          proc_ = com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.getDefaultInstance();
+        }
+        finviEntrypointBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.FinviEntrypoint, com.tcn.cloud.api.api.v0alpha.FinviEntrypoint.Builder, com.tcn.cloud.api.api.v0alpha.FinviEntrypointOrBuilder>(
+                (com.tcn.cloud.api.api.v0alpha.FinviEntrypoint) proc_,
+                getParentForChildren(),
+                isClean());
+        proc_ = null;
+      }
+      procCase_ = 79;
+      onChanged();
+      return finviEntrypointBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

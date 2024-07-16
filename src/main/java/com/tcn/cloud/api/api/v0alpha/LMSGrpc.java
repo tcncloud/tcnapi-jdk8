@@ -1813,6 +1813,37 @@ public final class LMSGrpc {
     return getGetQueuedEventsStatusByElementIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListPoolsRequest,
+      com.tcn.cloud.api.api.v0alpha.ListPoolsResponse> getListPoolsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListPools",
+      requestType = com.tcn.cloud.api.api.v0alpha.ListPoolsRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ListPoolsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListPoolsRequest,
+      com.tcn.cloud.api.api.v0alpha.ListPoolsResponse> getListPoolsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListPoolsRequest, com.tcn.cloud.api.api.v0alpha.ListPoolsResponse> getListPoolsMethod;
+    if ((getListPoolsMethod = LMSGrpc.getListPoolsMethod) == null) {
+      synchronized (LMSGrpc.class) {
+        if ((getListPoolsMethod = LMSGrpc.getListPoolsMethod) == null) {
+          LMSGrpc.getListPoolsMethod = getListPoolsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListPoolsRequest, com.tcn.cloud.api.api.v0alpha.ListPoolsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPools"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListPoolsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListPoolsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListPools"))
+              .build();
+        }
+      }
+    }
+    return getListPoolsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -2325,6 +2356,16 @@ public final class LMSGrpc {
     default void getQueuedEventsStatusByElementId(com.tcn.cloud.api.api.v0alpha.ElementPK request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Events> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetQueuedEventsStatusByElementIdMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List pools is a unary call to show finvi pools through exile
+     * </pre>
+     */
+    default void listPools(com.tcn.cloud.api.api.v0alpha.ListPoolsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPoolsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPoolsMethod(), responseObserver);
     }
   }
 
@@ -2878,6 +2919,17 @@ public final class LMSGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetQueuedEventsStatusByElementIdMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * List pools is a unary call to show finvi pools through exile
+     * </pre>
+     */
+    public void listPools(com.tcn.cloud.api.api.v0alpha.ListPoolsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPoolsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListPoolsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -3358,6 +3410,16 @@ public final class LMSGrpc {
     public com.tcn.cloud.api.api.v0alpha.Events getQueuedEventsStatusByElementId(com.tcn.cloud.api.api.v0alpha.ElementPK request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetQueuedEventsStatusByElementIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List pools is a unary call to show finvi pools through exile
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListPoolsResponse listPools(com.tcn.cloud.api.api.v0alpha.ListPoolsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListPoolsMethod(), getCallOptions(), request);
     }
   }
 
@@ -3842,6 +3904,17 @@ public final class LMSGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetQueuedEventsStatusByElementIdMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * List pools is a unary call to show finvi pools through exile
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListPoolsResponse> listPools(
+        com.tcn.cloud.api.api.v0alpha.ListPoolsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListPoolsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_PUBLIC_KEY = 0;
@@ -3901,7 +3974,8 @@ public final class LMSGrpc {
   private static final int METHODID_SAMPLE_ENDPOINT = 54;
   private static final int METHODID_GET_AVAILABLE_EHRFIELDS = 55;
   private static final int METHODID_GET_QUEUED_EVENTS_STATUS_BY_ELEMENT_ID = 56;
-  private static final int METHODID_STREAM_LIST = 57;
+  private static final int METHODID_LIST_POOLS = 57;
+  private static final int METHODID_STREAM_LIST = 58;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -4147,6 +4221,10 @@ public final class LMSGrpc {
         case METHODID_GET_QUEUED_EVENTS_STATUS_BY_ELEMENT_ID:
           serviceImpl.getQueuedEventsStatusByElementId((com.tcn.cloud.api.api.v0alpha.ElementPK) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Events>) responseObserver);
+          break;
+        case METHODID_LIST_POOLS:
+          serviceImpl.listPools((com.tcn.cloud.api.api.v0alpha.ListPoolsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPoolsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -4575,6 +4653,13 @@ public final class LMSGrpc {
               com.tcn.cloud.api.api.v0alpha.ElementPK,
               com.tcn.cloud.api.api.v0alpha.Events>(
                 service, METHODID_GET_QUEUED_EVENTS_STATUS_BY_ELEMENT_ID)))
+        .addMethod(
+          getListPoolsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListPoolsRequest,
+              com.tcn.cloud.api.api.v0alpha.ListPoolsResponse>(
+                service, METHODID_LIST_POOLS)))
         .build();
   }
 
@@ -4681,6 +4766,7 @@ public final class LMSGrpc {
               .addMethod(getSampleEndpointMethod())
               .addMethod(getGetAvailableEHRFieldsMethod())
               .addMethod(getGetQueuedEventsStatusByElementIdMethod())
+              .addMethod(getListPoolsMethod())
               .build();
         }
       }
