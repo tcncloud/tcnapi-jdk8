@@ -77,6 +77,37 @@ public final class TranslationsServiceGrpc {
     return getListTranslationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest,
+      com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse> getListLanguagesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListLanguages",
+      requestType = com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest.class,
+      responseType = com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest,
+      com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse> getListLanguagesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest, com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse> getListLanguagesMethod;
+    if ((getListLanguagesMethod = TranslationsServiceGrpc.getListLanguagesMethod) == null) {
+      synchronized (TranslationsServiceGrpc.class) {
+        if ((getListLanguagesMethod = TranslationsServiceGrpc.getListLanguagesMethod) == null) {
+          TranslationsServiceGrpc.getListLanguagesMethod = getListLanguagesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest, com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListLanguages"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TranslationsServiceMethodDescriptorSupplier("ListLanguages"))
+              .build();
+        }
+      }
+    }
+    return getListLanguagesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest,
       com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationResponse> getUpdateTranslationMethod;
 
@@ -343,6 +374,18 @@ public final class TranslationsServiceGrpc {
 
     /**
      * <pre>
+     * Lists localization languages
+     * Required permissions:
+     *  - PERMISSION_CUSTOMER_SUPPORT
+     * </pre>
+     */
+    default void listLanguages(com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListLanguagesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Overrides the translation for a given translationID
      * Required permissions:
      *   - PERMISSION_CUSTOMER_SUPPORT
@@ -480,6 +523,19 @@ public final class TranslationsServiceGrpc {
 
     /**
      * <pre>
+     * Lists localization languages
+     * Required permissions:
+     *  - PERMISSION_CUSTOMER_SUPPORT
+     * </pre>
+     */
+    public void listLanguages(com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListLanguagesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Overrides the translation for a given translationID
      * Required permissions:
      *   - PERMISSION_CUSTOMER_SUPPORT
@@ -610,6 +666,18 @@ public final class TranslationsServiceGrpc {
 
     /**
      * <pre>
+     * Lists localization languages
+     * Required permissions:
+     *  - PERMISSION_CUSTOMER_SUPPORT
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse listLanguages(com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListLanguagesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Overrides the translation for a given translationID
      * Required permissions:
      *   - PERMISSION_CUSTOMER_SUPPORT
@@ -736,6 +804,19 @@ public final class TranslationsServiceGrpc {
 
     /**
      * <pre>
+     * Lists localization languages
+     * Required permissions:
+     *  - PERMISSION_CUSTOMER_SUPPORT
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse> listLanguages(
+        com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListLanguagesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Overrides the translation for a given translationID
      * Required permissions:
      *   - PERMISSION_CUSTOMER_SUPPORT
@@ -820,12 +901,13 @@ public final class TranslationsServiceGrpc {
 
   private static final int METHODID_TRANSLATE_TEMPLATE = 0;
   private static final int METHODID_LIST_TRANSLATIONS = 1;
-  private static final int METHODID_UPDATE_TRANSLATION = 2;
-  private static final int METHODID_TRIGGER_LLMTRANSLATION = 3;
-  private static final int METHODID_TRIGGER_LLMTRANSLATIONS = 4;
-  private static final int METHODID_SET_SYSTEM_MESSAGE = 5;
-  private static final int METHODID_GET_SYSTEM_MESSAGE = 6;
-  private static final int METHODID_TEST_SYSTEM_MESSAGE = 7;
+  private static final int METHODID_LIST_LANGUAGES = 2;
+  private static final int METHODID_UPDATE_TRANSLATION = 3;
+  private static final int METHODID_TRIGGER_LLMTRANSLATION = 4;
+  private static final int METHODID_TRIGGER_LLMTRANSLATIONS = 5;
+  private static final int METHODID_SET_SYSTEM_MESSAGE = 6;
+  private static final int METHODID_GET_SYSTEM_MESSAGE = 7;
+  private static final int METHODID_TEST_SYSTEM_MESSAGE = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -851,6 +933,10 @@ public final class TranslationsServiceGrpc {
         case METHODID_LIST_TRANSLATIONS:
           serviceImpl.listTranslations((com.tcn.cloud.api.services.translations.v1alpha1.ListTranslationsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.ListTranslationsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_LANGUAGES:
+          serviceImpl.listLanguages((com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse>) responseObserver);
           break;
         case METHODID_UPDATE_TRANSLATION:
           serviceImpl.updateTranslation((com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest) request,
@@ -908,6 +994,13 @@ public final class TranslationsServiceGrpc {
               com.tcn.cloud.api.services.translations.v1alpha1.ListTranslationsRequest,
               com.tcn.cloud.api.services.translations.v1alpha1.ListTranslationsResponse>(
                 service, METHODID_LIST_TRANSLATIONS)))
+        .addMethod(
+          getListLanguagesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest,
+              com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse>(
+                service, METHODID_LIST_LANGUAGES)))
         .addMethod(
           getUpdateTranslationMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1000,6 +1093,7 @@ public final class TranslationsServiceGrpc {
               .setSchemaDescriptor(new TranslationsServiceFileDescriptorSupplier())
               .addMethod(getTranslateTemplateMethod())
               .addMethod(getListTranslationsMethod())
+              .addMethod(getListLanguagesMethod())
               .addMethod(getUpdateTranslationMethod())
               .addMethod(getTriggerLLMTranslationMethod())
               .addMethod(getTriggerLLMTranslationsMethod())

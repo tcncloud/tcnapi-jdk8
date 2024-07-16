@@ -99,6 +99,21 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_translations_v1alpha1_TriggerLLMTranslationsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_translations_v1alpha1_ListLanguagesRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_translations_v1alpha1_ListLanguagesRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_translations_v1alpha1_ListLanguagesResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_translations_v1alpha1_ListLanguagesResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_translations_v1alpha1_LocalizationLanguage_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_translations_v1alpha1_LocalizationLanguage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -148,13 +163,18 @@ public final class EntitiesProto {
       "sageResponse\022 \n\013translation\030\001 \001(\tR\013trans" +
       "lation\"9\n\035TriggerLLMTranslationsRequest\022" +
       "\030\n\007context\030\001 \001(\tR\007context\" \n\036TriggerLLMT" +
-      "ranslationsResponseB\333\001\n0com.tcn.cloud.ap" +
-      "i.services.translations.v1alpha1B\rEntiti" +
-      "esProtoP\001\242\002\003STX\252\002\036Services.Translations." +
-      "V1alpha1\312\002\036Services\\Translations\\V1alpha" +
-      "1\342\002*Services\\Translations\\V1alpha1\\GPBMe" +
-      "tadata\352\002 Services::Translations::V1alpha" +
-      "1b\006proto3"
+      "ranslationsResponse\"\026\n\024ListLanguagesRequ" +
+      "est\"k\n\025ListLanguagesResponse\022R\n\tlanguage" +
+      "s\030\001 \003(\01324.services.translations.v1alpha1" +
+      ".LocalizationLanguageR\tlanguages\"\\\n\024Loca" +
+      "lizationLanguage\022!\n\014language_tag\030\001 \001(\tR\013" +
+      "languageTag\022!\n\014english_name\030\002 \001(\tR\013engli" +
+      "shNameB\333\001\n0com.tcn.cloud.api.services.tr" +
+      "anslations.v1alpha1B\rEntitiesProtoP\001\242\002\003S" +
+      "TX\252\002\036Services.Translations.V1alpha1\312\002\036Se" +
+      "rvices\\Translations\\V1alpha1\342\002*Services\\" +
+      "Translations\\V1alpha1\\GPBMetadata\352\002 Serv" +
+      "ices::Translations::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -262,6 +282,24 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_translations_v1alpha1_TriggerLLMTranslationsResponse_descriptor,
         new java.lang.String[] { });
+    internal_static_services_translations_v1alpha1_ListLanguagesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_services_translations_v1alpha1_ListLanguagesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_translations_v1alpha1_ListLanguagesRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_services_translations_v1alpha1_ListLanguagesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_services_translations_v1alpha1_ListLanguagesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_translations_v1alpha1_ListLanguagesResponse_descriptor,
+        new java.lang.String[] { "Languages", });
+    internal_static_services_translations_v1alpha1_LocalizationLanguage_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_services_translations_v1alpha1_LocalizationLanguage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_translations_v1alpha1_LocalizationLanguage_descriptor,
+        new java.lang.String[] { "LanguageTag", "EnglishName", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
