@@ -42,6 +42,44 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse.class, com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse.Builder.class);
   }
 
+  public static final int AGENT_LEAVE_PETITION_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.api.commons.AgentLeavePetition agentLeavePetition_;
+  /**
+   * <pre>
+   * The canceled Agent Leave Petition.
+   * </pre>
+   *
+   * <code>.api.commons.AgentLeavePetition agent_leave_petition = 1 [json_name = "agentLeavePetition"];</code>
+   * @return Whether the agentLeavePetition field is set.
+   */
+  @java.lang.Override
+  public boolean hasAgentLeavePetition() {
+    return agentLeavePetition_ != null;
+  }
+  /**
+   * <pre>
+   * The canceled Agent Leave Petition.
+   * </pre>
+   *
+   * <code>.api.commons.AgentLeavePetition agent_leave_petition = 1 [json_name = "agentLeavePetition"];</code>
+   * @return The agentLeavePetition.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.AgentLeavePetition getAgentLeavePetition() {
+    return agentLeavePetition_ == null ? com.tcn.cloud.api.api.commons.AgentLeavePetition.getDefaultInstance() : agentLeavePetition_;
+  }
+  /**
+   * <pre>
+   * The canceled Agent Leave Petition.
+   * </pre>
+   *
+   * <code>.api.commons.AgentLeavePetition agent_leave_petition = 1 [json_name = "agentLeavePetition"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.AgentLeavePetitionOrBuilder getAgentLeavePetitionOrBuilder() {
+    return agentLeavePetition_ == null ? com.tcn.cloud.api.api.commons.AgentLeavePetition.getDefaultInstance() : agentLeavePetition_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -56,6 +94,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (agentLeavePetition_ != null) {
+      output.writeMessage(1, getAgentLeavePetition());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -65,6 +106,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (agentLeavePetition_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getAgentLeavePetition());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -80,6 +125,11 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse other = (com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse) obj;
 
+    if (hasAgentLeavePetition() != other.hasAgentLeavePetition()) return false;
+    if (hasAgentLeavePetition()) {
+      if (!getAgentLeavePetition()
+          .equals(other.getAgentLeavePetition())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -91,6 +141,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasAgentLeavePetition()) {
+      hash = (37 * hash) + AGENT_LEAVE_PETITION_FIELD_NUMBER;
+      hash = (53 * hash) + getAgentLeavePetition().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -225,6 +279,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      agentLeavePetition_ = null;
+      if (agentLeavePetitionBuilder_ != null) {
+        agentLeavePetitionBuilder_.dispose();
+        agentLeavePetitionBuilder_ = null;
+      }
       return this;
     }
 
@@ -251,8 +311,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse result = new com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.agentLeavePetition_ = agentLeavePetitionBuilder_ == null
+            ? agentLeavePetition_
+            : agentLeavePetitionBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -299,6 +369,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.wfm.CancelAgentLeavePetitionResponse.getDefaultInstance()) return this;
+      if (other.hasAgentLeavePetition()) {
+        mergeAgentLeavePetition(other.getAgentLeavePetition());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -325,6 +398,13 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              input.readMessage(
+                  getAgentLeavePetitionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -339,6 +419,162 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } // finally
       return this;
+    }
+    private int bitField0_;
+
+    private com.tcn.cloud.api.api.commons.AgentLeavePetition agentLeavePetition_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.AgentLeavePetition, com.tcn.cloud.api.api.commons.AgentLeavePetition.Builder, com.tcn.cloud.api.api.commons.AgentLeavePetitionOrBuilder> agentLeavePetitionBuilder_;
+    /**
+     * <pre>
+     * The canceled Agent Leave Petition.
+     * </pre>
+     *
+     * <code>.api.commons.AgentLeavePetition agent_leave_petition = 1 [json_name = "agentLeavePetition"];</code>
+     * @return Whether the agentLeavePetition field is set.
+     */
+    public boolean hasAgentLeavePetition() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The canceled Agent Leave Petition.
+     * </pre>
+     *
+     * <code>.api.commons.AgentLeavePetition agent_leave_petition = 1 [json_name = "agentLeavePetition"];</code>
+     * @return The agentLeavePetition.
+     */
+    public com.tcn.cloud.api.api.commons.AgentLeavePetition getAgentLeavePetition() {
+      if (agentLeavePetitionBuilder_ == null) {
+        return agentLeavePetition_ == null ? com.tcn.cloud.api.api.commons.AgentLeavePetition.getDefaultInstance() : agentLeavePetition_;
+      } else {
+        return agentLeavePetitionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The canceled Agent Leave Petition.
+     * </pre>
+     *
+     * <code>.api.commons.AgentLeavePetition agent_leave_petition = 1 [json_name = "agentLeavePetition"];</code>
+     */
+    public Builder setAgentLeavePetition(com.tcn.cloud.api.api.commons.AgentLeavePetition value) {
+      if (agentLeavePetitionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        agentLeavePetition_ = value;
+      } else {
+        agentLeavePetitionBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The canceled Agent Leave Petition.
+     * </pre>
+     *
+     * <code>.api.commons.AgentLeavePetition agent_leave_petition = 1 [json_name = "agentLeavePetition"];</code>
+     */
+    public Builder setAgentLeavePetition(
+        com.tcn.cloud.api.api.commons.AgentLeavePetition.Builder builderForValue) {
+      if (agentLeavePetitionBuilder_ == null) {
+        agentLeavePetition_ = builderForValue.build();
+      } else {
+        agentLeavePetitionBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The canceled Agent Leave Petition.
+     * </pre>
+     *
+     * <code>.api.commons.AgentLeavePetition agent_leave_petition = 1 [json_name = "agentLeavePetition"];</code>
+     */
+    public Builder mergeAgentLeavePetition(com.tcn.cloud.api.api.commons.AgentLeavePetition value) {
+      if (agentLeavePetitionBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          agentLeavePetition_ != null &&
+          agentLeavePetition_ != com.tcn.cloud.api.api.commons.AgentLeavePetition.getDefaultInstance()) {
+          getAgentLeavePetitionBuilder().mergeFrom(value);
+        } else {
+          agentLeavePetition_ = value;
+        }
+      } else {
+        agentLeavePetitionBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The canceled Agent Leave Petition.
+     * </pre>
+     *
+     * <code>.api.commons.AgentLeavePetition agent_leave_petition = 1 [json_name = "agentLeavePetition"];</code>
+     */
+    public Builder clearAgentLeavePetition() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      agentLeavePetition_ = null;
+      if (agentLeavePetitionBuilder_ != null) {
+        agentLeavePetitionBuilder_.dispose();
+        agentLeavePetitionBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The canceled Agent Leave Petition.
+     * </pre>
+     *
+     * <code>.api.commons.AgentLeavePetition agent_leave_petition = 1 [json_name = "agentLeavePetition"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.AgentLeavePetition.Builder getAgentLeavePetitionBuilder() {
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return getAgentLeavePetitionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The canceled Agent Leave Petition.
+     * </pre>
+     *
+     * <code>.api.commons.AgentLeavePetition agent_leave_petition = 1 [json_name = "agentLeavePetition"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.AgentLeavePetitionOrBuilder getAgentLeavePetitionOrBuilder() {
+      if (agentLeavePetitionBuilder_ != null) {
+        return agentLeavePetitionBuilder_.getMessageOrBuilder();
+      } else {
+        return agentLeavePetition_ == null ?
+            com.tcn.cloud.api.api.commons.AgentLeavePetition.getDefaultInstance() : agentLeavePetition_;
+      }
+    }
+    /**
+     * <pre>
+     * The canceled Agent Leave Petition.
+     * </pre>
+     *
+     * <code>.api.commons.AgentLeavePetition agent_leave_petition = 1 [json_name = "agentLeavePetition"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.AgentLeavePetition, com.tcn.cloud.api.api.commons.AgentLeavePetition.Builder, com.tcn.cloud.api.api.commons.AgentLeavePetitionOrBuilder> 
+        getAgentLeavePetitionFieldBuilder() {
+      if (agentLeavePetitionBuilder_ == null) {
+        agentLeavePetitionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.AgentLeavePetition, com.tcn.cloud.api.api.commons.AgentLeavePetition.Builder, com.tcn.cloud.api.api.commons.AgentLeavePetitionOrBuilder>(
+                getAgentLeavePetition(),
+                getParentForChildren(),
+                isClean());
+        agentLeavePetition_ = null;
+      }
+      return agentLeavePetitionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

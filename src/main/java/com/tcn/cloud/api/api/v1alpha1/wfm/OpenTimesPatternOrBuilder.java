@@ -80,4 +80,34 @@ public interface OpenTimesPatternOrBuilder extends
    * @return The scheduleScenarioSid.
    */
   long getScheduleScenarioSid();
+
+  /**
+   * <pre>
+   * An optional value to relate the open times pattern to a specific type of scheduling activity, such as time off.
+   * If left as nil, this will be treated as a standard open times pattern.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value scheduling_activity_sid = 5 [json_name = "schedulingActivitySid"];</code>
+   * @return Whether the schedulingActivitySid field is set.
+   */
+  boolean hasSchedulingActivitySid();
+  /**
+   * <pre>
+   * An optional value to relate the open times pattern to a specific type of scheduling activity, such as time off.
+   * If left as nil, this will be treated as a standard open times pattern.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value scheduling_activity_sid = 5 [json_name = "schedulingActivitySid"];</code>
+   * @return The schedulingActivitySid.
+   */
+  com.google.protobuf.Int64Value getSchedulingActivitySid();
+  /**
+   * <pre>
+   * An optional value to relate the open times pattern to a specific type of scheduling activity, such as time off.
+   * If left as nil, this will be treated as a standard open times pattern.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value scheduling_activity_sid = 5 [json_name = "schedulingActivitySid"];</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getSchedulingActivitySidOrBuilder();
 }

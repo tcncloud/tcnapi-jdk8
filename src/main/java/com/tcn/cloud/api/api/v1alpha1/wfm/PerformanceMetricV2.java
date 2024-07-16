@@ -89,7 +89,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PerformanceMetricV2.total_fte_intervals_required is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5901
+   *     See api/v1alpha1/wfm/wfm.proto;l=5916
    * @return The totalFteIntervalsRequired.
    */
   @java.lang.Override
@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PerformanceMetricV2.total_fte_intervals_achieved is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=5902
+   *     See api/v1alpha1/wfm/wfm.proto;l=5917
    * @return The totalFteIntervalsAchieved.
    */
   @java.lang.Override
@@ -1481,7 +1481,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PerformanceMetricV2.total_fte_intervals_required is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5901
+     *     See api/v1alpha1/wfm/wfm.proto;l=5916
      * @return The totalFteIntervalsRequired.
      */
     @java.lang.Override
@@ -1491,7 +1491,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PerformanceMetricV2.total_fte_intervals_required is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5901
+     *     See api/v1alpha1/wfm/wfm.proto;l=5916
      * @param value The totalFteIntervalsRequired to set.
      * @return This builder for chaining.
      */
@@ -1505,7 +1505,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PerformanceMetricV2.total_fte_intervals_required is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5901
+     *     See api/v1alpha1/wfm/wfm.proto;l=5916
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTotalFteIntervalsRequired() {
@@ -1519,7 +1519,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PerformanceMetricV2.total_fte_intervals_achieved is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5902
+     *     See api/v1alpha1/wfm/wfm.proto;l=5917
      * @return The totalFteIntervalsAchieved.
      */
     @java.lang.Override
@@ -1529,7 +1529,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PerformanceMetricV2.total_fte_intervals_achieved is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5902
+     *     See api/v1alpha1/wfm/wfm.proto;l=5917
      * @param value The totalFteIntervalsAchieved to set.
      * @return This builder for chaining.
      */
@@ -1543,7 +1543,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.PerformanceMetricV2.total_fte_intervals_achieved is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=5902
+     *     See api/v1alpha1/wfm/wfm.proto;l=5917
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTotalFteIntervalsAchieved() {

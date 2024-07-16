@@ -432,6 +432,23 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int REQUESTED_HOURS_OFF_FIELD_NUMBER = 11;
+  private float requestedHoursOff_ = 0F;
+  /**
+   * <pre>
+   * The number of working hours requested off.
+   * This does not need to relate directly to the datetime range being requested off,
+   * For example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
+   * </pre>
+   *
+   * <code>float requested_hours_off = 11 [json_name = "requestedHoursOff"];</code>
+   * @return The requestedHoursOff.
+   */
+  @java.lang.Override
+  public float getRequestedHoursOff() {
+    return requestedHoursOff_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -475,6 +492,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resolvedByUserId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, resolvedByUserId_);
+    }
+    if (java.lang.Float.floatToRawIntBits(requestedHoursOff_) != 0) {
+      output.writeFloat(11, requestedHoursOff_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -522,6 +542,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resolvedByUserId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, resolvedByUserId_);
     }
+    if (java.lang.Float.floatToRawIntBits(requestedHoursOff_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(11, requestedHoursOff_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -565,6 +589,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!getResolvedByUserId()
         .equals(other.getResolvedByUserId())) return false;
+    if (java.lang.Float.floatToIntBits(getRequestedHoursOff())
+        != java.lang.Float.floatToIntBits(
+            other.getRequestedHoursOff())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -606,6 +633,9 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + RESOLVED_BY_USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getResolvedByUserId().hashCode();
+    hash = (37 * hash) + REQUESTED_HOURS_OFF_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getRequestedHoursOff());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -769,6 +799,7 @@ private static final long serialVersionUID = 0L;
         resolvedTimeBuilder_ = null;
       }
       resolvedByUserId_ = "";
+      requestedHoursOff_ = 0F;
       return this;
     }
 
@@ -847,6 +878,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.resolvedByUserId_ = resolvedByUserId_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.requestedHoursOff_ = requestedHoursOff_;
       }
     }
 
@@ -953,6 +987,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000200;
         onChanged();
       }
+      if (other.getRequestedHoursOff() != 0F) {
+        setRequestedHoursOff(other.getRequestedHoursOff());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1043,6 +1080,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 82
+            case 93: {
+              requestedHoursOff_ = input.readFloat();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 93
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2307,6 +2349,56 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       resolvedByUserId_ = value;
       bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+
+    private float requestedHoursOff_ ;
+    /**
+     * <pre>
+     * The number of working hours requested off.
+     * This does not need to relate directly to the datetime range being requested off,
+     * For example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
+     * </pre>
+     *
+     * <code>float requested_hours_off = 11 [json_name = "requestedHoursOff"];</code>
+     * @return The requestedHoursOff.
+     */
+    @java.lang.Override
+    public float getRequestedHoursOff() {
+      return requestedHoursOff_;
+    }
+    /**
+     * <pre>
+     * The number of working hours requested off.
+     * This does not need to relate directly to the datetime range being requested off,
+     * For example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
+     * </pre>
+     *
+     * <code>float requested_hours_off = 11 [json_name = "requestedHoursOff"];</code>
+     * @param value The requestedHoursOff to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRequestedHoursOff(float value) {
+
+      requestedHoursOff_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The number of working hours requested off.
+     * This does not need to relate directly to the datetime range being requested off,
+     * For example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
+     * </pre>
+     *
+     * <code>float requested_hours_off = 11 [json_name = "requestedHoursOff"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRequestedHoursOff() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      requestedHoursOff_ = 0F;
       onChanged();
       return this;
     }

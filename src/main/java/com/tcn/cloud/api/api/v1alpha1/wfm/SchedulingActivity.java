@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private SchedulingActivity() {
+    activityClassification_ = 0;
   }
 
   @java.lang.Override
@@ -151,6 +152,32 @@ private static final long serialVersionUID = 0L;
     return memberNonSkillActivity_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.NonSkillActivity.getDefaultInstance() : memberNonSkillActivity_;
   }
 
+  public static final int ACTIVITY_CLASSIFICATION_FIELD_NUMBER = 5;
+  private int activityClassification_ = 0;
+  /**
+   * <pre>
+   * Distinguishes if this is a special scheduling activity.
+   * </pre>
+   *
+   * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+   * @return The enum numeric value on the wire for activityClassification.
+   */
+  @java.lang.Override public int getActivityClassificationValue() {
+    return activityClassification_;
+  }
+  /**
+   * <pre>
+   * Distinguishes if this is a special scheduling activity.
+   * </pre>
+   *
+   * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+   * @return The activityClassification.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.SchedulingActivityClassification getActivityClassification() {
+    com.tcn.cloud.api.api.commons.SchedulingActivityClassification result = com.tcn.cloud.api.api.commons.SchedulingActivityClassification.forNumber(activityClassification_);
+    return result == null ? com.tcn.cloud.api.api.commons.SchedulingActivityClassification.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -177,6 +204,9 @@ private static final long serialVersionUID = 0L;
     if (memberNonSkillActivity_ != null) {
       output.writeMessage(4, getMemberNonSkillActivity());
     }
+    if (activityClassification_ != com.tcn.cloud.api.api.commons.SchedulingActivityClassification.STANDARD_SCHEDULING_ACTIVITY.getNumber()) {
+      output.writeEnum(5, activityClassification_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -201,6 +231,10 @@ private static final long serialVersionUID = 0L;
     if (memberNonSkillActivity_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getMemberNonSkillActivity());
+    }
+    if (activityClassification_ != com.tcn.cloud.api.api.commons.SchedulingActivityClassification.STANDARD_SCHEDULING_ACTIVITY.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, activityClassification_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -231,6 +265,7 @@ private static final long serialVersionUID = 0L;
       if (!getMemberNonSkillActivity()
           .equals(other.getMemberNonSkillActivity())) return false;
     }
+    if (activityClassification_ != other.activityClassification_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -256,6 +291,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MEMBER_NON_SKILL_ACTIVITY_FIELD_NUMBER;
       hash = (53 * hash) + getMemberNonSkillActivity().hashCode();
     }
+    hash = (37 * hash) + ACTIVITY_CLASSIFICATION_FIELD_NUMBER;
+    hash = (53 * hash) + activityClassification_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -403,6 +440,7 @@ private static final long serialVersionUID = 0L;
         memberNonSkillActivityBuilder_.dispose();
         memberNonSkillActivityBuilder_ = null;
       }
+      activityClassification_ = 0;
       return this;
     }
 
@@ -451,6 +489,9 @@ private static final long serialVersionUID = 0L;
         result.memberNonSkillActivity_ = memberNonSkillActivityBuilder_ == null
             ? memberNonSkillActivity_
             : memberNonSkillActivityBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.activityClassification_ = activityClassification_;
       }
     }
 
@@ -510,6 +551,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasMemberNonSkillActivity()) {
         mergeMemberNonSkillActivity(other.getMemberNonSkillActivity());
       }
+      if (other.activityClassification_ != 0) {
+        setActivityClassificationValue(other.getActivityClassificationValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -560,6 +604,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 40: {
+              activityClassification_ = input.readEnum();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -982,6 +1031,79 @@ private static final long serialVersionUID = 0L;
         memberNonSkillActivity_ = null;
       }
       return memberNonSkillActivityBuilder_;
+    }
+
+    private int activityClassification_ = 0;
+    /**
+     * <pre>
+     * Distinguishes if this is a special scheduling activity.
+     * </pre>
+     *
+     * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+     * @return The enum numeric value on the wire for activityClassification.
+     */
+    @java.lang.Override public int getActivityClassificationValue() {
+      return activityClassification_;
+    }
+    /**
+     * <pre>
+     * Distinguishes if this is a special scheduling activity.
+     * </pre>
+     *
+     * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+     * @param value The enum numeric value on the wire for activityClassification to set.
+     * @return This builder for chaining.
+     */
+    public Builder setActivityClassificationValue(int value) {
+      activityClassification_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Distinguishes if this is a special scheduling activity.
+     * </pre>
+     *
+     * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+     * @return The activityClassification.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.SchedulingActivityClassification getActivityClassification() {
+      com.tcn.cloud.api.api.commons.SchedulingActivityClassification result = com.tcn.cloud.api.api.commons.SchedulingActivityClassification.forNumber(activityClassification_);
+      return result == null ? com.tcn.cloud.api.api.commons.SchedulingActivityClassification.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Distinguishes if this is a special scheduling activity.
+     * </pre>
+     *
+     * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+     * @param value The activityClassification to set.
+     * @return This builder for chaining.
+     */
+    public Builder setActivityClassification(com.tcn.cloud.api.api.commons.SchedulingActivityClassification value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      activityClassification_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Distinguishes if this is a special scheduling activity.
+     * </pre>
+     *
+     * <code>.api.commons.SchedulingActivityClassification activity_classification = 5 [json_name = "activityClassification"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearActivityClassification() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      activityClassification_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
