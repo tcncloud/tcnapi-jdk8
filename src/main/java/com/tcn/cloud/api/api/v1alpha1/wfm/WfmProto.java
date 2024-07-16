@@ -4056,7 +4056,7 @@ public final class WfmProto {
       "api.commons.DatetimeRangeR\027requestedDate" +
       "timeRanges\022)\n\020petition_comment\030\002 \001(\tR\017pe" +
       "titionComment\022\"\n\rwfm_agent_sid\030\003 \001(\003R\013wf" +
-      "mAgentSid\022.\n\023requested_hours_off\030\013 \001(\002R\021" +
+      "mAgentSid\022.\n\023requested_hours_off\030\004 \001(\002R\021" +
       "requestedHoursOff\"u\n CreateAgentLeavePet" +
       "itionResponse\022Q\n\024agent_leave_petition\030\001 " +
       "\001(\0132\037.api.commons.AgentLeavePetitionR\022ag" +

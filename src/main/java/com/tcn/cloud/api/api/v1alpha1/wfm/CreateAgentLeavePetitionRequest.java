@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
     return wfmAgentSid_;
   }
 
-  public static final int REQUESTED_HOURS_OFF_FIELD_NUMBER = 11;
+  public static final int REQUESTED_HOURS_OFF_FIELD_NUMBER = 4;
   private float requestedHoursOff_ = 0F;
   /**
    * <pre>
@@ -181,7 +181,7 @@ private static final long serialVersionUID = 0L;
    * For example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
    * </pre>
    *
-   * <code>float requested_hours_off = 11 [json_name = "requestedHoursOff"];</code>
+   * <code>float requested_hours_off = 4 [json_name = "requestedHoursOff"];</code>
    * @return The requestedHoursOff.
    */
   @java.lang.Override
@@ -213,7 +213,7 @@ private static final long serialVersionUID = 0L;
       output.writeInt64(3, wfmAgentSid_);
     }
     if (java.lang.Float.floatToRawIntBits(requestedHoursOff_) != 0) {
-      output.writeFloat(11, requestedHoursOff_);
+      output.writeFloat(4, requestedHoursOff_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -237,7 +237,7 @@ private static final long serialVersionUID = 0L;
     }
     if (java.lang.Float.floatToRawIntBits(requestedHoursOff_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeFloatSize(11, requestedHoursOff_);
+        .computeFloatSize(4, requestedHoursOff_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -618,11 +618,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
-            case 93: {
+            case 37: {
               requestedHoursOff_ = input.readFloat();
               bitField0_ |= 0x00000008;
               break;
-            } // case 93
+            } // case 37
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1114,7 +1114,7 @@ private static final long serialVersionUID = 0L;
      * For example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
      * </pre>
      *
-     * <code>float requested_hours_off = 11 [json_name = "requestedHoursOff"];</code>
+     * <code>float requested_hours_off = 4 [json_name = "requestedHoursOff"];</code>
      * @return The requestedHoursOff.
      */
     @java.lang.Override
@@ -1128,7 +1128,7 @@ private static final long serialVersionUID = 0L;
      * For example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
      * </pre>
      *
-     * <code>float requested_hours_off = 11 [json_name = "requestedHoursOff"];</code>
+     * <code>float requested_hours_off = 4 [json_name = "requestedHoursOff"];</code>
      * @param value The requestedHoursOff to set.
      * @return This builder for chaining.
      */
@@ -1146,7 +1146,7 @@ private static final long serialVersionUID = 0L;
      * For example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
      * </pre>
      *
-     * <code>float requested_hours_off = 11 [json_name = "requestedHoursOff"];</code>
+     * <code>float requested_hours_off = 4 [json_name = "requestedHoursOff"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRequestedHoursOff() {

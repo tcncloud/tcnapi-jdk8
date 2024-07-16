@@ -93,7 +93,7 @@ public interface CreateAgentLeavePetitionRequestOrBuilder extends
    * For example in the case where a 14 hour schedulable range is being taken off but 8 hours of work will be paid out with PTO.
    * </pre>
    *
-   * <code>float requested_hours_off = 11 [json_name = "requestedHoursOff"];</code>
+   * <code>float requested_hours_off = 4 [json_name = "requestedHoursOff"];</code>
    * @return The requestedHoursOff.
    */
   float getRequestedHoursOff();
