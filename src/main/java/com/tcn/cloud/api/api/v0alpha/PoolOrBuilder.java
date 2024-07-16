@@ -18,4 +18,16 @@ public interface PoolOrBuilder extends
    */
   com.google.protobuf.ByteString
       getIdBytes();
+
+  /**
+   * <code>string desc = 3 [json_name = "desc"];</code>
+   * @return The desc.
+   */
+  java.lang.String getDesc();
+  /**
+   * <code>string desc = 3 [json_name = "desc"];</code>
+   * @return The bytes for desc.
+   */
+  com.google.protobuf.ByteString
+      getDescBytes();
 }
