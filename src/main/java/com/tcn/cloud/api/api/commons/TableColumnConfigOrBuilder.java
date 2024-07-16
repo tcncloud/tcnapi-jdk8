@@ -49,23 +49,23 @@ public interface TableColumnConfigOrBuilder extends
 
   /**
    * <pre>
-   * Label for the column
+   * Renames the column name
    * </pre>
    *
-   * <code>string label = 4 [json_name = "label"];</code>
-   * @return The label.
+   * <code>string renamed_as = 4 [json_name = "renamedAs"];</code>
+   * @return The renamedAs.
    */
-  java.lang.String getLabel();
+  java.lang.String getRenamedAs();
   /**
    * <pre>
-   * Label for the column
+   * Renames the column name
    * </pre>
    *
-   * <code>string label = 4 [json_name = "label"];</code>
-   * @return The bytes for label.
+   * <code>string renamed_as = 4 [json_name = "renamedAs"];</code>
+   * @return The bytes for renamedAs.
    */
   com.google.protobuf.ByteString
-      getLabelBytes();
+      getRenamedAsBytes();
 
   /**
    * <pre>

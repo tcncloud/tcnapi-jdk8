@@ -42,6 +42,44 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse.class, com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse.Builder.class);
   }
 
+  public static final int OUTPUT_CONFIGURATION_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration outputConfiguration_;
+  /**
+   * <pre>
+   * The created output configuration
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
+   * @return Whether the outputConfiguration field is set.
+   */
+  @java.lang.Override
+  public boolean hasOutputConfiguration() {
+    return outputConfiguration_ != null;
+  }
+  /**
+   * <pre>
+   * The created output configuration
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
+   * @return The outputConfiguration.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration getOutputConfiguration() {
+    return outputConfiguration_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.getDefaultInstance() : outputConfiguration_;
+  }
+  /**
+   * <pre>
+   * The created output configuration
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder getOutputConfigurationOrBuilder() {
+    return outputConfiguration_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.getDefaultInstance() : outputConfiguration_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -56,6 +94,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (outputConfiguration_ != null) {
+      output.writeMessage(1, getOutputConfiguration());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -65,6 +106,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (outputConfiguration_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getOutputConfiguration());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -80,6 +125,11 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse other = (com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse) obj;
 
+    if (hasOutputConfiguration() != other.hasOutputConfiguration()) return false;
+    if (hasOutputConfiguration()) {
+      if (!getOutputConfiguration()
+          .equals(other.getOutputConfiguration())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -91,6 +141,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasOutputConfiguration()) {
+      hash = (37 * hash) + OUTPUT_CONFIGURATION_FIELD_NUMBER;
+      hash = (53 * hash) + getOutputConfiguration().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -225,6 +279,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      outputConfiguration_ = null;
+      if (outputConfigurationBuilder_ != null) {
+        outputConfigurationBuilder_.dispose();
+        outputConfigurationBuilder_ = null;
+      }
       return this;
     }
 
@@ -251,8 +311,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse result = new com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.outputConfiguration_ = outputConfigurationBuilder_ == null
+            ? outputConfiguration_
+            : outputConfigurationBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -299,6 +369,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse.getDefaultInstance()) return this;
+      if (other.hasOutputConfiguration()) {
+        mergeOutputConfiguration(other.getOutputConfiguration());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -325,6 +398,13 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              input.readMessage(
+                  getOutputConfigurationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -339,6 +419,162 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } // finally
       return this;
+    }
+    private int bitField0_;
+
+    private com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration outputConfiguration_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder> outputConfigurationBuilder_;
+    /**
+     * <pre>
+     * The created output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
+     * @return Whether the outputConfiguration field is set.
+     */
+    public boolean hasOutputConfiguration() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The created output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
+     * @return The outputConfiguration.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration getOutputConfiguration() {
+      if (outputConfigurationBuilder_ == null) {
+        return outputConfiguration_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.getDefaultInstance() : outputConfiguration_;
+      } else {
+        return outputConfigurationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The created output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
+     */
+    public Builder setOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration value) {
+      if (outputConfigurationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        outputConfiguration_ = value;
+      } else {
+        outputConfigurationBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The created output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
+     */
+    public Builder setOutputConfiguration(
+        com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder builderForValue) {
+      if (outputConfigurationBuilder_ == null) {
+        outputConfiguration_ = builderForValue.build();
+      } else {
+        outputConfigurationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The created output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
+     */
+    public Builder mergeOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration value) {
+      if (outputConfigurationBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          outputConfiguration_ != null &&
+          outputConfiguration_ != com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.getDefaultInstance()) {
+          getOutputConfigurationBuilder().mergeFrom(value);
+        } else {
+          outputConfiguration_ = value;
+        }
+      } else {
+        outputConfigurationBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The created output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
+     */
+    public Builder clearOutputConfiguration() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      outputConfiguration_ = null;
+      if (outputConfigurationBuilder_ != null) {
+        outputConfigurationBuilder_.dispose();
+        outputConfigurationBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The created output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder getOutputConfigurationBuilder() {
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return getOutputConfigurationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The created output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder getOutputConfigurationOrBuilder() {
+      if (outputConfigurationBuilder_ != null) {
+        return outputConfigurationBuilder_.getMessageOrBuilder();
+      } else {
+        return outputConfiguration_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.getDefaultInstance() : outputConfiguration_;
+      }
+    }
+    /**
+     * <pre>
+     * The created output configuration
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder> 
+        getOutputConfigurationFieldBuilder() {
+      if (outputConfigurationBuilder_ == null) {
+        outputConfigurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder>(
+                getOutputConfiguration(),
+                getParentForChildren(),
+                isClean());
+        outputConfiguration_ = null;
+      }
+      return outputConfigurationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

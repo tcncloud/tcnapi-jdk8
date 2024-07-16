@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
  * <pre>
- * Message for Output Configuration
+ * Output configuration provides formatting options in post processing
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.insights.OutputConfiguration}
@@ -588,7 +588,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Message for Output Configuration
+   * Output configuration provides formatting options in post processing
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.insights.OutputConfiguration}

@@ -21,7 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private TableColumnConfig() {
     key_ = "";
-    label_ = "";
+    renamedAs_ = "";
     columnFormatType_ = 0;
     columnFormatValues_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
@@ -127,47 +127,47 @@ private static final long serialVersionUID = 0L;
     return hideColumn_;
   }
 
-  public static final int LABEL_FIELD_NUMBER = 4;
+  public static final int RENAMED_AS_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object label_ = "";
+  private volatile java.lang.Object renamedAs_ = "";
   /**
    * <pre>
-   * Label for the column
+   * Renames the column name
    * </pre>
    *
-   * <code>string label = 4 [json_name = "label"];</code>
-   * @return The label.
+   * <code>string renamed_as = 4 [json_name = "renamedAs"];</code>
+   * @return The renamedAs.
    */
   @java.lang.Override
-  public java.lang.String getLabel() {
-    java.lang.Object ref = label_;
+  public java.lang.String getRenamedAs() {
+    java.lang.Object ref = renamedAs_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      label_ = s;
+      renamedAs_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * Label for the column
+   * Renames the column name
    * </pre>
    *
-   * <code>string label = 4 [json_name = "label"];</code>
-   * @return The bytes for label.
+   * <code>string renamed_as = 4 [json_name = "renamedAs"];</code>
+   * @return The bytes for renamedAs.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getLabelBytes() {
-    java.lang.Object ref = label_;
+      getRenamedAsBytes() {
+    java.lang.Object ref = renamedAs_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      label_ = b;
+      renamedAs_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -390,8 +390,8 @@ private static final long serialVersionUID = 0L;
     if (hideColumn_ != false) {
       output.writeBool(3, hideColumn_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, label_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(renamedAs_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, renamedAs_);
     }
     if (columnFormatType_ != com.tcn.cloud.api.api.commons.OutputConfigurationColumnFormatType.OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_UNSPECIFIED.getNumber()) {
       output.writeEnum(5, columnFormatType_);
@@ -431,8 +431,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, hideColumn_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, label_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(renamedAs_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, renamedAs_);
     }
     if (columnFormatType_ != com.tcn.cloud.api.api.commons.OutputConfigurationColumnFormatType.OUTPUT_CONFIGURATION_COLUMN_FORMAT_TYPE_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
@@ -482,8 +482,8 @@ private static final long serialVersionUID = 0L;
         != other.getColumnWidth()) return false;
     if (getHideColumn()
         != other.getHideColumn()) return false;
-    if (!getLabel()
-        .equals(other.getLabel())) return false;
+    if (!getRenamedAs()
+        .equals(other.getRenamedAs())) return false;
     if (columnFormatType_ != other.columnFormatType_) return false;
     if (!getColumnFormatValuesList()
         .equals(other.getColumnFormatValuesList())) return false;
@@ -512,8 +512,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + HIDE_COLUMN_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getHideColumn());
-    hash = (37 * hash) + LABEL_FIELD_NUMBER;
-    hash = (53 * hash) + getLabel().hashCode();
+    hash = (37 * hash) + RENAMED_AS_FIELD_NUMBER;
+    hash = (53 * hash) + getRenamedAs().hashCode();
     hash = (37 * hash) + COLUMN_FORMAT_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + columnFormatType_;
     if (getColumnFormatValuesCount() > 0) {
@@ -667,7 +667,7 @@ private static final long serialVersionUID = 0L;
       key_ = "";
       columnWidth_ = 0L;
       hideColumn_ = false;
-      label_ = "";
+      renamedAs_ = "";
       columnFormatType_ = 0;
       columnFormatValues_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
@@ -718,7 +718,7 @@ private static final long serialVersionUID = 0L;
         result.hideColumn_ = hideColumn_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.label_ = label_;
+        result.renamedAs_ = renamedAs_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.columnFormatType_ = columnFormatType_;
@@ -796,8 +796,8 @@ private static final long serialVersionUID = 0L;
       if (other.getHideColumn() != false) {
         setHideColumn(other.getHideColumn());
       }
-      if (!other.getLabel().isEmpty()) {
-        label_ = other.label_;
+      if (!other.getRenamedAs().isEmpty()) {
+        renamedAs_ = other.renamedAs_;
         bitField0_ |= 0x00000008;
         onChanged();
       }
@@ -870,7 +870,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 24
             case 34: {
-              label_ = input.readStringRequireUtf8();
+              renamedAs_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
             } // case 34
@@ -1102,22 +1102,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object label_ = "";
+    private java.lang.Object renamedAs_ = "";
     /**
      * <pre>
-     * Label for the column
+     * Renames the column name
      * </pre>
      *
-     * <code>string label = 4 [json_name = "label"];</code>
-     * @return The label.
+     * <code>string renamed_as = 4 [json_name = "renamedAs"];</code>
+     * @return The renamedAs.
      */
-    public java.lang.String getLabel() {
-      java.lang.Object ref = label_;
+    public java.lang.String getRenamedAs() {
+      java.lang.Object ref = renamedAs_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        label_ = s;
+        renamedAs_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -1125,20 +1125,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Label for the column
+     * Renames the column name
      * </pre>
      *
-     * <code>string label = 4 [json_name = "label"];</code>
-     * @return The bytes for label.
+     * <code>string renamed_as = 4 [json_name = "renamedAs"];</code>
+     * @return The bytes for renamedAs.
      */
     public com.google.protobuf.ByteString
-        getLabelBytes() {
-      java.lang.Object ref = label_;
+        getRenamedAsBytes() {
+      java.lang.Object ref = renamedAs_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        label_ = b;
+        renamedAs_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1146,49 +1146,49 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Label for the column
+     * Renames the column name
      * </pre>
      *
-     * <code>string label = 4 [json_name = "label"];</code>
-     * @param value The label to set.
+     * <code>string renamed_as = 4 [json_name = "renamedAs"];</code>
+     * @param value The renamedAs to set.
      * @return This builder for chaining.
      */
-    public Builder setLabel(
+    public Builder setRenamedAs(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      label_ = value;
+      renamedAs_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Label for the column
+     * Renames the column name
      * </pre>
      *
-     * <code>string label = 4 [json_name = "label"];</code>
+     * <code>string renamed_as = 4 [json_name = "renamedAs"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearLabel() {
-      label_ = getDefaultInstance().getLabel();
+    public Builder clearRenamedAs() {
+      renamedAs_ = getDefaultInstance().getRenamedAs();
       bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Label for the column
+     * Renames the column name
      * </pre>
      *
-     * <code>string label = 4 [json_name = "label"];</code>
-     * @param value The bytes for label to set.
+     * <code>string renamed_as = 4 [json_name = "renamedAs"];</code>
+     * @param value The bytes for renamedAs to set.
      * @return This builder for chaining.
      */
-    public Builder setLabelBytes(
+    public Builder setRenamedAsBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      label_ = value;
+      renamedAs_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;

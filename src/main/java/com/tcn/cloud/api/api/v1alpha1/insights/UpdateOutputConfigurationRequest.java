@@ -90,6 +90,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int UPDATE_MASK_FIELD_NUMBER = 2;
+  private com.google.protobuf.FieldMask updateMask_;
+  /**
+   * <pre>
+   * Field mask to update specified fields
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * @return Whether the updateMask field is set.
+   */
+  @java.lang.Override
+  public boolean hasUpdateMask() {
+    return updateMask_ != null;
+  }
+  /**
+   * <pre>
+   * Field mask to update specified fields
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * @return The updateMask.
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMask getUpdateMask() {
+    return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+  }
+  /**
+   * <pre>
+   * Field mask to update specified fields
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+    return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+  }
+
   public static final int OUTPUT_CONFIGURATION_FIELD_NUMBER = 3;
   private com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration outputConfiguration_;
   /**
@@ -145,6 +183,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputConfigurationId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, outputConfigurationId_);
     }
+    if (updateMask_ != null) {
+      output.writeMessage(2, getUpdateMask());
+    }
     if (outputConfiguration_ != null) {
       output.writeMessage(3, getOutputConfiguration());
     }
@@ -159,6 +200,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputConfigurationId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, outputConfigurationId_);
+    }
+    if (updateMask_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getUpdateMask());
     }
     if (outputConfiguration_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -181,6 +226,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getOutputConfigurationId()
         .equals(other.getOutputConfigurationId())) return false;
+    if (hasUpdateMask() != other.hasUpdateMask()) return false;
+    if (hasUpdateMask()) {
+      if (!getUpdateMask()
+          .equals(other.getUpdateMask())) return false;
+    }
     if (hasOutputConfiguration() != other.hasOutputConfiguration()) return false;
     if (hasOutputConfiguration()) {
       if (!getOutputConfiguration()
@@ -199,6 +249,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + OUTPUT_CONFIGURATION_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOutputConfigurationId().hashCode();
+    if (hasUpdateMask()) {
+      hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+      hash = (53 * hash) + getUpdateMask().hashCode();
+    }
     if (hasOutputConfiguration()) {
       hash = (37 * hash) + OUTPUT_CONFIGURATION_FIELD_NUMBER;
       hash = (53 * hash) + getOutputConfiguration().hashCode();
@@ -339,6 +393,11 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       outputConfigurationId_ = "";
+      updateMask_ = null;
+      if (updateMaskBuilder_ != null) {
+        updateMaskBuilder_.dispose();
+        updateMaskBuilder_ = null;
+      }
       outputConfiguration_ = null;
       if (outputConfigurationBuilder_ != null) {
         outputConfigurationBuilder_.dispose();
@@ -381,6 +440,11 @@ private static final long serialVersionUID = 0L;
         result.outputConfigurationId_ = outputConfigurationId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.updateMask_ = updateMaskBuilder_ == null
+            ? updateMask_
+            : updateMaskBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.outputConfiguration_ = outputConfigurationBuilder_ == null
             ? outputConfiguration_
             : outputConfigurationBuilder_.build();
@@ -436,6 +500,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (other.hasUpdateMask()) {
+        mergeUpdateMask(other.getUpdateMask());
+      }
       if (other.hasOutputConfiguration()) {
         mergeOutputConfiguration(other.getOutputConfiguration());
       }
@@ -470,11 +537,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  getUpdateMaskFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             case 26: {
               input.readMessage(
                   getOutputConfigurationFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             default: {
@@ -586,6 +660,161 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.google.protobuf.FieldMask updateMask_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+    /**
+     * <pre>
+     * Field mask to update specified fields
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * @return Whether the updateMask field is set.
+     */
+    public boolean hasUpdateMask() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Field mask to update specified fields
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * @return The updateMask.
+     */
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      if (updateMaskBuilder_ == null) {
+        return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+      } else {
+        return updateMaskBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Field mask to update specified fields
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     */
+    public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+      if (updateMaskBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        updateMask_ = value;
+      } else {
+        updateMaskBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Field mask to update specified fields
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     */
+    public Builder setUpdateMask(
+        com.google.protobuf.FieldMask.Builder builderForValue) {
+      if (updateMaskBuilder_ == null) {
+        updateMask_ = builderForValue.build();
+      } else {
+        updateMaskBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Field mask to update specified fields
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     */
+    public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+      if (updateMaskBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          updateMask_ != null &&
+          updateMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getUpdateMaskBuilder().mergeFrom(value);
+        } else {
+          updateMask_ = value;
+        }
+      } else {
+        updateMaskBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Field mask to update specified fields
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     */
+    public Builder clearUpdateMask() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      updateMask_ = null;
+      if (updateMaskBuilder_ != null) {
+        updateMaskBuilder_.dispose();
+        updateMaskBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Field mask to update specified fields
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     */
+    public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getUpdateMaskFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Field mask to update specified fields
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      if (updateMaskBuilder_ != null) {
+        return updateMaskBuilder_.getMessageOrBuilder();
+      } else {
+        return updateMask_ == null ?
+            com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+      }
+    }
+    /**
+     * <pre>
+     * Field mask to update specified fields
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+        getUpdateMaskFieldBuilder() {
+      if (updateMaskBuilder_ == null) {
+        updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                getUpdateMask(),
+                getParentForChildren(),
+                isClean());
+        updateMask_ = null;
+      }
+      return updateMaskBuilder_;
+    }
+
     private com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration outputConfiguration_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder, com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder> outputConfigurationBuilder_;
@@ -598,7 +827,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the outputConfiguration field is set.
      */
     public boolean hasOutputConfiguration() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -631,7 +860,7 @@ private static final long serialVersionUID = 0L;
       } else {
         outputConfigurationBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -649,7 +878,7 @@ private static final long serialVersionUID = 0L;
       } else {
         outputConfigurationBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -662,7 +891,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration value) {
       if (outputConfigurationBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
+        if (((bitField0_ & 0x00000004) != 0) &&
           outputConfiguration_ != null &&
           outputConfiguration_ != com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.getDefaultInstance()) {
           getOutputConfigurationBuilder().mergeFrom(value);
@@ -672,7 +901,7 @@ private static final long serialVersionUID = 0L;
       } else {
         outputConfigurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -684,7 +913,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 3 [json_name = "outputConfiguration"];</code>
      */
     public Builder clearOutputConfiguration() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       outputConfiguration_ = null;
       if (outputConfigurationBuilder_ != null) {
         outputConfigurationBuilder_.dispose();
@@ -701,7 +930,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 3 [json_name = "outputConfiguration"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration.Builder getOutputConfigurationBuilder() {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return getOutputConfigurationFieldBuilder().getBuilder();
     }

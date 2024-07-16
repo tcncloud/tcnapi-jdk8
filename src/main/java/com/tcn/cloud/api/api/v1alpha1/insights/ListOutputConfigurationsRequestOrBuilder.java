@@ -6,4 +6,24 @@ package com.tcn.cloud.api.api.v1alpha1.insights;
 public interface ListOutputConfigurationsRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.ListOutputConfigurationsRequest)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * The insight id to list output configurations for
+   * </pre>
+   *
+   * <code>string insight_id = 1 [json_name = "insightId"];</code>
+   * @return The insightId.
+   */
+  java.lang.String getInsightId();
+  /**
+   * <pre>
+   * The insight id to list output configurations for
+   * </pre>
+   *
+   * <code>string insight_id = 1 [json_name = "insightId"];</code>
+   * @return The bytes for insightId.
+   */
+  com.google.protobuf.ByteString
+      getInsightIdBytes();
 }

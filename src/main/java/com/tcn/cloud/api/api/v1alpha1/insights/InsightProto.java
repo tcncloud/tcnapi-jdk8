@@ -130,26 +130,6 @@ public final class InsightProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_insights_OutputConfiguration_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_insights_ListOutputConfigurationsRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_insights_ListOutputConfigurationsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_insights_ListOutputConfigurationsResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_insights_ListOutputConfigurationsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_insights_GetOutputConfigurationRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_insights_GetOutputConfigurationRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_insights_GetOutputConfigurationResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_insights_GetOutputConfigurationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_insights_CreateOutputConfigurationRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -159,6 +139,16 @@ public final class InsightProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_insights_CreateOutputConfigurationResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_ListOutputConfigurationsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_ListOutputConfigurationsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_ListOutputConfigurationsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_ListOutputConfigurationsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_insights_UpdateOutputConfigurationRequest_descriptor;
   static final 
@@ -179,6 +169,16 @@ public final class InsightProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_insights_DeleteOutputConfigurationResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_GetOutputConfigurationRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_GetOutputConfigurationRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_insights_GetOutputConfigurationResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_insights_GetOutputConfigurationResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -259,34 +259,41 @@ public final class InsightProto {
       "\tR\tinsightId\022\024\n\004blob\030\006 \001(\tH\000R\004blob\022R\n\023ta" +
       "ble_visualization\030\007 \001(\0132\037.api.commons.Ta" +
       "bleVisualizationH\000R\022tableVisualizationB\006" +
-      "\n\004body\"!\n\037ListOutputConfigurationsReques" +
-      "t\"\203\001\n ListOutputConfigurationsResponse\022_" +
-      "\n\025output_configurations\030\001 \003(\0132*.api.v1al" +
-      "pha1.insights.OutputConfigurationR\024outpu" +
-      "tConfigurations\"W\n\035GetOutputConfiguratio" +
-      "nRequest\0226\n\027output_configuration_id\030\001 \001(" +
-      "\tR\025outputConfigurationId\"\177\n\036GetOutputCon" +
-      "figurationResponse\022]\n\024output_configurati" +
-      "on\030\001 \001(\0132*.api.v1alpha1.insights.OutputC" +
-      "onfigurationR\023outputConfiguration\"\201\001\n Cr" +
-      "eateOutputConfigurationRequest\022]\n\024output" +
-      "_configuration\030\001 \001(\0132*.api.v1alpha1.insi" +
-      "ghts.OutputConfigurationR\023outputConfigur" +
-      "ation\"#\n!CreateOutputConfigurationRespon" +
-      "se\"\271\001\n UpdateOutputConfigurationRequest\022" +
-      "6\n\027output_configuration_id\030\001 \001(\tR\025output" +
-      "ConfigurationId\022]\n\024output_configuration\030" +
-      "\003 \001(\0132*.api.v1alpha1.insights.OutputConf" +
-      "igurationR\023outputConfiguration\"#\n!Update" +
-      "OutputConfigurationResponse\"Z\n DeleteOut" +
-      "putConfigurationRequest\0226\n\027output_config" +
-      "uration_id\030\001 \001(\tR\025outputConfigurationId\"" +
-      "#\n!DeleteOutputConfigurationResponseB\255\001\n" +
-      "\'com.tcn.cloud.api.api.v1alpha1.insights" +
-      "B\014InsightProtoP\001\242\002\003AVI\252\002\025Api.V1alpha1.In" +
-      "sights\312\002\025Api\\V1alpha1\\Insights\342\002!Api\\V1a" +
-      "lpha1\\Insights\\GPBMetadata\352\002\027Api::V1alph" +
-      "a1::Insightsb\006proto3"
+      "\n\004body\"\201\001\n CreateOutputConfigurationRequ" +
+      "est\022]\n\024output_configuration\030\001 \001(\0132*.api." +
+      "v1alpha1.insights.OutputConfigurationR\023o" +
+      "utputConfiguration\"\202\001\n!CreateOutputConfi" +
+      "gurationResponse\022]\n\024output_configuration" +
+      "\030\001 \001(\0132*.api.v1alpha1.insights.OutputCon" +
+      "figurationR\023outputConfiguration\"@\n\037ListO" +
+      "utputConfigurationsRequest\022\035\n\ninsight_id" +
+      "\030\001 \001(\tR\tinsightId\"\203\001\n ListOutputConfigur" +
+      "ationsResponse\022_\n\025output_configurations\030" +
+      "\001 \003(\0132*.api.v1alpha1.insights.OutputConf" +
+      "igurationR\024outputConfigurations\"\366\001\n Upda" +
+      "teOutputConfigurationRequest\0226\n\027output_c" +
+      "onfiguration_id\030\001 \001(\tR\025outputConfigurati" +
+      "onId\022;\n\013update_mask\030\002 \001(\0132\032.google.proto" +
+      "buf.FieldMaskR\nupdateMask\022]\n\024output_conf" +
+      "iguration\030\003 \001(\0132*.api.v1alpha1.insights." +
+      "OutputConfigurationR\023outputConfiguration" +
+      "\"\202\001\n!UpdateOutputConfigurationResponse\022]" +
+      "\n\024output_configuration\030\001 \001(\0132*.api.v1alp" +
+      "ha1.insights.OutputConfigurationR\023output" +
+      "Configuration\"Z\n DeleteOutputConfigurati" +
+      "onRequest\0226\n\027output_configuration_id\030\001 \001" +
+      "(\tR\025outputConfigurationId\"#\n!DeleteOutpu" +
+      "tConfigurationResponse\"W\n\035GetOutputConfi" +
+      "gurationRequest\0226\n\027output_configuration_" +
+      "id\030\001 \001(\tR\025outputConfigurationId\"\177\n\036GetOu" +
+      "tputConfigurationResponse\022]\n\024output_conf" +
+      "iguration\030\001 \001(\0132*.api.v1alpha1.insights." +
+      "OutputConfigurationR\023outputConfiguration" +
+      "B\255\001\n\'com.tcn.cloud.api.api.v1alpha1.insi" +
+      "ghtsB\014InsightProtoP\001\242\002\003AVI\252\002\025Api.V1alpha" +
+      "1.Insights\312\002\025Api\\V1alpha1\\Insights\342\002!Api" +
+      "\\V1alpha1\\Insights\\GPBMetadata\352\002\027Api::V1" +
+      "alpha1::Insightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -432,66 +439,66 @@ public final class InsightProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_OutputConfiguration_descriptor,
         new java.lang.String[] { "OutputConfigurationId", "OutputConfigurationTitle", "OutputConfigurationType", "InsightId", "Blob", "TableVisualization", "Body", });
-    internal_static_api_v1alpha1_insights_ListOutputConfigurationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(22);
-    internal_static_api_v1alpha1_insights_ListOutputConfigurationsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_insights_ListOutputConfigurationsRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_api_v1alpha1_insights_ListOutputConfigurationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(23);
-    internal_static_api_v1alpha1_insights_ListOutputConfigurationsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_insights_ListOutputConfigurationsResponse_descriptor,
-        new java.lang.String[] { "OutputConfigurations", });
-    internal_static_api_v1alpha1_insights_GetOutputConfigurationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(24);
-    internal_static_api_v1alpha1_insights_GetOutputConfigurationRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_insights_GetOutputConfigurationRequest_descriptor,
-        new java.lang.String[] { "OutputConfigurationId", });
-    internal_static_api_v1alpha1_insights_GetOutputConfigurationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(25);
-    internal_static_api_v1alpha1_insights_GetOutputConfigurationResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_insights_GetOutputConfigurationResponse_descriptor,
-        new java.lang.String[] { "OutputConfiguration", });
     internal_static_api_v1alpha1_insights_CreateOutputConfigurationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_api_v1alpha1_insights_CreateOutputConfigurationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_CreateOutputConfigurationRequest_descriptor,
         new java.lang.String[] { "OutputConfiguration", });
     internal_static_api_v1alpha1_insights_CreateOutputConfigurationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_api_v1alpha1_insights_CreateOutputConfigurationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_CreateOutputConfigurationResponse_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "OutputConfiguration", });
+    internal_static_api_v1alpha1_insights_ListOutputConfigurationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_api_v1alpha1_insights_ListOutputConfigurationsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_ListOutputConfigurationsRequest_descriptor,
+        new java.lang.String[] { "InsightId", });
+    internal_static_api_v1alpha1_insights_ListOutputConfigurationsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_api_v1alpha1_insights_ListOutputConfigurationsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_ListOutputConfigurationsResponse_descriptor,
+        new java.lang.String[] { "OutputConfigurations", });
     internal_static_api_v1alpha1_insights_UpdateOutputConfigurationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_api_v1alpha1_insights_UpdateOutputConfigurationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_UpdateOutputConfigurationRequest_descriptor,
-        new java.lang.String[] { "OutputConfigurationId", "OutputConfiguration", });
+        new java.lang.String[] { "OutputConfigurationId", "UpdateMask", "OutputConfiguration", });
     internal_static_api_v1alpha1_insights_UpdateOutputConfigurationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_api_v1alpha1_insights_UpdateOutputConfigurationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_UpdateOutputConfigurationResponse_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "OutputConfiguration", });
     internal_static_api_v1alpha1_insights_DeleteOutputConfigurationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_api_v1alpha1_insights_DeleteOutputConfigurationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_DeleteOutputConfigurationRequest_descriptor,
         new java.lang.String[] { "OutputConfigurationId", });
     internal_static_api_v1alpha1_insights_DeleteOutputConfigurationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_api_v1alpha1_insights_DeleteOutputConfigurationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_DeleteOutputConfigurationResponse_descriptor,
         new java.lang.String[] { });
+    internal_static_api_v1alpha1_insights_GetOutputConfigurationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_api_v1alpha1_insights_GetOutputConfigurationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_GetOutputConfigurationRequest_descriptor,
+        new java.lang.String[] { "OutputConfigurationId", });
+    internal_static_api_v1alpha1_insights_GetOutputConfigurationResponse_descriptor =
+      getDescriptor().getMessageTypes().get(31);
+    internal_static_api_v1alpha1_insights_GetOutputConfigurationResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_insights_GetOutputConfigurationResponse_descriptor,
+        new java.lang.String[] { "OutputConfiguration", });
     com.tcn.cloud.api.api.commons.InsightsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
   }

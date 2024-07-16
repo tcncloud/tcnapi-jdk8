@@ -6,4 +6,31 @@ package com.tcn.cloud.api.api.v1alpha1.insights;
 public interface UpdateOutputConfigurationResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.insights.UpdateOutputConfigurationResponse)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * Updated output configuration
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
+   * @return Whether the outputConfiguration field is set.
+   */
+  boolean hasOutputConfiguration();
+  /**
+   * <pre>
+   * Updated output configuration
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
+   * @return The outputConfiguration.
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.OutputConfiguration getOutputConfiguration();
+  /**
+   * <pre>
+   * Updated output configuration
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.OutputConfiguration output_configuration = 1 [json_name = "outputConfiguration"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.OutputConfigurationOrBuilder getOutputConfigurationOrBuilder();
 }

@@ -29,6 +29,33 @@ public interface UpdateOutputConfigurationRequestOrBuilder extends
 
   /**
    * <pre>
+   * Field mask to update specified fields
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * @return Whether the updateMask field is set.
+   */
+  boolean hasUpdateMask();
+  /**
+   * <pre>
+   * Field mask to update specified fields
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * @return The updateMask.
+   */
+  com.google.protobuf.FieldMask getUpdateMask();
+  /**
+   * <pre>
+   * Field mask to update specified fields
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   */
+  com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
+
+  /**
+   * <pre>
    * Updated output configuration
    * </pre>
    *
