@@ -91,6 +91,16 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getUserIdBytes();
+
+    /**
+     * <pre>
+     * Whether the agent associated with this extension is archived.
+     * </pre>
+     *
+     * <code>bool archived = 5 [json_name = "archived"];</code>
+     * @return The archived.
+     */
+    boolean getArchived();
   }
   /**
    * Protobuf type {@code api.v0alpha.Extension.Agent}
@@ -259,6 +269,21 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int ARCHIVED_FIELD_NUMBER = 5;
+    private boolean archived_ = false;
+    /**
+     * <pre>
+     * Whether the agent associated with this extension is archived.
+     * </pre>
+     *
+     * <code>bool archived = 5 [json_name = "archived"];</code>
+     * @return The archived.
+     */
+    @java.lang.Override
+    public boolean getArchived() {
+      return archived_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -282,6 +307,9 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, userId_);
       }
+      if (archived_ != false) {
+        output.writeBool(5, archived_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -299,6 +327,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, userId_);
+      }
+      if (archived_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, archived_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -321,6 +353,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getLastName())) return false;
       if (!getUserId()
           .equals(other.getUserId())) return false;
+      if (getArchived()
+          != other.getArchived()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -338,6 +372,9 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getLastName().hashCode();
       hash = (37 * hash) + USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getUserId().hashCode();
+      hash = (37 * hash) + ARCHIVED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getArchived());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -472,6 +509,7 @@ private static final long serialVersionUID = 0L;
         firstName_ = "";
         lastName_ = "";
         userId_ = "";
+        archived_ = false;
         return this;
       }
 
@@ -513,6 +551,9 @@ private static final long serialVersionUID = 0L;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.userId_ = userId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.archived_ = archived_;
         }
       }
 
@@ -575,6 +616,9 @@ private static final long serialVersionUID = 0L;
           bitField0_ |= 0x00000004;
           onChanged();
         }
+        if (other.getArchived() != false) {
+          setArchived(other.getArchived());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -616,6 +660,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000004;
                 break;
               } // case 34
+              case 40: {
+                archived_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 40
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -878,6 +927,50 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private boolean archived_ ;
+      /**
+       * <pre>
+       * Whether the agent associated with this extension is archived.
+       * </pre>
+       *
+       * <code>bool archived = 5 [json_name = "archived"];</code>
+       * @return The archived.
+       */
+      @java.lang.Override
+      public boolean getArchived() {
+        return archived_;
+      }
+      /**
+       * <pre>
+       * Whether the agent associated with this extension is archived.
+       * </pre>
+       *
+       * <code>bool archived = 5 [json_name = "archived"];</code>
+       * @param value The archived to set.
+       * @return This builder for chaining.
+       */
+      public Builder setArchived(boolean value) {
+
+        archived_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the agent associated with this extension is archived.
+       * </pre>
+       *
+       * <code>bool archived = 5 [json_name = "archived"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearArchived() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        archived_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -975,6 +1068,16 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getHuntGroupNameBytes();
+
+    /**
+     * <pre>
+     * Whether the hunt group associated with this extension is archived.
+     * </pre>
+     *
+     * <code>bool archived = 3 [json_name = "archived"];</code>
+     * @return The archived.
+     */
+    boolean getArchived();
   }
   /**
    * Protobuf type {@code api.v0alpha.Extension.HuntGroup}
@@ -1074,6 +1177,21 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int ARCHIVED_FIELD_NUMBER = 3;
+    private boolean archived_ = false;
+    /**
+     * <pre>
+     * Whether the hunt group associated with this extension is archived.
+     * </pre>
+     *
+     * <code>bool archived = 3 [json_name = "archived"];</code>
+     * @return The archived.
+     */
+    @java.lang.Override
+    public boolean getArchived() {
+      return archived_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1094,6 +1212,9 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(huntGroupName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, huntGroupName_);
       }
+      if (archived_ != false) {
+        output.writeBool(3, archived_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1109,6 +1230,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(huntGroupName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, huntGroupName_);
+      }
+      if (archived_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, archived_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1129,6 +1254,8 @@ private static final long serialVersionUID = 0L;
           != other.getHuntGroupSid()) return false;
       if (!getHuntGroupName()
           .equals(other.getHuntGroupName())) return false;
+      if (getArchived()
+          != other.getArchived()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1145,6 +1272,9 @@ private static final long serialVersionUID = 0L;
           getHuntGroupSid());
       hash = (37 * hash) + HUNT_GROUP_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getHuntGroupName().hashCode();
+      hash = (37 * hash) + ARCHIVED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getArchived());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1278,6 +1408,7 @@ private static final long serialVersionUID = 0L;
         bitField0_ = 0;
         huntGroupSid_ = 0L;
         huntGroupName_ = "";
+        archived_ = false;
         return this;
       }
 
@@ -1316,6 +1447,9 @@ private static final long serialVersionUID = 0L;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.huntGroupName_ = huntGroupName_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.archived_ = archived_;
         }
       }
 
@@ -1371,6 +1505,9 @@ private static final long serialVersionUID = 0L;
           bitField0_ |= 0x00000002;
           onChanged();
         }
+        if (other.getArchived() != false) {
+          setArchived(other.getArchived());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1407,6 +1544,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 24: {
+                archived_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1554,6 +1696,50 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         huntGroupName_ = value;
         bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private boolean archived_ ;
+      /**
+       * <pre>
+       * Whether the hunt group associated with this extension is archived.
+       * </pre>
+       *
+       * <code>bool archived = 3 [json_name = "archived"];</code>
+       * @return The archived.
+       */
+      @java.lang.Override
+      public boolean getArchived() {
+        return archived_;
+      }
+      /**
+       * <pre>
+       * Whether the hunt group associated with this extension is archived.
+       * </pre>
+       *
+       * <code>bool archived = 3 [json_name = "archived"];</code>
+       * @param value The archived to set.
+       * @return This builder for chaining.
+       */
+      public Builder setArchived(boolean value) {
+
+        archived_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the hunt group associated with this extension is archived.
+       * </pre>
+       *
+       * <code>bool archived = 3 [json_name = "archived"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearArchived() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        archived_ = false;
         onChanged();
         return this;
       }
