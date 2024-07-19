@@ -83,11 +83,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object skuId_ = "";
   /**
-   * <code>string sku_id = 2 [json_name = "skuId"];</code>
+   * <code>string sku_id = 2 [json_name = "skuId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.RateDefinition.sku_id is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=19
    * @return The skuId.
    */
   @java.lang.Override
-  public java.lang.String getSkuId() {
+  @java.lang.Deprecated public java.lang.String getSkuId() {
     java.lang.Object ref = skuId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -100,11 +102,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string sku_id = 2 [json_name = "skuId"];</code>
+   * <code>string sku_id = 2 [json_name = "skuId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.RateDefinition.sku_id is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=19
    * @return The bytes for skuId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getSkuIdBytes() {
     java.lang.Object ref = skuId_;
     if (ref instanceof java.lang.String) {
@@ -121,52 +125,60 @@ private static final long serialVersionUID = 0L;
   public static final int PRODUCT_FIELD_NUMBER = 3;
   private com.tcn.cloud.api.services.billing.entities.v1alpha3.Product product_;
   /**
-   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
+   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.RateDefinition.product is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=20
    * @return Whether the product field is set.
    */
   @java.lang.Override
-  public boolean hasProduct() {
+  @java.lang.Deprecated public boolean hasProduct() {
     return product_ != null;
   }
   /**
-   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
+   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.RateDefinition.product is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=20
    * @return The product.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha3.Product getProduct() {
+  @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha3.Product getProduct() {
     return product_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha3.Product.getDefaultInstance() : product_;
   }
   /**
-   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
+   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductOrBuilder getProductOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductOrBuilder getProductOrBuilder() {
     return product_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha3.Product.getDefaultInstance() : product_;
   }
 
   public static final int CONFIG_FIELD_NUMBER = 4;
   private com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig config_;
   /**
-   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
+   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.RateDefinition.config is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=21
    * @return Whether the config field is set.
    */
   @java.lang.Override
-  public boolean hasConfig() {
+  @java.lang.Deprecated public boolean hasConfig() {
     return config_ != null;
   }
   /**
-   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
+   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.RateDefinition.config is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=21
    * @return The config.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig getConfig() {
+  @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig getConfig() {
     return config_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.getDefaultInstance() : config_;
   }
   /**
-   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
+   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfigOrBuilder getConfigOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfigOrBuilder getConfigOrBuilder() {
     return config_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.getDefaultInstance() : config_;
   }
 
@@ -259,6 +271,32 @@ private static final long serialVersionUID = 0L;
     return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
   }
 
+  public static final int SKU_FIELD_NUMBER = 9;
+  private com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku sku_;
+  /**
+   * <code>.services.billing.entities.v1alpha3.Sku sku = 9 [json_name = "sku"];</code>
+   * @return Whether the sku field is set.
+   */
+  @java.lang.Override
+  public boolean hasSku() {
+    return sku_ != null;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha3.Sku sku = 9 [json_name = "sku"];</code>
+   * @return The sku.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku getSku() {
+    return sku_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku.getDefaultInstance() : sku_;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha3.Sku sku = 9 [json_name = "sku"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha3.SkuOrBuilder getSkuOrBuilder() {
+    return sku_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku.getDefaultInstance() : sku_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -296,6 +334,9 @@ private static final long serialVersionUID = 0L;
     }
     if (deleteTime_ != null) {
       output.writeMessage(8, getDeleteTime());
+    }
+    if (sku_ != null) {
+      output.writeMessage(9, getSku());
     }
     getUnknownFields().writeTo(output);
   }
@@ -335,6 +376,10 @@ private static final long serialVersionUID = 0L;
     if (deleteTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getDeleteTime());
+    }
+    if (sku_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getSku());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -382,6 +427,11 @@ private static final long serialVersionUID = 0L;
       if (!getDeleteTime()
           .equals(other.getDeleteTime())) return false;
     }
+    if (hasSku() != other.hasSku()) return false;
+    if (hasSku()) {
+      if (!getSku()
+          .equals(other.getSku())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -419,6 +469,10 @@ private static final long serialVersionUID = 0L;
     if (hasDeleteTime()) {
       hash = (37 * hash) + DELETE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getDeleteTime().hashCode();
+    }
+    if (hasSku()) {
+      hash = (37 * hash) + SKU_FIELD_NUMBER;
+      hash = (53 * hash) + getSku().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -579,6 +633,11 @@ private static final long serialVersionUID = 0L;
         deleteTimeBuilder_.dispose();
         deleteTimeBuilder_ = null;
       }
+      sku_ = null;
+      if (skuBuilder_ != null) {
+        skuBuilder_.dispose();
+        skuBuilder_ = null;
+      }
       return this;
     }
 
@@ -645,6 +704,11 @@ private static final long serialVersionUID = 0L;
         result.deleteTime_ = deleteTimeBuilder_ == null
             ? deleteTime_
             : deleteTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.sku_ = skuBuilder_ == null
+            ? sku_
+            : skuBuilder_.build();
       }
     }
 
@@ -719,6 +783,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDeleteTime()) {
         mergeDeleteTime(other.getDeleteTime());
+      }
+      if (other.hasSku()) {
+        mergeSku(other.getSku());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -796,6 +863,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 66
+            case 74: {
+              input.readMessage(
+                  getSkuFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -887,10 +961,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object skuId_ = "";
     /**
-     * <code>string sku_id = 2 [json_name = "skuId"];</code>
+     * <code>string sku_id = 2 [json_name = "skuId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.RateDefinition.sku_id is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=19
      * @return The skuId.
      */
-    public java.lang.String getSkuId() {
+    @java.lang.Deprecated public java.lang.String getSkuId() {
       java.lang.Object ref = skuId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -903,10 +979,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string sku_id = 2 [json_name = "skuId"];</code>
+     * <code>string sku_id = 2 [json_name = "skuId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.RateDefinition.sku_id is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=19
      * @return The bytes for skuId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getSkuIdBytes() {
       java.lang.Object ref = skuId_;
       if (ref instanceof String) {
@@ -920,11 +998,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string sku_id = 2 [json_name = "skuId"];</code>
+     * <code>string sku_id = 2 [json_name = "skuId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.RateDefinition.sku_id is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=19
      * @param value The skuId to set.
      * @return This builder for chaining.
      */
-    public Builder setSkuId(
+    @java.lang.Deprecated public Builder setSkuId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       skuId_ = value;
@@ -933,21 +1013,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string sku_id = 2 [json_name = "skuId"];</code>
+     * <code>string sku_id = 2 [json_name = "skuId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.RateDefinition.sku_id is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=19
      * @return This builder for chaining.
      */
-    public Builder clearSkuId() {
+    @java.lang.Deprecated public Builder clearSkuId() {
       skuId_ = getDefaultInstance().getSkuId();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string sku_id = 2 [json_name = "skuId"];</code>
+     * <code>string sku_id = 2 [json_name = "skuId", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.RateDefinition.sku_id is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=19
      * @param value The bytes for skuId to set.
      * @return This builder for chaining.
      */
-    public Builder setSkuIdBytes(
+    @java.lang.Deprecated public Builder setSkuIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -961,17 +1045,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha3.Product, com.tcn.cloud.api.services.billing.entities.v1alpha3.Product.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductOrBuilder> productBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.RateDefinition.product is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=20
      * @return Whether the product field is set.
      */
-    public boolean hasProduct() {
+    @java.lang.Deprecated public boolean hasProduct() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.RateDefinition.product is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=20
      * @return The product.
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha3.Product getProduct() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha3.Product getProduct() {
       if (productBuilder_ == null) {
         return product_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha3.Product.getDefaultInstance() : product_;
       } else {
@@ -979,9 +1067,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
      */
-    public Builder setProduct(com.tcn.cloud.api.services.billing.entities.v1alpha3.Product value) {
+    @java.lang.Deprecated public Builder setProduct(com.tcn.cloud.api.services.billing.entities.v1alpha3.Product value) {
       if (productBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -995,9 +1083,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
      */
-    public Builder setProduct(
+    @java.lang.Deprecated public Builder setProduct(
         com.tcn.cloud.api.services.billing.entities.v1alpha3.Product.Builder builderForValue) {
       if (productBuilder_ == null) {
         product_ = builderForValue.build();
@@ -1009,9 +1097,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
      */
-    public Builder mergeProduct(com.tcn.cloud.api.services.billing.entities.v1alpha3.Product value) {
+    @java.lang.Deprecated public Builder mergeProduct(com.tcn.cloud.api.services.billing.entities.v1alpha3.Product value) {
       if (productBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
           product_ != null &&
@@ -1028,9 +1116,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
      */
-    public Builder clearProduct() {
+    @java.lang.Deprecated public Builder clearProduct() {
       bitField0_ = (bitField0_ & ~0x00000004);
       product_ = null;
       if (productBuilder_ != null) {
@@ -1041,17 +1129,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha3.Product.Builder getProductBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha3.Product.Builder getProductBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getProductFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductOrBuilder getProductOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductOrBuilder getProductOrBuilder() {
       if (productBuilder_ != null) {
         return productBuilder_.getMessageOrBuilder();
       } else {
@@ -1060,7 +1148,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
+     * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha3.Product, com.tcn.cloud.api.services.billing.entities.v1alpha3.Product.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductOrBuilder> 
@@ -1080,17 +1168,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig, com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfigOrBuilder> configBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.RateDefinition.config is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=21
      * @return Whether the config field is set.
      */
-    public boolean hasConfig() {
+    @java.lang.Deprecated public boolean hasConfig() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.RateDefinition.config is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=21
      * @return The config.
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig getConfig() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig getConfig() {
       if (configBuilder_ == null) {
         return config_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.getDefaultInstance() : config_;
       } else {
@@ -1098,9 +1190,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config", deprecated = true];</code>
      */
-    public Builder setConfig(com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig value) {
+    @java.lang.Deprecated public Builder setConfig(com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig value) {
       if (configBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1114,9 +1206,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config", deprecated = true];</code>
      */
-    public Builder setConfig(
+    @java.lang.Deprecated public Builder setConfig(
         com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.Builder builderForValue) {
       if (configBuilder_ == null) {
         config_ = builderForValue.build();
@@ -1128,9 +1220,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config", deprecated = true];</code>
      */
-    public Builder mergeConfig(com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig value) {
+    @java.lang.Deprecated public Builder mergeConfig(com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig value) {
       if (configBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           config_ != null &&
@@ -1147,9 +1239,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config", deprecated = true];</code>
      */
-    public Builder clearConfig() {
+    @java.lang.Deprecated public Builder clearConfig() {
       bitField0_ = (bitField0_ & ~0x00000008);
       config_ = null;
       if (configBuilder_ != null) {
@@ -1160,17 +1252,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.Builder getConfigBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.Builder getConfigBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getConfigFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfigOrBuilder getConfigOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfigOrBuilder getConfigOrBuilder() {
       if (configBuilder_ != null) {
         return configBuilder_.getMessageOrBuilder();
       } else {
@@ -1179,7 +1271,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig, com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfigOrBuilder> 
@@ -1582,6 +1674,125 @@ private static final long serialVersionUID = 0L;
         deleteTime_ = null;
       }
       return deleteTimeBuilder_;
+    }
+
+    private com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku sku_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku, com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha3.SkuOrBuilder> skuBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha3.Sku sku = 9 [json_name = "sku"];</code>
+     * @return Whether the sku field is set.
+     */
+    public boolean hasSku() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.Sku sku = 9 [json_name = "sku"];</code>
+     * @return The sku.
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku getSku() {
+      if (skuBuilder_ == null) {
+        return sku_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku.getDefaultInstance() : sku_;
+      } else {
+        return skuBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.Sku sku = 9 [json_name = "sku"];</code>
+     */
+    public Builder setSku(com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku value) {
+      if (skuBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        sku_ = value;
+      } else {
+        skuBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.Sku sku = 9 [json_name = "sku"];</code>
+     */
+    public Builder setSku(
+        com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku.Builder builderForValue) {
+      if (skuBuilder_ == null) {
+        sku_ = builderForValue.build();
+      } else {
+        skuBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.Sku sku = 9 [json_name = "sku"];</code>
+     */
+    public Builder mergeSku(com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku value) {
+      if (skuBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          sku_ != null &&
+          sku_ != com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku.getDefaultInstance()) {
+          getSkuBuilder().mergeFrom(value);
+        } else {
+          sku_ = value;
+        }
+      } else {
+        skuBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.Sku sku = 9 [json_name = "sku"];</code>
+     */
+    public Builder clearSku() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      sku_ = null;
+      if (skuBuilder_ != null) {
+        skuBuilder_.dispose();
+        skuBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.Sku sku = 9 [json_name = "sku"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku.Builder getSkuBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getSkuFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.Sku sku = 9 [json_name = "sku"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha3.SkuOrBuilder getSkuOrBuilder() {
+      if (skuBuilder_ != null) {
+        return skuBuilder_.getMessageOrBuilder();
+      } else {
+        return sku_ == null ?
+            com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku.getDefaultInstance() : sku_;
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.Sku sku = 9 [json_name = "sku"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku, com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha3.SkuOrBuilder> 
+        getSkuFieldBuilder() {
+      if (skuBuilder_ == null) {
+        skuBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku, com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha3.SkuOrBuilder>(
+                getSku(),
+                getParentForChildren(),
+                isClean());
+        sku_ = null;
+      }
+      return skuBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

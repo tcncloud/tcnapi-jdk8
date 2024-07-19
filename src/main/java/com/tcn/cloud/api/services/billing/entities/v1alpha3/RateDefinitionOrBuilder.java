@@ -20,46 +20,58 @@ public interface RateDefinitionOrBuilder extends
       getRateDefinitionIdBytes();
 
   /**
-   * <code>string sku_id = 2 [json_name = "skuId"];</code>
+   * <code>string sku_id = 2 [json_name = "skuId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.RateDefinition.sku_id is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=19
    * @return The skuId.
    */
-  java.lang.String getSkuId();
+  @java.lang.Deprecated java.lang.String getSkuId();
   /**
-   * <code>string sku_id = 2 [json_name = "skuId"];</code>
+   * <code>string sku_id = 2 [json_name = "skuId", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.RateDefinition.sku_id is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=19
    * @return The bytes for skuId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getSkuIdBytes();
 
   /**
-   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
+   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.RateDefinition.product is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=20
    * @return Whether the product field is set.
    */
-  boolean hasProduct();
+  @java.lang.Deprecated boolean hasProduct();
   /**
-   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
+   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.RateDefinition.product is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=20
    * @return The product.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha3.Product getProduct();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha3.Product getProduct();
   /**
-   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
+   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductOrBuilder getProductOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductOrBuilder getProductOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
+   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.RateDefinition.config is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=21
    * @return Whether the config field is set.
    */
-  boolean hasConfig();
+  @java.lang.Deprecated boolean hasConfig();
   /**
-   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
+   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.RateDefinition.config is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=21
    * @return The config.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig getConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig getConfig();
   /**
-   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
+   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config", deprecated = true];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfigOrBuilder getConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfigOrBuilder getConfigOrBuilder();
 
   /**
    * <code>bool is_draft = 5 [json_name = "isDraft"];</code>
@@ -111,4 +123,19 @@ public interface RateDefinitionOrBuilder extends
    * <code>.google.protobuf.Timestamp delete_time = 8 [json_name = "deleteTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha3.Sku sku = 9 [json_name = "sku"];</code>
+   * @return Whether the sku field is set.
+   */
+  boolean hasSku();
+  /**
+   * <code>.services.billing.entities.v1alpha3.Sku sku = 9 [json_name = "sku"];</code>
+   * @return The sku.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha3.Sku getSku();
+  /**
+   * <code>.services.billing.entities.v1alpha3.Sku sku = 9 [json_name = "sku"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha3.SkuOrBuilder getSkuOrBuilder();
 }
