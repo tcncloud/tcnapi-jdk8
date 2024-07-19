@@ -5536,6 +5536,130 @@ public final class WFMGrpc {
     return getListRealTimeManagementStateColorsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorResponse> getCreateRgbaColorMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateRgbaColor",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorResponse> getCreateRgbaColorMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorResponse> getCreateRgbaColorMethod;
+    if ((getCreateRgbaColorMethod = WFMGrpc.getCreateRgbaColorMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateRgbaColorMethod = WFMGrpc.getCreateRgbaColorMethod) == null) {
+          WFMGrpc.getCreateRgbaColorMethod = getCreateRgbaColorMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateRgbaColor"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateRgbaColor"))
+              .build();
+        }
+      }
+    }
+    return getCreateRgbaColorMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsResponse> getListRgbaColorsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListRgbaColors",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsResponse> getListRgbaColorsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsResponse> getListRgbaColorsMethod;
+    if ((getListRgbaColorsMethod = WFMGrpc.getListRgbaColorsMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListRgbaColorsMethod = WFMGrpc.getListRgbaColorsMethod) == null) {
+          WFMGrpc.getListRgbaColorsMethod = getListRgbaColorsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRgbaColors"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListRgbaColors"))
+              .build();
+        }
+      }
+    }
+    return getListRgbaColorsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorResponse> getUpdateRgbaColorMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateRgbaColor",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorResponse> getUpdateRgbaColorMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorResponse> getUpdateRgbaColorMethod;
+    if ((getUpdateRgbaColorMethod = WFMGrpc.getUpdateRgbaColorMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdateRgbaColorMethod = WFMGrpc.getUpdateRgbaColorMethod) == null) {
+          WFMGrpc.getUpdateRgbaColorMethod = getUpdateRgbaColorMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateRgbaColor"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateRgbaColor"))
+              .build();
+        }
+      }
+    }
+    return getUpdateRgbaColorMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorResponse> getDeleteRgbaColorMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteRgbaColor",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorResponse> getDeleteRgbaColorMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorRequest, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorResponse> getDeleteRgbaColorMethod;
+    if ((getDeleteRgbaColorMethod = WFMGrpc.getDeleteRgbaColorMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getDeleteRgbaColorMethod = WFMGrpc.getDeleteRgbaColorMethod) == null) {
+          WFMGrpc.getDeleteRgbaColorMethod = getDeleteRgbaColorMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorRequest, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteRgbaColor"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteRgbaColor"))
+              .build();
+        }
+      }
+    }
+    return getDeleteRgbaColorMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -8379,6 +8503,59 @@ public final class WFMGrpc {
     default void listRealTimeManagementStateColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRealTimeManagementStateColorsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;color for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;color are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;color or an rgba with &#64;color.name already exists.
+     * </pre>
+     */
+    default void createRgbaColor(com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateRgbaColorMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists all rbga colors for the org sending the request.
+     * Errors:
+     *   - grpc.Internal: error occurs when listing the &#64;colors.
+     * </pre>
+     */
+    default void listRgbaColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRgbaColorsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;color for the org sending the request.
+     * Returns the updated rgba color after it has been updated.
+     * Errors:
+     *   - grpc.Internal: error occurs when updating the rgba color, or getting the updated color.
+     *   - grpc.NotFound: the color with &#64;color.rgba_color_id does not exist.
+     * </pre>
+     */
+    default void updateRgbaColor(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateRgbaColorMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Delete the rgba color with the &#64;rgba_color_id for the org sending the request.
+     * Deletes any real time management state colors that are using &#64;rgba_color_id, leaving them with their default colors.option
+     * Errors:
+     *  - grpc.Invalid: the &#64;rgba_color_id is invalid or does not exist.
+     *  - grpc.Internal: error occurs when deleting the rgba color or real time management state colors.
+     * </pre>
+     */
+    default void deleteRgbaColor(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRgbaColorMethod(), responseObserver);
     }
   }
 
@@ -11386,6 +11563,63 @@ public final class WFMGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListRealTimeManagementStateColorsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Creates the given &#64;color for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;color are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;color or an rgba with &#64;color.name already exists.
+     * </pre>
+     */
+    public void createRgbaColor(com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateRgbaColorMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists all rbga colors for the org sending the request.
+     * Errors:
+     *   - grpc.Internal: error occurs when listing the &#64;colors.
+     * </pre>
+     */
+    public void listRgbaColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListRgbaColorsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;color for the org sending the request.
+     * Returns the updated rgba color after it has been updated.
+     * Errors:
+     *   - grpc.Internal: error occurs when updating the rgba color, or getting the updated color.
+     *   - grpc.NotFound: the color with &#64;color.rgba_color_id does not exist.
+     * </pre>
+     */
+    public void updateRgbaColor(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateRgbaColorMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Delete the rgba color with the &#64;rgba_color_id for the org sending the request.
+     * Deletes any real time management state colors that are using &#64;rgba_color_id, leaving them with their default colors.option
+     * Errors:
+     *  - grpc.Invalid: the &#64;rgba_color_id is invalid or does not exist.
+     *  - grpc.Internal: error occurs when deleting the rgba color or real time management state colors.
+     * </pre>
+     */
+    public void deleteRgbaColor(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteRgbaColorMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -14205,6 +14439,59 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse listRealTimeManagementStateColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListRealTimeManagementStateColorsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given &#64;color for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;color are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;color or an rgba with &#64;color.name already exists.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorResponse createRgbaColor(com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateRgbaColorMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists all rbga colors for the org sending the request.
+     * Errors:
+     *   - grpc.Internal: error occurs when listing the &#64;colors.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsResponse listRgbaColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListRgbaColorsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;color for the org sending the request.
+     * Returns the updated rgba color after it has been updated.
+     * Errors:
+     *   - grpc.Internal: error occurs when updating the rgba color, or getting the updated color.
+     *   - grpc.NotFound: the color with &#64;color.rgba_color_id does not exist.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorResponse updateRgbaColor(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateRgbaColorMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Delete the rgba color with the &#64;rgba_color_id for the org sending the request.
+     * Deletes any real time management state colors that are using &#64;rgba_color_id, leaving them with their default colors.option
+     * Errors:
+     *  - grpc.Invalid: the &#64;rgba_color_id is invalid or does not exist.
+     *  - grpc.Internal: error occurs when deleting the rgba color or real time management state colors.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorResponse deleteRgbaColor(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteRgbaColorMethod(), getCallOptions(), request);
     }
   }
 
@@ -17096,6 +17383,63 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListRealTimeManagementStateColorsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Creates the given &#64;color for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;color are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;color or an rgba with &#64;color.name already exists.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorResponse> createRgbaColor(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateRgbaColorMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists all rbga colors for the org sending the request.
+     * Errors:
+     *   - grpc.Internal: error occurs when listing the &#64;colors.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsResponse> listRgbaColors(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListRgbaColorsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given &#64;color for the org sending the request.
+     * Returns the updated rgba color after it has been updated.
+     * Errors:
+     *   - grpc.Internal: error occurs when updating the rgba color, or getting the updated color.
+     *   - grpc.NotFound: the color with &#64;color.rgba_color_id does not exist.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorResponse> updateRgbaColor(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateRgbaColorMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Delete the rgba color with the &#64;rgba_color_id for the org sending the request.
+     * Deletes any real time management state colors that are using &#64;rgba_color_id, leaving them with their default colors.option
+     * Errors:
+     *  - grpc.Invalid: the &#64;rgba_color_id is invalid or does not exist.
+     *  - grpc.Internal: error occurs when deleting the rgba color or real time management state colors.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorResponse> deleteRgbaColor(
+        com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteRgbaColorMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PERFORM_INITIAL_CLIENT_SETUP = 0;
@@ -17276,6 +17620,10 @@ public final class WFMGrpc {
   private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 175;
   private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 176;
   private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 177;
+  private static final int METHODID_CREATE_RGBA_COLOR = 178;
+  private static final int METHODID_LIST_RGBA_COLORS = 179;
+  private static final int METHODID_UPDATE_RGBA_COLOR = 180;
+  private static final int METHODID_DELETE_RGBA_COLOR = 181;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -18005,6 +18353,22 @@ public final class WFMGrpc {
         case METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS:
           serviceImpl.listRealTimeManagementStateColors((com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_RGBA_COLOR:
+          serviceImpl.createRgbaColor((com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorResponse>) responseObserver);
+          break;
+        case METHODID_LIST_RGBA_COLORS:
+          serviceImpl.listRgbaColors((com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_RGBA_COLOR:
+          serviceImpl.updateRgbaColor((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_RGBA_COLOR:
+          serviceImpl.deleteRgbaColor((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -19270,6 +19634,34 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest,
               com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse>(
                 service, METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS)))
+        .addMethod(
+          getCreateRgbaColorMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorResponse>(
+                service, METHODID_CREATE_RGBA_COLOR)))
+        .addMethod(
+          getListRgbaColorsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListRgbaColorsResponse>(
+                service, METHODID_LIST_RGBA_COLORS)))
+        .addMethod(
+          getUpdateRgbaColorMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateRgbaColorResponse>(
+                service, METHODID_UPDATE_RGBA_COLOR)))
+        .addMethod(
+          getDeleteRgbaColorMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorResponse>(
+                service, METHODID_DELETE_RGBA_COLOR)))
         .build();
   }
 
@@ -19496,6 +19888,10 @@ public final class WFMGrpc {
               .addMethod(getListAgentStatesForDayMethod())
               .addMethod(getListRealTimeManagementStatesMethod())
               .addMethod(getListRealTimeManagementStateColorsMethod())
+              .addMethod(getCreateRgbaColorMethod())
+              .addMethod(getListRgbaColorsMethod())
+              .addMethod(getUpdateRgbaColorMethod())
+              .addMethod(getDeleteRgbaColorMethod())
               .build();
         }
       }
