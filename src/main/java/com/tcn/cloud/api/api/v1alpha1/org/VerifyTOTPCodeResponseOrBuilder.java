@@ -6,14 +6,4 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 public interface VerifyTOTPCodeResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.VerifyTOTPCodeResponse)
     com.google.protobuf.MessageOrBuilder {
-
-  /**
-   * <pre>
-   * Whether the code is successfully verified and is valid.
-   * </pre>
-   *
-   * <code>bool valid = 1 [json_name = "valid"];</code>
-   * @return The valid.
-   */
-  boolean getValid();
 }

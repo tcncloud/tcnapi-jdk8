@@ -42,21 +42,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse.class, com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse.Builder.class);
   }
 
-  public static final int VALID_FIELD_NUMBER = 1;
-  private boolean valid_ = false;
-  /**
-   * <pre>
-   * Whether the code is successfully verified and is valid.
-   * </pre>
-   *
-   * <code>bool valid = 1 [json_name = "valid"];</code>
-   * @return The valid.
-   */
-  @java.lang.Override
-  public boolean getValid() {
-    return valid_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -71,9 +56,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (valid_ != false) {
-      output.writeBool(1, valid_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -83,10 +65,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (valid_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(1, valid_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -102,8 +80,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse other = (com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse) obj;
 
-    if (getValid()
-        != other.getValid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -115,9 +91,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + VALID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getValid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -252,8 +225,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      valid_ = false;
       return this;
     }
 
@@ -280,16 +251,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse result = new com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.valid_ = valid_;
-      }
     }
 
     @java.lang.Override
@@ -336,9 +299,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.org.VerifyTOTPCodeResponse.getDefaultInstance()) return this;
-      if (other.getValid() != false) {
-        setValid(other.getValid());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -365,11 +325,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              valid_ = input.readBool();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -383,51 +338,6 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
-      return this;
-    }
-    private int bitField0_;
-
-    private boolean valid_ ;
-    /**
-     * <pre>
-     * Whether the code is successfully verified and is valid.
-     * </pre>
-     *
-     * <code>bool valid = 1 [json_name = "valid"];</code>
-     * @return The valid.
-     */
-    @java.lang.Override
-    public boolean getValid() {
-      return valid_;
-    }
-    /**
-     * <pre>
-     * Whether the code is successfully verified and is valid.
-     * </pre>
-     *
-     * <code>bool valid = 1 [json_name = "valid"];</code>
-     * @param value The valid to set.
-     * @return This builder for chaining.
-     */
-    public Builder setValid(boolean value) {
-
-      valid_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Whether the code is successfully verified and is valid.
-     * </pre>
-     *
-     * <code>bool valid = 1 [json_name = "valid"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearValid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      valid_ = false;
-      onChanged();
       return this;
     }
     @java.lang.Override
