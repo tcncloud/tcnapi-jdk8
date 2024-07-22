@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor> colors_;
   /**
    * <pre>
-   * The rgba colors for the &#64;org_id.
+   * The rgba colors for the org sending the request.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -59,7 +59,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The rgba colors for the &#64;org_id.
+   * The rgba colors for the org sending the request.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The rgba colors for the &#64;org_id.
+   * The rgba colors for the org sending the request.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The rgba colors for the &#64;org_id.
+   * The rgba colors for the org sending the request.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -93,7 +93,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The rgba colors for the &#64;org_id.
+   * The rgba colors for the org sending the request.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -524,7 +524,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -538,7 +538,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -559,7 +559,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -577,7 +577,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -597,7 +597,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -636,7 +636,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -673,7 +673,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -707,7 +707,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -718,7 +718,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -758,7 +758,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -770,7 +770,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The rgba colors for the &#64;org_id.
+     * The rgba colors for the org sending the request.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>

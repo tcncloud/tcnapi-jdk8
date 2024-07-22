@@ -9,7 +9,7 @@ public interface ListRgbaColorsResponseOrBuilder extends
 
   /**
    * <pre>
-   * The rgba colors for the &#64;org_id.
+   * The rgba colors for the org sending the request.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -18,7 +18,7 @@ public interface ListRgbaColorsResponseOrBuilder extends
       getColorsList();
   /**
    * <pre>
-   * The rgba colors for the &#64;org_id.
+   * The rgba colors for the org sending the request.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -26,7 +26,7 @@ public interface ListRgbaColorsResponseOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.wfm.RgbaColor getColors(int index);
   /**
    * <pre>
-   * The rgba colors for the &#64;org_id.
+   * The rgba colors for the org sending the request.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -34,7 +34,7 @@ public interface ListRgbaColorsResponseOrBuilder extends
   int getColorsCount();
   /**
    * <pre>
-   * The rgba colors for the &#64;org_id.
+   * The rgba colors for the org sending the request.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
@@ -43,7 +43,7 @@ public interface ListRgbaColorsResponseOrBuilder extends
       getColorsOrBuilderList();
   /**
    * <pre>
-   * The rgba colors for the &#64;org_id.
+   * The rgba colors for the org sending the request.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RgbaColor colors = 1 [json_name = "colors"];</code>
