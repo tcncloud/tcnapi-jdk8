@@ -17,6 +17,8 @@ private static final long serialVersionUID = 0L;
   }
   private Search() {
     term_ = "";
+    value_ = "";
+    fieldType_ = "";
   }
 
   @java.lang.Override
@@ -97,11 +99,13 @@ private static final long serialVersionUID = 0L;
    * Not compatible with a substring match
    * </pre>
    *
-   * <code>int64 fuzziness = 2 [json_name = "fuzziness"];</code>
+   * <code>int64 fuzziness = 2 [json_name = "fuzziness", deprecated = true];</code>
+   * @deprecated api.v0alpha.Search.fuzziness is deprecated.
+   *     See api/v0alpha/lms.proto;l=2584
    * @return The fuzziness.
    */
   @java.lang.Override
-  public long getFuzziness() {
+  @java.lang.Deprecated public long getFuzziness() {
     return fuzziness_;
   }
 
@@ -147,12 +151,108 @@ private static final long serialVersionUID = 0L;
    * Specifies if we should be case sensitive
    * </pre>
    *
-   * <code>bool case_sensitive = 5 [json_name = "caseSensitive"];</code>
+   * <code>bool case_sensitive = 5 [json_name = "caseSensitive", deprecated = true];</code>
+   * @deprecated api.v0alpha.Search.case_sensitive is deprecated.
+   *     See api/v0alpha/lms.proto;l=2595
    * @return The caseSensitive.
    */
   @java.lang.Override
-  public boolean getCaseSensitive() {
+  @java.lang.Deprecated public boolean getCaseSensitive() {
     return caseSensitive_;
+  }
+
+  public static final int VALUE_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object value_ = "";
+  /**
+   * <pre>
+   * the value of the term we are searching for
+   * </pre>
+   *
+   * <code>string value = 6 [json_name = "value"];</code>
+   * @return The value.
+   */
+  @java.lang.Override
+  public java.lang.String getValue() {
+    java.lang.Object ref = value_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      value_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the value of the term we are searching for
+   * </pre>
+   *
+   * <code>string value = 6 [json_name = "value"];</code>
+   * @return The bytes for value.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getValueBytes() {
+    java.lang.Object ref = value_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      value_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int FIELD_TYPE_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object fieldType_ = "";
+  /**
+   * <pre>
+   * the type of the term we are searching for
+   * </pre>
+   *
+   * <code>string field_type = 7 [json_name = "fieldType"];</code>
+   * @return The fieldType.
+   */
+  @java.lang.Override
+  public java.lang.String getFieldType() {
+    java.lang.Object ref = fieldType_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      fieldType_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the type of the term we are searching for
+   * </pre>
+   *
+   * <code>string field_type = 7 [json_name = "fieldType"];</code>
+   * @return The bytes for fieldType.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFieldTypeBytes() {
+    java.lang.Object ref = fieldType_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      fieldType_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -184,6 +284,12 @@ private static final long serialVersionUID = 0L;
     if (caseSensitive_ != false) {
       output.writeBool(5, caseSensitive_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, value_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldType_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, fieldType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -212,6 +318,12 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, caseSensitive_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, value_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldType_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, fieldType_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -237,6 +349,10 @@ private static final long serialVersionUID = 0L;
         != other.getNegate()) return false;
     if (getCaseSensitive()
         != other.getCaseSensitive()) return false;
+    if (!getValue()
+        .equals(other.getValue())) return false;
+    if (!getFieldType()
+        .equals(other.getFieldType())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -262,6 +378,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + CASE_SENSITIVE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getCaseSensitive());
+    hash = (37 * hash) + VALUE_FIELD_NUMBER;
+    hash = (53 * hash) + getValue().hashCode();
+    hash = (37 * hash) + FIELD_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + getFieldType().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -398,6 +518,8 @@ private static final long serialVersionUID = 0L;
       substring_ = false;
       negate_ = false;
       caseSensitive_ = false;
+      value_ = "";
+      fieldType_ = "";
       return this;
     }
 
@@ -445,6 +567,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.caseSensitive_ = caseSensitive_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.value_ = value_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.fieldType_ = fieldType_;
       }
     }
 
@@ -509,6 +637,16 @@ private static final long serialVersionUID = 0L;
       if (other.getCaseSensitive() != false) {
         setCaseSensitive(other.getCaseSensitive());
       }
+      if (!other.getValue().isEmpty()) {
+        value_ = other.value_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      if (!other.getFieldType().isEmpty()) {
+        fieldType_ = other.fieldType_;
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -560,6 +698,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 50: {
+              value_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              fieldType_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -679,11 +827,13 @@ private static final long serialVersionUID = 0L;
      * Not compatible with a substring match
      * </pre>
      *
-     * <code>int64 fuzziness = 2 [json_name = "fuzziness"];</code>
+     * <code>int64 fuzziness = 2 [json_name = "fuzziness", deprecated = true];</code>
+     * @deprecated api.v0alpha.Search.fuzziness is deprecated.
+     *     See api/v0alpha/lms.proto;l=2584
      * @return The fuzziness.
      */
     @java.lang.Override
-    public long getFuzziness() {
+    @java.lang.Deprecated public long getFuzziness() {
       return fuzziness_;
     }
     /**
@@ -695,11 +845,13 @@ private static final long serialVersionUID = 0L;
      * Not compatible with a substring match
      * </pre>
      *
-     * <code>int64 fuzziness = 2 [json_name = "fuzziness"];</code>
+     * <code>int64 fuzziness = 2 [json_name = "fuzziness", deprecated = true];</code>
+     * @deprecated api.v0alpha.Search.fuzziness is deprecated.
+     *     See api/v0alpha/lms.proto;l=2584
      * @param value The fuzziness to set.
      * @return This builder for chaining.
      */
-    public Builder setFuzziness(long value) {
+    @java.lang.Deprecated public Builder setFuzziness(long value) {
 
       fuzziness_ = value;
       bitField0_ |= 0x00000002;
@@ -715,10 +867,12 @@ private static final long serialVersionUID = 0L;
      * Not compatible with a substring match
      * </pre>
      *
-     * <code>int64 fuzziness = 2 [json_name = "fuzziness"];</code>
+     * <code>int64 fuzziness = 2 [json_name = "fuzziness", deprecated = true];</code>
+     * @deprecated api.v0alpha.Search.fuzziness is deprecated.
+     *     See api/v0alpha/lms.proto;l=2584
      * @return This builder for chaining.
      */
-    public Builder clearFuzziness() {
+    @java.lang.Deprecated public Builder clearFuzziness() {
       bitField0_ = (bitField0_ & ~0x00000002);
       fuzziness_ = 0L;
       onChanged();
@@ -834,11 +988,13 @@ private static final long serialVersionUID = 0L;
      * Specifies if we should be case sensitive
      * </pre>
      *
-     * <code>bool case_sensitive = 5 [json_name = "caseSensitive"];</code>
+     * <code>bool case_sensitive = 5 [json_name = "caseSensitive", deprecated = true];</code>
+     * @deprecated api.v0alpha.Search.case_sensitive is deprecated.
+     *     See api/v0alpha/lms.proto;l=2595
      * @return The caseSensitive.
      */
     @java.lang.Override
-    public boolean getCaseSensitive() {
+    @java.lang.Deprecated public boolean getCaseSensitive() {
       return caseSensitive_;
     }
     /**
@@ -846,11 +1002,13 @@ private static final long serialVersionUID = 0L;
      * Specifies if we should be case sensitive
      * </pre>
      *
-     * <code>bool case_sensitive = 5 [json_name = "caseSensitive"];</code>
+     * <code>bool case_sensitive = 5 [json_name = "caseSensitive", deprecated = true];</code>
+     * @deprecated api.v0alpha.Search.case_sensitive is deprecated.
+     *     See api/v0alpha/lms.proto;l=2595
      * @param value The caseSensitive to set.
      * @return This builder for chaining.
      */
-    public Builder setCaseSensitive(boolean value) {
+    @java.lang.Deprecated public Builder setCaseSensitive(boolean value) {
 
       caseSensitive_ = value;
       bitField0_ |= 0x00000010;
@@ -862,12 +1020,198 @@ private static final long serialVersionUID = 0L;
      * Specifies if we should be case sensitive
      * </pre>
      *
-     * <code>bool case_sensitive = 5 [json_name = "caseSensitive"];</code>
+     * <code>bool case_sensitive = 5 [json_name = "caseSensitive", deprecated = true];</code>
+     * @deprecated api.v0alpha.Search.case_sensitive is deprecated.
+     *     See api/v0alpha/lms.proto;l=2595
      * @return This builder for chaining.
      */
-    public Builder clearCaseSensitive() {
+    @java.lang.Deprecated public Builder clearCaseSensitive() {
       bitField0_ = (bitField0_ & ~0x00000010);
       caseSensitive_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object value_ = "";
+    /**
+     * <pre>
+     * the value of the term we are searching for
+     * </pre>
+     *
+     * <code>string value = 6 [json_name = "value"];</code>
+     * @return The value.
+     */
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the value of the term we are searching for
+     * </pre>
+     *
+     * <code>string value = 6 [json_name = "value"];</code>
+     * @return The bytes for value.
+     */
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the value of the term we are searching for
+     * </pre>
+     *
+     * <code>string value = 6 [json_name = "value"];</code>
+     * @param value The value to set.
+     * @return This builder for chaining.
+     */
+    public Builder setValue(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      value_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the value of the term we are searching for
+     * </pre>
+     *
+     * <code>string value = 6 [json_name = "value"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearValue() {
+      value_ = getDefaultInstance().getValue();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the value of the term we are searching for
+     * </pre>
+     *
+     * <code>string value = 6 [json_name = "value"];</code>
+     * @param value The bytes for value to set.
+     * @return This builder for chaining.
+     */
+    public Builder setValueBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      value_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object fieldType_ = "";
+    /**
+     * <pre>
+     * the type of the term we are searching for
+     * </pre>
+     *
+     * <code>string field_type = 7 [json_name = "fieldType"];</code>
+     * @return The fieldType.
+     */
+    public java.lang.String getFieldType() {
+      java.lang.Object ref = fieldType_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fieldType_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the type of the term we are searching for
+     * </pre>
+     *
+     * <code>string field_type = 7 [json_name = "fieldType"];</code>
+     * @return The bytes for fieldType.
+     */
+    public com.google.protobuf.ByteString
+        getFieldTypeBytes() {
+      java.lang.Object ref = fieldType_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fieldType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the type of the term we are searching for
+     * </pre>
+     *
+     * <code>string field_type = 7 [json_name = "fieldType"];</code>
+     * @param value The fieldType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFieldType(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      fieldType_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the type of the term we are searching for
+     * </pre>
+     *
+     * <code>string field_type = 7 [json_name = "fieldType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFieldType() {
+      fieldType_ = getDefaultInstance().getFieldType();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the type of the term we are searching for
+     * </pre>
+     *
+     * <code>string field_type = 7 [json_name = "fieldType"];</code>
+     * @param value The bytes for fieldType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFieldTypeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      fieldType_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
