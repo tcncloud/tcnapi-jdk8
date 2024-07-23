@@ -8,17 +8,29 @@ public interface ConversationTimeoutMessageConfigOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * disables timeout messages altogether, defaults at false for no change is previous behavior
+   * </pre>
+   *
    * <code>bool is_disabled = 1 [json_name = "isDisabled"];</code>
    * @return The isDisabled.
    */
   boolean getIsDisabled();
 
   /**
+   * <pre>
+   * msg is the configurable message for the timeout. If msg is left blank, the canned message is sent
+   * </pre>
+   *
    * <code>string msg = 2 [json_name = "msg"];</code>
    * @return The msg.
    */
   java.lang.String getMsg();
   /**
+   * <pre>
+   * msg is the configurable message for the timeout. If msg is left blank, the canned message is sent
+   * </pre>
+   *
    * <code>string msg = 2 [json_name = "msg"];</code>
    * @return The bytes for msg.
    */

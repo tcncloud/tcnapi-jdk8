@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
+ * <pre>
+ * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
+ * </pre>
+ *
  * Protobuf type {@code api.commons.ConversationTimeoutMessageConfig}
  */
 public final class ConversationTimeoutMessageConfig extends
@@ -42,6 +46,10 @@ private static final long serialVersionUID = 0L;
   public static final int IS_DISABLED_FIELD_NUMBER = 1;
   private boolean isDisabled_ = false;
   /**
+   * <pre>
+   * disables timeout messages altogether, defaults at false for no change is previous behavior
+   * </pre>
+   *
    * <code>bool is_disabled = 1 [json_name = "isDisabled"];</code>
    * @return The isDisabled.
    */
@@ -54,6 +62,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object msg_ = "";
   /**
+   * <pre>
+   * msg is the configurable message for the timeout. If msg is left blank, the canned message is sent
+   * </pre>
+   *
    * <code>string msg = 2 [json_name = "msg"];</code>
    * @return The msg.
    */
@@ -71,6 +83,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * msg is the configurable message for the timeout. If msg is left blank, the canned message is sent
+   * </pre>
+   *
    * <code>string msg = 2 [json_name = "msg"];</code>
    * @return The bytes for msg.
    */
@@ -258,6 +274,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
+   * </pre>
+   *
    * Protobuf type {@code api.commons.ConversationTimeoutMessageConfig}
    */
   public static final class Builder extends
@@ -441,6 +461,10 @@ private static final long serialVersionUID = 0L;
 
     private boolean isDisabled_ ;
     /**
+     * <pre>
+     * disables timeout messages altogether, defaults at false for no change is previous behavior
+     * </pre>
+     *
      * <code>bool is_disabled = 1 [json_name = "isDisabled"];</code>
      * @return The isDisabled.
      */
@@ -449,6 +473,10 @@ private static final long serialVersionUID = 0L;
       return isDisabled_;
     }
     /**
+     * <pre>
+     * disables timeout messages altogether, defaults at false for no change is previous behavior
+     * </pre>
+     *
      * <code>bool is_disabled = 1 [json_name = "isDisabled"];</code>
      * @param value The isDisabled to set.
      * @return This builder for chaining.
@@ -461,6 +489,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * disables timeout messages altogether, defaults at false for no change is previous behavior
+     * </pre>
+     *
      * <code>bool is_disabled = 1 [json_name = "isDisabled"];</code>
      * @return This builder for chaining.
      */
@@ -473,6 +505,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object msg_ = "";
     /**
+     * <pre>
+     * msg is the configurable message for the timeout. If msg is left blank, the canned message is sent
+     * </pre>
+     *
      * <code>string msg = 2 [json_name = "msg"];</code>
      * @return The msg.
      */
@@ -489,6 +525,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * msg is the configurable message for the timeout. If msg is left blank, the canned message is sent
+     * </pre>
+     *
      * <code>string msg = 2 [json_name = "msg"];</code>
      * @return The bytes for msg.
      */
@@ -506,6 +546,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * msg is the configurable message for the timeout. If msg is left blank, the canned message is sent
+     * </pre>
+     *
      * <code>string msg = 2 [json_name = "msg"];</code>
      * @param value The msg to set.
      * @return This builder for chaining.
@@ -519,6 +563,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * msg is the configurable message for the timeout. If msg is left blank, the canned message is sent
+     * </pre>
+     *
      * <code>string msg = 2 [json_name = "msg"];</code>
      * @return This builder for chaining.
      */
@@ -529,6 +577,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * msg is the configurable message for the timeout. If msg is left blank, the canned message is sent
+     * </pre>
+     *
      * <code>string msg = 2 [json_name = "msg"];</code>
      * @param value The bytes for msg to set.
      * @return This builder for chaining.
