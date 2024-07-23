@@ -43,6 +43,982 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.class, com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Builder.class);
   }
 
+  public interface SkillsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.Transcript.Skills)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * "Must-have" skills.
+     * </pre>
+     *
+     * <code>repeated string need = 1 [json_name = "need"];</code>
+     * @return A list containing the need.
+     */
+    java.util.List<java.lang.String>
+        getNeedList();
+    /**
+     * <pre>
+     * "Must-have" skills.
+     * </pre>
+     *
+     * <code>repeated string need = 1 [json_name = "need"];</code>
+     * @return The count of need.
+     */
+    int getNeedCount();
+    /**
+     * <pre>
+     * "Must-have" skills.
+     * </pre>
+     *
+     * <code>repeated string need = 1 [json_name = "need"];</code>
+     * @param index The index of the element to return.
+     * @return The need at the given index.
+     */
+    java.lang.String getNeed(int index);
+    /**
+     * <pre>
+     * "Must-have" skills.
+     * </pre>
+     *
+     * <code>repeated string need = 1 [json_name = "need"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the need at the given index.
+     */
+    com.google.protobuf.ByteString
+        getNeedBytes(int index);
+
+    /**
+     * <pre>
+     * "Nice-to-have" skills.
+     * </pre>
+     *
+     * <code>repeated string want = 2 [json_name = "want"];</code>
+     * @return A list containing the want.
+     */
+    java.util.List<java.lang.String>
+        getWantList();
+    /**
+     * <pre>
+     * "Nice-to-have" skills.
+     * </pre>
+     *
+     * <code>repeated string want = 2 [json_name = "want"];</code>
+     * @return The count of want.
+     */
+    int getWantCount();
+    /**
+     * <pre>
+     * "Nice-to-have" skills.
+     * </pre>
+     *
+     * <code>repeated string want = 2 [json_name = "want"];</code>
+     * @param index The index of the element to return.
+     * @return The want at the given index.
+     */
+    java.lang.String getWant(int index);
+    /**
+     * <pre>
+     * "Nice-to-have" skills.
+     * </pre>
+     *
+     * <code>repeated string want = 2 [json_name = "want"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the want at the given index.
+     */
+    com.google.protobuf.ByteString
+        getWantBytes(int index);
+  }
+  /**
+   * <pre>
+   * Skills attached to the transcript.
+   * </pre>
+   *
+   * Protobuf type {@code wfo.vanalytics.v2.Transcript.Skills}
+   */
+  public static final class Skills extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.Transcript.Skills)
+      SkillsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Skills.newBuilder() to construct.
+    private Skills(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Skills() {
+      need_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      want_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Skills();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Transcript_Skills_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Transcript_Skills_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills.class, com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills.Builder.class);
+    }
+
+    public static final int NEED_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList need_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * "Must-have" skills.
+     * </pre>
+     *
+     * <code>repeated string need = 1 [json_name = "need"];</code>
+     * @return A list containing the need.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getNeedList() {
+      return need_;
+    }
+    /**
+     * <pre>
+     * "Must-have" skills.
+     * </pre>
+     *
+     * <code>repeated string need = 1 [json_name = "need"];</code>
+     * @return The count of need.
+     */
+    public int getNeedCount() {
+      return need_.size();
+    }
+    /**
+     * <pre>
+     * "Must-have" skills.
+     * </pre>
+     *
+     * <code>repeated string need = 1 [json_name = "need"];</code>
+     * @param index The index of the element to return.
+     * @return The need at the given index.
+     */
+    public java.lang.String getNeed(int index) {
+      return need_.get(index);
+    }
+    /**
+     * <pre>
+     * "Must-have" skills.
+     * </pre>
+     *
+     * <code>repeated string need = 1 [json_name = "need"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the need at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getNeedBytes(int index) {
+      return need_.getByteString(index);
+    }
+
+    public static final int WANT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList want_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * "Nice-to-have" skills.
+     * </pre>
+     *
+     * <code>repeated string want = 2 [json_name = "want"];</code>
+     * @return A list containing the want.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getWantList() {
+      return want_;
+    }
+    /**
+     * <pre>
+     * "Nice-to-have" skills.
+     * </pre>
+     *
+     * <code>repeated string want = 2 [json_name = "want"];</code>
+     * @return The count of want.
+     */
+    public int getWantCount() {
+      return want_.size();
+    }
+    /**
+     * <pre>
+     * "Nice-to-have" skills.
+     * </pre>
+     *
+     * <code>repeated string want = 2 [json_name = "want"];</code>
+     * @param index The index of the element to return.
+     * @return The want at the given index.
+     */
+    public java.lang.String getWant(int index) {
+      return want_.get(index);
+    }
+    /**
+     * <pre>
+     * "Nice-to-have" skills.
+     * </pre>
+     *
+     * <code>repeated string want = 2 [json_name = "want"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the want at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getWantBytes(int index) {
+      return want_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < need_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, need_.getRaw(i));
+      }
+      for (int i = 0; i < want_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, want_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < need_.size(); i++) {
+          dataSize += computeStringSizeNoTag(need_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getNeedList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < want_.size(); i++) {
+          dataSize += computeStringSizeNoTag(want_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getWantList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills other = (com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills) obj;
+
+      if (!getNeedList()
+          .equals(other.getNeedList())) return false;
+      if (!getWantList()
+          .equals(other.getWantList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getNeedCount() > 0) {
+        hash = (37 * hash) + NEED_FIELD_NUMBER;
+        hash = (53 * hash) + getNeedList().hashCode();
+      }
+      if (getWantCount() > 0) {
+        hash = (37 * hash) + WANT_FIELD_NUMBER;
+        hash = (53 * hash) + getWantList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Skills attached to the transcript.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.Transcript.Skills}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.Transcript.Skills)
+        com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.SkillsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Transcript_Skills_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Transcript_Skills_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills.class, com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        need_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        want_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_Transcript_Skills_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills getDefaultInstanceForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills build() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills buildPartial() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills result = new com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          need_.makeImmutable();
+          result.need_ = need_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          want_.makeImmutable();
+          result.want_ = want_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills) {
+          return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills other) {
+        if (other == com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills.getDefaultInstance()) return this;
+        if (!other.need_.isEmpty()) {
+          if (need_.isEmpty()) {
+            need_ = other.need_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureNeedIsMutable();
+            need_.addAll(other.need_);
+          }
+          onChanged();
+        }
+        if (!other.want_.isEmpty()) {
+          if (want_.isEmpty()) {
+            want_ = other.want_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureWantIsMutable();
+            want_.addAll(other.want_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureNeedIsMutable();
+                need_.add(s);
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureWantIsMutable();
+                want_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList need_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureNeedIsMutable() {
+        if (!need_.isModifiable()) {
+          need_ = new com.google.protobuf.LazyStringArrayList(need_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * "Must-have" skills.
+       * </pre>
+       *
+       * <code>repeated string need = 1 [json_name = "need"];</code>
+       * @return A list containing the need.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getNeedList() {
+        need_.makeImmutable();
+        return need_;
+      }
+      /**
+       * <pre>
+       * "Must-have" skills.
+       * </pre>
+       *
+       * <code>repeated string need = 1 [json_name = "need"];</code>
+       * @return The count of need.
+       */
+      public int getNeedCount() {
+        return need_.size();
+      }
+      /**
+       * <pre>
+       * "Must-have" skills.
+       * </pre>
+       *
+       * <code>repeated string need = 1 [json_name = "need"];</code>
+       * @param index The index of the element to return.
+       * @return The need at the given index.
+       */
+      public java.lang.String getNeed(int index) {
+        return need_.get(index);
+      }
+      /**
+       * <pre>
+       * "Must-have" skills.
+       * </pre>
+       *
+       * <code>repeated string need = 1 [json_name = "need"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the need at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getNeedBytes(int index) {
+        return need_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * "Must-have" skills.
+       * </pre>
+       *
+       * <code>repeated string need = 1 [json_name = "need"];</code>
+       * @param index The index to set the value at.
+       * @param value The need to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNeed(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureNeedIsMutable();
+        need_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * "Must-have" skills.
+       * </pre>
+       *
+       * <code>repeated string need = 1 [json_name = "need"];</code>
+       * @param value The need to add.
+       * @return This builder for chaining.
+       */
+      public Builder addNeed(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureNeedIsMutable();
+        need_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * "Must-have" skills.
+       * </pre>
+       *
+       * <code>repeated string need = 1 [json_name = "need"];</code>
+       * @param values The need to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllNeed(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureNeedIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, need_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * "Must-have" skills.
+       * </pre>
+       *
+       * <code>repeated string need = 1 [json_name = "need"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNeed() {
+        need_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * "Must-have" skills.
+       * </pre>
+       *
+       * <code>repeated string need = 1 [json_name = "need"];</code>
+       * @param value The bytes of the need to add.
+       * @return This builder for chaining.
+       */
+      public Builder addNeedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureNeedIsMutable();
+        need_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList want_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureWantIsMutable() {
+        if (!want_.isModifiable()) {
+          want_ = new com.google.protobuf.LazyStringArrayList(want_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <pre>
+       * "Nice-to-have" skills.
+       * </pre>
+       *
+       * <code>repeated string want = 2 [json_name = "want"];</code>
+       * @return A list containing the want.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getWantList() {
+        want_.makeImmutable();
+        return want_;
+      }
+      /**
+       * <pre>
+       * "Nice-to-have" skills.
+       * </pre>
+       *
+       * <code>repeated string want = 2 [json_name = "want"];</code>
+       * @return The count of want.
+       */
+      public int getWantCount() {
+        return want_.size();
+      }
+      /**
+       * <pre>
+       * "Nice-to-have" skills.
+       * </pre>
+       *
+       * <code>repeated string want = 2 [json_name = "want"];</code>
+       * @param index The index of the element to return.
+       * @return The want at the given index.
+       */
+      public java.lang.String getWant(int index) {
+        return want_.get(index);
+      }
+      /**
+       * <pre>
+       * "Nice-to-have" skills.
+       * </pre>
+       *
+       * <code>repeated string want = 2 [json_name = "want"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the want at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getWantBytes(int index) {
+        return want_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * "Nice-to-have" skills.
+       * </pre>
+       *
+       * <code>repeated string want = 2 [json_name = "want"];</code>
+       * @param index The index to set the value at.
+       * @param value The want to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWant(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureWantIsMutable();
+        want_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * "Nice-to-have" skills.
+       * </pre>
+       *
+       * <code>repeated string want = 2 [json_name = "want"];</code>
+       * @param value The want to add.
+       * @return This builder for chaining.
+       */
+      public Builder addWant(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureWantIsMutable();
+        want_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * "Nice-to-have" skills.
+       * </pre>
+       *
+       * <code>repeated string want = 2 [json_name = "want"];</code>
+       * @param values The want to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllWant(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureWantIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, want_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * "Nice-to-have" skills.
+       * </pre>
+       *
+       * <code>repeated string want = 2 [json_name = "want"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWant() {
+        want_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * "Nice-to-have" skills.
+       * </pre>
+       *
+       * <code>repeated string want = 2 [json_name = "want"];</code>
+       * @param value The bytes of the want to add.
+       * @return This builder for chaining.
+       */
+      public Builder addWantBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureWantIsMutable();
+        want_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.Transcript.Skills)
+    }
+
+    // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.Transcript.Skills)
+    private static final com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills();
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Skills>
+        PARSER = new com.google.protobuf.AbstractParser<Skills>() {
+      @java.lang.Override
+      public Skills parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Skills> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Skills> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.Transcript.Skills getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int metadataCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object metadata_;
