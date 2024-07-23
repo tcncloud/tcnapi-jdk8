@@ -456,7 +456,7 @@ public final class InsightsGrpc {
       fullMethodName = SERVICE_NAME + '/' + "ListOutputConfigurations",
       requestType = com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest.class,
       responseType = com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest,
       com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> getListOutputConfigurationsMethod() {
     io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest, com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> getListOutputConfigurationsMethod;
@@ -465,7 +465,7 @@ public final class InsightsGrpc {
         if ((getListOutputConfigurationsMethod = InsightsGrpc.getListOutputConfigurationsMethod) == null) {
           InsightsGrpc.getListOutputConfigurationsMethod = getListOutputConfigurationsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest, com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOutputConfigurations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -1072,7 +1072,7 @@ public final class InsightsGrpc {
      */
     public void listOutputConfigurations(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOutputConfigurationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1293,9 +1293,8 @@ public final class InsightsGrpc {
      * ListOutputConfigurations lists output configurations for an insight
      * </pre>
      */
-    public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> listOutputConfigurations(
-        com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+    public com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse listOutputConfigurations(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOutputConfigurationsMethod(), getCallOptions(), request);
     }
 
@@ -1518,6 +1517,17 @@ public final class InsightsGrpc {
         com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateOutputConfigurationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListOutputConfigurations lists output configurations for an insight
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> listOutputConfigurations(
+        com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListOutputConfigurationsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1812,7 +1822,7 @@ public final class InsightsGrpc {
                 service, METHODID_CREATE_OUTPUT_CONFIGURATION)))
         .addMethod(
           getListOutputConfigurationsMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest,
               com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse>(

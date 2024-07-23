@@ -111,6 +111,14 @@ public enum Permission
   PERMISSION_USER_EDIT_AGENT_CALLER_ID(122),
   /**
    * <pre>
+   * Allows for viewing and editing users within an orgs access tokens
+   * </pre>
+   *
+   * <code>PERMISSION_ACCESS_TOKEN_MANAGMENT = 123 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_ACCESS_TOKEN_MANAGMENT(123),
+  /**
+   * <pre>
    * Enables access to agent management app for assigning skills,
    * huntgroup, etc.
    * </pre>
@@ -956,6 +964,14 @@ public enum Permission
   public static final int PERMISSION_USER_EDIT_AGENT_CALLER_ID_VALUE = 122;
   /**
    * <pre>
+   * Allows for viewing and editing users within an orgs access tokens
+   * </pre>
+   *
+   * <code>PERMISSION_ACCESS_TOKEN_MANAGMENT = 123 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_ACCESS_TOKEN_MANAGMENT_VALUE = 123;
+  /**
+   * <pre>
    * Enables access to agent management app for assigning skills,
    * huntgroup, etc.
    * </pre>
@@ -1732,6 +1748,7 @@ public enum Permission
       case 121: return PERMISSION_USER_EDIT_OPTIONS;
       case 260: return PERMISSION_LOGIN_CONNECTIONS;
       case 122: return PERMISSION_USER_EDIT_AGENT_CALLER_ID;
+      case 123: return PERMISSION_ACCESS_TOKEN_MANAGMENT;
       case 400: return PERMISSION_AGENT_MANAGEMENT;
       case 110: return PERMISSION_PERMISSION_GROUP_EDIT;
       case 111: return PERMISSION_PERMISSION_GROUP_ASSIGN;

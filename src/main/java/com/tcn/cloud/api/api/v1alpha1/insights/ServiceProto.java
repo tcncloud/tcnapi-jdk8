@@ -26,7 +26,7 @@ public final class ServiceProto {
       "\n#api/v1alpha1/insights/service.proto\022\025a" +
       "pi.v1alpha1.insights\032\027annotations/authz." +
       "proto\032#api/v1alpha1/insights/insight.pro" +
-      "to\032\034google/api/annotations.proto2\316\037\n\010Ins" +
+      "to\032\034google/api/annotations.proto2\314\037\n\010Ins" +
       "ights\022\263\001\n\rCreateInsight\022+.api.v1alpha1.i" +
       "nsights.CreateInsightRequest\032,.api.v1alp" +
       "ha1.insights.CreateInsightResponse\"G\272\270\221\002" +
@@ -92,47 +92,47 @@ public final class ServiceProto {
       "quest\0328.api.v1alpha1.insights.CreateOutp" +
       "utConfigurationResponse\"S\272\270\221\002\n\n\003\010\372\001\n\003\010\336\004" +
       "\202\323\344\223\002>\"9/api/v1alpha1/insights/insights/" +
-      "createoutputconfiguration:\001*\022\346\001\n\030ListOut" +
+      "createoutputconfiguration:\001*\022\344\001\n\030ListOut" +
       "putConfigurations\0226.api.v1alpha1.insight" +
       "s.ListOutputConfigurationsRequest\0327.api." +
       "v1alpha1.insights.ListOutputConfiguratio" +
       "nsResponse\"W\272\270\221\002\017\n\003\010\372\001\n\003\010\331\004\n\003\010\332\004\202\323\344\223\002=\"8" +
       "/api/v1alpha1/insights/insights/listoutp" +
-      "utconfigurations:\001*0\001\022\343\001\n\031UpdateOutputCo" +
-      "nfiguration\0227.api.v1alpha1.insights.Upda" +
-      "teOutputConfigurationRequest\0328.api.v1alp" +
-      "ha1.insights.UpdateOutputConfigurationRe" +
-      "sponse\"S\272\270\221\002\n\n\003\010\372\001\n\003\010\336\004\202\323\344\223\002>\"9/api/v1al" +
-      "pha1/insights/insights/updateoutputconfi" +
-      "guration:\001*\022\343\001\n\031DeleteOutputConfiguratio" +
-      "n\0227.api.v1alpha1.insights.DeleteOutputCo" +
-      "nfigurationRequest\0328.api.v1alpha1.insigh" +
-      "ts.DeleteOutputConfigurationResponse\"S\272\270" +
-      "\221\002\n\n\003\010\372\001\n\003\010\336\004\202\323\344\223\002>\"9/api/v1alpha1/insig" +
-      "hts/insights/deleteoutputconfiguration:\001" +
-      "*\022\334\001\n\026GetOutputConfiguration\0224.api.v1alp" +
-      "ha1.insights.GetOutputConfigurationReque" +
-      "st\0325.api.v1alpha1.insights.GetOutputConf" +
-      "igurationResponse\"U\272\270\221\002\017\n\003\010\372\001\n\003\010\331\004\n\003\010\332\004\202" +
-      "\323\344\223\002;\"6/api/v1alpha1/insights/insights/g" +
-      "etoutputconfiguration:\001*\022\363\001\n\035SetDefaultO" +
-      "utputConfiguration\022;.api.v1alpha1.insigh" +
-      "ts.SetDefaultOutputConfigurationRequest\032" +
-      "<.api.v1alpha1.insights.SetDefaultOutput" +
-      "ConfigurationResponse\"W\272\270\221\002\n\n\003\010\372\001\n\003\010\336\004\202\323" +
-      "\344\223\002B\"=/api/v1alpha1/insights/insights/se" +
-      "tdefaultoutputconfiguration:\001*\022\370\001\n\035GetDe" +
-      "faultOutputConfiguration\022;.api.v1alpha1." +
-      "insights.GetDefaultOutputConfigurationRe" +
-      "quest\032<.api.v1alpha1.insights.GetDefault" +
-      "OutputConfigurationResponse\"\\\272\270\221\002\017\n\003\010\372\001\n" +
-      "\003\010\331\004\n\003\010\332\004\202\323\344\223\002B\"=/api/v1alpha1/insights/" +
-      "insights/getdefaultoutputconfiguration:\001" +
-      "*B\255\001\n\'com.tcn.cloud.api.api.v1alpha1.ins" +
-      "ightsB\014ServiceProtoP\001\242\002\003AVI\252\002\025Api.V1alph" +
-      "a1.Insights\312\002\025Api\\V1alpha1\\Insights\342\002!Ap" +
-      "i\\V1alpha1\\Insights\\GPBMetadata\352\002\027Api::V" +
-      "1alpha1::Insightsb\006proto3"
+      "utconfigurations:\001*\022\343\001\n\031UpdateOutputConf" +
+      "iguration\0227.api.v1alpha1.insights.Update" +
+      "OutputConfigurationRequest\0328.api.v1alpha" +
+      "1.insights.UpdateOutputConfigurationResp" +
+      "onse\"S\272\270\221\002\n\n\003\010\372\001\n\003\010\336\004\202\323\344\223\002>\"9/api/v1alph" +
+      "a1/insights/insights/updateoutputconfigu" +
+      "ration:\001*\022\343\001\n\031DeleteOutputConfiguration\022" +
+      "7.api.v1alpha1.insights.DeleteOutputConf" +
+      "igurationRequest\0328.api.v1alpha1.insights" +
+      ".DeleteOutputConfigurationResponse\"S\272\270\221\002" +
+      "\n\n\003\010\372\001\n\003\010\336\004\202\323\344\223\002>\"9/api/v1alpha1/insight" +
+      "s/insights/deleteoutputconfiguration:\001*\022" +
+      "\334\001\n\026GetOutputConfiguration\0224.api.v1alpha" +
+      "1.insights.GetOutputConfigurationRequest" +
+      "\0325.api.v1alpha1.insights.GetOutputConfig" +
+      "urationResponse\"U\272\270\221\002\017\n\003\010\372\001\n\003\010\331\004\n\003\010\332\004\202\323\344" +
+      "\223\002;\"6/api/v1alpha1/insights/insights/get" +
+      "outputconfiguration:\001*\022\363\001\n\035SetDefaultOut" +
+      "putConfiguration\022;.api.v1alpha1.insights" +
+      ".SetDefaultOutputConfigurationRequest\032<." +
+      "api.v1alpha1.insights.SetDefaultOutputCo" +
+      "nfigurationResponse\"W\272\270\221\002\n\n\003\010\372\001\n\003\010\336\004\202\323\344\223" +
+      "\002B\"=/api/v1alpha1/insights/insights/setd" +
+      "efaultoutputconfiguration:\001*\022\370\001\n\035GetDefa" +
+      "ultOutputConfiguration\022;.api.v1alpha1.in" +
+      "sights.GetDefaultOutputConfigurationRequ" +
+      "est\032<.api.v1alpha1.insights.GetDefaultOu" +
+      "tputConfigurationResponse\"\\\272\270\221\002\017\n\003\010\372\001\n\003\010" +
+      "\331\004\n\003\010\332\004\202\323\344\223\002B\"=/api/v1alpha1/insights/in" +
+      "sights/getdefaultoutputconfiguration:\001*B" +
+      "\255\001\n\'com.tcn.cloud.api.api.v1alpha1.insig" +
+      "htsB\014ServiceProtoP\001\242\002\003AVI\252\002\025Api.V1alpha1" +
+      ".Insights\312\002\025Api\\V1alpha1\\Insights\342\002!Api\\" +
+      "V1alpha1\\Insights\\GPBMetadata\352\002\027Api::V1a" +
+      "lpha1::Insightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
