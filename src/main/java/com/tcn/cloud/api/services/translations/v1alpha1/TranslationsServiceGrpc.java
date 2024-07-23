@@ -108,37 +108,6 @@ public final class TranslationsServiceGrpc {
     return getListLanguagesMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.ListContextsRequest,
-      com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse> getListContextsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListContexts",
-      requestType = com.tcn.cloud.api.services.translations.v1alpha1.ListContextsRequest.class,
-      responseType = com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.ListContextsRequest,
-      com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse> getListContextsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.ListContextsRequest, com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse> getListContextsMethod;
-    if ((getListContextsMethod = TranslationsServiceGrpc.getListContextsMethod) == null) {
-      synchronized (TranslationsServiceGrpc.class) {
-        if ((getListContextsMethod = TranslationsServiceGrpc.getListContextsMethod) == null) {
-          TranslationsServiceGrpc.getListContextsMethod = getListContextsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.translations.v1alpha1.ListContextsRequest, com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListContexts"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.translations.v1alpha1.ListContextsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new TranslationsServiceMethodDescriptorSupplier("ListContexts"))
-              .build();
-        }
-      }
-    }
-    return getListContextsMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest,
       com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationResponse> getUpdateTranslationMethod;
 
@@ -417,18 +386,6 @@ public final class TranslationsServiceGrpc {
 
     /**
      * <pre>
-     * Lists localization contexts
-     * Required permissions:
-     *  - PERMISSION_CUSTOMER_SUPPORT
-     * </pre>
-     */
-    default void listContexts(com.tcn.cloud.api.services.translations.v1alpha1.ListContextsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListContextsMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * Overrides the translation for a given translationID
      * Required permissions:
      *   - PERMISSION_CUSTOMER_SUPPORT
@@ -579,19 +536,6 @@ public final class TranslationsServiceGrpc {
 
     /**
      * <pre>
-     * Lists localization contexts
-     * Required permissions:
-     *  - PERMISSION_CUSTOMER_SUPPORT
-     * </pre>
-     */
-    public void listContexts(com.tcn.cloud.api.services.translations.v1alpha1.ListContextsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListContextsMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * Overrides the translation for a given translationID
      * Required permissions:
      *   - PERMISSION_CUSTOMER_SUPPORT
@@ -730,18 +674,6 @@ public final class TranslationsServiceGrpc {
     public com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse listLanguages(com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListLanguagesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Lists localization contexts
-     * Required permissions:
-     *  - PERMISSION_CUSTOMER_SUPPORT
-     * </pre>
-     */
-    public com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse listContexts(com.tcn.cloud.api.services.translations.v1alpha1.ListContextsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListContextsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -885,19 +817,6 @@ public final class TranslationsServiceGrpc {
 
     /**
      * <pre>
-     * Lists localization contexts
-     * Required permissions:
-     *  - PERMISSION_CUSTOMER_SUPPORT
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse> listContexts(
-        com.tcn.cloud.api.services.translations.v1alpha1.ListContextsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListContextsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Overrides the translation for a given translationID
      * Required permissions:
      *   - PERMISSION_CUSTOMER_SUPPORT
@@ -983,13 +902,12 @@ public final class TranslationsServiceGrpc {
   private static final int METHODID_TRANSLATE_TEMPLATE = 0;
   private static final int METHODID_LIST_TRANSLATIONS = 1;
   private static final int METHODID_LIST_LANGUAGES = 2;
-  private static final int METHODID_LIST_CONTEXTS = 3;
-  private static final int METHODID_UPDATE_TRANSLATION = 4;
-  private static final int METHODID_TRIGGER_LLMTRANSLATION = 5;
-  private static final int METHODID_TRIGGER_LLMTRANSLATIONS = 6;
-  private static final int METHODID_SET_SYSTEM_MESSAGE = 7;
-  private static final int METHODID_GET_SYSTEM_MESSAGE = 8;
-  private static final int METHODID_TEST_SYSTEM_MESSAGE = 9;
+  private static final int METHODID_UPDATE_TRANSLATION = 3;
+  private static final int METHODID_TRIGGER_LLMTRANSLATION = 4;
+  private static final int METHODID_TRIGGER_LLMTRANSLATIONS = 5;
+  private static final int METHODID_SET_SYSTEM_MESSAGE = 6;
+  private static final int METHODID_GET_SYSTEM_MESSAGE = 7;
+  private static final int METHODID_TEST_SYSTEM_MESSAGE = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1019,10 +937,6 @@ public final class TranslationsServiceGrpc {
         case METHODID_LIST_LANGUAGES:
           serviceImpl.listLanguages((com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse>) responseObserver);
-          break;
-        case METHODID_LIST_CONTEXTS:
-          serviceImpl.listContexts((com.tcn.cloud.api.services.translations.v1alpha1.ListContextsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse>) responseObserver);
           break;
         case METHODID_UPDATE_TRANSLATION:
           serviceImpl.updateTranslation((com.tcn.cloud.api.services.translations.v1alpha1.UpdateTranslationRequest) request,
@@ -1087,13 +1001,6 @@ public final class TranslationsServiceGrpc {
               com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest,
               com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse>(
                 service, METHODID_LIST_LANGUAGES)))
-        .addMethod(
-          getListContextsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.services.translations.v1alpha1.ListContextsRequest,
-              com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse>(
-                service, METHODID_LIST_CONTEXTS)))
         .addMethod(
           getUpdateTranslationMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1187,7 +1094,6 @@ public final class TranslationsServiceGrpc {
               .addMethod(getTranslateTemplateMethod())
               .addMethod(getListTranslationsMethod())
               .addMethod(getListLanguagesMethod())
-              .addMethod(getListContextsMethod())
               .addMethod(getUpdateTranslationMethod())
               .addMethod(getTriggerLLMTranslationMethod())
               .addMethod(getTriggerLLMTranslationsMethod())
