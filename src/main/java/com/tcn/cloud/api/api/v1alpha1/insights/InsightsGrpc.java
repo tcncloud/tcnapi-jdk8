@@ -418,6 +418,223 @@ public final class InsightsGrpc {
     return getPublishInsightMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse> getCreateOutputConfigurationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateOutputConfiguration",
+      requestType = com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse> getCreateOutputConfigurationMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest, com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse> getCreateOutputConfigurationMethod;
+    if ((getCreateOutputConfigurationMethod = InsightsGrpc.getCreateOutputConfigurationMethod) == null) {
+      synchronized (InsightsGrpc.class) {
+        if ((getCreateOutputConfigurationMethod = InsightsGrpc.getCreateOutputConfigurationMethod) == null) {
+          InsightsGrpc.getCreateOutputConfigurationMethod = getCreateOutputConfigurationMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest, com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateOutputConfiguration"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new InsightsMethodDescriptorSupplier("CreateOutputConfiguration"))
+              .build();
+        }
+      }
+    }
+    return getCreateOutputConfigurationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> getListOutputConfigurationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListOutputConfigurations",
+      requestType = com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> getListOutputConfigurationsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest, com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> getListOutputConfigurationsMethod;
+    if ((getListOutputConfigurationsMethod = InsightsGrpc.getListOutputConfigurationsMethod) == null) {
+      synchronized (InsightsGrpc.class) {
+        if ((getListOutputConfigurationsMethod = InsightsGrpc.getListOutputConfigurationsMethod) == null) {
+          InsightsGrpc.getListOutputConfigurationsMethod = getListOutputConfigurationsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest, com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOutputConfigurations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new InsightsMethodDescriptorSupplier("ListOutputConfigurations"))
+              .build();
+        }
+      }
+    }
+    return getListOutputConfigurationsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse> getUpdateOutputConfigurationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateOutputConfiguration",
+      requestType = com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse> getUpdateOutputConfigurationMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest, com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse> getUpdateOutputConfigurationMethod;
+    if ((getUpdateOutputConfigurationMethod = InsightsGrpc.getUpdateOutputConfigurationMethod) == null) {
+      synchronized (InsightsGrpc.class) {
+        if ((getUpdateOutputConfigurationMethod = InsightsGrpc.getUpdateOutputConfigurationMethod) == null) {
+          InsightsGrpc.getUpdateOutputConfigurationMethod = getUpdateOutputConfigurationMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest, com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateOutputConfiguration"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new InsightsMethodDescriptorSupplier("UpdateOutputConfiguration"))
+              .build();
+        }
+      }
+    }
+    return getUpdateOutputConfigurationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse> getDeleteOutputConfigurationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteOutputConfiguration",
+      requestType = com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse> getDeleteOutputConfigurationMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest, com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse> getDeleteOutputConfigurationMethod;
+    if ((getDeleteOutputConfigurationMethod = InsightsGrpc.getDeleteOutputConfigurationMethod) == null) {
+      synchronized (InsightsGrpc.class) {
+        if ((getDeleteOutputConfigurationMethod = InsightsGrpc.getDeleteOutputConfigurationMethod) == null) {
+          InsightsGrpc.getDeleteOutputConfigurationMethod = getDeleteOutputConfigurationMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest, com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteOutputConfiguration"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new InsightsMethodDescriptorSupplier("DeleteOutputConfiguration"))
+              .build();
+        }
+      }
+    }
+    return getDeleteOutputConfigurationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse> getGetOutputConfigurationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetOutputConfiguration",
+      requestType = com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse> getGetOutputConfigurationMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest, com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse> getGetOutputConfigurationMethod;
+    if ((getGetOutputConfigurationMethod = InsightsGrpc.getGetOutputConfigurationMethod) == null) {
+      synchronized (InsightsGrpc.class) {
+        if ((getGetOutputConfigurationMethod = InsightsGrpc.getGetOutputConfigurationMethod) == null) {
+          InsightsGrpc.getGetOutputConfigurationMethod = getGetOutputConfigurationMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest, com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOutputConfiguration"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new InsightsMethodDescriptorSupplier("GetOutputConfiguration"))
+              .build();
+        }
+      }
+    }
+    return getGetOutputConfigurationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationResponse> getSetDefaultOutputConfigurationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetDefaultOutputConfiguration",
+      requestType = com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationResponse> getSetDefaultOutputConfigurationMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationRequest, com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationResponse> getSetDefaultOutputConfigurationMethod;
+    if ((getSetDefaultOutputConfigurationMethod = InsightsGrpc.getSetDefaultOutputConfigurationMethod) == null) {
+      synchronized (InsightsGrpc.class) {
+        if ((getSetDefaultOutputConfigurationMethod = InsightsGrpc.getSetDefaultOutputConfigurationMethod) == null) {
+          InsightsGrpc.getSetDefaultOutputConfigurationMethod = getSetDefaultOutputConfigurationMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationRequest, com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetDefaultOutputConfiguration"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new InsightsMethodDescriptorSupplier("SetDefaultOutputConfiguration"))
+              .build();
+        }
+      }
+    }
+    return getSetDefaultOutputConfigurationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationResponse> getGetDefaultOutputConfigurationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDefaultOutputConfiguration",
+      requestType = com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationRequest,
+      com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationResponse> getGetDefaultOutputConfigurationMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationRequest, com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationResponse> getGetDefaultOutputConfigurationMethod;
+    if ((getGetDefaultOutputConfigurationMethod = InsightsGrpc.getGetDefaultOutputConfigurationMethod) == null) {
+      synchronized (InsightsGrpc.class) {
+        if ((getGetDefaultOutputConfigurationMethod = InsightsGrpc.getGetDefaultOutputConfigurationMethod) == null) {
+          InsightsGrpc.getGetDefaultOutputConfigurationMethod = getGetDefaultOutputConfigurationMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationRequest, com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDefaultOutputConfiguration"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new InsightsMethodDescriptorSupplier("GetDefaultOutputConfiguration"))
+              .build();
+        }
+      }
+    }
+    return getGetDefaultOutputConfigurationMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -595,6 +812,76 @@ public final class InsightsGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPublishInsightMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * CreateOutputConfiguration creates an output configuration
+     * </pre>
+     */
+    default void createOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateOutputConfigurationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListOutputConfigurations lists output configurations for an insight
+     * </pre>
+     */
+    default void listOutputConfigurations(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOutputConfigurationsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateOutputConfiguration updates an output configuration
+     * </pre>
+     */
+    default void updateOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateOutputConfigurationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteOutputConfiguration deletes an output configuration
+     * </pre>
+     */
+    default void deleteOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteOutputConfigurationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetOutputConfiguration gets an output configuration
+     * </pre>
+     */
+    default void getOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOutputConfigurationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetDefaultOutputConfiguration sets the specified output configuration to default
+     * </pre>
+     */
+    default void setDefaultOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetDefaultOutputConfigurationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetDefaultOutputConfiguration gets the default output configuration for an insight
+     * </pre>
+     */
+    default void getDefaultOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDefaultOutputConfigurationMethod(), responseObserver);
+    }
   }
 
   /**
@@ -766,6 +1053,83 @@ public final class InsightsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPublishInsightMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * CreateOutputConfiguration creates an output configuration
+     * </pre>
+     */
+    public void createOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateOutputConfigurationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListOutputConfigurations lists output configurations for an insight
+     * </pre>
+     */
+    public void listOutputConfigurations(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getListOutputConfigurationsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateOutputConfiguration updates an output configuration
+     * </pre>
+     */
+    public void updateOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateOutputConfigurationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteOutputConfiguration deletes an output configuration
+     * </pre>
+     */
+    public void deleteOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteOutputConfigurationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetOutputConfiguration gets an output configuration
+     * </pre>
+     */
+    public void getOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetOutputConfigurationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SetDefaultOutputConfiguration sets the specified output configuration to default
+     * </pre>
+     */
+    public void setDefaultOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetDefaultOutputConfigurationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetDefaultOutputConfiguration gets the default output configuration for an insight
+     * </pre>
+     */
+    public void getDefaultOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDefaultOutputConfigurationMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -912,6 +1276,77 @@ public final class InsightsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightResponse publishInsight(com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPublishInsightMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateOutputConfiguration creates an output configuration
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse createOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateOutputConfigurationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListOutputConfigurations lists output configurations for an insight
+     * </pre>
+     */
+    public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> listOutputConfigurations(
+        com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getListOutputConfigurationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateOutputConfiguration updates an output configuration
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse updateOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateOutputConfigurationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteOutputConfiguration deletes an output configuration
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse deleteOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteOutputConfigurationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetOutputConfiguration gets an output configuration
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse getOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetOutputConfigurationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetDefaultOutputConfiguration sets the specified output configuration to default
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationResponse setDefaultOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetDefaultOutputConfigurationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetDefaultOutputConfiguration gets the default output configuration for an insight
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationResponse getDefaultOutputConfiguration(com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDefaultOutputConfigurationMethod(), getCallOptions(), request);
     }
   }
 
@@ -1073,6 +1508,72 @@ public final class InsightsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPublishInsightMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * CreateOutputConfiguration creates an output configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse> createOutputConfiguration(
+        com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateOutputConfigurationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateOutputConfiguration updates an output configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse> updateOutputConfiguration(
+        com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateOutputConfigurationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteOutputConfiguration deletes an output configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse> deleteOutputConfiguration(
+        com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteOutputConfigurationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetOutputConfiguration gets an output configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse> getOutputConfiguration(
+        com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetOutputConfigurationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * SetDefaultOutputConfiguration sets the specified output configuration to default
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationResponse> setDefaultOutputConfiguration(
+        com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetDefaultOutputConfigurationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetDefaultOutputConfiguration gets the default output configuration for an insight
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationResponse> getDefaultOutputConfiguration(
+        com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDefaultOutputConfigurationMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_INSIGHT = 0;
@@ -1088,6 +1589,13 @@ public final class InsightsGrpc {
   private static final int METHODID_LIST_VFSES = 10;
   private static final int METHODID_LIST_VFS_SCHEMAS = 11;
   private static final int METHODID_PUBLISH_INSIGHT = 12;
+  private static final int METHODID_CREATE_OUTPUT_CONFIGURATION = 13;
+  private static final int METHODID_LIST_OUTPUT_CONFIGURATIONS = 14;
+  private static final int METHODID_UPDATE_OUTPUT_CONFIGURATION = 15;
+  private static final int METHODID_DELETE_OUTPUT_CONFIGURATION = 16;
+  private static final int METHODID_GET_OUTPUT_CONFIGURATION = 17;
+  private static final int METHODID_SET_DEFAULT_OUTPUT_CONFIGURATION = 18;
+  private static final int METHODID_GET_DEFAULT_OUTPUT_CONFIGURATION = 19;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1157,6 +1665,34 @@ public final class InsightsGrpc {
         case METHODID_PUBLISH_INSIGHT:
           serviceImpl.publishInsight((com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_OUTPUT_CONFIGURATION:
+          serviceImpl.createOutputConfiguration((com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse>) responseObserver);
+          break;
+        case METHODID_LIST_OUTPUT_CONFIGURATIONS:
+          serviceImpl.listOutputConfigurations((com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_OUTPUT_CONFIGURATION:
+          serviceImpl.updateOutputConfiguration((com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_OUTPUT_CONFIGURATION:
+          serviceImpl.deleteOutputConfiguration((com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse>) responseObserver);
+          break;
+        case METHODID_GET_OUTPUT_CONFIGURATION:
+          serviceImpl.getOutputConfiguration((com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse>) responseObserver);
+          break;
+        case METHODID_SET_DEFAULT_OUTPUT_CONFIGURATION:
+          serviceImpl.setDefaultOutputConfiguration((com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationResponse>) responseObserver);
+          break;
+        case METHODID_GET_DEFAULT_OUTPUT_CONFIGURATION:
+          serviceImpl.getDefaultOutputConfiguration((com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1267,6 +1803,55 @@ public final class InsightsGrpc {
               com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightRequest,
               com.tcn.cloud.api.api.v1alpha1.insights.PublishInsightResponse>(
                 service, METHODID_PUBLISH_INSIGHT)))
+        .addMethod(
+          getCreateOutputConfigurationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationRequest,
+              com.tcn.cloud.api.api.v1alpha1.insights.CreateOutputConfigurationResponse>(
+                service, METHODID_CREATE_OUTPUT_CONFIGURATION)))
+        .addMethod(
+          getListOutputConfigurationsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest,
+              com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse>(
+                service, METHODID_LIST_OUTPUT_CONFIGURATIONS)))
+        .addMethod(
+          getUpdateOutputConfigurationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest,
+              com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse>(
+                service, METHODID_UPDATE_OUTPUT_CONFIGURATION)))
+        .addMethod(
+          getDeleteOutputConfigurationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationRequest,
+              com.tcn.cloud.api.api.v1alpha1.insights.DeleteOutputConfigurationResponse>(
+                service, METHODID_DELETE_OUTPUT_CONFIGURATION)))
+        .addMethod(
+          getGetOutputConfigurationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationRequest,
+              com.tcn.cloud.api.api.v1alpha1.insights.GetOutputConfigurationResponse>(
+                service, METHODID_GET_OUTPUT_CONFIGURATION)))
+        .addMethod(
+          getSetDefaultOutputConfigurationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationRequest,
+              com.tcn.cloud.api.api.v1alpha1.insights.SetDefaultOutputConfigurationResponse>(
+                service, METHODID_SET_DEFAULT_OUTPUT_CONFIGURATION)))
+        .addMethod(
+          getGetDefaultOutputConfigurationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationRequest,
+              com.tcn.cloud.api.api.v1alpha1.insights.GetDefaultOutputConfigurationResponse>(
+                service, METHODID_GET_DEFAULT_OUTPUT_CONFIGURATION)))
         .build();
   }
 
@@ -1328,6 +1913,13 @@ public final class InsightsGrpc {
               .addMethod(getListVfsesMethod())
               .addMethod(getListVfsSchemasMethod())
               .addMethod(getPublishInsightMethod())
+              .addMethod(getCreateOutputConfigurationMethod())
+              .addMethod(getListOutputConfigurationsMethod())
+              .addMethod(getUpdateOutputConfigurationMethod())
+              .addMethod(getDeleteOutputConfigurationMethod())
+              .addMethod(getGetOutputConfigurationMethod())
+              .addMethod(getSetDefaultOutputConfigurationMethod())
+              .addMethod(getGetDefaultOutputConfigurationMethod())
               .build();
         }
       }
