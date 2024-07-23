@@ -27,7 +27,7 @@ public final class ServiceProto {
       ".proto\022\036services.translations.v1alpha1\032\027" +
       "annotations/authz.proto\032\034google/api/anno" +
       "tations.proto\032-services/translations/v1a" +
-      "lpha1/entities.proto2\205\017\n\023TranslationsSer" +
+      "lpha1/entities.proto2\304\020\n\023TranslationsSer" +
       "vice\022\315\001\n\021TranslateTemplate\0228.services.tr" +
       "anslations.v1alpha1.TranslateTemplateReq" +
       "uest\0329.services.translations.v1alpha1.Tr" +
@@ -43,45 +43,50 @@ public final class ServiceProto {
       "agesRequest\0325.services.translations.v1al" +
       "pha1.ListLanguagesResponse\"B\272\270\221\002\005\n\003\010\310\001\202\323" +
       "\344\223\0022\"-/services/translations/v1alpha1/li" +
-      "stlanguages:\001*\022\320\001\n\021UpdateTranslation\0228.s" +
-      "ervices.translations.v1alpha1.UpdateTran" +
-      "slationRequest\0329.services.translations.v" +
-      "1alpha1.UpdateTranslationResponse\"F\272\270\221\002\005" +
-      "\n\003\010\310\001\202\323\344\223\0026\"1/services/translations/v1al" +
-      "pha1/updatetranslation:\001*\022\340\001\n\025TriggerLLM" +
-      "Translation\022<.services.translations.v1al" +
-      "pha1.TriggerLLMTranslationRequest\032=.serv" +
-      "ices.translations.v1alpha1.TriggerLLMTra" +
-      "nslationResponse\"J\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002:\"5/ser" +
-      "vices/translations/v1alpha1/triggerllmtr" +
-      "anslation:\001*\022\344\001\n\026TriggerLLMTranslations\022" +
-      "=.services.translations.v1alpha1.Trigger" +
-      "LLMTranslationsRequest\032>.services.transl" +
-      "ations.v1alpha1.TriggerLLMTranslationsRe" +
-      "sponse\"K\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002;\"6/services/tran" +
-      "slations/v1alpha1/triggerllmtranslations" +
-      ":\001*\022\314\001\n\020SetSystemMessage\0227.services.tran" +
-      "slations.v1alpha1.SetSystemMessageReques" +
-      "t\0328.services.translations.v1alpha1.SetSy" +
-      "stemMessageResponse\"E\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0025\"0/" +
-      "services/translations/v1alpha1/setsystem" +
-      "message:\001*\022\314\001\n\020GetSystemMessage\0227.servic" +
-      "es.translations.v1alpha1.GetSystemMessag" +
-      "eRequest\0328.services.translations.v1alpha" +
-      "1.GetSystemMessageResponse\"E\272\270\221\002\005\n\003\010\310\001\202\323" +
-      "\344\223\0025\"0/services/translations/v1alpha1/ge" +
-      "tsystemmessage:\001*\022\320\001\n\021TestSystemMessage\022" +
-      "8.services.translations.v1alpha1.TestSys" +
-      "temMessageRequest\0329.services.translation" +
-      "s.v1alpha1.TestSystemMessageResponse\"F\272\270" +
-      "\221\002\005\n\003\010\310\001\202\323\344\223\0026\"1/services/translations/v" +
-      "1alpha1/testsystemmessage:\001*B\332\001\n0com.tcn" +
-      ".cloud.api.services.translations.v1alpha" +
-      "1B\014ServiceProtoP\001\242\002\003STX\252\002\036Services.Trans" +
-      "lations.V1alpha1\312\002\036Services\\Translations" +
-      "\\V1alpha1\342\002*Services\\Translations\\V1alph" +
-      "a1\\GPBMetadata\352\002 Services::Translations:" +
-      ":V1alpha1b\006proto3"
+      "stlanguages:\001*\022\274\001\n\014ListContexts\0223.servic" +
+      "es.translations.v1alpha1.ListContextsReq" +
+      "uest\0324.services.translations.v1alpha1.Li" +
+      "stContextsResponse\"A\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0021\",/s" +
+      "ervices/translations/v1alpha1/listcontex" +
+      "ts:\001*\022\320\001\n\021UpdateTranslation\0228.services.t" +
+      "ranslations.v1alpha1.UpdateTranslationRe" +
+      "quest\0329.services.translations.v1alpha1.U" +
+      "pdateTranslationResponse\"F\272\270\221\002\005\n\003\010\310\001\202\323\344\223" +
+      "\0026\"1/services/translations/v1alpha1/upda" +
+      "tetranslation:\001*\022\340\001\n\025TriggerLLMTranslati" +
+      "on\022<.services.translations.v1alpha1.Trig" +
+      "gerLLMTranslationRequest\032=.services.tran" +
+      "slations.v1alpha1.TriggerLLMTranslationR" +
+      "esponse\"J\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002:\"5/services/tra" +
+      "nslations/v1alpha1/triggerllmtranslation" +
+      ":\001*\022\344\001\n\026TriggerLLMTranslations\022=.service" +
+      "s.translations.v1alpha1.TriggerLLMTransl" +
+      "ationsRequest\032>.services.translations.v1" +
+      "alpha1.TriggerLLMTranslationsResponse\"K\272" +
+      "\270\221\002\005\n\003\010\310\001\202\323\344\223\002;\"6/services/translations/" +
+      "v1alpha1/triggerllmtranslations:\001*\022\314\001\n\020S" +
+      "etSystemMessage\0227.services.translations." +
+      "v1alpha1.SetSystemMessageRequest\0328.servi" +
+      "ces.translations.v1alpha1.SetSystemMessa" +
+      "geResponse\"E\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0025\"0/services/" +
+      "translations/v1alpha1/setsystemmessage:\001" +
+      "*\022\314\001\n\020GetSystemMessage\0227.services.transl" +
+      "ations.v1alpha1.GetSystemMessageRequest\032" +
+      "8.services.translations.v1alpha1.GetSyst" +
+      "emMessageResponse\"E\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0025\"0/se" +
+      "rvices/translations/v1alpha1/getsystemme" +
+      "ssage:\001*\022\320\001\n\021TestSystemMessage\0228.service" +
+      "s.translations.v1alpha1.TestSystemMessag" +
+      "eRequest\0329.services.translations.v1alpha" +
+      "1.TestSystemMessageResponse\"F\272\270\221\002\005\n\003\010\310\001\202" +
+      "\323\344\223\0026\"1/services/translations/v1alpha1/t" +
+      "estsystemmessage:\001*B\332\001\n0com.tcn.cloud.ap" +
+      "i.services.translations.v1alpha1B\014Servic" +
+      "eProtoP\001\242\002\003STX\252\002\036Services.Translations.V" +
+      "1alpha1\312\002\036Services\\Translations\\V1alpha1" +
+      "\342\002*Services\\Translations\\V1alpha1\\GPBMet" +
+      "adata\352\002 Services::Translations::V1alpha1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
