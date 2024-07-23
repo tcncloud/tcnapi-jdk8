@@ -41,7 +41,7 @@ public interface TranscriptQueryOrBuilder extends
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=458
+   *     See wfo/vanalytics/v2/transcript.proto;l=466
    * @return Whether the channel field is set.
    */
   @java.lang.Deprecated boolean hasChannel();
@@ -52,7 +52,7 @@ public interface TranscriptQueryOrBuilder extends
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=458
+   *     See wfo/vanalytics/v2/transcript.proto;l=466
    * @return The channel.
    */
   @java.lang.Deprecated com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel();
@@ -253,4 +253,31 @@ public interface TranscriptQueryOrBuilder extends
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel_type = 9 [json_name = "channelType"];</code>
    */
   com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.ChannelOrBuilder getChannelTypeOrBuilder();
+
+  /**
+   * <pre>
+   * Query constraints on skills.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
+   * @return Whether the skills field is set.
+   */
+  boolean hasSkills();
+  /**
+   * <pre>
+   * Query constraints on skills.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
+   * @return The skills.
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery getSkills();
+  /**
+   * <pre>
+   * Query constraints on skills.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
+   */
+  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder getSkillsOrBuilder();
 }
