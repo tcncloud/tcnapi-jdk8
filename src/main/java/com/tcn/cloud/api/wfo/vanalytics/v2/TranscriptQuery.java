@@ -42,6 +42,2396 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Builder.class);
   }
 
+  public interface SkillsQueryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.SkillsQuery)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Match against "must-have" skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need = 1 [json_name = "need"];</code>
+     * @return Whether the need field is set.
+     */
+    boolean hasNeed();
+    /**
+     * <pre>
+     * Match against "must-have" skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need = 1 [json_name = "need"];</code>
+     * @return The need.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills getNeed();
+    /**
+     * <pre>
+     * Match against "must-have" skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need = 1 [json_name = "need"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.SkillsOrBuilder getNeedOrBuilder();
+
+    /**
+     * <pre>
+     * Match against "nice-to-have" skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want = 2 [json_name = "want"];</code>
+     * @return Whether the want field is set.
+     */
+    boolean hasWant();
+    /**
+     * <pre>
+     * Match against "nice-to-have" skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want = 2 [json_name = "want"];</code>
+     * @return The want.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills getWant();
+    /**
+     * <pre>
+     * Match against "nice-to-have" skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want = 2 [json_name = "want"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.SkillsOrBuilder getWantOrBuilder();
+
+    /**
+     * <pre>
+     * Match against groups of skills with logical OR.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+     */
+    java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery> 
+        getOrList();
+    /**
+     * <pre>
+     * Match against groups of skills with logical OR.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery getOr(int index);
+    /**
+     * <pre>
+     * Match against groups of skills with logical OR.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+     */
+    int getOrCount();
+    /**
+     * <pre>
+     * Match against groups of skills with logical OR.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+     */
+    java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder> 
+        getOrOrBuilderList();
+    /**
+     * <pre>
+     * Match against groups of skills with logical OR.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder getOrOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Query constraints on skills.
+   * </pre>
+   *
+   * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.SkillsQuery}
+   */
+  public static final class SkillsQuery extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.SkillsQuery)
+      SkillsQueryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SkillsQuery.newBuilder() to construct.
+    private SkillsQuery(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SkillsQuery() {
+      or_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SkillsQuery();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_SkillsQuery_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_SkillsQuery_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder.class);
+    }
+
+    public interface SkillsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Must match any one of the skills in the set.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return A list containing the any.
+       */
+      java.util.List<java.lang.String>
+          getAnyList();
+      /**
+       * <pre>
+       * Must match any one of the skills in the set.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return The count of any.
+       */
+      int getAnyCount();
+      /**
+       * <pre>
+       * Must match any one of the skills in the set.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      java.lang.String getAny(int index);
+      /**
+       * <pre>
+       * Must match any one of the skills in the set.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the any at the given index.
+       */
+      com.google.protobuf.ByteString
+          getAnyBytes(int index);
+
+      /**
+       * <pre>
+       * Must match all skills in the set.
+       * </pre>
+       *
+       * <code>repeated string all = 2 [json_name = "all"];</code>
+       * @return A list containing the all.
+       */
+      java.util.List<java.lang.String>
+          getAllList();
+      /**
+       * <pre>
+       * Must match all skills in the set.
+       * </pre>
+       *
+       * <code>repeated string all = 2 [json_name = "all"];</code>
+       * @return The count of all.
+       */
+      int getAllCount();
+      /**
+       * <pre>
+       * Must match all skills in the set.
+       * </pre>
+       *
+       * <code>repeated string all = 2 [json_name = "all"];</code>
+       * @param index The index of the element to return.
+       * @return The all at the given index.
+       */
+      java.lang.String getAll(int index);
+      /**
+       * <pre>
+       * Must match all skills in the set.
+       * </pre>
+       *
+       * <code>repeated string all = 2 [json_name = "all"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the all at the given index.
+       */
+      com.google.protobuf.ByteString
+          getAllBytes(int index);
+    }
+    /**
+     * <pre>
+     * Skills represents a set of skills.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills}
+     */
+    public static final class Skills extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills)
+        SkillsOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Skills.newBuilder() to construct.
+      private Skills(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Skills() {
+        any_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        all_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Skills();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_SkillsQuery_Skills_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_SkillsQuery_Skills_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.Builder.class);
+      }
+
+      public static final int ANY_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.LazyStringArrayList any_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      /**
+       * <pre>
+       * Must match any one of the skills in the set.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return A list containing the any.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAnyList() {
+        return any_;
+      }
+      /**
+       * <pre>
+       * Must match any one of the skills in the set.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @return The count of any.
+       */
+      public int getAnyCount() {
+        return any_.size();
+      }
+      /**
+       * <pre>
+       * Must match any one of the skills in the set.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      public java.lang.String getAny(int index) {
+        return any_.get(index);
+      }
+      /**
+       * <pre>
+       * Must match any one of the skills in the set.
+       * </pre>
+       *
+       * <code>repeated string any = 1 [json_name = "any"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the any at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAnyBytes(int index) {
+        return any_.getByteString(index);
+      }
+
+      public static final int ALL_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.LazyStringArrayList all_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      /**
+       * <pre>
+       * Must match all skills in the set.
+       * </pre>
+       *
+       * <code>repeated string all = 2 [json_name = "all"];</code>
+       * @return A list containing the all.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAllList() {
+        return all_;
+      }
+      /**
+       * <pre>
+       * Must match all skills in the set.
+       * </pre>
+       *
+       * <code>repeated string all = 2 [json_name = "all"];</code>
+       * @return The count of all.
+       */
+      public int getAllCount() {
+        return all_.size();
+      }
+      /**
+       * <pre>
+       * Must match all skills in the set.
+       * </pre>
+       *
+       * <code>repeated string all = 2 [json_name = "all"];</code>
+       * @param index The index of the element to return.
+       * @return The all at the given index.
+       */
+      public java.lang.String getAll(int index) {
+        return all_.get(index);
+      }
+      /**
+       * <pre>
+       * Must match all skills in the set.
+       * </pre>
+       *
+       * <code>repeated string all = 2 [json_name = "all"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the all at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAllBytes(int index) {
+        return all_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < any_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, any_.getRaw(i));
+        }
+        for (int i = 0; i < all_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, all_.getRaw(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < any_.size(); i++) {
+            dataSize += computeStringSizeNoTag(any_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getAnyList().size();
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < all_.size(); i++) {
+            dataSize += computeStringSizeNoTag(all_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getAllList().size();
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills) obj;
+
+        if (!getAnyList()
+            .equals(other.getAnyList())) return false;
+        if (!getAllList()
+            .equals(other.getAllList())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getAnyCount() > 0) {
+          hash = (37 * hash) + ANY_FIELD_NUMBER;
+          hash = (53 * hash) + getAnyList().hashCode();
+        }
+        if (getAllCount() > 0) {
+          hash = (37 * hash) + ALL_FIELD_NUMBER;
+          hash = (53 * hash) + getAllList().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Skills represents a set of skills.
+       * </pre>
+       *
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.SkillsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_SkillsQuery_Skills_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_SkillsQuery_Skills_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          any_ =
+              com.google.protobuf.LazyStringArrayList.emptyList();
+          all_ =
+              com.google.protobuf.LazyStringArrayList.emptyList();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_SkillsQuery_Skills_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            any_.makeImmutable();
+            result.any_ = any_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            all_.makeImmutable();
+            result.all_ = all_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.getDefaultInstance()) return this;
+          if (!other.any_.isEmpty()) {
+            if (any_.isEmpty()) {
+              any_ = other.any_;
+              bitField0_ |= 0x00000001;
+            } else {
+              ensureAnyIsMutable();
+              any_.addAll(other.any_);
+            }
+            onChanged();
+          }
+          if (!other.all_.isEmpty()) {
+            if (all_.isEmpty()) {
+              all_ = other.all_;
+              bitField0_ |= 0x00000002;
+            } else {
+              ensureAllIsMutable();
+              all_.addAll(other.all_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  java.lang.String s = input.readStringRequireUtf8();
+                  ensureAnyIsMutable();
+                  any_.add(s);
+                  break;
+                } // case 10
+                case 18: {
+                  java.lang.String s = input.readStringRequireUtf8();
+                  ensureAllIsMutable();
+                  all_.add(s);
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringArrayList any_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        private void ensureAnyIsMutable() {
+          if (!any_.isModifiable()) {
+            any_ = new com.google.protobuf.LazyStringArrayList(any_);
+          }
+          bitField0_ |= 0x00000001;
+        }
+        /**
+         * <pre>
+         * Must match any one of the skills in the set.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @return A list containing the any.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getAnyList() {
+          any_.makeImmutable();
+          return any_;
+        }
+        /**
+         * <pre>
+         * Must match any one of the skills in the set.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @return The count of any.
+         */
+        public int getAnyCount() {
+          return any_.size();
+        }
+        /**
+         * <pre>
+         * Must match any one of the skills in the set.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param index The index of the element to return.
+         * @return The any at the given index.
+         */
+        public java.lang.String getAny(int index) {
+          return any_.get(index);
+        }
+        /**
+         * <pre>
+         * Must match any one of the skills in the set.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the any at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getAnyBytes(int index) {
+          return any_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * Must match any one of the skills in the set.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param index The index to set the value at.
+         * @param value The any to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAny(
+            int index, java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          ensureAnyIsMutable();
+          any_.set(index, value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Must match any one of the skills in the set.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param value The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAny(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          ensureAnyIsMutable();
+          any_.add(value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Must match any one of the skills in the set.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param values The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllAny(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureAnyIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, any_);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Must match any one of the skills in the set.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAny() {
+          any_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Must match any one of the skills in the set.
+         * </pre>
+         *
+         * <code>repeated string any = 1 [json_name = "any"];</code>
+         * @param value The bytes of the any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAnyBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          ensureAnyIsMutable();
+          any_.add(value);
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.LazyStringArrayList all_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        private void ensureAllIsMutable() {
+          if (!all_.isModifiable()) {
+            all_ = new com.google.protobuf.LazyStringArrayList(all_);
+          }
+          bitField0_ |= 0x00000002;
+        }
+        /**
+         * <pre>
+         * Must match all skills in the set.
+         * </pre>
+         *
+         * <code>repeated string all = 2 [json_name = "all"];</code>
+         * @return A list containing the all.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getAllList() {
+          all_.makeImmutable();
+          return all_;
+        }
+        /**
+         * <pre>
+         * Must match all skills in the set.
+         * </pre>
+         *
+         * <code>repeated string all = 2 [json_name = "all"];</code>
+         * @return The count of all.
+         */
+        public int getAllCount() {
+          return all_.size();
+        }
+        /**
+         * <pre>
+         * Must match all skills in the set.
+         * </pre>
+         *
+         * <code>repeated string all = 2 [json_name = "all"];</code>
+         * @param index The index of the element to return.
+         * @return The all at the given index.
+         */
+        public java.lang.String getAll(int index) {
+          return all_.get(index);
+        }
+        /**
+         * <pre>
+         * Must match all skills in the set.
+         * </pre>
+         *
+         * <code>repeated string all = 2 [json_name = "all"];</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the all at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getAllBytes(int index) {
+          return all_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * Must match all skills in the set.
+         * </pre>
+         *
+         * <code>repeated string all = 2 [json_name = "all"];</code>
+         * @param index The index to set the value at.
+         * @param value The all to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAll(
+            int index, java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          ensureAllIsMutable();
+          all_.set(index, value);
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Must match all skills in the set.
+         * </pre>
+         *
+         * <code>repeated string all = 2 [json_name = "all"];</code>
+         * @param value The all to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAll(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          ensureAllIsMutable();
+          all_.add(value);
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Must match all skills in the set.
+         * </pre>
+         *
+         * <code>repeated string all = 2 [json_name = "all"];</code>
+         * @param values The all to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllAll(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureAllIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, all_);
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Must match all skills in the set.
+         * </pre>
+         *
+         * <code>repeated string all = 2 [json_name = "all"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAll() {
+          all_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Must match all skills in the set.
+         * </pre>
+         *
+         * <code>repeated string all = 2 [json_name = "all"];</code>
+         * @param value The bytes of the all to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          ensureAllIsMutable();
+          all_.add(value);
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Skills>
+          PARSER = new com.google.protobuf.AbstractParser<Skills>() {
+        @java.lang.Override
+        public Skills parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Skills> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Skills> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int NEED_FIELD_NUMBER = 1;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need_;
+    /**
+     * <pre>
+     * Match against "must-have" skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need = 1 [json_name = "need"];</code>
+     * @return Whether the need field is set.
+     */
+    @java.lang.Override
+    public boolean hasNeed() {
+      return need_ != null;
+    }
+    /**
+     * <pre>
+     * Match against "must-have" skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need = 1 [json_name = "need"];</code>
+     * @return The need.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills getNeed() {
+      return need_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.getDefaultInstance() : need_;
+    }
+    /**
+     * <pre>
+     * Match against "must-have" skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need = 1 [json_name = "need"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.SkillsOrBuilder getNeedOrBuilder() {
+      return need_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.getDefaultInstance() : need_;
+    }
+
+    public static final int WANT_FIELD_NUMBER = 2;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want_;
+    /**
+     * <pre>
+     * Match against "nice-to-have" skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want = 2 [json_name = "want"];</code>
+     * @return Whether the want field is set.
+     */
+    @java.lang.Override
+    public boolean hasWant() {
+      return want_ != null;
+    }
+    /**
+     * <pre>
+     * Match against "nice-to-have" skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want = 2 [json_name = "want"];</code>
+     * @return The want.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills getWant() {
+      return want_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.getDefaultInstance() : want_;
+    }
+    /**
+     * <pre>
+     * Match against "nice-to-have" skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want = 2 [json_name = "want"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.SkillsOrBuilder getWantOrBuilder() {
+      return want_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.getDefaultInstance() : want_;
+    }
+
+    public static final int OR_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery> or_;
+    /**
+     * <pre>
+     * Match against groups of skills with logical OR.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery> getOrList() {
+      return or_;
+    }
+    /**
+     * <pre>
+     * Match against groups of skills with logical OR.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder> 
+        getOrOrBuilderList() {
+      return or_;
+    }
+    /**
+     * <pre>
+     * Match against groups of skills with logical OR.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+     */
+    @java.lang.Override
+    public int getOrCount() {
+      return or_.size();
+    }
+    /**
+     * <pre>
+     * Match against groups of skills with logical OR.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery getOr(int index) {
+      return or_.get(index);
+    }
+    /**
+     * <pre>
+     * Match against groups of skills with logical OR.
+     * </pre>
+     *
+     * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder getOrOrBuilder(
+        int index) {
+      return or_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (need_ != null) {
+        output.writeMessage(1, getNeed());
+      }
+      if (want_ != null) {
+        output.writeMessage(2, getWant());
+      }
+      for (int i = 0; i < or_.size(); i++) {
+        output.writeMessage(3, or_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (need_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getNeed());
+      }
+      if (want_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getWant());
+      }
+      for (int i = 0; i < or_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, or_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery) obj;
+
+      if (hasNeed() != other.hasNeed()) return false;
+      if (hasNeed()) {
+        if (!getNeed()
+            .equals(other.getNeed())) return false;
+      }
+      if (hasWant() != other.hasWant()) return false;
+      if (hasWant()) {
+        if (!getWant()
+            .equals(other.getWant())) return false;
+      }
+      if (!getOrList()
+          .equals(other.getOrList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasNeed()) {
+        hash = (37 * hash) + NEED_FIELD_NUMBER;
+        hash = (53 * hash) + getNeed().hashCode();
+      }
+      if (hasWant()) {
+        hash = (37 * hash) + WANT_FIELD_NUMBER;
+        hash = (53 * hash) + getWant().hashCode();
+      }
+      if (getOrCount() > 0) {
+        hash = (37 * hash) + OR_FIELD_NUMBER;
+        hash = (53 * hash) + getOrList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Query constraints on skills.
+     * </pre>
+     *
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.SkillsQuery}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.SkillsQuery)
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_SkillsQuery_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_SkillsQuery_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        need_ = null;
+        if (needBuilder_ != null) {
+          needBuilder_.dispose();
+          needBuilder_ = null;
+        }
+        want_ = null;
+        if (wantBuilder_ != null) {
+          wantBuilder_.dispose();
+          wantBuilder_ = null;
+        }
+        if (orBuilder_ == null) {
+          or_ = java.util.Collections.emptyList();
+        } else {
+          or_ = null;
+          orBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_SkillsQuery_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery getDefaultInstanceForType() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery build() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery buildPartial() {
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery result) {
+        if (orBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            or_ = java.util.Collections.unmodifiableList(or_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.or_ = or_;
+        } else {
+          result.or_ = orBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.need_ = needBuilder_ == null
+              ? need_
+              : needBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.want_ = wantBuilder_ == null
+              ? want_
+              : wantBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery) {
+          return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery other) {
+        if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.getDefaultInstance()) return this;
+        if (other.hasNeed()) {
+          mergeNeed(other.getNeed());
+        }
+        if (other.hasWant()) {
+          mergeWant(other.getWant());
+        }
+        if (orBuilder_ == null) {
+          if (!other.or_.isEmpty()) {
+            if (or_.isEmpty()) {
+              or_ = other.or_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureOrIsMutable();
+              or_.addAll(other.or_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.or_.isEmpty()) {
+            if (orBuilder_.isEmpty()) {
+              orBuilder_.dispose();
+              orBuilder_ = null;
+              or_ = other.or_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              orBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOrFieldBuilder() : null;
+            } else {
+              orBuilder_.addAllMessages(other.or_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getNeedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getWantFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery m =
+                    input.readMessage(
+                        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.parser(),
+                        extensionRegistry);
+                if (orBuilder_ == null) {
+                  ensureOrIsMutable();
+                  or_.add(m);
+                } else {
+                  orBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.SkillsOrBuilder> needBuilder_;
+      /**
+       * <pre>
+       * Match against "must-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need = 1 [json_name = "need"];</code>
+       * @return Whether the need field is set.
+       */
+      public boolean hasNeed() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Match against "must-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need = 1 [json_name = "need"];</code>
+       * @return The need.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills getNeed() {
+        if (needBuilder_ == null) {
+          return need_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.getDefaultInstance() : need_;
+        } else {
+          return needBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Match against "must-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need = 1 [json_name = "need"];</code>
+       */
+      public Builder setNeed(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills value) {
+        if (needBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          need_ = value;
+        } else {
+          needBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against "must-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need = 1 [json_name = "need"];</code>
+       */
+      public Builder setNeed(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.Builder builderForValue) {
+        if (needBuilder_ == null) {
+          need_ = builderForValue.build();
+        } else {
+          needBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against "must-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need = 1 [json_name = "need"];</code>
+       */
+      public Builder mergeNeed(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills value) {
+        if (needBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            need_ != null &&
+            need_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.getDefaultInstance()) {
+            getNeedBuilder().mergeFrom(value);
+          } else {
+            need_ = value;
+          }
+        } else {
+          needBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against "must-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need = 1 [json_name = "need"];</code>
+       */
+      public Builder clearNeed() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        need_ = null;
+        if (needBuilder_ != null) {
+          needBuilder_.dispose();
+          needBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against "must-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need = 1 [json_name = "need"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.Builder getNeedBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getNeedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Match against "must-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need = 1 [json_name = "need"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.SkillsOrBuilder getNeedOrBuilder() {
+        if (needBuilder_ != null) {
+          return needBuilder_.getMessageOrBuilder();
+        } else {
+          return need_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.getDefaultInstance() : need_;
+        }
+      }
+      /**
+       * <pre>
+       * Match against "must-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills need = 1 [json_name = "need"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.SkillsOrBuilder> 
+          getNeedFieldBuilder() {
+        if (needBuilder_ == null) {
+          needBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.SkillsOrBuilder>(
+                  getNeed(),
+                  getParentForChildren(),
+                  isClean());
+          need_ = null;
+        }
+        return needBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.SkillsOrBuilder> wantBuilder_;
+      /**
+       * <pre>
+       * Match against "nice-to-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want = 2 [json_name = "want"];</code>
+       * @return Whether the want field is set.
+       */
+      public boolean hasWant() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Match against "nice-to-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want = 2 [json_name = "want"];</code>
+       * @return The want.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills getWant() {
+        if (wantBuilder_ == null) {
+          return want_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.getDefaultInstance() : want_;
+        } else {
+          return wantBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Match against "nice-to-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want = 2 [json_name = "want"];</code>
+       */
+      public Builder setWant(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills value) {
+        if (wantBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          want_ = value;
+        } else {
+          wantBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against "nice-to-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want = 2 [json_name = "want"];</code>
+       */
+      public Builder setWant(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.Builder builderForValue) {
+        if (wantBuilder_ == null) {
+          want_ = builderForValue.build();
+        } else {
+          wantBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against "nice-to-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want = 2 [json_name = "want"];</code>
+       */
+      public Builder mergeWant(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills value) {
+        if (wantBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            want_ != null &&
+            want_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.getDefaultInstance()) {
+            getWantBuilder().mergeFrom(value);
+          } else {
+            want_ = value;
+          }
+        } else {
+          wantBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against "nice-to-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want = 2 [json_name = "want"];</code>
+       */
+      public Builder clearWant() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        want_ = null;
+        if (wantBuilder_ != null) {
+          wantBuilder_.dispose();
+          wantBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against "nice-to-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want = 2 [json_name = "want"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.Builder getWantBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getWantFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Match against "nice-to-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want = 2 [json_name = "want"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.SkillsOrBuilder getWantOrBuilder() {
+        if (wantBuilder_ != null) {
+          return wantBuilder_.getMessageOrBuilder();
+        } else {
+          return want_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.getDefaultInstance() : want_;
+        }
+      }
+      /**
+       * <pre>
+       * Match against "nice-to-have" skills.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills want = 2 [json_name = "want"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.SkillsOrBuilder> 
+          getWantFieldBuilder() {
+        if (wantBuilder_ == null) {
+          wantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Skills.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.SkillsOrBuilder>(
+                  getWant(),
+                  getParentForChildren(),
+                  isClean());
+          want_ = null;
+        }
+        return wantBuilder_;
+      }
+
+      private java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery> or_ =
+        java.util.Collections.emptyList();
+      private void ensureOrIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          or_ = new java.util.ArrayList<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery>(or_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder> orBuilder_;
+
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery> getOrList() {
+        if (orBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(or_);
+        } else {
+          return orBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public int getOrCount() {
+        if (orBuilder_ == null) {
+          return or_.size();
+        } else {
+          return orBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery getOr(int index) {
+        if (orBuilder_ == null) {
+          return or_.get(index);
+        } else {
+          return orBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public Builder setOr(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery value) {
+        if (orBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrIsMutable();
+          or_.set(index, value);
+          onChanged();
+        } else {
+          orBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public Builder setOr(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder builderForValue) {
+        if (orBuilder_ == null) {
+          ensureOrIsMutable();
+          or_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          orBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public Builder addOr(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery value) {
+        if (orBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrIsMutable();
+          or_.add(value);
+          onChanged();
+        } else {
+          orBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public Builder addOr(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery value) {
+        if (orBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrIsMutable();
+          or_.add(index, value);
+          onChanged();
+        } else {
+          orBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public Builder addOr(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder builderForValue) {
+        if (orBuilder_ == null) {
+          ensureOrIsMutable();
+          or_.add(builderForValue.build());
+          onChanged();
+        } else {
+          orBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public Builder addOr(
+          int index, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder builderForValue) {
+        if (orBuilder_ == null) {
+          ensureOrIsMutable();
+          or_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          orBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public Builder addAllOr(
+          java.lang.Iterable<? extends com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery> values) {
+        if (orBuilder_ == null) {
+          ensureOrIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, or_);
+          onChanged();
+        } else {
+          orBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public Builder clearOr() {
+        if (orBuilder_ == null) {
+          or_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          orBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public Builder removeOr(int index) {
+        if (orBuilder_ == null) {
+          ensureOrIsMutable();
+          or_.remove(index);
+          onChanged();
+        } else {
+          orBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder getOrBuilder(
+          int index) {
+        return getOrFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder getOrOrBuilder(
+          int index) {
+        if (orBuilder_ == null) {
+          return or_.get(index);  } else {
+          return orBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public java.util.List<? extends com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder> 
+           getOrOrBuilderList() {
+        if (orBuilder_ != null) {
+          return orBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(or_);
+        }
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder addOrBuilder() {
+        return getOrFieldBuilder().addBuilder(
+            com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder addOrBuilder(
+          int index) {
+        return getOrFieldBuilder().addBuilder(
+            index, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Match against groups of skills with logical OR.
+       * </pre>
+       *
+       * <code>repeated .wfo.vanalytics.v2.TranscriptQuery.SkillsQuery or = 3 [json_name = "or"];</code>
+       */
+      public java.util.List<com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder> 
+           getOrBuilderList() {
+        return getOrFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder> 
+          getOrFieldBuilder() {
+        if (orBuilder_ == null) {
+          orBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder>(
+                  or_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          or_ = null;
+        }
+        return orBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.SkillsQuery)
+    }
+
+    // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.SkillsQuery)
+    private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery();
+    }
+
+    public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SkillsQuery>
+        PARSER = new com.google.protobuf.AbstractParser<SkillsQuery>() {
+      @java.lang.Override
+      public SkillsQuery parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SkillsQuery> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SkillsQuery> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PhoneOrBuilder extends
       // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Phone)
       com.google.protobuf.MessageOrBuilder {
@@ -47130,6 +49520,33 @@ private static final long serialVersionUID = 0L;
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversation_sid = 1 [json_name = "conversationSid"];</code>
      */
     com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSidOrBuilder getConversationSidOrBuilder();
+
+    /**
+     * <pre>
+     * Query constraints on campaign sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+     * @return Whether the campaignSid field is set.
+     */
+    boolean hasCampaignSid();
+    /**
+     * <pre>
+     * Query constraints on campaign sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+     * @return The campaignSid.
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid getCampaignSid();
+    /**
+     * <pre>
+     * Query constraints on campaign sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+     */
+    com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSidOrBuilder getCampaignSidOrBuilder();
   }
   /**
    * <pre>
@@ -47839,6 +50256,667 @@ private static final long serialVersionUID = 0L;
 
     }
 
+    public interface CampaignSidOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @return A list containing the any.
+       */
+      java.util.List<java.lang.Long> getAnyList();
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @return The count of any.
+       */
+      int getAnyCount();
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      long getAny(int index);
+    }
+    /**
+     * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid}
+     */
+    public static final class CampaignSid extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid)
+        CampaignSidOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use CampaignSid.newBuilder() to construct.
+      private CampaignSid(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private CampaignSid() {
+        any_ = emptyLongList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new CampaignSid();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_CampaignSid_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_CampaignSid_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.Builder.class);
+      }
+
+      public static final int ANY_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.Internal.LongList any_;
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @return A list containing the any.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Long>
+          getAnyList() {
+        return any_;
+      }
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @return The count of any.
+       */
+      public int getAnyCount() {
+        return any_.size();
+      }
+      /**
+       * <pre>
+       * Requires all sms specific transcript hits to have a campaign sid
+       * in the list.
+       * </pre>
+       *
+       * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      public long getAny(int index) {
+        return any_.getLong(index);
+      }
+      private int anyMemoizedSerializedSize = -1;
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (getAnyList().size() > 0) {
+          output.writeUInt32NoTag(10);
+          output.writeUInt32NoTag(anyMemoizedSerializedSize);
+        }
+        for (int i = 0; i < any_.size(); i++) {
+          output.writeInt64NoTag(any_.getLong(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < any_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeInt64SizeNoTag(any_.getLong(i));
+          }
+          size += dataSize;
+          if (!getAnyList().isEmpty()) {
+            size += 1;
+            size += com.google.protobuf.CodedOutputStream
+                .computeInt32SizeNoTag(dataSize);
+          }
+          anyMemoizedSerializedSize = dataSize;
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid other = (com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid) obj;
+
+        if (!getAnyList()
+            .equals(other.getAnyList())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getAnyCount() > 0) {
+          hash = (37 * hash) + ANY_FIELD_NUMBER;
+          hash = (53 * hash) + getAnyList().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid)
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSidOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_CampaignSid_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_CampaignSid_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.class, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          any_ = emptyLongList();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptProto.internal_static_wfo_vanalytics_v2_TranscriptQuery_Sms_CampaignSid_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid getDefaultInstanceForType() {
+          return com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid build() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid buildPartial() {
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid result = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid(this);
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid result) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            any_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.any_ = any_;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid result) {
+          int from_bitField0_ = bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid) {
+            return mergeFrom((com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid other) {
+          if (other == com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.getDefaultInstance()) return this;
+          if (!other.any_.isEmpty()) {
+            if (any_.isEmpty()) {
+              any_ = other.any_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAnyIsMutable();
+              any_.addAll(other.any_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  long v = input.readInt64();
+                  ensureAnyIsMutable();
+                  any_.addLong(v);
+                  break;
+                } // case 8
+                case 10: {
+                  int length = input.readRawVarint32();
+                  int limit = input.pushLimit(length);
+                  ensureAnyIsMutable();
+                  while (input.getBytesUntilLimit() > 0) {
+                    any_.addLong(input.readInt64());
+                  }
+                  input.popLimit(limit);
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.Internal.LongList any_ = emptyLongList();
+        private void ensureAnyIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            any_ = mutableCopy(any_);
+            bitField0_ |= 0x00000001;
+          }
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @return A list containing the any.
+         */
+        public java.util.List<java.lang.Long>
+            getAnyList() {
+          return ((bitField0_ & 0x00000001) != 0) ?
+                   java.util.Collections.unmodifiableList(any_) : any_;
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @return The count of any.
+         */
+        public int getAnyCount() {
+          return any_.size();
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @param index The index of the element to return.
+         * @return The any at the given index.
+         */
+        public long getAny(int index) {
+          return any_.getLong(index);
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @param index The index to set the value at.
+         * @param value The any to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAny(
+            int index, long value) {
+
+          ensureAnyIsMutable();
+          any_.setLong(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @param value The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAny(long value) {
+
+          ensureAnyIsMutable();
+          any_.addLong(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @param values The any to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllAny(
+            java.lang.Iterable<? extends java.lang.Long> values) {
+          ensureAnyIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, any_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Requires all sms specific transcript hits to have a campaign sid
+         * in the list.
+         * </pre>
+         *
+         * <code>repeated int64 any = 1 [json_name = "any", jstype = JS_STRING];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAny() {
+          any_ = emptyLongList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid)
+      }
+
+      // @@protoc_insertion_point(class_scope:wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid)
+      private static final com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid();
+      }
+
+      public static com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<CampaignSid>
+          PARSER = new com.google.protobuf.AbstractParser<CampaignSid>() {
+        @java.lang.Override
+        public CampaignSid parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<CampaignSid> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<CampaignSid> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
     private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid conversationSid_;
     /**
@@ -47877,6 +50955,44 @@ private static final long serialVersionUID = 0L;
       return conversationSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.ConversationSid.getDefaultInstance() : conversationSid_;
     }
 
+    public static final int CAMPAIGN_SID_FIELD_NUMBER = 2;
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaignSid_;
+    /**
+     * <pre>
+     * Query constraints on campaign sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+     * @return Whether the campaignSid field is set.
+     */
+    @java.lang.Override
+    public boolean hasCampaignSid() {
+      return campaignSid_ != null;
+    }
+    /**
+     * <pre>
+     * Query constraints on campaign sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+     * @return The campaignSid.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid getCampaignSid() {
+      return campaignSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.getDefaultInstance() : campaignSid_;
+    }
+    /**
+     * <pre>
+     * Query constraints on campaign sid.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSidOrBuilder getCampaignSidOrBuilder() {
+      return campaignSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.getDefaultInstance() : campaignSid_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -47894,6 +51010,9 @@ private static final long serialVersionUID = 0L;
       if (conversationSid_ != null) {
         output.writeMessage(1, getConversationSid());
       }
+      if (campaignSid_ != null) {
+        output.writeMessage(2, getCampaignSid());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -47906,6 +51025,10 @@ private static final long serialVersionUID = 0L;
       if (conversationSid_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getConversationSid());
+      }
+      if (campaignSid_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCampaignSid());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -47927,6 +51050,11 @@ private static final long serialVersionUID = 0L;
         if (!getConversationSid()
             .equals(other.getConversationSid())) return false;
       }
+      if (hasCampaignSid() != other.hasCampaignSid()) return false;
+      if (hasCampaignSid()) {
+        if (!getCampaignSid()
+            .equals(other.getCampaignSid())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -47941,6 +51069,10 @@ private static final long serialVersionUID = 0L;
       if (hasConversationSid()) {
         hash = (37 * hash) + CONVERSATION_SID_FIELD_NUMBER;
         hash = (53 * hash) + getConversationSid().hashCode();
+      }
+      if (hasCampaignSid()) {
+        hash = (37 * hash) + CAMPAIGN_SID_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignSid().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -48082,6 +51214,11 @@ private static final long serialVersionUID = 0L;
           conversationSidBuilder_.dispose();
           conversationSidBuilder_ = null;
         }
+        campaignSid_ = null;
+        if (campaignSidBuilder_ != null) {
+          campaignSidBuilder_.dispose();
+          campaignSidBuilder_ = null;
+        }
         return this;
       }
 
@@ -48119,6 +51256,11 @@ private static final long serialVersionUID = 0L;
           result.conversationSid_ = conversationSidBuilder_ == null
               ? conversationSid_
               : conversationSidBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.campaignSid_ = campaignSidBuilder_ == null
+              ? campaignSid_
+              : campaignSidBuilder_.build();
         }
       }
 
@@ -48169,6 +51311,9 @@ private static final long serialVersionUID = 0L;
         if (other.hasConversationSid()) {
           mergeConversationSid(other.getConversationSid());
         }
+        if (other.hasCampaignSid()) {
+          mergeCampaignSid(other.getCampaignSid());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -48202,6 +51347,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                input.readMessage(
+                    getCampaignSidFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -48372,6 +51524,161 @@ private static final long serialVersionUID = 0L;
           conversationSid_ = null;
         }
         return conversationSidBuilder_;
+      }
+
+      private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaignSid_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSidOrBuilder> campaignSidBuilder_;
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       * @return Whether the campaignSid field is set.
+       */
+      public boolean hasCampaignSid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       * @return The campaignSid.
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid getCampaignSid() {
+        if (campaignSidBuilder_ == null) {
+          return campaignSid_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.getDefaultInstance() : campaignSid_;
+        } else {
+          return campaignSidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       */
+      public Builder setCampaignSid(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid value) {
+        if (campaignSidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          campaignSid_ = value;
+        } else {
+          campaignSidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       */
+      public Builder setCampaignSid(
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.Builder builderForValue) {
+        if (campaignSidBuilder_ == null) {
+          campaignSid_ = builderForValue.build();
+        } else {
+          campaignSidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       */
+      public Builder mergeCampaignSid(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid value) {
+        if (campaignSidBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            campaignSid_ != null &&
+            campaignSid_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.getDefaultInstance()) {
+            getCampaignSidBuilder().mergeFrom(value);
+          } else {
+            campaignSid_ = value;
+          }
+        } else {
+          campaignSidBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       */
+      public Builder clearCampaignSid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        campaignSid_ = null;
+        if (campaignSidBuilder_ != null) {
+          campaignSidBuilder_.dispose();
+          campaignSidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.Builder getCampaignSidBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCampaignSidFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       */
+      public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSidOrBuilder getCampaignSidOrBuilder() {
+        if (campaignSidBuilder_ != null) {
+          return campaignSidBuilder_.getMessageOrBuilder();
+        } else {
+          return campaignSid_ == null ?
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.getDefaultInstance() : campaignSid_;
+        }
+      }
+      /**
+       * <pre>
+       * Query constraints on campaign sid.
+       * </pre>
+       *
+       * <code>.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid campaign_sid = 2 [json_name = "campaignSid"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSidOrBuilder> 
+          getCampaignSidFieldBuilder() {
+        if (campaignSidBuilder_ == null) {
+          campaignSidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSid.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Sms.CampaignSidOrBuilder>(
+                  getCampaignSid(),
+                  getParentForChildren(),
+                  isClean());
+          campaignSid_ = null;
+        }
+        return campaignSidBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -64271,7 +67578,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=458
+   *     See wfo/vanalytics/v2/transcript.proto;l=466
    * @return Whether the channel field is set.
    */
   @java.lang.Override
@@ -64285,7 +67592,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
    * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-   *     See wfo/vanalytics/v2/transcript.proto;l=458
+   *     See wfo/vanalytics/v2/transcript.proto;l=466
    * @return The channel.
    */
   @java.lang.Override
@@ -64570,6 +67877,44 @@ private static final long serialVersionUID = 0L;
     return channelType_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel.getDefaultInstance() : channelType_;
   }
 
+  public static final int SKILLS_FIELD_NUMBER = 10;
+  private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills_;
+  /**
+   * <pre>
+   * Query constraints on skills.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
+   * @return Whether the skills field is set.
+   */
+  @java.lang.Override
+  public boolean hasSkills() {
+    return skills_ != null;
+  }
+  /**
+   * <pre>
+   * Query constraints on skills.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
+   * @return The skills.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery getSkills() {
+    return skills_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.getDefaultInstance() : skills_;
+  }
+  /**
+   * <pre>
+   * Query constraints on skills.
+   * </pre>
+   *
+   * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder getSkillsOrBuilder() {
+    return skills_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.getDefaultInstance() : skills_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -64610,6 +67955,9 @@ private static final long serialVersionUID = 0L;
     }
     if (channelType_ != null) {
       output.writeMessage(9, getChannelType());
+    }
+    if (skills_ != null) {
+      output.writeMessage(10, getSkills());
     }
     getUnknownFields().writeTo(output);
   }
@@ -64655,6 +68003,10 @@ private static final long serialVersionUID = 0L;
     if (channelType_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getChannelType());
+    }
+    if (skills_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getSkills());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -64716,6 +68068,11 @@ private static final long serialVersionUID = 0L;
       if (!getChannelType()
           .equals(other.getChannelType())) return false;
     }
+    if (hasSkills() != other.hasSkills()) return false;
+    if (hasSkills()) {
+      if (!getSkills()
+          .equals(other.getSkills())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -64762,6 +68119,10 @@ private static final long serialVersionUID = 0L;
     if (hasChannelType()) {
       hash = (37 * hash) + CHANNEL_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getChannelType().hashCode();
+    }
+    if (hasSkills()) {
+      hash = (37 * hash) + SKILLS_FIELD_NUMBER;
+      hash = (53 * hash) + getSkills().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -64943,6 +68304,11 @@ private static final long serialVersionUID = 0L;
         channelTypeBuilder_.dispose();
         channelTypeBuilder_ = null;
       }
+      skills_ = null;
+      if (skillsBuilder_ != null) {
+        skillsBuilder_.dispose();
+        skillsBuilder_ = null;
+      }
       return this;
     }
 
@@ -65021,6 +68387,11 @@ private static final long serialVersionUID = 0L;
             ? channelType_
             : channelTypeBuilder_.build();
       }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.skills_ = skillsBuilder_ == null
+            ? skills_
+            : skillsBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -65093,6 +68464,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasChannelType()) {
         mergeChannelType(other.getChannelType());
+      }
+      if (other.hasSkills()) {
+        mergeSkills(other.getSkills());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -65183,6 +68557,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 74
+            case 82: {
+              input.readMessage(
+                  getSkillsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -65365,7 +68746,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=458
+     *     See wfo/vanalytics/v2/transcript.proto;l=466
      * @return Whether the channel field is set.
      */
     @java.lang.Deprecated public boolean hasChannel() {
@@ -65378,7 +68759,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.wfo.vanalytics.v2.TranscriptQuery.Channel channel = 2 [json_name = "channel", deprecated = true];</code>
      * @deprecated wfo.vanalytics.v2.TranscriptQuery.channel is deprecated.
-     *     See wfo/vanalytics/v2/transcript.proto;l=458
+     *     See wfo/vanalytics/v2/transcript.proto;l=466
      * @return The channel.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.Channel getChannel() {
@@ -66597,6 +69978,161 @@ private static final long serialVersionUID = 0L;
         channelType_ = null;
       }
       return channelTypeBuilder_;
+    }
+
+    private com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder> skillsBuilder_;
+    /**
+     * <pre>
+     * Query constraints on skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
+     * @return Whether the skills field is set.
+     */
+    public boolean hasSkills() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * Query constraints on skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
+     * @return The skills.
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery getSkills() {
+      if (skillsBuilder_ == null) {
+        return skills_ == null ? com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.getDefaultInstance() : skills_;
+      } else {
+        return skillsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Query constraints on skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder setSkills(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery value) {
+      if (skillsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        skills_ = value;
+      } else {
+        skillsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder setSkills(
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder builderForValue) {
+      if (skillsBuilder_ == null) {
+        skills_ = builderForValue.build();
+      } else {
+        skillsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder mergeSkills(com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery value) {
+      if (skillsBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0) &&
+          skills_ != null &&
+          skills_ != com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.getDefaultInstance()) {
+          getSkillsBuilder().mergeFrom(value);
+        } else {
+          skills_ = value;
+        }
+      } else {
+        skillsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
+     */
+    public Builder clearSkills() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      skills_ = null;
+      if (skillsBuilder_ != null) {
+        skillsBuilder_.dispose();
+        skillsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Query constraints on skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder getSkillsBuilder() {
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return getSkillsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Query constraints on skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
+     */
+    public com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder getSkillsOrBuilder() {
+      if (skillsBuilder_ != null) {
+        return skillsBuilder_.getMessageOrBuilder();
+      } else {
+        return skills_ == null ?
+            com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.getDefaultInstance() : skills_;
+      }
+    }
+    /**
+     * <pre>
+     * Query constraints on skills.
+     * </pre>
+     *
+     * <code>.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery skills = 10 [json_name = "skills"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder> 
+        getSkillsFieldBuilder() {
+      if (skillsBuilder_ == null) {
+        skillsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQuery.Builder, com.tcn.cloud.api.wfo.vanalytics.v2.TranscriptQuery.SkillsQueryOrBuilder>(
+                getSkills(),
+                getParentForChildren(),
+                isClean());
+        skills_ = null;
+      }
+      return skillsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
