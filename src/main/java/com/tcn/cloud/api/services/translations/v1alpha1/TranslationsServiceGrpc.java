@@ -392,7 +392,7 @@ public final class TranslationsServiceGrpc {
      * <pre>
      * Lists translations by context/language
      * Required permissions:
-     *  - Any Authenticated User can see available languages
+     *  - PERMISSION_CUSTOMER_SUPPORT
      * Errors:
      *   - grpc.InvalidArgument: The request is not valid.
      *   - grpc.NotFound: No templates found for the given context and language.
@@ -407,7 +407,7 @@ public final class TranslationsServiceGrpc {
      * <pre>
      * Lists localization languages
      * Required permissions:
-     *  - PERMISSION_CUSTOMER_SUPPORT
+     *  - Any Authenticated User
      * </pre>
      */
     default void listLanguages(com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest request,
@@ -552,7 +552,7 @@ public final class TranslationsServiceGrpc {
      * <pre>
      * Lists translations by context/language
      * Required permissions:
-     *  - Any Authenticated User can see available languages
+     *  - PERMISSION_CUSTOMER_SUPPORT
      * Errors:
      *   - grpc.InvalidArgument: The request is not valid.
      *   - grpc.NotFound: No templates found for the given context and language.
@@ -568,7 +568,7 @@ public final class TranslationsServiceGrpc {
      * <pre>
      * Lists localization languages
      * Required permissions:
-     *  - PERMISSION_CUSTOMER_SUPPORT
+     *  - Any Authenticated User
      * </pre>
      */
     public void listLanguages(com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest request,
@@ -709,7 +709,7 @@ public final class TranslationsServiceGrpc {
      * <pre>
      * Lists translations by context/language
      * Required permissions:
-     *  - Any Authenticated User can see available languages
+     *  - PERMISSION_CUSTOMER_SUPPORT
      * Errors:
      *   - grpc.InvalidArgument: The request is not valid.
      *   - grpc.NotFound: No templates found for the given context and language.
@@ -724,7 +724,7 @@ public final class TranslationsServiceGrpc {
      * <pre>
      * Lists localization languages
      * Required permissions:
-     *  - PERMISSION_CUSTOMER_SUPPORT
+     *  - Any Authenticated User
      * </pre>
      */
     public com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse listLanguages(com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesRequest request) {
@@ -858,7 +858,7 @@ public final class TranslationsServiceGrpc {
      * <pre>
      * Lists translations by context/language
      * Required permissions:
-     *  - Any Authenticated User can see available languages
+     *  - PERMISSION_CUSTOMER_SUPPORT
      * Errors:
      *   - grpc.InvalidArgument: The request is not valid.
      *   - grpc.NotFound: No templates found for the given context and language.
@@ -874,7 +874,7 @@ public final class TranslationsServiceGrpc {
      * <pre>
      * Lists localization languages
      * Required permissions:
-     *  - PERMISSION_CUSTOMER_SUPPORT
+     *  - Any Authenticated User
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.translations.v1alpha1.ListLanguagesResponse> listLanguages(

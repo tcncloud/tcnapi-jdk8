@@ -33,15 +33,15 @@ public final class ServiceProto {
       "uest\0329.services.translations.v1alpha1.Tr" +
       "anslateTemplateResponse\"C\272\270\221\002\002\030\001\202\323\344\223\0026\"1" +
       "/services/translations/v1alpha1/translat" +
-      "etemplate:\001*\022\311\001\n\020ListTranslations\0227.serv" +
+      "etemplate:\001*\022\314\001\n\020ListTranslations\0227.serv" +
       "ices.translations.v1alpha1.ListTranslati" +
       "onsRequest\0328.services.translations.v1alp" +
-      "ha1.ListTranslationsResponse\"B\272\270\221\002\002\030\001\202\323\344" +
-      "\223\0025\"0/services/translations/v1alpha1/lis" +
-      "ttranslations:\001*\022\300\001\n\rListLanguages\0224.ser" +
-      "vices.translations.v1alpha1.ListLanguage" +
-      "sRequest\0325.services.translations.v1alpha" +
-      "1.ListLanguagesResponse\"B\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002" +
+      "ha1.ListTranslationsResponse\"E\272\270\221\002\005\n\003\010\310\001" +
+      "\202\323\344\223\0025\"0/services/translations/v1alpha1/" +
+      "listtranslations:\001*\022\275\001\n\rListLanguages\0224." +
+      "services.translations.v1alpha1.ListLangu" +
+      "agesRequest\0325.services.translations.v1al" +
+      "pha1.ListLanguagesResponse\"?\272\270\221\002\002\030\001\202\323\344\223\002" +
       "2\"-/services/translations/v1alpha1/listl" +
       "anguages:\001*\022\274\001\n\014ListContexts\0223.services." +
       "translations.v1alpha1.ListContextsReques" +
