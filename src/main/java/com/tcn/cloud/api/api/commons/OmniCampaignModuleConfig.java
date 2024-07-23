@@ -1084,44 +1084,6 @@ java.lang.String defaultValue) {
     }
   }
 
-  public static final int TIMEOUT_MESSAGE_CONFIG_FIELD_NUMBER = 26;
-  private com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig timeoutMessageConfig_;
-  /**
-   * <pre>
-   * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
-   * </pre>
-   *
-   * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
-   * @return Whether the timeoutMessageConfig field is set.
-   */
-  @java.lang.Override
-  public boolean hasTimeoutMessageConfig() {
-    return timeoutMessageConfig_ != null;
-  }
-  /**
-   * <pre>
-   * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
-   * </pre>
-   *
-   * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
-   * @return The timeoutMessageConfig.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig getTimeoutMessageConfig() {
-    return timeoutMessageConfig_ == null ? com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig.getDefaultInstance() : timeoutMessageConfig_;
-  }
-  /**
-   * <pre>
-   * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
-   * </pre>
-   *
-   * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfigOrBuilder getTimeoutMessageConfigOrBuilder() {
-    return timeoutMessageConfig_ == null ? com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig.getDefaultInstance() : timeoutMessageConfig_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1210,9 +1172,6 @@ java.lang.String defaultValue) {
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postalCodeField_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 25, postalCodeField_);
-    }
-    if (timeoutMessageConfig_ != null) {
-      output.writeMessage(26, getTimeoutMessageConfig());
     }
     getUnknownFields().writeTo(output);
   }
@@ -1327,10 +1286,6 @@ java.lang.String defaultValue) {
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postalCodeField_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, postalCodeField_);
-    }
-    if (timeoutMessageConfig_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(26, getTimeoutMessageConfig());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1449,11 +1404,6 @@ java.lang.String defaultValue) {
         != other.getCountryCode()) return false;
     if (!getPostalCodeField()
         .equals(other.getPostalCodeField())) return false;
-    if (hasTimeoutMessageConfig() != other.hasTimeoutMessageConfig()) return false;
-    if (hasTimeoutMessageConfig()) {
-      if (!getTimeoutMessageConfig()
-          .equals(other.getTimeoutMessageConfig())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1557,10 +1507,6 @@ java.lang.String defaultValue) {
     hash = (53 * hash) + getCountryCode();
     hash = (37 * hash) + POSTAL_CODE_FIELD_FIELD_NUMBER;
     hash = (53 * hash) + getPostalCodeField().hashCode();
-    if (hasTimeoutMessageConfig()) {
-      hash = (37 * hash) + TIMEOUT_MESSAGE_CONFIG_FIELD_NUMBER;
-      hash = (53 * hash) + getTimeoutMessageConfig().hashCode();
-    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1827,11 +1773,6 @@ java.lang.String defaultValue) {
       internalGetMutableProviderMetadata().clear();
       countryCode_ = 0;
       postalCodeField_ = "";
-      timeoutMessageConfig_ = null;
-      if (timeoutMessageConfigBuilder_ != null) {
-        timeoutMessageConfigBuilder_.dispose();
-        timeoutMessageConfigBuilder_ = null;
-      }
       return this;
     }
 
@@ -1990,11 +1931,6 @@ java.lang.String defaultValue) {
       }
       if (((from_bitField0_ & 0x00800000) != 0)) {
         result.postalCodeField_ = postalCodeField_;
-      }
-      if (((from_bitField0_ & 0x01000000) != 0)) {
-        result.timeoutMessageConfig_ = timeoutMessageConfigBuilder_ == null
-            ? timeoutMessageConfig_
-            : timeoutMessageConfigBuilder_.build();
       }
     }
 
@@ -2168,9 +2104,6 @@ java.lang.String defaultValue) {
         postalCodeField_ = other.postalCodeField_;
         bitField0_ |= 0x00800000;
         onChanged();
-      }
-      if (other.hasTimeoutMessageConfig()) {
-        mergeTimeoutMessageConfig(other.getTimeoutMessageConfig());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -2375,13 +2308,6 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00800000;
               break;
             } // case 202
-            case 210: {
-              input.readMessage(
-                  getTimeoutMessageConfigFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x01000000;
-              break;
-            } // case 210
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -6266,161 +6192,6 @@ java.lang.String defaultValue) {
       bitField0_ |= 0x00800000;
       onChanged();
       return this;
-    }
-
-    private com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig timeoutMessageConfig_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig, com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig.Builder, com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfigOrBuilder> timeoutMessageConfigBuilder_;
-    /**
-     * <pre>
-     * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
-     * </pre>
-     *
-     * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
-     * @return Whether the timeoutMessageConfig field is set.
-     */
-    public boolean hasTimeoutMessageConfig() {
-      return ((bitField0_ & 0x01000000) != 0);
-    }
-    /**
-     * <pre>
-     * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
-     * </pre>
-     *
-     * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
-     * @return The timeoutMessageConfig.
-     */
-    public com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig getTimeoutMessageConfig() {
-      if (timeoutMessageConfigBuilder_ == null) {
-        return timeoutMessageConfig_ == null ? com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig.getDefaultInstance() : timeoutMessageConfig_;
-      } else {
-        return timeoutMessageConfigBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
-     * </pre>
-     *
-     * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
-     */
-    public Builder setTimeoutMessageConfig(com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig value) {
-      if (timeoutMessageConfigBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        timeoutMessageConfig_ = value;
-      } else {
-        timeoutMessageConfigBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x01000000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
-     * </pre>
-     *
-     * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
-     */
-    public Builder setTimeoutMessageConfig(
-        com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig.Builder builderForValue) {
-      if (timeoutMessageConfigBuilder_ == null) {
-        timeoutMessageConfig_ = builderForValue.build();
-      } else {
-        timeoutMessageConfigBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x01000000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
-     * </pre>
-     *
-     * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
-     */
-    public Builder mergeTimeoutMessageConfig(com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig value) {
-      if (timeoutMessageConfigBuilder_ == null) {
-        if (((bitField0_ & 0x01000000) != 0) &&
-          timeoutMessageConfig_ != null &&
-          timeoutMessageConfig_ != com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig.getDefaultInstance()) {
-          getTimeoutMessageConfigBuilder().mergeFrom(value);
-        } else {
-          timeoutMessageConfig_ = value;
-        }
-      } else {
-        timeoutMessageConfigBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x01000000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
-     * </pre>
-     *
-     * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
-     */
-    public Builder clearTimeoutMessageConfig() {
-      bitField0_ = (bitField0_ & ~0x01000000);
-      timeoutMessageConfig_ = null;
-      if (timeoutMessageConfigBuilder_ != null) {
-        timeoutMessageConfigBuilder_.dispose();
-        timeoutMessageConfigBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
-     * </pre>
-     *
-     * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig.Builder getTimeoutMessageConfigBuilder() {
-      bitField0_ |= 0x01000000;
-      onChanged();
-      return getTimeoutMessageConfigFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
-     * </pre>
-     *
-     * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfigOrBuilder getTimeoutMessageConfigOrBuilder() {
-      if (timeoutMessageConfigBuilder_ != null) {
-        return timeoutMessageConfigBuilder_.getMessageOrBuilder();
-      } else {
-        return timeoutMessageConfig_ == null ?
-            com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig.getDefaultInstance() : timeoutMessageConfig_;
-      }
-    }
-    /**
-     * <pre>
-     * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
-     * </pre>
-     *
-     * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig, com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig.Builder, com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfigOrBuilder> 
-        getTimeoutMessageConfigFieldBuilder() {
-      if (timeoutMessageConfigBuilder_ == null) {
-        timeoutMessageConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig, com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig.Builder, com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfigOrBuilder>(
-                getTimeoutMessageConfig(),
-                getParentForChildren(),
-                isClean());
-        timeoutMessageConfig_ = null;
-      }
-      return timeoutMessageConfigBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

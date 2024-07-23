@@ -716,31 +716,4 @@ java.lang.String defaultValue);
    */
   com.google.protobuf.ByteString
       getPostalCodeFieldBytes();
-
-  /**
-   * <pre>
-   * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
-   * </pre>
-   *
-   * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
-   * @return Whether the timeoutMessageConfig field is set.
-   */
-  boolean hasTimeoutMessageConfig();
-  /**
-   * <pre>
-   * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
-   * </pre>
-   *
-   * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
-   * @return The timeoutMessageConfig.
-   */
-  com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfig getTimeoutMessageConfig();
-  /**
-   * <pre>
-   * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
-   * </pre>
-   *
-   * <code>.api.commons.ConversationTimeoutMessageConfig timeout_message_config = 26 [json_name = "timeoutMessageConfig"];</code>
-   */
-  com.tcn.cloud.api.api.commons.ConversationTimeoutMessageConfigOrBuilder getTimeoutMessageConfigOrBuilder();
 }
