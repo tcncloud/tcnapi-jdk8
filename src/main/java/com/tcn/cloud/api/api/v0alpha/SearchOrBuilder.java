@@ -36,10 +36,12 @@ public interface SearchOrBuilder extends
    * Not compatible with a substring match
    * </pre>
    *
-   * <code>int64 fuzziness = 2 [json_name = "fuzziness"];</code>
+   * <code>int64 fuzziness = 2 [json_name = "fuzziness", deprecated = true];</code>
+   * @deprecated api.v0alpha.Search.fuzziness is deprecated.
+   *     See api/v0alpha/lms.proto;l=2584
    * @return The fuzziness.
    */
-  long getFuzziness();
+  @java.lang.Deprecated long getFuzziness();
 
   /**
    * <pre>
@@ -71,8 +73,30 @@ public interface SearchOrBuilder extends
    * Specifies if we should be case sensitive
    * </pre>
    *
-   * <code>bool case_sensitive = 5 [json_name = "caseSensitive"];</code>
+   * <code>bool case_sensitive = 5 [json_name = "caseSensitive", deprecated = true];</code>
+   * @deprecated api.v0alpha.Search.case_sensitive is deprecated.
+   *     See api/v0alpha/lms.proto;l=2595
    * @return The caseSensitive.
    */
-  boolean getCaseSensitive();
+  @java.lang.Deprecated boolean getCaseSensitive();
+
+  /**
+   * <pre>
+   * the value of the term we are searching for
+   * </pre>
+   *
+   * <code>string value = 6 [json_name = "value"];</code>
+   * @return The value.
+   */
+  java.lang.String getValue();
+  /**
+   * <pre>
+   * the value of the term we are searching for
+   * </pre>
+   *
+   * <code>string value = 6 [json_name = "value"];</code>
+   * @return The bytes for value.
+   */
+  com.google.protobuf.ByteString
+      getValueBytes();
 }
