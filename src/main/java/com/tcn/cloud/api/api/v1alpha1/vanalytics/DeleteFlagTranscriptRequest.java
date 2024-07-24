@@ -96,7 +96,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Internal.LongList transcriptSids_;
   /**
    * <pre>
-   * Required. The transcript sids for the flag transcripts to be deleted.
+   * Optional. The transcript sids for the flag transcripts to be deleted.
    * </pre>
    *
    * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
@@ -109,7 +109,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The transcript sids for the flag transcripts to be deleted.
+   * Optional. The transcript sids for the flag transcripts to be deleted.
    * </pre>
    *
    * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The transcript sids for the flag transcripts to be deleted.
+   * Optional. The transcript sids for the flag transcripts to be deleted.
    * </pre>
    *
    * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
@@ -131,6 +131,47 @@ private static final long serialVersionUID = 0L;
     return transcriptSids_.getLong(index);
   }
   private int transcriptSidsMemoizedSerializedSize = -1;
+
+  public static final int QUERY_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest query_;
+  /**
+   * <pre>
+   * Optional. Delete all flags transcripts associated
+   * with the flags returned by this search query.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+   * @return Whether the query field is set.
+   */
+  @java.lang.Override
+  public boolean hasQuery() {
+    return query_ != null;
+  }
+  /**
+   * <pre>
+   * Optional. Delete all flags transcripts associated
+   * with the flags returned by this search query.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+   * @return The query.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest getQuery() {
+    return query_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.getDefaultInstance() : query_;
+  }
+  /**
+   * <pre>
+   * Optional. Delete all flags transcripts associated
+   * with the flags returned by this search query.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequestOrBuilder getQueryOrBuilder() {
+    return query_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.getDefaultInstance() : query_;
+  }
 
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
@@ -156,6 +197,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < transcriptSids_.size(); i++) {
       output.writeInt64NoTag(transcriptSids_.getLong(i));
+    }
+    if (query_ != null) {
+      output.writeMessage(3, getQuery());
     }
     getUnknownFields().writeTo(output);
   }
@@ -183,6 +227,10 @@ private static final long serialVersionUID = 0L;
       }
       transcriptSidsMemoizedSerializedSize = dataSize;
     }
+    if (query_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getQuery());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -202,6 +250,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOrgId())) return false;
     if (!getTranscriptSidsList()
         .equals(other.getTranscriptSidsList())) return false;
+    if (hasQuery() != other.hasQuery()) return false;
+    if (hasQuery()) {
+      if (!getQuery()
+          .equals(other.getQuery())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -218,6 +271,10 @@ private static final long serialVersionUID = 0L;
     if (getTranscriptSidsCount() > 0) {
       hash = (37 * hash) + TRANSCRIPT_SIDS_FIELD_NUMBER;
       hash = (53 * hash) + getTranscriptSidsList().hashCode();
+    }
+    if (hasQuery()) {
+      hash = (37 * hash) + QUERY_FIELD_NUMBER;
+      hash = (53 * hash) + getQuery().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -356,6 +413,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       orgId_ = "";
       transcriptSids_ = emptyLongList();
+      query_ = null;
+      if (queryBuilder_ != null) {
+        queryBuilder_.dispose();
+        queryBuilder_ = null;
+      }
       return this;
     }
 
@@ -400,6 +462,11 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.orgId_ = orgId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.query_ = queryBuilder_ == null
+            ? query_
+            : queryBuilder_.build();
       }
     }
 
@@ -462,6 +529,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.hasQuery()) {
+        mergeQuery(other.getQuery());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -509,6 +579,13 @@ private static final long serialVersionUID = 0L;
               input.popLimit(limit);
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getQueryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -627,7 +704,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The transcript sids for the flag transcripts to be deleted.
+     * Optional. The transcript sids for the flag transcripts to be deleted.
      * </pre>
      *
      * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
@@ -640,7 +717,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The transcript sids for the flag transcripts to be deleted.
+     * Optional. The transcript sids for the flag transcripts to be deleted.
      * </pre>
      *
      * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
@@ -651,7 +728,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The transcript sids for the flag transcripts to be deleted.
+     * Optional. The transcript sids for the flag transcripts to be deleted.
      * </pre>
      *
      * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
@@ -663,7 +740,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The transcript sids for the flag transcripts to be deleted.
+     * Optional. The transcript sids for the flag transcripts to be deleted.
      * </pre>
      *
      * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
@@ -681,7 +758,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The transcript sids for the flag transcripts to be deleted.
+     * Optional. The transcript sids for the flag transcripts to be deleted.
      * </pre>
      *
      * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
@@ -697,7 +774,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The transcript sids for the flag transcripts to be deleted.
+     * Optional. The transcript sids for the flag transcripts to be deleted.
      * </pre>
      *
      * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
@@ -714,7 +791,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The transcript sids for the flag transcripts to be deleted.
+     * Optional. The transcript sids for the flag transcripts to be deleted.
      * </pre>
      *
      * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
@@ -725,6 +802,170 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest query_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequestOrBuilder> queryBuilder_;
+    /**
+     * <pre>
+     * Optional. Delete all flags transcripts associated
+     * with the flags returned by this search query.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     * @return Whether the query field is set.
+     */
+    public boolean hasQuery() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Optional. Delete all flags transcripts associated
+     * with the flags returned by this search query.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     * @return The query.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest getQuery() {
+      if (queryBuilder_ == null) {
+        return query_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.getDefaultInstance() : query_;
+      } else {
+        return queryBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Delete all flags transcripts associated
+     * with the flags returned by this search query.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     */
+    public Builder setQuery(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest value) {
+      if (queryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        query_ = value;
+      } else {
+        queryBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Delete all flags transcripts associated
+     * with the flags returned by this search query.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     */
+    public Builder setQuery(
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.Builder builderForValue) {
+      if (queryBuilder_ == null) {
+        query_ = builderForValue.build();
+      } else {
+        queryBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Delete all flags transcripts associated
+     * with the flags returned by this search query.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     */
+    public Builder mergeQuery(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest value) {
+      if (queryBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          query_ != null &&
+          query_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.getDefaultInstance()) {
+          getQueryBuilder().mergeFrom(value);
+        } else {
+          query_ = value;
+        }
+      } else {
+        queryBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Delete all flags transcripts associated
+     * with the flags returned by this search query.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     */
+    public Builder clearQuery() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      query_ = null;
+      if (queryBuilder_ != null) {
+        queryBuilder_.dispose();
+        queryBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Delete all flags transcripts associated
+     * with the flags returned by this search query.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.Builder getQueryBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getQueryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional. Delete all flags transcripts associated
+     * with the flags returned by this search query.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequestOrBuilder getQueryOrBuilder() {
+      if (queryBuilder_ != null) {
+        return queryBuilder_.getMessageOrBuilder();
+      } else {
+        return query_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.getDefaultInstance() : query_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Delete all flags transcripts associated
+     * with the flags returned by this search query.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequestOrBuilder> 
+        getQueryFieldBuilder() {
+      if (queryBuilder_ == null) {
+        queryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequestOrBuilder>(
+                getQuery(),
+                getParentForChildren(),
+                isClean());
+        query_ = null;
+      }
+      return queryBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

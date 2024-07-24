@@ -29,7 +29,7 @@ public interface DeleteFlagTranscriptRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The transcript sids for the flag transcripts to be deleted.
+   * Optional. The transcript sids for the flag transcripts to be deleted.
    * </pre>
    *
    * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
@@ -38,7 +38,7 @@ public interface DeleteFlagTranscriptRequestOrBuilder extends
   java.util.List<java.lang.Long> getTranscriptSidsList();
   /**
    * <pre>
-   * Required. The transcript sids for the flag transcripts to be deleted.
+   * Optional. The transcript sids for the flag transcripts to be deleted.
    * </pre>
    *
    * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
@@ -47,7 +47,7 @@ public interface DeleteFlagTranscriptRequestOrBuilder extends
   int getTranscriptSidsCount();
   /**
    * <pre>
-   * Required. The transcript sids for the flag transcripts to be deleted.
+   * Optional. The transcript sids for the flag transcripts to be deleted.
    * </pre>
    *
    * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
@@ -55,4 +55,34 @@ public interface DeleteFlagTranscriptRequestOrBuilder extends
    * @return The transcriptSids at the given index.
    */
   long getTranscriptSids(int index);
+
+  /**
+   * <pre>
+   * Optional. Delete all flags transcripts associated
+   * with the flags returned by this search query.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+   * @return Whether the query field is set.
+   */
+  boolean hasQuery();
+  /**
+   * <pre>
+   * Optional. Delete all flags transcripts associated
+   * with the flags returned by this search query.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+   * @return The query.
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest getQuery();
+  /**
+   * <pre>
+   * Optional. Delete all flags transcripts associated
+   * with the flags returned by this search query.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequestOrBuilder getQueryOrBuilder();
 }
