@@ -8,8 +8,10 @@ public interface EditTicketTemplateResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>bool is_edited = 1 [json_name = "isEdited"];</code>
+   * <code>bool is_edited = 1 [json_name = "isEdited", deprecated = true];</code>
+   * @deprecated api.v1alpha1.tickets.EditTicketTemplateResponse.is_edited is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=55
    * @return The isEdited.
    */
-  boolean getIsEdited();
+  @java.lang.Deprecated boolean getIsEdited();
 }

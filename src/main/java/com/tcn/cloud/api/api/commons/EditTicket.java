@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * EditTicket - Fields for Edit Ticket , listing attributes of a ticket which can be edited
+ * EditTicket - ** Only used in auditlog as a payload **
  * </pre>
  *
  * Protobuf type {@code api.commons.EditTicket}
@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.commons.EditTicket.ticket_sid is deprecated.
-   *     See api/commons/tickets.proto;l=387
+   *     See api/commons/tickets.proto;l=390
    * @return The ticketSid.
    */
   @java.lang.Override
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
    * ticket_action_id
    * </pre>
    *
-   * <code>int64 ticket_action_id = 4 [json_name = "ticketActionId"];</code>
+   * <code>int64 ticket_action_id = 4 [json_name = "ticketActionId", jstype = JS_STRING];</code>
    * @return The ticketActionId.
    */
   @java.lang.Override
@@ -358,7 +358,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * EditTicket - Fields for Edit Ticket , listing attributes of a ticket which can be edited
+   * EditTicket - ** Only used in auditlog as a payload **
    * </pre>
    *
    * Protobuf type {@code api.commons.EditTicket}
@@ -582,7 +582,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.commons.EditTicket.ticket_sid is deprecated.
-     *     See api/commons/tickets.proto;l=387
+     *     See api/commons/tickets.proto;l=390
      * @return The ticketSid.
      */
     @java.lang.Override
@@ -596,7 +596,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.commons.EditTicket.ticket_sid is deprecated.
-     *     See api/commons/tickets.proto;l=387
+     *     See api/commons/tickets.proto;l=390
      * @param value The ticketSid to set.
      * @return This builder for chaining.
      */
@@ -614,7 +614,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.commons.EditTicket.ticket_sid is deprecated.
-     *     See api/commons/tickets.proto;l=387
+     *     See api/commons/tickets.proto;l=390
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTicketSid() {
@@ -877,7 +877,7 @@ private static final long serialVersionUID = 0L;
      * ticket_action_id
      * </pre>
      *
-     * <code>int64 ticket_action_id = 4 [json_name = "ticketActionId"];</code>
+     * <code>int64 ticket_action_id = 4 [json_name = "ticketActionId", jstype = JS_STRING];</code>
      * @return The ticketActionId.
      */
     @java.lang.Override
@@ -889,7 +889,7 @@ private static final long serialVersionUID = 0L;
      * ticket_action_id
      * </pre>
      *
-     * <code>int64 ticket_action_id = 4 [json_name = "ticketActionId"];</code>
+     * <code>int64 ticket_action_id = 4 [json_name = "ticketActionId", jstype = JS_STRING];</code>
      * @param value The ticketActionId to set.
      * @return This builder for chaining.
      */
@@ -905,7 +905,7 @@ private static final long serialVersionUID = 0L;
      * ticket_action_id
      * </pre>
      *
-     * <code>int64 ticket_action_id = 4 [json_name = "ticketActionId"];</code>
+     * <code>int64 ticket_action_id = 4 [json_name = "ticketActionId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearTicketActionId() {

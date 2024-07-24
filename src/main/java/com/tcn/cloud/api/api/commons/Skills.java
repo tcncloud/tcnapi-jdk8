@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.commons;
  *
  * Protobuf type {@code api.commons.Skills}
  */
-public final class Skills extends
+@java.lang.Deprecated public final class Skills extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.Skills)
     SkillsOrBuilder {

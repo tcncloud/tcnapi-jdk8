@@ -53,7 +53,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.CloseTicketReq.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=247
+   *     See api/v1alpha1/tickets/ticket.proto;l=252
    * @return The ticketSid.
    */
   @java.lang.Override
@@ -115,11 +115,13 @@ private static final long serialVersionUID = 0L;
    * from status of the ticket
    * </pre>
    *
-   * <code>int64 from_status = 3 [json_name = "fromStatus", jstype = JS_STRING];</code>
+   * <code>int64 from_status = 3 [json_name = "fromStatus", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.tickets.CloseTicketReq.from_status is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=259
    * @return The fromStatus.
    */
   @java.lang.Override
-  public long getFromStatus() {
+  @java.lang.Deprecated public long getFromStatus() {
     return fromStatus_;
   }
 
@@ -580,7 +582,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.CloseTicketReq.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=247
+     *     See api/v1alpha1/tickets/ticket.proto;l=252
      * @return The ticketSid.
      */
     @java.lang.Override
@@ -594,7 +596,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.CloseTicketReq.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=247
+     *     See api/v1alpha1/tickets/ticket.proto;l=252
      * @param value The ticketSid to set.
      * @return This builder for chaining.
      */
@@ -612,7 +614,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.CloseTicketReq.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=247
+     *     See api/v1alpha1/tickets/ticket.proto;l=252
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTicketSid() {
@@ -720,11 +722,13 @@ private static final long serialVersionUID = 0L;
      * from status of the ticket
      * </pre>
      *
-     * <code>int64 from_status = 3 [json_name = "fromStatus", jstype = JS_STRING];</code>
+     * <code>int64 from_status = 3 [json_name = "fromStatus", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.tickets.CloseTicketReq.from_status is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=259
      * @return The fromStatus.
      */
     @java.lang.Override
-    public long getFromStatus() {
+    @java.lang.Deprecated public long getFromStatus() {
       return fromStatus_;
     }
     /**
@@ -732,11 +736,13 @@ private static final long serialVersionUID = 0L;
      * from status of the ticket
      * </pre>
      *
-     * <code>int64 from_status = 3 [json_name = "fromStatus", jstype = JS_STRING];</code>
+     * <code>int64 from_status = 3 [json_name = "fromStatus", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.tickets.CloseTicketReq.from_status is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=259
      * @param value The fromStatus to set.
      * @return This builder for chaining.
      */
-    public Builder setFromStatus(long value) {
+    @java.lang.Deprecated public Builder setFromStatus(long value) {
 
       fromStatus_ = value;
       bitField0_ |= 0x00000004;
@@ -748,10 +754,12 @@ private static final long serialVersionUID = 0L;
      * from status of the ticket
      * </pre>
      *
-     * <code>int64 from_status = 3 [json_name = "fromStatus", jstype = JS_STRING];</code>
+     * <code>int64 from_status = 3 [json_name = "fromStatus", deprecated = true, jstype = JS_STRING];</code>
+     * @deprecated api.v1alpha1.tickets.CloseTicketReq.from_status is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=259
      * @return This builder for chaining.
      */
-    public Builder clearFromStatus() {
+    @java.lang.Deprecated public Builder clearFromStatus() {
       bitField0_ = (bitField0_ & ~0x00000004);
       fromStatus_ = 0L;
       onChanged();

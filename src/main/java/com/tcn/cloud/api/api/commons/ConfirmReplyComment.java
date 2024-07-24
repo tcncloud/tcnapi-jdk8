@@ -49,11 +49,13 @@ private static final long serialVersionUID = 0L;
    * boolean value to confirm edit comment
    * </pre>
    *
-   * <code>bool is_created = 1 [json_name = "isCreated"];</code>
+   * <code>bool is_created = 1 [json_name = "isCreated", deprecated = true];</code>
+   * @deprecated api.commons.ConfirmReplyComment.is_created is deprecated.
+   *     See api/commons/tickets.proto;l=361
    * @return The isCreated.
    */
   @java.lang.Override
-  public boolean getIsCreated() {
+  @java.lang.Deprecated public boolean getIsCreated() {
     return isCreated_;
   }
 
@@ -393,11 +395,13 @@ private static final long serialVersionUID = 0L;
      * boolean value to confirm edit comment
      * </pre>
      *
-     * <code>bool is_created = 1 [json_name = "isCreated"];</code>
+     * <code>bool is_created = 1 [json_name = "isCreated", deprecated = true];</code>
+     * @deprecated api.commons.ConfirmReplyComment.is_created is deprecated.
+     *     See api/commons/tickets.proto;l=361
      * @return The isCreated.
      */
     @java.lang.Override
-    public boolean getIsCreated() {
+    @java.lang.Deprecated public boolean getIsCreated() {
       return isCreated_;
     }
     /**
@@ -405,11 +409,13 @@ private static final long serialVersionUID = 0L;
      * boolean value to confirm edit comment
      * </pre>
      *
-     * <code>bool is_created = 1 [json_name = "isCreated"];</code>
+     * <code>bool is_created = 1 [json_name = "isCreated", deprecated = true];</code>
+     * @deprecated api.commons.ConfirmReplyComment.is_created is deprecated.
+     *     See api/commons/tickets.proto;l=361
      * @param value The isCreated to set.
      * @return This builder for chaining.
      */
-    public Builder setIsCreated(boolean value) {
+    @java.lang.Deprecated public Builder setIsCreated(boolean value) {
 
       isCreated_ = value;
       bitField0_ |= 0x00000001;
@@ -421,10 +427,12 @@ private static final long serialVersionUID = 0L;
      * boolean value to confirm edit comment
      * </pre>
      *
-     * <code>bool is_created = 1 [json_name = "isCreated"];</code>
+     * <code>bool is_created = 1 [json_name = "isCreated", deprecated = true];</code>
+     * @deprecated api.commons.ConfirmReplyComment.is_created is deprecated.
+     *     See api/commons/tickets.proto;l=361
      * @return This builder for chaining.
      */
-    public Builder clearIsCreated() {
+    @java.lang.Deprecated public Builder clearIsCreated() {
       bitField0_ = (bitField0_ & ~0x00000001);
       isCreated_ = false;
       onChanged();

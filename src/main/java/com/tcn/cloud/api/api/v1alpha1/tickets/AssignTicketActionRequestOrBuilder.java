@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.tickets;
 
-public interface AssignTicketActionRequestOrBuilder extends
+@java.lang.Deprecated public interface AssignTicketActionRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.tickets.AssignTicketActionRequest)
     com.google.protobuf.MessageOrBuilder {
 

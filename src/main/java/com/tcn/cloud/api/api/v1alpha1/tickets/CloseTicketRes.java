@@ -45,11 +45,13 @@ private static final long serialVersionUID = 0L;
   public static final int IS_STATUS_FIELD_NUMBER = 1;
   private boolean isStatus_ = false;
   /**
-   * <code>bool is_status = 1 [json_name = "isStatus"];</code>
+   * <code>bool is_status = 1 [json_name = "isStatus", deprecated = true];</code>
+   * @deprecated api.v1alpha1.tickets.CloseTicketRes.is_status is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=269
    * @return The isStatus.
    */
   @java.lang.Override
-  public boolean getIsStatus() {
+  @java.lang.Deprecated public boolean getIsStatus() {
     return isStatus_;
   }
 
@@ -385,19 +387,23 @@ private static final long serialVersionUID = 0L;
 
     private boolean isStatus_ ;
     /**
-     * <code>bool is_status = 1 [json_name = "isStatus"];</code>
+     * <code>bool is_status = 1 [json_name = "isStatus", deprecated = true];</code>
+     * @deprecated api.v1alpha1.tickets.CloseTicketRes.is_status is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=269
      * @return The isStatus.
      */
     @java.lang.Override
-    public boolean getIsStatus() {
+    @java.lang.Deprecated public boolean getIsStatus() {
       return isStatus_;
     }
     /**
-     * <code>bool is_status = 1 [json_name = "isStatus"];</code>
+     * <code>bool is_status = 1 [json_name = "isStatus", deprecated = true];</code>
+     * @deprecated api.v1alpha1.tickets.CloseTicketRes.is_status is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=269
      * @param value The isStatus to set.
      * @return This builder for chaining.
      */
-    public Builder setIsStatus(boolean value) {
+    @java.lang.Deprecated public Builder setIsStatus(boolean value) {
 
       isStatus_ = value;
       bitField0_ |= 0x00000001;
@@ -405,10 +411,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool is_status = 1 [json_name = "isStatus"];</code>
+     * <code>bool is_status = 1 [json_name = "isStatus", deprecated = true];</code>
+     * @deprecated api.v1alpha1.tickets.CloseTicketRes.is_status is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=269
      * @return This builder for chaining.
      */
-    public Builder clearIsStatus() {
+    @java.lang.Deprecated public Builder clearIsStatus() {
       bitField0_ = (bitField0_ & ~0x00000001);
       isStatus_ = false;
       onChanged();

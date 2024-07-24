@@ -1169,6 +1169,7 @@ public final class TicketsGrpc {
      * Public Method to edit a ticket.
      * </pre>
      */
+    @java.lang.Deprecated
     default void editTicket(com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditTicketMethod(), responseObserver);
@@ -1190,6 +1191,7 @@ public final class TicketsGrpc {
      * Would be deprecated
      * </pre>
      */
+    @java.lang.Deprecated
     default void assignTicket(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignTicketMethod(), responseObserver);
@@ -1311,6 +1313,7 @@ public final class TicketsGrpc {
      * Public method to assign a ticket
      * </pre>
      */
+    @java.lang.Deprecated
     default void assignSelf(com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignSelfMethod(), responseObserver);
@@ -1390,6 +1393,7 @@ public final class TicketsGrpc {
      * Public method to assign a ticket action
      * </pre>
      */
+    @java.lang.Deprecated
     default void assignTicketAction(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignTicketActionMethod(), responseObserver);
@@ -1410,6 +1414,7 @@ public final class TicketsGrpc {
      * Public method to change the Status of a ticket
      * </pre>
      */
+    @java.lang.Deprecated
     default void changeTicketStatus(com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getChangeTicketStatusMethod(), responseObserver);
@@ -1470,6 +1475,7 @@ public final class TicketsGrpc {
      * Public method to list all Action Types
      * </pre>
      */
+    @java.lang.Deprecated
     default void getPhoneNumberType(com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPhoneNumberTypeMethod(), responseObserver);
@@ -1555,6 +1561,7 @@ public final class TicketsGrpc {
      * Public Method to edit a ticket.
      * </pre>
      */
+    @java.lang.Deprecated
     public void editTicket(com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1578,6 +1585,7 @@ public final class TicketsGrpc {
      * Would be deprecated
      * </pre>
      */
+    @java.lang.Deprecated
     public void assignTicket(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1711,6 +1719,7 @@ public final class TicketsGrpc {
      * Public method to assign a ticket
      * </pre>
      */
+    @java.lang.Deprecated
     public void assignSelf(com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1798,6 +1807,7 @@ public final class TicketsGrpc {
      * Public method to assign a ticket action
      * </pre>
      */
+    @java.lang.Deprecated
     public void assignTicketAction(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1820,6 +1830,7 @@ public final class TicketsGrpc {
      * Public method to change the Status of a ticket
      * </pre>
      */
+    @java.lang.Deprecated
     public void changeTicketStatus(com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1886,6 +1897,7 @@ public final class TicketsGrpc {
      * Public method to list all Action Types
      * </pre>
      */
+    @java.lang.Deprecated
     public void getPhoneNumberType(com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1960,6 +1972,7 @@ public final class TicketsGrpc {
      * Public Method to edit a ticket.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketRes editTicket(com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEditTicketMethod(), getCallOptions(), request);
@@ -1981,6 +1994,7 @@ public final class TicketsGrpc {
      * Would be deprecated
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes assignTicket(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAssignTicketMethod(), getCallOptions(), request);
@@ -2102,6 +2116,7 @@ public final class TicketsGrpc {
      * Public method to assign a ticket
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes assignSelf(com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAssignSelfMethod(), getCallOptions(), request);
@@ -2181,6 +2196,7 @@ public final class TicketsGrpc {
      * Public method to assign a ticket action
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse assignTicketAction(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAssignTicketActionMethod(), getCallOptions(), request);
@@ -2201,6 +2217,7 @@ public final class TicketsGrpc {
      * Public method to change the Status of a ticket
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse changeTicketStatus(com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getChangeTicketStatusMethod(), getCallOptions(), request);
@@ -2261,6 +2278,7 @@ public final class TicketsGrpc {
      * Public method to list all Action Types
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse getPhoneNumberType(com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPhoneNumberTypeMethod(), getCallOptions(), request);
@@ -2332,6 +2350,7 @@ public final class TicketsGrpc {
      * Public Method to edit a ticket.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketRes> editTicket(
         com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2355,6 +2374,7 @@ public final class TicketsGrpc {
      * Would be deprecated
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes> assignTicket(
         com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2488,6 +2508,7 @@ public final class TicketsGrpc {
      * Public method to assign a ticket
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes> assignSelf(
         com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2575,6 +2596,7 @@ public final class TicketsGrpc {
      * Public method to assign a ticket action
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionResponse> assignTicketAction(
         com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketActionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2597,6 +2619,7 @@ public final class TicketsGrpc {
      * Public method to change the Status of a ticket
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusResponse> changeTicketStatus(
         com.tcn.cloud.api.api.v1alpha1.tickets.ChangeTicketStatusRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2663,6 +2686,7 @@ public final class TicketsGrpc {
      * Public method to list all Action Types
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeResponse> getPhoneNumberType(
         com.tcn.cloud.api.api.v1alpha1.tickets.GetPhoneNumberTypeRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(

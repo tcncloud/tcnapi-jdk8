@@ -14,7 +14,7 @@ public interface CloseTicketReqOrBuilder extends
    *
    * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.CloseTicketReq.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=247
+   *     See api/v1alpha1/tickets/ticket.proto;l=252
    * @return The ticketSid.
    */
   @java.lang.Deprecated long getTicketSid();
@@ -44,10 +44,12 @@ public interface CloseTicketReqOrBuilder extends
    * from status of the ticket
    * </pre>
    *
-   * <code>int64 from_status = 3 [json_name = "fromStatus", jstype = JS_STRING];</code>
+   * <code>int64 from_status = 3 [json_name = "fromStatus", deprecated = true, jstype = JS_STRING];</code>
+   * @deprecated api.v1alpha1.tickets.CloseTicketReq.from_status is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=259
    * @return The fromStatus.
    */
-  long getFromStatus();
+  @java.lang.Deprecated long getFromStatus();
 
   /**
    * <pre>

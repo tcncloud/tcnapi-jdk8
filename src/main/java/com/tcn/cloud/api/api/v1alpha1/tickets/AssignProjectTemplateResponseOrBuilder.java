@@ -8,8 +8,10 @@ public interface AssignProjectTemplateResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>bool is_assigned = 1 [json_name = "isAssigned"];</code>
+   * <code>bool is_assigned = 1 [json_name = "isAssigned", deprecated = true];</code>
+   * @deprecated api.v1alpha1.tickets.AssignProjectTemplateResponse.is_assigned is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=80
    * @return The isAssigned.
    */
-  boolean getIsAssigned();
+  @java.lang.Deprecated boolean getIsAssigned();
 }

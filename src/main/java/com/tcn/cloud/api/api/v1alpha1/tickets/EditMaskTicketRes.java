@@ -46,11 +46,13 @@ private static final long serialVersionUID = 0L;
   public static final int IS_EDITED_FIELD_NUMBER = 1;
   private boolean isEdited_ = false;
   /**
-   * <code>bool is_edited = 1 [json_name = "isEdited"];</code>
+   * <code>bool is_edited = 1 [json_name = "isEdited", deprecated = true];</code>
+   * @deprecated api.v1alpha1.tickets.EditMaskTicketRes.is_edited is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=136
    * @return The isEdited.
    */
   @java.lang.Override
-  public boolean getIsEdited() {
+  @java.lang.Deprecated public boolean getIsEdited() {
     return isEdited_;
   }
 
@@ -387,19 +389,23 @@ private static final long serialVersionUID = 0L;
 
     private boolean isEdited_ ;
     /**
-     * <code>bool is_edited = 1 [json_name = "isEdited"];</code>
+     * <code>bool is_edited = 1 [json_name = "isEdited", deprecated = true];</code>
+     * @deprecated api.v1alpha1.tickets.EditMaskTicketRes.is_edited is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=136
      * @return The isEdited.
      */
     @java.lang.Override
-    public boolean getIsEdited() {
+    @java.lang.Deprecated public boolean getIsEdited() {
       return isEdited_;
     }
     /**
-     * <code>bool is_edited = 1 [json_name = "isEdited"];</code>
+     * <code>bool is_edited = 1 [json_name = "isEdited", deprecated = true];</code>
+     * @deprecated api.v1alpha1.tickets.EditMaskTicketRes.is_edited is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=136
      * @param value The isEdited to set.
      * @return This builder for chaining.
      */
-    public Builder setIsEdited(boolean value) {
+    @java.lang.Deprecated public Builder setIsEdited(boolean value) {
 
       isEdited_ = value;
       bitField0_ |= 0x00000001;
@@ -407,10 +413,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool is_edited = 1 [json_name = "isEdited"];</code>
+     * <code>bool is_edited = 1 [json_name = "isEdited", deprecated = true];</code>
+     * @deprecated api.v1alpha1.tickets.EditMaskTicketRes.is_edited is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=136
      * @return This builder for chaining.
      */
-    public Builder clearIsEdited() {
+    @java.lang.Deprecated public Builder clearIsEdited() {
       bitField0_ = (bitField0_ & ~0x00000001);
       isEdited_ = false;
       onChanged();

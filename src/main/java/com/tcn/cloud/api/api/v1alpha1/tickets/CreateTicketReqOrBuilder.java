@@ -133,43 +133,43 @@ public interface CreateTicketReqOrBuilder extends
    * A list of skills assotiated with a ticket
    * </pre>
    *
-   * <code>repeated .api.commons.Skills ticket_skills = 10 [json_name = "ticketSkills"];</code>
+   * <code>repeated .api.commons.Skills ticket_skills = 10 [json_name = "ticketSkills", deprecated = true];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.Skills> 
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.Skills> 
       getTicketSkillsList();
   /**
    * <pre>
    * A list of skills assotiated with a ticket
    * </pre>
    *
-   * <code>repeated .api.commons.Skills ticket_skills = 10 [json_name = "ticketSkills"];</code>
+   * <code>repeated .api.commons.Skills ticket_skills = 10 [json_name = "ticketSkills", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.Skills getTicketSkills(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.Skills getTicketSkills(int index);
   /**
    * <pre>
    * A list of skills assotiated with a ticket
    * </pre>
    *
-   * <code>repeated .api.commons.Skills ticket_skills = 10 [json_name = "ticketSkills"];</code>
+   * <code>repeated .api.commons.Skills ticket_skills = 10 [json_name = "ticketSkills", deprecated = true];</code>
    */
-  int getTicketSkillsCount();
+  @java.lang.Deprecated int getTicketSkillsCount();
   /**
    * <pre>
    * A list of skills assotiated with a ticket
    * </pre>
    *
-   * <code>repeated .api.commons.Skills ticket_skills = 10 [json_name = "ticketSkills"];</code>
+   * <code>repeated .api.commons.Skills ticket_skills = 10 [json_name = "ticketSkills", deprecated = true];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.SkillsOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.commons.SkillsOrBuilder> 
       getTicketSkillsOrBuilderList();
   /**
    * <pre>
    * A list of skills assotiated with a ticket
    * </pre>
    *
-   * <code>repeated .api.commons.Skills ticket_skills = 10 [json_name = "ticketSkills"];</code>
+   * <code>repeated .api.commons.Skills ticket_skills = 10 [json_name = "ticketSkills", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.SkillsOrBuilder getTicketSkillsOrBuilder(
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.SkillsOrBuilder getTicketSkillsOrBuilder(
       int index);
 
   /**
@@ -233,15 +233,19 @@ public interface CreateTicketReqOrBuilder extends
   boolean getAssignSelf();
 
   /**
-   * <code>string assign_other = 14 [json_name = "assignOther"];</code>
+   * <code>string assign_other = 14 [json_name = "assignOther", deprecated = true];</code>
+   * @deprecated api.v1alpha1.tickets.CreateTicketReq.assign_other is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=33
    * @return The assignOther.
    */
-  java.lang.String getAssignOther();
+  @java.lang.Deprecated java.lang.String getAssignOther();
   /**
-   * <code>string assign_other = 14 [json_name = "assignOther"];</code>
+   * <code>string assign_other = 14 [json_name = "assignOther", deprecated = true];</code>
+   * @deprecated api.v1alpha1.tickets.CreateTicketReq.assign_other is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=33
    * @return The bytes for assignOther.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getAssignOtherBytes();
 
   /**

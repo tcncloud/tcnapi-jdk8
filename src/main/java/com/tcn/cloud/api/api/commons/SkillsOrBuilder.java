@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface SkillsOrBuilder extends
+@java.lang.Deprecated public interface SkillsOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.Skills)
     com.google.protobuf.MessageOrBuilder {
 
