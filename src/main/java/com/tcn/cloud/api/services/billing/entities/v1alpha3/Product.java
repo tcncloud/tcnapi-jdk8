@@ -198,6 +198,32 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CONFIG_FIELD_NUMBER = 5;
+  private com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig config_;
+  /**
+   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 5 [json_name = "config"];</code>
+   * @return Whether the config field is set.
+   */
+  @java.lang.Override
+  public boolean hasConfig() {
+    return config_ != null;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 5 [json_name = "config"];</code>
+   * @return The config.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig getConfig() {
+    return config_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.getDefaultInstance() : config_;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 5 [json_name = "config"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfigOrBuilder getConfigOrBuilder() {
+    return config_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.getDefaultInstance() : config_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -224,6 +250,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, productName_);
     }
+    if (config_ != null) {
+      output.writeMessage(5, getConfig());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -244,6 +273,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, productName_);
+    }
+    if (config_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getConfig());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -268,6 +301,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCategoryThree())) return false;
     if (!getProductName()
         .equals(other.getProductName())) return false;
+    if (hasConfig() != other.hasConfig()) return false;
+    if (hasConfig()) {
+      if (!getConfig()
+          .equals(other.getConfig())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -287,6 +325,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getCategoryThree().hashCode();
     hash = (37 * hash) + PRODUCT_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getProductName().hashCode();
+    if (hasConfig()) {
+      hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getConfig().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -422,6 +464,11 @@ private static final long serialVersionUID = 0L;
       categoryTwo_ = "";
       categoryThree_ = "";
       productName_ = "";
+      config_ = null;
+      if (configBuilder_ != null) {
+        configBuilder_.dispose();
+        configBuilder_ = null;
+      }
       return this;
     }
 
@@ -466,6 +513,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.productName_ = productName_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.config_ = configBuilder_ == null
+            ? config_
+            : configBuilder_.build();
       }
     }
 
@@ -533,6 +585,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (other.hasConfig()) {
+        mergeConfig(other.getConfig());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -579,6 +634,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 42: {
+              input.readMessage(
+                  getConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -882,6 +944,125 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig config_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig, com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfigOrBuilder> configBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 5 [json_name = "config"];</code>
+     * @return Whether the config field is set.
+     */
+    public boolean hasConfig() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 5 [json_name = "config"];</code>
+     * @return The config.
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig getConfig() {
+      if (configBuilder_ == null) {
+        return config_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.getDefaultInstance() : config_;
+      } else {
+        return configBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 5 [json_name = "config"];</code>
+     */
+    public Builder setConfig(com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig value) {
+      if (configBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        config_ = value;
+      } else {
+        configBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 5 [json_name = "config"];</code>
+     */
+    public Builder setConfig(
+        com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.Builder builderForValue) {
+      if (configBuilder_ == null) {
+        config_ = builderForValue.build();
+      } else {
+        configBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 5 [json_name = "config"];</code>
+     */
+    public Builder mergeConfig(com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig value) {
+      if (configBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          config_ != null &&
+          config_ != com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.getDefaultInstance()) {
+          getConfigBuilder().mergeFrom(value);
+        } else {
+          config_ = value;
+        }
+      } else {
+        configBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 5 [json_name = "config"];</code>
+     */
+    public Builder clearConfig() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      config_ = null;
+      if (configBuilder_ != null) {
+        configBuilder_.dispose();
+        configBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 5 [json_name = "config"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.Builder getConfigBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getConfigFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 5 [json_name = "config"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfigOrBuilder getConfigOrBuilder() {
+      if (configBuilder_ != null) {
+        return configBuilder_.getMessageOrBuilder();
+      } else {
+        return config_ == null ?
+            com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.getDefaultInstance() : config_;
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha3.ProductConfig config = 5 [json_name = "config"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig, com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfigOrBuilder> 
+        getConfigFieldBuilder() {
+      if (configBuilder_ == null) {
+        configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig, com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfigOrBuilder>(
+                getConfig(),
+                getParentForChildren(),
+                isClean());
+        config_ = null;
+      }
+      return configBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
