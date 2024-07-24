@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons.audit;
 
 /**
  * <pre>
- * VanaCreateTranscriptEvent represents
+ * VanaCreateTranscriptEvent represents a newly created transcript.
  * </pre>
  *
  * Protobuf type {@code api.commons.audit.VanaCreateTranscriptEvent}
@@ -213,7 +213,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * VanaCreateTranscriptEvent represents
+   * VanaCreateTranscriptEvent represents a newly created transcript.
    * </pre>
    *
    * Protobuf type {@code api.commons.audit.VanaCreateTranscriptEvent}
