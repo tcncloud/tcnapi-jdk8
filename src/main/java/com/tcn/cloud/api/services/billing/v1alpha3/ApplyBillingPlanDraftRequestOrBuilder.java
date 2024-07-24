@@ -36,7 +36,7 @@ public interface ApplyBillingPlanDraftRequestOrBuilder extends
 
   /**
    * <pre>
-   * Optional. If not set, apply to all orgs; unless draft is org-specific.
+   * Optional. If not set, apply to all orgs.
    * </pre>
    *
    * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
@@ -46,7 +46,7 @@ public interface ApplyBillingPlanDraftRequestOrBuilder extends
       getOrgIdsList();
   /**
    * <pre>
-   * Optional. If not set, apply to all orgs; unless draft is org-specific.
+   * Optional. If not set, apply to all orgs.
    * </pre>
    *
    * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
@@ -55,7 +55,7 @@ public interface ApplyBillingPlanDraftRequestOrBuilder extends
   int getOrgIdsCount();
   /**
    * <pre>
-   * Optional. If not set, apply to all orgs; unless draft is org-specific.
+   * Optional. If not set, apply to all orgs.
    * </pre>
    *
    * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
@@ -65,7 +65,7 @@ public interface ApplyBillingPlanDraftRequestOrBuilder extends
   java.lang.String getOrgIds(int index);
   /**
    * <pre>
-   * Optional. If not set, apply to all orgs; unless draft is org-specific.
+   * Optional. If not set, apply to all orgs.
    * </pre>
    *
    * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>

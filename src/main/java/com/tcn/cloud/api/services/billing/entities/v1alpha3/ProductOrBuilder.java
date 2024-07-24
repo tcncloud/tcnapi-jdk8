@@ -54,19 +54,4 @@ public interface ProductOrBuilder extends
    */
   com.google.protobuf.ByteString
       getProductNameBytes();
-
-  /**
-   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 5 [json_name = "config"];</code>
-   * @return Whether the config field is set.
-   */
-  boolean hasConfig();
-  /**
-   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 5 [json_name = "config"];</code>
-   * @return The config.
-   */
-  com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfig getConfig();
-  /**
-   * <code>.services.billing.entities.v1alpha3.ProductConfig config = 5 [json_name = "config"];</code>
-   */
-  com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductConfigOrBuilder getConfigOrBuilder();
 }

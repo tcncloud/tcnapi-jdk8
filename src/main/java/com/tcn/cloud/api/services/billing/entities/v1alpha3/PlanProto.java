@@ -30,7 +30,7 @@ public final class PlanProto {
     java.lang.String[] descriptorData = {
       "\n-services/billing/entities/v1alpha3/pla" +
       "n.proto\022\"services.billing.entities.v1alp" +
-      "ha3\032\037google/protobuf/timestamp.proto\"\321\003\n" +
+      "ha3\032\037google/protobuf/timestamp.proto\"\272\003\n" +
       "\013BillingPlan\022&\n\017billing_plan_id\030\001 \001(\tR\rb" +
       "illingPlanId\022\024\n\005title\030\002 \001(\tR\005title\022G\n\004ty" +
       "pe\030\003 \001(\01623.services.billing.entities.v1a" +
@@ -42,16 +42,15 @@ public final class PlanProto {
       "ogle.protobuf.TimestampR\nupdateTime\022;\n\013d" +
       "elete_time\030\010 \001(\0132\032.google.protobuf.Times" +
       "tampR\ndeleteTime\022\027\n\007user_id\030\t \001(\tR\006userI" +
-      "d\022\025\n\006org_id\030\n \001(\tR\005orgId*n\n\017BillingPlanT" +
-      "ype\022!\n\035BILLING_PLAN_TYPE_UNSPECIFIED\020\000\022\035" +
-      "\n\031BILLING_PLAN_TYPE_DEFAULT\020\001\022\031\n\025BILLING" +
-      "_PLAN_TYPE_ORG\020\002B\354\001\n4com.tcn.cloud.api.s" +
-      "ervices.billing.entities.v1alpha3B\tPlanP" +
-      "rotoP\001\242\002\003SBE\252\002\"Services.Billing.Entities" +
-      ".V1alpha3\312\002\"Services\\Billing\\Entities\\V1" +
-      "alpha3\342\002.Services\\Billing\\Entities\\V1alp" +
-      "ha3\\GPBMetadata\352\002%Services::Billing::Ent" +
-      "ities::V1alpha3b\006proto3"
+      "d*n\n\017BillingPlanType\022!\n\035BILLING_PLAN_TYP" +
+      "E_UNSPECIFIED\020\000\022\035\n\031BILLING_PLAN_TYPE_DEF" +
+      "AULT\020\001\022\031\n\025BILLING_PLAN_TYPE_ORG\020\002B\354\001\n4co" +
+      "m.tcn.cloud.api.services.billing.entitie" +
+      "s.v1alpha3B\tPlanProtoP\001\242\002\003SBE\252\002\"Services" +
+      ".Billing.Entities.V1alpha3\312\002\"Services\\Bi" +
+      "lling\\Entities\\V1alpha3\342\002.Services\\Billi" +
+      "ng\\Entities\\V1alpha3\\GPBMetadata\352\002%Servi" +
+      "ces::Billing::Entities::V1alpha3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -63,7 +62,7 @@ public final class PlanProto {
     internal_static_services_billing_entities_v1alpha3_BillingPlan_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha3_BillingPlan_descriptor,
-        new java.lang.String[] { "BillingPlanId", "Title", "Type", "IsDraft", "StartTime", "CreateTime", "UpdateTime", "DeleteTime", "UserId", "OrgId", });
+        new java.lang.String[] { "BillingPlanId", "Title", "Type", "IsDraft", "StartTime", "CreateTime", "UpdateTime", "DeleteTime", "UserId", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
