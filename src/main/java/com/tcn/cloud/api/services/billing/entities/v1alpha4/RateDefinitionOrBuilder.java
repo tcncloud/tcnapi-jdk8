@@ -53,47 +53,53 @@ public interface RateDefinitionOrBuilder extends
   boolean getIsDraft();
 
   /**
-   * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+   * <code>bool is_overwrite = 5 [json_name = "isOverwrite"];</code>
+   * @return The isOverwrite.
+   */
+  boolean getIsOverwrite();
+
+  /**
+   * <code>.google.protobuf.Timestamp create_time = 6 [json_name = "createTime"];</code>
    * @return Whether the createTime field is set.
    */
   boolean hasCreateTime();
   /**
-   * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 6 [json_name = "createTime"];</code>
    * @return The createTime.
    */
   com.google.protobuf.Timestamp getCreateTime();
   /**
-   * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime"];</code>
+   * <code>.google.protobuf.Timestamp create_time = 6 [json_name = "createTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 
   /**
-   * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 7 [json_name = "updateTime"];</code>
    * @return Whether the updateTime field is set.
    */
   boolean hasUpdateTime();
   /**
-   * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 7 [json_name = "updateTime"];</code>
    * @return The updateTime.
    */
   com.google.protobuf.Timestamp getUpdateTime();
   /**
-   * <code>.google.protobuf.Timestamp update_time = 6 [json_name = "updateTime"];</code>
+   * <code>.google.protobuf.Timestamp update_time = 7 [json_name = "updateTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 
   /**
-   * <code>.google.protobuf.Timestamp delete_time = 7 [json_name = "deleteTime"];</code>
+   * <code>.google.protobuf.Timestamp delete_time = 8 [json_name = "deleteTime"];</code>
    * @return Whether the deleteTime field is set.
    */
   boolean hasDeleteTime();
   /**
-   * <code>.google.protobuf.Timestamp delete_time = 7 [json_name = "deleteTime"];</code>
+   * <code>.google.protobuf.Timestamp delete_time = 8 [json_name = "deleteTime"];</code>
    * @return The deleteTime.
    */
   com.google.protobuf.Timestamp getDeleteTime();
   /**
-   * <code>.google.protobuf.Timestamp delete_time = 7 [json_name = "deleteTime"];</code>
+   * <code>.google.protobuf.Timestamp delete_time = 8 [json_name = "deleteTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
 }
