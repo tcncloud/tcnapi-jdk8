@@ -100,5 +100,25 @@ public interface PanelSourceOrBuilder extends
   com.google.protobuf.ByteString
       getInsightResourceIdBytes();
 
+  /**
+   * <pre>
+   * Used for selecting which output configuration to display in the dashboard
+   * </pre>
+   *
+   * <code>string output_configuration_resource_id = 4 [json_name = "outputConfigurationResourceId"];</code>
+   * @return The outputConfigurationResourceId.
+   */
+  java.lang.String getOutputConfigurationResourceId();
+  /**
+   * <pre>
+   * Used for selecting which output configuration to display in the dashboard
+   * </pre>
+   *
+   * <code>string output_configuration_resource_id = 4 [json_name = "outputConfigurationResourceId"];</code>
+   * @return The bytes for outputConfigurationResourceId.
+   */
+  com.google.protobuf.ByteString
+      getOutputConfigurationResourceIdBytes();
+
   com.tcn.cloud.api.api.v0alpha.PanelSource.PanelTypeCase getPanelTypeCase();
 }
