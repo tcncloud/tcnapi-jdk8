@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.tickets;
 
-public interface CreateSelfAssignReqOrBuilder extends
+@java.lang.Deprecated public interface CreateSelfAssignReqOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.tickets.CreateSelfAssignReq)
     com.google.protobuf.MessageOrBuilder {
 

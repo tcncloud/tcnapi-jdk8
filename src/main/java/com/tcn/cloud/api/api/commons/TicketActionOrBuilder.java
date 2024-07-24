@@ -33,29 +33,33 @@ public interface TicketActionOrBuilder extends
    * To be Deprecated Later
    * </pre>
    *
-   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
+   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext", deprecated = true];</code>
+   * @deprecated api.commons.TicketAction.callback_context is deprecated.
+   *     See api/commons/tickets.proto;l=164
    * @return Whether the callbackContext field is set.
    */
-  boolean hasCallbackContext();
+  @java.lang.Deprecated boolean hasCallbackContext();
   /**
    * <pre>
    * Attributes for a callback Action
    * To be Deprecated Later
    * </pre>
    *
-   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
+   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext", deprecated = true];</code>
+   * @deprecated api.commons.TicketAction.callback_context is deprecated.
+   *     See api/commons/tickets.proto;l=164
    * @return The callbackContext.
    */
-  com.tcn.cloud.api.api.commons.CallbackContext getCallbackContext();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.CallbackContext getCallbackContext();
   /**
    * <pre>
    * Attributes for a callback Action
    * To be Deprecated Later
    * </pre>
    *
-   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
+   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.CallbackContextOrBuilder getCallbackContextOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.CallbackContextOrBuilder getCallbackContextOrBuilder();
 
   /**
    * <pre>
@@ -64,7 +68,7 @@ public interface TicketActionOrBuilder extends
    *
    * <code>int64 ticket_id = 4 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.commons.TicketAction.ticket_id is deprecated.
-   *     See api/commons/tickets.proto;l=165
+   *     See api/commons/tickets.proto;l=166
    * @return The ticketId.
    */
   @java.lang.Deprecated long getTicketId();

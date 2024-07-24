@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons;
 
-public interface ConfirmCloseOrBuilder extends
+@java.lang.Deprecated public interface ConfirmCloseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.ConfirmClose)
     com.google.protobuf.MessageOrBuilder {
 

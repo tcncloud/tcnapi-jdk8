@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.commons;
 /**
  * Protobuf enum {@code api.commons.PhoneNumberType}
  */
-public enum PhoneNumberType
+@java.lang.Deprecated public enum PhoneNumberType
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>

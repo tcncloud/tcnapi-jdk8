@@ -10,7 +10,7 @@ public interface CreateCommentReqOrBuilder extends
   /**
    * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.CreateCommentReq.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=227
+   *     See api/v1alpha1/tickets/ticket.proto;l=232
    * @return The ticketSid.
    */
   @java.lang.Deprecated long getTicketSid();

@@ -41,11 +41,13 @@ private static final long serialVersionUID = 0L;
   public static final int IS_ASSIGNED_FIELD_NUMBER = 1;
   private boolean isAssigned_ = false;
   /**
-   * <code>bool is_assigned = 1 [json_name = "isAssigned"];</code>
+   * <code>bool is_assigned = 1 [json_name = "isAssigned", deprecated = true];</code>
+   * @deprecated api.v1alpha1.tickets.AssignProjectTemplateResponse.is_assigned is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=80
    * @return The isAssigned.
    */
   @java.lang.Override
-  public boolean getIsAssigned() {
+  @java.lang.Deprecated public boolean getIsAssigned() {
     return isAssigned_;
   }
 
@@ -377,19 +379,23 @@ private static final long serialVersionUID = 0L;
 
     private boolean isAssigned_ ;
     /**
-     * <code>bool is_assigned = 1 [json_name = "isAssigned"];</code>
+     * <code>bool is_assigned = 1 [json_name = "isAssigned", deprecated = true];</code>
+     * @deprecated api.v1alpha1.tickets.AssignProjectTemplateResponse.is_assigned is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=80
      * @return The isAssigned.
      */
     @java.lang.Override
-    public boolean getIsAssigned() {
+    @java.lang.Deprecated public boolean getIsAssigned() {
       return isAssigned_;
     }
     /**
-     * <code>bool is_assigned = 1 [json_name = "isAssigned"];</code>
+     * <code>bool is_assigned = 1 [json_name = "isAssigned", deprecated = true];</code>
+     * @deprecated api.v1alpha1.tickets.AssignProjectTemplateResponse.is_assigned is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=80
      * @param value The isAssigned to set.
      * @return This builder for chaining.
      */
-    public Builder setIsAssigned(boolean value) {
+    @java.lang.Deprecated public Builder setIsAssigned(boolean value) {
 
       isAssigned_ = value;
       bitField0_ |= 0x00000001;
@@ -397,10 +403,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool is_assigned = 1 [json_name = "isAssigned"];</code>
+     * <code>bool is_assigned = 1 [json_name = "isAssigned", deprecated = true];</code>
+     * @deprecated api.v1alpha1.tickets.AssignProjectTemplateResponse.is_assigned is deprecated.
+     *     See api/v1alpha1/tickets/ticket.proto;l=80
      * @return This builder for chaining.
      */
-    public Builder clearIsAssigned() {
+    @java.lang.Deprecated public Builder clearIsAssigned() {
       bitField0_ = (bitField0_ & ~0x00000001);
       isAssigned_ = false;
       onChanged();

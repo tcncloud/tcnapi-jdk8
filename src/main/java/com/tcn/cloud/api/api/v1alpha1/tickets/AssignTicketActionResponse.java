@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.v1alpha1.tickets;
 /**
  * Protobuf type {@code api.v1alpha1.tickets.AssignTicketActionResponse}
  */
-public final class AssignTicketActionResponse extends
+@java.lang.Deprecated public final class AssignTicketActionResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.tickets.AssignTicketActionResponse)
     AssignTicketActionResponseOrBuilder {

@@ -59,20 +59,20 @@ public final class ProjectProto {
       "\020EnableProjectReq\022#\n\013project_sid\030\001 \001(\003B\002" +
       "0\001R\nprojectSid\022!\n\014project_code\030\002 \001(\tR\013pr" +
       "ojectCode\022#\n\rproject_title\030\003 \001(\tR\014projec" +
-      "tTitle\022\033\n\tis_active\030\004 \001(\010R\010isActive\",\n\020E" +
-      "nableProjectRes\022\030\n\007success\030\001 \001(\010R\007succes" +
-      "s\"\030\n\026ListEnabledProjectsReq\"P\n\026ListEnabl" +
-      "edProjectsRes\0226\n\010projects\030\001 \003(\0132\032.api.co" +
-      "mmons.TicketProjectR\010projects\"]\n\025ListTic" +
-      "ketAuditLogReq\022#\n\nticket_sid\030\001 \001(\003B\004\030\0010\001" +
-      "R\tticketSid\022\037\n\013ticket_code\030\020 \001(\tR\nticket" +
-      "Code\"N\n\025ListTicketAuditLogRes\0225\n\006events\030" +
-      "\001 \003(\0132\035.api.commons.audit.AuditEventR\006ev" +
-      "entsB\250\001\n&com.tcn.cloud.api.api.v1alpha1." +
-      "ticketsB\014ProjectProtoP\001\242\002\003AVT\252\002\024Api.V1al" +
-      "pha1.Tickets\312\002\024Api\\V1alpha1\\Tickets\342\002 Ap" +
-      "i\\V1alpha1\\Tickets\\GPBMetadata\352\002\026Api::V1" +
-      "alpha1::Ticketsb\006proto3"
+      "tTitle\022\033\n\tis_active\030\004 \001(\010R\010isActive\"0\n\020E" +
+      "nableProjectRes\022\034\n\007success\030\001 \001(\010B\002\030\001R\007su" +
+      "ccess\"\030\n\026ListEnabledProjectsReq\"P\n\026ListE" +
+      "nabledProjectsRes\0226\n\010projects\030\001 \003(\0132\032.ap" +
+      "i.commons.TicketProjectR\010projects\"]\n\025Lis" +
+      "tTicketAuditLogReq\022#\n\nticket_sid\030\001 \001(\003B\004" +
+      "\030\0010\001R\tticketSid\022\037\n\013ticket_code\030\020 \001(\tR\nti" +
+      "cketCode\"N\n\025ListTicketAuditLogRes\0225\n\006eve" +
+      "nts\030\001 \003(\0132\035.api.commons.audit.AuditEvent" +
+      "R\006eventsB\250\001\n&com.tcn.cloud.api.api.v1alp" +
+      "ha1.ticketsB\014ProjectProtoP\001\242\002\003AVT\252\002\024Api." +
+      "V1alpha1.Tickets\312\002\024Api\\V1alpha1\\Tickets\342" +
+      "\002 Api\\V1alpha1\\Tickets\\GPBMetadata\352\002\026Api" +
+      "::V1alpha1::Ticketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

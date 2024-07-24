@@ -8,8 +8,10 @@ public interface CloseTicketResOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>bool is_status = 1 [json_name = "isStatus"];</code>
+   * <code>bool is_status = 1 [json_name = "isStatus", deprecated = true];</code>
+   * @deprecated api.v1alpha1.tickets.CloseTicketRes.is_status is deprecated.
+   *     See api/v1alpha1/tickets/ticket.proto;l=269
    * @return The isStatus.
    */
-  boolean getIsStatus();
+  @java.lang.Deprecated boolean getIsStatus();
 }

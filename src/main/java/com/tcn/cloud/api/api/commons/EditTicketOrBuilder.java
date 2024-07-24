@@ -14,7 +14,7 @@ public interface EditTicketOrBuilder extends
    *
    * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.commons.EditTicket.ticket_sid is deprecated.
-   *     See api/commons/tickets.proto;l=387
+   *     See api/commons/tickets.proto;l=390
    * @return The ticketSid.
    */
   @java.lang.Deprecated long getTicketSid();
@@ -71,7 +71,7 @@ public interface EditTicketOrBuilder extends
    * ticket_action_id
    * </pre>
    *
-   * <code>int64 ticket_action_id = 4 [json_name = "ticketActionId"];</code>
+   * <code>int64 ticket_action_id = 4 [json_name = "ticketActionId", jstype = JS_STRING];</code>
    * @return The ticketActionId.
    */
   long getTicketActionId();
