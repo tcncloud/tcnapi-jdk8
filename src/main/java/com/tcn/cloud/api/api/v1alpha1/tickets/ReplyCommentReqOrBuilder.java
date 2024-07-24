@@ -24,7 +24,7 @@ public interface ReplyCommentReqOrBuilder extends
    *
    * <code>int64 ticket_sid = 2 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.ReplyCommentReq.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=326
+   *     See api/v1alpha1/tickets/ticket.proto;l=318
    * @return The ticketSid.
    */
   @java.lang.Deprecated long getTicketSid();

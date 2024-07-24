@@ -24,7 +24,7 @@ public interface CommentOrBuilder extends
    *
    * <code>int64 ticket_sid = 2 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.commons.Comment.ticket_sid is deprecated.
-   *     See api/commons/tickets.proto;l=255
+   *     See api/commons/tickets.proto;l=253
    * @return The ticketSid.
    */
   @java.lang.Deprecated long getTicketSid();

@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.tickets;
 
-@java.lang.Deprecated public interface ChangeTicketStatusResponseOrBuilder extends
+public interface ChangeTicketStatusResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.tickets.ChangeTicketStatusResponse)
     com.google.protobuf.MessageOrBuilder {
 

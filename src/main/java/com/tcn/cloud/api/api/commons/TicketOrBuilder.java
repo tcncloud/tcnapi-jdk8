@@ -201,54 +201,46 @@ public interface TicketOrBuilder extends
    * due-date
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp due_date = 11 [json_name = "dueDate", deprecated = true];</code>
-   * @deprecated api.commons.Ticket.due_date is deprecated.
-   *     See api/commons/tickets.proto;l=32
+   * <code>.google.protobuf.Timestamp due_date = 11 [json_name = "dueDate"];</code>
    * @return Whether the dueDate field is set.
    */
-  @java.lang.Deprecated boolean hasDueDate();
+  boolean hasDueDate();
   /**
    * <pre>
    * due-date
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp due_date = 11 [json_name = "dueDate", deprecated = true];</code>
-   * @deprecated api.commons.Ticket.due_date is deprecated.
-   *     See api/commons/tickets.proto;l=32
+   * <code>.google.protobuf.Timestamp due_date = 11 [json_name = "dueDate"];</code>
    * @return The dueDate.
    */
-  @java.lang.Deprecated com.google.protobuf.Timestamp getDueDate();
+  com.google.protobuf.Timestamp getDueDate();
   /**
    * <pre>
    * due-date
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp due_date = 11 [json_name = "dueDate", deprecated = true];</code>
+   * <code>.google.protobuf.Timestamp due_date = 11 [json_name = "dueDate"];</code>
    */
-  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getDueDateOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getDueDateOrBuilder();
 
   /**
    * <pre>
    * A list of users assigned to this ticket.
    * </pre>
    *
-   * <code>string assignee_list = 12 [json_name = "assigneeList", deprecated = true];</code>
-   * @deprecated api.commons.Ticket.assignee_list is deprecated.
-   *     See api/commons/tickets.proto;l=34
+   * <code>string assignee_list = 12 [json_name = "assigneeList"];</code>
    * @return The assigneeList.
    */
-  @java.lang.Deprecated java.lang.String getAssigneeList();
+  java.lang.String getAssigneeList();
   /**
    * <pre>
    * A list of users assigned to this ticket.
    * </pre>
    *
-   * <code>string assignee_list = 12 [json_name = "assigneeList", deprecated = true];</code>
-   * @deprecated api.commons.Ticket.assignee_list is deprecated.
-   *     See api/commons/tickets.proto;l=34
+   * <code>string assignee_list = 12 [json_name = "assigneeList"];</code>
    * @return The bytes for assigneeList.
    */
-  @java.lang.Deprecated com.google.protobuf.ByteString
+  com.google.protobuf.ByteString
       getAssigneeListBytes();
 
   /**
@@ -300,43 +292,43 @@ public interface TicketOrBuilder extends
    * A list of skills assotiated with a ticket
    * </pre>
    *
-   * <code>repeated .api.commons.Skills ticket_skills = 15 [json_name = "ticketSkills", deprecated = true];</code>
+   * <code>repeated .api.commons.Skills ticket_skills = 15 [json_name = "ticketSkills"];</code>
    */
-  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.Skills> 
+  java.util.List<com.tcn.cloud.api.api.commons.Skills> 
       getTicketSkillsList();
   /**
    * <pre>
    * A list of skills assotiated with a ticket
    * </pre>
    *
-   * <code>repeated .api.commons.Skills ticket_skills = 15 [json_name = "ticketSkills", deprecated = true];</code>
+   * <code>repeated .api.commons.Skills ticket_skills = 15 [json_name = "ticketSkills"];</code>
    */
-  @java.lang.Deprecated com.tcn.cloud.api.api.commons.Skills getTicketSkills(int index);
+  com.tcn.cloud.api.api.commons.Skills getTicketSkills(int index);
   /**
    * <pre>
    * A list of skills assotiated with a ticket
    * </pre>
    *
-   * <code>repeated .api.commons.Skills ticket_skills = 15 [json_name = "ticketSkills", deprecated = true];</code>
+   * <code>repeated .api.commons.Skills ticket_skills = 15 [json_name = "ticketSkills"];</code>
    */
-  @java.lang.Deprecated int getTicketSkillsCount();
+  int getTicketSkillsCount();
   /**
    * <pre>
    * A list of skills assotiated with a ticket
    * </pre>
    *
-   * <code>repeated .api.commons.Skills ticket_skills = 15 [json_name = "ticketSkills", deprecated = true];</code>
+   * <code>repeated .api.commons.Skills ticket_skills = 15 [json_name = "ticketSkills"];</code>
    */
-  @java.lang.Deprecated java.util.List<? extends com.tcn.cloud.api.api.commons.SkillsOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.commons.SkillsOrBuilder> 
       getTicketSkillsOrBuilderList();
   /**
    * <pre>
    * A list of skills assotiated with a ticket
    * </pre>
    *
-   * <code>repeated .api.commons.Skills ticket_skills = 15 [json_name = "ticketSkills", deprecated = true];</code>
+   * <code>repeated .api.commons.Skills ticket_skills = 15 [json_name = "ticketSkills"];</code>
    */
-  @java.lang.Deprecated com.tcn.cloud.api.api.commons.SkillsOrBuilder getTicketSkillsOrBuilder(
+  com.tcn.cloud.api.api.commons.SkillsOrBuilder getTicketSkillsOrBuilder(
       int index);
 
   /**

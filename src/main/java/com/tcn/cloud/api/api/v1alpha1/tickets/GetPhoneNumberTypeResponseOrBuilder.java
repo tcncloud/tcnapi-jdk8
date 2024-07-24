@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.tickets;
 
-@java.lang.Deprecated public interface GetPhoneNumberTypeResponseOrBuilder extends
+public interface GetPhoneNumberTypeResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.tickets.GetPhoneNumberTypeResponse)
     com.google.protobuf.MessageOrBuilder {
 

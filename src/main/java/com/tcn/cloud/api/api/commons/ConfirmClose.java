@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.commons;
  *
  * Protobuf type {@code api.commons.ConfirmClose}
  */
-@java.lang.Deprecated public final class ConfirmClose extends
+public final class ConfirmClose extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.ConfirmClose)
     ConfirmCloseOrBuilder {

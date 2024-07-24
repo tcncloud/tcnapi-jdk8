@@ -41,13 +41,11 @@ private static final long serialVersionUID = 0L;
   public static final int IS_CLOSED_FIELD_NUMBER = 1;
   private boolean isClosed_ = false;
   /**
-   * <code>bool is_closed = 1 [json_name = "isClosed", deprecated = true];</code>
-   * @deprecated api.v1alpha1.tickets.CloseTicketActionResponse.is_closed is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=400
+   * <code>bool is_closed = 1 [json_name = "isClosed"];</code>
    * @return The isClosed.
    */
   @java.lang.Override
-  @java.lang.Deprecated public boolean getIsClosed() {
+  public boolean getIsClosed() {
     return isClosed_;
   }
 
@@ -379,23 +377,19 @@ private static final long serialVersionUID = 0L;
 
     private boolean isClosed_ ;
     /**
-     * <code>bool is_closed = 1 [json_name = "isClosed", deprecated = true];</code>
-     * @deprecated api.v1alpha1.tickets.CloseTicketActionResponse.is_closed is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=400
+     * <code>bool is_closed = 1 [json_name = "isClosed"];</code>
      * @return The isClosed.
      */
     @java.lang.Override
-    @java.lang.Deprecated public boolean getIsClosed() {
+    public boolean getIsClosed() {
       return isClosed_;
     }
     /**
-     * <code>bool is_closed = 1 [json_name = "isClosed", deprecated = true];</code>
-     * @deprecated api.v1alpha1.tickets.CloseTicketActionResponse.is_closed is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=400
+     * <code>bool is_closed = 1 [json_name = "isClosed"];</code>
      * @param value The isClosed to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setIsClosed(boolean value) {
+    public Builder setIsClosed(boolean value) {
 
       isClosed_ = value;
       bitField0_ |= 0x00000001;
@@ -403,12 +397,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool is_closed = 1 [json_name = "isClosed", deprecated = true];</code>
-     * @deprecated api.v1alpha1.tickets.CloseTicketActionResponse.is_closed is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=400
+     * <code>bool is_closed = 1 [json_name = "isClosed"];</code>
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder clearIsClosed() {
+    public Builder clearIsClosed() {
       bitField0_ = (bitField0_ & ~0x00000001);
       isClosed_ = false;
       onChanged();

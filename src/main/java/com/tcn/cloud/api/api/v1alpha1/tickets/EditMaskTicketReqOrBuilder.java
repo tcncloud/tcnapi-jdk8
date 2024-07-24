@@ -14,7 +14,7 @@ public interface EditMaskTicketReqOrBuilder extends
    *
    * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.EditMaskTicketReq.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=121
+   *     See api/v1alpha1/tickets/ticket.proto;l=119
    * @return The ticketSid.
    */
   @java.lang.Deprecated long getTicketSid();

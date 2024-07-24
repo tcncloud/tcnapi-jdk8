@@ -129,13 +129,11 @@ private static final long serialVersionUID = 0L;
    * To be Deprecated Later
    * </pre>
    *
-   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext", deprecated = true];</code>
-   * @deprecated api.commons.TicketAction.callback_context is deprecated.
-   *     See api/commons/tickets.proto;l=164
+   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
    * @return Whether the callbackContext field is set.
    */
   @java.lang.Override
-  @java.lang.Deprecated public boolean hasCallbackContext() {
+  public boolean hasCallbackContext() {
     return callbackContext_ != null;
   }
   /**
@@ -144,13 +142,11 @@ private static final long serialVersionUID = 0L;
    * To be Deprecated Later
    * </pre>
    *
-   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext", deprecated = true];</code>
-   * @deprecated api.commons.TicketAction.callback_context is deprecated.
-   *     See api/commons/tickets.proto;l=164
+   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
    * @return The callbackContext.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallbackContext getCallbackContext() {
+  public com.tcn.cloud.api.api.commons.CallbackContext getCallbackContext() {
     return callbackContext_ == null ? com.tcn.cloud.api.api.commons.CallbackContext.getDefaultInstance() : callbackContext_;
   }
   /**
@@ -159,10 +155,10 @@ private static final long serialVersionUID = 0L;
    * To be Deprecated Later
    * </pre>
    *
-   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext", deprecated = true];</code>
+   * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallbackContextOrBuilder getCallbackContextOrBuilder() {
+  public com.tcn.cloud.api.api.commons.CallbackContextOrBuilder getCallbackContextOrBuilder() {
     return callbackContext_ == null ? com.tcn.cloud.api.api.commons.CallbackContext.getDefaultInstance() : callbackContext_;
   }
 
@@ -175,7 +171,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 ticket_id = 4 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.commons.TicketAction.ticket_id is deprecated.
-   *     See api/commons/tickets.proto;l=166
+   *     See api/commons/tickets.proto;l=165
    * @return The ticketId.
    */
   @java.lang.Override
@@ -1591,12 +1587,10 @@ private static final long serialVersionUID = 0L;
      * To be Deprecated Later
      * </pre>
      *
-     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext", deprecated = true];</code>
-     * @deprecated api.commons.TicketAction.callback_context is deprecated.
-     *     See api/commons/tickets.proto;l=164
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
      * @return Whether the callbackContext field is set.
      */
-    @java.lang.Deprecated public boolean hasCallbackContext() {
+    public boolean hasCallbackContext() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
@@ -1605,12 +1599,10 @@ private static final long serialVersionUID = 0L;
      * To be Deprecated Later
      * </pre>
      *
-     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext", deprecated = true];</code>
-     * @deprecated api.commons.TicketAction.callback_context is deprecated.
-     *     See api/commons/tickets.proto;l=164
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
      * @return The callbackContext.
      */
-    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallbackContext getCallbackContext() {
+    public com.tcn.cloud.api.api.commons.CallbackContext getCallbackContext() {
       if (callbackContextBuilder_ == null) {
         return callbackContext_ == null ? com.tcn.cloud.api.api.commons.CallbackContext.getDefaultInstance() : callbackContext_;
       } else {
@@ -1623,9 +1615,9 @@ private static final long serialVersionUID = 0L;
      * To be Deprecated Later
      * </pre>
      *
-     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext", deprecated = true];</code>
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
      */
-    @java.lang.Deprecated public Builder setCallbackContext(com.tcn.cloud.api.api.commons.CallbackContext value) {
+    public Builder setCallbackContext(com.tcn.cloud.api.api.commons.CallbackContext value) {
       if (callbackContextBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1644,9 +1636,9 @@ private static final long serialVersionUID = 0L;
      * To be Deprecated Later
      * </pre>
      *
-     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext", deprecated = true];</code>
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
      */
-    @java.lang.Deprecated public Builder setCallbackContext(
+    public Builder setCallbackContext(
         com.tcn.cloud.api.api.commons.CallbackContext.Builder builderForValue) {
       if (callbackContextBuilder_ == null) {
         callbackContext_ = builderForValue.build();
@@ -1663,9 +1655,9 @@ private static final long serialVersionUID = 0L;
      * To be Deprecated Later
      * </pre>
      *
-     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext", deprecated = true];</code>
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
      */
-    @java.lang.Deprecated public Builder mergeCallbackContext(com.tcn.cloud.api.api.commons.CallbackContext value) {
+    public Builder mergeCallbackContext(com.tcn.cloud.api.api.commons.CallbackContext value) {
       if (callbackContextBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
           callbackContext_ != null &&
@@ -1687,9 +1679,9 @@ private static final long serialVersionUID = 0L;
      * To be Deprecated Later
      * </pre>
      *
-     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext", deprecated = true];</code>
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
      */
-    @java.lang.Deprecated public Builder clearCallbackContext() {
+    public Builder clearCallbackContext() {
       bitField0_ = (bitField0_ & ~0x00000004);
       callbackContext_ = null;
       if (callbackContextBuilder_ != null) {
@@ -1705,9 +1697,9 @@ private static final long serialVersionUID = 0L;
      * To be Deprecated Later
      * </pre>
      *
-     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext", deprecated = true];</code>
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
      */
-    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallbackContext.Builder getCallbackContextBuilder() {
+    public com.tcn.cloud.api.api.commons.CallbackContext.Builder getCallbackContextBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getCallbackContextFieldBuilder().getBuilder();
@@ -1718,9 +1710,9 @@ private static final long serialVersionUID = 0L;
      * To be Deprecated Later
      * </pre>
      *
-     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext", deprecated = true];</code>
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
      */
-    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CallbackContextOrBuilder getCallbackContextOrBuilder() {
+    public com.tcn.cloud.api.api.commons.CallbackContextOrBuilder getCallbackContextOrBuilder() {
       if (callbackContextBuilder_ != null) {
         return callbackContextBuilder_.getMessageOrBuilder();
       } else {
@@ -1734,7 +1726,7 @@ private static final long serialVersionUID = 0L;
      * To be Deprecated Later
      * </pre>
      *
-     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext", deprecated = true];</code>
+     * <code>.api.commons.CallbackContext callback_context = 3 [json_name = "callbackContext"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.CallbackContext, com.tcn.cloud.api.api.commons.CallbackContext.Builder, com.tcn.cloud.api.api.commons.CallbackContextOrBuilder> 
@@ -1758,7 +1750,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_id = 4 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.commons.TicketAction.ticket_id is deprecated.
-     *     See api/commons/tickets.proto;l=166
+     *     See api/commons/tickets.proto;l=165
      * @return The ticketId.
      */
     @java.lang.Override
@@ -1772,7 +1764,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_id = 4 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.commons.TicketAction.ticket_id is deprecated.
-     *     See api/commons/tickets.proto;l=166
+     *     See api/commons/tickets.proto;l=165
      * @param value The ticketId to set.
      * @return This builder for chaining.
      */
@@ -1790,7 +1782,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_id = 4 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.commons.TicketAction.ticket_id is deprecated.
-     *     See api/commons/tickets.proto;l=166
+     *     See api/commons/tickets.proto;l=165
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTicketId() {

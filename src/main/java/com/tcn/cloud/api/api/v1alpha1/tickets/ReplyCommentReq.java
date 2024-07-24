@@ -69,7 +69,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 ticket_sid = 2 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.ReplyCommentReq.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=326
+   *     See api/v1alpha1/tickets/ticket.proto;l=318
    * @return The ticketSid.
    */
   @java.lang.Override
@@ -696,7 +696,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_sid = 2 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.ReplyCommentReq.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=326
+     *     See api/v1alpha1/tickets/ticket.proto;l=318
      * @return The ticketSid.
      */
     @java.lang.Override
@@ -710,7 +710,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_sid = 2 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.ReplyCommentReq.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=326
+     *     See api/v1alpha1/tickets/ticket.proto;l=318
      * @param value The ticketSid to set.
      * @return This builder for chaining.
      */
@@ -728,7 +728,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_sid = 2 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.ReplyCommentReq.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=326
+     *     See api/v1alpha1/tickets/ticket.proto;l=318
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTicketSid() {

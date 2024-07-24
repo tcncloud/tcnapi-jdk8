@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.v1alpha1.tickets;
  *
  * Protobuf type {@code api.v1alpha1.tickets.CreateSelfAssignReq}
  */
-@java.lang.Deprecated public final class CreateSelfAssignReq extends
+public final class CreateSelfAssignReq extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.tickets.CreateSelfAssignReq)
     CreateSelfAssignReqOrBuilder {

@@ -12,10 +12,8 @@ public interface EnableProjectResOrBuilder extends
    * result of project mapped to ticket was successful
    * </pre>
    *
-   * <code>bool success = 1 [json_name = "success", deprecated = true];</code>
-   * @deprecated api.v1alpha1.tickets.EnableProjectRes.success is deprecated.
-   *     See api/v1alpha1/tickets/project.proto;l=22
+   * <code>bool success = 1 [json_name = "success"];</code>
    * @return The success.
    */
-  @java.lang.Deprecated boolean getSuccess();
+  boolean getSuccess();
 }

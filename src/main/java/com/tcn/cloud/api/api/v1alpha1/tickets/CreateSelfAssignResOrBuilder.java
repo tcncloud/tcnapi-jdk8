@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.tickets;
 
-@java.lang.Deprecated public interface CreateSelfAssignResOrBuilder extends
+public interface CreateSelfAssignResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.tickets.CreateSelfAssignRes)
     com.google.protobuf.MessageOrBuilder {
 

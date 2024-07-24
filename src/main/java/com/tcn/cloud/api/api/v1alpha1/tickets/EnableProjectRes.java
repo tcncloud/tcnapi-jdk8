@@ -49,13 +49,11 @@ private static final long serialVersionUID = 0L;
    * result of project mapped to ticket was successful
    * </pre>
    *
-   * <code>bool success = 1 [json_name = "success", deprecated = true];</code>
-   * @deprecated api.v1alpha1.tickets.EnableProjectRes.success is deprecated.
-   *     See api/v1alpha1/tickets/project.proto;l=22
+   * <code>bool success = 1 [json_name = "success"];</code>
    * @return The success.
    */
   @java.lang.Override
-  @java.lang.Deprecated public boolean getSuccess() {
+  public boolean getSuccess() {
     return success_;
   }
 
@@ -395,13 +393,11 @@ private static final long serialVersionUID = 0L;
      * result of project mapped to ticket was successful
      * </pre>
      *
-     * <code>bool success = 1 [json_name = "success", deprecated = true];</code>
-     * @deprecated api.v1alpha1.tickets.EnableProjectRes.success is deprecated.
-     *     See api/v1alpha1/tickets/project.proto;l=22
+     * <code>bool success = 1 [json_name = "success"];</code>
      * @return The success.
      */
     @java.lang.Override
-    @java.lang.Deprecated public boolean getSuccess() {
+    public boolean getSuccess() {
       return success_;
     }
     /**
@@ -409,13 +405,11 @@ private static final long serialVersionUID = 0L;
      * result of project mapped to ticket was successful
      * </pre>
      *
-     * <code>bool success = 1 [json_name = "success", deprecated = true];</code>
-     * @deprecated api.v1alpha1.tickets.EnableProjectRes.success is deprecated.
-     *     See api/v1alpha1/tickets/project.proto;l=22
+     * <code>bool success = 1 [json_name = "success"];</code>
      * @param value The success to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setSuccess(boolean value) {
+    public Builder setSuccess(boolean value) {
 
       success_ = value;
       bitField0_ |= 0x00000001;
@@ -427,12 +421,10 @@ private static final long serialVersionUID = 0L;
      * result of project mapped to ticket was successful
      * </pre>
      *
-     * <code>bool success = 1 [json_name = "success", deprecated = true];</code>
-     * @deprecated api.v1alpha1.tickets.EnableProjectRes.success is deprecated.
-     *     See api/v1alpha1/tickets/project.proto;l=22
+     * <code>bool success = 1 [json_name = "success"];</code>
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder clearSuccess() {
+    public Builder clearSuccess() {
       bitField0_ = (bitField0_ & ~0x00000001);
       success_ = false;
       onChanged();

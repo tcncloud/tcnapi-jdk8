@@ -8,10 +8,8 @@ public interface CloseTicketActionResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>bool is_closed = 1 [json_name = "isClosed", deprecated = true];</code>
-   * @deprecated api.v1alpha1.tickets.CloseTicketActionResponse.is_closed is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=400
+   * <code>bool is_closed = 1 [json_name = "isClosed"];</code>
    * @return The isClosed.
    */
-  @java.lang.Deprecated boolean getIsClosed();
+  boolean getIsClosed();
 }

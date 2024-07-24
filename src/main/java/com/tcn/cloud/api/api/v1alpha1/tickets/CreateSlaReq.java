@@ -160,13 +160,11 @@ private static final long serialVersionUID = 0L;
    * sla interval
    * </pre>
    *
-   * <code>int64 interval = 4 [json_name = "interval", deprecated = true];</code>
-   * @deprecated api.v1alpha1.tickets.CreateSlaReq.interval is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=281
+   * <code>int64 interval = 4 [json_name = "interval"];</code>
    * @return The interval.
    */
   @java.lang.Override
-  @java.lang.Deprecated public long getInterval() {
+  public long getInterval() {
     return interval_;
   }
 
@@ -880,13 +878,11 @@ private static final long serialVersionUID = 0L;
      * sla interval
      * </pre>
      *
-     * <code>int64 interval = 4 [json_name = "interval", deprecated = true];</code>
-     * @deprecated api.v1alpha1.tickets.CreateSlaReq.interval is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=281
+     * <code>int64 interval = 4 [json_name = "interval"];</code>
      * @return The interval.
      */
     @java.lang.Override
-    @java.lang.Deprecated public long getInterval() {
+    public long getInterval() {
       return interval_;
     }
     /**
@@ -894,13 +890,11 @@ private static final long serialVersionUID = 0L;
      * sla interval
      * </pre>
      *
-     * <code>int64 interval = 4 [json_name = "interval", deprecated = true];</code>
-     * @deprecated api.v1alpha1.tickets.CreateSlaReq.interval is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=281
+     * <code>int64 interval = 4 [json_name = "interval"];</code>
      * @param value The interval to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setInterval(long value) {
+    public Builder setInterval(long value) {
 
       interval_ = value;
       bitField0_ |= 0x00000008;
@@ -912,12 +906,10 @@ private static final long serialVersionUID = 0L;
      * sla interval
      * </pre>
      *
-     * <code>int64 interval = 4 [json_name = "interval", deprecated = true];</code>
-     * @deprecated api.v1alpha1.tickets.CreateSlaReq.interval is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=281
+     * <code>int64 interval = 4 [json_name = "interval"];</code>
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder clearInterval() {
+    public Builder clearInterval() {
       bitField0_ = (bitField0_ & ~0x00000008);
       interval_ = 0L;
       onChanged();

@@ -74,7 +74,7 @@ public interface TicketAuditLogOrBuilder extends
    *
    * <code>int64 ticket_sid = 4 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.commons.TicketAuditLog.ticket_sid is deprecated.
-   *     See api/commons/tickets.proto;l=373
+   *     See api/commons/tickets.proto;l=370
    * @return The ticketSid.
    */
   @java.lang.Deprecated long getTicketSid();

@@ -10,7 +10,7 @@ public interface CloseTicketOrBuilder extends
   /**
    * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.commons.CloseTicket.ticket_sid is deprecated.
-   *     See api/commons/tickets.proto;l=273
+   *     See api/commons/tickets.proto;l=271
    * @return The ticketSid.
    */
   @java.lang.Deprecated long getTicketSid();

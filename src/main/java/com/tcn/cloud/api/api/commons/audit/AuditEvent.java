@@ -59,6 +59,7 @@ private static final long serialVersionUID = 0L;
     VANA_BILLING_REPORT_EVENT(202),
     VANA_FLAG_SUMMARY_EVENT(203),
     VANA_PHRASE_CORRECTION_EVENT(204),
+    VANA_CREATE_TRANSCRIPT_EVENT(205),
     OMNICHANNEL_CREATE_PROJECT_EVENT(300),
     OMNICHANNEL_CREATE_CAMPAIGN_EVENT(301),
     OMNICHANNEL_DAILY_PROJECT_REPORT_EVENT(302),
@@ -191,6 +192,7 @@ private static final long serialVersionUID = 0L;
         case 202: return VANA_BILLING_REPORT_EVENT;
         case 203: return VANA_FLAG_SUMMARY_EVENT;
         case 204: return VANA_PHRASE_CORRECTION_EVENT;
+        case 205: return VANA_CREATE_TRANSCRIPT_EVENT;
         case 300: return OMNICHANNEL_CREATE_PROJECT_EVENT;
         case 301: return OMNICHANNEL_CREATE_CAMPAIGN_EVENT;
         case 302: return OMNICHANNEL_DAILY_PROJECT_REPORT_EVENT;
@@ -781,6 +783,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_;
     }
     return com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent.getDefaultInstance();
+  }
+
+  public static final int VANA_CREATE_TRANSCRIPT_EVENT_FIELD_NUMBER = 205;
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent vana_create_transcript_event = 205 [json_name = "vanaCreateTranscriptEvent"];</code>
+   * @return Whether the vanaCreateTranscriptEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasVanaCreateTranscriptEvent() {
+    return eventCase_ == 205;
+  }
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent vana_create_transcript_event = 205 [json_name = "vanaCreateTranscriptEvent"];</code>
+   * @return The vanaCreateTranscriptEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent getVanaCreateTranscriptEvent() {
+    if (eventCase_ == 205) {
+       return (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent vana_create_transcript_event = 205 [json_name = "vanaCreateTranscriptEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEventOrBuilder getVanaCreateTranscriptEventOrBuilder() {
+    if (eventCase_ == 205) {
+       return (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.getDefaultInstance();
   }
 
   public static final int OMNICHANNEL_CREATE_PROJECT_EVENT_FIELD_NUMBER = 300;
@@ -4643,7 +4676,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=241
+   *     See api/commons/audit/audit.proto;l=242
    * @return Whether the billingCreateInvoiceEvent field is set.
    */
   @java.lang.Override
@@ -4653,7 +4686,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=241
+   *     See api/commons/audit/audit.proto;l=242
    * @return The billingCreateInvoiceEvent.
    */
   @java.lang.Override
@@ -4740,7 +4773,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=244
+   *     See api/commons/audit/audit.proto;l=245
    * @return Whether the billingDeleteInvoiceEvent field is set.
    */
   @java.lang.Override
@@ -4750,7 +4783,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=244
+   *     See api/commons/audit/audit.proto;l=245
    * @return The billingDeleteInvoiceEvent.
    */
   @java.lang.Override
@@ -4868,7 +4901,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=248
+   *     See api/commons/audit/audit.proto;l=249
    * @return Whether the billingUpdateInvoiceEvent field is set.
    */
   @java.lang.Override
@@ -4878,7 +4911,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=248
+   *     See api/commons/audit/audit.proto;l=249
    * @return The billingUpdateInvoiceEvent.
    */
   @java.lang.Override
@@ -5283,6 +5316,9 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 204) {
       output.writeMessage(204, (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_);
     }
+    if (eventCase_ == 205) {
+      output.writeMessage(205, (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent) event_);
+    }
     if (eventCase_ == 300) {
       output.writeMessage(300, (com.tcn.cloud.api.api.commons.audit.OmnichannelCreateProjectEvent) event_);
     }
@@ -5662,6 +5698,10 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 204) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(204, (com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEvent) event_);
+    }
+    if (eventCase_ == 205) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(205, (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent) event_);
     }
     if (eventCase_ == 300) {
       size += com.google.protobuf.CodedOutputStream
@@ -6154,6 +6194,10 @@ private static final long serialVersionUID = 0L;
         if (!getVanaPhraseCorrectionEvent()
             .equals(other.getVanaPhraseCorrectionEvent())) return false;
         break;
+      case 205:
+        if (!getVanaCreateTranscriptEvent()
+            .equals(other.getVanaCreateTranscriptEvent())) return false;
+        break;
       case 300:
         if (!getOmnichannelCreateProjectEvent()
             .equals(other.getOmnichannelCreateProjectEvent())) return false;
@@ -6642,6 +6686,10 @@ private static final long serialVersionUID = 0L;
       case 204:
         hash = (37 * hash) + VANA_PHRASE_CORRECTION_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getVanaPhraseCorrectionEvent().hashCode();
+        break;
+      case 205:
+        hash = (37 * hash) + VANA_CREATE_TRANSCRIPT_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getVanaCreateTranscriptEvent().hashCode();
         break;
       case 300:
         hash = (37 * hash) + OMNICHANNEL_CREATE_PROJECT_EVENT_FIELD_NUMBER;
@@ -7248,6 +7296,9 @@ private static final long serialVersionUID = 0L;
       if (vanaPhraseCorrectionEventBuilder_ != null) {
         vanaPhraseCorrectionEventBuilder_.clear();
       }
+      if (vanaCreateTranscriptEventBuilder_ != null) {
+        vanaCreateTranscriptEventBuilder_.clear();
+      }
       if (omnichannelCreateProjectEventBuilder_ != null) {
         omnichannelCreateProjectEventBuilder_.clear();
       }
@@ -7674,6 +7725,10 @@ private static final long serialVersionUID = 0L;
       if (eventCase_ == 204 &&
           vanaPhraseCorrectionEventBuilder_ != null) {
         result.event_ = vanaPhraseCorrectionEventBuilder_.build();
+      }
+      if (eventCase_ == 205 &&
+          vanaCreateTranscriptEventBuilder_ != null) {
+        result.event_ = vanaCreateTranscriptEventBuilder_.build();
       }
       if (eventCase_ == 300 &&
           omnichannelCreateProjectEventBuilder_ != null) {
@@ -8206,6 +8261,10 @@ private static final long serialVersionUID = 0L;
         }
         case VANA_PHRASE_CORRECTION_EVENT: {
           mergeVanaPhraseCorrectionEvent(other.getVanaPhraseCorrectionEvent());
+          break;
+        }
+        case VANA_CREATE_TRANSCRIPT_EVENT: {
+          mergeVanaCreateTranscriptEvent(other.getVanaCreateTranscriptEvent());
           break;
         }
         case OMNICHANNEL_CREATE_PROJECT_EVENT: {
@@ -8748,6 +8807,13 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 204;
               break;
             } // case 1634
+            case 1642: {
+              input.readMessage(
+                  getVanaCreateTranscriptEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 205;
+              break;
+            } // case 1642
             case 2402: {
               input.readMessage(
                   getOmnichannelCreateProjectEventFieldBuilder().getBuilder(),
@@ -11079,6 +11145,148 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 204;
       onChanged();
       return vanaPhraseCorrectionEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Builder, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEventOrBuilder> vanaCreateTranscriptEventBuilder_;
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent vana_create_transcript_event = 205 [json_name = "vanaCreateTranscriptEvent"];</code>
+     * @return Whether the vanaCreateTranscriptEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasVanaCreateTranscriptEvent() {
+      return eventCase_ == 205;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent vana_create_transcript_event = 205 [json_name = "vanaCreateTranscriptEvent"];</code>
+     * @return The vanaCreateTranscriptEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent getVanaCreateTranscriptEvent() {
+      if (vanaCreateTranscriptEventBuilder_ == null) {
+        if (eventCase_ == 205) {
+          return (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 205) {
+          return vanaCreateTranscriptEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent vana_create_transcript_event = 205 [json_name = "vanaCreateTranscriptEvent"];</code>
+     */
+    public Builder setVanaCreateTranscriptEvent(com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent value) {
+      if (vanaCreateTranscriptEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        vanaCreateTranscriptEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 205;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent vana_create_transcript_event = 205 [json_name = "vanaCreateTranscriptEvent"];</code>
+     */
+    public Builder setVanaCreateTranscriptEvent(
+        com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Builder builderForValue) {
+      if (vanaCreateTranscriptEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        vanaCreateTranscriptEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 205;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent vana_create_transcript_event = 205 [json_name = "vanaCreateTranscriptEvent"];</code>
+     */
+    public Builder mergeVanaCreateTranscriptEvent(com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent value) {
+      if (vanaCreateTranscriptEventBuilder_ == null) {
+        if (eventCase_ == 205 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 205) {
+          vanaCreateTranscriptEventBuilder_.mergeFrom(value);
+        } else {
+          vanaCreateTranscriptEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 205;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent vana_create_transcript_event = 205 [json_name = "vanaCreateTranscriptEvent"];</code>
+     */
+    public Builder clearVanaCreateTranscriptEvent() {
+      if (vanaCreateTranscriptEventBuilder_ == null) {
+        if (eventCase_ == 205) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 205) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        vanaCreateTranscriptEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent vana_create_transcript_event = 205 [json_name = "vanaCreateTranscriptEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Builder getVanaCreateTranscriptEventBuilder() {
+      return getVanaCreateTranscriptEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent vana_create_transcript_event = 205 [json_name = "vanaCreateTranscriptEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEventOrBuilder getVanaCreateTranscriptEventOrBuilder() {
+      if ((eventCase_ == 205) && (vanaCreateTranscriptEventBuilder_ != null)) {
+        return vanaCreateTranscriptEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 205) {
+          return (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent vana_create_transcript_event = 205 [json_name = "vanaCreateTranscriptEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Builder, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEventOrBuilder> 
+        getVanaCreateTranscriptEventFieldBuilder() {
+      if (vanaCreateTranscriptEventBuilder_ == null) {
+        if (!(eventCase_ == 205)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.getDefaultInstance();
+        }
+        vanaCreateTranscriptEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Builder, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 205;
+      onChanged();
+      return vanaCreateTranscriptEventBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -27113,7 +27321,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=241
+     *     See api/commons/audit/audit.proto;l=242
      * @return Whether the billingCreateInvoiceEvent field is set.
      */
     @java.lang.Override
@@ -27123,7 +27331,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=241
+     *     See api/commons/audit/audit.proto;l=242
      * @return The billingCreateInvoiceEvent.
      */
     @java.lang.Override
@@ -27543,7 +27751,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=244
+     *     See api/commons/audit/audit.proto;l=245
      * @return Whether the billingDeleteInvoiceEvent field is set.
      */
     @java.lang.Override
@@ -27553,7 +27761,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=244
+     *     See api/commons/audit/audit.proto;l=245
      * @return The billingDeleteInvoiceEvent.
      */
     @java.lang.Override
@@ -28115,7 +28323,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=248
+     *     See api/commons/audit/audit.proto;l=249
      * @return Whether the billingUpdateInvoiceEvent field is set.
      */
     @java.lang.Override
@@ -28125,7 +28333,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=248
+     *     See api/commons/audit/audit.proto;l=249
      * @return The billingUpdateInvoiceEvent.
      */
     @java.lang.Override

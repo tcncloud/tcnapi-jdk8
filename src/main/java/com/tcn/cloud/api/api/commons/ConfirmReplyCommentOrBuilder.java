@@ -12,10 +12,8 @@ public interface ConfirmReplyCommentOrBuilder extends
    * boolean value to confirm edit comment
    * </pre>
    *
-   * <code>bool is_created = 1 [json_name = "isCreated", deprecated = true];</code>
-   * @deprecated api.commons.ConfirmReplyComment.is_created is deprecated.
-   *     See api/commons/tickets.proto;l=361
+   * <code>bool is_created = 1 [json_name = "isCreated"];</code>
    * @return The isCreated.
    */
-  @java.lang.Deprecated boolean getIsCreated();
+  boolean getIsCreated();
 }
