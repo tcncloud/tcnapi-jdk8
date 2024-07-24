@@ -732,6 +732,161 @@ public final class BillingServiceGrpc {
     return getUpdateDefaultRateDefinitionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuRequest,
+      com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuResponse> getCreateSkuMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateSku",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuRequest,
+      com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuResponse> getCreateSkuMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuRequest, com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuResponse> getCreateSkuMethod;
+    if ((getCreateSkuMethod = BillingServiceGrpc.getCreateSkuMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getCreateSkuMethod = BillingServiceGrpc.getCreateSkuMethod) == null) {
+          BillingServiceGrpc.getCreateSkuMethod = getCreateSkuMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuRequest, com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSku"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("CreateSku"))
+              .build();
+        }
+      }
+    }
+    return getCreateSkuMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuRequest,
+      com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuResponse> getDeleteSkuMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteSku",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuRequest,
+      com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuResponse> getDeleteSkuMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuRequest, com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuResponse> getDeleteSkuMethod;
+    if ((getDeleteSkuMethod = BillingServiceGrpc.getDeleteSkuMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getDeleteSkuMethod = BillingServiceGrpc.getDeleteSkuMethod) == null) {
+          BillingServiceGrpc.getDeleteSkuMethod = getDeleteSkuMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuRequest, com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteSku"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("DeleteSku"))
+              .build();
+        }
+      }
+    }
+    return getDeleteSkuMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.GetSkuRequest,
+      com.tcn.cloud.api.services.billing.v1alpha3.GetSkuResponse> getGetSkuMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSku",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha3.GetSkuRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha3.GetSkuResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.GetSkuRequest,
+      com.tcn.cloud.api.services.billing.v1alpha3.GetSkuResponse> getGetSkuMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.GetSkuRequest, com.tcn.cloud.api.services.billing.v1alpha3.GetSkuResponse> getGetSkuMethod;
+    if ((getGetSkuMethod = BillingServiceGrpc.getGetSkuMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getGetSkuMethod = BillingServiceGrpc.getGetSkuMethod) == null) {
+          BillingServiceGrpc.getGetSkuMethod = getGetSkuMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha3.GetSkuRequest, com.tcn.cloud.api.services.billing.v1alpha3.GetSkuResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSku"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha3.GetSkuRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha3.GetSkuResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("GetSku"))
+              .build();
+        }
+      }
+    }
+    return getGetSkuMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.ListSkusRequest,
+      com.tcn.cloud.api.services.billing.v1alpha3.ListSkusResponse> getListSkusMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListSkus",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha3.ListSkusRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha3.ListSkusResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.ListSkusRequest,
+      com.tcn.cloud.api.services.billing.v1alpha3.ListSkusResponse> getListSkusMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.ListSkusRequest, com.tcn.cloud.api.services.billing.v1alpha3.ListSkusResponse> getListSkusMethod;
+    if ((getListSkusMethod = BillingServiceGrpc.getListSkusMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getListSkusMethod = BillingServiceGrpc.getListSkusMethod) == null) {
+          BillingServiceGrpc.getListSkusMethod = getListSkusMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha3.ListSkusRequest, com.tcn.cloud.api.services.billing.v1alpha3.ListSkusResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSkus"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha3.ListSkusRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha3.ListSkusResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("ListSkus"))
+              .build();
+        }
+      }
+    }
+    return getListSkusMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuRequest,
+      com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuResponse> getUpdateSkuMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateSku",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuRequest,
+      com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuResponse> getUpdateSkuMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuRequest, com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuResponse> getUpdateSkuMethod;
+    if ((getUpdateSkuMethod = BillingServiceGrpc.getUpdateSkuMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getUpdateSkuMethod = BillingServiceGrpc.getUpdateSkuMethod) == null) {
+          BillingServiceGrpc.getUpdateSkuMethod = getUpdateSkuMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuRequest, com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSku"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("UpdateSku"))
+              .build();
+        }
+      }
+    }
+    return getUpdateSkuMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha3.ExportInvoiceRequest,
       com.tcn.cloud.api.services.billing.v1alpha3.ExportInvoiceResponse> getExportInvoiceMethod;
 
@@ -1240,6 +1395,99 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Creates a new SKU for a REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void createSku(com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSkuMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes a SKU.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The SKU was not found.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void deleteSku(com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSkuMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets a SKU.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The SKU was not found.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void getSku(com.tcn.cloud.api.services.billing.v1alpha3.GetSkuRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.GetSkuResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSkuMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists SKUs.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void listSkus(com.tcn.cloud.api.services.billing.v1alpha3.ListSkusRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.ListSkusResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSkusMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates a SKU.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The SKU was not found.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void updateSku(com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSkuMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Exports an invoice.
      * Required permissions:
      *   TCN_BILLING_ADMIN
@@ -1739,6 +1987,104 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Creates a new SKU for a REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void createSku(com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateSkuMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes a SKU.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The SKU was not found.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void deleteSku(com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteSkuMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets a SKU.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The SKU was not found.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void getSku(com.tcn.cloud.api.services.billing.v1alpha3.GetSkuRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.GetSkuResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetSkuMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists SKUs.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void listSkus(com.tcn.cloud.api.services.billing.v1alpha3.ListSkusRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.ListSkusResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListSkusMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates a SKU.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The SKU was not found.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void updateSku(com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateSkuMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Exports an invoice.
      * Required permissions:
      *   TCN_BILLING_ADMIN
@@ -2197,6 +2543,99 @@ public final class BillingServiceGrpc {
     public com.tcn.cloud.api.services.billing.v1alpha3.UpdateDefaultRateDefinitionResponse updateDefaultRateDefinition(com.tcn.cloud.api.services.billing.v1alpha3.UpdateDefaultRateDefinitionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateDefaultRateDefinitionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a new SKU for a REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuResponse createSku(com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateSkuMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a SKU.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The SKU was not found.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuResponse deleteSku(com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteSkuMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a SKU.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The SKU was not found.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha3.GetSkuResponse getSku(com.tcn.cloud.api.services.billing.v1alpha3.GetSkuRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetSkuMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists SKUs.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha3.ListSkusResponse listSkus(com.tcn.cloud.api.services.billing.v1alpha3.ListSkusRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListSkusMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates a SKU.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The SKU was not found.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuResponse updateSku(com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateSkuMethod(), getCallOptions(), request);
     }
 
     /**
@@ -2685,6 +3124,104 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Creates a new SKU for a REGION.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuResponse> createSku(
+        com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateSkuMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a SKU.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The SKU was not found.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuResponse> deleteSku(
+        com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteSkuMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a SKU.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The SKU was not found.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha3.GetSkuResponse> getSku(
+        com.tcn.cloud.api.services.billing.v1alpha3.GetSkuRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetSkuMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists SKUs.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha3.ListSkusResponse> listSkus(
+        com.tcn.cloud.api.services.billing.v1alpha3.ListSkusRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListSkusMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates a SKU.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.NotFound: The SKU was not found.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuResponse> updateSku(
+        com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateSkuMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Exports an invoice.
      * Required permissions:
      *   TCN_BILLING_ADMIN
@@ -2725,7 +3262,12 @@ public final class BillingServiceGrpc {
   private static final int METHODID_GET_DEFAULT_RATE_DEFINITION = 20;
   private static final int METHODID_LIST_DEFAULT_RATE_DEFINITIONS = 21;
   private static final int METHODID_UPDATE_DEFAULT_RATE_DEFINITION = 22;
-  private static final int METHODID_EXPORT_INVOICE = 23;
+  private static final int METHODID_CREATE_SKU = 23;
+  private static final int METHODID_DELETE_SKU = 24;
+  private static final int METHODID_GET_SKU = 25;
+  private static final int METHODID_LIST_SKUS = 26;
+  private static final int METHODID_UPDATE_SKU = 27;
+  private static final int METHODID_EXPORT_INVOICE = 28;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2835,6 +3377,26 @@ public final class BillingServiceGrpc {
         case METHODID_UPDATE_DEFAULT_RATE_DEFINITION:
           serviceImpl.updateDefaultRateDefinition((com.tcn.cloud.api.services.billing.v1alpha3.UpdateDefaultRateDefinitionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.UpdateDefaultRateDefinitionResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_SKU:
+          serviceImpl.createSku((com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_SKU:
+          serviceImpl.deleteSku((com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuResponse>) responseObserver);
+          break;
+        case METHODID_GET_SKU:
+          serviceImpl.getSku((com.tcn.cloud.api.services.billing.v1alpha3.GetSkuRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.GetSkuResponse>) responseObserver);
+          break;
+        case METHODID_LIST_SKUS:
+          serviceImpl.listSkus((com.tcn.cloud.api.services.billing.v1alpha3.ListSkusRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.ListSkusResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_SKU:
+          serviceImpl.updateSku((com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuResponse>) responseObserver);
           break;
         case METHODID_EXPORT_INVOICE:
           serviceImpl.exportInvoice((com.tcn.cloud.api.services.billing.v1alpha3.ExportInvoiceRequest) request,
@@ -3020,6 +3582,41 @@ public final class BillingServiceGrpc {
               com.tcn.cloud.api.services.billing.v1alpha3.UpdateDefaultRateDefinitionResponse>(
                 service, METHODID_UPDATE_DEFAULT_RATE_DEFINITION)))
         .addMethod(
+          getCreateSkuMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuRequest,
+              com.tcn.cloud.api.services.billing.v1alpha3.CreateSkuResponse>(
+                service, METHODID_CREATE_SKU)))
+        .addMethod(
+          getDeleteSkuMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuRequest,
+              com.tcn.cloud.api.services.billing.v1alpha3.DeleteSkuResponse>(
+                service, METHODID_DELETE_SKU)))
+        .addMethod(
+          getGetSkuMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha3.GetSkuRequest,
+              com.tcn.cloud.api.services.billing.v1alpha3.GetSkuResponse>(
+                service, METHODID_GET_SKU)))
+        .addMethod(
+          getListSkusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha3.ListSkusRequest,
+              com.tcn.cloud.api.services.billing.v1alpha3.ListSkusResponse>(
+                service, METHODID_LIST_SKUS)))
+        .addMethod(
+          getUpdateSkuMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuRequest,
+              com.tcn.cloud.api.services.billing.v1alpha3.UpdateSkuResponse>(
+                service, METHODID_UPDATE_SKU)))
+        .addMethod(
           getExportInvoiceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -3097,6 +3694,11 @@ public final class BillingServiceGrpc {
               .addMethod(getGetDefaultRateDefinitionMethod())
               .addMethod(getListDefaultRateDefinitionsMethod())
               .addMethod(getUpdateDefaultRateDefinitionMethod())
+              .addMethod(getCreateSkuMethod())
+              .addMethod(getDeleteSkuMethod())
+              .addMethod(getGetSkuMethod())
+              .addMethod(getListSkusMethod())
+              .addMethod(getUpdateSkuMethod())
               .addMethod(getExportInvoiceMethod())
               .build();
         }

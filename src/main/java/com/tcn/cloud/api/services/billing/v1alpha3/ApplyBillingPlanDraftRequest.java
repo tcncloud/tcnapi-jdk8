@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * Optional. If not set, apply to all orgs.
+   * Optional. If not set, apply to all orgs; unless draft is org-specific.
    * </pre>
    *
    * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
@@ -124,7 +124,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. If not set, apply to all orgs.
+   * Optional. If not set, apply to all orgs; unless draft is org-specific.
    * </pre>
    *
    * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
@@ -135,7 +135,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. If not set, apply to all orgs.
+   * Optional. If not set, apply to all orgs; unless draft is org-specific.
    * </pre>
    *
    * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. If not set, apply to all orgs.
+   * Optional. If not set, apply to all orgs; unless draft is org-specific.
    * </pre>
    *
    * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
@@ -761,7 +761,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. If not set, apply to all orgs.
+     * Optional. If not set, apply to all orgs; unless draft is org-specific.
      * </pre>
      *
      * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
@@ -774,7 +774,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. If not set, apply to all orgs.
+     * Optional. If not set, apply to all orgs; unless draft is org-specific.
      * </pre>
      *
      * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
@@ -785,7 +785,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. If not set, apply to all orgs.
+     * Optional. If not set, apply to all orgs; unless draft is org-specific.
      * </pre>
      *
      * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
@@ -797,7 +797,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. If not set, apply to all orgs.
+     * Optional. If not set, apply to all orgs; unless draft is org-specific.
      * </pre>
      *
      * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
@@ -810,7 +810,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. If not set, apply to all orgs.
+     * Optional. If not set, apply to all orgs; unless draft is org-specific.
      * </pre>
      *
      * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
@@ -829,7 +829,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. If not set, apply to all orgs.
+     * Optional. If not set, apply to all orgs; unless draft is org-specific.
      * </pre>
      *
      * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
@@ -847,7 +847,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. If not set, apply to all orgs.
+     * Optional. If not set, apply to all orgs; unless draft is org-specific.
      * </pre>
      *
      * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
@@ -865,7 +865,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. If not set, apply to all orgs.
+     * Optional. If not set, apply to all orgs; unless draft is org-specific.
      * </pre>
      *
      * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
@@ -880,7 +880,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. If not set, apply to all orgs.
+     * Optional. If not set, apply to all orgs; unless draft is org-specific.
      * </pre>
      *
      * <code>repeated string org_ids = 3 [json_name = "orgIds"];</code>
