@@ -119,4 +119,26 @@ public interface BillingPlanOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUserIdBytes();
+
+  /**
+   * <pre>
+   * Optional. if set, this billing plan is for the org, and as
+   * a draft can only be applied to that org.
+   * </pre>
+   *
+   * <code>string org_id = 10 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  java.lang.String getOrgId();
+  /**
+   * <pre>
+   * Optional. if set, this billing plan is for the org, and as
+   * a draft can only be applied to that org.
+   * </pre>
+   *
+   * <code>string org_id = 10 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  com.google.protobuf.ByteString
+      getOrgIdBytes();
 }
