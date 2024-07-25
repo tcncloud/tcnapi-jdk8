@@ -551,11 +551,14 @@ public final class TicketProto {
       "commons.TicketR\007tickets\"r\n\tEntityRef\022\025\n\006" +
       "org_id\030\001 \001(\tR\005orgId\022\033\n\tregion_id\030\002 \001(\tR\010" +
       "regionId\022\037\n\013ticket_code\030\003 \001(\tR\nticketCod" +
-      "e\022\020\n\003uri\030\004 \001(\tR\003uriB\247\001\n&com.tcn.cloud.ap" +
-      "i.api.v1alpha1.ticketsB\013TicketProtoP\001\242\002\003" +
-      "AVT\252\002\024Api.V1alpha1.Tickets\312\002\024Api\\V1alpha" +
-      "1\\Tickets\342\002 Api\\V1alpha1\\Tickets\\GPBMeta" +
-      "data\352\002\026Api::V1alpha1::Ticketsb\006proto3"
+      "e\022\020\n\003uri\030\004 \001(\tR\003uri*?\n\013ActionTypes\022\006\n\002NA" +
+      "\020\000\022\014\n\010Callback\020\001\022\r\n\tEmailback\020\002\022\013\n\007Smsba" +
+      "ck\020\003*3\n\rSLAConditions\022\010\n\004None\020\000\022\013\n\007Respo" +
+      "nd\020\001\022\013\n\007Resolve\020\002B\247\001\n&com.tcn.cloud.api." +
+      "api.v1alpha1.ticketsB\013TicketProtoP\001\242\002\003AV" +
+      "T\252\002\024Api.V1alpha1.Tickets\312\002\024Api\\V1alpha1\\" +
+      "Tickets\342\002 Api\\V1alpha1\\Tickets\\GPBMetada" +
+      "ta\352\002\026Api::V1alpha1::Ticketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
