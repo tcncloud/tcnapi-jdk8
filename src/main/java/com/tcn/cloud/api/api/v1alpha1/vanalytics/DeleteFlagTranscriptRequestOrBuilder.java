@@ -58,31 +58,82 @@ public interface DeleteFlagTranscriptRequestOrBuilder extends
 
   /**
    * <pre>
-   * Optional. Delete all flags transcripts associated
-   * with the flags returned by this search query.
+   * Optional. Call start time to filter on.
    * </pre>
    *
-   * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
-   * @return Whether the query field is set.
+   * <code>.api.v1alpha1.vanalytics.TimestampExpr call_start_time = 3 [json_name = "callStartTime"];</code>
+   * @return Whether the callStartTime field is set.
    */
-  boolean hasQuery();
+  boolean hasCallStartTime();
   /**
    * <pre>
-   * Optional. Delete all flags transcripts associated
-   * with the flags returned by this search query.
+   * Optional. Call start time to filter on.
    * </pre>
    *
-   * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
-   * @return The query.
+   * <code>.api.v1alpha1.vanalytics.TimestampExpr call_start_time = 3 [json_name = "callStartTime"];</code>
+   * @return The callStartTime.
    */
-  com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest getQuery();
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr getCallStartTime();
   /**
    * <pre>
-   * Optional. Delete all flags transcripts associated
-   * with the flags returned by this search query.
+   * Optional. Call start time to filter on.
    * </pre>
    *
-   * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+   * <code>.api.v1alpha1.vanalytics.TimestampExpr call_start_time = 3 [json_name = "callStartTime"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequestOrBuilder getQueryOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExprOrBuilder getCallStartTimeOrBuilder();
+
+  /**
+   * <pre>
+   * Optional. Queries review status.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus review_status = 4 [json_name = "reviewStatus"];</code>
+   * @return Whether the reviewStatus field is set.
+   */
+  boolean hasReviewStatus();
+  /**
+   * <pre>
+   * Optional. Queries review status.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus review_status = 4 [json_name = "reviewStatus"];</code>
+   * @return The reviewStatus.
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus getReviewStatus();
+  /**
+   * <pre>
+   * Optional. Queries review status.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus review_status = 4 [json_name = "reviewStatus"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatusOrBuilder getReviewStatusOrBuilder();
+
+  /**
+   * <pre>
+   * Optional. Queries count.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count = 5 [json_name = "count"];</code>
+   * @return Whether the count field is set.
+   */
+  boolean hasCount();
+  /**
+   * <pre>
+   * Optional. Queries count.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count = 5 [json_name = "count"];</code>
+   * @return The count.
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count getCount();
+  /**
+   * <pre>
+   * Optional. Queries count.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count = 5 [json_name = "count"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.CountOrBuilder getCountOrBuilder();
 }

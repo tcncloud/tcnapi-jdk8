@@ -44,6 +44,2489 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Builder.class);
   }
 
+  public interface ReviewStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional. Must have any provided review status.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+     * @return A list containing the any.
+     */
+    java.util.List<com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus> getAnyList();
+    /**
+     * <pre>
+     * Optional. Must have any provided review status.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+     * @return The count of any.
+     */
+    int getAnyCount();
+    /**
+     * <pre>
+     * Optional. Must have any provided review status.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+     * @param index The index of the element to return.
+     * @return The any at the given index.
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus getAny(int index);
+    /**
+     * <pre>
+     * Optional. Must have any provided review status.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+     * @return A list containing the enum numeric values on the wire for any.
+     */
+    java.util.List<java.lang.Integer>
+    getAnyValueList();
+    /**
+     * <pre>
+     * Optional. Must have any provided review status.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of any at the given index.
+     */
+    int getAnyValue(int index);
+  }
+  /**
+   * <pre>
+   * ReviewStatus defines a query on review status.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus}
+   */
+  public static final class ReviewStatus extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus)
+      ReviewStatusOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ReviewStatus.newBuilder() to construct.
+    private ReviewStatus(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ReviewStatus() {
+      any_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReviewStatus();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptProto.internal_static_api_v1alpha1_vanalytics_DeleteFlagTranscriptRequest_ReviewStatus_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptProto.internal_static_api_v1alpha1_vanalytics_DeleteFlagTranscriptRequest_ReviewStatus_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.Builder.class);
+    }
+
+    public static final int ANY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<java.lang.Integer> any_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus> any_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus>() {
+              public com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus convert(java.lang.Integer from) {
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus result = com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus.forNumber(from);
+                return result == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * Optional. Must have any provided review status.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+     * @return A list containing the any.
+     */
+    @java.lang.Override
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus> getAnyList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus>(any_, any_converter_);
+    }
+    /**
+     * <pre>
+     * Optional. Must have any provided review status.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+     * @return The count of any.
+     */
+    @java.lang.Override
+    public int getAnyCount() {
+      return any_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Must have any provided review status.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+     * @param index The index of the element to return.
+     * @return The any at the given index.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus getAny(int index) {
+      return any_converter_.convert(any_.get(index));
+    }
+    /**
+     * <pre>
+     * Optional. Must have any provided review status.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+     * @return A list containing the enum numeric values on the wire for any.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getAnyValueList() {
+      return any_;
+    }
+    /**
+     * <pre>
+     * Optional. Must have any provided review status.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of any at the given index.
+     */
+    @java.lang.Override
+    public int getAnyValue(int index) {
+      return any_.get(index);
+    }
+    private int anyMemoizedSerializedSize;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getAnyList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(anyMemoizedSerializedSize);
+      }
+      for (int i = 0; i < any_.size(); i++) {
+        output.writeEnumNoTag(any_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < any_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(any_.get(i));
+        }
+        size += dataSize;
+        if (!getAnyList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }anyMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus) obj;
+
+      if (!any_.equals(other.any_)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAnyCount() > 0) {
+        hash = (37 * hash) + ANY_FIELD_NUMBER;
+        hash = (53 * hash) + any_.hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ReviewStatus defines a query on review status.
+     * </pre>
+     *
+     * Protobuf type {@code api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus)
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatusOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptProto.internal_static_api_v1alpha1_vanalytics_DeleteFlagTranscriptRequest_ReviewStatus_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptProto.internal_static_api_v1alpha1_vanalytics_DeleteFlagTranscriptRequest_ReviewStatus_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        any_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptProto.internal_static_api_v1alpha1_vanalytics_DeleteFlagTranscriptRequest_ReviewStatus_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus build() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          any_ = java.util.Collections.unmodifiableList(any_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.any_ = any_;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.getDefaultInstance()) return this;
+        if (!other.any_.isEmpty()) {
+          if (any_.isEmpty()) {
+            any_ = other.any_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureAnyIsMutable();
+            any_.addAll(other.any_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int tmpRaw = input.readEnum();
+                ensureAnyIsMutable();
+                any_.add(tmpRaw);
+                break;
+              } // case 8
+              case 10: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureAnyIsMutable();
+                  any_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<java.lang.Integer> any_ =
+        java.util.Collections.emptyList();
+      private void ensureAnyIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          any_ = new java.util.ArrayList<java.lang.Integer>(any_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Must have any provided review status.
+       * </pre>
+       *
+       * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+       * @return A list containing the any.
+       */
+      public java.util.List<com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus> getAnyList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus>(any_, any_converter_);
+      }
+      /**
+       * <pre>
+       * Optional. Must have any provided review status.
+       * </pre>
+       *
+       * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+       * @return The count of any.
+       */
+      public int getAnyCount() {
+        return any_.size();
+      }
+      /**
+       * <pre>
+       * Optional. Must have any provided review status.
+       * </pre>
+       *
+       * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+       * @param index The index of the element to return.
+       * @return The any at the given index.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus getAny(int index) {
+        return any_converter_.convert(any_.get(index));
+      }
+      /**
+       * <pre>
+       * Optional. Must have any provided review status.
+       * </pre>
+       *
+       * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+       * @param index The index to set the value at.
+       * @param value The any to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAny(
+          int index, com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAnyIsMutable();
+        any_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Must have any provided review status.
+       * </pre>
+       *
+       * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+       * @param value The any to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAny(com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAnyIsMutable();
+        any_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Must have any provided review status.
+       * </pre>
+       *
+       * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+       * @param values The any to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAny(
+          java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus> values) {
+        ensureAnyIsMutable();
+        for (com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptReviewStatus value : values) {
+          any_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Must have any provided review status.
+       * </pre>
+       *
+       * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAny() {
+        any_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Must have any provided review status.
+       * </pre>
+       *
+       * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+       * @return A list containing the enum numeric values on the wire for any.
+       */
+      public java.util.List<java.lang.Integer>
+      getAnyValueList() {
+        return java.util.Collections.unmodifiableList(any_);
+      }
+      /**
+       * <pre>
+       * Optional. Must have any provided review status.
+       * </pre>
+       *
+       * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of any at the given index.
+       */
+      public int getAnyValue(int index) {
+        return any_.get(index);
+      }
+      /**
+       * <pre>
+       * Optional. Must have any provided review status.
+       * </pre>
+       *
+       * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for any to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAnyValue(
+          int index, int value) {
+        ensureAnyIsMutable();
+        any_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Must have any provided review status.
+       * </pre>
+       *
+       * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+       * @param value The enum numeric value on the wire for any to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAnyValue(int value) {
+        ensureAnyIsMutable();
+        any_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Must have any provided review status.
+       * </pre>
+       *
+       * <code>repeated .api.v1alpha1.vanalytics.TranscriptReviewStatus any = 1 [json_name = "any"];</code>
+       * @param values The enum numeric values on the wire for any to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAnyValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureAnyIsMutable();
+        for (int value : values) {
+          any_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus)
+    private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ReviewStatus>
+        PARSER = new com.google.protobuf.AbstractParser<ReviewStatus>() {
+      @java.lang.Override
+      public ReviewStatus parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ReviewStatus> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReviewStatus> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional. Queries count greater than or equal.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+     * @return Whether the gte field is set.
+     */
+    boolean hasGte();
+    /**
+     * <pre>
+     * Optional. Queries count greater than or equal.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+     * @return The gte.
+     */
+    com.google.protobuf.Int32Value getGte();
+    /**
+     * <pre>
+     * Optional. Queries count greater than or equal.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+     */
+    com.google.protobuf.Int32ValueOrBuilder getGteOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries count less than or equal.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+     * @return Whether the lte field is set.
+     */
+    boolean hasLte();
+    /**
+     * <pre>
+     * Optional. Queries count less than or equal.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+     * @return The lte.
+     */
+    com.google.protobuf.Int32Value getLte();
+    /**
+     * <pre>
+     * Optional. Queries count less than or equal.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+     */
+    com.google.protobuf.Int32ValueOrBuilder getLteOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries count greater than.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+     * @return Whether the gt field is set.
+     */
+    boolean hasGt();
+    /**
+     * <pre>
+     * Optional. Queries count greater than.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+     * @return The gt.
+     */
+    com.google.protobuf.Int32Value getGt();
+    /**
+     * <pre>
+     * Optional. Queries count greater than.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+     */
+    com.google.protobuf.Int32ValueOrBuilder getGtOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries count less than.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+     * @return Whether the lt field is set.
+     */
+    boolean hasLt();
+    /**
+     * <pre>
+     * Optional. Queries count less than.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+     * @return The lt.
+     */
+    com.google.protobuf.Int32Value getLt();
+    /**
+     * <pre>
+     * Optional. Queries count less than.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+     */
+    com.google.protobuf.Int32ValueOrBuilder getLtOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries count equal to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value eq = 5 [json_name = "eq"];</code>
+     * @return Whether the eq field is set.
+     */
+    boolean hasEq();
+    /**
+     * <pre>
+     * Optional. Queries count equal to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value eq = 5 [json_name = "eq"];</code>
+     * @return The eq.
+     */
+    com.google.protobuf.Int32Value getEq();
+    /**
+     * <pre>
+     * Optional. Queries count equal to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value eq = 5 [json_name = "eq"];</code>
+     */
+    com.google.protobuf.Int32ValueOrBuilder getEqOrBuilder();
+  }
+  /**
+   * <pre>
+   * Count defines a query on count.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count}
+   */
+  public static final class Count extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count)
+      CountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Count.newBuilder() to construct.
+    private Count(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Count() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Count();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptProto.internal_static_api_v1alpha1_vanalytics_DeleteFlagTranscriptRequest_Count_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptProto.internal_static_api_v1alpha1_vanalytics_DeleteFlagTranscriptRequest_Count_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.Builder.class);
+    }
+
+    public static final int GTE_FIELD_NUMBER = 1;
+    private com.google.protobuf.Int32Value gte_;
+    /**
+     * <pre>
+     * Optional. Queries count greater than or equal.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+     * @return Whether the gte field is set.
+     */
+    @java.lang.Override
+    public boolean hasGte() {
+      return gte_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries count greater than or equal.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+     * @return The gte.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int32Value getGte() {
+      return gte_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : gte_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries count greater than or equal.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int32ValueOrBuilder getGteOrBuilder() {
+      return gte_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : gte_;
+    }
+
+    public static final int LTE_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int32Value lte_;
+    /**
+     * <pre>
+     * Optional. Queries count less than or equal.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+     * @return Whether the lte field is set.
+     */
+    @java.lang.Override
+    public boolean hasLte() {
+      return lte_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries count less than or equal.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+     * @return The lte.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int32Value getLte() {
+      return lte_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : lte_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries count less than or equal.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int32ValueOrBuilder getLteOrBuilder() {
+      return lte_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : lte_;
+    }
+
+    public static final int GT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int32Value gt_;
+    /**
+     * <pre>
+     * Optional. Queries count greater than.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+     * @return Whether the gt field is set.
+     */
+    @java.lang.Override
+    public boolean hasGt() {
+      return gt_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries count greater than.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+     * @return The gt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int32Value getGt() {
+      return gt_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : gt_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries count greater than.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int32ValueOrBuilder getGtOrBuilder() {
+      return gt_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : gt_;
+    }
+
+    public static final int LT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Int32Value lt_;
+    /**
+     * <pre>
+     * Optional. Queries count less than.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+     * @return Whether the lt field is set.
+     */
+    @java.lang.Override
+    public boolean hasLt() {
+      return lt_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries count less than.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+     * @return The lt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int32Value getLt() {
+      return lt_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : lt_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries count less than.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int32ValueOrBuilder getLtOrBuilder() {
+      return lt_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : lt_;
+    }
+
+    public static final int EQ_FIELD_NUMBER = 5;
+    private com.google.protobuf.Int32Value eq_;
+    /**
+     * <pre>
+     * Optional. Queries count equal to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value eq = 5 [json_name = "eq"];</code>
+     * @return Whether the eq field is set.
+     */
+    @java.lang.Override
+    public boolean hasEq() {
+      return eq_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries count equal to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value eq = 5 [json_name = "eq"];</code>
+     * @return The eq.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int32Value getEq() {
+      return eq_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : eq_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries count equal to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int32Value eq = 5 [json_name = "eq"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int32ValueOrBuilder getEqOrBuilder() {
+      return eq_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : eq_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (gte_ != null) {
+        output.writeMessage(1, getGte());
+      }
+      if (lte_ != null) {
+        output.writeMessage(2, getLte());
+      }
+      if (gt_ != null) {
+        output.writeMessage(3, getGt());
+      }
+      if (lt_ != null) {
+        output.writeMessage(4, getLt());
+      }
+      if (eq_ != null) {
+        output.writeMessage(5, getEq());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (gte_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getGte());
+      }
+      if (lte_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getLte());
+      }
+      if (gt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getGt());
+      }
+      if (lt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getLt());
+      }
+      if (eq_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getEq());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count) obj;
+
+      if (hasGte() != other.hasGte()) return false;
+      if (hasGte()) {
+        if (!getGte()
+            .equals(other.getGte())) return false;
+      }
+      if (hasLte() != other.hasLte()) return false;
+      if (hasLte()) {
+        if (!getLte()
+            .equals(other.getLte())) return false;
+      }
+      if (hasGt() != other.hasGt()) return false;
+      if (hasGt()) {
+        if (!getGt()
+            .equals(other.getGt())) return false;
+      }
+      if (hasLt() != other.hasLt()) return false;
+      if (hasLt()) {
+        if (!getLt()
+            .equals(other.getLt())) return false;
+      }
+      if (hasEq() != other.hasEq()) return false;
+      if (hasEq()) {
+        if (!getEq()
+            .equals(other.getEq())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasGte()) {
+        hash = (37 * hash) + GTE_FIELD_NUMBER;
+        hash = (53 * hash) + getGte().hashCode();
+      }
+      if (hasLte()) {
+        hash = (37 * hash) + LTE_FIELD_NUMBER;
+        hash = (53 * hash) + getLte().hashCode();
+      }
+      if (hasGt()) {
+        hash = (37 * hash) + GT_FIELD_NUMBER;
+        hash = (53 * hash) + getGt().hashCode();
+      }
+      if (hasLt()) {
+        hash = (37 * hash) + LT_FIELD_NUMBER;
+        hash = (53 * hash) + getLt().hashCode();
+      }
+      if (hasEq()) {
+        hash = (37 * hash) + EQ_FIELD_NUMBER;
+        hash = (53 * hash) + getEq().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Count defines a query on count.
+     * </pre>
+     *
+     * Protobuf type {@code api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count)
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.CountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptProto.internal_static_api_v1alpha1_vanalytics_DeleteFlagTranscriptRequest_Count_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptProto.internal_static_api_v1alpha1_vanalytics_DeleteFlagTranscriptRequest_Count_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        gte_ = null;
+        if (gteBuilder_ != null) {
+          gteBuilder_.dispose();
+          gteBuilder_ = null;
+        }
+        lte_ = null;
+        if (lteBuilder_ != null) {
+          lteBuilder_.dispose();
+          lteBuilder_ = null;
+        }
+        gt_ = null;
+        if (gtBuilder_ != null) {
+          gtBuilder_.dispose();
+          gtBuilder_ = null;
+        }
+        lt_ = null;
+        if (ltBuilder_ != null) {
+          ltBuilder_.dispose();
+          ltBuilder_ = null;
+        }
+        eq_ = null;
+        if (eqBuilder_ != null) {
+          eqBuilder_.dispose();
+          eqBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptProto.internal_static_api_v1alpha1_vanalytics_DeleteFlagTranscriptRequest_Count_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count build() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.gte_ = gteBuilder_ == null
+              ? gte_
+              : gteBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.lte_ = lteBuilder_ == null
+              ? lte_
+              : lteBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.gt_ = gtBuilder_ == null
+              ? gt_
+              : gtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.lt_ = ltBuilder_ == null
+              ? lt_
+              : ltBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.eq_ = eqBuilder_ == null
+              ? eq_
+              : eqBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.getDefaultInstance()) return this;
+        if (other.hasGte()) {
+          mergeGte(other.getGte());
+        }
+        if (other.hasLte()) {
+          mergeLte(other.getLte());
+        }
+        if (other.hasGt()) {
+          mergeGt(other.getGt());
+        }
+        if (other.hasLt()) {
+          mergeLt(other.getLt());
+        }
+        if (other.hasEq()) {
+          mergeEq(other.getEq());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getGteFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getLteFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getGtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getLtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getEqFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Int32Value gte_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> gteBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries count greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+       * @return Whether the gte field is set.
+       */
+      public boolean hasGte() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+       * @return The gte.
+       */
+      public com.google.protobuf.Int32Value getGte() {
+        if (gteBuilder_ == null) {
+          return gte_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : gte_;
+        } else {
+          return gteBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+       */
+      public Builder setGte(com.google.protobuf.Int32Value value) {
+        if (gteBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gte_ = value;
+        } else {
+          gteBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+       */
+      public Builder setGte(
+          com.google.protobuf.Int32Value.Builder builderForValue) {
+        if (gteBuilder_ == null) {
+          gte_ = builderForValue.build();
+        } else {
+          gteBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+       */
+      public Builder mergeGte(com.google.protobuf.Int32Value value) {
+        if (gteBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            gte_ != null &&
+            gte_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+            getGteBuilder().mergeFrom(value);
+          } else {
+            gte_ = value;
+          }
+        } else {
+          gteBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+       */
+      public Builder clearGte() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        gte_ = null;
+        if (gteBuilder_ != null) {
+          gteBuilder_.dispose();
+          gteBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+       */
+      public com.google.protobuf.Int32Value.Builder getGteBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getGteFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+       */
+      public com.google.protobuf.Int32ValueOrBuilder getGteOrBuilder() {
+        if (gteBuilder_ != null) {
+          return gteBuilder_.getMessageOrBuilder();
+        } else {
+          return gte_ == null ?
+              com.google.protobuf.Int32Value.getDefaultInstance() : gte_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gte = 1 [json_name = "gte"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
+          getGteFieldBuilder() {
+        if (gteBuilder_ == null) {
+          gteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
+                  getGte(),
+                  getParentForChildren(),
+                  isClean());
+          gte_ = null;
+        }
+        return gteBuilder_;
+      }
+
+      private com.google.protobuf.Int32Value lte_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> lteBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries count less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+       * @return Whether the lte field is set.
+       */
+      public boolean hasLte() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+       * @return The lte.
+       */
+      public com.google.protobuf.Int32Value getLte() {
+        if (lteBuilder_ == null) {
+          return lte_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : lte_;
+        } else {
+          return lteBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+       */
+      public Builder setLte(com.google.protobuf.Int32Value value) {
+        if (lteBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lte_ = value;
+        } else {
+          lteBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+       */
+      public Builder setLte(
+          com.google.protobuf.Int32Value.Builder builderForValue) {
+        if (lteBuilder_ == null) {
+          lte_ = builderForValue.build();
+        } else {
+          lteBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+       */
+      public Builder mergeLte(com.google.protobuf.Int32Value value) {
+        if (lteBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            lte_ != null &&
+            lte_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+            getLteBuilder().mergeFrom(value);
+          } else {
+            lte_ = value;
+          }
+        } else {
+          lteBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+       */
+      public Builder clearLte() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        lte_ = null;
+        if (lteBuilder_ != null) {
+          lteBuilder_.dispose();
+          lteBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+       */
+      public com.google.protobuf.Int32Value.Builder getLteBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getLteFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+       */
+      public com.google.protobuf.Int32ValueOrBuilder getLteOrBuilder() {
+        if (lteBuilder_ != null) {
+          return lteBuilder_.getMessageOrBuilder();
+        } else {
+          return lte_ == null ?
+              com.google.protobuf.Int32Value.getDefaultInstance() : lte_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than or equal.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lte = 2 [json_name = "lte"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
+          getLteFieldBuilder() {
+        if (lteBuilder_ == null) {
+          lteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
+                  getLte(),
+                  getParentForChildren(),
+                  isClean());
+          lte_ = null;
+        }
+        return lteBuilder_;
+      }
+
+      private com.google.protobuf.Int32Value gt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> gtBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries count greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+       * @return Whether the gt field is set.
+       */
+      public boolean hasGt() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+       * @return The gt.
+       */
+      public com.google.protobuf.Int32Value getGt() {
+        if (gtBuilder_ == null) {
+          return gt_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : gt_;
+        } else {
+          return gtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+       */
+      public Builder setGt(com.google.protobuf.Int32Value value) {
+        if (gtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gt_ = value;
+        } else {
+          gtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+       */
+      public Builder setGt(
+          com.google.protobuf.Int32Value.Builder builderForValue) {
+        if (gtBuilder_ == null) {
+          gt_ = builderForValue.build();
+        } else {
+          gtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+       */
+      public Builder mergeGt(com.google.protobuf.Int32Value value) {
+        if (gtBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            gt_ != null &&
+            gt_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+            getGtBuilder().mergeFrom(value);
+          } else {
+            gt_ = value;
+          }
+        } else {
+          gtBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+       */
+      public Builder clearGt() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        gt_ = null;
+        if (gtBuilder_ != null) {
+          gtBuilder_.dispose();
+          gtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+       */
+      public com.google.protobuf.Int32Value.Builder getGtBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getGtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+       */
+      public com.google.protobuf.Int32ValueOrBuilder getGtOrBuilder() {
+        if (gtBuilder_ != null) {
+          return gtBuilder_.getMessageOrBuilder();
+        } else {
+          return gt_ == null ?
+              com.google.protobuf.Int32Value.getDefaultInstance() : gt_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries count greater than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value gt = 3 [json_name = "gt"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
+          getGtFieldBuilder() {
+        if (gtBuilder_ == null) {
+          gtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
+                  getGt(),
+                  getParentForChildren(),
+                  isClean());
+          gt_ = null;
+        }
+        return gtBuilder_;
+      }
+
+      private com.google.protobuf.Int32Value lt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> ltBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries count less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+       * @return Whether the lt field is set.
+       */
+      public boolean hasLt() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+       * @return The lt.
+       */
+      public com.google.protobuf.Int32Value getLt() {
+        if (ltBuilder_ == null) {
+          return lt_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : lt_;
+        } else {
+          return ltBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+       */
+      public Builder setLt(com.google.protobuf.Int32Value value) {
+        if (ltBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lt_ = value;
+        } else {
+          ltBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+       */
+      public Builder setLt(
+          com.google.protobuf.Int32Value.Builder builderForValue) {
+        if (ltBuilder_ == null) {
+          lt_ = builderForValue.build();
+        } else {
+          ltBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+       */
+      public Builder mergeLt(com.google.protobuf.Int32Value value) {
+        if (ltBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            lt_ != null &&
+            lt_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+            getLtBuilder().mergeFrom(value);
+          } else {
+            lt_ = value;
+          }
+        } else {
+          ltBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+       */
+      public Builder clearLt() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        lt_ = null;
+        if (ltBuilder_ != null) {
+          ltBuilder_.dispose();
+          ltBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+       */
+      public com.google.protobuf.Int32Value.Builder getLtBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getLtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+       */
+      public com.google.protobuf.Int32ValueOrBuilder getLtOrBuilder() {
+        if (ltBuilder_ != null) {
+          return ltBuilder_.getMessageOrBuilder();
+        } else {
+          return lt_ == null ?
+              com.google.protobuf.Int32Value.getDefaultInstance() : lt_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries count less than.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value lt = 4 [json_name = "lt"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
+          getLtFieldBuilder() {
+        if (ltBuilder_ == null) {
+          ltBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
+                  getLt(),
+                  getParentForChildren(),
+                  isClean());
+          lt_ = null;
+        }
+        return ltBuilder_;
+      }
+
+      private com.google.protobuf.Int32Value eq_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> eqBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries count equal to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value eq = 5 [json_name = "eq"];</code>
+       * @return Whether the eq field is set.
+       */
+      public boolean hasEq() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries count equal to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value eq = 5 [json_name = "eq"];</code>
+       * @return The eq.
+       */
+      public com.google.protobuf.Int32Value getEq() {
+        if (eqBuilder_ == null) {
+          return eq_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : eq_;
+        } else {
+          return eqBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries count equal to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value eq = 5 [json_name = "eq"];</code>
+       */
+      public Builder setEq(com.google.protobuf.Int32Value value) {
+        if (eqBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          eq_ = value;
+        } else {
+          eqBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count equal to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value eq = 5 [json_name = "eq"];</code>
+       */
+      public Builder setEq(
+          com.google.protobuf.Int32Value.Builder builderForValue) {
+        if (eqBuilder_ == null) {
+          eq_ = builderForValue.build();
+        } else {
+          eqBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count equal to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value eq = 5 [json_name = "eq"];</code>
+       */
+      public Builder mergeEq(com.google.protobuf.Int32Value value) {
+        if (eqBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            eq_ != null &&
+            eq_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+            getEqBuilder().mergeFrom(value);
+          } else {
+            eq_ = value;
+          }
+        } else {
+          eqBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count equal to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value eq = 5 [json_name = "eq"];</code>
+       */
+      public Builder clearEq() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        eq_ = null;
+        if (eqBuilder_ != null) {
+          eqBuilder_.dispose();
+          eqBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries count equal to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value eq = 5 [json_name = "eq"];</code>
+       */
+      public com.google.protobuf.Int32Value.Builder getEqBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getEqFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries count equal to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value eq = 5 [json_name = "eq"];</code>
+       */
+      public com.google.protobuf.Int32ValueOrBuilder getEqOrBuilder() {
+        if (eqBuilder_ != null) {
+          return eqBuilder_.getMessageOrBuilder();
+        } else {
+          return eq_ == null ?
+              com.google.protobuf.Int32Value.getDefaultInstance() : eq_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries count equal to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int32Value eq = 5 [json_name = "eq"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
+          getEqFieldBuilder() {
+        if (eqBuilder_ == null) {
+          eqBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
+                  getEq(),
+                  getParentForChildren(),
+                  isClean());
+          eq_ = null;
+        }
+        return eqBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count)
+    private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Count>
+        PARSER = new com.google.protobuf.AbstractParser<Count>() {
+      @java.lang.Override
+      public Count parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Count> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Count> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public static final int ORG_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
@@ -132,45 +2615,118 @@ private static final long serialVersionUID = 0L;
   }
   private int transcriptSidsMemoizedSerializedSize = -1;
 
-  public static final int QUERY_FIELD_NUMBER = 3;
-  private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest query_;
+  public static final int CALL_START_TIME_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr callStartTime_;
   /**
    * <pre>
-   * Optional. Delete all flags transcripts associated
-   * with the flags returned by this search query.
+   * Optional. Call start time to filter on.
    * </pre>
    *
-   * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
-   * @return Whether the query field is set.
+   * <code>.api.v1alpha1.vanalytics.TimestampExpr call_start_time = 3 [json_name = "callStartTime"];</code>
+   * @return Whether the callStartTime field is set.
    */
   @java.lang.Override
-  public boolean hasQuery() {
-    return query_ != null;
+  public boolean hasCallStartTime() {
+    return callStartTime_ != null;
   }
   /**
    * <pre>
-   * Optional. Delete all flags transcripts associated
-   * with the flags returned by this search query.
+   * Optional. Call start time to filter on.
    * </pre>
    *
-   * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
-   * @return The query.
+   * <code>.api.v1alpha1.vanalytics.TimestampExpr call_start_time = 3 [json_name = "callStartTime"];</code>
+   * @return The callStartTime.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest getQuery() {
-    return query_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.getDefaultInstance() : query_;
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr getCallStartTime() {
+    return callStartTime_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr.getDefaultInstance() : callStartTime_;
   }
   /**
    * <pre>
-   * Optional. Delete all flags transcripts associated
-   * with the flags returned by this search query.
+   * Optional. Call start time to filter on.
    * </pre>
    *
-   * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+   * <code>.api.v1alpha1.vanalytics.TimestampExpr call_start_time = 3 [json_name = "callStartTime"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequestOrBuilder getQueryOrBuilder() {
-    return query_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.getDefaultInstance() : query_;
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExprOrBuilder getCallStartTimeOrBuilder() {
+    return callStartTime_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr.getDefaultInstance() : callStartTime_;
+  }
+
+  public static final int REVIEW_STATUS_FIELD_NUMBER = 4;
+  private com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus reviewStatus_;
+  /**
+   * <pre>
+   * Optional. Queries review status.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus review_status = 4 [json_name = "reviewStatus"];</code>
+   * @return Whether the reviewStatus field is set.
+   */
+  @java.lang.Override
+  public boolean hasReviewStatus() {
+    return reviewStatus_ != null;
+  }
+  /**
+   * <pre>
+   * Optional. Queries review status.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus review_status = 4 [json_name = "reviewStatus"];</code>
+   * @return The reviewStatus.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus getReviewStatus() {
+    return reviewStatus_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.getDefaultInstance() : reviewStatus_;
+  }
+  /**
+   * <pre>
+   * Optional. Queries review status.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus review_status = 4 [json_name = "reviewStatus"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatusOrBuilder getReviewStatusOrBuilder() {
+    return reviewStatus_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.getDefaultInstance() : reviewStatus_;
+  }
+
+  public static final int COUNT_FIELD_NUMBER = 5;
+  private com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count_;
+  /**
+   * <pre>
+   * Optional. Queries count.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count = 5 [json_name = "count"];</code>
+   * @return Whether the count field is set.
+   */
+  @java.lang.Override
+  public boolean hasCount() {
+    return count_ != null;
+  }
+  /**
+   * <pre>
+   * Optional. Queries count.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count = 5 [json_name = "count"];</code>
+   * @return The count.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count getCount() {
+    return count_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.getDefaultInstance() : count_;
+  }
+  /**
+   * <pre>
+   * Optional. Queries count.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count = 5 [json_name = "count"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.CountOrBuilder getCountOrBuilder() {
+    return count_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.getDefaultInstance() : count_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -198,8 +2754,14 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < transcriptSids_.size(); i++) {
       output.writeInt64NoTag(transcriptSids_.getLong(i));
     }
-    if (query_ != null) {
-      output.writeMessage(3, getQuery());
+    if (callStartTime_ != null) {
+      output.writeMessage(3, getCallStartTime());
+    }
+    if (reviewStatus_ != null) {
+      output.writeMessage(4, getReviewStatus());
+    }
+    if (count_ != null) {
+      output.writeMessage(5, getCount());
     }
     getUnknownFields().writeTo(output);
   }
@@ -227,9 +2789,17 @@ private static final long serialVersionUID = 0L;
       }
       transcriptSidsMemoizedSerializedSize = dataSize;
     }
-    if (query_ != null) {
+    if (callStartTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getQuery());
+        .computeMessageSize(3, getCallStartTime());
+    }
+    if (reviewStatus_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getReviewStatus());
+    }
+    if (count_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getCount());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -250,10 +2820,20 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOrgId())) return false;
     if (!getTranscriptSidsList()
         .equals(other.getTranscriptSidsList())) return false;
-    if (hasQuery() != other.hasQuery()) return false;
-    if (hasQuery()) {
-      if (!getQuery()
-          .equals(other.getQuery())) return false;
+    if (hasCallStartTime() != other.hasCallStartTime()) return false;
+    if (hasCallStartTime()) {
+      if (!getCallStartTime()
+          .equals(other.getCallStartTime())) return false;
+    }
+    if (hasReviewStatus() != other.hasReviewStatus()) return false;
+    if (hasReviewStatus()) {
+      if (!getReviewStatus()
+          .equals(other.getReviewStatus())) return false;
+    }
+    if (hasCount() != other.hasCount()) return false;
+    if (hasCount()) {
+      if (!getCount()
+          .equals(other.getCount())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -272,9 +2852,17 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TRANSCRIPT_SIDS_FIELD_NUMBER;
       hash = (53 * hash) + getTranscriptSidsList().hashCode();
     }
-    if (hasQuery()) {
-      hash = (37 * hash) + QUERY_FIELD_NUMBER;
-      hash = (53 * hash) + getQuery().hashCode();
+    if (hasCallStartTime()) {
+      hash = (37 * hash) + CALL_START_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getCallStartTime().hashCode();
+    }
+    if (hasReviewStatus()) {
+      hash = (37 * hash) + REVIEW_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getReviewStatus().hashCode();
+    }
+    if (hasCount()) {
+      hash = (37 * hash) + COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getCount().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -413,10 +3001,20 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       orgId_ = "";
       transcriptSids_ = emptyLongList();
-      query_ = null;
-      if (queryBuilder_ != null) {
-        queryBuilder_.dispose();
-        queryBuilder_ = null;
+      callStartTime_ = null;
+      if (callStartTimeBuilder_ != null) {
+        callStartTimeBuilder_.dispose();
+        callStartTimeBuilder_ = null;
+      }
+      reviewStatus_ = null;
+      if (reviewStatusBuilder_ != null) {
+        reviewStatusBuilder_.dispose();
+        reviewStatusBuilder_ = null;
+      }
+      count_ = null;
+      if (countBuilder_ != null) {
+        countBuilder_.dispose();
+        countBuilder_ = null;
       }
       return this;
     }
@@ -464,9 +3062,19 @@ private static final long serialVersionUID = 0L;
         result.orgId_ = orgId_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.query_ = queryBuilder_ == null
-            ? query_
-            : queryBuilder_.build();
+        result.callStartTime_ = callStartTimeBuilder_ == null
+            ? callStartTime_
+            : callStartTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.reviewStatus_ = reviewStatusBuilder_ == null
+            ? reviewStatus_
+            : reviewStatusBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.count_ = countBuilder_ == null
+            ? count_
+            : countBuilder_.build();
       }
     }
 
@@ -529,8 +3137,14 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      if (other.hasQuery()) {
-        mergeQuery(other.getQuery());
+      if (other.hasCallStartTime()) {
+        mergeCallStartTime(other.getCallStartTime());
+      }
+      if (other.hasReviewStatus()) {
+        mergeReviewStatus(other.getReviewStatus());
+      }
+      if (other.hasCount()) {
+        mergeCount(other.getCount());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -581,11 +3195,25 @@ private static final long serialVersionUID = 0L;
             } // case 18
             case 26: {
               input.readMessage(
-                  getQueryFieldBuilder().getBuilder(),
+                  getCallStartTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  getReviewStatusFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getCountFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -804,53 +3432,50 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest query_;
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr callStartTime_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequestOrBuilder> queryBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr, com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExprOrBuilder> callStartTimeBuilder_;
     /**
      * <pre>
-     * Optional. Delete all flags transcripts associated
-     * with the flags returned by this search query.
+     * Optional. Call start time to filter on.
      * </pre>
      *
-     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
-     * @return Whether the query field is set.
+     * <code>.api.v1alpha1.vanalytics.TimestampExpr call_start_time = 3 [json_name = "callStartTime"];</code>
+     * @return Whether the callStartTime field is set.
      */
-    public boolean hasQuery() {
+    public boolean hasCallStartTime() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Optional. Delete all flags transcripts associated
-     * with the flags returned by this search query.
+     * Optional. Call start time to filter on.
      * </pre>
      *
-     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
-     * @return The query.
+     * <code>.api.v1alpha1.vanalytics.TimestampExpr call_start_time = 3 [json_name = "callStartTime"];</code>
+     * @return The callStartTime.
      */
-    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest getQuery() {
-      if (queryBuilder_ == null) {
-        return query_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.getDefaultInstance() : query_;
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr getCallStartTime() {
+      if (callStartTimeBuilder_ == null) {
+        return callStartTime_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr.getDefaultInstance() : callStartTime_;
       } else {
-        return queryBuilder_.getMessage();
+        return callStartTimeBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * Optional. Delete all flags transcripts associated
-     * with the flags returned by this search query.
+     * Optional. Call start time to filter on.
      * </pre>
      *
-     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     * <code>.api.v1alpha1.vanalytics.TimestampExpr call_start_time = 3 [json_name = "callStartTime"];</code>
      */
-    public Builder setQuery(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest value) {
-      if (queryBuilder_ == null) {
+    public Builder setCallStartTime(com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr value) {
+      if (callStartTimeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        query_ = value;
+        callStartTime_ = value;
       } else {
-        queryBuilder_.setMessage(value);
+        callStartTimeBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000004;
       onChanged();
@@ -858,18 +3483,17 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Delete all flags transcripts associated
-     * with the flags returned by this search query.
+     * Optional. Call start time to filter on.
      * </pre>
      *
-     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     * <code>.api.v1alpha1.vanalytics.TimestampExpr call_start_time = 3 [json_name = "callStartTime"];</code>
      */
-    public Builder setQuery(
-        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.Builder builderForValue) {
-      if (queryBuilder_ == null) {
-        query_ = builderForValue.build();
+    public Builder setCallStartTime(
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr.Builder builderForValue) {
+      if (callStartTimeBuilder_ == null) {
+        callStartTime_ = builderForValue.build();
       } else {
-        queryBuilder_.setMessage(builderForValue.build());
+        callStartTimeBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000004;
       onChanged();
@@ -877,23 +3501,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Delete all flags transcripts associated
-     * with the flags returned by this search query.
+     * Optional. Call start time to filter on.
      * </pre>
      *
-     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     * <code>.api.v1alpha1.vanalytics.TimestampExpr call_start_time = 3 [json_name = "callStartTime"];</code>
      */
-    public Builder mergeQuery(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest value) {
-      if (queryBuilder_ == null) {
+    public Builder mergeCallStartTime(com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr value) {
+      if (callStartTimeBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
-          query_ != null &&
-          query_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.getDefaultInstance()) {
-          getQueryBuilder().mergeFrom(value);
+          callStartTime_ != null &&
+          callStartTime_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr.getDefaultInstance()) {
+          getCallStartTimeBuilder().mergeFrom(value);
         } else {
-          query_ = value;
+          callStartTime_ = value;
         }
       } else {
-        queryBuilder_.mergeFrom(value);
+        callStartTimeBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000004;
       onChanged();
@@ -901,71 +3524,377 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Delete all flags transcripts associated
-     * with the flags returned by this search query.
+     * Optional. Call start time to filter on.
      * </pre>
      *
-     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     * <code>.api.v1alpha1.vanalytics.TimestampExpr call_start_time = 3 [json_name = "callStartTime"];</code>
      */
-    public Builder clearQuery() {
+    public Builder clearCallStartTime() {
       bitField0_ = (bitField0_ & ~0x00000004);
-      query_ = null;
-      if (queryBuilder_ != null) {
-        queryBuilder_.dispose();
-        queryBuilder_ = null;
+      callStartTime_ = null;
+      if (callStartTimeBuilder_ != null) {
+        callStartTimeBuilder_.dispose();
+        callStartTimeBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Optional. Delete all flags transcripts associated
-     * with the flags returned by this search query.
+     * Optional. Call start time to filter on.
      * </pre>
      *
-     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     * <code>.api.v1alpha1.vanalytics.TimestampExpr call_start_time = 3 [json_name = "callStartTime"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.Builder getQueryBuilder() {
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr.Builder getCallStartTimeBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
-      return getQueryFieldBuilder().getBuilder();
+      return getCallStartTimeFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Optional. Delete all flags transcripts associated
-     * with the flags returned by this search query.
+     * Optional. Call start time to filter on.
      * </pre>
      *
-     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     * <code>.api.v1alpha1.vanalytics.TimestampExpr call_start_time = 3 [json_name = "callStartTime"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequestOrBuilder getQueryOrBuilder() {
-      if (queryBuilder_ != null) {
-        return queryBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExprOrBuilder getCallStartTimeOrBuilder() {
+      if (callStartTimeBuilder_ != null) {
+        return callStartTimeBuilder_.getMessageOrBuilder();
       } else {
-        return query_ == null ?
-            com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.getDefaultInstance() : query_;
+        return callStartTime_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr.getDefaultInstance() : callStartTime_;
       }
     }
     /**
      * <pre>
-     * Optional. Delete all flags transcripts associated
-     * with the flags returned by this search query.
+     * Optional. Call start time to filter on.
      * </pre>
      *
-     * <code>.api.v1alpha1.vanalytics.SearchRequest query = 3 [json_name = "query"];</code>
+     * <code>.api.v1alpha1.vanalytics.TimestampExpr call_start_time = 3 [json_name = "callStartTime"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequestOrBuilder> 
-        getQueryFieldBuilder() {
-      if (queryBuilder_ == null) {
-        queryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequestOrBuilder>(
-                getQuery(),
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr, com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExprOrBuilder> 
+        getCallStartTimeFieldBuilder() {
+      if (callStartTimeBuilder_ == null) {
+        callStartTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr, com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExprOrBuilder>(
+                getCallStartTime(),
                 getParentForChildren(),
                 isClean());
-        query_ = null;
+        callStartTime_ = null;
       }
-      return queryBuilder_;
+      return callStartTimeBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus reviewStatus_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatusOrBuilder> reviewStatusBuilder_;
+    /**
+     * <pre>
+     * Optional. Queries review status.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus review_status = 4 [json_name = "reviewStatus"];</code>
+     * @return Whether the reviewStatus field is set.
+     */
+    public boolean hasReviewStatus() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Optional. Queries review status.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus review_status = 4 [json_name = "reviewStatus"];</code>
+     * @return The reviewStatus.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus getReviewStatus() {
+      if (reviewStatusBuilder_ == null) {
+        return reviewStatus_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.getDefaultInstance() : reviewStatus_;
+      } else {
+        return reviewStatusBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Queries review status.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus review_status = 4 [json_name = "reviewStatus"];</code>
+     */
+    public Builder setReviewStatus(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus value) {
+      if (reviewStatusBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        reviewStatus_ = value;
+      } else {
+        reviewStatusBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Queries review status.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus review_status = 4 [json_name = "reviewStatus"];</code>
+     */
+    public Builder setReviewStatus(
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.Builder builderForValue) {
+      if (reviewStatusBuilder_ == null) {
+        reviewStatus_ = builderForValue.build();
+      } else {
+        reviewStatusBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Queries review status.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus review_status = 4 [json_name = "reviewStatus"];</code>
+     */
+    public Builder mergeReviewStatus(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus value) {
+      if (reviewStatusBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          reviewStatus_ != null &&
+          reviewStatus_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.getDefaultInstance()) {
+          getReviewStatusBuilder().mergeFrom(value);
+        } else {
+          reviewStatus_ = value;
+        }
+      } else {
+        reviewStatusBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Queries review status.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus review_status = 4 [json_name = "reviewStatus"];</code>
+     */
+    public Builder clearReviewStatus() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      reviewStatus_ = null;
+      if (reviewStatusBuilder_ != null) {
+        reviewStatusBuilder_.dispose();
+        reviewStatusBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Queries review status.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus review_status = 4 [json_name = "reviewStatus"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.Builder getReviewStatusBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getReviewStatusFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional. Queries review status.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus review_status = 4 [json_name = "reviewStatus"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatusOrBuilder getReviewStatusOrBuilder() {
+      if (reviewStatusBuilder_ != null) {
+        return reviewStatusBuilder_.getMessageOrBuilder();
+      } else {
+        return reviewStatus_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.getDefaultInstance() : reviewStatus_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Queries review status.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus review_status = 4 [json_name = "reviewStatus"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatusOrBuilder> 
+        getReviewStatusFieldBuilder() {
+      if (reviewStatusBuilder_ == null) {
+        reviewStatusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatus.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.ReviewStatusOrBuilder>(
+                getReviewStatus(),
+                getParentForChildren(),
+                isClean());
+        reviewStatus_ = null;
+      }
+      return reviewStatusBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.CountOrBuilder> countBuilder_;
+    /**
+     * <pre>
+     * Optional. Queries count.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count = 5 [json_name = "count"];</code>
+     * @return Whether the count field is set.
+     */
+    public boolean hasCount() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Optional. Queries count.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count = 5 [json_name = "count"];</code>
+     * @return The count.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count getCount() {
+      if (countBuilder_ == null) {
+        return count_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.getDefaultInstance() : count_;
+      } else {
+        return countBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Queries count.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count = 5 [json_name = "count"];</code>
+     */
+    public Builder setCount(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count value) {
+      if (countBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        count_ = value;
+      } else {
+        countBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Queries count.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count = 5 [json_name = "count"];</code>
+     */
+    public Builder setCount(
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.Builder builderForValue) {
+      if (countBuilder_ == null) {
+        count_ = builderForValue.build();
+      } else {
+        countBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Queries count.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count = 5 [json_name = "count"];</code>
+     */
+    public Builder mergeCount(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count value) {
+      if (countBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          count_ != null &&
+          count_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.getDefaultInstance()) {
+          getCountBuilder().mergeFrom(value);
+        } else {
+          count_ = value;
+        }
+      } else {
+        countBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Queries count.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count = 5 [json_name = "count"];</code>
+     */
+    public Builder clearCount() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      count_ = null;
+      if (countBuilder_ != null) {
+        countBuilder_.dispose();
+        countBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Queries count.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count = 5 [json_name = "count"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.Builder getCountBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getCountFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional. Queries count.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count = 5 [json_name = "count"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.CountOrBuilder getCountOrBuilder() {
+      if (countBuilder_ != null) {
+        return countBuilder_.getMessageOrBuilder();
+      } else {
+        return count_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.getDefaultInstance() : count_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Queries count.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count count = 5 [json_name = "count"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.CountOrBuilder> 
+        getCountFieldBuilder() {
+      if (countBuilder_ == null) {
+        countBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.Count.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.CountOrBuilder>(
+                getCount(),
+                getParentForChildren(),
+                isClean());
+        count_ = null;
+      }
+      return countBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
