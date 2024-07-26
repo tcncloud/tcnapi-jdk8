@@ -46,13 +46,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object clientId_ = "";
   /**
-   * <code>string client_id = 1 [json_name = "clientId", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.client_id is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=16
+   * <code>string client_id = 1 [json_name = "clientId"];</code>
    * @return The clientId.
    */
   @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getClientId() {
+  public java.lang.String getClientId() {
     java.lang.Object ref = clientId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -65,13 +63,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string client_id = 1 [json_name = "clientId", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.client_id is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=16
+   * <code>string client_id = 1 [json_name = "clientId"];</code>
    * @return The bytes for clientId.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
+  public com.google.protobuf.ByteString
       getClientIdBytes() {
     java.lang.Object ref = clientId_;
     if (ref instanceof java.lang.String) {
@@ -89,13 +85,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object productId_ = "";
   /**
-   * <code>string product_id = 2 [json_name = "productId", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.product_id is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=17
+   * <code>string product_id = 2 [json_name = "productId"];</code>
    * @return The productId.
    */
   @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getProductId() {
+  public java.lang.String getProductId() {
     java.lang.Object ref = productId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -108,13 +102,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string product_id = 2 [json_name = "productId", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.product_id is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=17
+   * <code>string product_id = 2 [json_name = "productId"];</code>
    * @return The bytes for productId.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
+  public com.google.protobuf.ByteString
       getProductIdBytes() {
     java.lang.Object ref = productId_;
     if (ref instanceof java.lang.String) {
@@ -132,13 +124,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
   /**
-   * <code>string description = 3 [json_name = "description", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.description is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=18
+   * <code>string description = 3 [json_name = "description"];</code>
    * @return The description.
    */
   @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getDescription() {
+  public java.lang.String getDescription() {
     java.lang.Object ref = description_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -151,13 +141,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string description = 3 [json_name = "description", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.description is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=18
+   * <code>string description = 3 [json_name = "description"];</code>
    * @return The bytes for description.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
+  public com.google.protobuf.ByteString
       getDescriptionBytes() {
     java.lang.Object ref = description_;
     if (ref instanceof java.lang.String) {
@@ -174,30 +162,26 @@ private static final long serialVersionUID = 0L;
   public static final int DATE_FIELD_NUMBER = 4;
   private com.google.protobuf.Timestamp date_;
   /**
-   * <code>.google.protobuf.Timestamp date = 4 [json_name = "date", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.date is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=19
+   * <code>.google.protobuf.Timestamp date = 4 [json_name = "date"];</code>
    * @return Whether the date field is set.
    */
   @java.lang.Override
-  @java.lang.Deprecated public boolean hasDate() {
+  public boolean hasDate() {
     return date_ != null;
   }
   /**
-   * <code>.google.protobuf.Timestamp date = 4 [json_name = "date", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.date is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=19
+   * <code>.google.protobuf.Timestamp date = 4 [json_name = "date"];</code>
    * @return The date.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.Timestamp getDate() {
+  public com.google.protobuf.Timestamp getDate() {
     return date_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : date_;
   }
   /**
-   * <code>.google.protobuf.Timestamp date = 4 [json_name = "date", deprecated = true];</code>
+   * <code>.google.protobuf.Timestamp date = 4 [json_name = "date"];</code>
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getDateOrBuilder() {
+  public com.google.protobuf.TimestampOrBuilder getDateOrBuilder() {
     return date_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : date_;
   }
 
@@ -245,30 +229,26 @@ private static final long serialVersionUID = 0L;
   public static final int RATED_AMOUNT_FIELD_NUMBER = 6;
   private com.google.type.Decimal ratedAmount_;
   /**
-   * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.rated_amount is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=21
+   * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount"];</code>
    * @return Whether the ratedAmount field is set.
    */
   @java.lang.Override
-  @java.lang.Deprecated public boolean hasRatedAmount() {
+  public boolean hasRatedAmount() {
     return ratedAmount_ != null;
   }
   /**
-   * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.rated_amount is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=21
+   * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount"];</code>
    * @return The ratedAmount.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.type.Decimal getRatedAmount() {
+  public com.google.type.Decimal getRatedAmount() {
     return ratedAmount_ == null ? com.google.type.Decimal.getDefaultInstance() : ratedAmount_;
   }
   /**
-   * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount", deprecated = true];</code>
+   * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount"];</code>
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.type.DecimalOrBuilder getRatedAmountOrBuilder() {
+  public com.google.type.DecimalOrBuilder getRatedAmountOrBuilder() {
     return ratedAmount_ == null ? com.google.type.Decimal.getDefaultInstance() : ratedAmount_;
   }
 
@@ -792,12 +772,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object clientId_ = "";
     /**
-     * <code>string client_id = 1 [json_name = "clientId", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.client_id is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=16
+     * <code>string client_id = 1 [json_name = "clientId"];</code>
      * @return The clientId.
      */
-    @java.lang.Deprecated public java.lang.String getClientId() {
+    public java.lang.String getClientId() {
       java.lang.Object ref = clientId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -810,12 +788,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string client_id = 1 [json_name = "clientId", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.client_id is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=16
+     * <code>string client_id = 1 [json_name = "clientId"];</code>
      * @return The bytes for clientId.
      */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
+    public com.google.protobuf.ByteString
         getClientIdBytes() {
       java.lang.Object ref = clientId_;
       if (ref instanceof String) {
@@ -829,13 +805,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string client_id = 1 [json_name = "clientId", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.client_id is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=16
+     * <code>string client_id = 1 [json_name = "clientId"];</code>
      * @param value The clientId to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setClientId(
+    public Builder setClientId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       clientId_ = value;
@@ -844,25 +818,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string client_id = 1 [json_name = "clientId", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.client_id is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=16
+     * <code>string client_id = 1 [json_name = "clientId"];</code>
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder clearClientId() {
+    public Builder clearClientId() {
       clientId_ = getDefaultInstance().getClientId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string client_id = 1 [json_name = "clientId", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.client_id is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=16
+     * <code>string client_id = 1 [json_name = "clientId"];</code>
      * @param value The bytes for clientId to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setClientIdBytes(
+    public Builder setClientIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -874,12 +844,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object productId_ = "";
     /**
-     * <code>string product_id = 2 [json_name = "productId", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.product_id is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=17
+     * <code>string product_id = 2 [json_name = "productId"];</code>
      * @return The productId.
      */
-    @java.lang.Deprecated public java.lang.String getProductId() {
+    public java.lang.String getProductId() {
       java.lang.Object ref = productId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -892,12 +860,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string product_id = 2 [json_name = "productId", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.product_id is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=17
+     * <code>string product_id = 2 [json_name = "productId"];</code>
      * @return The bytes for productId.
      */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
+    public com.google.protobuf.ByteString
         getProductIdBytes() {
       java.lang.Object ref = productId_;
       if (ref instanceof String) {
@@ -911,13 +877,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string product_id = 2 [json_name = "productId", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.product_id is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=17
+     * <code>string product_id = 2 [json_name = "productId"];</code>
      * @param value The productId to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setProductId(
+    public Builder setProductId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productId_ = value;
@@ -926,25 +890,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string product_id = 2 [json_name = "productId", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.product_id is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=17
+     * <code>string product_id = 2 [json_name = "productId"];</code>
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder clearProductId() {
+    public Builder clearProductId() {
       productId_ = getDefaultInstance().getProductId();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string product_id = 2 [json_name = "productId", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.product_id is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=17
+     * <code>string product_id = 2 [json_name = "productId"];</code>
      * @param value The bytes for productId to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setProductIdBytes(
+    public Builder setProductIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -956,12 +916,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object description_ = "";
     /**
-     * <code>string description = 3 [json_name = "description", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.description is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=18
+     * <code>string description = 3 [json_name = "description"];</code>
      * @return The description.
      */
-    @java.lang.Deprecated public java.lang.String getDescription() {
+    public java.lang.String getDescription() {
       java.lang.Object ref = description_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -974,12 +932,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string description = 3 [json_name = "description", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.description is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=18
+     * <code>string description = 3 [json_name = "description"];</code>
      * @return The bytes for description.
      */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
+    public com.google.protobuf.ByteString
         getDescriptionBytes() {
       java.lang.Object ref = description_;
       if (ref instanceof String) {
@@ -993,13 +949,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string description = 3 [json_name = "description", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.description is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=18
+     * <code>string description = 3 [json_name = "description"];</code>
      * @param value The description to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setDescription(
+    public Builder setDescription(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       description_ = value;
@@ -1008,25 +962,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string description = 3 [json_name = "description", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.description is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=18
+     * <code>string description = 3 [json_name = "description"];</code>
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder clearDescription() {
+    public Builder clearDescription() {
       description_ = getDefaultInstance().getDescription();
       bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
-     * <code>string description = 3 [json_name = "description", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.description is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=18
+     * <code>string description = 3 [json_name = "description"];</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setDescriptionBytes(
+    public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -1040,21 +990,17 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dateBuilder_;
     /**
-     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.date is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=19
+     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date"];</code>
      * @return Whether the date field is set.
      */
-    @java.lang.Deprecated public boolean hasDate() {
+    public boolean hasDate() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.date is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=19
+     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date"];</code>
      * @return The date.
      */
-    @java.lang.Deprecated public com.google.protobuf.Timestamp getDate() {
+    public com.google.protobuf.Timestamp getDate() {
       if (dateBuilder_ == null) {
         return date_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : date_;
       } else {
@@ -1062,9 +1008,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date", deprecated = true];</code>
+     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date"];</code>
      */
-    @java.lang.Deprecated public Builder setDate(com.google.protobuf.Timestamp value) {
+    public Builder setDate(com.google.protobuf.Timestamp value) {
       if (dateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1078,9 +1024,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date", deprecated = true];</code>
+     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date"];</code>
      */
-    @java.lang.Deprecated public Builder setDate(
+    public Builder setDate(
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (dateBuilder_ == null) {
         date_ = builderForValue.build();
@@ -1092,9 +1038,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date", deprecated = true];</code>
+     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date"];</code>
      */
-    @java.lang.Deprecated public Builder mergeDate(com.google.protobuf.Timestamp value) {
+    public Builder mergeDate(com.google.protobuf.Timestamp value) {
       if (dateBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           date_ != null &&
@@ -1111,9 +1057,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date", deprecated = true];</code>
+     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date"];</code>
      */
-    @java.lang.Deprecated public Builder clearDate() {
+    public Builder clearDate() {
       bitField0_ = (bitField0_ & ~0x00000008);
       date_ = null;
       if (dateBuilder_ != null) {
@@ -1124,17 +1070,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date", deprecated = true];</code>
+     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date"];</code>
      */
-    @java.lang.Deprecated public com.google.protobuf.Timestamp.Builder getDateBuilder() {
+    public com.google.protobuf.Timestamp.Builder getDateBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getDateFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date", deprecated = true];</code>
+     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date"];</code>
      */
-    @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getDateOrBuilder() {
+    public com.google.protobuf.TimestampOrBuilder getDateOrBuilder() {
       if (dateBuilder_ != null) {
         return dateBuilder_.getMessageOrBuilder();
       } else {
@@ -1143,7 +1089,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date", deprecated = true];</code>
+     * <code>.google.protobuf.Timestamp date = 4 [json_name = "date"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -1403,21 +1349,17 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.type.Decimal, com.google.type.Decimal.Builder, com.google.type.DecimalOrBuilder> ratedAmountBuilder_;
     /**
-     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.rated_amount is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=21
+     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount"];</code>
      * @return Whether the ratedAmount field is set.
      */
-    @java.lang.Deprecated public boolean hasRatedAmount() {
+    public boolean hasRatedAmount() {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount", deprecated = true];</code>
-     * @deprecated services.billing.entities.v1alpha3.InvoiceRow.rated_amount is deprecated.
-     *     See services/billing/entities/v1alpha3/invoice.proto;l=21
+     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount"];</code>
      * @return The ratedAmount.
      */
-    @java.lang.Deprecated public com.google.type.Decimal getRatedAmount() {
+    public com.google.type.Decimal getRatedAmount() {
       if (ratedAmountBuilder_ == null) {
         return ratedAmount_ == null ? com.google.type.Decimal.getDefaultInstance() : ratedAmount_;
       } else {
@@ -1425,9 +1367,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount", deprecated = true];</code>
+     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount"];</code>
      */
-    @java.lang.Deprecated public Builder setRatedAmount(com.google.type.Decimal value) {
+    public Builder setRatedAmount(com.google.type.Decimal value) {
       if (ratedAmountBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1441,9 +1383,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount", deprecated = true];</code>
+     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount"];</code>
      */
-    @java.lang.Deprecated public Builder setRatedAmount(
+    public Builder setRatedAmount(
         com.google.type.Decimal.Builder builderForValue) {
       if (ratedAmountBuilder_ == null) {
         ratedAmount_ = builderForValue.build();
@@ -1455,9 +1397,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount", deprecated = true];</code>
+     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount"];</code>
      */
-    @java.lang.Deprecated public Builder mergeRatedAmount(com.google.type.Decimal value) {
+    public Builder mergeRatedAmount(com.google.type.Decimal value) {
       if (ratedAmountBuilder_ == null) {
         if (((bitField0_ & 0x00000020) != 0) &&
           ratedAmount_ != null &&
@@ -1474,9 +1416,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount", deprecated = true];</code>
+     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount"];</code>
      */
-    @java.lang.Deprecated public Builder clearRatedAmount() {
+    public Builder clearRatedAmount() {
       bitField0_ = (bitField0_ & ~0x00000020);
       ratedAmount_ = null;
       if (ratedAmountBuilder_ != null) {
@@ -1487,17 +1429,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount", deprecated = true];</code>
+     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount"];</code>
      */
-    @java.lang.Deprecated public com.google.type.Decimal.Builder getRatedAmountBuilder() {
+    public com.google.type.Decimal.Builder getRatedAmountBuilder() {
       bitField0_ |= 0x00000020;
       onChanged();
       return getRatedAmountFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount", deprecated = true];</code>
+     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount"];</code>
      */
-    @java.lang.Deprecated public com.google.type.DecimalOrBuilder getRatedAmountOrBuilder() {
+    public com.google.type.DecimalOrBuilder getRatedAmountOrBuilder() {
       if (ratedAmountBuilder_ != null) {
         return ratedAmountBuilder_.getMessageOrBuilder();
       } else {
@@ -1506,7 +1448,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount", deprecated = true];</code>
+     * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.type.Decimal, com.google.type.Decimal.Builder, com.google.type.DecimalOrBuilder> 

@@ -8,71 +8,55 @@ public interface InvoiceRowOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string client_id = 1 [json_name = "clientId", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.client_id is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=16
+   * <code>string client_id = 1 [json_name = "clientId"];</code>
    * @return The clientId.
    */
-  @java.lang.Deprecated java.lang.String getClientId();
+  java.lang.String getClientId();
   /**
-   * <code>string client_id = 1 [json_name = "clientId", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.client_id is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=16
+   * <code>string client_id = 1 [json_name = "clientId"];</code>
    * @return The bytes for clientId.
    */
-  @java.lang.Deprecated com.google.protobuf.ByteString
+  com.google.protobuf.ByteString
       getClientIdBytes();
 
   /**
-   * <code>string product_id = 2 [json_name = "productId", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.product_id is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=17
+   * <code>string product_id = 2 [json_name = "productId"];</code>
    * @return The productId.
    */
-  @java.lang.Deprecated java.lang.String getProductId();
+  java.lang.String getProductId();
   /**
-   * <code>string product_id = 2 [json_name = "productId", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.product_id is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=17
+   * <code>string product_id = 2 [json_name = "productId"];</code>
    * @return The bytes for productId.
    */
-  @java.lang.Deprecated com.google.protobuf.ByteString
+  com.google.protobuf.ByteString
       getProductIdBytes();
 
   /**
-   * <code>string description = 3 [json_name = "description", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.description is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=18
+   * <code>string description = 3 [json_name = "description"];</code>
    * @return The description.
    */
-  @java.lang.Deprecated java.lang.String getDescription();
+  java.lang.String getDescription();
   /**
-   * <code>string description = 3 [json_name = "description", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.description is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=18
+   * <code>string description = 3 [json_name = "description"];</code>
    * @return The bytes for description.
    */
-  @java.lang.Deprecated com.google.protobuf.ByteString
+  com.google.protobuf.ByteString
       getDescriptionBytes();
 
   /**
-   * <code>.google.protobuf.Timestamp date = 4 [json_name = "date", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.date is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=19
+   * <code>.google.protobuf.Timestamp date = 4 [json_name = "date"];</code>
    * @return Whether the date field is set.
    */
-  @java.lang.Deprecated boolean hasDate();
+  boolean hasDate();
   /**
-   * <code>.google.protobuf.Timestamp date = 4 [json_name = "date", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.date is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=19
+   * <code>.google.protobuf.Timestamp date = 4 [json_name = "date"];</code>
    * @return The date.
    */
-  @java.lang.Deprecated com.google.protobuf.Timestamp getDate();
+  com.google.protobuf.Timestamp getDate();
   /**
-   * <code>.google.protobuf.Timestamp date = 4 [json_name = "date", deprecated = true];</code>
+   * <code>.google.protobuf.Timestamp date = 4 [json_name = "date"];</code>
    */
-  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getDateOrBuilder();
+  com.google.protobuf.TimestampOrBuilder getDateOrBuilder();
 
   /**
    * <code>repeated .services.billing.entities.v1alpha3.InvoiceColumn columns = 5 [json_name = "columns"];</code>
@@ -99,21 +83,17 @@ public interface InvoiceRowOrBuilder extends
       int index);
 
   /**
-   * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.rated_amount is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=21
+   * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount"];</code>
    * @return Whether the ratedAmount field is set.
    */
-  @java.lang.Deprecated boolean hasRatedAmount();
+  boolean hasRatedAmount();
   /**
-   * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.InvoiceRow.rated_amount is deprecated.
-   *     See services/billing/entities/v1alpha3/invoice.proto;l=21
+   * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount"];</code>
    * @return The ratedAmount.
    */
-  @java.lang.Deprecated com.google.type.Decimal getRatedAmount();
+  com.google.type.Decimal getRatedAmount();
   /**
-   * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount", deprecated = true];</code>
+   * <code>.google.type.Decimal rated_amount = 6 [json_name = "ratedAmount"];</code>
    */
-  @java.lang.Deprecated com.google.type.DecimalOrBuilder getRatedAmountOrBuilder();
+  com.google.type.DecimalOrBuilder getRatedAmountOrBuilder();
 }
