@@ -36,4 +36,16 @@ public interface OmniSmsUnitConfigOrBuilder extends
    * <code>.services.billing.entities.v1alpha3.BasicUnitConfig config = 2 [json_name = "config"];</code>
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha3.BasicUnitConfigOrBuilder getConfigOrBuilder();
+
+  /**
+   * <code>string name = 3 [json_name = "name"];</code>
+   * @return The name.
+   */
+  java.lang.String getName();
+  /**
+   * <code>string name = 3 [json_name = "name"];</code>
+   * @return The bytes for name.
+   */
+  com.google.protobuf.ByteString
+      getNameBytes();
 }

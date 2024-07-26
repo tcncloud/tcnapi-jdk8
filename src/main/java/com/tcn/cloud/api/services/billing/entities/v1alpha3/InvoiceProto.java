@@ -48,22 +48,23 @@ public final class InvoiceProto {
       "eateTime\022B\n\004rows\030\003 \003(\0132..services.billin" +
       "g.entities.v1alpha3.InvoiceRowR\004rows\022?\n\014" +
       "download_url\030\004 \001(\0132\034.google.protobuf.Str" +
-      "ingValueR\013downloadUrl\"\240\002\n\nInvoiceRow\022\033\n\t" +
-      "client_id\030\001 \001(\tR\010clientId\022\035\n\nproduct_id\030" +
-      "\002 \001(\tR\tproductId\022 \n\013description\030\003 \001(\tR\013d" +
-      "escription\022.\n\004date\030\004 \001(\0132\032.google.protob" +
-      "uf.TimestampR\004date\022K\n\007columns\030\005 \003(\01321.se" +
-      "rvices.billing.entities.v1alpha3.Invoice" +
-      "ColumnR\007columns\0227\n\014rated_amount\030\006 \001(\0132\024." +
-      "google.type.DecimalR\013ratedAmount\"9\n\rInvo" +
-      "iceColumn\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005value\030\002" +
-      " \001(\tR\005valueB\357\001\n4com.tcn.cloud.api.servic" +
-      "es.billing.entities.v1alpha3B\014InvoicePro" +
-      "toP\001\242\002\003SBE\252\002\"Services.Billing.Entities.V" +
-      "1alpha3\312\002\"Services\\Billing\\Entities\\V1al" +
-      "pha3\342\002.Services\\Billing\\Entities\\V1alpha" +
-      "3\\GPBMetadata\352\002%Services::Billing::Entit" +
-      "ies::V1alpha3b\006proto3"
+      "ingValueR\013downloadUrl\"\264\002\n\nInvoiceRow\022\037\n\t" +
+      "client_id\030\001 \001(\tB\002\030\001R\010clientId\022!\n\nproduct" +
+      "_id\030\002 \001(\tB\002\030\001R\tproductId\022$\n\013description\030" +
+      "\003 \001(\tB\002\030\001R\013description\0222\n\004date\030\004 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampB\002\030\001R\004date\022K\n\007co" +
+      "lumns\030\005 \003(\01321.services.billing.entities." +
+      "v1alpha3.InvoiceColumnR\007columns\022;\n\014rated" +
+      "_amount\030\006 \001(\0132\024.google.type.DecimalB\002\030\001R" +
+      "\013ratedAmount\"9\n\rInvoiceColumn\022\022\n\004name\030\001 " +
+      "\001(\tR\004name\022\024\n\005value\030\002 \001(\tR\005valueB\357\001\n4com." +
+      "tcn.cloud.api.services.billing.entities." +
+      "v1alpha3B\014InvoiceProtoP\001\242\002\003SBE\252\002\"Service" +
+      "s.Billing.Entities.V1alpha3\312\002\"Services\\B" +
+      "illing\\Entities\\V1alpha3\342\002.Services\\Bill" +
+      "ing\\Entities\\V1alpha3\\GPBMetadata\352\002%Serv" +
+      "ices::Billing::Entities::V1alpha3b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

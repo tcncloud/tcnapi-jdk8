@@ -3,55 +3,71 @@
 
 package com.tcn.cloud.api.services.billing.entities.v1alpha3;
 
-public interface ProductOrBuilder extends
+@java.lang.Deprecated public interface ProductOrBuilder extends
     // @@protoc_insertion_point(interface_extends:services.billing.entities.v1alpha3.Product)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string category_one = 1 [json_name = "categoryOne"];</code>
+   * <code>string category_one = 1 [json_name = "categoryOne", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.category_one is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=31
    * @return The categoryOne.
    */
-  java.lang.String getCategoryOne();
+  @java.lang.Deprecated java.lang.String getCategoryOne();
   /**
-   * <code>string category_one = 1 [json_name = "categoryOne"];</code>
+   * <code>string category_one = 1 [json_name = "categoryOne", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.category_one is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=31
    * @return The bytes for categoryOne.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getCategoryOneBytes();
 
   /**
-   * <code>string category_two = 2 [json_name = "categoryTwo"];</code>
+   * <code>string category_two = 2 [json_name = "categoryTwo", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.category_two is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=32
    * @return The categoryTwo.
    */
-  java.lang.String getCategoryTwo();
+  @java.lang.Deprecated java.lang.String getCategoryTwo();
   /**
-   * <code>string category_two = 2 [json_name = "categoryTwo"];</code>
+   * <code>string category_two = 2 [json_name = "categoryTwo", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.category_two is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=32
    * @return The bytes for categoryTwo.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getCategoryTwoBytes();
 
   /**
-   * <code>string category_three = 3 [json_name = "categoryThree"];</code>
+   * <code>string category_three = 3 [json_name = "categoryThree", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.category_three is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=33
    * @return The categoryThree.
    */
-  java.lang.String getCategoryThree();
+  @java.lang.Deprecated java.lang.String getCategoryThree();
   /**
-   * <code>string category_three = 3 [json_name = "categoryThree"];</code>
+   * <code>string category_three = 3 [json_name = "categoryThree", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.category_three is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=33
    * @return The bytes for categoryThree.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getCategoryThreeBytes();
 
   /**
-   * <code>string product_name = 4 [json_name = "productName"];</code>
+   * <code>string product_name = 4 [json_name = "productName", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.product_name is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=34
    * @return The productName.
    */
-  java.lang.String getProductName();
+  @java.lang.Deprecated java.lang.String getProductName();
   /**
-   * <code>string product_name = 4 [json_name = "productName"];</code>
+   * <code>string product_name = 4 [json_name = "productName", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.product_name is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=34
    * @return The bytes for productName.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getProductNameBytes();
 }

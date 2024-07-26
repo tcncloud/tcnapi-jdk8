@@ -6,7 +6,7 @@ package com.tcn.cloud.api.services.billing.entities.v1alpha3;
 /**
  * Protobuf type {@code services.billing.entities.v1alpha3.Product}
  */
-public final class Product extends
+@java.lang.Deprecated public final class Product extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:services.billing.entities.v1alpha3.Product)
     ProductOrBuilder {
@@ -46,11 +46,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object categoryOne_ = "";
   /**
-   * <code>string category_one = 1 [json_name = "categoryOne"];</code>
+   * <code>string category_one = 1 [json_name = "categoryOne", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.category_one is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=31
    * @return The categoryOne.
    */
   @java.lang.Override
-  public java.lang.String getCategoryOne() {
+  @java.lang.Deprecated public java.lang.String getCategoryOne() {
     java.lang.Object ref = categoryOne_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -63,11 +65,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string category_one = 1 [json_name = "categoryOne"];</code>
+   * <code>string category_one = 1 [json_name = "categoryOne", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.category_one is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=31
    * @return The bytes for categoryOne.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getCategoryOneBytes() {
     java.lang.Object ref = categoryOne_;
     if (ref instanceof java.lang.String) {
@@ -85,11 +89,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object categoryTwo_ = "";
   /**
-   * <code>string category_two = 2 [json_name = "categoryTwo"];</code>
+   * <code>string category_two = 2 [json_name = "categoryTwo", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.category_two is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=32
    * @return The categoryTwo.
    */
   @java.lang.Override
-  public java.lang.String getCategoryTwo() {
+  @java.lang.Deprecated public java.lang.String getCategoryTwo() {
     java.lang.Object ref = categoryTwo_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -102,11 +108,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string category_two = 2 [json_name = "categoryTwo"];</code>
+   * <code>string category_two = 2 [json_name = "categoryTwo", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.category_two is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=32
    * @return The bytes for categoryTwo.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getCategoryTwoBytes() {
     java.lang.Object ref = categoryTwo_;
     if (ref instanceof java.lang.String) {
@@ -124,11 +132,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object categoryThree_ = "";
   /**
-   * <code>string category_three = 3 [json_name = "categoryThree"];</code>
+   * <code>string category_three = 3 [json_name = "categoryThree", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.category_three is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=33
    * @return The categoryThree.
    */
   @java.lang.Override
-  public java.lang.String getCategoryThree() {
+  @java.lang.Deprecated public java.lang.String getCategoryThree() {
     java.lang.Object ref = categoryThree_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -141,11 +151,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string category_three = 3 [json_name = "categoryThree"];</code>
+   * <code>string category_three = 3 [json_name = "categoryThree", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.category_three is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=33
    * @return The bytes for categoryThree.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getCategoryThreeBytes() {
     java.lang.Object ref = categoryThree_;
     if (ref instanceof java.lang.String) {
@@ -163,11 +175,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object productName_ = "";
   /**
-   * <code>string product_name = 4 [json_name = "productName"];</code>
+   * <code>string product_name = 4 [json_name = "productName", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.product_name is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=34
    * @return The productName.
    */
   @java.lang.Override
-  public java.lang.String getProductName() {
+  @java.lang.Deprecated public java.lang.String getProductName() {
     java.lang.Object ref = productName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -180,11 +194,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string product_name = 4 [json_name = "productName"];</code>
+   * <code>string product_name = 4 [json_name = "productName", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha3.Product.product_name is deprecated.
+   *     See services/billing/entities/v1alpha3/rates.proto;l=34
    * @return The bytes for productName.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getProductNameBytes() {
     java.lang.Object ref = productName_;
     if (ref instanceof java.lang.String) {
@@ -598,10 +614,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object categoryOne_ = "";
     /**
-     * <code>string category_one = 1 [json_name = "categoryOne"];</code>
+     * <code>string category_one = 1 [json_name = "categoryOne", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.category_one is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=31
      * @return The categoryOne.
      */
-    public java.lang.String getCategoryOne() {
+    @java.lang.Deprecated public java.lang.String getCategoryOne() {
       java.lang.Object ref = categoryOne_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -614,10 +632,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string category_one = 1 [json_name = "categoryOne"];</code>
+     * <code>string category_one = 1 [json_name = "categoryOne", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.category_one is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=31
      * @return The bytes for categoryOne.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getCategoryOneBytes() {
       java.lang.Object ref = categoryOne_;
       if (ref instanceof String) {
@@ -631,11 +651,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string category_one = 1 [json_name = "categoryOne"];</code>
+     * <code>string category_one = 1 [json_name = "categoryOne", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.category_one is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=31
      * @param value The categoryOne to set.
      * @return This builder for chaining.
      */
-    public Builder setCategoryOne(
+    @java.lang.Deprecated public Builder setCategoryOne(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       categoryOne_ = value;
@@ -644,21 +666,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string category_one = 1 [json_name = "categoryOne"];</code>
+     * <code>string category_one = 1 [json_name = "categoryOne", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.category_one is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=31
      * @return This builder for chaining.
      */
-    public Builder clearCategoryOne() {
+    @java.lang.Deprecated public Builder clearCategoryOne() {
       categoryOne_ = getDefaultInstance().getCategoryOne();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string category_one = 1 [json_name = "categoryOne"];</code>
+     * <code>string category_one = 1 [json_name = "categoryOne", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.category_one is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=31
      * @param value The bytes for categoryOne to set.
      * @return This builder for chaining.
      */
-    public Builder setCategoryOneBytes(
+    @java.lang.Deprecated public Builder setCategoryOneBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -670,10 +696,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object categoryTwo_ = "";
     /**
-     * <code>string category_two = 2 [json_name = "categoryTwo"];</code>
+     * <code>string category_two = 2 [json_name = "categoryTwo", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.category_two is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=32
      * @return The categoryTwo.
      */
-    public java.lang.String getCategoryTwo() {
+    @java.lang.Deprecated public java.lang.String getCategoryTwo() {
       java.lang.Object ref = categoryTwo_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -686,10 +714,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string category_two = 2 [json_name = "categoryTwo"];</code>
+     * <code>string category_two = 2 [json_name = "categoryTwo", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.category_two is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=32
      * @return The bytes for categoryTwo.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getCategoryTwoBytes() {
       java.lang.Object ref = categoryTwo_;
       if (ref instanceof String) {
@@ -703,11 +733,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string category_two = 2 [json_name = "categoryTwo"];</code>
+     * <code>string category_two = 2 [json_name = "categoryTwo", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.category_two is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=32
      * @param value The categoryTwo to set.
      * @return This builder for chaining.
      */
-    public Builder setCategoryTwo(
+    @java.lang.Deprecated public Builder setCategoryTwo(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       categoryTwo_ = value;
@@ -716,21 +748,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string category_two = 2 [json_name = "categoryTwo"];</code>
+     * <code>string category_two = 2 [json_name = "categoryTwo", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.category_two is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=32
      * @return This builder for chaining.
      */
-    public Builder clearCategoryTwo() {
+    @java.lang.Deprecated public Builder clearCategoryTwo() {
       categoryTwo_ = getDefaultInstance().getCategoryTwo();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string category_two = 2 [json_name = "categoryTwo"];</code>
+     * <code>string category_two = 2 [json_name = "categoryTwo", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.category_two is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=32
      * @param value The bytes for categoryTwo to set.
      * @return This builder for chaining.
      */
-    public Builder setCategoryTwoBytes(
+    @java.lang.Deprecated public Builder setCategoryTwoBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -742,10 +778,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object categoryThree_ = "";
     /**
-     * <code>string category_three = 3 [json_name = "categoryThree"];</code>
+     * <code>string category_three = 3 [json_name = "categoryThree", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.category_three is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=33
      * @return The categoryThree.
      */
-    public java.lang.String getCategoryThree() {
+    @java.lang.Deprecated public java.lang.String getCategoryThree() {
       java.lang.Object ref = categoryThree_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -758,10 +796,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string category_three = 3 [json_name = "categoryThree"];</code>
+     * <code>string category_three = 3 [json_name = "categoryThree", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.category_three is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=33
      * @return The bytes for categoryThree.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getCategoryThreeBytes() {
       java.lang.Object ref = categoryThree_;
       if (ref instanceof String) {
@@ -775,11 +815,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string category_three = 3 [json_name = "categoryThree"];</code>
+     * <code>string category_three = 3 [json_name = "categoryThree", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.category_three is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=33
      * @param value The categoryThree to set.
      * @return This builder for chaining.
      */
-    public Builder setCategoryThree(
+    @java.lang.Deprecated public Builder setCategoryThree(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       categoryThree_ = value;
@@ -788,21 +830,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string category_three = 3 [json_name = "categoryThree"];</code>
+     * <code>string category_three = 3 [json_name = "categoryThree", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.category_three is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=33
      * @return This builder for chaining.
      */
-    public Builder clearCategoryThree() {
+    @java.lang.Deprecated public Builder clearCategoryThree() {
       categoryThree_ = getDefaultInstance().getCategoryThree();
       bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
-     * <code>string category_three = 3 [json_name = "categoryThree"];</code>
+     * <code>string category_three = 3 [json_name = "categoryThree", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.category_three is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=33
      * @param value The bytes for categoryThree to set.
      * @return This builder for chaining.
      */
-    public Builder setCategoryThreeBytes(
+    @java.lang.Deprecated public Builder setCategoryThreeBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -814,10 +860,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object productName_ = "";
     /**
-     * <code>string product_name = 4 [json_name = "productName"];</code>
+     * <code>string product_name = 4 [json_name = "productName", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.product_name is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=34
      * @return The productName.
      */
-    public java.lang.String getProductName() {
+    @java.lang.Deprecated public java.lang.String getProductName() {
       java.lang.Object ref = productName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -830,10 +878,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string product_name = 4 [json_name = "productName"];</code>
+     * <code>string product_name = 4 [json_name = "productName", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.product_name is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=34
      * @return The bytes for productName.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getProductNameBytes() {
       java.lang.Object ref = productName_;
       if (ref instanceof String) {
@@ -847,11 +897,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string product_name = 4 [json_name = "productName"];</code>
+     * <code>string product_name = 4 [json_name = "productName", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.product_name is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=34
      * @param value The productName to set.
      * @return This builder for chaining.
      */
-    public Builder setProductName(
+    @java.lang.Deprecated public Builder setProductName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       productName_ = value;
@@ -860,21 +912,25 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string product_name = 4 [json_name = "productName"];</code>
+     * <code>string product_name = 4 [json_name = "productName", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.product_name is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=34
      * @return This builder for chaining.
      */
-    public Builder clearProductName() {
+    @java.lang.Deprecated public Builder clearProductName() {
       productName_ = getDefaultInstance().getProductName();
       bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
-     * <code>string product_name = 4 [json_name = "productName"];</code>
+     * <code>string product_name = 4 [json_name = "productName", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha3.Product.product_name is deprecated.
+     *     See services/billing/entities/v1alpha3/rates.proto;l=34
      * @param value The bytes for productName to set.
      * @return This builder for chaining.
      */
-    public Builder setProductNameBytes(
+    @java.lang.Deprecated public Builder setProductNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
