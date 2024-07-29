@@ -15,45 +15,15 @@ public final class EntitiesProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_exile_manager_CreateCertificateInfoRequest_descriptor;
+    internal_static_api_v1alpha1_org_exile_manager_CertificateInfo_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_exile_manager_CreateCertificateInfoRequest_fieldAccessorTable;
+      internal_static_api_v1alpha1_org_exile_manager_CertificateInfo_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_exile_manager_CreateCertificateInfoResponse_descriptor;
+    internal_static_api_v1alpha1_org_exile_manager_ConfigurationInfo_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_exile_manager_CreateCertificateInfoResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_exile_manager_DeleteCertificateInfoRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_exile_manager_DeleteCertificateInfoRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_exile_manager_DeleteCertificateInfoResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_exile_manager_DeleteCertificateInfoResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_exile_manager_RevokeCertificateInfoRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_exile_manager_RevokeCertificateInfoRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_exile_manager_RevokeCertificateInfoResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_exile_manager_RevokeCertificateInfoResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_exile_manager_ListCertificateInfoRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_exile_manager_ListCertificateInfoRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_exile_manager_ListCertificateInfoResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_exile_manager_ListCertificateInfoResponse_fieldAccessorTable;
+      internal_static_api_v1alpha1_org_exile_manager_ConfigurationInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -65,82 +35,53 @@ public final class EntitiesProto {
     java.lang.String[] descriptorData = {
       "\n-api/v1alpha1/org/exile_manager/entitie" +
       "s.proto\022\036api.v1alpha1.org.exile_manager\032" +
-      "!api/commons/org/preferences.proto\"T\n\034Cr" +
-      "eateCertificateInfoRequest\022\022\n\004name\030\001 \001(\t" +
-      "R\004name\022 \n\013description\030\002 \001(\tR\013description" +
-      "\"P\n\035CreateCertificateInfoResponse\022/\n\023enc" +
-      "oded_certificate\030\001 \001(\tR\022encodedCertifica" +
-      "te\"N\n\034DeleteCertificateInfoRequest\022.\n\023ce" +
-      "rtificate_info_id\030\001 \001(\tR\021certificateInfo" +
-      "Id\"\037\n\035DeleteCertificateInfoResponse\"N\n\034R" +
-      "evokeCertificateInfoRequest\022.\n\023certifica" +
-      "te_info_id\030\001 \001(\tR\021certificateInfoId\"\037\n\035R" +
-      "evokeCertificateInfoResponse\"\034\n\032ListCert" +
-      "ificateInfoRequest\"s\n\033ListCertificateInf" +
-      "oResponse\022T\n\025certificate_info_list\030\001 \003(\013" +
-      "2 .api.commons.org.CertificateInfoR\023cert" +
-      "ificateInfoListB\331\001\n0com.tcn.cloud.api.ap" +
-      "i.v1alpha1.org.exile_managerB\rEntitiesPr" +
-      "otoP\001\242\002\004AVOE\252\002\035Api.V1alpha1.Org.ExileMan" +
-      "ager\312\002\035Api\\V1alpha1\\Org\\ExileManager\342\002)A" +
-      "pi\\V1alpha1\\Org\\ExileManager\\GPBMetadata" +
-      "\352\002 Api::V1alpha1::Org::ExileManagerb\006pro" +
-      "to3"
+      "\037google/protobuf/timestamp.proto\"\373\002\n\017Cer" +
+      "tificateInfo\022.\n\023certificate_info_id\030\001 \001(" +
+      "\tR\021certificateInfoId\022\025\n\006org_id\030\002 \001(\tR\005or" +
+      "gId\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description\030\004" +
+      " \001(\tR\013description\022\022\n\004hash\030\005 \001(\tR\004hash\022C\n" +
+      "\017expiration_date\030\006 \001(\0132\032.google.protobuf" +
+      ".TimestampR\016expirationDate\022?\n\rcreation_d" +
+      "ate\030\007 \001(\0132\032.google.protobuf.TimestampR\014c" +
+      "reationDate\022\035\n\nrequest_by\030\010 \001(\tR\trequest" +
+      "By\022\030\n\007deleted\030\t \001(\010R\007deleted\022\030\n\007revoked\030" +
+      "\n \001(\010R\007revoked\"\377\001\n\021ConfigurationInfo\0222\n\025" +
+      "configuration_info_id\030\001 \001(\tR\023configurati" +
+      "onInfoId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\022\n\004name\030" +
+      "\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013descri" +
+      "ption\022I\n\004type\030\005 \001(\01625.api.v1alpha1.org.e" +
+      "xile_manager.ConfigurationInfoTypeR\004type" +
+      "\022\036\n\nparameters\030\006 \001(\tR\nparameters*\267\001\n\025Con" +
+      "figurationInfoType\022\'\n#CONFIGURATION_INFO" +
+      "_TYPE_UNSPECIFIED\020\000\022%\n!CONFIGURATION_INF" +
+      "O_TYPE_DUMMY_ONE\020\001\022%\n!CONFIGURATION_INFO" +
+      "_TYPE_DUMMY_TWO\020\002\022\'\n#CONFIGURATION_INFO_" +
+      "TYPE_DUMMY_THREE\020\003B\331\001\n0com.tcn.cloud.api" +
+      ".api.v1alpha1.org.exile_managerB\rEntitie" +
+      "sProtoP\001\242\002\004AVOE\252\002\035Api.V1alpha1.Org.Exile" +
+      "Manager\312\002\035Api\\V1alpha1\\Org\\ExileManager\342" +
+      "\002)Api\\V1alpha1\\Org\\ExileManager\\GPBMetad" +
+      "ata\352\002 Api::V1alpha1::Org::ExileManagerb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.tcn.cloud.api.api.commons.org.PreferencesProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_api_v1alpha1_org_exile_manager_CreateCertificateInfoRequest_descriptor =
+    internal_static_api_v1alpha1_org_exile_manager_CertificateInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_api_v1alpha1_org_exile_manager_CreateCertificateInfoRequest_fieldAccessorTable = new
+    internal_static_api_v1alpha1_org_exile_manager_CertificateInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_exile_manager_CreateCertificateInfoRequest_descriptor,
-        new java.lang.String[] { "Name", "Description", });
-    internal_static_api_v1alpha1_org_exile_manager_CreateCertificateInfoResponse_descriptor =
+        internal_static_api_v1alpha1_org_exile_manager_CertificateInfo_descriptor,
+        new java.lang.String[] { "CertificateInfoId", "OrgId", "Name", "Description", "Hash", "ExpirationDate", "CreationDate", "RequestBy", "Deleted", "Revoked", });
+    internal_static_api_v1alpha1_org_exile_manager_ConfigurationInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_api_v1alpha1_org_exile_manager_CreateCertificateInfoResponse_fieldAccessorTable = new
+    internal_static_api_v1alpha1_org_exile_manager_ConfigurationInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_exile_manager_CreateCertificateInfoResponse_descriptor,
-        new java.lang.String[] { "EncodedCertificate", });
-    internal_static_api_v1alpha1_org_exile_manager_DeleteCertificateInfoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_api_v1alpha1_org_exile_manager_DeleteCertificateInfoRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_exile_manager_DeleteCertificateInfoRequest_descriptor,
-        new java.lang.String[] { "CertificateInfoId", });
-    internal_static_api_v1alpha1_org_exile_manager_DeleteCertificateInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_api_v1alpha1_org_exile_manager_DeleteCertificateInfoResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_exile_manager_DeleteCertificateInfoResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_api_v1alpha1_org_exile_manager_RevokeCertificateInfoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_api_v1alpha1_org_exile_manager_RevokeCertificateInfoRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_exile_manager_RevokeCertificateInfoRequest_descriptor,
-        new java.lang.String[] { "CertificateInfoId", });
-    internal_static_api_v1alpha1_org_exile_manager_RevokeCertificateInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_api_v1alpha1_org_exile_manager_RevokeCertificateInfoResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_exile_manager_RevokeCertificateInfoResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_api_v1alpha1_org_exile_manager_ListCertificateInfoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_api_v1alpha1_org_exile_manager_ListCertificateInfoRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_exile_manager_ListCertificateInfoRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_api_v1alpha1_org_exile_manager_ListCertificateInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_api_v1alpha1_org_exile_manager_ListCertificateInfoResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_exile_manager_ListCertificateInfoResponse_descriptor,
-        new java.lang.String[] { "CertificateInfoList", });
-    com.tcn.cloud.api.api.commons.org.PreferencesProto.getDescriptor();
+        internal_static_api_v1alpha1_org_exile_manager_ConfigurationInfo_descriptor,
+        new java.lang.String[] { "ConfigurationInfoId", "OrgId", "Name", "Description", "Type", "Parameters", });
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

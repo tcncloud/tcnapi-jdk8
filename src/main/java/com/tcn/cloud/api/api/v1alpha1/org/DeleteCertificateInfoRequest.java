@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * DeleteCertificateInfoRequest is the request for deleting a certificate info.
- * DEPRECATED: Use DeleteCertificateInfoRequest from api/v1alpha1/org/exile_manager/entities.proto
+ * DEPRECATED: Use api.v1alpha1.org.exile_manager.DeleteCertificateInfoRequest instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.DeleteCertificateInfoRequest}
@@ -250,7 +250,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * DeleteCertificateInfoRequest is the request for deleting a certificate info.
-   * DEPRECATED: Use DeleteCertificateInfoRequest from api/v1alpha1/org/exile_manager/entities.proto
+   * DEPRECATED: Use api.v1alpha1.org.exile_manager.DeleteCertificateInfoRequest instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.DeleteCertificateInfoRequest}

@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * RevokeCertificateInfoRequest is the request for revoking a certificate info.
- * DEPRECATED: Use RevokeCertificateInfoRequest from api/v1alpha1/org/exile_manager/entities.proto
+ * DEPRECATED: Use api.v1alpha1.org.exile_manager.RevokeCertificateInfoRequest instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.RevokeCertificateInfoRequest}
@@ -250,7 +250,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * RevokeCertificateInfoRequest is the request for revoking a certificate info.
-   * DEPRECATED: Use RevokeCertificateInfoRequest from api/v1alpha1/org/exile_manager/entities.proto
+   * DEPRECATED: Use api.v1alpha1.org.exile_manager.RevokeCertificateInfoRequest instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.RevokeCertificateInfoRequest}

@@ -682,7 +682,7 @@ public final class PreferencesProto {
       "R\013lastUpdated\"\214\001\n\017ObservedHoliday\0221\n\003day" +
       "\030\001 \001(\0132\035.api.commons.org.MonthDayDateH\000R" +
       "\003day\022;\n\007holiday\030\002 \001(\0132\037.api.commons.org." +
-      "CountryHolidayH\000R\007holidayB\t\n\007DayType\"\373\002\n" +
+      "CountryHolidayH\000R\007holidayB\t\n\007DayType\"\377\002\n" +
       "\017CertificateInfo\022.\n\023certificate_info_id\030" +
       "\001 \001(\tR\021certificateInfoId\022\025\n\006org_id\030\002 \001(\t" +
       "R\005orgId\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013descripti" +
@@ -692,11 +692,11 @@ public final class PreferencesProto {
       "on_date\030\007 \001(\0132\032.google.protobuf.Timestam" +
       "pR\014creationDate\022\035\n\nrequest_by\030\010 \001(\tR\treq" +
       "uestBy\022\030\n\007deleted\030\t \001(\010R\007deleted\022\030\n\007revo" +
-      "ked\030\n \001(\010R\007revokedB\223\001\n!com.tcn.cloud.api" +
-      ".api.commons.orgB\020PreferencesProtoP\001\242\002\003A" +
-      "CO\252\002\017Api.Commons.Org\312\002\017Api\\Commons\\Org\342\002" +
-      "\033Api\\Commons\\Org\\GPBMetadata\352\002\021Api::Comm" +
-      "ons::Orgb\006proto3"
+      "ked\030\n \001(\010R\007revoked:\002\030\001B\223\001\n!com.tcn.cloud" +
+      ".api.api.commons.orgB\020PreferencesProtoP\001" +
+      "\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\Commons\\O" +
+      "rg\342\002\033Api\\Commons\\Org\\GPBMetadata\352\002\021Api::" +
+      "Commons::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

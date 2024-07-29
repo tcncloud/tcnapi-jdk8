@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * ListCertificateInfoRequest is the request for listing certificate info.
- * DEPRECATED: Use ListCertificateInfoRequest from api/v1alpha1/org/exile_manager/entities.proto
+ * DEPRECATED: Use api.v1alpha1.org.exile_manager.ListCertificateInfoRequest instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.ListCertificateInfoRequest}
@@ -192,7 +192,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * ListCertificateInfoRequest is the request for listing certificate info.
-   * DEPRECATED: Use ListCertificateInfoRequest from api/v1alpha1/org/exile_manager/entities.proto
+   * DEPRECATED: Use api.v1alpha1.org.exile_manager.ListCertificateInfoRequest instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.ListCertificateInfoRequest}
