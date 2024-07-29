@@ -14,7 +14,7 @@ public interface GetPublishedArticleByIdRequestOrBuilder extends
    *
    * <code>int64 new_article_sid = 1 [json_name = "newArticleSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.newsroom.GetPublishedArticleByIdRequest.new_article_sid is deprecated.
-   *     See api/v1alpha1/newsroom/entities.proto;l=144
+   *     See api/v1alpha1/newsroom/entities.proto;l=145
    * @return The newArticleSid.
    */
   @java.lang.Deprecated long getNewArticleSid();
