@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     uuid_ = "";
     content_ = "";
     downloadUrl_ = "";
+    path_ = "";
   }
 
   @java.lang.Override
@@ -186,6 +187,91 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int TEMP_ID_FIELD_NUMBER = 4;
+  private com.google.protobuf.StringValue tempId_;
+  /**
+   * <pre>
+   * temp id for the image
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue temp_id = 4 [json_name = "tempId"];</code>
+   * @return Whether the tempId field is set.
+   */
+  @java.lang.Override
+  public boolean hasTempId() {
+    return tempId_ != null;
+  }
+  /**
+   * <pre>
+   * temp id for the image
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue temp_id = 4 [json_name = "tempId"];</code>
+   * @return The tempId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getTempId() {
+    return tempId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : tempId_;
+  }
+  /**
+   * <pre>
+   * temp id for the image
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue temp_id = 4 [json_name = "tempId"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getTempIdOrBuilder() {
+    return tempId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : tempId_;
+  }
+
+  public static final int PATH_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object path_ = "";
+  /**
+   * <pre>
+   * path for the image
+   * </pre>
+   *
+   * <code>string path = 5 [json_name = "path"];</code>
+   * @return The path.
+   */
+  @java.lang.Override
+  public java.lang.String getPath() {
+    java.lang.Object ref = path_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      path_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * path for the image
+   * </pre>
+   *
+   * <code>string path = 5 [json_name = "path"];</code>
+   * @return The bytes for path.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPathBytes() {
+    java.lang.Object ref = path_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      path_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -209,6 +295,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(downloadUrl_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, downloadUrl_);
     }
+    if (tempId_ != null) {
+      output.writeMessage(4, getTempId());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, path_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -226,6 +318,13 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(downloadUrl_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, downloadUrl_);
+    }
+    if (tempId_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getTempId());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, path_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -248,6 +347,13 @@ private static final long serialVersionUID = 0L;
         .equals(other.getContent())) return false;
     if (!getDownloadUrl()
         .equals(other.getDownloadUrl())) return false;
+    if (hasTempId() != other.hasTempId()) return false;
+    if (hasTempId()) {
+      if (!getTempId()
+          .equals(other.getTempId())) return false;
+    }
+    if (!getPath()
+        .equals(other.getPath())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -265,6 +371,12 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getContent().hashCode();
     hash = (37 * hash) + DOWNLOAD_URL_FIELD_NUMBER;
     hash = (53 * hash) + getDownloadUrl().hashCode();
+    if (hasTempId()) {
+      hash = (37 * hash) + TEMP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTempId().hashCode();
+    }
+    hash = (37 * hash) + PATH_FIELD_NUMBER;
+    hash = (53 * hash) + getPath().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -403,6 +515,12 @@ private static final long serialVersionUID = 0L;
       uuid_ = "";
       content_ = "";
       downloadUrl_ = "";
+      tempId_ = null;
+      if (tempIdBuilder_ != null) {
+        tempIdBuilder_.dispose();
+        tempIdBuilder_ = null;
+      }
+      path_ = "";
       return this;
     }
 
@@ -444,6 +562,14 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.downloadUrl_ = downloadUrl_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.tempId_ = tempIdBuilder_ == null
+            ? tempId_
+            : tempIdBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.path_ = path_;
       }
     }
 
@@ -506,6 +632,14 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
+      if (other.hasTempId()) {
+        mergeTempId(other.getTempId());
+      }
+      if (!other.getPath().isEmpty()) {
+        path_ = other.path_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -547,6 +681,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  getTempIdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              path_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -836,6 +982,253 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       downloadUrl_ = value;
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.StringValue tempId_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> tempIdBuilder_;
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 4 [json_name = "tempId"];</code>
+     * @return Whether the tempId field is set.
+     */
+    public boolean hasTempId() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 4 [json_name = "tempId"];</code>
+     * @return The tempId.
+     */
+    public com.google.protobuf.StringValue getTempId() {
+      if (tempIdBuilder_ == null) {
+        return tempId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : tempId_;
+      } else {
+        return tempIdBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 4 [json_name = "tempId"];</code>
+     */
+    public Builder setTempId(com.google.protobuf.StringValue value) {
+      if (tempIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        tempId_ = value;
+      } else {
+        tempIdBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 4 [json_name = "tempId"];</code>
+     */
+    public Builder setTempId(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (tempIdBuilder_ == null) {
+        tempId_ = builderForValue.build();
+      } else {
+        tempIdBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 4 [json_name = "tempId"];</code>
+     */
+    public Builder mergeTempId(com.google.protobuf.StringValue value) {
+      if (tempIdBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          tempId_ != null &&
+          tempId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getTempIdBuilder().mergeFrom(value);
+        } else {
+          tempId_ = value;
+        }
+      } else {
+        tempIdBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 4 [json_name = "tempId"];</code>
+     */
+    public Builder clearTempId() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      tempId_ = null;
+      if (tempIdBuilder_ != null) {
+        tempIdBuilder_.dispose();
+        tempIdBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 4 [json_name = "tempId"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getTempIdBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getTempIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 4 [json_name = "tempId"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getTempIdOrBuilder() {
+      if (tempIdBuilder_ != null) {
+        return tempIdBuilder_.getMessageOrBuilder();
+      } else {
+        return tempId_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : tempId_;
+      }
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 4 [json_name = "tempId"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getTempIdFieldBuilder() {
+      if (tempIdBuilder_ == null) {
+        tempIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getTempId(),
+                getParentForChildren(),
+                isClean());
+        tempId_ = null;
+      }
+      return tempIdBuilder_;
+    }
+
+    private java.lang.Object path_ = "";
+    /**
+     * <pre>
+     * path for the image
+     * </pre>
+     *
+     * <code>string path = 5 [json_name = "path"];</code>
+     * @return The path.
+     */
+    public java.lang.String getPath() {
+      java.lang.Object ref = path_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        path_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * path for the image
+     * </pre>
+     *
+     * <code>string path = 5 [json_name = "path"];</code>
+     * @return The bytes for path.
+     */
+    public com.google.protobuf.ByteString
+        getPathBytes() {
+      java.lang.Object ref = path_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        path_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * path for the image
+     * </pre>
+     *
+     * <code>string path = 5 [json_name = "path"];</code>
+     * @param value The path to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPath(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      path_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * path for the image
+     * </pre>
+     *
+     * <code>string path = 5 [json_name = "path"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPath() {
+      path_ = getDefaultInstance().getPath();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * path for the image
+     * </pre>
+     *
+     * <code>string path = 5 [json_name = "path"];</code>
+     * @param value The bytes for path to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPathBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      path_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
