@@ -251,32 +251,31 @@ public final class EntitiesProto {
       "om.PublishedArticleDetailsR\027publishedArt" +
       "icleDetails\"]\n\034StoreNewsArticleImageRequ" +
       "est\022=\n\005image\030\001 \001(\0132\'.api.v1alpha1.newsro" +
-      "om.NewsArticleImageR\005image\"\247\002\n\020NewsArtic" +
+      "om.NewsArticleImageR\005image\"\223\002\n\020NewsArtic" +
       "leImage\022\022\n\004uuid\030\001 \001(\tR\004uuid\022*\n\017new_artic" +
       "le_sid\030\002 \001(\003B\0020\001R\rnewArticleSid\022\030\n\007conte" +
       "nt\030\003 \001(\tR\007content\022!\n\014download_url\030\004 \001(\tR" +
       "\013downloadUrl\022,\n\022image_reference_id\030\005 \001(\t" +
       "R\020imageReferenceId\022\035\n\nimage_type\030\006 \001(\tR\t" +
       "imageType\0225\n\007temp_id\030\007 \001(\0132\034.google.prot" +
-      "obuf.StringValueR\006tempId\022\022\n\004path\030\010 \001(\tR\004" +
-      "path\"^\n\035StoreNewsArticleImageResponse\022=\n" +
-      "\005image\030\001 \001(\0132\'.api.v1alpha1.newsroom.New" +
-      "sArticleImageR\005image\"M\n\037ListImagesForNew" +
-      "sArticleRequest\022*\n\017new_article_sid\030\001 \001(\003" +
-      "B\0020\001R\rnewArticleSid\"{\n ListImagesForNews" +
-      "ArticleResponse\022W\n\023news_article_images\030\001" +
-      " \003(\0132\'.api.v1alpha1.newsroom.NewsArticle" +
-      "ImageR\021newsArticleImages\"^\n\035UploadNewsAr" +
-      "ticleImageRequest\022=\n\005image\030\001 \001(\0132\'.api.v" +
+      "obuf.StringValueR\006tempId\"^\n\035StoreNewsArt" +
+      "icleImageResponse\022=\n\005image\030\001 \001(\0132\'.api.v" +
       "1alpha1.newsroom.NewsArticleImageR\005image" +
-      "\"_\n\036UploadNewsArticleImageResponse\022=\n\005im" +
-      "age\030\001 \001(\0132\'.api.v1alpha1.newsroom.NewsAr" +
-      "ticleImageR\005imageB\256\001\n\'com.tcn.cloud.api." +
-      "api.v1alpha1.newsroomB\rEntitiesProtoP\001\242\002" +
-      "\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Api\\V1alp" +
-      "ha1\\Newsroom\342\002!Api\\V1alpha1\\Newsroom\\GPB" +
-      "Metadata\352\002\027Api::V1alpha1::Newsroomb\006prot" +
-      "o3"
+      "\"M\n\037ListImagesForNewsArticleRequest\022*\n\017n" +
+      "ew_article_sid\030\001 \001(\003B\0020\001R\rnewArticleSid\"" +
+      "{\n ListImagesForNewsArticleResponse\022W\n\023n" +
+      "ews_article_images\030\001 \003(\0132\'.api.v1alpha1." +
+      "newsroom.NewsArticleImageR\021newsArticleIm" +
+      "ages\"^\n\035UploadNewsArticleImageRequest\022=\n" +
+      "\005image\030\001 \001(\0132\'.api.v1alpha1.newsroom.New" +
+      "sArticleImageR\005image\"_\n\036UploadNewsArticl" +
+      "eImageResponse\022=\n\005image\030\001 \001(\0132\'.api.v1al" +
+      "pha1.newsroom.NewsArticleImageR\005imageB\256\001" +
+      "\n\'com.tcn.cloud.api.api.v1alpha1.newsroo" +
+      "mB\rEntitiesProtoP\001\242\002\003AVN\252\002\025Api.V1alpha1." +
+      "Newsroom\312\002\025Api\\V1alpha1\\Newsroom\342\002!Api\\V" +
+      "1alpha1\\Newsroom\\GPBMetadata\352\002\027Api::V1al" +
+      "pha1::Newsroomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -429,7 +428,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_newsroom_NewsArticleImage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_newsroom_NewsArticleImage_descriptor,
-        new java.lang.String[] { "Uuid", "NewArticleSid", "Content", "DownloadUrl", "ImageReferenceId", "ImageType", "TempId", "Path", });
+        new java.lang.String[] { "Uuid", "NewArticleSid", "Content", "DownloadUrl", "ImageReferenceId", "ImageType", "TempId", });
     internal_static_api_v1alpha1_newsroom_StoreNewsArticleImageResponse_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_api_v1alpha1_newsroom_StoreNewsArticleImageResponse_fieldAccessorTable = new

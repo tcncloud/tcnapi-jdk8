@@ -143,24 +143,4 @@ public interface NewsArticleImageOrBuilder extends
    * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getTempIdOrBuilder();
-
-  /**
-   * <pre>
-   * path for the image
-   * </pre>
-   *
-   * <code>string path = 8 [json_name = "path"];</code>
-   * @return The path.
-   */
-  java.lang.String getPath();
-  /**
-   * <pre>
-   * path for the image
-   * </pre>
-   *
-   * <code>string path = 8 [json_name = "path"];</code>
-   * @return The bytes for path.
-   */
-  com.google.protobuf.ByteString
-      getPathBytes();
 }
