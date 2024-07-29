@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface ListCertificateInfoRequestOrBuilder extends
+@java.lang.Deprecated public interface ListCertificateInfoRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.ListCertificateInfoRequest)
     com.google.protobuf.MessageOrBuilder {
 }

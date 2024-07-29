@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * DeleteCertificateInfoResponse is the response for deleting a certificate info.
+ * DEPRECATED: Use DeleteCertificateInfoResponse from api/v1alpha1/org/exile_manager/entities.proto
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.DeleteCertificateInfoResponse}
  */
-public final class DeleteCertificateInfoResponse extends
+@java.lang.Deprecated public final class DeleteCertificateInfoResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.org.DeleteCertificateInfoResponse)
     DeleteCertificateInfoResponseOrBuilder {
@@ -191,6 +192,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * DeleteCertificateInfoResponse is the response for deleting a certificate info.
+   * DEPRECATED: Use DeleteCertificateInfoResponse from api/v1alpha1/org/exile_manager/entities.proto
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.DeleteCertificateInfoResponse}

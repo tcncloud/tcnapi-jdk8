@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface RevokeCertificateInfoResponseOrBuilder extends
+@java.lang.Deprecated public interface RevokeCertificateInfoResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.RevokeCertificateInfoResponse)
     com.google.protobuf.MessageOrBuilder {
 }
