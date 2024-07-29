@@ -8569,7 +8569,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * List super-user assigned colors for real-time management states.
+     * List org assigned colors for real-time management states.
      * Any states that do not have an assigned state color will have their system default state color returned instead.
      * Errors:
      *  - grpc.Internal: error occurs when listing the real-time management state colors.
@@ -11658,7 +11658,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * List super-user assigned colors for real-time management states.
+     * List org assigned colors for real-time management states.
      * Any states that do not have an assigned state color will have their system default state color returned instead.
      * Errors:
      *  - grpc.Internal: error occurs when listing the real-time management state colors.
@@ -14567,7 +14567,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * List super-user assigned colors for real-time management states.
+     * List org assigned colors for real-time management states.
      * Any states that do not have an assigned state color will have their system default state color returned instead.
      * Errors:
      *  - grpc.Internal: error occurs when listing the real-time management state colors.
@@ -17540,7 +17540,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * List super-user assigned colors for real-time management states.
+     * List org assigned colors for real-time management states.
      * Any states that do not have an assigned state color will have their system default state color returned instead.
      * Errors:
      *  - grpc.Internal: error occurs when listing the real-time management state colors.

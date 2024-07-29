@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor> stateColors_;
   /**
    * <pre>
-   * The states and colors.
+   * The states and their associated colors.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -59,7 +59,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The states and colors.
+   * The states and their associated colors.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The states and colors.
+   * The states and their associated colors.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The states and colors.
+   * The states and their associated colors.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -93,7 +93,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The states and colors.
+   * The states and their associated colors.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -524,7 +524,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -538,7 +538,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -559,7 +559,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -577,7 +577,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -597,7 +597,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -636,7 +636,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -673,7 +673,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -707,7 +707,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -718,7 +718,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -758,7 +758,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -770,7 +770,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The states and colors.
+     * The states and their associated colors.
      * </pre>
      *
      * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>

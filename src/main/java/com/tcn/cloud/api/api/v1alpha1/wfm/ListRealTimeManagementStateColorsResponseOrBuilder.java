@@ -9,7 +9,7 @@ public interface ListRealTimeManagementStateColorsResponseOrBuilder extends
 
   /**
    * <pre>
-   * The states and colors.
+   * The states and their associated colors.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -18,7 +18,7 @@ public interface ListRealTimeManagementStateColorsResponseOrBuilder extends
       getStateColorsList();
   /**
    * <pre>
-   * The states and colors.
+   * The states and their associated colors.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -26,7 +26,7 @@ public interface ListRealTimeManagementStateColorsResponseOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.wfm.RealTimeManagementStateColor getStateColors(int index);
   /**
    * <pre>
-   * The states and colors.
+   * The states and their associated colors.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -34,7 +34,7 @@ public interface ListRealTimeManagementStateColorsResponseOrBuilder extends
   int getStateColorsCount();
   /**
    * <pre>
-   * The states and colors.
+   * The states and their associated colors.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
@@ -43,7 +43,7 @@ public interface ListRealTimeManagementStateColorsResponseOrBuilder extends
       getStateColorsOrBuilderList();
   /**
    * <pre>
-   * The states and colors.
+   * The states and their associated colors.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.wfm.RealTimeManagementStateColor state_colors = 1 [json_name = "stateColors"];</code>
