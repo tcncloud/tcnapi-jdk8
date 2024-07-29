@@ -8573,9 +8573,6 @@ public final class WFMGrpc {
      * Any states that do not have an assigned state color will have their system default state color returned instead.
      * Errors:
      *  - grpc.Internal: error occurs when listing the real-time management state colors.
-     * Errors:
-     *   - grpc.Invalid: on invalid input.
-     *   - grpc.Internal: on unexpected error.
      * </pre>
      */
     default void listRealTimeManagementStateColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request,
@@ -11662,9 +11659,6 @@ public final class WFMGrpc {
      * Any states that do not have an assigned state color will have their system default state color returned instead.
      * Errors:
      *  - grpc.Internal: error occurs when listing the real-time management state colors.
-     * Errors:
-     *   - grpc.Invalid: on invalid input.
-     *   - grpc.Internal: on unexpected error.
      * </pre>
      */
     public void listRealTimeManagementStateColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request,
@@ -14571,9 +14565,6 @@ public final class WFMGrpc {
      * Any states that do not have an assigned state color will have their system default state color returned instead.
      * Errors:
      *  - grpc.Internal: error occurs when listing the real-time management state colors.
-     * Errors:
-     *   - grpc.Invalid: on invalid input.
-     *   - grpc.Internal: on unexpected error.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse listRealTimeManagementStateColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request) {
@@ -17544,9 +17535,6 @@ public final class WFMGrpc {
      * Any states that do not have an assigned state color will have their system default state color returned instead.
      * Errors:
      *  - grpc.Internal: error occurs when listing the real-time management state colors.
-     * Errors:
-     *   - grpc.Invalid: on invalid input.
-     *   - grpc.Internal: on unexpected error.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse> listRealTimeManagementStateColors(
