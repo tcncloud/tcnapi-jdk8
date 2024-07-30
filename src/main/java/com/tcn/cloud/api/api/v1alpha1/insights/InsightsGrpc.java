@@ -480,37 +480,6 @@ public final class InsightsGrpc {
     return getListOutputConfigurationsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest,
-      com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> getListOutputConfigurationsStreamedMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListOutputConfigurationsStreamed",
-      requestType = com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest,
-      com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> getListOutputConfigurationsStreamedMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest, com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> getListOutputConfigurationsStreamedMethod;
-    if ((getListOutputConfigurationsStreamedMethod = InsightsGrpc.getListOutputConfigurationsStreamedMethod) == null) {
-      synchronized (InsightsGrpc.class) {
-        if ((getListOutputConfigurationsStreamedMethod = InsightsGrpc.getListOutputConfigurationsStreamedMethod) == null) {
-          InsightsGrpc.getListOutputConfigurationsStreamedMethod = getListOutputConfigurationsStreamedMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest, com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOutputConfigurationsStreamed"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new InsightsMethodDescriptorSupplier("ListOutputConfigurationsStreamed"))
-              .build();
-        }
-      }
-    }
-    return getListOutputConfigurationsStreamedMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationRequest,
       com.tcn.cloud.api.api.v1alpha1.insights.UpdateOutputConfigurationResponse> getUpdateOutputConfigurationMethod;
 
@@ -857,23 +826,11 @@ public final class InsightsGrpc {
     /**
      * <pre>
      * ListOutputConfigurations lists output configurations for an insight
-     * DEPRECATED. Use ListOutputConfigurationsStreamed instead
      * </pre>
      */
-    @java.lang.Deprecated
     default void listOutputConfigurations(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOutputConfigurationsMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * ListOutputConfigurationsStreamed lists the output configurations for an insight with streaming
-     * </pre>
-     */
-    default void listOutputConfigurationsStreamed(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOutputConfigurationsStreamedMethod(), responseObserver);
     }
 
     /**
@@ -1111,25 +1068,12 @@ public final class InsightsGrpc {
     /**
      * <pre>
      * ListOutputConfigurations lists output configurations for an insight
-     * DEPRECATED. Use ListOutputConfigurationsStreamed instead
      * </pre>
      */
-    @java.lang.Deprecated
     public void listOutputConfigurations(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOutputConfigurationsMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * ListOutputConfigurationsStreamed lists the output configurations for an insight with streaming
-     * </pre>
-     */
-    public void listOutputConfigurationsStreamed(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
-          getChannel().newCall(getListOutputConfigurationsStreamedMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1347,24 +1291,11 @@ public final class InsightsGrpc {
     /**
      * <pre>
      * ListOutputConfigurations lists output configurations for an insight
-     * DEPRECATED. Use ListOutputConfigurationsStreamed instead
      * </pre>
      */
-    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse listOutputConfigurations(com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOutputConfigurationsMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * ListOutputConfigurationsStreamed lists the output configurations for an insight with streaming
-     * </pre>
-     */
-    public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> listOutputConfigurationsStreamed(
-        com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
-          getChannel(), getListOutputConfigurationsStreamedMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1591,10 +1522,8 @@ public final class InsightsGrpc {
     /**
      * <pre>
      * ListOutputConfigurations lists output configurations for an insight
-     * DEPRECATED. Use ListOutputConfigurationsStreamed instead
      * </pre>
      */
-    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse> listOutputConfigurations(
         com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1672,12 +1601,11 @@ public final class InsightsGrpc {
   private static final int METHODID_PUBLISH_INSIGHT = 12;
   private static final int METHODID_CREATE_OUTPUT_CONFIGURATION = 13;
   private static final int METHODID_LIST_OUTPUT_CONFIGURATIONS = 14;
-  private static final int METHODID_LIST_OUTPUT_CONFIGURATIONS_STREAMED = 15;
-  private static final int METHODID_UPDATE_OUTPUT_CONFIGURATION = 16;
-  private static final int METHODID_DELETE_OUTPUT_CONFIGURATION = 17;
-  private static final int METHODID_GET_OUTPUT_CONFIGURATION = 18;
-  private static final int METHODID_SET_DEFAULT_OUTPUT_CONFIGURATION = 19;
-  private static final int METHODID_GET_DEFAULT_OUTPUT_CONFIGURATION = 20;
+  private static final int METHODID_UPDATE_OUTPUT_CONFIGURATION = 15;
+  private static final int METHODID_DELETE_OUTPUT_CONFIGURATION = 16;
+  private static final int METHODID_GET_OUTPUT_CONFIGURATION = 17;
+  private static final int METHODID_SET_DEFAULT_OUTPUT_CONFIGURATION = 18;
+  private static final int METHODID_GET_DEFAULT_OUTPUT_CONFIGURATION = 19;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1754,10 +1682,6 @@ public final class InsightsGrpc {
           break;
         case METHODID_LIST_OUTPUT_CONFIGURATIONS:
           serviceImpl.listOutputConfigurations((com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse>) responseObserver);
-          break;
-        case METHODID_LIST_OUTPUT_CONFIGURATIONS_STREAMED:
-          serviceImpl.listOutputConfigurationsStreamed((com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse>) responseObserver);
           break;
         case METHODID_UPDATE_OUTPUT_CONFIGURATION:
@@ -1904,13 +1828,6 @@ public final class InsightsGrpc {
               com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse>(
                 service, METHODID_LIST_OUTPUT_CONFIGURATIONS)))
         .addMethod(
-          getListOutputConfigurationsStreamedMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsRequest,
-              com.tcn.cloud.api.api.v1alpha1.insights.ListOutputConfigurationsResponse>(
-                service, METHODID_LIST_OUTPUT_CONFIGURATIONS_STREAMED)))
-        .addMethod(
           getUpdateOutputConfigurationMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -2008,7 +1925,6 @@ public final class InsightsGrpc {
               .addMethod(getPublishInsightMethod())
               .addMethod(getCreateOutputConfigurationMethod())
               .addMethod(getListOutputConfigurationsMethod())
-              .addMethod(getListOutputConfigurationsStreamedMethod())
               .addMethod(getUpdateOutputConfigurationMethod())
               .addMethod(getDeleteOutputConfigurationMethod())
               .addMethod(getGetOutputConfigurationMethod())
