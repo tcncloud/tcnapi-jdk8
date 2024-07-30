@@ -60,6 +60,10 @@ public enum AppName
    * <code>BILLING = 12;</code>
    */
   BILLING(12),
+  /**
+   * <code>NEWSROOM = 13;</code>
+   */
+  NEWSROOM(13),
   UNRECOGNIZED(-1),
   ;
 
@@ -115,6 +119,10 @@ public enum AppName
    * <code>BILLING = 12;</code>
    */
   public static final int BILLING_VALUE = 12;
+  /**
+   * <code>NEWSROOM = 13;</code>
+   */
+  public static final int NEWSROOM_VALUE = 13;
 
 
   public final int getNumber() {
@@ -154,6 +162,7 @@ public enum AppName
       case 10: return OMNICHANNEL;
       case 11: return LEARN;
       case 12: return BILLING;
+      case 13: return NEWSROOM;
       default: return null;
     }
   }

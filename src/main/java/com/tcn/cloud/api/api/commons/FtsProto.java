@@ -23,15 +23,15 @@ public final class FtsProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025api/commons/fts.proto\022\013api.commons*\254\001\n" +
+      "\n\025api/commons/fts.proto\022\013api.commons*\272\001\n" +
       "\007AppName\022\013\n\007OUTSIDE\020\000\022\007\n\003LMS\020\001\022\t\n\005P3API\020" +
       "\002\022\007\n\003ANA\020\003\022\016\n\nCOMPLIANCE\020\004\022\010\n\004VMDS\020\005\022\t\n\005" +
       "EMAIL\020\006\022\007\n\003CJS\020\007\022\016\n\nVANALYTICS\020\010\022\020\n\014INTE" +
       "GRATIONS\020\t\022\017\n\013OMNICHANNEL\020\n\022\t\n\005LEARN\020\013\022\013" +
-      "\n\007BILLING\020\014Bv\n\035com.tcn.cloud.api.api.com" +
-      "monsB\010FtsProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013A" +
-      "pi\\Commons\342\002\027Api\\Commons\\GPBMetadata\352\002\014A" +
-      "pi::Commonsb\006proto3"
+      "\n\007BILLING\020\014\022\014\n\010NEWSROOM\020\rBv\n\035com.tcn.clo" +
+      "ud.api.api.commonsB\010FtsProtoP\001\242\002\003ACX\252\002\013A" +
+      "pi.Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\G" +
+      "PBMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
