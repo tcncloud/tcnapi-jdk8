@@ -18,7 +18,6 @@ private static final long serialVersionUID = 0L;
   private BillingTag() {
     billingTagId_ = "";
     name_ = "";
-    category_ = "";
   }
 
   @java.lang.Override
@@ -197,45 +196,6 @@ private static final long serialVersionUID = 0L;
     return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
   }
 
-  public static final int CATEGORY_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object category_ = "";
-  /**
-   * <code>string category = 6 [json_name = "category"];</code>
-   * @return The category.
-   */
-  @java.lang.Override
-  public java.lang.String getCategory() {
-    java.lang.Object ref = category_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      category_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string category = 6 [json_name = "category"];</code>
-   * @return The bytes for category.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getCategoryBytes() {
-    java.lang.Object ref = category_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      category_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -265,9 +225,6 @@ private static final long serialVersionUID = 0L;
     if (deleteTime_ != null) {
       output.writeMessage(5, getDeleteTime());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(category_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, category_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -294,9 +251,6 @@ private static final long serialVersionUID = 0L;
     if (deleteTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getDeleteTime());
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(category_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, category_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -332,8 +286,6 @@ private static final long serialVersionUID = 0L;
       if (!getDeleteTime()
           .equals(other.getDeleteTime())) return false;
     }
-    if (!getCategory()
-        .equals(other.getCategory())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -361,8 +313,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DELETE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getDeleteTime().hashCode();
     }
-    hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
-    hash = (53 * hash) + getCategory().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -511,7 +461,6 @@ private static final long serialVersionUID = 0L;
         deleteTimeBuilder_.dispose();
         deleteTimeBuilder_ = null;
       }
-      category_ = "";
       return this;
     }
 
@@ -565,9 +514,6 @@ private static final long serialVersionUID = 0L;
         result.deleteTime_ = deleteTimeBuilder_ == null
             ? deleteTime_
             : deleteTimeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.category_ = category_;
       }
     }
 
@@ -634,11 +580,6 @@ private static final long serialVersionUID = 0L;
       if (other.hasDeleteTime()) {
         mergeDeleteTime(other.getDeleteTime());
       }
-      if (!other.getCategory().isEmpty()) {
-        category_ = other.category_;
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -696,11 +637,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
-            case 50: {
-              category_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1217,78 +1153,6 @@ private static final long serialVersionUID = 0L;
         deleteTime_ = null;
       }
       return deleteTimeBuilder_;
-    }
-
-    private java.lang.Object category_ = "";
-    /**
-     * <code>string category = 6 [json_name = "category"];</code>
-     * @return The category.
-     */
-    public java.lang.String getCategory() {
-      java.lang.Object ref = category_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        category_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string category = 6 [json_name = "category"];</code>
-     * @return The bytes for category.
-     */
-    public com.google.protobuf.ByteString
-        getCategoryBytes() {
-      java.lang.Object ref = category_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        category_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string category = 6 [json_name = "category"];</code>
-     * @param value The category to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCategory(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      category_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string category = 6 [json_name = "category"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearCategory() {
-      category_ = getDefaultInstance().getCategory();
-      bitField0_ = (bitField0_ & ~0x00000020);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string category = 6 [json_name = "category"];</code>
-     * @param value The bytes for category to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCategoryBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      category_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
