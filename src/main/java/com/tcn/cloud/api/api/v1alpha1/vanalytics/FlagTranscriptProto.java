@@ -85,50 +85,51 @@ public final class FlagTranscriptProto {
       "FlagTranscriptRequest\022\'\n\017transcript_sids" +
       "\030\001 \003(\003R\016transcriptSids\0221\n\004flag\030\002 \001(\0132\035.a" +
       "pi.v1alpha1.vanalytics.FlagR\004flag\"\036\n\034Cre" +
-      "ateFlagTranscriptResponse\"]\n\033DeleteFlagT" +
+      "ateFlagTranscriptResponse\"y\n\033DeleteFlagT" +
       "ranscriptRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022" +
-      "\'\n\017transcript_sids\030\002 \003(\003R\016transcriptSids" +
-      "\"\036\n\034DeleteFlagTranscriptResponse\"\313\006\n\034Sea" +
-      "rchFlagTranscriptsRequest\022\033\n\tpage_size\030\002" +
-      " \001(\rR\010pageSize\022\035\n\npage_token\030\003 \001(\tR\tpage" +
-      "Token\022X\n\010flag_sid\030\005 \001(\0132=.api.v1alpha1.v" +
-      "analytics.SearchFlagTranscriptsRequest.F" +
-      "lagSidR\007flagSid\022W\n\022flag_review_status\030\006 " +
-      "\001(\0162).api.v1alpha1.vanalytics.FlagReview" +
-      "StatusR\020flagReviewStatus\022k\n\017notify_group" +
-      "_id\030\007 \001(\0132C.api.v1alpha1.vanalytics.Sear" +
-      "chFlagTranscriptsRequest.NotifyGroupIdR\r" +
-      "notifyGroupId\022k\n\017review_group_id\030\010 \001(\0132C" +
-      ".api.v1alpha1.vanalytics.SearchFlagTrans" +
-      "criptsRequest.ReviewGroupIdR\rreviewGroup" +
-      "Id\0220\n\024start_transcript_sid\030\n \001(\003R\022startT" +
-      "ranscriptSid\022,\n\022end_transcript_sid\030\013 \001(\003" +
-      "R\020endTranscriptSid\022\031\n\010order_by\030\014 \001(\tR\007or" +
-      "derBy\0327\n\007FlagSid\022\026\n\006filter\030\001 \003(\003R\006filter" +
-      "\022\024\n\005match\030\002 \001(\005R\005match\032V\n\rNotifyGroupId\022" +
-      "\027\n\007is_null\030\001 \001(\010R\006isNull\022\026\n\006filter\030\002 \003(\t" +
-      "R\006filter\022\024\n\005match\030\003 \001(\005R\005match\032V\n\rReview" +
-      "GroupId\022\027\n\007is_null\030\001 \001(\010R\006isNull\022\026\n\006filt" +
-      "er\030\002 \003(\tR\006filter\022\024\n\005match\030\003 \001(\005R\005match\"\350" +
-      "\003\n\035SearchFlagTranscriptsResponse\022&\n\017next" +
-      "_page_token\030\001 \001(\tR\rnextPageToken\022N\n\004hits" +
-      "\030\002 \003(\0132:.api.v1alpha1.vanalytics.SearchF" +
-      "lagTranscriptsResponse.HitR\004hits\022\024\n\005tota" +
-      "l\030\003 \001(\004R\005total\032\270\002\n\003Hit\022C\n\ntranscript\030\001 \001" +
-      "(\0132#.api.v1alpha1.vanalytics.TranscriptR" +
-      "\ntranscript\022,\n\022flag_snapshot_sids\030\002 \003(\003R" +
-      "\020flagSnapshotSids\022d\n\010reviewed\030\003 \003(\0132H.ap" +
-      "i.v1alpha1.vanalytics.SearchFlagTranscri" +
-      "ptsResponse.Hit.ReviewedEntryR\010reviewed\022" +
-      "\033\n\tflag_sids\030\004 \003(\003R\010flagSids\032;\n\rReviewed" +
-      "Entry\022\020\n\003key\030\001 \001(\003R\003key\022\024\n\005value\030\002 \001(\010R\005" +
-      "value:\0028\001*9\n\020FlagReviewStatus\022\007\n\003ANY\020\000\022\010" +
-      "\n\004TODO\020\001\022\010\n\004DONE\020\002\022\010\n\004NONE\020\003B\276\001\n)com.tcn" +
-      ".cloud.api.api.v1alpha1.vanalyticsB\023Flag" +
-      "TranscriptProtoP\001\242\002\003AVV\252\002\027Api.V1alpha1.V" +
-      "analytics\312\002\027Api\\V1alpha1\\Vanalytics\342\002#Ap" +
-      "i\\V1alpha1\\Vanalytics\\GPBMetadata\352\002\031Api:" +
-      ":V1alpha1::Vanalyticsb\006proto3"
+      "+\n\017transcript_sids\030\002 \003(\003B\002\030\001R\016transcript" +
+      "Sids\022\026\n\006filter\030\003 \001(\tR\006filter\"\036\n\034DeleteFl" +
+      "agTranscriptResponse\"\313\006\n\034SearchFlagTrans" +
+      "criptsRequest\022\033\n\tpage_size\030\002 \001(\rR\010pageSi" +
+      "ze\022\035\n\npage_token\030\003 \001(\tR\tpageToken\022X\n\010fla" +
+      "g_sid\030\005 \001(\0132=.api.v1alpha1.vanalytics.Se" +
+      "archFlagTranscriptsRequest.FlagSidR\007flag" +
+      "Sid\022W\n\022flag_review_status\030\006 \001(\0162).api.v1" +
+      "alpha1.vanalytics.FlagReviewStatusR\020flag" +
+      "ReviewStatus\022k\n\017notify_group_id\030\007 \001(\0132C." +
+      "api.v1alpha1.vanalytics.SearchFlagTransc" +
+      "riptsRequest.NotifyGroupIdR\rnotifyGroupI" +
+      "d\022k\n\017review_group_id\030\010 \001(\0132C.api.v1alpha" +
+      "1.vanalytics.SearchFlagTranscriptsReques" +
+      "t.ReviewGroupIdR\rreviewGroupId\0220\n\024start_" +
+      "transcript_sid\030\n \001(\003R\022startTranscriptSid" +
+      "\022,\n\022end_transcript_sid\030\013 \001(\003R\020endTranscr" +
+      "iptSid\022\031\n\010order_by\030\014 \001(\tR\007orderBy\0327\n\007Fla" +
+      "gSid\022\026\n\006filter\030\001 \003(\003R\006filter\022\024\n\005match\030\002 " +
+      "\001(\005R\005match\032V\n\rNotifyGroupId\022\027\n\007is_null\030\001" +
+      " \001(\010R\006isNull\022\026\n\006filter\030\002 \003(\tR\006filter\022\024\n\005" +
+      "match\030\003 \001(\005R\005match\032V\n\rReviewGroupId\022\027\n\007i" +
+      "s_null\030\001 \001(\010R\006isNull\022\026\n\006filter\030\002 \003(\tR\006fi" +
+      "lter\022\024\n\005match\030\003 \001(\005R\005match\"\350\003\n\035SearchFla" +
+      "gTranscriptsResponse\022&\n\017next_page_token\030" +
+      "\001 \001(\tR\rnextPageToken\022N\n\004hits\030\002 \003(\0132:.api" +
+      ".v1alpha1.vanalytics.SearchFlagTranscrip" +
+      "tsResponse.HitR\004hits\022\024\n\005total\030\003 \001(\004R\005tot" +
+      "al\032\270\002\n\003Hit\022C\n\ntranscript\030\001 \001(\0132#.api.v1a" +
+      "lpha1.vanalytics.TranscriptR\ntranscript\022" +
+      ",\n\022flag_snapshot_sids\030\002 \003(\003R\020flagSnapsho" +
+      "tSids\022d\n\010reviewed\030\003 \003(\0132H.api.v1alpha1.v" +
+      "analytics.SearchFlagTranscriptsResponse." +
+      "Hit.ReviewedEntryR\010reviewed\022\033\n\tflag_sids" +
+      "\030\004 \003(\003R\010flagSids\032;\n\rReviewedEntry\022\020\n\003key" +
+      "\030\001 \001(\003R\003key\022\024\n\005value\030\002 \001(\010R\005value:\0028\001*9\n" +
+      "\020FlagReviewStatus\022\007\n\003ANY\020\000\022\010\n\004TODO\020\001\022\010\n\004" +
+      "DONE\020\002\022\010\n\004NONE\020\003B\276\001\n)com.tcn.cloud.api.a" +
+      "pi.v1alpha1.vanalyticsB\023FlagTranscriptPr" +
+      "otoP\001\242\002\003AVV\252\002\027Api.V1alpha1.Vanalytics\312\002\027" +
+      "Api\\V1alpha1\\Vanalytics\342\002#Api\\V1alpha1\\V" +
+      "analytics\\GPBMetadata\352\002\031Api::V1alpha1::V" +
+      "analyticsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -153,7 +154,7 @@ public final class FlagTranscriptProto {
     internal_static_api_v1alpha1_vanalytics_DeleteFlagTranscriptRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_vanalytics_DeleteFlagTranscriptRequest_descriptor,
-        new java.lang.String[] { "OrgId", "TranscriptSids", });
+        new java.lang.String[] { "OrgId", "TranscriptSids", "Filter", });
     internal_static_api_v1alpha1_vanalytics_DeleteFlagTranscriptResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_v1alpha1_vanalytics_DeleteFlagTranscriptResponse_fieldAccessorTable = new

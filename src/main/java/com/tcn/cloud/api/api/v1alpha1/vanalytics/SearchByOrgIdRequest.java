@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private SearchByOrgIdRequest() {
     orgId_ = "";
+    filter_ = "";
   }
 
   @java.lang.Override
@@ -223,6 +224,91 @@ private static final long serialVersionUID = 0L;
     return flagSummary_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.FlagSummary.getDefaultInstance() : flagSummary_;
   }
 
+  public static final int FILTER_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object filter_ = "";
+  /**
+   * <pre>
+   *
+   *Optional. The standard list filter as described in https://google.aip.dev/160.
+   *Multiple comparisons can be provided when separated with a logical AND
+   *operator. Supported fields, operators and functions are listed below.
+   *
+   *+----------------------------+-----------+--------------+-----------+
+   *|                      field |      type |    operators | functions |
+   *+----------------------------+-----------+--------------+-----------+
+   *|             transcript_sid |   integer |            = |       any |
+   *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+   *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+   *| flag_summary.review_status |      enum |            = |       any |
+   *+----------------------------+-----------+--------------+-----------+
+   *
+   *Examples:
+   *transcript_sid = any(1, 2, 3)
+   *
+   *flag_summary.count &gt; 0 AND
+   *flag_summary.review_status = any(done, none) AND
+   *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+   * </pre>
+   *
+   * <code>string filter = 6 [json_name = "filter"];</code>
+   * @return The filter.
+   */
+  @java.lang.Override
+  public java.lang.String getFilter() {
+    java.lang.Object ref = filter_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      filter_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *
+   *Optional. The standard list filter as described in https://google.aip.dev/160.
+   *Multiple comparisons can be provided when separated with a logical AND
+   *operator. Supported fields, operators and functions are listed below.
+   *
+   *+----------------------------+-----------+--------------+-----------+
+   *|                      field |      type |    operators | functions |
+   *+----------------------------+-----------+--------------+-----------+
+   *|             transcript_sid |   integer |            = |       any |
+   *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+   *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+   *| flag_summary.review_status |      enum |            = |       any |
+   *+----------------------------+-----------+--------------+-----------+
+   *
+   *Examples:
+   *transcript_sid = any(1, 2, 3)
+   *
+   *flag_summary.count &gt; 0 AND
+   *flag_summary.review_status = any(done, none) AND
+   *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+   * </pre>
+   *
+   * <code>string filter = 6 [json_name = "filter"];</code>
+   * @return The bytes for filter.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFilterBytes() {
+    java.lang.Object ref = filter_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      filter_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -252,6 +338,9 @@ private static final long serialVersionUID = 0L;
     if (flagSummary_ != null) {
       output.writeMessage(5, getFlagSummary());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, filter_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -279,6 +368,9 @@ private static final long serialVersionUID = 0L;
     if (flagSummary_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getFlagSummary());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, filter_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -314,6 +406,8 @@ private static final long serialVersionUID = 0L;
       if (!getFlagSummary()
           .equals(other.getFlagSummary())) return false;
     }
+    if (!getFilter()
+        .equals(other.getFilter())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -341,6 +435,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FLAG_SUMMARY_FIELD_NUMBER;
       hash = (53 * hash) + getFlagSummary().hashCode();
     }
+    hash = (37 * hash) + FILTER_FIELD_NUMBER;
+    hash = (53 * hash) + getFilter().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -493,6 +589,7 @@ private static final long serialVersionUID = 0L;
         flagSummaryBuilder_.dispose();
         flagSummaryBuilder_ = null;
       }
+      filter_ = "";
       return this;
     }
 
@@ -546,6 +643,9 @@ private static final long serialVersionUID = 0L;
         result.flagSummary_ = flagSummaryBuilder_ == null
             ? flagSummary_
             : flagSummaryBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.filter_ = filter_;
       }
     }
 
@@ -610,6 +710,11 @@ private static final long serialVersionUID = 0L;
       if (other.hasFlagSummary()) {
         mergeFlagSummary(other.getFlagSummary());
       }
+      if (!other.getFilter().isEmpty()) {
+        filter_ = other.filter_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -667,6 +772,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 50: {
+              filter_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1295,6 +1405,193 @@ private static final long serialVersionUID = 0L;
         flagSummary_ = null;
       }
       return flagSummaryBuilder_;
+    }
+
+    private java.lang.Object filter_ = "";
+    /**
+     * <pre>
+     *
+     *Optional. The standard list filter as described in https://google.aip.dev/160.
+     *Multiple comparisons can be provided when separated with a logical AND
+     *operator. Supported fields, operators and functions are listed below.
+     *
+     *+----------------------------+-----------+--------------+-----------+
+     *|                      field |      type |    operators | functions |
+     *+----------------------------+-----------+--------------+-----------+
+     *|             transcript_sid |   integer |            = |       any |
+     *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+     *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+     *| flag_summary.review_status |      enum |            = |       any |
+     *+----------------------------+-----------+--------------+-----------+
+     *
+     *Examples:
+     *transcript_sid = any(1, 2, 3)
+     *
+     *flag_summary.count &gt; 0 AND
+     *flag_summary.review_status = any(done, none) AND
+     *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+     * </pre>
+     *
+     * <code>string filter = 6 [json_name = "filter"];</code>
+     * @return The filter.
+     */
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     *
+     *Optional. The standard list filter as described in https://google.aip.dev/160.
+     *Multiple comparisons can be provided when separated with a logical AND
+     *operator. Supported fields, operators and functions are listed below.
+     *
+     *+----------------------------+-----------+--------------+-----------+
+     *|                      field |      type |    operators | functions |
+     *+----------------------------+-----------+--------------+-----------+
+     *|             transcript_sid |   integer |            = |       any |
+     *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+     *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+     *| flag_summary.review_status |      enum |            = |       any |
+     *+----------------------------+-----------+--------------+-----------+
+     *
+     *Examples:
+     *transcript_sid = any(1, 2, 3)
+     *
+     *flag_summary.count &gt; 0 AND
+     *flag_summary.review_status = any(done, none) AND
+     *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+     * </pre>
+     *
+     * <code>string filter = 6 [json_name = "filter"];</code>
+     * @return The bytes for filter.
+     */
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *
+     *Optional. The standard list filter as described in https://google.aip.dev/160.
+     *Multiple comparisons can be provided when separated with a logical AND
+     *operator. Supported fields, operators and functions are listed below.
+     *
+     *+----------------------------+-----------+--------------+-----------+
+     *|                      field |      type |    operators | functions |
+     *+----------------------------+-----------+--------------+-----------+
+     *|             transcript_sid |   integer |            = |       any |
+     *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+     *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+     *| flag_summary.review_status |      enum |            = |       any |
+     *+----------------------------+-----------+--------------+-----------+
+     *
+     *Examples:
+     *transcript_sid = any(1, 2, 3)
+     *
+     *flag_summary.count &gt; 0 AND
+     *flag_summary.review_status = any(done, none) AND
+     *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+     * </pre>
+     *
+     * <code>string filter = 6 [json_name = "filter"];</code>
+     * @param value The filter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFilter(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      filter_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *
+     *Optional. The standard list filter as described in https://google.aip.dev/160.
+     *Multiple comparisons can be provided when separated with a logical AND
+     *operator. Supported fields, operators and functions are listed below.
+     *
+     *+----------------------------+-----------+--------------+-----------+
+     *|                      field |      type |    operators | functions |
+     *+----------------------------+-----------+--------------+-----------+
+     *|             transcript_sid |   integer |            = |       any |
+     *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+     *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+     *| flag_summary.review_status |      enum |            = |       any |
+     *+----------------------------+-----------+--------------+-----------+
+     *
+     *Examples:
+     *transcript_sid = any(1, 2, 3)
+     *
+     *flag_summary.count &gt; 0 AND
+     *flag_summary.review_status = any(done, none) AND
+     *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+     * </pre>
+     *
+     * <code>string filter = 6 [json_name = "filter"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFilter() {
+      filter_ = getDefaultInstance().getFilter();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *
+     *Optional. The standard list filter as described in https://google.aip.dev/160.
+     *Multiple comparisons can be provided when separated with a logical AND
+     *operator. Supported fields, operators and functions are listed below.
+     *
+     *+----------------------------+-----------+--------------+-----------+
+     *|                      field |      type |    operators | functions |
+     *+----------------------------+-----------+--------------+-----------+
+     *|             transcript_sid |   integer |            = |       any |
+     *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+     *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+     *| flag_summary.review_status |      enum |            = |       any |
+     *+----------------------------+-----------+--------------+-----------+
+     *
+     *Examples:
+     *transcript_sid = any(1, 2, 3)
+     *
+     *flag_summary.count &gt; 0 AND
+     *flag_summary.review_status = any(done, none) AND
+     *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+     * </pre>
+     *
+     * <code>string filter = 6 [json_name = "filter"];</code>
+     * @param value The bytes for filter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFilterBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      filter_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private DeleteFlagTranscriptRequest() {
     orgId_ = "";
     transcriptSids_ = emptyLongList();
+    filter_ = "";
   }
 
   @java.lang.Override
@@ -96,41 +97,132 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Internal.LongList transcriptSids_;
   /**
    * <pre>
-   * Required. The transcript sids for the flag transcripts to be deleted.
+   * Deprecated. Use string filter instead.
    * </pre>
    *
-   * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
+   * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids", deprecated = true];</code>
+   * @deprecated api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.transcript_sids is deprecated.
+   *     See api/v1alpha1/vanalytics/flag_transcript.proto;l=29
    * @return A list containing the transcriptSids.
    */
   @java.lang.Override
-  public java.util.List<java.lang.Long>
+  @java.lang.Deprecated public java.util.List<java.lang.Long>
       getTranscriptSidsList() {
     return transcriptSids_;
   }
   /**
    * <pre>
-   * Required. The transcript sids for the flag transcripts to be deleted.
+   * Deprecated. Use string filter instead.
    * </pre>
    *
-   * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
+   * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids", deprecated = true];</code>
+   * @deprecated api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.transcript_sids is deprecated.
+   *     See api/v1alpha1/vanalytics/flag_transcript.proto;l=29
    * @return The count of transcriptSids.
    */
-  public int getTranscriptSidsCount() {
+  @java.lang.Deprecated public int getTranscriptSidsCount() {
     return transcriptSids_.size();
   }
   /**
    * <pre>
-   * Required. The transcript sids for the flag transcripts to be deleted.
+   * Deprecated. Use string filter instead.
    * </pre>
    *
-   * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
+   * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids", deprecated = true];</code>
+   * @deprecated api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.transcript_sids is deprecated.
+   *     See api/v1alpha1/vanalytics/flag_transcript.proto;l=29
    * @param index The index of the element to return.
    * @return The transcriptSids at the given index.
    */
-  public long getTranscriptSids(int index) {
+  @java.lang.Deprecated public long getTranscriptSids(int index) {
     return transcriptSids_.getLong(index);
   }
   private int transcriptSidsMemoizedSerializedSize = -1;
+
+  public static final int FILTER_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object filter_ = "";
+  /**
+   * <pre>
+   *
+   *Optional. The standard list filter as described in https://google.aip.dev/160.
+   *Multiple comparisons can be provided when separated with a logical AND
+   *operator. Supported fields, operators and functions are listed below.
+   *
+   *+----------------------------+-----------+--------------+-----------+
+   *|                      field |      type |    operators | functions |
+   *+----------------------------+-----------+--------------+-----------+
+   *|             transcript_sid |   integer |            = |       any |
+   *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+   *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+   *| flag_summary.review_status |      enum |            = |       any |
+   *+----------------------------+-----------+--------------+-----------+
+   *
+   *Examples:
+   *transcript_sid = any(1, 2, 3)
+   *
+   *flag_summary.count &gt; 0 AND
+   *flag_summary.review_status = any(done, none) AND
+   *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+   * </pre>
+   *
+   * <code>string filter = 3 [json_name = "filter"];</code>
+   * @return The filter.
+   */
+  @java.lang.Override
+  public java.lang.String getFilter() {
+    java.lang.Object ref = filter_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      filter_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *
+   *Optional. The standard list filter as described in https://google.aip.dev/160.
+   *Multiple comparisons can be provided when separated with a logical AND
+   *operator. Supported fields, operators and functions are listed below.
+   *
+   *+----------------------------+-----------+--------------+-----------+
+   *|                      field |      type |    operators | functions |
+   *+----------------------------+-----------+--------------+-----------+
+   *|             transcript_sid |   integer |            = |       any |
+   *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+   *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+   *| flag_summary.review_status |      enum |            = |       any |
+   *+----------------------------+-----------+--------------+-----------+
+   *
+   *Examples:
+   *transcript_sid = any(1, 2, 3)
+   *
+   *flag_summary.count &gt; 0 AND
+   *flag_summary.review_status = any(done, none) AND
+   *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+   * </pre>
+   *
+   * <code>string filter = 3 [json_name = "filter"];</code>
+   * @return The bytes for filter.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFilterBytes() {
+    java.lang.Object ref = filter_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      filter_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
 
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
@@ -156,6 +248,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < transcriptSids_.size(); i++) {
       output.writeInt64NoTag(transcriptSids_.getLong(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, filter_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -183,6 +278,9 @@ private static final long serialVersionUID = 0L;
       }
       transcriptSidsMemoizedSerializedSize = dataSize;
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, filter_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -202,6 +300,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOrgId())) return false;
     if (!getTranscriptSidsList()
         .equals(other.getTranscriptSidsList())) return false;
+    if (!getFilter()
+        .equals(other.getFilter())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -219,6 +319,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TRANSCRIPT_SIDS_FIELD_NUMBER;
       hash = (53 * hash) + getTranscriptSidsList().hashCode();
     }
+    hash = (37 * hash) + FILTER_FIELD_NUMBER;
+    hash = (53 * hash) + getFilter().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -356,6 +458,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       orgId_ = "";
       transcriptSids_ = emptyLongList();
+      filter_ = "";
       return this;
     }
 
@@ -400,6 +503,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.orgId_ = orgId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.filter_ = filter_;
       }
     }
 
@@ -462,6 +568,11 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (!other.getFilter().isEmpty()) {
+        filter_ = other.filter_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -509,6 +620,11 @@ private static final long serialVersionUID = 0L;
               input.popLimit(limit);
               break;
             } // case 18
+            case 26: {
+              filter_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -627,51 +743,59 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The transcript sids for the flag transcripts to be deleted.
+     * Deprecated. Use string filter instead.
      * </pre>
      *
-     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
+     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids", deprecated = true];</code>
+     * @deprecated api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.transcript_sids is deprecated.
+     *     See api/v1alpha1/vanalytics/flag_transcript.proto;l=29
      * @return A list containing the transcriptSids.
      */
-    public java.util.List<java.lang.Long>
+    @java.lang.Deprecated public java.util.List<java.lang.Long>
         getTranscriptSidsList() {
       return ((bitField0_ & 0x00000002) != 0) ?
                java.util.Collections.unmodifiableList(transcriptSids_) : transcriptSids_;
     }
     /**
      * <pre>
-     * Required. The transcript sids for the flag transcripts to be deleted.
+     * Deprecated. Use string filter instead.
      * </pre>
      *
-     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
+     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids", deprecated = true];</code>
+     * @deprecated api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.transcript_sids is deprecated.
+     *     See api/v1alpha1/vanalytics/flag_transcript.proto;l=29
      * @return The count of transcriptSids.
      */
-    public int getTranscriptSidsCount() {
+    @java.lang.Deprecated public int getTranscriptSidsCount() {
       return transcriptSids_.size();
     }
     /**
      * <pre>
-     * Required. The transcript sids for the flag transcripts to be deleted.
+     * Deprecated. Use string filter instead.
      * </pre>
      *
-     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
+     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids", deprecated = true];</code>
+     * @deprecated api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.transcript_sids is deprecated.
+     *     See api/v1alpha1/vanalytics/flag_transcript.proto;l=29
      * @param index The index of the element to return.
      * @return The transcriptSids at the given index.
      */
-    public long getTranscriptSids(int index) {
+    @java.lang.Deprecated public long getTranscriptSids(int index) {
       return transcriptSids_.getLong(index);
     }
     /**
      * <pre>
-     * Required. The transcript sids for the flag transcripts to be deleted.
+     * Deprecated. Use string filter instead.
      * </pre>
      *
-     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
+     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids", deprecated = true];</code>
+     * @deprecated api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.transcript_sids is deprecated.
+     *     See api/v1alpha1/vanalytics/flag_transcript.proto;l=29
      * @param index The index to set the value at.
      * @param value The transcriptSids to set.
      * @return This builder for chaining.
      */
-    public Builder setTranscriptSids(
+    @java.lang.Deprecated public Builder setTranscriptSids(
         int index, long value) {
 
       ensureTranscriptSidsIsMutable();
@@ -681,14 +805,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The transcript sids for the flag transcripts to be deleted.
+     * Deprecated. Use string filter instead.
      * </pre>
      *
-     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
+     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids", deprecated = true];</code>
+     * @deprecated api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.transcript_sids is deprecated.
+     *     See api/v1alpha1/vanalytics/flag_transcript.proto;l=29
      * @param value The transcriptSids to add.
      * @return This builder for chaining.
      */
-    public Builder addTranscriptSids(long value) {
+    @java.lang.Deprecated public Builder addTranscriptSids(long value) {
 
       ensureTranscriptSidsIsMutable();
       transcriptSids_.addLong(value);
@@ -697,14 +823,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The transcript sids for the flag transcripts to be deleted.
+     * Deprecated. Use string filter instead.
      * </pre>
      *
-     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
+     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids", deprecated = true];</code>
+     * @deprecated api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.transcript_sids is deprecated.
+     *     See api/v1alpha1/vanalytics/flag_transcript.proto;l=29
      * @param values The transcriptSids to add.
      * @return This builder for chaining.
      */
-    public Builder addAllTranscriptSids(
+    @java.lang.Deprecated public Builder addAllTranscriptSids(
         java.lang.Iterable<? extends java.lang.Long> values) {
       ensureTranscriptSidsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -714,15 +842,204 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The transcript sids for the flag transcripts to be deleted.
+     * Deprecated. Use string filter instead.
      * </pre>
      *
-     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids"];</code>
+     * <code>repeated int64 transcript_sids = 2 [json_name = "transcriptSids", deprecated = true];</code>
+     * @deprecated api.v1alpha1.vanalytics.DeleteFlagTranscriptRequest.transcript_sids is deprecated.
+     *     See api/v1alpha1/vanalytics/flag_transcript.proto;l=29
      * @return This builder for chaining.
      */
-    public Builder clearTranscriptSids() {
+    @java.lang.Deprecated public Builder clearTranscriptSids() {
       transcriptSids_ = emptyLongList();
       bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object filter_ = "";
+    /**
+     * <pre>
+     *
+     *Optional. The standard list filter as described in https://google.aip.dev/160.
+     *Multiple comparisons can be provided when separated with a logical AND
+     *operator. Supported fields, operators and functions are listed below.
+     *
+     *+----------------------------+-----------+--------------+-----------+
+     *|                      field |      type |    operators | functions |
+     *+----------------------------+-----------+--------------+-----------+
+     *|             transcript_sid |   integer |            = |       any |
+     *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+     *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+     *| flag_summary.review_status |      enum |            = |       any |
+     *+----------------------------+-----------+--------------+-----------+
+     *
+     *Examples:
+     *transcript_sid = any(1, 2, 3)
+     *
+     *flag_summary.count &gt; 0 AND
+     *flag_summary.review_status = any(done, none) AND
+     *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+     * </pre>
+     *
+     * <code>string filter = 3 [json_name = "filter"];</code>
+     * @return The filter.
+     */
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     *
+     *Optional. The standard list filter as described in https://google.aip.dev/160.
+     *Multiple comparisons can be provided when separated with a logical AND
+     *operator. Supported fields, operators and functions are listed below.
+     *
+     *+----------------------------+-----------+--------------+-----------+
+     *|                      field |      type |    operators | functions |
+     *+----------------------------+-----------+--------------+-----------+
+     *|             transcript_sid |   integer |            = |       any |
+     *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+     *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+     *| flag_summary.review_status |      enum |            = |       any |
+     *+----------------------------+-----------+--------------+-----------+
+     *
+     *Examples:
+     *transcript_sid = any(1, 2, 3)
+     *
+     *flag_summary.count &gt; 0 AND
+     *flag_summary.review_status = any(done, none) AND
+     *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+     * </pre>
+     *
+     * <code>string filter = 3 [json_name = "filter"];</code>
+     * @return The bytes for filter.
+     */
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *
+     *Optional. The standard list filter as described in https://google.aip.dev/160.
+     *Multiple comparisons can be provided when separated with a logical AND
+     *operator. Supported fields, operators and functions are listed below.
+     *
+     *+----------------------------+-----------+--------------+-----------+
+     *|                      field |      type |    operators | functions |
+     *+----------------------------+-----------+--------------+-----------+
+     *|             transcript_sid |   integer |            = |       any |
+     *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+     *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+     *| flag_summary.review_status |      enum |            = |       any |
+     *+----------------------------+-----------+--------------+-----------+
+     *
+     *Examples:
+     *transcript_sid = any(1, 2, 3)
+     *
+     *flag_summary.count &gt; 0 AND
+     *flag_summary.review_status = any(done, none) AND
+     *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+     * </pre>
+     *
+     * <code>string filter = 3 [json_name = "filter"];</code>
+     * @param value The filter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFilter(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      filter_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *
+     *Optional. The standard list filter as described in https://google.aip.dev/160.
+     *Multiple comparisons can be provided when separated with a logical AND
+     *operator. Supported fields, operators and functions are listed below.
+     *
+     *+----------------------------+-----------+--------------+-----------+
+     *|                      field |      type |    operators | functions |
+     *+----------------------------+-----------+--------------+-----------+
+     *|             transcript_sid |   integer |            = |       any |
+     *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+     *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+     *| flag_summary.review_status |      enum |            = |       any |
+     *+----------------------------+-----------+--------------+-----------+
+     *
+     *Examples:
+     *transcript_sid = any(1, 2, 3)
+     *
+     *flag_summary.count &gt; 0 AND
+     *flag_summary.review_status = any(done, none) AND
+     *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+     * </pre>
+     *
+     * <code>string filter = 3 [json_name = "filter"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFilter() {
+      filter_ = getDefaultInstance().getFilter();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *
+     *Optional. The standard list filter as described in https://google.aip.dev/160.
+     *Multiple comparisons can be provided when separated with a logical AND
+     *operator. Supported fields, operators and functions are listed below.
+     *
+     *+----------------------------+-----------+--------------+-----------+
+     *|                      field |      type |    operators | functions |
+     *+----------------------------+-----------+--------------+-----------+
+     *|             transcript_sid |   integer |            = |       any |
+     *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+     *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+     *| flag_summary.review_status |      enum |            = |       any |
+     *+----------------------------+-----------+--------------+-----------+
+     *
+     *Examples:
+     *transcript_sid = any(1, 2, 3)
+     *
+     *flag_summary.count &gt; 0 AND
+     *flag_summary.review_status = any(done, none) AND
+     *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+     * </pre>
+     *
+     * <code>string filter = 3 [json_name = "filter"];</code>
+     * @param value The bytes for filter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFilterBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      filter_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
