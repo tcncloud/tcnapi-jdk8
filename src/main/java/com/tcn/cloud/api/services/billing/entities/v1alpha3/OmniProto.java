@@ -37,17 +37,16 @@ public final class OmniProto {
       "i.proto\022\"services.billing.entities.v1alp" +
       "ha3\0321services/billing/entities/v1alpha3/" +
       "matching.proto\0320services/billing/entitie" +
-      "s/v1alpha3/modules.proto\"\277\001\n\rOmniSmsConf" +
+      "s/v1alpha3/modules.proto\"\253\001\n\rOmniSmsConf" +
       "ig\022Q\n\010prefixes\030\001 \001(\01325.services.billing." +
       "entities.v1alpha3.CountryCodePrefixR\010pre" +
       "fixes\022G\n\006config\030\002 \001(\0132/.services.billing" +
-      ".entities.v1alpha3.BasicConfigR\006config\022\022" +
-      "\n\004name\030\003 \001(\tR\004name\"\307\001\n\021OmniSmsUnitConfig" +
-      "\022Q\n\010prefixes\030\001 \001(\01325.services.billing.en" +
-      "tities.v1alpha3.CountryCodePrefixR\010prefi" +
-      "xes\022K\n\006config\030\002 \001(\01323.services.billing.e" +
-      "ntities.v1alpha3.BasicUnitConfigR\006config" +
-      "\022\022\n\004name\030\003 \001(\tR\004nameB\354\001\n4com.tcn.cloud.a" +
+      ".entities.v1alpha3.BasicConfigR\006config\"\263" +
+      "\001\n\021OmniSmsUnitConfig\022Q\n\010prefixes\030\001 \001(\01325" +
+      ".services.billing.entities.v1alpha3.Coun" +
+      "tryCodePrefixR\010prefixes\022K\n\006config\030\002 \001(\0132" +
+      "3.services.billing.entities.v1alpha3.Bas" +
+      "icUnitConfigR\006configB\354\001\n4com.tcn.cloud.a" +
       "pi.services.billing.entities.v1alpha3B\tO" +
       "mniProtoP\001\242\002\003SBE\252\002\"Services.Billing.Enti" +
       "ties.V1alpha3\312\002\"Services\\Billing\\Entitie" +
@@ -66,13 +65,13 @@ public final class OmniProto {
     internal_static_services_billing_entities_v1alpha3_OmniSmsConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha3_OmniSmsConfig_descriptor,
-        new java.lang.String[] { "Prefixes", "Config", "Name", });
+        new java.lang.String[] { "Prefixes", "Config", });
     internal_static_services_billing_entities_v1alpha3_OmniSmsUnitConfig_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_services_billing_entities_v1alpha3_OmniSmsUnitConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha3_OmniSmsUnitConfig_descriptor,
-        new java.lang.String[] { "Prefixes", "Config", "Name", });
+        new java.lang.String[] { "Prefixes", "Config", });
     com.tcn.cloud.api.services.billing.entities.v1alpha3.MatchingProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha3.ModulesProto.getDescriptor();
   }

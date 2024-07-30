@@ -32,23 +32,19 @@ public interface RateDefinitionOrBuilder extends
       getSkuIdBytes();
 
   /**
-   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.RateDefinition.product is deprecated.
-   *     See services/billing/entities/v1alpha3/rates.proto;l=20
+   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
    * @return Whether the product field is set.
    */
-  @java.lang.Deprecated boolean hasProduct();
+  boolean hasProduct();
   /**
-   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
-   * @deprecated services.billing.entities.v1alpha3.RateDefinition.product is deprecated.
-   *     See services/billing/entities/v1alpha3/rates.proto;l=20
+   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
    * @return The product.
    */
-  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha3.Product getProduct();
+  com.tcn.cloud.api.services.billing.entities.v1alpha3.Product getProduct();
   /**
-   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product", deprecated = true];</code>
+   * <code>.services.billing.entities.v1alpha3.Product product = 3 [json_name = "product"];</code>
    */
-  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductOrBuilder getProductOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha3.ProductOrBuilder getProductOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha3.ProductConfig config = 4 [json_name = "config"];</code>
@@ -115,10 +111,4 @@ public interface RateDefinitionOrBuilder extends
    * <code>.google.protobuf.Timestamp delete_time = 8 [json_name = "deleteTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
-
-  /**
-   * <code>bool is_overwrite = 9 [json_name = "isOverwrite"];</code>
-   * @return The isOverwrite.
-   */
-  boolean getIsOverwrite();
 }
