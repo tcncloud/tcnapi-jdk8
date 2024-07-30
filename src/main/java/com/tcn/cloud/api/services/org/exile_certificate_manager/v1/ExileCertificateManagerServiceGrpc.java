@@ -142,6 +142,68 @@ public final class ExileCertificateManagerServiceGrpc {
     return getListCertificateInfoMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationRequest,
+      com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationResponse> getAssignCertificateConfigurationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AssignCertificateConfiguration",
+      requestType = com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationRequest.class,
+      responseType = com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationRequest,
+      com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationResponse> getAssignCertificateConfigurationMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationRequest, com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationResponse> getAssignCertificateConfigurationMethod;
+    if ((getAssignCertificateConfigurationMethod = ExileCertificateManagerServiceGrpc.getAssignCertificateConfigurationMethod) == null) {
+      synchronized (ExileCertificateManagerServiceGrpc.class) {
+        if ((getAssignCertificateConfigurationMethod = ExileCertificateManagerServiceGrpc.getAssignCertificateConfigurationMethod) == null) {
+          ExileCertificateManagerServiceGrpc.getAssignCertificateConfigurationMethod = getAssignCertificateConfigurationMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationRequest, com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignCertificateConfiguration"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ExileCertificateManagerServiceMethodDescriptorSupplier("AssignCertificateConfiguration"))
+              .build();
+        }
+      }
+    }
+    return getAssignCertificateConfigurationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationRequest,
+      com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationResponse> getUnassignCertificateConfigurationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UnassignCertificateConfiguration",
+      requestType = com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationRequest.class,
+      responseType = com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationRequest,
+      com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationResponse> getUnassignCertificateConfigurationMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationRequest, com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationResponse> getUnassignCertificateConfigurationMethod;
+    if ((getUnassignCertificateConfigurationMethod = ExileCertificateManagerServiceGrpc.getUnassignCertificateConfigurationMethod) == null) {
+      synchronized (ExileCertificateManagerServiceGrpc.class) {
+        if ((getUnassignCertificateConfigurationMethod = ExileCertificateManagerServiceGrpc.getUnassignCertificateConfigurationMethod) == null) {
+          ExileCertificateManagerServiceGrpc.getUnassignCertificateConfigurationMethod = getUnassignCertificateConfigurationMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationRequest, com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UnassignCertificateConfiguration"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ExileCertificateManagerServiceMethodDescriptorSupplier("UnassignCertificateConfiguration"))
+              .build();
+        }
+      }
+    }
+    return getUnassignCertificateConfigurationMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -233,6 +295,26 @@ public final class ExileCertificateManagerServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.ListCertificateInfoResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCertificateInfoMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * AssignCertificateConfiguration assigns a configuration to a certificate.
+     * </pre>
+     */
+    default void assignCertificateConfiguration(com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignCertificateConfigurationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UnassignCertificateConfiguration unassigns a configuration from a certificate.
+     * </pre>
+     */
+    default void unassignCertificateConfiguration(com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnassignCertificateConfigurationMethod(), responseObserver);
+    }
   }
 
   /**
@@ -312,6 +394,28 @@ public final class ExileCertificateManagerServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListCertificateInfoMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * AssignCertificateConfiguration assigns a configuration to a certificate.
+     * </pre>
+     */
+    public void assignCertificateConfiguration(com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAssignCertificateConfigurationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UnassignCertificateConfiguration unassigns a configuration from a certificate.
+     * </pre>
+     */
+    public void unassignCertificateConfiguration(com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUnassignCertificateConfigurationMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -372,6 +476,26 @@ public final class ExileCertificateManagerServiceGrpc {
     public com.tcn.cloud.api.services.org.exile_certificate_manager.v1.ListCertificateInfoResponse listCertificateInfo(com.tcn.cloud.api.services.org.exile_certificate_manager.v1.ListCertificateInfoRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListCertificateInfoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AssignCertificateConfiguration assigns a configuration to a certificate.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationResponse assignCertificateConfiguration(com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAssignCertificateConfigurationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UnassignCertificateConfiguration unassigns a configuration from a certificate.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationResponse unassignCertificateConfiguration(com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUnassignCertificateConfigurationMethod(), getCallOptions(), request);
     }
   }
 
@@ -438,12 +562,36 @@ public final class ExileCertificateManagerServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListCertificateInfoMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * AssignCertificateConfiguration assigns a configuration to a certificate.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationResponse> assignCertificateConfiguration(
+        com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAssignCertificateConfigurationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UnassignCertificateConfiguration unassigns a configuration from a certificate.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationResponse> unassignCertificateConfiguration(
+        com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUnassignCertificateConfigurationMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_CERTIFICATE_INFO = 0;
   private static final int METHODID_DELETE_CERTIFICATE_INFO = 1;
   private static final int METHODID_REVOKE_CERTIFICATE_INFO = 2;
   private static final int METHODID_LIST_CERTIFICATE_INFO = 3;
+  private static final int METHODID_ASSIGN_CERTIFICATE_CONFIGURATION = 4;
+  private static final int METHODID_UNASSIGN_CERTIFICATE_CONFIGURATION = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -477,6 +625,14 @@ public final class ExileCertificateManagerServiceGrpc {
         case METHODID_LIST_CERTIFICATE_INFO:
           serviceImpl.listCertificateInfo((com.tcn.cloud.api.services.org.exile_certificate_manager.v1.ListCertificateInfoRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.ListCertificateInfoResponse>) responseObserver);
+          break;
+        case METHODID_ASSIGN_CERTIFICATE_CONFIGURATION:
+          serviceImpl.assignCertificateConfiguration((com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationResponse>) responseObserver);
+          break;
+        case METHODID_UNASSIGN_CERTIFICATE_CONFIGURATION:
+          serviceImpl.unassignCertificateConfiguration((com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -524,6 +680,20 @@ public final class ExileCertificateManagerServiceGrpc {
               com.tcn.cloud.api.services.org.exile_certificate_manager.v1.ListCertificateInfoRequest,
               com.tcn.cloud.api.services.org.exile_certificate_manager.v1.ListCertificateInfoResponse>(
                 service, METHODID_LIST_CERTIFICATE_INFO)))
+        .addMethod(
+          getAssignCertificateConfigurationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationRequest,
+              com.tcn.cloud.api.services.org.exile_certificate_manager.v1.AssignCertificateConfigurationResponse>(
+                service, METHODID_ASSIGN_CERTIFICATE_CONFIGURATION)))
+        .addMethod(
+          getUnassignCertificateConfigurationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationRequest,
+              com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UnassignCertificateConfigurationResponse>(
+                service, METHODID_UNASSIGN_CERTIFICATE_CONFIGURATION)))
         .build();
   }
 
@@ -576,6 +746,8 @@ public final class ExileCertificateManagerServiceGrpc {
               .addMethod(getDeleteCertificateInfoMethod())
               .addMethod(getRevokeCertificateInfoMethod())
               .addMethod(getListCertificateInfoMethod())
+              .addMethod(getAssignCertificateConfigurationMethod())
+              .addMethod(getUnassignCertificateConfigurationMethod())
               .build();
         }
       }

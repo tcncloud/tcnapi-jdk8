@@ -45,6 +45,26 @@ public final class CertificateInfoProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_org_exile_certificate_manager_v1_RevokeCertificateInfoResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_exile_certificate_manager_v1_AssignCertificateConfigurationRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_exile_certificate_manager_v1_AssignCertificateConfigurationRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_exile_certificate_manager_v1_AssignCertificateConfigurationResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_exile_certificate_manager_v1_AssignCertificateConfigurationResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_exile_certificate_manager_v1_UnassignCertificateConfigurationRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_exile_certificate_manager_v1_UnassignCertificateConfigurationRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_exile_certificate_manager_v1_UnassignCertificateConfigurationResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_exile_certificate_manager_v1_UnassignCertificateConfigurationResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_services_org_exile_certificate_manager_v1_ListCertificateInfoRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -77,18 +97,26 @@ public final class CertificateInfoProto {
       "Response\"N\n\034RevokeCertificateInfoRequest" +
       "\022.\n\023certificate_info_id\030\001 \001(\tR\021certifica" +
       "teInfoId\"\037\n\035RevokeCertificateInfoRespons" +
-      "e\"\034\n\032ListCertificateInfoRequest\"\215\001\n\033List" +
-      "CertificateInfoResponse\022n\n\025certificate_i" +
-      "nfo_list\030\001 \003(\0132:.services.org.exile_cert" +
-      "ificate_manager.v1.CertificateInfoR\023cert" +
-      "ificateInfoListB\222\002\n;com.tcn.cloud.api.se" +
-      "rvices.org.exile_certificate_manager.v1B" +
-      "\024CertificateInfoProtoP\001\242\002\003SOE\252\002\'Services" +
-      ".Org.ExileCertificateManager.V1\312\002\'Servic" +
-      "es\\Org\\ExileCertificateManager\\V1\342\0023Serv" +
-      "ices\\Org\\ExileCertificateManager\\V1\\GPBM" +
-      "etadata\352\002*Services::Org::ExileCertificat" +
-      "eManager::V1b\006proto3"
+      "e\"\213\001\n%AssignCertificateConfigurationRequ" +
+      "est\022.\n\023certificate_info_id\030\001 \001(\tR\021certif" +
+      "icateInfoId\0222\n\025configuration_info_id\030\002 \001" +
+      "(\tR\023configurationInfoId\"(\n&AssignCertifi" +
+      "cateConfigurationResponse\"Y\n\'UnassignCer" +
+      "tificateConfigurationRequest\022.\n\023certific" +
+      "ate_info_id\030\001 \001(\tR\021certificateInfoId\"*\n(" +
+      "UnassignCertificateConfigurationResponse" +
+      "\"\034\n\032ListCertificateInfoRequest\"\215\001\n\033ListC" +
+      "ertificateInfoResponse\022n\n\025certificate_in" +
+      "fo_list\030\001 \003(\0132:.services.org.exile_certi" +
+      "ficate_manager.v1.CertificateInfoR\023certi" +
+      "ficateInfoListB\222\002\n;com.tcn.cloud.api.ser" +
+      "vices.org.exile_certificate_manager.v1B\024" +
+      "CertificateInfoProtoP\001\242\002\003SOE\252\002\'Services." +
+      "Org.ExileCertificateManager.V1\312\002\'Service" +
+      "s\\Org\\ExileCertificateManager\\V1\342\0023Servi" +
+      "ces\\Org\\ExileCertificateManager\\V1\\GPBMe" +
+      "tadata\352\002*Services::Org::ExileCertificate" +
+      "Manager::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -131,14 +159,38 @@ public final class CertificateInfoProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_exile_certificate_manager_v1_RevokeCertificateInfoResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_services_org_exile_certificate_manager_v1_ListCertificateInfoRequest_descriptor =
+    internal_static_services_org_exile_certificate_manager_v1_AssignCertificateConfigurationRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_services_org_exile_certificate_manager_v1_AssignCertificateConfigurationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_exile_certificate_manager_v1_AssignCertificateConfigurationRequest_descriptor,
+        new java.lang.String[] { "CertificateInfoId", "ConfigurationInfoId", });
+    internal_static_services_org_exile_certificate_manager_v1_AssignCertificateConfigurationResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_services_org_exile_certificate_manager_v1_AssignCertificateConfigurationResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_exile_certificate_manager_v1_AssignCertificateConfigurationResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_services_org_exile_certificate_manager_v1_UnassignCertificateConfigurationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_services_org_exile_certificate_manager_v1_UnassignCertificateConfigurationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_exile_certificate_manager_v1_UnassignCertificateConfigurationRequest_descriptor,
+        new java.lang.String[] { "CertificateInfoId", });
+    internal_static_services_org_exile_certificate_manager_v1_UnassignCertificateConfigurationResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_services_org_exile_certificate_manager_v1_UnassignCertificateConfigurationResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_exile_certificate_manager_v1_UnassignCertificateConfigurationResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_services_org_exile_certificate_manager_v1_ListCertificateInfoRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_services_org_exile_certificate_manager_v1_ListCertificateInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_exile_certificate_manager_v1_ListCertificateInfoRequest_descriptor,
         new java.lang.String[] { });
     internal_static_services_org_exile_certificate_manager_v1_ListCertificateInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_services_org_exile_certificate_manager_v1_ListCertificateInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_exile_certificate_manager_v1_ListCertificateInfoResponse_descriptor,

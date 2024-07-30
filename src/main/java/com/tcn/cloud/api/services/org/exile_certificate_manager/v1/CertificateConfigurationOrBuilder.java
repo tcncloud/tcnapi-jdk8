@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.services.org.exile_certificate_manager.v1;
 
-public interface ConfigurationInfoOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.org.exile_certificate_manager.v1.ConfigurationInfo)
+public interface CertificateConfigurationOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.org.exile_certificate_manager.v1.CertificateConfiguration)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -92,7 +92,7 @@ public interface ConfigurationInfoOrBuilder extends
    * The type of configuration info.
    * </pre>
    *
-   * <code>.services.org.exile_certificate_manager.v1.ConfigurationInfoType type = 5 [json_name = "type"];</code>
+   * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 5 [json_name = "type"];</code>
    * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
@@ -101,14 +101,22 @@ public interface ConfigurationInfoOrBuilder extends
    * The type of configuration info.
    * </pre>
    *
-   * <code>.services.org.exile_certificate_manager.v1.ConfigurationInfoType type = 5 [json_name = "type"];</code>
+   * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 5 [json_name = "type"];</code>
    * @return The type.
    */
-  com.tcn.cloud.api.services.org.exile_certificate_manager.v1.ConfigurationInfoType getType();
+  com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationType getType();
 
   /**
    * <pre>
    * The parameters of the configuration info.
+   * This is a JSON string with the following information:
+   *   1. Database Host
+   *   2. Database URL
+   *   3. Database Port
+   *   4. Database Username
+   *   5. Database Password
+   *   6. Max Number Connections
+   *   7. Max Number Exile Jobs
    * </pre>
    *
    * <code>string parameters = 6 [json_name = "parameters"];</code>
@@ -118,6 +126,14 @@ public interface ConfigurationInfoOrBuilder extends
   /**
    * <pre>
    * The parameters of the configuration info.
+   * This is a JSON string with the following information:
+   *   1. Database Host
+   *   2. Database URL
+   *   3. Database Port
+   *   4. Database Username
+   *   5. Database Password
+   *   6. Max Number Connections
+   *   7. Max Number Exile Jobs
    * </pre>
    *
    * <code>string parameters = 6 [json_name = "parameters"];</code>

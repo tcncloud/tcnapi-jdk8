@@ -28,7 +28,7 @@ public final class ServiceProto {
       "rtificate_manager.v1\032\027annotations/authz." +
       "proto\032\034google/api/annotations.proto\032@ser" +
       "vices/org/exile_certificate_manager/v1/c" +
-      "ertificate_info.proto2\234\010\n\036ExileCertifica" +
+      "ertificate_info.proto2\356\014\n\036ExileCertifica" +
       "teManagerService\022\376\001\n\025CreateCertificateIn" +
       "fo\022G.services.org.exile_certificate_mana" +
       "ger.v1.CreateCertificateInfoRequest\032H.se" +
@@ -54,14 +54,29 @@ public final class ServiceProto {
       "st\032F.services.org.exile_certificate_mana" +
       "ger.v1.ListCertificateInfoResponse\"P\272\270\221\002" +
       "\004\n\002\010d\202\323\344\223\002A\"</services/org/exilecertific" +
-      "atemanager/v1/listcertificateinfo:\001*B\212\002\n" +
-      ";com.tcn.cloud.api.services.org.exile_ce" +
-      "rtificate_manager.v1B\014ServiceProtoP\001\242\002\003S" +
-      "OE\252\002\'Services.Org.ExileCertificateManage" +
-      "r.V1\312\002\'Services\\Org\\ExileCertificateMana" +
-      "ger\\V1\342\0023Services\\Org\\ExileCertificateMa" +
-      "nager\\V1\\GPBMetadata\352\002*Services::Org::Ex" +
-      "ileCertificateManager::V1b\006proto3"
+      "atemanager/v1/listcertificateinfo:\001*\022\242\002\n" +
+      "\036AssignCertificateConfiguration\022P.servic" +
+      "es.org.exile_certificate_manager.v1.Assi" +
+      "gnCertificateConfigurationRequest\032Q.serv" +
+      "ices.org.exile_certificate_manager.v1.As" +
+      "signCertificateConfigurationResponse\"[\272\270" +
+      "\221\002\004\n\002\010d\202\323\344\223\002L\"G/services/org/exilecertif" +
+      "icatemanager/v1/assigncertificateconfigu" +
+      "ration:\001*\022\252\002\n UnassignCertificateConfigu" +
+      "ration\022R.services.org.exile_certificate_" +
+      "manager.v1.UnassignCertificateConfigurat" +
+      "ionRequest\032S.services.org.exile_certific" +
+      "ate_manager.v1.UnassignCertificateConfig" +
+      "urationResponse\"]\272\270\221\002\004\n\002\010d\202\323\344\223\002N\"I/servi" +
+      "ces/org/exilecertificatemanager/v1/unass" +
+      "igncertificateconfiguration:\001*B\212\002\n;com.t" +
+      "cn.cloud.api.services.org.exile_certific" +
+      "ate_manager.v1B\014ServiceProtoP\001\242\002\003SOE\252\002\'S" +
+      "ervices.Org.ExileCertificateManager.V1\312\002" +
+      "\'Services\\Org\\ExileCertificateManager\\V1" +
+      "\342\0023Services\\Org\\ExileCertificateManager\\" +
+      "V1\\GPBMetadata\352\002*Services::Org::ExileCer" +
+      "tificateManager::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
