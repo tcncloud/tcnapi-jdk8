@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * CreateCertificateInfoResponse is the response for creating a certificate info.
- * DEPRECATED: Use services.org.exile_certificate_manager.v1.CreateCertificateInfoResponse instead
+ * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.CreateCertificateInfoResponse instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.CreateCertificateInfoResponse}
@@ -250,7 +250,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * CreateCertificateInfoResponse is the response for creating a certificate info.
-   * DEPRECATED: Use services.org.exile_certificate_manager.v1.CreateCertificateInfoResponse instead
+   * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.CreateCertificateInfoResponse instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.CreateCertificateInfoResponse}
