@@ -2219,7 +2219,7 @@ private static final long serialVersionUID = 0L;
        * The unique identifier of the attachment.
        * </pre>
        *
-       * <code>int64 attachment_sid = 1 [json_name = "attachmentSid"];</code>
+       * <code>int64 attachment_sid = 1 [json_name = "attachmentSid", jstype = JS_STRING];</code>
        * @return The attachmentSid.
        */
       long getAttachmentSid();
@@ -2270,7 +2270,7 @@ private static final long serialVersionUID = 0L;
        * The unique identifier of the attachment.
        * </pre>
        *
-       * <code>int64 attachment_sid = 1 [json_name = "attachmentSid"];</code>
+       * <code>int64 attachment_sid = 1 [json_name = "attachmentSid", jstype = JS_STRING];</code>
        * @return The attachmentSid.
        */
       @java.lang.Override
@@ -2614,7 +2614,7 @@ private static final long serialVersionUID = 0L;
          * The unique identifier of the attachment.
          * </pre>
          *
-         * <code>int64 attachment_sid = 1 [json_name = "attachmentSid"];</code>
+         * <code>int64 attachment_sid = 1 [json_name = "attachmentSid", jstype = JS_STRING];</code>
          * @return The attachmentSid.
          */
         @java.lang.Override
@@ -2626,7 +2626,7 @@ private static final long serialVersionUID = 0L;
          * The unique identifier of the attachment.
          * </pre>
          *
-         * <code>int64 attachment_sid = 1 [json_name = "attachmentSid"];</code>
+         * <code>int64 attachment_sid = 1 [json_name = "attachmentSid", jstype = JS_STRING];</code>
          * @param value The attachmentSid to set.
          * @return This builder for chaining.
          */
@@ -2642,7 +2642,7 @@ private static final long serialVersionUID = 0L;
          * The unique identifier of the attachment.
          * </pre>
          *
-         * <code>int64 attachment_sid = 1 [json_name = "attachmentSid"];</code>
+         * <code>int64 attachment_sid = 1 [json_name = "attachmentSid", jstype = JS_STRING];</code>
          * @return This builder for chaining.
          */
         public Builder clearAttachmentSid() {
