@@ -578,7 +578,7 @@ public final class ServiceProto {
       "eateAuthTokenByUserId\0220.api.v1alpha1.org" +
       ".CreateAuthTokenByUserIdRequest\0321.api.v1" +
       "alpha1.org.CreateAuthTokenByUserIdRespon" +
-      "se\"C\272\270\221\002\004\n\002\010w\202\323\344\223\0024\"//api/v1alpha1/autht" +
+      "se\"C\272\270\221\002\004\n\002\010{\202\323\344\223\0024\"//api/v1alpha1/autht" +
       "oken/CreateAuthTokenByUserId:\001*\022\237\001\n\016List" +
       "AuthTokens\022\'.api.v1alpha1.org.ListAuthTo" +
       "kensRequest\032(.api.v1alpha1.org.ListAuthT" +
@@ -587,7 +587,7 @@ public final class ServiceProto {
       "stAuthTokensByUserId\022/.api.v1alpha1.org." +
       "ListAuthTokensByUserIdRequest\0320.api.v1al" +
       "pha1.org.ListAuthTokensByUserIdResponse\"" +
-      "B\272\270\221\002\004\n\002\010e\202\323\344\223\0023\"./api/v1alpha1/authtoke" +
+      "B\272\270\221\002\004\n\002\010{\202\323\344\223\0023\"./api/v1alpha1/authtoke" +
       "n/ListAuthTokensByUserId:\001*\022\277\001\n\026SetAuthT" +
       "okenExpiration\022/.api.v1alpha1.org.SetAut" +
       "hTokenExpirationRequest\0320.api.v1alpha1.o" +
@@ -597,7 +597,7 @@ public final class ServiceProto {
       "pirationByUserId\0227.api.v1alpha1.org.SetA" +
       "uthTokenExpirationByUserIdRequest\0328.api." +
       "v1alpha1.org.SetAuthTokenExpirationByUse" +
-      "rIdResponse\"J\272\270\221\002\004\n\002\010w\202\323\344\223\002;\"6/api/v1alp" +
+      "rIdResponse\"J\272\270\221\002\004\n\002\010{\202\323\344\223\002;\"6/api/v1alp" +
       "ha1/authtoken/SetAuthTokenExpirationByUs" +
       "erId:\001*\022\243\001\n\017DeleteAuthToken\022(.api.v1alph" +
       "a1.org.DeleteAuthTokenRequest\032).api.v1al" +
@@ -606,7 +606,7 @@ public final class ServiceProto {
       "eAuthToken:\001*\022\303\001\n\027DeleteAuthTokenByUserI" +
       "d\0220.api.v1alpha1.org.DeleteAuthTokenByUs" +
       "erIdRequest\0321.api.v1alpha1.org.DeleteAut" +
-      "hTokenByUserIdResponse\"C\272\270\221\002\004\n\002\010w\202\323\344\223\0024\"" +
+      "hTokenByUserIdResponse\"C\272\270\221\002\004\n\002\010{\202\323\344\223\0024\"" +
       "//api/v1alpha1/authtoken/DeleteAuthToken" +
       "ByUserId:\001*\022\253\001\n\024GetHuntGroupSettings\022-.a" +
       "pi.v1alpha1.org.GetHuntGroupSettingsRequ" +
