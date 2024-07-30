@@ -23,20 +23,12 @@ public enum EvaluationType
   EVALUATE_MANUAL(0),
   /**
    * <pre>
-   * Otherwise known as Flag Evaluations. Questions orient around flags and risk level, and are completed by the system.
+   * the system fills out (scores) the scorecard
    * </pre>
    *
    * <code>EVALUATE_AUTO = 1;</code>
    */
   EVALUATE_AUTO(1),
-  /**
-   * <pre>
-   * Evaluates in a similar way to Manual Evaluations (points, pass percentages). Questions are completed by the system.
-   * </pre>
-   *
-   * <code>EVALUATE_SMART = 2;</code>
-   */
-  EVALUATE_SMART(2),
   UNRECOGNIZED(-1),
   ;
 
@@ -50,20 +42,12 @@ public enum EvaluationType
   public static final int EVALUATE_MANUAL_VALUE = 0;
   /**
    * <pre>
-   * Otherwise known as Flag Evaluations. Questions orient around flags and risk level, and are completed by the system.
+   * the system fills out (scores) the scorecard
    * </pre>
    *
    * <code>EVALUATE_AUTO = 1;</code>
    */
   public static final int EVALUATE_AUTO_VALUE = 1;
-  /**
-   * <pre>
-   * Evaluates in a similar way to Manual Evaluations (points, pass percentages). Questions are completed by the system.
-   * </pre>
-   *
-   * <code>EVALUATE_SMART = 2;</code>
-   */
-  public static final int EVALUATE_SMART_VALUE = 2;
 
 
   public final int getNumber() {
@@ -92,7 +76,6 @@ public enum EvaluationType
     switch (value) {
       case 0: return EVALUATE_MANUAL;
       case 1: return EVALUATE_AUTO;
-      case 2: return EVALUATE_SMART;
       default: return null;
     }
   }
