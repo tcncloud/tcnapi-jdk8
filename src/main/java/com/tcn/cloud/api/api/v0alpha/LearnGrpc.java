@@ -762,6 +762,37 @@ public final class LearnGrpc {
     return getDeleteVersionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UploadStaticImageReq,
+      com.tcn.cloud.api.api.v0alpha.UploadStaticImageRes> getUploadStaticImageMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UploadStaticImage",
+      requestType = com.tcn.cloud.api.api.v0alpha.UploadStaticImageReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.UploadStaticImageRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UploadStaticImageReq,
+      com.tcn.cloud.api.api.v0alpha.UploadStaticImageRes> getUploadStaticImageMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UploadStaticImageReq, com.tcn.cloud.api.api.v0alpha.UploadStaticImageRes> getUploadStaticImageMethod;
+    if ((getUploadStaticImageMethod = LearnGrpc.getUploadStaticImageMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getUploadStaticImageMethod = LearnGrpc.getUploadStaticImageMethod) == null) {
+          LearnGrpc.getUploadStaticImageMethod = getUploadStaticImageMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UploadStaticImageReq, com.tcn.cloud.api.api.v0alpha.UploadStaticImageRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UploadStaticImage"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.UploadStaticImageReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.UploadStaticImageRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("UploadStaticImage"))
+              .build();
+        }
+      }
+    }
+    return getUploadStaticImageMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1056,6 +1087,16 @@ public final class LearnGrpc {
     default void deleteVersion(com.tcn.cloud.api.api.v0alpha.DeleteVersionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteVersionRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteVersionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * upload image for learning articles
+     * </pre>
+     */
+    default void uploadStaticImage(com.tcn.cloud.api.api.v0alpha.UploadStaticImageReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UploadStaticImageRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadStaticImageMethod(), responseObserver);
     }
   }
 
@@ -1360,6 +1401,17 @@ public final class LearnGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteVersionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * upload image for learning articles
+     * </pre>
+     */
+    public void uploadStaticImage(com.tcn.cloud.api.api.v0alpha.UploadStaticImageReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UploadStaticImageRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUploadStaticImageMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1629,6 +1681,16 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteVersionMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * upload image for learning articles
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.UploadStaticImageRes uploadStaticImage(com.tcn.cloud.api.api.v0alpha.UploadStaticImageReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUploadStaticImageMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -1872,6 +1934,17 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteVersionMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * upload image for learning articles
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UploadStaticImageRes> uploadStaticImage(
+        com.tcn.cloud.api.api.v0alpha.UploadStaticImageReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUploadStaticImageMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_EXIST = 0;
@@ -1898,6 +1971,7 @@ public final class LearnGrpc {
   private static final int METHODID_LIST_VERSIONS = 21;
   private static final int METHODID_REVIEW_VERSION_STREAM = 22;
   private static final int METHODID_DELETE_VERSION = 23;
+  private static final int METHODID_UPLOAD_STATIC_IMAGE = 24;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2011,6 +2085,10 @@ public final class LearnGrpc {
         case METHODID_DELETE_VERSION:
           serviceImpl.deleteVersion((com.tcn.cloud.api.api.v0alpha.DeleteVersionReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteVersionRes>) responseObserver);
+          break;
+        case METHODID_UPLOAD_STATIC_IMAGE:
+          serviceImpl.uploadStaticImage((com.tcn.cloud.api.api.v0alpha.UploadStaticImageReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UploadStaticImageRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2198,6 +2276,13 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.DeleteVersionReq,
               com.tcn.cloud.api.api.v0alpha.DeleteVersionRes>(
                 service, METHODID_DELETE_VERSION)))
+        .addMethod(
+          getUploadStaticImageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UploadStaticImageReq,
+              com.tcn.cloud.api.api.v0alpha.UploadStaticImageRes>(
+                service, METHODID_UPLOAD_STATIC_IMAGE)))
         .build();
   }
 
@@ -2270,6 +2355,7 @@ public final class LearnGrpc {
               .addMethod(getListVersionsMethod())
               .addMethod(getReviewVersionStreamMethod())
               .addMethod(getDeleteVersionMethod())
+              .addMethod(getUploadStaticImageMethod())
               .build();
         }
       }
