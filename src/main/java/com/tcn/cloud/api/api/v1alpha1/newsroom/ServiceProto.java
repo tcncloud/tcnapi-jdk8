@@ -26,7 +26,7 @@ public final class ServiceProto {
       "\n#api/v1alpha1/newsroom/service.proto\022\025a" +
       "pi.v1alpha1.newsroom\032\027annotations/authz." +
       "proto\032$api/v1alpha1/newsroom/entities.pr" +
-      "oto\032\034google/api/annotations.proto2\275\020\n\013Ne" +
+      "oto\032\034google/api/annotations.proto2\211\022\n\013Ne" +
       "wsroomAPI\022\265\001\n\021CreateNewsArticle\022/.api.v1" +
       "alpha1.newsroom.CreateNewsArticleRequest" +
       "\0320.api.v1alpha1.newsroom.CreateNewsArtic" +
@@ -79,12 +79,17 @@ public final class ServiceProto {
       "NewsArticleRequest\0327.api.v1alpha1.newsro" +
       "om.ListImagesForNewsArticleResponse\"D\272\270\221" +
       "\002\005\n\003\010\347 \202\323\344\223\0024\"//api/v1alpha1/newsroom/li" +
-      "stimagesfornewsarticle:\001*B\255\001\n\'com.tcn.cl" +
-      "oud.api.api.v1alpha1.newsroomB\014ServicePr" +
-      "otoP\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312\002\025Ap" +
-      "i\\V1alpha1\\Newsroom\342\002!Api\\V1alpha1\\Newsr" +
-      "oom\\GPBMetadata\352\002\027Api::V1alpha1::Newsroo" +
-      "mb\006proto3"
+      "stimagesfornewsarticle:\001*\022\311\001\n\026UploadNews" +
+      "ArticleImage\0224.api.v1alpha1.newsroom.Upl" +
+      "oadNewsArticleImageRequest\0325.api.v1alpha" +
+      "1.newsroom.UploadNewsArticleImageRespons" +
+      "e\"B\272\270\221\002\005\n\003\010\350 \202\323\344\223\0022\"-/api/v1alpha1/newsr" +
+      "oom/uploadnewsarticleimage:\001*B\255\001\n\'com.tc" +
+      "n.cloud.api.api.v1alpha1.newsroomB\014Servi" +
+      "ceProtoP\001\242\002\003AVN\252\002\025Api.V1alpha1.Newsroom\312" +
+      "\002\025Api\\V1alpha1\\Newsroom\342\002!Api\\V1alpha1\\N" +
+      "ewsroom\\GPBMetadata\352\002\027Api::V1alpha1::New" +
+      "sroomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

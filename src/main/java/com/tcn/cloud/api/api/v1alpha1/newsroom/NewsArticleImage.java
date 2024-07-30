@@ -297,6 +297,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int TEMP_ID_FIELD_NUMBER = 7;
+  private com.google.protobuf.StringValue tempId_;
+  /**
+   * <pre>
+   * temp id for the image
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
+   * @return Whether the tempId field is set.
+   */
+  @java.lang.Override
+  public boolean hasTempId() {
+    return tempId_ != null;
+  }
+  /**
+   * <pre>
+   * temp id for the image
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
+   * @return The tempId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getTempId() {
+    return tempId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : tempId_;
+  }
+  /**
+   * <pre>
+   * temp id for the image
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getTempIdOrBuilder() {
+    return tempId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : tempId_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -329,6 +367,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageType_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, imageType_);
     }
+    if (tempId_ != null) {
+      output.writeMessage(7, getTempId());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -357,6 +398,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageType_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, imageType_);
     }
+    if (tempId_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getTempId());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -384,6 +429,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getImageReferenceId())) return false;
     if (!getImageType()
         .equals(other.getImageType())) return false;
+    if (hasTempId() != other.hasTempId()) return false;
+    if (hasTempId()) {
+      if (!getTempId()
+          .equals(other.getTempId())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -408,6 +458,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getImageReferenceId().hashCode();
     hash = (37 * hash) + IMAGE_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + getImageType().hashCode();
+    if (hasTempId()) {
+      hash = (37 * hash) + TEMP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTempId().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -549,6 +603,11 @@ private static final long serialVersionUID = 0L;
       downloadUrl_ = "";
       imageReferenceId_ = "";
       imageType_ = "";
+      tempId_ = null;
+      if (tempIdBuilder_ != null) {
+        tempIdBuilder_.dispose();
+        tempIdBuilder_ = null;
+      }
       return this;
     }
 
@@ -599,6 +658,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.imageType_ = imageType_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.tempId_ = tempIdBuilder_ == null
+            ? tempId_
+            : tempIdBuilder_.build();
       }
     }
 
@@ -674,6 +738,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000020;
         onChanged();
       }
+      if (other.hasTempId()) {
+        mergeTempId(other.getTempId());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -730,6 +797,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
+            case 58: {
+              input.readMessage(
+                  getTempIdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1249,6 +1323,161 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000020;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.StringValue tempId_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> tempIdBuilder_;
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
+     * @return Whether the tempId field is set.
+     */
+    public boolean hasTempId() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
+     * @return The tempId.
+     */
+    public com.google.protobuf.StringValue getTempId() {
+      if (tempIdBuilder_ == null) {
+        return tempId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : tempId_;
+      } else {
+        return tempIdBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
+     */
+    public Builder setTempId(com.google.protobuf.StringValue value) {
+      if (tempIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        tempId_ = value;
+      } else {
+        tempIdBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
+     */
+    public Builder setTempId(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (tempIdBuilder_ == null) {
+        tempId_ = builderForValue.build();
+      } else {
+        tempIdBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
+     */
+    public Builder mergeTempId(com.google.protobuf.StringValue value) {
+      if (tempIdBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          tempId_ != null &&
+          tempId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getTempIdBuilder().mergeFrom(value);
+        } else {
+          tempId_ = value;
+        }
+      } else {
+        tempIdBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
+     */
+    public Builder clearTempId() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      tempId_ = null;
+      if (tempIdBuilder_ != null) {
+        tempIdBuilder_.dispose();
+        tempIdBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getTempIdBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getTempIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getTempIdOrBuilder() {
+      if (tempIdBuilder_ != null) {
+        return tempIdBuilder_.getMessageOrBuilder();
+      } else {
+        return tempId_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : tempId_;
+      }
+    }
+    /**
+     * <pre>
+     * temp id for the image
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getTempIdFieldBuilder() {
+      if (tempIdBuilder_ == null) {
+        tempIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getTempId(),
+                getParentForChildren(),
+                isClean());
+        tempId_ = null;
+      }
+      return tempIdBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

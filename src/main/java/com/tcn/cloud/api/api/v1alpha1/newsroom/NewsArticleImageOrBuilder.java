@@ -116,4 +116,31 @@ public interface NewsArticleImageOrBuilder extends
    */
   com.google.protobuf.ByteString
       getImageTypeBytes();
+
+  /**
+   * <pre>
+   * temp id for the image
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
+   * @return Whether the tempId field is set.
+   */
+  boolean hasTempId();
+  /**
+   * <pre>
+   * temp id for the image
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
+   * @return The tempId.
+   */
+  com.google.protobuf.StringValue getTempId();
+  /**
+   * <pre>
+   * temp id for the image
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue temp_id = 7 [json_name = "tempId"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getTempIdOrBuilder();
 }
