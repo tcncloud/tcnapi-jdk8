@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PanelSource() {
+    outputConfigurationResourceId_ = "";
   }
 
   @java.lang.Override
@@ -284,6 +285,53 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int OUTPUT_CONFIGURATION_RESOURCE_ID_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object outputConfigurationResourceId_ = "";
+  /**
+   * <pre>
+   * Used for selecting which output configuration to display in the dashboard
+   * </pre>
+   *
+   * <code>string output_configuration_resource_id = 4 [json_name = "outputConfigurationResourceId"];</code>
+   * @return The outputConfigurationResourceId.
+   */
+  @java.lang.Override
+  public java.lang.String getOutputConfigurationResourceId() {
+    java.lang.Object ref = outputConfigurationResourceId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      outputConfigurationResourceId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Used for selecting which output configuration to display in the dashboard
+   * </pre>
+   *
+   * <code>string output_configuration_resource_id = 4 [json_name = "outputConfigurationResourceId"];</code>
+   * @return The bytes for outputConfigurationResourceId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getOutputConfigurationResourceIdBytes() {
+    java.lang.Object ref = outputConfigurationResourceId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      outputConfigurationResourceId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -307,6 +355,9 @@ private static final long serialVersionUID = 0L;
     if (panelTypeCase_ == 3) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, panelType_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputConfigurationResourceId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, outputConfigurationResourceId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -325,6 +376,9 @@ private static final long serialVersionUID = 0L;
     if (panelTypeCase_ == 3) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, panelType_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputConfigurationResourceId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, outputConfigurationResourceId_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -340,6 +394,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v0alpha.PanelSource other = (com.tcn.cloud.api.api.v0alpha.PanelSource) obj;
 
+    if (!getOutputConfigurationResourceId()
+        .equals(other.getOutputConfigurationResourceId())) return false;
     if (!getPanelTypeCase().equals(other.getPanelTypeCase())) return false;
     switch (panelTypeCase_) {
       case 1:
@@ -368,6 +424,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + OUTPUT_CONFIGURATION_RESOURCE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getOutputConfigurationResourceId().hashCode();
     switch (panelTypeCase_) {
       case 1:
         hash = (37 * hash) + INSIGHT_ID_FIELD_NUMBER;
@@ -519,6 +577,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      outputConfigurationResourceId_ = "";
       panelTypeCase_ = 0;
       panelType_ = null;
       return this;
@@ -555,6 +614,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PanelSource result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.outputConfigurationResourceId_ = outputConfigurationResourceId_;
+      }
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.v0alpha.PanelSource result) {
@@ -606,6 +668,11 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.PanelSource other) {
       if (other == com.tcn.cloud.api.api.v0alpha.PanelSource.getDefaultInstance()) return this;
+      if (!other.getOutputConfigurationResourceId().isEmpty()) {
+        outputConfigurationResourceId_ = other.outputConfigurationResourceId_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       switch (other.getPanelTypeCase()) {
         case INSIGHT_ID: {
           panelTypeCase_ = 1;
@@ -673,6 +740,11 @@ private static final long serialVersionUID = 0L;
               panelType_ = s;
               break;
             } // case 26
+            case 34: {
+              outputConfigurationResourceId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1064,6 +1136,98 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       panelTypeCase_ = 3;
       panelType_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object outputConfigurationResourceId_ = "";
+    /**
+     * <pre>
+     * Used for selecting which output configuration to display in the dashboard
+     * </pre>
+     *
+     * <code>string output_configuration_resource_id = 4 [json_name = "outputConfigurationResourceId"];</code>
+     * @return The outputConfigurationResourceId.
+     */
+    public java.lang.String getOutputConfigurationResourceId() {
+      java.lang.Object ref = outputConfigurationResourceId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        outputConfigurationResourceId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Used for selecting which output configuration to display in the dashboard
+     * </pre>
+     *
+     * <code>string output_configuration_resource_id = 4 [json_name = "outputConfigurationResourceId"];</code>
+     * @return The bytes for outputConfigurationResourceId.
+     */
+    public com.google.protobuf.ByteString
+        getOutputConfigurationResourceIdBytes() {
+      java.lang.Object ref = outputConfigurationResourceId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        outputConfigurationResourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Used for selecting which output configuration to display in the dashboard
+     * </pre>
+     *
+     * <code>string output_configuration_resource_id = 4 [json_name = "outputConfigurationResourceId"];</code>
+     * @param value The outputConfigurationResourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOutputConfigurationResourceId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      outputConfigurationResourceId_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Used for selecting which output configuration to display in the dashboard
+     * </pre>
+     *
+     * <code>string output_configuration_resource_id = 4 [json_name = "outputConfigurationResourceId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOutputConfigurationResourceId() {
+      outputConfigurationResourceId_ = getDefaultInstance().getOutputConfigurationResourceId();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Used for selecting which output configuration to display in the dashboard
+     * </pre>
+     *
+     * <code>string output_configuration_resource_id = 4 [json_name = "outputConfigurationResourceId"];</code>
+     * @param value The bytes for outputConfigurationResourceId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOutputConfigurationResourceIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      outputConfigurationResourceId_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
