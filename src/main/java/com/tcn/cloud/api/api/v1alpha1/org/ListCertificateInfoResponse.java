@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * ListCertificateInfoResponse is the response for listing certificate info.
- * DEPRECATED: Use api.v1alpha1.org.exile_manager.ListCertificateInfoResponse instead
+ * DEPRECATED: Use services.org.exile_certificate_manager.v1.ListCertificateInfoResponse instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.ListCertificateInfoResponse}
@@ -267,7 +267,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * ListCertificateInfoResponse is the response for listing certificate info.
-   * DEPRECATED: Use api.v1alpha1.org.exile_manager.ListCertificateInfoResponse instead
+   * DEPRECATED: Use services.org.exile_certificate_manager.v1.ListCertificateInfoResponse instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.ListCertificateInfoResponse}

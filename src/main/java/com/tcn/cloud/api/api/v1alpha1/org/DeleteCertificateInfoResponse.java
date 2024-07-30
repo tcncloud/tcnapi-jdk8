@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * DeleteCertificateInfoResponse is the response for deleting a certificate info.
- * DEPRECATED: Use api.v1alpha1.org.exile_manager.DeleteCertificateInfoResponse instead
+ * DEPRECATED: Use services.org.exile_certificate_manager.v1.DeleteCertificateInfoResponse instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.DeleteCertificateInfoResponse}
@@ -192,7 +192,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * DeleteCertificateInfoResponse is the response for deleting a certificate info.
-   * DEPRECATED: Use api.v1alpha1.org.exile_manager.DeleteCertificateInfoResponse instead
+   * DEPRECATED: Use services.org.exile_certificate_manager.v1.DeleteCertificateInfoResponse instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.DeleteCertificateInfoResponse}

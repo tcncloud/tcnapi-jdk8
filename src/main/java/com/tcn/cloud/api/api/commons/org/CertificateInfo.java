@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.commons.org;
 /**
  * <pre>
  * CertificateInfo contains the organization's certificate information.
- * DEPRECATED: Use api.v1alpha1.org.exile_manager.CertificateInfo instead.
+ * DEPRECATED: Use services.org.exile_certificate_manager.v1.CertificateInfo instead.
  * </pre>
  *
  * Protobuf type {@code api.commons.org.CertificateInfo}
@@ -702,7 +702,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * CertificateInfo contains the organization's certificate information.
-   * DEPRECATED: Use api.v1alpha1.org.exile_manager.CertificateInfo instead.
+   * DEPRECATED: Use services.org.exile_certificate_manager.v1.CertificateInfo instead.
    * </pre>
    *
    * Protobuf type {@code api.commons.org.CertificateInfo}

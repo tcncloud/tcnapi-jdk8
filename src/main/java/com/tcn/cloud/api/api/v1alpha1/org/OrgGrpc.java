@@ -9620,7 +9620,7 @@ public final class OrgGrpc {
      * <pre>
      * CreateCertificateInfo creates a new TLS certificate and
      * returns the certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.CreateCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.CreateCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -9632,7 +9632,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * DeleteCertificateInfo deletes a certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.DeleteCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.DeleteCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -9644,7 +9644,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * RevokeCertificateInfo deletes a certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.RevokeCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.RevokeCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -9656,7 +9656,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListCertificateInfo returns a list of certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.ListCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.ListCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -12285,7 +12285,7 @@ public final class OrgGrpc {
      * <pre>
      * CreateCertificateInfo creates a new TLS certificate and
      * returns the certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.CreateCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.CreateCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -12298,7 +12298,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * DeleteCertificateInfo deletes a certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.DeleteCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.DeleteCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -12311,7 +12311,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * RevokeCertificateInfo deletes a certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.RevokeCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.RevokeCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -12324,7 +12324,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListCertificateInfo returns a list of certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.ListCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.ListCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -14736,7 +14736,7 @@ public final class OrgGrpc {
      * <pre>
      * CreateCertificateInfo creates a new TLS certificate and
      * returns the certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.CreateCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.CreateCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -14748,7 +14748,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * DeleteCertificateInfo deletes a certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.DeleteCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.DeleteCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -14760,7 +14760,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * RevokeCertificateInfo deletes a certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.RevokeCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.RevokeCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -14772,7 +14772,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListCertificateInfo returns a list of certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.ListCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.ListCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -17277,7 +17277,7 @@ public final class OrgGrpc {
      * <pre>
      * CreateCertificateInfo creates a new TLS certificate and
      * returns the certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.CreateCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.CreateCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -17290,7 +17290,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * DeleteCertificateInfo deletes a certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.DeleteCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.DeleteCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -17303,7 +17303,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * RevokeCertificateInfo deletes a certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.RevokeCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.RevokeCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated
@@ -17316,7 +17316,7 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListCertificateInfo returns a list of certificate info for the current organization.
-     * DEPRECATED: Use api.v1alpha1.org.exile_manager.ListCertificateInfo instead
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1.ListCertificateInfo instead
      * </pre>
      */
     @java.lang.Deprecated

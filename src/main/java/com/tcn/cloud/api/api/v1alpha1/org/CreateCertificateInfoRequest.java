@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * CreateCertificateInfoRequest is the request for creating a certificate info.
- * DEPRECATED: Use api.v1alpha1.org.exile_manager.CreateCertificateInfoRequest instead
+ * DEPRECATED: Use services.org.exile_certificate_manager.v1.CreateCertificateInfoRequest instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.CreateCertificateInfoRequest}
@@ -308,7 +308,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * CreateCertificateInfoRequest is the request for creating a certificate info.
-   * DEPRECATED: Use api.v1alpha1.org.exile_manager.CreateCertificateInfoRequest instead
+   * DEPRECATED: Use services.org.exile_certificate_manager.v1.CreateCertificateInfoRequest instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.CreateCertificateInfoRequest}
