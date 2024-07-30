@@ -254,6 +254,21 @@ public interface AuditEventOrBuilder extends
   com.tcn.cloud.api.api.commons.audit.VanaPhraseCorrectionEventOrBuilder getVanaPhraseCorrectionEventOrBuilder();
 
   /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent vana_create_transcript_event = 205 [json_name = "vanaCreateTranscriptEvent"];</code>
+   * @return Whether the vanaCreateTranscriptEvent field is set.
+   */
+  boolean hasVanaCreateTranscriptEvent();
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent vana_create_transcript_event = 205 [json_name = "vanaCreateTranscriptEvent"];</code>
+   * @return The vanaCreateTranscriptEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent getVanaCreateTranscriptEvent();
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent vana_create_transcript_event = 205 [json_name = "vanaCreateTranscriptEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEventOrBuilder getVanaCreateTranscriptEventOrBuilder();
+
+  /**
    * <pre>
    *&#47; Omnichannel Events class 300
    * </pre>
@@ -2656,14 +2671,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=241
+   *     See api/commons/audit/audit.proto;l=242
    * @return Whether the billingCreateInvoiceEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingCreateInvoiceEvent();
   /**
    * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=241
+   *     See api/commons/audit/audit.proto;l=242
    * @return The billingCreateInvoiceEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingCreateInvoiceEvent getBillingCreateInvoiceEvent();
@@ -2705,14 +2720,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=244
+   *     See api/commons/audit/audit.proto;l=245
    * @return Whether the billingDeleteInvoiceEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingDeleteInvoiceEvent();
   /**
    * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=244
+   *     See api/commons/audit/audit.proto;l=245
    * @return The billingDeleteInvoiceEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingDeleteInvoiceEvent getBillingDeleteInvoiceEvent();
@@ -2769,14 +2784,14 @@ public interface AuditEventOrBuilder extends
   /**
    * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=248
+   *     See api/commons/audit/audit.proto;l=249
    * @return Whether the billingUpdateInvoiceEvent field is set.
    */
   @java.lang.Deprecated boolean hasBillingUpdateInvoiceEvent();
   /**
    * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=248
+   *     See api/commons/audit/audit.proto;l=249
    * @return The billingUpdateInvoiceEvent.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.BillingUpdateInvoiceEvent getBillingUpdateInvoiceEvent();

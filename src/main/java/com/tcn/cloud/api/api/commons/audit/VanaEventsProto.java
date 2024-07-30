@@ -44,6 +44,11 @@ public final class VanaEventsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_audit_VanaPhraseCorrectionEvent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_audit_VanaCreateTranscriptEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_audit_VanaCreateTranscriptEvent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -82,11 +87,13 @@ public final class VanaEventsProto {
       "gle.protobuf.DurationR\tendOffset\022#\n\rorig" +
       "inal_text\030\003 \001(\tR\014originalText\022#\n\rpropose" +
       "d_text\030\004 \001(\tR\014proposedText\022\020\n\003url\030\005 \001(\tR" +
-      "\003url\022\030\n\007channel\030\006 \001(\rR\007channelB\234\001\n#com.t" +
-      "cn.cloud.api.api.commons.auditB\017VanaEven" +
-      "tsProtoP\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Ap" +
-      "i\\Commons\\Audit\342\002\035Api\\Commons\\Audit\\GPBM" +
-      "etadata\352\002\023Api::Commons::Auditb\006proto3"
+      "\003url\022\030\n\007channel\030\006 \001(\rR\007channel\"B\n\031VanaCr" +
+      "eateTranscriptEvent\022%\n\016transcript_sid\030\001 " +
+      "\001(\003R\rtranscriptSidB\234\001\n#com.tcn.cloud.api" +
+      ".api.commons.auditB\017VanaEventsProtoP\001\242\002\003" +
+      "ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Au" +
+      "dit\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Ap" +
+      "i::Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -130,6 +137,12 @@ public final class VanaEventsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_VanaPhraseCorrectionEvent_descriptor,
         new java.lang.String[] { "StartOffset", "EndOffset", "OriginalText", "ProposedText", "Url", "Channel", });
+    internal_static_api_commons_audit_VanaCreateTranscriptEvent_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_api_commons_audit_VanaCreateTranscriptEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_audit_VanaCreateTranscriptEvent_descriptor,
+        new java.lang.String[] { "TranscriptSid", });
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
