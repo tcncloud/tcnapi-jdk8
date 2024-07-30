@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * RevokeCertificateInfoRequest is the request for revoking a certificate info.
+ * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.RevokeCertificateInfoRequest instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.RevokeCertificateInfoRequest}
  */
-public final class RevokeCertificateInfoRequest extends
+@java.lang.Deprecated public final class RevokeCertificateInfoRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.org.RevokeCertificateInfoRequest)
     RevokeCertificateInfoRequestOrBuilder {
@@ -249,6 +250,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * RevokeCertificateInfoRequest is the request for revoking a certificate info.
+   * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.RevokeCertificateInfoRequest instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.RevokeCertificateInfoRequest}

@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * DeleteCertificateInfoRequest is the request for deleting a certificate info.
+ * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.DeleteCertificateInfoRequest instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.DeleteCertificateInfoRequest}
  */
-public final class DeleteCertificateInfoRequest extends
+@java.lang.Deprecated public final class DeleteCertificateInfoRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.org.DeleteCertificateInfoRequest)
     DeleteCertificateInfoRequestOrBuilder {
@@ -249,6 +250,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * DeleteCertificateInfoRequest is the request for deleting a certificate info.
+   * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.DeleteCertificateInfoRequest instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.DeleteCertificateInfoRequest}

@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * ListCertificateInfoRequest is the request for listing certificate info.
+ * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.ListCertificateInfoRequest instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.ListCertificateInfoRequest}
  */
-public final class ListCertificateInfoRequest extends
+@java.lang.Deprecated public final class ListCertificateInfoRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.org.ListCertificateInfoRequest)
     ListCertificateInfoRequestOrBuilder {
@@ -191,6 +192,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * ListCertificateInfoRequest is the request for listing certificate info.
+   * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.ListCertificateInfoRequest instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.ListCertificateInfoRequest}

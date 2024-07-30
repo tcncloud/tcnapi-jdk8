@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.org;
 
-public interface CertificateInfoOrBuilder extends
+@java.lang.Deprecated public interface CertificateInfoOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.org.CertificateInfo)
     com.google.protobuf.MessageOrBuilder {
 

@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface DeleteCertificateInfoResponseOrBuilder extends
+@java.lang.Deprecated public interface DeleteCertificateInfoResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.DeleteCertificateInfoResponse)
     com.google.protobuf.MessageOrBuilder {
 }

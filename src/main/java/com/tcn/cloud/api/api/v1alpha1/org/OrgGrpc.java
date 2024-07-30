@@ -9620,8 +9620,10 @@ public final class OrgGrpc {
      * <pre>
      * CreateCertificateInfo creates a new TLS certificate and
      * returns the certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.CreateCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     default void createCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.CreateCertificateInfoRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateCertificateInfoResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCertificateInfoMethod(), responseObserver);
@@ -9630,8 +9632,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * DeleteCertificateInfo deletes a certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.DeleteCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     default void deleteCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCertificateInfoMethod(), responseObserver);
@@ -9640,8 +9644,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * RevokeCertificateInfo deletes a certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.RevokeCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     default void revokeCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeCertificateInfoMethod(), responseObserver);
@@ -9650,8 +9656,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListCertificateInfo returns a list of certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.ListCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     default void listCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.ListCertificateInfoRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListCertificateInfoResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCertificateInfoMethod(), responseObserver);
@@ -12277,8 +12285,10 @@ public final class OrgGrpc {
      * <pre>
      * CreateCertificateInfo creates a new TLS certificate and
      * returns the certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.CreateCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     public void createCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.CreateCertificateInfoRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateCertificateInfoResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -12288,8 +12298,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * DeleteCertificateInfo deletes a certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.DeleteCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     public void deleteCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -12299,8 +12311,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * RevokeCertificateInfo deletes a certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.RevokeCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     public void revokeCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -12310,8 +12324,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListCertificateInfo returns a list of certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.ListCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     public void listCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.ListCertificateInfoRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListCertificateInfoResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -14720,8 +14736,10 @@ public final class OrgGrpc {
      * <pre>
      * CreateCertificateInfo creates a new TLS certificate and
      * returns the certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.CreateCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.CreateCertificateInfoResponse createCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.CreateCertificateInfoRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateCertificateInfoMethod(), getCallOptions(), request);
@@ -14730,8 +14748,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * DeleteCertificateInfo deletes a certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.DeleteCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoResponse deleteCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteCertificateInfoMethod(), getCallOptions(), request);
@@ -14740,8 +14760,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * RevokeCertificateInfo deletes a certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.RevokeCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse revokeCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRevokeCertificateInfoMethod(), getCallOptions(), request);
@@ -14750,8 +14772,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListCertificateInfo returns a list of certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.ListCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.ListCertificateInfoResponse listCertificateInfo(com.tcn.cloud.api.api.v1alpha1.org.ListCertificateInfoRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListCertificateInfoMethod(), getCallOptions(), request);
@@ -17253,8 +17277,10 @@ public final class OrgGrpc {
      * <pre>
      * CreateCertificateInfo creates a new TLS certificate and
      * returns the certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.CreateCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreateCertificateInfoResponse> createCertificateInfo(
         com.tcn.cloud.api.api.v1alpha1.org.CreateCertificateInfoRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -17264,8 +17290,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * DeleteCertificateInfo deletes a certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.DeleteCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoResponse> deleteCertificateInfo(
         com.tcn.cloud.api.api.v1alpha1.org.DeleteCertificateInfoRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -17275,8 +17303,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * RevokeCertificateInfo deletes a certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.RevokeCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoResponse> revokeCertificateInfo(
         com.tcn.cloud.api.api.v1alpha1.org.RevokeCertificateInfoRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -17286,8 +17316,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListCertificateInfo returns a list of certificate info for the current organization.
+     * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.ListCertificateInfo instead
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListCertificateInfoResponse> listCertificateInfo(
         com.tcn.cloud.api.api.v1alpha1.org.ListCertificateInfoRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(

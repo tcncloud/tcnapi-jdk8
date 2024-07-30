@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * CreateCertificateInfoRequest is the request for creating a certificate info.
+ * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.CreateCertificateInfoRequest instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.CreateCertificateInfoRequest}
  */
-public final class CreateCertificateInfoRequest extends
+@java.lang.Deprecated public final class CreateCertificateInfoRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.org.CreateCertificateInfoRequest)
     CreateCertificateInfoRequestOrBuilder {
@@ -307,6 +308,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * CreateCertificateInfoRequest is the request for creating a certificate info.
+   * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.CreateCertificateInfoRequest instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.CreateCertificateInfoRequest}

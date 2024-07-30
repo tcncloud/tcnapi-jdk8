@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.commons.org;
 /**
  * <pre>
  * CertificateInfo contains the organization's certificate information.
+ * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.CertificateInfo instead.
  * </pre>
  *
  * Protobuf type {@code api.commons.org.CertificateInfo}
  */
-public final class CertificateInfo extends
+@java.lang.Deprecated public final class CertificateInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.org.CertificateInfo)
     CertificateInfoOrBuilder {
@@ -701,6 +702,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * CertificateInfo contains the organization's certificate information.
+   * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.CertificateInfo instead.
    * </pre>
    *
    * Protobuf type {@code api.commons.org.CertificateInfo}

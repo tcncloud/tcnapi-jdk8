@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * CreateCertificateInfoResponse is the response for creating a certificate info.
+ * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.CreateCertificateInfoResponse instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.CreateCertificateInfoResponse}
  */
-public final class CreateCertificateInfoResponse extends
+@java.lang.Deprecated public final class CreateCertificateInfoResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.org.CreateCertificateInfoResponse)
     CreateCertificateInfoResponseOrBuilder {
@@ -249,6 +250,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * CreateCertificateInfoResponse is the response for creating a certificate info.
+   * DEPRECATED: Use services.org.exile_certificate_manager.v1alpha1.CreateCertificateInfoResponse instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.CreateCertificateInfoResponse}
