@@ -5505,6 +5505,37 @@ public final class WFMGrpc {
     return getListRealTimeManagementStatesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorResponse> getUpsertRealTimeManagementStateColorMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpsertRealTimeManagementStateColor",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorResponse> getUpsertRealTimeManagementStateColorMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorResponse> getUpsertRealTimeManagementStateColorMethod;
+    if ((getUpsertRealTimeManagementStateColorMethod = WFMGrpc.getUpsertRealTimeManagementStateColorMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpsertRealTimeManagementStateColorMethod = WFMGrpc.getUpsertRealTimeManagementStateColorMethod) == null) {
+          WFMGrpc.getUpsertRealTimeManagementStateColorMethod = getUpsertRealTimeManagementStateColorMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertRealTimeManagementStateColor"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertRealTimeManagementStateColor"))
+              .build();
+        }
+      }
+    }
+    return getUpsertRealTimeManagementStateColorMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest,
       com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse> getListRealTimeManagementStateColorsMethod;
 
@@ -5534,6 +5565,37 @@ public final class WFMGrpc {
       }
     }
     return getListRealTimeManagementStateColorsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorResponse> getDeleteRealTimeManagementStateColorMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteRealTimeManagementStateColor",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorResponse> getDeleteRealTimeManagementStateColorMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorRequest, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorResponse> getDeleteRealTimeManagementStateColorMethod;
+    if ((getDeleteRealTimeManagementStateColorMethod = WFMGrpc.getDeleteRealTimeManagementStateColorMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getDeleteRealTimeManagementStateColorMethod = WFMGrpc.getDeleteRealTimeManagementStateColorMethod) == null) {
+          WFMGrpc.getDeleteRealTimeManagementStateColorMethod = getDeleteRealTimeManagementStateColorMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorRequest, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteRealTimeManagementStateColor"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteRealTimeManagementStateColor"))
+              .build();
+        }
+      }
+    }
+    return getDeleteRealTimeManagementStateColorMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorRequest,
@@ -8494,15 +8556,42 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * List org-level RealTimeManagementStateColors.
+     * Sets the given &#64;state to be associated with the given &#64;rgba_color_id for the org sending the request.
      * Errors:
-     *   - grpc.Invalid: on invalid input.
-     *   - grpc.Internal: on unexpected error.
+     *   - grpc.Internal: error upserting the real time management state color or returning the newly created state color.
+     *   - grpc.NotFound: the given &#64;rgba_color_id does not exist.
+     * </pre>
+     */
+    default void upsertRealTimeManagementStateColor(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertRealTimeManagementStateColorMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List org assigned colors for real-time management states.
+     * Any states that do not have an assigned state color will have their system default state color returned instead.
+     * Errors:
+     *  - grpc.Internal: error occurs when listing the real-time management state colors.
      * </pre>
      */
     default void listRealTimeManagementStateColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRealTimeManagementStateColorsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the state color for the given &#64;state for the org sending the request.
+     * The state will be associated with the system default color.
+     * Errors:
+     *  - grpc.Invalid: the &#64;state is invalid or is not associated with an &#64;rbg_color_id.
+     *  - grpc.Internal: error occurs when deleting the state color fails.
+     * </pre>
+     */
+    default void deleteRealTimeManagementStateColor(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRealTimeManagementStateColorMethod(), responseObserver);
     }
 
     /**
@@ -11552,16 +11641,45 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * List org-level RealTimeManagementStateColors.
+     * Sets the given &#64;state to be associated with the given &#64;rgba_color_id for the org sending the request.
      * Errors:
-     *   - grpc.Invalid: on invalid input.
-     *   - grpc.Internal: on unexpected error.
+     *   - grpc.Internal: error upserting the real time management state color or returning the newly created state color.
+     *   - grpc.NotFound: the given &#64;rgba_color_id does not exist.
+     * </pre>
+     */
+    public void upsertRealTimeManagementStateColor(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpsertRealTimeManagementStateColorMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List org assigned colors for real-time management states.
+     * Any states that do not have an assigned state color will have their system default state color returned instead.
+     * Errors:
+     *  - grpc.Internal: error occurs when listing the real-time management state colors.
      * </pre>
      */
     public void listRealTimeManagementStateColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListRealTimeManagementStateColorsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the state color for the given &#64;state for the org sending the request.
+     * The state will be associated with the system default color.
+     * Errors:
+     *  - grpc.Invalid: the &#64;state is invalid or is not associated with an &#64;rbg_color_id.
+     *  - grpc.Internal: error occurs when deleting the state color fails.
+     * </pre>
+     */
+    public void deleteRealTimeManagementStateColor(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteRealTimeManagementStateColorMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -14430,15 +14548,42 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * List org-level RealTimeManagementStateColors.
+     * Sets the given &#64;state to be associated with the given &#64;rgba_color_id for the org sending the request.
      * Errors:
-     *   - grpc.Invalid: on invalid input.
-     *   - grpc.Internal: on unexpected error.
+     *   - grpc.Internal: error upserting the real time management state color or returning the newly created state color.
+     *   - grpc.NotFound: the given &#64;rgba_color_id does not exist.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorResponse upsertRealTimeManagementStateColor(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpsertRealTimeManagementStateColorMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List org assigned colors for real-time management states.
+     * Any states that do not have an assigned state color will have their system default state color returned instead.
+     * Errors:
+     *  - grpc.Internal: error occurs when listing the real-time management state colors.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse listRealTimeManagementStateColors(com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListRealTimeManagementStateColorsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the state color for the given &#64;state for the org sending the request.
+     * The state will be associated with the system default color.
+     * Errors:
+     *  - grpc.Invalid: the &#64;state is invalid or is not associated with an &#64;rbg_color_id.
+     *  - grpc.Internal: error occurs when deleting the state color fails.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorResponse deleteRealTimeManagementStateColor(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteRealTimeManagementStateColorMethod(), getCallOptions(), request);
     }
 
     /**
@@ -17372,16 +17517,45 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * List org-level RealTimeManagementStateColors.
+     * Sets the given &#64;state to be associated with the given &#64;rgba_color_id for the org sending the request.
      * Errors:
-     *   - grpc.Invalid: on invalid input.
-     *   - grpc.Internal: on unexpected error.
+     *   - grpc.Internal: error upserting the real time management state color or returning the newly created state color.
+     *   - grpc.NotFound: the given &#64;rgba_color_id does not exist.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorResponse> upsertRealTimeManagementStateColor(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpsertRealTimeManagementStateColorMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * List org assigned colors for real-time management states.
+     * Any states that do not have an assigned state color will have their system default state color returned instead.
+     * Errors:
+     *  - grpc.Internal: error occurs when listing the real-time management state colors.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse> listRealTimeManagementStateColors(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListRealTimeManagementStateColorsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the state color for the given &#64;state for the org sending the request.
+     * The state will be associated with the system default color.
+     * Errors:
+     *  - grpc.Invalid: the &#64;state is invalid or is not associated with an &#64;rbg_color_id.
+     *  - grpc.Internal: error occurs when deleting the state color fails.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorResponse> deleteRealTimeManagementStateColor(
+        com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteRealTimeManagementStateColorMethod(), getCallOptions()), request);
     }
 
     /**
@@ -17619,11 +17793,13 @@ public final class WFMGrpc {
   private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 174;
   private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 175;
   private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 176;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 177;
-  private static final int METHODID_CREATE_RGBA_COLOR = 178;
-  private static final int METHODID_LIST_RGBA_COLORS = 179;
-  private static final int METHODID_UPDATE_RGBA_COLOR = 180;
-  private static final int METHODID_DELETE_RGBA_COLOR = 181;
+  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 177;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 178;
+  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 179;
+  private static final int METHODID_CREATE_RGBA_COLOR = 180;
+  private static final int METHODID_LIST_RGBA_COLORS = 181;
+  private static final int METHODID_UPDATE_RGBA_COLOR = 182;
+  private static final int METHODID_DELETE_RGBA_COLOR = 183;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -18350,9 +18526,17 @@ public final class WFMGrpc {
           serviceImpl.listRealTimeManagementStates((com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse>) responseObserver);
           break;
+        case METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR:
+          serviceImpl.upsertRealTimeManagementStateColor((com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorResponse>) responseObserver);
+          break;
         case METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS:
           serviceImpl.listRealTimeManagementStateColors((com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR:
+          serviceImpl.deleteRealTimeManagementStateColor((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorResponse>) responseObserver);
           break;
         case METHODID_CREATE_RGBA_COLOR:
           serviceImpl.createRgbaColor((com.tcn.cloud.api.api.v1alpha1.wfm.CreateRgbaColorRequest) request,
@@ -19628,12 +19812,26 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStatesResponse>(
                 service, METHODID_LIST_REAL_TIME_MANAGEMENT_STATES)))
         .addMethod(
+          getUpsertRealTimeManagementStateColorMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRealTimeManagementStateColorResponse>(
+                service, METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR)))
+        .addMethod(
           getListRealTimeManagementStateColorsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsRequest,
               com.tcn.cloud.api.api.v1alpha1.wfm.ListRealTimeManagementStateColorsResponse>(
                 service, METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS)))
+        .addMethod(
+          getDeleteRealTimeManagementStateColorMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRealTimeManagementStateColorResponse>(
+                service, METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR)))
         .addMethod(
           getCreateRgbaColorMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -19887,7 +20085,9 @@ public final class WFMGrpc {
               .addMethod(getHelloWorldWFMAdherenceMethod())
               .addMethod(getListAgentStatesForDayMethod())
               .addMethod(getListRealTimeManagementStatesMethod())
+              .addMethod(getUpsertRealTimeManagementStateColorMethod())
               .addMethod(getListRealTimeManagementStateColorsMethod())
+              .addMethod(getDeleteRealTimeManagementStateColorMethod())
               .addMethod(getCreateRgbaColorMethod())
               .addMethod(getListRgbaColorsMethod())
               .addMethod(getUpdateRgbaColorMethod())
