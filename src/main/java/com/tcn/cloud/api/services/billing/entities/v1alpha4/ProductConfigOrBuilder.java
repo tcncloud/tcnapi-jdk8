@@ -398,34 +398,34 @@ public interface ProductConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsConfigOrBuilder getCommunicationsOmniSmsAgentMessageUnitOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attatchment = 1201 [json_name = "communicationsOmniSmsAgentAttatchment"];</code>
-   * @return Whether the communicationsOmniSmsAgentAttatchment field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attachment = 1201 [json_name = "communicationsOmniSmsAgentAttachment"];</code>
+   * @return Whether the communicationsOmniSmsAgentAttachment field is set.
    */
-  boolean hasCommunicationsOmniSmsAgentAttatchment();
+  boolean hasCommunicationsOmniSmsAgentAttachment();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attatchment = 1201 [json_name = "communicationsOmniSmsAgentAttatchment"];</code>
-   * @return The communicationsOmniSmsAgentAttatchment.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attachment = 1201 [json_name = "communicationsOmniSmsAgentAttachment"];</code>
+   * @return The communicationsOmniSmsAgentAttachment.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsAgentAttatchment();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsAgentAttachment();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attatchment = 1201 [json_name = "communicationsOmniSmsAgentAttatchment"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attachment = 1201 [json_name = "communicationsOmniSmsAgentAttachment"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsAgentAttatchmentOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsAgentAttachmentOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attatchments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttatchments"];</code>
-   * @return Whether the communicationsOmniSmsAgentAccumulatedAttatchments field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attachments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttachments"];</code>
+   * @return Whether the communicationsOmniSmsAgentAccumulatedAttachments field is set.
    */
-  boolean hasCommunicationsOmniSmsAgentAccumulatedAttatchments();
+  boolean hasCommunicationsOmniSmsAgentAccumulatedAttachments();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attatchments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttatchments"];</code>
-   * @return The communicationsOmniSmsAgentAccumulatedAttatchments.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attachments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttachments"];</code>
+   * @return The communicationsOmniSmsAgentAccumulatedAttachments.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsAgentAccumulatedAttatchments();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsAgentAccumulatedAttachments();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attatchments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttatchments"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attachments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttachments"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsAgentAccumulatedAttatchmentsOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsAgentAccumulatedAttachmentsOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha4.OmniSmsConfig communications_omni_sms_customer_message_unit = 1210 [json_name = "communicationsOmniSmsCustomerMessageUnit"];</code>
@@ -443,34 +443,34 @@ public interface ProductConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsConfigOrBuilder getCommunicationsOmniSmsCustomerMessageUnitOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attatchment = 1211 [json_name = "communicationsOmniSmsCustomerAttatchment"];</code>
-   * @return Whether the communicationsOmniSmsCustomerAttatchment field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attachment = 1211 [json_name = "communicationsOmniSmsCustomerAttachment"];</code>
+   * @return Whether the communicationsOmniSmsCustomerAttachment field is set.
    */
-  boolean hasCommunicationsOmniSmsCustomerAttatchment();
+  boolean hasCommunicationsOmniSmsCustomerAttachment();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attatchment = 1211 [json_name = "communicationsOmniSmsCustomerAttatchment"];</code>
-   * @return The communicationsOmniSmsCustomerAttatchment.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attachment = 1211 [json_name = "communicationsOmniSmsCustomerAttachment"];</code>
+   * @return The communicationsOmniSmsCustomerAttachment.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsCustomerAttatchment();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsCustomerAttachment();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attatchment = 1211 [json_name = "communicationsOmniSmsCustomerAttatchment"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attachment = 1211 [json_name = "communicationsOmniSmsCustomerAttachment"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsCustomerAttatchmentOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsCustomerAttachmentOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attatchments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttatchments"];</code>
-   * @return Whether the communicationsOmniSmsCustomerAccumulatedAttatchments field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attachments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttachments"];</code>
+   * @return Whether the communicationsOmniSmsCustomerAccumulatedAttachments field is set.
    */
-  boolean hasCommunicationsOmniSmsCustomerAccumulatedAttatchments();
+  boolean hasCommunicationsOmniSmsCustomerAccumulatedAttachments();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attatchments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttatchments"];</code>
-   * @return The communicationsOmniSmsCustomerAccumulatedAttatchments.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attachments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttachments"];</code>
+   * @return The communicationsOmniSmsCustomerAccumulatedAttachments.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsCustomerAccumulatedAttatchments();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsCustomerAccumulatedAttachments();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attatchments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttatchments"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attachments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttachments"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsCustomerAccumulatedAttatchmentsOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsCustomerAccumulatedAttachmentsOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha4.OmniSmsConfig communications_omni_sms_manager_message_unit = 1220 [json_name = "communicationsOmniSmsManagerMessageUnit"];</code>
@@ -488,34 +488,34 @@ public interface ProductConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsConfigOrBuilder getCommunicationsOmniSmsManagerMessageUnitOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attatchment = 1221 [json_name = "communicationsOmniSmsManagerAttatchment"];</code>
-   * @return Whether the communicationsOmniSmsManagerAttatchment field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attachment = 1221 [json_name = "communicationsOmniSmsManagerAttachment"];</code>
+   * @return Whether the communicationsOmniSmsManagerAttachment field is set.
    */
-  boolean hasCommunicationsOmniSmsManagerAttatchment();
+  boolean hasCommunicationsOmniSmsManagerAttachment();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attatchment = 1221 [json_name = "communicationsOmniSmsManagerAttatchment"];</code>
-   * @return The communicationsOmniSmsManagerAttatchment.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attachment = 1221 [json_name = "communicationsOmniSmsManagerAttachment"];</code>
+   * @return The communicationsOmniSmsManagerAttachment.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsManagerAttatchment();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsManagerAttachment();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attatchment = 1221 [json_name = "communicationsOmniSmsManagerAttatchment"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attachment = 1221 [json_name = "communicationsOmniSmsManagerAttachment"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsManagerAttatchmentOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsManagerAttachmentOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attatchments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttatchments"];</code>
-   * @return Whether the communicationsOmniSmsManagerAccumulatedAttatchments field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attachments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttachments"];</code>
+   * @return Whether the communicationsOmniSmsManagerAccumulatedAttachments field is set.
    */
-  boolean hasCommunicationsOmniSmsManagerAccumulatedAttatchments();
+  boolean hasCommunicationsOmniSmsManagerAccumulatedAttachments();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attatchments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttatchments"];</code>
-   * @return The communicationsOmniSmsManagerAccumulatedAttatchments.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attachments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttachments"];</code>
+   * @return The communicationsOmniSmsManagerAccumulatedAttachments.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsManagerAccumulatedAttatchments();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsManagerAccumulatedAttachments();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attatchments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttatchments"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attachments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttachments"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsManagerAccumulatedAttatchmentsOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsManagerAccumulatedAttachmentsOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha4.OmniSmsConfig communications_omni_sms_system_message_unit = 1230 [json_name = "communicationsOmniSmsSystemMessageUnit"];</code>
@@ -533,34 +533,34 @@ public interface ProductConfigOrBuilder extends
   com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsConfigOrBuilder getCommunicationsOmniSmsSystemMessageUnitOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attatchment = 1231 [json_name = "communicationsOmniSmsSystemAttatchment"];</code>
-   * @return Whether the communicationsOmniSmsSystemAttatchment field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attachment = 1231 [json_name = "communicationsOmniSmsSystemAttachment"];</code>
+   * @return Whether the communicationsOmniSmsSystemAttachment field is set.
    */
-  boolean hasCommunicationsOmniSmsSystemAttatchment();
+  boolean hasCommunicationsOmniSmsSystemAttachment();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attatchment = 1231 [json_name = "communicationsOmniSmsSystemAttatchment"];</code>
-   * @return The communicationsOmniSmsSystemAttatchment.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attachment = 1231 [json_name = "communicationsOmniSmsSystemAttachment"];</code>
+   * @return The communicationsOmniSmsSystemAttachment.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsSystemAttatchment();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsSystemAttachment();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attatchment = 1231 [json_name = "communicationsOmniSmsSystemAttatchment"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attachment = 1231 [json_name = "communicationsOmniSmsSystemAttachment"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsSystemAttatchmentOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsSystemAttachmentOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attatchments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttatchments"];</code>
-   * @return Whether the communicationsOmniSmsSystemAccumulatedAttatchments field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attachments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttachments"];</code>
+   * @return Whether the communicationsOmniSmsSystemAccumulatedAttachments field is set.
    */
-  boolean hasCommunicationsOmniSmsSystemAccumulatedAttatchments();
+  boolean hasCommunicationsOmniSmsSystemAccumulatedAttachments();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attatchments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttatchments"];</code>
-   * @return The communicationsOmniSmsSystemAccumulatedAttatchments.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attachments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttachments"];</code>
+   * @return The communicationsOmniSmsSystemAccumulatedAttachments.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsSystemAccumulatedAttatchments();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsSystemAccumulatedAttachments();
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attatchments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttatchments"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attachments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttachments"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsSystemAccumulatedAttatchmentsOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsSystemAccumulatedAttachmentsOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha4.BasicConfig communications_omni_agent_seats = 1300 [json_name = "communicationsOmniAgentSeats"];</code>

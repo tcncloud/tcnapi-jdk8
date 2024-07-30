@@ -32,7 +32,7 @@ public final class ProductsProto {
       "ducts.proto\022\"services.billing.entities.v" +
       "1alpha4\0320services/billing/entities/v1alp" +
       "ha4/modules.proto\032-services/billing/enti" +
-      "ties/v1alpha4/omni.proto\"\2232\n\rProductConf" +
+      "ties/v1alpha4/omni.proto\"\2032\n\rProductConf" +
       "ig\022\217\001\n+communications_omni_chat_agent_me" +
       "ssage_unit\030\350\007 \001(\0132/.services.billing.ent" +
       "ities.v1alpha4.BasicConfigH\000R&communicat" +
@@ -129,77 +129,77 @@ public final class ProductsProto {
       "ommunications_omni_sms_agent_message_uni" +
       "t\030\260\t \001(\01321.services.billing.entities.v1a" +
       "lpha4.OmniSmsConfigH\000R%communicationsOmn" +
-      "iSmsAgentMessageUnit\022\222\001\n)communications_" +
-      "omni_sms_agent_attatchment\030\261\t \001(\01325.serv" +
-      "ices.billing.entities.v1alpha4.OmniSmsUn" +
-      "itConfigH\000R%communicationsOmniSmsAgentAt" +
-      "tatchment\022\253\001\n6communications_omni_sms_ag" +
-      "ent_accumulated_attatchments\030\262\t \001(\01325.se" +
-      "rvices.billing.entities.v1alpha4.OmniSms" +
-      "UnitConfigH\000R1communicationsOmniSmsAgent" +
-      "AccumulatedAttatchments\022\225\001\n-communicatio" +
-      "ns_omni_sms_customer_message_unit\030\272\t \001(\013" +
-      "21.services.billing.entities.v1alpha4.Om" +
-      "niSmsConfigH\000R(communicationsOmniSmsCust" +
-      "omerMessageUnit\022\230\001\n,communications_omni_" +
-      "sms_customer_attatchment\030\273\t \001(\01325.servic" +
-      "es.billing.entities.v1alpha4.OmniSmsUnit" +
-      "ConfigH\000R(communicationsOmniSmsCustomerA" +
-      "ttatchment\022\261\001\n9communications_omni_sms_c" +
-      "ustomer_accumulated_attatchments\030\274\t \001(\0132" +
-      "5.services.billing.entities.v1alpha4.Omn" +
-      "iSmsUnitConfigH\000R4communicationsOmniSmsC" +
-      "ustomerAccumulatedAttatchments\022\223\001\n,commu" +
-      "nications_omni_sms_manager_message_unit\030" +
-      "\304\t \001(\01321.services.billing.entities.v1alp" +
-      "ha4.OmniSmsConfigH\000R\'communicationsOmniS" +
-      "msManagerMessageUnit\022\226\001\n+communications_" +
-      "omni_sms_manager_attatchment\030\305\t \001(\01325.se" +
-      "rvices.billing.entities.v1alpha4.OmniSms" +
-      "UnitConfigH\000R\'communicationsOmniSmsManag" +
-      "erAttatchment\022\257\001\n8communications_omni_sm" +
-      "s_manager_accumulated_attatchments\030\306\t \001(" +
-      "\01325.services.billing.entities.v1alpha4.O" +
-      "mniSmsUnitConfigH\000R3communicationsOmniSm" +
-      "sManagerAccumulatedAttatchments\022\221\001\n+comm" +
-      "unications_omni_sms_system_message_unit\030" +
-      "\316\t \001(\01321.services.billing.entities.v1alp" +
-      "ha4.OmniSmsConfigH\000R&communicationsOmniS" +
-      "msSystemMessageUnit\022\224\001\n*communications_o" +
-      "mni_sms_system_attatchment\030\317\t \001(\01325.serv" +
-      "ices.billing.entities.v1alpha4.OmniSmsUn" +
-      "itConfigH\000R&communicationsOmniSmsSystemA" +
-      "ttatchment\022\255\001\n7communications_omni_sms_s" +
-      "ystem_accumulated_attatchments\030\320\t \001(\01325." +
-      "services.billing.entities.v1alpha4.OmniS" +
-      "msUnitConfigH\000R2communicationsOmniSmsSys" +
-      "temAccumulatedAttatchments\022y\n\037communicat" +
-      "ions_omni_agent_seats\030\224\n \001(\0132/.services." +
-      "billing.entities.v1alpha4.BasicConfigH\000R" +
-      "\034communicationsOmniAgentSeats\022\235\001\n2commun" +
-      "ications_omni_resources_connected_inbox_" +
-      "poll\030\370\n \001(\0132/.services.billing.entities." +
-      "v1alpha4.BasicConfigH\000R-communicationsOm" +
-      "niResourcesConnectedInboxPoll\022\243\001\n5commun" +
-      "ications_omni_resources_connected_inbox_" +
-      "created\030\371\n \001(\0132/.services.billing.entiti" +
-      "es.v1alpha4.BasicConfigH\000R0communication" +
-      "sOmniResourcesConnectedInboxCreated\022\227\001\n/" +
-      "data_management_compliance_compliance_rn" +
-      "d_query\030\220N \001(\0132/.services.billing.entiti" +
-      "es.v1alpha4.BasicConfigH\000R*dataManagemen" +
-      "tComplianceComplianceRndQuery\022\244\001\n6data_m" +
-      "anagement_compliance_compliance_rnd_quer" +
-      "y_cached\030\221N \001(\0132/.services.billing.entit" +
-      "ies.v1alpha4.BasicConfigH\000R0dataManageme" +
-      "ntComplianceComplianceRndQueryCachedB\010\n\006" +
-      "configB\360\001\n4com.tcn.cloud.api.services.bi" +
-      "lling.entities.v1alpha4B\rProductsProtoP\001" +
-      "\242\002\003SBE\252\002\"Services.Billing.Entities.V1alp" +
-      "ha4\312\002\"Services\\Billing\\Entities\\V1alpha4" +
-      "\342\002.Services\\Billing\\Entities\\V1alpha4\\GP" +
-      "BMetadata\352\002%Services::Billing::Entities:" +
-      ":V1alpha4b\006proto3"
+      "iSmsAgentMessageUnit\022\220\001\n(communications_" +
+      "omni_sms_agent_attachment\030\261\t \001(\01325.servi" +
+      "ces.billing.entities.v1alpha4.OmniSmsUni" +
+      "tConfigH\000R$communicationsOmniSmsAgentAtt" +
+      "achment\022\251\001\n5communications_omni_sms_agen" +
+      "t_accumulated_attachments\030\262\t \001(\01325.servi" +
+      "ces.billing.entities.v1alpha4.OmniSmsUni" +
+      "tConfigH\000R0communicationsOmniSmsAgentAcc" +
+      "umulatedAttachments\022\225\001\n-communications_o" +
+      "mni_sms_customer_message_unit\030\272\t \001(\01321.s" +
+      "ervices.billing.entities.v1alpha4.OmniSm" +
+      "sConfigH\000R(communicationsOmniSmsCustomer" +
+      "MessageUnit\022\226\001\n+communications_omni_sms_" +
+      "customer_attachment\030\273\t \001(\01325.services.bi" +
+      "lling.entities.v1alpha4.OmniSmsUnitConfi" +
+      "gH\000R\'communicationsOmniSmsCustomerAttach" +
+      "ment\022\257\001\n8communications_omni_sms_custome" +
+      "r_accumulated_attachments\030\274\t \001(\01325.servi" +
+      "ces.billing.entities.v1alpha4.OmniSmsUni" +
+      "tConfigH\000R3communicationsOmniSmsCustomer" +
+      "AccumulatedAttachments\022\223\001\n,communication" +
+      "s_omni_sms_manager_message_unit\030\304\t \001(\01321" +
+      ".services.billing.entities.v1alpha4.Omni" +
+      "SmsConfigH\000R\'communicationsOmniSmsManage" +
+      "rMessageUnit\022\224\001\n*communications_omni_sms" +
+      "_manager_attachment\030\305\t \001(\01325.services.bi" +
+      "lling.entities.v1alpha4.OmniSmsUnitConfi" +
+      "gH\000R&communicationsOmniSmsManagerAttachm" +
+      "ent\022\255\001\n7communications_omni_sms_manager_" +
+      "accumulated_attachments\030\306\t \001(\01325.service" +
+      "s.billing.entities.v1alpha4.OmniSmsUnitC" +
+      "onfigH\000R2communicationsOmniSmsManagerAcc" +
+      "umulatedAttachments\022\221\001\n+communications_o" +
+      "mni_sms_system_message_unit\030\316\t \001(\01321.ser" +
+      "vices.billing.entities.v1alpha4.OmniSmsC" +
+      "onfigH\000R&communicationsOmniSmsSystemMess" +
+      "ageUnit\022\222\001\n)communications_omni_sms_syst" +
+      "em_attachment\030\317\t \001(\01325.services.billing." +
+      "entities.v1alpha4.OmniSmsUnitConfigH\000R%c" +
+      "ommunicationsOmniSmsSystemAttachment\022\253\001\n" +
+      "6communications_omni_sms_system_accumula" +
+      "ted_attachments\030\320\t \001(\01325.services.billin" +
+      "g.entities.v1alpha4.OmniSmsUnitConfigH\000R" +
+      "1communicationsOmniSmsSystemAccumulatedA" +
+      "ttachments\022y\n\037communications_omni_agent_" +
+      "seats\030\224\n \001(\0132/.services.billing.entities" +
+      ".v1alpha4.BasicConfigH\000R\034communicationsO" +
+      "mniAgentSeats\022\235\001\n2communications_omni_re" +
+      "sources_connected_inbox_poll\030\370\n \001(\0132/.se" +
+      "rvices.billing.entities.v1alpha4.BasicCo" +
+      "nfigH\000R-communicationsOmniResourcesConne" +
+      "ctedInboxPoll\022\243\001\n5communications_omni_re" +
+      "sources_connected_inbox_created\030\371\n \001(\0132/" +
+      ".services.billing.entities.v1alpha4.Basi" +
+      "cConfigH\000R0communicationsOmniResourcesCo" +
+      "nnectedInboxCreated\022\227\001\n/data_management_" +
+      "compliance_compliance_rnd_query\030\220N \001(\0132/" +
+      ".services.billing.entities.v1alpha4.Basi" +
+      "cConfigH\000R*dataManagementComplianceCompl" +
+      "ianceRndQuery\022\244\001\n6data_management_compli" +
+      "ance_compliance_rnd_query_cached\030\221N \001(\0132" +
+      "/.services.billing.entities.v1alpha4.Bas" +
+      "icConfigH\000R0dataManagementComplianceComp" +
+      "lianceRndQueryCachedB\010\n\006configB\360\001\n4com.t" +
+      "cn.cloud.api.services.billing.entities.v" +
+      "1alpha4B\rProductsProtoP\001\242\002\003SBE\252\002\"Service" +
+      "s.Billing.Entities.V1alpha4\312\002\"Services\\B" +
+      "illing\\Entities\\V1alpha4\342\002.Services\\Bill" +
+      "ing\\Entities\\V1alpha4\\GPBMetadata\352\002%Serv" +
+      "ices::Billing::Entities::V1alpha4b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -212,7 +212,7 @@ public final class ProductsProto {
     internal_static_services_billing_entities_v1alpha4_ProductConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha4_ProductConfig_descriptor,
-        new java.lang.String[] { "CommunicationsOmniChatAgentMessageUnit", "CommunicationsOmniChatAgentAttachment", "CommunicationsOmniChatAgentAccumulatedAttachments", "CommunicationsOmniChatCustomerMessageUnit", "CommunicationsOmniChatCustomerAttachment", "CommunicationsOmniChatCustomerAccumulatedAttachments", "CommunicationsOmniChatManagerMessageUnit", "CommunicationsOmniChatManagerAttachment", "CommunicationsOmniChatManagerAccumulatedAttachments", "CommunicationsOmniChatSystemMessageUnit", "CommunicationsOmniChatSystemAttachment", "CommunicationsOmniChatSystemAccumulatedAttachments", "CommunicationsOmniEmailAgentMessageUnit", "CommunicationsOmniEmailAgentSize", "CommunicationsOmniEmailAgentAccumulatedSize", "CommunicationsOmniEmailCustomerMessageUnit", "CommunicationsOmniEmailCustomerSize", "CommunicationsOmniEmailCustomerAccumulatedSize", "CommunicationsOmniEmailManagerMessageUnit", "CommunicationsOmniEmailManagerSize", "CommunicationsOmniEmailManagerAccumulatedSize", "CommunicationsOmniEmailSystemMessageUnit", "CommunicationsOmniEmailSystemSize", "CommunicationsOmniEmailSystemAccumulatedSize", "CommunicationsOmniSmsAgentMessageUnit", "CommunicationsOmniSmsAgentAttatchment", "CommunicationsOmniSmsAgentAccumulatedAttatchments", "CommunicationsOmniSmsCustomerMessageUnit", "CommunicationsOmniSmsCustomerAttatchment", "CommunicationsOmniSmsCustomerAccumulatedAttatchments", "CommunicationsOmniSmsManagerMessageUnit", "CommunicationsOmniSmsManagerAttatchment", "CommunicationsOmniSmsManagerAccumulatedAttatchments", "CommunicationsOmniSmsSystemMessageUnit", "CommunicationsOmniSmsSystemAttatchment", "CommunicationsOmniSmsSystemAccumulatedAttatchments", "CommunicationsOmniAgentSeats", "CommunicationsOmniResourcesConnectedInboxPoll", "CommunicationsOmniResourcesConnectedInboxCreated", "DataManagementComplianceComplianceRndQuery", "DataManagementComplianceComplianceRndQueryCached", "Config", });
+        new java.lang.String[] { "CommunicationsOmniChatAgentMessageUnit", "CommunicationsOmniChatAgentAttachment", "CommunicationsOmniChatAgentAccumulatedAttachments", "CommunicationsOmniChatCustomerMessageUnit", "CommunicationsOmniChatCustomerAttachment", "CommunicationsOmniChatCustomerAccumulatedAttachments", "CommunicationsOmniChatManagerMessageUnit", "CommunicationsOmniChatManagerAttachment", "CommunicationsOmniChatManagerAccumulatedAttachments", "CommunicationsOmniChatSystemMessageUnit", "CommunicationsOmniChatSystemAttachment", "CommunicationsOmniChatSystemAccumulatedAttachments", "CommunicationsOmniEmailAgentMessageUnit", "CommunicationsOmniEmailAgentSize", "CommunicationsOmniEmailAgentAccumulatedSize", "CommunicationsOmniEmailCustomerMessageUnit", "CommunicationsOmniEmailCustomerSize", "CommunicationsOmniEmailCustomerAccumulatedSize", "CommunicationsOmniEmailManagerMessageUnit", "CommunicationsOmniEmailManagerSize", "CommunicationsOmniEmailManagerAccumulatedSize", "CommunicationsOmniEmailSystemMessageUnit", "CommunicationsOmniEmailSystemSize", "CommunicationsOmniEmailSystemAccumulatedSize", "CommunicationsOmniSmsAgentMessageUnit", "CommunicationsOmniSmsAgentAttachment", "CommunicationsOmniSmsAgentAccumulatedAttachments", "CommunicationsOmniSmsCustomerMessageUnit", "CommunicationsOmniSmsCustomerAttachment", "CommunicationsOmniSmsCustomerAccumulatedAttachments", "CommunicationsOmniSmsManagerMessageUnit", "CommunicationsOmniSmsManagerAttachment", "CommunicationsOmniSmsManagerAccumulatedAttachments", "CommunicationsOmniSmsSystemMessageUnit", "CommunicationsOmniSmsSystemAttachment", "CommunicationsOmniSmsSystemAccumulatedAttachments", "CommunicationsOmniAgentSeats", "CommunicationsOmniResourcesConnectedInboxPoll", "CommunicationsOmniResourcesConnectedInboxCreated", "DataManagementComplianceComplianceRndQuery", "DataManagementComplianceComplianceRndQueryCached", "Config", });
     com.tcn.cloud.api.services.billing.entities.v1alpha4.ModulesProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniProto.getDescriptor();
   }

@@ -69,17 +69,17 @@ private static final long serialVersionUID = 0L;
     COMMUNICATIONS_OMNI_EMAIL_SYSTEM_SIZE(1131),
     COMMUNICATIONS_OMNI_EMAIL_SYSTEM_ACCUMULATED_SIZE(1132),
     COMMUNICATIONS_OMNI_SMS_AGENT_MESSAGE_UNIT(1200),
-    COMMUNICATIONS_OMNI_SMS_AGENT_ATTATCHMENT(1201),
-    COMMUNICATIONS_OMNI_SMS_AGENT_ACCUMULATED_ATTATCHMENTS(1202),
+    COMMUNICATIONS_OMNI_SMS_AGENT_ATTACHMENT(1201),
+    COMMUNICATIONS_OMNI_SMS_AGENT_ACCUMULATED_ATTACHMENTS(1202),
     COMMUNICATIONS_OMNI_SMS_CUSTOMER_MESSAGE_UNIT(1210),
-    COMMUNICATIONS_OMNI_SMS_CUSTOMER_ATTATCHMENT(1211),
-    COMMUNICATIONS_OMNI_SMS_CUSTOMER_ACCUMULATED_ATTATCHMENTS(1212),
+    COMMUNICATIONS_OMNI_SMS_CUSTOMER_ATTACHMENT(1211),
+    COMMUNICATIONS_OMNI_SMS_CUSTOMER_ACCUMULATED_ATTACHMENTS(1212),
     COMMUNICATIONS_OMNI_SMS_MANAGER_MESSAGE_UNIT(1220),
-    COMMUNICATIONS_OMNI_SMS_MANAGER_ATTATCHMENT(1221),
-    COMMUNICATIONS_OMNI_SMS_MANAGER_ACCUMULATED_ATTATCHMENTS(1222),
+    COMMUNICATIONS_OMNI_SMS_MANAGER_ATTACHMENT(1221),
+    COMMUNICATIONS_OMNI_SMS_MANAGER_ACCUMULATED_ATTACHMENTS(1222),
     COMMUNICATIONS_OMNI_SMS_SYSTEM_MESSAGE_UNIT(1230),
-    COMMUNICATIONS_OMNI_SMS_SYSTEM_ATTATCHMENT(1231),
-    COMMUNICATIONS_OMNI_SMS_SYSTEM_ACCUMULATED_ATTATCHMENTS(1232),
+    COMMUNICATIONS_OMNI_SMS_SYSTEM_ATTACHMENT(1231),
+    COMMUNICATIONS_OMNI_SMS_SYSTEM_ACCUMULATED_ATTACHMENTS(1232),
     COMMUNICATIONS_OMNI_AGENT_SEATS(1300),
     COMMUNICATIONS_OMNI_RESOURCES_CONNECTED_INBOX_POLL(1400),
     COMMUNICATIONS_OMNI_RESOURCES_CONNECTED_INBOX_CREATED(1401),
@@ -127,17 +127,17 @@ private static final long serialVersionUID = 0L;
         case 1131: return COMMUNICATIONS_OMNI_EMAIL_SYSTEM_SIZE;
         case 1132: return COMMUNICATIONS_OMNI_EMAIL_SYSTEM_ACCUMULATED_SIZE;
         case 1200: return COMMUNICATIONS_OMNI_SMS_AGENT_MESSAGE_UNIT;
-        case 1201: return COMMUNICATIONS_OMNI_SMS_AGENT_ATTATCHMENT;
-        case 1202: return COMMUNICATIONS_OMNI_SMS_AGENT_ACCUMULATED_ATTATCHMENTS;
+        case 1201: return COMMUNICATIONS_OMNI_SMS_AGENT_ATTACHMENT;
+        case 1202: return COMMUNICATIONS_OMNI_SMS_AGENT_ACCUMULATED_ATTACHMENTS;
         case 1210: return COMMUNICATIONS_OMNI_SMS_CUSTOMER_MESSAGE_UNIT;
-        case 1211: return COMMUNICATIONS_OMNI_SMS_CUSTOMER_ATTATCHMENT;
-        case 1212: return COMMUNICATIONS_OMNI_SMS_CUSTOMER_ACCUMULATED_ATTATCHMENTS;
+        case 1211: return COMMUNICATIONS_OMNI_SMS_CUSTOMER_ATTACHMENT;
+        case 1212: return COMMUNICATIONS_OMNI_SMS_CUSTOMER_ACCUMULATED_ATTACHMENTS;
         case 1220: return COMMUNICATIONS_OMNI_SMS_MANAGER_MESSAGE_UNIT;
-        case 1221: return COMMUNICATIONS_OMNI_SMS_MANAGER_ATTATCHMENT;
-        case 1222: return COMMUNICATIONS_OMNI_SMS_MANAGER_ACCUMULATED_ATTATCHMENTS;
+        case 1221: return COMMUNICATIONS_OMNI_SMS_MANAGER_ATTACHMENT;
+        case 1222: return COMMUNICATIONS_OMNI_SMS_MANAGER_ACCUMULATED_ATTACHMENTS;
         case 1230: return COMMUNICATIONS_OMNI_SMS_SYSTEM_MESSAGE_UNIT;
-        case 1231: return COMMUNICATIONS_OMNI_SMS_SYSTEM_ATTATCHMENT;
-        case 1232: return COMMUNICATIONS_OMNI_SMS_SYSTEM_ACCUMULATED_ATTATCHMENTS;
+        case 1231: return COMMUNICATIONS_OMNI_SMS_SYSTEM_ATTACHMENT;
+        case 1232: return COMMUNICATIONS_OMNI_SMS_SYSTEM_ACCUMULATED_ATTACHMENTS;
         case 1300: return COMMUNICATIONS_OMNI_AGENT_SEATS;
         case 1400: return COMMUNICATIONS_OMNI_RESOURCES_CONNECTED_INBOX_POLL;
         case 1401: return COMMUNICATIONS_OMNI_RESOURCES_CONNECTED_INBOX_CREATED;
@@ -948,62 +948,62 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsConfig.getDefaultInstance();
   }
 
-  public static final int COMMUNICATIONS_OMNI_SMS_AGENT_ATTATCHMENT_FIELD_NUMBER = 1201;
+  public static final int COMMUNICATIONS_OMNI_SMS_AGENT_ATTACHMENT_FIELD_NUMBER = 1201;
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attatchment = 1201 [json_name = "communicationsOmniSmsAgentAttatchment"];</code>
-   * @return Whether the communicationsOmniSmsAgentAttatchment field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attachment = 1201 [json_name = "communicationsOmniSmsAgentAttachment"];</code>
+   * @return Whether the communicationsOmniSmsAgentAttachment field is set.
    */
   @java.lang.Override
-  public boolean hasCommunicationsOmniSmsAgentAttatchment() {
+  public boolean hasCommunicationsOmniSmsAgentAttachment() {
     return configCase_ == 1201;
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attatchment = 1201 [json_name = "communicationsOmniSmsAgentAttatchment"];</code>
-   * @return The communicationsOmniSmsAgentAttatchment.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attachment = 1201 [json_name = "communicationsOmniSmsAgentAttachment"];</code>
+   * @return The communicationsOmniSmsAgentAttachment.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsAgentAttatchment() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsAgentAttachment() {
     if (configCase_ == 1201) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attatchment = 1201 [json_name = "communicationsOmniSmsAgentAttatchment"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attachment = 1201 [json_name = "communicationsOmniSmsAgentAttachment"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsAgentAttatchmentOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsAgentAttachmentOrBuilder() {
     if (configCase_ == 1201) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
   }
 
-  public static final int COMMUNICATIONS_OMNI_SMS_AGENT_ACCUMULATED_ATTATCHMENTS_FIELD_NUMBER = 1202;
+  public static final int COMMUNICATIONS_OMNI_SMS_AGENT_ACCUMULATED_ATTACHMENTS_FIELD_NUMBER = 1202;
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attatchments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttatchments"];</code>
-   * @return Whether the communicationsOmniSmsAgentAccumulatedAttatchments field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attachments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttachments"];</code>
+   * @return Whether the communicationsOmniSmsAgentAccumulatedAttachments field is set.
    */
   @java.lang.Override
-  public boolean hasCommunicationsOmniSmsAgentAccumulatedAttatchments() {
+  public boolean hasCommunicationsOmniSmsAgentAccumulatedAttachments() {
     return configCase_ == 1202;
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attatchments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttatchments"];</code>
-   * @return The communicationsOmniSmsAgentAccumulatedAttatchments.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attachments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttachments"];</code>
+   * @return The communicationsOmniSmsAgentAccumulatedAttachments.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsAgentAccumulatedAttatchments() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsAgentAccumulatedAttachments() {
     if (configCase_ == 1202) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attatchments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttatchments"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attachments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttachments"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsAgentAccumulatedAttatchmentsOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsAgentAccumulatedAttachmentsOrBuilder() {
     if (configCase_ == 1202) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
@@ -1041,62 +1041,62 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsConfig.getDefaultInstance();
   }
 
-  public static final int COMMUNICATIONS_OMNI_SMS_CUSTOMER_ATTATCHMENT_FIELD_NUMBER = 1211;
+  public static final int COMMUNICATIONS_OMNI_SMS_CUSTOMER_ATTACHMENT_FIELD_NUMBER = 1211;
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attatchment = 1211 [json_name = "communicationsOmniSmsCustomerAttatchment"];</code>
-   * @return Whether the communicationsOmniSmsCustomerAttatchment field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attachment = 1211 [json_name = "communicationsOmniSmsCustomerAttachment"];</code>
+   * @return Whether the communicationsOmniSmsCustomerAttachment field is set.
    */
   @java.lang.Override
-  public boolean hasCommunicationsOmniSmsCustomerAttatchment() {
+  public boolean hasCommunicationsOmniSmsCustomerAttachment() {
     return configCase_ == 1211;
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attatchment = 1211 [json_name = "communicationsOmniSmsCustomerAttatchment"];</code>
-   * @return The communicationsOmniSmsCustomerAttatchment.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attachment = 1211 [json_name = "communicationsOmniSmsCustomerAttachment"];</code>
+   * @return The communicationsOmniSmsCustomerAttachment.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsCustomerAttatchment() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsCustomerAttachment() {
     if (configCase_ == 1211) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attatchment = 1211 [json_name = "communicationsOmniSmsCustomerAttatchment"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attachment = 1211 [json_name = "communicationsOmniSmsCustomerAttachment"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsCustomerAttatchmentOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsCustomerAttachmentOrBuilder() {
     if (configCase_ == 1211) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
   }
 
-  public static final int COMMUNICATIONS_OMNI_SMS_CUSTOMER_ACCUMULATED_ATTATCHMENTS_FIELD_NUMBER = 1212;
+  public static final int COMMUNICATIONS_OMNI_SMS_CUSTOMER_ACCUMULATED_ATTACHMENTS_FIELD_NUMBER = 1212;
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attatchments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttatchments"];</code>
-   * @return Whether the communicationsOmniSmsCustomerAccumulatedAttatchments field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attachments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttachments"];</code>
+   * @return Whether the communicationsOmniSmsCustomerAccumulatedAttachments field is set.
    */
   @java.lang.Override
-  public boolean hasCommunicationsOmniSmsCustomerAccumulatedAttatchments() {
+  public boolean hasCommunicationsOmniSmsCustomerAccumulatedAttachments() {
     return configCase_ == 1212;
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attatchments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttatchments"];</code>
-   * @return The communicationsOmniSmsCustomerAccumulatedAttatchments.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attachments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttachments"];</code>
+   * @return The communicationsOmniSmsCustomerAccumulatedAttachments.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsCustomerAccumulatedAttatchments() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsCustomerAccumulatedAttachments() {
     if (configCase_ == 1212) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attatchments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttatchments"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attachments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttachments"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsCustomerAccumulatedAttatchmentsOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsCustomerAccumulatedAttachmentsOrBuilder() {
     if (configCase_ == 1212) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
@@ -1134,62 +1134,62 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsConfig.getDefaultInstance();
   }
 
-  public static final int COMMUNICATIONS_OMNI_SMS_MANAGER_ATTATCHMENT_FIELD_NUMBER = 1221;
+  public static final int COMMUNICATIONS_OMNI_SMS_MANAGER_ATTACHMENT_FIELD_NUMBER = 1221;
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attatchment = 1221 [json_name = "communicationsOmniSmsManagerAttatchment"];</code>
-   * @return Whether the communicationsOmniSmsManagerAttatchment field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attachment = 1221 [json_name = "communicationsOmniSmsManagerAttachment"];</code>
+   * @return Whether the communicationsOmniSmsManagerAttachment field is set.
    */
   @java.lang.Override
-  public boolean hasCommunicationsOmniSmsManagerAttatchment() {
+  public boolean hasCommunicationsOmniSmsManagerAttachment() {
     return configCase_ == 1221;
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attatchment = 1221 [json_name = "communicationsOmniSmsManagerAttatchment"];</code>
-   * @return The communicationsOmniSmsManagerAttatchment.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attachment = 1221 [json_name = "communicationsOmniSmsManagerAttachment"];</code>
+   * @return The communicationsOmniSmsManagerAttachment.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsManagerAttatchment() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsManagerAttachment() {
     if (configCase_ == 1221) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attatchment = 1221 [json_name = "communicationsOmniSmsManagerAttatchment"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attachment = 1221 [json_name = "communicationsOmniSmsManagerAttachment"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsManagerAttatchmentOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsManagerAttachmentOrBuilder() {
     if (configCase_ == 1221) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
   }
 
-  public static final int COMMUNICATIONS_OMNI_SMS_MANAGER_ACCUMULATED_ATTATCHMENTS_FIELD_NUMBER = 1222;
+  public static final int COMMUNICATIONS_OMNI_SMS_MANAGER_ACCUMULATED_ATTACHMENTS_FIELD_NUMBER = 1222;
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attatchments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttatchments"];</code>
-   * @return Whether the communicationsOmniSmsManagerAccumulatedAttatchments field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attachments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttachments"];</code>
+   * @return Whether the communicationsOmniSmsManagerAccumulatedAttachments field is set.
    */
   @java.lang.Override
-  public boolean hasCommunicationsOmniSmsManagerAccumulatedAttatchments() {
+  public boolean hasCommunicationsOmniSmsManagerAccumulatedAttachments() {
     return configCase_ == 1222;
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attatchments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttatchments"];</code>
-   * @return The communicationsOmniSmsManagerAccumulatedAttatchments.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attachments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttachments"];</code>
+   * @return The communicationsOmniSmsManagerAccumulatedAttachments.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsManagerAccumulatedAttatchments() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsManagerAccumulatedAttachments() {
     if (configCase_ == 1222) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attatchments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttatchments"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attachments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttachments"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsManagerAccumulatedAttatchmentsOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsManagerAccumulatedAttachmentsOrBuilder() {
     if (configCase_ == 1222) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
@@ -1227,62 +1227,62 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsConfig.getDefaultInstance();
   }
 
-  public static final int COMMUNICATIONS_OMNI_SMS_SYSTEM_ATTATCHMENT_FIELD_NUMBER = 1231;
+  public static final int COMMUNICATIONS_OMNI_SMS_SYSTEM_ATTACHMENT_FIELD_NUMBER = 1231;
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attatchment = 1231 [json_name = "communicationsOmniSmsSystemAttatchment"];</code>
-   * @return Whether the communicationsOmniSmsSystemAttatchment field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attachment = 1231 [json_name = "communicationsOmniSmsSystemAttachment"];</code>
+   * @return Whether the communicationsOmniSmsSystemAttachment field is set.
    */
   @java.lang.Override
-  public boolean hasCommunicationsOmniSmsSystemAttatchment() {
+  public boolean hasCommunicationsOmniSmsSystemAttachment() {
     return configCase_ == 1231;
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attatchment = 1231 [json_name = "communicationsOmniSmsSystemAttatchment"];</code>
-   * @return The communicationsOmniSmsSystemAttatchment.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attachment = 1231 [json_name = "communicationsOmniSmsSystemAttachment"];</code>
+   * @return The communicationsOmniSmsSystemAttachment.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsSystemAttatchment() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsSystemAttachment() {
     if (configCase_ == 1231) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attatchment = 1231 [json_name = "communicationsOmniSmsSystemAttatchment"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attachment = 1231 [json_name = "communicationsOmniSmsSystemAttachment"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsSystemAttatchmentOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsSystemAttachmentOrBuilder() {
     if (configCase_ == 1231) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
   }
 
-  public static final int COMMUNICATIONS_OMNI_SMS_SYSTEM_ACCUMULATED_ATTATCHMENTS_FIELD_NUMBER = 1232;
+  public static final int COMMUNICATIONS_OMNI_SMS_SYSTEM_ACCUMULATED_ATTACHMENTS_FIELD_NUMBER = 1232;
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attatchments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttatchments"];</code>
-   * @return Whether the communicationsOmniSmsSystemAccumulatedAttatchments field is set.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attachments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttachments"];</code>
+   * @return Whether the communicationsOmniSmsSystemAccumulatedAttachments field is set.
    */
   @java.lang.Override
-  public boolean hasCommunicationsOmniSmsSystemAccumulatedAttatchments() {
+  public boolean hasCommunicationsOmniSmsSystemAccumulatedAttachments() {
     return configCase_ == 1232;
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attatchments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttatchments"];</code>
-   * @return The communicationsOmniSmsSystemAccumulatedAttatchments.
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attachments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttachments"];</code>
+   * @return The communicationsOmniSmsSystemAccumulatedAttachments.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsSystemAccumulatedAttatchments() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsSystemAccumulatedAttachments() {
     if (configCase_ == 1232) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attatchments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttatchments"];</code>
+   * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attachments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttachments"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsSystemAccumulatedAttatchmentsOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsSystemAccumulatedAttachmentsOrBuilder() {
     if (configCase_ == 1232) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
     }
@@ -1887,48 +1887,48 @@ private static final long serialVersionUID = 0L;
             .equals(other.getCommunicationsOmniSmsAgentMessageUnit())) return false;
         break;
       case 1201:
-        if (!getCommunicationsOmniSmsAgentAttatchment()
-            .equals(other.getCommunicationsOmniSmsAgentAttatchment())) return false;
+        if (!getCommunicationsOmniSmsAgentAttachment()
+            .equals(other.getCommunicationsOmniSmsAgentAttachment())) return false;
         break;
       case 1202:
-        if (!getCommunicationsOmniSmsAgentAccumulatedAttatchments()
-            .equals(other.getCommunicationsOmniSmsAgentAccumulatedAttatchments())) return false;
+        if (!getCommunicationsOmniSmsAgentAccumulatedAttachments()
+            .equals(other.getCommunicationsOmniSmsAgentAccumulatedAttachments())) return false;
         break;
       case 1210:
         if (!getCommunicationsOmniSmsCustomerMessageUnit()
             .equals(other.getCommunicationsOmniSmsCustomerMessageUnit())) return false;
         break;
       case 1211:
-        if (!getCommunicationsOmniSmsCustomerAttatchment()
-            .equals(other.getCommunicationsOmniSmsCustomerAttatchment())) return false;
+        if (!getCommunicationsOmniSmsCustomerAttachment()
+            .equals(other.getCommunicationsOmniSmsCustomerAttachment())) return false;
         break;
       case 1212:
-        if (!getCommunicationsOmniSmsCustomerAccumulatedAttatchments()
-            .equals(other.getCommunicationsOmniSmsCustomerAccumulatedAttatchments())) return false;
+        if (!getCommunicationsOmniSmsCustomerAccumulatedAttachments()
+            .equals(other.getCommunicationsOmniSmsCustomerAccumulatedAttachments())) return false;
         break;
       case 1220:
         if (!getCommunicationsOmniSmsManagerMessageUnit()
             .equals(other.getCommunicationsOmniSmsManagerMessageUnit())) return false;
         break;
       case 1221:
-        if (!getCommunicationsOmniSmsManagerAttatchment()
-            .equals(other.getCommunicationsOmniSmsManagerAttatchment())) return false;
+        if (!getCommunicationsOmniSmsManagerAttachment()
+            .equals(other.getCommunicationsOmniSmsManagerAttachment())) return false;
         break;
       case 1222:
-        if (!getCommunicationsOmniSmsManagerAccumulatedAttatchments()
-            .equals(other.getCommunicationsOmniSmsManagerAccumulatedAttatchments())) return false;
+        if (!getCommunicationsOmniSmsManagerAccumulatedAttachments()
+            .equals(other.getCommunicationsOmniSmsManagerAccumulatedAttachments())) return false;
         break;
       case 1230:
         if (!getCommunicationsOmniSmsSystemMessageUnit()
             .equals(other.getCommunicationsOmniSmsSystemMessageUnit())) return false;
         break;
       case 1231:
-        if (!getCommunicationsOmniSmsSystemAttatchment()
-            .equals(other.getCommunicationsOmniSmsSystemAttatchment())) return false;
+        if (!getCommunicationsOmniSmsSystemAttachment()
+            .equals(other.getCommunicationsOmniSmsSystemAttachment())) return false;
         break;
       case 1232:
-        if (!getCommunicationsOmniSmsSystemAccumulatedAttatchments()
-            .equals(other.getCommunicationsOmniSmsSystemAccumulatedAttatchments())) return false;
+        if (!getCommunicationsOmniSmsSystemAccumulatedAttachments()
+            .equals(other.getCommunicationsOmniSmsSystemAccumulatedAttachments())) return false;
         break;
       case 1300:
         if (!getCommunicationsOmniAgentSeats()
@@ -2066,48 +2066,48 @@ private static final long serialVersionUID = 0L;
         hash = (53 * hash) + getCommunicationsOmniSmsAgentMessageUnit().hashCode();
         break;
       case 1201:
-        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_AGENT_ATTATCHMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getCommunicationsOmniSmsAgentAttatchment().hashCode();
+        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_AGENT_ATTACHMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getCommunicationsOmniSmsAgentAttachment().hashCode();
         break;
       case 1202:
-        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_AGENT_ACCUMULATED_ATTATCHMENTS_FIELD_NUMBER;
-        hash = (53 * hash) + getCommunicationsOmniSmsAgentAccumulatedAttatchments().hashCode();
+        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_AGENT_ACCUMULATED_ATTACHMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getCommunicationsOmniSmsAgentAccumulatedAttachments().hashCode();
         break;
       case 1210:
         hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_CUSTOMER_MESSAGE_UNIT_FIELD_NUMBER;
         hash = (53 * hash) + getCommunicationsOmniSmsCustomerMessageUnit().hashCode();
         break;
       case 1211:
-        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_CUSTOMER_ATTATCHMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getCommunicationsOmniSmsCustomerAttatchment().hashCode();
+        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_CUSTOMER_ATTACHMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getCommunicationsOmniSmsCustomerAttachment().hashCode();
         break;
       case 1212:
-        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_CUSTOMER_ACCUMULATED_ATTATCHMENTS_FIELD_NUMBER;
-        hash = (53 * hash) + getCommunicationsOmniSmsCustomerAccumulatedAttatchments().hashCode();
+        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_CUSTOMER_ACCUMULATED_ATTACHMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getCommunicationsOmniSmsCustomerAccumulatedAttachments().hashCode();
         break;
       case 1220:
         hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_MANAGER_MESSAGE_UNIT_FIELD_NUMBER;
         hash = (53 * hash) + getCommunicationsOmniSmsManagerMessageUnit().hashCode();
         break;
       case 1221:
-        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_MANAGER_ATTATCHMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getCommunicationsOmniSmsManagerAttatchment().hashCode();
+        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_MANAGER_ATTACHMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getCommunicationsOmniSmsManagerAttachment().hashCode();
         break;
       case 1222:
-        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_MANAGER_ACCUMULATED_ATTATCHMENTS_FIELD_NUMBER;
-        hash = (53 * hash) + getCommunicationsOmniSmsManagerAccumulatedAttatchments().hashCode();
+        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_MANAGER_ACCUMULATED_ATTACHMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getCommunicationsOmniSmsManagerAccumulatedAttachments().hashCode();
         break;
       case 1230:
         hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_SYSTEM_MESSAGE_UNIT_FIELD_NUMBER;
         hash = (53 * hash) + getCommunicationsOmniSmsSystemMessageUnit().hashCode();
         break;
       case 1231:
-        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_SYSTEM_ATTATCHMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getCommunicationsOmniSmsSystemAttatchment().hashCode();
+        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_SYSTEM_ATTACHMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getCommunicationsOmniSmsSystemAttachment().hashCode();
         break;
       case 1232:
-        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_SYSTEM_ACCUMULATED_ATTATCHMENTS_FIELD_NUMBER;
-        hash = (53 * hash) + getCommunicationsOmniSmsSystemAccumulatedAttatchments().hashCode();
+        hash = (37 * hash) + COMMUNICATIONS_OMNI_SMS_SYSTEM_ACCUMULATED_ATTACHMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getCommunicationsOmniSmsSystemAccumulatedAttachments().hashCode();
         break;
       case 1300:
         hash = (37 * hash) + COMMUNICATIONS_OMNI_AGENT_SEATS_FIELD_NUMBER;
@@ -2339,38 +2339,38 @@ private static final long serialVersionUID = 0L;
       if (communicationsOmniSmsAgentMessageUnitBuilder_ != null) {
         communicationsOmniSmsAgentMessageUnitBuilder_.clear();
       }
-      if (communicationsOmniSmsAgentAttatchmentBuilder_ != null) {
-        communicationsOmniSmsAgentAttatchmentBuilder_.clear();
+      if (communicationsOmniSmsAgentAttachmentBuilder_ != null) {
+        communicationsOmniSmsAgentAttachmentBuilder_.clear();
       }
-      if (communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_ != null) {
-        communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_.clear();
+      if (communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_ != null) {
+        communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_.clear();
       }
       if (communicationsOmniSmsCustomerMessageUnitBuilder_ != null) {
         communicationsOmniSmsCustomerMessageUnitBuilder_.clear();
       }
-      if (communicationsOmniSmsCustomerAttatchmentBuilder_ != null) {
-        communicationsOmniSmsCustomerAttatchmentBuilder_.clear();
+      if (communicationsOmniSmsCustomerAttachmentBuilder_ != null) {
+        communicationsOmniSmsCustomerAttachmentBuilder_.clear();
       }
-      if (communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_ != null) {
-        communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_.clear();
+      if (communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_ != null) {
+        communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_.clear();
       }
       if (communicationsOmniSmsManagerMessageUnitBuilder_ != null) {
         communicationsOmniSmsManagerMessageUnitBuilder_.clear();
       }
-      if (communicationsOmniSmsManagerAttatchmentBuilder_ != null) {
-        communicationsOmniSmsManagerAttatchmentBuilder_.clear();
+      if (communicationsOmniSmsManagerAttachmentBuilder_ != null) {
+        communicationsOmniSmsManagerAttachmentBuilder_.clear();
       }
-      if (communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_ != null) {
-        communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_.clear();
+      if (communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_ != null) {
+        communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_.clear();
       }
       if (communicationsOmniSmsSystemMessageUnitBuilder_ != null) {
         communicationsOmniSmsSystemMessageUnitBuilder_.clear();
       }
-      if (communicationsOmniSmsSystemAttatchmentBuilder_ != null) {
-        communicationsOmniSmsSystemAttatchmentBuilder_.clear();
+      if (communicationsOmniSmsSystemAttachmentBuilder_ != null) {
+        communicationsOmniSmsSystemAttachmentBuilder_.clear();
       }
-      if (communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_ != null) {
-        communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_.clear();
+      if (communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_ != null) {
+        communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_.clear();
       }
       if (communicationsOmniAgentSeatsBuilder_ != null) {
         communicationsOmniAgentSeatsBuilder_.clear();
@@ -2534,48 +2534,48 @@ private static final long serialVersionUID = 0L;
         result.config_ = communicationsOmniSmsAgentMessageUnitBuilder_.build();
       }
       if (configCase_ == 1201 &&
-          communicationsOmniSmsAgentAttatchmentBuilder_ != null) {
-        result.config_ = communicationsOmniSmsAgentAttatchmentBuilder_.build();
+          communicationsOmniSmsAgentAttachmentBuilder_ != null) {
+        result.config_ = communicationsOmniSmsAgentAttachmentBuilder_.build();
       }
       if (configCase_ == 1202 &&
-          communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_ != null) {
-        result.config_ = communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_.build();
+          communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_ != null) {
+        result.config_ = communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_.build();
       }
       if (configCase_ == 1210 &&
           communicationsOmniSmsCustomerMessageUnitBuilder_ != null) {
         result.config_ = communicationsOmniSmsCustomerMessageUnitBuilder_.build();
       }
       if (configCase_ == 1211 &&
-          communicationsOmniSmsCustomerAttatchmentBuilder_ != null) {
-        result.config_ = communicationsOmniSmsCustomerAttatchmentBuilder_.build();
+          communicationsOmniSmsCustomerAttachmentBuilder_ != null) {
+        result.config_ = communicationsOmniSmsCustomerAttachmentBuilder_.build();
       }
       if (configCase_ == 1212 &&
-          communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_ != null) {
-        result.config_ = communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_.build();
+          communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_ != null) {
+        result.config_ = communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_.build();
       }
       if (configCase_ == 1220 &&
           communicationsOmniSmsManagerMessageUnitBuilder_ != null) {
         result.config_ = communicationsOmniSmsManagerMessageUnitBuilder_.build();
       }
       if (configCase_ == 1221 &&
-          communicationsOmniSmsManagerAttatchmentBuilder_ != null) {
-        result.config_ = communicationsOmniSmsManagerAttatchmentBuilder_.build();
+          communicationsOmniSmsManagerAttachmentBuilder_ != null) {
+        result.config_ = communicationsOmniSmsManagerAttachmentBuilder_.build();
       }
       if (configCase_ == 1222 &&
-          communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_ != null) {
-        result.config_ = communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_.build();
+          communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_ != null) {
+        result.config_ = communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_.build();
       }
       if (configCase_ == 1230 &&
           communicationsOmniSmsSystemMessageUnitBuilder_ != null) {
         result.config_ = communicationsOmniSmsSystemMessageUnitBuilder_.build();
       }
       if (configCase_ == 1231 &&
-          communicationsOmniSmsSystemAttatchmentBuilder_ != null) {
-        result.config_ = communicationsOmniSmsSystemAttatchmentBuilder_.build();
+          communicationsOmniSmsSystemAttachmentBuilder_ != null) {
+        result.config_ = communicationsOmniSmsSystemAttachmentBuilder_.build();
       }
       if (configCase_ == 1232 &&
-          communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_ != null) {
-        result.config_ = communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_.build();
+          communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_ != null) {
+        result.config_ = communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_.build();
       }
       if (configCase_ == 1300 &&
           communicationsOmniAgentSeatsBuilder_ != null) {
@@ -2744,48 +2744,48 @@ private static final long serialVersionUID = 0L;
           mergeCommunicationsOmniSmsAgentMessageUnit(other.getCommunicationsOmniSmsAgentMessageUnit());
           break;
         }
-        case COMMUNICATIONS_OMNI_SMS_AGENT_ATTATCHMENT: {
-          mergeCommunicationsOmniSmsAgentAttatchment(other.getCommunicationsOmniSmsAgentAttatchment());
+        case COMMUNICATIONS_OMNI_SMS_AGENT_ATTACHMENT: {
+          mergeCommunicationsOmniSmsAgentAttachment(other.getCommunicationsOmniSmsAgentAttachment());
           break;
         }
-        case COMMUNICATIONS_OMNI_SMS_AGENT_ACCUMULATED_ATTATCHMENTS: {
-          mergeCommunicationsOmniSmsAgentAccumulatedAttatchments(other.getCommunicationsOmniSmsAgentAccumulatedAttatchments());
+        case COMMUNICATIONS_OMNI_SMS_AGENT_ACCUMULATED_ATTACHMENTS: {
+          mergeCommunicationsOmniSmsAgentAccumulatedAttachments(other.getCommunicationsOmniSmsAgentAccumulatedAttachments());
           break;
         }
         case COMMUNICATIONS_OMNI_SMS_CUSTOMER_MESSAGE_UNIT: {
           mergeCommunicationsOmniSmsCustomerMessageUnit(other.getCommunicationsOmniSmsCustomerMessageUnit());
           break;
         }
-        case COMMUNICATIONS_OMNI_SMS_CUSTOMER_ATTATCHMENT: {
-          mergeCommunicationsOmniSmsCustomerAttatchment(other.getCommunicationsOmniSmsCustomerAttatchment());
+        case COMMUNICATIONS_OMNI_SMS_CUSTOMER_ATTACHMENT: {
+          mergeCommunicationsOmniSmsCustomerAttachment(other.getCommunicationsOmniSmsCustomerAttachment());
           break;
         }
-        case COMMUNICATIONS_OMNI_SMS_CUSTOMER_ACCUMULATED_ATTATCHMENTS: {
-          mergeCommunicationsOmniSmsCustomerAccumulatedAttatchments(other.getCommunicationsOmniSmsCustomerAccumulatedAttatchments());
+        case COMMUNICATIONS_OMNI_SMS_CUSTOMER_ACCUMULATED_ATTACHMENTS: {
+          mergeCommunicationsOmniSmsCustomerAccumulatedAttachments(other.getCommunicationsOmniSmsCustomerAccumulatedAttachments());
           break;
         }
         case COMMUNICATIONS_OMNI_SMS_MANAGER_MESSAGE_UNIT: {
           mergeCommunicationsOmniSmsManagerMessageUnit(other.getCommunicationsOmniSmsManagerMessageUnit());
           break;
         }
-        case COMMUNICATIONS_OMNI_SMS_MANAGER_ATTATCHMENT: {
-          mergeCommunicationsOmniSmsManagerAttatchment(other.getCommunicationsOmniSmsManagerAttatchment());
+        case COMMUNICATIONS_OMNI_SMS_MANAGER_ATTACHMENT: {
+          mergeCommunicationsOmniSmsManagerAttachment(other.getCommunicationsOmniSmsManagerAttachment());
           break;
         }
-        case COMMUNICATIONS_OMNI_SMS_MANAGER_ACCUMULATED_ATTATCHMENTS: {
-          mergeCommunicationsOmniSmsManagerAccumulatedAttatchments(other.getCommunicationsOmniSmsManagerAccumulatedAttatchments());
+        case COMMUNICATIONS_OMNI_SMS_MANAGER_ACCUMULATED_ATTACHMENTS: {
+          mergeCommunicationsOmniSmsManagerAccumulatedAttachments(other.getCommunicationsOmniSmsManagerAccumulatedAttachments());
           break;
         }
         case COMMUNICATIONS_OMNI_SMS_SYSTEM_MESSAGE_UNIT: {
           mergeCommunicationsOmniSmsSystemMessageUnit(other.getCommunicationsOmniSmsSystemMessageUnit());
           break;
         }
-        case COMMUNICATIONS_OMNI_SMS_SYSTEM_ATTATCHMENT: {
-          mergeCommunicationsOmniSmsSystemAttatchment(other.getCommunicationsOmniSmsSystemAttatchment());
+        case COMMUNICATIONS_OMNI_SMS_SYSTEM_ATTACHMENT: {
+          mergeCommunicationsOmniSmsSystemAttachment(other.getCommunicationsOmniSmsSystemAttachment());
           break;
         }
-        case COMMUNICATIONS_OMNI_SMS_SYSTEM_ACCUMULATED_ATTATCHMENTS: {
-          mergeCommunicationsOmniSmsSystemAccumulatedAttatchments(other.getCommunicationsOmniSmsSystemAccumulatedAttatchments());
+        case COMMUNICATIONS_OMNI_SMS_SYSTEM_ACCUMULATED_ATTACHMENTS: {
+          mergeCommunicationsOmniSmsSystemAccumulatedAttachments(other.getCommunicationsOmniSmsSystemAccumulatedAttachments());
           break;
         }
         case COMMUNICATIONS_OMNI_AGENT_SEATS: {
@@ -3015,14 +3015,14 @@ private static final long serialVersionUID = 0L;
             } // case 9602
             case 9610: {
               input.readMessage(
-                  getCommunicationsOmniSmsAgentAttatchmentFieldBuilder().getBuilder(),
+                  getCommunicationsOmniSmsAgentAttachmentFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1201;
               break;
             } // case 9610
             case 9618: {
               input.readMessage(
-                  getCommunicationsOmniSmsAgentAccumulatedAttatchmentsFieldBuilder().getBuilder(),
+                  getCommunicationsOmniSmsAgentAccumulatedAttachmentsFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1202;
               break;
@@ -3036,14 +3036,14 @@ private static final long serialVersionUID = 0L;
             } // case 9682
             case 9690: {
               input.readMessage(
-                  getCommunicationsOmniSmsCustomerAttatchmentFieldBuilder().getBuilder(),
+                  getCommunicationsOmniSmsCustomerAttachmentFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1211;
               break;
             } // case 9690
             case 9698: {
               input.readMessage(
-                  getCommunicationsOmniSmsCustomerAccumulatedAttatchmentsFieldBuilder().getBuilder(),
+                  getCommunicationsOmniSmsCustomerAccumulatedAttachmentsFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1212;
               break;
@@ -3057,14 +3057,14 @@ private static final long serialVersionUID = 0L;
             } // case 9762
             case 9770: {
               input.readMessage(
-                  getCommunicationsOmniSmsManagerAttatchmentFieldBuilder().getBuilder(),
+                  getCommunicationsOmniSmsManagerAttachmentFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1221;
               break;
             } // case 9770
             case 9778: {
               input.readMessage(
-                  getCommunicationsOmniSmsManagerAccumulatedAttatchmentsFieldBuilder().getBuilder(),
+                  getCommunicationsOmniSmsManagerAccumulatedAttachmentsFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1222;
               break;
@@ -3078,14 +3078,14 @@ private static final long serialVersionUID = 0L;
             } // case 9842
             case 9850: {
               input.readMessage(
-                  getCommunicationsOmniSmsSystemAttatchmentFieldBuilder().getBuilder(),
+                  getCommunicationsOmniSmsSystemAttachmentFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1231;
               break;
             } // case 9850
             case 9858: {
               input.readMessage(
-                  getCommunicationsOmniSmsSystemAccumulatedAttatchmentsFieldBuilder().getBuilder(),
+                  getCommunicationsOmniSmsSystemAccumulatedAttachmentsFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 1232;
               break;
@@ -6754,68 +6754,68 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsAgentAttatchmentBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsAgentAttachmentBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attatchment = 1201 [json_name = "communicationsOmniSmsAgentAttatchment"];</code>
-     * @return Whether the communicationsOmniSmsAgentAttatchment field is set.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attachment = 1201 [json_name = "communicationsOmniSmsAgentAttachment"];</code>
+     * @return Whether the communicationsOmniSmsAgentAttachment field is set.
      */
     @java.lang.Override
-    public boolean hasCommunicationsOmniSmsAgentAttatchment() {
+    public boolean hasCommunicationsOmniSmsAgentAttachment() {
       return configCase_ == 1201;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attatchment = 1201 [json_name = "communicationsOmniSmsAgentAttatchment"];</code>
-     * @return The communicationsOmniSmsAgentAttatchment.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attachment = 1201 [json_name = "communicationsOmniSmsAgentAttachment"];</code>
+     * @return The communicationsOmniSmsAgentAttachment.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsAgentAttatchment() {
-      if (communicationsOmniSmsAgentAttatchmentBuilder_ == null) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsAgentAttachment() {
+      if (communicationsOmniSmsAgentAttachmentBuilder_ == null) {
         if (configCase_ == 1201) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       } else {
         if (configCase_ == 1201) {
-          return communicationsOmniSmsAgentAttatchmentBuilder_.getMessage();
+          return communicationsOmniSmsAgentAttachmentBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attatchment = 1201 [json_name = "communicationsOmniSmsAgentAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attachment = 1201 [json_name = "communicationsOmniSmsAgentAttachment"];</code>
      */
-    public Builder setCommunicationsOmniSmsAgentAttatchment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsAgentAttatchmentBuilder_ == null) {
+    public Builder setCommunicationsOmniSmsAgentAttachment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsAgentAttachmentBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        communicationsOmniSmsAgentAttatchmentBuilder_.setMessage(value);
+        communicationsOmniSmsAgentAttachmentBuilder_.setMessage(value);
       }
       configCase_ = 1201;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attatchment = 1201 [json_name = "communicationsOmniSmsAgentAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attachment = 1201 [json_name = "communicationsOmniSmsAgentAttachment"];</code>
      */
-    public Builder setCommunicationsOmniSmsAgentAttatchment(
+    public Builder setCommunicationsOmniSmsAgentAttachment(
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder builderForValue) {
-      if (communicationsOmniSmsAgentAttatchmentBuilder_ == null) {
+      if (communicationsOmniSmsAgentAttachmentBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        communicationsOmniSmsAgentAttatchmentBuilder_.setMessage(builderForValue.build());
+        communicationsOmniSmsAgentAttachmentBuilder_.setMessage(builderForValue.build());
       }
       configCase_ = 1201;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attatchment = 1201 [json_name = "communicationsOmniSmsAgentAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attachment = 1201 [json_name = "communicationsOmniSmsAgentAttachment"];</code>
      */
-    public Builder mergeCommunicationsOmniSmsAgentAttatchment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsAgentAttatchmentBuilder_ == null) {
+    public Builder mergeCommunicationsOmniSmsAgentAttachment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsAgentAttachmentBuilder_ == null) {
         if (configCase_ == 1201 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_)
@@ -6826,19 +6826,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1201) {
-          communicationsOmniSmsAgentAttatchmentBuilder_.mergeFrom(value);
+          communicationsOmniSmsAgentAttachmentBuilder_.mergeFrom(value);
         } else {
-          communicationsOmniSmsAgentAttatchmentBuilder_.setMessage(value);
+          communicationsOmniSmsAgentAttachmentBuilder_.setMessage(value);
         }
       }
       configCase_ = 1201;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attatchment = 1201 [json_name = "communicationsOmniSmsAgentAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attachment = 1201 [json_name = "communicationsOmniSmsAgentAttachment"];</code>
      */
-    public Builder clearCommunicationsOmniSmsAgentAttatchment() {
-      if (communicationsOmniSmsAgentAttatchmentBuilder_ == null) {
+    public Builder clearCommunicationsOmniSmsAgentAttachment() {
+      if (communicationsOmniSmsAgentAttachmentBuilder_ == null) {
         if (configCase_ == 1201) {
           configCase_ = 0;
           config_ = null;
@@ -6849,23 +6849,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        communicationsOmniSmsAgentAttatchmentBuilder_.clear();
+        communicationsOmniSmsAgentAttachmentBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attatchment = 1201 [json_name = "communicationsOmniSmsAgentAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attachment = 1201 [json_name = "communicationsOmniSmsAgentAttachment"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsAgentAttatchmentBuilder() {
-      return getCommunicationsOmniSmsAgentAttatchmentFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsAgentAttachmentBuilder() {
+      return getCommunicationsOmniSmsAgentAttachmentFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attatchment = 1201 [json_name = "communicationsOmniSmsAgentAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attachment = 1201 [json_name = "communicationsOmniSmsAgentAttachment"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsAgentAttatchmentOrBuilder() {
-      if ((configCase_ == 1201) && (communicationsOmniSmsAgentAttatchmentBuilder_ != null)) {
-        return communicationsOmniSmsAgentAttatchmentBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsAgentAttachmentOrBuilder() {
+      if ((configCase_ == 1201) && (communicationsOmniSmsAgentAttachmentBuilder_ != null)) {
+        return communicationsOmniSmsAgentAttachmentBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1201) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
@@ -6874,16 +6874,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attatchment = 1201 [json_name = "communicationsOmniSmsAgentAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_attachment = 1201 [json_name = "communicationsOmniSmsAgentAttachment"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> 
-        getCommunicationsOmniSmsAgentAttatchmentFieldBuilder() {
-      if (communicationsOmniSmsAgentAttatchmentBuilder_ == null) {
+        getCommunicationsOmniSmsAgentAttachmentFieldBuilder() {
+      if (communicationsOmniSmsAgentAttachmentBuilder_ == null) {
         if (!(configCase_ == 1201)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
         }
-        communicationsOmniSmsAgentAttatchmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        communicationsOmniSmsAgentAttachmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_,
                 getParentForChildren(),
@@ -6892,72 +6892,72 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1201;
       onChanged();
-      return communicationsOmniSmsAgentAttatchmentBuilder_;
+      return communicationsOmniSmsAgentAttachmentBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attatchments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttatchments"];</code>
-     * @return Whether the communicationsOmniSmsAgentAccumulatedAttatchments field is set.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attachments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttachments"];</code>
+     * @return Whether the communicationsOmniSmsAgentAccumulatedAttachments field is set.
      */
     @java.lang.Override
-    public boolean hasCommunicationsOmniSmsAgentAccumulatedAttatchments() {
+    public boolean hasCommunicationsOmniSmsAgentAccumulatedAttachments() {
       return configCase_ == 1202;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attatchments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttatchments"];</code>
-     * @return The communicationsOmniSmsAgentAccumulatedAttatchments.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attachments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttachments"];</code>
+     * @return The communicationsOmniSmsAgentAccumulatedAttachments.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsAgentAccumulatedAttatchments() {
-      if (communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_ == null) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsAgentAccumulatedAttachments() {
+      if (communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_ == null) {
         if (configCase_ == 1202) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       } else {
         if (configCase_ == 1202) {
-          return communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_.getMessage();
+          return communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attatchments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attachments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttachments"];</code>
      */
-    public Builder setCommunicationsOmniSmsAgentAccumulatedAttatchments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_ == null) {
+    public Builder setCommunicationsOmniSmsAgentAccumulatedAttachments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_.setMessage(value);
+        communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_.setMessage(value);
       }
       configCase_ = 1202;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attatchments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attachments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttachments"];</code>
      */
-    public Builder setCommunicationsOmniSmsAgentAccumulatedAttatchments(
+    public Builder setCommunicationsOmniSmsAgentAccumulatedAttachments(
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder builderForValue) {
-      if (communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_ == null) {
+      if (communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_.setMessage(builderForValue.build());
+        communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_.setMessage(builderForValue.build());
       }
       configCase_ = 1202;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attatchments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attachments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttachments"];</code>
      */
-    public Builder mergeCommunicationsOmniSmsAgentAccumulatedAttatchments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_ == null) {
+    public Builder mergeCommunicationsOmniSmsAgentAccumulatedAttachments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_ == null) {
         if (configCase_ == 1202 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_)
@@ -6968,19 +6968,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1202) {
-          communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_.mergeFrom(value);
+          communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_.mergeFrom(value);
         } else {
-          communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_.setMessage(value);
+          communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_.setMessage(value);
         }
       }
       configCase_ = 1202;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attatchments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attachments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttachments"];</code>
      */
-    public Builder clearCommunicationsOmniSmsAgentAccumulatedAttatchments() {
-      if (communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_ == null) {
+    public Builder clearCommunicationsOmniSmsAgentAccumulatedAttachments() {
+      if (communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_ == null) {
         if (configCase_ == 1202) {
           configCase_ = 0;
           config_ = null;
@@ -6991,23 +6991,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_.clear();
+        communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attatchments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attachments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttachments"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsAgentAccumulatedAttatchmentsBuilder() {
-      return getCommunicationsOmniSmsAgentAccumulatedAttatchmentsFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsAgentAccumulatedAttachmentsBuilder() {
+      return getCommunicationsOmniSmsAgentAccumulatedAttachmentsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attatchments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attachments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttachments"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsAgentAccumulatedAttatchmentsOrBuilder() {
-      if ((configCase_ == 1202) && (communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_ != null)) {
-        return communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsAgentAccumulatedAttachmentsOrBuilder() {
+      if ((configCase_ == 1202) && (communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_ != null)) {
+        return communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1202) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
@@ -7016,16 +7016,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attatchments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_agent_accumulated_attachments = 1202 [json_name = "communicationsOmniSmsAgentAccumulatedAttachments"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> 
-        getCommunicationsOmniSmsAgentAccumulatedAttatchmentsFieldBuilder() {
-      if (communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_ == null) {
+        getCommunicationsOmniSmsAgentAccumulatedAttachmentsFieldBuilder() {
+      if (communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_ == null) {
         if (!(configCase_ == 1202)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
         }
-        communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_,
                 getParentForChildren(),
@@ -7034,7 +7034,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1202;
       onChanged();
-      return communicationsOmniSmsAgentAccumulatedAttatchmentsBuilder_;
+      return communicationsOmniSmsAgentAccumulatedAttachmentsBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -7180,68 +7180,68 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsCustomerAttatchmentBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsCustomerAttachmentBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attatchment = 1211 [json_name = "communicationsOmniSmsCustomerAttatchment"];</code>
-     * @return Whether the communicationsOmniSmsCustomerAttatchment field is set.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attachment = 1211 [json_name = "communicationsOmniSmsCustomerAttachment"];</code>
+     * @return Whether the communicationsOmniSmsCustomerAttachment field is set.
      */
     @java.lang.Override
-    public boolean hasCommunicationsOmniSmsCustomerAttatchment() {
+    public boolean hasCommunicationsOmniSmsCustomerAttachment() {
       return configCase_ == 1211;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attatchment = 1211 [json_name = "communicationsOmniSmsCustomerAttatchment"];</code>
-     * @return The communicationsOmniSmsCustomerAttatchment.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attachment = 1211 [json_name = "communicationsOmniSmsCustomerAttachment"];</code>
+     * @return The communicationsOmniSmsCustomerAttachment.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsCustomerAttatchment() {
-      if (communicationsOmniSmsCustomerAttatchmentBuilder_ == null) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsCustomerAttachment() {
+      if (communicationsOmniSmsCustomerAttachmentBuilder_ == null) {
         if (configCase_ == 1211) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       } else {
         if (configCase_ == 1211) {
-          return communicationsOmniSmsCustomerAttatchmentBuilder_.getMessage();
+          return communicationsOmniSmsCustomerAttachmentBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attatchment = 1211 [json_name = "communicationsOmniSmsCustomerAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attachment = 1211 [json_name = "communicationsOmniSmsCustomerAttachment"];</code>
      */
-    public Builder setCommunicationsOmniSmsCustomerAttatchment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsCustomerAttatchmentBuilder_ == null) {
+    public Builder setCommunicationsOmniSmsCustomerAttachment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsCustomerAttachmentBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        communicationsOmniSmsCustomerAttatchmentBuilder_.setMessage(value);
+        communicationsOmniSmsCustomerAttachmentBuilder_.setMessage(value);
       }
       configCase_ = 1211;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attatchment = 1211 [json_name = "communicationsOmniSmsCustomerAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attachment = 1211 [json_name = "communicationsOmniSmsCustomerAttachment"];</code>
      */
-    public Builder setCommunicationsOmniSmsCustomerAttatchment(
+    public Builder setCommunicationsOmniSmsCustomerAttachment(
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder builderForValue) {
-      if (communicationsOmniSmsCustomerAttatchmentBuilder_ == null) {
+      if (communicationsOmniSmsCustomerAttachmentBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        communicationsOmniSmsCustomerAttatchmentBuilder_.setMessage(builderForValue.build());
+        communicationsOmniSmsCustomerAttachmentBuilder_.setMessage(builderForValue.build());
       }
       configCase_ = 1211;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attatchment = 1211 [json_name = "communicationsOmniSmsCustomerAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attachment = 1211 [json_name = "communicationsOmniSmsCustomerAttachment"];</code>
      */
-    public Builder mergeCommunicationsOmniSmsCustomerAttatchment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsCustomerAttatchmentBuilder_ == null) {
+    public Builder mergeCommunicationsOmniSmsCustomerAttachment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsCustomerAttachmentBuilder_ == null) {
         if (configCase_ == 1211 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_)
@@ -7252,19 +7252,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1211) {
-          communicationsOmniSmsCustomerAttatchmentBuilder_.mergeFrom(value);
+          communicationsOmniSmsCustomerAttachmentBuilder_.mergeFrom(value);
         } else {
-          communicationsOmniSmsCustomerAttatchmentBuilder_.setMessage(value);
+          communicationsOmniSmsCustomerAttachmentBuilder_.setMessage(value);
         }
       }
       configCase_ = 1211;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attatchment = 1211 [json_name = "communicationsOmniSmsCustomerAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attachment = 1211 [json_name = "communicationsOmniSmsCustomerAttachment"];</code>
      */
-    public Builder clearCommunicationsOmniSmsCustomerAttatchment() {
-      if (communicationsOmniSmsCustomerAttatchmentBuilder_ == null) {
+    public Builder clearCommunicationsOmniSmsCustomerAttachment() {
+      if (communicationsOmniSmsCustomerAttachmentBuilder_ == null) {
         if (configCase_ == 1211) {
           configCase_ = 0;
           config_ = null;
@@ -7275,23 +7275,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        communicationsOmniSmsCustomerAttatchmentBuilder_.clear();
+        communicationsOmniSmsCustomerAttachmentBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attatchment = 1211 [json_name = "communicationsOmniSmsCustomerAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attachment = 1211 [json_name = "communicationsOmniSmsCustomerAttachment"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsCustomerAttatchmentBuilder() {
-      return getCommunicationsOmniSmsCustomerAttatchmentFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsCustomerAttachmentBuilder() {
+      return getCommunicationsOmniSmsCustomerAttachmentFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attatchment = 1211 [json_name = "communicationsOmniSmsCustomerAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attachment = 1211 [json_name = "communicationsOmniSmsCustomerAttachment"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsCustomerAttatchmentOrBuilder() {
-      if ((configCase_ == 1211) && (communicationsOmniSmsCustomerAttatchmentBuilder_ != null)) {
-        return communicationsOmniSmsCustomerAttatchmentBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsCustomerAttachmentOrBuilder() {
+      if ((configCase_ == 1211) && (communicationsOmniSmsCustomerAttachmentBuilder_ != null)) {
+        return communicationsOmniSmsCustomerAttachmentBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1211) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
@@ -7300,16 +7300,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attatchment = 1211 [json_name = "communicationsOmniSmsCustomerAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_attachment = 1211 [json_name = "communicationsOmniSmsCustomerAttachment"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> 
-        getCommunicationsOmniSmsCustomerAttatchmentFieldBuilder() {
-      if (communicationsOmniSmsCustomerAttatchmentBuilder_ == null) {
+        getCommunicationsOmniSmsCustomerAttachmentFieldBuilder() {
+      if (communicationsOmniSmsCustomerAttachmentBuilder_ == null) {
         if (!(configCase_ == 1211)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
         }
-        communicationsOmniSmsCustomerAttatchmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        communicationsOmniSmsCustomerAttachmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_,
                 getParentForChildren(),
@@ -7318,72 +7318,72 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1211;
       onChanged();
-      return communicationsOmniSmsCustomerAttatchmentBuilder_;
+      return communicationsOmniSmsCustomerAttachmentBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attatchments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttatchments"];</code>
-     * @return Whether the communicationsOmniSmsCustomerAccumulatedAttatchments field is set.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attachments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttachments"];</code>
+     * @return Whether the communicationsOmniSmsCustomerAccumulatedAttachments field is set.
      */
     @java.lang.Override
-    public boolean hasCommunicationsOmniSmsCustomerAccumulatedAttatchments() {
+    public boolean hasCommunicationsOmniSmsCustomerAccumulatedAttachments() {
       return configCase_ == 1212;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attatchments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttatchments"];</code>
-     * @return The communicationsOmniSmsCustomerAccumulatedAttatchments.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attachments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttachments"];</code>
+     * @return The communicationsOmniSmsCustomerAccumulatedAttachments.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsCustomerAccumulatedAttatchments() {
-      if (communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_ == null) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsCustomerAccumulatedAttachments() {
+      if (communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_ == null) {
         if (configCase_ == 1212) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       } else {
         if (configCase_ == 1212) {
-          return communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_.getMessage();
+          return communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attatchments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attachments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttachments"];</code>
      */
-    public Builder setCommunicationsOmniSmsCustomerAccumulatedAttatchments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_ == null) {
+    public Builder setCommunicationsOmniSmsCustomerAccumulatedAttachments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_.setMessage(value);
+        communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_.setMessage(value);
       }
       configCase_ = 1212;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attatchments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attachments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttachments"];</code>
      */
-    public Builder setCommunicationsOmniSmsCustomerAccumulatedAttatchments(
+    public Builder setCommunicationsOmniSmsCustomerAccumulatedAttachments(
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder builderForValue) {
-      if (communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_ == null) {
+      if (communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_.setMessage(builderForValue.build());
+        communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_.setMessage(builderForValue.build());
       }
       configCase_ = 1212;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attatchments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attachments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttachments"];</code>
      */
-    public Builder mergeCommunicationsOmniSmsCustomerAccumulatedAttatchments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_ == null) {
+    public Builder mergeCommunicationsOmniSmsCustomerAccumulatedAttachments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_ == null) {
         if (configCase_ == 1212 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_)
@@ -7394,19 +7394,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1212) {
-          communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_.mergeFrom(value);
+          communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_.mergeFrom(value);
         } else {
-          communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_.setMessage(value);
+          communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_.setMessage(value);
         }
       }
       configCase_ = 1212;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attatchments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attachments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttachments"];</code>
      */
-    public Builder clearCommunicationsOmniSmsCustomerAccumulatedAttatchments() {
-      if (communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_ == null) {
+    public Builder clearCommunicationsOmniSmsCustomerAccumulatedAttachments() {
+      if (communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_ == null) {
         if (configCase_ == 1212) {
           configCase_ = 0;
           config_ = null;
@@ -7417,23 +7417,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_.clear();
+        communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attatchments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attachments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttachments"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder() {
-      return getCommunicationsOmniSmsCustomerAccumulatedAttatchmentsFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsCustomerAccumulatedAttachmentsBuilder() {
+      return getCommunicationsOmniSmsCustomerAccumulatedAttachmentsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attatchments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attachments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttachments"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsCustomerAccumulatedAttatchmentsOrBuilder() {
-      if ((configCase_ == 1212) && (communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_ != null)) {
-        return communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsCustomerAccumulatedAttachmentsOrBuilder() {
+      if ((configCase_ == 1212) && (communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_ != null)) {
+        return communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1212) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
@@ -7442,16 +7442,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attatchments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_customer_accumulated_attachments = 1212 [json_name = "communicationsOmniSmsCustomerAccumulatedAttachments"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> 
-        getCommunicationsOmniSmsCustomerAccumulatedAttatchmentsFieldBuilder() {
-      if (communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_ == null) {
+        getCommunicationsOmniSmsCustomerAccumulatedAttachmentsFieldBuilder() {
+      if (communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_ == null) {
         if (!(configCase_ == 1212)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
         }
-        communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_,
                 getParentForChildren(),
@@ -7460,7 +7460,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1212;
       onChanged();
-      return communicationsOmniSmsCustomerAccumulatedAttatchmentsBuilder_;
+      return communicationsOmniSmsCustomerAccumulatedAttachmentsBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -7606,68 +7606,68 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsManagerAttatchmentBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsManagerAttachmentBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attatchment = 1221 [json_name = "communicationsOmniSmsManagerAttatchment"];</code>
-     * @return Whether the communicationsOmniSmsManagerAttatchment field is set.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attachment = 1221 [json_name = "communicationsOmniSmsManagerAttachment"];</code>
+     * @return Whether the communicationsOmniSmsManagerAttachment field is set.
      */
     @java.lang.Override
-    public boolean hasCommunicationsOmniSmsManagerAttatchment() {
+    public boolean hasCommunicationsOmniSmsManagerAttachment() {
       return configCase_ == 1221;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attatchment = 1221 [json_name = "communicationsOmniSmsManagerAttatchment"];</code>
-     * @return The communicationsOmniSmsManagerAttatchment.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attachment = 1221 [json_name = "communicationsOmniSmsManagerAttachment"];</code>
+     * @return The communicationsOmniSmsManagerAttachment.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsManagerAttatchment() {
-      if (communicationsOmniSmsManagerAttatchmentBuilder_ == null) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsManagerAttachment() {
+      if (communicationsOmniSmsManagerAttachmentBuilder_ == null) {
         if (configCase_ == 1221) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       } else {
         if (configCase_ == 1221) {
-          return communicationsOmniSmsManagerAttatchmentBuilder_.getMessage();
+          return communicationsOmniSmsManagerAttachmentBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attatchment = 1221 [json_name = "communicationsOmniSmsManagerAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attachment = 1221 [json_name = "communicationsOmniSmsManagerAttachment"];</code>
      */
-    public Builder setCommunicationsOmniSmsManagerAttatchment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsManagerAttatchmentBuilder_ == null) {
+    public Builder setCommunicationsOmniSmsManagerAttachment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsManagerAttachmentBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        communicationsOmniSmsManagerAttatchmentBuilder_.setMessage(value);
+        communicationsOmniSmsManagerAttachmentBuilder_.setMessage(value);
       }
       configCase_ = 1221;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attatchment = 1221 [json_name = "communicationsOmniSmsManagerAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attachment = 1221 [json_name = "communicationsOmniSmsManagerAttachment"];</code>
      */
-    public Builder setCommunicationsOmniSmsManagerAttatchment(
+    public Builder setCommunicationsOmniSmsManagerAttachment(
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder builderForValue) {
-      if (communicationsOmniSmsManagerAttatchmentBuilder_ == null) {
+      if (communicationsOmniSmsManagerAttachmentBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        communicationsOmniSmsManagerAttatchmentBuilder_.setMessage(builderForValue.build());
+        communicationsOmniSmsManagerAttachmentBuilder_.setMessage(builderForValue.build());
       }
       configCase_ = 1221;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attatchment = 1221 [json_name = "communicationsOmniSmsManagerAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attachment = 1221 [json_name = "communicationsOmniSmsManagerAttachment"];</code>
      */
-    public Builder mergeCommunicationsOmniSmsManagerAttatchment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsManagerAttatchmentBuilder_ == null) {
+    public Builder mergeCommunicationsOmniSmsManagerAttachment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsManagerAttachmentBuilder_ == null) {
         if (configCase_ == 1221 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_)
@@ -7678,19 +7678,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1221) {
-          communicationsOmniSmsManagerAttatchmentBuilder_.mergeFrom(value);
+          communicationsOmniSmsManagerAttachmentBuilder_.mergeFrom(value);
         } else {
-          communicationsOmniSmsManagerAttatchmentBuilder_.setMessage(value);
+          communicationsOmniSmsManagerAttachmentBuilder_.setMessage(value);
         }
       }
       configCase_ = 1221;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attatchment = 1221 [json_name = "communicationsOmniSmsManagerAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attachment = 1221 [json_name = "communicationsOmniSmsManagerAttachment"];</code>
      */
-    public Builder clearCommunicationsOmniSmsManagerAttatchment() {
-      if (communicationsOmniSmsManagerAttatchmentBuilder_ == null) {
+    public Builder clearCommunicationsOmniSmsManagerAttachment() {
+      if (communicationsOmniSmsManagerAttachmentBuilder_ == null) {
         if (configCase_ == 1221) {
           configCase_ = 0;
           config_ = null;
@@ -7701,23 +7701,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        communicationsOmniSmsManagerAttatchmentBuilder_.clear();
+        communicationsOmniSmsManagerAttachmentBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attatchment = 1221 [json_name = "communicationsOmniSmsManagerAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attachment = 1221 [json_name = "communicationsOmniSmsManagerAttachment"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsManagerAttatchmentBuilder() {
-      return getCommunicationsOmniSmsManagerAttatchmentFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsManagerAttachmentBuilder() {
+      return getCommunicationsOmniSmsManagerAttachmentFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attatchment = 1221 [json_name = "communicationsOmniSmsManagerAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attachment = 1221 [json_name = "communicationsOmniSmsManagerAttachment"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsManagerAttatchmentOrBuilder() {
-      if ((configCase_ == 1221) && (communicationsOmniSmsManagerAttatchmentBuilder_ != null)) {
-        return communicationsOmniSmsManagerAttatchmentBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsManagerAttachmentOrBuilder() {
+      if ((configCase_ == 1221) && (communicationsOmniSmsManagerAttachmentBuilder_ != null)) {
+        return communicationsOmniSmsManagerAttachmentBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1221) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
@@ -7726,16 +7726,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attatchment = 1221 [json_name = "communicationsOmniSmsManagerAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_attachment = 1221 [json_name = "communicationsOmniSmsManagerAttachment"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> 
-        getCommunicationsOmniSmsManagerAttatchmentFieldBuilder() {
-      if (communicationsOmniSmsManagerAttatchmentBuilder_ == null) {
+        getCommunicationsOmniSmsManagerAttachmentFieldBuilder() {
+      if (communicationsOmniSmsManagerAttachmentBuilder_ == null) {
         if (!(configCase_ == 1221)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
         }
-        communicationsOmniSmsManagerAttatchmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        communicationsOmniSmsManagerAttachmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_,
                 getParentForChildren(),
@@ -7744,72 +7744,72 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1221;
       onChanged();
-      return communicationsOmniSmsManagerAttatchmentBuilder_;
+      return communicationsOmniSmsManagerAttachmentBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attatchments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttatchments"];</code>
-     * @return Whether the communicationsOmniSmsManagerAccumulatedAttatchments field is set.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attachments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttachments"];</code>
+     * @return Whether the communicationsOmniSmsManagerAccumulatedAttachments field is set.
      */
     @java.lang.Override
-    public boolean hasCommunicationsOmniSmsManagerAccumulatedAttatchments() {
+    public boolean hasCommunicationsOmniSmsManagerAccumulatedAttachments() {
       return configCase_ == 1222;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attatchments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttatchments"];</code>
-     * @return The communicationsOmniSmsManagerAccumulatedAttatchments.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attachments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttachments"];</code>
+     * @return The communicationsOmniSmsManagerAccumulatedAttachments.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsManagerAccumulatedAttatchments() {
-      if (communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_ == null) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsManagerAccumulatedAttachments() {
+      if (communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_ == null) {
         if (configCase_ == 1222) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       } else {
         if (configCase_ == 1222) {
-          return communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_.getMessage();
+          return communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attatchments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attachments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttachments"];</code>
      */
-    public Builder setCommunicationsOmniSmsManagerAccumulatedAttatchments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_ == null) {
+    public Builder setCommunicationsOmniSmsManagerAccumulatedAttachments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_.setMessage(value);
+        communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_.setMessage(value);
       }
       configCase_ = 1222;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attatchments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attachments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttachments"];</code>
      */
-    public Builder setCommunicationsOmniSmsManagerAccumulatedAttatchments(
+    public Builder setCommunicationsOmniSmsManagerAccumulatedAttachments(
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder builderForValue) {
-      if (communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_ == null) {
+      if (communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_.setMessage(builderForValue.build());
+        communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_.setMessage(builderForValue.build());
       }
       configCase_ = 1222;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attatchments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attachments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttachments"];</code>
      */
-    public Builder mergeCommunicationsOmniSmsManagerAccumulatedAttatchments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_ == null) {
+    public Builder mergeCommunicationsOmniSmsManagerAccumulatedAttachments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_ == null) {
         if (configCase_ == 1222 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_)
@@ -7820,19 +7820,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1222) {
-          communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_.mergeFrom(value);
+          communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_.mergeFrom(value);
         } else {
-          communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_.setMessage(value);
+          communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_.setMessage(value);
         }
       }
       configCase_ = 1222;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attatchments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attachments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttachments"];</code>
      */
-    public Builder clearCommunicationsOmniSmsManagerAccumulatedAttatchments() {
-      if (communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_ == null) {
+    public Builder clearCommunicationsOmniSmsManagerAccumulatedAttachments() {
+      if (communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_ == null) {
         if (configCase_ == 1222) {
           configCase_ = 0;
           config_ = null;
@@ -7843,23 +7843,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_.clear();
+        communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attatchments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attachments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttachments"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsManagerAccumulatedAttatchmentsBuilder() {
-      return getCommunicationsOmniSmsManagerAccumulatedAttatchmentsFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsManagerAccumulatedAttachmentsBuilder() {
+      return getCommunicationsOmniSmsManagerAccumulatedAttachmentsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attatchments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attachments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttachments"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsManagerAccumulatedAttatchmentsOrBuilder() {
-      if ((configCase_ == 1222) && (communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_ != null)) {
-        return communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsManagerAccumulatedAttachmentsOrBuilder() {
+      if ((configCase_ == 1222) && (communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_ != null)) {
+        return communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1222) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
@@ -7868,16 +7868,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attatchments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_manager_accumulated_attachments = 1222 [json_name = "communicationsOmniSmsManagerAccumulatedAttachments"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> 
-        getCommunicationsOmniSmsManagerAccumulatedAttatchmentsFieldBuilder() {
-      if (communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_ == null) {
+        getCommunicationsOmniSmsManagerAccumulatedAttachmentsFieldBuilder() {
+      if (communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_ == null) {
         if (!(configCase_ == 1222)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
         }
-        communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_,
                 getParentForChildren(),
@@ -7886,7 +7886,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1222;
       onChanged();
-      return communicationsOmniSmsManagerAccumulatedAttatchmentsBuilder_;
+      return communicationsOmniSmsManagerAccumulatedAttachmentsBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -8032,68 +8032,68 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsSystemAttatchmentBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsSystemAttachmentBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attatchment = 1231 [json_name = "communicationsOmniSmsSystemAttatchment"];</code>
-     * @return Whether the communicationsOmniSmsSystemAttatchment field is set.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attachment = 1231 [json_name = "communicationsOmniSmsSystemAttachment"];</code>
+     * @return Whether the communicationsOmniSmsSystemAttachment field is set.
      */
     @java.lang.Override
-    public boolean hasCommunicationsOmniSmsSystemAttatchment() {
+    public boolean hasCommunicationsOmniSmsSystemAttachment() {
       return configCase_ == 1231;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attatchment = 1231 [json_name = "communicationsOmniSmsSystemAttatchment"];</code>
-     * @return The communicationsOmniSmsSystemAttatchment.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attachment = 1231 [json_name = "communicationsOmniSmsSystemAttachment"];</code>
+     * @return The communicationsOmniSmsSystemAttachment.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsSystemAttatchment() {
-      if (communicationsOmniSmsSystemAttatchmentBuilder_ == null) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsSystemAttachment() {
+      if (communicationsOmniSmsSystemAttachmentBuilder_ == null) {
         if (configCase_ == 1231) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       } else {
         if (configCase_ == 1231) {
-          return communicationsOmniSmsSystemAttatchmentBuilder_.getMessage();
+          return communicationsOmniSmsSystemAttachmentBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attatchment = 1231 [json_name = "communicationsOmniSmsSystemAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attachment = 1231 [json_name = "communicationsOmniSmsSystemAttachment"];</code>
      */
-    public Builder setCommunicationsOmniSmsSystemAttatchment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsSystemAttatchmentBuilder_ == null) {
+    public Builder setCommunicationsOmniSmsSystemAttachment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsSystemAttachmentBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        communicationsOmniSmsSystemAttatchmentBuilder_.setMessage(value);
+        communicationsOmniSmsSystemAttachmentBuilder_.setMessage(value);
       }
       configCase_ = 1231;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attatchment = 1231 [json_name = "communicationsOmniSmsSystemAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attachment = 1231 [json_name = "communicationsOmniSmsSystemAttachment"];</code>
      */
-    public Builder setCommunicationsOmniSmsSystemAttatchment(
+    public Builder setCommunicationsOmniSmsSystemAttachment(
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder builderForValue) {
-      if (communicationsOmniSmsSystemAttatchmentBuilder_ == null) {
+      if (communicationsOmniSmsSystemAttachmentBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        communicationsOmniSmsSystemAttatchmentBuilder_.setMessage(builderForValue.build());
+        communicationsOmniSmsSystemAttachmentBuilder_.setMessage(builderForValue.build());
       }
       configCase_ = 1231;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attatchment = 1231 [json_name = "communicationsOmniSmsSystemAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attachment = 1231 [json_name = "communicationsOmniSmsSystemAttachment"];</code>
      */
-    public Builder mergeCommunicationsOmniSmsSystemAttatchment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsSystemAttatchmentBuilder_ == null) {
+    public Builder mergeCommunicationsOmniSmsSystemAttachment(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsSystemAttachmentBuilder_ == null) {
         if (configCase_ == 1231 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_)
@@ -8104,19 +8104,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1231) {
-          communicationsOmniSmsSystemAttatchmentBuilder_.mergeFrom(value);
+          communicationsOmniSmsSystemAttachmentBuilder_.mergeFrom(value);
         } else {
-          communicationsOmniSmsSystemAttatchmentBuilder_.setMessage(value);
+          communicationsOmniSmsSystemAttachmentBuilder_.setMessage(value);
         }
       }
       configCase_ = 1231;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attatchment = 1231 [json_name = "communicationsOmniSmsSystemAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attachment = 1231 [json_name = "communicationsOmniSmsSystemAttachment"];</code>
      */
-    public Builder clearCommunicationsOmniSmsSystemAttatchment() {
-      if (communicationsOmniSmsSystemAttatchmentBuilder_ == null) {
+    public Builder clearCommunicationsOmniSmsSystemAttachment() {
+      if (communicationsOmniSmsSystemAttachmentBuilder_ == null) {
         if (configCase_ == 1231) {
           configCase_ = 0;
           config_ = null;
@@ -8127,23 +8127,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        communicationsOmniSmsSystemAttatchmentBuilder_.clear();
+        communicationsOmniSmsSystemAttachmentBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attatchment = 1231 [json_name = "communicationsOmniSmsSystemAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attachment = 1231 [json_name = "communicationsOmniSmsSystemAttachment"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsSystemAttatchmentBuilder() {
-      return getCommunicationsOmniSmsSystemAttatchmentFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsSystemAttachmentBuilder() {
+      return getCommunicationsOmniSmsSystemAttachmentFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attatchment = 1231 [json_name = "communicationsOmniSmsSystemAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attachment = 1231 [json_name = "communicationsOmniSmsSystemAttachment"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsSystemAttatchmentOrBuilder() {
-      if ((configCase_ == 1231) && (communicationsOmniSmsSystemAttatchmentBuilder_ != null)) {
-        return communicationsOmniSmsSystemAttatchmentBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsSystemAttachmentOrBuilder() {
+      if ((configCase_ == 1231) && (communicationsOmniSmsSystemAttachmentBuilder_ != null)) {
+        return communicationsOmniSmsSystemAttachmentBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1231) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
@@ -8152,16 +8152,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attatchment = 1231 [json_name = "communicationsOmniSmsSystemAttatchment"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_attachment = 1231 [json_name = "communicationsOmniSmsSystemAttachment"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> 
-        getCommunicationsOmniSmsSystemAttatchmentFieldBuilder() {
-      if (communicationsOmniSmsSystemAttatchmentBuilder_ == null) {
+        getCommunicationsOmniSmsSystemAttachmentFieldBuilder() {
+      if (communicationsOmniSmsSystemAttachmentBuilder_ == null) {
         if (!(configCase_ == 1231)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
         }
-        communicationsOmniSmsSystemAttatchmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        communicationsOmniSmsSystemAttachmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_,
                 getParentForChildren(),
@@ -8170,72 +8170,72 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1231;
       onChanged();
-      return communicationsOmniSmsSystemAttatchmentBuilder_;
+      return communicationsOmniSmsSystemAttachmentBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attatchments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttatchments"];</code>
-     * @return Whether the communicationsOmniSmsSystemAccumulatedAttatchments field is set.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attachments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttachments"];</code>
+     * @return Whether the communicationsOmniSmsSystemAccumulatedAttachments field is set.
      */
     @java.lang.Override
-    public boolean hasCommunicationsOmniSmsSystemAccumulatedAttatchments() {
+    public boolean hasCommunicationsOmniSmsSystemAccumulatedAttachments() {
       return configCase_ == 1232;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attatchments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttatchments"];</code>
-     * @return The communicationsOmniSmsSystemAccumulatedAttatchments.
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attachments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttachments"];</code>
+     * @return The communicationsOmniSmsSystemAccumulatedAttachments.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsSystemAccumulatedAttatchments() {
-      if (communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_ == null) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig getCommunicationsOmniSmsSystemAccumulatedAttachments() {
+      if (communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_ == null) {
         if (configCase_ == 1232) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       } else {
         if (configCase_ == 1232) {
-          return communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_.getMessage();
+          return communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attatchments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attachments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttachments"];</code>
      */
-    public Builder setCommunicationsOmniSmsSystemAccumulatedAttatchments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_ == null) {
+    public Builder setCommunicationsOmniSmsSystemAccumulatedAttachments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_.setMessage(value);
+        communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_.setMessage(value);
       }
       configCase_ = 1232;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attatchments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attachments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttachments"];</code>
      */
-    public Builder setCommunicationsOmniSmsSystemAccumulatedAttatchments(
+    public Builder setCommunicationsOmniSmsSystemAccumulatedAttachments(
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder builderForValue) {
-      if (communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_ == null) {
+      if (communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_.setMessage(builderForValue.build());
+        communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_.setMessage(builderForValue.build());
       }
       configCase_ = 1232;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attatchments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attachments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttachments"];</code>
      */
-    public Builder mergeCommunicationsOmniSmsSystemAccumulatedAttatchments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
-      if (communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_ == null) {
+    public Builder mergeCommunicationsOmniSmsSystemAccumulatedAttachments(com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig value) {
+      if (communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_ == null) {
         if (configCase_ == 1232 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_)
@@ -8246,19 +8246,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 1232) {
-          communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_.mergeFrom(value);
+          communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_.mergeFrom(value);
         } else {
-          communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_.setMessage(value);
+          communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_.setMessage(value);
         }
       }
       configCase_ = 1232;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attatchments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attachments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttachments"];</code>
      */
-    public Builder clearCommunicationsOmniSmsSystemAccumulatedAttatchments() {
-      if (communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_ == null) {
+    public Builder clearCommunicationsOmniSmsSystemAccumulatedAttachments() {
+      if (communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_ == null) {
         if (configCase_ == 1232) {
           configCase_ = 0;
           config_ = null;
@@ -8269,23 +8269,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_.clear();
+        communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attatchments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attachments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttachments"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsSystemAccumulatedAttatchmentsBuilder() {
-      return getCommunicationsOmniSmsSystemAccumulatedAttatchmentsFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder getCommunicationsOmniSmsSystemAccumulatedAttachmentsBuilder() {
+      return getCommunicationsOmniSmsSystemAccumulatedAttachmentsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attatchments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attachments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttachments"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsSystemAccumulatedAttatchmentsOrBuilder() {
-      if ((configCase_ == 1232) && (communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_ != null)) {
-        return communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder getCommunicationsOmniSmsSystemAccumulatedAttachmentsOrBuilder() {
+      if ((configCase_ == 1232) && (communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_ != null)) {
+        return communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 1232) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_;
@@ -8294,16 +8294,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attatchments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttatchments"];</code>
+     * <code>.services.billing.entities.v1alpha4.OmniSmsUnitConfig communications_omni_sms_system_accumulated_attachments = 1232 [json_name = "communicationsOmniSmsSystemAccumulatedAttachments"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder> 
-        getCommunicationsOmniSmsSystemAccumulatedAttatchmentsFieldBuilder() {
-      if (communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_ == null) {
+        getCommunicationsOmniSmsSystemAccumulatedAttachmentsFieldBuilder() {
+      if (communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_ == null) {
         if (!(configCase_ == 1232)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.getDefaultInstance();
         }
-        communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniSmsUnitConfig) config_,
                 getParentForChildren(),
@@ -8312,7 +8312,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 1232;
       onChanged();
-      return communicationsOmniSmsSystemAccumulatedAttatchmentsBuilder_;
+      return communicationsOmniSmsSystemAccumulatedAttachmentsBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
