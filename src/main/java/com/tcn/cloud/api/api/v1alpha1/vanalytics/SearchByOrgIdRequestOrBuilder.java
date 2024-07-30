@@ -121,4 +121,62 @@ public interface SearchByOrgIdRequestOrBuilder extends
    * <code>.api.v1alpha1.vanalytics.SearchQuery.FlagSummary flag_summary = 5 [json_name = "flagSummary"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.FlagSummaryOrBuilder getFlagSummaryOrBuilder();
+
+  /**
+   * <pre>
+   *
+   *Optional. The standard list filter as described in https://google.aip.dev/160.
+   *Multiple comparisons can be provided when separated with a logical AND
+   *operator. Supported fields, operators and functions are listed below.
+   *
+   *+----------------------------+-----------+--------------+-----------+
+   *|                      field |      type |    operators | functions |
+   *+----------------------------+-----------+--------------+-----------+
+   *|             transcript_sid |   integer |            = |       any |
+   *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+   *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+   *| flag_summary.review_status |      enum |            = |       any |
+   *+----------------------------+-----------+--------------+-----------+
+   *
+   *Examples:
+   *transcript_sid = any(1, 2, 3)
+   *
+   *flag_summary.count &gt; 0 AND
+   *flag_summary.review_status = any(done, none) AND
+   *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+   * </pre>
+   *
+   * <code>string filter = 6 [json_name = "filter"];</code>
+   * @return The filter.
+   */
+  java.lang.String getFilter();
+  /**
+   * <pre>
+   *
+   *Optional. The standard list filter as described in https://google.aip.dev/160.
+   *Multiple comparisons can be provided when separated with a logical AND
+   *operator. Supported fields, operators and functions are listed below.
+   *
+   *+----------------------------+-----------+--------------+-----------+
+   *|                      field |      type |    operators | functions |
+   *+----------------------------+-----------+--------------+-----------+
+   *|             transcript_sid |   integer |            = |       any |
+   *|                 start_time | timestamp | &gt;=, &lt;=, &gt;, &lt; | timestamp |
+   *|         flag_summary.count |   integer | &gt;=, &lt;=, &gt;, &lt; |           |
+   *| flag_summary.review_status |      enum |            = |       any |
+   *+----------------------------+-----------+--------------+-----------+
+   *
+   *Examples:
+   *transcript_sid = any(1, 2, 3)
+   *
+   *flag_summary.count &gt; 0 AND
+   *flag_summary.review_status = any(done, none) AND
+   *start_time &gt;= timestamp('2012-04-21T11:30:00-04:00')
+   * </pre>
+   *
+   * <code>string filter = 6 [json_name = "filter"];</code>
+   * @return The bytes for filter.
+   */
+  com.google.protobuf.ByteString
+      getFilterBytes();
 }
