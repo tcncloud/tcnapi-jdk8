@@ -23,7 +23,7 @@ public enum EvaluationType
   EVALUATE_MANUAL(0),
   /**
    * <pre>
-   * Otherwise known as Flag Evaluations. Questions orient around flags and risk level, and are completed by the system.
+   * AKA (Auto) Flag Evaluation. Completed by the system. Produces risk level.
    * </pre>
    *
    * <code>EVALUATE_AUTO = 1;</code>
@@ -31,7 +31,7 @@ public enum EvaluationType
   EVALUATE_AUTO(1),
   /**
    * <pre>
-   * Evaluates in a similar way to Manual Evaluations (points, score percentages). Questions are completed by the system.
+   * Completed by the system. Produces point total and score percentage.
    * </pre>
    *
    * <code>EVALUATE_SMART = 2;</code>
@@ -50,7 +50,7 @@ public enum EvaluationType
   public static final int EVALUATE_MANUAL_VALUE = 0;
   /**
    * <pre>
-   * Otherwise known as Flag Evaluations. Questions orient around flags and risk level, and are completed by the system.
+   * AKA (Auto) Flag Evaluation. Completed by the system. Produces risk level.
    * </pre>
    *
    * <code>EVALUATE_AUTO = 1;</code>
@@ -58,7 +58,7 @@ public enum EvaluationType
   public static final int EVALUATE_AUTO_VALUE = 1;
   /**
    * <pre>
-   * Evaluates in a similar way to Manual Evaluations (points, score percentages). Questions are completed by the system.
+   * Completed by the system. Produces point total and score percentage.
    * </pre>
    *
    * <code>EVALUATE_SMART = 2;</code>
