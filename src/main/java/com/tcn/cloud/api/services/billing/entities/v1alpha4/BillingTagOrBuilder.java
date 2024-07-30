@@ -75,4 +75,16 @@ public interface BillingTagOrBuilder extends
    * <code>.google.protobuf.Timestamp delete_time = 5 [json_name = "deleteTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
+
+  /**
+   * <code>string category = 6 [json_name = "category"];</code>
+   * @return The category.
+   */
+  java.lang.String getCategory();
+  /**
+   * <code>string category = 6 [json_name = "category"];</code>
+   * @return The bytes for category.
+   */
+  com.google.protobuf.ByteString
+      getCategoryBytes();
 }
