@@ -26,63 +26,95 @@ public final class ServiceProto {
       "\n7services/org/exile_certificate_manager" +
       "/v1/service.proto\022)services.org.exile_ce" +
       "rtificate_manager.v1\032\027annotations/authz." +
-      "proto\032\034google/api/annotations.proto\032@ser" +
+      "proto\032\034google/api/annotations.proto\032Iser" +
       "vices/org/exile_certificate_manager/v1/c" +
-      "ertificate_info.proto2\356\014\n\036ExileCertifica" +
-      "teManagerService\022\376\001\n\025CreateCertificateIn" +
-      "fo\022G.services.org.exile_certificate_mana" +
-      "ger.v1.CreateCertificateInfoRequest\032H.se" +
-      "rvices.org.exile_certificate_manager.v1." +
-      "CreateCertificateInfoResponse\"R\272\270\221\002\004\n\002\010d" +
-      "\202\323\344\223\002C\">/services/org/exilecertificatema" +
-      "nager/v1/createcertificateinfo:\001*\022\376\001\n\025De" +
-      "leteCertificateInfo\022G.services.org.exile" +
-      "_certificate_manager.v1.DeleteCertificat" +
-      "eInfoRequest\032H.services.org.exile_certif" +
-      "icate_manager.v1.DeleteCertificateInfoRe" +
-      "sponse\"R\272\270\221\002\004\n\002\010d\202\323\344\223\002C\">/services/org/e" +
-      "xilecertificatemanager/v1/deletecertific" +
-      "ateinfo:\001*\022\376\001\n\025RevokeCertificateInfo\022G.s" +
+      "ertificate_configuration.proto\032@services" +
+      "/org/exile_certificate_manager/v1/certif" +
+      "icate_info.proto2\376\025\n\036ExileCertificateMan" +
+      "agerService\022\376\001\n\025CreateCertificateInfo\022G." +
+      "services.org.exile_certificate_manager.v" +
+      "1.CreateCertificateInfoRequest\032H.service" +
+      "s.org.exile_certificate_manager.v1.Creat" +
+      "eCertificateInfoResponse\"R\272\270\221\002\004\n\002\010d\202\323\344\223\002" +
+      "C\">/services/org/exilecertificatemanager" +
+      "/v1/createcertificateinfo:\001*\022\376\001\n\025DeleteC" +
+      "ertificateInfo\022G.services.org.exile_cert" +
+      "ificate_manager.v1.DeleteCertificateInfo" +
+      "Request\032H.services.org.exile_certificate" +
+      "_manager.v1.DeleteCertificateInfoRespons" +
+      "e\"R\272\270\221\002\004\n\002\010d\202\323\344\223\002C\">/services/org/exilec" +
+      "ertificatemanager/v1/deletecertificatein" +
+      "fo:\001*\022\376\001\n\025RevokeCertificateInfo\022G.servic" +
+      "es.org.exile_certificate_manager.v1.Revo" +
+      "keCertificateInfoRequest\032H.services.org." +
+      "exile_certificate_manager.v1.RevokeCerti" +
+      "ficateInfoResponse\"R\272\270\221\002\004\n\002\010d\202\323\344\223\002C\">/se" +
+      "rvices/org/exilecertificatemanager/v1/re" +
+      "vokecertificateinfo:\001*\022\242\002\n\036AssignCertifi" +
+      "cateConfiguration\022P.services.org.exile_c" +
+      "ertificate_manager.v1.AssignCertificateC" +
+      "onfigurationRequest\032Q.services.org.exile" +
+      "_certificate_manager.v1.AssignCertificat" +
+      "eConfigurationResponse\"[\272\270\221\002\004\n\002\010d\202\323\344\223\002L\"" +
+      "G/services/org/exilecertificatemanager/v" +
+      "1/assigncertificateconfiguration:\001*\022\252\002\n " +
+      "UnassignCertificateConfiguration\022R.servi" +
+      "ces.org.exile_certificate_manager.v1.Una" +
+      "ssignCertificateConfigurationRequest\032S.s" +
       "ervices.org.exile_certificate_manager.v1" +
-      ".RevokeCertificateInfoRequest\032H.services" +
-      ".org.exile_certificate_manager.v1.Revoke" +
-      "CertificateInfoResponse\"R\272\270\221\002\004\n\002\010d\202\323\344\223\002C" +
-      "\">/services/org/exilecertificatemanager/" +
-      "v1/revokecertificateinfo:\001*\022\366\001\n\023ListCert" +
-      "ificateInfo\022E.services.org.exile_certifi" +
-      "cate_manager.v1.ListCertificateInfoReque" +
-      "st\032F.services.org.exile_certificate_mana" +
-      "ger.v1.ListCertificateInfoResponse\"P\272\270\221\002" +
-      "\004\n\002\010d\202\323\344\223\002A\"</services/org/exilecertific" +
-      "atemanager/v1/listcertificateinfo:\001*\022\242\002\n" +
-      "\036AssignCertificateConfiguration\022P.servic" +
-      "es.org.exile_certificate_manager.v1.Assi" +
-      "gnCertificateConfigurationRequest\032Q.serv" +
-      "ices.org.exile_certificate_manager.v1.As" +
-      "signCertificateConfigurationResponse\"[\272\270" +
-      "\221\002\004\n\002\010d\202\323\344\223\002L\"G/services/org/exilecertif" +
-      "icatemanager/v1/assigncertificateconfigu" +
-      "ration:\001*\022\252\002\n UnassignCertificateConfigu" +
-      "ration\022R.services.org.exile_certificate_" +
-      "manager.v1.UnassignCertificateConfigurat" +
-      "ionRequest\032S.services.org.exile_certific" +
-      "ate_manager.v1.UnassignCertificateConfig" +
-      "urationResponse\"]\272\270\221\002\004\n\002\010d\202\323\344\223\002N\"I/servi" +
-      "ces/org/exilecertificatemanager/v1/unass" +
-      "igncertificateconfiguration:\001*B\212\002\n;com.t" +
-      "cn.cloud.api.services.org.exile_certific" +
-      "ate_manager.v1B\014ServiceProtoP\001\242\002\003SOE\252\002\'S" +
-      "ervices.Org.ExileCertificateManager.V1\312\002" +
-      "\'Services\\Org\\ExileCertificateManager\\V1" +
-      "\342\0023Services\\Org\\ExileCertificateManager\\" +
-      "V1\\GPBMetadata\352\002*Services::Org::ExileCer" +
-      "tificateManager::V1b\006proto3"
+      ".UnassignCertificateConfigurationRespons" +
+      "e\"]\272\270\221\002\004\n\002\010d\202\323\344\223\002N\"I/services/org/exilec" +
+      "ertificatemanager/v1/unassigncertificate" +
+      "configuration:\001*\022\366\001\n\023ListCertificateInfo" +
+      "\022E.services.org.exile_certificate_manage" +
+      "r.v1.ListCertificateInfoRequest\032F.servic" +
+      "es.org.exile_certificate_manager.v1.List" +
+      "CertificateInfoResponse\"P\272\270\221\002\004\n\002\010d\202\323\344\223\002A" +
+      "\"</services/org/exilecertificatemanager/" +
+      "v1/listcertificateinfo:\001*\022\242\002\n\036CreateCert" +
+      "ificateConfiguration\022P.services.org.exil" +
+      "e_certificate_manager.v1.CreateCertifica" +
+      "teConfigurationRequest\032Q.services.org.ex" +
+      "ile_certificate_manager.v1.CreateCertifi" +
+      "cateConfigurationResponse\"[\272\270\221\002\004\n\002\010d\202\323\344\223" +
+      "\002L\"G/services/org/exilecertificatemanage" +
+      "r/v1/createcertificateconfiguration:\001*\022\242" +
+      "\002\n\036UpdateCertificateConfiguration\022P.serv" +
+      "ices.org.exile_certificate_manager.v1.Up" +
+      "dateCertificateConfigurationRequest\032Q.se" +
+      "rvices.org.exile_certificate_manager.v1." +
+      "UpdateCertificateConfigurationResponse\"[" +
+      "\272\270\221\002\004\n\002\010d\202\323\344\223\002L\"G/services/org/exilecert" +
+      "ificatemanager/v1/updatecertificateconfi" +
+      "guration:\001*\022\242\002\n\036DeleteCertificateConfigu" +
+      "ration\022P.services.org.exile_certificate_" +
+      "manager.v1.DeleteCertificateConfiguratio" +
+      "nRequest\032Q.services.org.exile_certificat" +
+      "e_manager.v1.DeleteCertificateConfigurat" +
+      "ionResponse\"[\272\270\221\002\004\n\002\010d\202\323\344\223\002L\"G/services/" +
+      "org/exilecertificatemanager/v1/deletecer" +
+      "tificateconfiguration:\001*\022\236\002\n\035ListCertifi" +
+      "cateConfigurations\022O.services.org.exile_" +
+      "certificate_manager.v1.ListCertificateCo" +
+      "nfigurationsRequest\032P.services.org.exile" +
+      "_certificate_manager.v1.ListCertificateC" +
+      "onfigurationsResponse\"Z\272\270\221\002\004\n\002\010d\202\323\344\223\002K\"F" +
+      "/services/org/exilecertificatemanager/v1" +
+      "/listcertificateconfigurations:\001*B\212\002\n;co" +
+      "m.tcn.cloud.api.services.org.exile_certi" +
+      "ficate_manager.v1B\014ServiceProtoP\001\242\002\003SOE\252" +
+      "\002\'Services.Org.ExileCertificateManager.V" +
+      "1\312\002\'Services\\Org\\ExileCertificateManager" +
+      "\\V1\342\0023Services\\Org\\ExileCertificateManag" +
+      "er\\V1\\GPBMetadata\352\002*Services::Org::Exile" +
+      "CertificateManager::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationProto.getDescriptor(),
           com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateInfoProto.getDescriptor(),
         });
     com.google.protobuf.ExtensionRegistry registry =
@@ -93,6 +125,7 @@ public final class ServiceProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationProto.getDescriptor();
     com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateInfoProto.getDescriptor();
   }
 
