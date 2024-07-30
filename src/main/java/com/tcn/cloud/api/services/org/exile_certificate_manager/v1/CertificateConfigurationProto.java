@@ -65,45 +65,47 @@ public final class CertificateConfigurationProto {
     java.lang.String[] descriptorData = {
       "\nIservices/org/exile_certificate_manager" +
       "/v1/certificate_configuration.proto\022)ser" +
-      "vices.org.exile_certificate_manager.v1\0328" +
-      "services/org/exile_certificate_manager/v" +
-      "1/entities.proto\"\332\001\n%CreateCertificateCo" +
-      "nfigurationRequest\022\022\n\004name\030\001 \001(\tR\004name\022 " +
-      "\n\013description\030\002 \001(\tR\013description\022[\n\004type" +
-      "\030\003 \001(\0162G.services.org.exile_certificate_" +
-      "manager.v1.CertificateConfigurationTypeR" +
-      "\004type\022\036\n\nparameters\030\004 \001(\tR\nparameters\"\\\n" +
-      "&CreateCertificateConfigurationResponse\022" +
-      "2\n\025configuration_info_id\030\001 \001(\tR\023configur" +
-      "ationInfoId\"\216\002\n%UpdateCertificateConfigu" +
-      "rationRequest\0222\n\025configuration_info_id\030\001" +
-      " \001(\tR\023configurationInfoId\022\022\n\004name\030\002 \001(\tR" +
-      "\004name\022 \n\013description\030\003 \001(\tR\013description\022" +
-      "[\n\004type\030\004 \001(\0162G.services.org.exile_certi" +
-      "ficate_manager.v1.CertificateConfigurati" +
-      "onTypeR\004type\022\036\n\nparameters\030\005 \001(\tR\nparame" +
-      "ters\"(\n&UpdateCertificateConfigurationRe" +
-      "sponse\"[\n%DeleteCertificateConfiguration" +
-      "Request\0222\n\025configuration_info_id\030\001 \001(\tR\023" +
-      "configurationInfoId\"(\n&DeleteCertificate" +
-      "ConfigurationResponse\"&\n$ListCertificate" +
-      "ConfigurationsRequest\"\254\001\n%ListCertificat" +
-      "eConfigurationsResponse\022\202\001\n\032certificate_" +
-      "configurations\030\001 \003(\0132C.services.org.exil" +
-      "e_certificate_manager.v1.CertificateConf" +
-      "igurationR\031certificateConfigurationsB\233\002\n" +
-      ";com.tcn.cloud.api.services.org.exile_ce" +
-      "rtificate_manager.v1B\035CertificateConfigu" +
-      "rationProtoP\001\242\002\003SOE\252\002\'Services.Org.Exile" +
-      "CertificateManager.V1\312\002\'Services\\Org\\Exi" +
-      "leCertificateManager\\V1\342\0023Services\\Org\\E" +
-      "xileCertificateManager\\V1\\GPBMetadata\352\002*" +
-      "Services::Org::ExileCertificateManager::" +
-      "V1b\006proto3"
+      "vices.org.exile_certificate_manager.v1\032 " +
+      "google/protobuf/field_mask.proto\0328servic" +
+      "es/org/exile_certificate_manager/v1/enti" +
+      "ties.proto\"\332\001\n%CreateCertificateConfigur" +
+      "ationRequest\022\022\n\004name\030\001 \001(\tR\004name\022 \n\013desc" +
+      "ription\030\002 \001(\tR\013description\022[\n\004type\030\003 \001(\016" +
+      "2G.services.org.exile_certificate_manage" +
+      "r.v1.CertificateConfigurationTypeR\004type\022" +
+      "\036\n\nparameters\030\004 \001(\tR\nparameters\"j\n&Creat" +
+      "eCertificateConfigurationResponse\022@\n\034cer" +
+      "tificate_configuration_id\030\001 \001(\tR\032certifi" +
+      "cateConfigurationId\"\315\001\n%UpdateCertificat" +
+      "eConfigurationRequest\022i\n\rconfiguration\030\001" +
+      " \001(\0132C.services.org.exile_certificate_ma" +
+      "nager.v1.CertificateConfigurationR\rconfi" +
+      "guration\0229\n\nfield_mask\030\002 \001(\0132\032.google.pr" +
+      "otobuf.FieldMaskR\tfieldMask\"(\n&UpdateCer" +
+      "tificateConfigurationResponse\"i\n%DeleteC" +
+      "ertificateConfigurationRequest\022@\n\034certif" +
+      "icate_configuration_id\030\001 \001(\tR\032certificat" +
+      "eConfigurationId\"(\n&DeleteCertificateCon" +
+      "figurationResponse\"a\n$ListCertificateCon" +
+      "figurationsRequest\0229\n\nfield_mask\030\001 \001(\0132\032" +
+      ".google.protobuf.FieldMaskR\tfieldMask\"\254\001" +
+      "\n%ListCertificateConfigurationsResponse\022" +
+      "\202\001\n\032certificate_configurations\030\001 \003(\0132C.s" +
+      "ervices.org.exile_certificate_manager.v1" +
+      ".CertificateConfigurationR\031certificateCo" +
+      "nfigurationsB\233\002\n;com.tcn.cloud.api.servi" +
+      "ces.org.exile_certificate_manager.v1B\035Ce" +
+      "rtificateConfigurationProtoP\001\242\002\003SOE\252\002\'Se" +
+      "rvices.Org.ExileCertificateManager.V1\312\002\'" +
+      "Services\\Org\\ExileCertificateManager\\V1\342" +
+      "\0023Services\\Org\\ExileCertificateManager\\V" +
+      "1\\GPBMetadata\352\002*Services::Org::ExileCert" +
+      "ificateManager::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.tcn.cloud.api.services.org.exile_certificate_manager.v1.EntitiesProto.getDescriptor(),
         });
     internal_static_services_org_exile_certificate_manager_v1_CreateCertificateConfigurationRequest_descriptor =
@@ -117,13 +119,13 @@ public final class CertificateConfigurationProto {
     internal_static_services_org_exile_certificate_manager_v1_CreateCertificateConfigurationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_exile_certificate_manager_v1_CreateCertificateConfigurationResponse_descriptor,
-        new java.lang.String[] { "ConfigurationInfoId", });
+        new java.lang.String[] { "CertificateConfigurationId", });
     internal_static_services_org_exile_certificate_manager_v1_UpdateCertificateConfigurationRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_services_org_exile_certificate_manager_v1_UpdateCertificateConfigurationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_exile_certificate_manager_v1_UpdateCertificateConfigurationRequest_descriptor,
-        new java.lang.String[] { "ConfigurationInfoId", "Name", "Description", "Type", "Parameters", });
+        new java.lang.String[] { "Configuration", "FieldMask", });
     internal_static_services_org_exile_certificate_manager_v1_UpdateCertificateConfigurationResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_services_org_exile_certificate_manager_v1_UpdateCertificateConfigurationResponse_fieldAccessorTable = new
@@ -135,7 +137,7 @@ public final class CertificateConfigurationProto {
     internal_static_services_org_exile_certificate_manager_v1_DeleteCertificateConfigurationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_exile_certificate_manager_v1_DeleteCertificateConfigurationRequest_descriptor,
-        new java.lang.String[] { "ConfigurationInfoId", });
+        new java.lang.String[] { "CertificateConfigurationId", });
     internal_static_services_org_exile_certificate_manager_v1_DeleteCertificateConfigurationResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_services_org_exile_certificate_manager_v1_DeleteCertificateConfigurationResponse_fieldAccessorTable = new
@@ -147,13 +149,14 @@ public final class CertificateConfigurationProto {
     internal_static_services_org_exile_certificate_manager_v1_ListCertificateConfigurationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_exile_certificate_manager_v1_ListCertificateConfigurationsRequest_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "FieldMask", });
     internal_static_services_org_exile_certificate_manager_v1_ListCertificateConfigurationsResponse_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_services_org_exile_certificate_manager_v1_ListCertificateConfigurationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_exile_certificate_manager_v1_ListCertificateConfigurationsResponse_descriptor,
         new java.lang.String[] { "CertificateConfigurations", });
+    com.google.protobuf.FieldMaskProto.getDescriptor();
     com.tcn.cloud.api.services.org.exile_certificate_manager.v1.EntitiesProto.getDescriptor();
   }
 

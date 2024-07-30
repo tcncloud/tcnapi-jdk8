@@ -20,11 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private UpdateCertificateConfigurationRequest() {
-    configurationInfoId_ = "";
-    name_ = "";
-    description_ = "";
-    type_ = 0;
-    parameters_ = "";
   }
 
   @java.lang.Override
@@ -47,222 +42,80 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UpdateCertificateConfigurationRequest.class, com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UpdateCertificateConfigurationRequest.Builder.class);
   }
 
-  public static final int CONFIGURATION_INFO_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object configurationInfoId_ = "";
+  public static final int CONFIGURATION_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration_;
   /**
    * <pre>
-   * The id of the configuration info to update.
+   * The certificate configuration to update.
    * </pre>
    *
-   * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-   * @return The configurationInfoId.
+   * <code>.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration = 1 [json_name = "configuration"];</code>
+   * @return Whether the configuration field is set.
    */
   @java.lang.Override
-  public java.lang.String getConfigurationInfoId() {
-    java.lang.Object ref = configurationInfoId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      configurationInfoId_ = s;
-      return s;
-    }
+  public boolean hasConfiguration() {
+    return configuration_ != null;
   }
   /**
    * <pre>
-   * The id of the configuration info to update.
+   * The certificate configuration to update.
    * </pre>
    *
-   * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-   * @return The bytes for configurationInfoId.
+   * <code>.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration = 1 [json_name = "configuration"];</code>
+   * @return The configuration.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getConfigurationInfoIdBytes() {
-    java.lang.Object ref = configurationInfoId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      configurationInfoId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration getConfiguration() {
+    return configuration_ == null ? com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration.getDefaultInstance() : configuration_;
+  }
+  /**
+   * <pre>
+   * The certificate configuration to update.
+   * </pre>
+   *
+   * <code>.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration = 1 [json_name = "configuration"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationOrBuilder getConfigurationOrBuilder() {
+    return configuration_ == null ? com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration.getDefaultInstance() : configuration_;
   }
 
-  public static final int NAME_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
+  public static final int FIELD_MASK_FIELD_NUMBER = 2;
+  private com.google.protobuf.FieldMask fieldMask_;
   /**
    * <pre>
-   * The configuration name.
+   * The fields to update.
    * </pre>
    *
-   * <code>string name = 2 [json_name = "name"];</code>
-   * @return The name.
+   * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
+   * @return Whether the fieldMask field is set.
    */
   @java.lang.Override
-  public java.lang.String getName() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      name_ = s;
-      return s;
-    }
+  public boolean hasFieldMask() {
+    return fieldMask_ != null;
   }
   /**
    * <pre>
-   * The configuration name.
+   * The fields to update.
    * </pre>
    *
-   * <code>string name = 2 [json_name = "name"];</code>
-   * @return The bytes for name.
+   * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
+   * @return The fieldMask.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getNameBytes() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      name_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public com.google.protobuf.FieldMask getFieldMask() {
+    return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
   }
-
-  public static final int DESCRIPTION_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
-   * The configuration description.
+   * The fields to update.
    * </pre>
    *
-   * <code>string description = 3 [json_name = "description"];</code>
-   * @return The description.
+   * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
    */
   @java.lang.Override
-  public java.lang.String getDescription() {
-    java.lang.Object ref = description_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      description_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * The configuration description.
-   * </pre>
-   *
-   * <code>string description = 3 [json_name = "description"];</code>
-   * @return The bytes for description.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDescriptionBytes() {
-    java.lang.Object ref = description_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      description_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int TYPE_FIELD_NUMBER = 4;
-  private int type_ = 0;
-  /**
-   * <pre>
-   * The type of configuration info.
-   * </pre>
-   *
-   * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 4 [json_name = "type"];</code>
-   * @return The enum numeric value on the wire for type.
-   */
-  @java.lang.Override public int getTypeValue() {
-    return type_;
-  }
-  /**
-   * <pre>
-   * The type of configuration info.
-   * </pre>
-   *
-   * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 4 [json_name = "type"];</code>
-   * @return The type.
-   */
-  @java.lang.Override public com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationType getType() {
-    com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationType result = com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationType.forNumber(type_);
-    return result == null ? com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationType.UNRECOGNIZED : result;
-  }
-
-  public static final int PARAMETERS_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object parameters_ = "";
-  /**
-   * <pre>
-   * The parameters of the configuration info.
-   * See services.org.exile_certificate_manager.v1.CertificateConfiguration
-   * for the required information.
-   * </pre>
-   *
-   * <code>string parameters = 5 [json_name = "parameters"];</code>
-   * @return The parameters.
-   */
-  @java.lang.Override
-  public java.lang.String getParameters() {
-    java.lang.Object ref = parameters_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      parameters_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * The parameters of the configuration info.
-   * See services.org.exile_certificate_manager.v1.CertificateConfiguration
-   * for the required information.
-   * </pre>
-   *
-   * <code>string parameters = 5 [json_name = "parameters"];</code>
-   * @return The bytes for parameters.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getParametersBytes() {
-    java.lang.Object ref = parameters_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      parameters_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
+    return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -279,20 +132,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configurationInfoId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, configurationInfoId_);
+    if (configuration_ != null) {
+      output.writeMessage(1, getConfiguration());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
-    }
-    if (type_ != com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationType.CERTIFICATE_CONFIGURATION_TYPE_UNSPECIFIED.getNumber()) {
-      output.writeEnum(4, type_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parameters_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, parameters_);
+    if (fieldMask_ != null) {
+      output.writeMessage(2, getFieldMask());
     }
     getUnknownFields().writeTo(output);
   }
@@ -303,21 +147,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configurationInfoId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, configurationInfoId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
-    }
-    if (type_ != com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationType.CERTIFICATE_CONFIGURATION_TYPE_UNSPECIFIED.getNumber()) {
+    if (configuration_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(4, type_);
+        .computeMessageSize(1, getConfiguration());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parameters_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, parameters_);
+    if (fieldMask_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getFieldMask());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -334,15 +170,16 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UpdateCertificateConfigurationRequest other = (com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UpdateCertificateConfigurationRequest) obj;
 
-    if (!getConfigurationInfoId()
-        .equals(other.getConfigurationInfoId())) return false;
-    if (!getName()
-        .equals(other.getName())) return false;
-    if (!getDescription()
-        .equals(other.getDescription())) return false;
-    if (type_ != other.type_) return false;
-    if (!getParameters()
-        .equals(other.getParameters())) return false;
+    if (hasConfiguration() != other.hasConfiguration()) return false;
+    if (hasConfiguration()) {
+      if (!getConfiguration()
+          .equals(other.getConfiguration())) return false;
+    }
+    if (hasFieldMask() != other.hasFieldMask()) return false;
+    if (hasFieldMask()) {
+      if (!getFieldMask()
+          .equals(other.getFieldMask())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -354,16 +191,14 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CONFIGURATION_INFO_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getConfigurationInfoId().hashCode();
-    hash = (37 * hash) + NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getName().hashCode();
-    hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
-    hash = (53 * hash) + getDescription().hashCode();
-    hash = (37 * hash) + TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + type_;
-    hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
-    hash = (53 * hash) + getParameters().hashCode();
+    if (hasConfiguration()) {
+      hash = (37 * hash) + CONFIGURATION_FIELD_NUMBER;
+      hash = (53 * hash) + getConfiguration().hashCode();
+    }
+    if (hasFieldMask()) {
+      hash = (37 * hash) + FIELD_MASK_FIELD_NUMBER;
+      hash = (53 * hash) + getFieldMask().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -499,11 +334,16 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      configurationInfoId_ = "";
-      name_ = "";
-      description_ = "";
-      type_ = 0;
-      parameters_ = "";
+      configuration_ = null;
+      if (configurationBuilder_ != null) {
+        configurationBuilder_.dispose();
+        configurationBuilder_ = null;
+      }
+      fieldMask_ = null;
+      if (fieldMaskBuilder_ != null) {
+        fieldMaskBuilder_.dispose();
+        fieldMaskBuilder_ = null;
+      }
       return this;
     }
 
@@ -538,19 +378,14 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UpdateCertificateConfigurationRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.configurationInfoId_ = configurationInfoId_;
+        result.configuration_ = configurationBuilder_ == null
+            ? configuration_
+            : configurationBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.name_ = name_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.description_ = description_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.type_ = type_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.parameters_ = parameters_;
+        result.fieldMask_ = fieldMaskBuilder_ == null
+            ? fieldMask_
+            : fieldMaskBuilder_.build();
       }
     }
 
@@ -598,28 +433,11 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UpdateCertificateConfigurationRequest other) {
       if (other == com.tcn.cloud.api.services.org.exile_certificate_manager.v1.UpdateCertificateConfigurationRequest.getDefaultInstance()) return this;
-      if (!other.getConfigurationInfoId().isEmpty()) {
-        configurationInfoId_ = other.configurationInfoId_;
-        bitField0_ |= 0x00000001;
-        onChanged();
+      if (other.hasConfiguration()) {
+        mergeConfiguration(other.getConfiguration());
       }
-      if (!other.getName().isEmpty()) {
-        name_ = other.name_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
-      if (!other.getDescription().isEmpty()) {
-        description_ = other.description_;
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
-      if (other.type_ != 0) {
-        setTypeValue(other.getTypeValue());
-      }
-      if (!other.getParameters().isEmpty()) {
-        parameters_ = other.parameters_;
-        bitField0_ |= 0x00000010;
-        onChanged();
+      if (other.hasFieldMask()) {
+        mergeFieldMask(other.getFieldMask());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -648,30 +466,19 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              configurationInfoId_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getConfigurationFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              name_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  getFieldMaskFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 32: {
-              type_ = input.readEnum();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            case 42: {
-              parameters_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -689,455 +496,314 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object configurationInfoId_ = "";
+    private com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration, com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration.Builder, com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationOrBuilder> configurationBuilder_;
     /**
      * <pre>
-     * The id of the configuration info to update.
+     * The certificate configuration to update.
      * </pre>
      *
-     * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-     * @return The configurationInfoId.
+     * <code>.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration = 1 [json_name = "configuration"];</code>
+     * @return Whether the configuration field is set.
      */
-    public java.lang.String getConfigurationInfoId() {
-      java.lang.Object ref = configurationInfoId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        configurationInfoId_ = s;
-        return s;
+    public boolean hasConfiguration() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The certificate configuration to update.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration = 1 [json_name = "configuration"];</code>
+     * @return The configuration.
+     */
+    public com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration getConfiguration() {
+      if (configurationBuilder_ == null) {
+        return configuration_ == null ? com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration.getDefaultInstance() : configuration_;
       } else {
-        return (java.lang.String) ref;
+        return configurationBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * The id of the configuration info to update.
+     * The certificate configuration to update.
      * </pre>
      *
-     * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-     * @return The bytes for configurationInfoId.
+     * <code>.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration = 1 [json_name = "configuration"];</code>
      */
-    public com.google.protobuf.ByteString
-        getConfigurationInfoIdBytes() {
-      java.lang.Object ref = configurationInfoId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        configurationInfoId_ = b;
-        return b;
+    public Builder setConfiguration(com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration value) {
+      if (configurationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        configuration_ = value;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        configurationBuilder_.setMessage(value);
       }
-    }
-    /**
-     * <pre>
-     * The id of the configuration info to update.
-     * </pre>
-     *
-     * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-     * @param value The configurationInfoId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setConfigurationInfoId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      configurationInfoId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The id of the configuration info to update.
+     * The certificate configuration to update.
      * </pre>
      *
-     * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-     * @return This builder for chaining.
+     * <code>.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration = 1 [json_name = "configuration"];</code>
      */
-    public Builder clearConfigurationInfoId() {
-      configurationInfoId_ = getDefaultInstance().getConfigurationInfoId();
+    public Builder setConfiguration(
+        com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration.Builder builderForValue) {
+      if (configurationBuilder_ == null) {
+        configuration_ = builderForValue.build();
+      } else {
+        configurationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The certificate configuration to update.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration = 1 [json_name = "configuration"];</code>
+     */
+    public Builder mergeConfiguration(com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration value) {
+      if (configurationBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          configuration_ != null &&
+          configuration_ != com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration.getDefaultInstance()) {
+          getConfigurationBuilder().mergeFrom(value);
+        } else {
+          configuration_ = value;
+        }
+      } else {
+        configurationBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The certificate configuration to update.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration = 1 [json_name = "configuration"];</code>
+     */
+    public Builder clearConfiguration() {
       bitField0_ = (bitField0_ & ~0x00000001);
+      configuration_ = null;
+      if (configurationBuilder_ != null) {
+        configurationBuilder_.dispose();
+        configurationBuilder_ = null;
+      }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The id of the configuration info to update.
+     * The certificate configuration to update.
      * </pre>
      *
-     * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-     * @param value The bytes for configurationInfoId to set.
-     * @return This builder for chaining.
+     * <code>.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration = 1 [json_name = "configuration"];</code>
      */
-    public Builder setConfigurationInfoIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      configurationInfoId_ = value;
+    public com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration.Builder getConfigurationBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
-      return this;
+      return getConfigurationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The certificate configuration to update.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration = 1 [json_name = "configuration"];</code>
+     */
+    public com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationOrBuilder getConfigurationOrBuilder() {
+      if (configurationBuilder_ != null) {
+        return configurationBuilder_.getMessageOrBuilder();
+      } else {
+        return configuration_ == null ?
+            com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration.getDefaultInstance() : configuration_;
+      }
+    }
+    /**
+     * <pre>
+     * The certificate configuration to update.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration = 1 [json_name = "configuration"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration, com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration.Builder, com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationOrBuilder> 
+        getConfigurationFieldBuilder() {
+      if (configurationBuilder_ == null) {
+        configurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration, com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration.Builder, com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationOrBuilder>(
+                getConfiguration(),
+                getParentForChildren(),
+                isClean());
+        configuration_ = null;
+      }
+      return configurationBuilder_;
     }
 
-    private java.lang.Object name_ = "";
+    private com.google.protobuf.FieldMask fieldMask_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
     /**
      * <pre>
-     * The configuration name.
+     * The fields to update.
      * </pre>
      *
-     * <code>string name = 2 [json_name = "name"];</code>
-     * @return The name.
+     * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
+     * @return Whether the fieldMask field is set.
      */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
+    public boolean hasFieldMask() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The fields to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
+     * @return The fieldMask.
+     */
+    public com.google.protobuf.FieldMask getFieldMask() {
+      if (fieldMaskBuilder_ == null) {
+        return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
       } else {
-        return (java.lang.String) ref;
+        return fieldMaskBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * The configuration name.
+     * The fields to update.
      * </pre>
      *
-     * <code>string name = 2 [json_name = "name"];</code>
-     * @return The bytes for name.
+     * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
      */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
+    public Builder setFieldMask(com.google.protobuf.FieldMask value) {
+      if (fieldMaskBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        fieldMask_ = value;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        fieldMaskBuilder_.setMessage(value);
       }
-    }
-    /**
-     * <pre>
-     * The configuration name.
-     * </pre>
-     *
-     * <code>string name = 2 [json_name = "name"];</code>
-     * @param value The name to set.
-     * @return This builder for chaining.
-     */
-    public Builder setName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      name_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The configuration name.
+     * The fields to update.
      * </pre>
      *
-     * <code>string name = 2 [json_name = "name"];</code>
-     * @return This builder for chaining.
+     * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
      */
-    public Builder clearName() {
-      name_ = getDefaultInstance().getName();
+    public Builder setFieldMask(
+        com.google.protobuf.FieldMask.Builder builderForValue) {
+      if (fieldMaskBuilder_ == null) {
+        fieldMask_ = builderForValue.build();
+      } else {
+        fieldMaskBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The fields to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
+     */
+    public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
+      if (fieldMaskBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          fieldMask_ != null &&
+          fieldMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getFieldMaskBuilder().mergeFrom(value);
+        } else {
+          fieldMask_ = value;
+        }
+      } else {
+        fieldMaskBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The fields to update.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
+     */
+    public Builder clearFieldMask() {
       bitField0_ = (bitField0_ & ~0x00000002);
+      fieldMask_ = null;
+      if (fieldMaskBuilder_ != null) {
+        fieldMaskBuilder_.dispose();
+        fieldMaskBuilder_ = null;
+      }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The configuration name.
+     * The fields to update.
      * </pre>
      *
-     * <code>string name = 2 [json_name = "name"];</code>
-     * @param value The bytes for name to set.
-     * @return This builder for chaining.
+     * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
      */
-    public Builder setNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      name_ = value;
+    public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
-      return this;
+      return getFieldMaskFieldBuilder().getBuilder();
     }
-
-    private java.lang.Object description_ = "";
     /**
      * <pre>
-     * The configuration description.
+     * The fields to update.
      * </pre>
      *
-     * <code>string description = 3 [json_name = "description"];</code>
-     * @return The description.
+     * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
      */
-    public java.lang.String getDescription() {
-      java.lang.Object ref = description_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        description_ = s;
-        return s;
+    public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
+      if (fieldMaskBuilder_ != null) {
+        return fieldMaskBuilder_.getMessageOrBuilder();
       } else {
-        return (java.lang.String) ref;
+        return fieldMask_ == null ?
+            com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
       }
     }
     /**
      * <pre>
-     * The configuration description.
+     * The fields to update.
      * </pre>
      *
-     * <code>string description = 3 [json_name = "description"];</code>
-     * @return The bytes for description.
+     * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
      */
-    public com.google.protobuf.ByteString
-        getDescriptionBytes() {
-      java.lang.Object ref = description_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        description_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+        getFieldMaskFieldBuilder() {
+      if (fieldMaskBuilder_ == null) {
+        fieldMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                getFieldMask(),
+                getParentForChildren(),
+                isClean());
+        fieldMask_ = null;
       }
-    }
-    /**
-     * <pre>
-     * The configuration description.
-     * </pre>
-     *
-     * <code>string description = 3 [json_name = "description"];</code>
-     * @param value The description to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDescription(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      description_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The configuration description.
-     * </pre>
-     *
-     * <code>string description = 3 [json_name = "description"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearDescription() {
-      description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The configuration description.
-     * </pre>
-     *
-     * <code>string description = 3 [json_name = "description"];</code>
-     * @param value The bytes for description to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDescriptionBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      description_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
-    private int type_ = 0;
-    /**
-     * <pre>
-     * The type of configuration info.
-     * </pre>
-     *
-     * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 4 [json_name = "type"];</code>
-     * @return The enum numeric value on the wire for type.
-     */
-    @java.lang.Override public int getTypeValue() {
-      return type_;
-    }
-    /**
-     * <pre>
-     * The type of configuration info.
-     * </pre>
-     *
-     * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 4 [json_name = "type"];</code>
-     * @param value The enum numeric value on the wire for type to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTypeValue(int value) {
-      type_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The type of configuration info.
-     * </pre>
-     *
-     * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 4 [json_name = "type"];</code>
-     * @return The type.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationType getType() {
-      com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationType result = com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationType.forNumber(type_);
-      return result == null ? com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationType.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * The type of configuration info.
-     * </pre>
-     *
-     * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 4 [json_name = "type"];</code>
-     * @param value The type to set.
-     * @return This builder for chaining.
-     */
-    public Builder setType(com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000008;
-      type_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The type of configuration info.
-     * </pre>
-     *
-     * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 4 [json_name = "type"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearType() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      type_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object parameters_ = "";
-    /**
-     * <pre>
-     * The parameters of the configuration info.
-     * See services.org.exile_certificate_manager.v1.CertificateConfiguration
-     * for the required information.
-     * </pre>
-     *
-     * <code>string parameters = 5 [json_name = "parameters"];</code>
-     * @return The parameters.
-     */
-    public java.lang.String getParameters() {
-      java.lang.Object ref = parameters_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        parameters_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The parameters of the configuration info.
-     * See services.org.exile_certificate_manager.v1.CertificateConfiguration
-     * for the required information.
-     * </pre>
-     *
-     * <code>string parameters = 5 [json_name = "parameters"];</code>
-     * @return The bytes for parameters.
-     */
-    public com.google.protobuf.ByteString
-        getParametersBytes() {
-      java.lang.Object ref = parameters_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        parameters_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The parameters of the configuration info.
-     * See services.org.exile_certificate_manager.v1.CertificateConfiguration
-     * for the required information.
-     * </pre>
-     *
-     * <code>string parameters = 5 [json_name = "parameters"];</code>
-     * @param value The parameters to set.
-     * @return This builder for chaining.
-     */
-    public Builder setParameters(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      parameters_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The parameters of the configuration info.
-     * See services.org.exile_certificate_manager.v1.CertificateConfiguration
-     * for the required information.
-     * </pre>
-     *
-     * <code>string parameters = 5 [json_name = "parameters"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearParameters() {
-      parameters_ = getDefaultInstance().getParameters();
-      bitField0_ = (bitField0_ & ~0x00000010);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The parameters of the configuration info.
-     * See services.org.exile_certificate_manager.v1.CertificateConfiguration
-     * for the required information.
-     * </pre>
-     *
-     * <code>string parameters = 5 [json_name = "parameters"];</code>
-     * @param value The bytes for parameters to set.
-     * @return This builder for chaining.
-     */
-    public Builder setParametersBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      parameters_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
+      return fieldMaskBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

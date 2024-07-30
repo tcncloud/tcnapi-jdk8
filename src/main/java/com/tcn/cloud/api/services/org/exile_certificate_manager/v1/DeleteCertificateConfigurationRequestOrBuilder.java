@@ -9,21 +9,21 @@ public interface DeleteCertificateConfigurationRequestOrBuilder extends
 
   /**
    * <pre>
-   * The id of the configuration info to delete.
+   * The id of the certificate configuration to delete.
    * </pre>
    *
-   * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-   * @return The configurationInfoId.
+   * <code>string certificate_configuration_id = 1 [json_name = "certificateConfigurationId"];</code>
+   * @return The certificateConfigurationId.
    */
-  java.lang.String getConfigurationInfoId();
+  java.lang.String getCertificateConfigurationId();
   /**
    * <pre>
-   * The id of the configuration info to delete.
+   * The id of the certificate configuration to delete.
    * </pre>
    *
-   * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-   * @return The bytes for configurationInfoId.
+   * <code>string certificate_configuration_id = 1 [json_name = "certificateConfigurationId"];</code>
+   * @return The bytes for certificateConfigurationId.
    */
   com.google.protobuf.ByteString
-      getConfigurationInfoIdBytes();
+      getCertificateConfigurationIdBytes();
 }

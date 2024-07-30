@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateCertificateConfigurationResponse() {
-    configurationInfoId_ = "";
+    certificateConfigurationId_ = "";
   }
 
   @java.lang.Override
@@ -43,47 +43,47 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CreateCertificateConfigurationResponse.class, com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CreateCertificateConfigurationResponse.Builder.class);
   }
 
-  public static final int CONFIGURATION_INFO_ID_FIELD_NUMBER = 1;
+  public static final int CERTIFICATE_CONFIGURATION_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object configurationInfoId_ = "";
+  private volatile java.lang.Object certificateConfigurationId_ = "";
   /**
    * <pre>
-   * The id of the configuration info that was created.
+   * The id of the certificate configuration that was created.
    * </pre>
    *
-   * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-   * @return The configurationInfoId.
+   * <code>string certificate_configuration_id = 1 [json_name = "certificateConfigurationId"];</code>
+   * @return The certificateConfigurationId.
    */
   @java.lang.Override
-  public java.lang.String getConfigurationInfoId() {
-    java.lang.Object ref = configurationInfoId_;
+  public java.lang.String getCertificateConfigurationId() {
+    java.lang.Object ref = certificateConfigurationId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      configurationInfoId_ = s;
+      certificateConfigurationId_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * The id of the configuration info that was created.
+   * The id of the certificate configuration that was created.
    * </pre>
    *
-   * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-   * @return The bytes for configurationInfoId.
+   * <code>string certificate_configuration_id = 1 [json_name = "certificateConfigurationId"];</code>
+   * @return The bytes for certificateConfigurationId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getConfigurationInfoIdBytes() {
-    java.lang.Object ref = configurationInfoId_;
+      getCertificateConfigurationIdBytes() {
+    java.lang.Object ref = certificateConfigurationId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      configurationInfoId_ = b;
+      certificateConfigurationId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -104,8 +104,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configurationInfoId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, configurationInfoId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateConfigurationId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, certificateConfigurationId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -116,8 +116,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configurationInfoId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, configurationInfoId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateConfigurationId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, certificateConfigurationId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -134,8 +134,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CreateCertificateConfigurationResponse other = (com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CreateCertificateConfigurationResponse) obj;
 
-    if (!getConfigurationInfoId()
-        .equals(other.getConfigurationInfoId())) return false;
+    if (!getCertificateConfigurationId()
+        .equals(other.getCertificateConfigurationId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -147,8 +147,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CONFIGURATION_INFO_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getConfigurationInfoId().hashCode();
+    hash = (37 * hash) + CERTIFICATE_CONFIGURATION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getCertificateConfigurationId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -284,7 +284,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      configurationInfoId_ = "";
+      certificateConfigurationId_ = "";
       return this;
     }
 
@@ -319,7 +319,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CreateCertificateConfigurationResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.configurationInfoId_ = configurationInfoId_;
+        result.certificateConfigurationId_ = certificateConfigurationId_;
       }
     }
 
@@ -367,8 +367,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CreateCertificateConfigurationResponse other) {
       if (other == com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CreateCertificateConfigurationResponse.getDefaultInstance()) return this;
-      if (!other.getConfigurationInfoId().isEmpty()) {
-        configurationInfoId_ = other.configurationInfoId_;
+      if (!other.getCertificateConfigurationId().isEmpty()) {
+        certificateConfigurationId_ = other.certificateConfigurationId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -399,7 +399,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              configurationInfoId_ = input.readStringRequireUtf8();
+              certificateConfigurationId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -420,22 +420,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object configurationInfoId_ = "";
+    private java.lang.Object certificateConfigurationId_ = "";
     /**
      * <pre>
-     * The id of the configuration info that was created.
+     * The id of the certificate configuration that was created.
      * </pre>
      *
-     * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-     * @return The configurationInfoId.
+     * <code>string certificate_configuration_id = 1 [json_name = "certificateConfigurationId"];</code>
+     * @return The certificateConfigurationId.
      */
-    public java.lang.String getConfigurationInfoId() {
-      java.lang.Object ref = configurationInfoId_;
+    public java.lang.String getCertificateConfigurationId() {
+      java.lang.Object ref = certificateConfigurationId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        configurationInfoId_ = s;
+        certificateConfigurationId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -443,20 +443,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The id of the configuration info that was created.
+     * The id of the certificate configuration that was created.
      * </pre>
      *
-     * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-     * @return The bytes for configurationInfoId.
+     * <code>string certificate_configuration_id = 1 [json_name = "certificateConfigurationId"];</code>
+     * @return The bytes for certificateConfigurationId.
      */
     public com.google.protobuf.ByteString
-        getConfigurationInfoIdBytes() {
-      java.lang.Object ref = configurationInfoId_;
+        getCertificateConfigurationIdBytes() {
+      java.lang.Object ref = certificateConfigurationId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        configurationInfoId_ = b;
+        certificateConfigurationId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -464,49 +464,49 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The id of the configuration info that was created.
+     * The id of the certificate configuration that was created.
      * </pre>
      *
-     * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-     * @param value The configurationInfoId to set.
+     * <code>string certificate_configuration_id = 1 [json_name = "certificateConfigurationId"];</code>
+     * @param value The certificateConfigurationId to set.
      * @return This builder for chaining.
      */
-    public Builder setConfigurationInfoId(
+    public Builder setCertificateConfigurationId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      configurationInfoId_ = value;
+      certificateConfigurationId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The id of the configuration info that was created.
+     * The id of the certificate configuration that was created.
      * </pre>
      *
-     * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
+     * <code>string certificate_configuration_id = 1 [json_name = "certificateConfigurationId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearConfigurationInfoId() {
-      configurationInfoId_ = getDefaultInstance().getConfigurationInfoId();
+    public Builder clearCertificateConfigurationId() {
+      certificateConfigurationId_ = getDefaultInstance().getCertificateConfigurationId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The id of the configuration info that was created.
+     * The id of the certificate configuration that was created.
      * </pre>
      *
-     * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-     * @param value The bytes for configurationInfoId to set.
+     * <code>string certificate_configuration_id = 1 [json_name = "certificateConfigurationId"];</code>
+     * @param value The bytes for certificateConfigurationId to set.
      * @return This builder for chaining.
      */
-    public Builder setConfigurationInfoIdBytes(
+    public Builder setCertificateConfigurationIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      configurationInfoId_ = value;
+      certificateConfigurationId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;

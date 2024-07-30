@@ -9,104 +9,55 @@ public interface UpdateCertificateConfigurationRequestOrBuilder extends
 
   /**
    * <pre>
-   * The id of the configuration info to update.
+   * The certificate configuration to update.
    * </pre>
    *
-   * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-   * @return The configurationInfoId.
+   * <code>.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration = 1 [json_name = "configuration"];</code>
+   * @return Whether the configuration field is set.
    */
-  java.lang.String getConfigurationInfoId();
+  boolean hasConfiguration();
   /**
    * <pre>
-   * The id of the configuration info to update.
+   * The certificate configuration to update.
    * </pre>
    *
-   * <code>string configuration_info_id = 1 [json_name = "configurationInfoId"];</code>
-   * @return The bytes for configurationInfoId.
+   * <code>.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration = 1 [json_name = "configuration"];</code>
+   * @return The configuration.
    */
-  com.google.protobuf.ByteString
-      getConfigurationInfoIdBytes();
+  com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfiguration getConfiguration();
+  /**
+   * <pre>
+   * The certificate configuration to update.
+   * </pre>
+   *
+   * <code>.services.org.exile_certificate_manager.v1.CertificateConfiguration configuration = 1 [json_name = "configuration"];</code>
+   */
+  com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationOrBuilder getConfigurationOrBuilder();
 
   /**
    * <pre>
-   * The configuration name.
+   * The fields to update.
    * </pre>
    *
-   * <code>string name = 2 [json_name = "name"];</code>
-   * @return The name.
+   * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
+   * @return Whether the fieldMask field is set.
    */
-  java.lang.String getName();
+  boolean hasFieldMask();
   /**
    * <pre>
-   * The configuration name.
+   * The fields to update.
    * </pre>
    *
-   * <code>string name = 2 [json_name = "name"];</code>
-   * @return The bytes for name.
+   * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
+   * @return The fieldMask.
    */
-  com.google.protobuf.ByteString
-      getNameBytes();
-
+  com.google.protobuf.FieldMask getFieldMask();
   /**
    * <pre>
-   * The configuration description.
+   * The fields to update.
    * </pre>
    *
-   * <code>string description = 3 [json_name = "description"];</code>
-   * @return The description.
+   * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
    */
-  java.lang.String getDescription();
-  /**
-   * <pre>
-   * The configuration description.
-   * </pre>
-   *
-   * <code>string description = 3 [json_name = "description"];</code>
-   * @return The bytes for description.
-   */
-  com.google.protobuf.ByteString
-      getDescriptionBytes();
-
-  /**
-   * <pre>
-   * The type of configuration info.
-   * </pre>
-   *
-   * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 4 [json_name = "type"];</code>
-   * @return The enum numeric value on the wire for type.
-   */
-  int getTypeValue();
-  /**
-   * <pre>
-   * The type of configuration info.
-   * </pre>
-   *
-   * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 4 [json_name = "type"];</code>
-   * @return The type.
-   */
-  com.tcn.cloud.api.services.org.exile_certificate_manager.v1.CertificateConfigurationType getType();
-
-  /**
-   * <pre>
-   * The parameters of the configuration info.
-   * See services.org.exile_certificate_manager.v1.CertificateConfiguration
-   * for the required information.
-   * </pre>
-   *
-   * <code>string parameters = 5 [json_name = "parameters"];</code>
-   * @return The parameters.
-   */
-  java.lang.String getParameters();
-  /**
-   * <pre>
-   * The parameters of the configuration info.
-   * See services.org.exile_certificate_manager.v1.CertificateConfiguration
-   * for the required information.
-   * </pre>
-   *
-   * <code>string parameters = 5 [json_name = "parameters"];</code>
-   * @return The bytes for parameters.
-   */
-  com.google.protobuf.ByteString
-      getParametersBytes();
+  com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder();
 }

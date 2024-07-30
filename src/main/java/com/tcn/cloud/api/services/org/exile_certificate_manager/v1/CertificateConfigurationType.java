@@ -5,7 +5,7 @@ package com.tcn.cloud.api.services.org.exile_certificate_manager.v1;
 
 /**
  * <pre>
- * CertificateConfigurationType defines the types of configuration info.
+ * CertificateConfigurationType defines the types of certificate configuration.
  * </pre>
  *
  * Protobuf enum {@code services.org.exile_certificate_manager.v1.CertificateConfigurationType}

@@ -49,7 +49,7 @@ public interface CreateCertificateConfigurationRequestOrBuilder extends
 
   /**
    * <pre>
-   * The type of configuration info.
+   * The type of certificate configuration.
    * </pre>
    *
    * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 3 [json_name = "type"];</code>
@@ -58,7 +58,7 @@ public interface CreateCertificateConfigurationRequestOrBuilder extends
   int getTypeValue();
   /**
    * <pre>
-   * The type of configuration info.
+   * The type of certificate configuration.
    * </pre>
    *
    * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 3 [json_name = "type"];</code>
@@ -68,7 +68,7 @@ public interface CreateCertificateConfigurationRequestOrBuilder extends
 
   /**
    * <pre>
-   * The parameters of the configuration info.
+   * The parameters of the certificate configuration.
    * See services.org.exile_certificate_manager.v1.CertificateConfiguration
    * for the required information.
    * </pre>
@@ -79,7 +79,7 @@ public interface CreateCertificateConfigurationRequestOrBuilder extends
   java.lang.String getParameters();
   /**
    * <pre>
-   * The parameters of the configuration info.
+   * The parameters of the certificate configuration.
    * See services.org.exile_certificate_manager.v1.CertificateConfiguration
    * for the required information.
    * </pre>

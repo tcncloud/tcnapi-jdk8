@@ -6,4 +6,31 @@ package com.tcn.cloud.api.services.org.exile_certificate_manager.v1;
 public interface ListCertificateInfoRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:services.org.exile_certificate_manager.v1.ListCertificateInfoRequest)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * The fields on the entity to include in the response.
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask field_mask = 1 [json_name = "fieldMask"];</code>
+   * @return Whether the fieldMask field is set.
+   */
+  boolean hasFieldMask();
+  /**
+   * <pre>
+   * The fields on the entity to include in the response.
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask field_mask = 1 [json_name = "fieldMask"];</code>
+   * @return The fieldMask.
+   */
+  com.google.protobuf.FieldMask getFieldMask();
+  /**
+   * <pre>
+   * The fields on the entity to include in the response.
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask field_mask = 1 [json_name = "fieldMask"];</code>
+   */
+  com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder();
 }

@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
   private int type_ = 0;
   /**
    * <pre>
-   * The type of configuration info.
+   * The type of certificate configuration.
    * </pre>
    *
    * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 3 [json_name = "type"];</code>
@@ -155,7 +155,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The type of configuration info.
+   * The type of certificate configuration.
    * </pre>
    *
    * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 3 [json_name = "type"];</code>
@@ -171,7 +171,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object parameters_ = "";
   /**
    * <pre>
-   * The parameters of the configuration info.
+   * The parameters of the certificate configuration.
    * See services.org.exile_certificate_manager.v1.CertificateConfiguration
    * for the required information.
    * </pre>
@@ -194,7 +194,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The parameters of the configuration info.
+   * The parameters of the certificate configuration.
    * See services.org.exile_certificate_manager.v1.CertificateConfiguration
    * for the required information.
    * </pre>
@@ -804,7 +804,7 @@ private static final long serialVersionUID = 0L;
     private int type_ = 0;
     /**
      * <pre>
-     * The type of configuration info.
+     * The type of certificate configuration.
      * </pre>
      *
      * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 3 [json_name = "type"];</code>
@@ -815,7 +815,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of configuration info.
+     * The type of certificate configuration.
      * </pre>
      *
      * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 3 [json_name = "type"];</code>
@@ -830,7 +830,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of configuration info.
+     * The type of certificate configuration.
      * </pre>
      *
      * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 3 [json_name = "type"];</code>
@@ -843,7 +843,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of configuration info.
+     * The type of certificate configuration.
      * </pre>
      *
      * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 3 [json_name = "type"];</code>
@@ -861,7 +861,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of configuration info.
+     * The type of certificate configuration.
      * </pre>
      *
      * <code>.services.org.exile_certificate_manager.v1.CertificateConfigurationType type = 3 [json_name = "type"];</code>
@@ -877,7 +877,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object parameters_ = "";
     /**
      * <pre>
-     * The parameters of the configuration info.
+     * The parameters of the certificate configuration.
      * See services.org.exile_certificate_manager.v1.CertificateConfiguration
      * for the required information.
      * </pre>
@@ -899,7 +899,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The parameters of the configuration info.
+     * The parameters of the certificate configuration.
      * See services.org.exile_certificate_manager.v1.CertificateConfiguration
      * for the required information.
      * </pre>
@@ -922,7 +922,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The parameters of the configuration info.
+     * The parameters of the certificate configuration.
      * See services.org.exile_certificate_manager.v1.CertificateConfiguration
      * for the required information.
      * </pre>
@@ -941,7 +941,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The parameters of the configuration info.
+     * The parameters of the certificate configuration.
      * See services.org.exile_certificate_manager.v1.CertificateConfiguration
      * for the required information.
      * </pre>
@@ -957,7 +957,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The parameters of the configuration info.
+     * The parameters of the certificate configuration.
      * See services.org.exile_certificate_manager.v1.CertificateConfiguration
      * for the required information.
      * </pre>

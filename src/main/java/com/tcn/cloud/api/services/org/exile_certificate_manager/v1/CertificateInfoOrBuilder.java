@@ -163,7 +163,7 @@ public interface CertificateInfoOrBuilder extends
 
   /**
    * <pre>
-   * The requestor of the certificate (user id or automated system)
+   * The requestor of the certificate (user ID or automated system)
    * </pre>
    *
    * <code>string request_by = 8 [json_name = "requestBy"];</code>
@@ -172,7 +172,7 @@ public interface CertificateInfoOrBuilder extends
   java.lang.String getRequestBy();
   /**
    * <pre>
-   * The requestor of the certificate (user id or automated system)
+   * The requestor of the certificate (user ID or automated system)
    * </pre>
    *
    * <code>string request_by = 8 [json_name = "requestBy"];</code>
@@ -203,23 +203,23 @@ public interface CertificateInfoOrBuilder extends
 
   /**
    * <pre>
-   * The id of the configuration info associated with the certificate.
+   * The id of the certificate configuration associated with the certificate.
    * </pre>
    *
-   * <code>string configuration_info_id = 11 [json_name = "configurationInfoId"];</code>
-   * @return The configurationInfoId.
+   * <code>string certificate_configuration_id = 11 [json_name = "certificateConfigurationId"];</code>
+   * @return The certificateConfigurationId.
    */
-  java.lang.String getConfigurationInfoId();
+  java.lang.String getCertificateConfigurationId();
   /**
    * <pre>
-   * The id of the configuration info associated with the certificate.
+   * The id of the certificate configuration associated with the certificate.
    * </pre>
    *
-   * <code>string configuration_info_id = 11 [json_name = "configurationInfoId"];</code>
-   * @return The bytes for configurationInfoId.
+   * <code>string certificate_configuration_id = 11 [json_name = "certificateConfigurationId"];</code>
+   * @return The bytes for certificateConfigurationId.
    */
   com.google.protobuf.ByteString
-      getConfigurationInfoIdBytes();
+      getCertificateConfigurationIdBytes();
 
   /**
    * <pre>

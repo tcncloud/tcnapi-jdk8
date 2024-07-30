@@ -29,21 +29,21 @@ public interface AssignCertificateConfigurationRequestOrBuilder extends
 
   /**
    * <pre>
-   * The id of the configuration info to assign.
+   * The id of the certificate configuration to assign.
    * </pre>
    *
-   * <code>string configuration_info_id = 2 [json_name = "configurationInfoId"];</code>
-   * @return The configurationInfoId.
+   * <code>string certificate_configuration_id = 2 [json_name = "certificateConfigurationId"];</code>
+   * @return The certificateConfigurationId.
    */
-  java.lang.String getConfigurationInfoId();
+  java.lang.String getCertificateConfigurationId();
   /**
    * <pre>
-   * The id of the configuration info to assign.
+   * The id of the certificate configuration to assign.
    * </pre>
    *
-   * <code>string configuration_info_id = 2 [json_name = "configurationInfoId"];</code>
-   * @return The bytes for configurationInfoId.
+   * <code>string certificate_configuration_id = 2 [json_name = "certificateConfigurationId"];</code>
+   * @return The bytes for certificateConfigurationId.
    */
   com.google.protobuf.ByteString
-      getConfigurationInfoIdBytes();
+      getCertificateConfigurationIdBytes();
 }
