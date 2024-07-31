@@ -22,8 +22,18 @@ public interface ListContactsByEntityRequestOrBuilder extends
    *Id of entity to be referenced with Contact, e.g: Ticket Code
    * </pre>
    *
-   * <code>int64 entity_id = 2 [json_name = "entityId"];</code>
+   * <code>string entity_id = 2 [json_name = "entityId"];</code>
    * @return The entityId.
    */
-  long getEntityId();
+  java.lang.String getEntityId();
+  /**
+   * <pre>
+   *Id of entity to be referenced with Contact, e.g: Ticket Code
+   * </pre>
+   *
+   * <code>string entity_id = 2 [json_name = "entityId"];</code>
+   * @return The bytes for entityId.
+   */
+  com.google.protobuf.ByteString
+      getEntityIdBytes();
 }

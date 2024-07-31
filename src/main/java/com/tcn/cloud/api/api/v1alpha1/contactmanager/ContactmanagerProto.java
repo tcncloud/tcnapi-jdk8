@@ -201,7 +201,7 @@ public final class ContactmanagerProto {
       "R\005value\022\022\n\004type\030\004 \001(\tR\004type\"\032\n\030EditConta" +
       "ctEntryResponse\"]\n\033ListContactsByEntityR" +
       "equest\022!\n\nproject_id\030\001 \001(\003B\0020\001R\tprojectI" +
-      "d\022\033\n\tentity_id\030\002 \001(\003R\010entityId\"\204\001\n\034ListC" +
+      "d\022\033\n\tentity_id\030\002 \001(\tR\010entityId\"\204\001\n\034ListC" +
       "ontactsByEntityResponse\022d\n\025contact_manag" +
       "er_entry\030\001 \003(\01320.api.v1alpha1.contactman" +
       "ager.ContactManagerEntryR\023contactManager" +

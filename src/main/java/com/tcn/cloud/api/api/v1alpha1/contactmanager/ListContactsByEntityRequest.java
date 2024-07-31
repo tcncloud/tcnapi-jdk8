@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListContactsByEntityRequest() {
+    entityId_ = "";
   }
 
   @java.lang.Override
@@ -54,18 +55,50 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENTITY_ID_FIELD_NUMBER = 2;
-  private long entityId_ = 0L;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object entityId_ = "";
   /**
    * <pre>
    *Id of entity to be referenced with Contact, e.g: Ticket Code
    * </pre>
    *
-   * <code>int64 entity_id = 2 [json_name = "entityId"];</code>
+   * <code>string entity_id = 2 [json_name = "entityId"];</code>
    * @return The entityId.
    */
   @java.lang.Override
-  public long getEntityId() {
-    return entityId_;
+  public java.lang.String getEntityId() {
+    java.lang.Object ref = entityId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      entityId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *Id of entity to be referenced with Contact, e.g: Ticket Code
+   * </pre>
+   *
+   * <code>string entity_id = 2 [json_name = "entityId"];</code>
+   * @return The bytes for entityId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getEntityIdBytes() {
+    java.lang.Object ref = entityId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      entityId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -85,8 +118,8 @@ private static final long serialVersionUID = 0L;
     if (projectId_ != 0L) {
       output.writeInt64(1, projectId_);
     }
-    if (entityId_ != 0L) {
-      output.writeInt64(2, entityId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, entityId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -101,9 +134,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, projectId_);
     }
-    if (entityId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, entityId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, entityId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -122,8 +154,8 @@ private static final long serialVersionUID = 0L;
 
     if (getProjectId()
         != other.getProjectId()) return false;
-    if (getEntityId()
-        != other.getEntityId()) return false;
+    if (!getEntityId()
+        .equals(other.getEntityId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -139,8 +171,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getProjectId());
     hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getEntityId());
+    hash = (53 * hash) + getEntityId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -273,7 +304,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       projectId_ = 0L;
-      entityId_ = 0L;
+      entityId_ = "";
       return this;
     }
 
@@ -362,8 +393,10 @@ private static final long serialVersionUID = 0L;
       if (other.getProjectId() != 0L) {
         setProjectId(other.getProjectId());
       }
-      if (other.getEntityId() != 0L) {
-        setEntityId(other.getEntityId());
+      if (!other.getEntityId().isEmpty()) {
+        entityId_ = other.entityId_;
+        bitField0_ |= 0x00000002;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -396,11 +429,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
-            case 16: {
-              entityId_ = input.readInt64();
+            case 18: {
+              entityId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
-            } // case 16
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -462,30 +495,60 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long entityId_ ;
+    private java.lang.Object entityId_ = "";
     /**
      * <pre>
      *Id of entity to be referenced with Contact, e.g: Ticket Code
      * </pre>
      *
-     * <code>int64 entity_id = 2 [json_name = "entityId"];</code>
+     * <code>string entity_id = 2 [json_name = "entityId"];</code>
      * @return The entityId.
      */
-    @java.lang.Override
-    public long getEntityId() {
-      return entityId_;
+    public java.lang.String getEntityId() {
+      java.lang.Object ref = entityId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        entityId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
      * <pre>
      *Id of entity to be referenced with Contact, e.g: Ticket Code
      * </pre>
      *
-     * <code>int64 entity_id = 2 [json_name = "entityId"];</code>
+     * <code>string entity_id = 2 [json_name = "entityId"];</code>
+     * @return The bytes for entityId.
+     */
+    public com.google.protobuf.ByteString
+        getEntityIdBytes() {
+      java.lang.Object ref = entityId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        entityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *Id of entity to be referenced with Contact, e.g: Ticket Code
+     * </pre>
+     *
+     * <code>string entity_id = 2 [json_name = "entityId"];</code>
      * @param value The entityId to set.
      * @return This builder for chaining.
      */
-    public Builder setEntityId(long value) {
-
+    public Builder setEntityId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       entityId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -496,12 +559,30 @@ private static final long serialVersionUID = 0L;
      *Id of entity to be referenced with Contact, e.g: Ticket Code
      * </pre>
      *
-     * <code>int64 entity_id = 2 [json_name = "entityId"];</code>
+     * <code>string entity_id = 2 [json_name = "entityId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearEntityId() {
+      entityId_ = getDefaultInstance().getEntityId();
       bitField0_ = (bitField0_ & ~0x00000002);
-      entityId_ = 0L;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *Id of entity to be referenced with Contact, e.g: Ticket Code
+     * </pre>
+     *
+     * <code>string entity_id = 2 [json_name = "entityId"];</code>
+     * @param value The bytes for entityId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEntityIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      entityId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
