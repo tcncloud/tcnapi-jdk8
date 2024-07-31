@@ -544,6 +544,17 @@ private static final long serialVersionUID = 0L;
     return ticketAssignee_.getByteString(index);
   }
 
+  public static final int CONTACT_ENTRY_ID_FIELD_NUMBER = 17;
+  private long contactEntryId_ = 0L;
+  /**
+   * <code>int64 contact_entry_id = 17 [json_name = "contactEntryId", jstype = JS_STRING];</code>
+   * @return The contactEntryId.
+   */
+  @java.lang.Override
+  public long getContactEntryId() {
+    return contactEntryId_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -593,6 +604,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < ticketAssignee_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 16, ticketAssignee_.getRaw(i));
+    }
+    if (contactEntryId_ != 0L) {
+      output.writeInt64(17, contactEntryId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -652,6 +666,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 2 * getTicketAssigneeList().size();
     }
+    if (contactEntryId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(17, contactEntryId_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -694,6 +712,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTicketActionList())) return false;
     if (!getTicketAssigneeList()
         .equals(other.getTicketAssigneeList())) return false;
+    if (getContactEntryId()
+        != other.getContactEntryId()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -744,6 +764,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TICKET_ASSIGNEE_FIELD_NUMBER;
       hash = (53 * hash) + getTicketAssigneeList().hashCode();
     }
+    hash = (37 * hash) + CONTACT_ENTRY_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getContactEntryId());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -920,6 +943,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000400);
       ticketAssignee_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      contactEntryId_ = 0L;
       return this;
     }
 
@@ -1019,6 +1043,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000800) != 0)) {
         ticketAssignee_.makeImmutable();
         result.ticketAssignee_ = ticketAssignee_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.contactEntryId_ = contactEntryId_;
       }
     }
 
@@ -1207,6 +1234,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.getContactEntryId() != 0L) {
+        setContactEntryId(other.getContactEntryId());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1328,6 +1358,11 @@ private static final long serialVersionUID = 0L;
               ticketAssignee_.add(s);
               break;
             } // case 130
+            case 136: {
+              contactEntryId_ = input.readInt64();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 136
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3205,6 +3240,38 @@ private static final long serialVersionUID = 0L;
       ensureTicketAssigneeIsMutable();
       ticketAssignee_.add(value);
       bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+
+    private long contactEntryId_ ;
+    /**
+     * <code>int64 contact_entry_id = 17 [json_name = "contactEntryId", jstype = JS_STRING];</code>
+     * @return The contactEntryId.
+     */
+    @java.lang.Override
+    public long getContactEntryId() {
+      return contactEntryId_;
+    }
+    /**
+     * <code>int64 contact_entry_id = 17 [json_name = "contactEntryId", jstype = JS_STRING];</code>
+     * @param value The contactEntryId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContactEntryId(long value) {
+
+      contactEntryId_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 contact_entry_id = 17 [json_name = "contactEntryId", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearContactEntryId() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      contactEntryId_ = 0L;
       onChanged();
       return this;
     }

@@ -377,7 +377,7 @@ public final class TicketProto {
       ".v1alpha1.tickets\032\031api/commons/tickets.p" +
       "roto\032 google/protobuf/field_mask.proto\032\037" +
       "google/protobuf/timestamp.proto\"\t\n\007PingR" +
-      "eq\"\t\n\007PingRes\"\220\004\n\017CreateTicketReq\022\024\n\005tit" +
+      "eq\"\t\n\007PingRes\"\276\004\n\017CreateTicketReq\022\024\n\005tit" +
       "le\030\001 \001(\tR\005title\022 \n\013description\030\002 \001(\tR\013de" +
       "scription\022#\n\013project_sid\030\003 \001(\003B\0020\001R\nproj" +
       "ectSid\0225\n\010due_date\030\010 \001(\0132\032.google.protob" +
@@ -390,172 +390,175 @@ public final class TicketProto {
       "\022%\n\014assign_other\030\016 \001(\tB\002\030\001R\013assignOther\022" +
       ">\n\rticket_action\030\017 \003(\0132\031.api.commons.Tic" +
       "ketActionR\014ticketAction\022\'\n\017ticket_assign" +
-      "ee\030\020 \003(\tR\016ticketAssignee\"c\n\033CreateTicket" +
-      "TemplateRequest\022D\n\017ticket_template\030\001 \001(\013" +
-      "2\033.api.commons.TicketTemplateR\016ticketTem" +
-      "plate\"d\n\034CreateTicketTemplateResponse\022D\n" +
-      "\017ticket_template\030\001 \001(\0132\033.api.commons.Tic" +
-      "ketTemplateR\016ticketTemplate\"\323\001\n\031EditTick" +
-      "etTemplateRequest\0220\n\022ticket_template_id\030" +
-      "\001 \001(\003B\0020\001R\020ticketTemplateId\022:\n\nedit_valu" +
-      "e\030\002 \001(\0132\033.api.commons.TicketTemplateR\ted" +
-      "itValue\022H\n\022edited_fields_mask\030\003 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMaskR\020editedFieldsMas" +
-      "k\"=\n\032EditTicketTemplateResponse\022\037\n\tis_ed" +
-      "ited\030\001 \001(\010B\002\030\001R\010isEdited\"\210\002\n\031ListTicketT" +
-      "emplateRequest\0220\n\022ticket_template_id\030\001 \001" +
-      "(\003B\002\030\001R\020ticketTemplateId\022!\n\nproject_id\030\002" +
-      " \001(\003B\002\030\001R\tprojectId\022=\n\014request_mask\030\003 \001(" +
-      "\0132\032.google.protobuf.FieldMaskR\013requestMa" +
-      "sk\022#\n\013template_id\030\004 \001(\003B\0020\001R\ntemplateId\022" +
-      "2\n\023template_project_id\030\005 \001(\003B\0020\001R\021templa" +
-      "teProjectId\"\304\001\n\032ListTicketTemplateRespon" +
-      "se\022J\n\021enabled_templates\030\001 \003(\0132\031.api.comm" +
-      "ons.ListTemplateB\002\030\001R\020enabledTemplates\022Z" +
-      "\n\027ticket_project_template\030\002 \003(\0132\".api.co" +
-      "mmons.TicketProjectTemplateR\025ticketProje" +
-      "ctTemplate\"\351\001\n\034AssignProjectTemplateRequ" +
-      "est\022Q\n\020project_template\030\001 \001(\0132\".api.comm" +
-      "ons.AssignProjectTemplateB\002\030\001R\017projectTe" +
-      "mplate\022!\n\nproject_id\030\002 \001(\003B\0020\001R\tprojectI" +
-      "d\022S\n\024template_description\030\003 \003(\0132 .api.co" +
-      "mmons.TemplateDescriptionR\023templateDescr" +
-      "iption\"D\n\035AssignProjectTemplateResponse\022" +
-      "#\n\013is_assigned\030\001 \001(\010B\002\030\001R\nisAssigned\">\n\017" +
-      "CreateTicketRes\022+\n\006ticket\030\001 \001(\0132\023.api.co" +
-      "mmons.TicketR\006ticket\"\026\n\024GetActionTypeReq" +
-      "uest\"Q\n\025GetActionTypeResponse\0228\n\013action_" +
-      "type\030\001 \003(\0132\027.api.commons.ActionTypeR\nact" +
-      "ionType\"B\n\031GetPhoneNumberTypeRequest\022!\n\014" +
-      "phone_number\030\001 \001(\tR\013phoneNumber:\002\030\001\"]\n\032G" +
-      "etPhoneNumberTypeResponse\022;\n\nphone_type\030" +
-      "\001 \001(\0162\034.api.commons.PhoneNumberTypeR\tpho" +
-      "neType:\002\030\001\"q\n\rEditTicketReq\022!\n\nticket_si" +
-      "d\030\001 \001(\003B\0020\001R\tticketSid\0229\n\nedit_value\030\002 \001" +
-      "(\0132\032.api.commons.EditAttributeR\teditValu" +
-      "e:\002\030\001\"\327\001\n\021EditMaskTicketReq\022#\n\nticket_si" +
-      "d\030\001 \001(\003B\004\030\0010\001R\tticketSid\0222\n\nedit_value\030\002" +
-      " \001(\0132\023.api.commons.TicketR\teditValue\022H\n\022" +
-      "edited_fields_mask\030\003 \003(\0132\032.google.protob" +
-      "uf.FieldMaskR\020editedFieldsMask\022\037\n\013ticket" +
-      "_code\030\004 \001(\tR\nticketCode\"4\n\021EditMaskTicke" +
-      "tRes\022\037\n\tis_edited\030\001 \001(\010B\002\030\001R\010isEdited\"?\n" +
-      "\026ListAllocatedTicketRes\022!\n\nticket_sid\030\001 " +
-      "\003(\003B\0020\001R\tticketSid:\002\030\001\"\034\n\026ListAllocatedT" +
-      "icketReq:\002\030\001\"G\n\030ListAgentTicketsResponse" +
-      "\022+\n\006ticket\030\001 \003(\0132\023.api.commons.TicketR\006t" +
-      "icket\"\236\001\n\027ListAgentTicketsRequest\022F\n\021sel" +
-      "ect_field_mask\030\001 \001(\0132\032.google.protobuf.F" +
-      "ieldMaskR\017selectFieldMask\022;\n\013filter_mask" +
-      "\030\002 \001(\0132\032.google.protobuf.FieldMaskR\nfilt" +
-      "erMask\"u\n!ListAvailableAgentTicketsRespo" +
-      "nse\022#\n\nticket_sid\030\001 \003(\003B\004\030\0010\001R\tticketSid" +
-      "\022+\n\006ticket\030\002 \003(\0132\023.api.commons.TicketR\006t" +
-      "icket\"\355\001\n ListAvailableAgentTicketsReque" +
-      "st\022F\n\021select_field_mask\030\001 \001(\0132\032.google.p" +
-      "rotobuf.FieldMaskR\017selectFieldMask\022W\n\020av" +
-      "ailable_filter\030\002 \001(\0132,.api.v1alpha1.tick" +
-      "ets.AvailableTicketsFilterR\017availableFil" +
-      "ter\022(\n\020agent_view_limit\030\003 \001(\003R\016agentView" +
-      "Limit\">\n\026AvailableTicketsFilter\022$\n\016agent" +
-      "_skill_id\030\001 \003(\tR\014agentSkillId\"0\n\rEditTic" +
-      "ketRes\022\033\n\tis_edited\030\001 \001(\010R\010isEdited:\002\030\001\"" +
-      "\020\n\016ListTicketsReq\"?\n\016ListTicketsRes\022-\n\007t" +
-      "ickets\030\001 \003(\0132\023.api.commons.TicketR\007ticke" +
-      "ts\"~\n\017AssignTicketReq\022!\n\nticket_sid\030\001 \001(" +
-      "\003B\0020\001R\tticketSid\022#\n\rassignee_list\030\002 \001(\tR" +
-      "\014assigneeList\022\037\n\013assigned_id\030\003 \001(\tR\nassi" +
-      "gnedId:\002\030\001\"~\n\017AssignTicketRes\022!\n\nticket_" +
-      "sid\030\001 \001(\003B\0020\001R\tticketSid\022#\n\rassignee_lis" +
-      "t\030\002 \001(\tR\014assigneeList\022\037\n\013assigned_id\030\003 \001" +
-      "(\tR\nassignedId:\002\030\001\"U\n\rViewTicketReq\022#\n\nt" +
-      "icket_sid\030\001 \001(\003B\004\030\0010\001R\tticketSid\022\037\n\013tick" +
-      "et_code\030\002 \001(\tR\nticketCode\"\256\001\n\rViewTicket" +
-      "Res\022+\n\006ticket\030\001 \001(\0132\023.api.commons.Ticket" +
-      "R\006ticket\0220\n\010comments\030\002 \003(\0132\024.api.commons" +
-      ".CommentR\010comments\022>\n\rreply_comment\030\003 \003(" +
-      "\0132\031.api.commons.ReplyCommentR\014replyComme" +
-      "nt\"r\n\020CreateCommentReq\022#\n\nticket_sid\030\001 \001" +
-      "(\003B\004\030\0010\001R\tticketSid\022\030\n\007comment\030\002 \001(\tR\007co" +
-      "mment\022\037\n\013ticket_code\030\003 \001(\tR\nticketCode\"B" +
-      "\n\020CreateCommentRes\022.\n\007comment\030\001 \001(\0132\024.ap" +
-      "i.commons.CommentR\007comment\"\227\001\n\016CloseTick" +
-      "etReq\022#\n\nticket_sid\030\001 \001(\003B\004\030\0010\001R\tticketS" +
-      "id\022\030\n\007comment\030\002 \001(\tR\007comment\022%\n\013from_sta" +
-      "tus\030\003 \001(\003B\004\030\0010\001R\nfromStatus\022\037\n\013ticket_co" +
-      "de\030\004 \001(\tR\nticketCode\"1\n\016CloseTicketRes\022\037" +
-      "\n\tis_status\030\001 \001(\010B\002\030\001R\010isStatus\"\264\001\n\014Crea" +
-      "teSlaReq\022\033\n\007sla_sid\030\001 \001(\003B\0020\001R\006slaSid\022\022\n" +
-      "\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013" +
-      "description\022\036\n\010interval\030\004 \001(\003B\002\030\001R\010inter" +
-      "val\0221\n\010duration\030\005 \001(\0132\025.api.commons.Dura" +
-      "tionR\010duration\"8\n\014CreateSlaRes\022(\n\003sla\030\001 " +
-      "\001(\0132\026.api.commons.TicketSlaR\003sla\"\014\n\nList" +
-      "SlaReq\"D\n\nListSlaRes\0226\n\nticketsSla\030\001 \003(\013" +
-      "2\026.api.commons.TicketSlaR\nticketsSla\"H\n\014" +
-      "UpdateSlaReq\022\033\n\007sla_sid\030\001 \001(\003B\0020\001R\006slaSi" +
-      "d\022\033\n\tis_active\030\002 \001(\003R\010isActive\"F\n\014Update" +
-      "SlaRes\0226\n\nticketsSla\030\001 \001(\0132\026.api.commons" +
-      ".TicketSlaR\nticketsSla\"\025\n\023ListSlaConditi" +
-      "onReq\"U\n\023ListSlaConditionRes\022>\n\014slaCondi" +
-      "tion\030\001 \003(\0132\032.api.commons.SlaConditionsR\014" +
-      "slaCondition\"\266\001\n\017ReplyCommentReq\022#\n\013comm" +
-      "ent_sid\030\001 \001(\003B\0020\001R\ncommentSid\022#\n\nticket_" +
-      "sid\030\002 \001(\003B\004\030\0010\001R\tticketSid\022\024\n\005reply\030\003 \001(" +
-      "\tR\005reply\022\"\n\rcreated_by_id\030\004 \001(\tR\013created" +
-      "ById\022\037\n\013ticket_code\030\005 \001(\tR\nticketCode\"R\n" +
-      "\017ReplyCommentRes\022?\n\nis_created\030\001 \001(\0132 .a" +
-      "pi.commons.ConfirmReplyCommentR\tisCreate" +
-      "d\"<\n\023CreateSelfAssignReq\022!\n\nticket_sid\030\001" +
-      " \001(\003B\0020\001R\tticketSid:\002\030\001\":\n\023CreateSelfAss" +
-      "ignRes\022\037\n\013is_assigned\030\001 \001(\010R\nisAssigned:" +
-      "\002\030\001\"\023\n\021ListSkillsRequest\"I\n\022ListSkillsRe" +
-      "sponse\0223\n\006skills\030\001 \003(\0132\033.api.v1alpha1.ti" +
-      "ckets.SkillR\006skills\"6\n\005Skill\022\031\n\010skill_id" +
-      "\030\001 \001(\tR\007skillId\022\022\n\004name\030\002 \001(\tR\004name\"\022\n\020L" +
-      "istUsersRequest\"E\n\021ListUsersResponse\0220\n\005" +
-      "users\030\001 \003(\0132\032.api.v1alpha1.tickets.UserR" +
-      "\005users\"x\n\004User\022\027\n\007user_id\030\001 \001(\tR\006userId\022" +
-      "\035\n\nfirst_name\030\002 \001(\tR\tfirstName\022\033\n\tlast_n" +
-      "ame\030\003 \001(\tR\010lastName\022\033\n\tis_active\030\004 \001(\010R\010" +
-      "isActive\"[\n\031CreateTicketActionRequest\022>\n" +
-      "\rticket_action\030\001 \001(\0132\031.api.commons.Ticke" +
-      "tActionR\014ticketAction\"\\\n\032CreateTicketAct" +
-      "ionResponse\022>\n\rticket_action\030\001 \001(\0132\031.api" +
-      ".commons.TicketActionR\014ticketAction\"\252\001\n\030" +
-      "CloseTicketActionRequest\022,\n\020ticket_actio" +
-      "n_id\030\001 \001(\003B\0020\001R\016ticketActionId\022!\n\tticket" +
-      "_id\030\002 \001(\003B\004\030\0010\001R\010ticketId\022\034\n\007comment\030\003 \001" +
-      "(\tB\002\030\001R\007comment\022\037\n\013ticket_code\030\004 \001(\tR\nti" +
-      "cketCode\"<\n\031CloseTicketActionResponse\022\037\n" +
-      "\tis_closed\030\001 \001(\010B\002\030\001R\010isClosed\"M\n\031Assign" +
-      "TicketActionRequest\022,\n\020ticket_action_id\030" +
-      "\001 \001(\003B\0020\001R\016ticketActionId:\002\030\001\"A\n\032AssignT" +
-      "icketActionResponse\022\037\n\013is_assigned\030\001 \001(\010" +
-      "R\nisAssigned:\002\030\001\"\241\001\n\031ChangeTicketStatusR" +
-      "equest\022\037\n\tticket_id\030\001 \001(\003B\0020\001R\010ticketId\022" +
-      "\037\n\tstatus_id\030\002 \001(\003B\0020\001R\010statusId\022>\n\rtick" +
-      "et_status\030\003 \001(\0162\031.api.commons.TicketStat" +
-      "usR\014ticketStatus:\002\030\001\"J\n\032ChangeTicketStat" +
-      "usResponse\022(\n\020is_status_edited\030\001 \001(\010R\016is" +
-      "StatusEdited:\002\030\001\"U\n\023AddEntityRefRequest\022" +
-      ">\n\nentity_ref\030\001 \001(\0132\037.api.v1alpha1.ticke" +
-      "ts.EntityRefR\tentityRef\"\026\n\024AddEntityRefR" +
-      "esponse\"@\n\035ListEntityRefsByTicketRequest" +
-      "\022\037\n\013ticket_code\030\001 \001(\tR\nticketCode\"`\n\036Lis" +
-      "tEntityRefsByTicketResponse\022>\n\nentity_re" +
-      "f\030\001 \003(\0132\037.api.v1alpha1.tickets.EntityRef" +
-      "R\tentityRef\"1\n\035ListTicketsByEntityRefReq" +
-      "uest\022\020\n\003uri\030\001 \001(\tR\003uri\"O\n\036ListTicketsByE" +
-      "ntityRefResponse\022-\n\007tickets\030\001 \003(\0132\023.api." +
-      "commons.TicketR\007tickets\"r\n\tEntityRef\022\025\n\006" +
-      "org_id\030\001 \001(\tR\005orgId\022\033\n\tregion_id\030\002 \001(\tR\010" +
-      "regionId\022\037\n\013ticket_code\030\003 \001(\tR\nticketCod" +
-      "e\022\020\n\003uri\030\004 \001(\tR\003uriB\247\001\n&com.tcn.cloud.ap" +
-      "i.api.v1alpha1.ticketsB\013TicketProtoP\001\242\002\003" +
-      "AVT\252\002\024Api.V1alpha1.Tickets\312\002\024Api\\V1alpha" +
-      "1\\Tickets\342\002 Api\\V1alpha1\\Tickets\\GPBMeta" +
-      "data\352\002\026Api::V1alpha1::Ticketsb\006proto3"
+      "ee\030\020 \003(\tR\016ticketAssignee\022,\n\020contact_entr" +
+      "y_id\030\021 \001(\003B\0020\001R\016contactEntryId\"c\n\033Create" +
+      "TicketTemplateRequest\022D\n\017ticket_template" +
+      "\030\001 \001(\0132\033.api.commons.TicketTemplateR\016tic" +
+      "ketTemplate\"d\n\034CreateTicketTemplateRespo" +
+      "nse\022D\n\017ticket_template\030\001 \001(\0132\033.api.commo" +
+      "ns.TicketTemplateR\016ticketTemplate\"\323\001\n\031Ed" +
+      "itTicketTemplateRequest\0220\n\022ticket_templa" +
+      "te_id\030\001 \001(\003B\0020\001R\020ticketTemplateId\022:\n\nedi" +
+      "t_value\030\002 \001(\0132\033.api.commons.TicketTempla" +
+      "teR\teditValue\022H\n\022edited_fields_mask\030\003 \001(" +
+      "\0132\032.google.protobuf.FieldMaskR\020editedFie" +
+      "ldsMask\"=\n\032EditTicketTemplateResponse\022\037\n" +
+      "\tis_edited\030\001 \001(\010B\002\030\001R\010isEdited\"\210\002\n\031ListT" +
+      "icketTemplateRequest\0220\n\022ticket_template_" +
+      "id\030\001 \001(\003B\002\030\001R\020ticketTemplateId\022!\n\nprojec" +
+      "t_id\030\002 \001(\003B\002\030\001R\tprojectId\022=\n\014request_mas" +
+      "k\030\003 \001(\0132\032.google.protobuf.FieldMaskR\013req" +
+      "uestMask\022#\n\013template_id\030\004 \001(\003B\0020\001R\ntempl" +
+      "ateId\0222\n\023template_project_id\030\005 \001(\003B\0020\001R\021" +
+      "templateProjectId\"\304\001\n\032ListTicketTemplate" +
+      "Response\022J\n\021enabled_templates\030\001 \003(\0132\031.ap" +
+      "i.commons.ListTemplateB\002\030\001R\020enabledTempl" +
+      "ates\022Z\n\027ticket_project_template\030\002 \003(\0132\"." +
+      "api.commons.TicketProjectTemplateR\025ticke" +
+      "tProjectTemplate\"\351\001\n\034AssignProjectTempla" +
+      "teRequest\022Q\n\020project_template\030\001 \001(\0132\".ap" +
+      "i.commons.AssignProjectTemplateB\002\030\001R\017pro" +
+      "jectTemplate\022!\n\nproject_id\030\002 \001(\003B\0020\001R\tpr" +
+      "ojectId\022S\n\024template_description\030\003 \003(\0132 ." +
+      "api.commons.TemplateDescriptionR\023templat" +
+      "eDescription\"D\n\035AssignProjectTemplateRes" +
+      "ponse\022#\n\013is_assigned\030\001 \001(\010B\002\030\001R\nisAssign" +
+      "ed\">\n\017CreateTicketRes\022+\n\006ticket\030\001 \001(\0132\023." +
+      "api.commons.TicketR\006ticket\"\026\n\024GetActionT" +
+      "ypeRequest\"Q\n\025GetActionTypeResponse\0228\n\013a" +
+      "ction_type\030\001 \003(\0132\027.api.commons.ActionTyp" +
+      "eR\nactionType\"B\n\031GetPhoneNumberTypeReque" +
+      "st\022!\n\014phone_number\030\001 \001(\tR\013phoneNumber:\002\030" +
+      "\001\"]\n\032GetPhoneNumberTypeResponse\022;\n\nphone" +
+      "_type\030\001 \001(\0162\034.api.commons.PhoneNumberTyp" +
+      "eR\tphoneType:\002\030\001\"q\n\rEditTicketReq\022!\n\ntic" +
+      "ket_sid\030\001 \001(\003B\0020\001R\tticketSid\0229\n\nedit_val" +
+      "ue\030\002 \001(\0132\032.api.commons.EditAttributeR\ted" +
+      "itValue:\002\030\001\"\205\002\n\021EditMaskTicketReq\022#\n\ntic" +
+      "ket_sid\030\001 \001(\003B\004\030\0010\001R\tticketSid\0222\n\nedit_v" +
+      "alue\030\002 \001(\0132\023.api.commons.TicketR\teditVal" +
+      "ue\022H\n\022edited_fields_mask\030\003 \003(\0132\032.google." +
+      "protobuf.FieldMaskR\020editedFieldsMask\022\037\n\013" +
+      "ticket_code\030\004 \001(\tR\nticketCode\022,\n\020contact" +
+      "_entry_id\030\021 \001(\003B\0020\001R\016contactEntryId\"4\n\021E" +
+      "ditMaskTicketRes\022\037\n\tis_edited\030\001 \001(\010B\002\030\001R" +
+      "\010isEdited\"?\n\026ListAllocatedTicketRes\022!\n\nt" +
+      "icket_sid\030\001 \003(\003B\0020\001R\tticketSid:\002\030\001\"\034\n\026Li" +
+      "stAllocatedTicketReq:\002\030\001\"G\n\030ListAgentTic" +
+      "ketsResponse\022+\n\006ticket\030\001 \003(\0132\023.api.commo" +
+      "ns.TicketR\006ticket\"\236\001\n\027ListAgentTicketsRe" +
+      "quest\022F\n\021select_field_mask\030\001 \001(\0132\032.googl" +
+      "e.protobuf.FieldMaskR\017selectFieldMask\022;\n" +
+      "\013filter_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
+      "ldMaskR\nfilterMask\"u\n!ListAvailableAgent" +
+      "TicketsResponse\022#\n\nticket_sid\030\001 \003(\003B\004\030\0010" +
+      "\001R\tticketSid\022+\n\006ticket\030\002 \003(\0132\023.api.commo" +
+      "ns.TicketR\006ticket\"\355\001\n ListAvailableAgent" +
+      "TicketsRequest\022F\n\021select_field_mask\030\001 \001(" +
+      "\0132\032.google.protobuf.FieldMaskR\017selectFie" +
+      "ldMask\022W\n\020available_filter\030\002 \001(\0132,.api.v" +
+      "1alpha1.tickets.AvailableTicketsFilterR\017" +
+      "availableFilter\022(\n\020agent_view_limit\030\003 \001(" +
+      "\003R\016agentViewLimit\">\n\026AvailableTicketsFil" +
+      "ter\022$\n\016agent_skill_id\030\001 \003(\tR\014agentSkillI" +
+      "d\"0\n\rEditTicketRes\022\033\n\tis_edited\030\001 \001(\010R\010i" +
+      "sEdited:\002\030\001\"\020\n\016ListTicketsReq\"?\n\016ListTic" +
+      "ketsRes\022-\n\007tickets\030\001 \003(\0132\023.api.commons.T" +
+      "icketR\007tickets\"~\n\017AssignTicketReq\022!\n\ntic" +
+      "ket_sid\030\001 \001(\003B\0020\001R\tticketSid\022#\n\rassignee" +
+      "_list\030\002 \001(\tR\014assigneeList\022\037\n\013assigned_id" +
+      "\030\003 \001(\tR\nassignedId:\002\030\001\"~\n\017AssignTicketRe" +
+      "s\022!\n\nticket_sid\030\001 \001(\003B\0020\001R\tticketSid\022#\n\r" +
+      "assignee_list\030\002 \001(\tR\014assigneeList\022\037\n\013ass" +
+      "igned_id\030\003 \001(\tR\nassignedId:\002\030\001\"U\n\rViewTi" +
+      "cketReq\022#\n\nticket_sid\030\001 \001(\003B\004\030\0010\001R\tticke" +
+      "tSid\022\037\n\013ticket_code\030\002 \001(\tR\nticketCode\"\256\001" +
+      "\n\rViewTicketRes\022+\n\006ticket\030\001 \001(\0132\023.api.co" +
+      "mmons.TicketR\006ticket\0220\n\010comments\030\002 \003(\0132\024" +
+      ".api.commons.CommentR\010comments\022>\n\rreply_" +
+      "comment\030\003 \003(\0132\031.api.commons.ReplyComment" +
+      "R\014replyComment\"r\n\020CreateCommentReq\022#\n\nti" +
+      "cket_sid\030\001 \001(\003B\004\030\0010\001R\tticketSid\022\030\n\007comme" +
+      "nt\030\002 \001(\tR\007comment\022\037\n\013ticket_code\030\003 \001(\tR\n" +
+      "ticketCode\"B\n\020CreateCommentRes\022.\n\007commen" +
+      "t\030\001 \001(\0132\024.api.commons.CommentR\007comment\"\227" +
+      "\001\n\016CloseTicketReq\022#\n\nticket_sid\030\001 \001(\003B\004\030" +
+      "\0010\001R\tticketSid\022\030\n\007comment\030\002 \001(\tR\007comment" +
+      "\022%\n\013from_status\030\003 \001(\003B\004\030\0010\001R\nfromStatus\022" +
+      "\037\n\013ticket_code\030\004 \001(\tR\nticketCode\"1\n\016Clos" +
+      "eTicketRes\022\037\n\tis_status\030\001 \001(\010B\002\030\001R\010isSta" +
+      "tus\"\264\001\n\014CreateSlaReq\022\033\n\007sla_sid\030\001 \001(\003B\0020" +
+      "\001R\006slaSid\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descrip" +
+      "tion\030\003 \001(\tR\013description\022\036\n\010interval\030\004 \001(" +
+      "\003B\002\030\001R\010interval\0221\n\010duration\030\005 \001(\0132\025.api." +
+      "commons.DurationR\010duration\"8\n\014CreateSlaR" +
+      "es\022(\n\003sla\030\001 \001(\0132\026.api.commons.TicketSlaR" +
+      "\003sla\"\014\n\nListSlaReq\"D\n\nListSlaRes\0226\n\ntick" +
+      "etsSla\030\001 \003(\0132\026.api.commons.TicketSlaR\nti" +
+      "cketsSla\"H\n\014UpdateSlaReq\022\033\n\007sla_sid\030\001 \001(" +
+      "\003B\0020\001R\006slaSid\022\033\n\tis_active\030\002 \001(\003R\010isActi" +
+      "ve\"F\n\014UpdateSlaRes\0226\n\nticketsSla\030\001 \001(\0132\026" +
+      ".api.commons.TicketSlaR\nticketsSla\"\025\n\023Li" +
+      "stSlaConditionReq\"U\n\023ListSlaConditionRes" +
+      "\022>\n\014slaCondition\030\001 \003(\0132\032.api.commons.Sla" +
+      "ConditionsR\014slaCondition\"\266\001\n\017ReplyCommen" +
+      "tReq\022#\n\013comment_sid\030\001 \001(\003B\0020\001R\ncommentSi" +
+      "d\022#\n\nticket_sid\030\002 \001(\003B\004\030\0010\001R\tticketSid\022\024" +
+      "\n\005reply\030\003 \001(\tR\005reply\022\"\n\rcreated_by_id\030\004 " +
+      "\001(\tR\013createdById\022\037\n\013ticket_code\030\005 \001(\tR\nt" +
+      "icketCode\"R\n\017ReplyCommentRes\022?\n\nis_creat" +
+      "ed\030\001 \001(\0132 .api.commons.ConfirmReplyComme" +
+      "ntR\tisCreated\"<\n\023CreateSelfAssignReq\022!\n\n" +
+      "ticket_sid\030\001 \001(\003B\0020\001R\tticketSid:\002\030\001\":\n\023C" +
+      "reateSelfAssignRes\022\037\n\013is_assigned\030\001 \001(\010R" +
+      "\nisAssigned:\002\030\001\"\023\n\021ListSkillsRequest\"I\n\022" +
+      "ListSkillsResponse\0223\n\006skills\030\001 \003(\0132\033.api" +
+      ".v1alpha1.tickets.SkillR\006skills\"6\n\005Skill" +
+      "\022\031\n\010skill_id\030\001 \001(\tR\007skillId\022\022\n\004name\030\002 \001(" +
+      "\tR\004name\"\022\n\020ListUsersRequest\"E\n\021ListUsers" +
+      "Response\0220\n\005users\030\001 \003(\0132\032.api.v1alpha1.t" +
+      "ickets.UserR\005users\"x\n\004User\022\027\n\007user_id\030\001 " +
+      "\001(\tR\006userId\022\035\n\nfirst_name\030\002 \001(\tR\tfirstNa" +
+      "me\022\033\n\tlast_name\030\003 \001(\tR\010lastName\022\033\n\tis_ac" +
+      "tive\030\004 \001(\010R\010isActive\"[\n\031CreateTicketActi" +
+      "onRequest\022>\n\rticket_action\030\001 \001(\0132\031.api.c" +
+      "ommons.TicketActionR\014ticketAction\"\\\n\032Cre" +
+      "ateTicketActionResponse\022>\n\rticket_action" +
+      "\030\001 \001(\0132\031.api.commons.TicketActionR\014ticke" +
+      "tAction\"\252\001\n\030CloseTicketActionRequest\022,\n\020" +
+      "ticket_action_id\030\001 \001(\003B\0020\001R\016ticketAction" +
+      "Id\022!\n\tticket_id\030\002 \001(\003B\004\030\0010\001R\010ticketId\022\034\n" +
+      "\007comment\030\003 \001(\tB\002\030\001R\007comment\022\037\n\013ticket_co" +
+      "de\030\004 \001(\tR\nticketCode\"<\n\031CloseTicketActio" +
+      "nResponse\022\037\n\tis_closed\030\001 \001(\010B\002\030\001R\010isClos" +
+      "ed\"M\n\031AssignTicketActionRequest\022,\n\020ticke" +
+      "t_action_id\030\001 \001(\003B\0020\001R\016ticketActionId:\002\030" +
+      "\001\"A\n\032AssignTicketActionResponse\022\037\n\013is_as" +
+      "signed\030\001 \001(\010R\nisAssigned:\002\030\001\"\241\001\n\031ChangeT" +
+      "icketStatusRequest\022\037\n\tticket_id\030\001 \001(\003B\0020" +
+      "\001R\010ticketId\022\037\n\tstatus_id\030\002 \001(\003B\0020\001R\010stat" +
+      "usId\022>\n\rticket_status\030\003 \001(\0162\031.api.common" +
+      "s.TicketStatusR\014ticketStatus:\002\030\001\"J\n\032Chan" +
+      "geTicketStatusResponse\022(\n\020is_status_edit" +
+      "ed\030\001 \001(\010R\016isStatusEdited:\002\030\001\"U\n\023AddEntit" +
+      "yRefRequest\022>\n\nentity_ref\030\001 \001(\0132\037.api.v1" +
+      "alpha1.tickets.EntityRefR\tentityRef\"\026\n\024A" +
+      "ddEntityRefResponse\"@\n\035ListEntityRefsByT" +
+      "icketRequest\022\037\n\013ticket_code\030\001 \001(\tR\nticke" +
+      "tCode\"`\n\036ListEntityRefsByTicketResponse\022" +
+      ">\n\nentity_ref\030\001 \003(\0132\037.api.v1alpha1.ticke" +
+      "ts.EntityRefR\tentityRef\"1\n\035ListTicketsBy" +
+      "EntityRefRequest\022\020\n\003uri\030\001 \001(\tR\003uri\"O\n\036Li" +
+      "stTicketsByEntityRefResponse\022-\n\007tickets\030" +
+      "\001 \003(\0132\023.api.commons.TicketR\007tickets\"r\n\tE" +
+      "ntityRef\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\033\n\tregio" +
+      "n_id\030\002 \001(\tR\010regionId\022\037\n\013ticket_code\030\003 \001(" +
+      "\tR\nticketCode\022\020\n\003uri\030\004 \001(\tR\003uriB\247\001\n&com." +
+      "tcn.cloud.api.api.v1alpha1.ticketsB\013Tick" +
+      "etProtoP\001\242\002\003AVT\252\002\024Api.V1alpha1.Tickets\312\002" +
+      "\024Api\\V1alpha1\\Tickets\342\002 Api\\V1alpha1\\Tic" +
+      "kets\\GPBMetadata\352\002\026Api::V1alpha1::Ticket" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -581,7 +584,7 @@ public final class TicketProto {
     internal_static_api_v1alpha1_tickets_CreateTicketReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CreateTicketReq_descriptor,
-        new java.lang.String[] { "Title", "Description", "ProjectSid", "DueDate", "Metadata", "TicketSkills", "Status", "TicketSla", "AssignSelf", "AssignOther", "TicketAction", "TicketAssignee", });
+        new java.lang.String[] { "Title", "Description", "ProjectSid", "DueDate", "Metadata", "TicketSkills", "Status", "TicketSla", "AssignSelf", "AssignOther", "TicketAction", "TicketAssignee", "ContactEntryId", });
     internal_static_api_v1alpha1_tickets_CreateTicketTemplateRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_v1alpha1_tickets_CreateTicketTemplateRequest_fieldAccessorTable = new
@@ -671,7 +674,7 @@ public final class TicketProto {
     internal_static_api_v1alpha1_tickets_EditMaskTicketReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_EditMaskTicketReq_descriptor,
-        new java.lang.String[] { "TicketSid", "EditValue", "EditedFieldsMask", "TicketCode", });
+        new java.lang.String[] { "TicketSid", "EditValue", "EditedFieldsMask", "TicketCode", "ContactEntryId", });
     internal_static_api_v1alpha1_tickets_EditMaskTicketRes_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_api_v1alpha1_tickets_EditMaskTicketRes_fieldAccessorTable = new

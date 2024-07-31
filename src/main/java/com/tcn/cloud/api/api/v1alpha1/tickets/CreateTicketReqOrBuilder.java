@@ -312,4 +312,10 @@ public interface CreateTicketReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTicketAssigneeBytes(int index);
+
+  /**
+   * <code>int64 contact_entry_id = 17 [json_name = "contactEntryId", jstype = JS_STRING];</code>
+   * @return The contactEntryId.
+   */
+  long getContactEntryId();
 }

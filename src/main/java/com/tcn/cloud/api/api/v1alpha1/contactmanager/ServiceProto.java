@@ -27,7 +27,7 @@ public final class ServiceProto {
       "oto\022\033api.v1alpha1.contactmanager\032\027annota" +
       "tions/authz.proto\0320api/v1alpha1/contactm" +
       "anager/contactmanager.proto\032\034google/api/" +
-      "annotations.proto2\353\013\n\016ContactManager\022\312\001\n" +
+      "annotations.proto2\323\r\n\016ContactManager\022\312\001\n" +
       "\016GetContactList\0222.api.v1alpha1.contactma" +
       "nager.GetContactListRequest\0323.api.v1alph" +
       "a1.contactmanager.GetContactListResponse" +
@@ -65,12 +65,18 @@ public final class ServiceProto {
       "api.v1alpha1.contactmanager.EditContactE" +
       "ntryResponse\"Q\272\270\221\002\005\n\003\010\354\'\202\323\344\223\002A\"</api/v1a" +
       "lpha1/contactmanager/contactmanager/edit" +
-      "contactentry:\001*B\313\001\n-com.tcn.cloud.api.ap" +
-      "i.v1alpha1.contactmanagerB\014ServiceProtoP" +
-      "\001\242\002\003AVC\252\002\033Api.V1alpha1.Contactmanager\312\002\033" +
-      "Api\\V1alpha1\\Contactmanager\342\002\'Api\\V1alph" +
-      "a1\\Contactmanager\\GPBMetadata\352\002\035Api::V1a" +
-      "lpha1::Contactmanagerb\006proto3"
+      "contactentry:\001*\022\345\001\n\024ListContactsByEntity" +
+      "\0228.api.v1alpha1.contactmanager.ListConta" +
+      "ctsByEntityRequest\0329.api.v1alpha1.contac" +
+      "tmanager.ListContactsByEntityResponse\"X\272" +
+      "\270\221\002\010\n\006\010\354\'\010\355\'\202\323\344\223\002E\"@/api/v1alpha1/contac" +
+      "tmanager/contactmanager/listcontactsbyen" +
+      "tity:\001*B\313\001\n-com.tcn.cloud.api.api.v1alph" +
+      "a1.contactmanagerB\014ServiceProtoP\001\242\002\003AVC\252" +
+      "\002\033Api.V1alpha1.Contactmanager\312\002\033Api\\V1al" +
+      "pha1\\Contactmanager\342\002\'Api\\V1alpha1\\Conta" +
+      "ctmanager\\GPBMetadata\352\002\035Api::V1alpha1::C" +
+      "ontactmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

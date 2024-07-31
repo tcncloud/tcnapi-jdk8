@@ -64,7 +64,7 @@ public interface CreateSlaReqOrBuilder extends
    *
    * <code>int64 interval = 4 [json_name = "interval", deprecated = true];</code>
    * @deprecated api.v1alpha1.tickets.CreateSlaReq.interval is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=281
+   *     See api/v1alpha1/tickets/ticket.proto;l=283
    * @return The interval.
    */
   @java.lang.Deprecated long getInterval();

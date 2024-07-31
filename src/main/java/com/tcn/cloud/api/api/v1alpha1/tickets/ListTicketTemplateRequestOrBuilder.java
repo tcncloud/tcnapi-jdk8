@@ -10,7 +10,7 @@ public interface ListTicketTemplateRequestOrBuilder extends
   /**
    * <code>int64 ticket_template_id = 1 [json_name = "ticketTemplateId", deprecated = true];</code>
    * @deprecated api.v1alpha1.tickets.ListTicketTemplateRequest.ticket_template_id is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=59
+   *     See api/v1alpha1/tickets/ticket.proto;l=60
    * @return The ticketTemplateId.
    */
   @java.lang.Deprecated long getTicketTemplateId();
@@ -18,7 +18,7 @@ public interface ListTicketTemplateRequestOrBuilder extends
   /**
    * <code>int64 project_id = 2 [json_name = "projectId", deprecated = true];</code>
    * @deprecated api.v1alpha1.tickets.ListTicketTemplateRequest.project_id is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=60
+   *     See api/v1alpha1/tickets/ticket.proto;l=61
    * @return The projectId.
    */
   @java.lang.Deprecated long getProjectId();

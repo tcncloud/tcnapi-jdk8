@@ -10,7 +10,7 @@ public interface CloseTicketActionResponseOrBuilder extends
   /**
    * <code>bool is_closed = 1 [json_name = "isClosed", deprecated = true];</code>
    * @deprecated api.v1alpha1.tickets.CloseTicketActionResponse.is_closed is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=400
+   *     See api/v1alpha1/tickets/ticket.proto;l=402
    * @return The isClosed.
    */
   @java.lang.Deprecated boolean getIsClosed();

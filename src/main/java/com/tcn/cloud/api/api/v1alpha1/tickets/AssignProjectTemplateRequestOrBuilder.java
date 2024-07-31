@@ -10,14 +10,14 @@ public interface AssignProjectTemplateRequestOrBuilder extends
   /**
    * <code>.api.commons.AssignProjectTemplate project_template = 1 [json_name = "projectTemplate", deprecated = true];</code>
    * @deprecated api.v1alpha1.tickets.AssignProjectTemplateRequest.project_template is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=74
+   *     See api/v1alpha1/tickets/ticket.proto;l=75
    * @return Whether the projectTemplate field is set.
    */
   @java.lang.Deprecated boolean hasProjectTemplate();
   /**
    * <code>.api.commons.AssignProjectTemplate project_template = 1 [json_name = "projectTemplate", deprecated = true];</code>
    * @deprecated api.v1alpha1.tickets.AssignProjectTemplateRequest.project_template is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=74
+   *     See api/v1alpha1/tickets/ticket.proto;l=75
    * @return The projectTemplate.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.AssignProjectTemplate getProjectTemplate();

@@ -54,7 +54,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.EditMaskTicketReq.ticket_sid is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=121
+   *     See api/v1alpha1/tickets/ticket.proto;l=122
    * @return The ticketSid.
    */
   @java.lang.Override
@@ -208,6 +208,17 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CONTACT_ENTRY_ID_FIELD_NUMBER = 17;
+  private long contactEntryId_ = 0L;
+  /**
+   * <code>int64 contact_entry_id = 17 [json_name = "contactEntryId", jstype = JS_STRING];</code>
+   * @return The contactEntryId.
+   */
+  @java.lang.Override
+  public long getContactEntryId() {
+    return contactEntryId_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -234,6 +245,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, ticketCode_);
     }
+    if (contactEntryId_ != 0L) {
+      output.writeInt64(17, contactEntryId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -257,6 +271,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, ticketCode_);
+    }
+    if (contactEntryId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(17, contactEntryId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -284,6 +302,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEditedFieldsMaskList())) return false;
     if (!getTicketCode()
         .equals(other.getTicketCode())) return false;
+    if (getContactEntryId()
+        != other.getContactEntryId()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -308,6 +328,9 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + TICKET_CODE_FIELD_NUMBER;
     hash = (53 * hash) + getTicketCode().hashCode();
+    hash = (37 * hash) + CONTACT_ENTRY_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getContactEntryId());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -458,6 +481,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000004);
       ticketCode_ = "";
+      contactEntryId_ = 0L;
       return this;
     }
 
@@ -514,6 +538,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.ticketCode_ = ticketCode_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.contactEntryId_ = contactEntryId_;
       }
     }
 
@@ -598,6 +625,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (other.getContactEntryId() != 0L) {
+        setContactEntryId(other.getContactEntryId());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -654,6 +684,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 136: {
+              contactEntryId_ = input.readInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 136
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -679,7 +714,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.EditMaskTicketReq.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=121
+     *     See api/v1alpha1/tickets/ticket.proto;l=122
      * @return The ticketSid.
      */
     @java.lang.Override
@@ -693,7 +728,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.EditMaskTicketReq.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=121
+     *     See api/v1alpha1/tickets/ticket.proto;l=122
      * @param value The ticketSid to set.
      * @return This builder for chaining.
      */
@@ -711,7 +746,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>int64 ticket_sid = 1 [json_name = "ticketSid", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.EditMaskTicketReq.ticket_sid is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=121
+     *     See api/v1alpha1/tickets/ticket.proto;l=122
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTicketSid() {
@@ -1276,6 +1311,38 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ticketCode_ = value;
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private long contactEntryId_ ;
+    /**
+     * <code>int64 contact_entry_id = 17 [json_name = "contactEntryId", jstype = JS_STRING];</code>
+     * @return The contactEntryId.
+     */
+    @java.lang.Override
+    public long getContactEntryId() {
+      return contactEntryId_;
+    }
+    /**
+     * <code>int64 contact_entry_id = 17 [json_name = "contactEntryId", jstype = JS_STRING];</code>
+     * @param value The contactEntryId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContactEntryId(long value) {
+
+      contactEntryId_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 contact_entry_id = 17 [json_name = "contactEntryId", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearContactEntryId() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      contactEntryId_ = 0L;
       onChanged();
       return this;
     }
