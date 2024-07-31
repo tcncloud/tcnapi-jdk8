@@ -58,4 +58,14 @@ public interface RgbaColorOrBuilder extends
    */
   com.google.protobuf.ByteString
       getNameBytes();
+
+  /**
+   * <pre>
+   * ID of the rgba color.
+   * </pre>
+   *
+   * <code>int64 rgba_color_id = 6 [json_name = "rgbaColorId"];</code>
+   * @return The rgbaColorId.
+   */
+  long getRgbaColorId();
 }
