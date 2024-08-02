@@ -30,21 +30,30 @@ public final class TagsProto {
     java.lang.String[] descriptorData = {
       "\n-services/billing/entities/v1alpha4/tag" +
       "s.proto\022\"services.billing.entities.v1alp" +
-      "ha4\032\037google/protobuf/timestamp.proto\"\231\002\n" +
+      "ha4\032\037google/protobuf/timestamp.proto\"\366\002\n" +
       "\nBillingTag\022$\n\016billing_tag_id\030\001 \001(\tR\014bil" +
       "lingTagId\022\022\n\004name\030\002 \001(\tR\004name\022;\n\013create_" +
       "time\030\003 \001(\0132\032.google.protobuf.TimestampR\n" +
       "createTime\022;\n\013update_time\030\004 \001(\0132\032.google" +
       ".protobuf.TimestampR\nupdateTime\022;\n\013delet" +
       "e_time\030\005 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\ndeleteTime\022\032\n\010category\030\006 \001(\tR\010category" +
-      "B\354\001\n4com.tcn.cloud.api.services.billing." +
-      "entities.v1alpha4B\tTagsProtoP\001\242\002\003SBE\252\002\"S" +
-      "ervices.Billing.Entities.V1alpha4\312\002\"Serv" +
-      "ices\\Billing\\Entities\\V1alpha4\342\002.Service" +
-      "s\\Billing\\Entities\\V1alpha4\\GPBMetadata\352" +
-      "\002%Services::Billing::Entities::V1alpha4b" +
-      "\006proto3"
+      "R\ndeleteTime\022\036\n\010category\030\006 \001(\tB\002\030\001R\010cate" +
+      "gory\022W\n\020billing_category\030\007 \001(\0162,.service" +
+      "s.billing.entities.v1alpha4.CategoryR\017bi" +
+      "llingCategory*\227\002\n\010Category\022\030\n\024CATEGORY_U" +
+      "NSPECIFIED\020\000\022%\n!CATEGORY_COMMUNICATIONS_" +
+      "OMNI_CHAT\020e\022&\n\"CATEGORY_COMMUNICATIONS_O" +
+      "MNI_EMAIL\020f\022$\n CATEGORY_COMMUNICATIONS_O" +
+      "MNI_SMS\020g\022&\n\"CATEGORY_COMMUNICATIONS_OMN" +
+      "I_AGENT\020h\022*\n&CATEGORY_COMMUNICATIONS_OMN" +
+      "I_RESOURCES\020i\022(\n#CATEGORY_DATA_MANAGEMEN" +
+      "T_COMPLIANCE\020\311\001B\354\001\n4com.tcn.cloud.api.se" +
+      "rvices.billing.entities.v1alpha4B\tTagsPr" +
+      "otoP\001\242\002\003SBE\252\002\"Services.Billing.Entities." +
+      "V1alpha4\312\002\"Services\\Billing\\Entities\\V1a" +
+      "lpha4\342\002.Services\\Billing\\Entities\\V1alph" +
+      "a4\\GPBMetadata\352\002%Services::Billing::Enti" +
+      "ties::V1alpha4b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -56,7 +65,7 @@ public final class TagsProto {
     internal_static_services_billing_entities_v1alpha4_BillingTag_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha4_BillingTag_descriptor,
-        new java.lang.String[] { "BillingTagId", "Name", "CreateTime", "UpdateTime", "DeleteTime", "Category", });
+        new java.lang.String[] { "BillingTagId", "Name", "CreateTime", "UpdateTime", "DeleteTime", "Category", "BillingCategory", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

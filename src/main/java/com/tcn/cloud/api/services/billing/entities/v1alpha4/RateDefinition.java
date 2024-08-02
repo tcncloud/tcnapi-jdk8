@@ -18,6 +18,7 @@ private static final long serialVersionUID = 0L;
   private RateDefinition() {
     rateDefinitionId_ = "";
     skuId_ = "";
+    billingTagId_ = "";
   }
 
   @java.lang.Override
@@ -121,26 +122,30 @@ private static final long serialVersionUID = 0L;
   public static final int BILLING_TAG_FIELD_NUMBER = 3;
   private com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag billingTag_;
   /**
-   * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag"];</code>
+   * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.RateDefinition.billing_tag is deprecated.
+   *     See services/billing/entities/v1alpha4/rates.proto;l=11
    * @return Whether the billingTag field is set.
    */
   @java.lang.Override
-  public boolean hasBillingTag() {
+  @java.lang.Deprecated public boolean hasBillingTag() {
     return billingTag_ != null;
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag"];</code>
+   * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.RateDefinition.billing_tag is deprecated.
+   *     See services/billing/entities/v1alpha4/rates.proto;l=11
    * @return The billingTag.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag getBillingTag() {
+  @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag getBillingTag() {
     return billingTag_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag.getDefaultInstance() : billingTag_;
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag"];</code>
+   * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTagOrBuilder getBillingTagOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTagOrBuilder getBillingTagOrBuilder() {
     return billingTag_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag.getDefaultInstance() : billingTag_;
   }
 
@@ -270,6 +275,45 @@ private static final long serialVersionUID = 0L;
     return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
   }
 
+  public static final int BILLING_TAG_ID_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object billingTagId_ = "";
+  /**
+   * <code>string billing_tag_id = 10 [json_name = "billingTagId"];</code>
+   * @return The billingTagId.
+   */
+  @java.lang.Override
+  public java.lang.String getBillingTagId() {
+    java.lang.Object ref = billingTagId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      billingTagId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string billing_tag_id = 10 [json_name = "billingTagId"];</code>
+   * @return The bytes for billingTagId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getBillingTagIdBytes() {
+    java.lang.Object ref = billingTagId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      billingTagId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -310,6 +354,9 @@ private static final long serialVersionUID = 0L;
     }
     if (deleteTime_ != null) {
       output.writeMessage(9, getDeleteTime());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingTagId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, billingTagId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -353,6 +400,9 @@ private static final long serialVersionUID = 0L;
     if (deleteTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getDeleteTime());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingTagId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, billingTagId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -402,6 +452,8 @@ private static final long serialVersionUID = 0L;
       if (!getDeleteTime()
           .equals(other.getDeleteTime())) return false;
     }
+    if (!getBillingTagId()
+        .equals(other.getBillingTagId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -443,6 +495,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DELETE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getDeleteTime().hashCode();
     }
+    hash = (37 * hash) + BILLING_TAG_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getBillingTagId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -603,6 +657,7 @@ private static final long serialVersionUID = 0L;
         deleteTimeBuilder_.dispose();
         deleteTimeBuilder_ = null;
       }
+      billingTagId_ = "";
       return this;
     }
 
@@ -672,6 +727,9 @@ private static final long serialVersionUID = 0L;
         result.deleteTime_ = deleteTimeBuilder_ == null
             ? deleteTime_
             : deleteTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.billingTagId_ = billingTagId_;
       }
     }
 
@@ -749,6 +807,11 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDeleteTime()) {
         mergeDeleteTime(other.getDeleteTime());
+      }
+      if (!other.getBillingTagId().isEmpty()) {
+        billingTagId_ = other.billingTagId_;
+        bitField0_ |= 0x00000200;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -831,6 +894,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 74
+            case 82: {
+              billingTagId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -996,17 +1064,21 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag, com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTagOrBuilder> billingTagBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag"];</code>
+     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha4.RateDefinition.billing_tag is deprecated.
+     *     See services/billing/entities/v1alpha4/rates.proto;l=11
      * @return Whether the billingTag field is set.
      */
-    public boolean hasBillingTag() {
+    @java.lang.Deprecated public boolean hasBillingTag() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag"];</code>
+     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha4.RateDefinition.billing_tag is deprecated.
+     *     See services/billing/entities/v1alpha4/rates.proto;l=11
      * @return The billingTag.
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag getBillingTag() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag getBillingTag() {
       if (billingTagBuilder_ == null) {
         return billingTag_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag.getDefaultInstance() : billingTag_;
       } else {
@@ -1014,9 +1086,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag"];</code>
+     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
      */
-    public Builder setBillingTag(com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag value) {
+    @java.lang.Deprecated public Builder setBillingTag(com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag value) {
       if (billingTagBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1030,9 +1102,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag"];</code>
+     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
      */
-    public Builder setBillingTag(
+    @java.lang.Deprecated public Builder setBillingTag(
         com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag.Builder builderForValue) {
       if (billingTagBuilder_ == null) {
         billingTag_ = builderForValue.build();
@@ -1044,9 +1116,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag"];</code>
+     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
      */
-    public Builder mergeBillingTag(com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag value) {
+    @java.lang.Deprecated public Builder mergeBillingTag(com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag value) {
       if (billingTagBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
           billingTag_ != null &&
@@ -1063,9 +1135,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag"];</code>
+     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
      */
-    public Builder clearBillingTag() {
+    @java.lang.Deprecated public Builder clearBillingTag() {
       bitField0_ = (bitField0_ & ~0x00000004);
       billingTag_ = null;
       if (billingTagBuilder_ != null) {
@@ -1076,17 +1148,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag"];</code>
+     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag.Builder getBillingTagBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag.Builder getBillingTagBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getBillingTagFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag"];</code>
+     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTagOrBuilder getBillingTagOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTagOrBuilder getBillingTagOrBuilder() {
       if (billingTagBuilder_ != null) {
         return billingTagBuilder_.getMessageOrBuilder();
       } else {
@@ -1095,7 +1167,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag"];</code>
+     * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag, com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTagOrBuilder> 
@@ -1649,6 +1721,78 @@ private static final long serialVersionUID = 0L;
         deleteTime_ = null;
       }
       return deleteTimeBuilder_;
+    }
+
+    private java.lang.Object billingTagId_ = "";
+    /**
+     * <code>string billing_tag_id = 10 [json_name = "billingTagId"];</code>
+     * @return The billingTagId.
+     */
+    public java.lang.String getBillingTagId() {
+      java.lang.Object ref = billingTagId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        billingTagId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string billing_tag_id = 10 [json_name = "billingTagId"];</code>
+     * @return The bytes for billingTagId.
+     */
+    public com.google.protobuf.ByteString
+        getBillingTagIdBytes() {
+      java.lang.Object ref = billingTagId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        billingTagId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string billing_tag_id = 10 [json_name = "billingTagId"];</code>
+     * @param value The billingTagId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBillingTagId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      billingTagId_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string billing_tag_id = 10 [json_name = "billingTagId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBillingTagId() {
+      billingTagId_ = getDefaultInstance().getBillingTagId();
+      bitField0_ = (bitField0_ & ~0x00000200);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string billing_tag_id = 10 [json_name = "billingTagId"];</code>
+     * @param value The bytes for billingTagId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBillingTagIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      billingTagId_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
