@@ -42,12 +42,12 @@ public final class TagsProto {
       "s.billing.entities.v1alpha4.CategoryR\017bi" +
       "llingCategory*\227\002\n\010Category\022\030\n\024CATEGORY_U" +
       "NSPECIFIED\020\000\022%\n!CATEGORY_COMMUNICATIONS_" +
-      "OMNI_CHAT\020e\022&\n\"CATEGORY_COMMUNICATIONS_O" +
-      "MNI_EMAIL\020f\022$\n CATEGORY_COMMUNICATIONS_O" +
-      "MNI_SMS\020g\022&\n\"CATEGORY_COMMUNICATIONS_OMN" +
-      "I_AGENT\020h\022*\n&CATEGORY_COMMUNICATIONS_OMN" +
-      "I_RESOURCES\020i\022(\n#CATEGORY_DATA_MANAGEMEN" +
-      "T_COMPLIANCE\020\311\001B\354\001\n4com.tcn.cloud.api.se" +
+      "OMNI_CHAT\020d\022&\n\"CATEGORY_COMMUNICATIONS_O" +
+      "MNI_EMAIL\020e\022$\n CATEGORY_COMMUNICATIONS_O" +
+      "MNI_SMS\020f\022&\n\"CATEGORY_COMMUNICATIONS_OMN" +
+      "I_AGENT\020g\022*\n&CATEGORY_COMMUNICATIONS_OMN" +
+      "I_RESOURCES\020h\022(\n#CATEGORY_DATA_MANAGEMEN" +
+      "T_COMPLIANCE\020\310\001B\354\001\n4com.tcn.cloud.api.se" +
       "rvices.billing.entities.v1alpha4B\tTagsPr" +
       "otoP\001\242\002\003SBE\252\002\"Services.Billing.Entities." +
       "V1alpha4\312\002\"Services\\Billing\\Entities\\V1a" +
