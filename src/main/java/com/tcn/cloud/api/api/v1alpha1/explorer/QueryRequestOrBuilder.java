@@ -288,5 +288,25 @@ public interface QueryRequestOrBuilder extends
   com.google.protobuf.ByteString
       getCommentBytes();
 
+  /**
+   * <pre>
+   * format is the format of the result.
+   * </pre>
+   *
+   * <code>string format = 12 [json_name = "format"];</code>
+   * @return The format.
+   */
+  java.lang.String getFormat();
+  /**
+   * <pre>
+   * format is the format of the result.
+   * </pre>
+   *
+   * <code>string format = 12 [json_name = "format"];</code>
+   * @return The bytes for format.
+   */
+  com.google.protobuf.ByteString
+      getFormatBytes();
+
   com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest.QueryCase getQueryCase();
 }

@@ -27,6 +27,7 @@ private static final long serialVersionUID = 0L;
     timezone_ = "";
     uiTraceId_ = "";
     comment_ = "";
+    format_ = "";
   }
 
   @java.lang.Override
@@ -602,6 +603,53 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int FORMAT_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object format_ = "";
+  /**
+   * <pre>
+   * format is the format of the result.
+   * </pre>
+   *
+   * <code>string format = 12 [json_name = "format"];</code>
+   * @return The format.
+   */
+  @java.lang.Override
+  public java.lang.String getFormat() {
+    java.lang.Object ref = format_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      format_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * format is the format of the result.
+   * </pre>
+   *
+   * <code>string format = 12 [json_name = "format"];</code>
+   * @return The bytes for format.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFormatBytes() {
+    java.lang.Object ref = format_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      format_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -648,6 +696,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, comment_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, format_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -700,6 +751,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, comment_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, format_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -741,6 +795,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getUiTraceId())) return false;
     if (!getComment()
         .equals(other.getComment())) return false;
+    if (!getFormat()
+        .equals(other.getFormat())) return false;
     if (!getQueryCase().equals(other.getQueryCase())) return false;
     switch (queryCase_) {
       case 3:
@@ -791,6 +847,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getUiTraceId().hashCode();
     hash = (37 * hash) + COMMENT_FIELD_NUMBER;
     hash = (53 * hash) + getComment().hashCode();
+    hash = (37 * hash) + FORMAT_FIELD_NUMBER;
+    hash = (53 * hash) + getFormat().hashCode();
     switch (queryCase_) {
       case 3:
         hash = (37 * hash) + PIPELINE_FIELD_NUMBER;
@@ -960,6 +1018,7 @@ private static final long serialVersionUID = 0L;
       }
       uiTraceId_ = "";
       comment_ = "";
+      format_ = "";
       queryCase_ = 0;
       query_ = null;
       return this;
@@ -1029,6 +1088,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.comment_ = comment_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.format_ = format_;
       }
     }
 
@@ -1121,6 +1183,11 @@ private static final long serialVersionUID = 0L;
       if (!other.getComment().isEmpty()) {
         comment_ = other.comment_;
         bitField0_ |= 0x00000400;
+        onChanged();
+      }
+      if (!other.getFormat().isEmpty()) {
+        format_ = other.format_;
+        bitField0_ |= 0x00000800;
         onChanged();
       }
       switch (other.getQueryCase()) {
@@ -1230,6 +1297,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000400;
               break;
             } // case 90
+            case 98: {
+              format_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2550,6 +2622,98 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       comment_ = value;
       bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object format_ = "";
+    /**
+     * <pre>
+     * format is the format of the result.
+     * </pre>
+     *
+     * <code>string format = 12 [json_name = "format"];</code>
+     * @return The format.
+     */
+    public java.lang.String getFormat() {
+      java.lang.Object ref = format_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        format_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * format is the format of the result.
+     * </pre>
+     *
+     * <code>string format = 12 [json_name = "format"];</code>
+     * @return The bytes for format.
+     */
+    public com.google.protobuf.ByteString
+        getFormatBytes() {
+      java.lang.Object ref = format_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        format_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * format is the format of the result.
+     * </pre>
+     *
+     * <code>string format = 12 [json_name = "format"];</code>
+     * @param value The format to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFormat(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      format_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * format is the format of the result.
+     * </pre>
+     *
+     * <code>string format = 12 [json_name = "format"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFormat() {
+      format_ = getDefaultInstance().getFormat();
+      bitField0_ = (bitField0_ & ~0x00000800);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * format is the format of the result.
+     * </pre>
+     *
+     * <code>string format = 12 [json_name = "format"];</code>
+     * @param value The bytes for format to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFormatBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      format_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }

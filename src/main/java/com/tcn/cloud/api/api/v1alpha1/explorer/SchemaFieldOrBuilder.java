@@ -41,4 +41,16 @@ public interface SchemaFieldOrBuilder extends
    * @return The isLowCardinality.
    */
   boolean getIsLowCardinality();
+
+  /**
+   * <code>string column_description = 5 [json_name = "columnDescription"];</code>
+   * @return The columnDescription.
+   */
+  java.lang.String getColumnDescription();
+  /**
+   * <code>string column_description = 5 [json_name = "columnDescription"];</code>
+   * @return The bytes for columnDescription.
+   */
+  com.google.protobuf.ByteString
+      getColumnDescriptionBytes();
 }

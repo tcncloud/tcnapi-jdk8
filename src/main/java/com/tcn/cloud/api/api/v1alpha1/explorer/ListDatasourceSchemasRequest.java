@@ -20,6 +20,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListDatasourceSchemasRequest() {
+    datasourceNames_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -42,6 +44,43 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasRequest.class, com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasRequest.Builder.class);
   }
 
+  public static final int DATASOURCE_NAMES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList datasourceNames_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+   * @return A list containing the datasourceNames.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getDatasourceNamesList() {
+    return datasourceNames_;
+  }
+  /**
+   * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+   * @return The count of datasourceNames.
+   */
+  public int getDatasourceNamesCount() {
+    return datasourceNames_.size();
+  }
+  /**
+   * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+   * @param index The index of the element to return.
+   * @return The datasourceNames at the given index.
+   */
+  public java.lang.String getDatasourceNames(int index) {
+    return datasourceNames_.get(index);
+  }
+  /**
+   * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the datasourceNames at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getDatasourceNamesBytes(int index) {
+    return datasourceNames_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -56,6 +95,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    for (int i = 0; i < datasourceNames_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasourceNames_.getRaw(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -65,6 +107,14 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    {
+      int dataSize = 0;
+      for (int i = 0; i < datasourceNames_.size(); i++) {
+        dataSize += computeStringSizeNoTag(datasourceNames_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getDatasourceNamesList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -80,6 +130,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasRequest other = (com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasRequest) obj;
 
+    if (!getDatasourceNamesList()
+        .equals(other.getDatasourceNamesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -91,6 +143,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (getDatasourceNamesCount() > 0) {
+      hash = (37 * hash) + DATASOURCE_NAMES_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasourceNamesList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -225,6 +281,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      datasourceNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -251,8 +310,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasRequest result = new com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        datasourceNames_.makeImmutable();
+        result.datasourceNames_ = datasourceNames_;
+      }
     }
 
     @java.lang.Override
@@ -299,6 +367,16 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasRequest.getDefaultInstance()) return this;
+      if (!other.datasourceNames_.isEmpty()) {
+        if (datasourceNames_.isEmpty()) {
+          datasourceNames_ = other.datasourceNames_;
+          bitField0_ |= 0x00000001;
+        } else {
+          ensureDatasourceNamesIsMutable();
+          datasourceNames_.addAll(other.datasourceNames_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -325,6 +403,12 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureDatasourceNamesIsMutable();
+              datasourceNames_.add(s);
+              break;
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -338,6 +422,118 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private com.google.protobuf.LazyStringArrayList datasourceNames_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureDatasourceNamesIsMutable() {
+      if (!datasourceNames_.isModifiable()) {
+        datasourceNames_ = new com.google.protobuf.LazyStringArrayList(datasourceNames_);
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+     * @return A list containing the datasourceNames.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDatasourceNamesList() {
+      datasourceNames_.makeImmutable();
+      return datasourceNames_;
+    }
+    /**
+     * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+     * @return The count of datasourceNames.
+     */
+    public int getDatasourceNamesCount() {
+      return datasourceNames_.size();
+    }
+    /**
+     * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+     * @param index The index of the element to return.
+     * @return The datasourceNames at the given index.
+     */
+    public java.lang.String getDatasourceNames(int index) {
+      return datasourceNames_.get(index);
+    }
+    /**
+     * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the datasourceNames at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDatasourceNamesBytes(int index) {
+      return datasourceNames_.getByteString(index);
+    }
+    /**
+     * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+     * @param index The index to set the value at.
+     * @param value The datasourceNames to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDatasourceNames(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureDatasourceNamesIsMutable();
+      datasourceNames_.set(index, value);
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+     * @param value The datasourceNames to add.
+     * @return This builder for chaining.
+     */
+    public Builder addDatasourceNames(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureDatasourceNamesIsMutable();
+      datasourceNames_.add(value);
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+     * @param values The datasourceNames to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllDatasourceNames(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureDatasourceNamesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, datasourceNames_);
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDatasourceNames() {
+      datasourceNames_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+     * @param value The bytes of the datasourceNames to add.
+     * @return This builder for chaining.
+     */
+    public Builder addDatasourceNamesBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureDatasourceNamesIsMutable();
+      datasourceNames_.add(value);
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     @java.lang.Override

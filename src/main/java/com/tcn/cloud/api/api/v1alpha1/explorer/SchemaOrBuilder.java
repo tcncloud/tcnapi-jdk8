@@ -53,4 +53,16 @@ public interface SchemaOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.explorer.SchemaFieldOrBuilder getFieldsOrBuilder(
       int index);
+
+  /**
+   * <code>string table_description = 4 [json_name = "tableDescription"];</code>
+   * @return The tableDescription.
+   */
+  java.lang.String getTableDescription();
+  /**
+   * <code>string table_description = 4 [json_name = "tableDescription"];</code>
+   * @return The bytes for tableDescription.
+   */
+  com.google.protobuf.ByteString
+      getTableDescriptionBytes();
 }

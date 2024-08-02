@@ -6,4 +6,29 @@ package com.tcn.cloud.api.api.v1alpha1.explorer;
 public interface ListDatasourceSchemasRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.explorer.ListDatasourceSchemasRequest)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+   * @return A list containing the datasourceNames.
+   */
+  java.util.List<java.lang.String>
+      getDatasourceNamesList();
+  /**
+   * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+   * @return The count of datasourceNames.
+   */
+  int getDatasourceNamesCount();
+  /**
+   * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+   * @param index The index of the element to return.
+   * @return The datasourceNames at the given index.
+   */
+  java.lang.String getDatasourceNames(int index);
+  /**
+   * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the datasourceNames at the given index.
+   */
+  com.google.protobuf.ByteString
+      getDatasourceNamesBytes(int index);
 }
