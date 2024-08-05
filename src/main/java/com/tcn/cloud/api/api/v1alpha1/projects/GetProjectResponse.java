@@ -8,38 +8,38 @@ package com.tcn.cloud.api.api.v1alpha1.projects;
  * respond back to single project based on project id
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.projects.GetProjectByIdResponse}
+ * Protobuf type {@code api.v1alpha1.projects.GetProjectResponse}
  */
-public final class GetProjectByIdResponse extends
+public final class GetProjectResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.projects.GetProjectByIdResponse)
-    GetProjectByIdResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.projects.GetProjectResponse)
+    GetProjectResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetProjectByIdResponse.newBuilder() to construct.
-  private GetProjectByIdResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use GetProjectResponse.newBuilder() to construct.
+  private GetProjectResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetProjectByIdResponse() {
+  private GetProjectResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetProjectByIdResponse();
+    return new GetProjectResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.projects.ProjectsProto.internal_static_api_v1alpha1_projects_GetProjectByIdResponse_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.projects.ProjectsProto.internal_static_api_v1alpha1_projects_GetProjectResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.projects.ProjectsProto.internal_static_api_v1alpha1_projects_GetProjectByIdResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.projects.ProjectsProto.internal_static_api_v1alpha1_projects_GetProjectResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse.class, com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse.class, com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse.Builder.class);
   }
 
   public static final int PROJECT_FIELD_NUMBER = 1;
@@ -120,10 +120,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse other = (com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse) obj;
+    com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse other = (com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse) obj;
 
     if (hasProject() != other.hasProject()) return false;
     if (hasProject()) {
@@ -150,44 +150,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -195,26 +195,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -227,7 +227,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -247,26 +247,26 @@ private static final long serialVersionUID = 0L;
    * respond back to single project based on project id
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.projects.GetProjectByIdResponse}
+   * Protobuf type {@code api.v1alpha1.projects.GetProjectResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.projects.GetProjectByIdResponse)
-      com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.projects.GetProjectResponse)
+      com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.projects.ProjectsProto.internal_static_api_v1alpha1_projects_GetProjectByIdResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.projects.ProjectsProto.internal_static_api_v1alpha1_projects_GetProjectResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.projects.ProjectsProto.internal_static_api_v1alpha1_projects_GetProjectByIdResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.projects.ProjectsProto.internal_static_api_v1alpha1_projects_GetProjectResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse.class, com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse.class, com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse.newBuilder()
     private Builder() {
 
     }
@@ -291,17 +291,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.projects.ProjectsProto.internal_static_api_v1alpha1_projects_GetProjectByIdResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.projects.ProjectsProto.internal_static_api_v1alpha1_projects_GetProjectResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse build() {
-      com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -309,14 +309,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse result = new com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse(this);
+    public com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse result = new com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.project_ = projectBuilder_ == null
@@ -359,16 +359,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse.getDefaultInstance()) return this;
       if (other.hasProject()) {
         mergeProject(other.getProject());
       }
@@ -589,23 +589,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.projects.GetProjectByIdResponse)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.projects.GetProjectResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.projects.GetProjectByIdResponse)
-  private static final com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.projects.GetProjectResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetProjectByIdResponse>
-      PARSER = new com.google.protobuf.AbstractParser<GetProjectByIdResponse>() {
+  private static final com.google.protobuf.Parser<GetProjectResponse>
+      PARSER = new com.google.protobuf.AbstractParser<GetProjectResponse>() {
     @java.lang.Override
-    public GetProjectByIdResponse parsePartialFrom(
+    public GetProjectResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -624,17 +624,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetProjectByIdResponse> parser() {
+  public static com.google.protobuf.Parser<GetProjectResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetProjectByIdResponse> getParserForType() {
+  public com.google.protobuf.Parser<GetProjectResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

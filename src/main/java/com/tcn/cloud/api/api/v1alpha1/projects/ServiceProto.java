@@ -26,21 +26,21 @@ public final class ServiceProto {
       "\n#api/v1alpha1/projects/service.proto\022\025a" +
       "pi.v1alpha1.projects\032\027annotations/authz." +
       "proto\032$api/v1alpha1/projects/projects.pr" +
-      "oto\032\034google/api/annotations.proto2\354\002\n\010Pr" +
+      "oto\032\034google/api/annotations.proto2\340\002\n\010Pr" +
       "ojects\022\252\001\n\014ListProjects\022*.api.v1alpha1.p" +
       "rojects.ListProjectsRequest\032+.api.v1alph" +
       "a1.projects.ListProjectsResponse\"A\272\270\221\002\005\n" +
       "\003\010\260\t\202\323\344\223\0021\",/api/v1alpha1/projects/proje" +
-      "cts/listprojects:\001*\022\262\001\n\016GetProjectById\022," +
-      ".api.v1alpha1.projects.GetProjectByIdReq" +
-      "uest\032-.api.v1alpha1.projects.GetProjectB" +
-      "yIdResponse\"C\272\270\221\002\005\n\003\010\260\t\202\323\344\223\0023\"./api/v1al" +
-      "pha1/projects/projects/getprojectbyid:\001*" +
-      "B\255\001\n\'com.tcn.cloud.api.api.v1alpha1.proj" +
-      "ectsB\014ServiceProtoP\001\242\002\003AVP\252\002\025Api.V1alpha" +
-      "1.Projects\312\002\025Api\\V1alpha1\\Projects\342\002!Api" +
-      "\\V1alpha1\\Projects\\GPBMetadata\352\002\027Api::V1" +
-      "alpha1::Projectsb\006proto3"
+      "cts/listprojects:\001*\022\246\001\n\016GetProjectById\022(" +
+      ".api.v1alpha1.projects.GetProjectRequest" +
+      "\032).api.v1alpha1.projects.GetProjectRespo" +
+      "nse\"?\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002/\"*/api/v1alpha1/pro" +
+      "jects/projects/getproject:\001*B\255\001\n\'com.tcn" +
+      ".cloud.api.api.v1alpha1.projectsB\014Servic" +
+      "eProtoP\001\242\002\003AVP\252\002\025Api.V1alpha1.Projects\312\002" +
+      "\025Api\\V1alpha1\\Projects\342\002!Api\\V1alpha1\\Pr" +
+      "ojects\\GPBMetadata\352\002\027Api::V1alpha1::Proj" +
+      "ectsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

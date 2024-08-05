@@ -49,29 +49,29 @@ public final class ProjectsGrpc {
     return getListProjectsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdRequest,
-      com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse> getGetProjectByIdMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectRequest,
+      com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse> getGetProjectByIdMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetProjectById",
-      requestType = com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse.class,
+      requestType = com.tcn.cloud.api.api.v1alpha1.projects.GetProjectRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdRequest,
-      com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse> getGetProjectByIdMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdRequest, com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse> getGetProjectByIdMethod;
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectRequest,
+      com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse> getGetProjectByIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectRequest, com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse> getGetProjectByIdMethod;
     if ((getGetProjectByIdMethod = ProjectsGrpc.getGetProjectByIdMethod) == null) {
       synchronized (ProjectsGrpc.class) {
         if ((getGetProjectByIdMethod = ProjectsGrpc.getGetProjectByIdMethod) == null) {
           ProjectsGrpc.getGetProjectByIdMethod = getGetProjectByIdMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdRequest, com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectRequest, com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProjectById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.projects.GetProjectRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse.getDefaultInstance()))
               .setSchemaDescriptor(new ProjectsMethodDescriptorSupplier("GetProjectById"))
               .build();
         }
@@ -146,8 +146,8 @@ public final class ProjectsGrpc {
      * Public method to get project by project Id
      * </pre>
      */
-    default void getProjectById(com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse> responseObserver) {
+    default void getProjectById(com.tcn.cloud.api.api.v1alpha1.projects.GetProjectRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProjectByIdMethod(), responseObserver);
     }
   }
@@ -201,8 +201,8 @@ public final class ProjectsGrpc {
      * Public method to get project by project Id
      * </pre>
      */
-    public void getProjectById(com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse> responseObserver) {
+    public void getProjectById(com.tcn.cloud.api.api.v1alpha1.projects.GetProjectRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetProjectByIdMethod(), getCallOptions()), request, responseObserver);
     }
@@ -242,7 +242,7 @@ public final class ProjectsGrpc {
      * Public method to get project by project Id
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse getProjectById(com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdRequest request) {
+    public com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse getProjectById(com.tcn.cloud.api.api.v1alpha1.projects.GetProjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProjectByIdMethod(), getCallOptions(), request);
     }
@@ -283,8 +283,8 @@ public final class ProjectsGrpc {
      * Public method to get project by project Id
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse> getProjectById(
-        com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse> getProjectById(
+        com.tcn.cloud.api.api.v1alpha1.projects.GetProjectRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetProjectByIdMethod(), getCallOptions()), request);
     }
@@ -315,8 +315,8 @@ public final class ProjectsGrpc {
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.projects.ListProjectsResponse>) responseObserver);
           break;
         case METHODID_GET_PROJECT_BY_ID:
-          serviceImpl.getProjectById((com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse>) responseObserver);
+          serviceImpl.getProjectById((com.tcn.cloud.api.api.v1alpha1.projects.GetProjectRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -347,8 +347,8 @@ public final class ProjectsGrpc {
           getGetProjectByIdMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdRequest,
-              com.tcn.cloud.api.api.v1alpha1.projects.GetProjectByIdResponse>(
+              com.tcn.cloud.api.api.v1alpha1.projects.GetProjectRequest,
+              com.tcn.cloud.api.api.v1alpha1.projects.GetProjectResponse>(
                 service, METHODID_GET_PROJECT_BY_ID)))
         .build();
   }

@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.projects;
 
-public interface GetProjectByIdRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.projects.GetProjectByIdRequest)
+public interface GetProjectRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.projects.GetProjectRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
