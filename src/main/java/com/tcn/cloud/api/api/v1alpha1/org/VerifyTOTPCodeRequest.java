@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private VerifyTOTPCodeRequest() {
     code_ = "";
+    secretKey_ = "";
   }
 
   @java.lang.Override
@@ -90,6 +91,53 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int SECRET_KEY_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object secretKey_ = "";
+  /**
+   * <pre>
+   * The secret key the user is using for TOTP.
+   * </pre>
+   *
+   * <code>string secret_key = 2 [json_name = "secretKey"];</code>
+   * @return The secretKey.
+   */
+  @java.lang.Override
+  public java.lang.String getSecretKey() {
+    java.lang.Object ref = secretKey_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      secretKey_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The secret key the user is using for TOTP.
+   * </pre>
+   *
+   * <code>string secret_key = 2 [json_name = "secretKey"];</code>
+   * @return The bytes for secretKey.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSecretKeyBytes() {
+    java.lang.Object ref = secretKey_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      secretKey_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -107,6 +155,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(code_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, code_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretKey_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, secretKey_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -118,6 +169,9 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(code_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, code_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretKey_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, secretKey_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -136,6 +190,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getCode()
         .equals(other.getCode())) return false;
+    if (!getSecretKey()
+        .equals(other.getSecretKey())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -149,6 +205,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + CODE_FIELD_NUMBER;
     hash = (53 * hash) + getCode().hashCode();
+    hash = (37 * hash) + SECRET_KEY_FIELD_NUMBER;
+    hash = (53 * hash) + getSecretKey().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -285,6 +343,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       code_ = "";
+      secretKey_ = "";
       return this;
     }
 
@@ -320,6 +379,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.code_ = code_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.secretKey_ = secretKey_;
       }
     }
 
@@ -372,6 +434,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (!other.getSecretKey().isEmpty()) {
+        secretKey_ = other.secretKey_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -403,6 +470,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              secretKey_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -508,6 +580,98 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       code_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object secretKey_ = "";
+    /**
+     * <pre>
+     * The secret key the user is using for TOTP.
+     * </pre>
+     *
+     * <code>string secret_key = 2 [json_name = "secretKey"];</code>
+     * @return The secretKey.
+     */
+    public java.lang.String getSecretKey() {
+      java.lang.Object ref = secretKey_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretKey_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The secret key the user is using for TOTP.
+     * </pre>
+     *
+     * <code>string secret_key = 2 [json_name = "secretKey"];</code>
+     * @return The bytes for secretKey.
+     */
+    public com.google.protobuf.ByteString
+        getSecretKeyBytes() {
+      java.lang.Object ref = secretKey_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The secret key the user is using for TOTP.
+     * </pre>
+     *
+     * <code>string secret_key = 2 [json_name = "secretKey"];</code>
+     * @param value The secretKey to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSecretKey(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      secretKey_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The secret key the user is using for TOTP.
+     * </pre>
+     *
+     * <code>string secret_key = 2 [json_name = "secretKey"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSecretKey() {
+      secretKey_ = getDefaultInstance().getSecretKey();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The secret key the user is using for TOTP.
+     * </pre>
+     *
+     * <code>string secret_key = 2 [json_name = "secretKey"];</code>
+     * @param value The bytes for secretKey to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSecretKeyBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      secretKey_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

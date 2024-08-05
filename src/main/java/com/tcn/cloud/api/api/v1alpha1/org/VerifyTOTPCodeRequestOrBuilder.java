@@ -26,4 +26,24 @@ public interface VerifyTOTPCodeRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCodeBytes();
+
+  /**
+   * <pre>
+   * The secret key the user is using for TOTP.
+   * </pre>
+   *
+   * <code>string secret_key = 2 [json_name = "secretKey"];</code>
+   * @return The secretKey.
+   */
+  java.lang.String getSecretKey();
+  /**
+   * <pre>
+   * The secret key the user is using for TOTP.
+   * </pre>
+   *
+   * <code>string secret_key = 2 [json_name = "secretKey"];</code>
+   * @return The bytes for secretKey.
+   */
+  com.google.protobuf.ByteString
+      getSecretKeyBytes();
 }
