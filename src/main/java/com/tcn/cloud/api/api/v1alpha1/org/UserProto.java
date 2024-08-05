@@ -975,29 +975,28 @@ public final class UserProto {
       "\004 \001(\010R\013totpEnabled\"\033\n\031GenerateTOTPSecret",
       "Request\"[\n\032GenerateTOTPSecretResponse\022\035\n" +
       "\nsecret_key\030\001 \001(\tR\tsecretKey\022\036\n\013qr_code_" +
-      "url\030\002 \001(\tR\tqrCodeUrl\"J\n\025VerifyTOTPCodeRe" +
-      "quest\022\022\n\004code\030\001 \001(\tR\004code\022\035\n\nsecret_key\030" +
-      "\002 \001(\tR\tsecretKey\"\030\n\026VerifyTOTPCodeRespon" +
-      "se\"R\n#AddGroupedUserIPRestrictionsReques" +
-      "t\022\031\n\010user_ids\030\001 \003(\tR\007userIds\022\020\n\003ips\030\002 \003(" +
-      "\tR\003ips\"&\n$AddGroupedUserIPRestrictionsRe" +
-      "sponse\"U\n&RemoveGroupedUserIPRestriction" +
-      "sRequest\022\031\n\010user_ids\030\001 \003(\tR\007userIds\022\020\n\003i" +
-      "ps\030\002 \003(\tR\003ips\")\n\'RemoveGroupedUserIPRest" +
-      "rictionsResponse\"7\n\032ListUsersAllowedIpsR" +
-      "equest\022\031\n\010user_ids\030\001 \003(\tR\007userIds\"\264\002\n\033Li" +
-      "stUsersAllowedIpsResponse\022u\n\024user_allowe" +
-      "d_ips_map\030\001 \003(\0132D.api.v1alpha1.org.ListU" +
-      "sersAllowedIpsResponse.UserAllowedIpsMap" +
-      "EntryR\021userAllowedIpsMap\032~\n\026UserAllowedI" +
-      "psMapEntry\022\020\n\003key\030\001 \001(\tR\003key\022N\n\005value\030\002 " +
-      "\001(\01328.api.v1alpha1.org.ListUsersAllowedI" +
-      "psResponse.AllowedIpsR\005value:\0028\001\032\036\n\nAllo" +
-      "wedIps\022\020\n\003ips\030\001 \003(\tR\003ipsB\221\001\n\"com.tcn.clo" +
-      "ud.api.api.v1alpha1.orgB\tUserProtoP\001\242\002\003A" +
-      "VO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\Org" +
-      "\342\002\034Api\\V1alpha1\\Org\\GPBMetadata\352\002\022Api::V" +
-      "1alpha1::Orgb\006proto3"
+      "url\030\002 \001(\tR\tqrCodeUrl\"+\n\025VerifyTOTPCodeRe" +
+      "quest\022\022\n\004code\030\001 \001(\tR\004code\"\030\n\026VerifyTOTPC" +
+      "odeResponse\"R\n#AddGroupedUserIPRestricti" +
+      "onsRequest\022\031\n\010user_ids\030\001 \003(\tR\007userIds\022\020\n" +
+      "\003ips\030\002 \003(\tR\003ips\"&\n$AddGroupedUserIPRestr" +
+      "ictionsResponse\"U\n&RemoveGroupedUserIPRe" +
+      "strictionsRequest\022\031\n\010user_ids\030\001 \003(\tR\007use" +
+      "rIds\022\020\n\003ips\030\002 \003(\tR\003ips\")\n\'RemoveGroupedU" +
+      "serIPRestrictionsResponse\"7\n\032ListUsersAl" +
+      "lowedIpsRequest\022\031\n\010user_ids\030\001 \003(\tR\007userI" +
+      "ds\"\264\002\n\033ListUsersAllowedIpsResponse\022u\n\024us" +
+      "er_allowed_ips_map\030\001 \003(\0132D.api.v1alpha1." +
+      "org.ListUsersAllowedIpsResponse.UserAllo" +
+      "wedIpsMapEntryR\021userAllowedIpsMap\032~\n\026Use" +
+      "rAllowedIpsMapEntry\022\020\n\003key\030\001 \001(\tR\003key\022N\n" +
+      "\005value\030\002 \001(\01328.api.v1alpha1.org.ListUser" +
+      "sAllowedIpsResponse.AllowedIpsR\005value:\0028" +
+      "\001\032\036\n\nAllowedIps\022\020\n\003ips\030\001 \003(\tR\003ipsB\221\001\n\"co" +
+      "m.tcn.cloud.api.api.v1alpha1.orgB\tUserPr" +
+      "otoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1a" +
+      "lpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetadata" +
+      "\352\002\022Api::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1618,7 +1617,7 @@ public final class UserProto {
     internal_static_api_v1alpha1_org_VerifyTOTPCodeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_VerifyTOTPCodeRequest_descriptor,
-        new java.lang.String[] { "Code", "SecretKey", });
+        new java.lang.String[] { "Code", });
     internal_static_api_v1alpha1_org_VerifyTOTPCodeResponse_descriptor =
       getDescriptor().getMessageTypes().get(85);
     internal_static_api_v1alpha1_org_VerifyTOTPCodeResponse_fieldAccessorTable = new
