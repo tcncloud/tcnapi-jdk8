@@ -46,4 +46,24 @@ public interface CreateExileCertificateRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDescriptionBytes();
+
+  /**
+   * <pre>
+   * The id of the exile configuration to assign to the exile certificate.
+   * </pre>
+   *
+   * <code>string configuration_id = 3 [json_name = "configurationId"];</code>
+   * @return The configurationId.
+   */
+  java.lang.String getConfigurationId();
+  /**
+   * <pre>
+   * The id of the exile configuration to assign to the exile certificate.
+   * </pre>
+   *
+   * <code>string configuration_id = 3 [json_name = "configurationId"];</code>
+   * @return The bytes for configurationId.
+   */
+  com.google.protobuf.ByteString
+      getConfigurationIdBytes();
 }
