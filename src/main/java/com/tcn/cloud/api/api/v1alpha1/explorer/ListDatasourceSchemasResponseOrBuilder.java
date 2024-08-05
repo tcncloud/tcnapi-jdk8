@@ -8,24 +8,44 @@ public interface ListDatasourceSchemasResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * list of schemas
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.explorer.Schema schemas = 1 [json_name = "schemas"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.explorer.Schema> 
       getSchemasList();
   /**
+   * <pre>
+   * list of schemas
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.explorer.Schema schemas = 1 [json_name = "schemas"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.explorer.Schema getSchemas(int index);
   /**
+   * <pre>
+   * list of schemas
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.explorer.Schema schemas = 1 [json_name = "schemas"];</code>
    */
   int getSchemasCount();
   /**
+   * <pre>
+   * list of schemas
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.explorer.Schema schemas = 1 [json_name = "schemas"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.explorer.SchemaOrBuilder> 
       getSchemasOrBuilderList();
   /**
+   * <pre>
+   * list of schemas
+   * </pre>
+   *
    * <code>repeated .api.v1alpha1.explorer.Schema schemas = 1 [json_name = "schemas"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.explorer.SchemaOrBuilder getSchemasOrBuilder(

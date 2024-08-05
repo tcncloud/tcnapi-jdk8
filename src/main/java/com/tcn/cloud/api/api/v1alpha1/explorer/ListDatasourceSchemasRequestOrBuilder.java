@@ -8,27 +8,64 @@ public interface ListDatasourceSchemasRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * datasource_names is a table name filter for the datasources to list.
+   * </pre>
+   *
    * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
    * @return A list containing the datasourceNames.
    */
   java.util.List<java.lang.String>
       getDatasourceNamesList();
   /**
+   * <pre>
+   * datasource_names is a table name filter for the datasources to list.
+   * </pre>
+   *
    * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
    * @return The count of datasourceNames.
    */
   int getDatasourceNamesCount();
   /**
+   * <pre>
+   * datasource_names is a table name filter for the datasources to list.
+   * </pre>
+   *
    * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
    * @param index The index of the element to return.
    * @return The datasourceNames at the given index.
    */
   java.lang.String getDatasourceNames(int index);
   /**
+   * <pre>
+   * datasource_names is a table name filter for the datasources to list.
+   * </pre>
+   *
    * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the datasourceNames at the given index.
    */
   com.google.protobuf.ByteString
       getDatasourceNamesBytes(int index);
+
+  /**
+   * <pre>
+   * datasource_type is the type of the datasource to list.
+   * If not specified, all datasources will be listed.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 2 [json_name = "datasourceType"];</code>
+   * @return The enum numeric value on the wire for datasourceType.
+   */
+  int getDatasourceTypeValue();
+  /**
+   * <pre>
+   * datasource_type is the type of the datasource to list.
+   * If not specified, all datasources will be listed.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 2 [json_name = "datasourceType"];</code>
+   * @return The datasourceType.
+   */
+  com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType getDatasourceType();
 }

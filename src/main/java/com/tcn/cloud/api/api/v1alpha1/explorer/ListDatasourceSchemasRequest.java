@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private ListDatasourceSchemasRequest() {
     datasourceNames_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    datasourceType_ = 0;
   }
 
   @java.lang.Override
@@ -49,6 +50,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList datasourceNames_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * datasource_names is a table name filter for the datasources to list.
+   * </pre>
+   *
    * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
    * @return A list containing the datasourceNames.
    */
@@ -57,6 +62,10 @@ private static final long serialVersionUID = 0L;
     return datasourceNames_;
   }
   /**
+   * <pre>
+   * datasource_names is a table name filter for the datasources to list.
+   * </pre>
+   *
    * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
    * @return The count of datasourceNames.
    */
@@ -64,6 +73,10 @@ private static final long serialVersionUID = 0L;
     return datasourceNames_.size();
   }
   /**
+   * <pre>
+   * datasource_names is a table name filter for the datasources to list.
+   * </pre>
+   *
    * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
    * @param index The index of the element to return.
    * @return The datasourceNames at the given index.
@@ -72,6 +85,10 @@ private static final long serialVersionUID = 0L;
     return datasourceNames_.get(index);
   }
   /**
+   * <pre>
+   * datasource_names is a table name filter for the datasources to list.
+   * </pre>
+   *
    * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the datasourceNames at the given index.
@@ -79,6 +96,34 @@ private static final long serialVersionUID = 0L;
   public com.google.protobuf.ByteString
       getDatasourceNamesBytes(int index) {
     return datasourceNames_.getByteString(index);
+  }
+
+  public static final int DATASOURCE_TYPE_FIELD_NUMBER = 2;
+  private int datasourceType_ = 0;
+  /**
+   * <pre>
+   * datasource_type is the type of the datasource to list.
+   * If not specified, all datasources will be listed.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 2 [json_name = "datasourceType"];</code>
+   * @return The enum numeric value on the wire for datasourceType.
+   */
+  @java.lang.Override public int getDatasourceTypeValue() {
+    return datasourceType_;
+  }
+  /**
+   * <pre>
+   * datasource_type is the type of the datasource to list.
+   * If not specified, all datasources will be listed.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 2 [json_name = "datasourceType"];</code>
+   * @return The datasourceType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType getDatasourceType() {
+    com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType result = com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType.forNumber(datasourceType_);
+    return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -98,6 +143,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < datasourceNames_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasourceNames_.getRaw(i));
     }
+    if (datasourceType_ != com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType.DATASOURCE_TYPE_UNSPECIFIED.getNumber()) {
+      output.writeEnum(2, datasourceType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -114,6 +162,10 @@ private static final long serialVersionUID = 0L;
       }
       size += dataSize;
       size += 1 * getDatasourceNamesList().size();
+    }
+    if (datasourceType_ != com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType.DATASOURCE_TYPE_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(2, datasourceType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -132,6 +184,7 @@ private static final long serialVersionUID = 0L;
 
     if (!getDatasourceNamesList()
         .equals(other.getDatasourceNamesList())) return false;
+    if (datasourceType_ != other.datasourceType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -147,6 +200,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DATASOURCE_NAMES_FIELD_NUMBER;
       hash = (53 * hash) + getDatasourceNamesList().hashCode();
     }
+    hash = (37 * hash) + DATASOURCE_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + datasourceType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -284,6 +339,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       datasourceNames_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      datasourceType_ = 0;
       return this;
     }
 
@@ -320,6 +376,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         datasourceNames_.makeImmutable();
         result.datasourceNames_ = datasourceNames_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.datasourceType_ = datasourceType_;
       }
     }
 
@@ -377,6 +436,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.datasourceType_ != 0) {
+        setDatasourceTypeValue(other.getDatasourceTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -409,6 +471,11 @@ private static final long serialVersionUID = 0L;
               datasourceNames_.add(s);
               break;
             } // case 10
+            case 16: {
+              datasourceType_ = input.readEnum();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -435,6 +502,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
     }
     /**
+     * <pre>
+     * datasource_names is a table name filter for the datasources to list.
+     * </pre>
+     *
      * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
      * @return A list containing the datasourceNames.
      */
@@ -444,6 +515,10 @@ private static final long serialVersionUID = 0L;
       return datasourceNames_;
     }
     /**
+     * <pre>
+     * datasource_names is a table name filter for the datasources to list.
+     * </pre>
+     *
      * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
      * @return The count of datasourceNames.
      */
@@ -451,6 +526,10 @@ private static final long serialVersionUID = 0L;
       return datasourceNames_.size();
     }
     /**
+     * <pre>
+     * datasource_names is a table name filter for the datasources to list.
+     * </pre>
+     *
      * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
      * @param index The index of the element to return.
      * @return The datasourceNames at the given index.
@@ -459,6 +538,10 @@ private static final long serialVersionUID = 0L;
       return datasourceNames_.get(index);
     }
     /**
+     * <pre>
+     * datasource_names is a table name filter for the datasources to list.
+     * </pre>
+     *
      * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the datasourceNames at the given index.
@@ -468,6 +551,10 @@ private static final long serialVersionUID = 0L;
       return datasourceNames_.getByteString(index);
     }
     /**
+     * <pre>
+     * datasource_names is a table name filter for the datasources to list.
+     * </pre>
+     *
      * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
      * @param index The index to set the value at.
      * @param value The datasourceNames to set.
@@ -483,6 +570,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * datasource_names is a table name filter for the datasources to list.
+     * </pre>
+     *
      * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
      * @param value The datasourceNames to add.
      * @return This builder for chaining.
@@ -497,6 +588,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * datasource_names is a table name filter for the datasources to list.
+     * </pre>
+     *
      * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
      * @param values The datasourceNames to add.
      * @return This builder for chaining.
@@ -511,6 +606,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * datasource_names is a table name filter for the datasources to list.
+     * </pre>
+     *
      * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
      * @return This builder for chaining.
      */
@@ -522,6 +621,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * datasource_names is a table name filter for the datasources to list.
+     * </pre>
+     *
      * <code>repeated string datasource_names = 1 [json_name = "datasourceNames"];</code>
      * @param value The bytes of the datasourceNames to add.
      * @return This builder for chaining.
@@ -533,6 +636,84 @@ private static final long serialVersionUID = 0L;
       ensureDatasourceNamesIsMutable();
       datasourceNames_.add(value);
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private int datasourceType_ = 0;
+    /**
+     * <pre>
+     * datasource_type is the type of the datasource to list.
+     * If not specified, all datasources will be listed.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 2 [json_name = "datasourceType"];</code>
+     * @return The enum numeric value on the wire for datasourceType.
+     */
+    @java.lang.Override public int getDatasourceTypeValue() {
+      return datasourceType_;
+    }
+    /**
+     * <pre>
+     * datasource_type is the type of the datasource to list.
+     * If not specified, all datasources will be listed.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 2 [json_name = "datasourceType"];</code>
+     * @param value The enum numeric value on the wire for datasourceType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDatasourceTypeValue(int value) {
+      datasourceType_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * datasource_type is the type of the datasource to list.
+     * If not specified, all datasources will be listed.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 2 [json_name = "datasourceType"];</code>
+     * @return The datasourceType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType getDatasourceType() {
+      com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType result = com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType.forNumber(datasourceType_);
+      return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * datasource_type is the type of the datasource to list.
+     * If not specified, all datasources will be listed.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 2 [json_name = "datasourceType"];</code>
+     * @param value The datasourceType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDatasourceType(com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000002;
+      datasourceType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * datasource_type is the type of the datasource to list.
+     * If not specified, all datasources will be listed.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 2 [json_name = "datasourceType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDatasourceType() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      datasourceType_ = 0;
       onChanged();
       return this;
     }

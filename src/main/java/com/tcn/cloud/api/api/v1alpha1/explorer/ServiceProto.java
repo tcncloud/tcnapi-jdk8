@@ -46,37 +46,39 @@ public final class ServiceProto {
       "\n#api/v1alpha1/explorer/service.proto\022\025a" +
       "pi.v1alpha1.explorer\032$api/v1alpha1/explo" +
       "rer/entities.proto\032\037google/protobuf/time" +
-      "stamp.proto\"I\n\034ListDatasourceSchemasRequ" +
-      "est\022)\n\020datasource_names\030\001 \003(\tR\017datasourc" +
-      "eNames\"X\n\035ListDatasourceSchemasResponse\022" +
-      "7\n\007schemas\030\001 \003(\0132\035.api.v1alpha1.explorer" +
-      ".SchemaR\007schemas\"\221\004\n\014QueryRequest\022\'\n\017dat" +
-      "asource_name\030\001 \001(\tR\016datasourceName\022N\n\017da" +
-      "tasource_type\030\002 \001(\0162%.api.v1alpha1.explo" +
-      "rer.DatasourceTypeR\016datasourceType\022\034\n\010pi" +
-      "peline\030\003 \001(\tH\000R\010pipeline\022\024\n\004prql\030\004 \001(\tH\000" +
-      "R\004prql\022\027\n\007org_ids\030\005 \003(\tR\006orgIds\0229\n\nstart" +
-      "_time\030\006 \001(\0132\032.google.protobuf.TimestampR" +
-      "\tstartTime\0225\n\010end_time\030\007 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\007endTime\022\032\n\010timezone\030\010 " +
-      "\001(\tR\010timezone\022R\n\023pipeline_parameters\030\t \001" +
-      "(\0132!.api.v1alpha1.explorer.ParametersR\022p" +
-      "ipelineParameters\022\036\n\013ui_trace_id\030\n \001(\tR\t" +
-      "uiTraceId\022\030\n\007comment\030\013 \001(\tR\007comment\022\026\n\006f" +
-      "ormat\030\014 \001(\tR\006formatB\007\n\005query\"Z\n\rQueryRes" +
-      "ponse\022\035\n\nresult_url\030\001 \001(\tR\tresultUrl\022*\n\021" +
-      "result_size_bytes\030\002 \001(\003R\017resultSizeBytes" +
-      "2\352\001\n\017ExplorerService\022\202\001\n\025ListDatasourceS" +
-      "chemas\0223.api.v1alpha1.explorer.ListDatas" +
-      "ourceSchemasRequest\0324.api.v1alpha1.explo" +
-      "rer.ListDatasourceSchemasResponse\022R\n\005Que" +
-      "ry\022#.api.v1alpha1.explorer.QueryRequest\032" +
-      "$.api.v1alpha1.explorer.QueryResponseB\255\001" +
-      "\n\'com.tcn.cloud.api.api.v1alpha1.explore" +
-      "rB\014ServiceProtoP\001\242\002\003AVE\252\002\025Api.V1alpha1.E" +
-      "xplorer\312\002\025Api\\V1alpha1\\Explorer\342\002!Api\\V1" +
-      "alpha1\\Explorer\\GPBMetadata\352\002\027Api::V1alp" +
-      "ha1::Explorerb\006proto3"
+      "stamp.proto\"\231\001\n\034ListDatasourceSchemasReq" +
+      "uest\022)\n\020datasource_names\030\001 \003(\tR\017datasour" +
+      "ceNames\022N\n\017datasource_type\030\002 \001(\0162%.api.v" +
+      "1alpha1.explorer.DatasourceTypeR\016datasou" +
+      "rceType\"X\n\035ListDatasourceSchemasResponse" +
+      "\0227\n\007schemas\030\001 \003(\0132\035.api.v1alpha1.explore" +
+      "r.SchemaR\007schemas\"\221\004\n\014QueryRequest\022\'\n\017da" +
+      "tasource_name\030\001 \001(\tR\016datasourceName\022N\n\017d" +
+      "atasource_type\030\002 \001(\0162%.api.v1alpha1.expl" +
+      "orer.DatasourceTypeR\016datasourceType\022\034\n\010p" +
+      "ipeline\030\003 \001(\tH\000R\010pipeline\022\024\n\004prql\030\004 \001(\tH" +
+      "\000R\004prql\022\027\n\007org_ids\030\005 \003(\tR\006orgIds\0229\n\nstar" +
+      "t_time\030\006 \001(\0132\032.google.protobuf.Timestamp" +
+      "R\tstartTime\0225\n\010end_time\030\007 \001(\0132\032.google.p" +
+      "rotobuf.TimestampR\007endTime\022\032\n\010timezone\030\010" +
+      " \001(\tR\010timezone\022R\n\023pipeline_parameters\030\t " +
+      "\001(\0132!.api.v1alpha1.explorer.ParametersR\022" +
+      "pipelineParameters\022\036\n\013ui_trace_id\030\n \001(\tR" +
+      "\tuiTraceId\022\030\n\007comment\030\013 \001(\tR\007comment\022\026\n\006" +
+      "format\030\014 \001(\tR\006formatB\007\n\005query\"Z\n\rQueryRe" +
+      "sponse\022\035\n\nresult_url\030\001 \001(\tR\tresultUrl\022*\n" +
+      "\021result_size_bytes\030\002 \001(\003R\017resultSizeByte" +
+      "s2\352\001\n\017ExplorerService\022\202\001\n\025ListDatasource" +
+      "Schemas\0223.api.v1alpha1.explorer.ListData" +
+      "sourceSchemasRequest\0324.api.v1alpha1.expl" +
+      "orer.ListDatasourceSchemasResponse\022R\n\005Qu" +
+      "ery\022#.api.v1alpha1.explorer.QueryRequest" +
+      "\032$.api.v1alpha1.explorer.QueryResponseB\255" +
+      "\001\n\'com.tcn.cloud.api.api.v1alpha1.explor" +
+      "erB\014ServiceProtoP\001\242\002\003AVE\252\002\025Api.V1alpha1." +
+      "Explorer\312\002\025Api\\V1alpha1\\Explorer\342\002!Api\\V" +
+      "1alpha1\\Explorer\\GPBMetadata\352\002\027Api::V1al" +
+      "pha1::Explorerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -89,7 +91,7 @@ public final class ServiceProto {
     internal_static_api_v1alpha1_explorer_ListDatasourceSchemasRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_explorer_ListDatasourceSchemasRequest_descriptor,
-        new java.lang.String[] { "DatasourceNames", });
+        new java.lang.String[] { "DatasourceNames", "DatasourceType", });
     internal_static_api_v1alpha1_explorer_ListDatasourceSchemasResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_v1alpha1_explorer_ListDatasourceSchemasResponse_fieldAccessorTable = new
