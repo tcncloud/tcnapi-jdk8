@@ -227,4 +227,24 @@ public interface GetUserSessionDataResponseOrBuilder extends
    * <code>.api.commons.LocalePreferences locale_preferences = 7 [json_name = "localePreferences"];</code>
    */
   com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOrBuilder();
+
+  /**
+   * <pre>
+   * The billing ID of the organization the user belongs to.
+   * </pre>
+   *
+   * <code>string billing_id = 8 [json_name = "billingId"];</code>
+   * @return The billingId.
+   */
+  java.lang.String getBillingId();
+  /**
+   * <pre>
+   * The billing ID of the organization the user belongs to.
+   * </pre>
+   *
+   * <code>string billing_id = 8 [json_name = "billingId"];</code>
+   * @return The bytes for billingId.
+   */
+  com.google.protobuf.ByteString
+      getBillingIdBytes();
 }
