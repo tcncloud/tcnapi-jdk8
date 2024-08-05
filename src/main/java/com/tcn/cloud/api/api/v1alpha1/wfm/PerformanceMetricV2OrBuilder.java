@@ -37,7 +37,7 @@ public interface PerformanceMetricV2OrBuilder extends
   /**
    * <code>float total_fte_intervals_required = 2 [json_name = "totalFteIntervalsRequired", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PerformanceMetricV2.total_fte_intervals_required is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=6050
+   *     See api/v1alpha1/wfm/wfm.proto;l=6054
    * @return The totalFteIntervalsRequired.
    */
   @java.lang.Deprecated float getTotalFteIntervalsRequired();
@@ -45,7 +45,7 @@ public interface PerformanceMetricV2OrBuilder extends
   /**
    * <code>float total_fte_intervals_achieved = 3 [json_name = "totalFteIntervalsAchieved", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.PerformanceMetricV2.total_fte_intervals_achieved is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=6051
+   *     See api/v1alpha1/wfm/wfm.proto;l=6055
    * @return The totalFteIntervalsAchieved.
    */
   @java.lang.Deprecated float getTotalFteIntervalsAchieved();
@@ -291,4 +291,24 @@ public interface PerformanceMetricV2OrBuilder extends
    * @return The totalProductiveFte.
    */
   float getTotalProductiveFte();
+
+  /**
+   * <pre>
+   * The total FTE, minus shrinkage, the the schedule is likely to address with the current shift instances.
+   * </pre>
+   *
+   * <code>float total_achieved_fte_with_shrinkage_applied = 18 [json_name = "totalAchievedFteWithShrinkageApplied"];</code>
+   * @return The totalAchievedFteWithShrinkageApplied.
+   */
+  float getTotalAchievedFteWithShrinkageApplied();
+
+  /**
+   * <pre>
+   * Total count of FTE, minus shrinkage, scheduled to be on the phone / productive / duration of time.
+   * </pre>
+   *
+   * <code>float total_productive_fte_with_shrinkage_applied = 19 [json_name = "totalProductiveFteWithShrinkageApplied"];</code>
+   * @return The totalProductiveFteWithShrinkageApplied.
+   */
+  float getTotalProductiveFteWithShrinkageApplied();
 }

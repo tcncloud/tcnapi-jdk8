@@ -69,7 +69,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.required_fte_occupancy is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=6102
+   *     See api/v1alpha1/wfm/wfm.proto;l=6110
    * @return The requiredFteOccupancy.
    */
   @java.lang.Override
@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.achieved_fte_occupancy is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=6103
+   *     See api/v1alpha1/wfm/wfm.proto;l=6111
    * @return The achievedFteOccupancy.
    */
   @java.lang.Override
@@ -135,6 +135,36 @@ private static final long serialVersionUID = 0L;
     return productiveFte_;
   }
 
+  public static final int ACHIEVED_FTE_WITH_SHRINKAGE_APPLIED_FIELD_NUMBER = 7;
+  private float achievedFteWithShrinkageApplied_ = 0F;
+  /**
+   * <pre>
+   * Number of achieved FTE's, minus shrinkage, in the interval.
+   * </pre>
+   *
+   * <code>float achieved_fte_with_shrinkage_applied = 7 [json_name = "achievedFteWithShrinkageApplied"];</code>
+   * @return The achievedFteWithShrinkageApplied.
+   */
+  @java.lang.Override
+  public float getAchievedFteWithShrinkageApplied() {
+    return achievedFteWithShrinkageApplied_;
+  }
+
+  public static final int PRODUCTIVE_FTE_WITH_SHRINKAGE_APPLIED_FIELD_NUMBER = 8;
+  private float productiveFteWithShrinkageApplied_ = 0F;
+  /**
+   * <pre>
+   * Count of FTE, minus shrinkage, scheduled to be on the phone / productive / duration of time.
+   * </pre>
+   *
+   * <code>float productive_fte_with_shrinkage_applied = 8 [json_name = "productiveFteWithShrinkageApplied"];</code>
+   * @return The productiveFteWithShrinkageApplied.
+   */
+  @java.lang.Override
+  public float getProductiveFteWithShrinkageApplied() {
+    return productiveFteWithShrinkageApplied_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -166,6 +196,12 @@ private static final long serialVersionUID = 0L;
     }
     if (java.lang.Float.floatToRawIntBits(productiveFte_) != 0) {
       output.writeFloat(6, productiveFte_);
+    }
+    if (java.lang.Float.floatToRawIntBits(achievedFteWithShrinkageApplied_) != 0) {
+      output.writeFloat(7, achievedFteWithShrinkageApplied_);
+    }
+    if (java.lang.Float.floatToRawIntBits(productiveFteWithShrinkageApplied_) != 0) {
+      output.writeFloat(8, productiveFteWithShrinkageApplied_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -199,6 +235,14 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToRawIntBits(productiveFte_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(6, productiveFte_);
+    }
+    if (java.lang.Float.floatToRawIntBits(achievedFteWithShrinkageApplied_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(7, achievedFteWithShrinkageApplied_);
+    }
+    if (java.lang.Float.floatToRawIntBits(productiveFteWithShrinkageApplied_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(8, productiveFteWithShrinkageApplied_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -235,6 +279,12 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToIntBits(getProductiveFte())
         != java.lang.Float.floatToIntBits(
             other.getProductiveFte())) return false;
+    if (java.lang.Float.floatToIntBits(getAchievedFteWithShrinkageApplied())
+        != java.lang.Float.floatToIntBits(
+            other.getAchievedFteWithShrinkageApplied())) return false;
+    if (java.lang.Float.floatToIntBits(getProductiveFteWithShrinkageApplied())
+        != java.lang.Float.floatToIntBits(
+            other.getProductiveFteWithShrinkageApplied())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -265,6 +315,12 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PRODUCTIVE_FTE_FIELD_NUMBER;
     hash = (53 * hash) + java.lang.Float.floatToIntBits(
         getProductiveFte());
+    hash = (37 * hash) + ACHIEVED_FTE_WITH_SHRINKAGE_APPLIED_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getAchievedFteWithShrinkageApplied());
+    hash = (37 * hash) + PRODUCTIVE_FTE_WITH_SHRINKAGE_APPLIED_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getProductiveFteWithShrinkageApplied());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -406,6 +462,8 @@ private static final long serialVersionUID = 0L;
       requiredFte_ = 0F;
       achievedFte_ = 0F;
       productiveFte_ = 0F;
+      achievedFteWithShrinkageApplied_ = 0F;
+      productiveFteWithShrinkageApplied_ = 0F;
       return this;
     }
 
@@ -458,6 +516,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.productiveFte_ = productiveFte_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.achievedFteWithShrinkageApplied_ = achievedFteWithShrinkageApplied_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.productiveFteWithShrinkageApplied_ = productiveFteWithShrinkageApplied_;
       }
     }
 
@@ -523,6 +587,12 @@ private static final long serialVersionUID = 0L;
       if (other.getProductiveFte() != 0F) {
         setProductiveFte(other.getProductiveFte());
       }
+      if (other.getAchievedFteWithShrinkageApplied() != 0F) {
+        setAchievedFteWithShrinkageApplied(other.getAchievedFteWithShrinkageApplied());
+      }
+      if (other.getProductiveFteWithShrinkageApplied() != 0F) {
+        setProductiveFteWithShrinkageApplied(other.getProductiveFteWithShrinkageApplied());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -581,6 +651,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 53
+            case 61: {
+              achievedFteWithShrinkageApplied_ = input.readFloat();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 61
+            case 69: {
+              productiveFteWithShrinkageApplied_ = input.readFloat();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 69
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -721,7 +801,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.required_fte_occupancy is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=6102
+     *     See api/v1alpha1/wfm/wfm.proto;l=6110
      * @return The requiredFteOccupancy.
      */
     @java.lang.Override
@@ -731,7 +811,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.required_fte_occupancy is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=6102
+     *     See api/v1alpha1/wfm/wfm.proto;l=6110
      * @param value The requiredFteOccupancy to set.
      * @return This builder for chaining.
      */
@@ -745,7 +825,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.required_fte_occupancy is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=6102
+     *     See api/v1alpha1/wfm/wfm.proto;l=6110
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearRequiredFteOccupancy() {
@@ -759,7 +839,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.achieved_fte_occupancy is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=6103
+     *     See api/v1alpha1/wfm/wfm.proto;l=6111
      * @return The achievedFteOccupancy.
      */
     @java.lang.Override
@@ -769,7 +849,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.achieved_fte_occupancy is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=6103
+     *     See api/v1alpha1/wfm/wfm.proto;l=6111
      * @param value The achievedFteOccupancy to set.
      * @return This builder for chaining.
      */
@@ -783,7 +863,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy", deprecated = true];</code>
      * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.achieved_fte_occupancy is deprecated.
-     *     See api/v1alpha1/wfm/wfm.proto;l=6103
+     *     See api/v1alpha1/wfm/wfm.proto;l=6111
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearAchievedFteOccupancy() {
@@ -921,6 +1001,94 @@ private static final long serialVersionUID = 0L;
     public Builder clearProductiveFte() {
       bitField0_ = (bitField0_ & ~0x00000020);
       productiveFte_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float achievedFteWithShrinkageApplied_ ;
+    /**
+     * <pre>
+     * Number of achieved FTE's, minus shrinkage, in the interval.
+     * </pre>
+     *
+     * <code>float achieved_fte_with_shrinkage_applied = 7 [json_name = "achievedFteWithShrinkageApplied"];</code>
+     * @return The achievedFteWithShrinkageApplied.
+     */
+    @java.lang.Override
+    public float getAchievedFteWithShrinkageApplied() {
+      return achievedFteWithShrinkageApplied_;
+    }
+    /**
+     * <pre>
+     * Number of achieved FTE's, minus shrinkage, in the interval.
+     * </pre>
+     *
+     * <code>float achieved_fte_with_shrinkage_applied = 7 [json_name = "achievedFteWithShrinkageApplied"];</code>
+     * @param value The achievedFteWithShrinkageApplied to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAchievedFteWithShrinkageApplied(float value) {
+
+      achievedFteWithShrinkageApplied_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of achieved FTE's, minus shrinkage, in the interval.
+     * </pre>
+     *
+     * <code>float achieved_fte_with_shrinkage_applied = 7 [json_name = "achievedFteWithShrinkageApplied"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAchievedFteWithShrinkageApplied() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      achievedFteWithShrinkageApplied_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float productiveFteWithShrinkageApplied_ ;
+    /**
+     * <pre>
+     * Count of FTE, minus shrinkage, scheduled to be on the phone / productive / duration of time.
+     * </pre>
+     *
+     * <code>float productive_fte_with_shrinkage_applied = 8 [json_name = "productiveFteWithShrinkageApplied"];</code>
+     * @return The productiveFteWithShrinkageApplied.
+     */
+    @java.lang.Override
+    public float getProductiveFteWithShrinkageApplied() {
+      return productiveFteWithShrinkageApplied_;
+    }
+    /**
+     * <pre>
+     * Count of FTE, minus shrinkage, scheduled to be on the phone / productive / duration of time.
+     * </pre>
+     *
+     * <code>float productive_fte_with_shrinkage_applied = 8 [json_name = "productiveFteWithShrinkageApplied"];</code>
+     * @param value The productiveFteWithShrinkageApplied to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProductiveFteWithShrinkageApplied(float value) {
+
+      productiveFteWithShrinkageApplied_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Count of FTE, minus shrinkage, scheduled to be on the phone / productive / duration of time.
+     * </pre>
+     *
+     * <code>float productive_fte_with_shrinkage_applied = 8 [json_name = "productiveFteWithShrinkageApplied"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProductiveFteWithShrinkageApplied() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      productiveFteWithShrinkageApplied_ = 0F;
       onChanged();
       return this;
     }

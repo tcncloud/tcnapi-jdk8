@@ -25,7 +25,7 @@ public interface FTERequiredVsAchievedOccupancyIntervalOrBuilder extends
   /**
    * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.required_fte_occupancy is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=6102
+   *     See api/v1alpha1/wfm/wfm.proto;l=6110
    * @return The requiredFteOccupancy.
    */
   @java.lang.Deprecated float getRequiredFteOccupancy();
@@ -33,7 +33,7 @@ public interface FTERequiredVsAchievedOccupancyIntervalOrBuilder extends
   /**
    * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.achieved_fte_occupancy is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=6103
+   *     See api/v1alpha1/wfm/wfm.proto;l=6111
    * @return The achievedFteOccupancy.
    */
   @java.lang.Deprecated float getAchievedFteOccupancy();
@@ -67,4 +67,24 @@ public interface FTERequiredVsAchievedOccupancyIntervalOrBuilder extends
    * @return The productiveFte.
    */
   float getProductiveFte();
+
+  /**
+   * <pre>
+   * Number of achieved FTE's, minus shrinkage, in the interval.
+   * </pre>
+   *
+   * <code>float achieved_fte_with_shrinkage_applied = 7 [json_name = "achievedFteWithShrinkageApplied"];</code>
+   * @return The achievedFteWithShrinkageApplied.
+   */
+  float getAchievedFteWithShrinkageApplied();
+
+  /**
+   * <pre>
+   * Count of FTE, minus shrinkage, scheduled to be on the phone / productive / duration of time.
+   * </pre>
+   *
+   * <code>float productive_fte_with_shrinkage_applied = 8 [json_name = "productiveFteWithShrinkageApplied"];</code>
+   * @return The productiveFteWithShrinkageApplied.
+   */
+  float getProductiveFteWithShrinkageApplied();
 }
