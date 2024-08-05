@@ -60,4 +60,31 @@ public interface ListShiftInstanceSidsForScheduleRequestOrBuilder extends
    * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
    */
   com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDatetimeRangeOrBuilder();
+
+  /**
+   * <pre>
+   * Optional field, if left nil all shift sids matching the given parameters will be included.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
+   * @return Whether the nodeSelector field is set.
+   */
+  boolean hasNodeSelector();
+  /**
+   * <pre>
+   * Optional field, if left nil all shift sids matching the given parameters will be included.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
+   * @return The nodeSelector.
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity getNodeSelector();
+  /**
+   * <pre>
+   * Optional field, if left nil all shift sids matching the given parameters will be included.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder getNodeSelectorOrBuilder();
 }

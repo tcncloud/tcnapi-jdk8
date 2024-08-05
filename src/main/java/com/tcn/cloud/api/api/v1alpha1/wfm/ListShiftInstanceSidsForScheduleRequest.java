@@ -118,6 +118,44 @@ private static final long serialVersionUID = 0L;
     return datetimeRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : datetimeRange_;
   }
 
+  public static final int NODE_SELECTOR_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity nodeSelector_;
+  /**
+   * <pre>
+   * Optional field, if left nil all shift sids matching the given parameters will be included.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
+   * @return Whether the nodeSelector field is set.
+   */
+  @java.lang.Override
+  public boolean hasNodeSelector() {
+    return nodeSelector_ != null;
+  }
+  /**
+   * <pre>
+   * Optional field, if left nil all shift sids matching the given parameters will be included.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
+   * @return The nodeSelector.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity getNodeSelector() {
+    return nodeSelector_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance() : nodeSelector_;
+  }
+  /**
+   * <pre>
+   * Optional field, if left nil all shift sids matching the given parameters will be included.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder getNodeSelectorOrBuilder() {
+    return nodeSelector_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance() : nodeSelector_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -138,6 +176,9 @@ private static final long serialVersionUID = 0L;
     if (datetimeRange_ != null) {
       output.writeMessage(2, getDatetimeRange());
     }
+    if (nodeSelector_ != null) {
+      output.writeMessage(3, getNodeSelector());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -154,6 +195,10 @@ private static final long serialVersionUID = 0L;
     if (datetimeRange_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getDatetimeRange());
+    }
+    if (nodeSelector_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getNodeSelector());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -180,6 +225,11 @@ private static final long serialVersionUID = 0L;
       if (!getDatetimeRange()
           .equals(other.getDatetimeRange())) return false;
     }
+    if (hasNodeSelector() != other.hasNodeSelector()) return false;
+    if (hasNodeSelector()) {
+      if (!getNodeSelector()
+          .equals(other.getNodeSelector())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -198,6 +248,10 @@ private static final long serialVersionUID = 0L;
     if (hasDatetimeRange()) {
       hash = (37 * hash) + DATETIME_RANGE_FIELD_NUMBER;
       hash = (53 * hash) + getDatetimeRange().hashCode();
+    }
+    if (hasNodeSelector()) {
+      hash = (37 * hash) + NODE_SELECTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getNodeSelector().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -344,6 +398,11 @@ private static final long serialVersionUID = 0L;
         datetimeRangeBuilder_.dispose();
         datetimeRangeBuilder_ = null;
       }
+      nodeSelector_ = null;
+      if (nodeSelectorBuilder_ != null) {
+        nodeSelectorBuilder_.dispose();
+        nodeSelectorBuilder_ = null;
+      }
       return this;
     }
 
@@ -386,6 +445,11 @@ private static final long serialVersionUID = 0L;
         result.datetimeRange_ = datetimeRangeBuilder_ == null
             ? datetimeRange_
             : datetimeRangeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.nodeSelector_ = nodeSelectorBuilder_ == null
+            ? nodeSelector_
+            : nodeSelectorBuilder_.build();
       }
     }
 
@@ -439,6 +503,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasDatetimeRange()) {
         mergeDatetimeRange(other.getDatetimeRange());
       }
+      if (other.hasNodeSelector()) {
+        mergeNodeSelector(other.getNodeSelector());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -479,6 +546,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getNodeSelectorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -804,6 +878,161 @@ private static final long serialVersionUID = 0L;
         datetimeRange_ = null;
       }
       return datetimeRangeBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity nodeSelector_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity, com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder> nodeSelectorBuilder_;
+    /**
+     * <pre>
+     * Optional field, if left nil all shift sids matching the given parameters will be included.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
+     * @return Whether the nodeSelector field is set.
+     */
+    public boolean hasNodeSelector() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Optional field, if left nil all shift sids matching the given parameters will be included.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
+     * @return The nodeSelector.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity getNodeSelector() {
+      if (nodeSelectorBuilder_ == null) {
+        return nodeSelector_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance() : nodeSelector_;
+      } else {
+        return nodeSelectorBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional field, if left nil all shift sids matching the given parameters will be included.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
+     */
+    public Builder setNodeSelector(com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity value) {
+      if (nodeSelectorBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        nodeSelector_ = value;
+      } else {
+        nodeSelectorBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional field, if left nil all shift sids matching the given parameters will be included.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
+     */
+    public Builder setNodeSelector(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder builderForValue) {
+      if (nodeSelectorBuilder_ == null) {
+        nodeSelector_ = builderForValue.build();
+      } else {
+        nodeSelectorBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional field, if left nil all shift sids matching the given parameters will be included.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
+     */
+    public Builder mergeNodeSelector(com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity value) {
+      if (nodeSelectorBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          nodeSelector_ != null &&
+          nodeSelector_ != com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance()) {
+          getNodeSelectorBuilder().mergeFrom(value);
+        } else {
+          nodeSelector_ = value;
+        }
+      } else {
+        nodeSelectorBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional field, if left nil all shift sids matching the given parameters will be included.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
+     */
+    public Builder clearNodeSelector() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      nodeSelector_ = null;
+      if (nodeSelectorBuilder_ != null) {
+        nodeSelectorBuilder_.dispose();
+        nodeSelectorBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional field, if left nil all shift sids matching the given parameters will be included.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder getNodeSelectorBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getNodeSelectorFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional field, if left nil all shift sids matching the given parameters will be included.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder getNodeSelectorOrBuilder() {
+      if (nodeSelectorBuilder_ != null) {
+        return nodeSelectorBuilder_.getMessageOrBuilder();
+      } else {
+        return nodeSelector_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance() : nodeSelector_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional field, if left nil all shift sids matching the given parameters will be included.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity, com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder> 
+        getNodeSelectorFieldBuilder() {
+      if (nodeSelectorBuilder_ == null) {
+        nodeSelectorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity, com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder>(
+                getNodeSelector(),
+                getParentForChildren(),
+                isClean());
+        nodeSelector_ = null;
+      }
+      return nodeSelectorBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
