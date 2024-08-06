@@ -142,6 +142,21 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int RGBA_COLOR_ID_FIELD_NUMBER = 6;
+  private long rgbaColorId_ = 0L;
+  /**
+   * <pre>
+   * ID of the rgba color.
+   * </pre>
+   *
+   * <code>int64 rgba_color_id = 6 [json_name = "rgbaColorId"];</code>
+   * @return The rgbaColorId.
+   */
+  @java.lang.Override
+  public long getRgbaColorId() {
+    return rgbaColorId_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -171,6 +186,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, name_);
     }
+    if (rgbaColorId_ != 0L) {
+      output.writeInt64(6, rgbaColorId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -198,6 +216,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, name_);
+    }
+    if (rgbaColorId_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(6, rgbaColorId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -228,6 +250,8 @@ private static final long serialVersionUID = 0L;
             other.getAlpha())) return false;
     if (!getName()
         .equals(other.getName())) return false;
+    if (getRgbaColorId()
+        != other.getRgbaColorId()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -253,6 +277,9 @@ private static final long serialVersionUID = 0L;
         getAlpha());
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
+    hash = (37 * hash) + RGBA_COLOR_ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getRgbaColorId());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -393,6 +420,7 @@ private static final long serialVersionUID = 0L;
       blue_ = 0F;
       alpha_ = 0F;
       name_ = "";
+      rgbaColorId_ = 0L;
       return this;
     }
 
@@ -440,6 +468,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.rgbaColorId_ = rgbaColorId_;
       }
     }
 
@@ -504,6 +535,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
+      if (other.getRgbaColorId() != 0L) {
+        setRgbaColorId(other.getRgbaColorId());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -555,6 +589,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 48: {
+              rgbaColorId_ = input.readInt64();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -816,6 +855,50 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       name_ = value;
       bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private long rgbaColorId_ ;
+    /**
+     * <pre>
+     * ID of the rgba color.
+     * </pre>
+     *
+     * <code>int64 rgba_color_id = 6 [json_name = "rgbaColorId"];</code>
+     * @return The rgbaColorId.
+     */
+    @java.lang.Override
+    public long getRgbaColorId() {
+      return rgbaColorId_;
+    }
+    /**
+     * <pre>
+     * ID of the rgba color.
+     * </pre>
+     *
+     * <code>int64 rgba_color_id = 6 [json_name = "rgbaColorId"];</code>
+     * @param value The rgbaColorId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRgbaColorId(long value) {
+
+      rgbaColorId_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ID of the rgba color.
+     * </pre>
+     *
+     * <code>int64 rgba_color_id = 6 [json_name = "rgbaColorId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRgbaColorId() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      rgbaColorId_ = 0L;
       onChanged();
       return this;
     }
