@@ -88,6 +88,10 @@ public enum Application
    * <code>APPLICATION_CONTACTMANAGER = 18;</code>
    */
   APPLICATION_CONTACTMANAGER(18),
+  /**
+   * <code>APPLICATION_AGENT_MANAGER = 19;</code>
+   */
+  APPLICATION_AGENT_MANAGER(19),
   UNRECOGNIZED(-1),
   ;
 
@@ -167,6 +171,10 @@ public enum Application
    * <code>APPLICATION_CONTACTMANAGER = 18;</code>
    */
   public static final int APPLICATION_CONTACTMANAGER_VALUE = 18;
+  /**
+   * <code>APPLICATION_AGENT_MANAGER = 19;</code>
+   */
+  public static final int APPLICATION_AGENT_MANAGER_VALUE = 19;
 
 
   public final int getNumber() {
@@ -212,6 +220,7 @@ public enum Application
       case 16: return APPLICATION_WORKFLOWS;
       case 17: return APPLICATION_NEWSROOM;
       case 18: return APPLICATION_CONTACTMANAGER;
+      case 19: return APPLICATION_AGENT_MANAGER;
       default: return null;
     }
   }
