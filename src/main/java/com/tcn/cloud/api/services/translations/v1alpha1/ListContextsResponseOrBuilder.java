@@ -8,27 +8,67 @@ public interface ListContextsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * This is still populated for backwards compatibility
+   * </pre>
+   *
    * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
    * @return A list containing the contexts.
    */
   java.util.List<java.lang.String>
       getContextsList();
   /**
+   * <pre>
+   * This is still populated for backwards compatibility
+   * </pre>
+   *
    * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
    * @return The count of contexts.
    */
   int getContextsCount();
   /**
+   * <pre>
+   * This is still populated for backwards compatibility
+   * </pre>
+   *
    * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
    * @param index The index of the element to return.
    * @return The contexts at the given index.
    */
   java.lang.String getContexts(int index);
   /**
+   * <pre>
+   * This is still populated for backwards compatibility
+   * </pre>
+   *
    * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the contexts at the given index.
    */
   com.google.protobuf.ByteString
       getContextsBytes(int index);
+
+  /**
+   * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext> 
+      getLocalizationContextsList();
+  /**
+   * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+   */
+  com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext getLocalizationContexts(int index);
+  /**
+   * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+   */
+  int getLocalizationContextsCount();
+  /**
+   * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContextOrBuilder> 
+      getLocalizationContextsOrBuilderList();
+  /**
+   * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+   */
+  com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContextOrBuilder getLocalizationContextsOrBuilder(
+      int index);
 }

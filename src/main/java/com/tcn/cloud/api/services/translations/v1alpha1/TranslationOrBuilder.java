@@ -126,4 +126,31 @@ public interface TranslationOrBuilder extends
    */
   com.google.protobuf.ByteString
       getManualTranslationBytes();
+
+  /**
+   * <pre>
+   * Creation time of the translation.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp created_at = 7 [json_name = "createdAt"];</code>
+   * @return Whether the createdAt field is set.
+   */
+  boolean hasCreatedAt();
+  /**
+   * <pre>
+   * Creation time of the translation.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp created_at = 7 [json_name = "createdAt"];</code>
+   * @return The createdAt.
+   */
+  com.google.protobuf.Timestamp getCreatedAt();
+  /**
+   * <pre>
+   * Creation time of the translation.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp created_at = 7 [json_name = "createdAt"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 }
