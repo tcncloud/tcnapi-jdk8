@@ -440,6 +440,36 @@ private static final long serialVersionUID = 0L;
     return totalProductiveFte_;
   }
 
+  public static final int TOTAL_ACHIEVED_FTE_WITH_SHRINKAGE_APPLIED_FIELD_NUMBER = 18;
+  private float totalAchievedFteWithShrinkageApplied_ = 0F;
+  /**
+   * <pre>
+   * The total FTE, minus shrinkage, the the schedule is likely to address with the current shift instances.
+   * </pre>
+   *
+   * <code>float total_achieved_fte_with_shrinkage_applied = 18 [json_name = "totalAchievedFteWithShrinkageApplied"];</code>
+   * @return The totalAchievedFteWithShrinkageApplied.
+   */
+  @java.lang.Override
+  public float getTotalAchievedFteWithShrinkageApplied() {
+    return totalAchievedFteWithShrinkageApplied_;
+  }
+
+  public static final int TOTAL_PRODUCTIVE_FTE_WITH_SHRINKAGE_APPLIED_FIELD_NUMBER = 19;
+  private float totalProductiveFteWithShrinkageApplied_ = 0F;
+  /**
+   * <pre>
+   * Total count of FTE, minus shrinkage, scheduled to be on the phone / productive / duration of time.
+   * </pre>
+   *
+   * <code>float total_productive_fte_with_shrinkage_applied = 19 [json_name = "totalProductiveFteWithShrinkageApplied"];</code>
+   * @return The totalProductiveFteWithShrinkageApplied.
+   */
+  @java.lang.Override
+  public float getTotalProductiveFteWithShrinkageApplied() {
+    return totalProductiveFteWithShrinkageApplied_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -504,6 +534,12 @@ private static final long serialVersionUID = 0L;
     }
     if (java.lang.Float.floatToRawIntBits(totalProductiveFte_) != 0) {
       output.writeFloat(17, totalProductiveFte_);
+    }
+    if (java.lang.Float.floatToRawIntBits(totalAchievedFteWithShrinkageApplied_) != 0) {
+      output.writeFloat(18, totalAchievedFteWithShrinkageApplied_);
+    }
+    if (java.lang.Float.floatToRawIntBits(totalProductiveFteWithShrinkageApplied_) != 0) {
+      output.writeFloat(19, totalProductiveFteWithShrinkageApplied_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -582,6 +618,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(17, totalProductiveFte_);
     }
+    if (java.lang.Float.floatToRawIntBits(totalAchievedFteWithShrinkageApplied_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(18, totalAchievedFteWithShrinkageApplied_);
+    }
+    if (java.lang.Float.floatToRawIntBits(totalProductiveFteWithShrinkageApplied_) != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeFloatSize(19, totalProductiveFteWithShrinkageApplied_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -643,6 +687,12 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToIntBits(getTotalProductiveFte())
         != java.lang.Float.floatToIntBits(
             other.getTotalProductiveFte())) return false;
+    if (java.lang.Float.floatToIntBits(getTotalAchievedFteWithShrinkageApplied())
+        != java.lang.Float.floatToIntBits(
+            other.getTotalAchievedFteWithShrinkageApplied())) return false;
+    if (java.lang.Float.floatToIntBits(getTotalProductiveFteWithShrinkageApplied())
+        != java.lang.Float.floatToIntBits(
+            other.getTotalProductiveFteWithShrinkageApplied())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -703,6 +753,12 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TOTAL_PRODUCTIVE_FTE_FIELD_NUMBER;
     hash = (53 * hash) + java.lang.Float.floatToIntBits(
         getTotalProductiveFte());
+    hash = (37 * hash) + TOTAL_ACHIEVED_FTE_WITH_SHRINKAGE_APPLIED_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getTotalAchievedFteWithShrinkageApplied());
+    hash = (37 * hash) + TOTAL_PRODUCTIVE_FTE_WITH_SHRINKAGE_APPLIED_FIELD_NUMBER;
+    hash = (53 * hash) + java.lang.Float.floatToIntBits(
+        getTotalProductiveFteWithShrinkageApplied());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -879,6 +935,8 @@ private static final long serialVersionUID = 0L;
       totalRequiredFte_ = 0F;
       totalAchievedFte_ = 0F;
       totalProductiveFte_ = 0F;
+      totalAchievedFteWithShrinkageApplied_ = 0F;
+      totalProductiveFteWithShrinkageApplied_ = 0F;
       return this;
     }
 
@@ -982,6 +1040,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00010000) != 0)) {
         result.totalProductiveFte_ = totalProductiveFte_;
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.totalAchievedFteWithShrinkageApplied_ = totalAchievedFteWithShrinkageApplied_;
+      }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.totalProductiveFteWithShrinkageApplied_ = totalProductiveFteWithShrinkageApplied_;
       }
     }
 
@@ -1126,6 +1190,12 @@ private static final long serialVersionUID = 0L;
       if (other.getTotalProductiveFte() != 0F) {
         setTotalProductiveFte(other.getTotalProductiveFte());
       }
+      if (other.getTotalAchievedFteWithShrinkageApplied() != 0F) {
+        setTotalAchievedFteWithShrinkageApplied(other.getTotalAchievedFteWithShrinkageApplied());
+      }
+      if (other.getTotalProductiveFteWithShrinkageApplied() != 0F) {
+        setTotalProductiveFteWithShrinkageApplied(other.getTotalProductiveFteWithShrinkageApplied());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1257,6 +1327,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00010000;
               break;
             } // case 141
+            case 149: {
+              totalAchievedFteWithShrinkageApplied_ = input.readFloat();
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 149
+            case 157: {
+              totalProductiveFteWithShrinkageApplied_ = input.readFloat();
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 157
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2775,6 +2855,94 @@ private static final long serialVersionUID = 0L;
     public Builder clearTotalProductiveFte() {
       bitField0_ = (bitField0_ & ~0x00010000);
       totalProductiveFte_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float totalAchievedFteWithShrinkageApplied_ ;
+    /**
+     * <pre>
+     * The total FTE, minus shrinkage, the the schedule is likely to address with the current shift instances.
+     * </pre>
+     *
+     * <code>float total_achieved_fte_with_shrinkage_applied = 18 [json_name = "totalAchievedFteWithShrinkageApplied"];</code>
+     * @return The totalAchievedFteWithShrinkageApplied.
+     */
+    @java.lang.Override
+    public float getTotalAchievedFteWithShrinkageApplied() {
+      return totalAchievedFteWithShrinkageApplied_;
+    }
+    /**
+     * <pre>
+     * The total FTE, minus shrinkage, the the schedule is likely to address with the current shift instances.
+     * </pre>
+     *
+     * <code>float total_achieved_fte_with_shrinkage_applied = 18 [json_name = "totalAchievedFteWithShrinkageApplied"];</code>
+     * @param value The totalAchievedFteWithShrinkageApplied to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalAchievedFteWithShrinkageApplied(float value) {
+
+      totalAchievedFteWithShrinkageApplied_ = value;
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The total FTE, minus shrinkage, the the schedule is likely to address with the current shift instances.
+     * </pre>
+     *
+     * <code>float total_achieved_fte_with_shrinkage_applied = 18 [json_name = "totalAchievedFteWithShrinkageApplied"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalAchievedFteWithShrinkageApplied() {
+      bitField0_ = (bitField0_ & ~0x00020000);
+      totalAchievedFteWithShrinkageApplied_ = 0F;
+      onChanged();
+      return this;
+    }
+
+    private float totalProductiveFteWithShrinkageApplied_ ;
+    /**
+     * <pre>
+     * Total count of FTE, minus shrinkage, scheduled to be on the phone / productive / duration of time.
+     * </pre>
+     *
+     * <code>float total_productive_fte_with_shrinkage_applied = 19 [json_name = "totalProductiveFteWithShrinkageApplied"];</code>
+     * @return The totalProductiveFteWithShrinkageApplied.
+     */
+    @java.lang.Override
+    public float getTotalProductiveFteWithShrinkageApplied() {
+      return totalProductiveFteWithShrinkageApplied_;
+    }
+    /**
+     * <pre>
+     * Total count of FTE, minus shrinkage, scheduled to be on the phone / productive / duration of time.
+     * </pre>
+     *
+     * <code>float total_productive_fte_with_shrinkage_applied = 19 [json_name = "totalProductiveFteWithShrinkageApplied"];</code>
+     * @param value The totalProductiveFteWithShrinkageApplied to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalProductiveFteWithShrinkageApplied(float value) {
+
+      totalProductiveFteWithShrinkageApplied_ = value;
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Total count of FTE, minus shrinkage, scheduled to be on the phone / productive / duration of time.
+     * </pre>
+     *
+     * <code>float total_productive_fte_with_shrinkage_applied = 19 [json_name = "totalProductiveFteWithShrinkageApplied"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalProductiveFteWithShrinkageApplied() {
+      bitField0_ = (bitField0_ & ~0x00040000);
+      totalProductiveFteWithShrinkageApplied_ = 0F;
       onChanged();
       return this;
     }
