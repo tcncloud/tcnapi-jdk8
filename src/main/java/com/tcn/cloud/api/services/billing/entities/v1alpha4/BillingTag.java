@@ -19,6 +19,7 @@ private static final long serialVersionUID = 0L;
     billingTagId_ = "";
     name_ = "";
     category_ = "";
+    billingCategory_ = 0;
   }
 
   @java.lang.Override
@@ -201,11 +202,13 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object category_ = "";
   /**
-   * <code>string category = 6 [json_name = "category"];</code>
+   * <code>string category = 6 [json_name = "category", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.BillingTag.category is deprecated.
+   *     See services/billing/entities/v1alpha4/tags.proto;l=12
    * @return The category.
    */
   @java.lang.Override
-  public java.lang.String getCategory() {
+  @java.lang.Deprecated public java.lang.String getCategory() {
     java.lang.Object ref = category_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -218,11 +221,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string category = 6 [json_name = "category"];</code>
+   * <code>string category = 6 [json_name = "category", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.BillingTag.category is deprecated.
+   *     See services/billing/entities/v1alpha4/tags.proto;l=12
    * @return The bytes for category.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getCategoryBytes() {
     java.lang.Object ref = category_;
     if (ref instanceof java.lang.String) {
@@ -234,6 +239,24 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int BILLING_CATEGORY_FIELD_NUMBER = 7;
+  private int billingCategory_ = 0;
+  /**
+   * <code>.services.billing.entities.v1alpha4.Category billing_category = 7 [json_name = "billingCategory"];</code>
+   * @return The enum numeric value on the wire for billingCategory.
+   */
+  @java.lang.Override public int getBillingCategoryValue() {
+    return billingCategory_;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha4.Category billing_category = 7 [json_name = "billingCategory"];</code>
+   * @return The billingCategory.
+   */
+  @java.lang.Override public com.tcn.cloud.api.services.billing.entities.v1alpha4.Category getBillingCategory() {
+    com.tcn.cloud.api.services.billing.entities.v1alpha4.Category result = com.tcn.cloud.api.services.billing.entities.v1alpha4.Category.forNumber(billingCategory_);
+    return result == null ? com.tcn.cloud.api.services.billing.entities.v1alpha4.Category.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -268,6 +291,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(category_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, category_);
     }
+    if (billingCategory_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.Category.CATEGORY_UNSPECIFIED.getNumber()) {
+      output.writeEnum(7, billingCategory_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -297,6 +323,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(category_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, category_);
+    }
+    if (billingCategory_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.Category.CATEGORY_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(7, billingCategory_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -334,6 +364,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getCategory()
         .equals(other.getCategory())) return false;
+    if (billingCategory_ != other.billingCategory_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -363,6 +394,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
     hash = (53 * hash) + getCategory().hashCode();
+    hash = (37 * hash) + BILLING_CATEGORY_FIELD_NUMBER;
+    hash = (53 * hash) + billingCategory_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -512,6 +545,7 @@ private static final long serialVersionUID = 0L;
         deleteTimeBuilder_ = null;
       }
       category_ = "";
+      billingCategory_ = 0;
       return this;
     }
 
@@ -568,6 +602,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.category_ = category_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.billingCategory_ = billingCategory_;
       }
     }
 
@@ -639,6 +676,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000020;
         onChanged();
       }
+      if (other.billingCategory_ != 0) {
+        setBillingCategoryValue(other.getBillingCategoryValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -701,6 +741,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
+            case 56: {
+              billingCategory_ = input.readEnum();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1221,10 +1266,12 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object category_ = "";
     /**
-     * <code>string category = 6 [json_name = "category"];</code>
+     * <code>string category = 6 [json_name = "category", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha4.BillingTag.category is deprecated.
+     *     See services/billing/entities/v1alpha4/tags.proto;l=12
      * @return The category.
      */
-    public java.lang.String getCategory() {
+    @java.lang.Deprecated public java.lang.String getCategory() {
       java.lang.Object ref = category_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -1237,10 +1284,12 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string category = 6 [json_name = "category"];</code>
+     * <code>string category = 6 [json_name = "category", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha4.BillingTag.category is deprecated.
+     *     See services/billing/entities/v1alpha4/tags.proto;l=12
      * @return The bytes for category.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getCategoryBytes() {
       java.lang.Object ref = category_;
       if (ref instanceof String) {
@@ -1254,11 +1303,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string category = 6 [json_name = "category"];</code>
+     * <code>string category = 6 [json_name = "category", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha4.BillingTag.category is deprecated.
+     *     See services/billing/entities/v1alpha4/tags.proto;l=12
      * @param value The category to set.
      * @return This builder for chaining.
      */
-    public Builder setCategory(
+    @java.lang.Deprecated public Builder setCategory(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       category_ = value;
@@ -1267,26 +1318,83 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string category = 6 [json_name = "category"];</code>
+     * <code>string category = 6 [json_name = "category", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha4.BillingTag.category is deprecated.
+     *     See services/billing/entities/v1alpha4/tags.proto;l=12
      * @return This builder for chaining.
      */
-    public Builder clearCategory() {
+    @java.lang.Deprecated public Builder clearCategory() {
       category_ = getDefaultInstance().getCategory();
       bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
-     * <code>string category = 6 [json_name = "category"];</code>
+     * <code>string category = 6 [json_name = "category", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha4.BillingTag.category is deprecated.
+     *     See services/billing/entities/v1alpha4/tags.proto;l=12
      * @param value The bytes for category to set.
      * @return This builder for chaining.
      */
-    public Builder setCategoryBytes(
+    @java.lang.Deprecated public Builder setCategoryBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       category_ = value;
       bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
+    private int billingCategory_ = 0;
+    /**
+     * <code>.services.billing.entities.v1alpha4.Category billing_category = 7 [json_name = "billingCategory"];</code>
+     * @return The enum numeric value on the wire for billingCategory.
+     */
+    @java.lang.Override public int getBillingCategoryValue() {
+      return billingCategory_;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.Category billing_category = 7 [json_name = "billingCategory"];</code>
+     * @param value The enum numeric value on the wire for billingCategory to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBillingCategoryValue(int value) {
+      billingCategory_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.Category billing_category = 7 [json_name = "billingCategory"];</code>
+     * @return The billingCategory.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.Category getBillingCategory() {
+      com.tcn.cloud.api.services.billing.entities.v1alpha4.Category result = com.tcn.cloud.api.services.billing.entities.v1alpha4.Category.forNumber(billingCategory_);
+      return result == null ? com.tcn.cloud.api.services.billing.entities.v1alpha4.Category.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.Category billing_category = 7 [json_name = "billingCategory"];</code>
+     * @param value The billingCategory to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBillingCategory(com.tcn.cloud.api.services.billing.entities.v1alpha4.Category value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000040;
+      billingCategory_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.Category billing_category = 7 [json_name = "billingCategory"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBillingCategory() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      billingCategory_ = 0;
       onChanged();
       return this;
     }

@@ -78,4 +78,15 @@ public interface ListShiftInstancesBySidReqOrBuilder extends
    * @return The includeActivity.
    */
   boolean getIncludeActivity();
+
+  /**
+   * <pre>
+   * Set to true to include shift segment call stats in each of the returned shift segments.
+   * Only effective when &#64;include_shift_segments is also set to true.
+   * </pre>
+   *
+   * <code>bool include_shift_segment_call_stats = 6 [json_name = "includeShiftSegmentCallStats"];</code>
+   * @return The includeShiftSegmentCallStats.
+   */
+  boolean getIncludeShiftSegmentCallStats();
 }

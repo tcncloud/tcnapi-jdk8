@@ -32,19 +32,23 @@ public interface RateDefinitionOrBuilder extends
       getSkuIdBytes();
 
   /**
-   * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag"];</code>
+   * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.RateDefinition.billing_tag is deprecated.
+   *     See services/billing/entities/v1alpha4/rates.proto;l=11
    * @return Whether the billingTag field is set.
    */
-  boolean hasBillingTag();
+  @java.lang.Deprecated boolean hasBillingTag();
   /**
-   * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag"];</code>
+   * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.RateDefinition.billing_tag is deprecated.
+   *     See services/billing/entities/v1alpha4/rates.proto;l=11
    * @return The billingTag.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag getBillingTag();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag getBillingTag();
   /**
-   * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag"];</code>
+   * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTagOrBuilder getBillingTagOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTagOrBuilder getBillingTagOrBuilder();
 
   /**
    * <code>.services.billing.entities.v1alpha4.ProductConfig config = 4 [json_name = "config"];</code>
@@ -117,4 +121,16 @@ public interface RateDefinitionOrBuilder extends
    * <code>.google.protobuf.Timestamp delete_time = 9 [json_name = "deleteTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
+
+  /**
+   * <code>string billing_tag_id = 10 [json_name = "billingTagId"];</code>
+   * @return The billingTagId.
+   */
+  java.lang.String getBillingTagId();
+  /**
+   * <code>string billing_tag_id = 10 [json_name = "billingTagId"];</code>
+   * @return The bytes for billingTagId.
+   */
+  com.google.protobuf.ByteString
+      getBillingTagIdBytes();
 }

@@ -77,14 +77,29 @@ public interface BillingTagOrBuilder extends
   com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder();
 
   /**
-   * <code>string category = 6 [json_name = "category"];</code>
+   * <code>string category = 6 [json_name = "category", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.BillingTag.category is deprecated.
+   *     See services/billing/entities/v1alpha4/tags.proto;l=12
    * @return The category.
    */
-  java.lang.String getCategory();
+  @java.lang.Deprecated java.lang.String getCategory();
   /**
-   * <code>string category = 6 [json_name = "category"];</code>
+   * <code>string category = 6 [json_name = "category", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.BillingTag.category is deprecated.
+   *     See services/billing/entities/v1alpha4/tags.proto;l=12
    * @return The bytes for category.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getCategoryBytes();
+
+  /**
+   * <code>.services.billing.entities.v1alpha4.Category billing_category = 7 [json_name = "billingCategory"];</code>
+   * @return The enum numeric value on the wire for billingCategory.
+   */
+  int getBillingCategoryValue();
+  /**
+   * <code>.services.billing.entities.v1alpha4.Category billing_category = 7 [json_name = "billingCategory"];</code>
+   * @return The billingCategory.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.Category getBillingCategory();
 }
