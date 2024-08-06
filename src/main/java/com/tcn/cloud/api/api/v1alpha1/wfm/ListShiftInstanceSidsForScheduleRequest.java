@@ -156,6 +156,21 @@ private static final long serialVersionUID = 0L;
     return nodeSelector_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance() : nodeSelector_;
   }
 
+  public static final int SCHEDULE_SCENARIO_SID_FIELD_NUMBER = 4;
+  private long scheduleScenarioSid_ = 0L;
+  /**
+   * <pre>
+   * Only required if &#64;node_selector is not nil.
+   * </pre>
+   *
+   * <code>int64 schedule_scenario_sid = 4 [json_name = "scheduleScenarioSid"];</code>
+   * @return The scheduleScenarioSid.
+   */
+  @java.lang.Override
+  public long getScheduleScenarioSid() {
+    return scheduleScenarioSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -179,6 +194,9 @@ private static final long serialVersionUID = 0L;
     if (nodeSelector_ != null) {
       output.writeMessage(3, getNodeSelector());
     }
+    if (scheduleScenarioSid_ != 0L) {
+      output.writeInt64(4, scheduleScenarioSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -199,6 +217,10 @@ private static final long serialVersionUID = 0L;
     if (nodeSelector_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getNodeSelector());
+    }
+    if (scheduleScenarioSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(4, scheduleScenarioSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -230,6 +252,8 @@ private static final long serialVersionUID = 0L;
       if (!getNodeSelector()
           .equals(other.getNodeSelector())) return false;
     }
+    if (getScheduleScenarioSid()
+        != other.getScheduleScenarioSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -253,6 +277,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + NODE_SELECTOR_FIELD_NUMBER;
       hash = (53 * hash) + getNodeSelector().hashCode();
     }
+    hash = (37 * hash) + SCHEDULE_SCENARIO_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getScheduleScenarioSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -403,6 +430,7 @@ private static final long serialVersionUID = 0L;
         nodeSelectorBuilder_.dispose();
         nodeSelectorBuilder_ = null;
       }
+      scheduleScenarioSid_ = 0L;
       return this;
     }
 
@@ -450,6 +478,9 @@ private static final long serialVersionUID = 0L;
         result.nodeSelector_ = nodeSelectorBuilder_ == null
             ? nodeSelector_
             : nodeSelectorBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.scheduleScenarioSid_ = scheduleScenarioSid_;
       }
     }
 
@@ -506,6 +537,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasNodeSelector()) {
         mergeNodeSelector(other.getNodeSelector());
       }
+      if (other.getScheduleScenarioSid() != 0L) {
+        setScheduleScenarioSid(other.getScheduleScenarioSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -553,6 +587,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              scheduleScenarioSid_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1033,6 +1072,50 @@ private static final long serialVersionUID = 0L;
         nodeSelector_ = null;
       }
       return nodeSelectorBuilder_;
+    }
+
+    private long scheduleScenarioSid_ ;
+    /**
+     * <pre>
+     * Only required if &#64;node_selector is not nil.
+     * </pre>
+     *
+     * <code>int64 schedule_scenario_sid = 4 [json_name = "scheduleScenarioSid"];</code>
+     * @return The scheduleScenarioSid.
+     */
+    @java.lang.Override
+    public long getScheduleScenarioSid() {
+      return scheduleScenarioSid_;
+    }
+    /**
+     * <pre>
+     * Only required if &#64;node_selector is not nil.
+     * </pre>
+     *
+     * <code>int64 schedule_scenario_sid = 4 [json_name = "scheduleScenarioSid"];</code>
+     * @param value The scheduleScenarioSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setScheduleScenarioSid(long value) {
+
+      scheduleScenarioSid_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Only required if &#64;node_selector is not nil.
+     * </pre>
+     *
+     * <code>int64 schedule_scenario_sid = 4 [json_name = "scheduleScenarioSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearScheduleScenarioSid() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      scheduleScenarioSid_ = 0L;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

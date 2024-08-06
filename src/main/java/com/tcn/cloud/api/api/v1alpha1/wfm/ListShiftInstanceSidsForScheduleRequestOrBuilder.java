@@ -87,4 +87,14 @@ public interface ListShiftInstanceSidsForScheduleRequestOrBuilder extends
    * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 3 [json_name = "nodeSelector"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder getNodeSelectorOrBuilder();
+
+  /**
+   * <pre>
+   * Only required if &#64;node_selector is not nil.
+   * </pre>
+   *
+   * <code>int64 schedule_scenario_sid = 4 [json_name = "scheduleScenarioSid"];</code>
+   * @return The scheduleScenarioSid.
+   */
+  long getScheduleScenarioSid();
 }

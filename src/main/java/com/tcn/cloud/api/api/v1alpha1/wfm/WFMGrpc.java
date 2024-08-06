@@ -7907,6 +7907,7 @@ public final class WFMGrpc {
      * Lists the shift_instance_sids for the Shift Instances associated with the given &#64;datetime_range and &#64;schedule_selector.
      * If &#64;node_selector is set, only shifts sids related to the given &#64;node_selector will be listed.
      * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the node they are associated with.
+     * If &#64;node_selector is set, the &#64;schedule_scenario_sid must be set to match &#64;node_selector.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the data.
@@ -10962,6 +10963,7 @@ public final class WFMGrpc {
      * Lists the shift_instance_sids for the Shift Instances associated with the given &#64;datetime_range and &#64;schedule_selector.
      * If &#64;node_selector is set, only shifts sids related to the given &#64;node_selector will be listed.
      * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the node they are associated with.
+     * If &#64;node_selector is set, the &#64;schedule_scenario_sid must be set to match &#64;node_selector.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the data.
@@ -13930,6 +13932,7 @@ public final class WFMGrpc {
      * Lists the shift_instance_sids for the Shift Instances associated with the given &#64;datetime_range and &#64;schedule_selector.
      * If &#64;node_selector is set, only shifts sids related to the given &#64;node_selector will be listed.
      * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the node they are associated with.
+     * If &#64;node_selector is set, the &#64;schedule_scenario_sid must be set to match &#64;node_selector.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the data.
@@ -16869,6 +16872,7 @@ public final class WFMGrpc {
      * Lists the shift_instance_sids for the Shift Instances associated with the given &#64;datetime_range and &#64;schedule_selector.
      * If &#64;node_selector is set, only shifts sids related to the given &#64;node_selector will be listed.
      * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the node they are associated with.
+     * If &#64;node_selector is set, the &#64;schedule_scenario_sid must be set to match &#64;node_selector.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
      *   - grpc.Internal: error occurs when getting the data.
