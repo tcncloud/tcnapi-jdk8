@@ -147,22 +147,6 @@ private static final long serialVersionUID = 0L;
     return includeActivity_;
   }
 
-  public static final int INCLUDE_SHIFT_SEGMENT_CALL_STATS_FIELD_NUMBER = 6;
-  private boolean includeShiftSegmentCallStats_ = false;
-  /**
-   * <pre>
-   * Set to true to include shift segment call stats in each of the returned shift segments.
-   * Only effective when &#64;include_shift_segments is also set to true.
-   * </pre>
-   *
-   * <code>bool include_shift_segment_call_stats = 6 [json_name = "includeShiftSegmentCallStats"];</code>
-   * @return The includeShiftSegmentCallStats.
-   */
-  @java.lang.Override
-  public boolean getIncludeShiftSegmentCallStats() {
-    return includeShiftSegmentCallStats_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -196,9 +180,6 @@ private static final long serialVersionUID = 0L;
     }
     if (includeActivity_ != false) {
       output.writeBool(5, includeActivity_);
-    }
-    if (includeShiftSegmentCallStats_ != false) {
-      output.writeBool(6, includeShiftSegmentCallStats_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -239,10 +220,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, includeActivity_);
     }
-    if (includeShiftSegmentCallStats_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(6, includeShiftSegmentCallStats_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -268,8 +245,6 @@ private static final long serialVersionUID = 0L;
         != other.getIncludeSchedulingActivity()) return false;
     if (getIncludeActivity()
         != other.getIncludeActivity()) return false;
-    if (getIncludeShiftSegmentCallStats()
-        != other.getIncludeShiftSegmentCallStats()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -297,9 +272,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + INCLUDE_ACTIVITY_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIncludeActivity());
-    hash = (37 * hash) + INCLUDE_SHIFT_SEGMENT_CALL_STATS_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getIncludeShiftSegmentCallStats());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -440,7 +412,6 @@ private static final long serialVersionUID = 0L;
       includeShiftTemplate_ = false;
       includeSchedulingActivity_ = false;
       includeActivity_ = false;
-      includeShiftSegmentCallStats_ = false;
       return this;
     }
 
@@ -494,9 +465,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.includeActivity_ = includeActivity_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.includeShiftSegmentCallStats_ = includeShiftSegmentCallStats_;
       }
     }
 
@@ -566,9 +534,6 @@ private static final long serialVersionUID = 0L;
       if (other.getIncludeActivity() != false) {
         setIncludeActivity(other.getIncludeActivity());
       }
-      if (other.getIncludeShiftSegmentCallStats() != false) {
-        setIncludeShiftSegmentCallStats(other.getIncludeShiftSegmentCallStats());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -631,11 +596,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
-            case 48: {
-              includeShiftSegmentCallStats_ = input.readBool();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -943,53 +903,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearIncludeActivity() {
       bitField0_ = (bitField0_ & ~0x00000010);
       includeActivity_ = false;
-      onChanged();
-      return this;
-    }
-
-    private boolean includeShiftSegmentCallStats_ ;
-    /**
-     * <pre>
-     * Set to true to include shift segment call stats in each of the returned shift segments.
-     * Only effective when &#64;include_shift_segments is also set to true.
-     * </pre>
-     *
-     * <code>bool include_shift_segment_call_stats = 6 [json_name = "includeShiftSegmentCallStats"];</code>
-     * @return The includeShiftSegmentCallStats.
-     */
-    @java.lang.Override
-    public boolean getIncludeShiftSegmentCallStats() {
-      return includeShiftSegmentCallStats_;
-    }
-    /**
-     * <pre>
-     * Set to true to include shift segment call stats in each of the returned shift segments.
-     * Only effective when &#64;include_shift_segments is also set to true.
-     * </pre>
-     *
-     * <code>bool include_shift_segment_call_stats = 6 [json_name = "includeShiftSegmentCallStats"];</code>
-     * @param value The includeShiftSegmentCallStats to set.
-     * @return This builder for chaining.
-     */
-    public Builder setIncludeShiftSegmentCallStats(boolean value) {
-
-      includeShiftSegmentCallStats_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Set to true to include shift segment call stats in each of the returned shift segments.
-     * Only effective when &#64;include_shift_segments is also set to true.
-     * </pre>
-     *
-     * <code>bool include_shift_segment_call_stats = 6 [json_name = "includeShiftSegmentCallStats"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearIncludeShiftSegmentCallStats() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      includeShiftSegmentCallStats_ = false;
       onChanged();
       return this;
     }
