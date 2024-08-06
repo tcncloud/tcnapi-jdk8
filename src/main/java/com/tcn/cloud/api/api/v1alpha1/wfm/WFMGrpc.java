@@ -4110,6 +4110,37 @@ public final class WFMGrpc {
     return getListShiftInstanceSidsForAgentMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleResponse> getListShiftInstanceSidsForScheduleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListShiftInstanceSidsForSchedule",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleResponse> getListShiftInstanceSidsForScheduleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleResponse> getListShiftInstanceSidsForScheduleMethod;
+    if ((getListShiftInstanceSidsForScheduleMethod = WFMGrpc.getListShiftInstanceSidsForScheduleMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListShiftInstanceSidsForScheduleMethod = WFMGrpc.getListShiftInstanceSidsForScheduleMethod) == null) {
+          WFMGrpc.getListShiftInstanceSidsForScheduleMethod = getListShiftInstanceSidsForScheduleMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListShiftInstanceSidsForSchedule"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListShiftInstanceSidsForSchedule"))
+              .build();
+        }
+      }
+    }
+    return getListShiftInstanceSidsForScheduleMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsRes> getListShiftSegmentsByShiftInstanceSidsMethod;
 
@@ -7873,6 +7904,22 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the shift_instance_sids for the Shift Instances associated with the given &#64;datetime_range and &#64;schedule_selector.
+     * If &#64;node_selector is set, only shifts sids related to the given &#64;node_selector will be listed.
+     * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the node they are associated with.
+     * If &#64;node_selector is set, the &#64;schedule_scenario_sid must be set to match &#64;node_selector.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    default void listShiftInstanceSidsForSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListShiftInstanceSidsForScheduleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists shift segments for the specified shift instances for the org sending the request.
      * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
      * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling activities member non skill activity field.
@@ -10913,6 +10960,23 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the shift_instance_sids for the Shift Instances associated with the given &#64;datetime_range and &#64;schedule_selector.
+     * If &#64;node_selector is set, only shifts sids related to the given &#64;node_selector will be listed.
+     * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the node they are associated with.
+     * If &#64;node_selector is set, the &#64;schedule_scenario_sid must be set to match &#64;node_selector.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    public void listShiftInstanceSidsForSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListShiftInstanceSidsForScheduleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists shift segments for the specified shift instances for the org sending the request.
      * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
      * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling activities member non skill activity field.
@@ -13865,6 +13929,22 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the shift_instance_sids for the Shift Instances associated with the given &#64;datetime_range and &#64;schedule_selector.
+     * If &#64;node_selector is set, only shifts sids related to the given &#64;node_selector will be listed.
+     * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the node they are associated with.
+     * If &#64;node_selector is set, the &#64;schedule_scenario_sid must be set to match &#64;node_selector.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleResponse listShiftInstanceSidsForSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListShiftInstanceSidsForScheduleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Lists shift segments for the specified shift instances for the org sending the request.
      * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
      * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling activities member non skill activity field.
@@ -16789,6 +16869,23 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the shift_instance_sids for the Shift Instances associated with the given &#64;datetime_range and &#64;schedule_selector.
+     * If &#64;node_selector is set, only shifts sids related to the given &#64;node_selector will be listed.
+     * If &#64;node_selector is not set, all shifts on the &#64;schedule_selector may be cleared, regardless of the node they are associated with.
+     * If &#64;node_selector is set, the &#64;schedule_scenario_sid must be set to match &#64;node_selector.
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleResponse> listShiftInstanceSidsForSchedule(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListShiftInstanceSidsForScheduleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists shift segments for the specified shift instances for the org sending the request.
      * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
      * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling activities member non skill activity field.
@@ -17748,58 +17845,59 @@ public final class WFMGrpc {
   private static final int METHODID_UPDATE_SHIFT_INSTANCE_WITH_SEGMENTS = 129;
   private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 130;
   private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 131;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 132;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 133;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 134;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 135;
-  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 136;
-  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 137;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 138;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 139;
-  private static final int METHODID_CREATE_TOUR_PATTERN = 140;
-  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 141;
-  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 142;
-  private static final int METHODID_GET_TOUR_PATTERN = 143;
-  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 144;
-  private static final int METHODID_DELETE_TOUR_PATTERN = 145;
-  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 146;
-  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 147;
-  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 148;
-  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 149;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 150;
-  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 151;
-  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 152;
-  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 153;
-  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 154;
-  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 155;
-  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 156;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 157;
-  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 158;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 159;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 160;
-  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 161;
-  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 162;
-  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 163;
-  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 164;
-  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 165;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 166;
-  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 167;
-  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 168;
-  private static final int METHODID_CREATE_AGENT_LEAVE_PETITION = 169;
-  private static final int METHODID_LIST_AGENT_LEAVE_PETITIONS = 170;
-  private static final int METHODID_ARCHIVE_AGENT_LEAVE_PETITION = 171;
-  private static final int METHODID_RESOLVE_AGENT_LEAVE_PETITION = 172;
-  private static final int METHODID_CANCEL_AGENT_LEAVE_PETITION = 173;
-  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 174;
-  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 175;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 176;
-  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 177;
-  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 178;
-  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 179;
-  private static final int METHODID_CREATE_RGBA_COLOR = 180;
-  private static final int METHODID_LIST_RGBA_COLORS = 181;
-  private static final int METHODID_UPDATE_RGBA_COLOR = 182;
-  private static final int METHODID_DELETE_RGBA_COLOR = 183;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_SCHEDULE = 132;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 133;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 134;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 135;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 136;
+  private static final int METHODID_GET_DEFAULT_SCHEDULING_TARGET = 137;
+  private static final int METHODID_SET_DEFAULT_SCHEDULING_TARGET = 138;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 139;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 140;
+  private static final int METHODID_CREATE_TOUR_PATTERN = 141;
+  private static final int METHODID_GET_TOUR_PATTERN_DIAGNOSTICS = 142;
+  private static final int METHODID_UPSERT_TOUR_PATTERN_WITH_MEMBERS = 143;
+  private static final int METHODID_GET_TOUR_PATTERN = 144;
+  private static final int METHODID_GET_TOUR_PATTERN_WITH_MEMBERS = 145;
+  private static final int METHODID_DELETE_TOUR_PATTERN = 146;
+  private static final int METHODID_CREATE_TOUR_WEEK_PATTERN = 147;
+  private static final int METHODID_LIST_TOUR_WEEK_PATTERNS = 148;
+  private static final int METHODID_DELETE_TOUR_WEEK_PATTERNS = 149;
+  private static final int METHODID_CREATE_TOUR_SHIFT_INSTANCE_CONFIG = 150;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_INSTANCE_CONFIG = 151;
+  private static final int METHODID_LIST_TOUR_SHIFT_INSTANCE_CONFIGS = 152;
+  private static final int METHODID_DELETE_TOUR_SHIFT_INSTANCE_CONFIGS = 153;
+  private static final int METHODID_CREATE_TOUR_SHIFT_SEGMENT_CONFIG = 154;
+  private static final int METHODID_UPDATE_TOUR_SHIFT_SEGMENT_CONFIG = 155;
+  private static final int METHODID_LIST_TOUR_SHIFT_SEGMENT_CONFIGS = 156;
+  private static final int METHODID_DELETE_TOUR_SHIFT_SEGMENT_CONFIGS = 157;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION = 158;
+  private static final int METHODID_UPDATE_TOUR_AGENT_COLLECTION = 159;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTIONS = 160;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTIONS = 161;
+  private static final int METHODID_CREATE_TOUR_AGENT_COLLECTION_WFMAGENTS = 162;
+  private static final int METHODID_LIST_TOUR_AGENT_COLLECTION_WFMAGENTS = 163;
+  private static final int METHODID_DELETE_TOUR_AGENT_COLLECTION_WFMAGENTS = 164;
+  private static final int METHODID_GENERATE_TOUR_WEEK_PATTERNS = 165;
+  private static final int METHODID_LIST_VALID_AGENTS_FOR_REPLACEMENT = 166;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE = 167;
+  private static final int METHODID_REPLACE_AGENT_ON_SCHEDULE_V1 = 168;
+  private static final int METHODID_REMOVE_AGENT_FROM_SCHEDULE = 169;
+  private static final int METHODID_CREATE_AGENT_LEAVE_PETITION = 170;
+  private static final int METHODID_LIST_AGENT_LEAVE_PETITIONS = 171;
+  private static final int METHODID_ARCHIVE_AGENT_LEAVE_PETITION = 172;
+  private static final int METHODID_RESOLVE_AGENT_LEAVE_PETITION = 173;
+  private static final int METHODID_CANCEL_AGENT_LEAVE_PETITION = 174;
+  private static final int METHODID_HELLO_WORLD_WFMADHERENCE = 175;
+  private static final int METHODID_LIST_AGENT_STATES_FOR_DAY = 176;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATES = 177;
+  private static final int METHODID_UPSERT_REAL_TIME_MANAGEMENT_STATE_COLOR = 178;
+  private static final int METHODID_LIST_REAL_TIME_MANAGEMENT_STATE_COLORS = 179;
+  private static final int METHODID_DELETE_REAL_TIME_MANAGEMENT_STATE_COLOR = 180;
+  private static final int METHODID_CREATE_RGBA_COLOR = 181;
+  private static final int METHODID_LIST_RGBA_COLORS = 182;
+  private static final int METHODID_UPDATE_RGBA_COLOR = 183;
+  private static final int METHODID_DELETE_RGBA_COLOR = 184;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -18345,6 +18443,10 @@ public final class WFMGrpc {
         case METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT:
           serviceImpl.listShiftInstanceSidsForAgent((com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes>) responseObserver);
+          break;
+        case METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_SCHEDULE:
+          serviceImpl.listShiftInstanceSidsForSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleResponse>) responseObserver);
           break;
         case METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS:
           serviceImpl.listShiftSegmentsByShiftInstanceSids((com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq) request,
@@ -19497,6 +19599,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes>(
                 service, METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT)))
         .addMethod(
+          getListShiftInstanceSidsForScheduleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForScheduleResponse>(
+                service, METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_SCHEDULE)))
+        .addMethod(
           getListShiftSegmentsByShiftInstanceSidsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -20040,6 +20149,7 @@ public final class WFMGrpc {
               .addMethod(getUpdateShiftInstanceWithSegmentsMethod())
               .addMethod(getCopyShiftInstancesToScheduleMethod())
               .addMethod(getListShiftInstanceSidsForAgentMethod())
+              .addMethod(getListShiftInstanceSidsForScheduleMethod())
               .addMethod(getListShiftSegmentsByShiftInstanceSidsMethod())
               .addMethod(getSetSchedulingTargetMethod())
               .addMethod(getGetSchedulingTargetMethod())
