@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     datasourceType_ = 0;
     fields_ = java.util.Collections.emptyList();
+    tableDescription_ = "";
   }
 
   @java.lang.Override
@@ -143,6 +144,45 @@ private static final long serialVersionUID = 0L;
     return fields_.get(index);
   }
 
+  public static final int TABLE_DESCRIPTION_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object tableDescription_ = "";
+  /**
+   * <code>string table_description = 4 [json_name = "tableDescription"];</code>
+   * @return The tableDescription.
+   */
+  @java.lang.Override
+  public java.lang.String getTableDescription() {
+    java.lang.Object ref = tableDescription_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      tableDescription_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string table_description = 4 [json_name = "tableDescription"];</code>
+   * @return The bytes for tableDescription.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTableDescriptionBytes() {
+    java.lang.Object ref = tableDescription_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      tableDescription_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -166,6 +206,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < fields_.size(); i++) {
       output.writeMessage(3, fields_.get(i));
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tableDescription_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, tableDescription_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -185,6 +228,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < fields_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, fields_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tableDescription_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, tableDescription_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -206,6 +252,8 @@ private static final long serialVersionUID = 0L;
     if (datasourceType_ != other.datasourceType_) return false;
     if (!getFieldsList()
         .equals(other.getFieldsList())) return false;
+    if (!getTableDescription()
+        .equals(other.getTableDescription())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -225,6 +273,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + getFieldsList().hashCode();
     }
+    hash = (37 * hash) + TABLE_DESCRIPTION_FIELD_NUMBER;
+    hash = (53 * hash) + getTableDescription().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -369,6 +419,7 @@ private static final long serialVersionUID = 0L;
         fieldsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
+      tableDescription_ = "";
       return this;
     }
 
@@ -420,6 +471,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.datasourceType_ = datasourceType_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.tableDescription_ = tableDescription_;
       }
     }
 
@@ -501,6 +555,11 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.getTableDescription().isEmpty()) {
+        tableDescription_ = other.tableDescription_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -550,6 +609,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 26
+            case 34: {
+              tableDescription_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -930,6 +994,78 @@ private static final long serialVersionUID = 0L;
         fields_ = null;
       }
       return fieldsBuilder_;
+    }
+
+    private java.lang.Object tableDescription_ = "";
+    /**
+     * <code>string table_description = 4 [json_name = "tableDescription"];</code>
+     * @return The tableDescription.
+     */
+    public java.lang.String getTableDescription() {
+      java.lang.Object ref = tableDescription_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tableDescription_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string table_description = 4 [json_name = "tableDescription"];</code>
+     * @return The bytes for tableDescription.
+     */
+    public com.google.protobuf.ByteString
+        getTableDescriptionBytes() {
+      java.lang.Object ref = tableDescription_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tableDescription_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string table_description = 4 [json_name = "tableDescription"];</code>
+     * @param value The tableDescription to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTableDescription(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      tableDescription_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string table_description = 4 [json_name = "tableDescription"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTableDescription() {
+      tableDescription_ = getDefaultInstance().getTableDescription();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string table_description = 4 [json_name = "tableDescription"];</code>
+     * @param value The bytes for tableDescription to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTableDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      tableDescription_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private SchemaField() {
     name_ = "";
     columnType_ = 0;
+    columnDescription_ = "";
   }
 
   @java.lang.Override
@@ -123,6 +124,45 @@ private static final long serialVersionUID = 0L;
     return isLowCardinality_;
   }
 
+  public static final int COLUMN_DESCRIPTION_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object columnDescription_ = "";
+  /**
+   * <code>string column_description = 5 [json_name = "columnDescription"];</code>
+   * @return The columnDescription.
+   */
+  @java.lang.Override
+  public java.lang.String getColumnDescription() {
+    java.lang.Object ref = columnDescription_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      columnDescription_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string column_description = 5 [json_name = "columnDescription"];</code>
+   * @return The bytes for columnDescription.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getColumnDescriptionBytes() {
+    java.lang.Object ref = columnDescription_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      columnDescription_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -149,6 +189,9 @@ private static final long serialVersionUID = 0L;
     if (isLowCardinality_ != false) {
       output.writeBool(4, isLowCardinality_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(columnDescription_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, columnDescription_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -173,6 +216,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, isLowCardinality_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(columnDescription_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, columnDescription_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -195,6 +241,8 @@ private static final long serialVersionUID = 0L;
         != other.getIsPrimaryKey()) return false;
     if (getIsLowCardinality()
         != other.getIsLowCardinality()) return false;
+    if (!getColumnDescription()
+        .equals(other.getColumnDescription())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -216,6 +264,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_LOW_CARDINALITY_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsLowCardinality());
+    hash = (37 * hash) + COLUMN_DESCRIPTION_FIELD_NUMBER;
+    hash = (53 * hash) + getColumnDescription().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -355,6 +405,7 @@ private static final long serialVersionUID = 0L;
       columnType_ = 0;
       isPrimaryKey_ = false;
       isLowCardinality_ = false;
+      columnDescription_ = "";
       return this;
     }
 
@@ -399,6 +450,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.isLowCardinality_ = isLowCardinality_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.columnDescription_ = columnDescription_;
       }
     }
 
@@ -460,6 +514,11 @@ private static final long serialVersionUID = 0L;
       if (other.getIsLowCardinality() != false) {
         setIsLowCardinality(other.getIsLowCardinality());
       }
+      if (!other.getColumnDescription().isEmpty()) {
+        columnDescription_ = other.columnDescription_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -506,6 +565,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 42: {
+              columnDescription_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -708,6 +772,78 @@ private static final long serialVersionUID = 0L;
     public Builder clearIsLowCardinality() {
       bitField0_ = (bitField0_ & ~0x00000008);
       isLowCardinality_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object columnDescription_ = "";
+    /**
+     * <code>string column_description = 5 [json_name = "columnDescription"];</code>
+     * @return The columnDescription.
+     */
+    public java.lang.String getColumnDescription() {
+      java.lang.Object ref = columnDescription_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        columnDescription_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string column_description = 5 [json_name = "columnDescription"];</code>
+     * @return The bytes for columnDescription.
+     */
+    public com.google.protobuf.ByteString
+        getColumnDescriptionBytes() {
+      java.lang.Object ref = columnDescription_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        columnDescription_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string column_description = 5 [json_name = "columnDescription"];</code>
+     * @param value The columnDescription to set.
+     * @return This builder for chaining.
+     */
+    public Builder setColumnDescription(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      columnDescription_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string column_description = 5 [json_name = "columnDescription"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearColumnDescription() {
+      columnDescription_ = getDefaultInstance().getColumnDescription();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string column_description = 5 [json_name = "columnDescription"];</code>
+     * @param value The bytes for columnDescription to set.
+     * @return This builder for chaining.
+     */
+    public Builder setColumnDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      columnDescription_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

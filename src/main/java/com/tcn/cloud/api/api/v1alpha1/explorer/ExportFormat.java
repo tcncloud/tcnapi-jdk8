@@ -5,40 +5,40 @@ package com.tcn.cloud.api.api.v1alpha1.explorer;
 
 /**
  * <pre>
- * DatasourceType is an enum for the type of a datasource.
+ * ExportFormat is an enum for the format of a report.
  * </pre>
  *
- * Protobuf enum {@code api.v1alpha1.explorer.DatasourceType}
+ * Protobuf enum {@code api.v1alpha1.explorer.ExportFormat}
  */
-public enum DatasourceType
+public enum ExportFormat
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>DATASOURCE_TYPE_UNSPECIFIED = 0;</code>
+   * <code>REPORT_FORMAT_UNSPECIFIED = 0;</code>
    */
-  DATASOURCE_TYPE_UNSPECIFIED(0),
+  REPORT_FORMAT_UNSPECIFIED(0),
   /**
-   * <code>DATASOURCE_TYPE_VFS = 1;</code>
+   * <code>REPORT_FORMAT_CSV = 1;</code>
    */
-  DATASOURCE_TYPE_VFS(1),
+  REPORT_FORMAT_CSV(1),
   /**
-   * <code>DATASOURCE_TYPE_CLICKHOUSE = 2;</code>
+   * <code>REPORT_FORMAT_PARQUET = 2;</code>
    */
-  DATASOURCE_TYPE_CLICKHOUSE(2),
+  REPORT_FORMAT_PARQUET(2),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>DATASOURCE_TYPE_UNSPECIFIED = 0;</code>
+   * <code>REPORT_FORMAT_UNSPECIFIED = 0;</code>
    */
-  public static final int DATASOURCE_TYPE_UNSPECIFIED_VALUE = 0;
+  public static final int REPORT_FORMAT_UNSPECIFIED_VALUE = 0;
   /**
-   * <code>DATASOURCE_TYPE_VFS = 1;</code>
+   * <code>REPORT_FORMAT_CSV = 1;</code>
    */
-  public static final int DATASOURCE_TYPE_VFS_VALUE = 1;
+  public static final int REPORT_FORMAT_CSV_VALUE = 1;
   /**
-   * <code>DATASOURCE_TYPE_CLICKHOUSE = 2;</code>
+   * <code>REPORT_FORMAT_PARQUET = 2;</code>
    */
-  public static final int DATASOURCE_TYPE_CLICKHOUSE_VALUE = 2;
+  public static final int REPORT_FORMAT_PARQUET_VALUE = 2;
 
 
   public final int getNumber() {
@@ -55,7 +55,7 @@ public enum DatasourceType
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static DatasourceType valueOf(int value) {
+  public static ExportFormat valueOf(int value) {
     return forNumber(value);
   }
 
@@ -63,24 +63,24 @@ public enum DatasourceType
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static DatasourceType forNumber(int value) {
+  public static ExportFormat forNumber(int value) {
     switch (value) {
-      case 0: return DATASOURCE_TYPE_UNSPECIFIED;
-      case 1: return DATASOURCE_TYPE_VFS;
-      case 2: return DATASOURCE_TYPE_CLICKHOUSE;
+      case 0: return REPORT_FORMAT_UNSPECIFIED;
+      case 1: return REPORT_FORMAT_CSV;
+      case 2: return REPORT_FORMAT_PARQUET;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<DatasourceType>
+  public static com.google.protobuf.Internal.EnumLiteMap<ExportFormat>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      DatasourceType> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<DatasourceType>() {
-          public DatasourceType findValueByNumber(int number) {
-            return DatasourceType.forNumber(number);
+      ExportFormat> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<ExportFormat>() {
+          public ExportFormat findValueByNumber(int number) {
+            return ExportFormat.forNumber(number);
           }
         };
 
@@ -98,12 +98,12 @@ public enum DatasourceType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.explorer.EntitiesProto.getDescriptor().getEnumTypes().get(2);
+    return com.tcn.cloud.api.api.v1alpha1.explorer.EntitiesProto.getDescriptor().getEnumTypes().get(0);
   }
 
-  private static final DatasourceType[] VALUES = values();
+  private static final ExportFormat[] VALUES = values();
 
-  public static DatasourceType valueOf(
+  public static ExportFormat valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -117,10 +117,10 @@ public enum DatasourceType
 
   private final int value;
 
-  private DatasourceType(int value) {
+  private ExportFormat(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.v1alpha1.explorer.DatasourceType)
+  // @@protoc_insertion_point(enum_scope:api.v1alpha1.explorer.ExportFormat)
 }
 
