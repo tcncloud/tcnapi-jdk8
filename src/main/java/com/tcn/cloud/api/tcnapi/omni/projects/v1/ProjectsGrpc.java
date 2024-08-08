@@ -111,6 +111,68 @@ public final class ProjectsGrpc {
     return getCreateProjectMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.tcnapi.omni.projects.v1.UpdateProjectRequest,
+      com.tcn.cloud.api.tcnapi.omni.projects.v1.Project> getUpdateProjectMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateProject",
+      requestType = com.tcn.cloud.api.tcnapi.omni.projects.v1.UpdateProjectRequest.class,
+      responseType = com.tcn.cloud.api.tcnapi.omni.projects.v1.Project.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.tcnapi.omni.projects.v1.UpdateProjectRequest,
+      com.tcn.cloud.api.tcnapi.omni.projects.v1.Project> getUpdateProjectMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.tcnapi.omni.projects.v1.UpdateProjectRequest, com.tcn.cloud.api.tcnapi.omni.projects.v1.Project> getUpdateProjectMethod;
+    if ((getUpdateProjectMethod = ProjectsGrpc.getUpdateProjectMethod) == null) {
+      synchronized (ProjectsGrpc.class) {
+        if ((getUpdateProjectMethod = ProjectsGrpc.getUpdateProjectMethod) == null) {
+          ProjectsGrpc.getUpdateProjectMethod = getUpdateProjectMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.tcnapi.omni.projects.v1.UpdateProjectRequest, com.tcn.cloud.api.tcnapi.omni.projects.v1.Project>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateProject"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.tcnapi.omni.projects.v1.UpdateProjectRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.tcnapi.omni.projects.v1.Project.getDefaultInstance()))
+              .setSchemaDescriptor(new ProjectsMethodDescriptorSupplier("UpdateProject"))
+              .build();
+        }
+      }
+    }
+    return getUpdateProjectMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.tcnapi.omni.projects.v1.DeleteProjectRequest,
+      com.tcn.cloud.api.tcnapi.omni.projects.v1.Project> getDeleteProjectMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteProject",
+      requestType = com.tcn.cloud.api.tcnapi.omni.projects.v1.DeleteProjectRequest.class,
+      responseType = com.tcn.cloud.api.tcnapi.omni.projects.v1.Project.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.tcnapi.omni.projects.v1.DeleteProjectRequest,
+      com.tcn.cloud.api.tcnapi.omni.projects.v1.Project> getDeleteProjectMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.tcnapi.omni.projects.v1.DeleteProjectRequest, com.tcn.cloud.api.tcnapi.omni.projects.v1.Project> getDeleteProjectMethod;
+    if ((getDeleteProjectMethod = ProjectsGrpc.getDeleteProjectMethod) == null) {
+      synchronized (ProjectsGrpc.class) {
+        if ((getDeleteProjectMethod = ProjectsGrpc.getDeleteProjectMethod) == null) {
+          ProjectsGrpc.getDeleteProjectMethod = getDeleteProjectMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.tcnapi.omni.projects.v1.DeleteProjectRequest, com.tcn.cloud.api.tcnapi.omni.projects.v1.Project>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteProject"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.tcnapi.omni.projects.v1.DeleteProjectRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.tcnapi.omni.projects.v1.Project.getDefaultInstance()))
+              .setSchemaDescriptor(new ProjectsMethodDescriptorSupplier("DeleteProject"))
+              .build();
+        }
+      }
+    }
+    return getDeleteProjectMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -191,6 +253,26 @@ public final class ProjectsGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.projects.v1.Project> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateProjectMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Method to update a project
+     * </pre>
+     */
+    default void updateProject(com.tcn.cloud.api.tcnapi.omni.projects.v1.UpdateProjectRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.projects.v1.Project> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateProjectMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Method to delete a project
+     * </pre>
+     */
+    default void deleteProject(com.tcn.cloud.api.tcnapi.omni.projects.v1.DeleteProjectRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.projects.v1.Project> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteProjectMethod(), responseObserver);
+    }
   }
 
   /**
@@ -258,6 +340,28 @@ public final class ProjectsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateProjectMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Method to update a project
+     * </pre>
+     */
+    public void updateProject(com.tcn.cloud.api.tcnapi.omni.projects.v1.UpdateProjectRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.projects.v1.Project> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateProjectMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Method to delete a project
+     * </pre>
+     */
+    public void deleteProject(com.tcn.cloud.api.tcnapi.omni.projects.v1.DeleteProjectRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.projects.v1.Project> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteProjectMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -307,6 +411,26 @@ public final class ProjectsGrpc {
     public com.tcn.cloud.api.tcnapi.omni.projects.v1.Project createProject(com.tcn.cloud.api.tcnapi.omni.projects.v1.CreateProjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateProjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Method to update a project
+     * </pre>
+     */
+    public com.tcn.cloud.api.tcnapi.omni.projects.v1.Project updateProject(com.tcn.cloud.api.tcnapi.omni.projects.v1.UpdateProjectRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateProjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Method to delete a project
+     * </pre>
+     */
+    public com.tcn.cloud.api.tcnapi.omni.projects.v1.Project deleteProject(com.tcn.cloud.api.tcnapi.omni.projects.v1.DeleteProjectRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteProjectMethod(), getCallOptions(), request);
     }
   }
 
@@ -361,11 +485,35 @@ public final class ProjectsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateProjectMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Method to update a project
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.tcnapi.omni.projects.v1.Project> updateProject(
+        com.tcn.cloud.api.tcnapi.omni.projects.v1.UpdateProjectRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateProjectMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Method to delete a project
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.tcnapi.omni.projects.v1.Project> deleteProject(
+        com.tcn.cloud.api.tcnapi.omni.projects.v1.DeleteProjectRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteProjectMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_PROJECTS = 0;
   private static final int METHODID_GET_PROJECT = 1;
   private static final int METHODID_CREATE_PROJECT = 2;
+  private static final int METHODID_UPDATE_PROJECT = 3;
+  private static final int METHODID_DELETE_PROJECT = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -394,6 +542,14 @@ public final class ProjectsGrpc {
           break;
         case METHODID_CREATE_PROJECT:
           serviceImpl.createProject((com.tcn.cloud.api.tcnapi.omni.projects.v1.CreateProjectRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.projects.v1.Project>) responseObserver);
+          break;
+        case METHODID_UPDATE_PROJECT:
+          serviceImpl.updateProject((com.tcn.cloud.api.tcnapi.omni.projects.v1.UpdateProjectRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.projects.v1.Project>) responseObserver);
+          break;
+        case METHODID_DELETE_PROJECT:
+          serviceImpl.deleteProject((com.tcn.cloud.api.tcnapi.omni.projects.v1.DeleteProjectRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.projects.v1.Project>) responseObserver);
           break;
         default:
@@ -435,6 +591,20 @@ public final class ProjectsGrpc {
               com.tcn.cloud.api.tcnapi.omni.projects.v1.CreateProjectRequest,
               com.tcn.cloud.api.tcnapi.omni.projects.v1.Project>(
                 service, METHODID_CREATE_PROJECT)))
+        .addMethod(
+          getUpdateProjectMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.tcnapi.omni.projects.v1.UpdateProjectRequest,
+              com.tcn.cloud.api.tcnapi.omni.projects.v1.Project>(
+                service, METHODID_UPDATE_PROJECT)))
+        .addMethod(
+          getDeleteProjectMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.tcnapi.omni.projects.v1.DeleteProjectRequest,
+              com.tcn.cloud.api.tcnapi.omni.projects.v1.Project>(
+                service, METHODID_DELETE_PROJECT)))
         .build();
   }
 
@@ -486,6 +656,8 @@ public final class ProjectsGrpc {
               .addMethod(getListProjectsMethod())
               .addMethod(getGetProjectMethod())
               .addMethod(getCreateProjectMethod())
+              .addMethod(getUpdateProjectMethod())
+              .addMethod(getDeleteProjectMethod())
               .build();
         }
       }

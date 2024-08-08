@@ -34,6 +34,16 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_tcnapi_omni_projects_v1_CreateProjectRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_tcnapi_omni_projects_v1_UpdateProjectRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_tcnapi_omni_projects_v1_UpdateProjectRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_tcnapi_omni_projects_v1_DeleteProjectRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_tcnapi_omni_projects_v1_DeleteProjectRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -61,11 +71,18 @@ public final class EntitiesProto {
       "ent\030\001 \001(\tB(\340A\002\372A\"\022 projects.omni.tcnapi." +
       "com/ProjectR\006parent\022?\n\007project\030\003 \001(\0132 .t" +
       "cnapi.omni.projects.v1.ProjectB\003\340A\002R\007pro" +
-      "jectB\271\001\n)com.tcn.cloud.api.tcnapi.omni.p" +
-      "rojects.v1B\rEntitiesProtoP\001\242\002\003TOP\252\002\027Tcna" +
-      "pi.Omni.Projects.V1\312\002\027Tcnapi\\Omni\\Projec" +
-      "ts\\V1\342\002#Tcnapi\\Omni\\Projects\\V1\\GPBMetad" +
-      "ata\352\002\032Tcnapi::Omni::Projects::V1b\006proto3"
+      "ject\"\231\001\n\024UpdateProjectRequest\022?\n\007project" +
+      "\030\001 \001(\0132 .tcnapi.omni.projects.v1.Project" +
+      "B\003\340A\002R\007project\022@\n\013update_mask\030\002 \001(\0132\032.go" +
+      "ogle.protobuf.FieldMaskB\003\340A\001R\nupdateMask" +
+      "\"T\n\024DeleteProjectRequest\022<\n\004name\030\001 \001(\tB(" +
+      "\340A\002\372A\"\n projects.omni.tcnapi.com/Project" +
+      "R\004nameB\271\001\n)com.tcn.cloud.api.tcnapi.omni" +
+      ".projects.v1B\rEntitiesProtoP\001\242\002\003TOP\252\002\027Tc" +
+      "napi.Omni.Projects.V1\312\002\027Tcnapi\\Omni\\Proj" +
+      "ects\\V1\342\002#Tcnapi\\Omni\\Projects\\V1\\GPBMet" +
+      "adata\352\002\032Tcnapi::Omni::Projects::V1b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -99,6 +116,18 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_tcnapi_omni_projects_v1_CreateProjectRequest_descriptor,
         new java.lang.String[] { "Parent", "Project", });
+    internal_static_tcnapi_omni_projects_v1_UpdateProjectRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_tcnapi_omni_projects_v1_UpdateProjectRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_tcnapi_omni_projects_v1_UpdateProjectRequest_descriptor,
+        new java.lang.String[] { "Project", "UpdateMask", });
+    internal_static_tcnapi_omni_projects_v1_DeleteProjectRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_tcnapi_omni_projects_v1_DeleteProjectRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_tcnapi_omni_projects_v1_DeleteProjectRequest_descriptor,
+        new java.lang.String[] { "Name", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
