@@ -293,7 +293,7 @@ private static final long serialVersionUID = 0L;
    * project description
    * </pre>
    *
-   * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The description.
    */
   @java.lang.Override
@@ -314,7 +314,7 @@ private static final long serialVersionUID = 0L;
    * project description
    * </pre>
    *
-   * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for description.
    */
   @java.lang.Override
@@ -1022,7 +1022,7 @@ private static final long serialVersionUID = 0L;
      * project description
      * </pre>
      *
-     * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The description.
      */
     public java.lang.String getDescription() {
@@ -1042,7 +1042,7 @@ private static final long serialVersionUID = 0L;
      * project description
      * </pre>
      *
-     * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The bytes for description.
      */
     public com.google.protobuf.ByteString
@@ -1063,7 +1063,7 @@ private static final long serialVersionUID = 0L;
      * project description
      * </pre>
      *
-     * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The description to set.
      * @return This builder for chaining.
      */
@@ -1080,7 +1080,7 @@ private static final long serialVersionUID = 0L;
      * project description
      * </pre>
      *
-     * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
@@ -1094,7 +1094,7 @@ private static final long serialVersionUID = 0L;
      * project description
      * </pre>
      *
-     * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */

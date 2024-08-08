@@ -34,7 +34,7 @@ public final class ProjectsProto {
       "proto\032\037google/protobuf/timestamp.proto\"\227" +
       "\003\n\007Project\022\027\n\004name\030\001 \001(\tB\003\340A\010R\004name\022\031\n\005t" +
       "itle\030\002 \001(\tB\003\340A\002R\005title\022%\n\013description\030\003 " +
-      "\001(\tB\003\340A\001R\013description\022A\n\005state\030\004 \001(\0162&.t" +
+      "\001(\tB\003\340A\002R\013description\022A\n\005state\030\004 \001(\0162&.t" +
       "cnapi.omni.projects.v1.Project.StateB\003\340A" +
       "\003R\005state\022@\n\013create_time\030\005 \001(\0132\032.google.p" +
       "rotobuf.TimestampB\003\340A\003R\ncreateTime\"D\n\005St" +

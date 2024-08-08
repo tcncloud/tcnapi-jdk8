@@ -52,7 +52,7 @@ public interface ProjectOrBuilder extends
    * project description
    * </pre>
    *
-   * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The description.
    */
   java.lang.String getDescription();
@@ -61,7 +61,7 @@ public interface ProjectOrBuilder extends
    * project description
    * </pre>
    *
-   * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>string description = 3 [json_name = "description", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString
