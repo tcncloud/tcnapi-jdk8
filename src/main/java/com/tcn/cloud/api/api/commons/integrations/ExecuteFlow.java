@@ -288,6 +288,12 @@ private static final long serialVersionUID = 0L;
     FINVI_PROCESS_NEW_TRANSACTION_REFUND(4320),
     FINVI_PROCESS_NEW_TRANSACTION_SALE(4321),
     FINVI_PROCESS_NEW_TRANSACTION_VALIDATE(4322),
+    FINVI_EXILE_QUERY_RECORDS(4323),
+    FINVI_EXILE_READ_FIELDS(4324),
+    FINVI_EXILE_WRITE_FIELDS(4325),
+    FINVI_EXILE_EXECUTE_LOGIC(4326),
+    FINVI_EXILE_CREATE_PAYMENT(4327),
+    FINVI_EXILE_POP_ACCOUNT(4328),
     NAVIGA_DTI_CIRC_CREATE_PAYMENT(4401),
     NAVIGA_DTI_CIRC_CHANGE_BILLING(4402),
     NAVIGA_DTI_CS_AUTO_RENEW_INFO(4501),
@@ -557,6 +563,12 @@ private static final long serialVersionUID = 0L;
         case 4320: return FINVI_PROCESS_NEW_TRANSACTION_REFUND;
         case 4321: return FINVI_PROCESS_NEW_TRANSACTION_SALE;
         case 4322: return FINVI_PROCESS_NEW_TRANSACTION_VALIDATE;
+        case 4323: return FINVI_EXILE_QUERY_RECORDS;
+        case 4324: return FINVI_EXILE_READ_FIELDS;
+        case 4325: return FINVI_EXILE_WRITE_FIELDS;
+        case 4326: return FINVI_EXILE_EXECUTE_LOGIC;
+        case 4327: return FINVI_EXILE_CREATE_PAYMENT;
+        case 4328: return FINVI_EXILE_POP_ACCOUNT;
         case 4401: return NAVIGA_DTI_CIRC_CREATE_PAYMENT;
         case 4402: return NAVIGA_DTI_CIRC_CHANGE_BILLING;
         case 4501: return NAVIGA_DTI_CS_AUTO_RENEW_INFO;
@@ -7943,6 +7955,192 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionValidate.getDefaultInstance();
   }
 
+  public static final int FINVI_EXILE_QUERY_RECORDS_FIELD_NUMBER = 4323;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4323 [json_name = "finviExileQueryRecords"];</code>
+   * @return Whether the finviExileQueryRecords field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviExileQueryRecords() {
+    return valueCase_ == 4323;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4323 [json_name = "finviExileQueryRecords"];</code>
+   * @return The finviExileQueryRecords.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords getFinviExileQueryRecords() {
+    if (valueCase_ == 4323) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4323 [json_name = "finviExileQueryRecords"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecordsOrBuilder getFinviExileQueryRecordsOrBuilder() {
+    if (valueCase_ == 4323) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords.getDefaultInstance();
+  }
+
+  public static final int FINVI_EXILE_READ_FIELDS_FIELD_NUMBER = 4324;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4324 [json_name = "finviExileReadFields"];</code>
+   * @return Whether the finviExileReadFields field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviExileReadFields() {
+    return valueCase_ == 4324;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4324 [json_name = "finviExileReadFields"];</code>
+   * @return The finviExileReadFields.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields getFinviExileReadFields() {
+    if (valueCase_ == 4324) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4324 [json_name = "finviExileReadFields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFieldsOrBuilder getFinviExileReadFieldsOrBuilder() {
+    if (valueCase_ == 4324) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields.getDefaultInstance();
+  }
+
+  public static final int FINVI_EXILE_WRITE_FIELDS_FIELD_NUMBER = 4325;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4325 [json_name = "finviExileWriteFields"];</code>
+   * @return Whether the finviExileWriteFields field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviExileWriteFields() {
+    return valueCase_ == 4325;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4325 [json_name = "finviExileWriteFields"];</code>
+   * @return The finviExileWriteFields.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields getFinviExileWriteFields() {
+    if (valueCase_ == 4325) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4325 [json_name = "finviExileWriteFields"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFieldsOrBuilder getFinviExileWriteFieldsOrBuilder() {
+    if (valueCase_ == 4325) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields.getDefaultInstance();
+  }
+
+  public static final int FINVI_EXILE_EXECUTE_LOGIC_FIELD_NUMBER = 4326;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4326 [json_name = "finviExileExecuteLogic"];</code>
+   * @return Whether the finviExileExecuteLogic field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviExileExecuteLogic() {
+    return valueCase_ == 4326;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4326 [json_name = "finviExileExecuteLogic"];</code>
+   * @return The finviExileExecuteLogic.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic getFinviExileExecuteLogic() {
+    if (valueCase_ == 4326) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4326 [json_name = "finviExileExecuteLogic"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogicOrBuilder getFinviExileExecuteLogicOrBuilder() {
+    if (valueCase_ == 4326) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic.getDefaultInstance();
+  }
+
+  public static final int FINVI_EXILE_CREATE_PAYMENT_FIELD_NUMBER = 4327;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4327 [json_name = "finviExileCreatePayment"];</code>
+   * @return Whether the finviExileCreatePayment field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviExileCreatePayment() {
+    return valueCase_ == 4327;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4327 [json_name = "finviExileCreatePayment"];</code>
+   * @return The finviExileCreatePayment.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment getFinviExileCreatePayment() {
+    if (valueCase_ == 4327) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4327 [json_name = "finviExileCreatePayment"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePaymentOrBuilder getFinviExileCreatePaymentOrBuilder() {
+    if (valueCase_ == 4327) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment.getDefaultInstance();
+  }
+
+  public static final int FINVI_EXILE_POP_ACCOUNT_FIELD_NUMBER = 4328;
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4328 [json_name = "finviExilePopAccount"];</code>
+   * @return Whether the finviExilePopAccount field is set.
+   */
+  @java.lang.Override
+  public boolean hasFinviExilePopAccount() {
+    return valueCase_ == 4328;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4328 [json_name = "finviExilePopAccount"];</code>
+   * @return The finviExilePopAccount.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount getFinviExilePopAccount() {
+    if (valueCase_ == 4328) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4328 [json_name = "finviExilePopAccount"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccountOrBuilder getFinviExilePopAccountOrBuilder() {
+    if (valueCase_ == 4328) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount.getDefaultInstance();
+  }
+
   public static final int NAVIGA_DTI_CIRC_CREATE_PAYMENT_FIELD_NUMBER = 4401;
   /**
    * <code>.api.commons.integrations.ExecuteNavigaDTICircCreatePayment naviga_dti_circ_create_payment = 4401 [json_name = "navigaDtiCircCreatePayment"];</code>
@@ -9164,6 +9362,24 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 4322) {
       output.writeMessage(4322, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionValidate) value_);
     }
+    if (valueCase_ == 4323) {
+      output.writeMessage(4323, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords) value_);
+    }
+    if (valueCase_ == 4324) {
+      output.writeMessage(4324, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields) value_);
+    }
+    if (valueCase_ == 4325) {
+      output.writeMessage(4325, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields) value_);
+    }
+    if (valueCase_ == 4326) {
+      output.writeMessage(4326, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic) value_);
+    }
+    if (valueCase_ == 4327) {
+      output.writeMessage(4327, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment) value_);
+    }
+    if (valueCase_ == 4328) {
+      output.writeMessage(4328, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount) value_);
+    }
     if (valueCase_ == 4401) {
       output.writeMessage(4401, (com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICircCreatePayment) value_);
     }
@@ -10167,6 +10383,30 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 4322) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4322, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionValidate) value_);
+    }
+    if (valueCase_ == 4323) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4323, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords) value_);
+    }
+    if (valueCase_ == 4324) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4324, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields) value_);
+    }
+    if (valueCase_ == 4325) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4325, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields) value_);
+    }
+    if (valueCase_ == 4326) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4326, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic) value_);
+    }
+    if (valueCase_ == 4327) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4327, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment) value_);
+    }
+    if (valueCase_ == 4328) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4328, (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount) value_);
     }
     if (valueCase_ == 4401) {
       size += com.google.protobuf.CodedOutputStream
@@ -11195,6 +11435,30 @@ private static final long serialVersionUID = 0L;
         if (!getFinviProcessNewTransactionValidate()
             .equals(other.getFinviProcessNewTransactionValidate())) return false;
         break;
+      case 4323:
+        if (!getFinviExileQueryRecords()
+            .equals(other.getFinviExileQueryRecords())) return false;
+        break;
+      case 4324:
+        if (!getFinviExileReadFields()
+            .equals(other.getFinviExileReadFields())) return false;
+        break;
+      case 4325:
+        if (!getFinviExileWriteFields()
+            .equals(other.getFinviExileWriteFields())) return false;
+        break;
+      case 4326:
+        if (!getFinviExileExecuteLogic()
+            .equals(other.getFinviExileExecuteLogic())) return false;
+        break;
+      case 4327:
+        if (!getFinviExileCreatePayment()
+            .equals(other.getFinviExileCreatePayment())) return false;
+        break;
+      case 4328:
+        if (!getFinviExilePopAccount()
+            .equals(other.getFinviExilePopAccount())) return false;
+        break;
       case 4401:
         if (!getNavigaDtiCircCreatePayment()
             .equals(other.getNavigaDtiCircCreatePayment())) return false;
@@ -12220,6 +12484,30 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + FINVI_PROCESS_NEW_TRANSACTION_VALIDATE_FIELD_NUMBER;
         hash = (53 * hash) + getFinviProcessNewTransactionValidate().hashCode();
         break;
+      case 4323:
+        hash = (37 * hash) + FINVI_EXILE_QUERY_RECORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviExileQueryRecords().hashCode();
+        break;
+      case 4324:
+        hash = (37 * hash) + FINVI_EXILE_READ_FIELDS_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviExileReadFields().hashCode();
+        break;
+      case 4325:
+        hash = (37 * hash) + FINVI_EXILE_WRITE_FIELDS_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviExileWriteFields().hashCode();
+        break;
+      case 4326:
+        hash = (37 * hash) + FINVI_EXILE_EXECUTE_LOGIC_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviExileExecuteLogic().hashCode();
+        break;
+      case 4327:
+        hash = (37 * hash) + FINVI_EXILE_CREATE_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviExileCreatePayment().hashCode();
+        break;
+      case 4328:
+        hash = (37 * hash) + FINVI_EXILE_POP_ACCOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getFinviExilePopAccount().hashCode();
+        break;
       case 4401:
         hash = (37 * hash) + NAVIGA_DTI_CIRC_CREATE_PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getNavigaDtiCircCreatePayment().hashCode();
@@ -12432,6 +12720,7 @@ private static final long serialVersionUID = 0L;
       bitField5_ = 0;
       bitField6_ = 0;
       bitField7_ = 0;
+      bitField8_ = 0;
       pluginInstanceId_ = "";
       if (braintreeCreditSaleBuilder_ != null) {
         braintreeCreditSaleBuilder_.clear();
@@ -13141,6 +13430,24 @@ private static final long serialVersionUID = 0L;
       if (finviProcessNewTransactionValidateBuilder_ != null) {
         finviProcessNewTransactionValidateBuilder_.clear();
       }
+      if (finviExileQueryRecordsBuilder_ != null) {
+        finviExileQueryRecordsBuilder_.clear();
+      }
+      if (finviExileReadFieldsBuilder_ != null) {
+        finviExileReadFieldsBuilder_.clear();
+      }
+      if (finviExileWriteFieldsBuilder_ != null) {
+        finviExileWriteFieldsBuilder_.clear();
+      }
+      if (finviExileExecuteLogicBuilder_ != null) {
+        finviExileExecuteLogicBuilder_.clear();
+      }
+      if (finviExileCreatePaymentBuilder_ != null) {
+        finviExileCreatePaymentBuilder_.clear();
+      }
+      if (finviExilePopAccountBuilder_ != null) {
+        finviExilePopAccountBuilder_.clear();
+      }
       if (navigaDtiCircCreatePaymentBuilder_ != null) {
         navigaDtiCircCreatePaymentBuilder_.clear();
       }
@@ -13225,6 +13532,7 @@ private static final long serialVersionUID = 0L;
       if (bitField5_ != 0) { buildPartial5(result); }
       if (bitField6_ != 0) { buildPartial6(result); }
       if (bitField7_ != 0) { buildPartial7(result); }
+      if (bitField8_ != 0) { buildPartial8(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -13263,6 +13571,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial7(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
       int from_bitField7_ = bitField7_;
+    }
+
+    private void buildPartial8(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
+      int from_bitField8_ = bitField8_;
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
@@ -14211,6 +14523,30 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 4322 &&
           finviProcessNewTransactionValidateBuilder_ != null) {
         result.value_ = finviProcessNewTransactionValidateBuilder_.build();
+      }
+      if (valueCase_ == 4323 &&
+          finviExileQueryRecordsBuilder_ != null) {
+        result.value_ = finviExileQueryRecordsBuilder_.build();
+      }
+      if (valueCase_ == 4324 &&
+          finviExileReadFieldsBuilder_ != null) {
+        result.value_ = finviExileReadFieldsBuilder_.build();
+      }
+      if (valueCase_ == 4325 &&
+          finviExileWriteFieldsBuilder_ != null) {
+        result.value_ = finviExileWriteFieldsBuilder_.build();
+      }
+      if (valueCase_ == 4326 &&
+          finviExileExecuteLogicBuilder_ != null) {
+        result.value_ = finviExileExecuteLogicBuilder_.build();
+      }
+      if (valueCase_ == 4327 &&
+          finviExileCreatePaymentBuilder_ != null) {
+        result.value_ = finviExileCreatePaymentBuilder_.build();
+      }
+      if (valueCase_ == 4328 &&
+          finviExilePopAccountBuilder_ != null) {
+        result.value_ = finviExilePopAccountBuilder_.build();
       }
       if (valueCase_ == 4401 &&
           navigaDtiCircCreatePaymentBuilder_ != null) {
@@ -15270,6 +15606,30 @@ private static final long serialVersionUID = 0L;
         }
         case FINVI_PROCESS_NEW_TRANSACTION_VALIDATE: {
           mergeFinviProcessNewTransactionValidate(other.getFinviProcessNewTransactionValidate());
+          break;
+        }
+        case FINVI_EXILE_QUERY_RECORDS: {
+          mergeFinviExileQueryRecords(other.getFinviExileQueryRecords());
+          break;
+        }
+        case FINVI_EXILE_READ_FIELDS: {
+          mergeFinviExileReadFields(other.getFinviExileReadFields());
+          break;
+        }
+        case FINVI_EXILE_WRITE_FIELDS: {
+          mergeFinviExileWriteFields(other.getFinviExileWriteFields());
+          break;
+        }
+        case FINVI_EXILE_EXECUTE_LOGIC: {
+          mergeFinviExileExecuteLogic(other.getFinviExileExecuteLogic());
+          break;
+        }
+        case FINVI_EXILE_CREATE_PAYMENT: {
+          mergeFinviExileCreatePayment(other.getFinviExileCreatePayment());
+          break;
+        }
+        case FINVI_EXILE_POP_ACCOUNT: {
+          mergeFinviExilePopAccount(other.getFinviExilePopAccount());
           break;
         }
         case NAVIGA_DTI_CIRC_CREATE_PAYMENT: {
@@ -17023,6 +17383,48 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 4322;
               break;
             } // case 34578
+            case 34586: {
+              input.readMessage(
+                  getFinviExileQueryRecordsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4323;
+              break;
+            } // case 34586
+            case 34594: {
+              input.readMessage(
+                  getFinviExileReadFieldsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4324;
+              break;
+            } // case 34594
+            case 34602: {
+              input.readMessage(
+                  getFinviExileWriteFieldsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4325;
+              break;
+            } // case 34602
+            case 34610: {
+              input.readMessage(
+                  getFinviExileExecuteLogicFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4326;
+              break;
+            } // case 34610
+            case 34618: {
+              input.readMessage(
+                  getFinviExileCreatePaymentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4327;
+              break;
+            } // case 34618
+            case 34626: {
+              input.readMessage(
+                  getFinviExilePopAccountFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4328;
+              break;
+            } // case 34626
             case 35210: {
               input.readMessage(
                   getNavigaDtiCircCreatePaymentFieldBuilder().getBuilder(),
@@ -17173,6 +17575,7 @@ private static final long serialVersionUID = 0L;
     private int bitField5_;
     private int bitField6_;
     private int bitField7_;
+    private int bitField8_;
 
     private java.lang.Object pluginInstanceId_ = "";
     /**
@@ -50756,6 +51159,858 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 4322;
       onChanged();
       return finviProcessNewTransactionValidateBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecordsOrBuilder> finviExileQueryRecordsBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4323 [json_name = "finviExileQueryRecords"];</code>
+     * @return Whether the finviExileQueryRecords field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviExileQueryRecords() {
+      return valueCase_ == 4323;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4323 [json_name = "finviExileQueryRecords"];</code>
+     * @return The finviExileQueryRecords.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords getFinviExileQueryRecords() {
+      if (finviExileQueryRecordsBuilder_ == null) {
+        if (valueCase_ == 4323) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4323) {
+          return finviExileQueryRecordsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4323 [json_name = "finviExileQueryRecords"];</code>
+     */
+    public Builder setFinviExileQueryRecords(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords value) {
+      if (finviExileQueryRecordsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviExileQueryRecordsBuilder_.setMessage(value);
+      }
+      valueCase_ = 4323;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4323 [json_name = "finviExileQueryRecords"];</code>
+     */
+    public Builder setFinviExileQueryRecords(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords.Builder builderForValue) {
+      if (finviExileQueryRecordsBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviExileQueryRecordsBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4323;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4323 [json_name = "finviExileQueryRecords"];</code>
+     */
+    public Builder mergeFinviExileQueryRecords(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords value) {
+      if (finviExileQueryRecordsBuilder_ == null) {
+        if (valueCase_ == 4323 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4323) {
+          finviExileQueryRecordsBuilder_.mergeFrom(value);
+        } else {
+          finviExileQueryRecordsBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4323;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4323 [json_name = "finviExileQueryRecords"];</code>
+     */
+    public Builder clearFinviExileQueryRecords() {
+      if (finviExileQueryRecordsBuilder_ == null) {
+        if (valueCase_ == 4323) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4323) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviExileQueryRecordsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4323 [json_name = "finviExileQueryRecords"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords.Builder getFinviExileQueryRecordsBuilder() {
+      return getFinviExileQueryRecordsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4323 [json_name = "finviExileQueryRecords"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecordsOrBuilder getFinviExileQueryRecordsOrBuilder() {
+      if ((valueCase_ == 4323) && (finviExileQueryRecordsBuilder_ != null)) {
+        return finviExileQueryRecordsBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4323) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4323 [json_name = "finviExileQueryRecords"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecordsOrBuilder> 
+        getFinviExileQueryRecordsFieldBuilder() {
+      if (finviExileQueryRecordsBuilder_ == null) {
+        if (!(valueCase_ == 4323)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords.getDefaultInstance();
+        }
+        finviExileQueryRecordsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecordsOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4323;
+      onChanged();
+      return finviExileQueryRecordsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFieldsOrBuilder> finviExileReadFieldsBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4324 [json_name = "finviExileReadFields"];</code>
+     * @return Whether the finviExileReadFields field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviExileReadFields() {
+      return valueCase_ == 4324;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4324 [json_name = "finviExileReadFields"];</code>
+     * @return The finviExileReadFields.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields getFinviExileReadFields() {
+      if (finviExileReadFieldsBuilder_ == null) {
+        if (valueCase_ == 4324) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4324) {
+          return finviExileReadFieldsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4324 [json_name = "finviExileReadFields"];</code>
+     */
+    public Builder setFinviExileReadFields(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields value) {
+      if (finviExileReadFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviExileReadFieldsBuilder_.setMessage(value);
+      }
+      valueCase_ = 4324;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4324 [json_name = "finviExileReadFields"];</code>
+     */
+    public Builder setFinviExileReadFields(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields.Builder builderForValue) {
+      if (finviExileReadFieldsBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviExileReadFieldsBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4324;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4324 [json_name = "finviExileReadFields"];</code>
+     */
+    public Builder mergeFinviExileReadFields(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields value) {
+      if (finviExileReadFieldsBuilder_ == null) {
+        if (valueCase_ == 4324 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4324) {
+          finviExileReadFieldsBuilder_.mergeFrom(value);
+        } else {
+          finviExileReadFieldsBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4324;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4324 [json_name = "finviExileReadFields"];</code>
+     */
+    public Builder clearFinviExileReadFields() {
+      if (finviExileReadFieldsBuilder_ == null) {
+        if (valueCase_ == 4324) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4324) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviExileReadFieldsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4324 [json_name = "finviExileReadFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields.Builder getFinviExileReadFieldsBuilder() {
+      return getFinviExileReadFieldsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4324 [json_name = "finviExileReadFields"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFieldsOrBuilder getFinviExileReadFieldsOrBuilder() {
+      if ((valueCase_ == 4324) && (finviExileReadFieldsBuilder_ != null)) {
+        return finviExileReadFieldsBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4324) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4324 [json_name = "finviExileReadFields"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFieldsOrBuilder> 
+        getFinviExileReadFieldsFieldBuilder() {
+      if (finviExileReadFieldsBuilder_ == null) {
+        if (!(valueCase_ == 4324)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields.getDefaultInstance();
+        }
+        finviExileReadFieldsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFieldsOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4324;
+      onChanged();
+      return finviExileReadFieldsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFieldsOrBuilder> finviExileWriteFieldsBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4325 [json_name = "finviExileWriteFields"];</code>
+     * @return Whether the finviExileWriteFields field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviExileWriteFields() {
+      return valueCase_ == 4325;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4325 [json_name = "finviExileWriteFields"];</code>
+     * @return The finviExileWriteFields.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields getFinviExileWriteFields() {
+      if (finviExileWriteFieldsBuilder_ == null) {
+        if (valueCase_ == 4325) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4325) {
+          return finviExileWriteFieldsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4325 [json_name = "finviExileWriteFields"];</code>
+     */
+    public Builder setFinviExileWriteFields(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields value) {
+      if (finviExileWriteFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviExileWriteFieldsBuilder_.setMessage(value);
+      }
+      valueCase_ = 4325;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4325 [json_name = "finviExileWriteFields"];</code>
+     */
+    public Builder setFinviExileWriteFields(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields.Builder builderForValue) {
+      if (finviExileWriteFieldsBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviExileWriteFieldsBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4325;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4325 [json_name = "finviExileWriteFields"];</code>
+     */
+    public Builder mergeFinviExileWriteFields(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields value) {
+      if (finviExileWriteFieldsBuilder_ == null) {
+        if (valueCase_ == 4325 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4325) {
+          finviExileWriteFieldsBuilder_.mergeFrom(value);
+        } else {
+          finviExileWriteFieldsBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4325;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4325 [json_name = "finviExileWriteFields"];</code>
+     */
+    public Builder clearFinviExileWriteFields() {
+      if (finviExileWriteFieldsBuilder_ == null) {
+        if (valueCase_ == 4325) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4325) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviExileWriteFieldsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4325 [json_name = "finviExileWriteFields"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields.Builder getFinviExileWriteFieldsBuilder() {
+      return getFinviExileWriteFieldsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4325 [json_name = "finviExileWriteFields"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFieldsOrBuilder getFinviExileWriteFieldsOrBuilder() {
+      if ((valueCase_ == 4325) && (finviExileWriteFieldsBuilder_ != null)) {
+        return finviExileWriteFieldsBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4325) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4325 [json_name = "finviExileWriteFields"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFieldsOrBuilder> 
+        getFinviExileWriteFieldsFieldBuilder() {
+      if (finviExileWriteFieldsBuilder_ == null) {
+        if (!(valueCase_ == 4325)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields.getDefaultInstance();
+        }
+        finviExileWriteFieldsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFieldsOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4325;
+      onChanged();
+      return finviExileWriteFieldsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogicOrBuilder> finviExileExecuteLogicBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4326 [json_name = "finviExileExecuteLogic"];</code>
+     * @return Whether the finviExileExecuteLogic field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviExileExecuteLogic() {
+      return valueCase_ == 4326;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4326 [json_name = "finviExileExecuteLogic"];</code>
+     * @return The finviExileExecuteLogic.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic getFinviExileExecuteLogic() {
+      if (finviExileExecuteLogicBuilder_ == null) {
+        if (valueCase_ == 4326) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4326) {
+          return finviExileExecuteLogicBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4326 [json_name = "finviExileExecuteLogic"];</code>
+     */
+    public Builder setFinviExileExecuteLogic(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic value) {
+      if (finviExileExecuteLogicBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviExileExecuteLogicBuilder_.setMessage(value);
+      }
+      valueCase_ = 4326;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4326 [json_name = "finviExileExecuteLogic"];</code>
+     */
+    public Builder setFinviExileExecuteLogic(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic.Builder builderForValue) {
+      if (finviExileExecuteLogicBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviExileExecuteLogicBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4326;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4326 [json_name = "finviExileExecuteLogic"];</code>
+     */
+    public Builder mergeFinviExileExecuteLogic(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic value) {
+      if (finviExileExecuteLogicBuilder_ == null) {
+        if (valueCase_ == 4326 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4326) {
+          finviExileExecuteLogicBuilder_.mergeFrom(value);
+        } else {
+          finviExileExecuteLogicBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4326;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4326 [json_name = "finviExileExecuteLogic"];</code>
+     */
+    public Builder clearFinviExileExecuteLogic() {
+      if (finviExileExecuteLogicBuilder_ == null) {
+        if (valueCase_ == 4326) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4326) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviExileExecuteLogicBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4326 [json_name = "finviExileExecuteLogic"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic.Builder getFinviExileExecuteLogicBuilder() {
+      return getFinviExileExecuteLogicFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4326 [json_name = "finviExileExecuteLogic"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogicOrBuilder getFinviExileExecuteLogicOrBuilder() {
+      if ((valueCase_ == 4326) && (finviExileExecuteLogicBuilder_ != null)) {
+        return finviExileExecuteLogicBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4326) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4326 [json_name = "finviExileExecuteLogic"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogicOrBuilder> 
+        getFinviExileExecuteLogicFieldBuilder() {
+      if (finviExileExecuteLogicBuilder_ == null) {
+        if (!(valueCase_ == 4326)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic.getDefaultInstance();
+        }
+        finviExileExecuteLogicBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogicOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4326;
+      onChanged();
+      return finviExileExecuteLogicBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePaymentOrBuilder> finviExileCreatePaymentBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4327 [json_name = "finviExileCreatePayment"];</code>
+     * @return Whether the finviExileCreatePayment field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviExileCreatePayment() {
+      return valueCase_ == 4327;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4327 [json_name = "finviExileCreatePayment"];</code>
+     * @return The finviExileCreatePayment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment getFinviExileCreatePayment() {
+      if (finviExileCreatePaymentBuilder_ == null) {
+        if (valueCase_ == 4327) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4327) {
+          return finviExileCreatePaymentBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4327 [json_name = "finviExileCreatePayment"];</code>
+     */
+    public Builder setFinviExileCreatePayment(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment value) {
+      if (finviExileCreatePaymentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviExileCreatePaymentBuilder_.setMessage(value);
+      }
+      valueCase_ = 4327;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4327 [json_name = "finviExileCreatePayment"];</code>
+     */
+    public Builder setFinviExileCreatePayment(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment.Builder builderForValue) {
+      if (finviExileCreatePaymentBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviExileCreatePaymentBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4327;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4327 [json_name = "finviExileCreatePayment"];</code>
+     */
+    public Builder mergeFinviExileCreatePayment(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment value) {
+      if (finviExileCreatePaymentBuilder_ == null) {
+        if (valueCase_ == 4327 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4327) {
+          finviExileCreatePaymentBuilder_.mergeFrom(value);
+        } else {
+          finviExileCreatePaymentBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4327;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4327 [json_name = "finviExileCreatePayment"];</code>
+     */
+    public Builder clearFinviExileCreatePayment() {
+      if (finviExileCreatePaymentBuilder_ == null) {
+        if (valueCase_ == 4327) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4327) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviExileCreatePaymentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4327 [json_name = "finviExileCreatePayment"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment.Builder getFinviExileCreatePaymentBuilder() {
+      return getFinviExileCreatePaymentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4327 [json_name = "finviExileCreatePayment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePaymentOrBuilder getFinviExileCreatePaymentOrBuilder() {
+      if ((valueCase_ == 4327) && (finviExileCreatePaymentBuilder_ != null)) {
+        return finviExileCreatePaymentBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4327) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4327 [json_name = "finviExileCreatePayment"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePaymentOrBuilder> 
+        getFinviExileCreatePaymentFieldBuilder() {
+      if (finviExileCreatePaymentBuilder_ == null) {
+        if (!(valueCase_ == 4327)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment.getDefaultInstance();
+        }
+        finviExileCreatePaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4327;
+      onChanged();
+      return finviExileCreatePaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccountOrBuilder> finviExilePopAccountBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4328 [json_name = "finviExilePopAccount"];</code>
+     * @return Whether the finviExilePopAccount field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinviExilePopAccount() {
+      return valueCase_ == 4328;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4328 [json_name = "finviExilePopAccount"];</code>
+     * @return The finviExilePopAccount.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount getFinviExilePopAccount() {
+      if (finviExilePopAccountBuilder_ == null) {
+        if (valueCase_ == 4328) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4328) {
+          return finviExilePopAccountBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4328 [json_name = "finviExilePopAccount"];</code>
+     */
+    public Builder setFinviExilePopAccount(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount value) {
+      if (finviExilePopAccountBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        finviExilePopAccountBuilder_.setMessage(value);
+      }
+      valueCase_ = 4328;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4328 [json_name = "finviExilePopAccount"];</code>
+     */
+    public Builder setFinviExilePopAccount(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount.Builder builderForValue) {
+      if (finviExilePopAccountBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        finviExilePopAccountBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4328;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4328 [json_name = "finviExilePopAccount"];</code>
+     */
+    public Builder mergeFinviExilePopAccount(com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount value) {
+      if (finviExilePopAccountBuilder_ == null) {
+        if (valueCase_ == 4328 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4328) {
+          finviExilePopAccountBuilder_.mergeFrom(value);
+        } else {
+          finviExilePopAccountBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4328;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4328 [json_name = "finviExilePopAccount"];</code>
+     */
+    public Builder clearFinviExilePopAccount() {
+      if (finviExilePopAccountBuilder_ == null) {
+        if (valueCase_ == 4328) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4328) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        finviExilePopAccountBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4328 [json_name = "finviExilePopAccount"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount.Builder getFinviExilePopAccountBuilder() {
+      return getFinviExilePopAccountFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4328 [json_name = "finviExilePopAccount"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccountOrBuilder getFinviExilePopAccountOrBuilder() {
+      if ((valueCase_ == 4328) && (finviExilePopAccountBuilder_ != null)) {
+        return finviExilePopAccountBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4328) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4328 [json_name = "finviExilePopAccount"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccountOrBuilder> 
+        getFinviExilePopAccountFieldBuilder() {
+      if (finviExilePopAccountBuilder_ == null) {
+        if (!(valueCase_ == 4328)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount.getDefaultInstance();
+        }
+        finviExilePopAccountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccountOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4328;
+      onChanged();
+      return finviExilePopAccountBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

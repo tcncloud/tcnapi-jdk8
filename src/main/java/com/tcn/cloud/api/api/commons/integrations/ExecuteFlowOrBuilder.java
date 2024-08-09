@@ -3560,6 +3560,96 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionValidateOrBuilder getFinviProcessNewTransactionValidateOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4323 [json_name = "finviExileQueryRecords"];</code>
+   * @return Whether the finviExileQueryRecords field is set.
+   */
+  boolean hasFinviExileQueryRecords();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4323 [json_name = "finviExileQueryRecords"];</code>
+   * @return The finviExileQueryRecords.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords getFinviExileQueryRecords();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4323 [json_name = "finviExileQueryRecords"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecordsOrBuilder getFinviExileQueryRecordsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4324 [json_name = "finviExileReadFields"];</code>
+   * @return Whether the finviExileReadFields field is set.
+   */
+  boolean hasFinviExileReadFields();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4324 [json_name = "finviExileReadFields"];</code>
+   * @return The finviExileReadFields.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields getFinviExileReadFields();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4324 [json_name = "finviExileReadFields"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFieldsOrBuilder getFinviExileReadFieldsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4325 [json_name = "finviExileWriteFields"];</code>
+   * @return Whether the finviExileWriteFields field is set.
+   */
+  boolean hasFinviExileWriteFields();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4325 [json_name = "finviExileWriteFields"];</code>
+   * @return The finviExileWriteFields.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields getFinviExileWriteFields();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4325 [json_name = "finviExileWriteFields"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFieldsOrBuilder getFinviExileWriteFieldsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4326 [json_name = "finviExileExecuteLogic"];</code>
+   * @return Whether the finviExileExecuteLogic field is set.
+   */
+  boolean hasFinviExileExecuteLogic();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4326 [json_name = "finviExileExecuteLogic"];</code>
+   * @return The finviExileExecuteLogic.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic getFinviExileExecuteLogic();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4326 [json_name = "finviExileExecuteLogic"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogicOrBuilder getFinviExileExecuteLogicOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4327 [json_name = "finviExileCreatePayment"];</code>
+   * @return Whether the finviExileCreatePayment field is set.
+   */
+  boolean hasFinviExileCreatePayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4327 [json_name = "finviExileCreatePayment"];</code>
+   * @return The finviExileCreatePayment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment getFinviExileCreatePayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4327 [json_name = "finviExileCreatePayment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePaymentOrBuilder getFinviExileCreatePaymentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4328 [json_name = "finviExilePopAccount"];</code>
+   * @return Whether the finviExilePopAccount field is set.
+   */
+  boolean hasFinviExilePopAccount();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4328 [json_name = "finviExilePopAccount"];</code>
+   * @return The finviExilePopAccount.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount getFinviExilePopAccount();
+  /**
+   * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4328 [json_name = "finviExilePopAccount"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccountOrBuilder getFinviExilePopAccountOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteNavigaDTICircCreatePayment naviga_dti_circ_create_payment = 4401 [json_name = "navigaDtiCircCreatePayment"];</code>
    * @return Whether the navigaDtiCircCreatePayment field is set.
    */
