@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
    * ID of this agent rule.
    * </pre>
    *
-   * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId"];</code>
+   * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId", jstype = JS_STRING];</code>
    * @return The adherenceAgentRuleId.
    */
   @java.lang.Override
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
    * ID of the notification config that this rule will use/follow.
    * </pre>
    *
-   * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId"];</code>
+   * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId", jstype = JS_STRING];</code>
    * @return The adherenceRuleNotificationConfigId.
    */
   @java.lang.Override
@@ -630,7 +630,7 @@ private static final long serialVersionUID = 0L;
      * ID of this agent rule.
      * </pre>
      *
-     * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId"];</code>
+     * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId", jstype = JS_STRING];</code>
      * @return The adherenceAgentRuleId.
      */
     @java.lang.Override
@@ -642,7 +642,7 @@ private static final long serialVersionUID = 0L;
      * ID of this agent rule.
      * </pre>
      *
-     * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId"];</code>
+     * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId", jstype = JS_STRING];</code>
      * @param value The adherenceAgentRuleId to set.
      * @return This builder for chaining.
      */
@@ -658,7 +658,7 @@ private static final long serialVersionUID = 0L;
      * ID of this agent rule.
      * </pre>
      *
-     * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId"];</code>
+     * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearAdherenceAgentRuleId() {
@@ -1003,7 +1003,7 @@ private static final long serialVersionUID = 0L;
      * ID of the notification config that this rule will use/follow.
      * </pre>
      *
-     * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId"];</code>
+     * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId", jstype = JS_STRING];</code>
      * @return The adherenceRuleNotificationConfigId.
      */
     @java.lang.Override
@@ -1015,7 +1015,7 @@ private static final long serialVersionUID = 0L;
      * ID of the notification config that this rule will use/follow.
      * </pre>
      *
-     * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId"];</code>
+     * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId", jstype = JS_STRING];</code>
      * @param value The adherenceRuleNotificationConfigId to set.
      * @return This builder for chaining.
      */
@@ -1031,7 +1031,7 @@ private static final long serialVersionUID = 0L;
      * ID of the notification config that this rule will use/follow.
      * </pre>
      *
-     * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId"];</code>
+     * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearAdherenceRuleNotificationConfigId() {

@@ -12,7 +12,7 @@ public interface AdherenceDepartmentalRuleClauseOrBuilder extends
    * ID of this departmental rule clause.
    * </pre>
    *
-   * <code>int64 adherence_departmental_rule_clause_id = 1 [json_name = "adherenceDepartmentalRuleClauseId"];</code>
+   * <code>int64 adherence_departmental_rule_clause_id = 1 [json_name = "adherenceDepartmentalRuleClauseId", jstype = JS_STRING];</code>
    * @return The adherenceDepartmentalRuleClauseId.
    */
   long getAdherenceDepartmentalRuleClauseId();
@@ -22,7 +22,7 @@ public interface AdherenceDepartmentalRuleClauseOrBuilder extends
    * ID of the departmental rule that this clause belongs to.
    * </pre>
    *
-   * <code>int64 adherence_departmental_rule_id = 2 [json_name = "adherenceDepartmentalRuleId"];</code>
+   * <code>int64 adherence_departmental_rule_id = 2 [json_name = "adherenceDepartmentalRuleId", jstype = JS_STRING];</code>
    * @return The adherenceDepartmentalRuleId.
    */
   long getAdherenceDepartmentalRuleId();

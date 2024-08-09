@@ -12,7 +12,7 @@ public interface AdherenceAgentRuleClauseOrBuilder extends
    * ID of this agent rule clause.
    * </pre>
    *
-   * <code>int64 adherence_agent_rule_clause_id = 1 [json_name = "adherenceAgentRuleClauseId"];</code>
+   * <code>int64 adherence_agent_rule_clause_id = 1 [json_name = "adherenceAgentRuleClauseId", jstype = JS_STRING];</code>
    * @return The adherenceAgentRuleClauseId.
    */
   long getAdherenceAgentRuleClauseId();
@@ -22,7 +22,7 @@ public interface AdherenceAgentRuleClauseOrBuilder extends
    * ID of the agent rule that this clause belongs to.
    * </pre>
    *
-   * <code>int64 adherence_agent_rule_id = 2 [json_name = "adherenceAgentRuleId"];</code>
+   * <code>int64 adherence_agent_rule_id = 2 [json_name = "adherenceAgentRuleId", jstype = JS_STRING];</code>
    * @return The adherenceAgentRuleId.
    */
   long getAdherenceAgentRuleId();

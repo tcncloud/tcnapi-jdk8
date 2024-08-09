@@ -12,7 +12,7 @@ public interface AdherenceDepartmentalRuleOrBuilder extends
    * ID of this departmental rule.
    * </pre>
    *
-   * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId"];</code>
+   * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId", jstype = JS_STRING];</code>
    * @return The adherenceDepartmentalRuleId.
    */
   long getAdherenceDepartmentalRuleId();
@@ -91,7 +91,7 @@ public interface AdherenceDepartmentalRuleOrBuilder extends
    * ID of the notification config that this rule will use/follow.
    * </pre>
    *
-   * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId"];</code>
+   * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId", jstype = JS_STRING];</code>
    * @return The adherenceRuleNotificationConfigId.
    */
   long getAdherenceRuleNotificationConfigId();
@@ -101,27 +101,19 @@ public interface AdherenceDepartmentalRuleOrBuilder extends
    * Range that this rule will be applied at.
    * </pre>
    *
-   * <code>.api.commons.AdherenceDepartmentalRule rule_range = 6 [json_name = "ruleRange"];</code>
-   * @return Whether the ruleRange field is set.
+   * <code>.api.commons.AdherenceRuleRange rule_range = 6 [json_name = "ruleRange"];</code>
+   * @return The enum numeric value on the wire for ruleRange.
    */
-  boolean hasRuleRange();
+  int getRuleRangeValue();
   /**
    * <pre>
    * Range that this rule will be applied at.
    * </pre>
    *
-   * <code>.api.commons.AdherenceDepartmentalRule rule_range = 6 [json_name = "ruleRange"];</code>
+   * <code>.api.commons.AdherenceRuleRange rule_range = 6 [json_name = "ruleRange"];</code>
    * @return The ruleRange.
    */
-  com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule getRuleRange();
-  /**
-   * <pre>
-   * Range that this rule will be applied at.
-   * </pre>
-   *
-   * <code>.api.commons.AdherenceDepartmentalRule rule_range = 6 [json_name = "ruleRange"];</code>
-   */
-  com.tcn.cloud.api.api.commons.AdherenceDepartmentalRuleOrBuilder getRuleRangeOrBuilder();
+  com.tcn.cloud.api.api.commons.AdherenceRuleRange getRuleRange();
 
   /**
    * <pre>

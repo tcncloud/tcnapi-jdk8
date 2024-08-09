@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
    * ID of the config entity.
    * </pre>
    *
-   * <code>int64 entity_sid = 1 [json_name = "entitySid"];</code>
+   * <code>int64 entity_sid = 1 [json_name = "entitySid", jstype = JS_STRING];</code>
    * @return The entitySid.
    */
   @java.lang.Override
@@ -442,7 +442,7 @@ private static final long serialVersionUID = 0L;
      * ID of the config entity.
      * </pre>
      *
-     * <code>int64 entity_sid = 1 [json_name = "entitySid"];</code>
+     * <code>int64 entity_sid = 1 [json_name = "entitySid", jstype = JS_STRING];</code>
      * @return The entitySid.
      */
     @java.lang.Override
@@ -454,7 +454,7 @@ private static final long serialVersionUID = 0L;
      * ID of the config entity.
      * </pre>
      *
-     * <code>int64 entity_sid = 1 [json_name = "entitySid"];</code>
+     * <code>int64 entity_sid = 1 [json_name = "entitySid", jstype = JS_STRING];</code>
      * @param value The entitySid to set.
      * @return This builder for chaining.
      */
@@ -470,7 +470,7 @@ private static final long serialVersionUID = 0L;
      * ID of the config entity.
      * </pre>
      *
-     * <code>int64 entity_sid = 1 [json_name = "entitySid"];</code>
+     * <code>int64 entity_sid = 1 [json_name = "entitySid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearEntitySid() {

@@ -12,7 +12,7 @@ public interface AdherenceAgentRuleOrBuilder extends
    * ID of this agent rule.
    * </pre>
    *
-   * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId"];</code>
+   * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId", jstype = JS_STRING];</code>
    * @return The adherenceAgentRuleId.
    */
   long getAdherenceAgentRuleId();
@@ -91,7 +91,7 @@ public interface AdherenceAgentRuleOrBuilder extends
    * ID of the notification config that this rule will use/follow.
    * </pre>
    *
-   * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId"];</code>
+   * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId", jstype = JS_STRING];</code>
    * @return The adherenceRuleNotificationConfigId.
    */
   long getAdherenceRuleNotificationConfigId();

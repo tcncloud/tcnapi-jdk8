@@ -12,7 +12,7 @@ public interface AdherenceRuleNotificationConfigOrBuilder extends
    * ID of the notification config.
    * </pre>
    *
-   * <code>int64 adherence_rule_notification_config_id = 1 [json_name = "adherenceRuleNotificationConfigId"];</code>
+   * <code>int64 adherence_rule_notification_config_id = 1 [json_name = "adherenceRuleNotificationConfigId", jstype = JS_STRING];</code>
    * @return The adherenceRuleNotificationConfigId.
    */
   long getAdherenceRuleNotificationConfigId();

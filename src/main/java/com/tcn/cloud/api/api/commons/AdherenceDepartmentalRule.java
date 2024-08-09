@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private AdherenceDepartmentalRule() {
     name_ = "";
     ruleRequirementType_ = 0;
+    ruleRange_ = 0;
   }
 
   @java.lang.Override
@@ -51,7 +52,7 @@ private static final long serialVersionUID = 0L;
    * ID of this departmental rule.
    * </pre>
    *
-   * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId"];</code>
+   * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId", jstype = JS_STRING];</code>
    * @return The adherenceDepartmentalRuleId.
    */
   @java.lang.Override
@@ -180,7 +181,7 @@ private static final long serialVersionUID = 0L;
    * ID of the notification config that this rule will use/follow.
    * </pre>
    *
-   * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId"];</code>
+   * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId", jstype = JS_STRING];</code>
    * @return The adherenceRuleNotificationConfigId.
    */
   @java.lang.Override
@@ -189,41 +190,29 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RULE_RANGE_FIELD_NUMBER = 6;
-  private com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule ruleRange_;
+  private int ruleRange_ = 0;
   /**
    * <pre>
    * Range that this rule will be applied at.
    * </pre>
    *
-   * <code>.api.commons.AdherenceDepartmentalRule rule_range = 6 [json_name = "ruleRange"];</code>
-   * @return Whether the ruleRange field is set.
+   * <code>.api.commons.AdherenceRuleRange rule_range = 6 [json_name = "ruleRange"];</code>
+   * @return The enum numeric value on the wire for ruleRange.
    */
-  @java.lang.Override
-  public boolean hasRuleRange() {
-    return ruleRange_ != null;
+  @java.lang.Override public int getRuleRangeValue() {
+    return ruleRange_;
   }
   /**
    * <pre>
    * Range that this rule will be applied at.
    * </pre>
    *
-   * <code>.api.commons.AdherenceDepartmentalRule rule_range = 6 [json_name = "ruleRange"];</code>
+   * <code>.api.commons.AdherenceRuleRange rule_range = 6 [json_name = "ruleRange"];</code>
    * @return The ruleRange.
    */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule getRuleRange() {
-    return ruleRange_ == null ? com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule.getDefaultInstance() : ruleRange_;
-  }
-  /**
-   * <pre>
-   * Range that this rule will be applied at.
-   * </pre>
-   *
-   * <code>.api.commons.AdherenceDepartmentalRule rule_range = 6 [json_name = "ruleRange"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.AdherenceDepartmentalRuleOrBuilder getRuleRangeOrBuilder() {
-    return ruleRange_ == null ? com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule.getDefaultInstance() : ruleRange_;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.AdherenceRuleRange getRuleRange() {
+    com.tcn.cloud.api.api.commons.AdherenceRuleRange result = com.tcn.cloud.api.api.commons.AdherenceRuleRange.forNumber(ruleRange_);
+    return result == null ? com.tcn.cloud.api.api.commons.AdherenceRuleRange.UNRECOGNIZED : result;
   }
 
   public static final int CUSTOM_RANGE_FIELD_NUMBER = 7;
@@ -293,8 +282,8 @@ private static final long serialVersionUID = 0L;
     if (adherenceRuleNotificationConfigId_ != 0L) {
       output.writeInt64(5, adherenceRuleNotificationConfigId_);
     }
-    if (ruleRange_ != null) {
-      output.writeMessage(6, getRuleRange());
+    if (ruleRange_ != com.tcn.cloud.api.api.commons.AdherenceRuleRange.ADHERENCE_RULE_RANGE_START_OF_DAY.getNumber()) {
+      output.writeEnum(6, ruleRange_);
     }
     if (customRange_ != null) {
       output.writeMessage(7, getCustomRange());
@@ -327,9 +316,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, adherenceRuleNotificationConfigId_);
     }
-    if (ruleRange_ != null) {
+    if (ruleRange_ != com.tcn.cloud.api.api.commons.AdherenceRuleRange.ADHERENCE_RULE_RANGE_START_OF_DAY.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getRuleRange());
+        .computeEnumSize(6, ruleRange_);
     }
     if (customRange_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -362,11 +351,7 @@ private static final long serialVersionUID = 0L;
     if (ruleRequirementType_ != other.ruleRequirementType_) return false;
     if (getAdherenceRuleNotificationConfigId()
         != other.getAdherenceRuleNotificationConfigId()) return false;
-    if (hasRuleRange() != other.hasRuleRange()) return false;
-    if (hasRuleRange()) {
-      if (!getRuleRange()
-          .equals(other.getRuleRange())) return false;
-    }
+    if (ruleRange_ != other.ruleRange_) return false;
     if (hasCustomRange() != other.hasCustomRange()) return false;
     if (hasCustomRange()) {
       if (!getCustomRange()
@@ -397,10 +382,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ADHERENCE_RULE_NOTIFICATION_CONFIG_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getAdherenceRuleNotificationConfigId());
-    if (hasRuleRange()) {
-      hash = (37 * hash) + RULE_RANGE_FIELD_NUMBER;
-      hash = (53 * hash) + getRuleRange().hashCode();
-    }
+    hash = (37 * hash) + RULE_RANGE_FIELD_NUMBER;
+    hash = (53 * hash) + ruleRange_;
     if (hasCustomRange()) {
       hash = (37 * hash) + CUSTOM_RANGE_FIELD_NUMBER;
       hash = (53 * hash) + getCustomRange().hashCode();
@@ -549,11 +532,7 @@ private static final long serialVersionUID = 0L;
       }
       ruleRequirementType_ = 0;
       adherenceRuleNotificationConfigId_ = 0L;
-      ruleRange_ = null;
-      if (ruleRangeBuilder_ != null) {
-        ruleRangeBuilder_.dispose();
-        ruleRangeBuilder_ = null;
-      }
+      ruleRange_ = 0;
       customRange_ = null;
       if (customRangeBuilder_ != null) {
         customRangeBuilder_.dispose();
@@ -610,9 +589,7 @@ private static final long serialVersionUID = 0L;
         result.adherenceRuleNotificationConfigId_ = adherenceRuleNotificationConfigId_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.ruleRange_ = ruleRangeBuilder_ == null
-            ? ruleRange_
-            : ruleRangeBuilder_.build();
+        result.ruleRange_ = ruleRange_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.customRange_ = customRangeBuilder_ == null
@@ -682,8 +659,8 @@ private static final long serialVersionUID = 0L;
       if (other.getAdherenceRuleNotificationConfigId() != 0L) {
         setAdherenceRuleNotificationConfigId(other.getAdherenceRuleNotificationConfigId());
       }
-      if (other.hasRuleRange()) {
-        mergeRuleRange(other.getRuleRange());
+      if (other.ruleRange_ != 0) {
+        setRuleRangeValue(other.getRuleRangeValue());
       }
       if (other.hasCustomRange()) {
         mergeCustomRange(other.getCustomRange());
@@ -741,13 +718,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
-            case 50: {
-              input.readMessage(
-                  getRuleRangeFieldBuilder().getBuilder(),
-                  extensionRegistry);
+            case 48: {
+              ruleRange_ = input.readEnum();
               bitField0_ |= 0x00000020;
               break;
-            } // case 50
+            } // case 48
             case 58: {
               input.readMessage(
                   getCustomRangeFieldBuilder().getBuilder(),
@@ -778,7 +753,7 @@ private static final long serialVersionUID = 0L;
      * ID of this departmental rule.
      * </pre>
      *
-     * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId"];</code>
+     * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId", jstype = JS_STRING];</code>
      * @return The adherenceDepartmentalRuleId.
      */
     @java.lang.Override
@@ -790,7 +765,7 @@ private static final long serialVersionUID = 0L;
      * ID of this departmental rule.
      * </pre>
      *
-     * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId"];</code>
+     * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId", jstype = JS_STRING];</code>
      * @param value The adherenceDepartmentalRuleId to set.
      * @return This builder for chaining.
      */
@@ -806,7 +781,7 @@ private static final long serialVersionUID = 0L;
      * ID of this departmental rule.
      * </pre>
      *
-     * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId"];</code>
+     * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearAdherenceDepartmentalRuleId() {
@@ -1151,7 +1126,7 @@ private static final long serialVersionUID = 0L;
      * ID of the notification config that this rule will use/follow.
      * </pre>
      *
-     * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId"];</code>
+     * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId", jstype = JS_STRING];</code>
      * @return The adherenceRuleNotificationConfigId.
      */
     @java.lang.Override
@@ -1163,7 +1138,7 @@ private static final long serialVersionUID = 0L;
      * ID of the notification config that this rule will use/follow.
      * </pre>
      *
-     * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId"];</code>
+     * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId", jstype = JS_STRING];</code>
      * @param value The adherenceRuleNotificationConfigId to set.
      * @return This builder for chaining.
      */
@@ -1179,7 +1154,7 @@ private static final long serialVersionUID = 0L;
      * ID of the notification config that this rule will use/follow.
      * </pre>
      *
-     * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId"];</code>
+     * <code>int64 adherence_rule_notification_config_id = 5 [json_name = "adherenceRuleNotificationConfigId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearAdherenceRuleNotificationConfigId() {
@@ -1189,52 +1164,61 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule ruleRange_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule, com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule.Builder, com.tcn.cloud.api.api.commons.AdherenceDepartmentalRuleOrBuilder> ruleRangeBuilder_;
+    private int ruleRange_ = 0;
     /**
      * <pre>
      * Range that this rule will be applied at.
      * </pre>
      *
-     * <code>.api.commons.AdherenceDepartmentalRule rule_range = 6 [json_name = "ruleRange"];</code>
-     * @return Whether the ruleRange field is set.
+     * <code>.api.commons.AdherenceRuleRange rule_range = 6 [json_name = "ruleRange"];</code>
+     * @return The enum numeric value on the wire for ruleRange.
      */
-    public boolean hasRuleRange() {
-      return ((bitField0_ & 0x00000020) != 0);
+    @java.lang.Override public int getRuleRangeValue() {
+      return ruleRange_;
     }
     /**
      * <pre>
      * Range that this rule will be applied at.
      * </pre>
      *
-     * <code>.api.commons.AdherenceDepartmentalRule rule_range = 6 [json_name = "ruleRange"];</code>
+     * <code>.api.commons.AdherenceRuleRange rule_range = 6 [json_name = "ruleRange"];</code>
+     * @param value The enum numeric value on the wire for ruleRange to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRuleRangeValue(int value) {
+      ruleRange_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Range that this rule will be applied at.
+     * </pre>
+     *
+     * <code>.api.commons.AdherenceRuleRange rule_range = 6 [json_name = "ruleRange"];</code>
      * @return The ruleRange.
      */
-    public com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule getRuleRange() {
-      if (ruleRangeBuilder_ == null) {
-        return ruleRange_ == null ? com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule.getDefaultInstance() : ruleRange_;
-      } else {
-        return ruleRangeBuilder_.getMessage();
-      }
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.AdherenceRuleRange getRuleRange() {
+      com.tcn.cloud.api.api.commons.AdherenceRuleRange result = com.tcn.cloud.api.api.commons.AdherenceRuleRange.forNumber(ruleRange_);
+      return result == null ? com.tcn.cloud.api.api.commons.AdherenceRuleRange.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * Range that this rule will be applied at.
      * </pre>
      *
-     * <code>.api.commons.AdherenceDepartmentalRule rule_range = 6 [json_name = "ruleRange"];</code>
+     * <code>.api.commons.AdherenceRuleRange rule_range = 6 [json_name = "ruleRange"];</code>
+     * @param value The ruleRange to set.
+     * @return This builder for chaining.
      */
-    public Builder setRuleRange(com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule value) {
-      if (ruleRangeBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ruleRange_ = value;
-      } else {
-        ruleRangeBuilder_.setMessage(value);
+    public Builder setRuleRange(com.tcn.cloud.api.api.commons.AdherenceRuleRange value) {
+      if (value == null) {
+        throw new NullPointerException();
       }
       bitField0_ |= 0x00000020;
+      ruleRange_ = value.getNumber();
       onChanged();
       return this;
     }
@@ -1243,105 +1227,14 @@ private static final long serialVersionUID = 0L;
      * Range that this rule will be applied at.
      * </pre>
      *
-     * <code>.api.commons.AdherenceDepartmentalRule rule_range = 6 [json_name = "ruleRange"];</code>
-     */
-    public Builder setRuleRange(
-        com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule.Builder builderForValue) {
-      if (ruleRangeBuilder_ == null) {
-        ruleRange_ = builderForValue.build();
-      } else {
-        ruleRangeBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Range that this rule will be applied at.
-     * </pre>
-     *
-     * <code>.api.commons.AdherenceDepartmentalRule rule_range = 6 [json_name = "ruleRange"];</code>
-     */
-    public Builder mergeRuleRange(com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule value) {
-      if (ruleRangeBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          ruleRange_ != null &&
-          ruleRange_ != com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule.getDefaultInstance()) {
-          getRuleRangeBuilder().mergeFrom(value);
-        } else {
-          ruleRange_ = value;
-        }
-      } else {
-        ruleRangeBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Range that this rule will be applied at.
-     * </pre>
-     *
-     * <code>.api.commons.AdherenceDepartmentalRule rule_range = 6 [json_name = "ruleRange"];</code>
+     * <code>.api.commons.AdherenceRuleRange rule_range = 6 [json_name = "ruleRange"];</code>
+     * @return This builder for chaining.
      */
     public Builder clearRuleRange() {
       bitField0_ = (bitField0_ & ~0x00000020);
-      ruleRange_ = null;
-      if (ruleRangeBuilder_ != null) {
-        ruleRangeBuilder_.dispose();
-        ruleRangeBuilder_ = null;
-      }
+      ruleRange_ = 0;
       onChanged();
       return this;
-    }
-    /**
-     * <pre>
-     * Range that this rule will be applied at.
-     * </pre>
-     *
-     * <code>.api.commons.AdherenceDepartmentalRule rule_range = 6 [json_name = "ruleRange"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule.Builder getRuleRangeBuilder() {
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return getRuleRangeFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Range that this rule will be applied at.
-     * </pre>
-     *
-     * <code>.api.commons.AdherenceDepartmentalRule rule_range = 6 [json_name = "ruleRange"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.AdherenceDepartmentalRuleOrBuilder getRuleRangeOrBuilder() {
-      if (ruleRangeBuilder_ != null) {
-        return ruleRangeBuilder_.getMessageOrBuilder();
-      } else {
-        return ruleRange_ == null ?
-            com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule.getDefaultInstance() : ruleRange_;
-      }
-    }
-    /**
-     * <pre>
-     * Range that this rule will be applied at.
-     * </pre>
-     *
-     * <code>.api.commons.AdherenceDepartmentalRule rule_range = 6 [json_name = "ruleRange"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule, com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule.Builder, com.tcn.cloud.api.api.commons.AdherenceDepartmentalRuleOrBuilder> 
-        getRuleRangeFieldBuilder() {
-      if (ruleRangeBuilder_ == null) {
-        ruleRangeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule, com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule.Builder, com.tcn.cloud.api.api.commons.AdherenceDepartmentalRuleOrBuilder>(
-                getRuleRange(),
-                getParentForChildren(),
-                isClean());
-        ruleRange_ = null;
-      }
-      return ruleRangeBuilder_;
     }
 
     private com.tcn.cloud.api.api.commons.DatetimeRange customRange_;

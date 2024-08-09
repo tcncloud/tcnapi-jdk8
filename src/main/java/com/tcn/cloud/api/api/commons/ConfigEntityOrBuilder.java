@@ -12,7 +12,7 @@ public interface ConfigEntityOrBuilder extends
    * ID of the config entity.
    * </pre>
    *
-   * <code>int64 entity_sid = 1 [json_name = "entitySid"];</code>
+   * <code>int64 entity_sid = 1 [json_name = "entitySid", jstype = JS_STRING];</code>
    * @return The entitySid.
    */
   long getEntitySid();
