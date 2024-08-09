@@ -46,6 +46,37 @@ public final class PBXServiceGrpc {
     return getListPBXUsersMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionRequest,
+      com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionResponse> getGetDialUrlByExtensionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDialUrlByExtension",
+      requestType = com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionRequest.class,
+      responseType = com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionRequest,
+      com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionResponse> getGetDialUrlByExtensionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionRequest, com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionResponse> getGetDialUrlByExtensionMethod;
+    if ((getGetDialUrlByExtensionMethod = PBXServiceGrpc.getGetDialUrlByExtensionMethod) == null) {
+      synchronized (PBXServiceGrpc.class) {
+        if ((getGetDialUrlByExtensionMethod = PBXServiceGrpc.getGetDialUrlByExtensionMethod) == null) {
+          PBXServiceGrpc.getGetDialUrlByExtensionMethod = getGetDialUrlByExtensionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionRequest, com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDialUrlByExtension"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new PBXServiceMethodDescriptorSupplier("GetDialUrlByExtension"))
+              .build();
+        }
+      }
+    }
+    return getGetDialUrlByExtensionMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest,
       com.tcn.cloud.api.services.pbx.v2.GetPBXUserResponse> getGetPBXUserMethod;
 
@@ -75,6 +106,37 @@ public final class PBXServiceGrpc {
       }
     }
     return getGetPBXUserMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesRequest,
+      com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesResponse> getListActivePBXProfilesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListActivePBXProfiles",
+      requestType = com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesRequest.class,
+      responseType = com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesRequest,
+      com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesResponse> getListActivePBXProfilesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesRequest, com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesResponse> getListActivePBXProfilesMethod;
+    if ((getListActivePBXProfilesMethod = PBXServiceGrpc.getListActivePBXProfilesMethod) == null) {
+      synchronized (PBXServiceGrpc.class) {
+        if ((getListActivePBXProfilesMethod = PBXServiceGrpc.getListActivePBXProfilesMethod) == null) {
+          PBXServiceGrpc.getListActivePBXProfilesMethod = getListActivePBXProfilesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesRequest, com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListActivePBXProfiles"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new PBXServiceMethodDescriptorSupplier("ListActivePBXProfiles"))
+              .build();
+        }
+      }
+    }
+    return getListActivePBXProfilesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.pbx.v2.ListRingGroupsRequest,
@@ -422,6 +484,24 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
+     * Returns the dial URL for a PBX User based on their extension
+     * Required permissions:
+     *   PBX-MANAGER
+     * Errors:
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.NotFound: The user does not exist or is not in the caller's ORG.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    default void getDialUrlByExtension(com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDialUrlByExtensionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Returns details of the PBX User associated with the pbx_user_id
      * Required permissions:
      *   PBX-MANAGER
@@ -436,6 +516,22 @@ public final class PBXServiceGrpc {
     default void getPBXUser(com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetPBXUserResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPBXUserMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns info about active extensions and name of active users
+     * Required permissions:
+     *   PBX-MANAGER
+     * Errors:
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    default void listActivePBXProfiles(com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListActivePBXProfilesMethod(), responseObserver);
     }
 
     /**
@@ -647,6 +743,25 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
+     * Returns the dial URL for a PBX User based on their extension
+     * Required permissions:
+     *   PBX-MANAGER
+     * Errors:
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.NotFound: The user does not exist or is not in the caller's ORG.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public void getDialUrlByExtension(com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDialUrlByExtensionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Returns details of the PBX User associated with the pbx_user_id
      * Required permissions:
      *   PBX-MANAGER
@@ -662,6 +777,23 @@ public final class PBXServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetPBXUserResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPBXUserMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns info about active extensions and name of active users
+     * Required permissions:
+     *   PBX-MANAGER
+     * Errors:
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public void listActivePBXProfiles(com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListActivePBXProfilesMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -870,6 +1002,24 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
+     * Returns the dial URL for a PBX User based on their extension
+     * Required permissions:
+     *   PBX-MANAGER
+     * Errors:
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.NotFound: The user does not exist or is not in the caller's ORG.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionResponse getDialUrlByExtension(com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDialUrlByExtensionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Returns details of the PBX User associated with the pbx_user_id
      * Required permissions:
      *   PBX-MANAGER
@@ -884,6 +1034,22 @@ public final class PBXServiceGrpc {
     public com.tcn.cloud.api.services.pbx.v2.GetPBXUserResponse getPBXUser(com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPBXUserMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns info about active extensions and name of active users
+     * Required permissions:
+     *   PBX-MANAGER
+     * Errors:
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesResponse listActivePBXProfiles(com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListActivePBXProfilesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1084,6 +1250,25 @@ public final class PBXServiceGrpc {
 
     /**
      * <pre>
+     * Returns the dial URL for a PBX User based on their extension
+     * Required permissions:
+     *   PBX-MANAGER
+     * Errors:
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.NotFound: The user does not exist or is not in the caller's ORG.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionResponse> getDialUrlByExtension(
+        com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDialUrlByExtensionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Returns details of the PBX User associated with the pbx_user_id
      * Required permissions:
      *   PBX-MANAGER
@@ -1099,6 +1284,23 @@ public final class PBXServiceGrpc {
         com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPBXUserMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Returns info about active extensions and name of active users
+     * Required permissions:
+     *   PBX-MANAGER
+     * Errors:
+     *   - grpc.PermissionDenied: Caller doesn't have the required permissions.
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.Unavailable: The operation is currently unavailable. Likely a transient issue with a downstream service.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesResponse> listActivePBXProfiles(
+        com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListActivePBXProfilesMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1274,16 +1476,18 @@ public final class PBXServiceGrpc {
   }
 
   private static final int METHODID_LIST_PBXUSERS = 0;
-  private static final int METHODID_GET_PBXUSER = 1;
-  private static final int METHODID_LIST_RING_GROUPS = 2;
-  private static final int METHODID_GET_RING_GROUP = 3;
-  private static final int METHODID_GET_SIPACCOUNT = 4;
-  private static final int METHODID_LIST_SIPACCOUNTS = 5;
-  private static final int METHODID_UPDATE_SIPACCOUNT = 6;
-  private static final int METHODID_UPDATE_RING_GROUP = 7;
-  private static final int METHODID_CREATE_RING_GROUP = 8;
-  private static final int METHODID_DELETE_RING_GROUP = 9;
-  private static final int METHODID_ASSIGN_RANDOM_EXTENSION = 10;
+  private static final int METHODID_GET_DIAL_URL_BY_EXTENSION = 1;
+  private static final int METHODID_GET_PBXUSER = 2;
+  private static final int METHODID_LIST_ACTIVE_PBXPROFILES = 3;
+  private static final int METHODID_LIST_RING_GROUPS = 4;
+  private static final int METHODID_GET_RING_GROUP = 5;
+  private static final int METHODID_GET_SIPACCOUNT = 6;
+  private static final int METHODID_LIST_SIPACCOUNTS = 7;
+  private static final int METHODID_UPDATE_SIPACCOUNT = 8;
+  private static final int METHODID_UPDATE_RING_GROUP = 9;
+  private static final int METHODID_CREATE_RING_GROUP = 10;
+  private static final int METHODID_DELETE_RING_GROUP = 11;
+  private static final int METHODID_ASSIGN_RANDOM_EXTENSION = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1306,9 +1510,17 @@ public final class PBXServiceGrpc {
           serviceImpl.listPBXUsers((com.tcn.cloud.api.services.pbx.v2.ListPBXUsersRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.ListPBXUsersResponse>) responseObserver);
           break;
+        case METHODID_GET_DIAL_URL_BY_EXTENSION:
+          serviceImpl.getDialUrlByExtension((com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionResponse>) responseObserver);
+          break;
         case METHODID_GET_PBXUSER:
           serviceImpl.getPBXUser((com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.GetPBXUserResponse>) responseObserver);
+          break;
+        case METHODID_LIST_ACTIVE_PBXPROFILES:
+          serviceImpl.listActivePBXProfiles((com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesResponse>) responseObserver);
           break;
         case METHODID_LIST_RING_GROUPS:
           serviceImpl.listRingGroups((com.tcn.cloud.api.services.pbx.v2.ListRingGroupsRequest) request,
@@ -1372,12 +1584,26 @@ public final class PBXServiceGrpc {
               com.tcn.cloud.api.services.pbx.v2.ListPBXUsersResponse>(
                 service, METHODID_LIST_PBXUSERS)))
         .addMethod(
+          getGetDialUrlByExtensionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionRequest,
+              com.tcn.cloud.api.services.pbx.v2.GetDialUrlByExtensionResponse>(
+                service, METHODID_GET_DIAL_URL_BY_EXTENSION)))
+        .addMethod(
           getGetPBXUserMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.services.pbx.v2.GetPBXUserRequest,
               com.tcn.cloud.api.services.pbx.v2.GetPBXUserResponse>(
                 service, METHODID_GET_PBXUSER)))
+        .addMethod(
+          getListActivePBXProfilesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesRequest,
+              com.tcn.cloud.api.services.pbx.v2.ListActivePBXProfilesResponse>(
+                service, METHODID_LIST_ACTIVE_PBXPROFILES)))
         .addMethod(
           getListRingGroupsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1490,7 +1716,9 @@ public final class PBXServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new PBXServiceFileDescriptorSupplier())
               .addMethod(getListPBXUsersMethod())
+              .addMethod(getGetDialUrlByExtensionMethod())
               .addMethod(getGetPBXUserMethod())
+              .addMethod(getListActivePBXProfilesMethod())
               .addMethod(getListRingGroupsMethod())
               .addMethod(getGetRingGroupMethod())
               .addMethod(getGetSIPAccountMethod())
