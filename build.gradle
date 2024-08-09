@@ -10,9 +10,9 @@ repositories {
 project.group = 'com.tcn.cloud'
 
 dependencies {
-    api 'com.google.protobuf:protobuf-java:3.22.3'
-    api 'io.grpc:grpc-stub:1.54.1'
-    api 'io.grpc:grpc-protobuf:1.54.1'
+    provided 'com.google.protobuf:protobuf-java:3.22.3'
+    provided 'io.grpc:grpc-stub:1.54.1'
+    provided 'io.grpc:grpc-protobuf:1.54.1'
 }
 
 java {
