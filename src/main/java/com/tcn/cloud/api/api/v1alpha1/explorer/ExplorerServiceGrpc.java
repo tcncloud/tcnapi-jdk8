@@ -132,6 +132,9 @@ public final class ExplorerServiceGrpc {
   public interface AsyncService {
 
     /**
+     * <pre>
+     * ListDatasourceSchemas lists all accessible datasources and their schemas.
+     * </pre>
      */
     default void listDatasourceSchemas(com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasResponse> responseObserver) {
@@ -139,6 +142,9 @@ public final class ExplorerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Query queries a datasource.
+     * </pre>
      */
     default void query(com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse> responseObserver) {
@@ -180,6 +186,9 @@ public final class ExplorerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListDatasourceSchemas lists all accessible datasources and their schemas.
+     * </pre>
      */
     public void listDatasourceSchemas(com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasResponse> responseObserver) {
@@ -188,6 +197,9 @@ public final class ExplorerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Query queries a datasource.
+     * </pre>
      */
     public void query(com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse> responseObserver) {
@@ -216,6 +228,9 @@ public final class ExplorerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListDatasourceSchemas lists all accessible datasources and their schemas.
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasResponse listDatasourceSchemas(com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -223,6 +238,9 @@ public final class ExplorerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Query queries a datasource.
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse query(com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -250,6 +268,9 @@ public final class ExplorerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListDatasourceSchemas lists all accessible datasources and their schemas.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasResponse> listDatasourceSchemas(
         com.tcn.cloud.api.api.v1alpha1.explorer.ListDatasourceSchemasRequest request) {
@@ -258,6 +279,9 @@ public final class ExplorerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Query queries a datasource.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.explorer.QueryResponse> query(
         com.tcn.cloud.api.api.v1alpha1.explorer.QueryRequest request) {

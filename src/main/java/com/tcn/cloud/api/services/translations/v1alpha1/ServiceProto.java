@@ -27,7 +27,7 @@ public final class ServiceProto {
       ".proto\022\036services.translations.v1alpha1\032\027" +
       "annotations/authz.proto\032\034google/api/anno" +
       "tations.proto\032-services/translations/v1a" +
-      "lpha1/entities.proto2\301\020\n\023TranslationsSer" +
+      "lpha1/entities.proto2\262\025\n\023TranslationsSer" +
       "vice\022\315\001\n\021TranslateTemplate\0228.services.tr" +
       "anslations.v1alpha1.TranslateTemplateReq" +
       "uest\0329.services.translations.v1alpha1.Tr" +
@@ -80,13 +80,28 @@ public final class ServiceProto {
       "quest\0329.services.translations.v1alpha1.T" +
       "estSystemMessageResponse\"F\272\270\221\002\005\n\003\010\310\001\202\323\344\223" +
       "\0026\"1/services/translations/v1alpha1/test" +
-      "systemmessage:\001*B\332\001\n0com.tcn.cloud.api.s" +
-      "ervices.translations.v1alpha1B\014ServicePr" +
-      "otoP\001\242\002\003STX\252\002\036Services.Translations.V1al" +
-      "pha1\312\002\036Services\\Translations\\V1alpha1\342\002*" +
-      "Services\\Translations\\V1alpha1\\GPBMetada" +
-      "ta\352\002 Services::Translations::V1alpha1b\006p" +
-      "roto3"
+      "systemmessage:\001*\022\300\001\n\rEnableContext\0224.ser" +
+      "vices.translations.v1alpha1.EnableContex" +
+      "tRequest\0325.services.translations.v1alpha" +
+      "1.EnableContextResponse\"B\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002" +
+      "2\"-/services/translations/v1alpha1/enabl" +
+      "econtext:\001*\022\304\001\n\016DisableContext\0225.service" +
+      "s.translations.v1alpha1.DisableContextRe" +
+      "quest\0326.services.translations.v1alpha1.D" +
+      "isableContextResponse\"C\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0023\"" +
+      "./services/translations/v1alpha1/disable" +
+      "context:\001*\022\344\001\n\026BulkDeleteTranslations\022=." +
+      "services.translations.v1alpha1.BulkDelet" +
+      "eTranslationsRequest\032>.services.translat" +
+      "ions.v1alpha1.BulkDeleteTranslationsResp" +
+      "onse\"K\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002;\"6/services/transl" +
+      "ations/v1alpha1/bulkdeletetranslations:\001" +
+      "*B\332\001\n0com.tcn.cloud.api.services.transla" +
+      "tions.v1alpha1B\014ServiceProtoP\001\242\002\003STX\252\002\036S" +
+      "ervices.Translations.V1alpha1\312\002\036Services" +
+      "\\Translations\\V1alpha1\342\002*Services\\Transl" +
+      "ations\\V1alpha1\\GPBMetadata\352\002 Services::" +
+      "Translations::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

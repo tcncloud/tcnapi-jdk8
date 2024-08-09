@@ -43,7 +43,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>bool is_assigned = 1 [json_name = "isAssigned", deprecated = true];</code>
    * @deprecated api.v1alpha1.tickets.AssignProjectTemplateResponse.is_assigned is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=80
+   *     See api/v1alpha1/tickets/ticket.proto;l=81
    * @return The isAssigned.
    */
   @java.lang.Override
@@ -381,7 +381,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>bool is_assigned = 1 [json_name = "isAssigned", deprecated = true];</code>
      * @deprecated api.v1alpha1.tickets.AssignProjectTemplateResponse.is_assigned is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=80
+     *     See api/v1alpha1/tickets/ticket.proto;l=81
      * @return The isAssigned.
      */
     @java.lang.Override
@@ -391,7 +391,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>bool is_assigned = 1 [json_name = "isAssigned", deprecated = true];</code>
      * @deprecated api.v1alpha1.tickets.AssignProjectTemplateResponse.is_assigned is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=80
+     *     See api/v1alpha1/tickets/ticket.proto;l=81
      * @param value The isAssigned to set.
      * @return This builder for chaining.
      */
@@ -405,7 +405,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>bool is_assigned = 1 [json_name = "isAssigned", deprecated = true];</code>
      * @deprecated api.v1alpha1.tickets.AssignProjectTemplateResponse.is_assigned is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=80
+     *     See api/v1alpha1/tickets/ticket.proto;l=81
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearIsAssigned() {

@@ -18,6 +18,7 @@ private static final long serialVersionUID = 0L;
   private ListContextsResponse() {
     contexts_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    localizationContexts_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -45,6 +46,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList contexts_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * This is still populated for backwards compatibility
+   * </pre>
+   *
    * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
    * @return A list containing the contexts.
    */
@@ -53,6 +58,10 @@ private static final long serialVersionUID = 0L;
     return contexts_;
   }
   /**
+   * <pre>
+   * This is still populated for backwards compatibility
+   * </pre>
+   *
    * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
    * @return The count of contexts.
    */
@@ -60,6 +69,10 @@ private static final long serialVersionUID = 0L;
     return contexts_.size();
   }
   /**
+   * <pre>
+   * This is still populated for backwards compatibility
+   * </pre>
+   *
    * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
    * @param index The index of the element to return.
    * @return The contexts at the given index.
@@ -68,6 +81,10 @@ private static final long serialVersionUID = 0L;
     return contexts_.get(index);
   }
   /**
+   * <pre>
+   * This is still populated for backwards compatibility
+   * </pre>
+   *
    * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the contexts at the given index.
@@ -75,6 +92,47 @@ private static final long serialVersionUID = 0L;
   public com.google.protobuf.ByteString
       getContextsBytes(int index) {
     return contexts_.getByteString(index);
+  }
+
+  public static final int LOCALIZATION_CONTEXTS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext> localizationContexts_;
+  /**
+   * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext> getLocalizationContextsList() {
+    return localizationContexts_;
+  }
+  /**
+   * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContextOrBuilder> 
+      getLocalizationContextsOrBuilderList() {
+    return localizationContexts_;
+  }
+  /**
+   * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+   */
+  @java.lang.Override
+  public int getLocalizationContextsCount() {
+    return localizationContexts_.size();
+  }
+  /**
+   * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext getLocalizationContexts(int index) {
+    return localizationContexts_.get(index);
+  }
+  /**
+   * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContextOrBuilder getLocalizationContextsOrBuilder(
+      int index) {
+    return localizationContexts_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -94,6 +152,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < contexts_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contexts_.getRaw(i));
     }
+    for (int i = 0; i < localizationContexts_.size(); i++) {
+      output.writeMessage(2, localizationContexts_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -110,6 +171,10 @@ private static final long serialVersionUID = 0L;
       }
       size += dataSize;
       size += 1 * getContextsList().size();
+    }
+    for (int i = 0; i < localizationContexts_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, localizationContexts_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -128,6 +193,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getContextsList()
         .equals(other.getContextsList())) return false;
+    if (!getLocalizationContextsList()
+        .equals(other.getLocalizationContextsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -142,6 +209,10 @@ private static final long serialVersionUID = 0L;
     if (getContextsCount() > 0) {
       hash = (37 * hash) + CONTEXTS_FIELD_NUMBER;
       hash = (53 * hash) + getContextsList().hashCode();
+    }
+    if (getLocalizationContextsCount() > 0) {
+      hash = (37 * hash) + LOCALIZATION_CONTEXTS_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalizationContextsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -276,6 +347,13 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       contexts_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      if (localizationContextsBuilder_ == null) {
+        localizationContexts_ = java.util.Collections.emptyList();
+      } else {
+        localizationContexts_ = null;
+        localizationContextsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -302,9 +380,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse buildPartial() {
       com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse result = new com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse result) {
+      if (localizationContextsBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          localizationContexts_ = java.util.Collections.unmodifiableList(localizationContexts_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.localizationContexts_ = localizationContexts_;
+      } else {
+        result.localizationContexts_ = localizationContextsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.services.translations.v1alpha1.ListContextsResponse result) {
@@ -369,6 +460,32 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (localizationContextsBuilder_ == null) {
+        if (!other.localizationContexts_.isEmpty()) {
+          if (localizationContexts_.isEmpty()) {
+            localizationContexts_ = other.localizationContexts_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureLocalizationContextsIsMutable();
+            localizationContexts_.addAll(other.localizationContexts_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.localizationContexts_.isEmpty()) {
+          if (localizationContextsBuilder_.isEmpty()) {
+            localizationContextsBuilder_.dispose();
+            localizationContextsBuilder_ = null;
+            localizationContexts_ = other.localizationContexts_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            localizationContextsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getLocalizationContextsFieldBuilder() : null;
+          } else {
+            localizationContextsBuilder_.addAllMessages(other.localizationContexts_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -401,6 +518,19 @@ private static final long serialVersionUID = 0L;
               contexts_.add(s);
               break;
             } // case 10
+            case 18: {
+              com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext m =
+                  input.readMessage(
+                      com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext.parser(),
+                      extensionRegistry);
+              if (localizationContextsBuilder_ == null) {
+                ensureLocalizationContextsIsMutable();
+                localizationContexts_.add(m);
+              } else {
+                localizationContextsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -427,6 +557,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
     }
     /**
+     * <pre>
+     * This is still populated for backwards compatibility
+     * </pre>
+     *
      * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
      * @return A list containing the contexts.
      */
@@ -436,6 +570,10 @@ private static final long serialVersionUID = 0L;
       return contexts_;
     }
     /**
+     * <pre>
+     * This is still populated for backwards compatibility
+     * </pre>
+     *
      * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
      * @return The count of contexts.
      */
@@ -443,6 +581,10 @@ private static final long serialVersionUID = 0L;
       return contexts_.size();
     }
     /**
+     * <pre>
+     * This is still populated for backwards compatibility
+     * </pre>
+     *
      * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
      * @param index The index of the element to return.
      * @return The contexts at the given index.
@@ -451,6 +593,10 @@ private static final long serialVersionUID = 0L;
       return contexts_.get(index);
     }
     /**
+     * <pre>
+     * This is still populated for backwards compatibility
+     * </pre>
+     *
      * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the contexts at the given index.
@@ -460,6 +606,10 @@ private static final long serialVersionUID = 0L;
       return contexts_.getByteString(index);
     }
     /**
+     * <pre>
+     * This is still populated for backwards compatibility
+     * </pre>
+     *
      * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
      * @param index The index to set the value at.
      * @param value The contexts to set.
@@ -475,6 +625,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * This is still populated for backwards compatibility
+     * </pre>
+     *
      * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
      * @param value The contexts to add.
      * @return This builder for chaining.
@@ -489,6 +643,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * This is still populated for backwards compatibility
+     * </pre>
+     *
      * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
      * @param values The contexts to add.
      * @return This builder for chaining.
@@ -503,6 +661,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * This is still populated for backwards compatibility
+     * </pre>
+     *
      * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
      * @return This builder for chaining.
      */
@@ -514,6 +676,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * This is still populated for backwards compatibility
+     * </pre>
+     *
      * <code>repeated string contexts = 1 [json_name = "contexts"];</code>
      * @param value The bytes of the contexts to add.
      * @return This builder for chaining.
@@ -527,6 +693,246 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext> localizationContexts_ =
+      java.util.Collections.emptyList();
+    private void ensureLocalizationContextsIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        localizationContexts_ = new java.util.ArrayList<com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext>(localizationContexts_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext, com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext.Builder, com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContextOrBuilder> localizationContextsBuilder_;
+
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext> getLocalizationContextsList() {
+      if (localizationContextsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(localizationContexts_);
+      } else {
+        return localizationContextsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public int getLocalizationContextsCount() {
+      if (localizationContextsBuilder_ == null) {
+        return localizationContexts_.size();
+      } else {
+        return localizationContextsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext getLocalizationContexts(int index) {
+      if (localizationContextsBuilder_ == null) {
+        return localizationContexts_.get(index);
+      } else {
+        return localizationContextsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public Builder setLocalizationContexts(
+        int index, com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext value) {
+      if (localizationContextsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLocalizationContextsIsMutable();
+        localizationContexts_.set(index, value);
+        onChanged();
+      } else {
+        localizationContextsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public Builder setLocalizationContexts(
+        int index, com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext.Builder builderForValue) {
+      if (localizationContextsBuilder_ == null) {
+        ensureLocalizationContextsIsMutable();
+        localizationContexts_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        localizationContextsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public Builder addLocalizationContexts(com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext value) {
+      if (localizationContextsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLocalizationContextsIsMutable();
+        localizationContexts_.add(value);
+        onChanged();
+      } else {
+        localizationContextsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public Builder addLocalizationContexts(
+        int index, com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext value) {
+      if (localizationContextsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLocalizationContextsIsMutable();
+        localizationContexts_.add(index, value);
+        onChanged();
+      } else {
+        localizationContextsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public Builder addLocalizationContexts(
+        com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext.Builder builderForValue) {
+      if (localizationContextsBuilder_ == null) {
+        ensureLocalizationContextsIsMutable();
+        localizationContexts_.add(builderForValue.build());
+        onChanged();
+      } else {
+        localizationContextsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public Builder addLocalizationContexts(
+        int index, com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext.Builder builderForValue) {
+      if (localizationContextsBuilder_ == null) {
+        ensureLocalizationContextsIsMutable();
+        localizationContexts_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        localizationContextsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public Builder addAllLocalizationContexts(
+        java.lang.Iterable<? extends com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext> values) {
+      if (localizationContextsBuilder_ == null) {
+        ensureLocalizationContextsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, localizationContexts_);
+        onChanged();
+      } else {
+        localizationContextsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public Builder clearLocalizationContexts() {
+      if (localizationContextsBuilder_ == null) {
+        localizationContexts_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        localizationContextsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public Builder removeLocalizationContexts(int index) {
+      if (localizationContextsBuilder_ == null) {
+        ensureLocalizationContextsIsMutable();
+        localizationContexts_.remove(index);
+        onChanged();
+      } else {
+        localizationContextsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext.Builder getLocalizationContextsBuilder(
+        int index) {
+      return getLocalizationContextsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContextOrBuilder getLocalizationContextsOrBuilder(
+        int index) {
+      if (localizationContextsBuilder_ == null) {
+        return localizationContexts_.get(index);  } else {
+        return localizationContextsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContextOrBuilder> 
+         getLocalizationContextsOrBuilderList() {
+      if (localizationContextsBuilder_ != null) {
+        return localizationContextsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(localizationContexts_);
+      }
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext.Builder addLocalizationContextsBuilder() {
+      return getLocalizationContextsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext.Builder addLocalizationContextsBuilder(
+        int index) {
+      return getLocalizationContextsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .services.translations.v1alpha1.LocalizationContext localization_contexts = 2 [json_name = "localizationContexts"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext.Builder> 
+         getLocalizationContextsBuilderList() {
+      return getLocalizationContextsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext, com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext.Builder, com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContextOrBuilder> 
+        getLocalizationContextsFieldBuilder() {
+      if (localizationContextsBuilder_ == null) {
+        localizationContextsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext, com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContext.Builder, com.tcn.cloud.api.services.translations.v1alpha1.LocalizationContextOrBuilder>(
+                localizationContexts_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        localizationContexts_ = null;
+      }
+      return localizationContextsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

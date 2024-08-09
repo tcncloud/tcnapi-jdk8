@@ -161,7 +161,7 @@ public enum SchemaType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.explorer.EntitiesProto.getDescriptor().getEnumTypes().get(0);
+    return com.tcn.cloud.api.api.v1alpha1.explorer.EntitiesProto.getDescriptor().getEnumTypes().get(1);
   }
 
   private static final SchemaType[] VALUES = values();

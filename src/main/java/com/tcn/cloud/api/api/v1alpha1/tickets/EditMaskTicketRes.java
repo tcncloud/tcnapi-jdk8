@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>bool is_edited = 1 [json_name = "isEdited", deprecated = true];</code>
    * @deprecated api.v1alpha1.tickets.EditMaskTicketRes.is_edited is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=136
+   *     See api/v1alpha1/tickets/ticket.proto;l=138
    * @return The isEdited.
    */
   @java.lang.Override
@@ -391,7 +391,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>bool is_edited = 1 [json_name = "isEdited", deprecated = true];</code>
      * @deprecated api.v1alpha1.tickets.EditMaskTicketRes.is_edited is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=136
+     *     See api/v1alpha1/tickets/ticket.proto;l=138
      * @return The isEdited.
      */
     @java.lang.Override
@@ -401,7 +401,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>bool is_edited = 1 [json_name = "isEdited", deprecated = true];</code>
      * @deprecated api.v1alpha1.tickets.EditMaskTicketRes.is_edited is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=136
+     *     See api/v1alpha1/tickets/ticket.proto;l=138
      * @param value The isEdited to set.
      * @return This builder for chaining.
      */
@@ -415,7 +415,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>bool is_edited = 1 [json_name = "isEdited", deprecated = true];</code>
      * @deprecated api.v1alpha1.tickets.EditMaskTicketRes.is_edited is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=136
+     *     See api/v1alpha1/tickets/ticket.proto;l=138
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearIsEdited() {

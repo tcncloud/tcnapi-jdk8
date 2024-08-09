@@ -232,6 +232,37 @@ public final class ContactManagerGrpc {
     return getEditContactEntryMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityRequest,
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse> getListContactsByEntityMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListContactsByEntity",
+      requestType = com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityRequest,
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse> getListContactsByEntityMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse> getListContactsByEntityMethod;
+    if ((getListContactsByEntityMethod = ContactManagerGrpc.getListContactsByEntityMethod) == null) {
+      synchronized (ContactManagerGrpc.class) {
+        if ((getListContactsByEntityMethod = ContactManagerGrpc.getListContactsByEntityMethod) == null) {
+          ContactManagerGrpc.getListContactsByEntityMethod = getListContactsByEntityMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListContactsByEntity"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ContactManagerMethodDescriptorSupplier("ListContactsByEntity"))
+              .build();
+        }
+      }
+    }
+    return getListContactsByEntityMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -336,6 +367,17 @@ public final class ContactManagerGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditContactEntryMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     **
+     *List contacts for entity
+     * </pre>
+     */
+    default void listContactsByEntity(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListContactsByEntityMethod(), responseObserver);
+    }
   }
 
   /**
@@ -428,6 +470,18 @@ public final class ContactManagerGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getEditContactEntryMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     **
+     *List contacts for entity
+     * </pre>
+     */
+    public void listContactsByEntity(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListContactsByEntityMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -501,6 +555,17 @@ public final class ContactManagerGrpc {
     public com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse editContactEntry(com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEditContactEntryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     **
+     *List contacts for entity
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse listContactsByEntity(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListContactsByEntityMethod(), getCallOptions(), request);
     }
   }
 
@@ -583,6 +648,18 @@ public final class ContactManagerGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getEditContactEntryMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     **
+     *List contacts for entity
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse> listContactsByEntity(
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListContactsByEntityMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_CONTACT_LIST = 0;
@@ -592,6 +669,7 @@ public final class ContactManagerGrpc {
   private static final int METHODID_GET_KYCKEYS = 4;
   private static final int METHODID_ADD_CONTACT_ENTRY = 5;
   private static final int METHODID_EDIT_CONTACT_ENTRY = 6;
+  private static final int METHODID_LIST_CONTACTS_BY_ENTITY = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -637,6 +715,10 @@ public final class ContactManagerGrpc {
         case METHODID_EDIT_CONTACT_ENTRY:
           serviceImpl.editContactEntry((com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse>) responseObserver);
+          break;
+        case METHODID_LIST_CONTACTS_BY_ENTITY:
+          serviceImpl.listContactsByEntity((com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -705,6 +787,13 @@ public final class ContactManagerGrpc {
               com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryRequest,
               com.tcn.cloud.api.api.v1alpha1.contactmanager.EditContactEntryResponse>(
                 service, METHODID_EDIT_CONTACT_ENTRY)))
+        .addMethod(
+          getListContactsByEntityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityRequest,
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse>(
+                service, METHODID_LIST_CONTACTS_BY_ENTITY)))
         .build();
   }
 
@@ -760,6 +849,7 @@ public final class ContactManagerGrpc {
               .addMethod(getGetKYCKeysMethod())
               .addMethod(getAddContactEntryMethod())
               .addMethod(getEditContactEntryMethod())
+              .addMethod(getListContactsByEntityMethod())
               .build();
         }
       }

@@ -10,7 +10,7 @@ public interface CloseTicketResOrBuilder extends
   /**
    * <code>bool is_status = 1 [json_name = "isStatus", deprecated = true];</code>
    * @deprecated api.v1alpha1.tickets.CloseTicketRes.is_status is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=269
+   *     See api/v1alpha1/tickets/ticket.proto;l=271
    * @return The isStatus.
    */
   @java.lang.Deprecated boolean getIsStatus();

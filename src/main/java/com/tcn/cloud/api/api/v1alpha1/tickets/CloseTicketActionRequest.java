@@ -56,7 +56,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>int64 ticket_id = 2 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.ticket_id is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=390
+   *     See api/v1alpha1/tickets/ticket.proto;l=392
    * @return The ticketId.
    */
   @java.lang.Override
@@ -70,7 +70,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string comment = 3 [json_name = "comment", deprecated = true];</code>
    * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.comment is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=394
+   *     See api/v1alpha1/tickets/ticket.proto;l=396
    * @return The comment.
    */
   @java.lang.Override
@@ -89,7 +89,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string comment = 3 [json_name = "comment", deprecated = true];</code>
    * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.comment is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=394
+   *     See api/v1alpha1/tickets/ticket.proto;l=396
    * @return The bytes for comment.
    */
   @java.lang.Override
@@ -588,7 +588,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 ticket_id = 2 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.ticket_id is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=390
+     *     See api/v1alpha1/tickets/ticket.proto;l=392
      * @return The ticketId.
      */
     @java.lang.Override
@@ -598,7 +598,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 ticket_id = 2 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.ticket_id is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=390
+     *     See api/v1alpha1/tickets/ticket.proto;l=392
      * @param value The ticketId to set.
      * @return This builder for chaining.
      */
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>int64 ticket_id = 2 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
      * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.ticket_id is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=390
+     *     See api/v1alpha1/tickets/ticket.proto;l=392
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTicketId() {
@@ -626,7 +626,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string comment = 3 [json_name = "comment", deprecated = true];</code>
      * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.comment is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=394
+     *     See api/v1alpha1/tickets/ticket.proto;l=396
      * @return The comment.
      */
     @java.lang.Deprecated public java.lang.String getComment() {
@@ -644,7 +644,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string comment = 3 [json_name = "comment", deprecated = true];</code>
      * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.comment is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=394
+     *     See api/v1alpha1/tickets/ticket.proto;l=396
      * @return The bytes for comment.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -663,7 +663,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string comment = 3 [json_name = "comment", deprecated = true];</code>
      * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.comment is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=394
+     *     See api/v1alpha1/tickets/ticket.proto;l=396
      * @param value The comment to set.
      * @return This builder for chaining.
      */
@@ -678,7 +678,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string comment = 3 [json_name = "comment", deprecated = true];</code>
      * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.comment is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=394
+     *     See api/v1alpha1/tickets/ticket.proto;l=396
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearComment() {
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string comment = 3 [json_name = "comment", deprecated = true];</code>
      * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.comment is deprecated.
-     *     See api/v1alpha1/tickets/ticket.proto;l=394
+     *     See api/v1alpha1/tickets/ticket.proto;l=396
      * @param value The bytes for comment to set.
      * @return This builder for chaining.
      */

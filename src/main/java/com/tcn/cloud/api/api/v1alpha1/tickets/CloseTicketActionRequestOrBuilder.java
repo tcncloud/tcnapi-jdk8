@@ -16,7 +16,7 @@ public interface CloseTicketActionRequestOrBuilder extends
   /**
    * <code>int64 ticket_id = 2 [json_name = "ticketId", deprecated = true, jstype = JS_STRING];</code>
    * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.ticket_id is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=390
+   *     See api/v1alpha1/tickets/ticket.proto;l=392
    * @return The ticketId.
    */
   @java.lang.Deprecated long getTicketId();
@@ -24,14 +24,14 @@ public interface CloseTicketActionRequestOrBuilder extends
   /**
    * <code>string comment = 3 [json_name = "comment", deprecated = true];</code>
    * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.comment is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=394
+   *     See api/v1alpha1/tickets/ticket.proto;l=396
    * @return The comment.
    */
   @java.lang.Deprecated java.lang.String getComment();
   /**
    * <code>string comment = 3 [json_name = "comment", deprecated = true];</code>
    * @deprecated api.v1alpha1.tickets.CloseTicketActionRequest.comment is deprecated.
-   *     See api/v1alpha1/tickets/ticket.proto;l=394
+   *     See api/v1alpha1/tickets/ticket.proto;l=396
    * @return The bytes for comment.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
