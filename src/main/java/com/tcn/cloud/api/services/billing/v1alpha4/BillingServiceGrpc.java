@@ -267,6 +267,37 @@ public final class BillingServiceGrpc {
     return getCreateDefaultBillingPlanMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse> getCopyDefaultBillingPlanMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CopyDefaultBillingPlan",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse> getCopyDefaultBillingPlanMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse> getCopyDefaultBillingPlanMethod;
+    if ((getCopyDefaultBillingPlanMethod = BillingServiceGrpc.getCopyDefaultBillingPlanMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getCopyDefaultBillingPlanMethod = BillingServiceGrpc.getCopyDefaultBillingPlanMethod) == null) {
+          BillingServiceGrpc.getCopyDefaultBillingPlanMethod = getCopyDefaultBillingPlanMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyDefaultBillingPlan"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("CopyDefaultBillingPlan"))
+              .build();
+        }
+      }
+    }
+    return getCopyDefaultBillingPlanMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha4.DeleteDefaultBillingPlanRequest,
       com.tcn.cloud.api.services.billing.v1alpha4.DeleteDefaultBillingPlanResponse> getDeleteDefaultBillingPlanMethod;
 
@@ -1239,6 +1270,24 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Copies a default billing plan.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    default void copyDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyDefaultBillingPlanMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes a default billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -1887,6 +1936,25 @@ public final class BillingServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha4.CreateDefaultBillingPlanResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateDefaultBillingPlanMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Copies a default billing plan.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public void copyDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCopyDefaultBillingPlanMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -2545,6 +2613,24 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Copies a default billing plan.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse copyDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCopyDefaultBillingPlanMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Deletes a default billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -3182,6 +3268,25 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Copies a default billing plan.
+     * Required permissions:
+     *   CUSTOMER_SUPPORT
+     *   TCN_BILLING_ADMIN
+     * Errors:
+     *   - grpc.Internal: An internal error occurred.
+     *   - grpc.InvalidArgument: The request is invalid.
+     *   - grpc.PermissionDenied: The caller does not have the required permissions.
+     *   - grpc.Unavailable: The operation is currently unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse> copyDefaultBillingPlan(
+        com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCopyDefaultBillingPlanMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes a default billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
@@ -3679,31 +3784,32 @@ public final class BillingServiceGrpc {
   private static final int METHODID_UPDATE_BILLING_PLAN = 5;
   private static final int METHODID_APPLY_DEFAULT_BILLING_PLAN_DRAFT = 6;
   private static final int METHODID_CREATE_DEFAULT_BILLING_PLAN = 7;
-  private static final int METHODID_DELETE_DEFAULT_BILLING_PLAN = 8;
-  private static final int METHODID_GET_DEFAULT_BILLING_PLAN = 9;
-  private static final int METHODID_LIST_DEFAULT_BILLING_PLANS = 10;
-  private static final int METHODID_UPDATE_DEFAULT_BILLING_PLAN = 11;
-  private static final int METHODID_CREATE_RATE_DEFINITION = 12;
-  private static final int METHODID_DELETE_RATE_DEFINITION = 13;
-  private static final int METHODID_GET_RATE_DEFINITION = 14;
-  private static final int METHODID_LIST_RATE_DEFINITIONS = 15;
-  private static final int METHODID_UPDATE_RATE_DEFINITION = 16;
-  private static final int METHODID_CREATE_DEFAULT_RATE_DEFINITION = 17;
-  private static final int METHODID_DELETE_DEFAULT_RATE_DEFINITION = 18;
-  private static final int METHODID_GET_DEFAULT_RATE_DEFINITION = 19;
-  private static final int METHODID_LIST_DEFAULT_RATE_DEFINITIONS = 20;
-  private static final int METHODID_UPDATE_DEFAULT_RATE_DEFINITION = 21;
-  private static final int METHODID_CREATE_MATCHING_RULE = 22;
-  private static final int METHODID_DELETE_MATCHING_RULE = 23;
-  private static final int METHODID_GET_MATCHING_RULE = 24;
-  private static final int METHODID_LIST_MATCHING_RULES = 25;
-  private static final int METHODID_UPDATE_MATCHING_RULE = 26;
-  private static final int METHODID_CREATE_BILLING_TAG = 27;
-  private static final int METHODID_DELETE_BILLING_TAG = 28;
-  private static final int METHODID_GET_BILLING_TAG = 29;
-  private static final int METHODID_LIST_BILLING_TAGS = 30;
-  private static final int METHODID_UPDATE_BILLING_TAG = 31;
-  private static final int METHODID_EXPORT_INVOICE = 32;
+  private static final int METHODID_COPY_DEFAULT_BILLING_PLAN = 8;
+  private static final int METHODID_DELETE_DEFAULT_BILLING_PLAN = 9;
+  private static final int METHODID_GET_DEFAULT_BILLING_PLAN = 10;
+  private static final int METHODID_LIST_DEFAULT_BILLING_PLANS = 11;
+  private static final int METHODID_UPDATE_DEFAULT_BILLING_PLAN = 12;
+  private static final int METHODID_CREATE_RATE_DEFINITION = 13;
+  private static final int METHODID_DELETE_RATE_DEFINITION = 14;
+  private static final int METHODID_GET_RATE_DEFINITION = 15;
+  private static final int METHODID_LIST_RATE_DEFINITIONS = 16;
+  private static final int METHODID_UPDATE_RATE_DEFINITION = 17;
+  private static final int METHODID_CREATE_DEFAULT_RATE_DEFINITION = 18;
+  private static final int METHODID_DELETE_DEFAULT_RATE_DEFINITION = 19;
+  private static final int METHODID_GET_DEFAULT_RATE_DEFINITION = 20;
+  private static final int METHODID_LIST_DEFAULT_RATE_DEFINITIONS = 21;
+  private static final int METHODID_UPDATE_DEFAULT_RATE_DEFINITION = 22;
+  private static final int METHODID_CREATE_MATCHING_RULE = 23;
+  private static final int METHODID_DELETE_MATCHING_RULE = 24;
+  private static final int METHODID_GET_MATCHING_RULE = 25;
+  private static final int METHODID_LIST_MATCHING_RULES = 26;
+  private static final int METHODID_UPDATE_MATCHING_RULE = 27;
+  private static final int METHODID_CREATE_BILLING_TAG = 28;
+  private static final int METHODID_DELETE_BILLING_TAG = 29;
+  private static final int METHODID_GET_BILLING_TAG = 30;
+  private static final int METHODID_LIST_BILLING_TAGS = 31;
+  private static final int METHODID_UPDATE_BILLING_TAG = 32;
+  private static final int METHODID_EXPORT_INVOICE = 33;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3753,6 +3859,10 @@ public final class BillingServiceGrpc {
         case METHODID_CREATE_DEFAULT_BILLING_PLAN:
           serviceImpl.createDefaultBillingPlan((com.tcn.cloud.api.services.billing.v1alpha4.CreateDefaultBillingPlanRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha4.CreateDefaultBillingPlanResponse>) responseObserver);
+          break;
+        case METHODID_COPY_DEFAULT_BILLING_PLAN:
+          serviceImpl.copyDefaultBillingPlan((com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse>) responseObserver);
           break;
         case METHODID_DELETE_DEFAULT_BILLING_PLAN:
           serviceImpl.deleteDefaultBillingPlan((com.tcn.cloud.api.services.billing.v1alpha4.DeleteDefaultBillingPlanRequest) request,
@@ -3928,6 +4038,13 @@ public final class BillingServiceGrpc {
               com.tcn.cloud.api.services.billing.v1alpha4.CreateDefaultBillingPlanRequest,
               com.tcn.cloud.api.services.billing.v1alpha4.CreateDefaultBillingPlanResponse>(
                 service, METHODID_CREATE_DEFAULT_BILLING_PLAN)))
+        .addMethod(
+          getCopyDefaultBillingPlanMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest,
+              com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse>(
+                service, METHODID_COPY_DEFAULT_BILLING_PLAN)))
         .addMethod(
           getDeleteDefaultBillingPlanMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -4159,6 +4276,7 @@ public final class BillingServiceGrpc {
               .addMethod(getUpdateBillingPlanMethod())
               .addMethod(getApplyDefaultBillingPlanDraftMethod())
               .addMethod(getCreateDefaultBillingPlanMethod())
+              .addMethod(getCopyDefaultBillingPlanMethod())
               .addMethod(getDeleteDefaultBillingPlanMethod())
               .addMethod(getGetDefaultBillingPlanMethod())
               .addMethod(getListDefaultBillingPlansMethod())
