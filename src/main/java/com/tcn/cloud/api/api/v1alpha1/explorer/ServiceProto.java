@@ -44,50 +44,52 @@ public final class ServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n#api/v1alpha1/explorer/service.proto\022\025a" +
-      "pi.v1alpha1.explorer\032$api/v1alpha1/explo" +
-      "rer/entities.proto\032\034google/api/annotatio" +
-      "ns.proto\032\037google/protobuf/timestamp.prot" +
-      "o\"\231\001\n\034ListDatasourceSchemasRequest\022)\n\020da" +
-      "tasource_names\030\001 \003(\tR\017datasourceNames\022N\n" +
-      "\017datasource_type\030\002 \001(\0162%.api.v1alpha1.ex" +
-      "plorer.DatasourceTypeR\016datasourceType\"X\n" +
-      "\035ListDatasourceSchemasResponse\0227\n\007schema" +
-      "s\030\001 \003(\0132\035.api.v1alpha1.explorer.SchemaR\007" +
-      "schemas\"\266\004\n\014QueryRequest\022\'\n\017datasource_n" +
-      "ame\030\001 \001(\tR\016datasourceName\022N\n\017datasource_" +
-      "type\030\002 \001(\0162%.api.v1alpha1.explorer.Datas" +
-      "ourceTypeR\016datasourceType\022\034\n\010pipeline\030\003 " +
-      "\001(\tH\000R\010pipeline\022\024\n\004prql\030\004 \001(\tH\000R\004prql\022\027\n" +
-      "\007org_ids\030\005 \003(\tR\006orgIds\0229\n\nstart_time\030\006 \001" +
-      "(\0132\032.google.protobuf.TimestampR\tstartTim" +
-      "e\0225\n\010end_time\030\007 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\007endTime\022\032\n\010timezone\030\010 \001(\tR\010time" +
-      "zone\022R\n\023pipeline_parameters\030\t \001(\0132!.api." +
-      "v1alpha1.explorer.ParametersR\022pipelinePa" +
-      "rameters\022\036\n\013ui_trace_id\030\n \001(\tR\tuiTraceId" +
-      "\022\030\n\007comment\030\013 \001(\tR\007comment\022;\n\006format\030\014 \001" +
-      "(\0162#.api.v1alpha1.explorer.ExportFormatR" +
-      "\006formatB\007\n\005query\"Z\n\rQueryResponse\022\035\n\nres" +
-      "ult_url\030\001 \001(\tR\tresultUrl\022*\n\021result_size_" +
-      "bytes\030\002 \001(\003R\017resultSizeBytes2\337\002\n\017Explore" +
-      "rService\022\304\001\n\025ListDatasourceSchemas\0223.api" +
-      ".v1alpha1.explorer.ListDatasourceSchemas" +
-      "Request\0324.api.v1alpha1.explorer.ListData" +
-      "sourceSchemasResponse\"@\202\323\344\223\002:\"5/api/v1al" +
-      "pha1/explorer/explorer/listdatasourcesch" +
-      "emas:\001*\022\204\001\n\005Query\022#.api.v1alpha1.explore" +
-      "r.QueryRequest\032$.api.v1alpha1.explorer.Q" +
-      "ueryResponse\"0\202\323\344\223\002*\"%/api/v1alpha1/expl" +
-      "orer/explorer/query:\001*B\255\001\n\'com.tcn.cloud" +
-      ".api.api.v1alpha1.explorerB\014ServiceProto" +
-      "P\001\242\002\003AVE\252\002\025Api.V1alpha1.Explorer\312\002\025Api\\V" +
-      "1alpha1\\Explorer\342\002!Api\\V1alpha1\\Explorer" +
-      "\\GPBMetadata\352\002\027Api::V1alpha1::Explorerb\006" +
-      "proto3"
+      "pi.v1alpha1.explorer\032\027annotations/authz." +
+      "proto\032$api/v1alpha1/explorer/entities.pr" +
+      "oto\032\034google/api/annotations.proto\032\037googl" +
+      "e/protobuf/timestamp.proto\"\231\001\n\034ListDatas" +
+      "ourceSchemasRequest\022)\n\020datasource_names\030" +
+      "\001 \003(\tR\017datasourceNames\022N\n\017datasource_typ" +
+      "e\030\002 \001(\0162%.api.v1alpha1.explorer.Datasour" +
+      "ceTypeR\016datasourceType\"X\n\035ListDatasource" +
+      "SchemasResponse\0227\n\007schemas\030\001 \003(\0132\035.api.v" +
+      "1alpha1.explorer.SchemaR\007schemas\"\266\004\n\014Que" +
+      "ryRequest\022\'\n\017datasource_name\030\001 \001(\tR\016data" +
+      "sourceName\022N\n\017datasource_type\030\002 \001(\0162%.ap" +
+      "i.v1alpha1.explorer.DatasourceTypeR\016data" +
+      "sourceType\022\034\n\010pipeline\030\003 \001(\tH\000R\010pipeline" +
+      "\022\024\n\004prql\030\004 \001(\tH\000R\004prql\022\027\n\007org_ids\030\005 \003(\tR" +
+      "\006orgIds\0229\n\nstart_time\030\006 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\tstartTime\0225\n\010end_time\030\007" +
+      " \001(\0132\032.google.protobuf.TimestampR\007endTim" +
+      "e\022\032\n\010timezone\030\010 \001(\tR\010timezone\022R\n\023pipelin" +
+      "e_parameters\030\t \001(\0132!.api.v1alpha1.explor" +
+      "er.ParametersR\022pipelineParameters\022\036\n\013ui_" +
+      "trace_id\030\n \001(\tR\tuiTraceId\022\030\n\007comment\030\013 \001" +
+      "(\tR\007comment\022;\n\006format\030\014 \001(\0162#.api.v1alph" +
+      "a1.explorer.ExportFormatR\006formatB\007\n\005quer" +
+      "y\"Z\n\rQueryResponse\022\035\n\nresult_url\030\001 \001(\tR\t" +
+      "resultUrl\022*\n\021result_size_bytes\030\002 \001(\003R\017re" +
+      "sultSizeBytes2\351\002\n\017ExplorerService\022\311\001\n\025Li" +
+      "stDatasourceSchemas\0223.api.v1alpha1.explo" +
+      "rer.ListDatasourceSchemasRequest\0324.api.v" +
+      "1alpha1.explorer.ListDatasourceSchemasRe" +
+      "sponse\"E\272\270\221\002\000\202\323\344\223\002:\"5/api/v1alpha1/explo" +
+      "rer/explorer/listdatasourceschemas:\001*\022\211\001" +
+      "\n\005Query\022#.api.v1alpha1.explorer.QueryReq" +
+      "uest\032$.api.v1alpha1.explorer.QueryRespon" +
+      "se\"5\272\270\221\002\000\202\323\344\223\002*\"%/api/v1alpha1/explorer/" +
+      "explorer/query:\001*B\255\001\n\'com.tcn.cloud.api." +
+      "api.v1alpha1.explorerB\014ServiceProtoP\001\242\002\003" +
+      "AVE\252\002\025Api.V1alpha1.Explorer\312\002\025Api\\V1alph" +
+      "a1\\Explorer\342\002!Api\\V1alpha1\\Explorer\\GPBM" +
+      "etadata\352\002\027Api::V1alpha1::Explorerb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.v1alpha1.explorer.EntitiesProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
@@ -118,9 +120,11 @@ public final class ServiceProto {
         new java.lang.String[] { "ResultUrl", "ResultSizeBytes", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.explorer.EntitiesProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
