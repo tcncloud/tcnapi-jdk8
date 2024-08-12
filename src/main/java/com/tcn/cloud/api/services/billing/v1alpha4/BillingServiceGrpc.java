@@ -267,35 +267,35 @@ public final class BillingServiceGrpc {
     return getCreateDefaultBillingPlanMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest,
-      com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse> getCopyDefaultBillingPlanMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanResponse> getCloneDefaultBillingPlanMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CopyDefaultBillingPlan",
-      requestType = com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest.class,
-      responseType = com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "CloneDefaultBillingPlan",
+      requestType = com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanRequest.class,
+      responseType = com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest,
-      com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse> getCopyDefaultBillingPlanMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse> getCopyDefaultBillingPlanMethod;
-    if ((getCopyDefaultBillingPlanMethod = BillingServiceGrpc.getCopyDefaultBillingPlanMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanRequest,
+      com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanResponse> getCloneDefaultBillingPlanMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanResponse> getCloneDefaultBillingPlanMethod;
+    if ((getCloneDefaultBillingPlanMethod = BillingServiceGrpc.getCloneDefaultBillingPlanMethod) == null) {
       synchronized (BillingServiceGrpc.class) {
-        if ((getCopyDefaultBillingPlanMethod = BillingServiceGrpc.getCopyDefaultBillingPlanMethod) == null) {
-          BillingServiceGrpc.getCopyDefaultBillingPlanMethod = getCopyDefaultBillingPlanMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse>newBuilder()
+        if ((getCloneDefaultBillingPlanMethod = BillingServiceGrpc.getCloneDefaultBillingPlanMethod) == null) {
+          BillingServiceGrpc.getCloneDefaultBillingPlanMethod = getCloneDefaultBillingPlanMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanRequest, com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyDefaultBillingPlan"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CloneDefaultBillingPlan"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("CopyDefaultBillingPlan"))
+                  com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("CloneDefaultBillingPlan"))
               .build();
         }
       }
     }
-    return getCopyDefaultBillingPlanMethod;
+    return getCloneDefaultBillingPlanMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.billing.v1alpha4.DeleteDefaultBillingPlanRequest,
@@ -1270,7 +1270,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Copies a default billing plan.
+     * Clones a default billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      *   TCN_BILLING_ADMIN
@@ -1281,9 +1281,9 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
-    default void copyDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyDefaultBillingPlanMethod(), responseObserver);
+    default void cloneDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCloneDefaultBillingPlanMethod(), responseObserver);
     }
 
     /**
@@ -1940,7 +1940,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Copies a default billing plan.
+     * Clones a default billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      *   TCN_BILLING_ADMIN
@@ -1951,10 +1951,10 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
-    public void copyDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse> responseObserver) {
+    public void cloneDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCopyDefaultBillingPlanMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCloneDefaultBillingPlanMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -2613,7 +2613,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Copies a default billing plan.
+     * Clones a default billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      *   TCN_BILLING_ADMIN
@@ -2624,9 +2624,9 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
-    public com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse copyDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest request) {
+    public com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanResponse cloneDefaultBillingPlan(com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCopyDefaultBillingPlanMethod(), getCallOptions(), request);
+          getChannel(), getCloneDefaultBillingPlanMethod(), getCallOptions(), request);
     }
 
     /**
@@ -3268,7 +3268,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Copies a default billing plan.
+     * Clones a default billing plan.
      * Required permissions:
      *   CUSTOMER_SUPPORT
      *   TCN_BILLING_ADMIN
@@ -3279,10 +3279,10 @@ public final class BillingServiceGrpc {
      *   - grpc.Unavailable: The operation is currently unavailable.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse> copyDefaultBillingPlan(
-        com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanResponse> cloneDefaultBillingPlan(
+        com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCopyDefaultBillingPlanMethod(), getCallOptions()), request);
+          getChannel().newCall(getCloneDefaultBillingPlanMethod(), getCallOptions()), request);
     }
 
     /**
@@ -3784,7 +3784,7 @@ public final class BillingServiceGrpc {
   private static final int METHODID_UPDATE_BILLING_PLAN = 5;
   private static final int METHODID_APPLY_DEFAULT_BILLING_PLAN_DRAFT = 6;
   private static final int METHODID_CREATE_DEFAULT_BILLING_PLAN = 7;
-  private static final int METHODID_COPY_DEFAULT_BILLING_PLAN = 8;
+  private static final int METHODID_CLONE_DEFAULT_BILLING_PLAN = 8;
   private static final int METHODID_DELETE_DEFAULT_BILLING_PLAN = 9;
   private static final int METHODID_GET_DEFAULT_BILLING_PLAN = 10;
   private static final int METHODID_LIST_DEFAULT_BILLING_PLANS = 11;
@@ -3860,9 +3860,9 @@ public final class BillingServiceGrpc {
           serviceImpl.createDefaultBillingPlan((com.tcn.cloud.api.services.billing.v1alpha4.CreateDefaultBillingPlanRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha4.CreateDefaultBillingPlanResponse>) responseObserver);
           break;
-        case METHODID_COPY_DEFAULT_BILLING_PLAN:
-          serviceImpl.copyDefaultBillingPlan((com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse>) responseObserver);
+        case METHODID_CLONE_DEFAULT_BILLING_PLAN:
+          serviceImpl.cloneDefaultBillingPlan((com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanResponse>) responseObserver);
           break;
         case METHODID_DELETE_DEFAULT_BILLING_PLAN:
           serviceImpl.deleteDefaultBillingPlan((com.tcn.cloud.api.services.billing.v1alpha4.DeleteDefaultBillingPlanRequest) request,
@@ -4039,12 +4039,12 @@ public final class BillingServiceGrpc {
               com.tcn.cloud.api.services.billing.v1alpha4.CreateDefaultBillingPlanResponse>(
                 service, METHODID_CREATE_DEFAULT_BILLING_PLAN)))
         .addMethod(
-          getCopyDefaultBillingPlanMethod(),
+          getCloneDefaultBillingPlanMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanRequest,
-              com.tcn.cloud.api.services.billing.v1alpha4.CopyDefaultBillingPlanResponse>(
-                service, METHODID_COPY_DEFAULT_BILLING_PLAN)))
+              com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanRequest,
+              com.tcn.cloud.api.services.billing.v1alpha4.CloneDefaultBillingPlanResponse>(
+                service, METHODID_CLONE_DEFAULT_BILLING_PLAN)))
         .addMethod(
           getDeleteDefaultBillingPlanMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -4276,7 +4276,7 @@ public final class BillingServiceGrpc {
               .addMethod(getUpdateBillingPlanMethod())
               .addMethod(getApplyDefaultBillingPlanDraftMethod())
               .addMethod(getCreateDefaultBillingPlanMethod())
-              .addMethod(getCopyDefaultBillingPlanMethod())
+              .addMethod(getCloneDefaultBillingPlanMethod())
               .addMethod(getDeleteDefaultBillingPlanMethod())
               .addMethod(getGetDefaultBillingPlanMethod())
               .addMethod(getListDefaultBillingPlansMethod())

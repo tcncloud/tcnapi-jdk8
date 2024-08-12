@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.services.billing.v1alpha4;
 
-public interface CopyDefaultBillingPlanRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.billing.v1alpha4.CopyDefaultBillingPlanRequest)
+public interface CloneDefaultBillingPlanResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.billing.v1alpha4.CloneDefaultBillingPlanResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
