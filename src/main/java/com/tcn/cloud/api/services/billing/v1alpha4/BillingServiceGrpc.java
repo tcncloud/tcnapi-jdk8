@@ -1176,6 +1176,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Clones a billing plan
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -1857,6 +1858,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Clones a billing plan
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -2556,6 +2558,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Clones a billing plan
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
@@ -3222,6 +3225,7 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
+     * Clones a billing plan
      * Required permissions:
      *   CUSTOMER_SUPPORT
      * Errors:
