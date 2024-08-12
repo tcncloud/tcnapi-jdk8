@@ -22,25 +22,25 @@ public interface CopyHuntGroupExileLinkRequestOrBuilder extends
    * The exile link to copy from the source hunt group.
    * </pre>
    *
-   * <code>.services.org.hunt_groups.v1alpha1.ExileLink link = 2 [json_name = "link"];</code>
-   * @return Whether the link field is set.
+   * <code>.services.org.hunt_groups.v1alpha1.ExileLink exile_link = 2 [json_name = "exileLink"];</code>
+   * @return Whether the exileLink field is set.
    */
-  boolean hasLink();
+  boolean hasExileLink();
   /**
    * <pre>
    * The exile link to copy from the source hunt group.
    * </pre>
    *
-   * <code>.services.org.hunt_groups.v1alpha1.ExileLink link = 2 [json_name = "link"];</code>
-   * @return The link.
+   * <code>.services.org.hunt_groups.v1alpha1.ExileLink exile_link = 2 [json_name = "exileLink"];</code>
+   * @return The exileLink.
    */
-  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink getLink();
+  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink getExileLink();
   /**
    * <pre>
    * The exile link to copy from the source hunt group.
    * </pre>
    *
-   * <code>.services.org.hunt_groups.v1alpha1.ExileLink link = 2 [json_name = "link"];</code>
+   * <code>.services.org.hunt_groups.v1alpha1.ExileLink exile_link = 2 [json_name = "exileLink"];</code>
    */
-  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkOrBuilder getLinkOrBuilder();
+  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkOrBuilder getExileLinkOrBuilder();
 }

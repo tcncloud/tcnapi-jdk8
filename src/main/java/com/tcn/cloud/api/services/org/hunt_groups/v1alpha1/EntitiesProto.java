@@ -93,22 +93,23 @@ public final class EntitiesProto {
       "t_group_sid\030\001 \001(\003R\014huntGroupSid\"p\n\037ListH" +
       "untGroupExileLinksResponse\022M\n\013exile_link" +
       "s\030\001 \003(\0132,.services.org.hunt_groups.v1alp" +
-      "ha1.ExileLinkR\nexileLinks\"\214\001\n\035CopyHuntGr" +
+      "ha1.ExileLinkR\nexileLinks\"\227\001\n\035CopyHuntGr" +
       "oupExileLinkRequest\022)\n\021to_hunt_group_sid" +
-      "\030\001 \001(\003R\016toHuntGroupSid\022@\n\004link\030\002 \001(\0132,.s" +
-      "ervices.org.hunt_groups.v1alpha1.ExileLi" +
-      "nkR\004link\" \n\036CopyHuntGroupExileLinkRespon" +
-      "se\"\227\001\n UpdateHuntGroupExileLinksRequest\022" +
-      "$\n\016hunt_group_sid\030\001 \001(\003R\014huntGroupSid\022M\n" +
-      "\013exile_links\030\002 \003(\0132,.services.org.hunt_g" +
-      "roups.v1alpha1.ExileLinkR\nexileLinks\"#\n!" +
-      "UpdateHuntGroupExileLinksResponseB\347\001\n3co" +
-      "m.tcn.cloud.api.services.org.hunt_groups" +
-      ".v1alpha1B\rEntitiesProtoP\001\242\002\003SOH\252\002 Servi" +
-      "ces.Org.HuntGroups.V1alpha1\312\002 Services\\O" +
-      "rg\\HuntGroups\\V1alpha1\342\002,Services\\Org\\Hu" +
-      "ntGroups\\V1alpha1\\GPBMetadata\352\002#Services" +
-      "::Org::HuntGroups::V1alpha1b\006proto3"
+      "\030\001 \001(\003R\016toHuntGroupSid\022K\n\nexile_link\030\002 \001" +
+      "(\0132,.services.org.hunt_groups.v1alpha1.E" +
+      "xileLinkR\texileLink\" \n\036CopyHuntGroupExil" +
+      "eLinkResponse\"\227\001\n UpdateHuntGroupExileLi" +
+      "nksRequest\022$\n\016hunt_group_sid\030\001 \001(\003R\014hunt" +
+      "GroupSid\022M\n\013exile_links\030\002 \003(\0132,.services" +
+      ".org.hunt_groups.v1alpha1.ExileLinkR\nexi" +
+      "leLinks\"#\n!UpdateHuntGroupExileLinksResp" +
+      "onseB\347\001\n3com.tcn.cloud.api.services.org." +
+      "hunt_groups.v1alpha1B\rEntitiesProtoP\001\242\002\003" +
+      "SOH\252\002 Services.Org.HuntGroups.V1alpha1\312\002" +
+      " Services\\Org\\HuntGroups\\V1alpha1\342\002,Serv" +
+      "ices\\Org\\HuntGroups\\V1alpha1\\GPBMetadata" +
+      "\352\002#Services::Org::HuntGroups::V1alpha1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -150,7 +151,7 @@ public final class EntitiesProto {
     internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupExileLinkRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupExileLinkRequest_descriptor,
-        new java.lang.String[] { "ToHuntGroupSid", "Link", });
+        new java.lang.String[] { "ToHuntGroupSid", "ExileLink", });
     internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupExileLinkResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupExileLinkResponse_fieldAccessorTable = new

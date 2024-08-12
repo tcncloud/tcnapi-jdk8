@@ -57,42 +57,42 @@ private static final long serialVersionUID = 0L;
     return toHuntGroupSid_;
   }
 
-  public static final int LINK_FIELD_NUMBER = 2;
-  private com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink link_;
+  public static final int EXILE_LINK_FIELD_NUMBER = 2;
+  private com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink exileLink_;
   /**
    * <pre>
    * The exile link to copy from the source hunt group.
    * </pre>
    *
-   * <code>.services.org.hunt_groups.v1alpha1.ExileLink link = 2 [json_name = "link"];</code>
-   * @return Whether the link field is set.
+   * <code>.services.org.hunt_groups.v1alpha1.ExileLink exile_link = 2 [json_name = "exileLink"];</code>
+   * @return Whether the exileLink field is set.
    */
   @java.lang.Override
-  public boolean hasLink() {
-    return link_ != null;
+  public boolean hasExileLink() {
+    return exileLink_ != null;
   }
   /**
    * <pre>
    * The exile link to copy from the source hunt group.
    * </pre>
    *
-   * <code>.services.org.hunt_groups.v1alpha1.ExileLink link = 2 [json_name = "link"];</code>
-   * @return The link.
+   * <code>.services.org.hunt_groups.v1alpha1.ExileLink exile_link = 2 [json_name = "exileLink"];</code>
+   * @return The exileLink.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink getLink() {
-    return link_ == null ? com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.getDefaultInstance() : link_;
+  public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink getExileLink() {
+    return exileLink_ == null ? com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.getDefaultInstance() : exileLink_;
   }
   /**
    * <pre>
    * The exile link to copy from the source hunt group.
    * </pre>
    *
-   * <code>.services.org.hunt_groups.v1alpha1.ExileLink link = 2 [json_name = "link"];</code>
+   * <code>.services.org.hunt_groups.v1alpha1.ExileLink exile_link = 2 [json_name = "exileLink"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkOrBuilder getLinkOrBuilder() {
-    return link_ == null ? com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.getDefaultInstance() : link_;
+  public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkOrBuilder getExileLinkOrBuilder() {
+    return exileLink_ == null ? com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.getDefaultInstance() : exileLink_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -112,8 +112,8 @@ private static final long serialVersionUID = 0L;
     if (toHuntGroupSid_ != 0L) {
       output.writeInt64(1, toHuntGroupSid_);
     }
-    if (link_ != null) {
-      output.writeMessage(2, getLink());
+    if (exileLink_ != null) {
+      output.writeMessage(2, getExileLink());
     }
     getUnknownFields().writeTo(output);
   }
@@ -128,9 +128,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, toHuntGroupSid_);
     }
-    if (link_ != null) {
+    if (exileLink_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getLink());
+        .computeMessageSize(2, getExileLink());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -149,10 +149,10 @@ private static final long serialVersionUID = 0L;
 
     if (getToHuntGroupSid()
         != other.getToHuntGroupSid()) return false;
-    if (hasLink() != other.hasLink()) return false;
-    if (hasLink()) {
-      if (!getLink()
-          .equals(other.getLink())) return false;
+    if (hasExileLink() != other.hasExileLink()) return false;
+    if (hasExileLink()) {
+      if (!getExileLink()
+          .equals(other.getExileLink())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -168,9 +168,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TO_HUNT_GROUP_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getToHuntGroupSid());
-    if (hasLink()) {
-      hash = (37 * hash) + LINK_FIELD_NUMBER;
-      hash = (53 * hash) + getLink().hashCode();
+    if (hasExileLink()) {
+      hash = (37 * hash) + EXILE_LINK_FIELD_NUMBER;
+      hash = (53 * hash) + getExileLink().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -308,10 +308,10 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       toHuntGroupSid_ = 0L;
-      link_ = null;
-      if (linkBuilder_ != null) {
-        linkBuilder_.dispose();
-        linkBuilder_ = null;
+      exileLink_ = null;
+      if (exileLinkBuilder_ != null) {
+        exileLinkBuilder_.dispose();
+        exileLinkBuilder_ = null;
       }
       return this;
     }
@@ -350,9 +350,9 @@ private static final long serialVersionUID = 0L;
         result.toHuntGroupSid_ = toHuntGroupSid_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.link_ = linkBuilder_ == null
-            ? link_
-            : linkBuilder_.build();
+        result.exileLink_ = exileLinkBuilder_ == null
+            ? exileLink_
+            : exileLinkBuilder_.build();
       }
     }
 
@@ -403,8 +403,8 @@ private static final long serialVersionUID = 0L;
       if (other.getToHuntGroupSid() != 0L) {
         setToHuntGroupSid(other.getToHuntGroupSid());
       }
-      if (other.hasLink()) {
-        mergeLink(other.getLink());
+      if (other.hasExileLink()) {
+        mergeExileLink(other.getExileLink());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -439,7 +439,7 @@ private static final long serialVersionUID = 0L;
             } // case 8
             case 18: {
               input.readMessage(
-                  getLinkFieldBuilder().getBuilder(),
+                  getExileLinkFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
@@ -505,18 +505,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink link_;
+    private com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink exileLink_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.Builder, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkOrBuilder> linkBuilder_;
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.Builder, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkOrBuilder> exileLinkBuilder_;
     /**
      * <pre>
      * The exile link to copy from the source hunt group.
      * </pre>
      *
-     * <code>.services.org.hunt_groups.v1alpha1.ExileLink link = 2 [json_name = "link"];</code>
-     * @return Whether the link field is set.
+     * <code>.services.org.hunt_groups.v1alpha1.ExileLink exile_link = 2 [json_name = "exileLink"];</code>
+     * @return Whether the exileLink field is set.
      */
-    public boolean hasLink() {
+    public boolean hasExileLink() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
@@ -524,14 +524,14 @@ private static final long serialVersionUID = 0L;
      * The exile link to copy from the source hunt group.
      * </pre>
      *
-     * <code>.services.org.hunt_groups.v1alpha1.ExileLink link = 2 [json_name = "link"];</code>
-     * @return The link.
+     * <code>.services.org.hunt_groups.v1alpha1.ExileLink exile_link = 2 [json_name = "exileLink"];</code>
+     * @return The exileLink.
      */
-    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink getLink() {
-      if (linkBuilder_ == null) {
-        return link_ == null ? com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.getDefaultInstance() : link_;
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink getExileLink() {
+      if (exileLinkBuilder_ == null) {
+        return exileLink_ == null ? com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.getDefaultInstance() : exileLink_;
       } else {
-        return linkBuilder_.getMessage();
+        return exileLinkBuilder_.getMessage();
       }
     }
     /**
@@ -539,16 +539,16 @@ private static final long serialVersionUID = 0L;
      * The exile link to copy from the source hunt group.
      * </pre>
      *
-     * <code>.services.org.hunt_groups.v1alpha1.ExileLink link = 2 [json_name = "link"];</code>
+     * <code>.services.org.hunt_groups.v1alpha1.ExileLink exile_link = 2 [json_name = "exileLink"];</code>
      */
-    public Builder setLink(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink value) {
-      if (linkBuilder_ == null) {
+    public Builder setExileLink(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink value) {
+      if (exileLinkBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        link_ = value;
+        exileLink_ = value;
       } else {
-        linkBuilder_.setMessage(value);
+        exileLinkBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000002;
       onChanged();
@@ -559,14 +559,14 @@ private static final long serialVersionUID = 0L;
      * The exile link to copy from the source hunt group.
      * </pre>
      *
-     * <code>.services.org.hunt_groups.v1alpha1.ExileLink link = 2 [json_name = "link"];</code>
+     * <code>.services.org.hunt_groups.v1alpha1.ExileLink exile_link = 2 [json_name = "exileLink"];</code>
      */
-    public Builder setLink(
+    public Builder setExileLink(
         com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.Builder builderForValue) {
-      if (linkBuilder_ == null) {
-        link_ = builderForValue.build();
+      if (exileLinkBuilder_ == null) {
+        exileLink_ = builderForValue.build();
       } else {
-        linkBuilder_.setMessage(builderForValue.build());
+        exileLinkBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000002;
       onChanged();
@@ -577,19 +577,19 @@ private static final long serialVersionUID = 0L;
      * The exile link to copy from the source hunt group.
      * </pre>
      *
-     * <code>.services.org.hunt_groups.v1alpha1.ExileLink link = 2 [json_name = "link"];</code>
+     * <code>.services.org.hunt_groups.v1alpha1.ExileLink exile_link = 2 [json_name = "exileLink"];</code>
      */
-    public Builder mergeLink(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink value) {
-      if (linkBuilder_ == null) {
+    public Builder mergeExileLink(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink value) {
+      if (exileLinkBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
-          link_ != null &&
-          link_ != com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.getDefaultInstance()) {
-          getLinkBuilder().mergeFrom(value);
+          exileLink_ != null &&
+          exileLink_ != com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.getDefaultInstance()) {
+          getExileLinkBuilder().mergeFrom(value);
         } else {
-          link_ = value;
+          exileLink_ = value;
         }
       } else {
-        linkBuilder_.mergeFrom(value);
+        exileLinkBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000002;
       onChanged();
@@ -600,14 +600,14 @@ private static final long serialVersionUID = 0L;
      * The exile link to copy from the source hunt group.
      * </pre>
      *
-     * <code>.services.org.hunt_groups.v1alpha1.ExileLink link = 2 [json_name = "link"];</code>
+     * <code>.services.org.hunt_groups.v1alpha1.ExileLink exile_link = 2 [json_name = "exileLink"];</code>
      */
-    public Builder clearLink() {
+    public Builder clearExileLink() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      link_ = null;
-      if (linkBuilder_ != null) {
-        linkBuilder_.dispose();
-        linkBuilder_ = null;
+      exileLink_ = null;
+      if (exileLinkBuilder_ != null) {
+        exileLinkBuilder_.dispose();
+        exileLinkBuilder_ = null;
       }
       onChanged();
       return this;
@@ -617,26 +617,26 @@ private static final long serialVersionUID = 0L;
      * The exile link to copy from the source hunt group.
      * </pre>
      *
-     * <code>.services.org.hunt_groups.v1alpha1.ExileLink link = 2 [json_name = "link"];</code>
+     * <code>.services.org.hunt_groups.v1alpha1.ExileLink exile_link = 2 [json_name = "exileLink"];</code>
      */
-    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.Builder getLinkBuilder() {
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.Builder getExileLinkBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
-      return getLinkFieldBuilder().getBuilder();
+      return getExileLinkFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * The exile link to copy from the source hunt group.
      * </pre>
      *
-     * <code>.services.org.hunt_groups.v1alpha1.ExileLink link = 2 [json_name = "link"];</code>
+     * <code>.services.org.hunt_groups.v1alpha1.ExileLink exile_link = 2 [json_name = "exileLink"];</code>
      */
-    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkOrBuilder getLinkOrBuilder() {
-      if (linkBuilder_ != null) {
-        return linkBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkOrBuilder getExileLinkOrBuilder() {
+      if (exileLinkBuilder_ != null) {
+        return exileLinkBuilder_.getMessageOrBuilder();
       } else {
-        return link_ == null ?
-            com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.getDefaultInstance() : link_;
+        return exileLink_ == null ?
+            com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.getDefaultInstance() : exileLink_;
       }
     }
     /**
@@ -644,20 +644,20 @@ private static final long serialVersionUID = 0L;
      * The exile link to copy from the source hunt group.
      * </pre>
      *
-     * <code>.services.org.hunt_groups.v1alpha1.ExileLink link = 2 [json_name = "link"];</code>
+     * <code>.services.org.hunt_groups.v1alpha1.ExileLink exile_link = 2 [json_name = "exileLink"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.Builder, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkOrBuilder> 
-        getLinkFieldBuilder() {
-      if (linkBuilder_ == null) {
-        linkBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getExileLinkFieldBuilder() {
+      if (exileLinkBuilder_ == null) {
+        exileLinkBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.Builder, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkOrBuilder>(
-                getLink(),
+                getExileLink(),
                 getParentForChildren(),
                 isClean());
-        link_ = null;
+        exileLink_ = null;
       }
-      return linkBuilder_;
+      return exileLinkBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
