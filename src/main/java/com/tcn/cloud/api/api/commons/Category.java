@@ -28,6 +28,7 @@ private static final long serialVersionUID = 0L;
     skillProfiles_ = emptyLongList();
     callTypes_ = java.util.Collections.emptyList();
     categoryType_ = 0;
+    skillProfileGroupSids_ = emptyLongList();
   }
 
   @java.lang.Override
@@ -391,6 +392,47 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.CategoryType.UNRECOGNIZED : result;
   }
 
+  public static final int SKILL_PROFILE_GROUP_SIDS_FIELD_NUMBER = 13;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.Internal.LongList skillProfileGroupSids_;
+  /**
+   * <pre>
+   * skill_profile_group_sids related to category
+   * </pre>
+   *
+   * <code>repeated int64 skill_profile_group_sids = 13 [json_name = "skillProfileGroupSids"];</code>
+   * @return A list containing the skillProfileGroupSids.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Long>
+      getSkillProfileGroupSidsList() {
+    return skillProfileGroupSids_;
+  }
+  /**
+   * <pre>
+   * skill_profile_group_sids related to category
+   * </pre>
+   *
+   * <code>repeated int64 skill_profile_group_sids = 13 [json_name = "skillProfileGroupSids"];</code>
+   * @return The count of skillProfileGroupSids.
+   */
+  public int getSkillProfileGroupSidsCount() {
+    return skillProfileGroupSids_.size();
+  }
+  /**
+   * <pre>
+   * skill_profile_group_sids related to category
+   * </pre>
+   *
+   * <code>repeated int64 skill_profile_group_sids = 13 [json_name = "skillProfileGroupSids"];</code>
+   * @param index The index of the element to return.
+   * @return The skillProfileGroupSids at the given index.
+   */
+  public long getSkillProfileGroupSids(int index) {
+    return skillProfileGroupSids_.getLong(index);
+  }
+  private int skillProfileGroupSidsMemoizedSerializedSize = -1;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -440,6 +482,13 @@ private static final long serialVersionUID = 0L;
     }
     if (categoryType_ != com.tcn.cloud.api.api.commons.CategoryType.INVALID.getNumber()) {
       output.writeEnum(12, categoryType_);
+    }
+    if (getSkillProfileGroupSidsList().size() > 0) {
+      output.writeUInt32NoTag(106);
+      output.writeUInt32NoTag(skillProfileGroupSidsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < skillProfileGroupSids_.size(); i++) {
+      output.writeInt64NoTag(skillProfileGroupSids_.getLong(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -501,6 +550,20 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(12, categoryType_);
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < skillProfileGroupSids_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(skillProfileGroupSids_.getLong(i));
+      }
+      size += dataSize;
+      if (!getSkillProfileGroupSidsList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      skillProfileGroupSidsMemoizedSerializedSize = dataSize;
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -532,6 +595,8 @@ private static final long serialVersionUID = 0L;
     if (getIsSystem()
         != other.getIsSystem()) return false;
     if (categoryType_ != other.categoryType_) return false;
+    if (!getSkillProfileGroupSidsList()
+        .equals(other.getSkillProfileGroupSidsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -567,6 +632,10 @@ private static final long serialVersionUID = 0L;
         getIsSystem());
     hash = (37 * hash) + CATEGORY_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + categoryType_;
+    if (getSkillProfileGroupSidsCount() > 0) {
+      hash = (37 * hash) + SKILL_PROFILE_GROUP_SIDS_FIELD_NUMBER;
+      hash = (53 * hash) + getSkillProfileGroupSidsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -714,6 +783,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000040);
       isSystem_ = false;
       categoryType_ = 0;
+      skillProfileGroupSids_ = emptyLongList();
       return this;
     }
 
@@ -757,6 +827,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000040);
       }
       result.callTypes_ = callTypes_;
+      if (((bitField0_ & 0x00000200) != 0)) {
+        skillProfileGroupSids_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000200);
+      }
+      result.skillProfileGroupSids_ = skillProfileGroupSids_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.Category result) {
@@ -875,6 +950,16 @@ private static final long serialVersionUID = 0L;
       if (other.categoryType_ != 0) {
         setCategoryTypeValue(other.getCategoryTypeValue());
       }
+      if (!other.skillProfileGroupSids_.isEmpty()) {
+        if (skillProfileGroupSids_.isEmpty()) {
+          skillProfileGroupSids_ = other.skillProfileGroupSids_;
+          bitField0_ = (bitField0_ & ~0x00000200);
+        } else {
+          ensureSkillProfileGroupSidsIsMutable();
+          skillProfileGroupSids_.addAll(other.skillProfileGroupSids_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -969,6 +1054,22 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 96
+            case 104: {
+              long v = input.readInt64();
+              ensureSkillProfileGroupSidsIsMutable();
+              skillProfileGroupSids_.addLong(v);
+              break;
+            } // case 104
+            case 106: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureSkillProfileGroupSidsIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                skillProfileGroupSids_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 106
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1784,6 +1885,115 @@ private static final long serialVersionUID = 0L;
     public Builder clearCategoryType() {
       bitField0_ = (bitField0_ & ~0x00000100);
       categoryType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Internal.LongList skillProfileGroupSids_ = emptyLongList();
+    private void ensureSkillProfileGroupSidsIsMutable() {
+      if (!((bitField0_ & 0x00000200) != 0)) {
+        skillProfileGroupSids_ = mutableCopy(skillProfileGroupSids_);
+        bitField0_ |= 0x00000200;
+      }
+    }
+    /**
+     * <pre>
+     * skill_profile_group_sids related to category
+     * </pre>
+     *
+     * <code>repeated int64 skill_profile_group_sids = 13 [json_name = "skillProfileGroupSids"];</code>
+     * @return A list containing the skillProfileGroupSids.
+     */
+    public java.util.List<java.lang.Long>
+        getSkillProfileGroupSidsList() {
+      return ((bitField0_ & 0x00000200) != 0) ?
+               java.util.Collections.unmodifiableList(skillProfileGroupSids_) : skillProfileGroupSids_;
+    }
+    /**
+     * <pre>
+     * skill_profile_group_sids related to category
+     * </pre>
+     *
+     * <code>repeated int64 skill_profile_group_sids = 13 [json_name = "skillProfileGroupSids"];</code>
+     * @return The count of skillProfileGroupSids.
+     */
+    public int getSkillProfileGroupSidsCount() {
+      return skillProfileGroupSids_.size();
+    }
+    /**
+     * <pre>
+     * skill_profile_group_sids related to category
+     * </pre>
+     *
+     * <code>repeated int64 skill_profile_group_sids = 13 [json_name = "skillProfileGroupSids"];</code>
+     * @param index The index of the element to return.
+     * @return The skillProfileGroupSids at the given index.
+     */
+    public long getSkillProfileGroupSids(int index) {
+      return skillProfileGroupSids_.getLong(index);
+    }
+    /**
+     * <pre>
+     * skill_profile_group_sids related to category
+     * </pre>
+     *
+     * <code>repeated int64 skill_profile_group_sids = 13 [json_name = "skillProfileGroupSids"];</code>
+     * @param index The index to set the value at.
+     * @param value The skillProfileGroupSids to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSkillProfileGroupSids(
+        int index, long value) {
+
+      ensureSkillProfileGroupSidsIsMutable();
+      skillProfileGroupSids_.setLong(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * skill_profile_group_sids related to category
+     * </pre>
+     *
+     * <code>repeated int64 skill_profile_group_sids = 13 [json_name = "skillProfileGroupSids"];</code>
+     * @param value The skillProfileGroupSids to add.
+     * @return This builder for chaining.
+     */
+    public Builder addSkillProfileGroupSids(long value) {
+
+      ensureSkillProfileGroupSidsIsMutable();
+      skillProfileGroupSids_.addLong(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * skill_profile_group_sids related to category
+     * </pre>
+     *
+     * <code>repeated int64 skill_profile_group_sids = 13 [json_name = "skillProfileGroupSids"];</code>
+     * @param values The skillProfileGroupSids to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllSkillProfileGroupSids(
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureSkillProfileGroupSidsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, skillProfileGroupSids_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * skill_profile_group_sids related to category
+     * </pre>
+     *
+     * <code>repeated int64 skill_profile_group_sids = 13 [json_name = "skillProfileGroupSids"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSkillProfileGroupSids() {
+      skillProfileGroupSids_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }

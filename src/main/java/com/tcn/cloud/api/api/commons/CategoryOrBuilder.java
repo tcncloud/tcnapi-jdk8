@@ -203,4 +203,33 @@ public interface CategoryOrBuilder extends
    * @return The categoryType.
    */
   com.tcn.cloud.api.api.commons.CategoryType getCategoryType();
+
+  /**
+   * <pre>
+   * skill_profile_group_sids related to category
+   * </pre>
+   *
+   * <code>repeated int64 skill_profile_group_sids = 13 [json_name = "skillProfileGroupSids"];</code>
+   * @return A list containing the skillProfileGroupSids.
+   */
+  java.util.List<java.lang.Long> getSkillProfileGroupSidsList();
+  /**
+   * <pre>
+   * skill_profile_group_sids related to category
+   * </pre>
+   *
+   * <code>repeated int64 skill_profile_group_sids = 13 [json_name = "skillProfileGroupSids"];</code>
+   * @return The count of skillProfileGroupSids.
+   */
+  int getSkillProfileGroupSidsCount();
+  /**
+   * <pre>
+   * skill_profile_group_sids related to category
+   * </pre>
+   *
+   * <code>repeated int64 skill_profile_group_sids = 13 [json_name = "skillProfileGroupSids"];</code>
+   * @param index The index of the element to return.
+   * @return The skillProfileGroupSids at the given index.
+   */
+  long getSkillProfileGroupSids(int index);
 }
