@@ -27,20 +27,32 @@ public final class ServiceProto {
       "ice.proto\022!services.org.hunt_groups.v1al" +
       "pha1\032\027annotations/authz.proto\032\034google/ap" +
       "i/annotations.proto\0320services/org/hunt_g" +
-      "roups/v1alpha1/entities.proto2\206\002\n\021HuntGr" +
+      "roups/v1alpha1/entities.proto2\344\005\n\021HuntGr" +
       "oupsService\022\360\001\n\027ListHuntGroupExileLinks\022" +
       "A.services.org.hunt_groups.v1alpha1.List" +
       "HuntGroupExileLinksRequest\032B.services.or" +
       "g.hunt_groups.v1alpha1.ListHuntGroupExil" +
       "eLinksResponse\"N\272\270\221\002\005\n\003\010\354\016\202\323\344\223\002>\"9/servi" +
       "ces/org/huntgroups/v1alpha1/listhuntgrou" +
-      "pexilelinks:\001*B\346\001\n3com.tcn.cloud.api.ser" +
-      "vices.org.hunt_groups.v1alpha1B\014ServiceP" +
-      "rotoP\001\242\002\003SOH\252\002 Services.Org.HuntGroups.V" +
-      "1alpha1\312\002 Services\\Org\\HuntGroups\\V1alph" +
-      "a1\342\002,Services\\Org\\HuntGroups\\V1alpha1\\GP" +
-      "BMetadata\352\002#Services::Org::HuntGroups::V" +
-      "1alpha1b\006proto3"
+      "pexilelinks:\001*\022\346\001\n\026CopyHuntGroupExileLin" +
+      "k\022@.services.org.hunt_groups.v1alpha1.Co" +
+      "pyHuntGroupExileLinkRequest\032A.services.o" +
+      "rg.hunt_groups.v1alpha1.CopyHuntGroupExi" +
+      "leLinkResponse\"G\272\270\221\002\005\n\003\010\355\016\202\323\344\223\0027\"2/api/v" +
+      "1alpha1/org/huntgroup/copyhuntgroupexile" +
+      "link:\001*\022\362\001\n\031UpdateHuntGroupExileLinks\022C." +
+      "services.org.hunt_groups.v1alpha1.Update" +
+      "HuntGroupExileLinksRequest\032D.services.or" +
+      "g.hunt_groups.v1alpha1.UpdateHuntGroupEx" +
+      "ileLinksResponse\"J\272\270\221\002\005\n\003\010\355\016\202\323\344\223\002:\"5/api" +
+      "/v1alpha1/org/huntgroup/updatehuntgroupe" +
+      "xilelinks:\001*B\346\001\n3com.tcn.cloud.api.servi" +
+      "ces.org.hunt_groups.v1alpha1B\014ServicePro" +
+      "toP\001\242\002\003SOH\252\002 Services.Org.HuntGroups.V1a" +
+      "lpha1\312\002 Services\\Org\\HuntGroups\\V1alpha1" +
+      "\342\002,Services\\Org\\HuntGroups\\V1alpha1\\GPBM" +
+      "etadata\352\002#Services::Org::HuntGroups::V1a" +
+      "lpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
