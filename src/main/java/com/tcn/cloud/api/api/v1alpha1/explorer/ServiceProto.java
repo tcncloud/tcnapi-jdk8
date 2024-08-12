@@ -70,21 +70,21 @@ public final class ServiceProto {
       "a1.explorer.ExportFormatR\006formatB\007\n\005quer" +
       "y\"Z\n\rQueryResponse\022\035\n\nresult_url\030\001 \001(\tR\t" +
       "resultUrl\022*\n\021result_size_bytes\030\002 \001(\003R\017re" +
-      "sultSizeBytes2\351\002\n\017ExplorerService\022\311\001\n\025Li" +
+      "sultSizeBytes2\355\002\n\017ExplorerService\022\313\001\n\025Li" +
       "stDatasourceSchemas\0223.api.v1alpha1.explo" +
       "rer.ListDatasourceSchemasRequest\0324.api.v" +
       "1alpha1.explorer.ListDatasourceSchemasRe" +
-      "sponse\"E\272\270\221\002\000\202\323\344\223\002:\"5/api/v1alpha1/explo" +
-      "rer/explorer/listdatasourceschemas:\001*\022\211\001" +
-      "\n\005Query\022#.api.v1alpha1.explorer.QueryReq" +
-      "uest\032$.api.v1alpha1.explorer.QueryRespon" +
-      "se\"5\272\270\221\002\000\202\323\344\223\002*\"%/api/v1alpha1/explorer/" +
-      "explorer/query:\001*B\255\001\n\'com.tcn.cloud.api." +
-      "api.v1alpha1.explorerB\014ServiceProtoP\001\242\002\003" +
-      "AVE\252\002\025Api.V1alpha1.Explorer\312\002\025Api\\V1alph" +
-      "a1\\Explorer\342\002!Api\\V1alpha1\\Explorer\\GPBM" +
-      "etadata\352\002\027Api::V1alpha1::Explorerb\006proto" +
-      "3"
+      "sponse\"G\272\270\221\002\002\030\001\202\323\344\223\002:\"5/api/v1alpha1/exp" +
+      "lorer/explorer/listdatasourceschemas:\001*\022" +
+      "\213\001\n\005Query\022#.api.v1alpha1.explorer.QueryR" +
+      "equest\032$.api.v1alpha1.explorer.QueryResp" +
+      "onse\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v1alpha1/explo" +
+      "rer/explorer/query:\001*B\255\001\n\'com.tcn.cloud." +
+      "api.api.v1alpha1.explorerB\014ServiceProtoP" +
+      "\001\242\002\003AVE\252\002\025Api.V1alpha1.Explorer\312\002\025Api\\V1" +
+      "alpha1\\Explorer\342\002!Api\\V1alpha1\\Explorer\\" +
+      "GPBMetadata\352\002\027Api::V1alpha1::Explorerb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
