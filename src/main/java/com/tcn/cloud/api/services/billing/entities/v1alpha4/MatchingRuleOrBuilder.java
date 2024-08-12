@@ -20,19 +20,23 @@ public interface MatchingRuleOrBuilder extends
       getMatchingRuleIdBytes();
 
   /**
-   * <code>.services.billing.entities.v1alpha4.ProductConfig config = 2 [json_name = "config"];</code>
+   * <code>.services.billing.entities.v1alpha4.ProductConfig config = 2 [json_name = "config", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.MatchingRule.config is deprecated.
+   *     See services/billing/entities/v1alpha4/rates.proto;l=24
    * @return Whether the config field is set.
    */
-  boolean hasConfig();
+  @java.lang.Deprecated boolean hasConfig();
   /**
-   * <code>.services.billing.entities.v1alpha4.ProductConfig config = 2 [json_name = "config"];</code>
+   * <code>.services.billing.entities.v1alpha4.ProductConfig config = 2 [json_name = "config", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.MatchingRule.config is deprecated.
+   *     See services/billing/entities/v1alpha4/rates.proto;l=24
    * @return The config.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.ProductConfig getConfig();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha4.ProductConfig getConfig();
   /**
-   * <code>.services.billing.entities.v1alpha4.ProductConfig config = 2 [json_name = "config"];</code>
+   * <code>.services.billing.entities.v1alpha4.ProductConfig config = 2 [json_name = "config", deprecated = true];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.ProductConfigOrBuilder getConfigOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha4.ProductConfigOrBuilder getConfigOrBuilder();
 
   /**
    * <code>.google.protobuf.Timestamp create_time = 3 [json_name = "createTime"];</code>
@@ -78,4 +82,21 @@ public interface MatchingRuleOrBuilder extends
    * <code>.google.protobuf.Timestamp update_time = 5 [json_name = "updateTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+   * @return Whether the countryCodePrefix field is set.
+   */
+  boolean hasCountryCodePrefix();
+  /**
+   * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+   * @return The countryCodePrefix.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix getCountryCodePrefix();
+  /**
+   * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefixOrBuilder getCountryCodePrefixOrBuilder();
+
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingRule.MatchingConfigCase getMatchingConfigCase();
 }

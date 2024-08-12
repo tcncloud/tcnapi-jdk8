@@ -8,15 +8,19 @@ public interface OmniSmsUnitConfigOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.OmniSmsUnitConfig.name is deprecated.
+   *     See services/billing/entities/v1alpha4/omni.proto;l=14
    * @return The name.
    */
-  java.lang.String getName();
+  @java.lang.Deprecated java.lang.String getName();
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.OmniSmsUnitConfig.name is deprecated.
+   *     See services/billing/entities/v1alpha4/omni.proto;l=14
    * @return The bytes for name.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getNameBytes();
 
   /**

@@ -61,4 +61,36 @@ public interface CountryCodePrefixOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPrefixesBytes(int index);
+
+  /**
+   * <pre>
+   * The id of the matching rule.
+   * </pre>
+   *
+   * <code>string matching_rule_id = 3 [json_name = "matchingRuleId"];</code>
+   * @return The matchingRuleId.
+   */
+  java.lang.String getMatchingRuleId();
+  /**
+   * <pre>
+   * The id of the matching rule.
+   * </pre>
+   *
+   * <code>string matching_rule_id = 3 [json_name = "matchingRuleId"];</code>
+   * @return The bytes for matchingRuleId.
+   */
+  com.google.protobuf.ByteString
+      getMatchingRuleIdBytes();
+
+  /**
+   * <code>string name = 4 [json_name = "name"];</code>
+   * @return The name.
+   */
+  java.lang.String getName();
+  /**
+   * <code>string name = 4 [json_name = "name"];</code>
+   * @return The bytes for name.
+   */
+  com.google.protobuf.ByteString
+      getNameBytes();
 }

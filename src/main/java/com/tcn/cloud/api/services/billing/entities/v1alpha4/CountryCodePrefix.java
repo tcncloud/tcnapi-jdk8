@@ -18,6 +18,8 @@ private static final long serialVersionUID = 0L;
   private CountryCodePrefix() {
     prefixes_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    matchingRuleId_ = "";
+    name_ = "";
   }
 
   @java.lang.Override
@@ -112,6 +114,92 @@ private static final long serialVersionUID = 0L;
     return prefixes_.getByteString(index);
   }
 
+  public static final int MATCHING_RULE_ID_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object matchingRuleId_ = "";
+  /**
+   * <pre>
+   * The id of the matching rule.
+   * </pre>
+   *
+   * <code>string matching_rule_id = 3 [json_name = "matchingRuleId"];</code>
+   * @return The matchingRuleId.
+   */
+  @java.lang.Override
+  public java.lang.String getMatchingRuleId() {
+    java.lang.Object ref = matchingRuleId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      matchingRuleId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The id of the matching rule.
+   * </pre>
+   *
+   * <code>string matching_rule_id = 3 [json_name = "matchingRuleId"];</code>
+   * @return The bytes for matchingRuleId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getMatchingRuleIdBytes() {
+    java.lang.Object ref = matchingRuleId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      matchingRuleId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int NAME_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
+  /**
+   * <code>string name = 4 [json_name = "name"];</code>
+   * @return The name.
+   */
+  @java.lang.Override
+  public java.lang.String getName() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      name_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string name = 4 [json_name = "name"];</code>
+   * @return The bytes for name.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getNameBytes() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      name_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -131,6 +219,12 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < prefixes_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, prefixes_.getRaw(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(matchingRuleId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, matchingRuleId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -153,6 +247,12 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getPrefixesList().size();
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(matchingRuleId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, matchingRuleId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -172,6 +272,10 @@ private static final long serialVersionUID = 0L;
         != other.getCountryCode()) return false;
     if (!getPrefixesList()
         .equals(other.getPrefixesList())) return false;
+    if (!getMatchingRuleId()
+        .equals(other.getMatchingRuleId())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -189,6 +293,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PREFIXES_FIELD_NUMBER;
       hash = (53 * hash) + getPrefixesList().hashCode();
     }
+    hash = (37 * hash) + MATCHING_RULE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getMatchingRuleId().hashCode();
+    hash = (37 * hash) + NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -323,6 +431,8 @@ private static final long serialVersionUID = 0L;
       countryCode_ = 0;
       prefixes_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      matchingRuleId_ = "";
+      name_ = "";
       return this;
     }
 
@@ -362,6 +472,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         prefixes_.makeImmutable();
         result.prefixes_ = prefixes_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.matchingRuleId_ = matchingRuleId_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.name_ = name_;
       }
     }
 
@@ -422,6 +538,16 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (!other.getMatchingRuleId().isEmpty()) {
+        matchingRuleId_ = other.matchingRuleId_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (!other.getName().isEmpty()) {
+        name_ = other.name_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -459,6 +585,16 @@ private static final long serialVersionUID = 0L;
               prefixes_.add(s);
               break;
             } // case 18
+            case 26: {
+              matchingRuleId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -672,6 +808,170 @@ private static final long serialVersionUID = 0L;
       ensurePrefixesIsMutable();
       prefixes_.add(value);
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object matchingRuleId_ = "";
+    /**
+     * <pre>
+     * The id of the matching rule.
+     * </pre>
+     *
+     * <code>string matching_rule_id = 3 [json_name = "matchingRuleId"];</code>
+     * @return The matchingRuleId.
+     */
+    public java.lang.String getMatchingRuleId() {
+      java.lang.Object ref = matchingRuleId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        matchingRuleId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The id of the matching rule.
+     * </pre>
+     *
+     * <code>string matching_rule_id = 3 [json_name = "matchingRuleId"];</code>
+     * @return The bytes for matchingRuleId.
+     */
+    public com.google.protobuf.ByteString
+        getMatchingRuleIdBytes() {
+      java.lang.Object ref = matchingRuleId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        matchingRuleId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The id of the matching rule.
+     * </pre>
+     *
+     * <code>string matching_rule_id = 3 [json_name = "matchingRuleId"];</code>
+     * @param value The matchingRuleId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMatchingRuleId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      matchingRuleId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The id of the matching rule.
+     * </pre>
+     *
+     * <code>string matching_rule_id = 3 [json_name = "matchingRuleId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMatchingRuleId() {
+      matchingRuleId_ = getDefaultInstance().getMatchingRuleId();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The id of the matching rule.
+     * </pre>
+     *
+     * <code>string matching_rule_id = 3 [json_name = "matchingRuleId"];</code>
+     * @param value The bytes for matchingRuleId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMatchingRuleIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      matchingRuleId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object name_ = "";
+    /**
+     * <code>string name = 4 [json_name = "name"];</code>
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string name = 4 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string name = 4 [json_name = "name"];</code>
+     * @param value The name to set.
+     * @return This builder for chaining.
+     */
+    public Builder setName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      name_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string name = 4 [json_name = "name"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearName() {
+      name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string name = 4 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      name_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
