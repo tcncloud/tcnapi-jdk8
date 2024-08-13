@@ -27,20 +27,39 @@ public final class ServiceProto {
       "ice.proto\022!services.org.hunt_groups.v1al" +
       "pha1\032\027annotations/authz.proto\032\034google/ap" +
       "i/annotations.proto\0320services/org/hunt_g" +
-      "roups/v1alpha1/entities.proto2\206\002\n\021HuntGr" +
+      "roups/v1alpha1/entities.proto2\207\010\n\021HuntGr" +
       "oupsService\022\360\001\n\027ListHuntGroupExileLinks\022" +
       "A.services.org.hunt_groups.v1alpha1.List" +
       "HuntGroupExileLinksRequest\032B.services.or" +
       "g.hunt_groups.v1alpha1.ListHuntGroupExil" +
       "eLinksResponse\"N\272\270\221\002\005\n\003\010\354\016\202\323\344\223\002>\"9/servi" +
       "ces/org/huntgroups/v1alpha1/listhuntgrou" +
-      "pexilelinks:\001*B\346\001\n3com.tcn.cloud.api.ser" +
-      "vices.org.hunt_groups.v1alpha1B\014ServiceP" +
-      "rotoP\001\242\002\003SOH\252\002 Services.Org.HuntGroups.V" +
-      "1alpha1\312\002 Services\\Org\\HuntGroups\\V1alph" +
-      "a1\342\002,Services\\Org\\HuntGroups\\V1alpha1\\GP" +
-      "BMetadata\352\002#Services::Org::HuntGroups::V" +
-      "1alpha1b\006proto3"
+      "pexilelinks:\001*\022\374\001\n\032ListHuntGroupAgentTri" +
+      "ggers\022D.services.org.hunt_groups.v1alpha" +
+      "1.ListHuntGroupAgentTriggersRequest\032E.se" +
+      "rvices.org.hunt_groups.v1alpha1.ListHunt" +
+      "GroupAgentTriggersResponse\"Q\272\270\221\002\005\n\003\010\354\016\202\323" +
+      "\344\223\002A\"</services/org/huntgroups/v1alpha1/" +
+      "listhuntgroupagenttriggers:\001*\022\370\001\n\031CopyHu" +
+      "ntGroupAgentTrigger\022C.services.org.hunt_" +
+      "groups.v1alpha1.CopyHuntGroupAgentTrigge" +
+      "rRequest\032D.services.org.hunt_groups.v1al" +
+      "pha1.CopyHuntGroupAgentTriggerResponse\"P" +
+      "\272\270\221\002\005\n\003\010\355\016\202\323\344\223\002@\";/services/org/huntgrou" +
+      "ps/v1alpha1/copyhuntgroupagenttrigger:\001*" +
+      "\022\204\002\n\034UpdateHuntGroupAgentTriggers\022F.serv" +
+      "ices.org.hunt_groups.v1alpha1.UpdateHunt" +
+      "GroupAgentTriggersRequest\032G.services.org" +
+      ".hunt_groups.v1alpha1.UpdateHuntGroupAge" +
+      "ntTriggersResponse\"S\272\270\221\002\005\n\003\010\355\016\202\323\344\223\002C\">/s" +
+      "ervices/org/huntgroups/v1alpha1/updatehu" +
+      "ntgroupagenttriggers:\001*B\346\001\n3com.tcn.clou" +
+      "d.api.services.org.hunt_groups.v1alpha1B" +
+      "\014ServiceProtoP\001\242\002\003SOH\252\002 Services.Org.Hun" +
+      "tGroups.V1alpha1\312\002 Services\\Org\\HuntGrou" +
+      "ps\\V1alpha1\342\002,Services\\Org\\HuntGroups\\V1" +
+      "alpha1\\GPBMetadata\352\002#Services::Org::Hunt" +
+      "Groups::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

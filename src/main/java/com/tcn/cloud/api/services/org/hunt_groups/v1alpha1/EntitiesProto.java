@@ -39,6 +39,61 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupExileLinksResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_hunt_groups_v1alpha1_AgentTrigger_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_hunt_groups_v1alpha1_AgentTrigger_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_hunt_groups_v1alpha1_AgentStatusOption_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_hunt_groups_v1alpha1_AgentStatusOption_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_hunt_groups_v1alpha1_TriggerPauseCode_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_hunt_groups_v1alpha1_TriggerPauseCode_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_hunt_groups_v1alpha1_TriggerCallTypes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_hunt_groups_v1alpha1_TriggerCallTypes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_hunt_groups_v1alpha1_TriggerActionOption_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_hunt_groups_v1alpha1_TriggerActionOption_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupAgentTriggersRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupAgentTriggersRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupAgentTriggersResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupAgentTriggersResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupAgentTriggerRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupAgentTriggerRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupAgentTriggerResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupAgentTriggerResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupAgentTriggersRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupAgentTriggersRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupAgentTriggersResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupAgentTriggersResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -73,13 +128,84 @@ public final class EntitiesProto {
       "t_group_sid\030\001 \001(\003R\014huntGroupSid\"p\n\037ListH" +
       "untGroupExileLinksResponse\022M\n\013exile_link" +
       "s\030\001 \003(\0132,.services.org.hunt_groups.v1alp" +
-      "ha1.ExileLinkR\nexileLinksB\347\001\n3com.tcn.cl" +
-      "oud.api.services.org.hunt_groups.v1alpha" +
-      "1B\rEntitiesProtoP\001\242\002\003SOH\252\002 Services.Org." +
-      "HuntGroups.V1alpha1\312\002 Services\\Org\\HuntG" +
-      "roups\\V1alpha1\342\002,Services\\Org\\HuntGroups" +
-      "\\V1alpha1\\GPBMetadata\352\002#Services::Org::H" +
-      "untGroups::V1alpha1b\006proto3"
+      "ha1.ExileLinkR\nexileLinks\"\256\002\n\014AgentTrigg" +
+      "er\022*\n\021agent_trigger_sid\030\001 \001(\003R\017agentTrig" +
+      "gerSid\022 \n\013description\030\002 \001(\tR\013description" +
+      "\022d\n\023agent_status_option\030\003 \001(\01324.services" +
+      ".org.hunt_groups.v1alpha1.AgentStatusOpt" +
+      "ionR\021agentStatusOption\022j\n\025trigger_action" +
+      "_option\030\004 \001(\01326.services.org.hunt_groups" +
+      ".v1alpha1.TriggerActionOptionR\023triggerAc" +
+      "tionOption\"\350\002\n\021AgentStatusOption\022Q\n\014agen" +
+      "t_status\030\001 \001(\0162..services.org.hunt_group" +
+      "s.v1alpha1.AgentStatusR\013agentStatus\022\032\n\010d" +
+      "uration\030\002 \001(\003R\010duration\022R\n\npause_code\030\003 " +
+      "\001(\01323.services.org.hunt_groups.v1alpha1." +
+      "TriggerPauseCodeR\tpauseCode\022R\n\ncall_type" +
+      "s\030\004 \001(\01323.services.org.hunt_groups.v1alp" +
+      "ha1.TriggerCallTypesR\tcallTypes\022<\n\032sched" +
+      "uled_callback_present\030\005 \001(\010R\030scheduledCa" +
+      "llbackPresent\"\260\001\n\020TriggerPauseCode\022`\n\021sy" +
+      "stem_pause_code\030\001 \001(\01622.services.org.hun" +
+      "t_groups.v1alpha1.SystemPauseCodeH\000R\017sys" +
+      "temPauseCode\022,\n\021custom_pause_code\030\002 \001(\tH" +
+      "\000R\017customPauseCodeB\014\n\npause_code\"z\n\020Trig" +
+      "gerCallTypes\022\032\n\010outbound\030\001 \001(\010R\010outbound" +
+      "\022\030\n\007inbound\030\002 \001(\010R\007inbound\022\026\n\006manual\030\003 \001" +
+      "(\010R\006manual\022\030\n\007preview\030\004 \001(\010R\007preview\"\336\002\n" +
+      "\023TriggerActionOption\022H\n\006action\030\001 \001(\01620.s" +
+      "ervices.org.hunt_groups.v1alpha1.Trigger" +
+      "ActionR\006action\022\'\n\017display_message\030\002 \001(\tR" +
+      "\016displayMessage\022Z\n\021advance_to_status\030\003 \001" +
+      "(\0162..services.org.hunt_groups.v1alpha1.A" +
+      "gentStatusR\017advanceToStatus\022 \n\014web_link_" +
+      "sid\030\004 \001(\003R\nwebLinkSid\0220\n\024integration_lin" +
+      "k_sid\030\005 \001(\003R\022integrationLinkSid\022$\n\016exile" +
+      "_link_sid\030\006 \001(\003R\014exileLinkSid\"I\n!ListHun" +
+      "tGroupAgentTriggersRequest\022$\n\016hunt_group" +
+      "_sid\030\001 \001(\003R\014huntGroupSid\"|\n\"ListHuntGrou" +
+      "pAgentTriggersResponse\022V\n\016agent_triggers" +
+      "\030\001 \003(\0132/.services.org.hunt_groups.v1alph" +
+      "a1.AgentTriggerR\ragentTriggers\"\322\001\n CopyH" +
+      "untGroupAgentTriggerRequest\022-\n\023from_hunt" +
+      "_group_sid\030\001 \001(\003R\020fromHuntGroupSid\022)\n\021to" +
+      "_hunt_group_sid\030\002 \001(\003R\016toHuntGroupSid\022T\n" +
+      "\ragent_trigger\030\003 \001(\0132/.services.org.hunt" +
+      "_groups.v1alpha1.AgentTriggerR\014agentTrig" +
+      "ger\"#\n!CopyHuntGroupAgentTriggerResponse" +
+      "\"\243\001\n#UpdateHuntGroupAgentTriggersRequest" +
+      "\022$\n\016hunt_group_sid\030\001 \001(\003R\014huntGroupSid\022V" +
+      "\n\016agent_triggers\030\002 \003(\0132/.services.org.hu" +
+      "nt_groups.v1alpha1.AgentTriggerR\ragentTr" +
+      "iggers\"&\n$UpdateHuntGroupAgentTriggersRe" +
+      "sponse*\327\002\n\013AgentStatus\022\034\n\030AGENT_STATUS_U" +
+      "NSPECIFIED\020\000\022\032\n\026AGENT_STATUS_LOGGED_IN\020\001" +
+      "\022\030\n\024AGENT_STATUS_WAITING\020\002\022\027\n\023AGENT_STAT" +
+      "US_PAUSED\020\003\022\030\n\024AGENT_STATUS_ON_CALL\020\004\022\036\n" +
+      "\032AGENT_STATUS_TRANSFER_CALL\020\005\022\036\n\032AGENT_S" +
+      "TATUS_TRANSFER_LOST\020\006\022%\n!AGENT_STATUS_TR" +
+      "ANSFER_TARGET_LOST\020\007\022\035\n\031AGENT_STATUS_PRE" +
+      "VIEW_CALL\020\010\022!\n\035AGENT_STATUS_MANUAL_DIAL_" +
+      "CALL\020\t\022\030\n\024AGENT_STATUS_WRAP_UP\020\n*\350\001\n\017Sys" +
+      "temPauseCode\022!\n\035SYSTEM_PAUSE_CODE_UNSPEC" +
+      "IFIED\020\000\0225\n1SYSTEM_PAUSE_CODE_AGENT_TRIGG" +
+      "ER_ADVANCE_TO_PAUSED\020\001\022%\n!SYSTEM_PAUSE_C" +
+      "ODE_CHANGE_PASSWORD\020\002\022&\n\"SYSTEM_PAUSE_CO" +
+      "DE_CHECK_VOICE_MAIL\020\003\022,\n(SYSTEM_PAUSE_CO" +
+      "DE_MANUALLY_APPROVE_CALLS\020\004*\222\002\n\rTriggerA" +
+      "ction\022\036\n\032TRIGGER_ACTION_UNSPECIFIED\020\000\022$\n" +
+      " TRIGGER_ACTION_ADVANCE_TO_STATUS\020\001\022\"\n\036T" +
+      "RIGGER_ACTION_DISPLAY_MESSAGE\020\002\022\036\n\032TRIGG" +
+      "ER_ACTION_EJECT_AGENT\020\003\022#\n\037TRIGGER_ACTIO" +
+      "N_EXECUTE_WEB_LINK\020\004\022+\n\'TRIGGER_ACTION_E" +
+      "XECUTE_INTEGRATION_LINK\020\005\022%\n!TRIGGER_ACT" +
+      "ION_EXECUTE_EXILE_LINK\020\006B\347\001\n3com.tcn.clo" +
+      "ud.api.services.org.hunt_groups.v1alpha1" +
+      "B\rEntitiesProtoP\001\242\002\003SOH\252\002 Services.Org.H" +
+      "untGroups.V1alpha1\312\002 Services\\Org\\HuntGr" +
+      "oups\\V1alpha1\342\002,Services\\Org\\HuntGroups\\" +
+      "V1alpha1\\GPBMetadata\352\002#Services::Org::Hu" +
+      "ntGroups::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -116,6 +242,72 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupExileLinksResponse_descriptor,
         new java.lang.String[] { "ExileLinks", });
+    internal_static_services_org_hunt_groups_v1alpha1_AgentTrigger_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_services_org_hunt_groups_v1alpha1_AgentTrigger_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_hunt_groups_v1alpha1_AgentTrigger_descriptor,
+        new java.lang.String[] { "AgentTriggerSid", "Description", "AgentStatusOption", "TriggerActionOption", });
+    internal_static_services_org_hunt_groups_v1alpha1_AgentStatusOption_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_services_org_hunt_groups_v1alpha1_AgentStatusOption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_hunt_groups_v1alpha1_AgentStatusOption_descriptor,
+        new java.lang.String[] { "AgentStatus", "Duration", "PauseCode", "CallTypes", "ScheduledCallbackPresent", });
+    internal_static_services_org_hunt_groups_v1alpha1_TriggerPauseCode_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_services_org_hunt_groups_v1alpha1_TriggerPauseCode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_hunt_groups_v1alpha1_TriggerPauseCode_descriptor,
+        new java.lang.String[] { "SystemPauseCode", "CustomPauseCode", "PauseCode", });
+    internal_static_services_org_hunt_groups_v1alpha1_TriggerCallTypes_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_services_org_hunt_groups_v1alpha1_TriggerCallTypes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_hunt_groups_v1alpha1_TriggerCallTypes_descriptor,
+        new java.lang.String[] { "Outbound", "Inbound", "Manual", "Preview", });
+    internal_static_services_org_hunt_groups_v1alpha1_TriggerActionOption_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_services_org_hunt_groups_v1alpha1_TriggerActionOption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_hunt_groups_v1alpha1_TriggerActionOption_descriptor,
+        new java.lang.String[] { "Action", "DisplayMessage", "AdvanceToStatus", "WebLinkSid", "IntegrationLinkSid", "ExileLinkSid", });
+    internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupAgentTriggersRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupAgentTriggersRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupAgentTriggersRequest_descriptor,
+        new java.lang.String[] { "HuntGroupSid", });
+    internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupAgentTriggersResponse_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupAgentTriggersResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupAgentTriggersResponse_descriptor,
+        new java.lang.String[] { "AgentTriggers", });
+    internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupAgentTriggerRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupAgentTriggerRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupAgentTriggerRequest_descriptor,
+        new java.lang.String[] { "FromHuntGroupSid", "ToHuntGroupSid", "AgentTrigger", });
+    internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupAgentTriggerResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupAgentTriggerResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupAgentTriggerResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupAgentTriggersRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupAgentTriggersRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupAgentTriggersRequest_descriptor,
+        new java.lang.String[] { "HuntGroupSid", "AgentTriggers", });
+    internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupAgentTriggersResponse_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupAgentTriggersResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupAgentTriggersResponse_descriptor,
+        new java.lang.String[] { });
     com.tcn.cloud.api.api.commons.org.HuntgroupProto.getDescriptor();
   }
 

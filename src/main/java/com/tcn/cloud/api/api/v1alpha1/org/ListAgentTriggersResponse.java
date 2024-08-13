@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * ListAgentTriggersResponse is the response message for the ListAgentTriggers RPC method.
+ * DEPRECATED: Use services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersResponse instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.ListAgentTriggersResponse}
  */
-public final class ListAgentTriggersResponse extends
+@java.lang.Deprecated public final class ListAgentTriggersResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.org.ListAgentTriggersResponse)
     ListAgentTriggersResponseOrBuilder {
@@ -266,6 +267,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * ListAgentTriggersResponse is the response message for the ListAgentTriggers RPC method.
+   * DEPRECATED: Use services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersResponse instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.ListAgentTriggersResponse}

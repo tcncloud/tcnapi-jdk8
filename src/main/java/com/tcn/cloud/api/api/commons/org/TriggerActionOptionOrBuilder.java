@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.org;
 
-public interface TriggerActionOptionOrBuilder extends
+@java.lang.Deprecated public interface TriggerActionOptionOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.org.TriggerActionOption)
     com.google.protobuf.MessageOrBuilder {
 

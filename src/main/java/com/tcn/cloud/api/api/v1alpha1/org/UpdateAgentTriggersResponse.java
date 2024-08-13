@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * UpdateAgentTriggersResponse is the response message for the UpdateAgentTriggers RPC method.
+ * DEPRECATED: Use services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.UpdateAgentTriggersResponse}
  */
-public final class UpdateAgentTriggersResponse extends
+@java.lang.Deprecated public final class UpdateAgentTriggersResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.org.UpdateAgentTriggersResponse)
     UpdateAgentTriggersResponseOrBuilder {
@@ -191,6 +192,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * UpdateAgentTriggersResponse is the response message for the UpdateAgentTriggers RPC method.
+   * DEPRECATED: Use services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.UpdateAgentTriggersResponse}
