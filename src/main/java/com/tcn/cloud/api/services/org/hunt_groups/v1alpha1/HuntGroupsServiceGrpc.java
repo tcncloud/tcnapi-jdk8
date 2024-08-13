@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * HuntGroupsService
+ * HuntGroupsService is the service for managing hunt groups and their related entities.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -47,6 +47,68 @@ public final class HuntGroupsServiceGrpc {
       }
     }
     return getListHuntGroupExileLinksMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkRequest,
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkResponse> getCopyHuntGroupExileLinkMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CopyHuntGroupExileLink",
+      requestType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkRequest.class,
+      responseType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkRequest,
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkResponse> getCopyHuntGroupExileLinkMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkResponse> getCopyHuntGroupExileLinkMethod;
+    if ((getCopyHuntGroupExileLinkMethod = HuntGroupsServiceGrpc.getCopyHuntGroupExileLinkMethod) == null) {
+      synchronized (HuntGroupsServiceGrpc.class) {
+        if ((getCopyHuntGroupExileLinkMethod = HuntGroupsServiceGrpc.getCopyHuntGroupExileLinkMethod) == null) {
+          HuntGroupsServiceGrpc.getCopyHuntGroupExileLinkMethod = getCopyHuntGroupExileLinkMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyHuntGroupExileLink"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new HuntGroupsServiceMethodDescriptorSupplier("CopyHuntGroupExileLink"))
+              .build();
+        }
+      }
+    }
+    return getCopyHuntGroupExileLinkMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest,
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksResponse> getUpdateHuntGroupExileLinksMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateHuntGroupExileLinks",
+      requestType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest.class,
+      responseType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest,
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksResponse> getUpdateHuntGroupExileLinksMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksResponse> getUpdateHuntGroupExileLinksMethod;
+    if ((getUpdateHuntGroupExileLinksMethod = HuntGroupsServiceGrpc.getUpdateHuntGroupExileLinksMethod) == null) {
+      synchronized (HuntGroupsServiceGrpc.class) {
+        if ((getUpdateHuntGroupExileLinksMethod = HuntGroupsServiceGrpc.getUpdateHuntGroupExileLinksMethod) == null) {
+          HuntGroupsServiceGrpc.getUpdateHuntGroupExileLinksMethod = getUpdateHuntGroupExileLinksMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateHuntGroupExileLinks"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new HuntGroupsServiceMethodDescriptorSupplier("UpdateHuntGroupExileLinks"))
+              .build();
+        }
+      }
+    }
+    return getUpdateHuntGroupExileLinksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersRequest,
@@ -188,16 +250,44 @@ public final class HuntGroupsServiceGrpc {
 
   /**
    * <pre>
-   * HuntGroupsService
+   * HuntGroupsService is the service for managing hunt groups and their related entities.
    * </pre>
    */
   public interface AsyncService {
 
     /**
+     * <pre>
+     * ListHuntGroupExileLinks returns a list of Exile links for a given hunt group.
+     * </pre>
      */
     default void listHuntGroupExileLinks(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHuntGroupExileLinksMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CopyHuntGroupExileLink copies an exile link from one hunt group to another.
+     * It will create a new exile link in the destination hunt group with the same
+     * settings/parameters as the source exile link.
+     * </pre>
+     */
+    default void copyHuntGroupExileLink(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyHuntGroupExileLinkMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupExileLinks updates the exile links for a hunt group.
+     * It will create any new exile links that do not already exist in the hunt group,
+     * update any existing exile links with the new settings/parameters, and
+     * delete any exile links that are not in the request.
+     * </pre>
+     */
+    default void updateHuntGroupExileLinks(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateHuntGroupExileLinksMethod(), responseObserver);
     }
 
     /**
@@ -234,7 +324,7 @@ public final class HuntGroupsServiceGrpc {
   /**
    * Base class for the server implementation of the service HuntGroupsService.
    * <pre>
-   * HuntGroupsService
+   * HuntGroupsService is the service for managing hunt groups and their related entities.
    * </pre>
    */
   public static abstract class HuntGroupsServiceImplBase
@@ -248,7 +338,7 @@ public final class HuntGroupsServiceGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service HuntGroupsService.
    * <pre>
-   * HuntGroupsService
+   * HuntGroupsService is the service for managing hunt groups and their related entities.
    * </pre>
    */
   public static final class HuntGroupsServiceStub
@@ -265,11 +355,41 @@ public final class HuntGroupsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListHuntGroupExileLinks returns a list of Exile links for a given hunt group.
+     * </pre>
      */
     public void listHuntGroupExileLinks(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListHuntGroupExileLinksMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CopyHuntGroupExileLink copies an exile link from one hunt group to another.
+     * It will create a new exile link in the destination hunt group with the same
+     * settings/parameters as the source exile link.
+     * </pre>
+     */
+    public void copyHuntGroupExileLink(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCopyHuntGroupExileLinkMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupExileLinks updates the exile links for a hunt group.
+     * It will create any new exile links that do not already exist in the hunt group,
+     * update any existing exile links with the new settings/parameters, and
+     * delete any exile links that are not in the request.
+     * </pre>
+     */
+    public void updateHuntGroupExileLinks(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateHuntGroupExileLinksMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -309,7 +429,7 @@ public final class HuntGroupsServiceGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service HuntGroupsService.
    * <pre>
-   * HuntGroupsService
+   * HuntGroupsService is the service for managing hunt groups and their related entities.
    * </pre>
    */
   public static final class HuntGroupsServiceBlockingStub
@@ -326,10 +446,38 @@ public final class HuntGroupsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListHuntGroupExileLinks returns a list of Exile links for a given hunt group.
+     * </pre>
      */
     public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse listHuntGroupExileLinks(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListHuntGroupExileLinksMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CopyHuntGroupExileLink copies an exile link from one hunt group to another.
+     * It will create a new exile link in the destination hunt group with the same
+     * settings/parameters as the source exile link.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkResponse copyHuntGroupExileLink(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCopyHuntGroupExileLinkMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupExileLinks updates the exile links for a hunt group.
+     * It will create any new exile links that do not already exist in the hunt group,
+     * update any existing exile links with the new settings/parameters, and
+     * delete any exile links that are not in the request.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksResponse updateHuntGroupExileLinks(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateHuntGroupExileLinksMethod(), getCallOptions(), request);
     }
 
     /**
@@ -366,7 +514,7 @@ public final class HuntGroupsServiceGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service HuntGroupsService.
    * <pre>
-   * HuntGroupsService
+   * HuntGroupsService is the service for managing hunt groups and their related entities.
    * </pre>
    */
   public static final class HuntGroupsServiceFutureStub
@@ -383,11 +531,41 @@ public final class HuntGroupsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * ListHuntGroupExileLinks returns a list of Exile links for a given hunt group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse> listHuntGroupExileLinks(
         com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListHuntGroupExileLinksMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * CopyHuntGroupExileLink copies an exile link from one hunt group to another.
+     * It will create a new exile link in the destination hunt group with the same
+     * settings/parameters as the source exile link.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkResponse> copyHuntGroupExileLink(
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCopyHuntGroupExileLinkMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupExileLinks updates the exile links for a hunt group.
+     * It will create any new exile links that do not already exist in the hunt group,
+     * update any existing exile links with the new settings/parameters, and
+     * delete any exile links that are not in the request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksResponse> updateHuntGroupExileLinks(
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateHuntGroupExileLinksMethod(), getCallOptions()), request);
     }
 
     /**
@@ -425,9 +603,11 @@ public final class HuntGroupsServiceGrpc {
   }
 
   private static final int METHODID_LIST_HUNT_GROUP_EXILE_LINKS = 0;
-  private static final int METHODID_LIST_HUNT_GROUP_AGENT_TRIGGERS = 1;
-  private static final int METHODID_COPY_HUNT_GROUP_AGENT_TRIGGER = 2;
-  private static final int METHODID_UPDATE_HUNT_GROUP_AGENT_TRIGGERS = 3;
+  private static final int METHODID_COPY_HUNT_GROUP_EXILE_LINK = 1;
+  private static final int METHODID_UPDATE_HUNT_GROUP_EXILE_LINKS = 2;
+  private static final int METHODID_LIST_HUNT_GROUP_AGENT_TRIGGERS = 3;
+  private static final int METHODID_COPY_HUNT_GROUP_AGENT_TRIGGER = 4;
+  private static final int METHODID_UPDATE_HUNT_GROUP_AGENT_TRIGGERS = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -449,6 +629,14 @@ public final class HuntGroupsServiceGrpc {
         case METHODID_LIST_HUNT_GROUP_EXILE_LINKS:
           serviceImpl.listHuntGroupExileLinks((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse>) responseObserver);
+          break;
+        case METHODID_COPY_HUNT_GROUP_EXILE_LINK:
+          serviceImpl.copyHuntGroupExileLink((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_HUNT_GROUP_EXILE_LINKS:
+          serviceImpl.updateHuntGroupExileLinks((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksResponse>) responseObserver);
           break;
         case METHODID_LIST_HUNT_GROUP_AGENT_TRIGGERS:
           serviceImpl.listHuntGroupAgentTriggers((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersRequest) request,
@@ -487,6 +675,20 @@ public final class HuntGroupsServiceGrpc {
               com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksRequest,
               com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse>(
                 service, METHODID_LIST_HUNT_GROUP_EXILE_LINKS)))
+        .addMethod(
+          getCopyHuntGroupExileLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkRequest,
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupExileLinkResponse>(
+                service, METHODID_COPY_HUNT_GROUP_EXILE_LINK)))
+        .addMethod(
+          getUpdateHuntGroupExileLinksMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest,
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksResponse>(
+                service, METHODID_UPDATE_HUNT_GROUP_EXILE_LINKS)))
         .addMethod(
           getListHuntGroupAgentTriggersMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -557,6 +759,8 @@ public final class HuntGroupsServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new HuntGroupsServiceFileDescriptorSupplier())
               .addMethod(getListHuntGroupExileLinksMethod())
+              .addMethod(getCopyHuntGroupExileLinkMethod())
+              .addMethod(getUpdateHuntGroupExileLinksMethod())
               .addMethod(getListHuntGroupAgentTriggersMethod())
               .addMethod(getCopyHuntGroupAgentTriggerMethod())
               .addMethod(getUpdateHuntGroupAgentTriggersMethod())

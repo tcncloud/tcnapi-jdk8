@@ -45,6 +45,10 @@ private static final long serialVersionUID = 0L;
   public static final int RECORD_ID_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter recordId_;
   /**
+   * <pre>
+   * The record ID of the data.
+   * </pre>
+   *
    * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter record_id = 1 [json_name = "recordId"];</code>
    * @return Whether the recordId field is set.
    */
@@ -53,6 +57,10 @@ private static final long serialVersionUID = 0L;
     return recordId_ != null;
   }
   /**
+   * <pre>
+   * The record ID of the data.
+   * </pre>
+   *
    * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter record_id = 1 [json_name = "recordId"];</code>
    * @return The recordId.
    */
@@ -61,6 +69,10 @@ private static final long serialVersionUID = 0L;
     return recordId_ == null ? com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter.getDefaultInstance() : recordId_;
   }
   /**
+   * <pre>
+   * The record ID of the data.
+   * </pre>
+   *
    * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter record_id = 1 [json_name = "recordId"];</code>
    */
   @java.lang.Override
@@ -71,6 +83,10 @@ private static final long serialVersionUID = 0L;
   public static final int ALTERNATE_ID_FIELD_NUMBER = 2;
   private com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternateId_;
   /**
+   * <pre>
+   * The alternate ID of the data.
+   * </pre>
+   *
    * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternate_id = 2 [json_name = "alternateId"];</code>
    * @return Whether the alternateId field is set.
    */
@@ -79,6 +95,10 @@ private static final long serialVersionUID = 0L;
     return alternateId_ != null;
   }
   /**
+   * <pre>
+   * The alternate ID of the data.
+   * </pre>
+   *
    * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternate_id = 2 [json_name = "alternateId"];</code>
    * @return The alternateId.
    */
@@ -87,6 +107,10 @@ private static final long serialVersionUID = 0L;
     return alternateId_ == null ? com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter.getDefaultInstance() : alternateId_;
   }
   /**
+   * <pre>
+   * The alternate ID of the data.
+   * </pre>
+   *
    * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternate_id = 2 [json_name = "alternateId"];</code>
    */
   @java.lang.Override
@@ -476,6 +500,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter.Builder, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameterOrBuilder> recordIdBuilder_;
     /**
+     * <pre>
+     * The record ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter record_id = 1 [json_name = "recordId"];</code>
      * @return Whether the recordId field is set.
      */
@@ -483,6 +511,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * The record ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter record_id = 1 [json_name = "recordId"];</code>
      * @return The recordId.
      */
@@ -494,6 +526,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The record ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter record_id = 1 [json_name = "recordId"];</code>
      */
     public Builder setRecordId(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter value) {
@@ -510,6 +546,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The record ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter record_id = 1 [json_name = "recordId"];</code>
      */
     public Builder setRecordId(
@@ -524,6 +564,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The record ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter record_id = 1 [json_name = "recordId"];</code>
      */
     public Builder mergeRecordId(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter value) {
@@ -543,6 +587,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The record ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter record_id = 1 [json_name = "recordId"];</code>
      */
     public Builder clearRecordId() {
@@ -556,6 +604,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The record ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter record_id = 1 [json_name = "recordId"];</code>
      */
     public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter.Builder getRecordIdBuilder() {
@@ -564,6 +616,10 @@ private static final long serialVersionUID = 0L;
       return getRecordIdFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The record ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter record_id = 1 [json_name = "recordId"];</code>
      */
     public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameterOrBuilder getRecordIdOrBuilder() {
@@ -575,6 +631,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The record ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter record_id = 1 [json_name = "recordId"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -595,6 +655,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter.Builder, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameterOrBuilder> alternateIdBuilder_;
     /**
+     * <pre>
+     * The alternate ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternate_id = 2 [json_name = "alternateId"];</code>
      * @return Whether the alternateId field is set.
      */
@@ -602,6 +666,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * The alternate ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternate_id = 2 [json_name = "alternateId"];</code>
      * @return The alternateId.
      */
@@ -613,6 +681,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The alternate ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternate_id = 2 [json_name = "alternateId"];</code>
      */
     public Builder setAlternateId(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter value) {
@@ -629,6 +701,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The alternate ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternate_id = 2 [json_name = "alternateId"];</code>
      */
     public Builder setAlternateId(
@@ -643,6 +719,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The alternate ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternate_id = 2 [json_name = "alternateId"];</code>
      */
     public Builder mergeAlternateId(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter value) {
@@ -662,6 +742,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The alternate ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternate_id = 2 [json_name = "alternateId"];</code>
      */
     public Builder clearAlternateId() {
@@ -675,6 +759,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The alternate ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternate_id = 2 [json_name = "alternateId"];</code>
      */
     public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter.Builder getAlternateIdBuilder() {
@@ -683,6 +771,10 @@ private static final long serialVersionUID = 0L;
       return getAlternateIdFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The alternate ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternate_id = 2 [json_name = "alternateId"];</code>
      */
     public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameterOrBuilder getAlternateIdOrBuilder() {
@@ -694,6 +786,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The alternate ID of the data.
+     * </pre>
+     *
      * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternate_id = 2 [json_name = "alternateId"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
