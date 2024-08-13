@@ -190,22 +190,6 @@ private static final long serialVersionUID = 0L;
     return integrationLinkSid_;
   }
 
-  public static final int EXILE_LINK_SID_FIELD_NUMBER = 6;
-  private long exileLinkSid_ = 0L;
-  /**
-   * <pre>
-   * The sid of the exile link to execute when the trigger is activated
-   * Used for action: Execute Exile Link
-   * </pre>
-   *
-   * <code>int64 exile_link_sid = 6 [json_name = "exileLinkSid"];</code>
-   * @return The exileLinkSid.
-   */
-  @java.lang.Override
-  public long getExileLinkSid() {
-    return exileLinkSid_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -235,9 +219,6 @@ private static final long serialVersionUID = 0L;
     if (integrationLinkSid_ != 0L) {
       output.writeInt64(5, integrationLinkSid_);
     }
-    if (exileLinkSid_ != 0L) {
-      output.writeInt64(6, exileLinkSid_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -266,10 +247,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, integrationLinkSid_);
     }
-    if (exileLinkSid_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(6, exileLinkSid_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -293,8 +270,6 @@ private static final long serialVersionUID = 0L;
         != other.getWebLinkSid()) return false;
     if (getIntegrationLinkSid()
         != other.getIntegrationLinkSid()) return false;
-    if (getExileLinkSid()
-        != other.getExileLinkSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -318,9 +293,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + INTEGRATION_LINK_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getIntegrationLinkSid());
-    hash = (37 * hash) + EXILE_LINK_SID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getExileLinkSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -457,7 +429,6 @@ private static final long serialVersionUID = 0L;
       advanceToStatus_ = 0;
       webLinkSid_ = 0L;
       integrationLinkSid_ = 0L;
-      exileLinkSid_ = 0L;
       return this;
     }
 
@@ -505,9 +476,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.integrationLinkSid_ = integrationLinkSid_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.exileLinkSid_ = exileLinkSid_;
       }
     }
 
@@ -572,9 +540,6 @@ private static final long serialVersionUID = 0L;
       if (other.getIntegrationLinkSid() != 0L) {
         setIntegrationLinkSid(other.getIntegrationLinkSid());
       }
-      if (other.getExileLinkSid() != 0L) {
-        setExileLinkSid(other.getExileLinkSid());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -626,11 +591,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
-            case 48: {
-              exileLinkSid_ = input.readInt64();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1021,53 +981,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearIntegrationLinkSid() {
       bitField0_ = (bitField0_ & ~0x00000010);
       integrationLinkSid_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private long exileLinkSid_ ;
-    /**
-     * <pre>
-     * The sid of the exile link to execute when the trigger is activated
-     * Used for action: Execute Exile Link
-     * </pre>
-     *
-     * <code>int64 exile_link_sid = 6 [json_name = "exileLinkSid"];</code>
-     * @return The exileLinkSid.
-     */
-    @java.lang.Override
-    public long getExileLinkSid() {
-      return exileLinkSid_;
-    }
-    /**
-     * <pre>
-     * The sid of the exile link to execute when the trigger is activated
-     * Used for action: Execute Exile Link
-     * </pre>
-     *
-     * <code>int64 exile_link_sid = 6 [json_name = "exileLinkSid"];</code>
-     * @param value The exileLinkSid to set.
-     * @return This builder for chaining.
-     */
-    public Builder setExileLinkSid(long value) {
-
-      exileLinkSid_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The sid of the exile link to execute when the trigger is activated
-     * Used for action: Execute Exile Link
-     * </pre>
-     *
-     * <code>int64 exile_link_sid = 6 [json_name = "exileLinkSid"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearExileLinkSid() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      exileLinkSid_ = 0L;
       onChanged();
       return this;
     }

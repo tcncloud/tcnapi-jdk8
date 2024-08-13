@@ -61,14 +61,6 @@ public enum TriggerAction
    * <code>TRIGGER_ACTION_EXECUTE_INTEGRATION_LINK = 5;</code>
    */
   TRIGGER_ACTION_EXECUTE_INTEGRATION_LINK(5),
-  /**
-   * <pre>
-   * The action to execute an exile link
-   * </pre>
-   *
-   * <code>TRIGGER_ACTION_EXECUTE_EXILE_LINK = 6;</code>
-   */
-  TRIGGER_ACTION_EXECUTE_EXILE_LINK(6),
   UNRECOGNIZED(-1),
   ;
 
@@ -121,14 +113,6 @@ public enum TriggerAction
    * <code>TRIGGER_ACTION_EXECUTE_INTEGRATION_LINK = 5;</code>
    */
   public static final int TRIGGER_ACTION_EXECUTE_INTEGRATION_LINK_VALUE = 5;
-  /**
-   * <pre>
-   * The action to execute an exile link
-   * </pre>
-   *
-   * <code>TRIGGER_ACTION_EXECUTE_EXILE_LINK = 6;</code>
-   */
-  public static final int TRIGGER_ACTION_EXECUTE_EXILE_LINK_VALUE = 6;
 
 
   public final int getNumber() {
@@ -161,7 +145,6 @@ public enum TriggerAction
       case 3: return TRIGGER_ACTION_EJECT_AGENT;
       case 4: return TRIGGER_ACTION_EXECUTE_WEB_LINK;
       case 5: return TRIGGER_ACTION_EXECUTE_INTEGRATION_LINK;
-      case 6: return TRIGGER_ACTION_EXECUTE_EXILE_LINK;
       default: return null;
     }
   }
