@@ -281,7 +281,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
    * @deprecated api.commons.Category.call_types is deprecated.
-   *     See api/commons/scorecards.proto;l=103
+   *     See api/commons/scorecards.proto;l=110
    * @return A list containing the callTypes.
    */
   @java.lang.Override
@@ -296,7 +296,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
    * @deprecated api.commons.Category.call_types is deprecated.
-   *     See api/commons/scorecards.proto;l=103
+   *     See api/commons/scorecards.proto;l=110
    * @return The count of callTypes.
    */
   @java.lang.Override
@@ -310,7 +310,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
    * @deprecated api.commons.Category.call_types is deprecated.
-   *     See api/commons/scorecards.proto;l=103
+   *     See api/commons/scorecards.proto;l=110
    * @param index The index of the element to return.
    * @return The callTypes at the given index.
    */
@@ -325,7 +325,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
    * @deprecated api.commons.Category.call_types is deprecated.
-   *     See api/commons/scorecards.proto;l=103
+   *     See api/commons/scorecards.proto;l=110
    * @return A list containing the enum numeric values on the wire for callTypes.
    */
   @java.lang.Override
@@ -340,7 +340,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
    * @deprecated api.commons.Category.call_types is deprecated.
-   *     See api/commons/scorecards.proto;l=103
+   *     See api/commons/scorecards.proto;l=110
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of callTypes at the given index.
    */
@@ -1474,7 +1474,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
      * @deprecated api.commons.Category.call_types is deprecated.
-     *     See api/commons/scorecards.proto;l=103
+     *     See api/commons/scorecards.proto;l=110
      * @return A list containing the callTypes.
      */
     @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.CallType.Enum> getCallTypesList() {
@@ -1488,7 +1488,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
      * @deprecated api.commons.Category.call_types is deprecated.
-     *     See api/commons/scorecards.proto;l=103
+     *     See api/commons/scorecards.proto;l=110
      * @return The count of callTypes.
      */
     @java.lang.Deprecated public int getCallTypesCount() {
@@ -1501,7 +1501,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
      * @deprecated api.commons.Category.call_types is deprecated.
-     *     See api/commons/scorecards.proto;l=103
+     *     See api/commons/scorecards.proto;l=110
      * @param index The index of the element to return.
      * @return The callTypes at the given index.
      */
@@ -1515,7 +1515,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
      * @deprecated api.commons.Category.call_types is deprecated.
-     *     See api/commons/scorecards.proto;l=103
+     *     See api/commons/scorecards.proto;l=110
      * @param index The index to set the value at.
      * @param value The callTypes to set.
      * @return This builder for chaining.
@@ -1537,7 +1537,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
      * @deprecated api.commons.Category.call_types is deprecated.
-     *     See api/commons/scorecards.proto;l=103
+     *     See api/commons/scorecards.proto;l=110
      * @param value The callTypes to add.
      * @return This builder for chaining.
      */
@@ -1557,7 +1557,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
      * @deprecated api.commons.Category.call_types is deprecated.
-     *     See api/commons/scorecards.proto;l=103
+     *     See api/commons/scorecards.proto;l=110
      * @param values The callTypes to add.
      * @return This builder for chaining.
      */
@@ -1577,7 +1577,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
      * @deprecated api.commons.Category.call_types is deprecated.
-     *     See api/commons/scorecards.proto;l=103
+     *     See api/commons/scorecards.proto;l=110
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearCallTypes() {
@@ -1593,7 +1593,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
      * @deprecated api.commons.Category.call_types is deprecated.
-     *     See api/commons/scorecards.proto;l=103
+     *     See api/commons/scorecards.proto;l=110
      * @return A list containing the enum numeric values on the wire for callTypes.
      */
     @java.lang.Deprecated public java.util.List<java.lang.Integer>
@@ -1607,7 +1607,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
      * @deprecated api.commons.Category.call_types is deprecated.
-     *     See api/commons/scorecards.proto;l=103
+     *     See api/commons/scorecards.proto;l=110
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of callTypes at the given index.
      */
@@ -1621,7 +1621,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
      * @deprecated api.commons.Category.call_types is deprecated.
-     *     See api/commons/scorecards.proto;l=103
+     *     See api/commons/scorecards.proto;l=110
      * @param index The index to set the value at.
      * @param value The enum numeric value on the wire for callTypes to set.
      * @return This builder for chaining.
@@ -1640,7 +1640,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
      * @deprecated api.commons.Category.call_types is deprecated.
-     *     See api/commons/scorecards.proto;l=103
+     *     See api/commons/scorecards.proto;l=110
      * @param value The enum numeric value on the wire for callTypes to add.
      * @return This builder for chaining.
      */
@@ -1657,7 +1657,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
      * @deprecated api.commons.Category.call_types is deprecated.
-     *     See api/commons/scorecards.proto;l=103
+     *     See api/commons/scorecards.proto;l=110
      * @param values The enum numeric values on the wire for callTypes to add.
      * @return This builder for chaining.
      */

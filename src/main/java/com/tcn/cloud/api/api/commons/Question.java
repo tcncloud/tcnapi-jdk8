@@ -26,6 +26,7 @@ private static final long serialVersionUID = 0L;
     question_ = "";
     description_ = "";
     categories_ = java.util.Collections.emptyList();
+    focus_ = 0;
   }
 
   @java.lang.Override
@@ -265,6 +266,32 @@ private static final long serialVersionUID = 0L;
     return categories_.get(index);
   }
 
+  public static final int FOCUS_FIELD_NUMBER = 7;
+  private int focus_ = 0;
+  /**
+   * <pre>
+   * which party the question is about
+   * </pre>
+   *
+   * <code>.api.commons.QuestionFocus focus = 7 [json_name = "focus"];</code>
+   * @return The enum numeric value on the wire for focus.
+   */
+  @java.lang.Override public int getFocusValue() {
+    return focus_;
+  }
+  /**
+   * <pre>
+   * which party the question is about
+   * </pre>
+   *
+   * <code>.api.commons.QuestionFocus focus = 7 [json_name = "focus"];</code>
+   * @return The focus.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.QuestionFocus getFocus() {
+    com.tcn.cloud.api.api.commons.QuestionFocus result = com.tcn.cloud.api.api.commons.QuestionFocus.forNumber(focus_);
+    return result == null ? com.tcn.cloud.api.api.commons.QuestionFocus.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -294,6 +321,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < categories_.size(); i++) {
       output.writeMessage(6, categories_.get(i));
     }
+    if (focus_ != com.tcn.cloud.api.api.commons.QuestionFocus.QUESTION_FOCUS_UNDEFINED.getNumber()) {
+      output.writeEnum(7, focus_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -320,6 +350,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, categories_.get(i));
     }
+    if (focus_ != com.tcn.cloud.api.api.commons.QuestionFocus.QUESTION_FOCUS_UNDEFINED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(7, focus_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -345,6 +379,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getDescription())) return false;
     if (!getCategoriesList()
         .equals(other.getCategoriesList())) return false;
+    if (focus_ != other.focus_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -369,6 +404,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CATEGORIES_FIELD_NUMBER;
       hash = (53 * hash) + getCategoriesList().hashCode();
     }
+    hash = (37 * hash) + FOCUS_FIELD_NUMBER;
+    hash = (53 * hash) + focus_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -517,6 +554,7 @@ private static final long serialVersionUID = 0L;
         categoriesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000010);
+      focus_ = 0;
       return this;
     }
 
@@ -574,6 +612,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.focus_ = focus_;
       }
     }
 
@@ -665,6 +706,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.focus_ != 0) {
+        setFocusValue(other.getFocusValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -724,6 +768,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 50
+            case 56: {
+              focus_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 56
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1371,6 +1420,79 @@ private static final long serialVersionUID = 0L;
         categories_ = null;
       }
       return categoriesBuilder_;
+    }
+
+    private int focus_ = 0;
+    /**
+     * <pre>
+     * which party the question is about
+     * </pre>
+     *
+     * <code>.api.commons.QuestionFocus focus = 7 [json_name = "focus"];</code>
+     * @return The enum numeric value on the wire for focus.
+     */
+    @java.lang.Override public int getFocusValue() {
+      return focus_;
+    }
+    /**
+     * <pre>
+     * which party the question is about
+     * </pre>
+     *
+     * <code>.api.commons.QuestionFocus focus = 7 [json_name = "focus"];</code>
+     * @param value The enum numeric value on the wire for focus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFocusValue(int value) {
+      focus_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * which party the question is about
+     * </pre>
+     *
+     * <code>.api.commons.QuestionFocus focus = 7 [json_name = "focus"];</code>
+     * @return The focus.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.QuestionFocus getFocus() {
+      com.tcn.cloud.api.api.commons.QuestionFocus result = com.tcn.cloud.api.api.commons.QuestionFocus.forNumber(focus_);
+      return result == null ? com.tcn.cloud.api.api.commons.QuestionFocus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * which party the question is about
+     * </pre>
+     *
+     * <code>.api.commons.QuestionFocus focus = 7 [json_name = "focus"];</code>
+     * @param value The focus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFocus(com.tcn.cloud.api.api.commons.QuestionFocus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000020;
+      focus_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * which party the question is about
+     * </pre>
+     *
+     * <code>.api.commons.QuestionFocus focus = 7 [json_name = "focus"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFocus() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      focus_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
