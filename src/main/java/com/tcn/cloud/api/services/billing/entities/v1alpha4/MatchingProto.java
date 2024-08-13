@@ -30,15 +30,17 @@ public final class MatchingProto {
     java.lang.String[] descriptorData = {
       "\n1services/billing/entities/v1alpha4/mat" +
       "ching.proto\022\"services.billing.entities.v" +
-      "1alpha4\"R\n\021CountryCodePrefix\022!\n\014country_" +
-      "code\030\001 \001(\005R\013countryCode\022\032\n\010prefixes\030\002 \003(" +
-      "\tR\010prefixesB\360\001\n4com.tcn.cloud.api.servic" +
-      "es.billing.entities.v1alpha4B\rMatchingPr" +
-      "otoP\001\242\002\003SBE\252\002\"Services.Billing.Entities." +
-      "V1alpha4\312\002\"Services\\Billing\\Entities\\V1a" +
-      "lpha4\342\002.Services\\Billing\\Entities\\V1alph" +
-      "a4\\GPBMetadata\352\002%Services::Billing::Enti" +
-      "ties::V1alpha4b\006proto3"
+      "1alpha4\"\220\001\n\021CountryCodePrefix\022!\n\014country" +
+      "_code\030\001 \001(\005R\013countryCode\022\032\n\010prefixes\030\002 \003" +
+      "(\tR\010prefixes\022(\n\020matching_rule_id\030\003 \001(\tR\016" +
+      "matchingRuleId\022\022\n\004name\030\004 \001(\tR\004nameB\360\001\n4c" +
+      "om.tcn.cloud.api.services.billing.entiti" +
+      "es.v1alpha4B\rMatchingProtoP\001\242\002\003SBE\252\002\"Ser" +
+      "vices.Billing.Entities.V1alpha4\312\002\"Servic" +
+      "es\\Billing\\Entities\\V1alpha4\342\002.Services\\" +
+      "Billing\\Entities\\V1alpha4\\GPBMetadata\352\002%" +
+      "Services::Billing::Entities::V1alpha4b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -49,7 +51,7 @@ public final class MatchingProto {
     internal_static_services_billing_entities_v1alpha4_CountryCodePrefix_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha4_CountryCodePrefix_descriptor,
-        new java.lang.String[] { "CountryCode", "Prefixes", });
+        new java.lang.String[] { "CountryCode", "Prefixes", "MatchingRuleId", "Name", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

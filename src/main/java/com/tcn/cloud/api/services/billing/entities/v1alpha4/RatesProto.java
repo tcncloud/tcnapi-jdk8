@@ -36,41 +36,47 @@ public final class RatesProto {
       "\n.services/billing/entities/v1alpha4/rat" +
       "es.proto\022\"services.billing.entities.v1al" +
       "pha4\032\037google/protobuf/timestamp.proto\0321s" +
-      "ervices/billing/entities/v1alpha4/produc" +
-      "ts.proto\032-services/billing/entities/v1al" +
-      "pha4/tags.proto\"\220\004\n\016RateDefinition\022,\n\022ra" +
-      "te_definition_id\030\001 \001(\tR\020rateDefinitionId" +
-      "\022\025\n\006sku_id\030\002 \001(\tR\005skuId\022S\n\013billing_tag\030\003" +
-      " \001(\0132..services.billing.entities.v1alpha" +
-      "4.BillingTagB\002\030\001R\nbillingTag\022I\n\006config\030\004" +
-      " \001(\01321.services.billing.entities.v1alpha" +
-      "4.ProductConfigR\006config\022\031\n\010is_draft\030\005 \001(" +
-      "\010R\007isDraft\022!\n\014is_overwrite\030\006 \001(\010R\013isOver" +
-      "write\022;\n\013create_time\030\007 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\ncreateTime\022;\n\013update_tim" +
-      "e\030\010 \001(\0132\032.google.protobuf.TimestampR\nupd" +
-      "ateTime\022;\n\013delete_time\030\t \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\ndeleteTime\022$\n\016billing_" +
-      "tag_id\030\n \001(\tR\014billingTagId\"\272\002\n\014MatchingR" +
-      "ule\022(\n\020matching_rule_id\030\001 \001(\tR\016matchingR" +
-      "uleId\022I\n\006config\030\002 \001(\01321.services.billing" +
-      ".entities.v1alpha4.ProductConfigR\006config" +
-      "\022;\n\013create_time\030\003 \001(\0132\032.google.protobuf." +
-      "TimestampR\ncreateTime\022;\n\013delete_time\030\004 \001" +
-      "(\0132\032.google.protobuf.TimestampR\ndeleteTi" +
-      "me\022;\n\013update_time\030\005 \001(\0132\032.google.protobu" +
-      "f.TimestampR\nupdateTimeB\355\001\n4com.tcn.clou" +
-      "d.api.services.billing.entities.v1alpha4" +
-      "B\nRatesProtoP\001\242\002\003SBE\252\002\"Services.Billing." +
-      "Entities.V1alpha4\312\002\"Services\\Billing\\Ent" +
-      "ities\\V1alpha4\342\002.Services\\Billing\\Entiti" +
-      "es\\V1alpha4\\GPBMetadata\352\002%Services::Bill" +
-      "ing::Entities::V1alpha4b\006proto3"
+      "ervices/billing/entities/v1alpha4/matchi" +
+      "ng.proto\0321services/billing/entities/v1al" +
+      "pha4/products.proto\032-services/billing/en" +
+      "tities/v1alpha4/tags.proto\"\220\004\n\016RateDefin" +
+      "ition\022,\n\022rate_definition_id\030\001 \001(\tR\020rateD" +
+      "efinitionId\022\025\n\006sku_id\030\002 \001(\tR\005skuId\022S\n\013bi" +
+      "lling_tag\030\003 \001(\0132..services.billing.entit" +
+      "ies.v1alpha4.BillingTagB\002\030\001R\nbillingTag\022" +
+      "I\n\006config\030\004 \001(\01321.services.billing.entit" +
+      "ies.v1alpha4.ProductConfigR\006config\022\031\n\010is" +
+      "_draft\030\005 \001(\010R\007isDraft\022!\n\014is_overwrite\030\006 " +
+      "\001(\010R\013isOverwrite\022;\n\013create_time\030\007 \001(\0132\032." +
+      "google.protobuf.TimestampR\ncreateTime\022;\n" +
+      "\013update_time\030\010 \001(\0132\032.google.protobuf.Tim" +
+      "estampR\nupdateTime\022;\n\013delete_time\030\t \001(\0132" +
+      "\032.google.protobuf.TimestampR\ndeleteTime\022" +
+      "$\n\016billing_tag_id\030\n \001(\tR\014billingTagId\"\272\003" +
+      "\n\014MatchingRule\022(\n\020matching_rule_id\030\001 \001(\t" +
+      "R\016matchingRuleId\022M\n\006config\030\002 \001(\01321.servi" +
+      "ces.billing.entities.v1alpha4.ProductCon" +
+      "figB\002\030\001R\006config\022;\n\013create_time\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampR\ncreateTime\022;\n\013" +
+      "delete_time\030\004 \001(\0132\032.google.protobuf.Time" +
+      "stampR\ndeleteTime\022;\n\013update_time\030\005 \001(\0132\032" +
+      ".google.protobuf.TimestampR\nupdateTime\022g" +
+      "\n\023country_code_prefix\030d \001(\01325.services.b" +
+      "illing.entities.v1alpha4.CountryCodePref" +
+      "ixH\000R\021countryCodePrefixB\021\n\017matching_conf" +
+      "igB\355\001\n4com.tcn.cloud.api.services.billin" +
+      "g.entities.v1alpha4B\nRatesProtoP\001\242\002\003SBE\252" +
+      "\002\"Services.Billing.Entities.V1alpha4\312\002\"S" +
+      "ervices\\Billing\\Entities\\V1alpha4\342\002.Serv" +
+      "ices\\Billing\\Entities\\V1alpha4\\GPBMetada" +
+      "ta\352\002%Services::Billing::Entities::V1alph" +
+      "a4b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingProto.getDescriptor(),
           com.tcn.cloud.api.services.billing.entities.v1alpha4.ProductsProto.getDescriptor(),
           com.tcn.cloud.api.services.billing.entities.v1alpha4.TagsProto.getDescriptor(),
         });
@@ -85,8 +91,9 @@ public final class RatesProto {
     internal_static_services_billing_entities_v1alpha4_MatchingRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha4_MatchingRule_descriptor,
-        new java.lang.String[] { "MatchingRuleId", "Config", "CreateTime", "DeleteTime", "UpdateTime", });
+        new java.lang.String[] { "MatchingRuleId", "Config", "CreateTime", "DeleteTime", "UpdateTime", "CountryCodePrefix", "MatchingConfig", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha4.ProductsProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha4.TagsProto.getDescriptor();
   }

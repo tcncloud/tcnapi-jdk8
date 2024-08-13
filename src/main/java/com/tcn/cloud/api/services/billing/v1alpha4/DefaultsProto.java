@@ -25,6 +25,16 @@ public final class DefaultsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_billing_v1alpha4_ApplyDefaultBillingPlanDraftResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_billing_v1alpha4_CloneDefaultBillingPlanRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_billing_v1alpha4_CloneDefaultBillingPlanRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_billing_v1alpha4_CloneDefaultBillingPlanResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_billing_v1alpha4_CloneDefaultBillingPlanResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_services_billing_v1alpha4_CreateDefaultBillingPlanRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -145,75 +155,78 @@ public final class DefaultsProto {
       "ime\030\002 \001(\0132\032.google.protobuf.TimestampR\ts" +
       "tartTime\022\027\n\007org_ids\030\003 \003(\tR\006orgIds\"P\n$App" +
       "lyDefaultBillingPlanDraftResponse\022(\n\020bil" +
-      "ling_plan_ids\030\001 \003(\tR\016billingPlanIds\"\235\001\n\037" +
-      "CreateDefaultBillingPlanRequest\022&\n\017billi" +
-      "ng_plan_id\030\001 \001(\tR\rbillingPlanId\022R\n\014billi" +
-      "ng_plan\030\002 \001(\0132/.services.billing.entitie" +
-      "s.v1alpha4.BillingPlanR\013billingPlan\"J\n C" +
-      "reateDefaultBillingPlanResponse\022&\n\017billi" +
-      "ng_plan_id\030\001 \001(\tR\rbillingPlanId\"I\n\037Delet" +
-      "eDefaultBillingPlanRequest\022&\n\017billing_pl" +
-      "an_id\030\001 \001(\tR\rbillingPlanId\"\"\n DeleteDefa" +
-      "ultBillingPlanResponse\"F\n\034GetDefaultBill" +
-      "ingPlanRequest\022&\n\017billing_plan_id\030\001 \001(\tR" +
-      "\rbillingPlanId\"s\n\035GetDefaultBillingPlanR" +
-      "esponse\022R\n\014billing_plan\030\001 \001(\0132/.services" +
-      ".billing.entities.v1alpha4.BillingPlanR\013" +
-      "billingPlan\"\376\001\n\036ListDefaultBillingPlansR" +
-      "equest\022&\n\017billing_plan_id\030\001 \001(\tR\rbilling" +
-      "PlanId\022\026\n\006filter\030\002 \001(\tR\006filter\0222\n\006fields" +
-      "\030\003 \001(\0132\032.google.protobuf.FieldMaskR\006fiel" +
-      "ds\0223\n\004sort\030\004 \003(\0132\037.services.billing.v1al" +
-      "pha4.SortR\004sort\0223\n\004page\030\005 \001(\0132\037.services" +
-      ".billing.v1alpha4.PageR\004page\"\215\001\n\037ListDef" +
-      "aultBillingPlansResponse\022T\n\rbilling_plan" +
-      "s\030\001 \003(\0132/.services.billing.entities.v1al" +
-      "pha4.BillingPlanR\014billingPlans\022\024\n\005token\030" +
-      "\002 \001(\tR\005token\"\332\001\n\037UpdateDefaultBillingPla" +
-      "nRequest\022&\n\017billing_plan_id\030\001 \001(\tR\rbilli" +
-      "ngPlanId\022R\n\014billing_plan\030\002 \001(\0132/.service" +
-      "s.billing.entities.v1alpha4.BillingPlanR" +
-      "\013billingPlan\022;\n\013update_mask\030\003 \001(\0132\032.goog" +
-      "le.protobuf.FieldMaskR\nupdateMask\"\"\n Upd" +
-      "ateDefaultBillingPlanResponse\"\257\001\n\"Create" +
-      "DefaultRateDefinitionRequest\022,\n\022rate_def" +
-      "inition_id\030\001 \001(\tR\020rateDefinitionId\022[\n\017ra" +
-      "te_definition\030\002 \001(\01322.services.billing.e" +
-      "ntities.v1alpha4.RateDefinitionR\016rateDef" +
-      "inition\"S\n#CreateDefaultRateDefinitionRe" +
-      "sponse\022,\n\022rate_definition_id\030\001 \001(\tR\020rate" +
-      "DefinitionId\"R\n\"DeleteDefaultRateDefinit" +
-      "ionRequest\022,\n\022rate_definition_id\030\001 \001(\tR\020" +
-      "rateDefinitionId\"%\n#DeleteDefaultRateDef" +
-      "initionResponse\"O\n\037GetDefaultRateDefinit" +
-      "ionRequest\022,\n\022rate_definition_id\030\001 \001(\tR\020" +
-      "rateDefinitionId\"\177\n GetDefaultRateDefini" +
-      "tionResponse\022[\n\017rate_definition\030\001 \001(\01322." +
-      "services.billing.entities.v1alpha4.RateD" +
-      "efinitionR\016rateDefinition\"\207\002\n!ListDefaul" +
-      "tRateDefinitionsRequest\022,\n\022rate_definiti" +
-      "on_id\030\001 \001(\tR\020rateDefinitionId\022\026\n\006filter\030" +
-      "\002 \001(\tR\006filter\0222\n\006fields\030\003 \001(\0132\032.google.p" +
-      "rotobuf.FieldMaskR\006fields\0223\n\004sort\030\004 \003(\0132" +
-      "\037.services.billing.v1alpha4.SortR\004sort\0223" +
-      "\n\004page\030\005 \001(\0132\037.services.billing.v1alpha4" +
-      ".PageR\004page\"\231\001\n\"ListDefaultRateDefinitio" +
-      "nsResponse\022]\n\020rate_definitions\030\001 \003(\01322.s" +
-      "ervices.billing.entities.v1alpha4.RateDe" +
-      "finitionR\017rateDefinitions\022\024\n\005token\030\002 \001(\t" +
-      "R\005token\"\354\001\n\"UpdateDefaultRateDefinitionR" +
-      "equest\022,\n\022rate_definition_id\030\001 \001(\tR\020rate" +
-      "DefinitionId\022[\n\017rate_definition\030\002 \001(\01322." +
-      "services.billing.entities.v1alpha4.RateD" +
-      "efinitionR\016rateDefinition\022;\n\013update_mask" +
-      "\030\003 \001(\0132\032.google.protobuf.FieldMaskR\nupda" +
-      "teMask\"%\n#UpdateDefaultRateDefinitionRes" +
-      "ponseB\302\001\n+com.tcn.cloud.api.services.bil" +
-      "ling.v1alpha4B\rDefaultsProtoP\001\242\002\003SBX\252\002\031S" +
-      "ervices.Billing.V1alpha4\312\002\031Services\\Bill" +
-      "ing\\V1alpha4\342\002%Services\\Billing\\V1alpha4" +
-      "\\GPBMetadata\352\002\033Services::Billing::V1alph" +
-      "a4b\006proto3"
+      "ling_plan_ids\030\001 \003(\tR\016billingPlanIds\"H\n\036C" +
+      "loneDefaultBillingPlanRequest\022&\n\017billing" +
+      "_plan_id\030\001 \001(\tR\rbillingPlanId\"I\n\037CloneDe" +
+      "faultBillingPlanResponse\022&\n\017billing_plan" +
+      "_id\030\001 \001(\tR\rbillingPlanId\"\235\001\n\037CreateDefau" +
+      "ltBillingPlanRequest\022&\n\017billing_plan_id\030" +
+      "\001 \001(\tR\rbillingPlanId\022R\n\014billing_plan\030\002 \001" +
+      "(\0132/.services.billing.entities.v1alpha4." +
+      "BillingPlanR\013billingPlan\"J\n CreateDefaul" +
+      "tBillingPlanResponse\022&\n\017billing_plan_id\030" +
+      "\001 \001(\tR\rbillingPlanId\"I\n\037DeleteDefaultBil" +
+      "lingPlanRequest\022&\n\017billing_plan_id\030\001 \001(\t" +
+      "R\rbillingPlanId\"\"\n DeleteDefaultBillingP" +
+      "lanResponse\"F\n\034GetDefaultBillingPlanRequ" +
+      "est\022&\n\017billing_plan_id\030\001 \001(\tR\rbillingPla" +
+      "nId\"s\n\035GetDefaultBillingPlanResponse\022R\n\014" +
+      "billing_plan\030\001 \001(\0132/.services.billing.en" +
+      "tities.v1alpha4.BillingPlanR\013billingPlan" +
+      "\"\376\001\n\036ListDefaultBillingPlansRequest\022&\n\017b" +
+      "illing_plan_id\030\001 \001(\tR\rbillingPlanId\022\026\n\006f" +
+      "ilter\030\002 \001(\tR\006filter\0222\n\006fields\030\003 \001(\0132\032.go" +
+      "ogle.protobuf.FieldMaskR\006fields\0223\n\004sort\030" +
+      "\004 \003(\0132\037.services.billing.v1alpha4.SortR\004" +
+      "sort\0223\n\004page\030\005 \001(\0132\037.services.billing.v1" +
+      "alpha4.PageR\004page\"\215\001\n\037ListDefaultBilling" +
+      "PlansResponse\022T\n\rbilling_plans\030\001 \003(\0132/.s" +
+      "ervices.billing.entities.v1alpha4.Billin" +
+      "gPlanR\014billingPlans\022\024\n\005token\030\002 \001(\tR\005toke" +
+      "n\"\332\001\n\037UpdateDefaultBillingPlanRequest\022&\n" +
+      "\017billing_plan_id\030\001 \001(\tR\rbillingPlanId\022R\n" +
+      "\014billing_plan\030\002 \001(\0132/.services.billing.e" +
+      "ntities.v1alpha4.BillingPlanR\013billingPla" +
+      "n\022;\n\013update_mask\030\003 \001(\0132\032.google.protobuf" +
+      ".FieldMaskR\nupdateMask\"\"\n UpdateDefaultB" +
+      "illingPlanResponse\"\257\001\n\"CreateDefaultRate" +
+      "DefinitionRequest\022,\n\022rate_definition_id\030" +
+      "\001 \001(\tR\020rateDefinitionId\022[\n\017rate_definiti" +
+      "on\030\002 \001(\01322.services.billing.entities.v1a" +
+      "lpha4.RateDefinitionR\016rateDefinition\"S\n#" +
+      "CreateDefaultRateDefinitionResponse\022,\n\022r" +
+      "ate_definition_id\030\001 \001(\tR\020rateDefinitionI" +
+      "d\"R\n\"DeleteDefaultRateDefinitionRequest\022" +
+      ",\n\022rate_definition_id\030\001 \001(\tR\020rateDefinit" +
+      "ionId\"%\n#DeleteDefaultRateDefinitionResp" +
+      "onse\"O\n\037GetDefaultRateDefinitionRequest\022" +
+      ",\n\022rate_definition_id\030\001 \001(\tR\020rateDefinit" +
+      "ionId\"\177\n GetDefaultRateDefinitionRespons" +
+      "e\022[\n\017rate_definition\030\001 \001(\01322.services.bi" +
+      "lling.entities.v1alpha4.RateDefinitionR\016" +
+      "rateDefinition\"\207\002\n!ListDefaultRateDefini" +
+      "tionsRequest\022,\n\022rate_definition_id\030\001 \001(\t" +
+      "R\020rateDefinitionId\022\026\n\006filter\030\002 \001(\tR\006filt" +
+      "er\0222\n\006fields\030\003 \001(\0132\032.google.protobuf.Fie" +
+      "ldMaskR\006fields\0223\n\004sort\030\004 \003(\0132\037.services." +
+      "billing.v1alpha4.SortR\004sort\0223\n\004page\030\005 \001(" +
+      "\0132\037.services.billing.v1alpha4.PageR\004page" +
+      "\"\231\001\n\"ListDefaultRateDefinitionsResponse\022" +
+      "]\n\020rate_definitions\030\001 \003(\01322.services.bil" +
+      "ling.entities.v1alpha4.RateDefinitionR\017r" +
+      "ateDefinitions\022\024\n\005token\030\002 \001(\tR\005token\"\354\001\n" +
+      "\"UpdateDefaultRateDefinitionRequest\022,\n\022r" +
+      "ate_definition_id\030\001 \001(\tR\020rateDefinitionI" +
+      "d\022[\n\017rate_definition\030\002 \001(\01322.services.bi" +
+      "lling.entities.v1alpha4.RateDefinitionR\016" +
+      "rateDefinition\022;\n\013update_mask\030\003 \001(\0132\032.go" +
+      "ogle.protobuf.FieldMaskR\nupdateMask\"%\n#U" +
+      "pdateDefaultRateDefinitionResponseB\302\001\n+c" +
+      "om.tcn.cloud.api.services.billing.v1alph" +
+      "a4B\rDefaultsProtoP\001\242\002\003SBX\252\002\031Services.Bil" +
+      "ling.V1alpha4\312\002\031Services\\Billing\\V1alpha" +
+      "4\342\002%Services\\Billing\\V1alpha4\\GPBMetadat" +
+      "a\352\002\033Services::Billing::V1alpha4b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -236,122 +249,134 @@ public final class DefaultsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_ApplyDefaultBillingPlanDraftResponse_descriptor,
         new java.lang.String[] { "BillingPlanIds", });
-    internal_static_services_billing_v1alpha4_CreateDefaultBillingPlanRequest_descriptor =
+    internal_static_services_billing_v1alpha4_CloneDefaultBillingPlanRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_services_billing_v1alpha4_CloneDefaultBillingPlanRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_billing_v1alpha4_CloneDefaultBillingPlanRequest_descriptor,
+        new java.lang.String[] { "BillingPlanId", });
+    internal_static_services_billing_v1alpha4_CloneDefaultBillingPlanResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_services_billing_v1alpha4_CloneDefaultBillingPlanResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_billing_v1alpha4_CloneDefaultBillingPlanResponse_descriptor,
+        new java.lang.String[] { "BillingPlanId", });
+    internal_static_services_billing_v1alpha4_CreateDefaultBillingPlanRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_services_billing_v1alpha4_CreateDefaultBillingPlanRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_CreateDefaultBillingPlanRequest_descriptor,
         new java.lang.String[] { "BillingPlanId", "BillingPlan", });
     internal_static_services_billing_v1alpha4_CreateDefaultBillingPlanResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_services_billing_v1alpha4_CreateDefaultBillingPlanResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_CreateDefaultBillingPlanResponse_descriptor,
         new java.lang.String[] { "BillingPlanId", });
     internal_static_services_billing_v1alpha4_DeleteDefaultBillingPlanRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_services_billing_v1alpha4_DeleteDefaultBillingPlanRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_DeleteDefaultBillingPlanRequest_descriptor,
         new java.lang.String[] { "BillingPlanId", });
     internal_static_services_billing_v1alpha4_DeleteDefaultBillingPlanResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_services_billing_v1alpha4_DeleteDefaultBillingPlanResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_DeleteDefaultBillingPlanResponse_descriptor,
         new java.lang.String[] { });
     internal_static_services_billing_v1alpha4_GetDefaultBillingPlanRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_services_billing_v1alpha4_GetDefaultBillingPlanRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_GetDefaultBillingPlanRequest_descriptor,
         new java.lang.String[] { "BillingPlanId", });
     internal_static_services_billing_v1alpha4_GetDefaultBillingPlanResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_services_billing_v1alpha4_GetDefaultBillingPlanResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_GetDefaultBillingPlanResponse_descriptor,
         new java.lang.String[] { "BillingPlan", });
     internal_static_services_billing_v1alpha4_ListDefaultBillingPlansRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_services_billing_v1alpha4_ListDefaultBillingPlansRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_ListDefaultBillingPlansRequest_descriptor,
         new java.lang.String[] { "BillingPlanId", "Filter", "Fields", "Sort", "Page", });
     internal_static_services_billing_v1alpha4_ListDefaultBillingPlansResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_services_billing_v1alpha4_ListDefaultBillingPlansResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_ListDefaultBillingPlansResponse_descriptor,
         new java.lang.String[] { "BillingPlans", "Token", });
     internal_static_services_billing_v1alpha4_UpdateDefaultBillingPlanRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_services_billing_v1alpha4_UpdateDefaultBillingPlanRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_UpdateDefaultBillingPlanRequest_descriptor,
         new java.lang.String[] { "BillingPlanId", "BillingPlan", "UpdateMask", });
     internal_static_services_billing_v1alpha4_UpdateDefaultBillingPlanResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_services_billing_v1alpha4_UpdateDefaultBillingPlanResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_UpdateDefaultBillingPlanResponse_descriptor,
         new java.lang.String[] { });
     internal_static_services_billing_v1alpha4_CreateDefaultRateDefinitionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_services_billing_v1alpha4_CreateDefaultRateDefinitionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_CreateDefaultRateDefinitionRequest_descriptor,
         new java.lang.String[] { "RateDefinitionId", "RateDefinition", });
     internal_static_services_billing_v1alpha4_CreateDefaultRateDefinitionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_services_billing_v1alpha4_CreateDefaultRateDefinitionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_CreateDefaultRateDefinitionResponse_descriptor,
         new java.lang.String[] { "RateDefinitionId", });
     internal_static_services_billing_v1alpha4_DeleteDefaultRateDefinitionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_services_billing_v1alpha4_DeleteDefaultRateDefinitionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_DeleteDefaultRateDefinitionRequest_descriptor,
         new java.lang.String[] { "RateDefinitionId", });
     internal_static_services_billing_v1alpha4_DeleteDefaultRateDefinitionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_services_billing_v1alpha4_DeleteDefaultRateDefinitionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_DeleteDefaultRateDefinitionResponse_descriptor,
         new java.lang.String[] { });
     internal_static_services_billing_v1alpha4_GetDefaultRateDefinitionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_services_billing_v1alpha4_GetDefaultRateDefinitionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_GetDefaultRateDefinitionRequest_descriptor,
         new java.lang.String[] { "RateDefinitionId", });
     internal_static_services_billing_v1alpha4_GetDefaultRateDefinitionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_services_billing_v1alpha4_GetDefaultRateDefinitionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_GetDefaultRateDefinitionResponse_descriptor,
         new java.lang.String[] { "RateDefinition", });
     internal_static_services_billing_v1alpha4_ListDefaultRateDefinitionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_services_billing_v1alpha4_ListDefaultRateDefinitionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_ListDefaultRateDefinitionsRequest_descriptor,
         new java.lang.String[] { "RateDefinitionId", "Filter", "Fields", "Sort", "Page", });
     internal_static_services_billing_v1alpha4_ListDefaultRateDefinitionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_services_billing_v1alpha4_ListDefaultRateDefinitionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_ListDefaultRateDefinitionsResponse_descriptor,
         new java.lang.String[] { "RateDefinitions", "Token", });
     internal_static_services_billing_v1alpha4_UpdateDefaultRateDefinitionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_services_billing_v1alpha4_UpdateDefaultRateDefinitionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_UpdateDefaultRateDefinitionRequest_descriptor,
         new java.lang.String[] { "RateDefinitionId", "RateDefinition", "UpdateMask", });
     internal_static_services_billing_v1alpha4_UpdateDefaultRateDefinitionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_services_billing_v1alpha4_UpdateDefaultRateDefinitionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_UpdateDefaultRateDefinitionResponse_descriptor,

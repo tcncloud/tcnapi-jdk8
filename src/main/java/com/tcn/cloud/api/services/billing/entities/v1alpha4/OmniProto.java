@@ -37,23 +37,23 @@ public final class OmniProto {
       "i.proto\022\"services.billing.entities.v1alp" +
       "ha4\0321services/billing/entities/v1alpha4/" +
       "matching.proto\0320services/billing/entitie" +
-      "s/v1alpha4/modules.proto\"\277\001\n\rOmniSmsConf" +
-      "ig\022\022\n\004name\030\001 \001(\tR\004name\022Q\n\010prefixes\030\002 \001(\013" +
-      "25.services.billing.entities.v1alpha4.Co" +
-      "untryCodePrefixR\010prefixes\022G\n\006config\030\003 \001(" +
-      "\0132/.services.billing.entities.v1alpha4.B" +
-      "asicConfigR\006config\"\307\001\n\021OmniSmsUnitConfig" +
-      "\022\022\n\004name\030\001 \001(\tR\004name\022Q\n\010prefixes\030\002 \001(\01325" +
-      ".services.billing.entities.v1alpha4.Coun" +
-      "tryCodePrefixR\010prefixes\022K\n\006config\030\003 \001(\0132" +
-      "3.services.billing.entities.v1alpha4.Bas" +
-      "icUnitConfigR\006configB\354\001\n4com.tcn.cloud.a" +
-      "pi.services.billing.entities.v1alpha4B\tO" +
-      "mniProtoP\001\242\002\003SBE\252\002\"Services.Billing.Enti" +
-      "ties.V1alpha4\312\002\"Services\\Billing\\Entitie" +
-      "s\\V1alpha4\342\002.Services\\Billing\\Entities\\V" +
-      "1alpha4\\GPBMetadata\352\002%Services::Billing:" +
-      ":Entities::V1alpha4b\006proto3"
+      "s/v1alpha4/modules.proto\"\303\001\n\rOmniSmsConf" +
+      "ig\022\026\n\004name\030\001 \001(\tB\002\030\001R\004name\022Q\n\010prefixes\030\002" +
+      " \001(\01325.services.billing.entities.v1alpha" +
+      "4.CountryCodePrefixR\010prefixes\022G\n\006config\030" +
+      "\003 \001(\0132/.services.billing.entities.v1alph" +
+      "a4.BasicConfigR\006config\"\313\001\n\021OmniSmsUnitCo" +
+      "nfig\022\026\n\004name\030\001 \001(\tB\002\030\001R\004name\022Q\n\010prefixes" +
+      "\030\002 \001(\01325.services.billing.entities.v1alp" +
+      "ha4.CountryCodePrefixR\010prefixes\022K\n\006confi" +
+      "g\030\003 \001(\01323.services.billing.entities.v1al" +
+      "pha4.BasicUnitConfigR\006configB\354\001\n4com.tcn" +
+      ".cloud.api.services.billing.entities.v1a" +
+      "lpha4B\tOmniProtoP\001\242\002\003SBE\252\002\"Services.Bill" +
+      "ing.Entities.V1alpha4\312\002\"Services\\Billing" +
+      "\\Entities\\V1alpha4\342\002.Services\\Billing\\En" +
+      "tities\\V1alpha4\\GPBMetadata\352\002%Services::" +
+      "Billing::Entities::V1alpha4b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -34,14 +34,14 @@ public interface RateDefinitionOrBuilder extends
   /**
    * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
    * @deprecated services.billing.entities.v1alpha4.RateDefinition.billing_tag is deprecated.
-   *     See services/billing/entities/v1alpha4/rates.proto;l=11
+   *     See services/billing/entities/v1alpha4/rates.proto;l=12
    * @return Whether the billingTag field is set.
    */
   @java.lang.Deprecated boolean hasBillingTag();
   /**
    * <code>.services.billing.entities.v1alpha4.BillingTag billing_tag = 3 [json_name = "billingTag", deprecated = true];</code>
    * @deprecated services.billing.entities.v1alpha4.RateDefinition.billing_tag is deprecated.
-   *     See services/billing/entities/v1alpha4/rates.proto;l=11
+   *     See services/billing/entities/v1alpha4/rates.proto;l=12
    * @return The billingTag.
    */
   @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha4.BillingTag getBillingTag();
