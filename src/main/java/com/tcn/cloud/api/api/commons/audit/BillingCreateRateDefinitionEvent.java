@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.commons.audit;
  *
  * Protobuf type {@code api.commons.audit.BillingCreateRateDefinitionEvent}
  */
-public final class BillingCreateRateDefinitionEvent extends
+@java.lang.Deprecated public final class BillingCreateRateDefinitionEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.audit.BillingCreateRateDefinitionEvent)
     BillingCreateRateDefinitionEventOrBuilder {

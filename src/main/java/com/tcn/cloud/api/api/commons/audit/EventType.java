@@ -872,12 +872,14 @@ public enum EventType
    * Billing Events
    * </pre>
    *
-   * <code>EVENT_TYPE_BILLING_COMMIT_BILLING_PLAN = 1000;</code>
+   * <code>EVENT_TYPE_BILLING_COMMIT_BILLING_PLAN = 1000 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   EVENT_TYPE_BILLING_COMMIT_BILLING_PLAN(1000),
   /**
-   * <code>EVENT_TYPE_BILLING_CREATE_BILLING_PLAN = 1001;</code>
+   * <code>EVENT_TYPE_BILLING_CREATE_BILLING_PLAN = 1001 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   EVENT_TYPE_BILLING_CREATE_BILLING_PLAN(1001),
   /**
    * <code>EVENT_TYPE_BILLING_CREATE_INVOICE = 1002 [deprecated = true];</code>
@@ -885,12 +887,14 @@ public enum EventType
   @java.lang.Deprecated
   EVENT_TYPE_BILLING_CREATE_INVOICE(1002),
   /**
-   * <code>EVENT_TYPE_BILLING_CREATE_RATE_DEFINITION = 1003;</code>
+   * <code>EVENT_TYPE_BILLING_CREATE_RATE_DEFINITION = 1003 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   EVENT_TYPE_BILLING_CREATE_RATE_DEFINITION(1003),
   /**
-   * <code>EVENT_TYPE_BILLING_DELETE_BILLING_PLAN = 1004;</code>
+   * <code>EVENT_TYPE_BILLING_DELETE_BILLING_PLAN = 1004 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   EVENT_TYPE_BILLING_DELETE_BILLING_PLAN(1004),
   /**
    * <code>EVENT_TYPE_BILLING_DELETE_INVOICE = 1005 [deprecated = true];</code>
@@ -898,16 +902,19 @@ public enum EventType
   @java.lang.Deprecated
   EVENT_TYPE_BILLING_DELETE_INVOICE(1005),
   /**
-   * <code>EVENT_TYPE_BILLING_DELETE_RATE_DEFINITION = 1006;</code>
+   * <code>EVENT_TYPE_BILLING_DELETE_RATE_DEFINITION = 1006 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   EVENT_TYPE_BILLING_DELETE_RATE_DEFINITION(1006),
   /**
-   * <code>EVENT_TYPE_BILLING_EXPORT_INVOICE = 1007;</code>
+   * <code>EVENT_TYPE_BILLING_EXPORT_INVOICE = 1007 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   EVENT_TYPE_BILLING_EXPORT_INVOICE(1007),
   /**
-   * <code>EVENT_TYPE_BILLING_UPDATE_BILLING_PLAN = 1008;</code>
+   * <code>EVENT_TYPE_BILLING_UPDATE_BILLING_PLAN = 1008 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   EVENT_TYPE_BILLING_UPDATE_BILLING_PLAN(1008),
   /**
    * <code>EVENT_TYPE_BILLING_UPDATE_INVOICE = 1009 [deprecated = true];</code>
@@ -915,9 +922,14 @@ public enum EventType
   @java.lang.Deprecated
   EVENT_TYPE_BILLING_UPDATE_INVOICE(1009),
   /**
-   * <code>EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION = 1010;</code>
+   * <code>EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION = 1010 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION(1010),
+  /**
+   * <code>EVENT_TYPE_BILLING_RATED_ITEMS_GENERATED = 1011;</code>
+   */
+  EVENT_TYPE_BILLING_RATED_ITEMS_GENERATED(1011),
   /**
    * <pre>
    * Delivery Events
@@ -1840,49 +1852,53 @@ public enum EventType
    * Billing Events
    * </pre>
    *
-   * <code>EVENT_TYPE_BILLING_COMMIT_BILLING_PLAN = 1000;</code>
+   * <code>EVENT_TYPE_BILLING_COMMIT_BILLING_PLAN = 1000 [deprecated = true];</code>
    */
-  public static final int EVENT_TYPE_BILLING_COMMIT_BILLING_PLAN_VALUE = 1000;
+  @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_COMMIT_BILLING_PLAN_VALUE = 1000;
   /**
-   * <code>EVENT_TYPE_BILLING_CREATE_BILLING_PLAN = 1001;</code>
+   * <code>EVENT_TYPE_BILLING_CREATE_BILLING_PLAN = 1001 [deprecated = true];</code>
    */
-  public static final int EVENT_TYPE_BILLING_CREATE_BILLING_PLAN_VALUE = 1001;
+  @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_CREATE_BILLING_PLAN_VALUE = 1001;
   /**
    * <code>EVENT_TYPE_BILLING_CREATE_INVOICE = 1002 [deprecated = true];</code>
    */
   @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_CREATE_INVOICE_VALUE = 1002;
   /**
-   * <code>EVENT_TYPE_BILLING_CREATE_RATE_DEFINITION = 1003;</code>
+   * <code>EVENT_TYPE_BILLING_CREATE_RATE_DEFINITION = 1003 [deprecated = true];</code>
    */
-  public static final int EVENT_TYPE_BILLING_CREATE_RATE_DEFINITION_VALUE = 1003;
+  @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_CREATE_RATE_DEFINITION_VALUE = 1003;
   /**
-   * <code>EVENT_TYPE_BILLING_DELETE_BILLING_PLAN = 1004;</code>
+   * <code>EVENT_TYPE_BILLING_DELETE_BILLING_PLAN = 1004 [deprecated = true];</code>
    */
-  public static final int EVENT_TYPE_BILLING_DELETE_BILLING_PLAN_VALUE = 1004;
+  @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_DELETE_BILLING_PLAN_VALUE = 1004;
   /**
    * <code>EVENT_TYPE_BILLING_DELETE_INVOICE = 1005 [deprecated = true];</code>
    */
   @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_DELETE_INVOICE_VALUE = 1005;
   /**
-   * <code>EVENT_TYPE_BILLING_DELETE_RATE_DEFINITION = 1006;</code>
+   * <code>EVENT_TYPE_BILLING_DELETE_RATE_DEFINITION = 1006 [deprecated = true];</code>
    */
-  public static final int EVENT_TYPE_BILLING_DELETE_RATE_DEFINITION_VALUE = 1006;
+  @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_DELETE_RATE_DEFINITION_VALUE = 1006;
   /**
-   * <code>EVENT_TYPE_BILLING_EXPORT_INVOICE = 1007;</code>
+   * <code>EVENT_TYPE_BILLING_EXPORT_INVOICE = 1007 [deprecated = true];</code>
    */
-  public static final int EVENT_TYPE_BILLING_EXPORT_INVOICE_VALUE = 1007;
+  @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_EXPORT_INVOICE_VALUE = 1007;
   /**
-   * <code>EVENT_TYPE_BILLING_UPDATE_BILLING_PLAN = 1008;</code>
+   * <code>EVENT_TYPE_BILLING_UPDATE_BILLING_PLAN = 1008 [deprecated = true];</code>
    */
-  public static final int EVENT_TYPE_BILLING_UPDATE_BILLING_PLAN_VALUE = 1008;
+  @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_UPDATE_BILLING_PLAN_VALUE = 1008;
   /**
    * <code>EVENT_TYPE_BILLING_UPDATE_INVOICE = 1009 [deprecated = true];</code>
    */
   @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_UPDATE_INVOICE_VALUE = 1009;
   /**
-   * <code>EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION = 1010;</code>
+   * <code>EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION = 1010 [deprecated = true];</code>
    */
-  public static final int EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION_VALUE = 1010;
+  @java.lang.Deprecated public static final int EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION_VALUE = 1010;
+  /**
+   * <code>EVENT_TYPE_BILLING_RATED_ITEMS_GENERATED = 1011;</code>
+   */
+  public static final int EVENT_TYPE_BILLING_RATED_ITEMS_GENERATED_VALUE = 1011;
   /**
    * <pre>
    * Delivery Events
@@ -2103,6 +2119,7 @@ public enum EventType
       case 1008: return EVENT_TYPE_BILLING_UPDATE_BILLING_PLAN;
       case 1009: return EVENT_TYPE_BILLING_UPDATE_INVOICE;
       case 1010: return EVENT_TYPE_BILLING_UPDATE_RATE_DEFINITION;
+      case 1011: return EVENT_TYPE_BILLING_RATED_ITEMS_GENERATED;
       case 1100: return EVENT_TYPE_DELIVERY_FAILURE;
       case 1101: return EVENT_TYPE_DELIVERY_SUCCESS;
       case 1200: return EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT;

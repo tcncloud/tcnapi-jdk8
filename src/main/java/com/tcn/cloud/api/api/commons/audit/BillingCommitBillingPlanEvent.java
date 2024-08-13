@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.commons.audit;
  *
  * Protobuf type {@code api.commons.audit.BillingCommitBillingPlanEvent}
  */
-public final class BillingCommitBillingPlanEvent extends
+@java.lang.Deprecated public final class BillingCommitBillingPlanEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.audit.BillingCommitBillingPlanEvent)
     BillingCommitBillingPlanEventOrBuilder {
