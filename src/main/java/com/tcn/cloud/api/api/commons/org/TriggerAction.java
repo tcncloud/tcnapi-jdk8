@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.commons.org;
 /**
  * <pre>
  * TriggerAction is the action to take when the trigger is activated
+ * DEPRECATED: Use services.org.hunt_groups.v1alpha1.TriggerAction instead
  * </pre>
  *
  * Protobuf enum {@code api.commons.org.TriggerAction}
  */
-public enum TriggerAction
+@java.lang.Deprecated public enum TriggerAction
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>

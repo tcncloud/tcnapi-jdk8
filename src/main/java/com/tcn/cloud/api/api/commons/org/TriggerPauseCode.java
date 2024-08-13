@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.commons.org;
 /**
  * <pre>
  * TriggerPauseCode is the pause code to use for the trigger
+ * DEPRECATED: Use services.org.hunt_groups.v1alpha1.TriggerPauseCode instead
  * </pre>
  *
  * Protobuf type {@code api.commons.org.TriggerPauseCode}
  */
-public final class TriggerPauseCode extends
+@java.lang.Deprecated public final class TriggerPauseCode extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.org.TriggerPauseCode)
     TriggerPauseCodeOrBuilder {
@@ -381,6 +382,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * TriggerPauseCode is the pause code to use for the trigger
+   * DEPRECATED: Use services.org.hunt_groups.v1alpha1.TriggerPauseCode instead
    * </pre>
    *
    * Protobuf type {@code api.commons.org.TriggerPauseCode}

@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.org;
 
-public interface TriggerPauseCodeOrBuilder extends
+@java.lang.Deprecated public interface TriggerPauseCodeOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.org.TriggerPauseCode)
     com.google.protobuf.MessageOrBuilder {
 

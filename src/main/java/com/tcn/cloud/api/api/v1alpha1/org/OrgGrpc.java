@@ -8894,8 +8894,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListAgentTriggers returns a list of agent triggers for the given hunt group.
+     * DEPRECATED: Use services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggers instead
      * </pre>
      */
+    @java.lang.Deprecated
     default void listAgentTriggers(com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentTriggersMethod(), responseObserver);
@@ -8904,8 +8906,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * CopyAgentTrigger copys an agent trigger to the given hunt group in the same org.
+     * DEPRECATED: Use services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTrigger instead
      * </pre>
      */
+    @java.lang.Deprecated
     default void copyAgentTrigger(com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyAgentTriggerMethod(), responseObserver);
@@ -8914,8 +8918,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * UpdateAgentTriggers updates all agent triggers for the given hunt group.
+     * DEPRECATED: Use services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggers instead
      * </pre>
      */
+    @java.lang.Deprecated
     default void updateAgentTriggers(com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentTriggersMethod(), responseObserver);
@@ -11489,8 +11495,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListAgentTriggers returns a list of agent triggers for the given hunt group.
+     * DEPRECATED: Use services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggers instead
      * </pre>
      */
+    @java.lang.Deprecated
     public void listAgentTriggers(com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -11500,8 +11508,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * CopyAgentTrigger copys an agent trigger to the given hunt group in the same org.
+     * DEPRECATED: Use services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTrigger instead
      * </pre>
      */
+    @java.lang.Deprecated
     public void copyAgentTrigger(com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -11511,8 +11521,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * UpdateAgentTriggers updates all agent triggers for the given hunt group.
+     * DEPRECATED: Use services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggers instead
      * </pre>
      */
+    @java.lang.Deprecated
     public void updateAgentTriggers(com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -14009,8 +14021,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListAgentTriggers returns a list of agent triggers for the given hunt group.
+     * DEPRECATED: Use services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggers instead
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse listAgentTriggers(com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAgentTriggersMethod(), getCallOptions(), request);
@@ -14019,8 +14033,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * CopyAgentTrigger copys an agent trigger to the given hunt group in the same org.
+     * DEPRECATED: Use services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTrigger instead
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse copyAgentTrigger(com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCopyAgentTriggerMethod(), getCallOptions(), request);
@@ -14029,8 +14045,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * UpdateAgentTriggers updates all agent triggers for the given hunt group.
+     * DEPRECATED: Use services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggers instead
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse updateAgentTriggers(com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAgentTriggersMethod(), getCallOptions(), request);
@@ -16492,8 +16510,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * ListAgentTriggers returns a list of agent triggers for the given hunt group.
+     * DEPRECATED: Use services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggers instead
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersResponse> listAgentTriggers(
         com.tcn.cloud.api.api.v1alpha1.org.ListAgentTriggersRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -16503,8 +16523,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * CopyAgentTrigger copys an agent trigger to the given hunt group in the same org.
+     * DEPRECATED: Use services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTrigger instead
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerResponse> copyAgentTrigger(
         com.tcn.cloud.api.api.v1alpha1.org.CopyAgentTriggerRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -16514,8 +16536,10 @@ public final class OrgGrpc {
     /**
      * <pre>
      * UpdateAgentTriggers updates all agent triggers for the given hunt group.
+     * DEPRECATED: Use services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggers instead
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersResponse> updateAgentTriggers(
         com.tcn.cloud.api.api.v1alpha1.org.UpdateAgentTriggersRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(

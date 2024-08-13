@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface CopyAgentTriggerResponseOrBuilder extends
+@java.lang.Deprecated public interface CopyAgentTriggerResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.CopyAgentTriggerResponse)
     com.google.protobuf.MessageOrBuilder {
 }

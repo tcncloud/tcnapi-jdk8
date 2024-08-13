@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.commons.org;
 /**
  * <pre>
  * AgentTrigger is the entity for agent triggers.
+ * DEPRECATED: Use services.org.hunt_groups.v1alpha1.AgentTrigger instead
  * </pre>
  *
  * Protobuf type {@code api.commons.org.AgentTrigger}
  */
-public final class AgentTrigger extends
+@java.lang.Deprecated public final class AgentTrigger extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.org.AgentTrigger)
     AgentTriggerOrBuilder {
@@ -384,6 +385,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * AgentTrigger is the entity for agent triggers.
+   * DEPRECATED: Use services.org.hunt_groups.v1alpha1.AgentTrigger instead
    * </pre>
    *
    * Protobuf type {@code api.commons.org.AgentTrigger}
