@@ -26,4 +26,24 @@ public interface CreateExileCertificateResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getEncodedExileCertificateBytes();
+
+  /**
+   * <pre>
+   * The id of the exile certificate that was created.
+   * </pre>
+   *
+   * <code>string exile_certificate_id = 2 [json_name = "exileCertificateId"];</code>
+   * @return The exileCertificateId.
+   */
+  java.lang.String getExileCertificateId();
+  /**
+   * <pre>
+   * The id of the exile certificate that was created.
+   * </pre>
+   *
+   * <code>string exile_certificate_id = 2 [json_name = "exileCertificateId"];</code>
+   * @return The bytes for exileCertificateId.
+   */
+  com.google.protobuf.ByteString
+      getExileCertificateIdBytes();
 }
