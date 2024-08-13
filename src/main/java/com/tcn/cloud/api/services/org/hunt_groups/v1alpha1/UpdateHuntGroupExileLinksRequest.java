@@ -5,21 +5,21 @@ package com.tcn.cloud.api.services.org.hunt_groups.v1alpha1;
 
 /**
  * <pre>
- * ListHuntGroupExileLinksResponse is the response for ListHuntGroupExileLinks rpc.
+ * UpdateHuntGroupExileLinksRequest is the request message for the UpdateHuntGroupExileLinks rpc.
  * </pre>
  *
- * Protobuf type {@code services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse}
+ * Protobuf type {@code services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest}
  */
-public final class ListHuntGroupExileLinksResponse extends
+public final class UpdateHuntGroupExileLinksRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse)
-    ListHuntGroupExileLinksResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest)
+    UpdateHuntGroupExileLinksRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ListHuntGroupExileLinksResponse.newBuilder() to construct.
-  private ListHuntGroupExileLinksResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UpdateHuntGroupExileLinksRequest.newBuilder() to construct.
+  private UpdateHuntGroupExileLinksRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ListHuntGroupExileLinksResponse() {
+  private UpdateHuntGroupExileLinksRequest() {
     exileLinks_ = java.util.Collections.emptyList();
   }
 
@@ -27,31 +27,46 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ListHuntGroupExileLinksResponse();
+    return new UpdateHuntGroupExileLinksRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupExileLinksResponse_descriptor;
+    return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupExileLinksRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupExileLinksResponse_fieldAccessorTable
+    return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupExileLinksRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse.Builder.class);
+            com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest.Builder.class);
   }
 
-  public static final int EXILE_LINKS_FIELD_NUMBER = 1;
+  public static final int HUNT_GROUP_SID_FIELD_NUMBER = 1;
+  private long huntGroupSid_ = 0L;
+  /**
+   * <pre>
+   * The sid of the hunt group to update the exile links for.
+   * </pre>
+   *
+   * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+   * @return The huntGroupSid.
+   */
+  @java.lang.Override
+  public long getHuntGroupSid() {
+    return huntGroupSid_;
+  }
+
+  public static final int EXILE_LINKS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink> exileLinks_;
   /**
    * <pre>
-   * The links for exile
+   * The list of exile links to update.
    * </pre>
    *
-   * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
    */
   @java.lang.Override
   public java.util.List<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink> getExileLinksList() {
@@ -59,10 +74,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The links for exile
+   * The list of exile links to update.
    * </pre>
    *
-   * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkOrBuilder> 
@@ -71,10 +86,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The links for exile
+   * The list of exile links to update.
    * </pre>
    *
-   * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
    */
   @java.lang.Override
   public int getExileLinksCount() {
@@ -82,10 +97,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The links for exile
+   * The list of exile links to update.
    * </pre>
    *
-   * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink getExileLinks(int index) {
@@ -93,10 +108,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The links for exile
+   * The list of exile links to update.
    * </pre>
    *
-   * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+   * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkOrBuilder getExileLinksOrBuilder(
@@ -118,8 +133,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (huntGroupSid_ != 0L) {
+      output.writeInt64(1, huntGroupSid_);
+    }
     for (int i = 0; i < exileLinks_.size(); i++) {
-      output.writeMessage(1, exileLinks_.get(i));
+      output.writeMessage(2, exileLinks_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -130,9 +148,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (huntGroupSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, huntGroupSid_);
+    }
     for (int i = 0; i < exileLinks_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, exileLinks_.get(i));
+        .computeMessageSize(2, exileLinks_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -144,11 +166,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse other = (com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse) obj;
+    com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest other = (com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest) obj;
 
+    if (getHuntGroupSid()
+        != other.getHuntGroupSid()) return false;
     if (!getExileLinksList()
         .equals(other.getExileLinksList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -162,6 +186,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + HUNT_GROUP_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getHuntGroupSid());
     if (getExileLinksCount() > 0) {
       hash = (37 * hash) + EXILE_LINKS_FIELD_NUMBER;
       hash = (53 * hash) + getExileLinksList().hashCode();
@@ -171,44 +198,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -216,26 +243,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -248,7 +275,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -265,29 +292,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ListHuntGroupExileLinksResponse is the response for ListHuntGroupExileLinks rpc.
+   * UpdateHuntGroupExileLinksRequest is the request message for the UpdateHuntGroupExileLinks rpc.
    * </pre>
    *
-   * Protobuf type {@code services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse}
+   * Protobuf type {@code services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse)
-      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest)
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupExileLinksResponse_descriptor;
+      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupExileLinksRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupExileLinksResponse_fieldAccessorTable
+      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupExileLinksRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse.Builder.class);
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest.newBuilder()
     private Builder() {
 
     }
@@ -301,30 +328,31 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      huntGroupSid_ = 0L;
       if (exileLinksBuilder_ == null) {
         exileLinks_ = java.util.Collections.emptyList();
       } else {
         exileLinks_ = null;
         exileLinksBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupExileLinksResponse_descriptor;
+      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupExileLinksRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse.getDefaultInstance();
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse build() {
-      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse result = buildPartial();
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest build() {
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -332,19 +360,19 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse buildPartial() {
-      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse result = new com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse(this);
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest buildPartial() {
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest result = new com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse result) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest result) {
       if (exileLinksBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           exileLinks_ = java.util.Collections.unmodifiableList(exileLinks_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.exileLinks_ = exileLinks_;
       } else {
@@ -352,8 +380,11 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.huntGroupSid_ = huntGroupSid_;
+      }
     }
 
     @java.lang.Override
@@ -390,21 +421,24 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse) {
-        return mergeFrom((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse)other);
+      if (other instanceof com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest) {
+        return mergeFrom((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse other) {
-      if (other == com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest other) {
+      if (other == com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest.getDefaultInstance()) return this;
+      if (other.getHuntGroupSid() != 0L) {
+        setHuntGroupSid(other.getHuntGroupSid());
+      }
       if (exileLinksBuilder_ == null) {
         if (!other.exileLinks_.isEmpty()) {
           if (exileLinks_.isEmpty()) {
             exileLinks_ = other.exileLinks_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureExileLinksIsMutable();
             exileLinks_.addAll(other.exileLinks_);
@@ -417,7 +451,7 @@ private static final long serialVersionUID = 0L;
             exileLinksBuilder_.dispose();
             exileLinksBuilder_ = null;
             exileLinks_ = other.exileLinks_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             exileLinksBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getExileLinksFieldBuilder() : null;
@@ -452,7 +486,12 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
+            case 8: {
+              huntGroupSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
               com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink m =
                   input.readMessage(
                       com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.parser(),
@@ -464,7 +503,7 @@ private static final long serialVersionUID = 0L;
                 exileLinksBuilder_.addMessage(m);
               }
               break;
-            } // case 10
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -482,12 +521,56 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private long huntGroupSid_ ;
+    /**
+     * <pre>
+     * The sid of the hunt group to update the exile links for.
+     * </pre>
+     *
+     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+     * @return The huntGroupSid.
+     */
+    @java.lang.Override
+    public long getHuntGroupSid() {
+      return huntGroupSid_;
+    }
+    /**
+     * <pre>
+     * The sid of the hunt group to update the exile links for.
+     * </pre>
+     *
+     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+     * @param value The huntGroupSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHuntGroupSid(long value) {
+
+      huntGroupSid_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The sid of the hunt group to update the exile links for.
+     * </pre>
+     *
+     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHuntGroupSid() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      huntGroupSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private java.util.List<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink> exileLinks_ =
       java.util.Collections.emptyList();
     private void ensureExileLinksIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         exileLinks_ = new java.util.ArrayList<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink>(exileLinks_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -496,10 +579,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public java.util.List<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink> getExileLinksList() {
       if (exileLinksBuilder_ == null) {
@@ -510,10 +593,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public int getExileLinksCount() {
       if (exileLinksBuilder_ == null) {
@@ -524,10 +607,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink getExileLinks(int index) {
       if (exileLinksBuilder_ == null) {
@@ -538,10 +621,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public Builder setExileLinks(
         int index, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink value) {
@@ -559,10 +642,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public Builder setExileLinks(
         int index, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.Builder builderForValue) {
@@ -577,10 +660,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public Builder addExileLinks(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink value) {
       if (exileLinksBuilder_ == null) {
@@ -597,10 +680,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public Builder addExileLinks(
         int index, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink value) {
@@ -618,10 +701,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public Builder addExileLinks(
         com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.Builder builderForValue) {
@@ -636,10 +719,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public Builder addExileLinks(
         int index, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.Builder builderForValue) {
@@ -654,10 +737,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public Builder addAllExileLinks(
         java.lang.Iterable<? extends com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink> values) {
@@ -673,15 +756,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public Builder clearExileLinks() {
       if (exileLinksBuilder_ == null) {
         exileLinks_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         exileLinksBuilder_.clear();
@@ -690,10 +773,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public Builder removeExileLinks(int index) {
       if (exileLinksBuilder_ == null) {
@@ -707,10 +790,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.Builder getExileLinksBuilder(
         int index) {
@@ -718,10 +801,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkOrBuilder getExileLinksOrBuilder(
         int index) {
@@ -732,10 +815,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkOrBuilder> 
          getExileLinksOrBuilderList() {
@@ -747,10 +830,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.Builder addExileLinksBuilder() {
       return getExileLinksFieldBuilder().addBuilder(
@@ -758,10 +841,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.Builder addExileLinksBuilder(
         int index) {
@@ -770,10 +853,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The links for exile
+     * The list of exile links to update.
      * </pre>
      *
-     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 1 [json_name = "exileLinks"];</code>
+     * <code>repeated .services.org.hunt_groups.v1alpha1.ExileLink exile_links = 2 [json_name = "exileLinks"];</code>
      */
     public java.util.List<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.Builder> 
          getExileLinksBuilderList() {
@@ -786,7 +869,7 @@ private static final long serialVersionUID = 0L;
         exileLinksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLink.Builder, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkOrBuilder>(
                 exileLinks_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         exileLinks_ = null;
@@ -806,23 +889,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse)
+    // @@protoc_insertion_point(builder_scope:services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse)
-  private static final com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest)
+  private static final com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest();
   }
 
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ListHuntGroupExileLinksResponse>
-      PARSER = new com.google.protobuf.AbstractParser<ListHuntGroupExileLinksResponse>() {
+  private static final com.google.protobuf.Parser<UpdateHuntGroupExileLinksRequest>
+      PARSER = new com.google.protobuf.AbstractParser<UpdateHuntGroupExileLinksRequest>() {
     @java.lang.Override
-    public ListHuntGroupExileLinksResponse parsePartialFrom(
+    public UpdateHuntGroupExileLinksRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -841,17 +924,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ListHuntGroupExileLinksResponse> parser() {
+  public static com.google.protobuf.Parser<UpdateHuntGroupExileLinksRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ListHuntGroupExileLinksResponse> getParserForType() {
+  public com.google.protobuf.Parser<UpdateHuntGroupExileLinksRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupExileLinksResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

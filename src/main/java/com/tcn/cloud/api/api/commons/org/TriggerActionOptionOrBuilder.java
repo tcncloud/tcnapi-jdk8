@@ -104,4 +104,15 @@ public interface TriggerActionOptionOrBuilder extends
    * @return The integrationLinkSid.
    */
   long getIntegrationLinkSid();
+
+  /**
+   * <pre>
+   * The sid of the exile link to execute when the trigger is activated
+   * Used for action: Execute Exile Link
+   * </pre>
+   *
+   * <code>int64 exile_link_sid = 6 [json_name = "exileLinkSid"];</code>
+   * @return The exileLinkSid.
+   */
+  long getExileLinkSid();
 }
