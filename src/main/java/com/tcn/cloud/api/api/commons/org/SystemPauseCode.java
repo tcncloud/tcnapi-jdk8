@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.commons.org;
 /**
  * <pre>
  * SystemPauseCode controls if a system Pause code is being used
+ * DEPRECATED: Use services.org.hunt_groups.v1alpha1.SystemPauseCode instead
  * </pre>
  *
  * Protobuf enum {@code api.commons.org.SystemPauseCode}
  */
-public enum SystemPauseCode
+@java.lang.Deprecated public enum SystemPauseCode
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>

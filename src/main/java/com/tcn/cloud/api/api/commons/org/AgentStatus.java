@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.commons.org;
 /**
  * <pre>
  * AgentStatus is the status of the agent on which the trigger is based
+ * DEPRECATED: Use services.org.hunt_groups.v1alpha1.AgentStatus instead
  * </pre>
  *
  * Protobuf enum {@code api.commons.org.AgentStatus}
  */
-public enum AgentStatus
+@java.lang.Deprecated public enum AgentStatus
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>

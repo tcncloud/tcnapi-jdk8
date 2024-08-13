@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.org;
 
-public interface TriggerCallTypesOrBuilder extends
+@java.lang.Deprecated public interface TriggerCallTypesOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.org.TriggerCallTypes)
     com.google.protobuf.MessageOrBuilder {
 

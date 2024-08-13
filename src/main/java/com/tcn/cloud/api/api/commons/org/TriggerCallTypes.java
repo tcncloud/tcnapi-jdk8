@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.commons.org;
 /**
  * <pre>
  * TriggerCallTypes is the call types to use for the trigger
+ * DEPRECATED: Use services.org.hunt_groups.v1alpha1.TriggerCallTypes instead
  * </pre>
  *
  * Protobuf type {@code api.commons.org.TriggerCallTypes}
  */
-public final class TriggerCallTypes extends
+@java.lang.Deprecated public final class TriggerCallTypes extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.org.TriggerCallTypes)
     TriggerCallTypesOrBuilder {
@@ -299,6 +300,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * TriggerCallTypes is the call types to use for the trigger
+   * DEPRECATED: Use services.org.hunt_groups.v1alpha1.TriggerCallTypes instead
    * </pre>
    *
    * Protobuf type {@code api.commons.org.TriggerCallTypes}

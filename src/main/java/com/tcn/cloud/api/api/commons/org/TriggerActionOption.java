@@ -4,9 +4,13 @@
 package com.tcn.cloud.api.api.commons.org;
 
 /**
+ * <pre>
+ * DEPRECATED: Use services.org.hunt_groups.v1alpha1.TriggerActionOption instead
+ * </pre>
+ *
  * Protobuf type {@code api.commons.org.TriggerActionOption}
  */
-public final class TriggerActionOption extends
+@java.lang.Deprecated public final class TriggerActionOption extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.org.TriggerActionOption)
     TriggerActionOptionOrBuilder {
@@ -391,6 +395,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * DEPRECATED: Use services.org.hunt_groups.v1alpha1.TriggerActionOption instead
+   * </pre>
+   *
    * Protobuf type {@code api.commons.org.TriggerActionOption}
    */
   public static final class Builder extends

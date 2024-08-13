@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * HuntGroupsService
+ * HuntGroupsService is the service for managing hunt groups and their related entities.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -111,6 +111,99 @@ public final class HuntGroupsServiceGrpc {
     return getUpdateHuntGroupExileLinksMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersRequest,
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersResponse> getListHuntGroupAgentTriggersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListHuntGroupAgentTriggers",
+      requestType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersRequest.class,
+      responseType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersRequest,
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersResponse> getListHuntGroupAgentTriggersMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersResponse> getListHuntGroupAgentTriggersMethod;
+    if ((getListHuntGroupAgentTriggersMethod = HuntGroupsServiceGrpc.getListHuntGroupAgentTriggersMethod) == null) {
+      synchronized (HuntGroupsServiceGrpc.class) {
+        if ((getListHuntGroupAgentTriggersMethod = HuntGroupsServiceGrpc.getListHuntGroupAgentTriggersMethod) == null) {
+          HuntGroupsServiceGrpc.getListHuntGroupAgentTriggersMethod = getListHuntGroupAgentTriggersMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListHuntGroupAgentTriggers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new HuntGroupsServiceMethodDescriptorSupplier("ListHuntGroupAgentTriggers"))
+              .build();
+        }
+      }
+    }
+    return getListHuntGroupAgentTriggersMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerRequest,
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerResponse> getCopyHuntGroupAgentTriggerMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CopyHuntGroupAgentTrigger",
+      requestType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerRequest.class,
+      responseType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerRequest,
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerResponse> getCopyHuntGroupAgentTriggerMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerResponse> getCopyHuntGroupAgentTriggerMethod;
+    if ((getCopyHuntGroupAgentTriggerMethod = HuntGroupsServiceGrpc.getCopyHuntGroupAgentTriggerMethod) == null) {
+      synchronized (HuntGroupsServiceGrpc.class) {
+        if ((getCopyHuntGroupAgentTriggerMethod = HuntGroupsServiceGrpc.getCopyHuntGroupAgentTriggerMethod) == null) {
+          HuntGroupsServiceGrpc.getCopyHuntGroupAgentTriggerMethod = getCopyHuntGroupAgentTriggerMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyHuntGroupAgentTrigger"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new HuntGroupsServiceMethodDescriptorSupplier("CopyHuntGroupAgentTrigger"))
+              .build();
+        }
+      }
+    }
+    return getCopyHuntGroupAgentTriggerMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersRequest,
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse> getUpdateHuntGroupAgentTriggersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateHuntGroupAgentTriggers",
+      requestType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersRequest.class,
+      responseType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersRequest,
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse> getUpdateHuntGroupAgentTriggersMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse> getUpdateHuntGroupAgentTriggersMethod;
+    if ((getUpdateHuntGroupAgentTriggersMethod = HuntGroupsServiceGrpc.getUpdateHuntGroupAgentTriggersMethod) == null) {
+      synchronized (HuntGroupsServiceGrpc.class) {
+        if ((getUpdateHuntGroupAgentTriggersMethod = HuntGroupsServiceGrpc.getUpdateHuntGroupAgentTriggersMethod) == null) {
+          HuntGroupsServiceGrpc.getUpdateHuntGroupAgentTriggersMethod = getUpdateHuntGroupAgentTriggersMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateHuntGroupAgentTriggers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new HuntGroupsServiceMethodDescriptorSupplier("UpdateHuntGroupAgentTriggers"))
+              .build();
+        }
+      }
+    }
+    return getUpdateHuntGroupAgentTriggersMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -157,7 +250,7 @@ public final class HuntGroupsServiceGrpc {
 
   /**
    * <pre>
-   * HuntGroupsService
+   * HuntGroupsService is the service for managing hunt groups and their related entities.
    * </pre>
    */
   public interface AsyncService {
@@ -196,12 +289,42 @@ public final class HuntGroupsServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateHuntGroupExileLinksMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListHuntGroupAgentTriggers returns a list of agent triggers for the given hunt group.
+     * </pre>
+     */
+    default void listHuntGroupAgentTriggers(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHuntGroupAgentTriggersMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CopyHuntGroupAgentTrigger copys an agent trigger to the given hunt group in the same org.
+     * </pre>
+     */
+    default void copyHuntGroupAgentTrigger(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyHuntGroupAgentTriggerMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupAgentTriggers updates all agent triggers for the given hunt group.
+     * </pre>
+     */
+    default void updateHuntGroupAgentTriggers(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateHuntGroupAgentTriggersMethod(), responseObserver);
+    }
   }
 
   /**
    * Base class for the server implementation of the service HuntGroupsService.
    * <pre>
-   * HuntGroupsService
+   * HuntGroupsService is the service for managing hunt groups and their related entities.
    * </pre>
    */
   public static abstract class HuntGroupsServiceImplBase
@@ -215,7 +338,7 @@ public final class HuntGroupsServiceGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service HuntGroupsService.
    * <pre>
-   * HuntGroupsService
+   * HuntGroupsService is the service for managing hunt groups and their related entities.
    * </pre>
    */
   public static final class HuntGroupsServiceStub
@@ -268,12 +391,45 @@ public final class HuntGroupsServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateHuntGroupExileLinksMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListHuntGroupAgentTriggers returns a list of agent triggers for the given hunt group.
+     * </pre>
+     */
+    public void listHuntGroupAgentTriggers(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListHuntGroupAgentTriggersMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CopyHuntGroupAgentTrigger copys an agent trigger to the given hunt group in the same org.
+     * </pre>
+     */
+    public void copyHuntGroupAgentTrigger(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCopyHuntGroupAgentTriggerMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupAgentTriggers updates all agent triggers for the given hunt group.
+     * </pre>
+     */
+    public void updateHuntGroupAgentTriggers(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateHuntGroupAgentTriggersMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service HuntGroupsService.
    * <pre>
-   * HuntGroupsService
+   * HuntGroupsService is the service for managing hunt groups and their related entities.
    * </pre>
    */
   public static final class HuntGroupsServiceBlockingStub
@@ -323,12 +479,42 @@ public final class HuntGroupsServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateHuntGroupExileLinksMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * ListHuntGroupAgentTriggers returns a list of agent triggers for the given hunt group.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersResponse listHuntGroupAgentTriggers(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListHuntGroupAgentTriggersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CopyHuntGroupAgentTrigger copys an agent trigger to the given hunt group in the same org.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerResponse copyHuntGroupAgentTrigger(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCopyHuntGroupAgentTriggerMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupAgentTriggers updates all agent triggers for the given hunt group.
+     * </pre>
+     */
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse updateHuntGroupAgentTriggers(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateHuntGroupAgentTriggersMethod(), getCallOptions(), request);
+    }
   }
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service HuntGroupsService.
    * <pre>
-   * HuntGroupsService
+   * HuntGroupsService is the service for managing hunt groups and their related entities.
    * </pre>
    */
   public static final class HuntGroupsServiceFutureStub
@@ -381,11 +567,47 @@ public final class HuntGroupsServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateHuntGroupExileLinksMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * ListHuntGroupAgentTriggers returns a list of agent triggers for the given hunt group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersResponse> listHuntGroupAgentTriggers(
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListHuntGroupAgentTriggersMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * CopyHuntGroupAgentTrigger copys an agent trigger to the given hunt group in the same org.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerResponse> copyHuntGroupAgentTrigger(
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCopyHuntGroupAgentTriggerMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateHuntGroupAgentTriggers updates all agent triggers for the given hunt group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse> updateHuntGroupAgentTriggers(
+        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateHuntGroupAgentTriggersMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_HUNT_GROUP_EXILE_LINKS = 0;
   private static final int METHODID_COPY_HUNT_GROUP_EXILE_LINK = 1;
   private static final int METHODID_UPDATE_HUNT_GROUP_EXILE_LINKS = 2;
+  private static final int METHODID_LIST_HUNT_GROUP_AGENT_TRIGGERS = 3;
+  private static final int METHODID_COPY_HUNT_GROUP_AGENT_TRIGGER = 4;
+  private static final int METHODID_UPDATE_HUNT_GROUP_AGENT_TRIGGERS = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -415,6 +637,18 @@ public final class HuntGroupsServiceGrpc {
         case METHODID_UPDATE_HUNT_GROUP_EXILE_LINKS:
           serviceImpl.updateHuntGroupExileLinks((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksResponse>) responseObserver);
+          break;
+        case METHODID_LIST_HUNT_GROUP_AGENT_TRIGGERS:
+          serviceImpl.listHuntGroupAgentTriggers((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersResponse>) responseObserver);
+          break;
+        case METHODID_COPY_HUNT_GROUP_AGENT_TRIGGER:
+          serviceImpl.copyHuntGroupAgentTrigger((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_HUNT_GROUP_AGENT_TRIGGERS:
+          serviceImpl.updateHuntGroupAgentTriggers((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -455,6 +689,27 @@ public final class HuntGroupsServiceGrpc {
               com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksRequest,
               com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupExileLinksResponse>(
                 service, METHODID_UPDATE_HUNT_GROUP_EXILE_LINKS)))
+        .addMethod(
+          getListHuntGroupAgentTriggersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersRequest,
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ListHuntGroupAgentTriggersResponse>(
+                service, METHODID_LIST_HUNT_GROUP_AGENT_TRIGGERS)))
+        .addMethod(
+          getCopyHuntGroupAgentTriggerMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerRequest,
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerResponse>(
+                service, METHODID_COPY_HUNT_GROUP_AGENT_TRIGGER)))
+        .addMethod(
+          getUpdateHuntGroupAgentTriggersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersRequest,
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse>(
+                service, METHODID_UPDATE_HUNT_GROUP_AGENT_TRIGGERS)))
         .build();
   }
 
@@ -506,6 +761,9 @@ public final class HuntGroupsServiceGrpc {
               .addMethod(getListHuntGroupExileLinksMethod())
               .addMethod(getCopyHuntGroupExileLinkMethod())
               .addMethod(getUpdateHuntGroupExileLinksMethod())
+              .addMethod(getListHuntGroupAgentTriggersMethod())
+              .addMethod(getCopyHuntGroupAgentTriggerMethod())
+              .addMethod(getUpdateHuntGroupAgentTriggersMethod())
               .build();
         }
       }

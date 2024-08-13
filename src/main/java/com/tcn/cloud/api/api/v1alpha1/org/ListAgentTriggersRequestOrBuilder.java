@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface ListAgentTriggersRequestOrBuilder extends
+@java.lang.Deprecated public interface ListAgentTriggersRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.ListAgentTriggersRequest)
     com.google.protobuf.MessageOrBuilder {
 

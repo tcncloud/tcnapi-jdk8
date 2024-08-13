@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org;
 
-public interface UpdateAgentTriggersRequestOrBuilder extends
+@java.lang.Deprecated public interface UpdateAgentTriggersRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.UpdateAgentTriggersRequest)
     com.google.protobuf.MessageOrBuilder {
 

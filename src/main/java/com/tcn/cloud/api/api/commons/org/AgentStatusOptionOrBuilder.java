@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.org;
 
-public interface AgentStatusOptionOrBuilder extends
+@java.lang.Deprecated public interface AgentStatusOptionOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.org.AgentStatusOption)
     com.google.protobuf.MessageOrBuilder {
 

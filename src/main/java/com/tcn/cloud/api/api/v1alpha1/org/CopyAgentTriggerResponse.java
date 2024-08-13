@@ -6,11 +6,12 @@ package com.tcn.cloud.api.api.v1alpha1.org;
 /**
  * <pre>
  * CopyAgentTriggerResponse is the response message for the CopyAgentTrigger RPC method.
+ * DEPRECATED: Use services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerResponse instead
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.org.CopyAgentTriggerResponse}
  */
-public final class CopyAgentTriggerResponse extends
+@java.lang.Deprecated public final class CopyAgentTriggerResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.org.CopyAgentTriggerResponse)
     CopyAgentTriggerResponseOrBuilder {
@@ -191,6 +192,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * CopyAgentTriggerResponse is the response message for the CopyAgentTrigger RPC method.
+   * DEPRECATED: Use services.org.hunt_groups.v1alpha1.CopyHuntGroupAgentTriggerResponse instead
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.org.CopyAgentTriggerResponse}
