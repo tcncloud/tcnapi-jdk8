@@ -321,7 +321,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < categories_.size(); i++) {
       output.writeMessage(6, categories_.get(i));
     }
-    if (focus_ != com.tcn.cloud.api.api.commons.QuestionFocus.QUESTION_FOCUS_UNDEFINED.getNumber()) {
+    if (focus_ != com.tcn.cloud.api.api.commons.QuestionFocus.QUESTION_FOCUS_UNSPECIFIED.getNumber()) {
       output.writeEnum(7, focus_);
     }
     getUnknownFields().writeTo(output);
@@ -350,7 +350,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, categories_.get(i));
     }
-    if (focus_ != com.tcn.cloud.api.api.commons.QuestionFocus.QUESTION_FOCUS_UNDEFINED.getNumber()) {
+    if (focus_ != com.tcn.cloud.api.api.commons.QuestionFocus.QUESTION_FOCUS_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(7, focus_);
     }

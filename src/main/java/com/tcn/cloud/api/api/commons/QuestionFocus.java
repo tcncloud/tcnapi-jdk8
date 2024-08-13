@@ -14,12 +14,12 @@ public enum QuestionFocus
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
-   * No question focus/about.
+   * No question focus/about specified.
    * </pre>
    *
-   * <code>QUESTION_FOCUS_UNDEFINED = 0;</code>
+   * <code>QUESTION_FOCUS_UNSPECIFIED = 0;</code>
    */
-  QUESTION_FOCUS_UNDEFINED(0),
+  QUESTION_FOCUS_UNSPECIFIED(0),
   /**
    * <pre>
    * Question is about the Agent(s).
@@ -41,12 +41,12 @@ public enum QuestionFocus
 
   /**
    * <pre>
-   * No question focus/about.
+   * No question focus/about specified.
    * </pre>
    *
-   * <code>QUESTION_FOCUS_UNDEFINED = 0;</code>
+   * <code>QUESTION_FOCUS_UNSPECIFIED = 0;</code>
    */
-  public static final int QUESTION_FOCUS_UNDEFINED_VALUE = 0;
+  public static final int QUESTION_FOCUS_UNSPECIFIED_VALUE = 0;
   /**
    * <pre>
    * Question is about the Agent(s).
@@ -89,7 +89,7 @@ public enum QuestionFocus
    */
   public static QuestionFocus forNumber(int value) {
     switch (value) {
-      case 0: return QUESTION_FOCUS_UNDEFINED;
+      case 0: return QUESTION_FOCUS_UNSPECIFIED;
       case 1: return QUESTION_FOCUS_AGENT;
       case 2: return QUESTION_FOCUS_CUSTOMER;
       default: return null;
