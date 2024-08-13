@@ -21,7 +21,6 @@ private static final long serialVersionUID = 0L;
   }
   private CreateExileCertificateResponse() {
     encodedExileCertificate_ = "";
-    exileCertificateId_ = "";
   }
 
   @java.lang.Override
@@ -91,53 +90,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int EXILE_CERTIFICATE_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object exileCertificateId_ = "";
-  /**
-   * <pre>
-   * The id of the exile certificate that was created.
-   * </pre>
-   *
-   * <code>string exile_certificate_id = 2 [json_name = "exileCertificateId"];</code>
-   * @return The exileCertificateId.
-   */
-  @java.lang.Override
-  public java.lang.String getExileCertificateId() {
-    java.lang.Object ref = exileCertificateId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      exileCertificateId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * The id of the exile certificate that was created.
-   * </pre>
-   *
-   * <code>string exile_certificate_id = 2 [json_name = "exileCertificateId"];</code>
-   * @return The bytes for exileCertificateId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getExileCertificateIdBytes() {
-    java.lang.Object ref = exileCertificateId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      exileCertificateId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -155,9 +107,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encodedExileCertificate_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, encodedExileCertificate_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exileCertificateId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, exileCertificateId_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -169,9 +118,6 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encodedExileCertificate_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, encodedExileCertificate_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exileCertificateId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, exileCertificateId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -190,8 +136,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getEncodedExileCertificate()
         .equals(other.getEncodedExileCertificate())) return false;
-    if (!getExileCertificateId()
-        .equals(other.getExileCertificateId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -205,8 +149,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ENCODED_EXILE_CERTIFICATE_FIELD_NUMBER;
     hash = (53 * hash) + getEncodedExileCertificate().hashCode();
-    hash = (37 * hash) + EXILE_CERTIFICATE_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getExileCertificateId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -343,7 +285,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       encodedExileCertificate_ = "";
-      exileCertificateId_ = "";
       return this;
     }
 
@@ -379,9 +320,6 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.encodedExileCertificate_ = encodedExileCertificate_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.exileCertificateId_ = exileCertificateId_;
       }
     }
 
@@ -434,11 +372,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getExileCertificateId().isEmpty()) {
-        exileCertificateId_ = other.exileCertificateId_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -470,11 +403,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              exileCertificateId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -580,98 +508,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       encodedExileCertificate_ = value;
       bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object exileCertificateId_ = "";
-    /**
-     * <pre>
-     * The id of the exile certificate that was created.
-     * </pre>
-     *
-     * <code>string exile_certificate_id = 2 [json_name = "exileCertificateId"];</code>
-     * @return The exileCertificateId.
-     */
-    public java.lang.String getExileCertificateId() {
-      java.lang.Object ref = exileCertificateId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        exileCertificateId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The id of the exile certificate that was created.
-     * </pre>
-     *
-     * <code>string exile_certificate_id = 2 [json_name = "exileCertificateId"];</code>
-     * @return The bytes for exileCertificateId.
-     */
-    public com.google.protobuf.ByteString
-        getExileCertificateIdBytes() {
-      java.lang.Object ref = exileCertificateId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        exileCertificateId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The id of the exile certificate that was created.
-     * </pre>
-     *
-     * <code>string exile_certificate_id = 2 [json_name = "exileCertificateId"];</code>
-     * @param value The exileCertificateId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setExileCertificateId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      exileCertificateId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The id of the exile certificate that was created.
-     * </pre>
-     *
-     * <code>string exile_certificate_id = 2 [json_name = "exileCertificateId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearExileCertificateId() {
-      exileCertificateId_ = getDefaultInstance().getExileCertificateId();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The id of the exile certificate that was created.
-     * </pre>
-     *
-     * <code>string exile_certificate_id = 2 [json_name = "exileCertificateId"];</code>
-     * @param value The bytes for exileCertificateId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setExileCertificateIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      exileCertificateId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
