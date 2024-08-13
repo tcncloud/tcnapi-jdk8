@@ -275,46 +275,46 @@ public interface PaymentFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.PaymentStellaECheckOrBuilder getPaymentstellaEcheckOrBuilder();
 
   /**
-   * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
-   * @return Whether the finviCc field is set.
+   * <code>.api.commons.integrations.PaymentSwervePayCC swervePay_cc = 19 [json_name = "swervePayCc"];</code>
+   * @return Whether the swervePayCc field is set.
    */
-  boolean hasFinviCc();
+  boolean hasSwervePayCc();
   /**
-   * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
-   * @return The finviCc.
+   * <code>.api.commons.integrations.PaymentSwervePayCC swervePay_cc = 19 [json_name = "swervePayCc"];</code>
+   * @return The swervePayCc.
    */
-  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCC getFinviCc();
+  com.tcn.cloud.api.api.commons.integrations.PaymentSwervePayCC getSwervePayCc();
   /**
-   * <code>.api.commons.integrations.PaymentFinviCC finvi_cc = 19 [json_name = "finviCc"];</code>
+   * <code>.api.commons.integrations.PaymentSwervePayCC swervePay_cc = 19 [json_name = "swervePayCc"];</code>
    */
-  com.tcn.cloud.api.api.commons.integrations.PaymentFinviCCOrBuilder getFinviCcOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.PaymentSwervePayCCOrBuilder getSwervePayCcOrBuilder();
 
   /**
    * <pre>
    * Had to skip ID 20 here because it is already used for payment_fields
    * </pre>
    *
-   * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
-   * @return Whether the finviAch field is set.
+   * <code>.api.commons.integrations.PaymentSwervePayACH swervePay_ach = 21 [json_name = "swervePayAch"];</code>
+   * @return Whether the swervePayAch field is set.
    */
-  boolean hasFinviAch();
+  boolean hasSwervePayAch();
   /**
    * <pre>
    * Had to skip ID 20 here because it is already used for payment_fields
    * </pre>
    *
-   * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
-   * @return The finviAch.
+   * <code>.api.commons.integrations.PaymentSwervePayACH swervePay_ach = 21 [json_name = "swervePayAch"];</code>
+   * @return The swervePayAch.
    */
-  com.tcn.cloud.api.api.commons.integrations.PaymentFinviACH getFinviAch();
+  com.tcn.cloud.api.api.commons.integrations.PaymentSwervePayACH getSwervePayAch();
   /**
    * <pre>
    * Had to skip ID 20 here because it is already used for payment_fields
    * </pre>
    *
-   * <code>.api.commons.integrations.PaymentFinviACH finvi_ach = 21 [json_name = "finviAch"];</code>
+   * <code>.api.commons.integrations.PaymentSwervePayACH swervePay_ach = 21 [json_name = "swervePayAch"];</code>
    */
-  com.tcn.cloud.api.api.commons.integrations.PaymentFinviACHOrBuilder getFinviAchOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.PaymentSwervePayACHOrBuilder getSwervePayAchOrBuilder();
 
   /**
    * <pre>

@@ -3230,334 +3230,94 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteSutherlandrevPaymentConnectOrBuilder getSutherlandrevPaymentConnectOrBuilder();
 
   /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
-   * @return Whether the finviCreateCustomer field is set.
+   * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4301 [json_name = "finviExileQueryRecords"];</code>
+   * @return Whether the finviExileQueryRecords field is set.
    */
-  boolean hasFinviCreateCustomer();
+  boolean hasFinviExileQueryRecords();
   /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
-   * @return The finviCreateCustomer.
+   * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4301 [json_name = "finviExileQueryRecords"];</code>
+   * @return The finviExileQueryRecords.
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomer getFinviCreateCustomer();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecords getFinviExileQueryRecords();
   /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateCustomer finvi_create_customer = 4301 [json_name = "finviCreateCustomer"];</code>
+   * <code>.api.commons.integrations.ExecuteFinviExileQueryRecords finvi_exile_query_records = 4301 [json_name = "finviExileQueryRecords"];</code>
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateCustomerOrBuilder getFinviCreateCustomerOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileQueryRecordsOrBuilder getFinviExileQueryRecordsOrBuilder();
 
   /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4302 [json_name = "finviQueryCustomerDetails"];</code>
-   * @return Whether the finviQueryCustomerDetails field is set.
+   * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4302 [json_name = "finviExileReadFields"];</code>
+   * @return Whether the finviExileReadFields field is set.
    */
-  boolean hasFinviQueryCustomerDetails();
+  boolean hasFinviExileReadFields();
   /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4302 [json_name = "finviQueryCustomerDetails"];</code>
-   * @return The finviQueryCustomerDetails.
+   * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4302 [json_name = "finviExileReadFields"];</code>
+   * @return The finviExileReadFields.
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetails getFinviQueryCustomerDetails();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFields getFinviExileReadFields();
   /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerDetails finvi_query_customer_details = 4302 [json_name = "finviQueryCustomerDetails"];</code>
+   * <code>.api.commons.integrations.ExecuteFinviExileReadFields finvi_exile_read_fields = 4302 [json_name = "finviExileReadFields"];</code>
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerDetailsOrBuilder getFinviQueryCustomerDetailsOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileReadFieldsOrBuilder getFinviExileReadFieldsOrBuilder();
 
   /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4303 [json_name = "finviQueryCustomerTokenDetails"];</code>
-   * @return Whether the finviQueryCustomerTokenDetails field is set.
+   * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4303 [json_name = "finviExileWriteFields"];</code>
+   * @return Whether the finviExileWriteFields field is set.
    */
-  boolean hasFinviQueryCustomerTokenDetails();
+  boolean hasFinviExileWriteFields();
   /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4303 [json_name = "finviQueryCustomerTokenDetails"];</code>
-   * @return The finviQueryCustomerTokenDetails.
+   * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4303 [json_name = "finviExileWriteFields"];</code>
+   * @return The finviExileWriteFields.
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails getFinviQueryCustomerTokenDetails();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFields getFinviExileWriteFields();
   /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetails finvi_query_customer_token_details = 4303 [json_name = "finviQueryCustomerTokenDetails"];</code>
+   * <code>.api.commons.integrations.ExecuteFinviExileWriteFields finvi_exile_write_fields = 4303 [json_name = "finviExileWriteFields"];</code>
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTokenDetailsOrBuilder getFinviQueryCustomerTokenDetailsOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileWriteFieldsOrBuilder getFinviExileWriteFieldsOrBuilder();
 
   /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4304 [json_name = "finviQueryCustomerTokens"];</code>
-   * @return Whether the finviQueryCustomerTokens field is set.
+   * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4304 [json_name = "finviExileExecuteLogic"];</code>
+   * @return Whether the finviExileExecuteLogic field is set.
    */
-  boolean hasFinviQueryCustomerTokens();
+  boolean hasFinviExileExecuteLogic();
   /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4304 [json_name = "finviQueryCustomerTokens"];</code>
-   * @return The finviQueryCustomerTokens.
+   * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4304 [json_name = "finviExileExecuteLogic"];</code>
+   * @return The finviExileExecuteLogic.
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens getFinviQueryCustomerTokens();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogic getFinviExileExecuteLogic();
   /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokens finvi_query_customer_tokens = 4304 [json_name = "finviQueryCustomerTokens"];</code>
+   * <code>.api.commons.integrations.ExecuteFinviExileExecuteLogic finvi_exile_execute_logic = 4304 [json_name = "finviExileExecuteLogic"];</code>
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryCustomerTokensOrBuilder getFinviQueryCustomerTokensOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileExecuteLogicOrBuilder getFinviExileExecuteLogicOrBuilder();
 
   /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4305 [json_name = "finviQueryCustomerTransactions"];</code>
-   * @return Whether the finviQueryCustomerTransactions field is set.
+   * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4305 [json_name = "finviExileCreatePayment"];</code>
+   * @return Whether the finviExileCreatePayment field is set.
    */
-  boolean hasFinviQueryCustomerTransactions();
+  boolean hasFinviExileCreatePayment();
   /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4305 [json_name = "finviQueryCustomerTransactions"];</code>
-   * @return The finviQueryCustomerTransactions.
+   * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4305 [json_name = "finviExileCreatePayment"];</code>
+   * @return The finviExileCreatePayment.
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactions getFinviQueryCustomerTransactions();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePayment getFinviExileCreatePayment();
   /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryCustomerTransactions finvi_query_customer_transactions = 4305 [json_name = "finviQueryCustomerTransactions"];</code>
+   * <code>.api.commons.integrations.ExecuteFinviExileCreatePayment finvi_exile_create_payment = 4305 [json_name = "finviExileCreatePayment"];</code>
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomerTransactionsOrBuilder getFinviQueryCustomerTransactionsOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExileCreatePaymentOrBuilder getFinviExileCreatePaymentOrBuilder();
 
   /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4306 [json_name = "finviQueryCustomers"];</code>
-   * @return Whether the finviQueryCustomers field is set.
+   * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4306 [json_name = "finviExilePopAccount"];</code>
+   * @return Whether the finviExilePopAccount field is set.
    */
-  boolean hasFinviQueryCustomers();
+  boolean hasFinviExilePopAccount();
   /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4306 [json_name = "finviQueryCustomers"];</code>
-   * @return The finviQueryCustomers.
+   * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4306 [json_name = "finviExilePopAccount"];</code>
+   * @return The finviExilePopAccount.
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomers getFinviQueryCustomers();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccount getFinviExilePopAccount();
   /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryCustomers finvi_query_customers = 4306 [json_name = "finviQueryCustomers"];</code>
+   * <code>.api.commons.integrations.ExecuteFinviExilePopAccount finvi_exile_pop_account = 4306 [json_name = "finviExilePopAccount"];</code>
    */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryCustomersOrBuilder getFinviQueryCustomersOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4307 [json_name = "finviQueryTransactionDetails"];</code>
-   * @return Whether the finviQueryTransactionDetails field is set.
-   */
-  boolean hasFinviQueryTransactionDetails();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4307 [json_name = "finviQueryTransactionDetails"];</code>
-   * @return The finviQueryTransactionDetails.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails getFinviQueryTransactionDetails();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetails finvi_query_transaction_details = 4307 [json_name = "finviQueryTransactionDetails"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryQueryTransactionDetailsOrBuilder getFinviQueryTransactionDetailsOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4308 [json_name = "finviQueryTransactions"];</code>
-   * @return Whether the finviQueryTransactions field is set.
-   */
-  boolean hasFinviQueryTransactions();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4308 [json_name = "finviQueryTransactions"];</code>
-   * @return The finviQueryTransactions.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactions getFinviQueryTransactions();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviQueryTransactions finvi_query_transactions = 4308 [json_name = "finviQueryTransactions"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviQueryTransactionsOrBuilder getFinviQueryTransactionsOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4309 [json_name = "finviRemoveCustomerToken"];</code>
-   * @return Whether the finviRemoveCustomerToken field is set.
-   */
-  boolean hasFinviRemoveCustomerToken();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4309 [json_name = "finviRemoveCustomerToken"];</code>
-   * @return The finviRemoveCustomerToken.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerToken getFinviRemoveCustomerToken();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviRemoveCustomerToken finvi_remove_customer_token = 4309 [json_name = "finviRemoveCustomerToken"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviRemoveCustomerTokenOrBuilder getFinviRemoveCustomerTokenOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4310 [json_name = "finviUpdateCustomer"];</code>
-   * @return Whether the finviUpdateCustomer field is set.
-   */
-  boolean hasFinviUpdateCustomer();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4310 [json_name = "finviUpdateCustomer"];</code>
-   * @return The finviUpdateCustomer.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomer getFinviUpdateCustomer();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviUpdateCustomer finvi_update_customer = 4310 [json_name = "finviUpdateCustomer"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviUpdateCustomerOrBuilder getFinviUpdateCustomerOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionAuth finvi_create_transaction_auth = 4311 [json_name = "finviCreateTransactionAuth"];</code>
-   * @return Whether the finviCreateTransactionAuth field is set.
-   */
-  boolean hasFinviCreateTransactionAuth();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionAuth finvi_create_transaction_auth = 4311 [json_name = "finviCreateTransactionAuth"];</code>
-   * @return The finviCreateTransactionAuth.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionAuth getFinviCreateTransactionAuth();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionAuth finvi_create_transaction_auth = 4311 [json_name = "finviCreateTransactionAuth"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionAuthOrBuilder getFinviCreateTransactionAuthOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionCapture finvi_create_transaction_capture = 4312 [json_name = "finviCreateTransactionCapture"];</code>
-   * @return Whether the finviCreateTransactionCapture field is set.
-   */
-  boolean hasFinviCreateTransactionCapture();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionCapture finvi_create_transaction_capture = 4312 [json_name = "finviCreateTransactionCapture"];</code>
-   * @return The finviCreateTransactionCapture.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionCapture getFinviCreateTransactionCapture();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionCapture finvi_create_transaction_capture = 4312 [json_name = "finviCreateTransactionCapture"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionCaptureOrBuilder getFinviCreateTransactionCaptureOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionCredit finvi_create_transaction_credit = 4313 [json_name = "finviCreateTransactionCredit"];</code>
-   * @return Whether the finviCreateTransactionCredit field is set.
-   */
-  boolean hasFinviCreateTransactionCredit();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionCredit finvi_create_transaction_credit = 4313 [json_name = "finviCreateTransactionCredit"];</code>
-   * @return The finviCreateTransactionCredit.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionCredit getFinviCreateTransactionCredit();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionCredit finvi_create_transaction_credit = 4313 [json_name = "finviCreateTransactionCredit"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionCreditOrBuilder getFinviCreateTransactionCreditOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionRefund finvi_create_transaction_refund = 4314 [json_name = "finviCreateTransactionRefund"];</code>
-   * @return Whether the finviCreateTransactionRefund field is set.
-   */
-  boolean hasFinviCreateTransactionRefund();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionRefund finvi_create_transaction_refund = 4314 [json_name = "finviCreateTransactionRefund"];</code>
-   * @return The finviCreateTransactionRefund.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionRefund getFinviCreateTransactionRefund();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionRefund finvi_create_transaction_refund = 4314 [json_name = "finviCreateTransactionRefund"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionRefundOrBuilder getFinviCreateTransactionRefundOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionSale finvi_create_transaction_sale = 4315 [json_name = "finviCreateTransactionSale"];</code>
-   * @return Whether the finviCreateTransactionSale field is set.
-   */
-  boolean hasFinviCreateTransactionSale();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionSale finvi_create_transaction_sale = 4315 [json_name = "finviCreateTransactionSale"];</code>
-   * @return The finviCreateTransactionSale.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionSale getFinviCreateTransactionSale();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionSale finvi_create_transaction_sale = 4315 [json_name = "finviCreateTransactionSale"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionSaleOrBuilder getFinviCreateTransactionSaleOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionValidate finvi_create_transaction_validate = 4316 [json_name = "finviCreateTransactionValidate"];</code>
-   * @return Whether the finviCreateTransactionValidate field is set.
-   */
-  boolean hasFinviCreateTransactionValidate();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionValidate finvi_create_transaction_validate = 4316 [json_name = "finviCreateTransactionValidate"];</code>
-   * @return The finviCreateTransactionValidate.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionValidate getFinviCreateTransactionValidate();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviCreateTransactionValidate finvi_create_transaction_validate = 4316 [json_name = "finviCreateTransactionValidate"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviCreateTransactionValidateOrBuilder getFinviCreateTransactionValidateOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionAuth finvi_process_new_transaction_auth = 4317 [json_name = "finviProcessNewTransactionAuth"];</code>
-   * @return Whether the finviProcessNewTransactionAuth field is set.
-   */
-  boolean hasFinviProcessNewTransactionAuth();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionAuth finvi_process_new_transaction_auth = 4317 [json_name = "finviProcessNewTransactionAuth"];</code>
-   * @return The finviProcessNewTransactionAuth.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionAuth getFinviProcessNewTransactionAuth();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionAuth finvi_process_new_transaction_auth = 4317 [json_name = "finviProcessNewTransactionAuth"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionAuthOrBuilder getFinviProcessNewTransactionAuthOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionCapture finvi_process_new_transaction_capture = 4318 [json_name = "finviProcessNewTransactionCapture"];</code>
-   * @return Whether the finviProcessNewTransactionCapture field is set.
-   */
-  boolean hasFinviProcessNewTransactionCapture();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionCapture finvi_process_new_transaction_capture = 4318 [json_name = "finviProcessNewTransactionCapture"];</code>
-   * @return The finviProcessNewTransactionCapture.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionCapture getFinviProcessNewTransactionCapture();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionCapture finvi_process_new_transaction_capture = 4318 [json_name = "finviProcessNewTransactionCapture"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionCaptureOrBuilder getFinviProcessNewTransactionCaptureOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionCredit finvi_process_new_transaction_credit = 4319 [json_name = "finviProcessNewTransactionCredit"];</code>
-   * @return Whether the finviProcessNewTransactionCredit field is set.
-   */
-  boolean hasFinviProcessNewTransactionCredit();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionCredit finvi_process_new_transaction_credit = 4319 [json_name = "finviProcessNewTransactionCredit"];</code>
-   * @return The finviProcessNewTransactionCredit.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionCredit getFinviProcessNewTransactionCredit();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionCredit finvi_process_new_transaction_credit = 4319 [json_name = "finviProcessNewTransactionCredit"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionCreditOrBuilder getFinviProcessNewTransactionCreditOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionRefund finvi_process_new_transaction_refund = 4320 [json_name = "finviProcessNewTransactionRefund"];</code>
-   * @return Whether the finviProcessNewTransactionRefund field is set.
-   */
-  boolean hasFinviProcessNewTransactionRefund();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionRefund finvi_process_new_transaction_refund = 4320 [json_name = "finviProcessNewTransactionRefund"];</code>
-   * @return The finviProcessNewTransactionRefund.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionRefund getFinviProcessNewTransactionRefund();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionRefund finvi_process_new_transaction_refund = 4320 [json_name = "finviProcessNewTransactionRefund"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionRefundOrBuilder getFinviProcessNewTransactionRefundOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionSale finvi_process_new_transaction_sale = 4321 [json_name = "finviProcessNewTransactionSale"];</code>
-   * @return Whether the finviProcessNewTransactionSale field is set.
-   */
-  boolean hasFinviProcessNewTransactionSale();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionSale finvi_process_new_transaction_sale = 4321 [json_name = "finviProcessNewTransactionSale"];</code>
-   * @return The finviProcessNewTransactionSale.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionSale getFinviProcessNewTransactionSale();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionSale finvi_process_new_transaction_sale = 4321 [json_name = "finviProcessNewTransactionSale"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionSaleOrBuilder getFinviProcessNewTransactionSaleOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionValidate finvi_process_new_transaction_validate = 4322 [json_name = "finviProcessNewTransactionValidate"];</code>
-   * @return Whether the finviProcessNewTransactionValidate field is set.
-   */
-  boolean hasFinviProcessNewTransactionValidate();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionValidate finvi_process_new_transaction_validate = 4322 [json_name = "finviProcessNewTransactionValidate"];</code>
-   * @return The finviProcessNewTransactionValidate.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionValidate getFinviProcessNewTransactionValidate();
-  /**
-   * <code>.api.commons.integrations.ExecuteFinviProcessNewTransactionValidate finvi_process_new_transaction_validate = 4322 [json_name = "finviProcessNewTransactionValidate"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviProcessNewTransactionValidateOrBuilder getFinviProcessNewTransactionValidateOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFinviExilePopAccountOrBuilder getFinviExilePopAccountOrBuilder();
 
   /**
    * <code>.api.commons.integrations.ExecuteNavigaDTICircCreatePayment naviga_dti_circ_create_payment = 4401 [json_name = "navigaDtiCircCreatePayment"];</code>
@@ -3768,6 +3528,336 @@ public interface ExecuteFlowOrBuilder extends
    * <code>.api.commons.integrations.ExecuteNavigaDTICSStopTrans naviga_dti_cs_stop_trans = 4512 [json_name = "navigaDtiCsStopTrans"];</code>
    */
   com.tcn.cloud.api.api.commons.integrations.ExecuteNavigaDTICSStopTransOrBuilder getNavigaDtiCsStopTransOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateCustomer swervepay_create_customer = 4601 [json_name = "swervepayCreateCustomer"];</code>
+   * @return Whether the swervepayCreateCustomer field is set.
+   */
+  boolean hasSwervepayCreateCustomer();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateCustomer swervepay_create_customer = 4601 [json_name = "swervepayCreateCustomer"];</code>
+   * @return The swervepayCreateCustomer.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayCreateCustomer getSwervepayCreateCustomer();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateCustomer swervepay_create_customer = 4601 [json_name = "swervepayCreateCustomer"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayCreateCustomerOrBuilder getSwervepayCreateCustomerOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryCustomerDetails swervepay_query_customer_details = 4602 [json_name = "swervepayQueryCustomerDetails"];</code>
+   * @return Whether the swervepayQueryCustomerDetails field is set.
+   */
+  boolean hasSwervepayQueryCustomerDetails();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryCustomerDetails swervepay_query_customer_details = 4602 [json_name = "swervepayQueryCustomerDetails"];</code>
+   * @return The swervepayQueryCustomerDetails.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayQueryCustomerDetails getSwervepayQueryCustomerDetails();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryCustomerDetails swervepay_query_customer_details = 4602 [json_name = "swervepayQueryCustomerDetails"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayQueryCustomerDetailsOrBuilder getSwervepayQueryCustomerDetailsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryCustomerTokenDetails swervepay_query_customer_token_details = 4603 [json_name = "swervepayQueryCustomerTokenDetails"];</code>
+   * @return Whether the swervepayQueryCustomerTokenDetails field is set.
+   */
+  boolean hasSwervepayQueryCustomerTokenDetails();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryCustomerTokenDetails swervepay_query_customer_token_details = 4603 [json_name = "swervepayQueryCustomerTokenDetails"];</code>
+   * @return The swervepayQueryCustomerTokenDetails.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayQueryCustomerTokenDetails getSwervepayQueryCustomerTokenDetails();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryCustomerTokenDetails swervepay_query_customer_token_details = 4603 [json_name = "swervepayQueryCustomerTokenDetails"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayQueryCustomerTokenDetailsOrBuilder getSwervepayQueryCustomerTokenDetailsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryQueryCustomerTokens swervepay_query_customer_tokens = 4604 [json_name = "swervepayQueryCustomerTokens"];</code>
+   * @return Whether the swervepayQueryCustomerTokens field is set.
+   */
+  boolean hasSwervepayQueryCustomerTokens();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryQueryCustomerTokens swervepay_query_customer_tokens = 4604 [json_name = "swervepayQueryCustomerTokens"];</code>
+   * @return The swervepayQueryCustomerTokens.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayQueryQueryCustomerTokens getSwervepayQueryCustomerTokens();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryQueryCustomerTokens swervepay_query_customer_tokens = 4604 [json_name = "swervepayQueryCustomerTokens"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayQueryQueryCustomerTokensOrBuilder getSwervepayQueryCustomerTokensOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryCustomerTransactions swervepay_query_customer_transactions = 4605 [json_name = "swervepayQueryCustomerTransactions"];</code>
+   * @return Whether the swervepayQueryCustomerTransactions field is set.
+   */
+  boolean hasSwervepayQueryCustomerTransactions();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryCustomerTransactions swervepay_query_customer_transactions = 4605 [json_name = "swervepayQueryCustomerTransactions"];</code>
+   * @return The swervepayQueryCustomerTransactions.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayQueryCustomerTransactions getSwervepayQueryCustomerTransactions();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryCustomerTransactions swervepay_query_customer_transactions = 4605 [json_name = "swervepayQueryCustomerTransactions"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayQueryCustomerTransactionsOrBuilder getSwervepayQueryCustomerTransactionsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryCustomers swervepay_query_customers = 4606 [json_name = "swervepayQueryCustomers"];</code>
+   * @return Whether the swervepayQueryCustomers field is set.
+   */
+  boolean hasSwervepayQueryCustomers();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryCustomers swervepay_query_customers = 4606 [json_name = "swervepayQueryCustomers"];</code>
+   * @return The swervepayQueryCustomers.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayQueryCustomers getSwervepayQueryCustomers();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryCustomers swervepay_query_customers = 4606 [json_name = "swervepayQueryCustomers"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayQueryCustomersOrBuilder getSwervepayQueryCustomersOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryQueryTransactionDetails swervepay_query_transaction_details = 4607 [json_name = "swervepayQueryTransactionDetails"];</code>
+   * @return Whether the swervepayQueryTransactionDetails field is set.
+   */
+  boolean hasSwervepayQueryTransactionDetails();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryQueryTransactionDetails swervepay_query_transaction_details = 4607 [json_name = "swervepayQueryTransactionDetails"];</code>
+   * @return The swervepayQueryTransactionDetails.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayQueryQueryTransactionDetails getSwervepayQueryTransactionDetails();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryQueryTransactionDetails swervepay_query_transaction_details = 4607 [json_name = "swervepayQueryTransactionDetails"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayQueryQueryTransactionDetailsOrBuilder getSwervepayQueryTransactionDetailsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryTransactions swervepay_query_transactions = 4608 [json_name = "swervepayQueryTransactions"];</code>
+   * @return Whether the swervepayQueryTransactions field is set.
+   */
+  boolean hasSwervepayQueryTransactions();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryTransactions swervepay_query_transactions = 4608 [json_name = "swervepayQueryTransactions"];</code>
+   * @return The swervepayQueryTransactions.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayQueryTransactions getSwervepayQueryTransactions();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayQueryTransactions swervepay_query_transactions = 4608 [json_name = "swervepayQueryTransactions"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayQueryTransactionsOrBuilder getSwervepayQueryTransactionsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayRemoveCustomerToken swervepay_remove_customer_token = 4609 [json_name = "swervepayRemoveCustomerToken"];</code>
+   * @return Whether the swervepayRemoveCustomerToken field is set.
+   */
+  boolean hasSwervepayRemoveCustomerToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayRemoveCustomerToken swervepay_remove_customer_token = 4609 [json_name = "swervepayRemoveCustomerToken"];</code>
+   * @return The swervepayRemoveCustomerToken.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayRemoveCustomerToken getSwervepayRemoveCustomerToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayRemoveCustomerToken swervepay_remove_customer_token = 4609 [json_name = "swervepayRemoveCustomerToken"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayRemoveCustomerTokenOrBuilder getSwervepayRemoveCustomerTokenOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayUpdateCustomer swervepay_update_customer = 4610 [json_name = "swervepayUpdateCustomer"];</code>
+   * @return Whether the swervepayUpdateCustomer field is set.
+   */
+  boolean hasSwervepayUpdateCustomer();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayUpdateCustomer swervepay_update_customer = 4610 [json_name = "swervepayUpdateCustomer"];</code>
+   * @return The swervepayUpdateCustomer.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayUpdateCustomer getSwervepayUpdateCustomer();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayUpdateCustomer swervepay_update_customer = 4610 [json_name = "swervepayUpdateCustomer"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayUpdateCustomerOrBuilder getSwervepayUpdateCustomerOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionAuth swervepay_create_transaction_auth = 4611 [json_name = "swervepayCreateTransactionAuth"];</code>
+   * @return Whether the swervepayCreateTransactionAuth field is set.
+   */
+  boolean hasSwervepayCreateTransactionAuth();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionAuth swervepay_create_transaction_auth = 4611 [json_name = "swervepayCreateTransactionAuth"];</code>
+   * @return The swervepayCreateTransactionAuth.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayCreateTransactionAuth getSwervepayCreateTransactionAuth();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionAuth swervepay_create_transaction_auth = 4611 [json_name = "swervepayCreateTransactionAuth"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayCreateTransactionAuthOrBuilder getSwervepayCreateTransactionAuthOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionCapture swervepay_create_transaction_capture = 4612 [json_name = "swervepayCreateTransactionCapture"];</code>
+   * @return Whether the swervepayCreateTransactionCapture field is set.
+   */
+  boolean hasSwervepayCreateTransactionCapture();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionCapture swervepay_create_transaction_capture = 4612 [json_name = "swervepayCreateTransactionCapture"];</code>
+   * @return The swervepayCreateTransactionCapture.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayCreateTransactionCapture getSwervepayCreateTransactionCapture();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionCapture swervepay_create_transaction_capture = 4612 [json_name = "swervepayCreateTransactionCapture"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayCreateTransactionCaptureOrBuilder getSwervepayCreateTransactionCaptureOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionCredit swervepay_create_transaction_credit = 4613 [json_name = "swervepayCreateTransactionCredit"];</code>
+   * @return Whether the swervepayCreateTransactionCredit field is set.
+   */
+  boolean hasSwervepayCreateTransactionCredit();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionCredit swervepay_create_transaction_credit = 4613 [json_name = "swervepayCreateTransactionCredit"];</code>
+   * @return The swervepayCreateTransactionCredit.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayCreateTransactionCredit getSwervepayCreateTransactionCredit();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionCredit swervepay_create_transaction_credit = 4613 [json_name = "swervepayCreateTransactionCredit"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayCreateTransactionCreditOrBuilder getSwervepayCreateTransactionCreditOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionRefund swervepay_create_transaction_refund = 4614 [json_name = "swervepayCreateTransactionRefund"];</code>
+   * @return Whether the swervepayCreateTransactionRefund field is set.
+   */
+  boolean hasSwervepayCreateTransactionRefund();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionRefund swervepay_create_transaction_refund = 4614 [json_name = "swervepayCreateTransactionRefund"];</code>
+   * @return The swervepayCreateTransactionRefund.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayCreateTransactionRefund getSwervepayCreateTransactionRefund();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionRefund swervepay_create_transaction_refund = 4614 [json_name = "swervepayCreateTransactionRefund"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayCreateTransactionRefundOrBuilder getSwervepayCreateTransactionRefundOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionSale swervepay_create_transaction_sale = 4615 [json_name = "swervepayCreateTransactionSale"];</code>
+   * @return Whether the swervepayCreateTransactionSale field is set.
+   */
+  boolean hasSwervepayCreateTransactionSale();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionSale swervepay_create_transaction_sale = 4615 [json_name = "swervepayCreateTransactionSale"];</code>
+   * @return The swervepayCreateTransactionSale.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayCreateTransactionSale getSwervepayCreateTransactionSale();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionSale swervepay_create_transaction_sale = 4615 [json_name = "swervepayCreateTransactionSale"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayCreateTransactionSaleOrBuilder getSwervepayCreateTransactionSaleOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionValidate swervepay_create_transaction_validate = 4616 [json_name = "swervepayCreateTransactionValidate"];</code>
+   * @return Whether the swervepayCreateTransactionValidate field is set.
+   */
+  boolean hasSwervepayCreateTransactionValidate();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionValidate swervepay_create_transaction_validate = 4616 [json_name = "swervepayCreateTransactionValidate"];</code>
+   * @return The swervepayCreateTransactionValidate.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayCreateTransactionValidate getSwervepayCreateTransactionValidate();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayCreateTransactionValidate swervepay_create_transaction_validate = 4616 [json_name = "swervepayCreateTransactionValidate"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayCreateTransactionValidateOrBuilder getSwervepayCreateTransactionValidateOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionAuth swervepay_process_new_transaction_auth = 4617 [json_name = "swervepayProcessNewTransactionAuth"];</code>
+   * @return Whether the swervepayProcessNewTransactionAuth field is set.
+   */
+  boolean hasSwervepayProcessNewTransactionAuth();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionAuth swervepay_process_new_transaction_auth = 4617 [json_name = "swervepayProcessNewTransactionAuth"];</code>
+   * @return The swervepayProcessNewTransactionAuth.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionAuth getSwervepayProcessNewTransactionAuth();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionAuth swervepay_process_new_transaction_auth = 4617 [json_name = "swervepayProcessNewTransactionAuth"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionAuthOrBuilder getSwervepayProcessNewTransactionAuthOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionCapture swervepay_process_new_transaction_capture = 4618 [json_name = "swervepayProcessNewTransactionCapture"];</code>
+   * @return Whether the swervepayProcessNewTransactionCapture field is set.
+   */
+  boolean hasSwervepayProcessNewTransactionCapture();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionCapture swervepay_process_new_transaction_capture = 4618 [json_name = "swervepayProcessNewTransactionCapture"];</code>
+   * @return The swervepayProcessNewTransactionCapture.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionCapture getSwervepayProcessNewTransactionCapture();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionCapture swervepay_process_new_transaction_capture = 4618 [json_name = "swervepayProcessNewTransactionCapture"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionCaptureOrBuilder getSwervepayProcessNewTransactionCaptureOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionCredit swervepay_process_new_transaction_credit = 4619 [json_name = "swervepayProcessNewTransactionCredit"];</code>
+   * @return Whether the swervepayProcessNewTransactionCredit field is set.
+   */
+  boolean hasSwervepayProcessNewTransactionCredit();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionCredit swervepay_process_new_transaction_credit = 4619 [json_name = "swervepayProcessNewTransactionCredit"];</code>
+   * @return The swervepayProcessNewTransactionCredit.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionCredit getSwervepayProcessNewTransactionCredit();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionCredit swervepay_process_new_transaction_credit = 4619 [json_name = "swervepayProcessNewTransactionCredit"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionCreditOrBuilder getSwervepayProcessNewTransactionCreditOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionRefund swervepay_process_new_transaction_refund = 4620 [json_name = "swervepayProcessNewTransactionRefund"];</code>
+   * @return Whether the swervepayProcessNewTransactionRefund field is set.
+   */
+  boolean hasSwervepayProcessNewTransactionRefund();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionRefund swervepay_process_new_transaction_refund = 4620 [json_name = "swervepayProcessNewTransactionRefund"];</code>
+   * @return The swervepayProcessNewTransactionRefund.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionRefund getSwervepayProcessNewTransactionRefund();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionRefund swervepay_process_new_transaction_refund = 4620 [json_name = "swervepayProcessNewTransactionRefund"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionRefundOrBuilder getSwervepayProcessNewTransactionRefundOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionSale swervepay_process_new_transaction_sale = 4621 [json_name = "swervepayProcessNewTransactionSale"];</code>
+   * @return Whether the swervepayProcessNewTransactionSale field is set.
+   */
+  boolean hasSwervepayProcessNewTransactionSale();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionSale swervepay_process_new_transaction_sale = 4621 [json_name = "swervepayProcessNewTransactionSale"];</code>
+   * @return The swervepayProcessNewTransactionSale.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionSale getSwervepayProcessNewTransactionSale();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionSale swervepay_process_new_transaction_sale = 4621 [json_name = "swervepayProcessNewTransactionSale"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionSaleOrBuilder getSwervepayProcessNewTransactionSaleOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionValidate swervepay_process_new_transaction_validate = 4622 [json_name = "swervepayProcessNewTransactionValidate"];</code>
+   * @return Whether the swervepayProcessNewTransactionValidate field is set.
+   */
+  boolean hasSwervepayProcessNewTransactionValidate();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionValidate swervepay_process_new_transaction_validate = 4622 [json_name = "swervepayProcessNewTransactionValidate"];</code>
+   * @return The swervepayProcessNewTransactionValidate.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionValidate getSwervepayProcessNewTransactionValidate();
+  /**
+   * <code>.api.commons.integrations.ExecuteSwervepayProcessNewTransactionValidate swervepay_process_new_transaction_validate = 4622 [json_name = "swervepayProcessNewTransactionValidate"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionValidateOrBuilder getSwervepayProcessNewTransactionValidateOrBuilder();
 
   /**
    * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>

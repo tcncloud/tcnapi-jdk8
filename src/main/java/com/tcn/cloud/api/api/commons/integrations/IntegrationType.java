@@ -197,6 +197,10 @@ public enum IntegrationType
    */
   INTEGRATION_TYPE_NAVIGA_DTI_CS(4500),
   /**
+   * <code>INTEGRATION_TYPE_SWERVEPAY = 4600;</code>
+   */
+  INTEGRATION_TYPE_SWERVEPAY(4600),
+  /**
    * <code>INTEGRATION_TYPE_DEBUG = 5000;</code>
    */
   INTEGRATION_TYPE_DEBUG(5000),
@@ -388,6 +392,10 @@ public enum IntegrationType
    */
   public static final int INTEGRATION_TYPE_NAVIGA_DTI_CS_VALUE = 4500;
   /**
+   * <code>INTEGRATION_TYPE_SWERVEPAY = 4600;</code>
+   */
+  public static final int INTEGRATION_TYPE_SWERVEPAY_VALUE = 4600;
+  /**
    * <code>INTEGRATION_TYPE_DEBUG = 5000;</code>
    */
   public static final int INTEGRATION_TYPE_DEBUG_VALUE = 5000;
@@ -463,6 +471,7 @@ public enum IntegrationType
       case 4300: return INTEGRATION_TYPE_FINVI;
       case 4400: return INTEGRATION_TYPE_NAVIGA_DTI_CIRC;
       case 4500: return INTEGRATION_TYPE_NAVIGA_DTI_CS;
+      case 4600: return INTEGRATION_TYPE_SWERVEPAY;
       case 5000: return INTEGRATION_TYPE_DEBUG;
       default: return null;
     }
