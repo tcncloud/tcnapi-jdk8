@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.audit;
 
-public interface BillingExportInvoiceEventOrBuilder extends
+@java.lang.Deprecated public interface BillingExportInvoiceEventOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.audit.BillingExportInvoiceEvent)
     com.google.protobuf.MessageOrBuilder {
 

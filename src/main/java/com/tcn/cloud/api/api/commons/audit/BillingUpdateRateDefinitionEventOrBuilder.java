@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.audit;
 
-public interface BillingUpdateRateDefinitionEventOrBuilder extends
+@java.lang.Deprecated public interface BillingUpdateRateDefinitionEventOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.audit.BillingUpdateRateDefinitionEvent)
     com.google.protobuf.MessageOrBuilder {
 

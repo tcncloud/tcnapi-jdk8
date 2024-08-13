@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.audit;
 
-public interface BillingDeleteRateDefinitionEventOrBuilder extends
+@java.lang.Deprecated public interface BillingDeleteRateDefinitionEventOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.audit.BillingDeleteRateDefinitionEvent)
     com.google.protobuf.MessageOrBuilder {
 
