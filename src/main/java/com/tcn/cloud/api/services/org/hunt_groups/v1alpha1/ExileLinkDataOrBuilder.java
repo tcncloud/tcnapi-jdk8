@@ -8,31 +8,55 @@ public interface ExileLinkDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The record ID of the data.
+   * </pre>
+   *
    * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter record_id = 1 [json_name = "recordId"];</code>
    * @return Whether the recordId field is set.
    */
   boolean hasRecordId();
   /**
+   * <pre>
+   * The record ID of the data.
+   * </pre>
+   *
    * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter record_id = 1 [json_name = "recordId"];</code>
    * @return The recordId.
    */
   com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter getRecordId();
   /**
+   * <pre>
+   * The record ID of the data.
+   * </pre>
+   *
    * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter record_id = 1 [json_name = "recordId"];</code>
    */
   com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameterOrBuilder getRecordIdOrBuilder();
 
   /**
+   * <pre>
+   * The alternate ID of the data.
+   * </pre>
+   *
    * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternate_id = 2 [json_name = "alternateId"];</code>
    * @return Whether the alternateId field is set.
    */
   boolean hasAlternateId();
   /**
+   * <pre>
+   * The alternate ID of the data.
+   * </pre>
+   *
    * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternate_id = 2 [json_name = "alternateId"];</code>
    * @return The alternateId.
    */
   com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameter getAlternateId();
   /**
+   * <pre>
+   * The alternate ID of the data.
+   * </pre>
+   *
    * <code>.services.org.hunt_groups.v1alpha1.ExileLinkParameter alternate_id = 2 [json_name = "alternateId"];</code>
    */
   com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.ExileLinkParameterOrBuilder getAlternateIdOrBuilder();

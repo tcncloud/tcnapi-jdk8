@@ -39,6 +39,26 @@ public final class EntitiesProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupExileLinksResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupExileLinkRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupExileLinkRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupExileLinkResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupExileLinkResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupExileLinksRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupExileLinksRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupExileLinksResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupExileLinksResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -73,13 +93,23 @@ public final class EntitiesProto {
       "t_group_sid\030\001 \001(\003R\014huntGroupSid\"p\n\037ListH" +
       "untGroupExileLinksResponse\022M\n\013exile_link" +
       "s\030\001 \003(\0132,.services.org.hunt_groups.v1alp" +
-      "ha1.ExileLinkR\nexileLinksB\347\001\n3com.tcn.cl" +
-      "oud.api.services.org.hunt_groups.v1alpha" +
-      "1B\rEntitiesProtoP\001\242\002\003SOH\252\002 Services.Org." +
-      "HuntGroups.V1alpha1\312\002 Services\\Org\\HuntG" +
-      "roups\\V1alpha1\342\002,Services\\Org\\HuntGroups" +
-      "\\V1alpha1\\GPBMetadata\352\002#Services::Org::H" +
-      "untGroups::V1alpha1b\006proto3"
+      "ha1.ExileLinkR\nexileLinks\"\227\001\n\035CopyHuntGr" +
+      "oupExileLinkRequest\022)\n\021to_hunt_group_sid" +
+      "\030\001 \001(\003R\016toHuntGroupSid\022K\n\nexile_link\030\002 \001" +
+      "(\0132,.services.org.hunt_groups.v1alpha1.E" +
+      "xileLinkR\texileLink\" \n\036CopyHuntGroupExil" +
+      "eLinkResponse\"\227\001\n UpdateHuntGroupExileLi" +
+      "nksRequest\022$\n\016hunt_group_sid\030\001 \001(\003R\014hunt" +
+      "GroupSid\022M\n\013exile_links\030\002 \003(\0132,.services" +
+      ".org.hunt_groups.v1alpha1.ExileLinkR\nexi" +
+      "leLinks\"#\n!UpdateHuntGroupExileLinksResp" +
+      "onseB\347\001\n3com.tcn.cloud.api.services.org." +
+      "hunt_groups.v1alpha1B\rEntitiesProtoP\001\242\002\003" +
+      "SOH\252\002 Services.Org.HuntGroups.V1alpha1\312\002" +
+      " Services\\Org\\HuntGroups\\V1alpha1\342\002,Serv" +
+      "ices\\Org\\HuntGroups\\V1alpha1\\GPBMetadata" +
+      "\352\002#Services::Org::HuntGroups::V1alpha1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -116,6 +146,30 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_hunt_groups_v1alpha1_ListHuntGroupExileLinksResponse_descriptor,
         new java.lang.String[] { "ExileLinks", });
+    internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupExileLinkRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupExileLinkRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupExileLinkRequest_descriptor,
+        new java.lang.String[] { "ToHuntGroupSid", "ExileLink", });
+    internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupExileLinkResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupExileLinkResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupExileLinkResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupExileLinksRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupExileLinksRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupExileLinksRequest_descriptor,
+        new java.lang.String[] { "HuntGroupSid", "ExileLinks", });
+    internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupExileLinksResponse_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupExileLinksResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_org_hunt_groups_v1alpha1_UpdateHuntGroupExileLinksResponse_descriptor,
+        new java.lang.String[] { });
     com.tcn.cloud.api.api.commons.org.HuntgroupProto.getDescriptor();
   }
 
