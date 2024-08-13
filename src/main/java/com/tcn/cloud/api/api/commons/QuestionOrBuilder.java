@@ -120,4 +120,23 @@ public interface QuestionOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.CategoryOrBuilder getCategoriesOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * which party the question is about
+   * </pre>
+   *
+   * <code>.api.commons.QuestionFocus focus = 7 [json_name = "focus"];</code>
+   * @return The enum numeric value on the wire for focus.
+   */
+  int getFocusValue();
+  /**
+   * <pre>
+   * which party the question is about
+   * </pre>
+   *
+   * <code>.api.commons.QuestionFocus focus = 7 [json_name = "focus"];</code>
+   * @return The focus.
+   */
+  com.tcn.cloud.api.api.commons.QuestionFocus getFocus();
 }
