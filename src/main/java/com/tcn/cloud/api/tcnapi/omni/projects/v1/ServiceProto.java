@@ -28,37 +28,37 @@ public final class ServiceProto {
       "thz.proto\032\034google/api/annotations.proto\032" +
       "\027google/api/client.proto\032&tcnapi/omni/pr" +
       "ojects/v1/entities.proto\032&tcnapi/omni/pr" +
-      "ojects/v1/projects.proto2\327\007\n\010Projects\022\301\001" +
+      "ojects/v1/projects.proto2\341\007\n\010Projects\022\303\001" +
       "\n\014ListProjects\022,.tcnapi.omni.projects.v1" +
       ".ListProjectsRequest\032-.tcnapi.omni.proje" +
-      "cts.v1.ListProjectsResponse\"T\332A\006parent\272\270" +
-      "\221\002\005\n\003\010\260\t\202\323\344\223\002;\0229/tcnapi/omni/projects/v1" +
-      "/{parent=org/*/region/*}/projects\022\256\001\n\nGe" +
-      "tProject\022*.tcnapi.omni.projects.v1.GetPr" +
-      "ojectRequest\032 .tcnapi.omni.projects.v1.P" +
-      "roject\"R\332A\004name\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002;\0229/tcnapi" +
-      "/omni/projects/v1/{name=org/*/region/*/p" +
-      "rojects/*}\022\307\001\n\rCreateProject\022-.tcnapi.om" +
-      "ni.projects.v1.CreateProjectRequest\032 .tc" +
-      "napi.omni.projects.v1.Project\"e\332A\016parent" +
-      ",project\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002D\"9/tcnapi/omni/p" +
-      "rojects/v1/{parent=org/*/region/*}/proje" +
-      "cts:\007project\022\324\001\n\rUpdateProject\022-.tcnapi." +
-      "omni.projects.v1.UpdateProjectRequest\032 ." +
-      "tcnapi.omni.projects.v1.Project\"r\332A\023proj" +
-      "ect,update_mask\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002L2A/tcnapi" +
-      "/omni/projects/v1/{project.name=org/*/re" +
-      "gion/*/projects/*}:\007project\022\264\001\n\rDeletePr" +
-      "oject\022-.tcnapi.omni.projects.v1.DeletePr" +
-      "ojectRequest\032 .tcnapi.omni.projects.v1.P" +
-      "roject\"R\332A\004name\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002;*9/tcnapi" +
-      "/omni/projects/v1/{name=org/*/region/*/p" +
-      "rojects/*}B\270\001\n)com.tcn.cloud.api.tcnapi." +
-      "omni.projects.v1B\014ServiceProtoP\001\242\002\003TOP\252\002" +
-      "\027Tcnapi.Omni.Projects.V1\312\002\027Tcnapi\\Omni\\P" +
-      "rojects\\V1\342\002#Tcnapi\\Omni\\Projects\\V1\\GPB" +
-      "Metadata\352\002\032Tcnapi::Omni::Projects::V1b\006p" +
-      "roto3"
+      "cts.v1.ListProjectsResponse\"V\332A\006parent\272\270" +
+      "\221\002\005\n\003\010\260\t\202\323\344\223\002=\022;/tcnapi/omni/projects/v1" +
+      "/{parent=regions/*/orgs/*}/projects\022\260\001\n\n" +
+      "GetProject\022*.tcnapi.omni.projects.v1.Get" +
+      "ProjectRequest\032 .tcnapi.omni.projects.v1" +
+      ".Project\"T\332A\004name\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002=\022;/tcna" +
+      "pi/omni/projects/v1/{name=regions/*/orgs" +
+      "/*/projects/*}\022\311\001\n\rCreateProject\022-.tcnap" +
+      "i.omni.projects.v1.CreateProjectRequest\032" +
+      " .tcnapi.omni.projects.v1.Project\"g\332A\016pa" +
+      "rent,project\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002F\";/tcnapi/om" +
+      "ni/projects/v1/{parent=regions/*/orgs/*}" +
+      "/projects:\007project\022\326\001\n\rUpdateProject\022-.t" +
+      "cnapi.omni.projects.v1.UpdateProjectRequ" +
+      "est\032 .tcnapi.omni.projects.v1.Project\"t\332" +
+      "A\023project,update_mask\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002N2C/" +
+      "tcnapi/omni/projects/v1/{project.name=re" +
+      "gions/*/orgs/*/projects/*}:\007project\022\266\001\n\r" +
+      "DeleteProject\022-.tcnapi.omni.projects.v1." +
+      "DeleteProjectRequest\032 .tcnapi.omni.proje" +
+      "cts.v1.Project\"T\332A\004name\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002=*" +
+      ";/tcnapi/omni/projects/v1/{name=regions/" +
+      "*/orgs/*/projects/*}B\270\001\n)com.tcn.cloud.a" +
+      "pi.tcnapi.omni.projects.v1B\014ServiceProto" +
+      "P\001\242\002\003TOP\252\002\027Tcnapi.Omni.Projects.V1\312\002\027Tcn" +
+      "api\\Omni\\Projects\\V1\342\002#Tcnapi\\Omni\\Proje" +
+      "cts\\V1\\GPBMetadata\352\002\032Tcnapi::Omni::Proje" +
+      "cts::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
