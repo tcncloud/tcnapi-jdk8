@@ -5753,6 +5753,192 @@ public final class WFMGrpc {
     return getDeleteRgbaColorMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigResponse> getCreateAdherenceRuleNotificationConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateAdherenceRuleNotificationConfig",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigResponse> getCreateAdherenceRuleNotificationConfigMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigResponse> getCreateAdherenceRuleNotificationConfigMethod;
+    if ((getCreateAdherenceRuleNotificationConfigMethod = WFMGrpc.getCreateAdherenceRuleNotificationConfigMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateAdherenceRuleNotificationConfigMethod = WFMGrpc.getCreateAdherenceRuleNotificationConfigMethod) == null) {
+          WFMGrpc.getCreateAdherenceRuleNotificationConfigMethod = getCreateAdherenceRuleNotificationConfigMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAdherenceRuleNotificationConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateAdherenceRuleNotificationConfig"))
+              .build();
+        }
+      }
+    }
+    return getCreateAdherenceRuleNotificationConfigMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse> getCreateAdherenceRuleNotificationConfigEntryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateAdherenceRuleNotificationConfigEntry",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse> getCreateAdherenceRuleNotificationConfigEntryMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse> getCreateAdherenceRuleNotificationConfigEntryMethod;
+    if ((getCreateAdherenceRuleNotificationConfigEntryMethod = WFMGrpc.getCreateAdherenceRuleNotificationConfigEntryMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateAdherenceRuleNotificationConfigEntryMethod = WFMGrpc.getCreateAdherenceRuleNotificationConfigEntryMethod) == null) {
+          WFMGrpc.getCreateAdherenceRuleNotificationConfigEntryMethod = getCreateAdherenceRuleNotificationConfigEntryMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAdherenceRuleNotificationConfigEntry"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateAdherenceRuleNotificationConfigEntry"))
+              .build();
+        }
+      }
+    }
+    return getCreateAdherenceRuleNotificationConfigEntryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleResponse> getCreateAdherenceDepartmentalRuleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateAdherenceDepartmentalRule",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleResponse> getCreateAdherenceDepartmentalRuleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleResponse> getCreateAdherenceDepartmentalRuleMethod;
+    if ((getCreateAdherenceDepartmentalRuleMethod = WFMGrpc.getCreateAdherenceDepartmentalRuleMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateAdherenceDepartmentalRuleMethod = WFMGrpc.getCreateAdherenceDepartmentalRuleMethod) == null) {
+          WFMGrpc.getCreateAdherenceDepartmentalRuleMethod = getCreateAdherenceDepartmentalRuleMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAdherenceDepartmentalRule"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateAdherenceDepartmentalRule"))
+              .build();
+        }
+      }
+    }
+    return getCreateAdherenceDepartmentalRuleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse> getCreateAdherenceDepartmentalRuleClauseMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateAdherenceDepartmentalRuleClause",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse> getCreateAdherenceDepartmentalRuleClauseMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse> getCreateAdherenceDepartmentalRuleClauseMethod;
+    if ((getCreateAdherenceDepartmentalRuleClauseMethod = WFMGrpc.getCreateAdherenceDepartmentalRuleClauseMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateAdherenceDepartmentalRuleClauseMethod = WFMGrpc.getCreateAdherenceDepartmentalRuleClauseMethod) == null) {
+          WFMGrpc.getCreateAdherenceDepartmentalRuleClauseMethod = getCreateAdherenceDepartmentalRuleClauseMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAdherenceDepartmentalRuleClause"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateAdherenceDepartmentalRuleClause"))
+              .build();
+        }
+      }
+    }
+    return getCreateAdherenceDepartmentalRuleClauseMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleResponse> getCreateAdherenceAgentRuleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateAdherenceAgentRule",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleResponse> getCreateAdherenceAgentRuleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleResponse> getCreateAdherenceAgentRuleMethod;
+    if ((getCreateAdherenceAgentRuleMethod = WFMGrpc.getCreateAdherenceAgentRuleMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateAdherenceAgentRuleMethod = WFMGrpc.getCreateAdherenceAgentRuleMethod) == null) {
+          WFMGrpc.getCreateAdherenceAgentRuleMethod = getCreateAdherenceAgentRuleMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAdherenceAgentRule"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateAdherenceAgentRule"))
+              .build();
+        }
+      }
+    }
+    return getCreateAdherenceAgentRuleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseResponse> getCreateAdherenceAgentRuleClauseMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateAdherenceAgentRuleClause",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseResponse> getCreateAdherenceAgentRuleClauseMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseResponse> getCreateAdherenceAgentRuleClauseMethod;
+    if ((getCreateAdherenceAgentRuleClauseMethod = WFMGrpc.getCreateAdherenceAgentRuleClauseMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateAdherenceAgentRuleClauseMethod = WFMGrpc.getCreateAdherenceAgentRuleClauseMethod) == null) {
+          WFMGrpc.getCreateAdherenceAgentRuleClauseMethod = getCreateAdherenceAgentRuleClauseMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseRequest, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAdherenceAgentRuleClause"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateAdherenceAgentRuleClause"))
+              .build();
+        }
+      }
+    }
+    return getCreateAdherenceAgentRuleClauseMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -5930,7 +6116,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the state of the cache for the given &#64;org_id, and if the cache's state is not_loaded, or loading_failed,
+     * Gets the state of the cache for the org sending the request, and if the cache's state is not_loaded, or loading_failed,
      * it will start the loading task before returning the current state.
      * DEPRECATED as of Dec/13/2023 - Use PerformInitialClientSetup instead.
      * Errors:
@@ -8694,6 +8880,87 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRgbaColorMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Creates the given adherence &#64;notification_config for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;notification_config.
+     * </pre>
+     */
+    default void createAdherenceRuleNotificationConfig(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAdherenceRuleNotificationConfigMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence &#64;notification_config_entry for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config_entry are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;notification_config_entry.
+     *   - grpc.NotFound: notification config with the &#64;notification_config_sid does not exist.
+     * </pre>
+     */
+    default void createAdherenceRuleNotificationConfigEntry(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAdherenceRuleNotificationConfigEntryMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence departmental &#64;rule for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;rule are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;rule.
+     * </pre>
+     */
+    default void createAdherenceDepartmentalRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAdherenceDepartmentalRuleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence departmental rule &#64;clause for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;clause are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;clause.
+     *   - grpc.NotFound: departmental rule with the &#64;departmetal_rule_sid does not exist.
+     * </pre>
+     */
+    default void createAdherenceDepartmentalRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAdherenceDepartmentalRuleClauseMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence agent &#64;rule for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;rule are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;rule.
+     * </pre>
+     */
+    default void createAdherenceAgentRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAdherenceAgentRuleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence agent rule &#64;clause for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;clause are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;clause.
+     *   - grpc.NotFound: agent rule with the &#64;agent_rule_sid does not exist.
+     * </pre>
+     */
+    default void createAdherenceAgentRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAdherenceAgentRuleClauseMethod(), responseObserver);
+    }
   }
 
   /**
@@ -8864,7 +9131,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the state of the cache for the given &#64;org_id, and if the cache's state is not_loaded, or loading_failed,
+     * Gets the state of the cache for the org sending the request, and if the cache's state is not_loaded, or loading_failed,
      * it will start the loading task before returning the current state.
      * DEPRECATED as of Dec/13/2023 - Use PerformInitialClientSetup instead.
      * Errors:
@@ -11804,6 +12071,93 @@ public final class WFMGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteRgbaColorMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Creates the given adherence &#64;notification_config for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;notification_config.
+     * </pre>
+     */
+    public void createAdherenceRuleNotificationConfig(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateAdherenceRuleNotificationConfigMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence &#64;notification_config_entry for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config_entry are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;notification_config_entry.
+     *   - grpc.NotFound: notification config with the &#64;notification_config_sid does not exist.
+     * </pre>
+     */
+    public void createAdherenceRuleNotificationConfigEntry(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateAdherenceRuleNotificationConfigEntryMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence departmental &#64;rule for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;rule are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;rule.
+     * </pre>
+     */
+    public void createAdherenceDepartmentalRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateAdherenceDepartmentalRuleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence departmental rule &#64;clause for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;clause are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;clause.
+     *   - grpc.NotFound: departmental rule with the &#64;departmetal_rule_sid does not exist.
+     * </pre>
+     */
+    public void createAdherenceDepartmentalRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateAdherenceDepartmentalRuleClauseMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence agent &#64;rule for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;rule are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;rule.
+     * </pre>
+     */
+    public void createAdherenceAgentRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateAdherenceAgentRuleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence agent rule &#64;clause for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;clause are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;clause.
+     *   - grpc.NotFound: agent rule with the &#64;agent_rule_sid does not exist.
+     * </pre>
+     */
+    public void createAdherenceAgentRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateAdherenceAgentRuleClauseMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -11951,7 +12305,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the state of the cache for the given &#64;org_id, and if the cache's state is not_loaded, or loading_failed,
+     * Gets the state of the cache for the org sending the request, and if the cache's state is not_loaded, or loading_failed,
      * it will start the loading task before returning the current state.
      * DEPRECATED as of Dec/13/2023 - Use PerformInitialClientSetup instead.
      * Errors:
@@ -14721,6 +15075,87 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteRgbaColorMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Creates the given adherence &#64;notification_config for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;notification_config.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigResponse createAdherenceRuleNotificationConfig(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateAdherenceRuleNotificationConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence &#64;notification_config_entry for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config_entry are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;notification_config_entry.
+     *   - grpc.NotFound: notification config with the &#64;notification_config_sid does not exist.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse createAdherenceRuleNotificationConfigEntry(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateAdherenceRuleNotificationConfigEntryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence departmental &#64;rule for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;rule are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;rule.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleResponse createAdherenceDepartmentalRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateAdherenceDepartmentalRuleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence departmental rule &#64;clause for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;clause are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;clause.
+     *   - grpc.NotFound: departmental rule with the &#64;departmetal_rule_sid does not exist.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse createAdherenceDepartmentalRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateAdherenceDepartmentalRuleClauseMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence agent &#64;rule for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;rule are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;rule.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleResponse createAdherenceAgentRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateAdherenceAgentRuleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence agent rule &#64;clause for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;clause are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;clause.
+     *   - grpc.NotFound: agent rule with the &#64;agent_rule_sid does not exist.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseResponse createAdherenceAgentRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateAdherenceAgentRuleClauseMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -14877,7 +15312,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets the state of the cache for the given &#64;org_id, and if the cache's state is not_loaded, or loading_failed,
+     * Gets the state of the cache for the org sending the request, and if the cache's state is not_loaded, or loading_failed,
      * it will start the loading task before returning the current state.
      * DEPRECATED as of Dec/13/2023 - Use PerformInitialClientSetup instead.
      * Errors:
@@ -17715,6 +18150,93 @@ public final class WFMGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteRgbaColorMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Creates the given adherence &#64;notification_config for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;notification_config.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigResponse> createAdherenceRuleNotificationConfig(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateAdherenceRuleNotificationConfigMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence &#64;notification_config_entry for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config_entry are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;notification_config_entry.
+     *   - grpc.NotFound: notification config with the &#64;notification_config_sid does not exist.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse> createAdherenceRuleNotificationConfigEntry(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateAdherenceRuleNotificationConfigEntryMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence departmental &#64;rule for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;rule are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;rule.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleResponse> createAdherenceDepartmentalRule(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateAdherenceDepartmentalRuleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence departmental rule &#64;clause for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;clause are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;clause.
+     *   - grpc.NotFound: departmental rule with the &#64;departmetal_rule_sid does not exist.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse> createAdherenceDepartmentalRuleClause(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateAdherenceDepartmentalRuleClauseMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence agent &#64;rule for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;rule are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;rule.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleResponse> createAdherenceAgentRule(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateAdherenceAgentRuleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates the given adherence agent rule &#64;clause for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;clause are invalid.
+     *   - grpc.Internal: error occurs when creating the given &#64;clause.
+     *   - grpc.NotFound: agent rule with the &#64;agent_rule_sid does not exist.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseResponse> createAdherenceAgentRuleClause(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateAdherenceAgentRuleClauseMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PERFORM_INITIAL_CLIENT_SETUP = 0;
@@ -17902,6 +18424,12 @@ public final class WFMGrpc {
   private static final int METHODID_LIST_RGBA_COLORS = 182;
   private static final int METHODID_UPDATE_RGBA_COLOR = 183;
   private static final int METHODID_DELETE_RGBA_COLOR = 184;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 185;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 186;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 187;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 188;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 189;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 190;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -18659,6 +19187,30 @@ public final class WFMGrpc {
         case METHODID_DELETE_RGBA_COLOR:
           serviceImpl.deleteRgbaColor((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG:
+          serviceImpl.createAdherenceRuleNotificationConfig((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY:
+          serviceImpl.createAdherenceRuleNotificationConfigEntry((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE:
+          serviceImpl.createAdherenceDepartmentalRule((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE:
+          serviceImpl.createAdherenceDepartmentalRuleClause((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_ADHERENCE_AGENT_RULE:
+          serviceImpl.createAdherenceAgentRule((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE:
+          serviceImpl.createAdherenceAgentRuleClause((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -19973,6 +20525,48 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorRequest,
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRgbaColorResponse>(
                 service, METHODID_DELETE_RGBA_COLOR)))
+        .addMethod(
+          getCreateAdherenceRuleNotificationConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigResponse>(
+                service, METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG)))
+        .addMethod(
+          getCreateAdherenceRuleNotificationConfigEntryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse>(
+                service, METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY)))
+        .addMethod(
+          getCreateAdherenceDepartmentalRuleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleResponse>(
+                service, METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE)))
+        .addMethod(
+          getCreateAdherenceDepartmentalRuleClauseMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse>(
+                service, METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE)))
+        .addMethod(
+          getCreateAdherenceAgentRuleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleResponse>(
+                service, METHODID_CREATE_ADHERENCE_AGENT_RULE)))
+        .addMethod(
+          getCreateAdherenceAgentRuleClauseMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseResponse>(
+                service, METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE)))
         .build();
   }
 
@@ -20206,6 +20800,12 @@ public final class WFMGrpc {
               .addMethod(getListRgbaColorsMethod())
               .addMethod(getUpdateRgbaColorMethod())
               .addMethod(getDeleteRgbaColorMethod())
+              .addMethod(getCreateAdherenceRuleNotificationConfigMethod())
+              .addMethod(getCreateAdherenceRuleNotificationConfigEntryMethod())
+              .addMethod(getCreateAdherenceDepartmentalRuleMethod())
+              .addMethod(getCreateAdherenceDepartmentalRuleClauseMethod())
+              .addMethod(getCreateAdherenceAgentRuleMethod())
+              .addMethod(getCreateAdherenceAgentRuleClauseMethod())
               .build();
         }
       }
