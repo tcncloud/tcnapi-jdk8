@@ -314,7 +314,7 @@ public final class InsightProto {
       "a1.insights.GetVfsSchemaResponseR\nvfsSch" +
       "emas\"p\n\022TableVisualization\022Z\n\024table_colu" +
       "mn_details\030\001 \003(\0132(.api.v1alpha1.insights" +
-      ".TableColumnConfigR\022tableColumnDetails\"\214" +
+      ".TableColumnConfigR\022tableColumnDetails\"\233" +
       "\004\n\021TableColumnConfig\022\037\n\013column_name\030\001 \001(" +
       "\tR\ncolumnName\022!\n\014column_width\030\002 \001(\003R\013col" +
       "umnWidth\022\037\n\013hide_column\030\003 \001(\010R\nhideColum" +
@@ -325,115 +325,115 @@ public final class InsightProto {
       "onfigurationColumnSummaryTypeR\rcolumnSum" +
       "mary\022 \n\013description\030\007 \001(\tR\013description\022H" +
       "\n\016sort_direction\030\010 \001(\0162!.api.v1alpha1.in" +
-      "sights.ColumnSortR\rsortDirection\022[\n\021cont" +
-      "extual_action\030\t \001(\0132..api.v1alpha1.insig" +
-      "hts.InsightContextualActionR\020contextualA" +
-      "ction\"1\n\014FormatSeries\022!\n\014format_parts\030\001 " +
-      "\003(\tR\013formatParts\"\340\001\n\017ColumnOperation\022K\n\016" +
-      "operation_type\030\001 \001(\0162$.api.v1alpha1.insi" +
-      "ghts.OperationTypeR\roperationType\022!\n\013flo" +
-      "at_value\030\002 \001(\001H\000R\nfloatValue\022J\n\rformat_s" +
-      "eries\030\003 \001(\0132#.api.v1alpha1.insights.Form" +
-      "atSeriesH\000R\014formatSeriesB\021\n\017operation_va" +
-      "lue\"\262\002\n\027InsightContextualAction\022a\n\026conte" +
-      "xtual_action_type\030\001 \001(\0162+.api.v1alpha1.i" +
-      "nsights.ContextualActionTypeR\024contextual" +
-      "ActionType\022D\n\013link_action\030\002 \001(\0132!.api.v1" +
-      "alpha1.insights.LinkActionH\000R\nlinkAction" +
-      "\022S\n\020component_action\030\003 \001(\0132&.api.v1alpha" +
-      "1.insights.ComponentActionH\000R\017componentA" +
-      "ctionB\031\n\027contextual_action_value\"\324\001\n\nLin" +
-      "kAction\022#\n\rlink_elements\030\001 \003(\tR\014linkElem" +
-      "ents\022^\n\017component_value\030\002 \003(\01325.api.v1al" +
-      "pha1.insights.LinkAction.ComponentValueE" +
-      "ntryR\016componentValue\032A\n\023ComponentValueEn" +
-      "try\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005va" +
-      "lue:\0028\001\"\340\001\n\017ComponentAction\022%\n\016component" +
-      "_name\030\001 \001(\tR\rcomponentName\022c\n\017component_" +
-      "value\030\002 \003(\0132:.api.v1alpha1.insights.Comp" +
-      "onentAction.ComponentValueEntryR\016compone" +
-      "ntValue\032A\n\023ComponentValueEntry\022\020\n\003key\030\001 " +
-      "\001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\253\003\n\023O" +
-      "utputConfiguration\022\037\n\013resource_id\030\001 \001(\tR" +
-      "\nresourceId\022<\n\032output_configuration_titl" +
-      "e\030\003 \001(\tR\030outputConfigurationTitle\022j\n\031out" +
-      "put_configuration_type\030\004 \001(\0162..api.v1alp" +
-      "ha1.insights.OutputConfigurationTypeR\027ou" +
-      "tputConfigurationType\022.\n\023insight_resourc" +
-      "e_id\030\005 \001(\tR\021insightResourceId\022\035\n\nis_defa" +
-      "ult\030\006 \001(\010R\tisDefault\022\024\n\004blob\030\007 \001(\tH\000R\004bl" +
-      "ob\022\\\n\023table_visualization\030\010 \001(\0132).api.v1" +
-      "alpha1.insights.TableVisualizationH\000R\022ta" +
-      "bleVisualizationB\006\n\004body\"\201\001\n CreateOutpu" +
-      "tConfigurationRequest\022]\n\024output_configur" +
-      "ation\030\001 \001(\0132*.api.v1alpha1.insights.Outp" +
-      "utConfigurationR\023outputConfiguration\"\202\001\n" +
-      "!CreateOutputConfigurationResponse\022]\n\024ou" +
-      "tput_configuration\030\001 \001(\0132*.api.v1alpha1." +
-      "insights.OutputConfigurationR\023outputConf" +
-      "iguration\"Q\n\037ListOutputConfigurationsReq" +
-      "uest\022.\n\023insight_resource_id\030\001 \001(\tR\021insig" +
-      "htResourceId\"\203\001\n ListOutputConfiguration" +
-      "sResponse\022_\n\025output_configurations\030\001 \003(\013" +
-      "2*.api.v1alpha1.insights.OutputConfigura" +
-      "tionR\024outputConfigurations\"\276\001\n UpdateOut" +
-      "putConfigurationRequest\022;\n\013update_mask\030\002" +
-      " \001(\0132\032.google.protobuf.FieldMaskR\nupdate" +
-      "Mask\022]\n\024output_configuration\030\003 \001(\0132*.api" +
-      ".v1alpha1.insights.OutputConfigurationR\023" +
-      "outputConfiguration\"\202\001\n!UpdateOutputConf" +
-      "igurationResponse\022]\n\024output_configuratio" +
-      "n\030\001 \001(\0132*.api.v1alpha1.insights.OutputCo" +
-      "nfigurationR\023outputConfiguration\"C\n Dele" +
-      "teOutputConfigurationRequest\022\037\n\013resource" +
-      "_id\030\001 \001(\tR\nresourceId\"#\n!DeleteOutputCon" +
-      "figurationResponse\"@\n\035GetOutputConfigura" +
-      "tionRequest\022\037\n\013resource_id\030\001 \001(\tR\nresour" +
-      "ceId\"\177\n\036GetOutputConfigurationResponse\022]" +
-      "\n\024output_configuration\030\001 \001(\0132*.api.v1alp" +
-      "ha1.insights.OutputConfigurationR\023output" +
-      "Configuration\"w\n$SetDefaultOutputConfigu" +
-      "rationRequest\022\037\n\013resource_id\030\001 \001(\tR\nreso" +
-      "urceId\022.\n\023insight_resource_id\030\002 \001(\tR\021ins" +
-      "ightResourceId\"\'\n%SetDefaultOutputConfig" +
-      "urationResponse\"V\n$GetDefaultOutputConfi" +
-      "gurationRequest\022.\n\023insight_resource_id\030\001" +
-      " \001(\tR\021insightResourceId\"\206\001\n%GetDefaultOu" +
-      "tputConfigurationResponse\022]\n\024output_conf" +
-      "iguration\030\001 \001(\0132*.api.v1alpha1.insights." +
-      "OutputConfigurationR\023outputConfiguration" +
-      "*\276\001\n\027OutputConfigurationType\022)\n%OUTPUT_C" +
-      "ONFIGURATION_TYPE_UNSPECIFIED\020\000\022#\n\037OUTPU" +
-      "T_CONFIGURATION_TYPE_TABLE\020\001\022*\n&OUTPUT_C" +
-      "ONFIGURATION_TYPE_MULTI_SERIES\020\002\022\'\n#OUTP" +
-      "UT_CONFIGURATION_TYPE_PIE_CHART\020\003*\310\002\n\rOp" +
-      "erationType\022\036\n\032OPERATION_TYPE_UNSPECIFIE" +
-      "D\020\000\022\027\n\023OPERATION_TYPE_DATE\020\001\022\031\n\025OPERATIO" +
-      "N_TYPE_PREFIX\020\002\022\031\n\025OPERATION_TYPE_SUFFIX" +
-      "\020\003\022\033\n\027OPERATION_TYPE_DURATION\020\004\022\026\n\022OPERA" +
-      "TION_TYPE_ADD\020\005\022\033\n\027OPERATION_TYPE_SUBTRA" +
-      "CT\020\006\022\033\n\027OPERATION_TYPE_MULTIPLY\020\007\022\031\n\025OPE" +
-      "RATION_TYPE_DIVIDE\020\010\022 \n\034OPERATION_TYPE_F" +
-      "ORMAT_NUMBER\020\t\022\034\n\030OPERATION_TYPE_PRECISI" +
-      "ON\020\n*`\n\nColumnSort\022\033\n\027COLUMN_SORT_UNSPEC" +
-      "IFIED\020\000\022\031\n\025COLUMN_SORT_ASCENDING\020\001\022\032\n\026CO" +
-      "LUMN_SORT_DESCENDING\020\002*\250\002\n$OutputConfigu" +
-      "rationColumnSummaryType\0228\n4OUTPUT_CONFIG" +
-      "URATION_COLUMN_SUMMARY_TYPE_UNSPECIFIED\020" +
-      "\000\0220\n,OUTPUT_CONFIGURATION_COLUMN_SUMMARY" +
-      "_TYPE_AVG\020\001\0220\n,OUTPUT_CONFIGURATION_COLU" +
-      "MN_SUMMARY_TYPE_SUM\020\002\0220\n,OUTPUT_CONFIGUR" +
-      "ATION_COLUMN_SUMMARY_TYPE_MIN\020\003\0220\n,OUTPU" +
-      "T_CONFIGURATION_COLUMN_SUMMARY_TYPE_MAX\020" +
-      "\004*\235\001\n\024ContextualActionType\022.\n*INSIGHT_CO" +
-      "NTEXTUAL_ACTION_TYPE_UNSPECIFIED\020\000\022\'\n#IN" +
-      "SIGHT_CONTEXTUAL_ACTION_TYPE_LINK\020\001\022,\n(I" +
-      "NSIGHT_CONTEXTUAL_ACTION_TYPE_COMPONENT\020" +
-      "\002B\255\001\n\'com.tcn.cloud.api.api.v1alpha1.ins" +
-      "ightsB\014InsightProtoP\001\242\002\003AVI\252\002\025Api.V1alph" +
-      "a1.Insights\312\002\025Api\\V1alpha1\\Insights\342\002!Ap" +
-      "i\\V1alpha1\\Insights\\GPBMetadata\352\002\027Api::V" +
-      "1alpha1::Insightsb\006proto3"
+      "sights.ColumnSortR\rsortDirection\022j\n\031insi" +
+      "ght_contextual_action\030\t \001(\0132..api.v1alph" +
+      "a1.insights.InsightContextualActionR\027ins" +
+      "ightContextualAction\"1\n\014FormatSeries\022!\n\014" +
+      "format_parts\030\001 \003(\tR\013formatParts\"\340\001\n\017Colu" +
+      "mnOperation\022K\n\016operation_type\030\001 \001(\0162$.ap" +
+      "i.v1alpha1.insights.OperationTypeR\ropera" +
+      "tionType\022!\n\013float_value\030\002 \001(\001H\000R\nfloatVa" +
+      "lue\022J\n\rformat_series\030\003 \001(\0132#.api.v1alpha" +
+      "1.insights.FormatSeriesH\000R\014formatSeriesB" +
+      "\021\n\017operation_value\"\250\002\n\027InsightContextual" +
+      "Action\022h\n\026contextual_action_type\030\001 \001(\01622" +
+      ".api.v1alpha1.insights.InsightContextual" +
+      "ActionTypeR\024contextualActionType\022D\n\013link" +
+      "_action\030\002 \001(\0132!.api.v1alpha1.insights.Li" +
+      "nkActionH\000R\nlinkAction\022S\n\020component_acti" +
+      "on\030\003 \001(\0132&.api.v1alpha1.insights.Compone" +
+      "ntActionH\000R\017componentActionB\010\n\006action\"\324\001" +
+      "\n\nLinkAction\022#\n\rlink_elements\030\001 \003(\tR\014lin" +
+      "kElements\022^\n\017component_value\030\002 \003(\01325.api" +
+      ".v1alpha1.insights.LinkAction.ComponentV" +
+      "alueEntryR\016componentValue\032A\n\023ComponentVa" +
+      "lueEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(" +
+      "\tR\005value:\0028\001\"\340\001\n\017ComponentAction\022%\n\016comp" +
+      "onent_name\030\001 \001(\tR\rcomponentName\022c\n\017compo" +
+      "nent_value\030\002 \003(\0132:.api.v1alpha1.insights" +
+      ".ComponentAction.ComponentValueEntryR\016co" +
+      "mponentValue\032A\n\023ComponentValueEntry\022\020\n\003k" +
+      "ey\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"" +
+      "\253\003\n\023OutputConfiguration\022\037\n\013resource_id\030\001" +
+      " \001(\tR\nresourceId\022<\n\032output_configuration" +
+      "_title\030\003 \001(\tR\030outputConfigurationTitle\022j" +
+      "\n\031output_configuration_type\030\004 \001(\0162..api." +
+      "v1alpha1.insights.OutputConfigurationTyp" +
+      "eR\027outputConfigurationType\022.\n\023insight_re" +
+      "source_id\030\005 \001(\tR\021insightResourceId\022\035\n\nis" +
+      "_default\030\006 \001(\010R\tisDefault\022\024\n\004blob\030\007 \001(\tH" +
+      "\000R\004blob\022\\\n\023table_visualization\030\010 \001(\0132).a" +
+      "pi.v1alpha1.insights.TableVisualizationH" +
+      "\000R\022tableVisualizationB\006\n\004body\"\201\001\n Create" +
+      "OutputConfigurationRequest\022]\n\024output_con" +
+      "figuration\030\001 \001(\0132*.api.v1alpha1.insights" +
+      ".OutputConfigurationR\023outputConfiguratio" +
+      "n\"\202\001\n!CreateOutputConfigurationResponse\022" +
+      "]\n\024output_configuration\030\001 \001(\0132*.api.v1al" +
+      "pha1.insights.OutputConfigurationR\023outpu" +
+      "tConfiguration\"Q\n\037ListOutputConfiguratio" +
+      "nsRequest\022.\n\023insight_resource_id\030\001 \001(\tR\021" +
+      "insightResourceId\"\203\001\n ListOutputConfigur" +
+      "ationsResponse\022_\n\025output_configurations\030" +
+      "\001 \003(\0132*.api.v1alpha1.insights.OutputConf" +
+      "igurationR\024outputConfigurations\"\276\001\n Upda" +
+      "teOutputConfigurationRequest\022;\n\013update_m" +
+      "ask\030\002 \001(\0132\032.google.protobuf.FieldMaskR\nu" +
+      "pdateMask\022]\n\024output_configuration\030\003 \001(\0132" +
+      "*.api.v1alpha1.insights.OutputConfigurat" +
+      "ionR\023outputConfiguration\"\202\001\n!UpdateOutpu" +
+      "tConfigurationResponse\022]\n\024output_configu" +
+      "ration\030\001 \001(\0132*.api.v1alpha1.insights.Out" +
+      "putConfigurationR\023outputConfiguration\"C\n" +
+      " DeleteOutputConfigurationRequest\022\037\n\013res" +
+      "ource_id\030\001 \001(\tR\nresourceId\"#\n!DeleteOutp" +
+      "utConfigurationResponse\"@\n\035GetOutputConf" +
+      "igurationRequest\022\037\n\013resource_id\030\001 \001(\tR\nr" +
+      "esourceId\"\177\n\036GetOutputConfigurationRespo" +
+      "nse\022]\n\024output_configuration\030\001 \001(\0132*.api." +
+      "v1alpha1.insights.OutputConfigurationR\023o" +
+      "utputConfiguration\"w\n$SetDefaultOutputCo" +
+      "nfigurationRequest\022\037\n\013resource_id\030\001 \001(\tR" +
+      "\nresourceId\022.\n\023insight_resource_id\030\002 \001(\t" +
+      "R\021insightResourceId\"\'\n%SetDefaultOutputC" +
+      "onfigurationResponse\"V\n$GetDefaultOutput" +
+      "ConfigurationRequest\022.\n\023insight_resource" +
+      "_id\030\001 \001(\tR\021insightResourceId\"\206\001\n%GetDefa" +
+      "ultOutputConfigurationResponse\022]\n\024output" +
+      "_configuration\030\001 \001(\0132*.api.v1alpha1.insi" +
+      "ghts.OutputConfigurationR\023outputConfigur" +
+      "ation*\276\001\n\027OutputConfigurationType\022)\n%OUT" +
+      "PUT_CONFIGURATION_TYPE_UNSPECIFIED\020\000\022#\n\037" +
+      "OUTPUT_CONFIGURATION_TYPE_TABLE\020\001\022*\n&OUT" +
+      "PUT_CONFIGURATION_TYPE_MULTI_SERIES\020\002\022\'\n" +
+      "#OUTPUT_CONFIGURATION_TYPE_PIE_CHART\020\003*\310" +
+      "\002\n\rOperationType\022\036\n\032OPERATION_TYPE_UNSPE" +
+      "CIFIED\020\000\022\027\n\023OPERATION_TYPE_DATE\020\001\022\031\n\025OPE" +
+      "RATION_TYPE_PREFIX\020\002\022\031\n\025OPERATION_TYPE_S" +
+      "UFFIX\020\003\022\033\n\027OPERATION_TYPE_DURATION\020\004\022\026\n\022" +
+      "OPERATION_TYPE_ADD\020\005\022\033\n\027OPERATION_TYPE_S" +
+      "UBTRACT\020\006\022\033\n\027OPERATION_TYPE_MULTIPLY\020\007\022\031" +
+      "\n\025OPERATION_TYPE_DIVIDE\020\010\022 \n\034OPERATION_T" +
+      "YPE_FORMAT_NUMBER\020\t\022\034\n\030OPERATION_TYPE_PR" +
+      "ECISION\020\n*`\n\nColumnSort\022\033\n\027COLUMN_SORT_U" +
+      "NSPECIFIED\020\000\022\031\n\025COLUMN_SORT_ASCENDING\020\001\022" +
+      "\032\n\026COLUMN_SORT_DESCENDING\020\002*\250\002\n$OutputCo" +
+      "nfigurationColumnSummaryType\0228\n4OUTPUT_C" +
+      "ONFIGURATION_COLUMN_SUMMARY_TYPE_UNSPECI" +
+      "FIED\020\000\0220\n,OUTPUT_CONFIGURATION_COLUMN_SU" +
+      "MMARY_TYPE_AVG\020\001\0220\n,OUTPUT_CONFIGURATION" +
+      "_COLUMN_SUMMARY_TYPE_SUM\020\002\0220\n,OUTPUT_CON" +
+      "FIGURATION_COLUMN_SUMMARY_TYPE_MIN\020\003\0220\n," +
+      "OUTPUT_CONFIGURATION_COLUMN_SUMMARY_TYPE" +
+      "_MAX\020\004*\244\001\n\033InsightContextualActionType\022." +
+      "\n*INSIGHT_CONTEXTUAL_ACTION_TYPE_UNSPECI" +
+      "FIED\020\000\022\'\n#INSIGHT_CONTEXTUAL_ACTION_TYPE" +
+      "_LINK\020\001\022,\n(INSIGHT_CONTEXTUAL_ACTION_TYP" +
+      "E_COMPONENT\020\002B\255\001\n\'com.tcn.cloud.api.api." +
+      "v1alpha1.insightsB\014InsightProtoP\001\242\002\003AVI\252" +
+      "\002\025Api.V1alpha1.Insights\312\002\025Api\\V1alpha1\\I" +
+      "nsights\342\002!Api\\V1alpha1\\Insights\\GPBMetad" +
+      "ata\352\002\027Api::V1alpha1::Insightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -584,7 +584,7 @@ public final class InsightProto {
     internal_static_api_v1alpha1_insights_TableColumnConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_TableColumnConfig_descriptor,
-        new java.lang.String[] { "ColumnName", "ColumnWidth", "HideColumn", "RenamedAs", "Operations", "ColumnSummary", "Description", "SortDirection", "ContextualAction", });
+        new java.lang.String[] { "ColumnName", "ColumnWidth", "HideColumn", "RenamedAs", "Operations", "ColumnSummary", "Description", "SortDirection", "InsightContextualAction", });
     internal_static_api_v1alpha1_insights_FormatSeries_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_api_v1alpha1_insights_FormatSeries_fieldAccessorTable = new
@@ -602,7 +602,7 @@ public final class InsightProto {
     internal_static_api_v1alpha1_insights_InsightContextualAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_insights_InsightContextualAction_descriptor,
-        new java.lang.String[] { "ContextualActionType", "LinkAction", "ComponentAction", "ContextualActionValue", });
+        new java.lang.String[] { "ContextualActionType", "LinkAction", "ComponentAction", "Action", });
     internal_static_api_v1alpha1_insights_LinkAction_descriptor =
       getDescriptor().getMessageTypes().get(26);
     internal_static_api_v1alpha1_insights_LinkAction_fieldAccessorTable = new

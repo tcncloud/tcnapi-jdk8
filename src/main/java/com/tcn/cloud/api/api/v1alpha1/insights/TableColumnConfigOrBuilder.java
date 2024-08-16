@@ -171,28 +171,28 @@ public interface TableColumnConfigOrBuilder extends
 
   /**
    * <pre>
-   * contextual actions
+   * insight contextual actions
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.InsightContextualAction contextual_action = 9 [json_name = "contextualAction"];</code>
-   * @return Whether the contextualAction field is set.
+   * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+   * @return Whether the insightContextualAction field is set.
    */
-  boolean hasContextualAction();
+  boolean hasInsightContextualAction();
   /**
    * <pre>
-   * contextual actions
+   * insight contextual actions
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.InsightContextualAction contextual_action = 9 [json_name = "contextualAction"];</code>
-   * @return The contextualAction.
+   * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+   * @return The insightContextualAction.
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction getContextualAction();
+  com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction getInsightContextualAction();
   /**
    * <pre>
-   * contextual actions
+   * insight contextual actions
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.InsightContextualAction contextual_action = 9 [json_name = "contextualAction"];</code>
+   * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionOrBuilder getContextualActionOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionOrBuilder getInsightContextualActionOrBuilder();
 }

@@ -12,7 +12,7 @@ public interface InsightContextualActionOrBuilder extends
    * Type of the contextual action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ContextualActionType contextual_action_type = 1 [json_name = "contextualActionType"];</code>
+   * <code>.api.v1alpha1.insights.InsightContextualActionType contextual_action_type = 1 [json_name = "contextualActionType"];</code>
    * @return The enum numeric value on the wire for contextualActionType.
    */
   int getContextualActionTypeValue();
@@ -21,10 +21,10 @@ public interface InsightContextualActionOrBuilder extends
    * Type of the contextual action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ContextualActionType contextual_action_type = 1 [json_name = "contextualActionType"];</code>
+   * <code>.api.v1alpha1.insights.InsightContextualActionType contextual_action_type = 1 [json_name = "contextualActionType"];</code>
    * @return The contextualActionType.
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType getContextualActionType();
+  com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType getContextualActionType();
 
   /**
    * <pre>
@@ -80,5 +80,5 @@ public interface InsightContextualActionOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.insights.ComponentActionOrBuilder getComponentActionOrBuilder();
 
-  com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.ContextualActionValueCase getContextualActionValueCase();
+  com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.ActionCase getActionCase();
 }

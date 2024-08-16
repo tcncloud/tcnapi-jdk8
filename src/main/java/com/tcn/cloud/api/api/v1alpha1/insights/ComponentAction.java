@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
  * <pre>
- * Message for Component Action
+ * Message for Component Insight Contextual Action
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.insights.ComponentAction}
@@ -353,7 +353,7 @@ java.lang.String defaultValue) {
   }
   /**
    * <pre>
-   * Message for Component Action
+   * Message for Component Insight Contextual Action
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.insights.ComponentAction}

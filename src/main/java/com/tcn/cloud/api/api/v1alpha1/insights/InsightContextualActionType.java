@@ -8,9 +8,9 @@ package com.tcn.cloud.api.api.v1alpha1.insights;
  * Enum for the Insight Contextual Action Type
  * </pre>
  *
- * Protobuf enum {@code api.v1alpha1.insights.ContextualActionType}
+ * Protobuf enum {@code api.v1alpha1.insights.InsightContextualActionType}
  */
-public enum ContextualActionType
+public enum InsightContextualActionType
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
@@ -79,7 +79,7 @@ public enum ContextualActionType
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static ContextualActionType valueOf(int value) {
+  public static InsightContextualActionType valueOf(int value) {
     return forNumber(value);
   }
 
@@ -87,7 +87,7 @@ public enum ContextualActionType
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static ContextualActionType forNumber(int value) {
+  public static InsightContextualActionType forNumber(int value) {
     switch (value) {
       case 0: return INSIGHT_CONTEXTUAL_ACTION_TYPE_UNSPECIFIED;
       case 1: return INSIGHT_CONTEXTUAL_ACTION_TYPE_LINK;
@@ -96,15 +96,15 @@ public enum ContextualActionType
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<ContextualActionType>
+  public static com.google.protobuf.Internal.EnumLiteMap<InsightContextualActionType>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      ContextualActionType> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<ContextualActionType>() {
-          public ContextualActionType findValueByNumber(int number) {
-            return ContextualActionType.forNumber(number);
+      InsightContextualActionType> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<InsightContextualActionType>() {
+          public InsightContextualActionType findValueByNumber(int number) {
+            return InsightContextualActionType.forNumber(number);
           }
         };
 
@@ -125,9 +125,9 @@ public enum ContextualActionType
     return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.getDescriptor().getEnumTypes().get(4);
   }
 
-  private static final ContextualActionType[] VALUES = values();
+  private static final InsightContextualActionType[] VALUES = values();
 
-  public static ContextualActionType valueOf(
+  public static InsightContextualActionType valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -141,10 +141,10 @@ public enum ContextualActionType
 
   private final int value;
 
-  private ContextualActionType(int value) {
+  private InsightContextualActionType(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.v1alpha1.insights.ContextualActionType)
+  // @@protoc_insertion_point(enum_scope:api.v1alpha1.insights.InsightContextualActionType)
 }
 

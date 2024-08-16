@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v1alpha1.insights;
 
 /**
  * <pre>
- * Message for Link Action
+ * Message for Link Insight Contextual Action
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.insights.LinkAction}
@@ -359,7 +359,7 @@ java.lang.String defaultValue) {
   }
   /**
    * <pre>
-   * Message for Link Action
+   * Message for Link Insight Contextual Action
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.insights.LinkAction}
