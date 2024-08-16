@@ -174,17 +174,25 @@ public interface TableColumnConfigOrBuilder extends
    * contextual actions
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ContextualActionType contextual_action = 9 [json_name = "contextualAction"];</code>
-   * @return The enum numeric value on the wire for contextualAction.
+   * <code>.api.v1alpha1.insights.InsightContextualAction contextual_action = 9 [json_name = "contextualAction"];</code>
+   * @return Whether the contextualAction field is set.
    */
-  int getContextualActionValue();
+  boolean hasContextualAction();
   /**
    * <pre>
    * contextual actions
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ContextualActionType contextual_action = 9 [json_name = "contextualAction"];</code>
+   * <code>.api.v1alpha1.insights.InsightContextualAction contextual_action = 9 [json_name = "contextualAction"];</code>
    * @return The contextualAction.
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType getContextualAction();
+  com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction getContextualAction();
+  /**
+   * <pre>
+   * contextual actions
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.InsightContextualAction contextual_action = 9 [json_name = "contextualAction"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionOrBuilder getContextualActionOrBuilder();
 }

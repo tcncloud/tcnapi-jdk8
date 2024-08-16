@@ -9,7 +9,7 @@ public interface InsightContextualActionOrBuilder extends
 
   /**
    * <pre>
-   * Contextual Action Type
+   * Type of the contextual action
    * </pre>
    *
    * <code>.api.v1alpha1.insights.ContextualActionType contextual_action_type = 1 [json_name = "contextualActionType"];</code>
@@ -18,11 +18,67 @@ public interface InsightContextualActionOrBuilder extends
   int getContextualActionTypeValue();
   /**
    * <pre>
-   * Contextual Action Type
+   * Type of the contextual action
    * </pre>
    *
    * <code>.api.v1alpha1.insights.ContextualActionType contextual_action_type = 1 [json_name = "contextualActionType"];</code>
    * @return The contextualActionType.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType getContextualActionType();
+
+  /**
+   * <pre>
+   * Link action
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
+   * @return Whether the linkAction field is set.
+   */
+  boolean hasLinkAction();
+  /**
+   * <pre>
+   * Link action
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
+   * @return The linkAction.
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.LinkAction getLinkAction();
+  /**
+   * <pre>
+   * Link action
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.LinkActionOrBuilder getLinkActionOrBuilder();
+
+  /**
+   * <pre>
+   * Component action
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
+   * @return Whether the componentAction field is set.
+   */
+  boolean hasComponentAction();
+  /**
+   * <pre>
+   * Component action
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
+   * @return The componentAction.
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction getComponentAction();
+  /**
+   * <pre>
+   * Component action
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.ComponentActionOrBuilder getComponentActionOrBuilder();
+
+  com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.ContextualActionValueCase getContextualActionValueCase();
 }
