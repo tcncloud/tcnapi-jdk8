@@ -425,15 +425,15 @@ public final class InsightProto {
       "MN_SUMMARY_TYPE_SUM\020\002\0220\n,OUTPUT_CONFIGUR" +
       "ATION_COLUMN_SUMMARY_TYPE_MIN\020\003\0220\n,OUTPU" +
       "T_CONFIGURATION_COLUMN_SUMMARY_TYPE_MAX\020" +
-      "\004*\225\001\n\024ContextualActionType\022&\n\"CONTEXTUAL" +
-      "_ACTION_TYPE_UNSPECIFIED\020\000\022\'\n#INSIGHT_CO" +
-      "NTEXTUAL_ACTION_TYPE_LINK\020\001\022,\n(INSIGHT_C" +
-      "ONTEXTUAL_ACTION_TYPE_COMPONENT\020\002B\255\001\n\'co" +
-      "m.tcn.cloud.api.api.v1alpha1.insightsB\014I" +
-      "nsightProtoP\001\242\002\003AVI\252\002\025Api.V1alpha1.Insig" +
-      "hts\312\002\025Api\\V1alpha1\\Insights\342\002!Api\\V1alph" +
-      "a1\\Insights\\GPBMetadata\352\002\027Api::V1alpha1:" +
-      ":Insightsb\006proto3"
+      "\004*\235\001\n\024ContextualActionType\022.\n*INSIGHT_CO" +
+      "NTEXTUAL_ACTION_TYPE_UNSPECIFIED\020\000\022\'\n#IN" +
+      "SIGHT_CONTEXTUAL_ACTION_TYPE_LINK\020\001\022,\n(I" +
+      "NSIGHT_CONTEXTUAL_ACTION_TYPE_COMPONENT\020" +
+      "\002B\255\001\n\'com.tcn.cloud.api.api.v1alpha1.ins" +
+      "ightsB\014InsightProtoP\001\242\002\003AVI\252\002\025Api.V1alph" +
+      "a1.Insights\312\002\025Api\\V1alpha1\\Insights\342\002!Ap" +
+      "i\\V1alpha1\\Insights\\GPBMetadata\352\002\027Api::V" +
+      "1alpha1::Insightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

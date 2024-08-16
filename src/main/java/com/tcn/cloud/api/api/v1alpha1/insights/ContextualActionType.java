@@ -17,9 +17,9 @@ public enum ContextualActionType
    * Unspecified
    * </pre>
    *
-   * <code>CONTEXTUAL_ACTION_TYPE_UNSPECIFIED = 0;</code>
+   * <code>INSIGHT_CONTEXTUAL_ACTION_TYPE_UNSPECIFIED = 0;</code>
    */
-  CONTEXTUAL_ACTION_TYPE_UNSPECIFIED(0),
+  INSIGHT_CONTEXTUAL_ACTION_TYPE_UNSPECIFIED(0),
   /**
    * <pre>
    * Contextual Action Type Link
@@ -44,9 +44,9 @@ public enum ContextualActionType
    * Unspecified
    * </pre>
    *
-   * <code>CONTEXTUAL_ACTION_TYPE_UNSPECIFIED = 0;</code>
+   * <code>INSIGHT_CONTEXTUAL_ACTION_TYPE_UNSPECIFIED = 0;</code>
    */
-  public static final int CONTEXTUAL_ACTION_TYPE_UNSPECIFIED_VALUE = 0;
+  public static final int INSIGHT_CONTEXTUAL_ACTION_TYPE_UNSPECIFIED_VALUE = 0;
   /**
    * <pre>
    * Contextual Action Type Link
@@ -89,7 +89,7 @@ public enum ContextualActionType
    */
   public static ContextualActionType forNumber(int value) {
     switch (value) {
-      case 0: return CONTEXTUAL_ACTION_TYPE_UNSPECIFIED;
+      case 0: return INSIGHT_CONTEXTUAL_ACTION_TYPE_UNSPECIFIED;
       case 1: return INSIGHT_CONTEXTUAL_ACTION_TYPE_LINK;
       case 2: return INSIGHT_CONTEXTUAL_ACTION_TYPE_COMPONENT;
       default: return null;

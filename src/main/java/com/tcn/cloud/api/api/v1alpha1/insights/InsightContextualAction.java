@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (contextualActionType_ != com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType.CONTEXTUAL_ACTION_TYPE_UNSPECIFIED.getNumber()) {
+    if (contextualActionType_ != com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType.INSIGHT_CONTEXTUAL_ACTION_TYPE_UNSPECIFIED.getNumber()) {
       output.writeEnum(1, contextualActionType_);
     }
     if (contextualActionValueCase_ == 2) {
@@ -229,7 +229,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (contextualActionType_ != com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType.CONTEXTUAL_ACTION_TYPE_UNSPECIFIED.getNumber()) {
+    if (contextualActionType_ != com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType.INSIGHT_CONTEXTUAL_ACTION_TYPE_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, contextualActionType_);
     }
