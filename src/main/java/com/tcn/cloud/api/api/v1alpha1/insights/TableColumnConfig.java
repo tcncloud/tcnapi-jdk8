@@ -26,6 +26,7 @@ private static final long serialVersionUID = 0L;
     columnSummary_ = 0;
     description_ = "";
     sortDirection_ = 0;
+    contextualAction_ = 0;
   }
 
   @java.lang.Override
@@ -332,6 +333,32 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.v1alpha1.insights.ColumnSort.UNRECOGNIZED : result;
   }
 
+  public static final int CONTEXTUAL_ACTION_FIELD_NUMBER = 9;
+  private int contextualAction_ = 0;
+  /**
+   * <pre>
+   * contextual actions
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ContextualActionType contextual_action = 9 [json_name = "contextualAction"];</code>
+   * @return The enum numeric value on the wire for contextualAction.
+   */
+  @java.lang.Override public int getContextualActionValue() {
+    return contextualAction_;
+  }
+  /**
+   * <pre>
+   * contextual actions
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ContextualActionType contextual_action = 9 [json_name = "contextualAction"];</code>
+   * @return The contextualAction.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType getContextualAction() {
+    com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType result = com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType.forNumber(contextualAction_);
+    return result == null ? com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -369,6 +396,9 @@ private static final long serialVersionUID = 0L;
     }
     if (sortDirection_ != com.tcn.cloud.api.api.v1alpha1.insights.ColumnSort.COLUMN_SORT_UNSPECIFIED.getNumber()) {
       output.writeEnum(8, sortDirection_);
+    }
+    if (contextualAction_ != com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType.CONTEXTUAL_ACTION_TYPE_UNSPECIFIED.getNumber()) {
+      output.writeEnum(9, contextualAction_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -408,6 +438,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, sortDirection_);
     }
+    if (contextualAction_ != com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType.CONTEXTUAL_ACTION_TYPE_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(9, contextualAction_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -437,6 +471,7 @@ private static final long serialVersionUID = 0L;
     if (!getDescription()
         .equals(other.getDescription())) return false;
     if (sortDirection_ != other.sortDirection_) return false;
+    if (contextualAction_ != other.contextualAction_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -468,6 +503,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getDescription().hashCode();
     hash = (37 * hash) + SORT_DIRECTION_FIELD_NUMBER;
     hash = (53 * hash) + sortDirection_;
+    hash = (37 * hash) + CONTEXTUAL_ACTION_FIELD_NUMBER;
+    hash = (53 * hash) + contextualAction_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -617,6 +654,7 @@ private static final long serialVersionUID = 0L;
       columnSummary_ = 0;
       description_ = "";
       sortDirection_ = 0;
+      contextualAction_ = 0;
       return this;
     }
 
@@ -683,6 +721,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.sortDirection_ = sortDirection_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.contextualAction_ = contextualAction_;
       }
     }
 
@@ -783,6 +824,9 @@ private static final long serialVersionUID = 0L;
       if (other.sortDirection_ != 0) {
         setSortDirectionValue(other.getSortDirectionValue());
       }
+      if (other.contextualAction_ != 0) {
+        setContextualActionValue(other.getContextualActionValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -857,6 +901,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 64
+            case 72: {
+              contextualAction_ = input.readEnum();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1692,6 +1741,79 @@ private static final long serialVersionUID = 0L;
     public Builder clearSortDirection() {
       bitField0_ = (bitField0_ & ~0x00000080);
       sortDirection_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int contextualAction_ = 0;
+    /**
+     * <pre>
+     * contextual actions
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.ContextualActionType contextual_action = 9 [json_name = "contextualAction"];</code>
+     * @return The enum numeric value on the wire for contextualAction.
+     */
+    @java.lang.Override public int getContextualActionValue() {
+      return contextualAction_;
+    }
+    /**
+     * <pre>
+     * contextual actions
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.ContextualActionType contextual_action = 9 [json_name = "contextualAction"];</code>
+     * @param value The enum numeric value on the wire for contextualAction to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContextualActionValue(int value) {
+      contextualAction_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * contextual actions
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.ContextualActionType contextual_action = 9 [json_name = "contextualAction"];</code>
+     * @return The contextualAction.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType getContextualAction() {
+      com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType result = com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType.forNumber(contextualAction_);
+      return result == null ? com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * contextual actions
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.ContextualActionType contextual_action = 9 [json_name = "contextualAction"];</code>
+     * @param value The contextualAction to set.
+     * @return This builder for chaining.
+     */
+    public Builder setContextualAction(com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000100;
+      contextualAction_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * contextual actions
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.ContextualActionType contextual_action = 9 [json_name = "contextualAction"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearContextualAction() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      contextualAction_ = 0;
       onChanged();
       return this;
     }

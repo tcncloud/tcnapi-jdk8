@@ -168,4 +168,23 @@ public interface TableColumnConfigOrBuilder extends
    * @return The sortDirection.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.ColumnSort getSortDirection();
+
+  /**
+   * <pre>
+   * contextual actions
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ContextualActionType contextual_action = 9 [json_name = "contextualAction"];</code>
+   * @return The enum numeric value on the wire for contextualAction.
+   */
+  int getContextualActionValue();
+  /**
+   * <pre>
+   * contextual actions
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.ContextualActionType contextual_action = 9 [json_name = "contextualAction"];</code>
+   * @return The contextualAction.
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.ContextualActionType getContextualAction();
 }
