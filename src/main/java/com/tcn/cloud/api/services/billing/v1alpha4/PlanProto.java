@@ -155,75 +155,74 @@ public final class PlanProto {
       ".google.protobuf.TimestampR\tstartTime\022\027\n" +
       "\007org_ids\030\003 \003(\tR\006orgIds\"I\n\035ApplyBillingPl" +
       "anDraftResponse\022(\n\020billing_plan_ids\030\001 \003(" +
-      "\tR\016billingPlanIds\"W\n\027CloneBillingPlanReq" +
+      "\tR\016billingPlanIds\"A\n\027CloneBillingPlanReq" +
       "uest\022&\n\017billing_plan_id\030\001 \001(\tR\rbillingPl" +
-      "anId\022\024\n\005title\030\002 \001(\tR\005title\"B\n\030CloneBilli" +
+      "anId\"B\n\030CloneBillingPlanResponse\022&\n\017bill" +
+      "ing_plan_id\030\001 \001(\tR\rbillingPlanId\"\226\001\n\030Cre" +
+      "ateBillingPlanRequest\022&\n\017billing_plan_id" +
+      "\030\001 \001(\tR\rbillingPlanId\022R\n\014billing_plan\030\002 " +
+      "\001(\0132/.services.billing.entities.v1alpha4" +
+      ".BillingPlanR\013billingPlan\"C\n\031CreateBilli" +
       "ngPlanResponse\022&\n\017billing_plan_id\030\001 \001(\tR" +
-      "\rbillingPlanId\"\226\001\n\030CreateBillingPlanRequ" +
-      "est\022&\n\017billing_plan_id\030\001 \001(\tR\rbillingPla" +
-      "nId\022R\n\014billing_plan\030\002 \001(\0132/.services.bil" +
-      "ling.entities.v1alpha4.BillingPlanR\013bill" +
-      "ingPlan\"C\n\031CreateBillingPlanResponse\022&\n\017" +
-      "billing_plan_id\030\001 \001(\tR\rbillingPlanId\"B\n\030" +
-      "DeleteBillingPlanRequest\022&\n\017billing_plan" +
-      "_id\030\001 \001(\tR\rbillingPlanId\"\033\n\031DeleteBillin" +
-      "gPlanResponse\"?\n\025GetBillingPlanRequest\022&" +
-      "\n\017billing_plan_id\030\001 \001(\tR\rbillingPlanId\"l" +
-      "\n\026GetBillingPlanResponse\022R\n\014billing_plan" +
-      "\030\001 \001(\0132/.services.billing.entities.v1alp" +
-      "ha4.BillingPlanR\013billingPlan\"\367\001\n\027ListBil" +
-      "lingPlansRequest\022&\n\017billing_plan_id\030\001 \001(" +
-      "\tR\rbillingPlanId\022\026\n\006filter\030\002 \001(\tR\006filter" +
-      "\0222\n\006fields\030\003 \001(\0132\032.google.protobuf.Field" +
-      "MaskR\006fields\0223\n\004sort\030\004 \003(\0132\037.services.bi" +
-      "lling.v1alpha4.SortR\004sort\0223\n\004page\030\005 \001(\0132" +
-      "\037.services.billing.v1alpha4.PageR\004page\"\206" +
-      "\001\n\030ListBillingPlansResponse\022T\n\rbilling_p" +
-      "lans\030\001 \003(\0132/.services.billing.entities.v" +
-      "1alpha4.BillingPlanR\014billingPlans\022\024\n\005tok" +
-      "en\030\002 \001(\tR\005token\"\323\001\n\030UpdateBillingPlanReq" +
-      "uest\022&\n\017billing_plan_id\030\001 \001(\tR\rbillingPl" +
-      "anId\022R\n\014billing_plan\030\002 \001(\0132/.services.bi" +
-      "lling.entities.v1alpha4.BillingPlanR\013bil" +
-      "lingPlan\022;\n\013update_mask\030\003 \001(\0132\032.google.p" +
-      "rotobuf.FieldMaskR\nupdateMask\"\033\n\031UpdateB" +
-      "illingPlanResponse\"\250\001\n\033CreateRateDefinit" +
-      "ionRequest\022,\n\022rate_definition_id\030\001 \001(\tR\020" +
-      "rateDefinitionId\022[\n\017rate_definition\030\002 \001(" +
-      "\01322.services.billing.entities.v1alpha4.R" +
-      "ateDefinitionR\016rateDefinition\"L\n\034CreateR" +
-      "ateDefinitionResponse\022,\n\022rate_definition" +
-      "_id\030\001 \001(\tR\020rateDefinitionId\"K\n\033DeleteRat" +
-      "eDefinitionRequest\022,\n\022rate_definition_id" +
-      "\030\001 \001(\tR\020rateDefinitionId\"\036\n\034DeleteRateDe" +
-      "finitionResponse\"H\n\030GetRateDefinitionReq" +
-      "uest\022,\n\022rate_definition_id\030\001 \001(\tR\020rateDe" +
-      "finitionId\"x\n\031GetRateDefinitionResponse\022" +
-      "[\n\017rate_definition\030\001 \001(\01322.services.bill" +
-      "ing.entities.v1alpha4.RateDefinitionR\016ra" +
-      "teDefinition\"\200\002\n\032ListRateDefinitionsRequ" +
-      "est\022,\n\022rate_definition_id\030\001 \001(\tR\020rateDef" +
-      "initionId\022\026\n\006filter\030\002 \001(\tR\006filter\0222\n\006fie" +
-      "lds\030\003 \001(\0132\032.google.protobuf.FieldMaskR\006f" +
-      "ields\0223\n\004sort\030\004 \003(\0132\037.services.billing.v" +
-      "1alpha4.SortR\004sort\0223\n\004page\030\005 \001(\0132\037.servi" +
-      "ces.billing.v1alpha4.PageR\004page\"\222\001\n\033List" +
-      "RateDefinitionsResponse\022]\n\020rate_definiti" +
-      "ons\030\001 \003(\01322.services.billing.entities.v1" +
-      "alpha4.RateDefinitionR\017rateDefinitions\022\024" +
-      "\n\005token\030\002 \001(\tR\005token\"\345\001\n\033UpdateRateDefin" +
-      "itionRequest\022,\n\022rate_definition_id\030\001 \001(\t" +
-      "R\020rateDefinitionId\022[\n\017rate_definition\030\002 " +
-      "\001(\01322.services.billing.entities.v1alpha4" +
-      ".RateDefinitionR\016rateDefinition\022;\n\013updat" +
-      "e_mask\030\003 \001(\0132\032.google.protobuf.FieldMask" +
-      "R\nupdateMask\"\036\n\034UpdateRateDefinitionResp" +
-      "onseB\276\001\n+com.tcn.cloud.api.services.bill" +
-      "ing.v1alpha4B\tPlanProtoP\001\242\002\003SBX\252\002\031Servic" +
-      "es.Billing.V1alpha4\312\002\031Services\\Billing\\V" +
-      "1alpha4\342\002%Services\\Billing\\V1alpha4\\GPBM" +
-      "etadata\352\002\033Services::Billing::V1alpha4b\006p" +
-      "roto3"
+      "\rbillingPlanId\"B\n\030DeleteBillingPlanReque" +
+      "st\022&\n\017billing_plan_id\030\001 \001(\tR\rbillingPlan" +
+      "Id\"\033\n\031DeleteBillingPlanResponse\"?\n\025GetBi" +
+      "llingPlanRequest\022&\n\017billing_plan_id\030\001 \001(" +
+      "\tR\rbillingPlanId\"l\n\026GetBillingPlanRespon" +
+      "se\022R\n\014billing_plan\030\001 \001(\0132/.services.bill" +
+      "ing.entities.v1alpha4.BillingPlanR\013billi" +
+      "ngPlan\"\367\001\n\027ListBillingPlansRequest\022&\n\017bi" +
+      "lling_plan_id\030\001 \001(\tR\rbillingPlanId\022\026\n\006fi" +
+      "lter\030\002 \001(\tR\006filter\0222\n\006fields\030\003 \001(\0132\032.goo" +
+      "gle.protobuf.FieldMaskR\006fields\0223\n\004sort\030\004" +
+      " \003(\0132\037.services.billing.v1alpha4.SortR\004s" +
+      "ort\0223\n\004page\030\005 \001(\0132\037.services.billing.v1a" +
+      "lpha4.PageR\004page\"\206\001\n\030ListBillingPlansRes" +
+      "ponse\022T\n\rbilling_plans\030\001 \003(\0132/.services." +
+      "billing.entities.v1alpha4.BillingPlanR\014b" +
+      "illingPlans\022\024\n\005token\030\002 \001(\tR\005token\"\323\001\n\030Up" +
+      "dateBillingPlanRequest\022&\n\017billing_plan_i" +
+      "d\030\001 \001(\tR\rbillingPlanId\022R\n\014billing_plan\030\002" +
+      " \001(\0132/.services.billing.entities.v1alpha" +
+      "4.BillingPlanR\013billingPlan\022;\n\013update_mas" +
+      "k\030\003 \001(\0132\032.google.protobuf.FieldMaskR\nupd" +
+      "ateMask\"\033\n\031UpdateBillingPlanResponse\"\250\001\n" +
+      "\033CreateRateDefinitionRequest\022,\n\022rate_def" +
+      "inition_id\030\001 \001(\tR\020rateDefinitionId\022[\n\017ra" +
+      "te_definition\030\002 \001(\01322.services.billing.e" +
+      "ntities.v1alpha4.RateDefinitionR\016rateDef" +
+      "inition\"L\n\034CreateRateDefinitionResponse\022" +
+      ",\n\022rate_definition_id\030\001 \001(\tR\020rateDefinit" +
+      "ionId\"K\n\033DeleteRateDefinitionRequest\022,\n\022" +
+      "rate_definition_id\030\001 \001(\tR\020rateDefinition" +
+      "Id\"\036\n\034DeleteRateDefinitionResponse\"H\n\030Ge" +
+      "tRateDefinitionRequest\022,\n\022rate_definitio" +
+      "n_id\030\001 \001(\tR\020rateDefinitionId\"x\n\031GetRateD" +
+      "efinitionResponse\022[\n\017rate_definition\030\001 \001" +
+      "(\01322.services.billing.entities.v1alpha4." +
+      "RateDefinitionR\016rateDefinition\"\200\002\n\032ListR" +
+      "ateDefinitionsRequest\022,\n\022rate_definition" +
+      "_id\030\001 \001(\tR\020rateDefinitionId\022\026\n\006filter\030\002 " +
+      "\001(\tR\006filter\0222\n\006fields\030\003 \001(\0132\032.google.pro" +
+      "tobuf.FieldMaskR\006fields\0223\n\004sort\030\004 \003(\0132\037." +
+      "services.billing.v1alpha4.SortR\004sort\0223\n\004" +
+      "page\030\005 \001(\0132\037.services.billing.v1alpha4.P" +
+      "ageR\004page\"\222\001\n\033ListRateDefinitionsRespons" +
+      "e\022]\n\020rate_definitions\030\001 \003(\01322.services.b" +
+      "illing.entities.v1alpha4.RateDefinitionR" +
+      "\017rateDefinitions\022\024\n\005token\030\002 \001(\tR\005token\"\345" +
+      "\001\n\033UpdateRateDefinitionRequest\022,\n\022rate_d" +
+      "efinition_id\030\001 \001(\tR\020rateDefinitionId\022[\n\017" +
+      "rate_definition\030\002 \001(\01322.services.billing" +
+      ".entities.v1alpha4.RateDefinitionR\016rateD" +
+      "efinition\022;\n\013update_mask\030\003 \001(\0132\032.google." +
+      "protobuf.FieldMaskR\nupdateMask\"\036\n\034Update" +
+      "RateDefinitionResponseB\276\001\n+com.tcn.cloud" +
+      ".api.services.billing.v1alpha4B\tPlanProt" +
+      "oP\001\242\002\003SBX\252\002\031Services.Billing.V1alpha4\312\002\031" +
+      "Services\\Billing\\V1alpha4\342\002%Services\\Bil" +
+      "ling\\V1alpha4\\GPBMetadata\352\002\033Services::Bi" +
+      "lling::V1alpha4b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -251,7 +250,7 @@ public final class PlanProto {
     internal_static_services_billing_v1alpha4_CloneBillingPlanRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_v1alpha4_CloneBillingPlanRequest_descriptor,
-        new java.lang.String[] { "BillingPlanId", "Title", });
+        new java.lang.String[] { "BillingPlanId", });
     internal_static_services_billing_v1alpha4_CloneBillingPlanResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_services_billing_v1alpha4_CloneBillingPlanResponse_fieldAccessorTable = new
