@@ -18,4 +18,16 @@ public interface CloneBillingPlanRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getBillingPlanIdBytes();
+
+  /**
+   * <code>string title = 2 [json_name = "title"];</code>
+   * @return The title.
+   */
+  java.lang.String getTitle();
+  /**
+   * <code>string title = 2 [json_name = "title"];</code>
+   * @return The bytes for title.
+   */
+  com.google.protobuf.ByteString
+      getTitleBytes();
 }
