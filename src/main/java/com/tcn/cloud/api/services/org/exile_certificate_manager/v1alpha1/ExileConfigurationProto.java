@@ -73,33 +73,36 @@ public final class ExileConfigurationProto {
       "\n\013description\030\002 \001(\tR\013description\022[\n\004type" +
       "\030\003 \001(\0162G.services.org.exile_certificate_" +
       "manager.v1alpha1.ExileConfigurationTypeR" +
-      "\004type\022\036\n\nparameters\030\004 \001(\tR\nparameters\"X\n" +
-      " CreateExileConfigurationResponse\0224\n\026exi" +
-      "le_configuration_id\030\001 \001(\tR\024exileConfigur" +
-      "ationId\"\307\001\n\037UpdateExileConfigurationRequ" +
-      "est\022i\n\rconfiguration\030\001 \001(\0132C.services.or" +
-      "g.exile_certificate_manager.v1alpha1.Exi" +
-      "leConfigurationR\rconfiguration\0229\n\nfield_" +
-      "mask\030\002 \001(\0132\032.google.protobuf.FieldMaskR\t" +
-      "fieldMask\"\"\n UpdateExileConfigurationRes" +
-      "ponse\"W\n\037DeleteExileConfigurationRequest" +
-      "\0224\n\026exile_configuration_id\030\001 \001(\tR\024exileC" +
-      "onfigurationId\"\"\n DeleteExileConfigurati" +
-      "onResponse\"[\n\036ListExileConfigurationsReq" +
-      "uest\0229\n\nfield_mask\030\001 \001(\0132\032.google.protob" +
-      "uf.FieldMaskR\tfieldMask\"\231\001\n\037ListExileCon" +
-      "figurationsResponse\022v\n\024exile_configurati" +
-      "ons\030\001 \003(\0132C.services.org.exile_certifica" +
-      "te_manager.v1alpha1.ExileConfigurationR\023" +
-      "exileConfigurationsB\263\002\nAcom.tcn.cloud.ap" +
-      "i.services.org.exile_certificate_manager" +
-      ".v1alpha1B\027ExileConfigurationProtoP\001\242\002\003S" +
-      "OE\252\002-Services.Org.ExileCertificateManage" +
-      "r.V1alpha1\312\002-Services\\Org\\ExileCertifica" +
-      "teManager\\V1alpha1\342\0029Services\\Org\\ExileC" +
-      "ertificateManager\\V1alpha1\\GPBMetadata\352\002" +
-      "0Services::Org::ExileCertificateManager:" +
-      ":V1alpha1b\006proto3"
+      "\004type\022\036\n\nparameters\030\004 \001(\tR\nparameters\"\316\001" +
+      "\n CreateExileConfigurationResponse\0224\n\026ex" +
+      "ile_configuration_id\030\001 \001(\tR\024exileConfigu" +
+      "rationId\022t\n\023exile_configuration\030\002 \001(\0132C." +
+      "services.org.exile_certificate_manager.v" +
+      "1alpha1.ExileConfigurationR\022exileConfigu" +
+      "ration\"\307\001\n\037UpdateExileConfigurationReque" +
+      "st\022i\n\rconfiguration\030\001 \001(\0132C.services.org" +
+      ".exile_certificate_manager.v1alpha1.Exil" +
+      "eConfigurationR\rconfiguration\0229\n\nfield_m" +
+      "ask\030\002 \001(\0132\032.google.protobuf.FieldMaskR\tf" +
+      "ieldMask\"\"\n UpdateExileConfigurationResp" +
+      "onse\"W\n\037DeleteExileConfigurationRequest\022" +
+      "4\n\026exile_configuration_id\030\001 \001(\tR\024exileCo" +
+      "nfigurationId\"\"\n DeleteExileConfiguratio" +
+      "nResponse\"[\n\036ListExileConfigurationsRequ" +
+      "est\0229\n\nfield_mask\030\001 \001(\0132\032.google.protobu" +
+      "f.FieldMaskR\tfieldMask\"\231\001\n\037ListExileConf" +
+      "igurationsResponse\022v\n\024exile_configuratio" +
+      "ns\030\001 \003(\0132C.services.org.exile_certificat" +
+      "e_manager.v1alpha1.ExileConfigurationR\023e" +
+      "xileConfigurationsB\263\002\nAcom.tcn.cloud.api" +
+      ".services.org.exile_certificate_manager." +
+      "v1alpha1B\027ExileConfigurationProtoP\001\242\002\003SO" +
+      "E\252\002-Services.Org.ExileCertificateManager" +
+      ".V1alpha1\312\002-Services\\Org\\ExileCertificat" +
+      "eManager\\V1alpha1\342\0029Services\\Org\\ExileCe" +
+      "rtificateManager\\V1alpha1\\GPBMetadata\352\0020" +
+      "Services::Org::ExileCertificateManager::" +
+      "V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -118,7 +121,7 @@ public final class ExileConfigurationProto {
     internal_static_services_org_exile_certificate_manager_v1alpha1_CreateExileConfigurationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_exile_certificate_manager_v1alpha1_CreateExileConfigurationResponse_descriptor,
-        new java.lang.String[] { "ExileConfigurationId", });
+        new java.lang.String[] { "ExileConfigurationId", "ExileConfiguration", });
     internal_static_services_org_exile_certificate_manager_v1alpha1_UpdateExileConfigurationRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_services_org_exile_certificate_manager_v1alpha1_UpdateExileConfigurationRequest_fieldAccessorTable = new

@@ -80,35 +80,37 @@ public final class ExileCertificateProto {
       "rvices/org/exile_certificate_manager/v1a" +
       "lpha1/entities.proto\"U\n\035CreateExileCerti" +
       "ficateRequest\022\022\n\004name\030\001 \001(\tR\004name\022 \n\013des" +
-      "cription\030\002 \001(\tR\013description\"\216\001\n\036CreateEx" +
+      "cription\030\002 \001(\tR\013description\"\314\001\n\036CreateEx" +
       "ileCertificateResponse\022:\n\031encoded_exile_" +
       "certificate\030\001 \001(\tR\027encodedExileCertifica" +
-      "te\0220\n\024exile_certificate_id\030\002 \001(\tR\022exileC" +
-      "ertificateId\"Q\n\035RevokeExileCertificateRe" +
-      "quest\0220\n\024exile_certificate_id\030\001 \001(\tR\022exi" +
-      "leCertificateId\" \n\036RevokeExileCertificat" +
-      "eResponse\"\211\001\n\037AssignExileConfigurationRe" +
-      "quest\0220\n\024exile_certificate_id\030\001 \001(\tR\022exi" +
-      "leCertificateId\0224\n\026exile_configuration_i" +
-      "d\030\002 \001(\tR\024exileConfigurationId\"\"\n AssignE" +
-      "xileConfigurationResponse\"U\n!UnassignExi" +
-      "leConfigurationRequest\0220\n\024exile_certific" +
-      "ate_id\030\001 \001(\tR\022exileCertificateId\"$\n\"Unas" +
-      "signExileConfigurationResponse\"Y\n\034ListEx" +
-      "ileCertificatesRequest\0229\n\nfield_mask\030\001 \001" +
-      "(\0132\032.google.protobuf.FieldMaskR\tfieldMas" +
-      "k\"\221\001\n\035ListExileCertificatesResponse\022p\n\022e" +
-      "xile_certificates\030\001 \003(\0132A.services.org.e" +
-      "xile_certificate_manager.v1alpha1.ExileC" +
-      "ertificateR\021exileCertificatesB\261\002\nAcom.tc" +
-      "n.cloud.api.services.org.exile_certifica" +
-      "te_manager.v1alpha1B\025ExileCertificatePro" +
-      "toP\001\242\002\003SOE\252\002-Services.Org.ExileCertifica" +
-      "teManager.V1alpha1\312\002-Services\\Org\\ExileC" +
-      "ertificateManager\\V1alpha1\342\0029Services\\Or" +
-      "g\\ExileCertificateManager\\V1alpha1\\GPBMe" +
-      "tadata\352\0020Services::Org::ExileCertificate" +
-      "Manager::V1alpha1b\006proto3"
+      "te\022n\n\021exile_certificate\030\002 \001(\0132A.services" +
+      ".org.exile_certificate_manager.v1alpha1." +
+      "ExileCertificateR\020exileCertificate\"Q\n\035Re" +
+      "vokeExileCertificateRequest\0220\n\024exile_cer" +
+      "tificate_id\030\001 \001(\tR\022exileCertificateId\" \n" +
+      "\036RevokeExileCertificateResponse\"\211\001\n\037Assi" +
+      "gnExileConfigurationRequest\0220\n\024exile_cer" +
+      "tificate_id\030\001 \001(\tR\022exileCertificateId\0224\n" +
+      "\026exile_configuration_id\030\002 \001(\tR\024exileConf" +
+      "igurationId\"\"\n AssignExileConfigurationR" +
+      "esponse\"U\n!UnassignExileConfigurationReq" +
+      "uest\0220\n\024exile_certificate_id\030\001 \001(\tR\022exil" +
+      "eCertificateId\"$\n\"UnassignExileConfigura" +
+      "tionResponse\"Y\n\034ListExileCertificatesReq" +
+      "uest\0229\n\nfield_mask\030\001 \001(\0132\032.google.protob" +
+      "uf.FieldMaskR\tfieldMask\"\221\001\n\035ListExileCer" +
+      "tificatesResponse\022p\n\022exile_certificates\030" +
+      "\001 \003(\0132A.services.org.exile_certificate_m" +
+      "anager.v1alpha1.ExileCertificateR\021exileC" +
+      "ertificatesB\261\002\nAcom.tcn.cloud.api.servic" +
+      "es.org.exile_certificate_manager.v1alpha" +
+      "1B\025ExileCertificateProtoP\001\242\002\003SOE\252\002-Servi" +
+      "ces.Org.ExileCertificateManager.V1alpha1" +
+      "\312\002-Services\\Org\\ExileCertificateManager\\" +
+      "V1alpha1\342\0029Services\\Org\\ExileCertificate" +
+      "Manager\\V1alpha1\\GPBMetadata\352\0020Services:" +
+      ":Org::ExileCertificateManager::V1alpha1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -127,7 +129,7 @@ public final class ExileCertificateProto {
     internal_static_services_org_exile_certificate_manager_v1alpha1_CreateExileCertificateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_exile_certificate_manager_v1alpha1_CreateExileCertificateResponse_descriptor,
-        new java.lang.String[] { "EncodedExileCertificate", "ExileCertificateId", });
+        new java.lang.String[] { "EncodedExileCertificate", "ExileCertificate", });
     internal_static_services_org_exile_certificate_manager_v1alpha1_RevokeExileCertificateRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_services_org_exile_certificate_manager_v1alpha1_RevokeExileCertificateRequest_fieldAccessorTable = new

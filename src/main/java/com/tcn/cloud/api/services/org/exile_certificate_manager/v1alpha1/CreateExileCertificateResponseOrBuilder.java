@@ -29,21 +29,28 @@ public interface CreateExileCertificateResponseOrBuilder extends
 
   /**
    * <pre>
-   * The id of the exile certificate that was created.
+   * The newly created exile certificate.
    * </pre>
    *
-   * <code>string exile_certificate_id = 2 [json_name = "exileCertificateId"];</code>
-   * @return The exileCertificateId.
+   * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+   * @return Whether the exileCertificate field is set.
    */
-  java.lang.String getExileCertificateId();
+  boolean hasExileCertificate();
   /**
    * <pre>
-   * The id of the exile certificate that was created.
+   * The newly created exile certificate.
    * </pre>
    *
-   * <code>string exile_certificate_id = 2 [json_name = "exileCertificateId"];</code>
-   * @return The bytes for exileCertificateId.
+   * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+   * @return The exileCertificate.
    */
-  com.google.protobuf.ByteString
-      getExileCertificateIdBytes();
+  com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate getExileCertificate();
+  /**
+   * <pre>
+   * The newly created exile certificate.
+   * </pre>
+   *
+   * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+   */
+  com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificateOrBuilder getExileCertificateOrBuilder();
 }

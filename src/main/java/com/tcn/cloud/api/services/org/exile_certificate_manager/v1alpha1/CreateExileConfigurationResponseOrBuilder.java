@@ -26,4 +26,31 @@ public interface CreateExileConfigurationResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getExileConfigurationIdBytes();
+
+  /**
+   * <pre>
+   * The newly created exile configuration.
+   * </pre>
+   *
+   * <code>.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exile_configuration = 2 [json_name = "exileConfiguration"];</code>
+   * @return Whether the exileConfiguration field is set.
+   */
+  boolean hasExileConfiguration();
+  /**
+   * <pre>
+   * The newly created exile configuration.
+   * </pre>
+   *
+   * <code>.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exile_configuration = 2 [json_name = "exileConfiguration"];</code>
+   * @return The exileConfiguration.
+   */
+  com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration getExileConfiguration();
+  /**
+   * <pre>
+   * The newly created exile configuration.
+   * </pre>
+   *
+   * <code>.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exile_configuration = 2 [json_name = "exileConfiguration"];</code>
+   */
+  com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfigurationOrBuilder getExileConfigurationOrBuilder();
 }
