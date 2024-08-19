@@ -52,7 +52,7 @@ public final class RatesProto {
       "\013update_time\030\010 \001(\0132\032.google.protobuf.Tim" +
       "estampR\nupdateTime\022;\n\013delete_time\030\t \001(\0132" +
       "\032.google.protobuf.TimestampR\ndeleteTime\022" +
-      "$\n\016billing_tag_id\030\n \001(\tR\014billingTagId\"\272\003" +
+      "$\n\016billing_tag_id\030\n \001(\tR\014billingTagId\"\223\004" +
       "\n\014MatchingRule\022(\n\020matching_rule_id\030\001 \001(\t" +
       "R\016matchingRuleId\022M\n\006config\030\002 \001(\01321.servi" +
       "ces.billing.entities.v1alpha4.ProductCon" +
@@ -60,17 +60,19 @@ public final class RatesProto {
       "oogle.protobuf.TimestampR\ncreateTime\022;\n\013" +
       "delete_time\030\004 \001(\0132\032.google.protobuf.Time" +
       "stampR\ndeleteTime\022;\n\013update_time\030\005 \001(\0132\032" +
-      ".google.protobuf.TimestampR\nupdateTime\022g" +
-      "\n\023country_code_prefix\030d \001(\01325.services.b" +
-      "illing.entities.v1alpha4.CountryCodePref" +
-      "ixH\000R\021countryCodePrefixB\021\n\017matching_conf" +
-      "igB\355\001\n4com.tcn.cloud.api.services.billin" +
-      "g.entities.v1alpha4B\nRatesProtoP\001\242\002\003SBE\252" +
-      "\002\"Services.Billing.Entities.V1alpha4\312\002\"S" +
-      "ervices\\Billing\\Entities\\V1alpha4\342\002.Serv" +
-      "ices\\Billing\\Entities\\V1alpha4\\GPBMetada" +
-      "ta\352\002%Services::Billing::Entities::V1alph" +
-      "a4b\006proto3"
+      ".google.protobuf.TimestampR\nupdateTime\022S" +
+      "\n\013rule_config\030\006 \001(\01322.services.billing.e" +
+      "ntities.v1alpha4.MatchingConfigR\nruleCon" +
+      "fig\022k\n\023country_code_prefix\030d \001(\01325.servi" +
+      "ces.billing.entities.v1alpha4.CountryCod" +
+      "ePrefixB\002\030\001H\000R\021countryCodePrefixB\021\n\017matc" +
+      "hing_configB\355\001\n4com.tcn.cloud.api.servic" +
+      "es.billing.entities.v1alpha4B\nRatesProto" +
+      "P\001\242\002\003SBE\252\002\"Services.Billing.Entities.V1a" +
+      "lpha4\312\002\"Services\\Billing\\Entities\\V1alph" +
+      "a4\342\002.Services\\Billing\\Entities\\V1alpha4\\" +
+      "GPBMetadata\352\002%Services::Billing::Entitie" +
+      "s::V1alpha4b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -91,7 +93,7 @@ public final class RatesProto {
     internal_static_services_billing_entities_v1alpha4_MatchingRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha4_MatchingRule_descriptor,
-        new java.lang.String[] { "MatchingRuleId", "Config", "CreateTime", "DeleteTime", "UpdateTime", "CountryCodePrefix", "MatchingConfig", });
+        new java.lang.String[] { "MatchingRuleId", "Config", "CreateTime", "DeleteTime", "UpdateTime", "RuleConfig", "CountryCodePrefix", "MatchingConfig", });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha4.ProductsProto.getDescriptor();

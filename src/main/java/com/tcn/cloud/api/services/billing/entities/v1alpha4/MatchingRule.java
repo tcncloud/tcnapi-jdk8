@@ -45,7 +45,7 @@ private static final long serialVersionUID = 0L;
   public enum MatchingConfigCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    COUNTRY_CODE_PREFIX(100),
+    @java.lang.Deprecated COUNTRY_CODE_PREFIX(100),
     MATCHINGCONFIG_NOT_SET(0);
     private final int value;
     private MatchingConfigCase(int value) {
@@ -226,31 +226,61 @@ private static final long serialVersionUID = 0L;
     return updateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updateTime_;
   }
 
+  public static final int RULE_CONFIG_FIELD_NUMBER = 6;
+  private com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig ruleConfig_;
+  /**
+   * <code>.services.billing.entities.v1alpha4.MatchingConfig rule_config = 6 [json_name = "ruleConfig"];</code>
+   * @return Whether the ruleConfig field is set.
+   */
+  @java.lang.Override
+  public boolean hasRuleConfig() {
+    return ruleConfig_ != null;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha4.MatchingConfig rule_config = 6 [json_name = "ruleConfig"];</code>
+   * @return The ruleConfig.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig getRuleConfig() {
+    return ruleConfig_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig.getDefaultInstance() : ruleConfig_;
+  }
+  /**
+   * <code>.services.billing.entities.v1alpha4.MatchingConfig rule_config = 6 [json_name = "ruleConfig"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfigOrBuilder getRuleConfigOrBuilder() {
+    return ruleConfig_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig.getDefaultInstance() : ruleConfig_;
+  }
+
   public static final int COUNTRY_CODE_PREFIX_FIELD_NUMBER = 100;
   /**
-   * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+   * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.MatchingRule.country_code_prefix is deprecated.
+   *     See services/billing/entities/v1alpha4/rates.proto;l=30
    * @return Whether the countryCodePrefix field is set.
    */
   @java.lang.Override
-  public boolean hasCountryCodePrefix() {
+  @java.lang.Deprecated public boolean hasCountryCodePrefix() {
     return matchingConfigCase_ == 100;
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+   * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.MatchingRule.country_code_prefix is deprecated.
+   *     See services/billing/entities/v1alpha4/rates.proto;l=30
    * @return The countryCodePrefix.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix getCountryCodePrefix() {
+  @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix getCountryCodePrefix() {
     if (matchingConfigCase_ == 100) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix) matchingConfig_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+   * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefixOrBuilder getCountryCodePrefixOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefixOrBuilder getCountryCodePrefixOrBuilder() {
     if (matchingConfigCase_ == 100) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix) matchingConfig_;
     }
@@ -286,6 +316,9 @@ private static final long serialVersionUID = 0L;
     if (updateTime_ != null) {
       output.writeMessage(5, getUpdateTime());
     }
+    if (ruleConfig_ != null) {
+      output.writeMessage(6, getRuleConfig());
+    }
     if (matchingConfigCase_ == 100) {
       output.writeMessage(100, (com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix) matchingConfig_);
     }
@@ -316,6 +349,10 @@ private static final long serialVersionUID = 0L;
     if (updateTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getUpdateTime());
+    }
+    if (ruleConfig_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getRuleConfig());
     }
     if (matchingConfigCase_ == 100) {
       size += com.google.protobuf.CodedOutputStream
@@ -358,6 +395,11 @@ private static final long serialVersionUID = 0L;
       if (!getUpdateTime()
           .equals(other.getUpdateTime())) return false;
     }
+    if (hasRuleConfig() != other.hasRuleConfig()) return false;
+    if (hasRuleConfig()) {
+      if (!getRuleConfig()
+          .equals(other.getRuleConfig())) return false;
+    }
     if (!getMatchingConfigCase().equals(other.getMatchingConfigCase())) return false;
     switch (matchingConfigCase_) {
       case 100:
@@ -395,6 +437,10 @@ private static final long serialVersionUID = 0L;
     if (hasUpdateTime()) {
       hash = (37 * hash) + UPDATE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getUpdateTime().hashCode();
+    }
+    if (hasRuleConfig()) {
+      hash = (37 * hash) + RULE_CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getRuleConfig().hashCode();
     }
     switch (matchingConfigCase_) {
       case 100:
@@ -556,6 +602,11 @@ private static final long serialVersionUID = 0L;
         updateTimeBuilder_.dispose();
         updateTimeBuilder_ = null;
       }
+      ruleConfig_ = null;
+      if (ruleConfigBuilder_ != null) {
+        ruleConfigBuilder_.dispose();
+        ruleConfigBuilder_ = null;
+      }
       if (countryCodePrefixBuilder_ != null) {
         countryCodePrefixBuilder_.clear();
       }
@@ -617,6 +668,11 @@ private static final long serialVersionUID = 0L;
         result.updateTime_ = updateTimeBuilder_ == null
             ? updateTime_
             : updateTimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.ruleConfig_ = ruleConfigBuilder_ == null
+            ? ruleConfig_
+            : ruleConfigBuilder_.build();
       }
     }
 
@@ -690,6 +746,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasUpdateTime()) {
         mergeUpdateTime(other.getUpdateTime());
       }
+      if (other.hasRuleConfig()) {
+        mergeRuleConfig(other.getRuleConfig());
+      }
       switch (other.getMatchingConfigCase()) {
         case COUNTRY_CODE_PREFIX: {
           mergeCountryCodePrefix(other.getCountryCodePrefix());
@@ -758,6 +817,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 50: {
+              input.readMessage(
+                  getRuleConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             case 802: {
               input.readMessage(
                   getCountryCodePrefixFieldBuilder().getBuilder(),
@@ -1349,22 +1415,145 @@ private static final long serialVersionUID = 0L;
       return updateTimeBuilder_;
     }
 
+    private com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig ruleConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfigOrBuilder> ruleConfigBuilder_;
+    /**
+     * <code>.services.billing.entities.v1alpha4.MatchingConfig rule_config = 6 [json_name = "ruleConfig"];</code>
+     * @return Whether the ruleConfig field is set.
+     */
+    public boolean hasRuleConfig() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.MatchingConfig rule_config = 6 [json_name = "ruleConfig"];</code>
+     * @return The ruleConfig.
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig getRuleConfig() {
+      if (ruleConfigBuilder_ == null) {
+        return ruleConfig_ == null ? com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig.getDefaultInstance() : ruleConfig_;
+      } else {
+        return ruleConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.MatchingConfig rule_config = 6 [json_name = "ruleConfig"];</code>
+     */
+    public Builder setRuleConfig(com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig value) {
+      if (ruleConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ruleConfig_ = value;
+      } else {
+        ruleConfigBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.MatchingConfig rule_config = 6 [json_name = "ruleConfig"];</code>
+     */
+    public Builder setRuleConfig(
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig.Builder builderForValue) {
+      if (ruleConfigBuilder_ == null) {
+        ruleConfig_ = builderForValue.build();
+      } else {
+        ruleConfigBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.MatchingConfig rule_config = 6 [json_name = "ruleConfig"];</code>
+     */
+    public Builder mergeRuleConfig(com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig value) {
+      if (ruleConfigBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          ruleConfig_ != null &&
+          ruleConfig_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig.getDefaultInstance()) {
+          getRuleConfigBuilder().mergeFrom(value);
+        } else {
+          ruleConfig_ = value;
+        }
+      } else {
+        ruleConfigBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.MatchingConfig rule_config = 6 [json_name = "ruleConfig"];</code>
+     */
+    public Builder clearRuleConfig() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      ruleConfig_ = null;
+      if (ruleConfigBuilder_ != null) {
+        ruleConfigBuilder_.dispose();
+        ruleConfigBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.MatchingConfig rule_config = 6 [json_name = "ruleConfig"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig.Builder getRuleConfigBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getRuleConfigFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.MatchingConfig rule_config = 6 [json_name = "ruleConfig"];</code>
+     */
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfigOrBuilder getRuleConfigOrBuilder() {
+      if (ruleConfigBuilder_ != null) {
+        return ruleConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return ruleConfig_ == null ?
+            com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig.getDefaultInstance() : ruleConfig_;
+      }
+    }
+    /**
+     * <code>.services.billing.entities.v1alpha4.MatchingConfig rule_config = 6 [json_name = "ruleConfig"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfigOrBuilder> 
+        getRuleConfigFieldBuilder() {
+      if (ruleConfigBuilder_ == null) {
+        ruleConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfigOrBuilder>(
+                getRuleConfig(),
+                getParentForChildren(),
+                isClean());
+        ruleConfig_ = null;
+      }
+      return ruleConfigBuilder_;
+    }
+
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix, com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefixOrBuilder> countryCodePrefixBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha4.MatchingRule.country_code_prefix is deprecated.
+     *     See services/billing/entities/v1alpha4/rates.proto;l=30
      * @return Whether the countryCodePrefix field is set.
      */
     @java.lang.Override
-    public boolean hasCountryCodePrefix() {
+    @java.lang.Deprecated public boolean hasCountryCodePrefix() {
       return matchingConfigCase_ == 100;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix", deprecated = true];</code>
+     * @deprecated services.billing.entities.v1alpha4.MatchingRule.country_code_prefix is deprecated.
+     *     See services/billing/entities/v1alpha4/rates.proto;l=30
      * @return The countryCodePrefix.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix getCountryCodePrefix() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix getCountryCodePrefix() {
       if (countryCodePrefixBuilder_ == null) {
         if (matchingConfigCase_ == 100) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix) matchingConfig_;
@@ -1378,9 +1567,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix", deprecated = true];</code>
      */
-    public Builder setCountryCodePrefix(com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix value) {
+    @java.lang.Deprecated public Builder setCountryCodePrefix(com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix value) {
       if (countryCodePrefixBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1394,9 +1583,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix", deprecated = true];</code>
      */
-    public Builder setCountryCodePrefix(
+    @java.lang.Deprecated public Builder setCountryCodePrefix(
         com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix.Builder builderForValue) {
       if (countryCodePrefixBuilder_ == null) {
         matchingConfig_ = builderForValue.build();
@@ -1408,9 +1597,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix", deprecated = true];</code>
      */
-    public Builder mergeCountryCodePrefix(com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix value) {
+    @java.lang.Deprecated public Builder mergeCountryCodePrefix(com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix value) {
       if (countryCodePrefixBuilder_ == null) {
         if (matchingConfigCase_ == 100 &&
             matchingConfig_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix.getDefaultInstance()) {
@@ -1431,9 +1620,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix", deprecated = true];</code>
      */
-    public Builder clearCountryCodePrefix() {
+    @java.lang.Deprecated public Builder clearCountryCodePrefix() {
       if (countryCodePrefixBuilder_ == null) {
         if (matchingConfigCase_ == 100) {
           matchingConfigCase_ = 0;
@@ -1450,16 +1639,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix.Builder getCountryCodePrefixBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix.Builder getCountryCodePrefixBuilder() {
       return getCountryCodePrefixFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefixOrBuilder getCountryCodePrefixOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefixOrBuilder getCountryCodePrefixOrBuilder() {
       if ((matchingConfigCase_ == 100) && (countryCodePrefixBuilder_ != null)) {
         return countryCodePrefixBuilder_.getMessageOrBuilder();
       } else {
@@ -1470,7 +1659,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+     * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix, com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefixOrBuilder> 

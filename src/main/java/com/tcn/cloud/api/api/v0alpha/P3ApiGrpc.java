@@ -3053,37 +3053,6 @@ public final class P3ApiGrpc {
     return getListSmsNumbersMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetMailMergeReq,
-      com.tcn.cloud.api.api.v0alpha.GetMailMergeRes> getGetMailMergeMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetMailMerge",
-      requestType = com.tcn.cloud.api.api.v0alpha.GetMailMergeReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.GetMailMergeRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetMailMergeReq,
-      com.tcn.cloud.api.api.v0alpha.GetMailMergeRes> getGetMailMergeMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetMailMergeReq, com.tcn.cloud.api.api.v0alpha.GetMailMergeRes> getGetMailMergeMethod;
-    if ((getGetMailMergeMethod = P3ApiGrpc.getGetMailMergeMethod) == null) {
-      synchronized (P3ApiGrpc.class) {
-        if ((getGetMailMergeMethod = P3ApiGrpc.getGetMailMergeMethod) == null) {
-          P3ApiGrpc.getGetMailMergeMethod = getGetMailMergeMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetMailMergeReq, com.tcn.cloud.api.api.v0alpha.GetMailMergeRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMailMerge"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.GetMailMergeReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.GetMailMergeRes.getDefaultInstance()))
-              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetMailMerge"))
-              .build();
-        }
-      }
-    }
-    return getGetMailMergeMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -4172,13 +4141,6 @@ public final class P3ApiGrpc {
     default void listSmsNumbers(com.tcn.cloud.api.api.v0alpha.ListSmsNumbersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsNumbersRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmsNumbersMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void getMailMerge(com.tcn.cloud.api.api.v0alpha.GetMailMergeReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMailMergeRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMailMergeMethod(), responseObserver);
     }
   }
 
@@ -5348,14 +5310,6 @@ public final class P3ApiGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSmsNumbersMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     */
-    public void getMailMerge(com.tcn.cloud.api.api.v0alpha.GetMailMergeReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMailMergeRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetMailMergeMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -6416,13 +6370,6 @@ public final class P3ApiGrpc {
     public com.tcn.cloud.api.api.v0alpha.ListSmsNumbersRes listSmsNumbers(com.tcn.cloud.api.api.v0alpha.ListSmsNumbersReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSmsNumbersMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcn.cloud.api.api.v0alpha.GetMailMergeRes getMailMerge(com.tcn.cloud.api.api.v0alpha.GetMailMergeReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetMailMergeMethod(), getCallOptions(), request);
     }
   }
 
@@ -7560,14 +7507,6 @@ public final class P3ApiGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSmsNumbersMethod(), getCallOptions()), request);
     }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetMailMergeRes> getMailMerge(
-        com.tcn.cloud.api.api.v0alpha.GetMailMergeReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetMailMergeMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_GET_AGENT_HUNT_GROUP = 0;
@@ -7668,7 +7607,6 @@ public final class P3ApiGrpc {
   private static final int METHODID_LIST_SCHEDULE_RULES = 95;
   private static final int METHODID_LIST_CUSTOM_REPORT_FILTERS = 96;
   private static final int METHODID_LIST_SMS_NUMBERS = 97;
-  private static final int METHODID_GET_MAIL_MERGE = 98;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -8078,10 +8016,6 @@ public final class P3ApiGrpc {
         case METHODID_LIST_SMS_NUMBERS:
           serviceImpl.listSmsNumbers((com.tcn.cloud.api.api.v0alpha.ListSmsNumbersReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsNumbersRes>) responseObserver);
-          break;
-        case METHODID_GET_MAIL_MERGE:
-          serviceImpl.getMailMerge((com.tcn.cloud.api.api.v0alpha.GetMailMergeReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMailMergeRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -8787,13 +8721,6 @@ public final class P3ApiGrpc {
               com.tcn.cloud.api.api.v0alpha.ListSmsNumbersReq,
               com.tcn.cloud.api.api.v0alpha.ListSmsNumbersRes>(
                 service, METHODID_LIST_SMS_NUMBERS)))
-        .addMethod(
-          getGetMailMergeMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetMailMergeReq,
-              com.tcn.cloud.api.api.v0alpha.GetMailMergeRes>(
-                service, METHODID_GET_MAIL_MERGE)))
         .build();
   }
 
@@ -8940,7 +8867,6 @@ public final class P3ApiGrpc {
               .addMethod(getListScheduleRulesMethod())
               .addMethod(getListCustomReportFiltersMethod())
               .addMethod(getListSmsNumbersMethod())
-              .addMethod(getGetMailMergeMethod())
               .build();
         }
       }
