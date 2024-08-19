@@ -168,4 +168,31 @@ public interface TableColumnConfigOrBuilder extends
    * @return The sortDirection.
    */
   com.tcn.cloud.api.api.v1alpha1.insights.ColumnSort getSortDirection();
+
+  /**
+   * <pre>
+   * insight contextual actions
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+   * @return Whether the insightContextualAction field is set.
+   */
+  boolean hasInsightContextualAction();
+  /**
+   * <pre>
+   * insight contextual actions
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+   * @return The insightContextualAction.
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction getInsightContextualAction();
+  /**
+   * <pre>
+   * insight contextual actions
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionOrBuilder getInsightContextualActionOrBuilder();
 }
