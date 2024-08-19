@@ -12,73 +12,73 @@ public interface InsightContextualActionOrBuilder extends
    * Type of the contextual action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.InsightContextualActionType contextual_action_type = 1 [json_name = "contextualActionType"];</code>
-   * @return The enum numeric value on the wire for contextualActionType.
+   * <code>.api.v1alpha1.insights.InsightContextualActionType type = 1 [json_name = "type"];</code>
+   * @return The enum numeric value on the wire for type.
    */
-  int getContextualActionTypeValue();
+  int getTypeValue();
   /**
    * <pre>
    * Type of the contextual action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.InsightContextualActionType contextual_action_type = 1 [json_name = "contextualActionType"];</code>
-   * @return The contextualActionType.
+   * <code>.api.v1alpha1.insights.InsightContextualActionType type = 1 [json_name = "type"];</code>
+   * @return The type.
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType getContextualActionType();
+  com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType getType();
 
   /**
    * <pre>
    * Link action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
-   * @return Whether the linkAction field is set.
+   * <code>.api.v1alpha1.insights.LinkAction link = 2 [json_name = "link"];</code>
+   * @return Whether the link field is set.
    */
-  boolean hasLinkAction();
+  boolean hasLink();
   /**
    * <pre>
    * Link action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
-   * @return The linkAction.
+   * <code>.api.v1alpha1.insights.LinkAction link = 2 [json_name = "link"];</code>
+   * @return The link.
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.LinkAction getLinkAction();
+  com.tcn.cloud.api.api.v1alpha1.insights.LinkAction getLink();
   /**
    * <pre>
    * Link action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
+   * <code>.api.v1alpha1.insights.LinkAction link = 2 [json_name = "link"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.LinkActionOrBuilder getLinkActionOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.insights.LinkActionOrBuilder getLinkOrBuilder();
 
   /**
    * <pre>
    * Component action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
-   * @return Whether the componentAction field is set.
+   * <code>.api.v1alpha1.insights.ComponentAction component = 3 [json_name = "component"];</code>
+   * @return Whether the component field is set.
    */
-  boolean hasComponentAction();
+  boolean hasComponent();
   /**
    * <pre>
    * Component action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
-   * @return The componentAction.
+   * <code>.api.v1alpha1.insights.ComponentAction component = 3 [json_name = "component"];</code>
+   * @return The component.
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction getComponentAction();
+  com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction getComponent();
   /**
    * <pre>
    * Component action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
+   * <code>.api.v1alpha1.insights.ComponentAction component = 3 [json_name = "component"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.ComponentActionOrBuilder getComponentActionOrBuilder();
+  com.tcn.cloud.api.api.v1alpha1.insights.ComponentActionOrBuilder getComponentOrBuilder();
 
   com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.ActionCase getActionCase();
 }

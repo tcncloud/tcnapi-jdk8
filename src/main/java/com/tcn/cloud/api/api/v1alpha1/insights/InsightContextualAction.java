@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private InsightContextualAction() {
-    contextualActionType_ = 0;
+    type_ = 0;
   }
 
   @java.lang.Override
@@ -49,8 +49,8 @@ private static final long serialVersionUID = 0L;
   public enum ActionCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    LINK_ACTION(2),
-    COMPONENT_ACTION(3),
+    LINK(2),
+    COMPONENT(3),
     ACTION_NOT_SET(0);
     private final int value;
     private ActionCase(int value) {
@@ -68,8 +68,8 @@ private static final long serialVersionUID = 0L;
 
     public static ActionCase forNumber(int value) {
       switch (value) {
-        case 2: return LINK_ACTION;
-        case 3: return COMPONENT_ACTION;
+        case 2: return LINK;
+        case 3: return COMPONENT;
         case 0: return ACTION_NOT_SET;
         default: return null;
       }
@@ -85,43 +85,43 @@ private static final long serialVersionUID = 0L;
         actionCase_);
   }
 
-  public static final int CONTEXTUAL_ACTION_TYPE_FIELD_NUMBER = 1;
-  private int contextualActionType_ = 0;
+  public static final int TYPE_FIELD_NUMBER = 1;
+  private int type_ = 0;
   /**
    * <pre>
    * Type of the contextual action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.InsightContextualActionType contextual_action_type = 1 [json_name = "contextualActionType"];</code>
-   * @return The enum numeric value on the wire for contextualActionType.
+   * <code>.api.v1alpha1.insights.InsightContextualActionType type = 1 [json_name = "type"];</code>
+   * @return The enum numeric value on the wire for type.
    */
-  @java.lang.Override public int getContextualActionTypeValue() {
-    return contextualActionType_;
+  @java.lang.Override public int getTypeValue() {
+    return type_;
   }
   /**
    * <pre>
    * Type of the contextual action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.InsightContextualActionType contextual_action_type = 1 [json_name = "contextualActionType"];</code>
-   * @return The contextualActionType.
+   * <code>.api.v1alpha1.insights.InsightContextualActionType type = 1 [json_name = "type"];</code>
+   * @return The type.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType getContextualActionType() {
-    com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType result = com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType.forNumber(contextualActionType_);
+  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType getType() {
+    com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType result = com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType.forNumber(type_);
     return result == null ? com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType.UNRECOGNIZED : result;
   }
 
-  public static final int LINK_ACTION_FIELD_NUMBER = 2;
+  public static final int LINK_FIELD_NUMBER = 2;
   /**
    * <pre>
    * Link action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
-   * @return Whether the linkAction field is set.
+   * <code>.api.v1alpha1.insights.LinkAction link = 2 [json_name = "link"];</code>
+   * @return Whether the link field is set.
    */
   @java.lang.Override
-  public boolean hasLinkAction() {
+  public boolean hasLink() {
     return actionCase_ == 2;
   }
   /**
@@ -129,11 +129,11 @@ private static final long serialVersionUID = 0L;
    * Link action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
-   * @return The linkAction.
+   * <code>.api.v1alpha1.insights.LinkAction link = 2 [json_name = "link"];</code>
+   * @return The link.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.insights.LinkAction getLinkAction() {
+  public com.tcn.cloud.api.api.v1alpha1.insights.LinkAction getLink() {
     if (actionCase_ == 2) {
        return (com.tcn.cloud.api.api.v1alpha1.insights.LinkAction) action_;
     }
@@ -144,27 +144,27 @@ private static final long serialVersionUID = 0L;
    * Link action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
+   * <code>.api.v1alpha1.insights.LinkAction link = 2 [json_name = "link"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.insights.LinkActionOrBuilder getLinkActionOrBuilder() {
+  public com.tcn.cloud.api.api.v1alpha1.insights.LinkActionOrBuilder getLinkOrBuilder() {
     if (actionCase_ == 2) {
        return (com.tcn.cloud.api.api.v1alpha1.insights.LinkAction) action_;
     }
     return com.tcn.cloud.api.api.v1alpha1.insights.LinkAction.getDefaultInstance();
   }
 
-  public static final int COMPONENT_ACTION_FIELD_NUMBER = 3;
+  public static final int COMPONENT_FIELD_NUMBER = 3;
   /**
    * <pre>
    * Component action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
-   * @return Whether the componentAction field is set.
+   * <code>.api.v1alpha1.insights.ComponentAction component = 3 [json_name = "component"];</code>
+   * @return Whether the component field is set.
    */
   @java.lang.Override
-  public boolean hasComponentAction() {
+  public boolean hasComponent() {
     return actionCase_ == 3;
   }
   /**
@@ -172,11 +172,11 @@ private static final long serialVersionUID = 0L;
    * Component action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
-   * @return The componentAction.
+   * <code>.api.v1alpha1.insights.ComponentAction component = 3 [json_name = "component"];</code>
+   * @return The component.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction getComponentAction() {
+  public com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction getComponent() {
     if (actionCase_ == 3) {
        return (com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction) action_;
     }
@@ -187,10 +187,10 @@ private static final long serialVersionUID = 0L;
    * Component action
    * </pre>
    *
-   * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
+   * <code>.api.v1alpha1.insights.ComponentAction component = 3 [json_name = "component"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.insights.ComponentActionOrBuilder getComponentActionOrBuilder() {
+  public com.tcn.cloud.api.api.v1alpha1.insights.ComponentActionOrBuilder getComponentOrBuilder() {
     if (actionCase_ == 3) {
        return (com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction) action_;
     }
@@ -211,8 +211,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (contextualActionType_ != com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType.INSIGHT_CONTEXTUAL_ACTION_TYPE_UNSPECIFIED.getNumber()) {
-      output.writeEnum(1, contextualActionType_);
+    if (type_ != com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType.INSIGHT_CONTEXTUAL_ACTION_TYPE_UNSPECIFIED.getNumber()) {
+      output.writeEnum(1, type_);
     }
     if (actionCase_ == 2) {
       output.writeMessage(2, (com.tcn.cloud.api.api.v1alpha1.insights.LinkAction) action_);
@@ -229,9 +229,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (contextualActionType_ != com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType.INSIGHT_CONTEXTUAL_ACTION_TYPE_UNSPECIFIED.getNumber()) {
+    if (type_ != com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType.INSIGHT_CONTEXTUAL_ACTION_TYPE_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(1, contextualActionType_);
+        .computeEnumSize(1, type_);
     }
     if (actionCase_ == 2) {
       size += com.google.protobuf.CodedOutputStream
@@ -256,16 +256,16 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction other = (com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction) obj;
 
-    if (contextualActionType_ != other.contextualActionType_) return false;
+    if (type_ != other.type_) return false;
     if (!getActionCase().equals(other.getActionCase())) return false;
     switch (actionCase_) {
       case 2:
-        if (!getLinkAction()
-            .equals(other.getLinkAction())) return false;
+        if (!getLink()
+            .equals(other.getLink())) return false;
         break;
       case 3:
-        if (!getComponentAction()
-            .equals(other.getComponentAction())) return false;
+        if (!getComponent()
+            .equals(other.getComponent())) return false;
         break;
       case 0:
       default:
@@ -281,16 +281,16 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CONTEXTUAL_ACTION_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + contextualActionType_;
+    hash = (37 * hash) + TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + type_;
     switch (actionCase_) {
       case 2:
-        hash = (37 * hash) + LINK_ACTION_FIELD_NUMBER;
-        hash = (53 * hash) + getLinkAction().hashCode();
+        hash = (37 * hash) + LINK_FIELD_NUMBER;
+        hash = (53 * hash) + getLink().hashCode();
         break;
       case 3:
-        hash = (37 * hash) + COMPONENT_ACTION_FIELD_NUMBER;
-        hash = (53 * hash) + getComponentAction().hashCode();
+        hash = (37 * hash) + COMPONENT_FIELD_NUMBER;
+        hash = (53 * hash) + getComponent().hashCode();
         break;
       case 0:
       default:
@@ -430,12 +430,12 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      contextualActionType_ = 0;
-      if (linkActionBuilder_ != null) {
-        linkActionBuilder_.clear();
+      type_ = 0;
+      if (linkBuilder_ != null) {
+        linkBuilder_.clear();
       }
-      if (componentActionBuilder_ != null) {
-        componentActionBuilder_.clear();
+      if (componentBuilder_ != null) {
+        componentBuilder_.clear();
       }
       actionCase_ = 0;
       action_ = null;
@@ -474,7 +474,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.contextualActionType_ = contextualActionType_;
+        result.type_ = type_;
       }
     }
 
@@ -482,12 +482,12 @@ private static final long serialVersionUID = 0L;
       result.actionCase_ = actionCase_;
       result.action_ = this.action_;
       if (actionCase_ == 2 &&
-          linkActionBuilder_ != null) {
-        result.action_ = linkActionBuilder_.build();
+          linkBuilder_ != null) {
+        result.action_ = linkBuilder_.build();
       }
       if (actionCase_ == 3 &&
-          componentActionBuilder_ != null) {
-        result.action_ = componentActionBuilder_.build();
+          componentBuilder_ != null) {
+        result.action_ = componentBuilder_.build();
       }
     }
 
@@ -535,16 +535,16 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.getDefaultInstance()) return this;
-      if (other.contextualActionType_ != 0) {
-        setContextualActionTypeValue(other.getContextualActionTypeValue());
+      if (other.type_ != 0) {
+        setTypeValue(other.getTypeValue());
       }
       switch (other.getActionCase()) {
-        case LINK_ACTION: {
-          mergeLinkAction(other.getLinkAction());
+        case LINK: {
+          mergeLink(other.getLink());
           break;
         }
-        case COMPONENT_ACTION: {
-          mergeComponentAction(other.getComponentAction());
+        case COMPONENT: {
+          mergeComponent(other.getComponent());
           break;
         }
         case ACTION_NOT_SET: {
@@ -578,20 +578,20 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              contextualActionType_ = input.readEnum();
+              type_ = input.readEnum();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 18: {
               input.readMessage(
-                  getLinkActionFieldBuilder().getBuilder(),
+                  getLinkFieldBuilder().getBuilder(),
                   extensionRegistry);
               actionCase_ = 2;
               break;
             } // case 18
             case 26: {
               input.readMessage(
-                  getComponentActionFieldBuilder().getBuilder(),
+                  getComponentFieldBuilder().getBuilder(),
                   extensionRegistry);
               actionCase_ = 3;
               break;
@@ -628,29 +628,29 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
 
-    private int contextualActionType_ = 0;
+    private int type_ = 0;
     /**
      * <pre>
      * Type of the contextual action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.InsightContextualActionType contextual_action_type = 1 [json_name = "contextualActionType"];</code>
-     * @return The enum numeric value on the wire for contextualActionType.
+     * <code>.api.v1alpha1.insights.InsightContextualActionType type = 1 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override public int getContextualActionTypeValue() {
-      return contextualActionType_;
+    @java.lang.Override public int getTypeValue() {
+      return type_;
     }
     /**
      * <pre>
      * Type of the contextual action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.InsightContextualActionType contextual_action_type = 1 [json_name = "contextualActionType"];</code>
-     * @param value The enum numeric value on the wire for contextualActionType to set.
+     * <code>.api.v1alpha1.insights.InsightContextualActionType type = 1 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
      * @return This builder for chaining.
      */
-    public Builder setContextualActionTypeValue(int value) {
-      contextualActionType_ = value;
+    public Builder setTypeValue(int value) {
+      type_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -660,12 +660,12 @@ private static final long serialVersionUID = 0L;
      * Type of the contextual action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.InsightContextualActionType contextual_action_type = 1 [json_name = "contextualActionType"];</code>
-     * @return The contextualActionType.
+     * <code>.api.v1alpha1.insights.InsightContextualActionType type = 1 [json_name = "type"];</code>
+     * @return The type.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType getContextualActionType() {
-      com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType result = com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType.forNumber(contextualActionType_);
+    public com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType getType() {
+      com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType result = com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType.forNumber(type_);
       return result == null ? com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType.UNRECOGNIZED : result;
     }
     /**
@@ -673,16 +673,16 @@ private static final long serialVersionUID = 0L;
      * Type of the contextual action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.InsightContextualActionType contextual_action_type = 1 [json_name = "contextualActionType"];</code>
-     * @param value The contextualActionType to set.
+     * <code>.api.v1alpha1.insights.InsightContextualActionType type = 1 [json_name = "type"];</code>
+     * @param value The type to set.
      * @return This builder for chaining.
      */
-    public Builder setContextualActionType(com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType value) {
+    public Builder setType(com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionType value) {
       if (value == null) {
         throw new NullPointerException();
       }
       bitField0_ |= 0x00000001;
-      contextualActionType_ = value.getNumber();
+      type_ = value.getNumber();
       onChanged();
       return this;
     }
@@ -691,28 +691,28 @@ private static final long serialVersionUID = 0L;
      * Type of the contextual action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.InsightContextualActionType contextual_action_type = 1 [json_name = "contextualActionType"];</code>
+     * <code>.api.v1alpha1.insights.InsightContextualActionType type = 1 [json_name = "type"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearContextualActionType() {
+    public Builder clearType() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      contextualActionType_ = 0;
+      type_ = 0;
       onChanged();
       return this;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.insights.LinkAction, com.tcn.cloud.api.api.v1alpha1.insights.LinkAction.Builder, com.tcn.cloud.api.api.v1alpha1.insights.LinkActionOrBuilder> linkActionBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.insights.LinkAction, com.tcn.cloud.api.api.v1alpha1.insights.LinkAction.Builder, com.tcn.cloud.api.api.v1alpha1.insights.LinkActionOrBuilder> linkBuilder_;
     /**
      * <pre>
      * Link action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
-     * @return Whether the linkAction field is set.
+     * <code>.api.v1alpha1.insights.LinkAction link = 2 [json_name = "link"];</code>
+     * @return Whether the link field is set.
      */
     @java.lang.Override
-    public boolean hasLinkAction() {
+    public boolean hasLink() {
       return actionCase_ == 2;
     }
     /**
@@ -720,19 +720,19 @@ private static final long serialVersionUID = 0L;
      * Link action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
-     * @return The linkAction.
+     * <code>.api.v1alpha1.insights.LinkAction link = 2 [json_name = "link"];</code>
+     * @return The link.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.LinkAction getLinkAction() {
-      if (linkActionBuilder_ == null) {
+    public com.tcn.cloud.api.api.v1alpha1.insights.LinkAction getLink() {
+      if (linkBuilder_ == null) {
         if (actionCase_ == 2) {
           return (com.tcn.cloud.api.api.v1alpha1.insights.LinkAction) action_;
         }
         return com.tcn.cloud.api.api.v1alpha1.insights.LinkAction.getDefaultInstance();
       } else {
         if (actionCase_ == 2) {
-          return linkActionBuilder_.getMessage();
+          return linkBuilder_.getMessage();
         }
         return com.tcn.cloud.api.api.v1alpha1.insights.LinkAction.getDefaultInstance();
       }
@@ -742,17 +742,17 @@ private static final long serialVersionUID = 0L;
      * Link action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
+     * <code>.api.v1alpha1.insights.LinkAction link = 2 [json_name = "link"];</code>
      */
-    public Builder setLinkAction(com.tcn.cloud.api.api.v1alpha1.insights.LinkAction value) {
-      if (linkActionBuilder_ == null) {
+    public Builder setLink(com.tcn.cloud.api.api.v1alpha1.insights.LinkAction value) {
+      if (linkBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         action_ = value;
         onChanged();
       } else {
-        linkActionBuilder_.setMessage(value);
+        linkBuilder_.setMessage(value);
       }
       actionCase_ = 2;
       return this;
@@ -762,15 +762,15 @@ private static final long serialVersionUID = 0L;
      * Link action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
+     * <code>.api.v1alpha1.insights.LinkAction link = 2 [json_name = "link"];</code>
      */
-    public Builder setLinkAction(
+    public Builder setLink(
         com.tcn.cloud.api.api.v1alpha1.insights.LinkAction.Builder builderForValue) {
-      if (linkActionBuilder_ == null) {
+      if (linkBuilder_ == null) {
         action_ = builderForValue.build();
         onChanged();
       } else {
-        linkActionBuilder_.setMessage(builderForValue.build());
+        linkBuilder_.setMessage(builderForValue.build());
       }
       actionCase_ = 2;
       return this;
@@ -780,10 +780,10 @@ private static final long serialVersionUID = 0L;
      * Link action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
+     * <code>.api.v1alpha1.insights.LinkAction link = 2 [json_name = "link"];</code>
      */
-    public Builder mergeLinkAction(com.tcn.cloud.api.api.v1alpha1.insights.LinkAction value) {
-      if (linkActionBuilder_ == null) {
+    public Builder mergeLink(com.tcn.cloud.api.api.v1alpha1.insights.LinkAction value) {
+      if (linkBuilder_ == null) {
         if (actionCase_ == 2 &&
             action_ != com.tcn.cloud.api.api.v1alpha1.insights.LinkAction.getDefaultInstance()) {
           action_ = com.tcn.cloud.api.api.v1alpha1.insights.LinkAction.newBuilder((com.tcn.cloud.api.api.v1alpha1.insights.LinkAction) action_)
@@ -794,9 +794,9 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (actionCase_ == 2) {
-          linkActionBuilder_.mergeFrom(value);
+          linkBuilder_.mergeFrom(value);
         } else {
-          linkActionBuilder_.setMessage(value);
+          linkBuilder_.setMessage(value);
         }
       }
       actionCase_ = 2;
@@ -807,10 +807,10 @@ private static final long serialVersionUID = 0L;
      * Link action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
+     * <code>.api.v1alpha1.insights.LinkAction link = 2 [json_name = "link"];</code>
      */
-    public Builder clearLinkAction() {
-      if (linkActionBuilder_ == null) {
+    public Builder clearLink() {
+      if (linkBuilder_ == null) {
         if (actionCase_ == 2) {
           actionCase_ = 0;
           action_ = null;
@@ -821,7 +821,7 @@ private static final long serialVersionUID = 0L;
           actionCase_ = 0;
           action_ = null;
         }
-        linkActionBuilder_.clear();
+        linkBuilder_.clear();
       }
       return this;
     }
@@ -830,22 +830,22 @@ private static final long serialVersionUID = 0L;
      * Link action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
+     * <code>.api.v1alpha1.insights.LinkAction link = 2 [json_name = "link"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.insights.LinkAction.Builder getLinkActionBuilder() {
-      return getLinkActionFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.api.v1alpha1.insights.LinkAction.Builder getLinkBuilder() {
+      return getLinkFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * Link action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
+     * <code>.api.v1alpha1.insights.LinkAction link = 2 [json_name = "link"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.LinkActionOrBuilder getLinkActionOrBuilder() {
-      if ((actionCase_ == 2) && (linkActionBuilder_ != null)) {
-        return linkActionBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.v1alpha1.insights.LinkActionOrBuilder getLinkOrBuilder() {
+      if ((actionCase_ == 2) && (linkBuilder_ != null)) {
+        return linkBuilder_.getMessageOrBuilder();
       } else {
         if (actionCase_ == 2) {
           return (com.tcn.cloud.api.api.v1alpha1.insights.LinkAction) action_;
@@ -858,16 +858,16 @@ private static final long serialVersionUID = 0L;
      * Link action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.LinkAction link_action = 2 [json_name = "linkAction"];</code>
+     * <code>.api.v1alpha1.insights.LinkAction link = 2 [json_name = "link"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.LinkAction, com.tcn.cloud.api.api.v1alpha1.insights.LinkAction.Builder, com.tcn.cloud.api.api.v1alpha1.insights.LinkActionOrBuilder> 
-        getLinkActionFieldBuilder() {
-      if (linkActionBuilder_ == null) {
+        getLinkFieldBuilder() {
+      if (linkBuilder_ == null) {
         if (!(actionCase_ == 2)) {
           action_ = com.tcn.cloud.api.api.v1alpha1.insights.LinkAction.getDefaultInstance();
         }
-        linkActionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        linkBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.insights.LinkAction, com.tcn.cloud.api.api.v1alpha1.insights.LinkAction.Builder, com.tcn.cloud.api.api.v1alpha1.insights.LinkActionOrBuilder>(
                 (com.tcn.cloud.api.api.v1alpha1.insights.LinkAction) action_,
                 getParentForChildren(),
@@ -876,21 +876,21 @@ private static final long serialVersionUID = 0L;
       }
       actionCase_ = 2;
       onChanged();
-      return linkActionBuilder_;
+      return linkBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction, com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ComponentActionOrBuilder> componentActionBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction, com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ComponentActionOrBuilder> componentBuilder_;
     /**
      * <pre>
      * Component action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
-     * @return Whether the componentAction field is set.
+     * <code>.api.v1alpha1.insights.ComponentAction component = 3 [json_name = "component"];</code>
+     * @return Whether the component field is set.
      */
     @java.lang.Override
-    public boolean hasComponentAction() {
+    public boolean hasComponent() {
       return actionCase_ == 3;
     }
     /**
@@ -898,19 +898,19 @@ private static final long serialVersionUID = 0L;
      * Component action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
-     * @return The componentAction.
+     * <code>.api.v1alpha1.insights.ComponentAction component = 3 [json_name = "component"];</code>
+     * @return The component.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction getComponentAction() {
-      if (componentActionBuilder_ == null) {
+    public com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction getComponent() {
+      if (componentBuilder_ == null) {
         if (actionCase_ == 3) {
           return (com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction) action_;
         }
         return com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction.getDefaultInstance();
       } else {
         if (actionCase_ == 3) {
-          return componentActionBuilder_.getMessage();
+          return componentBuilder_.getMessage();
         }
         return com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction.getDefaultInstance();
       }
@@ -920,17 +920,17 @@ private static final long serialVersionUID = 0L;
      * Component action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
+     * <code>.api.v1alpha1.insights.ComponentAction component = 3 [json_name = "component"];</code>
      */
-    public Builder setComponentAction(com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction value) {
-      if (componentActionBuilder_ == null) {
+    public Builder setComponent(com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction value) {
+      if (componentBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         action_ = value;
         onChanged();
       } else {
-        componentActionBuilder_.setMessage(value);
+        componentBuilder_.setMessage(value);
       }
       actionCase_ = 3;
       return this;
@@ -940,15 +940,15 @@ private static final long serialVersionUID = 0L;
      * Component action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
+     * <code>.api.v1alpha1.insights.ComponentAction component = 3 [json_name = "component"];</code>
      */
-    public Builder setComponentAction(
+    public Builder setComponent(
         com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction.Builder builderForValue) {
-      if (componentActionBuilder_ == null) {
+      if (componentBuilder_ == null) {
         action_ = builderForValue.build();
         onChanged();
       } else {
-        componentActionBuilder_.setMessage(builderForValue.build());
+        componentBuilder_.setMessage(builderForValue.build());
       }
       actionCase_ = 3;
       return this;
@@ -958,10 +958,10 @@ private static final long serialVersionUID = 0L;
      * Component action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
+     * <code>.api.v1alpha1.insights.ComponentAction component = 3 [json_name = "component"];</code>
      */
-    public Builder mergeComponentAction(com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction value) {
-      if (componentActionBuilder_ == null) {
+    public Builder mergeComponent(com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction value) {
+      if (componentBuilder_ == null) {
         if (actionCase_ == 3 &&
             action_ != com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction.getDefaultInstance()) {
           action_ = com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction.newBuilder((com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction) action_)
@@ -972,9 +972,9 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (actionCase_ == 3) {
-          componentActionBuilder_.mergeFrom(value);
+          componentBuilder_.mergeFrom(value);
         } else {
-          componentActionBuilder_.setMessage(value);
+          componentBuilder_.setMessage(value);
         }
       }
       actionCase_ = 3;
@@ -985,10 +985,10 @@ private static final long serialVersionUID = 0L;
      * Component action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
+     * <code>.api.v1alpha1.insights.ComponentAction component = 3 [json_name = "component"];</code>
      */
-    public Builder clearComponentAction() {
-      if (componentActionBuilder_ == null) {
+    public Builder clearComponent() {
+      if (componentBuilder_ == null) {
         if (actionCase_ == 3) {
           actionCase_ = 0;
           action_ = null;
@@ -999,7 +999,7 @@ private static final long serialVersionUID = 0L;
           actionCase_ = 0;
           action_ = null;
         }
-        componentActionBuilder_.clear();
+        componentBuilder_.clear();
       }
       return this;
     }
@@ -1008,22 +1008,22 @@ private static final long serialVersionUID = 0L;
      * Component action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
+     * <code>.api.v1alpha1.insights.ComponentAction component = 3 [json_name = "component"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction.Builder getComponentActionBuilder() {
-      return getComponentActionFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction.Builder getComponentBuilder() {
+      return getComponentFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * Component action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
+     * <code>.api.v1alpha1.insights.ComponentAction component = 3 [json_name = "component"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.ComponentActionOrBuilder getComponentActionOrBuilder() {
-      if ((actionCase_ == 3) && (componentActionBuilder_ != null)) {
-        return componentActionBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.api.v1alpha1.insights.ComponentActionOrBuilder getComponentOrBuilder() {
+      if ((actionCase_ == 3) && (componentBuilder_ != null)) {
+        return componentBuilder_.getMessageOrBuilder();
       } else {
         if (actionCase_ == 3) {
           return (com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction) action_;
@@ -1036,16 +1036,16 @@ private static final long serialVersionUID = 0L;
      * Component action
      * </pre>
      *
-     * <code>.api.v1alpha1.insights.ComponentAction component_action = 3 [json_name = "componentAction"];</code>
+     * <code>.api.v1alpha1.insights.ComponentAction component = 3 [json_name = "component"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction, com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ComponentActionOrBuilder> 
-        getComponentActionFieldBuilder() {
-      if (componentActionBuilder_ == null) {
+        getComponentFieldBuilder() {
+      if (componentBuilder_ == null) {
         if (!(actionCase_ == 3)) {
           action_ = com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction.getDefaultInstance();
         }
-        componentActionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        componentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction, com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction.Builder, com.tcn.cloud.api.api.v1alpha1.insights.ComponentActionOrBuilder>(
                 (com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction) action_,
                 getParentForChildren(),
@@ -1054,7 +1054,7 @@ private static final long serialVersionUID = 0L;
       }
       actionCase_ = 3;
       onChanged();
-      return componentActionBuilder_;
+      return componentBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
