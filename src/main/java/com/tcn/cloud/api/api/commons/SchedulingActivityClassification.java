@@ -30,12 +30,20 @@ public enum SchedulingActivityClassification
   ON_CALL_ACTIVITY(1),
   /**
    * <pre>
-   * The wraps the Time Off Non Skill Activity.
+   * This wraps the Time Off Non Skill Activity.
    * </pre>
    *
    * <code>TIME_OFF_ACTIVITY = 2;</code>
    */
   TIME_OFF_ACTIVITY(2),
+  /**
+   * <pre>
+   * This wraps a Meeting Non Skill Activity
+   * </pre>
+   *
+   * <code>MEETING_ACTIVITY = 3;</code>
+   */
+  MEETING_ACTIVITY(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -57,12 +65,20 @@ public enum SchedulingActivityClassification
   public static final int ON_CALL_ACTIVITY_VALUE = 1;
   /**
    * <pre>
-   * The wraps the Time Off Non Skill Activity.
+   * This wraps the Time Off Non Skill Activity.
    * </pre>
    *
    * <code>TIME_OFF_ACTIVITY = 2;</code>
    */
   public static final int TIME_OFF_ACTIVITY_VALUE = 2;
+  /**
+   * <pre>
+   * This wraps a Meeting Non Skill Activity
+   * </pre>
+   *
+   * <code>MEETING_ACTIVITY = 3;</code>
+   */
+  public static final int MEETING_ACTIVITY_VALUE = 3;
 
 
   public final int getNumber() {
@@ -92,6 +108,7 @@ public enum SchedulingActivityClassification
       case 0: return STANDARD_SCHEDULING_ACTIVITY;
       case 1: return ON_CALL_ACTIVITY;
       case 2: return TIME_OFF_ACTIVITY;
+      case 3: return MEETING_ACTIVITY;
       default: return null;
     }
   }
