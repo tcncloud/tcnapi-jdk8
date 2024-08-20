@@ -332,6 +332,44 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.v1alpha1.insights.ColumnSort.UNRECOGNIZED : result;
   }
 
+  public static final int INSIGHT_CONTEXTUAL_ACTION_FIELD_NUMBER = 9;
+  private com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction insightContextualAction_;
+  /**
+   * <pre>
+   * insight contextual actions
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+   * @return Whether the insightContextualAction field is set.
+   */
+  @java.lang.Override
+  public boolean hasInsightContextualAction() {
+    return insightContextualAction_ != null;
+  }
+  /**
+   * <pre>
+   * insight contextual actions
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+   * @return The insightContextualAction.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction getInsightContextualAction() {
+    return insightContextualAction_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.getDefaultInstance() : insightContextualAction_;
+  }
+  /**
+   * <pre>
+   * insight contextual actions
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionOrBuilder getInsightContextualActionOrBuilder() {
+    return insightContextualAction_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.getDefaultInstance() : insightContextualAction_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -369,6 +407,9 @@ private static final long serialVersionUID = 0L;
     }
     if (sortDirection_ != com.tcn.cloud.api.api.v1alpha1.insights.ColumnSort.COLUMN_SORT_UNSPECIFIED.getNumber()) {
       output.writeEnum(8, sortDirection_);
+    }
+    if (insightContextualAction_ != null) {
+      output.writeMessage(9, getInsightContextualAction());
     }
     getUnknownFields().writeTo(output);
   }
@@ -408,6 +449,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, sortDirection_);
     }
+    if (insightContextualAction_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getInsightContextualAction());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -437,6 +482,11 @@ private static final long serialVersionUID = 0L;
     if (!getDescription()
         .equals(other.getDescription())) return false;
     if (sortDirection_ != other.sortDirection_) return false;
+    if (hasInsightContextualAction() != other.hasInsightContextualAction()) return false;
+    if (hasInsightContextualAction()) {
+      if (!getInsightContextualAction()
+          .equals(other.getInsightContextualAction())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -468,6 +518,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getDescription().hashCode();
     hash = (37 * hash) + SORT_DIRECTION_FIELD_NUMBER;
     hash = (53 * hash) + sortDirection_;
+    if (hasInsightContextualAction()) {
+      hash = (37 * hash) + INSIGHT_CONTEXTUAL_ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getInsightContextualAction().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -617,6 +671,11 @@ private static final long serialVersionUID = 0L;
       columnSummary_ = 0;
       description_ = "";
       sortDirection_ = 0;
+      insightContextualAction_ = null;
+      if (insightContextualActionBuilder_ != null) {
+        insightContextualActionBuilder_.dispose();
+        insightContextualActionBuilder_ = null;
+      }
       return this;
     }
 
@@ -683,6 +742,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.sortDirection_ = sortDirection_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.insightContextualAction_ = insightContextualActionBuilder_ == null
+            ? insightContextualAction_
+            : insightContextualActionBuilder_.build();
       }
     }
 
@@ -783,6 +847,9 @@ private static final long serialVersionUID = 0L;
       if (other.sortDirection_ != 0) {
         setSortDirectionValue(other.getSortDirectionValue());
       }
+      if (other.hasInsightContextualAction()) {
+        mergeInsightContextualAction(other.getInsightContextualAction());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -857,6 +924,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 64
+            case 74: {
+              input.readMessage(
+                  getInsightContextualActionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1694,6 +1768,161 @@ private static final long serialVersionUID = 0L;
       sortDirection_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction insightContextualAction_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction, com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.Builder, com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionOrBuilder> insightContextualActionBuilder_;
+    /**
+     * <pre>
+     * insight contextual actions
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+     * @return Whether the insightContextualAction field is set.
+     */
+    public boolean hasInsightContextualAction() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * insight contextual actions
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+     * @return The insightContextualAction.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction getInsightContextualAction() {
+      if (insightContextualActionBuilder_ == null) {
+        return insightContextualAction_ == null ? com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.getDefaultInstance() : insightContextualAction_;
+      } else {
+        return insightContextualActionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * insight contextual actions
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+     */
+    public Builder setInsightContextualAction(com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction value) {
+      if (insightContextualActionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        insightContextualAction_ = value;
+      } else {
+        insightContextualActionBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * insight contextual actions
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+     */
+    public Builder setInsightContextualAction(
+        com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.Builder builderForValue) {
+      if (insightContextualActionBuilder_ == null) {
+        insightContextualAction_ = builderForValue.build();
+      } else {
+        insightContextualActionBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * insight contextual actions
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+     */
+    public Builder mergeInsightContextualAction(com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction value) {
+      if (insightContextualActionBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          insightContextualAction_ != null &&
+          insightContextualAction_ != com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.getDefaultInstance()) {
+          getInsightContextualActionBuilder().mergeFrom(value);
+        } else {
+          insightContextualAction_ = value;
+        }
+      } else {
+        insightContextualActionBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * insight contextual actions
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+     */
+    public Builder clearInsightContextualAction() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      insightContextualAction_ = null;
+      if (insightContextualActionBuilder_ != null) {
+        insightContextualActionBuilder_.dispose();
+        insightContextualActionBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * insight contextual actions
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.Builder getInsightContextualActionBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return getInsightContextualActionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * insight contextual actions
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionOrBuilder getInsightContextualActionOrBuilder() {
+      if (insightContextualActionBuilder_ != null) {
+        return insightContextualActionBuilder_.getMessageOrBuilder();
+      } else {
+        return insightContextualAction_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.getDefaultInstance() : insightContextualAction_;
+      }
+    }
+    /**
+     * <pre>
+     * insight contextual actions
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.InsightContextualAction insight_contextual_action = 9 [json_name = "insightContextualAction"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction, com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.Builder, com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionOrBuilder> 
+        getInsightContextualActionFieldBuilder() {
+      if (insightContextualActionBuilder_ == null) {
+        insightContextualActionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction, com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.Builder, com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualActionOrBuilder>(
+                getInsightContextualAction(),
+                getParentForChildren(),
+                isClean());
+        insightContextualAction_ = null;
+      }
+      return insightContextualActionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
