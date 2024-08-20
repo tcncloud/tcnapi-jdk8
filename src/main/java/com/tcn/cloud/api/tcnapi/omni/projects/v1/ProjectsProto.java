@@ -31,7 +31,7 @@ public final class ProjectsProto {
       "\n&tcnapi/omni/projects/v1/projects.proto" +
       "\022\027tcnapi.omni.projects.v1\032\037google/api/fi" +
       "eld_behavior.proto\032\031google/api/resource." +
-      "proto\032\037google/protobuf/timestamp.proto\"\227" +
+      "proto\032\037google/protobuf/timestamp.proto\"\230" +
       "\003\n\007Project\022\027\n\004name\030\001 \001(\tB\003\340A\010R\004name\022\031\n\005t" +
       "itle\030\002 \001(\tB\003\340A\002R\005title\022%\n\013description\030\003 " +
       "\001(\tB\003\340A\002R\013description\022A\n\005state\030\004 \001(\0162&.t" +
@@ -39,15 +39,15 @@ public final class ProjectsProto {
       "\003R\005state\022@\n\013create_time\030\005 \001(\0132\032.google.p" +
       "rotobuf.TimestampB\003\340A\003R\ncreateTime\"D\n\005St" +
       "ate\022\025\n\021STATE_UNSPECIFIED\020\000\022\020\n\nSTATE_OPEN" +
-      "\020\350\204\001\022\022\n\014STATE_CLOSED\020\362\204\001:f\352Ac\n projects." +
-      "omni.tcnapi.com/Project\022,org/{org}/regio" +
-      "n/{region}/projects/{project}*\010projects2" +
-      "\007projectB\271\001\n)com.tcn.cloud.api.tcnapi.om" +
-      "ni.projects.v1B\rProjectsProtoP\001\242\002\003TOP\252\002\027" +
-      "Tcnapi.Omni.Projects.V1\312\002\027Tcnapi\\Omni\\Pr" +
-      "ojects\\V1\342\002#Tcnapi\\Omni\\Projects\\V1\\GPBM" +
-      "etadata\352\002\032Tcnapi::Omni::Projects::V1b\006pr" +
-      "oto3"
+      "\020\350\204\001\022\022\n\014STATE_CLOSED\020\362\204\001:g\352Ad\n\037tcnapi.om" +
+      "ni.projects.v1/Project\022.regions/{region}" +
+      "/orgs/{org}/projects/{project}*\010projects" +
+      "2\007projectB\271\001\n)com.tcn.cloud.api.tcnapi.o" +
+      "mni.projects.v1B\rProjectsProtoP\001\242\002\003TOP\252\002" +
+      "\027Tcnapi.Omni.Projects.V1\312\002\027Tcnapi\\Omni\\P" +
+      "rojects\\V1\342\002#Tcnapi\\Omni\\Projects\\V1\\GPB" +
+      "Metadata\352\002\032Tcnapi::Omni::Projects::V1b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

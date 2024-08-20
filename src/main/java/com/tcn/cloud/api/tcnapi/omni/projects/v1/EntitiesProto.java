@@ -58,31 +58,31 @@ public final class EntitiesProto {
       "eld_behavior.proto\032\031google/api/resource." +
       "proto\032 google/protobuf/field_mask.proto\032" +
       "&tcnapi/omni/projects/v1/projects.proto\"" +
-      "\235\001\n\023ListProjectsRequest\022@\n\006parent\030\001 \001(\tB" +
-      "(\340A\002\372A\"\022 projects.omni.tcnapi.com/Projec" +
-      "tR\006parent\022 \n\tpage_size\030\002 \001(\005B\003\340A\001R\010pageS" +
-      "ize\022\"\n\npage_token\030\003 \001(\tB\003\340A\001R\tpageToken\"" +
-      "|\n\024ListProjectsResponse\022<\n\010projects\030\001 \003(" +
-      "\0132 .tcnapi.omni.projects.v1.ProjectR\010pro" +
-      "jects\022&\n\017next_page_token\030\002 \001(\tR\rnextPage" +
-      "Token\"Q\n\021GetProjectRequest\022<\n\004name\030\001 \001(\t" +
-      "B(\340A\002\372A\"\n projects.omni.tcnapi.com/Proje" +
-      "ctR\004name\"\231\001\n\024CreateProjectRequest\022@\n\006par" +
-      "ent\030\001 \001(\tB(\340A\002\372A\"\022 projects.omni.tcnapi." +
-      "com/ProjectR\006parent\022?\n\007project\030\003 \001(\0132 .t" +
-      "cnapi.omni.projects.v1.ProjectB\003\340A\002R\007pro" +
-      "ject\"\231\001\n\024UpdateProjectRequest\022?\n\007project" +
-      "\030\001 \001(\0132 .tcnapi.omni.projects.v1.Project" +
-      "B\003\340A\002R\007project\022@\n\013update_mask\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMaskB\003\340A\001R\nupdateMask" +
-      "\"T\n\024DeleteProjectRequest\022<\n\004name\030\001 \001(\tB(" +
-      "\340A\002\372A\"\n projects.omni.tcnapi.com/Project" +
-      "R\004nameB\271\001\n)com.tcn.cloud.api.tcnapi.omni" +
-      ".projects.v1B\rEntitiesProtoP\001\242\002\003TOP\252\002\027Tc" +
-      "napi.Omni.Projects.V1\312\002\027Tcnapi\\Omni\\Proj" +
-      "ects\\V1\342\002#Tcnapi\\Omni\\Projects\\V1\\GPBMet" +
-      "adata\352\002\032Tcnapi::Omni::Projects::V1b\006prot" +
-      "o3"
+      "\271\001\n\023ListProjectsRequest\022?\n\006parent\030\001 \001(\tB" +
+      "\'\340A\002\372A!\022\037tcnapi.omni.projects.v1/Project" +
+      "R\006parent\022 \n\tpage_size\030\002 \001(\005B\003\340A\001R\010pageSi" +
+      "ze\022\"\n\npage_token\030\003 \001(\tB\003\340A\001R\tpageToken\022\033" +
+      "\n\006filter\030\004 \001(\tB\003\340A\001R\006filter\"|\n\024ListProje" +
+      "ctsResponse\022<\n\010projects\030\001 \003(\0132 .tcnapi.o" +
+      "mni.projects.v1.ProjectR\010projects\022&\n\017nex" +
+      "t_page_token\030\002 \001(\tR\rnextPageToken\"P\n\021Get" +
+      "ProjectRequest\022;\n\004name\030\001 \001(\tB\'\340A\002\372A!\n\037tc" +
+      "napi.omni.projects.v1/ProjectR\004name\"\230\001\n\024" +
+      "CreateProjectRequest\022?\n\006parent\030\001 \001(\tB\'\340A" +
+      "\002\372A!\022\037tcnapi.omni.projects.v1/ProjectR\006p" +
+      "arent\022?\n\007project\030\003 \001(\0132 .tcnapi.omni.pro" +
+      "jects.v1.ProjectB\003\340A\002R\007project\"\231\001\n\024Updat" +
+      "eProjectRequest\022?\n\007project\030\001 \001(\0132 .tcnap" +
+      "i.omni.projects.v1.ProjectB\003\340A\002R\007project" +
+      "\022@\n\013update_mask\030\002 \001(\0132\032.google.protobuf." +
+      "FieldMaskB\003\340A\001R\nupdateMask\"S\n\024DeleteProj" +
+      "ectRequest\022;\n\004name\030\001 \001(\tB\'\340A\002\372A!\n\037tcnapi" +
+      ".omni.projects.v1/ProjectR\004nameB\271\001\n)com." +
+      "tcn.cloud.api.tcnapi.omni.projects.v1B\rE" +
+      "ntitiesProtoP\001\242\002\003TOP\252\002\027Tcnapi.Omni.Proje" +
+      "cts.V1\312\002\027Tcnapi\\Omni\\Projects\\V1\342\002#Tcnap" +
+      "i\\Omni\\Projects\\V1\\GPBMetadata\352\002\032Tcnapi:" +
+      ":Omni::Projects::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -97,7 +97,7 @@ public final class EntitiesProto {
     internal_static_tcnapi_omni_projects_v1_ListProjectsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_tcnapi_omni_projects_v1_ListProjectsRequest_descriptor,
-        new java.lang.String[] { "Parent", "PageSize", "PageToken", });
+        new java.lang.String[] { "Parent", "PageSize", "PageToken", "Filter", });
     internal_static_tcnapi_omni_projects_v1_ListProjectsResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_tcnapi_omni_projects_v1_ListProjectsResponse_fieldAccessorTable = new
