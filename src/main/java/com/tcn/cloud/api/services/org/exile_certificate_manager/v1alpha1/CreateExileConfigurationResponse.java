@@ -49,13 +49,16 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The id of the exile configuration that was created.
+   * DEPRECATED: Use exile_configuration instead.
    * </pre>
    *
-   * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId"];</code>
+   * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId", deprecated = true];</code>
+   * @deprecated services.org.exile_certificate_manager.v1alpha1.CreateExileConfigurationResponse.exile_configuration_id is deprecated.
+   *     See services/org/exile_certificate_manager/v1alpha1/exile_configuration.proto;l=25
    * @return The exileConfigurationId.
    */
   @java.lang.Override
-  public java.lang.String getExileConfigurationId() {
+  @java.lang.Deprecated public java.lang.String getExileConfigurationId() {
     java.lang.Object ref = exileConfigurationId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -70,13 +73,16 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The id of the exile configuration that was created.
+   * DEPRECATED: Use exile_configuration instead.
    * </pre>
    *
-   * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId"];</code>
+   * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId", deprecated = true];</code>
+   * @deprecated services.org.exile_certificate_manager.v1alpha1.CreateExileConfigurationResponse.exile_configuration_id is deprecated.
+   *     See services/org/exile_certificate_manager/v1alpha1/exile_configuration.proto;l=25
    * @return The bytes for exileConfigurationId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getExileConfigurationIdBytes() {
     java.lang.Object ref = exileConfigurationId_;
     if (ref instanceof java.lang.String) {
@@ -498,12 +504,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The id of the exile configuration that was created.
+     * DEPRECATED: Use exile_configuration instead.
      * </pre>
      *
-     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId"];</code>
+     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId", deprecated = true];</code>
+     * @deprecated services.org.exile_certificate_manager.v1alpha1.CreateExileConfigurationResponse.exile_configuration_id is deprecated.
+     *     See services/org/exile_certificate_manager/v1alpha1/exile_configuration.proto;l=25
      * @return The exileConfigurationId.
      */
-    public java.lang.String getExileConfigurationId() {
+    @java.lang.Deprecated public java.lang.String getExileConfigurationId() {
       java.lang.Object ref = exileConfigurationId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -518,12 +527,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The id of the exile configuration that was created.
+     * DEPRECATED: Use exile_configuration instead.
      * </pre>
      *
-     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId"];</code>
+     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId", deprecated = true];</code>
+     * @deprecated services.org.exile_certificate_manager.v1alpha1.CreateExileConfigurationResponse.exile_configuration_id is deprecated.
+     *     See services/org/exile_certificate_manager/v1alpha1/exile_configuration.proto;l=25
      * @return The bytes for exileConfigurationId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getExileConfigurationIdBytes() {
       java.lang.Object ref = exileConfigurationId_;
       if (ref instanceof String) {
@@ -539,13 +551,16 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The id of the exile configuration that was created.
+     * DEPRECATED: Use exile_configuration instead.
      * </pre>
      *
-     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId"];</code>
+     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId", deprecated = true];</code>
+     * @deprecated services.org.exile_certificate_manager.v1alpha1.CreateExileConfigurationResponse.exile_configuration_id is deprecated.
+     *     See services/org/exile_certificate_manager/v1alpha1/exile_configuration.proto;l=25
      * @param value The exileConfigurationId to set.
      * @return This builder for chaining.
      */
-    public Builder setExileConfigurationId(
+    @java.lang.Deprecated public Builder setExileConfigurationId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       exileConfigurationId_ = value;
@@ -556,12 +571,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The id of the exile configuration that was created.
+     * DEPRECATED: Use exile_configuration instead.
      * </pre>
      *
-     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId"];</code>
+     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId", deprecated = true];</code>
+     * @deprecated services.org.exile_certificate_manager.v1alpha1.CreateExileConfigurationResponse.exile_configuration_id is deprecated.
+     *     See services/org/exile_certificate_manager/v1alpha1/exile_configuration.proto;l=25
      * @return This builder for chaining.
      */
-    public Builder clearExileConfigurationId() {
+    @java.lang.Deprecated public Builder clearExileConfigurationId() {
       exileConfigurationId_ = getDefaultInstance().getExileConfigurationId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
@@ -570,13 +588,16 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The id of the exile configuration that was created.
+     * DEPRECATED: Use exile_configuration instead.
      * </pre>
      *
-     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId"];</code>
+     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId", deprecated = true];</code>
+     * @deprecated services.org.exile_certificate_manager.v1alpha1.CreateExileConfigurationResponse.exile_configuration_id is deprecated.
+     *     See services/org/exile_certificate_manager/v1alpha1/exile_configuration.proto;l=25
      * @param value The bytes for exileConfigurationId to set.
      * @return This builder for chaining.
      */
-    public Builder setExileConfigurationIdBytes(
+    @java.lang.Deprecated public Builder setExileConfigurationIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
