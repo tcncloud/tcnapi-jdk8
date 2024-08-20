@@ -49,13 +49,16 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The id of the exile configuration that was created.
+   * DEPRECATED: Use exile_configuration instead.
    * </pre>
    *
-   * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId"];</code>
+   * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId", deprecated = true];</code>
+   * @deprecated services.org.exile_certificate_manager.v1alpha1.CreateExileConfigurationResponse.exile_configuration_id is deprecated.
+   *     See services/org/exile_certificate_manager/v1alpha1/exile_configuration.proto;l=25
    * @return The exileConfigurationId.
    */
   @java.lang.Override
-  public java.lang.String getExileConfigurationId() {
+  @java.lang.Deprecated public java.lang.String getExileConfigurationId() {
     java.lang.Object ref = exileConfigurationId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -70,13 +73,16 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The id of the exile configuration that was created.
+   * DEPRECATED: Use exile_configuration instead.
    * </pre>
    *
-   * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId"];</code>
+   * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId", deprecated = true];</code>
+   * @deprecated services.org.exile_certificate_manager.v1alpha1.CreateExileConfigurationResponse.exile_configuration_id is deprecated.
+   *     See services/org/exile_certificate_manager/v1alpha1/exile_configuration.proto;l=25
    * @return The bytes for exileConfigurationId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getExileConfigurationIdBytes() {
     java.lang.Object ref = exileConfigurationId_;
     if (ref instanceof java.lang.String) {
@@ -88,6 +94,44 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int EXILE_CONFIGURATION_FIELD_NUMBER = 2;
+  private com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exileConfiguration_;
+  /**
+   * <pre>
+   * The newly created exile configuration.
+   * </pre>
+   *
+   * <code>.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exile_configuration = 2 [json_name = "exileConfiguration"];</code>
+   * @return Whether the exileConfiguration field is set.
+   */
+  @java.lang.Override
+  public boolean hasExileConfiguration() {
+    return exileConfiguration_ != null;
+  }
+  /**
+   * <pre>
+   * The newly created exile configuration.
+   * </pre>
+   *
+   * <code>.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exile_configuration = 2 [json_name = "exileConfiguration"];</code>
+   * @return The exileConfiguration.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration getExileConfiguration() {
+    return exileConfiguration_ == null ? com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration.getDefaultInstance() : exileConfiguration_;
+  }
+  /**
+   * <pre>
+   * The newly created exile configuration.
+   * </pre>
+   *
+   * <code>.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exile_configuration = 2 [json_name = "exileConfiguration"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfigurationOrBuilder getExileConfigurationOrBuilder() {
+    return exileConfiguration_ == null ? com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration.getDefaultInstance() : exileConfiguration_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -107,6 +151,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exileConfigurationId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, exileConfigurationId_);
     }
+    if (exileConfiguration_ != null) {
+      output.writeMessage(2, getExileConfiguration());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -118,6 +165,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exileConfigurationId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, exileConfigurationId_);
+    }
+    if (exileConfiguration_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getExileConfiguration());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -136,6 +187,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getExileConfigurationId()
         .equals(other.getExileConfigurationId())) return false;
+    if (hasExileConfiguration() != other.hasExileConfiguration()) return false;
+    if (hasExileConfiguration()) {
+      if (!getExileConfiguration()
+          .equals(other.getExileConfiguration())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -149,6 +205,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + EXILE_CONFIGURATION_ID_FIELD_NUMBER;
     hash = (53 * hash) + getExileConfigurationId().hashCode();
+    if (hasExileConfiguration()) {
+      hash = (37 * hash) + EXILE_CONFIGURATION_FIELD_NUMBER;
+      hash = (53 * hash) + getExileConfiguration().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -285,6 +345,11 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       exileConfigurationId_ = "";
+      exileConfiguration_ = null;
+      if (exileConfigurationBuilder_ != null) {
+        exileConfigurationBuilder_.dispose();
+        exileConfigurationBuilder_ = null;
+      }
       return this;
     }
 
@@ -320,6 +385,11 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.exileConfigurationId_ = exileConfigurationId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.exileConfiguration_ = exileConfigurationBuilder_ == null
+            ? exileConfiguration_
+            : exileConfigurationBuilder_.build();
       }
     }
 
@@ -372,6 +442,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (other.hasExileConfiguration()) {
+        mergeExileConfiguration(other.getExileConfiguration());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -403,6 +476,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  getExileConfigurationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -424,12 +504,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The id of the exile configuration that was created.
+     * DEPRECATED: Use exile_configuration instead.
      * </pre>
      *
-     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId"];</code>
+     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId", deprecated = true];</code>
+     * @deprecated services.org.exile_certificate_manager.v1alpha1.CreateExileConfigurationResponse.exile_configuration_id is deprecated.
+     *     See services/org/exile_certificate_manager/v1alpha1/exile_configuration.proto;l=25
      * @return The exileConfigurationId.
      */
-    public java.lang.String getExileConfigurationId() {
+    @java.lang.Deprecated public java.lang.String getExileConfigurationId() {
       java.lang.Object ref = exileConfigurationId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -444,12 +527,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The id of the exile configuration that was created.
+     * DEPRECATED: Use exile_configuration instead.
      * </pre>
      *
-     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId"];</code>
+     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId", deprecated = true];</code>
+     * @deprecated services.org.exile_certificate_manager.v1alpha1.CreateExileConfigurationResponse.exile_configuration_id is deprecated.
+     *     See services/org/exile_certificate_manager/v1alpha1/exile_configuration.proto;l=25
      * @return The bytes for exileConfigurationId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getExileConfigurationIdBytes() {
       java.lang.Object ref = exileConfigurationId_;
       if (ref instanceof String) {
@@ -465,13 +551,16 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The id of the exile configuration that was created.
+     * DEPRECATED: Use exile_configuration instead.
      * </pre>
      *
-     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId"];</code>
+     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId", deprecated = true];</code>
+     * @deprecated services.org.exile_certificate_manager.v1alpha1.CreateExileConfigurationResponse.exile_configuration_id is deprecated.
+     *     See services/org/exile_certificate_manager/v1alpha1/exile_configuration.proto;l=25
      * @param value The exileConfigurationId to set.
      * @return This builder for chaining.
      */
-    public Builder setExileConfigurationId(
+    @java.lang.Deprecated public Builder setExileConfigurationId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       exileConfigurationId_ = value;
@@ -482,12 +571,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The id of the exile configuration that was created.
+     * DEPRECATED: Use exile_configuration instead.
      * </pre>
      *
-     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId"];</code>
+     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId", deprecated = true];</code>
+     * @deprecated services.org.exile_certificate_manager.v1alpha1.CreateExileConfigurationResponse.exile_configuration_id is deprecated.
+     *     See services/org/exile_certificate_manager/v1alpha1/exile_configuration.proto;l=25
      * @return This builder for chaining.
      */
-    public Builder clearExileConfigurationId() {
+    @java.lang.Deprecated public Builder clearExileConfigurationId() {
       exileConfigurationId_ = getDefaultInstance().getExileConfigurationId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
@@ -496,13 +588,16 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The id of the exile configuration that was created.
+     * DEPRECATED: Use exile_configuration instead.
      * </pre>
      *
-     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId"];</code>
+     * <code>string exile_configuration_id = 1 [json_name = "exileConfigurationId", deprecated = true];</code>
+     * @deprecated services.org.exile_certificate_manager.v1alpha1.CreateExileConfigurationResponse.exile_configuration_id is deprecated.
+     *     See services/org/exile_certificate_manager/v1alpha1/exile_configuration.proto;l=25
      * @param value The bytes for exileConfigurationId to set.
      * @return This builder for chaining.
      */
-    public Builder setExileConfigurationIdBytes(
+    @java.lang.Deprecated public Builder setExileConfigurationIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -510,6 +605,161 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exileConfiguration_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration, com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration.Builder, com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfigurationOrBuilder> exileConfigurationBuilder_;
+    /**
+     * <pre>
+     * The newly created exile configuration.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exile_configuration = 2 [json_name = "exileConfiguration"];</code>
+     * @return Whether the exileConfiguration field is set.
+     */
+    public boolean hasExileConfiguration() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The newly created exile configuration.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exile_configuration = 2 [json_name = "exileConfiguration"];</code>
+     * @return The exileConfiguration.
+     */
+    public com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration getExileConfiguration() {
+      if (exileConfigurationBuilder_ == null) {
+        return exileConfiguration_ == null ? com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration.getDefaultInstance() : exileConfiguration_;
+      } else {
+        return exileConfigurationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The newly created exile configuration.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exile_configuration = 2 [json_name = "exileConfiguration"];</code>
+     */
+    public Builder setExileConfiguration(com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration value) {
+      if (exileConfigurationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        exileConfiguration_ = value;
+      } else {
+        exileConfigurationBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The newly created exile configuration.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exile_configuration = 2 [json_name = "exileConfiguration"];</code>
+     */
+    public Builder setExileConfiguration(
+        com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration.Builder builderForValue) {
+      if (exileConfigurationBuilder_ == null) {
+        exileConfiguration_ = builderForValue.build();
+      } else {
+        exileConfigurationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The newly created exile configuration.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exile_configuration = 2 [json_name = "exileConfiguration"];</code>
+     */
+    public Builder mergeExileConfiguration(com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration value) {
+      if (exileConfigurationBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          exileConfiguration_ != null &&
+          exileConfiguration_ != com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration.getDefaultInstance()) {
+          getExileConfigurationBuilder().mergeFrom(value);
+        } else {
+          exileConfiguration_ = value;
+        }
+      } else {
+        exileConfigurationBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The newly created exile configuration.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exile_configuration = 2 [json_name = "exileConfiguration"];</code>
+     */
+    public Builder clearExileConfiguration() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      exileConfiguration_ = null;
+      if (exileConfigurationBuilder_ != null) {
+        exileConfigurationBuilder_.dispose();
+        exileConfigurationBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The newly created exile configuration.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exile_configuration = 2 [json_name = "exileConfiguration"];</code>
+     */
+    public com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration.Builder getExileConfigurationBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getExileConfigurationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The newly created exile configuration.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exile_configuration = 2 [json_name = "exileConfiguration"];</code>
+     */
+    public com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfigurationOrBuilder getExileConfigurationOrBuilder() {
+      if (exileConfigurationBuilder_ != null) {
+        return exileConfigurationBuilder_.getMessageOrBuilder();
+      } else {
+        return exileConfiguration_ == null ?
+            com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration.getDefaultInstance() : exileConfiguration_;
+      }
+    }
+    /**
+     * <pre>
+     * The newly created exile configuration.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration exile_configuration = 2 [json_name = "exileConfiguration"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration, com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration.Builder, com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfigurationOrBuilder> 
+        getExileConfigurationFieldBuilder() {
+      if (exileConfigurationBuilder_ == null) {
+        exileConfigurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration, com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfiguration.Builder, com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileConfigurationOrBuilder>(
+                getExileConfiguration(),
+                getParentForChildren(),
+                isClean());
+        exileConfiguration_ = null;
+      }
+      return exileConfigurationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

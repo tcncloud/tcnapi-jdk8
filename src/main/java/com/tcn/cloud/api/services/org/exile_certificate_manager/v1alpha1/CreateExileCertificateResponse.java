@@ -90,6 +90,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int EXILE_CERTIFICATE_FIELD_NUMBER = 2;
+  private com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exileCertificate_;
+  /**
+   * <pre>
+   * The newly created exile certificate.
+   * </pre>
+   *
+   * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+   * @return Whether the exileCertificate field is set.
+   */
+  @java.lang.Override
+  public boolean hasExileCertificate() {
+    return exileCertificate_ != null;
+  }
+  /**
+   * <pre>
+   * The newly created exile certificate.
+   * </pre>
+   *
+   * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+   * @return The exileCertificate.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate getExileCertificate() {
+    return exileCertificate_ == null ? com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate.getDefaultInstance() : exileCertificate_;
+  }
+  /**
+   * <pre>
+   * The newly created exile certificate.
+   * </pre>
+   *
+   * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificateOrBuilder getExileCertificateOrBuilder() {
+    return exileCertificate_ == null ? com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate.getDefaultInstance() : exileCertificate_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -107,6 +145,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encodedExileCertificate_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, encodedExileCertificate_);
     }
+    if (exileCertificate_ != null) {
+      output.writeMessage(2, getExileCertificate());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -118,6 +159,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encodedExileCertificate_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, encodedExileCertificate_);
+    }
+    if (exileCertificate_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getExileCertificate());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -136,6 +181,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getEncodedExileCertificate()
         .equals(other.getEncodedExileCertificate())) return false;
+    if (hasExileCertificate() != other.hasExileCertificate()) return false;
+    if (hasExileCertificate()) {
+      if (!getExileCertificate()
+          .equals(other.getExileCertificate())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -149,6 +199,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ENCODED_EXILE_CERTIFICATE_FIELD_NUMBER;
     hash = (53 * hash) + getEncodedExileCertificate().hashCode();
+    if (hasExileCertificate()) {
+      hash = (37 * hash) + EXILE_CERTIFICATE_FIELD_NUMBER;
+      hash = (53 * hash) + getExileCertificate().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -285,6 +339,11 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       encodedExileCertificate_ = "";
+      exileCertificate_ = null;
+      if (exileCertificateBuilder_ != null) {
+        exileCertificateBuilder_.dispose();
+        exileCertificateBuilder_ = null;
+      }
       return this;
     }
 
@@ -320,6 +379,11 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.encodedExileCertificate_ = encodedExileCertificate_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.exileCertificate_ = exileCertificateBuilder_ == null
+            ? exileCertificate_
+            : exileCertificateBuilder_.build();
       }
     }
 
@@ -372,6 +436,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (other.hasExileCertificate()) {
+        mergeExileCertificate(other.getExileCertificate());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -403,6 +470,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  getExileCertificateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -510,6 +584,161 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exileCertificate_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate, com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate.Builder, com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificateOrBuilder> exileCertificateBuilder_;
+    /**
+     * <pre>
+     * The newly created exile certificate.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+     * @return Whether the exileCertificate field is set.
+     */
+    public boolean hasExileCertificate() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The newly created exile certificate.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+     * @return The exileCertificate.
+     */
+    public com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate getExileCertificate() {
+      if (exileCertificateBuilder_ == null) {
+        return exileCertificate_ == null ? com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate.getDefaultInstance() : exileCertificate_;
+      } else {
+        return exileCertificateBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The newly created exile certificate.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+     */
+    public Builder setExileCertificate(com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate value) {
+      if (exileCertificateBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        exileCertificate_ = value;
+      } else {
+        exileCertificateBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The newly created exile certificate.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+     */
+    public Builder setExileCertificate(
+        com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate.Builder builderForValue) {
+      if (exileCertificateBuilder_ == null) {
+        exileCertificate_ = builderForValue.build();
+      } else {
+        exileCertificateBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The newly created exile certificate.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+     */
+    public Builder mergeExileCertificate(com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate value) {
+      if (exileCertificateBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          exileCertificate_ != null &&
+          exileCertificate_ != com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate.getDefaultInstance()) {
+          getExileCertificateBuilder().mergeFrom(value);
+        } else {
+          exileCertificate_ = value;
+        }
+      } else {
+        exileCertificateBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The newly created exile certificate.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+     */
+    public Builder clearExileCertificate() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      exileCertificate_ = null;
+      if (exileCertificateBuilder_ != null) {
+        exileCertificateBuilder_.dispose();
+        exileCertificateBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The newly created exile certificate.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+     */
+    public com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate.Builder getExileCertificateBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getExileCertificateFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The newly created exile certificate.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+     */
+    public com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificateOrBuilder getExileCertificateOrBuilder() {
+      if (exileCertificateBuilder_ != null) {
+        return exileCertificateBuilder_.getMessageOrBuilder();
+      } else {
+        return exileCertificate_ == null ?
+            com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate.getDefaultInstance() : exileCertificate_;
+      }
+    }
+    /**
+     * <pre>
+     * The newly created exile certificate.
+     * </pre>
+     *
+     * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate, com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate.Builder, com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificateOrBuilder> 
+        getExileCertificateFieldBuilder() {
+      if (exileCertificateBuilder_ == null) {
+        exileCertificateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate, com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate.Builder, com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificateOrBuilder>(
+                getExileCertificate(),
+                getParentForChildren(),
+                isClean());
+        exileCertificate_ = null;
+      }
+      return exileCertificateBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

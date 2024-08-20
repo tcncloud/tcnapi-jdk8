@@ -26,4 +26,31 @@ public interface CreateExileCertificateResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getEncodedExileCertificateBytes();
+
+  /**
+   * <pre>
+   * The newly created exile certificate.
+   * </pre>
+   *
+   * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+   * @return Whether the exileCertificate field is set.
+   */
+  boolean hasExileCertificate();
+  /**
+   * <pre>
+   * The newly created exile certificate.
+   * </pre>
+   *
+   * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+   * @return The exileCertificate.
+   */
+  com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificate getExileCertificate();
+  /**
+   * <pre>
+   * The newly created exile certificate.
+   * </pre>
+   *
+   * <code>.services.org.exile_certificate_manager.v1alpha1.ExileCertificate exile_certificate = 2 [json_name = "exileCertificate"];</code>
+   */
+  com.tcn.cloud.api.services.org.exile_certificate_manager.v1alpha1.ExileCertificateOrBuilder getExileCertificateOrBuilder();
 }
