@@ -52,10 +52,6 @@ public enum SchemaType
    * <code>SCHEMA_TYPE_BOOL_ARRAY = 11;</code>
    */
   SCHEMA_TYPE_BOOL_ARRAY(11),
-  /**
-   * <code>SCHEMA_TYPE_MAP = 12;</code>
-   */
-  SCHEMA_TYPE_MAP(12),
   UNRECOGNIZED(-1),
   ;
 
@@ -99,10 +95,6 @@ public enum SchemaType
    * <code>SCHEMA_TYPE_BOOL_ARRAY = 11;</code>
    */
   public static final int SCHEMA_TYPE_BOOL_ARRAY_VALUE = 11;
-  /**
-   * <code>SCHEMA_TYPE_MAP = 12;</code>
-   */
-  public static final int SCHEMA_TYPE_MAP_VALUE = 12;
 
 
   public final int getNumber() {
@@ -139,7 +131,6 @@ public enum SchemaType
       case 9: return SCHEMA_TYPE_FLOAT_ARRAY;
       case 10: return SCHEMA_TYPE_STRING_ARRAY;
       case 11: return SCHEMA_TYPE_BOOL_ARRAY;
-      case 12: return SCHEMA_TYPE_MAP;
       default: return null;
     }
   }

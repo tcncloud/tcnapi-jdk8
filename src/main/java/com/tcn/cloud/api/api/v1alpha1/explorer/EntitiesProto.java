@@ -70,21 +70,21 @@ public final class EntitiesProto {
       "s.ParameterR\005value:\0028\001*_\n\014ExportFormat\022\035" +
       "\n\031REPORT_FORMAT_UNSPECIFIED\020\000\022\025\n\021REPORT_" +
       "FORMAT_CSV\020\001\022\031\n\025REPORT_FORMAT_PARQUET\020\002*" +
-      "\245\002\n\nSchemaType\022\033\n\027SCHEMA_TYPE_UNSPECIFIE" +
+      "\220\002\n\nSchemaType\022\033\n\027SCHEMA_TYPE_UNSPECIFIE" +
       "D\020\000\022\023\n\017SCHEMA_TYPE_INT\020\002\022\025\n\021SCHEMA_TYPE_" +
       "FLOAT\020\003\022\026\n\022SCHEMA_TYPE_STRING\020\005\022\024\n\020SCHEM" +
       "A_TYPE_BOOL\020\006\022\031\n\025SCHEMA_TYPE_TIMESTAMP\020\007" +
       "\022\031\n\025SCHEMA_TYPE_INT_ARRAY\020\010\022\033\n\027SCHEMA_TY" +
       "PE_FLOAT_ARRAY\020\t\022\034\n\030SCHEMA_TYPE_STRING_A" +
-      "RRAY\020\n\022\032\n\026SCHEMA_TYPE_BOOL_ARRAY\020\013\022\023\n\017SC" +
-      "HEMA_TYPE_MAP\020\014*j\n\016DatasourceType\022\037\n\033DAT" +
-      "ASOURCE_TYPE_UNSPECIFIED\020\000\022\027\n\023DATASOURCE" +
-      "_TYPE_VFS\020\001\022\036\n\032DATASOURCE_TYPE_CLICKHOUS" +
-      "E\020\002B\256\001\n\'com.tcn.cloud.api.api.v1alpha1.e" +
-      "xplorerB\rEntitiesProtoP\001\242\002\003AVE\252\002\025Api.V1a" +
-      "lpha1.Explorer\312\002\025Api\\V1alpha1\\Explorer\342\002" +
-      "!Api\\V1alpha1\\Explorer\\GPBMetadata\352\002\027Api" +
-      "::V1alpha1::Explorerb\006proto3"
+      "RRAY\020\n\022\032\n\026SCHEMA_TYPE_BOOL_ARRAY\020\013*j\n\016Da" +
+      "tasourceType\022\037\n\033DATASOURCE_TYPE_UNSPECIF" +
+      "IED\020\000\022\027\n\023DATASOURCE_TYPE_VFS\020\001\022\036\n\032DATASO" +
+      "URCE_TYPE_CLICKHOUSE\020\002B\256\001\n\'com.tcn.cloud" +
+      ".api.api.v1alpha1.explorerB\rEntitiesProt" +
+      "oP\001\242\002\003AVE\252\002\025Api.V1alpha1.Explorer\312\002\025Api\\" +
+      "V1alpha1\\Explorer\342\002!Api\\V1alpha1\\Explore" +
+      "r\\GPBMetadata\352\002\027Api::V1alpha1::Explorerb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
