@@ -1275,7 +1275,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
      * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-     *     See api/v0alpha/omniapi.proto;l=1442
+     *     See api/v0alpha/omniapi.proto;l=1444
      * @return A list containing the statuses.
      */
     @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.ConversationStatus> getStatusesList();
@@ -1286,7 +1286,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
      * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-     *     See api/v0alpha/omniapi.proto;l=1442
+     *     See api/v0alpha/omniapi.proto;l=1444
      * @return The count of statuses.
      */
     @java.lang.Deprecated int getStatusesCount();
@@ -1297,7 +1297,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
      * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-     *     See api/v0alpha/omniapi.proto;l=1442
+     *     See api/v0alpha/omniapi.proto;l=1444
      * @param index The index of the element to return.
      * @return The statuses at the given index.
      */
@@ -1309,7 +1309,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
      * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-     *     See api/v0alpha/omniapi.proto;l=1442
+     *     See api/v0alpha/omniapi.proto;l=1444
      * @return A list containing the enum numeric values on the wire for statuses.
      */
     @java.lang.Deprecated java.util.List<java.lang.Integer>
@@ -1321,7 +1321,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
      * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-     *     See api/v0alpha/omniapi.proto;l=1442
+     *     See api/v0alpha/omniapi.proto;l=1444
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of statuses at the given index.
      */
@@ -1465,7 +1465,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
      * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-     *     See api/v0alpha/omniapi.proto;l=1442
+     *     See api/v0alpha/omniapi.proto;l=1444
      * @return A list containing the statuses.
      */
     @java.lang.Override
@@ -1480,7 +1480,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
      * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-     *     See api/v0alpha/omniapi.proto;l=1442
+     *     See api/v0alpha/omniapi.proto;l=1444
      * @return The count of statuses.
      */
     @java.lang.Override
@@ -1494,7 +1494,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
      * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-     *     See api/v0alpha/omniapi.proto;l=1442
+     *     See api/v0alpha/omniapi.proto;l=1444
      * @param index The index of the element to return.
      * @return The statuses at the given index.
      */
@@ -1509,7 +1509,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
      * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-     *     See api/v0alpha/omniapi.proto;l=1442
+     *     See api/v0alpha/omniapi.proto;l=1444
      * @return A list containing the enum numeric values on the wire for statuses.
      */
     @java.lang.Override
@@ -1524,7 +1524,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
      * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-     *     See api/v0alpha/omniapi.proto;l=1442
+     *     See api/v0alpha/omniapi.proto;l=1444
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of statuses at the given index.
      */
@@ -2143,7 +2143,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
        * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-       *     See api/v0alpha/omniapi.proto;l=1442
+       *     See api/v0alpha/omniapi.proto;l=1444
        * @return A list containing the statuses.
        */
       @java.lang.Deprecated public java.util.List<com.tcn.cloud.api.api.commons.ConversationStatus> getStatusesList() {
@@ -2157,7 +2157,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
        * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-       *     See api/v0alpha/omniapi.proto;l=1442
+       *     See api/v0alpha/omniapi.proto;l=1444
        * @return The count of statuses.
        */
       @java.lang.Deprecated public int getStatusesCount() {
@@ -2170,7 +2170,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
        * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-       *     See api/v0alpha/omniapi.proto;l=1442
+       *     See api/v0alpha/omniapi.proto;l=1444
        * @param index The index of the element to return.
        * @return The statuses at the given index.
        */
@@ -2184,7 +2184,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
        * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-       *     See api/v0alpha/omniapi.proto;l=1442
+       *     See api/v0alpha/omniapi.proto;l=1444
        * @param index The index to set the value at.
        * @param value The statuses to set.
        * @return This builder for chaining.
@@ -2206,7 +2206,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
        * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-       *     See api/v0alpha/omniapi.proto;l=1442
+       *     See api/v0alpha/omniapi.proto;l=1444
        * @param value The statuses to add.
        * @return This builder for chaining.
        */
@@ -2226,7 +2226,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
        * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-       *     See api/v0alpha/omniapi.proto;l=1442
+       *     See api/v0alpha/omniapi.proto;l=1444
        * @param values The statuses to add.
        * @return This builder for chaining.
        */
@@ -2246,7 +2246,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
        * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-       *     See api/v0alpha/omniapi.proto;l=1442
+       *     See api/v0alpha/omniapi.proto;l=1444
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearStatuses() {
@@ -2262,7 +2262,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
        * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-       *     See api/v0alpha/omniapi.proto;l=1442
+       *     See api/v0alpha/omniapi.proto;l=1444
        * @return A list containing the enum numeric values on the wire for statuses.
        */
       @java.lang.Deprecated public java.util.List<java.lang.Integer>
@@ -2276,7 +2276,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
        * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-       *     See api/v0alpha/omniapi.proto;l=1442
+       *     See api/v0alpha/omniapi.proto;l=1444
        * @param index The index of the value to return.
        * @return The enum numeric value on the wire of statuses at the given index.
        */
@@ -2290,7 +2290,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
        * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-       *     See api/v0alpha/omniapi.proto;l=1442
+       *     See api/v0alpha/omniapi.proto;l=1444
        * @param index The index to set the value at.
        * @param value The enum numeric value on the wire for statuses to set.
        * @return This builder for chaining.
@@ -2309,7 +2309,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
        * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-       *     See api/v0alpha/omniapi.proto;l=1442
+       *     See api/v0alpha/omniapi.proto;l=1444
        * @param value The enum numeric value on the wire for statuses to add.
        * @return This builder for chaining.
        */
@@ -2326,7 +2326,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>repeated .api.commons.ConversationStatus statuses = 2 [json_name = "statuses", deprecated = true];</code>
        * @deprecated api.v0alpha.ListConversationsReq.ByAssignedUser.statuses is deprecated.
-       *     See api/v0alpha/omniapi.proto;l=1442
+       *     See api/v0alpha/omniapi.proto;l=1444
        * @param values The enum numeric values on the wire for statuses to add.
        * @return This builder for chaining.
        */
@@ -2539,6 +2539,976 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface ByConversationSidsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v0alpha.ListConversationsReq.ByConversationSids)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * the conversation sid
+     * </pre>
+     *
+     * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+     * @return A list containing the conversationSids.
+     */
+    java.util.List<java.lang.String>
+        getConversationSidsList();
+    /**
+     * <pre>
+     * the conversation sid
+     * </pre>
+     *
+     * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+     * @return The count of conversationSids.
+     */
+    int getConversationSidsCount();
+    /**
+     * <pre>
+     * the conversation sid
+     * </pre>
+     *
+     * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+     * @param index The index of the element to return.
+     * @return The conversationSids at the given index.
+     */
+    java.lang.String getConversationSids(int index);
+    /**
+     * <pre>
+     * the conversation sid
+     * </pre>
+     *
+     * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the conversationSids at the given index.
+     */
+    com.google.protobuf.ByteString
+        getConversationSidsBytes(int index);
+
+    /**
+     * <pre>
+     * Optional. The number of listconversation to include in a single response. When not provided this defaults to 100.
+     * </pre>
+     *
+     * <code>uint32 page_size = 4 [json_name = "pageSize"];</code>
+     * @return The pageSize.
+     */
+    int getPageSize();
+
+    /**
+     * <pre>
+     *Optional. When provided all other request fields are ignored.
+     * </pre>
+     *
+     * <code>string page_token = 5 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     *Optional. When provided all other request fields are ignored.
+     * </pre>
+     *
+     * <code>string page_token = 5 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * <pre>
+   * message filter to list conversations by conversation sids
+   * </pre>
+   *
+   * Protobuf type {@code api.v0alpha.ListConversationsReq.ByConversationSids}
+   */
+  public static final class ByConversationSids extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v0alpha.ListConversationsReq.ByConversationSids)
+      ByConversationSidsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ByConversationSids.newBuilder() to construct.
+    private ByConversationSids(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ByConversationSids() {
+      conversationSids_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ByConversationSids();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListConversationsReq_ByConversationSids_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListConversationsReq_ByConversationSids_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.class, com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.Builder.class);
+    }
+
+    public static final int CONVERSATION_SIDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList conversationSids_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * the conversation sid
+     * </pre>
+     *
+     * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+     * @return A list containing the conversationSids.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getConversationSidsList() {
+      return conversationSids_;
+    }
+    /**
+     * <pre>
+     * the conversation sid
+     * </pre>
+     *
+     * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+     * @return The count of conversationSids.
+     */
+    public int getConversationSidsCount() {
+      return conversationSids_.size();
+    }
+    /**
+     * <pre>
+     * the conversation sid
+     * </pre>
+     *
+     * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+     * @param index The index of the element to return.
+     * @return The conversationSids at the given index.
+     */
+    public java.lang.String getConversationSids(int index) {
+      return conversationSids_.get(index);
+    }
+    /**
+     * <pre>
+     * the conversation sid
+     * </pre>
+     *
+     * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the conversationSids at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getConversationSidsBytes(int index) {
+      return conversationSids_.getByteString(index);
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 4;
+    private int pageSize_ = 0;
+    /**
+     * <pre>
+     * Optional. The number of listconversation to include in a single response. When not provided this defaults to 100.
+     * </pre>
+     *
+     * <code>uint32 page_size = 4 [json_name = "pageSize"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public int getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object pageToken_ = "";
+    /**
+     * <pre>
+     *Optional. When provided all other request fields are ignored.
+     * </pre>
+     *
+     * <code>string page_token = 5 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *Optional. When provided all other request fields are ignored.
+     * </pre>
+     *
+     * <code>string page_token = 5 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < conversationSids_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, conversationSids_.getRaw(i));
+      }
+      if (pageSize_ != 0) {
+        output.writeUInt32(4, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, pageToken_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < conversationSids_.size(); i++) {
+          dataSize += computeStringSizeNoTag(conversationSids_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getConversationSidsList().size();
+      }
+      if (pageSize_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, pageToken_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids other = (com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids) obj;
+
+      if (!getConversationSidsList()
+          .equals(other.getConversationSidsList())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getConversationSidsCount() > 0) {
+        hash = (37 * hash) + CONVERSATION_SIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getConversationSidsList().hashCode();
+      }
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getPageSize();
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * message filter to list conversations by conversation sids
+     * </pre>
+     *
+     * Protobuf type {@code api.v0alpha.ListConversationsReq.ByConversationSids}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v0alpha.ListConversationsReq.ByConversationSids)
+        com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSidsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListConversationsReq_ByConversationSids_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListConversationsReq_ByConversationSids_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.class, com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        conversationSids_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        pageSize_ = 0;
+        pageToken_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListConversationsReq_ByConversationSids_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids build() {
+        com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids buildPartial() {
+        com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids result = new com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          conversationSids_.makeImmutable();
+          result.conversationSids_ = conversationSids_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pageSize_ = pageSize_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pageToken_ = pageToken_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids) {
+          return mergeFrom((com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids other) {
+        if (other == com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.getDefaultInstance()) return this;
+        if (!other.conversationSids_.isEmpty()) {
+          if (conversationSids_.isEmpty()) {
+            conversationSids_ = other.conversationSids_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureConversationSidsIsMutable();
+            conversationSids_.addAll(other.conversationSids_);
+          }
+          onChanged();
+        }
+        if (other.getPageSize() != 0) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureConversationSidsIsMutable();
+                conversationSids_.add(s);
+                break;
+              } // case 10
+              case 32: {
+                pageSize_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 32
+              case 42: {
+                pageToken_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList conversationSids_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureConversationSidsIsMutable() {
+        if (!conversationSids_.isModifiable()) {
+          conversationSids_ = new com.google.protobuf.LazyStringArrayList(conversationSids_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * the conversation sid
+       * </pre>
+       *
+       * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+       * @return A list containing the conversationSids.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getConversationSidsList() {
+        conversationSids_.makeImmutable();
+        return conversationSids_;
+      }
+      /**
+       * <pre>
+       * the conversation sid
+       * </pre>
+       *
+       * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+       * @return The count of conversationSids.
+       */
+      public int getConversationSidsCount() {
+        return conversationSids_.size();
+      }
+      /**
+       * <pre>
+       * the conversation sid
+       * </pre>
+       *
+       * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+       * @param index The index of the element to return.
+       * @return The conversationSids at the given index.
+       */
+      public java.lang.String getConversationSids(int index) {
+        return conversationSids_.get(index);
+      }
+      /**
+       * <pre>
+       * the conversation sid
+       * </pre>
+       *
+       * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the conversationSids at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getConversationSidsBytes(int index) {
+        return conversationSids_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * the conversation sid
+       * </pre>
+       *
+       * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+       * @param index The index to set the value at.
+       * @param value The conversationSids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConversationSids(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureConversationSidsIsMutable();
+        conversationSids_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the conversation sid
+       * </pre>
+       *
+       * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+       * @param value The conversationSids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addConversationSids(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureConversationSidsIsMutable();
+        conversationSids_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the conversation sid
+       * </pre>
+       *
+       * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+       * @param values The conversationSids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllConversationSids(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureConversationSidsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, conversationSids_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the conversation sid
+       * </pre>
+       *
+       * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConversationSids() {
+        conversationSids_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the conversation sid
+       * </pre>
+       *
+       * <code>repeated string conversation_sids = 1 [json_name = "conversationSids"];</code>
+       * @param value The bytes of the conversationSids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addConversationSidsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureConversationSidsIsMutable();
+        conversationSids_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int pageSize_ ;
+      /**
+       * <pre>
+       * Optional. The number of listconversation to include in a single response. When not provided this defaults to 100.
+       * </pre>
+       *
+       * <code>uint32 page_size = 4 [json_name = "pageSize"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public int getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * Optional. The number of listconversation to include in a single response. When not provided this defaults to 100.
+       * </pre>
+       *
+       * <code>uint32 page_size = 4 [json_name = "pageSize"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(int value) {
+
+        pageSize_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. The number of listconversation to include in a single response. When not provided this defaults to 100.
+       * </pre>
+       *
+       * <code>uint32 page_size = 4 [json_name = "pageSize"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pageSize_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       *Optional. When provided all other request fields are ignored.
+       * </pre>
+       *
+       * <code>string page_token = 5 [json_name = "pageToken"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *Optional. When provided all other request fields are ignored.
+       * </pre>
+       *
+       * <code>string page_token = 5 [json_name = "pageToken"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *Optional. When provided all other request fields are ignored.
+       * </pre>
+       *
+       * <code>string page_token = 5 [json_name = "pageToken"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        pageToken_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Optional. When provided all other request fields are ignored.
+       * </pre>
+       *
+       * <code>string page_token = 5 [json_name = "pageToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        pageToken_ = getDefaultInstance().getPageToken();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Optional. When provided all other request fields are ignored.
+       * </pre>
+       *
+       * <code>string page_token = 5 [json_name = "pageToken"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        pageToken_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v0alpha.ListConversationsReq.ByConversationSids)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v0alpha.ListConversationsReq.ByConversationSids)
+    private static final com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids();
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ByConversationSids>
+        PARSER = new com.google.protobuf.AbstractParser<ByConversationSids>() {
+      @java.lang.Override
+      public ByConversationSids parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ByConversationSids> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ByConversationSids> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int filterCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object filter_;
@@ -2547,6 +3517,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     BY_TIME(100),
     BY_ASSIGNED_USER(101),
+    BY_CONVERSATION_SIDS(102),
     FILTER_NOT_SET(0);
     private final int value;
     private FilterCase(int value) {
@@ -2566,6 +3537,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 100: return BY_TIME;
         case 101: return BY_ASSIGNED_USER;
+        case 102: return BY_CONVERSATION_SIDS;
         case 0: return FILTER_NOT_SET;
         default: return null;
       }
@@ -2861,6 +3833,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByAssignedUser.getDefaultInstance();
   }
 
+  public static final int BY_CONVERSATION_SIDS_FIELD_NUMBER = 102;
+  /**
+   * <pre>
+   * list conversations by conversation sid
+   * </pre>
+   *
+   * <code>.api.v0alpha.ListConversationsReq.ByConversationSids by_conversation_sids = 102 [json_name = "byConversationSids"];</code>
+   * @return Whether the byConversationSids field is set.
+   */
+  @java.lang.Override
+  public boolean hasByConversationSids() {
+    return filterCase_ == 102;
+  }
+  /**
+   * <pre>
+   * list conversations by conversation sid
+   * </pre>
+   *
+   * <code>.api.v0alpha.ListConversationsReq.ByConversationSids by_conversation_sids = 102 [json_name = "byConversationSids"];</code>
+   * @return The byConversationSids.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids getByConversationSids() {
+    if (filterCase_ == 102) {
+       return (com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids) filter_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * list conversations by conversation sid
+   * </pre>
+   *
+   * <code>.api.v0alpha.ListConversationsReq.ByConversationSids by_conversation_sids = 102 [json_name = "byConversationSids"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSidsOrBuilder getByConversationSidsOrBuilder() {
+    if (filterCase_ == 102) {
+       return (com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids) filter_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2898,6 +3913,9 @@ private static final long serialVersionUID = 0L;
     }
     if (filterCase_ == 101) {
       output.writeMessage(101, (com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByAssignedUser) filter_);
+    }
+    if (filterCase_ == 102) {
+      output.writeMessage(102, (com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids) filter_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -2944,6 +3962,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(101, (com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByAssignedUser) filter_);
     }
+    if (filterCase_ == 102) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(102, (com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids) filter_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2975,6 +3997,10 @@ private static final long serialVersionUID = 0L;
       case 101:
         if (!getByAssignedUser()
             .equals(other.getByAssignedUser())) return false;
+        break;
+      case 102:
+        if (!getByConversationSids()
+            .equals(other.getByConversationSids())) return false;
         break;
       case 0:
       default:
@@ -3010,6 +4036,10 @@ private static final long serialVersionUID = 0L;
       case 101:
         hash = (37 * hash) + BY_ASSIGNED_USER_FIELD_NUMBER;
         hash = (53 * hash) + getByAssignedUser().hashCode();
+        break;
+      case 102:
+        hash = (37 * hash) + BY_CONVERSATION_SIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getByConversationSids().hashCode();
         break;
       case 0:
       default:
@@ -3164,6 +4194,9 @@ private static final long serialVersionUID = 0L;
       if (byAssignedUserBuilder_ != null) {
         byAssignedUserBuilder_.clear();
       }
+      if (byConversationSidsBuilder_ != null) {
+        byConversationSidsBuilder_.clear();
+      }
       filterCase_ = 0;
       filter_ = null;
       return this;
@@ -3231,6 +4264,10 @@ private static final long serialVersionUID = 0L;
       if (filterCase_ == 101 &&
           byAssignedUserBuilder_ != null) {
         result.filter_ = byAssignedUserBuilder_.build();
+      }
+      if (filterCase_ == 102 &&
+          byConversationSidsBuilder_ != null) {
+        result.filter_ = byConversationSidsBuilder_.build();
       }
     }
 
@@ -3308,6 +4345,10 @@ private static final long serialVersionUID = 0L;
         }
         case BY_ASSIGNED_USER: {
           mergeByAssignedUser(other.getByAssignedUser());
+          break;
+        }
+        case BY_CONVERSATION_SIDS: {
+          mergeByConversationSids(other.getByConversationSids());
           break;
         }
         case FILTER_NOT_SET: {
@@ -3395,6 +4436,13 @@ private static final long serialVersionUID = 0L;
               filterCase_ = 101;
               break;
             } // case 810
+            case 818: {
+              input.readMessage(
+                  getByConversationSidsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              filterCase_ = 102;
+              break;
+            } // case 818
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -4312,6 +5360,184 @@ private static final long serialVersionUID = 0L;
       filterCase_ = 101;
       onChanged();
       return byAssignedUserBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids, com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.Builder, com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSidsOrBuilder> byConversationSidsBuilder_;
+    /**
+     * <pre>
+     * list conversations by conversation sid
+     * </pre>
+     *
+     * <code>.api.v0alpha.ListConversationsReq.ByConversationSids by_conversation_sids = 102 [json_name = "byConversationSids"];</code>
+     * @return Whether the byConversationSids field is set.
+     */
+    @java.lang.Override
+    public boolean hasByConversationSids() {
+      return filterCase_ == 102;
+    }
+    /**
+     * <pre>
+     * list conversations by conversation sid
+     * </pre>
+     *
+     * <code>.api.v0alpha.ListConversationsReq.ByConversationSids by_conversation_sids = 102 [json_name = "byConversationSids"];</code>
+     * @return The byConversationSids.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids getByConversationSids() {
+      if (byConversationSidsBuilder_ == null) {
+        if (filterCase_ == 102) {
+          return (com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids) filter_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.getDefaultInstance();
+      } else {
+        if (filterCase_ == 102) {
+          return byConversationSidsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * list conversations by conversation sid
+     * </pre>
+     *
+     * <code>.api.v0alpha.ListConversationsReq.ByConversationSids by_conversation_sids = 102 [json_name = "byConversationSids"];</code>
+     */
+    public Builder setByConversationSids(com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids value) {
+      if (byConversationSidsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        filter_ = value;
+        onChanged();
+      } else {
+        byConversationSidsBuilder_.setMessage(value);
+      }
+      filterCase_ = 102;
+      return this;
+    }
+    /**
+     * <pre>
+     * list conversations by conversation sid
+     * </pre>
+     *
+     * <code>.api.v0alpha.ListConversationsReq.ByConversationSids by_conversation_sids = 102 [json_name = "byConversationSids"];</code>
+     */
+    public Builder setByConversationSids(
+        com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.Builder builderForValue) {
+      if (byConversationSidsBuilder_ == null) {
+        filter_ = builderForValue.build();
+        onChanged();
+      } else {
+        byConversationSidsBuilder_.setMessage(builderForValue.build());
+      }
+      filterCase_ = 102;
+      return this;
+    }
+    /**
+     * <pre>
+     * list conversations by conversation sid
+     * </pre>
+     *
+     * <code>.api.v0alpha.ListConversationsReq.ByConversationSids by_conversation_sids = 102 [json_name = "byConversationSids"];</code>
+     */
+    public Builder mergeByConversationSids(com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids value) {
+      if (byConversationSidsBuilder_ == null) {
+        if (filterCase_ == 102 &&
+            filter_ != com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.getDefaultInstance()) {
+          filter_ = com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.newBuilder((com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids) filter_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          filter_ = value;
+        }
+        onChanged();
+      } else {
+        if (filterCase_ == 102) {
+          byConversationSidsBuilder_.mergeFrom(value);
+        } else {
+          byConversationSidsBuilder_.setMessage(value);
+        }
+      }
+      filterCase_ = 102;
+      return this;
+    }
+    /**
+     * <pre>
+     * list conversations by conversation sid
+     * </pre>
+     *
+     * <code>.api.v0alpha.ListConversationsReq.ByConversationSids by_conversation_sids = 102 [json_name = "byConversationSids"];</code>
+     */
+    public Builder clearByConversationSids() {
+      if (byConversationSidsBuilder_ == null) {
+        if (filterCase_ == 102) {
+          filterCase_ = 0;
+          filter_ = null;
+          onChanged();
+        }
+      } else {
+        if (filterCase_ == 102) {
+          filterCase_ = 0;
+          filter_ = null;
+        }
+        byConversationSidsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * list conversations by conversation sid
+     * </pre>
+     *
+     * <code>.api.v0alpha.ListConversationsReq.ByConversationSids by_conversation_sids = 102 [json_name = "byConversationSids"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.Builder getByConversationSidsBuilder() {
+      return getByConversationSidsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * list conversations by conversation sid
+     * </pre>
+     *
+     * <code>.api.v0alpha.ListConversationsReq.ByConversationSids by_conversation_sids = 102 [json_name = "byConversationSids"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSidsOrBuilder getByConversationSidsOrBuilder() {
+      if ((filterCase_ == 102) && (byConversationSidsBuilder_ != null)) {
+        return byConversationSidsBuilder_.getMessageOrBuilder();
+      } else {
+        if (filterCase_ == 102) {
+          return (com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids) filter_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * list conversations by conversation sid
+     * </pre>
+     *
+     * <code>.api.v0alpha.ListConversationsReq.ByConversationSids by_conversation_sids = 102 [json_name = "byConversationSids"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids, com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.Builder, com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSidsOrBuilder> 
+        getByConversationSidsFieldBuilder() {
+      if (byConversationSidsBuilder_ == null) {
+        if (!(filterCase_ == 102)) {
+          filter_ = com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.getDefaultInstance();
+        }
+        byConversationSidsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids, com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids.Builder, com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSidsOrBuilder>(
+                (com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids) filter_,
+                getParentForChildren(),
+                isClean());
+        filter_ = null;
+      }
+      filterCase_ = 102;
+      onChanged();
+      return byConversationSidsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
