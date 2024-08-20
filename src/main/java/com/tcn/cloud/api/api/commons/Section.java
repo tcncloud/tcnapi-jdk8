@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     description_ = "";
     questions_ = java.util.Collections.emptyList();
     autoQuestions_ = java.util.Collections.emptyList();
+    smartQuestions_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -337,6 +338,67 @@ private static final long serialVersionUID = 0L;
     return autoQuestions_.get(index);
   }
 
+  public static final int SMART_QUESTIONS_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.SmartQuestion> smartQuestions_;
+  /**
+   * <pre>
+   * The smart questions in the section.
+   * </pre>
+   *
+   * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.SmartQuestion> getSmartQuestionsList() {
+    return smartQuestions_;
+  }
+  /**
+   * <pre>
+   * The smart questions in the section.
+   * </pre>
+   *
+   * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.SmartQuestionOrBuilder> 
+      getSmartQuestionsOrBuilderList() {
+    return smartQuestions_;
+  }
+  /**
+   * <pre>
+   * The smart questions in the section.
+   * </pre>
+   *
+   * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+   */
+  @java.lang.Override
+  public int getSmartQuestionsCount() {
+    return smartQuestions_.size();
+  }
+  /**
+   * <pre>
+   * The smart questions in the section.
+   * </pre>
+   *
+   * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.SmartQuestion getSmartQuestions(int index) {
+    return smartQuestions_.get(index);
+  }
+  /**
+   * <pre>
+   * The smart questions in the section.
+   * </pre>
+   *
+   * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.SmartQuestionOrBuilder getSmartQuestionsOrBuilder(
+      int index) {
+    return smartQuestions_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -377,6 +439,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < autoQuestions_.size(); i++) {
       output.writeMessage(11, autoQuestions_.get(i));
+    }
+    for (int i = 0; i < smartQuestions_.size(); i++) {
+      output.writeMessage(12, smartQuestions_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -421,6 +486,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, autoQuestions_.get(i));
     }
+    for (int i = 0; i < smartQuestions_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, smartQuestions_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -454,6 +523,8 @@ private static final long serialVersionUID = 0L;
         != other.getSortOrder()) return false;
     if (!getAutoQuestionsList()
         .equals(other.getAutoQuestionsList())) return false;
+    if (!getSmartQuestionsList()
+        .equals(other.getSmartQuestionsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -488,6 +559,10 @@ private static final long serialVersionUID = 0L;
     if (getAutoQuestionsCount() > 0) {
       hash = (37 * hash) + AUTO_QUESTIONS_FIELD_NUMBER;
       hash = (53 * hash) + getAutoQuestionsList().hashCode();
+    }
+    if (getSmartQuestionsCount() > 0) {
+      hash = (37 * hash) + SMART_QUESTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getSmartQuestionsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -645,6 +720,13 @@ private static final long serialVersionUID = 0L;
         autoQuestionsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000100);
+      if (smartQuestionsBuilder_ == null) {
+        smartQuestions_ = java.util.Collections.emptyList();
+      } else {
+        smartQuestions_ = null;
+        smartQuestionsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000200);
       return this;
     }
 
@@ -695,6 +777,15 @@ private static final long serialVersionUID = 0L;
         result.autoQuestions_ = autoQuestions_;
       } else {
         result.autoQuestions_ = autoQuestionsBuilder_.build();
+      }
+      if (smartQuestionsBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0)) {
+          smartQuestions_ = java.util.Collections.unmodifiableList(smartQuestions_);
+          bitField0_ = (bitField0_ & ~0x00000200);
+        }
+        result.smartQuestions_ = smartQuestions_;
+      } else {
+        result.smartQuestions_ = smartQuestionsBuilder_.build();
       }
     }
 
@@ -844,6 +935,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (smartQuestionsBuilder_ == null) {
+        if (!other.smartQuestions_.isEmpty()) {
+          if (smartQuestions_.isEmpty()) {
+            smartQuestions_ = other.smartQuestions_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+          } else {
+            ensureSmartQuestionsIsMutable();
+            smartQuestions_.addAll(other.smartQuestions_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.smartQuestions_.isEmpty()) {
+          if (smartQuestionsBuilder_.isEmpty()) {
+            smartQuestionsBuilder_.dispose();
+            smartQuestionsBuilder_ = null;
+            smartQuestions_ = other.smartQuestions_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+            smartQuestionsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getSmartQuestionsFieldBuilder() : null;
+          } else {
+            smartQuestionsBuilder_.addAllMessages(other.smartQuestions_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -931,6 +1048,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 90
+            case 98: {
+              com.tcn.cloud.api.api.commons.SmartQuestion m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.SmartQuestion.parser(),
+                      extensionRegistry);
+              if (smartQuestionsBuilder_ == null) {
+                ensureSmartQuestionsIsMutable();
+                smartQuestions_.add(m);
+              } else {
+                smartQuestionsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1974,6 +2104,318 @@ private static final long serialVersionUID = 0L;
         autoQuestions_ = null;
       }
       return autoQuestionsBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.SmartQuestion> smartQuestions_ =
+      java.util.Collections.emptyList();
+    private void ensureSmartQuestionsIsMutable() {
+      if (!((bitField0_ & 0x00000200) != 0)) {
+        smartQuestions_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.SmartQuestion>(smartQuestions_);
+        bitField0_ |= 0x00000200;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SmartQuestion, com.tcn.cloud.api.api.commons.SmartQuestion.Builder, com.tcn.cloud.api.api.commons.SmartQuestionOrBuilder> smartQuestionsBuilder_;
+
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.SmartQuestion> getSmartQuestionsList() {
+      if (smartQuestionsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(smartQuestions_);
+      } else {
+        return smartQuestionsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public int getSmartQuestionsCount() {
+      if (smartQuestionsBuilder_ == null) {
+        return smartQuestions_.size();
+      } else {
+        return smartQuestionsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SmartQuestion getSmartQuestions(int index) {
+      if (smartQuestionsBuilder_ == null) {
+        return smartQuestions_.get(index);
+      } else {
+        return smartQuestionsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public Builder setSmartQuestions(
+        int index, com.tcn.cloud.api.api.commons.SmartQuestion value) {
+      if (smartQuestionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSmartQuestionsIsMutable();
+        smartQuestions_.set(index, value);
+        onChanged();
+      } else {
+        smartQuestionsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public Builder setSmartQuestions(
+        int index, com.tcn.cloud.api.api.commons.SmartQuestion.Builder builderForValue) {
+      if (smartQuestionsBuilder_ == null) {
+        ensureSmartQuestionsIsMutable();
+        smartQuestions_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        smartQuestionsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public Builder addSmartQuestions(com.tcn.cloud.api.api.commons.SmartQuestion value) {
+      if (smartQuestionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSmartQuestionsIsMutable();
+        smartQuestions_.add(value);
+        onChanged();
+      } else {
+        smartQuestionsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public Builder addSmartQuestions(
+        int index, com.tcn.cloud.api.api.commons.SmartQuestion value) {
+      if (smartQuestionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureSmartQuestionsIsMutable();
+        smartQuestions_.add(index, value);
+        onChanged();
+      } else {
+        smartQuestionsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public Builder addSmartQuestions(
+        com.tcn.cloud.api.api.commons.SmartQuestion.Builder builderForValue) {
+      if (smartQuestionsBuilder_ == null) {
+        ensureSmartQuestionsIsMutable();
+        smartQuestions_.add(builderForValue.build());
+        onChanged();
+      } else {
+        smartQuestionsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public Builder addSmartQuestions(
+        int index, com.tcn.cloud.api.api.commons.SmartQuestion.Builder builderForValue) {
+      if (smartQuestionsBuilder_ == null) {
+        ensureSmartQuestionsIsMutable();
+        smartQuestions_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        smartQuestionsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public Builder addAllSmartQuestions(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.SmartQuestion> values) {
+      if (smartQuestionsBuilder_ == null) {
+        ensureSmartQuestionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, smartQuestions_);
+        onChanged();
+      } else {
+        smartQuestionsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public Builder clearSmartQuestions() {
+      if (smartQuestionsBuilder_ == null) {
+        smartQuestions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+      } else {
+        smartQuestionsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public Builder removeSmartQuestions(int index) {
+      if (smartQuestionsBuilder_ == null) {
+        ensureSmartQuestionsIsMutable();
+        smartQuestions_.remove(index);
+        onChanged();
+      } else {
+        smartQuestionsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SmartQuestion.Builder getSmartQuestionsBuilder(
+        int index) {
+      return getSmartQuestionsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SmartQuestionOrBuilder getSmartQuestionsOrBuilder(
+        int index) {
+      if (smartQuestionsBuilder_ == null) {
+        return smartQuestions_.get(index);  } else {
+        return smartQuestionsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.SmartQuestionOrBuilder> 
+         getSmartQuestionsOrBuilderList() {
+      if (smartQuestionsBuilder_ != null) {
+        return smartQuestionsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(smartQuestions_);
+      }
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SmartQuestion.Builder addSmartQuestionsBuilder() {
+      return getSmartQuestionsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.SmartQuestion.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.SmartQuestion.Builder addSmartQuestionsBuilder(
+        int index) {
+      return getSmartQuestionsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.SmartQuestion.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The smart questions in the section.
+     * </pre>
+     *
+     * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.SmartQuestion.Builder> 
+         getSmartQuestionsBuilderList() {
+      return getSmartQuestionsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.SmartQuestion, com.tcn.cloud.api.api.commons.SmartQuestion.Builder, com.tcn.cloud.api.api.commons.SmartQuestionOrBuilder> 
+        getSmartQuestionsFieldBuilder() {
+      if (smartQuestionsBuilder_ == null) {
+        smartQuestionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.SmartQuestion, com.tcn.cloud.api.api.commons.SmartQuestion.Builder, com.tcn.cloud.api.api.commons.SmartQuestionOrBuilder>(
+                smartQuestions_,
+                ((bitField0_ & 0x00000200) != 0),
+                getParentForChildren(),
+                isClean());
+        smartQuestions_ = null;
+      }
+      return smartQuestionsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

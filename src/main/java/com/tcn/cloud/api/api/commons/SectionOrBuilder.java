@@ -184,4 +184,48 @@ public interface SectionOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.AutoQuestionOrBuilder getAutoQuestionsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * The smart questions in the section.
+   * </pre>
+   *
+   * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.SmartQuestion> 
+      getSmartQuestionsList();
+  /**
+   * <pre>
+   * The smart questions in the section.
+   * </pre>
+   *
+   * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+   */
+  com.tcn.cloud.api.api.commons.SmartQuestion getSmartQuestions(int index);
+  /**
+   * <pre>
+   * The smart questions in the section.
+   * </pre>
+   *
+   * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+   */
+  int getSmartQuestionsCount();
+  /**
+   * <pre>
+   * The smart questions in the section.
+   * </pre>
+   *
+   * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.SmartQuestionOrBuilder> 
+      getSmartQuestionsOrBuilderList();
+  /**
+   * <pre>
+   * The smart questions in the section.
+   * </pre>
+   *
+   * <code>repeated .api.commons.SmartQuestion smart_questions = 12 [json_name = "smartQuestions"];</code>
+   */
+  com.tcn.cloud.api.api.commons.SmartQuestionOrBuilder getSmartQuestionsOrBuilder(
+      int index);
 }

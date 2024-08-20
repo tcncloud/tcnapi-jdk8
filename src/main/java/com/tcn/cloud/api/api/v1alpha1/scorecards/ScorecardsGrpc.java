@@ -1472,6 +1472,37 @@ public final class ScorecardsGrpc {
     return getRestoreEvaluationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionResponse> getCreateSmartQuestionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateSmartQuestion",
+      requestType = com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionResponse> getCreateSmartQuestionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionResponse> getCreateSmartQuestionMethod;
+    if ((getCreateSmartQuestionMethod = ScorecardsGrpc.getCreateSmartQuestionMethod) == null) {
+      synchronized (ScorecardsGrpc.class) {
+        if ((getCreateSmartQuestionMethod = ScorecardsGrpc.getCreateSmartQuestionMethod) == null) {
+          ScorecardsGrpc.getCreateSmartQuestionMethod = getCreateSmartQuestionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSmartQuestion"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateSmartQuestion"))
+              .build();
+        }
+      }
+    }
+    return getCreateSmartQuestionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1989,6 +2020,16 @@ public final class ScorecardsGrpc {
     default void restoreEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRestoreEvaluationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateSmartQuestion creates a scorecard smart question.
+     * </pre>
+     */
+    default void createSmartQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSmartQuestionMethod(), responseObserver);
     }
   }
 
@@ -2536,6 +2577,17 @@ public final class ScorecardsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRestoreEvaluationMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * CreateSmartQuestion creates a scorecard smart question.
+     * </pre>
+     */
+    public void createSmartQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateSmartQuestionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -3024,6 +3076,16 @@ public final class ScorecardsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse restoreEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRestoreEvaluationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateSmartQuestion creates a scorecard smart question.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionResponse createSmartQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateSmartQuestionMethod(), getCallOptions(), request);
     }
   }
 
@@ -3549,6 +3611,17 @@ public final class ScorecardsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRestoreEvaluationMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * CreateSmartQuestion creates a scorecard smart question.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionResponse> createSmartQuestion(
+        com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateSmartQuestionMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_SCORECARD = 0;
@@ -3598,6 +3671,7 @@ public final class ScorecardsGrpc {
   private static final int METHODID_DELETE_AUTO_EVALUATION = 44;
   private static final int METHODID_PREVIEW_EVALUATION_SCORE = 45;
   private static final int METHODID_RESTORE_EVALUATION = 46;
+  private static final int METHODID_CREATE_SMART_QUESTION = 47;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3803,6 +3877,10 @@ public final class ScorecardsGrpc {
         case METHODID_RESTORE_EVALUATION:
           serviceImpl.restoreEvaluation((com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_SMART_QUESTION:
+          serviceImpl.createSmartQuestion((com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -4151,6 +4229,13 @@ public final class ScorecardsGrpc {
               com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationRequest,
               com.tcn.cloud.api.api.v1alpha1.scorecards.RestoreEvaluationResponse>(
                 service, METHODID_RESTORE_EVALUATION)))
+        .addMethod(
+          getCreateSmartQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSmartQuestionResponse>(
+                service, METHODID_CREATE_SMART_QUESTION)))
         .build();
   }
 
@@ -4246,6 +4331,7 @@ public final class ScorecardsGrpc {
               .addMethod(getDeleteAutoEvaluationMethod())
               .addMethod(getPreviewEvaluationScoreMethod())
               .addMethod(getRestoreEvaluationMethod())
+              .addMethod(getCreateSmartQuestionMethod())
               .build();
         }
       }
