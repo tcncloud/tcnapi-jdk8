@@ -75,7 +75,7 @@ private static final long serialVersionUID = 0L;
      * Points to award for answer.
      * </pre>
      *
-     * <code>uint32 points = 2 [json_name = "points"];</code>
+     * <code>int32 points = 2 [json_name = "points"];</code>
      * @return Whether the points field is set.
      */
     boolean hasPoints();
@@ -84,7 +84,7 @@ private static final long serialVersionUID = 0L;
      * Points to award for answer.
      * </pre>
      *
-     * <code>uint32 points = 2 [json_name = "points"];</code>
+     * <code>int32 points = 2 [json_name = "points"];</code>
      * @return The points.
      */
     int getPoints();
@@ -254,7 +254,7 @@ private static final long serialVersionUID = 0L;
      * Points to award for answer.
      * </pre>
      *
-     * <code>uint32 points = 2 [json_name = "points"];</code>
+     * <code>int32 points = 2 [json_name = "points"];</code>
      * @return Whether the points field is set.
      */
     @java.lang.Override
@@ -266,7 +266,7 @@ private static final long serialVersionUID = 0L;
      * Points to award for answer.
      * </pre>
      *
-     * <code>uint32 points = 2 [json_name = "points"];</code>
+     * <code>int32 points = 2 [json_name = "points"];</code>
      * @return The points.
      */
     @java.lang.Override
@@ -338,7 +338,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, answer_);
       }
       if (resultCase_ == 2) {
-        output.writeUInt32(
+        output.writeInt32(
             2, (int)((java.lang.Integer) result_));
       }
       if (resultCase_ == 3) {
@@ -358,7 +358,7 @@ private static final long serialVersionUID = 0L;
       }
       if (resultCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(
+          .computeInt32Size(
               2, (int)((java.lang.Integer) result_));
       }
       if (resultCase_ == 3) {
@@ -696,7 +696,7 @@ private static final long serialVersionUID = 0L;
                 break;
               } // case 10
               case 16: {
-                result_ = input.readUInt32();
+                result_ = input.readInt32();
                 resultCase_ = 2;
                 break;
               } // case 16
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
        * Points to award for answer.
        * </pre>
        *
-       * <code>uint32 points = 2 [json_name = "points"];</code>
+       * <code>int32 points = 2 [json_name = "points"];</code>
        * @return Whether the points field is set.
        */
       public boolean hasPoints() {
@@ -846,7 +846,7 @@ private static final long serialVersionUID = 0L;
        * Points to award for answer.
        * </pre>
        *
-       * <code>uint32 points = 2 [json_name = "points"];</code>
+       * <code>int32 points = 2 [json_name = "points"];</code>
        * @return The points.
        */
       public int getPoints() {
@@ -860,7 +860,7 @@ private static final long serialVersionUID = 0L;
        * Points to award for answer.
        * </pre>
        *
-       * <code>uint32 points = 2 [json_name = "points"];</code>
+       * <code>int32 points = 2 [json_name = "points"];</code>
        * @param value The points to set.
        * @return This builder for chaining.
        */
@@ -876,7 +876,7 @@ private static final long serialVersionUID = 0L;
        * Points to award for answer.
        * </pre>
        *
-       * <code>uint32 points = 2 [json_name = "points"];</code>
+       * <code>int32 points = 2 [json_name = "points"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPoints() {

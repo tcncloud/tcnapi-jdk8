@@ -323,7 +323,7 @@ public final class ScorecardsProto {
       "estion.AnswerR\007answers\0220\n\005focus\030\013 \001(\0162\032." +
       "api.commons.QuestionFocusR\005focus\032z\n\006Answ" +
       "er\022\026\n\006answer\030\001 \001(\tR\006answer\022\030\n\006points\030\002 \001" +
-      "(\rH\000R\006points\0224\n\tfail_type\030\003 \001(\0162\025.api.co" +
+      "(\005H\000R\006points\0224\n\tfail_type\030\003 \001(\0162\025.api.co" +
       "mmons.FailTypeH\000R\010failTypeB\010\n\006result*=\n\014" +
       "CategoryType\022\013\n\007INVALID\020\000\022\017\n\013SKILL_CALLS" +
       "\020\001\022\017\n\013MANUAL_DIAL\020\002*L\n\016EvaluationType\022\023\n" +
