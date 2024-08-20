@@ -1286,6 +1286,21 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.QuestionFocus.UNRECOGNIZED : result;
   }
 
+  public static final int SORT_ORDER_FIELD_NUMBER = 12;
+  private int sortOrder_ = 0;
+  /**
+   * <pre>
+   * Order number of smart question.
+   * </pre>
+   *
+   * <code>int32 sort_order = 12 [json_name = "sortOrder"];</code>
+   * @return The sortOrder.
+   */
+  @java.lang.Override
+  public int getSortOrder() {
+    return sortOrder_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1323,6 +1338,9 @@ private static final long serialVersionUID = 0L;
     }
     if (focus_ != com.tcn.cloud.api.api.commons.QuestionFocus.QUESTION_FOCUS_UNSPECIFIED.getNumber()) {
       output.writeEnum(11, focus_);
+    }
+    if (sortOrder_ != 0) {
+      output.writeInt32(12, sortOrder_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1363,6 +1381,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(11, focus_);
     }
+    if (sortOrder_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(12, sortOrder_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1393,6 +1415,8 @@ private static final long serialVersionUID = 0L;
     if (!getAnswersList()
         .equals(other.getAnswersList())) return false;
     if (focus_ != other.focus_) return false;
+    if (getSortOrder()
+        != other.getSortOrder()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1426,6 +1450,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + FOCUS_FIELD_NUMBER;
     hash = (53 * hash) + focus_;
+    hash = (37 * hash) + SORT_ORDER_FIELD_NUMBER;
+    hash = (53 * hash) + getSortOrder();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1575,6 +1601,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000040);
       focus_ = 0;
+      sortOrder_ = 0;
       return this;
     }
 
@@ -1641,6 +1668,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.focus_ = focus_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.sortOrder_ = sortOrder_;
       }
     }
 
@@ -1739,6 +1769,9 @@ private static final long serialVersionUID = 0L;
       if (other.focus_ != 0) {
         setFocusValue(other.getFocusValue());
       }
+      if (other.getSortOrder() != 0) {
+        setSortOrder(other.getSortOrder());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1813,6 +1846,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 88
+            case 96: {
+              sortOrder_ = input.readInt32();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 96
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2571,6 +2609,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearFocus() {
       bitField0_ = (bitField0_ & ~0x00000080);
       focus_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int sortOrder_ ;
+    /**
+     * <pre>
+     * Order number of smart question.
+     * </pre>
+     *
+     * <code>int32 sort_order = 12 [json_name = "sortOrder"];</code>
+     * @return The sortOrder.
+     */
+    @java.lang.Override
+    public int getSortOrder() {
+      return sortOrder_;
+    }
+    /**
+     * <pre>
+     * Order number of smart question.
+     * </pre>
+     *
+     * <code>int32 sort_order = 12 [json_name = "sortOrder"];</code>
+     * @param value The sortOrder to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSortOrder(int value) {
+
+      sortOrder_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Order number of smart question.
+     * </pre>
+     *
+     * <code>int32 sort_order = 12 [json_name = "sortOrder"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSortOrder() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      sortOrder_ = 0;
       onChanged();
       return this;
     }

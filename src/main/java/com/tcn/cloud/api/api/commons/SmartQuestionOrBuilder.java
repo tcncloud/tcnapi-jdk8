@@ -149,4 +149,14 @@ public interface SmartQuestionOrBuilder extends
    * @return The focus.
    */
   com.tcn.cloud.api.api.commons.QuestionFocus getFocus();
+
+  /**
+   * <pre>
+   * Order number of smart question.
+   * </pre>
+   *
+   * <code>int32 sort_order = 12 [json_name = "sortOrder"];</code>
+   * @return The sortOrder.
+   */
+  int getSortOrder();
 }
