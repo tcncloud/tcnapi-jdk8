@@ -186,5 +186,32 @@ public interface ListConversationsReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByAssignedUserOrBuilder getByAssignedUserOrBuilder();
 
+  /**
+   * <pre>
+   * list conversations by conversation sid
+   * </pre>
+   *
+   * <code>.api.v0alpha.ListConversationsReq.ByConversationSids by_conversation_sids = 102 [json_name = "byConversationSids"];</code>
+   * @return Whether the byConversationSids field is set.
+   */
+  boolean hasByConversationSids();
+  /**
+   * <pre>
+   * list conversations by conversation sid
+   * </pre>
+   *
+   * <code>.api.v0alpha.ListConversationsReq.ByConversationSids by_conversation_sids = 102 [json_name = "byConversationSids"];</code>
+   * @return The byConversationSids.
+   */
+  com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSids getByConversationSids();
+  /**
+   * <pre>
+   * list conversations by conversation sid
+   * </pre>
+   *
+   * <code>.api.v0alpha.ListConversationsReq.ByConversationSids by_conversation_sids = 102 [json_name = "byConversationSids"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByConversationSidsOrBuilder getByConversationSidsOrBuilder();
+
   com.tcn.cloud.api.api.v0alpha.ListConversationsReq.FilterCase getFilterCase();
 }
