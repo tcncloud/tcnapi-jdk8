@@ -84,19 +84,38 @@ public interface MatchingRuleOrBuilder extends
   com.google.protobuf.TimestampOrBuilder getUpdateTimeOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+   * <code>.services.billing.entities.v1alpha4.MatchingConfig rule_config = 6 [json_name = "ruleConfig"];</code>
+   * @return Whether the ruleConfig field is set.
+   */
+  boolean hasRuleConfig();
+  /**
+   * <code>.services.billing.entities.v1alpha4.MatchingConfig rule_config = 6 [json_name = "ruleConfig"];</code>
+   * @return The ruleConfig.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfig getRuleConfig();
+  /**
+   * <code>.services.billing.entities.v1alpha4.MatchingConfig rule_config = 6 [json_name = "ruleConfig"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingConfigOrBuilder getRuleConfigOrBuilder();
+
+  /**
+   * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.MatchingRule.country_code_prefix is deprecated.
+   *     See services/billing/entities/v1alpha4/rates.proto;l=30
    * @return Whether the countryCodePrefix field is set.
    */
-  boolean hasCountryCodePrefix();
+  @java.lang.Deprecated boolean hasCountryCodePrefix();
   /**
-   * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+   * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix", deprecated = true];</code>
+   * @deprecated services.billing.entities.v1alpha4.MatchingRule.country_code_prefix is deprecated.
+   *     See services/billing/entities/v1alpha4/rates.proto;l=30
    * @return The countryCodePrefix.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix getCountryCodePrefix();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefix getCountryCodePrefix();
   /**
-   * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix"];</code>
+   * <code>.services.billing.entities.v1alpha4.CountryCodePrefix country_code_prefix = 100 [json_name = "countryCodePrefix", deprecated = true];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefixOrBuilder getCountryCodePrefixOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.services.billing.entities.v1alpha4.CountryCodePrefixOrBuilder getCountryCodePrefixOrBuilder();
 
   com.tcn.cloud.api.services.billing.entities.v1alpha4.MatchingRule.MatchingConfigCase getMatchingConfigCase();
 }
