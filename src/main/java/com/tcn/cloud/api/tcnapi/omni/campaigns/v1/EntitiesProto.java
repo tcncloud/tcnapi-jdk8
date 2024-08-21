@@ -38,19 +38,19 @@ public final class EntitiesProto {
       "field_behavior.proto\032\031google/api/resourc" +
       "e.proto\032 google/protobuf/field_mask.prot" +
       "o\032(tcnapi/omni/campaigns/v1/campaigns.pr" +
-      "oto\"\241\001\n\024ListcampaignsRequest\022C\n\006parent\030\001" +
-      " \001(\tB+\340A\002\372A%\022#campaigns.omni.tcnapi.com/" +
-      "campaignsR\006parent\022 \n\tpage_size\030\002 \001(\005B\003\340A" +
-      "\001R\010pageSize\022\"\n\npage_token\030\003 \001(\tB\003\340A\001R\tpa" +
-      "geToken\"\201\001\n\025ListcampaignsResponse\022@\n\tcam" +
-      "paigns\030\001 \003(\0132\".tcnapi.omni.campaigns.v1." +
-      "CampaignR\tcampaigns\022&\n\017next_page_token\030\002" +
-      " \001(\tR\rnextPageTokenB\276\001\n*com.tcn.cloud.ap" +
-      "i.tcnapi.omni.campaigns.v1B\rEntitiesProt" +
-      "oP\001\242\002\003TOC\252\002\030Tcnapi.Omni.Campaigns.V1\312\002\030T" +
-      "cnapi\\Omni\\Campaigns\\V1\342\002$Tcnapi\\Omni\\Ca" +
-      "mpaigns\\V1\\GPBMetadata\352\002\033Tcnapi::Omni::C" +
-      "ampaigns::V1b\006proto3"
+      "oto\"\240\001\n\024ListcampaignsRequest\022B\n\006parent\030\001" +
+      " \001(\tB*\340A\002\372A$\022\"tcnapi.omni.campaigns.v1/C" +
+      "ampaignsR\006parent\022 \n\tpage_size\030\002 \001(\005B\003\340A\001" +
+      "R\010pageSize\022\"\n\npage_token\030\003 \001(\tB\003\340A\001R\tpag" +
+      "eToken\"\201\001\n\025ListcampaignsResponse\022@\n\tcamp" +
+      "aigns\030\001 \003(\0132\".tcnapi.omni.campaigns.v1.C" +
+      "ampaignR\tcampaigns\022&\n\017next_page_token\030\002 " +
+      "\001(\tR\rnextPageTokenB\276\001\n*com.tcn.cloud.api" +
+      ".tcnapi.omni.campaigns.v1B\rEntitiesProto" +
+      "P\001\242\002\003TOC\252\002\030Tcnapi.Omni.Campaigns.V1\312\002\030Tc" +
+      "napi\\Omni\\Campaigns\\V1\342\002$Tcnapi\\Omni\\Cam" +
+      "paigns\\V1\\GPBMetadata\352\002\033Tcnapi::Omni::Ca" +
+      "mpaigns::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

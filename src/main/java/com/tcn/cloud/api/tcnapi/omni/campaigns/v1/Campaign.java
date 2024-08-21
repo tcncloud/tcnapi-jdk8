@@ -22,7 +22,7 @@ private static final long serialVersionUID = 0L;
   private Campaign() {
     title_ = "";
     description_ = "";
-    status_ = 0;
+    state_ = 0;
     channelType_ = 0;
   }
 
@@ -48,151 +48,12 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * This enum represents the channel type
-   * </pre>
-   *
-   * Protobuf enum {@code tcnapi.omni.campaigns.v1.Campaign.ChannelType}
-   */
-  public enum ChannelType
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>CHANNEL_TYPE_EMAIL = 0;</code>
-     */
-    CHANNEL_TYPE_EMAIL(0),
-    /**
-     * <code>CHANNEL_TYPE_SMS = 1;</code>
-     */
-    CHANNEL_TYPE_SMS(1),
-    /**
-     * <code>CHANNEL_TYPE_CHAT = 2;</code>
-     */
-    CHANNEL_TYPE_CHAT(2),
-    /**
-     * <code>CHANNEL_TYPE_VOICE = 3;</code>
-     */
-    CHANNEL_TYPE_VOICE(3),
-    /**
-     * <code>CHANNEL_TYPE_WHATSAPP = 4;</code>
-     */
-    CHANNEL_TYPE_WHATSAPP(4),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>CHANNEL_TYPE_EMAIL = 0;</code>
-     */
-    public static final int CHANNEL_TYPE_EMAIL_VALUE = 0;
-    /**
-     * <code>CHANNEL_TYPE_SMS = 1;</code>
-     */
-    public static final int CHANNEL_TYPE_SMS_VALUE = 1;
-    /**
-     * <code>CHANNEL_TYPE_CHAT = 2;</code>
-     */
-    public static final int CHANNEL_TYPE_CHAT_VALUE = 2;
-    /**
-     * <code>CHANNEL_TYPE_VOICE = 3;</code>
-     */
-    public static final int CHANNEL_TYPE_VOICE_VALUE = 3;
-    /**
-     * <code>CHANNEL_TYPE_WHATSAPP = 4;</code>
-     */
-    public static final int CHANNEL_TYPE_WHATSAPP_VALUE = 4;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static ChannelType valueOf(int value) {
-      return forNumber(value);
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static ChannelType forNumber(int value) {
-      switch (value) {
-        case 0: return CHANNEL_TYPE_EMAIL;
-        case 1: return CHANNEL_TYPE_SMS;
-        case 2: return CHANNEL_TYPE_CHAT;
-        case 3: return CHANNEL_TYPE_VOICE;
-        case 4: return CHANNEL_TYPE_WHATSAPP;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<ChannelType>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        ChannelType> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<ChannelType>() {
-            public ChannelType findValueByNumber(int number) {
-              return ChannelType.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final ChannelType[] VALUES = values();
-
-    public static ChannelType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private ChannelType(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:tcnapi.omni.campaigns.v1.Campaign.ChannelType)
-  }
-
-  /**
-   * <pre>
    * This enum represents the state of a campaign
    * </pre>
    *
-   * Protobuf enum {@code tcnapi.omni.campaigns.v1.Campaign.CampaignStatus}
+   * Protobuf enum {@code tcnapi.omni.campaigns.v1.Campaign.CampaignState}
    */
-  public enum CampaignStatus
+  public enum CampaignState
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <pre>
@@ -293,7 +154,7 @@ private static final long serialVersionUID = 0L;
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
-    public static CampaignStatus valueOf(int value) {
+    public static CampaignState valueOf(int value) {
       return forNumber(value);
     }
 
@@ -301,7 +162,7 @@ private static final long serialVersionUID = 0L;
      * @param value The numeric wire value of the corresponding enum entry.
      * @return The enum associated with the given numeric wire value.
      */
-    public static CampaignStatus forNumber(int value) {
+    public static CampaignState forNumber(int value) {
       switch (value) {
         case 0: return SCHEDULING;
         case 200: return RUNNING;
@@ -312,15 +173,15 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<CampaignStatus>
+    public static com.google.protobuf.Internal.EnumLiteMap<CampaignState>
         internalGetValueMap() {
       return internalValueMap;
     }
     private static final com.google.protobuf.Internal.EnumLiteMap<
-        CampaignStatus> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<CampaignStatus>() {
-            public CampaignStatus findValueByNumber(int number) {
-              return CampaignStatus.forNumber(number);
+        CampaignState> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<CampaignState>() {
+            public CampaignState findValueByNumber(int number) {
+              return CampaignState.forNumber(number);
             }
           };
 
@@ -338,12 +199,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.getDescriptor().getEnumTypes().get(1);
+      return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.getDescriptor().getEnumTypes().get(0);
     }
 
-    private static final CampaignStatus[] VALUES = values();
+    private static final CampaignState[] VALUES = values();
 
-    public static CampaignStatus valueOf(
+    public static CampaignState valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
@@ -357,16 +218,286 @@ private static final long serialVersionUID = 0L;
 
     private final int value;
 
-    private CampaignStatus(int value) {
+    private CampaignState(int value) {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:tcnapi.omni.campaigns.v1.Campaign.CampaignStatus)
+    // @@protoc_insertion_point(enum_scope:tcnapi.omni.campaigns.v1.Campaign.CampaignState)
   }
 
   public interface ModuleOrBuilder extends
       // @@protoc_insertion_point(interface_extends:tcnapi.omni.campaigns.v1.Campaign.Module)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * the campaign module identifier
+     * </pre>
+     *
+     * <code>int64 campaign_module_sid = 1 [json_name = "campaignModuleSid", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The campaignModuleSid.
+     */
+    long getCampaignModuleSid();
+
+    /**
+     * <pre>
+     * the campaign identifier
+     * </pre>
+     *
+     * <code>int64 campaign_sid = 2 [json_name = "campaignSid", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The campaignSid.
+     */
+    long getCampaignSid();
+
+    /**
+     * <pre>
+     * module type (inbound|outbound)
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.ModuleType module_type = 3 [json_name = "moduleType", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The enum numeric value on the wire for moduleType.
+     */
+    int getModuleTypeValue();
+    /**
+     * <pre>
+     * module type (inbound|outbound)
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.ModuleType module_type = 3 [json_name = "moduleType", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The moduleType.
+     */
+    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ModuleType getModuleType();
+
+    /**
+     * <pre>
+     * campaign module State (running|stopped|etc.)
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState State = 4 [json_name = "State", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <pre>
+     * campaign module State (running|stopped|etc.)
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState State = 4 [json_name = "State", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The state.
+     */
+    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState getState();
+
+    /**
+     * <pre>
+     * config data specific to the module
+     * ModuleConfig config = 5 [(google.api.field_behavior) = REQUIRED];
+     * date module was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the dateCreated field is set.
+     */
+    boolean hasDateCreated();
+    /**
+     * <pre>
+     * config data specific to the module
+     * ModuleConfig config = 5 [(google.api.field_behavior) = REQUIRED];
+     * date module was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The dateCreated.
+     */
+    com.google.protobuf.Timestamp getDateCreated();
+    /**
+     * <pre>
+     * config data specific to the module
+     * ModuleConfig config = 5 [(google.api.field_behavior) = REQUIRED];
+     * date module was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder();
+
+    /**
+     * <pre>
+     * date module was last modified
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the dateModified field is set.
+     */
+    boolean hasDateModified();
+    /**
+     * <pre>
+     * date module was last modified
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The dateModified.
+     */
+    com.google.protobuf.Timestamp getDateModified();
+    /**
+     * <pre>
+     * date module was last modified
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder();
+
+    /**
+     * <pre>
+     * when campaign is scheduled to stop; null == not a scheduled module
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp scheduled_stop_date = 8 [json_name = "scheduledStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return Whether the scheduledStopDate field is set.
+     */
+    boolean hasScheduledStopDate();
+    /**
+     * <pre>
+     * when campaign is scheduled to stop; null == not a scheduled module
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp scheduled_stop_date = 8 [json_name = "scheduledStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The scheduledStopDate.
+     */
+    com.google.protobuf.Timestamp getScheduledStopDate();
+    /**
+     * <pre>
+     * when campaign is scheduled to stop; null == not a scheduled module
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp scheduled_stop_date = 8 [json_name = "scheduledStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getScheduledStopDateOrBuilder();
+
+    /**
+     * <pre>
+     * time campaign was actually stopped; null == not stopped yet
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp actual_stop_date = 9 [json_name = "actualStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return Whether the actualStopDate field is set.
+     */
+    boolean hasActualStopDate();
+    /**
+     * <pre>
+     * time campaign was actually stopped; null == not stopped yet
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp actual_stop_date = 9 [json_name = "actualStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The actualStopDate.
+     */
+    com.google.protobuf.Timestamp getActualStopDate();
+    /**
+     * <pre>
+     * time campaign was actually stopped; null == not stopped yet
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp actual_stop_date = 9 [json_name = "actualStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getActualStopDateOrBuilder();
+
+    /**
+     * <pre>
+     * campaign module operating time; nullable
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 10 [json_name = "hoursOfOperation", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return Whether the hoursOfOperation field is set.
+     */
+    boolean hasHoursOfOperation();
+    /**
+     * <pre>
+     * campaign module operating time; nullable
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 10 [json_name = "hoursOfOperation", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The hoursOfOperation.
+     */
+    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange getHoursOfOperation();
+    /**
+     * <pre>
+     * campaign module operating time; nullable
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 10 [json_name = "hoursOfOperation", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRangeOrBuilder getHoursOfOperationOrBuilder();
+
+    /**
+     * <pre>
+     * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 11 [json_name = "details", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return Whether the details field is set.
+     */
+    boolean hasDetails();
+    /**
+     * <pre>
+     * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 11 [json_name = "details", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The details.
+     */
+    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details getDetails();
+    /**
+     * <pre>
+     * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 11 [json_name = "details", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.DetailsOrBuilder getDetailsOrBuilder();
+
+    /**
+     * <pre>
+     * attachments
+     * </pre>
+     *
+     * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment> 
+        getAttachmentsList();
+    /**
+     * <pre>
+     * attachments
+     * </pre>
+     *
+     * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment getAttachments(int index);
+    /**
+     * <pre>
+     * attachments
+     * </pre>
+     *
+     * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    int getAttachmentsCount();
+    /**
+     * <pre>
+     * attachments
+     * </pre>
+     *
+     * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    java.util.List<? extends com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.AttachmentOrBuilder> 
+        getAttachmentsOrBuilderList();
+    /**
+     * <pre>
+     * attachments
+     * </pre>
+     *
+     * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.AttachmentOrBuilder getAttachmentsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -385,6 +516,9 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Module() {
+      moduleType_ = 0;
+      state_ = 0;
+      attachments_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -407,6 +541,5700 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.class, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Builder.class);
     }
 
+    /**
+     * Protobuf enum {@code tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState}
+     */
+    public enum ModuleState
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * initial module State
+       * </pre>
+       *
+       * <code>MODULE_PREPARING = 0;</code>
+       */
+      MODULE_PREPARING(0),
+      /**
+       * <pre>
+       * module is in the process of getting scheduled
+       * </pre>
+       *
+       * <code>MODULE_SCHEDULING = 100;</code>
+       */
+      MODULE_SCHEDULING(100),
+      /**
+       * <pre>
+       * module is currently processing requests/data
+       * </pre>
+       *
+       * <code>MODULE_RUNNING = 200;</code>
+       */
+      MODULE_RUNNING(200),
+      /**
+       * <pre>
+       * module is processing requests/data, but has received an ERROR event
+       * </pre>
+       *
+       * <code>MODULE_RUNNING_ERROR = 250;</code>
+       */
+      MODULE_RUNNING_ERROR(250),
+      /**
+       * <pre>
+       * module has received a FAIL event (i.e. too many consecutive errors have occurred)
+       * </pre>
+       *
+       * <code>MODULE_ERROR_STANDBY = 300;</code>
+       */
+      MODULE_ERROR_STANDBY(300),
+      /**
+       * <pre>
+       * module is paused
+       * </pre>
+       *
+       * <code>MODULE_PAUSED = 400;</code>
+       */
+      MODULE_PAUSED(400),
+      /**
+       * <pre>
+       * module is preparing to run again
+       * </pre>
+       *
+       * <code>MODULE_RESUMING = 500;</code>
+       */
+      MODULE_RESUMING(500),
+      /**
+       * <pre>
+       * module has completed (i.e. finished, done running)
+       * </pre>
+       *
+       * <code>MODULE_COMPLETED = 600;</code>
+       */
+      MODULE_COMPLETED(600),
+      /**
+       * <pre>
+       * module has been archived/closed
+       * </pre>
+       *
+       * <code>MODULE_ARCHIVED = 700;</code>
+       */
+      MODULE_ARCHIVED(700),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * initial module State
+       * </pre>
+       *
+       * <code>MODULE_PREPARING = 0;</code>
+       */
+      public static final int MODULE_PREPARING_VALUE = 0;
+      /**
+       * <pre>
+       * module is in the process of getting scheduled
+       * </pre>
+       *
+       * <code>MODULE_SCHEDULING = 100;</code>
+       */
+      public static final int MODULE_SCHEDULING_VALUE = 100;
+      /**
+       * <pre>
+       * module is currently processing requests/data
+       * </pre>
+       *
+       * <code>MODULE_RUNNING = 200;</code>
+       */
+      public static final int MODULE_RUNNING_VALUE = 200;
+      /**
+       * <pre>
+       * module is processing requests/data, but has received an ERROR event
+       * </pre>
+       *
+       * <code>MODULE_RUNNING_ERROR = 250;</code>
+       */
+      public static final int MODULE_RUNNING_ERROR_VALUE = 250;
+      /**
+       * <pre>
+       * module has received a FAIL event (i.e. too many consecutive errors have occurred)
+       * </pre>
+       *
+       * <code>MODULE_ERROR_STANDBY = 300;</code>
+       */
+      public static final int MODULE_ERROR_STANDBY_VALUE = 300;
+      /**
+       * <pre>
+       * module is paused
+       * </pre>
+       *
+       * <code>MODULE_PAUSED = 400;</code>
+       */
+      public static final int MODULE_PAUSED_VALUE = 400;
+      /**
+       * <pre>
+       * module is preparing to run again
+       * </pre>
+       *
+       * <code>MODULE_RESUMING = 500;</code>
+       */
+      public static final int MODULE_RESUMING_VALUE = 500;
+      /**
+       * <pre>
+       * module has completed (i.e. finished, done running)
+       * </pre>
+       *
+       * <code>MODULE_COMPLETED = 600;</code>
+       */
+      public static final int MODULE_COMPLETED_VALUE = 600;
+      /**
+       * <pre>
+       * module has been archived/closed
+       * </pre>
+       *
+       * <code>MODULE_ARCHIVED = 700;</code>
+       */
+      public static final int MODULE_ARCHIVED_VALUE = 700;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ModuleState valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ModuleState forNumber(int value) {
+        switch (value) {
+          case 0: return MODULE_PREPARING;
+          case 100: return MODULE_SCHEDULING;
+          case 200: return MODULE_RUNNING;
+          case 250: return MODULE_RUNNING_ERROR;
+          case 300: return MODULE_ERROR_STANDBY;
+          case 400: return MODULE_PAUSED;
+          case 500: return MODULE_RESUMING;
+          case 600: return MODULE_COMPLETED;
+          case 700: return MODULE_ARCHIVED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ModuleState>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ModuleState> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ModuleState>() {
+              public ModuleState findValueByNumber(int number) {
+                return ModuleState.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ModuleState[] VALUES = values();
+
+      public static ModuleState valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ModuleState(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState)
+    }
+
+    public interface DetailsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:tcnapi.omni.campaigns.v1.Campaign.Module.Details)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * the total number of tasks created by an outbound module
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the totalTaskCount field is set.
+       */
+      boolean hasTotalTaskCount();
+      /**
+       * <pre>
+       * the total number of tasks created by an outbound module
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The totalTaskCount.
+       */
+      com.google.protobuf.Int64Value getTotalTaskCount();
+      /**
+       * <pre>
+       * the total number of tasks created by an outbound module
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getTotalTaskCountOrBuilder();
+
+      /**
+       * <pre>
+       * the total number of tasks that have successfully completed for an outbound module
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the completedTaskCount field is set.
+       */
+      boolean hasCompletedTaskCount();
+      /**
+       * <pre>
+       * the total number of tasks that have successfully completed for an outbound module
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The completedTaskCount.
+       */
+      com.google.protobuf.Int64Value getCompletedTaskCount();
+      /**
+       * <pre>
+       * the total number of tasks that have successfully completed for an outbound module
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getCompletedTaskCountOrBuilder();
+
+      /**
+       * <pre>
+       * the name of the associated connected_inbox for this module
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the connectedInboxAddress field is set.
+       */
+      boolean hasConnectedInboxAddress();
+      /**
+       * <pre>
+       * the name of the associated connected_inbox for this module
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The connectedInboxAddress.
+       */
+      com.google.protobuf.StringValue getConnectedInboxAddress();
+      /**
+       * <pre>
+       * the name of the associated connected_inbox for this module
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      com.google.protobuf.StringValueOrBuilder getConnectedInboxAddressOrBuilder();
+
+      /**
+       * <pre>
+       * the name of the associated verified_email for this module
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the verifiedEmailAddress field is set.
+       */
+      boolean hasVerifiedEmailAddress();
+      /**
+       * <pre>
+       * the name of the associated verified_email for this module
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The verifiedEmailAddress.
+       */
+      com.google.protobuf.StringValue getVerifiedEmailAddress();
+      /**
+       * <pre>
+       * the name of the associated verified_email for this module
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      com.google.protobuf.StringValueOrBuilder getVerifiedEmailAddressOrBuilder();
+
+      /**
+       * <pre>
+       * the number of tasks pending
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the pendingTaskCount field is set.
+       */
+      boolean hasPendingTaskCount();
+      /**
+       * <pre>
+       * the number of tasks pending
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The pendingTaskCount.
+       */
+      com.google.protobuf.Int64Value getPendingTaskCount();
+      /**
+       * <pre>
+       * the number of tasks pending
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getPendingTaskCountOrBuilder();
+
+      /**
+       * <pre>
+       * the number of tasks that failed
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the failedTaskCount field is set.
+       */
+      boolean hasFailedTaskCount();
+      /**
+       * <pre>
+       * the number of tasks that failed
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The failedTaskCount.
+       */
+      com.google.protobuf.Int64Value getFailedTaskCount();
+      /**
+       * <pre>
+       * the number of tasks that failed
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getFailedTaskCountOrBuilder();
+
+      /**
+       * <pre>
+       * the number of tasks that are canceled
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the canceledTaskCount field is set.
+       */
+      boolean hasCanceledTaskCount();
+      /**
+       * <pre>
+       * the number of tasks that are canceled
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The canceledTaskCount.
+       */
+      com.google.protobuf.Int64Value getCanceledTaskCount();
+      /**
+       * <pre>
+       * the number of tasks that are canceled
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getCanceledTaskCountOrBuilder();
+    }
+    /**
+     * <pre>
+     * Details -
+     * </pre>
+     *
+     * Protobuf type {@code tcnapi.omni.campaigns.v1.Campaign.Module.Details}
+     */
+    public static final class Details extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:tcnapi.omni.campaigns.v1.Campaign.Module.Details)
+        DetailsOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Details.newBuilder() to construct.
+      private Details(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Details() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Details();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.class, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.Builder.class);
+      }
+
+      public static final int TOTAL_TASK_COUNT_FIELD_NUMBER = 1;
+      private com.google.protobuf.Int64Value totalTaskCount_;
+      /**
+       * <pre>
+       * the total number of tasks created by an outbound module
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the totalTaskCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasTotalTaskCount() {
+        return totalTaskCount_ != null;
+      }
+      /**
+       * <pre>
+       * the total number of tasks created by an outbound module
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The totalTaskCount.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getTotalTaskCount() {
+        return totalTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalTaskCount_;
+      }
+      /**
+       * <pre>
+       * the total number of tasks created by an outbound module
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getTotalTaskCountOrBuilder() {
+        return totalTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalTaskCount_;
+      }
+
+      public static final int COMPLETED_TASK_COUNT_FIELD_NUMBER = 2;
+      private com.google.protobuf.Int64Value completedTaskCount_;
+      /**
+       * <pre>
+       * the total number of tasks that have successfully completed for an outbound module
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the completedTaskCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasCompletedTaskCount() {
+        return completedTaskCount_ != null;
+      }
+      /**
+       * <pre>
+       * the total number of tasks that have successfully completed for an outbound module
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The completedTaskCount.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getCompletedTaskCount() {
+        return completedTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : completedTaskCount_;
+      }
+      /**
+       * <pre>
+       * the total number of tasks that have successfully completed for an outbound module
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getCompletedTaskCountOrBuilder() {
+        return completedTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : completedTaskCount_;
+      }
+
+      public static final int CONNECTED_INBOX_ADDRESS_FIELD_NUMBER = 3;
+      private com.google.protobuf.StringValue connectedInboxAddress_;
+      /**
+       * <pre>
+       * the name of the associated connected_inbox for this module
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the connectedInboxAddress field is set.
+       */
+      @java.lang.Override
+      public boolean hasConnectedInboxAddress() {
+        return connectedInboxAddress_ != null;
+      }
+      /**
+       * <pre>
+       * the name of the associated connected_inbox for this module
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The connectedInboxAddress.
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getConnectedInboxAddress() {
+        return connectedInboxAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : connectedInboxAddress_;
+      }
+      /**
+       * <pre>
+       * the name of the associated connected_inbox for this module
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValueOrBuilder getConnectedInboxAddressOrBuilder() {
+        return connectedInboxAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : connectedInboxAddress_;
+      }
+
+      public static final int VERIFIED_EMAIL_ADDRESS_FIELD_NUMBER = 4;
+      private com.google.protobuf.StringValue verifiedEmailAddress_;
+      /**
+       * <pre>
+       * the name of the associated verified_email for this module
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the verifiedEmailAddress field is set.
+       */
+      @java.lang.Override
+      public boolean hasVerifiedEmailAddress() {
+        return verifiedEmailAddress_ != null;
+      }
+      /**
+       * <pre>
+       * the name of the associated verified_email for this module
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The verifiedEmailAddress.
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getVerifiedEmailAddress() {
+        return verifiedEmailAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : verifiedEmailAddress_;
+      }
+      /**
+       * <pre>
+       * the name of the associated verified_email for this module
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValueOrBuilder getVerifiedEmailAddressOrBuilder() {
+        return verifiedEmailAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : verifiedEmailAddress_;
+      }
+
+      public static final int PENDING_TASK_COUNT_FIELD_NUMBER = 5;
+      private com.google.protobuf.Int64Value pendingTaskCount_;
+      /**
+       * <pre>
+       * the number of tasks pending
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the pendingTaskCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasPendingTaskCount() {
+        return pendingTaskCount_ != null;
+      }
+      /**
+       * <pre>
+       * the number of tasks pending
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The pendingTaskCount.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getPendingTaskCount() {
+        return pendingTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : pendingTaskCount_;
+      }
+      /**
+       * <pre>
+       * the number of tasks pending
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getPendingTaskCountOrBuilder() {
+        return pendingTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : pendingTaskCount_;
+      }
+
+      public static final int FAILED_TASK_COUNT_FIELD_NUMBER = 6;
+      private com.google.protobuf.Int64Value failedTaskCount_;
+      /**
+       * <pre>
+       * the number of tasks that failed
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the failedTaskCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasFailedTaskCount() {
+        return failedTaskCount_ != null;
+      }
+      /**
+       * <pre>
+       * the number of tasks that failed
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The failedTaskCount.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getFailedTaskCount() {
+        return failedTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : failedTaskCount_;
+      }
+      /**
+       * <pre>
+       * the number of tasks that failed
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getFailedTaskCountOrBuilder() {
+        return failedTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : failedTaskCount_;
+      }
+
+      public static final int CANCELED_TASK_COUNT_FIELD_NUMBER = 7;
+      private com.google.protobuf.Int64Value canceledTaskCount_;
+      /**
+       * <pre>
+       * the number of tasks that are canceled
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the canceledTaskCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasCanceledTaskCount() {
+        return canceledTaskCount_ != null;
+      }
+      /**
+       * <pre>
+       * the number of tasks that are canceled
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The canceledTaskCount.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getCanceledTaskCount() {
+        return canceledTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : canceledTaskCount_;
+      }
+      /**
+       * <pre>
+       * the number of tasks that are canceled
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getCanceledTaskCountOrBuilder() {
+        return canceledTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : canceledTaskCount_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (totalTaskCount_ != null) {
+          output.writeMessage(1, getTotalTaskCount());
+        }
+        if (completedTaskCount_ != null) {
+          output.writeMessage(2, getCompletedTaskCount());
+        }
+        if (connectedInboxAddress_ != null) {
+          output.writeMessage(3, getConnectedInboxAddress());
+        }
+        if (verifiedEmailAddress_ != null) {
+          output.writeMessage(4, getVerifiedEmailAddress());
+        }
+        if (pendingTaskCount_ != null) {
+          output.writeMessage(5, getPendingTaskCount());
+        }
+        if (failedTaskCount_ != null) {
+          output.writeMessage(6, getFailedTaskCount());
+        }
+        if (canceledTaskCount_ != null) {
+          output.writeMessage(7, getCanceledTaskCount());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (totalTaskCount_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getTotalTaskCount());
+        }
+        if (completedTaskCount_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getCompletedTaskCount());
+        }
+        if (connectedInboxAddress_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getConnectedInboxAddress());
+        }
+        if (verifiedEmailAddress_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getVerifiedEmailAddress());
+        }
+        if (pendingTaskCount_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, getPendingTaskCount());
+        }
+        if (failedTaskCount_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, getFailedTaskCount());
+        }
+        if (canceledTaskCount_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(7, getCanceledTaskCount());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details other = (com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details) obj;
+
+        if (hasTotalTaskCount() != other.hasTotalTaskCount()) return false;
+        if (hasTotalTaskCount()) {
+          if (!getTotalTaskCount()
+              .equals(other.getTotalTaskCount())) return false;
+        }
+        if (hasCompletedTaskCount() != other.hasCompletedTaskCount()) return false;
+        if (hasCompletedTaskCount()) {
+          if (!getCompletedTaskCount()
+              .equals(other.getCompletedTaskCount())) return false;
+        }
+        if (hasConnectedInboxAddress() != other.hasConnectedInboxAddress()) return false;
+        if (hasConnectedInboxAddress()) {
+          if (!getConnectedInboxAddress()
+              .equals(other.getConnectedInboxAddress())) return false;
+        }
+        if (hasVerifiedEmailAddress() != other.hasVerifiedEmailAddress()) return false;
+        if (hasVerifiedEmailAddress()) {
+          if (!getVerifiedEmailAddress()
+              .equals(other.getVerifiedEmailAddress())) return false;
+        }
+        if (hasPendingTaskCount() != other.hasPendingTaskCount()) return false;
+        if (hasPendingTaskCount()) {
+          if (!getPendingTaskCount()
+              .equals(other.getPendingTaskCount())) return false;
+        }
+        if (hasFailedTaskCount() != other.hasFailedTaskCount()) return false;
+        if (hasFailedTaskCount()) {
+          if (!getFailedTaskCount()
+              .equals(other.getFailedTaskCount())) return false;
+        }
+        if (hasCanceledTaskCount() != other.hasCanceledTaskCount()) return false;
+        if (hasCanceledTaskCount()) {
+          if (!getCanceledTaskCount()
+              .equals(other.getCanceledTaskCount())) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasTotalTaskCount()) {
+          hash = (37 * hash) + TOTAL_TASK_COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getTotalTaskCount().hashCode();
+        }
+        if (hasCompletedTaskCount()) {
+          hash = (37 * hash) + COMPLETED_TASK_COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getCompletedTaskCount().hashCode();
+        }
+        if (hasConnectedInboxAddress()) {
+          hash = (37 * hash) + CONNECTED_INBOX_ADDRESS_FIELD_NUMBER;
+          hash = (53 * hash) + getConnectedInboxAddress().hashCode();
+        }
+        if (hasVerifiedEmailAddress()) {
+          hash = (37 * hash) + VERIFIED_EMAIL_ADDRESS_FIELD_NUMBER;
+          hash = (53 * hash) + getVerifiedEmailAddress().hashCode();
+        }
+        if (hasPendingTaskCount()) {
+          hash = (37 * hash) + PENDING_TASK_COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getPendingTaskCount().hashCode();
+        }
+        if (hasFailedTaskCount()) {
+          hash = (37 * hash) + FAILED_TASK_COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getFailedTaskCount().hashCode();
+        }
+        if (hasCanceledTaskCount()) {
+          hash = (37 * hash) + CANCELED_TASK_COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getCanceledTaskCount().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Details -
+       * </pre>
+       *
+       * Protobuf type {@code tcnapi.omni.campaigns.v1.Campaign.Module.Details}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:tcnapi.omni.campaigns.v1.Campaign.Module.Details)
+          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.DetailsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.class, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          totalTaskCount_ = null;
+          if (totalTaskCountBuilder_ != null) {
+            totalTaskCountBuilder_.dispose();
+            totalTaskCountBuilder_ = null;
+          }
+          completedTaskCount_ = null;
+          if (completedTaskCountBuilder_ != null) {
+            completedTaskCountBuilder_.dispose();
+            completedTaskCountBuilder_ = null;
+          }
+          connectedInboxAddress_ = null;
+          if (connectedInboxAddressBuilder_ != null) {
+            connectedInboxAddressBuilder_.dispose();
+            connectedInboxAddressBuilder_ = null;
+          }
+          verifiedEmailAddress_ = null;
+          if (verifiedEmailAddressBuilder_ != null) {
+            verifiedEmailAddressBuilder_.dispose();
+            verifiedEmailAddressBuilder_ = null;
+          }
+          pendingTaskCount_ = null;
+          if (pendingTaskCountBuilder_ != null) {
+            pendingTaskCountBuilder_.dispose();
+            pendingTaskCountBuilder_ = null;
+          }
+          failedTaskCount_ = null;
+          if (failedTaskCountBuilder_ != null) {
+            failedTaskCountBuilder_.dispose();
+            failedTaskCountBuilder_ = null;
+          }
+          canceledTaskCount_ = null;
+          if (canceledTaskCountBuilder_ != null) {
+            canceledTaskCountBuilder_.dispose();
+            canceledTaskCountBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details getDefaultInstanceForType() {
+          return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details build() {
+          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details buildPartial() {
+          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details result = new com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.totalTaskCount_ = totalTaskCountBuilder_ == null
+                ? totalTaskCount_
+                : totalTaskCountBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.completedTaskCount_ = completedTaskCountBuilder_ == null
+                ? completedTaskCount_
+                : completedTaskCountBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.connectedInboxAddress_ = connectedInboxAddressBuilder_ == null
+                ? connectedInboxAddress_
+                : connectedInboxAddressBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.verifiedEmailAddress_ = verifiedEmailAddressBuilder_ == null
+                ? verifiedEmailAddress_
+                : verifiedEmailAddressBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.pendingTaskCount_ = pendingTaskCountBuilder_ == null
+                ? pendingTaskCount_
+                : pendingTaskCountBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000020) != 0)) {
+            result.failedTaskCount_ = failedTaskCountBuilder_ == null
+                ? failedTaskCount_
+                : failedTaskCountBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000040) != 0)) {
+            result.canceledTaskCount_ = canceledTaskCountBuilder_ == null
+                ? canceledTaskCount_
+                : canceledTaskCountBuilder_.build();
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details) {
+            return mergeFrom((com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details other) {
+          if (other == com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.getDefaultInstance()) return this;
+          if (other.hasTotalTaskCount()) {
+            mergeTotalTaskCount(other.getTotalTaskCount());
+          }
+          if (other.hasCompletedTaskCount()) {
+            mergeCompletedTaskCount(other.getCompletedTaskCount());
+          }
+          if (other.hasConnectedInboxAddress()) {
+            mergeConnectedInboxAddress(other.getConnectedInboxAddress());
+          }
+          if (other.hasVerifiedEmailAddress()) {
+            mergeVerifiedEmailAddress(other.getVerifiedEmailAddress());
+          }
+          if (other.hasPendingTaskCount()) {
+            mergePendingTaskCount(other.getPendingTaskCount());
+          }
+          if (other.hasFailedTaskCount()) {
+            mergeFailedTaskCount(other.getFailedTaskCount());
+          }
+          if (other.hasCanceledTaskCount()) {
+            mergeCanceledTaskCount(other.getCanceledTaskCount());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  input.readMessage(
+                      getTotalTaskCountFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 18: {
+                  input.readMessage(
+                      getCompletedTaskCountFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 26: {
+                  input.readMessage(
+                      getConnectedInboxAddressFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                case 34: {
+                  input.readMessage(
+                      getVerifiedEmailAddressFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 34
+                case 42: {
+                  input.readMessage(
+                      getPendingTaskCountFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 42
+                case 50: {
+                  input.readMessage(
+                      getFailedTaskCountFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000020;
+                  break;
+                } // case 50
+                case 58: {
+                  input.readMessage(
+                      getCanceledTaskCountFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000040;
+                  break;
+                } // case 58
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.Int64Value totalTaskCount_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> totalTaskCountBuilder_;
+        /**
+         * <pre>
+         * the total number of tasks created by an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return Whether the totalTaskCount field is set.
+         */
+        public boolean hasTotalTaskCount() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * the total number of tasks created by an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return The totalTaskCount.
+         */
+        public com.google.protobuf.Int64Value getTotalTaskCount() {
+          if (totalTaskCountBuilder_ == null) {
+            return totalTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalTaskCount_;
+          } else {
+            return totalTaskCountBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * the total number of tasks created by an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setTotalTaskCount(com.google.protobuf.Int64Value value) {
+          if (totalTaskCountBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            totalTaskCount_ = value;
+          } else {
+            totalTaskCountBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the total number of tasks created by an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setTotalTaskCount(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (totalTaskCountBuilder_ == null) {
+            totalTaskCount_ = builderForValue.build();
+          } else {
+            totalTaskCountBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the total number of tasks created by an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder mergeTotalTaskCount(com.google.protobuf.Int64Value value) {
+          if (totalTaskCountBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0) &&
+              totalTaskCount_ != null &&
+              totalTaskCount_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+              getTotalTaskCountBuilder().mergeFrom(value);
+            } else {
+              totalTaskCount_ = value;
+            }
+          } else {
+            totalTaskCountBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the total number of tasks created by an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder clearTotalTaskCount() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          totalTaskCount_ = null;
+          if (totalTaskCountBuilder_ != null) {
+            totalTaskCountBuilder_.dispose();
+            totalTaskCountBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the total number of tasks created by an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getTotalTaskCountBuilder() {
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return getTotalTaskCountFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * the total number of tasks created by an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getTotalTaskCountOrBuilder() {
+          if (totalTaskCountBuilder_ != null) {
+            return totalTaskCountBuilder_.getMessageOrBuilder();
+          } else {
+            return totalTaskCount_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : totalTaskCount_;
+          }
+        }
+        /**
+         * <pre>
+         * the total number of tasks created by an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getTotalTaskCountFieldBuilder() {
+          if (totalTaskCountBuilder_ == null) {
+            totalTaskCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getTotalTaskCount(),
+                    getParentForChildren(),
+                    isClean());
+            totalTaskCount_ = null;
+          }
+          return totalTaskCountBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value completedTaskCount_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> completedTaskCountBuilder_;
+        /**
+         * <pre>
+         * the total number of tasks that have successfully completed for an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return Whether the completedTaskCount field is set.
+         */
+        public boolean hasCompletedTaskCount() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         * the total number of tasks that have successfully completed for an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return The completedTaskCount.
+         */
+        public com.google.protobuf.Int64Value getCompletedTaskCount() {
+          if (completedTaskCountBuilder_ == null) {
+            return completedTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : completedTaskCount_;
+          } else {
+            return completedTaskCountBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * the total number of tasks that have successfully completed for an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setCompletedTaskCount(com.google.protobuf.Int64Value value) {
+          if (completedTaskCountBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            completedTaskCount_ = value;
+          } else {
+            completedTaskCountBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the total number of tasks that have successfully completed for an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setCompletedTaskCount(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (completedTaskCountBuilder_ == null) {
+            completedTaskCount_ = builderForValue.build();
+          } else {
+            completedTaskCountBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the total number of tasks that have successfully completed for an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder mergeCompletedTaskCount(com.google.protobuf.Int64Value value) {
+          if (completedTaskCountBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) != 0) &&
+              completedTaskCount_ != null &&
+              completedTaskCount_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+              getCompletedTaskCountBuilder().mergeFrom(value);
+            } else {
+              completedTaskCount_ = value;
+            }
+          } else {
+            completedTaskCountBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the total number of tasks that have successfully completed for an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder clearCompletedTaskCount() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          completedTaskCount_ = null;
+          if (completedTaskCountBuilder_ != null) {
+            completedTaskCountBuilder_.dispose();
+            completedTaskCountBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the total number of tasks that have successfully completed for an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getCompletedTaskCountBuilder() {
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return getCompletedTaskCountFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * the total number of tasks that have successfully completed for an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getCompletedTaskCountOrBuilder() {
+          if (completedTaskCountBuilder_ != null) {
+            return completedTaskCountBuilder_.getMessageOrBuilder();
+          } else {
+            return completedTaskCount_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : completedTaskCount_;
+          }
+        }
+        /**
+         * <pre>
+         * the total number of tasks that have successfully completed for an outbound module
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getCompletedTaskCountFieldBuilder() {
+          if (completedTaskCountBuilder_ == null) {
+            completedTaskCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getCompletedTaskCount(),
+                    getParentForChildren(),
+                    isClean());
+            completedTaskCount_ = null;
+          }
+          return completedTaskCountBuilder_;
+        }
+
+        private com.google.protobuf.StringValue connectedInboxAddress_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> connectedInboxAddressBuilder_;
+        /**
+         * <pre>
+         * the name of the associated connected_inbox for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return Whether the connectedInboxAddress field is set.
+         */
+        public boolean hasConnectedInboxAddress() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * the name of the associated connected_inbox for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return The connectedInboxAddress.
+         */
+        public com.google.protobuf.StringValue getConnectedInboxAddress() {
+          if (connectedInboxAddressBuilder_ == null) {
+            return connectedInboxAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : connectedInboxAddress_;
+          } else {
+            return connectedInboxAddressBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * the name of the associated connected_inbox for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setConnectedInboxAddress(com.google.protobuf.StringValue value) {
+          if (connectedInboxAddressBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            connectedInboxAddress_ = value;
+          } else {
+            connectedInboxAddressBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the name of the associated connected_inbox for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setConnectedInboxAddress(
+            com.google.protobuf.StringValue.Builder builderForValue) {
+          if (connectedInboxAddressBuilder_ == null) {
+            connectedInboxAddress_ = builderForValue.build();
+          } else {
+            connectedInboxAddressBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the name of the associated connected_inbox for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder mergeConnectedInboxAddress(com.google.protobuf.StringValue value) {
+          if (connectedInboxAddressBuilder_ == null) {
+            if (((bitField0_ & 0x00000004) != 0) &&
+              connectedInboxAddress_ != null &&
+              connectedInboxAddress_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+              getConnectedInboxAddressBuilder().mergeFrom(value);
+            } else {
+              connectedInboxAddress_ = value;
+            }
+          } else {
+            connectedInboxAddressBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the name of the associated connected_inbox for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder clearConnectedInboxAddress() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          connectedInboxAddress_ = null;
+          if (connectedInboxAddressBuilder_ != null) {
+            connectedInboxAddressBuilder_.dispose();
+            connectedInboxAddressBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the name of the associated connected_inbox for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.StringValue.Builder getConnectedInboxAddressBuilder() {
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return getConnectedInboxAddressFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * the name of the associated connected_inbox for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.StringValueOrBuilder getConnectedInboxAddressOrBuilder() {
+          if (connectedInboxAddressBuilder_ != null) {
+            return connectedInboxAddressBuilder_.getMessageOrBuilder();
+          } else {
+            return connectedInboxAddress_ == null ?
+                com.google.protobuf.StringValue.getDefaultInstance() : connectedInboxAddress_;
+          }
+        }
+        /**
+         * <pre>
+         * the name of the associated connected_inbox for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+            getConnectedInboxAddressFieldBuilder() {
+          if (connectedInboxAddressBuilder_ == null) {
+            connectedInboxAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                    getConnectedInboxAddress(),
+                    getParentForChildren(),
+                    isClean());
+            connectedInboxAddress_ = null;
+          }
+          return connectedInboxAddressBuilder_;
+        }
+
+        private com.google.protobuf.StringValue verifiedEmailAddress_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> verifiedEmailAddressBuilder_;
+        /**
+         * <pre>
+         * the name of the associated verified_email for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return Whether the verifiedEmailAddress field is set.
+         */
+        public boolean hasVerifiedEmailAddress() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <pre>
+         * the name of the associated verified_email for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return The verifiedEmailAddress.
+         */
+        public com.google.protobuf.StringValue getVerifiedEmailAddress() {
+          if (verifiedEmailAddressBuilder_ == null) {
+            return verifiedEmailAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : verifiedEmailAddress_;
+          } else {
+            return verifiedEmailAddressBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * the name of the associated verified_email for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setVerifiedEmailAddress(com.google.protobuf.StringValue value) {
+          if (verifiedEmailAddressBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            verifiedEmailAddress_ = value;
+          } else {
+            verifiedEmailAddressBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the name of the associated verified_email for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setVerifiedEmailAddress(
+            com.google.protobuf.StringValue.Builder builderForValue) {
+          if (verifiedEmailAddressBuilder_ == null) {
+            verifiedEmailAddress_ = builderForValue.build();
+          } else {
+            verifiedEmailAddressBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the name of the associated verified_email for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder mergeVerifiedEmailAddress(com.google.protobuf.StringValue value) {
+          if (verifiedEmailAddressBuilder_ == null) {
+            if (((bitField0_ & 0x00000008) != 0) &&
+              verifiedEmailAddress_ != null &&
+              verifiedEmailAddress_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+              getVerifiedEmailAddressBuilder().mergeFrom(value);
+            } else {
+              verifiedEmailAddress_ = value;
+            }
+          } else {
+            verifiedEmailAddressBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the name of the associated verified_email for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder clearVerifiedEmailAddress() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          verifiedEmailAddress_ = null;
+          if (verifiedEmailAddressBuilder_ != null) {
+            verifiedEmailAddressBuilder_.dispose();
+            verifiedEmailAddressBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the name of the associated verified_email for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.StringValue.Builder getVerifiedEmailAddressBuilder() {
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return getVerifiedEmailAddressFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * the name of the associated verified_email for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.StringValueOrBuilder getVerifiedEmailAddressOrBuilder() {
+          if (verifiedEmailAddressBuilder_ != null) {
+            return verifiedEmailAddressBuilder_.getMessageOrBuilder();
+          } else {
+            return verifiedEmailAddress_ == null ?
+                com.google.protobuf.StringValue.getDefaultInstance() : verifiedEmailAddress_;
+          }
+        }
+        /**
+         * <pre>
+         * the name of the associated verified_email for this module
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+            getVerifiedEmailAddressFieldBuilder() {
+          if (verifiedEmailAddressBuilder_ == null) {
+            verifiedEmailAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                    getVerifiedEmailAddress(),
+                    getParentForChildren(),
+                    isClean());
+            verifiedEmailAddress_ = null;
+          }
+          return verifiedEmailAddressBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value pendingTaskCount_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> pendingTaskCountBuilder_;
+        /**
+         * <pre>
+         * the number of tasks pending
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return Whether the pendingTaskCount field is set.
+         */
+        public boolean hasPendingTaskCount() {
+          return ((bitField0_ & 0x00000010) != 0);
+        }
+        /**
+         * <pre>
+         * the number of tasks pending
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return The pendingTaskCount.
+         */
+        public com.google.protobuf.Int64Value getPendingTaskCount() {
+          if (pendingTaskCountBuilder_ == null) {
+            return pendingTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : pendingTaskCount_;
+          } else {
+            return pendingTaskCountBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * the number of tasks pending
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setPendingTaskCount(com.google.protobuf.Int64Value value) {
+          if (pendingTaskCountBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            pendingTaskCount_ = value;
+          } else {
+            pendingTaskCountBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the number of tasks pending
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setPendingTaskCount(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (pendingTaskCountBuilder_ == null) {
+            pendingTaskCount_ = builderForValue.build();
+          } else {
+            pendingTaskCountBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the number of tasks pending
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder mergePendingTaskCount(com.google.protobuf.Int64Value value) {
+          if (pendingTaskCountBuilder_ == null) {
+            if (((bitField0_ & 0x00000010) != 0) &&
+              pendingTaskCount_ != null &&
+              pendingTaskCount_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+              getPendingTaskCountBuilder().mergeFrom(value);
+            } else {
+              pendingTaskCount_ = value;
+            }
+          } else {
+            pendingTaskCountBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the number of tasks pending
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder clearPendingTaskCount() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          pendingTaskCount_ = null;
+          if (pendingTaskCountBuilder_ != null) {
+            pendingTaskCountBuilder_.dispose();
+            pendingTaskCountBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the number of tasks pending
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getPendingTaskCountBuilder() {
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return getPendingTaskCountFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * the number of tasks pending
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getPendingTaskCountOrBuilder() {
+          if (pendingTaskCountBuilder_ != null) {
+            return pendingTaskCountBuilder_.getMessageOrBuilder();
+          } else {
+            return pendingTaskCount_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : pendingTaskCount_;
+          }
+        }
+        /**
+         * <pre>
+         * the number of tasks pending
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getPendingTaskCountFieldBuilder() {
+          if (pendingTaskCountBuilder_ == null) {
+            pendingTaskCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getPendingTaskCount(),
+                    getParentForChildren(),
+                    isClean());
+            pendingTaskCount_ = null;
+          }
+          return pendingTaskCountBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value failedTaskCount_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> failedTaskCountBuilder_;
+        /**
+         * <pre>
+         * the number of tasks that failed
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return Whether the failedTaskCount field is set.
+         */
+        public boolean hasFailedTaskCount() {
+          return ((bitField0_ & 0x00000020) != 0);
+        }
+        /**
+         * <pre>
+         * the number of tasks that failed
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return The failedTaskCount.
+         */
+        public com.google.protobuf.Int64Value getFailedTaskCount() {
+          if (failedTaskCountBuilder_ == null) {
+            return failedTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : failedTaskCount_;
+          } else {
+            return failedTaskCountBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * the number of tasks that failed
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setFailedTaskCount(com.google.protobuf.Int64Value value) {
+          if (failedTaskCountBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            failedTaskCount_ = value;
+          } else {
+            failedTaskCountBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the number of tasks that failed
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setFailedTaskCount(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (failedTaskCountBuilder_ == null) {
+            failedTaskCount_ = builderForValue.build();
+          } else {
+            failedTaskCountBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the number of tasks that failed
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder mergeFailedTaskCount(com.google.protobuf.Int64Value value) {
+          if (failedTaskCountBuilder_ == null) {
+            if (((bitField0_ & 0x00000020) != 0) &&
+              failedTaskCount_ != null &&
+              failedTaskCount_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+              getFailedTaskCountBuilder().mergeFrom(value);
+            } else {
+              failedTaskCount_ = value;
+            }
+          } else {
+            failedTaskCountBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the number of tasks that failed
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder clearFailedTaskCount() {
+          bitField0_ = (bitField0_ & ~0x00000020);
+          failedTaskCount_ = null;
+          if (failedTaskCountBuilder_ != null) {
+            failedTaskCountBuilder_.dispose();
+            failedTaskCountBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the number of tasks that failed
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getFailedTaskCountBuilder() {
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return getFailedTaskCountFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * the number of tasks that failed
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getFailedTaskCountOrBuilder() {
+          if (failedTaskCountBuilder_ != null) {
+            return failedTaskCountBuilder_.getMessageOrBuilder();
+          } else {
+            return failedTaskCount_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : failedTaskCount_;
+          }
+        }
+        /**
+         * <pre>
+         * the number of tasks that failed
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getFailedTaskCountFieldBuilder() {
+          if (failedTaskCountBuilder_ == null) {
+            failedTaskCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getFailedTaskCount(),
+                    getParentForChildren(),
+                    isClean());
+            failedTaskCount_ = null;
+          }
+          return failedTaskCountBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value canceledTaskCount_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> canceledTaskCountBuilder_;
+        /**
+         * <pre>
+         * the number of tasks that are canceled
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return Whether the canceledTaskCount field is set.
+         */
+        public boolean hasCanceledTaskCount() {
+          return ((bitField0_ & 0x00000040) != 0);
+        }
+        /**
+         * <pre>
+         * the number of tasks that are canceled
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return The canceledTaskCount.
+         */
+        public com.google.protobuf.Int64Value getCanceledTaskCount() {
+          if (canceledTaskCountBuilder_ == null) {
+            return canceledTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : canceledTaskCount_;
+          } else {
+            return canceledTaskCountBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * the number of tasks that are canceled
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setCanceledTaskCount(com.google.protobuf.Int64Value value) {
+          if (canceledTaskCountBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            canceledTaskCount_ = value;
+          } else {
+            canceledTaskCountBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000040;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the number of tasks that are canceled
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setCanceledTaskCount(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (canceledTaskCountBuilder_ == null) {
+            canceledTaskCount_ = builderForValue.build();
+          } else {
+            canceledTaskCountBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000040;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the number of tasks that are canceled
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder mergeCanceledTaskCount(com.google.protobuf.Int64Value value) {
+          if (canceledTaskCountBuilder_ == null) {
+            if (((bitField0_ & 0x00000040) != 0) &&
+              canceledTaskCount_ != null &&
+              canceledTaskCount_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+              getCanceledTaskCountBuilder().mergeFrom(value);
+            } else {
+              canceledTaskCount_ = value;
+            }
+          } else {
+            canceledTaskCountBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000040;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the number of tasks that are canceled
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder clearCanceledTaskCount() {
+          bitField0_ = (bitField0_ & ~0x00000040);
+          canceledTaskCount_ = null;
+          if (canceledTaskCountBuilder_ != null) {
+            canceledTaskCountBuilder_.dispose();
+            canceledTaskCountBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * the number of tasks that are canceled
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getCanceledTaskCountBuilder() {
+          bitField0_ |= 0x00000040;
+          onChanged();
+          return getCanceledTaskCountFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * the number of tasks that are canceled
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getCanceledTaskCountOrBuilder() {
+          if (canceledTaskCountBuilder_ != null) {
+            return canceledTaskCountBuilder_.getMessageOrBuilder();
+          } else {
+            return canceledTaskCount_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : canceledTaskCount_;
+          }
+        }
+        /**
+         * <pre>
+         * the number of tasks that are canceled
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getCanceledTaskCountFieldBuilder() {
+          if (canceledTaskCountBuilder_ == null) {
+            canceledTaskCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getCanceledTaskCount(),
+                    getParentForChildren(),
+                    isClean());
+            canceledTaskCount_ = null;
+          }
+          return canceledTaskCountBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:tcnapi.omni.campaigns.v1.Campaign.Module.Details)
+      }
+
+      // @@protoc_insertion_point(class_scope:tcnapi.omni.campaigns.v1.Campaign.Module.Details)
+      private static final com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details();
+      }
+
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Details>
+          PARSER = new com.google.protobuf.AbstractParser<Details>() {
+        @java.lang.Override
+        public Details parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Details> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Details> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface AttachmentOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:tcnapi.omni.campaigns.v1.Campaign.Module.Attachment)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * primary key or internal identifier for attachment
+       * </pre>
+       *
+       * <code>int64 attachment_sid = 1 [json_name = "attachmentSid", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The attachmentSid.
+       */
+      long getAttachmentSid();
+
+      /**
+       * <pre>
+       * attachment file title
+       * </pre>
+       *
+       * <code>string title = 2 [json_name = "title", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The title.
+       */
+      java.lang.String getTitle();
+      /**
+       * <pre>
+       * attachment file title
+       * </pre>
+       *
+       * <code>string title = 2 [json_name = "title", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The bytes for title.
+       */
+      com.google.protobuf.ByteString
+          getTitleBytes();
+
+      /**
+       * <pre>
+       * attachment file type
+       * </pre>
+       *
+       * <code>string file_type = 3 [json_name = "fileType", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The fileType.
+       */
+      java.lang.String getFileType();
+      /**
+       * <pre>
+       * attachment file type
+       * </pre>
+       *
+       * <code>string file_type = 3 [json_name = "fileType", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The bytes for fileType.
+       */
+      com.google.protobuf.ByteString
+          getFileTypeBytes();
+
+      /**
+       * <pre>
+       * attachment file size
+       * </pre>
+       *
+       * <code>int64 file_size = 4 [json_name = "fileSize", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The fileSize.
+       */
+      long getFileSize();
+
+      /**
+       * <pre>
+       * attachment file path
+       * </pre>
+       *
+       * <code>string path = 5 [json_name = "path", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The path.
+       */
+      java.lang.String getPath();
+      /**
+       * <pre>
+       * attachment file path
+       * </pre>
+       *
+       * <code>string path = 5 [json_name = "path", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The bytes for path.
+       */
+      com.google.protobuf.ByteString
+          getPathBytes();
+
+      /**
+       * <pre>
+       * temp id
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue temp_id = 6 [json_name = "tempId", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return Whether the tempId field is set.
+       */
+      boolean hasTempId();
+      /**
+       * <pre>
+       * temp id
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue temp_id = 6 [json_name = "tempId", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The tempId.
+       */
+      com.google.protobuf.StringValue getTempId();
+      /**
+       * <pre>
+       * temp id
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue temp_id = 6 [json_name = "tempId", (.google.api.field_behavior) = REQUIRED];</code>
+       */
+      com.google.protobuf.StringValueOrBuilder getTempIdOrBuilder();
+
+      /**
+       * <pre>
+       * download attachment file url
+       * </pre>
+       *
+       * <code>string download_url = 7 [json_name = "downloadUrl", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The downloadUrl.
+       */
+      java.lang.String getDownloadUrl();
+      /**
+       * <pre>
+       * download attachment file url
+       * </pre>
+       *
+       * <code>string download_url = 7 [json_name = "downloadUrl", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The bytes for downloadUrl.
+       */
+      com.google.protobuf.ByteString
+          getDownloadUrlBytes();
+
+      /**
+       * <pre>
+       * time when the attachment was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the dateCreated field is set.
+       */
+      boolean hasDateCreated();
+      /**
+       * <pre>
+       * time when the attachment was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The dateCreated.
+       */
+      com.google.protobuf.Timestamp getDateCreated();
+      /**
+       * <pre>
+       * time when the attachment was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder();
+
+      /**
+       * <pre>
+       * time when the attachment was last modified
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_modified = 9 [json_name = "dateModified", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the dateModified field is set.
+       */
+      boolean hasDateModified();
+      /**
+       * <pre>
+       * time when the attachment was last modified
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_modified = 9 [json_name = "dateModified", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The dateModified.
+       */
+      com.google.protobuf.Timestamp getDateModified();
+      /**
+       * <pre>
+       * time when the attachment was last modified
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_modified = 9 [json_name = "dateModified", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder();
+
+      /**
+       * <pre>
+       * Optional. the id of the attachment in text if inline
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue content_id = 10 [json_name = "contentId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the contentId field is set.
+       */
+      boolean hasContentId();
+      /**
+       * <pre>
+       * Optional. the id of the attachment in text if inline
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue content_id = 10 [json_name = "contentId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The contentId.
+       */
+      com.google.protobuf.StringValue getContentId();
+      /**
+       * <pre>
+       * Optional. the id of the attachment in text if inline
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue content_id = 10 [json_name = "contentId", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      com.google.protobuf.StringValueOrBuilder getContentIdOrBuilder();
+
+      /**
+       * <pre>
+       * Optional. the width of the inline attachment
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue width = 11 [json_name = "width", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the width field is set.
+       */
+      boolean hasWidth();
+      /**
+       * <pre>
+       * Optional. the width of the inline attachment
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue width = 11 [json_name = "width", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The width.
+       */
+      com.google.protobuf.StringValue getWidth();
+      /**
+       * <pre>
+       * Optional. the width of the inline attachment
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue width = 11 [json_name = "width", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      com.google.protobuf.StringValueOrBuilder getWidthOrBuilder();
+
+      /**
+       * <pre>
+       * Optional. the height of the inline attachment
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue height = 12 [json_name = "height", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the height field is set.
+       */
+      boolean hasHeight();
+      /**
+       * <pre>
+       * Optional. the height of the inline attachment
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue height = 12 [json_name = "height", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The height.
+       */
+      com.google.protobuf.StringValue getHeight();
+      /**
+       * <pre>
+       * Optional. the height of the inline attachment
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue height = 12 [json_name = "height", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      com.google.protobuf.StringValueOrBuilder getHeightOrBuilder();
+    }
+    /**
+     * <pre>
+     * attachment details
+     * </pre>
+     *
+     * Protobuf type {@code tcnapi.omni.campaigns.v1.Campaign.Module.Attachment}
+     */
+    public static final class Attachment extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:tcnapi.omni.campaigns.v1.Campaign.Module.Attachment)
+        AttachmentOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Attachment.newBuilder() to construct.
+      private Attachment(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Attachment() {
+        title_ = "";
+        fileType_ = "";
+        path_ = "";
+        downloadUrl_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Attachment();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Attachment_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Attachment_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.class, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.Builder.class);
+      }
+
+      public static final int ATTACHMENT_SID_FIELD_NUMBER = 1;
+      private long attachmentSid_ = 0L;
+      /**
+       * <pre>
+       * primary key or internal identifier for attachment
+       * </pre>
+       *
+       * <code>int64 attachment_sid = 1 [json_name = "attachmentSid", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The attachmentSid.
+       */
+      @java.lang.Override
+      public long getAttachmentSid() {
+        return attachmentSid_;
+      }
+
+      public static final int TITLE_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object title_ = "";
+      /**
+       * <pre>
+       * attachment file title
+       * </pre>
+       *
+       * <code>string title = 2 [json_name = "title", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The title.
+       */
+      @java.lang.Override
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * attachment file title
+       * </pre>
+       *
+       * <code>string title = 2 [json_name = "title", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The bytes for title.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int FILE_TYPE_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object fileType_ = "";
+      /**
+       * <pre>
+       * attachment file type
+       * </pre>
+       *
+       * <code>string file_type = 3 [json_name = "fileType", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The fileType.
+       */
+      @java.lang.Override
+      public java.lang.String getFileType() {
+        java.lang.Object ref = fileType_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fileType_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * attachment file type
+       * </pre>
+       *
+       * <code>string file_type = 3 [json_name = "fileType", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The bytes for fileType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFileTypeBytes() {
+        java.lang.Object ref = fileType_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fileType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int FILE_SIZE_FIELD_NUMBER = 4;
+      private long fileSize_ = 0L;
+      /**
+       * <pre>
+       * attachment file size
+       * </pre>
+       *
+       * <code>int64 file_size = 4 [json_name = "fileSize", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The fileSize.
+       */
+      @java.lang.Override
+      public long getFileSize() {
+        return fileSize_;
+      }
+
+      public static final int PATH_FIELD_NUMBER = 5;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object path_ = "";
+      /**
+       * <pre>
+       * attachment file path
+       * </pre>
+       *
+       * <code>string path = 5 [json_name = "path", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The path.
+       */
+      @java.lang.Override
+      public java.lang.String getPath() {
+        java.lang.Object ref = path_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          path_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * attachment file path
+       * </pre>
+       *
+       * <code>string path = 5 [json_name = "path", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The bytes for path.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPathBytes() {
+        java.lang.Object ref = path_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          path_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int TEMP_ID_FIELD_NUMBER = 6;
+      private com.google.protobuf.StringValue tempId_;
+      /**
+       * <pre>
+       * temp id
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue temp_id = 6 [json_name = "tempId", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return Whether the tempId field is set.
+       */
+      @java.lang.Override
+      public boolean hasTempId() {
+        return tempId_ != null;
+      }
+      /**
+       * <pre>
+       * temp id
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue temp_id = 6 [json_name = "tempId", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The tempId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getTempId() {
+        return tempId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : tempId_;
+      }
+      /**
+       * <pre>
+       * temp id
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue temp_id = 6 [json_name = "tempId", (.google.api.field_behavior) = REQUIRED];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValueOrBuilder getTempIdOrBuilder() {
+        return tempId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : tempId_;
+      }
+
+      public static final int DOWNLOAD_URL_FIELD_NUMBER = 7;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object downloadUrl_ = "";
+      /**
+       * <pre>
+       * download attachment file url
+       * </pre>
+       *
+       * <code>string download_url = 7 [json_name = "downloadUrl", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The downloadUrl.
+       */
+      @java.lang.Override
+      public java.lang.String getDownloadUrl() {
+        java.lang.Object ref = downloadUrl_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          downloadUrl_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * download attachment file url
+       * </pre>
+       *
+       * <code>string download_url = 7 [json_name = "downloadUrl", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The bytes for downloadUrl.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDownloadUrlBytes() {
+        java.lang.Object ref = downloadUrl_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          downloadUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int DATE_CREATED_FIELD_NUMBER = 8;
+      private com.google.protobuf.Timestamp dateCreated_;
+      /**
+       * <pre>
+       * time when the attachment was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the dateCreated field is set.
+       */
+      @java.lang.Override
+      public boolean hasDateCreated() {
+        return dateCreated_ != null;
+      }
+      /**
+       * <pre>
+       * time when the attachment was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The dateCreated.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getDateCreated() {
+        return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+      }
+      /**
+       * <pre>
+       * time when the attachment was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder() {
+        return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+      }
+
+      public static final int DATE_MODIFIED_FIELD_NUMBER = 9;
+      private com.google.protobuf.Timestamp dateModified_;
+      /**
+       * <pre>
+       * time when the attachment was last modified
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_modified = 9 [json_name = "dateModified", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the dateModified field is set.
+       */
+      @java.lang.Override
+      public boolean hasDateModified() {
+        return dateModified_ != null;
+      }
+      /**
+       * <pre>
+       * time when the attachment was last modified
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_modified = 9 [json_name = "dateModified", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The dateModified.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getDateModified() {
+        return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+      }
+      /**
+       * <pre>
+       * time when the attachment was last modified
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_modified = 9 [json_name = "dateModified", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder() {
+        return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+      }
+
+      public static final int CONTENT_ID_FIELD_NUMBER = 10;
+      private com.google.protobuf.StringValue contentId_;
+      /**
+       * <pre>
+       * Optional. the id of the attachment in text if inline
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue content_id = 10 [json_name = "contentId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the contentId field is set.
+       */
+      @java.lang.Override
+      public boolean hasContentId() {
+        return contentId_ != null;
+      }
+      /**
+       * <pre>
+       * Optional. the id of the attachment in text if inline
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue content_id = 10 [json_name = "contentId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The contentId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getContentId() {
+        return contentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : contentId_;
+      }
+      /**
+       * <pre>
+       * Optional. the id of the attachment in text if inline
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue content_id = 10 [json_name = "contentId", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValueOrBuilder getContentIdOrBuilder() {
+        return contentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : contentId_;
+      }
+
+      public static final int WIDTH_FIELD_NUMBER = 11;
+      private com.google.protobuf.StringValue width_;
+      /**
+       * <pre>
+       * Optional. the width of the inline attachment
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue width = 11 [json_name = "width", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the width field is set.
+       */
+      @java.lang.Override
+      public boolean hasWidth() {
+        return width_ != null;
+      }
+      /**
+       * <pre>
+       * Optional. the width of the inline attachment
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue width = 11 [json_name = "width", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The width.
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getWidth() {
+        return width_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : width_;
+      }
+      /**
+       * <pre>
+       * Optional. the width of the inline attachment
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue width = 11 [json_name = "width", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValueOrBuilder getWidthOrBuilder() {
+        return width_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : width_;
+      }
+
+      public static final int HEIGHT_FIELD_NUMBER = 12;
+      private com.google.protobuf.StringValue height_;
+      /**
+       * <pre>
+       * Optional. the height of the inline attachment
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue height = 12 [json_name = "height", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the height field is set.
+       */
+      @java.lang.Override
+      public boolean hasHeight() {
+        return height_ != null;
+      }
+      /**
+       * <pre>
+       * Optional. the height of the inline attachment
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue height = 12 [json_name = "height", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getHeight() {
+        return height_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : height_;
+      }
+      /**
+       * <pre>
+       * Optional. the height of the inline attachment
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue height = 12 [json_name = "height", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValueOrBuilder getHeightOrBuilder() {
+        return height_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : height_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (attachmentSid_ != 0L) {
+          output.writeInt64(1, attachmentSid_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, title_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileType_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fileType_);
+        }
+        if (fileSize_ != 0L) {
+          output.writeInt64(4, fileSize_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 5, path_);
+        }
+        if (tempId_ != null) {
+          output.writeMessage(6, getTempId());
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(downloadUrl_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 7, downloadUrl_);
+        }
+        if (dateCreated_ != null) {
+          output.writeMessage(8, getDateCreated());
+        }
+        if (dateModified_ != null) {
+          output.writeMessage(9, getDateModified());
+        }
+        if (contentId_ != null) {
+          output.writeMessage(10, getContentId());
+        }
+        if (width_ != null) {
+          output.writeMessage(11, getWidth());
+        }
+        if (height_ != null) {
+          output.writeMessage(12, getHeight());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (attachmentSid_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, attachmentSid_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, title_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileType_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, fileType_);
+        }
+        if (fileSize_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(4, fileSize_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, path_);
+        }
+        if (tempId_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, getTempId());
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(downloadUrl_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, downloadUrl_);
+        }
+        if (dateCreated_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(8, getDateCreated());
+        }
+        if (dateModified_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(9, getDateModified());
+        }
+        if (contentId_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(10, getContentId());
+        }
+        if (width_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(11, getWidth());
+        }
+        if (height_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(12, getHeight());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment other = (com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment) obj;
+
+        if (getAttachmentSid()
+            != other.getAttachmentSid()) return false;
+        if (!getTitle()
+            .equals(other.getTitle())) return false;
+        if (!getFileType()
+            .equals(other.getFileType())) return false;
+        if (getFileSize()
+            != other.getFileSize()) return false;
+        if (!getPath()
+            .equals(other.getPath())) return false;
+        if (hasTempId() != other.hasTempId()) return false;
+        if (hasTempId()) {
+          if (!getTempId()
+              .equals(other.getTempId())) return false;
+        }
+        if (!getDownloadUrl()
+            .equals(other.getDownloadUrl())) return false;
+        if (hasDateCreated() != other.hasDateCreated()) return false;
+        if (hasDateCreated()) {
+          if (!getDateCreated()
+              .equals(other.getDateCreated())) return false;
+        }
+        if (hasDateModified() != other.hasDateModified()) return false;
+        if (hasDateModified()) {
+          if (!getDateModified()
+              .equals(other.getDateModified())) return false;
+        }
+        if (hasContentId() != other.hasContentId()) return false;
+        if (hasContentId()) {
+          if (!getContentId()
+              .equals(other.getContentId())) return false;
+        }
+        if (hasWidth() != other.hasWidth()) return false;
+        if (hasWidth()) {
+          if (!getWidth()
+              .equals(other.getWidth())) return false;
+        }
+        if (hasHeight() != other.hasHeight()) return false;
+        if (hasHeight()) {
+          if (!getHeight()
+              .equals(other.getHeight())) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ATTACHMENT_SID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getAttachmentSid());
+        hash = (37 * hash) + TITLE_FIELD_NUMBER;
+        hash = (53 * hash) + getTitle().hashCode();
+        hash = (37 * hash) + FILE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getFileType().hashCode();
+        hash = (37 * hash) + FILE_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getFileSize());
+        hash = (37 * hash) + PATH_FIELD_NUMBER;
+        hash = (53 * hash) + getPath().hashCode();
+        if (hasTempId()) {
+          hash = (37 * hash) + TEMP_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getTempId().hashCode();
+        }
+        hash = (37 * hash) + DOWNLOAD_URL_FIELD_NUMBER;
+        hash = (53 * hash) + getDownloadUrl().hashCode();
+        if (hasDateCreated()) {
+          hash = (37 * hash) + DATE_CREATED_FIELD_NUMBER;
+          hash = (53 * hash) + getDateCreated().hashCode();
+        }
+        if (hasDateModified()) {
+          hash = (37 * hash) + DATE_MODIFIED_FIELD_NUMBER;
+          hash = (53 * hash) + getDateModified().hashCode();
+        }
+        if (hasContentId()) {
+          hash = (37 * hash) + CONTENT_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getContentId().hashCode();
+        }
+        if (hasWidth()) {
+          hash = (37 * hash) + WIDTH_FIELD_NUMBER;
+          hash = (53 * hash) + getWidth().hashCode();
+        }
+        if (hasHeight()) {
+          hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+          hash = (53 * hash) + getHeight().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * attachment details
+       * </pre>
+       *
+       * Protobuf type {@code tcnapi.omni.campaigns.v1.Campaign.Module.Attachment}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:tcnapi.omni.campaigns.v1.Campaign.Module.Attachment)
+          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.AttachmentOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Attachment_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Attachment_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.class, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          attachmentSid_ = 0L;
+          title_ = "";
+          fileType_ = "";
+          fileSize_ = 0L;
+          path_ = "";
+          tempId_ = null;
+          if (tempIdBuilder_ != null) {
+            tempIdBuilder_.dispose();
+            tempIdBuilder_ = null;
+          }
+          downloadUrl_ = "";
+          dateCreated_ = null;
+          if (dateCreatedBuilder_ != null) {
+            dateCreatedBuilder_.dispose();
+            dateCreatedBuilder_ = null;
+          }
+          dateModified_ = null;
+          if (dateModifiedBuilder_ != null) {
+            dateModifiedBuilder_.dispose();
+            dateModifiedBuilder_ = null;
+          }
+          contentId_ = null;
+          if (contentIdBuilder_ != null) {
+            contentIdBuilder_.dispose();
+            contentIdBuilder_ = null;
+          }
+          width_ = null;
+          if (widthBuilder_ != null) {
+            widthBuilder_.dispose();
+            widthBuilder_ = null;
+          }
+          height_ = null;
+          if (heightBuilder_ != null) {
+            heightBuilder_.dispose();
+            heightBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Attachment_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment getDefaultInstanceForType() {
+          return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment build() {
+          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment buildPartial() {
+          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment result = new com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.attachmentSid_ = attachmentSid_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.title_ = title_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.fileType_ = fileType_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.fileSize_ = fileSize_;
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.path_ = path_;
+          }
+          if (((from_bitField0_ & 0x00000020) != 0)) {
+            result.tempId_ = tempIdBuilder_ == null
+                ? tempId_
+                : tempIdBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000040) != 0)) {
+            result.downloadUrl_ = downloadUrl_;
+          }
+          if (((from_bitField0_ & 0x00000080) != 0)) {
+            result.dateCreated_ = dateCreatedBuilder_ == null
+                ? dateCreated_
+                : dateCreatedBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000100) != 0)) {
+            result.dateModified_ = dateModifiedBuilder_ == null
+                ? dateModified_
+                : dateModifiedBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000200) != 0)) {
+            result.contentId_ = contentIdBuilder_ == null
+                ? contentId_
+                : contentIdBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000400) != 0)) {
+            result.width_ = widthBuilder_ == null
+                ? width_
+                : widthBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000800) != 0)) {
+            result.height_ = heightBuilder_ == null
+                ? height_
+                : heightBuilder_.build();
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment) {
+            return mergeFrom((com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment other) {
+          if (other == com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.getDefaultInstance()) return this;
+          if (other.getAttachmentSid() != 0L) {
+            setAttachmentSid(other.getAttachmentSid());
+          }
+          if (!other.getTitle().isEmpty()) {
+            title_ = other.title_;
+            bitField0_ |= 0x00000002;
+            onChanged();
+          }
+          if (!other.getFileType().isEmpty()) {
+            fileType_ = other.fileType_;
+            bitField0_ |= 0x00000004;
+            onChanged();
+          }
+          if (other.getFileSize() != 0L) {
+            setFileSize(other.getFileSize());
+          }
+          if (!other.getPath().isEmpty()) {
+            path_ = other.path_;
+            bitField0_ |= 0x00000010;
+            onChanged();
+          }
+          if (other.hasTempId()) {
+            mergeTempId(other.getTempId());
+          }
+          if (!other.getDownloadUrl().isEmpty()) {
+            downloadUrl_ = other.downloadUrl_;
+            bitField0_ |= 0x00000040;
+            onChanged();
+          }
+          if (other.hasDateCreated()) {
+            mergeDateCreated(other.getDateCreated());
+          }
+          if (other.hasDateModified()) {
+            mergeDateModified(other.getDateModified());
+          }
+          if (other.hasContentId()) {
+            mergeContentId(other.getContentId());
+          }
+          if (other.hasWidth()) {
+            mergeWidth(other.getWidth());
+          }
+          if (other.hasHeight()) {
+            mergeHeight(other.getHeight());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  attachmentSid_ = input.readInt64();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 18: {
+                  title_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 26: {
+                  fileType_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                case 32: {
+                  fileSize_ = input.readInt64();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 32
+                case 42: {
+                  path_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 42
+                case 50: {
+                  input.readMessage(
+                      getTempIdFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000020;
+                  break;
+                } // case 50
+                case 58: {
+                  downloadUrl_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000040;
+                  break;
+                } // case 58
+                case 66: {
+                  input.readMessage(
+                      getDateCreatedFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000080;
+                  break;
+                } // case 66
+                case 74: {
+                  input.readMessage(
+                      getDateModifiedFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000100;
+                  break;
+                } // case 74
+                case 82: {
+                  input.readMessage(
+                      getContentIdFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000200;
+                  break;
+                } // case 82
+                case 90: {
+                  input.readMessage(
+                      getWidthFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000400;
+                  break;
+                } // case 90
+                case 98: {
+                  input.readMessage(
+                      getHeightFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000800;
+                  break;
+                } // case 98
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private long attachmentSid_ ;
+        /**
+         * <pre>
+         * primary key or internal identifier for attachment
+         * </pre>
+         *
+         * <code>int64 attachment_sid = 1 [json_name = "attachmentSid", (.google.api.field_behavior) = REQUIRED];</code>
+         * @return The attachmentSid.
+         */
+        @java.lang.Override
+        public long getAttachmentSid() {
+          return attachmentSid_;
+        }
+        /**
+         * <pre>
+         * primary key or internal identifier for attachment
+         * </pre>
+         *
+         * <code>int64 attachment_sid = 1 [json_name = "attachmentSid", (.google.api.field_behavior) = REQUIRED];</code>
+         * @param value The attachmentSid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setAttachmentSid(long value) {
+
+          attachmentSid_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * primary key or internal identifier for attachment
+         * </pre>
+         *
+         * <code>int64 attachment_sid = 1 [json_name = "attachmentSid", (.google.api.field_behavior) = REQUIRED];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearAttachmentSid() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          attachmentSid_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object title_ = "";
+        /**
+         * <pre>
+         * attachment file title
+         * </pre>
+         *
+         * <code>string title = 2 [json_name = "title", (.google.api.field_behavior) = REQUIRED];</code>
+         * @return The title.
+         */
+        public java.lang.String getTitle() {
+          java.lang.Object ref = title_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            title_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * attachment file title
+         * </pre>
+         *
+         * <code>string title = 2 [json_name = "title", (.google.api.field_behavior) = REQUIRED];</code>
+         * @return The bytes for title.
+         */
+        public com.google.protobuf.ByteString
+            getTitleBytes() {
+          java.lang.Object ref = title_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            title_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * attachment file title
+         * </pre>
+         *
+         * <code>string title = 2 [json_name = "title", (.google.api.field_behavior) = REQUIRED];</code>
+         * @param value The title to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTitle(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          title_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * attachment file title
+         * </pre>
+         *
+         * <code>string title = 2 [json_name = "title", (.google.api.field_behavior) = REQUIRED];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTitle() {
+          title_ = getDefaultInstance().getTitle();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * attachment file title
+         * </pre>
+         *
+         * <code>string title = 2 [json_name = "title", (.google.api.field_behavior) = REQUIRED];</code>
+         * @param value The bytes for title to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTitleBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          title_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object fileType_ = "";
+        /**
+         * <pre>
+         * attachment file type
+         * </pre>
+         *
+         * <code>string file_type = 3 [json_name = "fileType", (.google.api.field_behavior) = REQUIRED];</code>
+         * @return The fileType.
+         */
+        public java.lang.String getFileType() {
+          java.lang.Object ref = fileType_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            fileType_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * attachment file type
+         * </pre>
+         *
+         * <code>string file_type = 3 [json_name = "fileType", (.google.api.field_behavior) = REQUIRED];</code>
+         * @return The bytes for fileType.
+         */
+        public com.google.protobuf.ByteString
+            getFileTypeBytes() {
+          java.lang.Object ref = fileType_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            fileType_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * attachment file type
+         * </pre>
+         *
+         * <code>string file_type = 3 [json_name = "fileType", (.google.api.field_behavior) = REQUIRED];</code>
+         * @param value The fileType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFileType(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          fileType_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * attachment file type
+         * </pre>
+         *
+         * <code>string file_type = 3 [json_name = "fileType", (.google.api.field_behavior) = REQUIRED];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFileType() {
+          fileType_ = getDefaultInstance().getFileType();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * attachment file type
+         * </pre>
+         *
+         * <code>string file_type = 3 [json_name = "fileType", (.google.api.field_behavior) = REQUIRED];</code>
+         * @param value The bytes for fileType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFileTypeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          fileType_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+
+        private long fileSize_ ;
+        /**
+         * <pre>
+         * attachment file size
+         * </pre>
+         *
+         * <code>int64 file_size = 4 [json_name = "fileSize", (.google.api.field_behavior) = REQUIRED];</code>
+         * @return The fileSize.
+         */
+        @java.lang.Override
+        public long getFileSize() {
+          return fileSize_;
+        }
+        /**
+         * <pre>
+         * attachment file size
+         * </pre>
+         *
+         * <code>int64 file_size = 4 [json_name = "fileSize", (.google.api.field_behavior) = REQUIRED];</code>
+         * @param value The fileSize to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFileSize(long value) {
+
+          fileSize_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * attachment file size
+         * </pre>
+         *
+         * <code>int64 file_size = 4 [json_name = "fileSize", (.google.api.field_behavior) = REQUIRED];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFileSize() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          fileSize_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object path_ = "";
+        /**
+         * <pre>
+         * attachment file path
+         * </pre>
+         *
+         * <code>string path = 5 [json_name = "path", (.google.api.field_behavior) = REQUIRED];</code>
+         * @return The path.
+         */
+        public java.lang.String getPath() {
+          java.lang.Object ref = path_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            path_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * attachment file path
+         * </pre>
+         *
+         * <code>string path = 5 [json_name = "path", (.google.api.field_behavior) = REQUIRED];</code>
+         * @return The bytes for path.
+         */
+        public com.google.protobuf.ByteString
+            getPathBytes() {
+          java.lang.Object ref = path_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            path_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * attachment file path
+         * </pre>
+         *
+         * <code>string path = 5 [json_name = "path", (.google.api.field_behavior) = REQUIRED];</code>
+         * @param value The path to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPath(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          path_ = value;
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * attachment file path
+         * </pre>
+         *
+         * <code>string path = 5 [json_name = "path", (.google.api.field_behavior) = REQUIRED];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPath() {
+          path_ = getDefaultInstance().getPath();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * attachment file path
+         * </pre>
+         *
+         * <code>string path = 5 [json_name = "path", (.google.api.field_behavior) = REQUIRED];</code>
+         * @param value The bytes for path to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPathBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          path_ = value;
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.StringValue tempId_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> tempIdBuilder_;
+        /**
+         * <pre>
+         * temp id
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue temp_id = 6 [json_name = "tempId", (.google.api.field_behavior) = REQUIRED];</code>
+         * @return Whether the tempId field is set.
+         */
+        public boolean hasTempId() {
+          return ((bitField0_ & 0x00000020) != 0);
+        }
+        /**
+         * <pre>
+         * temp id
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue temp_id = 6 [json_name = "tempId", (.google.api.field_behavior) = REQUIRED];</code>
+         * @return The tempId.
+         */
+        public com.google.protobuf.StringValue getTempId() {
+          if (tempIdBuilder_ == null) {
+            return tempId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : tempId_;
+          } else {
+            return tempIdBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * temp id
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue temp_id = 6 [json_name = "tempId", (.google.api.field_behavior) = REQUIRED];</code>
+         */
+        public Builder setTempId(com.google.protobuf.StringValue value) {
+          if (tempIdBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            tempId_ = value;
+          } else {
+            tempIdBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * temp id
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue temp_id = 6 [json_name = "tempId", (.google.api.field_behavior) = REQUIRED];</code>
+         */
+        public Builder setTempId(
+            com.google.protobuf.StringValue.Builder builderForValue) {
+          if (tempIdBuilder_ == null) {
+            tempId_ = builderForValue.build();
+          } else {
+            tempIdBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * temp id
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue temp_id = 6 [json_name = "tempId", (.google.api.field_behavior) = REQUIRED];</code>
+         */
+        public Builder mergeTempId(com.google.protobuf.StringValue value) {
+          if (tempIdBuilder_ == null) {
+            if (((bitField0_ & 0x00000020) != 0) &&
+              tempId_ != null &&
+              tempId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+              getTempIdBuilder().mergeFrom(value);
+            } else {
+              tempId_ = value;
+            }
+          } else {
+            tempIdBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * temp id
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue temp_id = 6 [json_name = "tempId", (.google.api.field_behavior) = REQUIRED];</code>
+         */
+        public Builder clearTempId() {
+          bitField0_ = (bitField0_ & ~0x00000020);
+          tempId_ = null;
+          if (tempIdBuilder_ != null) {
+            tempIdBuilder_.dispose();
+            tempIdBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * temp id
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue temp_id = 6 [json_name = "tempId", (.google.api.field_behavior) = REQUIRED];</code>
+         */
+        public com.google.protobuf.StringValue.Builder getTempIdBuilder() {
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return getTempIdFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * temp id
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue temp_id = 6 [json_name = "tempId", (.google.api.field_behavior) = REQUIRED];</code>
+         */
+        public com.google.protobuf.StringValueOrBuilder getTempIdOrBuilder() {
+          if (tempIdBuilder_ != null) {
+            return tempIdBuilder_.getMessageOrBuilder();
+          } else {
+            return tempId_ == null ?
+                com.google.protobuf.StringValue.getDefaultInstance() : tempId_;
+          }
+        }
+        /**
+         * <pre>
+         * temp id
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue temp_id = 6 [json_name = "tempId", (.google.api.field_behavior) = REQUIRED];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+            getTempIdFieldBuilder() {
+          if (tempIdBuilder_ == null) {
+            tempIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                    getTempId(),
+                    getParentForChildren(),
+                    isClean());
+            tempId_ = null;
+          }
+          return tempIdBuilder_;
+        }
+
+        private java.lang.Object downloadUrl_ = "";
+        /**
+         * <pre>
+         * download attachment file url
+         * </pre>
+         *
+         * <code>string download_url = 7 [json_name = "downloadUrl", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return The downloadUrl.
+         */
+        public java.lang.String getDownloadUrl() {
+          java.lang.Object ref = downloadUrl_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            downloadUrl_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * download attachment file url
+         * </pre>
+         *
+         * <code>string download_url = 7 [json_name = "downloadUrl", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return The bytes for downloadUrl.
+         */
+        public com.google.protobuf.ByteString
+            getDownloadUrlBytes() {
+          java.lang.Object ref = downloadUrl_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            downloadUrl_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * download attachment file url
+         * </pre>
+         *
+         * <code>string download_url = 7 [json_name = "downloadUrl", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @param value The downloadUrl to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDownloadUrl(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          downloadUrl_ = value;
+          bitField0_ |= 0x00000040;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * download attachment file url
+         * </pre>
+         *
+         * <code>string download_url = 7 [json_name = "downloadUrl", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDownloadUrl() {
+          downloadUrl_ = getDefaultInstance().getDownloadUrl();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * download attachment file url
+         * </pre>
+         *
+         * <code>string download_url = 7 [json_name = "downloadUrl", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @param value The bytes for downloadUrl to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDownloadUrlBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          downloadUrl_ = value;
+          bitField0_ |= 0x00000040;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.Timestamp dateCreated_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dateCreatedBuilder_;
+        /**
+         * <pre>
+         * time when the attachment was created
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return Whether the dateCreated field is set.
+         */
+        public boolean hasDateCreated() {
+          return ((bitField0_ & 0x00000080) != 0);
+        }
+        /**
+         * <pre>
+         * time when the attachment was created
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return The dateCreated.
+         */
+        public com.google.protobuf.Timestamp getDateCreated() {
+          if (dateCreatedBuilder_ == null) {
+            return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+          } else {
+            return dateCreatedBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * time when the attachment was created
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setDateCreated(com.google.protobuf.Timestamp value) {
+          if (dateCreatedBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            dateCreated_ = value;
+          } else {
+            dateCreatedBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000080;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * time when the attachment was created
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setDateCreated(
+            com.google.protobuf.Timestamp.Builder builderForValue) {
+          if (dateCreatedBuilder_ == null) {
+            dateCreated_ = builderForValue.build();
+          } else {
+            dateCreatedBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000080;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * time when the attachment was created
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder mergeDateCreated(com.google.protobuf.Timestamp value) {
+          if (dateCreatedBuilder_ == null) {
+            if (((bitField0_ & 0x00000080) != 0) &&
+              dateCreated_ != null &&
+              dateCreated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+              getDateCreatedBuilder().mergeFrom(value);
+            } else {
+              dateCreated_ = value;
+            }
+          } else {
+            dateCreatedBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000080;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * time when the attachment was created
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder clearDateCreated() {
+          bitField0_ = (bitField0_ & ~0x00000080);
+          dateCreated_ = null;
+          if (dateCreatedBuilder_ != null) {
+            dateCreatedBuilder_.dispose();
+            dateCreatedBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * time when the attachment was created
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.Timestamp.Builder getDateCreatedBuilder() {
+          bitField0_ |= 0x00000080;
+          onChanged();
+          return getDateCreatedFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * time when the attachment was created
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder() {
+          if (dateCreatedBuilder_ != null) {
+            return dateCreatedBuilder_.getMessageOrBuilder();
+          } else {
+            return dateCreated_ == null ?
+                com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+          }
+        }
+        /**
+         * <pre>
+         * time when the attachment was created
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_created = 8 [json_name = "dateCreated", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+            getDateCreatedFieldBuilder() {
+          if (dateCreatedBuilder_ == null) {
+            dateCreatedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                    getDateCreated(),
+                    getParentForChildren(),
+                    isClean());
+            dateCreated_ = null;
+          }
+          return dateCreatedBuilder_;
+        }
+
+        private com.google.protobuf.Timestamp dateModified_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dateModifiedBuilder_;
+        /**
+         * <pre>
+         * time when the attachment was last modified
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_modified = 9 [json_name = "dateModified", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return Whether the dateModified field is set.
+         */
+        public boolean hasDateModified() {
+          return ((bitField0_ & 0x00000100) != 0);
+        }
+        /**
+         * <pre>
+         * time when the attachment was last modified
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_modified = 9 [json_name = "dateModified", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return The dateModified.
+         */
+        public com.google.protobuf.Timestamp getDateModified() {
+          if (dateModifiedBuilder_ == null) {
+            return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+          } else {
+            return dateModifiedBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * time when the attachment was last modified
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_modified = 9 [json_name = "dateModified", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setDateModified(com.google.protobuf.Timestamp value) {
+          if (dateModifiedBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            dateModified_ = value;
+          } else {
+            dateModifiedBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000100;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * time when the attachment was last modified
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_modified = 9 [json_name = "dateModified", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setDateModified(
+            com.google.protobuf.Timestamp.Builder builderForValue) {
+          if (dateModifiedBuilder_ == null) {
+            dateModified_ = builderForValue.build();
+          } else {
+            dateModifiedBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000100;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * time when the attachment was last modified
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_modified = 9 [json_name = "dateModified", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder mergeDateModified(com.google.protobuf.Timestamp value) {
+          if (dateModifiedBuilder_ == null) {
+            if (((bitField0_ & 0x00000100) != 0) &&
+              dateModified_ != null &&
+              dateModified_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+              getDateModifiedBuilder().mergeFrom(value);
+            } else {
+              dateModified_ = value;
+            }
+          } else {
+            dateModifiedBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000100;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * time when the attachment was last modified
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_modified = 9 [json_name = "dateModified", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder clearDateModified() {
+          bitField0_ = (bitField0_ & ~0x00000100);
+          dateModified_ = null;
+          if (dateModifiedBuilder_ != null) {
+            dateModifiedBuilder_.dispose();
+            dateModifiedBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * time when the attachment was last modified
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_modified = 9 [json_name = "dateModified", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.Timestamp.Builder getDateModifiedBuilder() {
+          bitField0_ |= 0x00000100;
+          onChanged();
+          return getDateModifiedFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * time when the attachment was last modified
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_modified = 9 [json_name = "dateModified", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder() {
+          if (dateModifiedBuilder_ != null) {
+            return dateModifiedBuilder_.getMessageOrBuilder();
+          } else {
+            return dateModified_ == null ?
+                com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+          }
+        }
+        /**
+         * <pre>
+         * time when the attachment was last modified
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp date_modified = 9 [json_name = "dateModified", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+            getDateModifiedFieldBuilder() {
+          if (dateModifiedBuilder_ == null) {
+            dateModifiedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                    getDateModified(),
+                    getParentForChildren(),
+                    isClean());
+            dateModified_ = null;
+          }
+          return dateModifiedBuilder_;
+        }
+
+        private com.google.protobuf.StringValue contentId_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> contentIdBuilder_;
+        /**
+         * <pre>
+         * Optional. the id of the attachment in text if inline
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue content_id = 10 [json_name = "contentId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return Whether the contentId field is set.
+         */
+        public boolean hasContentId() {
+          return ((bitField0_ & 0x00000200) != 0);
+        }
+        /**
+         * <pre>
+         * Optional. the id of the attachment in text if inline
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue content_id = 10 [json_name = "contentId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return The contentId.
+         */
+        public com.google.protobuf.StringValue getContentId() {
+          if (contentIdBuilder_ == null) {
+            return contentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : contentId_;
+          } else {
+            return contentIdBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Optional. the id of the attachment in text if inline
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue content_id = 10 [json_name = "contentId", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setContentId(com.google.protobuf.StringValue value) {
+          if (contentIdBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            contentId_ = value;
+          } else {
+            contentIdBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000200;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. the id of the attachment in text if inline
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue content_id = 10 [json_name = "contentId", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setContentId(
+            com.google.protobuf.StringValue.Builder builderForValue) {
+          if (contentIdBuilder_ == null) {
+            contentId_ = builderForValue.build();
+          } else {
+            contentIdBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000200;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. the id of the attachment in text if inline
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue content_id = 10 [json_name = "contentId", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder mergeContentId(com.google.protobuf.StringValue value) {
+          if (contentIdBuilder_ == null) {
+            if (((bitField0_ & 0x00000200) != 0) &&
+              contentId_ != null &&
+              contentId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+              getContentIdBuilder().mergeFrom(value);
+            } else {
+              contentId_ = value;
+            }
+          } else {
+            contentIdBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000200;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. the id of the attachment in text if inline
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue content_id = 10 [json_name = "contentId", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder clearContentId() {
+          bitField0_ = (bitField0_ & ~0x00000200);
+          contentId_ = null;
+          if (contentIdBuilder_ != null) {
+            contentIdBuilder_.dispose();
+            contentIdBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. the id of the attachment in text if inline
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue content_id = 10 [json_name = "contentId", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.StringValue.Builder getContentIdBuilder() {
+          bitField0_ |= 0x00000200;
+          onChanged();
+          return getContentIdFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Optional. the id of the attachment in text if inline
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue content_id = 10 [json_name = "contentId", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.StringValueOrBuilder getContentIdOrBuilder() {
+          if (contentIdBuilder_ != null) {
+            return contentIdBuilder_.getMessageOrBuilder();
+          } else {
+            return contentId_ == null ?
+                com.google.protobuf.StringValue.getDefaultInstance() : contentId_;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. the id of the attachment in text if inline
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue content_id = 10 [json_name = "contentId", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+            getContentIdFieldBuilder() {
+          if (contentIdBuilder_ == null) {
+            contentIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                    getContentId(),
+                    getParentForChildren(),
+                    isClean());
+            contentId_ = null;
+          }
+          return contentIdBuilder_;
+        }
+
+        private com.google.protobuf.StringValue width_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> widthBuilder_;
+        /**
+         * <pre>
+         * Optional. the width of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue width = 11 [json_name = "width", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return Whether the width field is set.
+         */
+        public boolean hasWidth() {
+          return ((bitField0_ & 0x00000400) != 0);
+        }
+        /**
+         * <pre>
+         * Optional. the width of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue width = 11 [json_name = "width", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return The width.
+         */
+        public com.google.protobuf.StringValue getWidth() {
+          if (widthBuilder_ == null) {
+            return width_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : width_;
+          } else {
+            return widthBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Optional. the width of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue width = 11 [json_name = "width", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setWidth(com.google.protobuf.StringValue value) {
+          if (widthBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            width_ = value;
+          } else {
+            widthBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000400;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. the width of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue width = 11 [json_name = "width", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setWidth(
+            com.google.protobuf.StringValue.Builder builderForValue) {
+          if (widthBuilder_ == null) {
+            width_ = builderForValue.build();
+          } else {
+            widthBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000400;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. the width of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue width = 11 [json_name = "width", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder mergeWidth(com.google.protobuf.StringValue value) {
+          if (widthBuilder_ == null) {
+            if (((bitField0_ & 0x00000400) != 0) &&
+              width_ != null &&
+              width_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+              getWidthBuilder().mergeFrom(value);
+            } else {
+              width_ = value;
+            }
+          } else {
+            widthBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000400;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. the width of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue width = 11 [json_name = "width", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder clearWidth() {
+          bitField0_ = (bitField0_ & ~0x00000400);
+          width_ = null;
+          if (widthBuilder_ != null) {
+            widthBuilder_.dispose();
+            widthBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. the width of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue width = 11 [json_name = "width", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.StringValue.Builder getWidthBuilder() {
+          bitField0_ |= 0x00000400;
+          onChanged();
+          return getWidthFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Optional. the width of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue width = 11 [json_name = "width", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.StringValueOrBuilder getWidthOrBuilder() {
+          if (widthBuilder_ != null) {
+            return widthBuilder_.getMessageOrBuilder();
+          } else {
+            return width_ == null ?
+                com.google.protobuf.StringValue.getDefaultInstance() : width_;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. the width of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue width = 11 [json_name = "width", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+            getWidthFieldBuilder() {
+          if (widthBuilder_ == null) {
+            widthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                    getWidth(),
+                    getParentForChildren(),
+                    isClean());
+            width_ = null;
+          }
+          return widthBuilder_;
+        }
+
+        private com.google.protobuf.StringValue height_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> heightBuilder_;
+        /**
+         * <pre>
+         * Optional. the height of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue height = 12 [json_name = "height", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return Whether the height field is set.
+         */
+        public boolean hasHeight() {
+          return ((bitField0_ & 0x00000800) != 0);
+        }
+        /**
+         * <pre>
+         * Optional. the height of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue height = 12 [json_name = "height", (.google.api.field_behavior) = OPTIONAL];</code>
+         * @return The height.
+         */
+        public com.google.protobuf.StringValue getHeight() {
+          if (heightBuilder_ == null) {
+            return height_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : height_;
+          } else {
+            return heightBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Optional. the height of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue height = 12 [json_name = "height", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setHeight(com.google.protobuf.StringValue value) {
+          if (heightBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            height_ = value;
+          } else {
+            heightBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000800;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. the height of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue height = 12 [json_name = "height", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder setHeight(
+            com.google.protobuf.StringValue.Builder builderForValue) {
+          if (heightBuilder_ == null) {
+            height_ = builderForValue.build();
+          } else {
+            heightBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000800;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. the height of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue height = 12 [json_name = "height", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder mergeHeight(com.google.protobuf.StringValue value) {
+          if (heightBuilder_ == null) {
+            if (((bitField0_ & 0x00000800) != 0) &&
+              height_ != null &&
+              height_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+              getHeightBuilder().mergeFrom(value);
+            } else {
+              height_ = value;
+            }
+          } else {
+            heightBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000800;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. the height of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue height = 12 [json_name = "height", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public Builder clearHeight() {
+          bitField0_ = (bitField0_ & ~0x00000800);
+          height_ = null;
+          if (heightBuilder_ != null) {
+            heightBuilder_.dispose();
+            heightBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional. the height of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue height = 12 [json_name = "height", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.StringValue.Builder getHeightBuilder() {
+          bitField0_ |= 0x00000800;
+          onChanged();
+          return getHeightFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Optional. the height of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue height = 12 [json_name = "height", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        public com.google.protobuf.StringValueOrBuilder getHeightOrBuilder() {
+          if (heightBuilder_ != null) {
+            return heightBuilder_.getMessageOrBuilder();
+          } else {
+            return height_ == null ?
+                com.google.protobuf.StringValue.getDefaultInstance() : height_;
+          }
+        }
+        /**
+         * <pre>
+         * Optional. the height of the inline attachment
+         * </pre>
+         *
+         * <code>.google.protobuf.StringValue height = 12 [json_name = "height", (.google.api.field_behavior) = OPTIONAL];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+            getHeightFieldBuilder() {
+          if (heightBuilder_ == null) {
+            heightBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                    getHeight(),
+                    getParentForChildren(),
+                    isClean());
+            height_ = null;
+          }
+          return heightBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:tcnapi.omni.campaigns.v1.Campaign.Module.Attachment)
+      }
+
+      // @@protoc_insertion_point(class_scope:tcnapi.omni.campaigns.v1.Campaign.Module.Attachment)
+      private static final com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment();
+      }
+
+      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Attachment>
+          PARSER = new com.google.protobuf.AbstractParser<Attachment>() {
+        @java.lang.Override
+        public Attachment parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Attachment> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Attachment> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int CAMPAIGN_MODULE_SID_FIELD_NUMBER = 1;
+    private long campaignModuleSid_ = 0L;
+    /**
+     * <pre>
+     * the campaign module identifier
+     * </pre>
+     *
+     * <code>int64 campaign_module_sid = 1 [json_name = "campaignModuleSid", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The campaignModuleSid.
+     */
+    @java.lang.Override
+    public long getCampaignModuleSid() {
+      return campaignModuleSid_;
+    }
+
+    public static final int CAMPAIGN_SID_FIELD_NUMBER = 2;
+    private long campaignSid_ = 0L;
+    /**
+     * <pre>
+     * the campaign identifier
+     * </pre>
+     *
+     * <code>int64 campaign_sid = 2 [json_name = "campaignSid", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The campaignSid.
+     */
+    @java.lang.Override
+    public long getCampaignSid() {
+      return campaignSid_;
+    }
+
+    public static final int MODULE_TYPE_FIELD_NUMBER = 3;
+    private int moduleType_ = 0;
+    /**
+     * <pre>
+     * module type (inbound|outbound)
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.ModuleType module_type = 3 [json_name = "moduleType", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The enum numeric value on the wire for moduleType.
+     */
+    @java.lang.Override public int getModuleTypeValue() {
+      return moduleType_;
+    }
+    /**
+     * <pre>
+     * module type (inbound|outbound)
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.ModuleType module_type = 3 [json_name = "moduleType", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The moduleType.
+     */
+    @java.lang.Override public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ModuleType getModuleType() {
+      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ModuleType result = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ModuleType.forNumber(moduleType_);
+      return result == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ModuleType.UNRECOGNIZED : result;
+    }
+
+    public static final int STATE_FIELD_NUMBER = 4;
+    private int state_ = 0;
+    /**
+     * <pre>
+     * campaign module State (running|stopped|etc.)
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState State = 4 [json_name = "State", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <pre>
+     * campaign module State (running|stopped|etc.)
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState State = 4 [json_name = "State", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The state.
+     */
+    @java.lang.Override public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState getState() {
+      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState result = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState.forNumber(state_);
+      return result == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState.UNRECOGNIZED : result;
+    }
+
+    public static final int DATE_CREATED_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp dateCreated_;
+    /**
+     * <pre>
+     * config data specific to the module
+     * ModuleConfig config = 5 [(google.api.field_behavior) = REQUIRED];
+     * date module was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the dateCreated field is set.
+     */
+    @java.lang.Override
+    public boolean hasDateCreated() {
+      return dateCreated_ != null;
+    }
+    /**
+     * <pre>
+     * config data specific to the module
+     * ModuleConfig config = 5 [(google.api.field_behavior) = REQUIRED];
+     * date module was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The dateCreated.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDateCreated() {
+      return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+    }
+    /**
+     * <pre>
+     * config data specific to the module
+     * ModuleConfig config = 5 [(google.api.field_behavior) = REQUIRED];
+     * date module was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder() {
+      return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+    }
+
+    public static final int DATE_MODIFIED_FIELD_NUMBER = 7;
+    private com.google.protobuf.Timestamp dateModified_;
+    /**
+     * <pre>
+     * date module was last modified
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the dateModified field is set.
+     */
+    @java.lang.Override
+    public boolean hasDateModified() {
+      return dateModified_ != null;
+    }
+    /**
+     * <pre>
+     * date module was last modified
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The dateModified.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDateModified() {
+      return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+    }
+    /**
+     * <pre>
+     * date module was last modified
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder() {
+      return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+    }
+
+    public static final int SCHEDULED_STOP_DATE_FIELD_NUMBER = 8;
+    private com.google.protobuf.Timestamp scheduledStopDate_;
+    /**
+     * <pre>
+     * when campaign is scheduled to stop; null == not a scheduled module
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp scheduled_stop_date = 8 [json_name = "scheduledStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return Whether the scheduledStopDate field is set.
+     */
+    @java.lang.Override
+    public boolean hasScheduledStopDate() {
+      return scheduledStopDate_ != null;
+    }
+    /**
+     * <pre>
+     * when campaign is scheduled to stop; null == not a scheduled module
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp scheduled_stop_date = 8 [json_name = "scheduledStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The scheduledStopDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getScheduledStopDate() {
+      return scheduledStopDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : scheduledStopDate_;
+    }
+    /**
+     * <pre>
+     * when campaign is scheduled to stop; null == not a scheduled module
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp scheduled_stop_date = 8 [json_name = "scheduledStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getScheduledStopDateOrBuilder() {
+      return scheduledStopDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : scheduledStopDate_;
+    }
+
+    public static final int ACTUAL_STOP_DATE_FIELD_NUMBER = 9;
+    private com.google.protobuf.Timestamp actualStopDate_;
+    /**
+     * <pre>
+     * time campaign was actually stopped; null == not stopped yet
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp actual_stop_date = 9 [json_name = "actualStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return Whether the actualStopDate field is set.
+     */
+    @java.lang.Override
+    public boolean hasActualStopDate() {
+      return actualStopDate_ != null;
+    }
+    /**
+     * <pre>
+     * time campaign was actually stopped; null == not stopped yet
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp actual_stop_date = 9 [json_name = "actualStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The actualStopDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getActualStopDate() {
+      return actualStopDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : actualStopDate_;
+    }
+    /**
+     * <pre>
+     * time campaign was actually stopped; null == not stopped yet
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp actual_stop_date = 9 [json_name = "actualStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getActualStopDateOrBuilder() {
+      return actualStopDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : actualStopDate_;
+    }
+
+    public static final int HOURS_OF_OPERATION_FIELD_NUMBER = 10;
+    private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange hoursOfOperation_;
+    /**
+     * <pre>
+     * campaign module operating time; nullable
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 10 [json_name = "hoursOfOperation", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return Whether the hoursOfOperation field is set.
+     */
+    @java.lang.Override
+    public boolean hasHoursOfOperation() {
+      return hoursOfOperation_ != null;
+    }
+    /**
+     * <pre>
+     * campaign module operating time; nullable
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 10 [json_name = "hoursOfOperation", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The hoursOfOperation.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange getHoursOfOperation() {
+      return hoursOfOperation_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange.getDefaultInstance() : hoursOfOperation_;
+    }
+    /**
+     * <pre>
+     * campaign module operating time; nullable
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 10 [json_name = "hoursOfOperation", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRangeOrBuilder getHoursOfOperationOrBuilder() {
+      return hoursOfOperation_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange.getDefaultInstance() : hoursOfOperation_;
+    }
+
+    public static final int DETAILS_FIELD_NUMBER = 11;
+    private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details details_;
+    /**
+     * <pre>
+     * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 11 [json_name = "details", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return Whether the details field is set.
+     */
+    @java.lang.Override
+    public boolean hasDetails() {
+      return details_ != null;
+    }
+    /**
+     * <pre>
+     * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 11 [json_name = "details", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The details.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details getDetails() {
+      return details_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.getDefaultInstance() : details_;
+    }
+    /**
+     * <pre>
+     * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 11 [json_name = "details", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.DetailsOrBuilder getDetailsOrBuilder() {
+      return details_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.getDefaultInstance() : details_;
+    }
+
+    public static final int ATTACHMENTS_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment> attachments_;
+    /**
+     * <pre>
+     * attachments
+     * </pre>
+     *
+     * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment> getAttachmentsList() {
+      return attachments_;
+    }
+    /**
+     * <pre>
+     * attachments
+     * </pre>
+     *
+     * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.AttachmentOrBuilder> 
+        getAttachmentsOrBuilderList() {
+      return attachments_;
+    }
+    /**
+     * <pre>
+     * attachments
+     * </pre>
+     *
+     * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    @java.lang.Override
+    public int getAttachmentsCount() {
+      return attachments_.size();
+    }
+    /**
+     * <pre>
+     * attachments
+     * </pre>
+     *
+     * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment getAttachments(int index) {
+      return attachments_.get(index);
+    }
+    /**
+     * <pre>
+     * attachments
+     * </pre>
+     *
+     * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.AttachmentOrBuilder getAttachmentsOrBuilder(
+        int index) {
+      return attachments_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -421,6 +6249,39 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (campaignModuleSid_ != 0L) {
+        output.writeInt64(1, campaignModuleSid_);
+      }
+      if (campaignSid_ != 0L) {
+        output.writeInt64(2, campaignSid_);
+      }
+      if (moduleType_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ModuleType.MODULE_TYPE_INBOUND.getNumber()) {
+        output.writeEnum(3, moduleType_);
+      }
+      if (state_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState.MODULE_PREPARING.getNumber()) {
+        output.writeEnum(4, state_);
+      }
+      if (dateCreated_ != null) {
+        output.writeMessage(6, getDateCreated());
+      }
+      if (dateModified_ != null) {
+        output.writeMessage(7, getDateModified());
+      }
+      if (scheduledStopDate_ != null) {
+        output.writeMessage(8, getScheduledStopDate());
+      }
+      if (actualStopDate_ != null) {
+        output.writeMessage(9, getActualStopDate());
+      }
+      if (hoursOfOperation_ != null) {
+        output.writeMessage(10, getHoursOfOperation());
+      }
+      if (details_ != null) {
+        output.writeMessage(11, getDetails());
+      }
+      for (int i = 0; i < attachments_.size(); i++) {
+        output.writeMessage(12, attachments_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -430,6 +6291,50 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
+      if (campaignModuleSid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, campaignModuleSid_);
+      }
+      if (campaignSid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, campaignSid_);
+      }
+      if (moduleType_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ModuleType.MODULE_TYPE_INBOUND.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, moduleType_);
+      }
+      if (state_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState.MODULE_PREPARING.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, state_);
+      }
+      if (dateCreated_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDateCreated());
+      }
+      if (dateModified_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getDateModified());
+      }
+      if (scheduledStopDate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getScheduledStopDate());
+      }
+      if (actualStopDate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getActualStopDate());
+      }
+      if (hoursOfOperation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getHoursOfOperation());
+      }
+      if (details_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getDetails());
+      }
+      for (int i = 0; i < attachments_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, attachments_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -445,6 +6350,44 @@ private static final long serialVersionUID = 0L;
       }
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module other = (com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module) obj;
 
+      if (getCampaignModuleSid()
+          != other.getCampaignModuleSid()) return false;
+      if (getCampaignSid()
+          != other.getCampaignSid()) return false;
+      if (moduleType_ != other.moduleType_) return false;
+      if (state_ != other.state_) return false;
+      if (hasDateCreated() != other.hasDateCreated()) return false;
+      if (hasDateCreated()) {
+        if (!getDateCreated()
+            .equals(other.getDateCreated())) return false;
+      }
+      if (hasDateModified() != other.hasDateModified()) return false;
+      if (hasDateModified()) {
+        if (!getDateModified()
+            .equals(other.getDateModified())) return false;
+      }
+      if (hasScheduledStopDate() != other.hasScheduledStopDate()) return false;
+      if (hasScheduledStopDate()) {
+        if (!getScheduledStopDate()
+            .equals(other.getScheduledStopDate())) return false;
+      }
+      if (hasActualStopDate() != other.hasActualStopDate()) return false;
+      if (hasActualStopDate()) {
+        if (!getActualStopDate()
+            .equals(other.getActualStopDate())) return false;
+      }
+      if (hasHoursOfOperation() != other.hasHoursOfOperation()) return false;
+      if (hasHoursOfOperation()) {
+        if (!getHoursOfOperation()
+            .equals(other.getHoursOfOperation())) return false;
+      }
+      if (hasDetails() != other.hasDetails()) return false;
+      if (hasDetails()) {
+        if (!getDetails()
+            .equals(other.getDetails())) return false;
+      }
+      if (!getAttachmentsList()
+          .equals(other.getAttachmentsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -456,6 +6399,44 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CAMPAIGN_MODULE_SID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCampaignModuleSid());
+      hash = (37 * hash) + CAMPAIGN_SID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCampaignSid());
+      hash = (37 * hash) + MODULE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + moduleType_;
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + state_;
+      if (hasDateCreated()) {
+        hash = (37 * hash) + DATE_CREATED_FIELD_NUMBER;
+        hash = (53 * hash) + getDateCreated().hashCode();
+      }
+      if (hasDateModified()) {
+        hash = (37 * hash) + DATE_MODIFIED_FIELD_NUMBER;
+        hash = (53 * hash) + getDateModified().hashCode();
+      }
+      if (hasScheduledStopDate()) {
+        hash = (37 * hash) + SCHEDULED_STOP_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getScheduledStopDate().hashCode();
+      }
+      if (hasActualStopDate()) {
+        hash = (37 * hash) + ACTUAL_STOP_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getActualStopDate().hashCode();
+      }
+      if (hasHoursOfOperation()) {
+        hash = (37 * hash) + HOURS_OF_OPERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getHoursOfOperation().hashCode();
+      }
+      if (hasDetails()) {
+        hash = (37 * hash) + DETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getDetails().hashCode();
+      }
+      if (getAttachmentsCount() > 0) {
+        hash = (37 * hash) + ATTACHMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getAttachmentsList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -590,6 +6571,48 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        campaignModuleSid_ = 0L;
+        campaignSid_ = 0L;
+        moduleType_ = 0;
+        state_ = 0;
+        dateCreated_ = null;
+        if (dateCreatedBuilder_ != null) {
+          dateCreatedBuilder_.dispose();
+          dateCreatedBuilder_ = null;
+        }
+        dateModified_ = null;
+        if (dateModifiedBuilder_ != null) {
+          dateModifiedBuilder_.dispose();
+          dateModifiedBuilder_ = null;
+        }
+        scheduledStopDate_ = null;
+        if (scheduledStopDateBuilder_ != null) {
+          scheduledStopDateBuilder_.dispose();
+          scheduledStopDateBuilder_ = null;
+        }
+        actualStopDate_ = null;
+        if (actualStopDateBuilder_ != null) {
+          actualStopDateBuilder_.dispose();
+          actualStopDateBuilder_ = null;
+        }
+        hoursOfOperation_ = null;
+        if (hoursOfOperationBuilder_ != null) {
+          hoursOfOperationBuilder_.dispose();
+          hoursOfOperationBuilder_ = null;
+        }
+        details_ = null;
+        if (detailsBuilder_ != null) {
+          detailsBuilder_.dispose();
+          detailsBuilder_ = null;
+        }
+        if (attachmentsBuilder_ == null) {
+          attachments_ = java.util.Collections.emptyList();
+        } else {
+          attachments_ = null;
+          attachmentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -616,8 +6639,68 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module buildPartial() {
         com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module result = new com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module result) {
+        if (attachmentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0)) {
+            attachments_ = java.util.Collections.unmodifiableList(attachments_);
+            bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.attachments_ = attachments_;
+        } else {
+          result.attachments_ = attachmentsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.campaignModuleSid_ = campaignModuleSid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.campaignSid_ = campaignSid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.moduleType_ = moduleType_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.state_ = state_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.dateCreated_ = dateCreatedBuilder_ == null
+              ? dateCreated_
+              : dateCreatedBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.dateModified_ = dateModifiedBuilder_ == null
+              ? dateModified_
+              : dateModifiedBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.scheduledStopDate_ = scheduledStopDateBuilder_ == null
+              ? scheduledStopDate_
+              : scheduledStopDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.actualStopDate_ = actualStopDateBuilder_ == null
+              ? actualStopDate_
+              : actualStopDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.hoursOfOperation_ = hoursOfOperationBuilder_ == null
+              ? hoursOfOperation_
+              : hoursOfOperationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.details_ = detailsBuilder_ == null
+              ? details_
+              : detailsBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -664,6 +6747,62 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module other) {
         if (other == com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.getDefaultInstance()) return this;
+        if (other.getCampaignModuleSid() != 0L) {
+          setCampaignModuleSid(other.getCampaignModuleSid());
+        }
+        if (other.getCampaignSid() != 0L) {
+          setCampaignSid(other.getCampaignSid());
+        }
+        if (other.moduleType_ != 0) {
+          setModuleTypeValue(other.getModuleTypeValue());
+        }
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
+        }
+        if (other.hasDateCreated()) {
+          mergeDateCreated(other.getDateCreated());
+        }
+        if (other.hasDateModified()) {
+          mergeDateModified(other.getDateModified());
+        }
+        if (other.hasScheduledStopDate()) {
+          mergeScheduledStopDate(other.getScheduledStopDate());
+        }
+        if (other.hasActualStopDate()) {
+          mergeActualStopDate(other.getActualStopDate());
+        }
+        if (other.hasHoursOfOperation()) {
+          mergeHoursOfOperation(other.getHoursOfOperation());
+        }
+        if (other.hasDetails()) {
+          mergeDetails(other.getDetails());
+        }
+        if (attachmentsBuilder_ == null) {
+          if (!other.attachments_.isEmpty()) {
+            if (attachments_.isEmpty()) {
+              attachments_ = other.attachments_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensureAttachmentsIsMutable();
+              attachments_.addAll(other.attachments_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.attachments_.isEmpty()) {
+            if (attachmentsBuilder_.isEmpty()) {
+              attachmentsBuilder_.dispose();
+              attachmentsBuilder_ = null;
+              attachments_ = other.attachments_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              attachmentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAttachmentsFieldBuilder() : null;
+            } else {
+              attachmentsBuilder_.addAllMessages(other.attachments_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -690,6 +6829,81 @@ private static final long serialVersionUID = 0L;
               case 0:
                 done = true;
                 break;
+              case 8: {
+                campaignModuleSid_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                campaignSid_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                moduleType_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                state_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 50: {
+                input.readMessage(
+                    getDateCreatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getDateModifiedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getScheduledStopDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getActualStopDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getHoursOfOperationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getDetailsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 90
+              case 98: {
+                com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment m =
+                    input.readMessage(
+                        com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.parser(),
+                        extensionRegistry);
+                if (attachmentsBuilder_ == null) {
+                  ensureAttachmentsIsMutable();
+                  attachments_.add(m);
+                } else {
+                  attachmentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -704,6 +6918,1501 @@ private static final long serialVersionUID = 0L;
           onChanged();
         } // finally
         return this;
+      }
+      private int bitField0_;
+
+      private long campaignModuleSid_ ;
+      /**
+       * <pre>
+       * the campaign module identifier
+       * </pre>
+       *
+       * <code>int64 campaign_module_sid = 1 [json_name = "campaignModuleSid", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The campaignModuleSid.
+       */
+      @java.lang.Override
+      public long getCampaignModuleSid() {
+        return campaignModuleSid_;
+      }
+      /**
+       * <pre>
+       * the campaign module identifier
+       * </pre>
+       *
+       * <code>int64 campaign_module_sid = 1 [json_name = "campaignModuleSid", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @param value The campaignModuleSid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCampaignModuleSid(long value) {
+
+        campaignModuleSid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the campaign module identifier
+       * </pre>
+       *
+       * <code>int64 campaign_module_sid = 1 [json_name = "campaignModuleSid", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCampaignModuleSid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        campaignModuleSid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long campaignSid_ ;
+      /**
+       * <pre>
+       * the campaign identifier
+       * </pre>
+       *
+       * <code>int64 campaign_sid = 2 [json_name = "campaignSid", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The campaignSid.
+       */
+      @java.lang.Override
+      public long getCampaignSid() {
+        return campaignSid_;
+      }
+      /**
+       * <pre>
+       * the campaign identifier
+       * </pre>
+       *
+       * <code>int64 campaign_sid = 2 [json_name = "campaignSid", (.google.api.field_behavior) = REQUIRED];</code>
+       * @param value The campaignSid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCampaignSid(long value) {
+
+        campaignSid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the campaign identifier
+       * </pre>
+       *
+       * <code>int64 campaign_sid = 2 [json_name = "campaignSid", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCampaignSid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        campaignSid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int moduleType_ = 0;
+      /**
+       * <pre>
+       * module type (inbound|outbound)
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.ModuleType module_type = 3 [json_name = "moduleType", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The enum numeric value on the wire for moduleType.
+       */
+      @java.lang.Override public int getModuleTypeValue() {
+        return moduleType_;
+      }
+      /**
+       * <pre>
+       * module type (inbound|outbound)
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.ModuleType module_type = 3 [json_name = "moduleType", (.google.api.field_behavior) = REQUIRED];</code>
+       * @param value The enum numeric value on the wire for moduleType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleTypeValue(int value) {
+        moduleType_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * module type (inbound|outbound)
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.ModuleType module_type = 3 [json_name = "moduleType", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The moduleType.
+       */
+      @java.lang.Override
+      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ModuleType getModuleType() {
+        com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ModuleType result = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ModuleType.forNumber(moduleType_);
+        return result == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ModuleType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * module type (inbound|outbound)
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.ModuleType module_type = 3 [json_name = "moduleType", (.google.api.field_behavior) = REQUIRED];</code>
+       * @param value The moduleType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleType(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ModuleType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        moduleType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * module type (inbound|outbound)
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.ModuleType module_type = 3 [json_name = "moduleType", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModuleType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        moduleType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int state_ = 0;
+      /**
+       * <pre>
+       * campaign module State (running|stopped|etc.)
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState State = 4 [json_name = "State", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override public int getStateValue() {
+        return state_;
+      }
+      /**
+       * <pre>
+       * campaign module State (running|stopped|etc.)
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState State = 4 [json_name = "State", (.google.api.field_behavior) = REQUIRED];</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        state_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * campaign module State (running|stopped|etc.)
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState State = 4 [json_name = "State", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState getState() {
+        com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState result = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState.forNumber(state_);
+        return result == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * campaign module State (running|stopped|etc.)
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState State = 4 [json_name = "State", (.google.api.field_behavior) = REQUIRED];</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * campaign module State (running|stopped|etc.)
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleState State = 4 [json_name = "State", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp dateCreated_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dateCreatedBuilder_;
+      /**
+       * <pre>
+       * config data specific to the module
+       * ModuleConfig config = 5 [(google.api.field_behavior) = REQUIRED];
+       * date module was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the dateCreated field is set.
+       */
+      public boolean hasDateCreated() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * config data specific to the module
+       * ModuleConfig config = 5 [(google.api.field_behavior) = REQUIRED];
+       * date module was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The dateCreated.
+       */
+      public com.google.protobuf.Timestamp getDateCreated() {
+        if (dateCreatedBuilder_ == null) {
+          return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+        } else {
+          return dateCreatedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * config data specific to the module
+       * ModuleConfig config = 5 [(google.api.field_behavior) = REQUIRED];
+       * date module was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setDateCreated(com.google.protobuf.Timestamp value) {
+        if (dateCreatedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dateCreated_ = value;
+        } else {
+          dateCreatedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * config data specific to the module
+       * ModuleConfig config = 5 [(google.api.field_behavior) = REQUIRED];
+       * date module was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setDateCreated(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (dateCreatedBuilder_ == null) {
+          dateCreated_ = builderForValue.build();
+        } else {
+          dateCreatedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * config data specific to the module
+       * ModuleConfig config = 5 [(google.api.field_behavior) = REQUIRED];
+       * date module was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeDateCreated(com.google.protobuf.Timestamp value) {
+        if (dateCreatedBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            dateCreated_ != null &&
+            dateCreated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getDateCreatedBuilder().mergeFrom(value);
+          } else {
+            dateCreated_ = value;
+          }
+        } else {
+          dateCreatedBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * config data specific to the module
+       * ModuleConfig config = 5 [(google.api.field_behavior) = REQUIRED];
+       * date module was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearDateCreated() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        dateCreated_ = null;
+        if (dateCreatedBuilder_ != null) {
+          dateCreatedBuilder_.dispose();
+          dateCreatedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * config data specific to the module
+       * ModuleConfig config = 5 [(google.api.field_behavior) = REQUIRED];
+       * date module was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDateCreatedBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getDateCreatedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * config data specific to the module
+       * ModuleConfig config = 5 [(google.api.field_behavior) = REQUIRED];
+       * date module was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder() {
+        if (dateCreatedBuilder_ != null) {
+          return dateCreatedBuilder_.getMessageOrBuilder();
+        } else {
+          return dateCreated_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+        }
+      }
+      /**
+       * <pre>
+       * config data specific to the module
+       * ModuleConfig config = 5 [(google.api.field_behavior) = REQUIRED];
+       * date module was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDateCreatedFieldBuilder() {
+        if (dateCreatedBuilder_ == null) {
+          dateCreatedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDateCreated(),
+                  getParentForChildren(),
+                  isClean());
+          dateCreated_ = null;
+        }
+        return dateCreatedBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp dateModified_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dateModifiedBuilder_;
+      /**
+       * <pre>
+       * date module was last modified
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the dateModified field is set.
+       */
+      public boolean hasDateModified() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * date module was last modified
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The dateModified.
+       */
+      public com.google.protobuf.Timestamp getDateModified() {
+        if (dateModifiedBuilder_ == null) {
+          return dateModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+        } else {
+          return dateModifiedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * date module was last modified
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setDateModified(com.google.protobuf.Timestamp value) {
+        if (dateModifiedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dateModified_ = value;
+        } else {
+          dateModifiedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * date module was last modified
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setDateModified(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (dateModifiedBuilder_ == null) {
+          dateModified_ = builderForValue.build();
+        } else {
+          dateModifiedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * date module was last modified
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeDateModified(com.google.protobuf.Timestamp value) {
+        if (dateModifiedBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            dateModified_ != null &&
+            dateModified_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getDateModifiedBuilder().mergeFrom(value);
+          } else {
+            dateModified_ = value;
+          }
+        } else {
+          dateModifiedBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * date module was last modified
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearDateModified() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        dateModified_ = null;
+        if (dateModifiedBuilder_ != null) {
+          dateModifiedBuilder_.dispose();
+          dateModifiedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * date module was last modified
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDateModifiedBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getDateModifiedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * date module was last modified
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDateModifiedOrBuilder() {
+        if (dateModifiedBuilder_ != null) {
+          return dateModifiedBuilder_.getMessageOrBuilder();
+        } else {
+          return dateModified_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : dateModified_;
+        }
+      }
+      /**
+       * <pre>
+       * date module was last modified
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp date_modified = 7 [json_name = "dateModified", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDateModifiedFieldBuilder() {
+        if (dateModifiedBuilder_ == null) {
+          dateModifiedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDateModified(),
+                  getParentForChildren(),
+                  isClean());
+          dateModified_ = null;
+        }
+        return dateModifiedBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp scheduledStopDate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> scheduledStopDateBuilder_;
+      /**
+       * <pre>
+       * when campaign is scheduled to stop; null == not a scheduled module
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp scheduled_stop_date = 8 [json_name = "scheduledStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the scheduledStopDate field is set.
+       */
+      public boolean hasScheduledStopDate() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * when campaign is scheduled to stop; null == not a scheduled module
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp scheduled_stop_date = 8 [json_name = "scheduledStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The scheduledStopDate.
+       */
+      public com.google.protobuf.Timestamp getScheduledStopDate() {
+        if (scheduledStopDateBuilder_ == null) {
+          return scheduledStopDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : scheduledStopDate_;
+        } else {
+          return scheduledStopDateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * when campaign is scheduled to stop; null == not a scheduled module
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp scheduled_stop_date = 8 [json_name = "scheduledStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder setScheduledStopDate(com.google.protobuf.Timestamp value) {
+        if (scheduledStopDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          scheduledStopDate_ = value;
+        } else {
+          scheduledStopDateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * when campaign is scheduled to stop; null == not a scheduled module
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp scheduled_stop_date = 8 [json_name = "scheduledStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder setScheduledStopDate(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (scheduledStopDateBuilder_ == null) {
+          scheduledStopDate_ = builderForValue.build();
+        } else {
+          scheduledStopDateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * when campaign is scheduled to stop; null == not a scheduled module
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp scheduled_stop_date = 8 [json_name = "scheduledStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder mergeScheduledStopDate(com.google.protobuf.Timestamp value) {
+        if (scheduledStopDateBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            scheduledStopDate_ != null &&
+            scheduledStopDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getScheduledStopDateBuilder().mergeFrom(value);
+          } else {
+            scheduledStopDate_ = value;
+          }
+        } else {
+          scheduledStopDateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * when campaign is scheduled to stop; null == not a scheduled module
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp scheduled_stop_date = 8 [json_name = "scheduledStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder clearScheduledStopDate() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        scheduledStopDate_ = null;
+        if (scheduledStopDateBuilder_ != null) {
+          scheduledStopDateBuilder_.dispose();
+          scheduledStopDateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * when campaign is scheduled to stop; null == not a scheduled module
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp scheduled_stop_date = 8 [json_name = "scheduledStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getScheduledStopDateBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getScheduledStopDateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * when campaign is scheduled to stop; null == not a scheduled module
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp scheduled_stop_date = 8 [json_name = "scheduledStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getScheduledStopDateOrBuilder() {
+        if (scheduledStopDateBuilder_ != null) {
+          return scheduledStopDateBuilder_.getMessageOrBuilder();
+        } else {
+          return scheduledStopDate_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : scheduledStopDate_;
+        }
+      }
+      /**
+       * <pre>
+       * when campaign is scheduled to stop; null == not a scheduled module
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp scheduled_stop_date = 8 [json_name = "scheduledStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getScheduledStopDateFieldBuilder() {
+        if (scheduledStopDateBuilder_ == null) {
+          scheduledStopDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getScheduledStopDate(),
+                  getParentForChildren(),
+                  isClean());
+          scheduledStopDate_ = null;
+        }
+        return scheduledStopDateBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp actualStopDate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> actualStopDateBuilder_;
+      /**
+       * <pre>
+       * time campaign was actually stopped; null == not stopped yet
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp actual_stop_date = 9 [json_name = "actualStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the actualStopDate field is set.
+       */
+      public boolean hasActualStopDate() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       * time campaign was actually stopped; null == not stopped yet
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp actual_stop_date = 9 [json_name = "actualStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The actualStopDate.
+       */
+      public com.google.protobuf.Timestamp getActualStopDate() {
+        if (actualStopDateBuilder_ == null) {
+          return actualStopDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : actualStopDate_;
+        } else {
+          return actualStopDateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * time campaign was actually stopped; null == not stopped yet
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp actual_stop_date = 9 [json_name = "actualStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder setActualStopDate(com.google.protobuf.Timestamp value) {
+        if (actualStopDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          actualStopDate_ = value;
+        } else {
+          actualStopDateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time campaign was actually stopped; null == not stopped yet
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp actual_stop_date = 9 [json_name = "actualStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder setActualStopDate(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (actualStopDateBuilder_ == null) {
+          actualStopDate_ = builderForValue.build();
+        } else {
+          actualStopDateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time campaign was actually stopped; null == not stopped yet
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp actual_stop_date = 9 [json_name = "actualStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder mergeActualStopDate(com.google.protobuf.Timestamp value) {
+        if (actualStopDateBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            actualStopDate_ != null &&
+            actualStopDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getActualStopDateBuilder().mergeFrom(value);
+          } else {
+            actualStopDate_ = value;
+          }
+        } else {
+          actualStopDateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time campaign was actually stopped; null == not stopped yet
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp actual_stop_date = 9 [json_name = "actualStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder clearActualStopDate() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        actualStopDate_ = null;
+        if (actualStopDateBuilder_ != null) {
+          actualStopDateBuilder_.dispose();
+          actualStopDateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time campaign was actually stopped; null == not stopped yet
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp actual_stop_date = 9 [json_name = "actualStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getActualStopDateBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getActualStopDateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * time campaign was actually stopped; null == not stopped yet
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp actual_stop_date = 9 [json_name = "actualStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getActualStopDateOrBuilder() {
+        if (actualStopDateBuilder_ != null) {
+          return actualStopDateBuilder_.getMessageOrBuilder();
+        } else {
+          return actualStopDate_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : actualStopDate_;
+        }
+      }
+      /**
+       * <pre>
+       * time campaign was actually stopped; null == not stopped yet
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp actual_stop_date = 9 [json_name = "actualStopDate", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getActualStopDateFieldBuilder() {
+        if (actualStopDateBuilder_ == null) {
+          actualStopDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getActualStopDate(),
+                  getParentForChildren(),
+                  isClean());
+          actualStopDate_ = null;
+        }
+        return actualStopDateBuilder_;
+      }
+
+      private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange hoursOfOperation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRangeOrBuilder> hoursOfOperationBuilder_;
+      /**
+       * <pre>
+       * campaign module operating time; nullable
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 10 [json_name = "hoursOfOperation", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the hoursOfOperation field is set.
+       */
+      public boolean hasHoursOfOperation() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <pre>
+       * campaign module operating time; nullable
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 10 [json_name = "hoursOfOperation", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The hoursOfOperation.
+       */
+      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange getHoursOfOperation() {
+        if (hoursOfOperationBuilder_ == null) {
+          return hoursOfOperation_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange.getDefaultInstance() : hoursOfOperation_;
+        } else {
+          return hoursOfOperationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * campaign module operating time; nullable
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 10 [json_name = "hoursOfOperation", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder setHoursOfOperation(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange value) {
+        if (hoursOfOperationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hoursOfOperation_ = value;
+        } else {
+          hoursOfOperationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * campaign module operating time; nullable
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 10 [json_name = "hoursOfOperation", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder setHoursOfOperation(
+          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange.Builder builderForValue) {
+        if (hoursOfOperationBuilder_ == null) {
+          hoursOfOperation_ = builderForValue.build();
+        } else {
+          hoursOfOperationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * campaign module operating time; nullable
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 10 [json_name = "hoursOfOperation", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder mergeHoursOfOperation(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange value) {
+        if (hoursOfOperationBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            hoursOfOperation_ != null &&
+            hoursOfOperation_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange.getDefaultInstance()) {
+            getHoursOfOperationBuilder().mergeFrom(value);
+          } else {
+            hoursOfOperation_ = value;
+          }
+        } else {
+          hoursOfOperationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * campaign module operating time; nullable
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 10 [json_name = "hoursOfOperation", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder clearHoursOfOperation() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        hoursOfOperation_ = null;
+        if (hoursOfOperationBuilder_ != null) {
+          hoursOfOperationBuilder_.dispose();
+          hoursOfOperationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * campaign module operating time; nullable
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 10 [json_name = "hoursOfOperation", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange.Builder getHoursOfOperationBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getHoursOfOperationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * campaign module operating time; nullable
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 10 [json_name = "hoursOfOperation", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRangeOrBuilder getHoursOfOperationOrBuilder() {
+        if (hoursOfOperationBuilder_ != null) {
+          return hoursOfOperationBuilder_.getMessageOrBuilder();
+        } else {
+          return hoursOfOperation_ == null ?
+              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange.getDefaultInstance() : hoursOfOperation_;
+        }
+      }
+      /**
+       * <pre>
+       * campaign module operating time; nullable
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 10 [json_name = "hoursOfOperation", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRangeOrBuilder> 
+          getHoursOfOperationFieldBuilder() {
+        if (hoursOfOperationBuilder_ == null) {
+          hoursOfOperationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRangeOrBuilder>(
+                  getHoursOfOperation(),
+                  getParentForChildren(),
+                  isClean());
+          hoursOfOperation_ = null;
+        }
+        return hoursOfOperationBuilder_;
+      }
+
+      private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details details_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.DetailsOrBuilder> detailsBuilder_;
+      /**
+       * <pre>
+       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 11 [json_name = "details", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the details field is set.
+       */
+      public boolean hasDetails() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <pre>
+       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 11 [json_name = "details", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The details.
+       */
+      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details getDetails() {
+        if (detailsBuilder_ == null) {
+          return details_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.getDefaultInstance() : details_;
+        } else {
+          return detailsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 11 [json_name = "details", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder setDetails(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details value) {
+        if (detailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          details_ = value;
+        } else {
+          detailsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 11 [json_name = "details", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder setDetails(
+          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.Builder builderForValue) {
+        if (detailsBuilder_ == null) {
+          details_ = builderForValue.build();
+        } else {
+          detailsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 11 [json_name = "details", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder mergeDetails(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details value) {
+        if (detailsBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            details_ != null &&
+            details_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.getDefaultInstance()) {
+            getDetailsBuilder().mergeFrom(value);
+          } else {
+            details_ = value;
+          }
+        } else {
+          detailsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 11 [json_name = "details", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder clearDetails() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        details_ = null;
+        if (detailsBuilder_ != null) {
+          detailsBuilder_.dispose();
+          detailsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 11 [json_name = "details", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.Builder getDetailsBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getDetailsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 11 [json_name = "details", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.DetailsOrBuilder getDetailsOrBuilder() {
+        if (detailsBuilder_ != null) {
+          return detailsBuilder_.getMessageOrBuilder();
+        } else {
+          return details_ == null ?
+              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.getDefaultInstance() : details_;
+        }
+      }
+      /**
+       * <pre>
+       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
+       * </pre>
+       *
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 11 [json_name = "details", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.DetailsOrBuilder> 
+          getDetailsFieldBuilder() {
+        if (detailsBuilder_ == null) {
+          detailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.DetailsOrBuilder>(
+                  getDetails(),
+                  getParentForChildren(),
+                  isClean());
+          details_ = null;
+        }
+        return detailsBuilder_;
+      }
+
+      private java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment> attachments_ =
+        java.util.Collections.emptyList();
+      private void ensureAttachmentsIsMutable() {
+        if (!((bitField0_ & 0x00000400) != 0)) {
+          attachments_ = new java.util.ArrayList<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment>(attachments_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.AttachmentOrBuilder> attachmentsBuilder_;
+
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment> getAttachmentsList() {
+        if (attachmentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(attachments_);
+        } else {
+          return attachmentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public int getAttachmentsCount() {
+        if (attachmentsBuilder_ == null) {
+          return attachments_.size();
+        } else {
+          return attachmentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment getAttachments(int index) {
+        if (attachmentsBuilder_ == null) {
+          return attachments_.get(index);
+        } else {
+          return attachmentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder setAttachments(
+          int index, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment value) {
+        if (attachmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttachmentsIsMutable();
+          attachments_.set(index, value);
+          onChanged();
+        } else {
+          attachmentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder setAttachments(
+          int index, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.Builder builderForValue) {
+        if (attachmentsBuilder_ == null) {
+          ensureAttachmentsIsMutable();
+          attachments_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          attachmentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder addAttachments(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment value) {
+        if (attachmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttachmentsIsMutable();
+          attachments_.add(value);
+          onChanged();
+        } else {
+          attachmentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder addAttachments(
+          int index, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment value) {
+        if (attachmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttachmentsIsMutable();
+          attachments_.add(index, value);
+          onChanged();
+        } else {
+          attachmentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder addAttachments(
+          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.Builder builderForValue) {
+        if (attachmentsBuilder_ == null) {
+          ensureAttachmentsIsMutable();
+          attachments_.add(builderForValue.build());
+          onChanged();
+        } else {
+          attachmentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder addAttachments(
+          int index, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.Builder builderForValue) {
+        if (attachmentsBuilder_ == null) {
+          ensureAttachmentsIsMutable();
+          attachments_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          attachmentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder addAllAttachments(
+          java.lang.Iterable<? extends com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment> values) {
+        if (attachmentsBuilder_ == null) {
+          ensureAttachmentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, attachments_);
+          onChanged();
+        } else {
+          attachmentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder clearAttachments() {
+        if (attachmentsBuilder_ == null) {
+          attachments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          attachmentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder removeAttachments(int index) {
+        if (attachmentsBuilder_ == null) {
+          ensureAttachmentsIsMutable();
+          attachments_.remove(index);
+          onChanged();
+        } else {
+          attachmentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.Builder getAttachmentsBuilder(
+          int index) {
+        return getAttachmentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.AttachmentOrBuilder getAttachmentsOrBuilder(
+          int index) {
+        if (attachmentsBuilder_ == null) {
+          return attachments_.get(index);  } else {
+          return attachmentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public java.util.List<? extends com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.AttachmentOrBuilder> 
+           getAttachmentsOrBuilderList() {
+        if (attachmentsBuilder_ != null) {
+          return attachmentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(attachments_);
+        }
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.Builder addAttachmentsBuilder() {
+        return getAttachmentsFieldBuilder().addBuilder(
+            com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.Builder addAttachmentsBuilder(
+          int index) {
+        return getAttachmentsFieldBuilder().addBuilder(
+            index, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * attachments
+       * </pre>
+       *
+       * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module.Attachment attachments = 12 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.Builder> 
+           getAttachmentsBuilderList() {
+        return getAttachmentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.AttachmentOrBuilder> 
+          getAttachmentsFieldBuilder() {
+        if (attachmentsBuilder_ == null) {
+          attachmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Attachment.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.AttachmentOrBuilder>(
+                  attachments_,
+                  ((bitField0_ & 0x00000400) != 0),
+                  getParentForChildren(),
+                  isClean());
+          attachments_ = null;
+        }
+        return attachmentsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -916,30 +8625,30 @@ private static final long serialVersionUID = 0L;
     return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
   }
 
-  public static final int STATUS_FIELD_NUMBER = 5;
-  private int status_ = 0;
+  public static final int STATE_FIELD_NUMBER = 5;
+  private int state_ = 0;
   /**
    * <pre>
-   * campaign status (i.e. running|stopped|paused|etc.)
+   * campaign State (i.e. running|stopped|paused|etc.)
    * </pre>
    *
-   * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus status = 5 [json_name = "status"];</code>
-   * @return The enum numeric value on the wire for status.
+   * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignState State = 5 [json_name = "State"];</code>
+   * @return The enum numeric value on the wire for state.
    */
-  @java.lang.Override public int getStatusValue() {
-    return status_;
+  @java.lang.Override public int getStateValue() {
+    return state_;
   }
   /**
    * <pre>
-   * campaign status (i.e. running|stopped|paused|etc.)
+   * campaign State (i.e. running|stopped|paused|etc.)
    * </pre>
    *
-   * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus status = 5 [json_name = "status"];</code>
-   * @return The status.
+   * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignState State = 5 [json_name = "State"];</code>
+   * @return The state.
    */
-  @java.lang.Override public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus getStatus() {
-    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus result = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus.forNumber(status_);
-    return result == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignState getState() {
+    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignState result = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignState.forNumber(state_);
+    return result == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignState.UNRECOGNIZED : result;
   }
 
   public static final int CHANNEL_TYPE_FIELD_NUMBER = 6;
@@ -949,7 +8658,7 @@ private static final long serialVersionUID = 0L;
    * campaign channel type (chat|email|sms|etc.)
    * </pre>
    *
-   * <code>.tcnapi.omni.campaigns.v1.Campaign.ChannelType channel_type = 6 [json_name = "channelType"];</code>
+   * <code>.tcnapi.omni.campaigns.v1.ChannelType channel_type = 6 [json_name = "channelType"];</code>
    * @return The enum numeric value on the wire for channelType.
    */
   @java.lang.Override public int getChannelTypeValue() {
@@ -960,12 +8669,12 @@ private static final long serialVersionUID = 0L;
    * campaign channel type (chat|email|sms|etc.)
    * </pre>
    *
-   * <code>.tcnapi.omni.campaigns.v1.Campaign.ChannelType channel_type = 6 [json_name = "channelType"];</code>
+   * <code>.tcnapi.omni.campaigns.v1.ChannelType channel_type = 6 [json_name = "channelType"];</code>
    * @return The channelType.
    */
-  @java.lang.Override public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.ChannelType getChannelType() {
-    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.ChannelType result = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.ChannelType.forNumber(channelType_);
-    return result == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.ChannelType.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ChannelType getChannelType() {
+    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ChannelType result = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ChannelType.forNumber(channelType_);
+    return result == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ChannelType.UNRECOGNIZED : result;
   }
 
   public static final int CREATE_TIME_FIELD_NUMBER = 7;
@@ -1059,6 +8768,59 @@ private static final long serialVersionUID = 0L;
     return projectSid_;
   }
 
+  public static final int TIME_ZONE_FIELD_NUMBER = 10;
+  private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper timeZone_;
+  /**
+   * <pre>
+   * the campaign timezone
+   * </pre>
+   *
+   * <code>.tcnapi.omni.campaigns.v1.TimeZoneWrapper time_zone = 10 [json_name = "timeZone", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return Whether the timeZone field is set.
+   */
+  @java.lang.Override
+  public boolean hasTimeZone() {
+    return timeZone_ != null;
+  }
+  /**
+   * <pre>
+   * the campaign timezone
+   * </pre>
+   *
+   * <code>.tcnapi.omni.campaigns.v1.TimeZoneWrapper time_zone = 10 [json_name = "timeZone", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The timeZone.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper getTimeZone() {
+    return timeZone_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper.getDefaultInstance() : timeZone_;
+  }
+  /**
+   * <pre>
+   * the campaign timezone
+   * </pre>
+   *
+   * <code>.tcnapi.omni.campaigns.v1.TimeZoneWrapper time_zone = 10 [json_name = "timeZone", (.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapperOrBuilder getTimeZoneOrBuilder() {
+    return timeZone_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper.getDefaultInstance() : timeZone_;
+  }
+
+  public static final int SHORTEN_URL_FIELD_NUMBER = 11;
+  private boolean shortenUrl_ = false;
+  /**
+   * <pre>
+   * if url's should be shortened
+   * </pre>
+   *
+   * <code>bool shorten_url = 11 [json_name = "shortenUrl", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The shortenUrl.
+   */
+  @java.lang.Override
+  public boolean getShortenUrl() {
+    return shortenUrl_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1085,10 +8847,10 @@ private static final long serialVersionUID = 0L;
     if (startDate_ != null) {
       output.writeMessage(4, getStartDate());
     }
-    if (status_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus.SCHEDULING.getNumber()) {
-      output.writeEnum(5, status_);
+    if (state_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignState.SCHEDULING.getNumber()) {
+      output.writeEnum(5, state_);
     }
-    if (channelType_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
+    if (channelType_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       output.writeEnum(6, channelType_);
     }
     if (createTime_ != null) {
@@ -1099,6 +8861,12 @@ private static final long serialVersionUID = 0L;
     }
     if (projectSid_ != 0L) {
       output.writeInt64(9, projectSid_);
+    }
+    if (timeZone_ != null) {
+      output.writeMessage(10, getTimeZone());
+    }
+    if (shortenUrl_ != false) {
+      output.writeBool(11, shortenUrl_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1123,11 +8891,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getStartDate());
     }
-    if (status_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus.SCHEDULING.getNumber()) {
+    if (state_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignState.SCHEDULING.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(5, status_);
+        .computeEnumSize(5, state_);
     }
-    if (channelType_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
+    if (channelType_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, channelType_);
     }
@@ -1142,6 +8910,14 @@ private static final long serialVersionUID = 0L;
     if (projectSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(9, projectSid_);
+    }
+    if (timeZone_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getTimeZone());
+    }
+    if (shortenUrl_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(11, shortenUrl_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1169,7 +8945,7 @@ private static final long serialVersionUID = 0L;
       if (!getStartDate()
           .equals(other.getStartDate())) return false;
     }
-    if (status_ != other.status_) return false;
+    if (state_ != other.state_) return false;
     if (channelType_ != other.channelType_) return false;
     if (hasCreateTime() != other.hasCreateTime()) return false;
     if (hasCreateTime()) {
@@ -1183,6 +8959,13 @@ private static final long serialVersionUID = 0L;
     }
     if (getProjectSid()
         != other.getProjectSid()) return false;
+    if (hasTimeZone() != other.hasTimeZone()) return false;
+    if (hasTimeZone()) {
+      if (!getTimeZone()
+          .equals(other.getTimeZone())) return false;
+    }
+    if (getShortenUrl()
+        != other.getShortenUrl()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1205,8 +8988,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + START_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getStartDate().hashCode();
     }
-    hash = (37 * hash) + STATUS_FIELD_NUMBER;
-    hash = (53 * hash) + status_;
+    hash = (37 * hash) + STATE_FIELD_NUMBER;
+    hash = (53 * hash) + state_;
     hash = (37 * hash) + CHANNEL_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + channelType_;
     if (hasCreateTime()) {
@@ -1220,6 +9003,13 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PROJECT_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getProjectSid());
+    if (hasTimeZone()) {
+      hash = (37 * hash) + TIME_ZONE_FIELD_NUMBER;
+      hash = (53 * hash) + getTimeZone().hashCode();
+    }
+    hash = (37 * hash) + SHORTEN_URL_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getShortenUrl());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1363,7 +9153,7 @@ private static final long serialVersionUID = 0L;
         startDateBuilder_.dispose();
         startDateBuilder_ = null;
       }
-      status_ = 0;
+      state_ = 0;
       channelType_ = 0;
       createTime_ = null;
       if (createTimeBuilder_ != null) {
@@ -1376,6 +9166,12 @@ private static final long serialVersionUID = 0L;
         updateTimeBuilder_ = null;
       }
       projectSid_ = 0L;
+      timeZone_ = null;
+      if (timeZoneBuilder_ != null) {
+        timeZoneBuilder_.dispose();
+        timeZoneBuilder_ = null;
+      }
+      shortenUrl_ = false;
       return this;
     }
 
@@ -1424,7 +9220,7 @@ private static final long serialVersionUID = 0L;
             : startDateBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.status_ = status_;
+        result.state_ = state_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.channelType_ = channelType_;
@@ -1441,6 +9237,14 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.projectSid_ = projectSid_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.timeZone_ = timeZoneBuilder_ == null
+            ? timeZone_
+            : timeZoneBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.shortenUrl_ = shortenUrl_;
       }
     }
 
@@ -1504,8 +9308,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasStartDate()) {
         mergeStartDate(other.getStartDate());
       }
-      if (other.status_ != 0) {
-        setStatusValue(other.getStatusValue());
+      if (other.state_ != 0) {
+        setStateValue(other.getStateValue());
       }
       if (other.channelType_ != 0) {
         setChannelTypeValue(other.getChannelTypeValue());
@@ -1518,6 +9322,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getProjectSid() != 0L) {
         setProjectSid(other.getProjectSid());
+      }
+      if (other.hasTimeZone()) {
+        mergeTimeZone(other.getTimeZone());
+      }
+      if (other.getShortenUrl() != false) {
+        setShortenUrl(other.getShortenUrl());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1568,7 +9378,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 34
             case 40: {
-              status_ = input.readEnum();
+              state_ = input.readEnum();
               bitField0_ |= 0x00000010;
               break;
             } // case 40
@@ -1596,6 +9406,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 72
+            case 82: {
+              input.readMessage(
+                  getTimeZoneFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            case 88: {
+              shortenUrl_ = input.readBool();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 88
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1996,75 +9818,75 @@ private static final long serialVersionUID = 0L;
       return startDateBuilder_;
     }
 
-    private int status_ = 0;
+    private int state_ = 0;
     /**
      * <pre>
-     * campaign status (i.e. running|stopped|paused|etc.)
+     * campaign State (i.e. running|stopped|paused|etc.)
      * </pre>
      *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus status = 5 [json_name = "status"];</code>
-     * @return The enum numeric value on the wire for status.
+     * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignState State = 5 [json_name = "State"];</code>
+     * @return The enum numeric value on the wire for state.
      */
-    @java.lang.Override public int getStatusValue() {
-      return status_;
+    @java.lang.Override public int getStateValue() {
+      return state_;
     }
     /**
      * <pre>
-     * campaign status (i.e. running|stopped|paused|etc.)
+     * campaign State (i.e. running|stopped|paused|etc.)
      * </pre>
      *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus status = 5 [json_name = "status"];</code>
-     * @param value The enum numeric value on the wire for status to set.
+     * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignState State = 5 [json_name = "State"];</code>
+     * @param value The enum numeric value on the wire for state to set.
      * @return This builder for chaining.
      */
-    public Builder setStatusValue(int value) {
-      status_ = value;
+    public Builder setStateValue(int value) {
+      state_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * campaign status (i.e. running|stopped|paused|etc.)
+     * campaign State (i.e. running|stopped|paused|etc.)
      * </pre>
      *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus status = 5 [json_name = "status"];</code>
-     * @return The status.
+     * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignState State = 5 [json_name = "State"];</code>
+     * @return The state.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus getStatus() {
-      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus result = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus.forNumber(status_);
-      return result == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignState getState() {
+      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignState result = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignState.forNumber(state_);
+      return result == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignState.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * campaign status (i.e. running|stopped|paused|etc.)
+     * campaign State (i.e. running|stopped|paused|etc.)
      * </pre>
      *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus status = 5 [json_name = "status"];</code>
-     * @param value The status to set.
+     * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignState State = 5 [json_name = "State"];</code>
+     * @param value The state to set.
      * @return This builder for chaining.
      */
-    public Builder setStatus(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus value) {
+    public Builder setState(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignState value) {
       if (value == null) {
         throw new NullPointerException();
       }
       bitField0_ |= 0x00000010;
-      status_ = value.getNumber();
+      state_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * campaign status (i.e. running|stopped|paused|etc.)
+     * campaign State (i.e. running|stopped|paused|etc.)
      * </pre>
      *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus status = 5 [json_name = "status"];</code>
+     * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignState State = 5 [json_name = "State"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearStatus() {
+    public Builder clearState() {
       bitField0_ = (bitField0_ & ~0x00000010);
-      status_ = 0;
+      state_ = 0;
       onChanged();
       return this;
     }
@@ -2075,7 +9897,7 @@ private static final long serialVersionUID = 0L;
      * campaign channel type (chat|email|sms|etc.)
      * </pre>
      *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.ChannelType channel_type = 6 [json_name = "channelType"];</code>
+     * <code>.tcnapi.omni.campaigns.v1.ChannelType channel_type = 6 [json_name = "channelType"];</code>
      * @return The enum numeric value on the wire for channelType.
      */
     @java.lang.Override public int getChannelTypeValue() {
@@ -2086,7 +9908,7 @@ private static final long serialVersionUID = 0L;
      * campaign channel type (chat|email|sms|etc.)
      * </pre>
      *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.ChannelType channel_type = 6 [json_name = "channelType"];</code>
+     * <code>.tcnapi.omni.campaigns.v1.ChannelType channel_type = 6 [json_name = "channelType"];</code>
      * @param value The enum numeric value on the wire for channelType to set.
      * @return This builder for chaining.
      */
@@ -2101,24 +9923,24 @@ private static final long serialVersionUID = 0L;
      * campaign channel type (chat|email|sms|etc.)
      * </pre>
      *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.ChannelType channel_type = 6 [json_name = "channelType"];</code>
+     * <code>.tcnapi.omni.campaigns.v1.ChannelType channel_type = 6 [json_name = "channelType"];</code>
      * @return The channelType.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.ChannelType getChannelType() {
-      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.ChannelType result = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.ChannelType.forNumber(channelType_);
-      return result == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.ChannelType.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ChannelType getChannelType() {
+      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ChannelType result = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ChannelType.forNumber(channelType_);
+      return result == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ChannelType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * campaign channel type (chat|email|sms|etc.)
      * </pre>
      *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.ChannelType channel_type = 6 [json_name = "channelType"];</code>
+     * <code>.tcnapi.omni.campaigns.v1.ChannelType channel_type = 6 [json_name = "channelType"];</code>
      * @param value The channelType to set.
      * @return This builder for chaining.
      */
-    public Builder setChannelType(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.ChannelType value) {
+    public Builder setChannelType(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ChannelType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -2132,7 +9954,7 @@ private static final long serialVersionUID = 0L;
      * campaign channel type (chat|email|sms|etc.)
      * </pre>
      *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.ChannelType channel_type = 6 [json_name = "channelType"];</code>
+     * <code>.tcnapi.omni.campaigns.v1.ChannelType channel_type = 6 [json_name = "channelType"];</code>
      * @return This builder for chaining.
      */
     public Builder clearChannelType() {
@@ -2492,6 +10314,205 @@ private static final long serialVersionUID = 0L;
     public Builder clearProjectSid() {
       bitField0_ = (bitField0_ & ~0x00000100);
       projectSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper timeZone_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapperOrBuilder> timeZoneBuilder_;
+    /**
+     * <pre>
+     * the campaign timezone
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.TimeZoneWrapper time_zone = 10 [json_name = "timeZone", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return Whether the timeZone field is set.
+     */
+    public boolean hasTimeZone() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * the campaign timezone
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.TimeZoneWrapper time_zone = 10 [json_name = "timeZone", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The timeZone.
+     */
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper getTimeZone() {
+      if (timeZoneBuilder_ == null) {
+        return timeZone_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper.getDefaultInstance() : timeZone_;
+      } else {
+        return timeZoneBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * the campaign timezone
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.TimeZoneWrapper time_zone = 10 [json_name = "timeZone", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder setTimeZone(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper value) {
+      if (timeZoneBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        timeZone_ = value;
+      } else {
+        timeZoneBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the campaign timezone
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.TimeZoneWrapper time_zone = 10 [json_name = "timeZone", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder setTimeZone(
+        com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper.Builder builderForValue) {
+      if (timeZoneBuilder_ == null) {
+        timeZone_ = builderForValue.build();
+      } else {
+        timeZoneBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the campaign timezone
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.TimeZoneWrapper time_zone = 10 [json_name = "timeZone", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder mergeTimeZone(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper value) {
+      if (timeZoneBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0) &&
+          timeZone_ != null &&
+          timeZone_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper.getDefaultInstance()) {
+          getTimeZoneBuilder().mergeFrom(value);
+        } else {
+          timeZone_ = value;
+        }
+      } else {
+        timeZoneBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the campaign timezone
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.TimeZoneWrapper time_zone = 10 [json_name = "timeZone", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder clearTimeZone() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      timeZone_ = null;
+      if (timeZoneBuilder_ != null) {
+        timeZoneBuilder_.dispose();
+        timeZoneBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the campaign timezone
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.TimeZoneWrapper time_zone = 10 [json_name = "timeZone", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper.Builder getTimeZoneBuilder() {
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return getTimeZoneFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the campaign timezone
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.TimeZoneWrapper time_zone = 10 [json_name = "timeZone", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapperOrBuilder getTimeZoneOrBuilder() {
+      if (timeZoneBuilder_ != null) {
+        return timeZoneBuilder_.getMessageOrBuilder();
+      } else {
+        return timeZone_ == null ?
+            com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper.getDefaultInstance() : timeZone_;
+      }
+    }
+    /**
+     * <pre>
+     * the campaign timezone
+     * </pre>
+     *
+     * <code>.tcnapi.omni.campaigns.v1.TimeZoneWrapper time_zone = 10 [json_name = "timeZone", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapperOrBuilder> 
+        getTimeZoneFieldBuilder() {
+      if (timeZoneBuilder_ == null) {
+        timeZoneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapperOrBuilder>(
+                getTimeZone(),
+                getParentForChildren(),
+                isClean());
+        timeZone_ = null;
+      }
+      return timeZoneBuilder_;
+    }
+
+    private boolean shortenUrl_ ;
+    /**
+     * <pre>
+     * if url's should be shortened
+     * </pre>
+     *
+     * <code>bool shorten_url = 11 [json_name = "shortenUrl", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The shortenUrl.
+     */
+    @java.lang.Override
+    public boolean getShortenUrl() {
+      return shortenUrl_;
+    }
+    /**
+     * <pre>
+     * if url's should be shortened
+     * </pre>
+     *
+     * <code>bool shorten_url = 11 [json_name = "shortenUrl", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The shortenUrl to set.
+     * @return This builder for chaining.
+     */
+    public Builder setShortenUrl(boolean value) {
+
+      shortenUrl_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * if url's should be shortened
+     * </pre>
+     *
+     * <code>bool shorten_url = 11 [json_name = "shortenUrl", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearShortenUrl() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      shortenUrl_ = false;
       onChanged();
       return this;
     }

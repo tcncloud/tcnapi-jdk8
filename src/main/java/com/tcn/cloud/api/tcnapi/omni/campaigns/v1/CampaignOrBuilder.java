@@ -86,29 +86,29 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * campaign status (i.e. running|stopped|paused|etc.)
+   * campaign State (i.e. running|stopped|paused|etc.)
    * </pre>
    *
-   * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus status = 5 [json_name = "status"];</code>
-   * @return The enum numeric value on the wire for status.
+   * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignState State = 5 [json_name = "State"];</code>
+   * @return The enum numeric value on the wire for state.
    */
-  int getStatusValue();
+  int getStateValue();
   /**
    * <pre>
-   * campaign status (i.e. running|stopped|paused|etc.)
+   * campaign State (i.e. running|stopped|paused|etc.)
    * </pre>
    *
-   * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus status = 5 [json_name = "status"];</code>
-   * @return The status.
+   * <code>.tcnapi.omni.campaigns.v1.Campaign.CampaignState State = 5 [json_name = "State"];</code>
+   * @return The state.
    */
-  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignStatus getStatus();
+  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.CampaignState getState();
 
   /**
    * <pre>
    * campaign channel type (chat|email|sms|etc.)
    * </pre>
    *
-   * <code>.tcnapi.omni.campaigns.v1.Campaign.ChannelType channel_type = 6 [json_name = "channelType"];</code>
+   * <code>.tcnapi.omni.campaigns.v1.ChannelType channel_type = 6 [json_name = "channelType"];</code>
    * @return The enum numeric value on the wire for channelType.
    */
   int getChannelTypeValue();
@@ -117,10 +117,10 @@ public interface CampaignOrBuilder extends
    * campaign channel type (chat|email|sms|etc.)
    * </pre>
    *
-   * <code>.tcnapi.omni.campaigns.v1.Campaign.ChannelType channel_type = 6 [json_name = "channelType"];</code>
+   * <code>.tcnapi.omni.campaigns.v1.ChannelType channel_type = 6 [json_name = "channelType"];</code>
    * @return The channelType.
    */
-  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.ChannelType getChannelType();
+  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ChannelType getChannelType();
 
   /**
    * <pre>
@@ -185,4 +185,41 @@ public interface CampaignOrBuilder extends
    * @return The projectSid.
    */
   long getProjectSid();
+
+  /**
+   * <pre>
+   * the campaign timezone
+   * </pre>
+   *
+   * <code>.tcnapi.omni.campaigns.v1.TimeZoneWrapper time_zone = 10 [json_name = "timeZone", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return Whether the timeZone field is set.
+   */
+  boolean hasTimeZone();
+  /**
+   * <pre>
+   * the campaign timezone
+   * </pre>
+   *
+   * <code>.tcnapi.omni.campaigns.v1.TimeZoneWrapper time_zone = 10 [json_name = "timeZone", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The timeZone.
+   */
+  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapper getTimeZone();
+  /**
+   * <pre>
+   * the campaign timezone
+   * </pre>
+   *
+   * <code>.tcnapi.omni.campaigns.v1.TimeZoneWrapper time_zone = 10 [json_name = "timeZone", (.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.TimeZoneWrapperOrBuilder getTimeZoneOrBuilder();
+
+  /**
+   * <pre>
+   * if url's should be shortened
+   * </pre>
+   *
+   * <code>bool shorten_url = 11 [json_name = "shortenUrl", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The shortenUrl.
+   */
+  boolean getShortenUrl();
 }

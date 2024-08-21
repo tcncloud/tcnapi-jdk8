@@ -24,6 +24,36 @@ public final class CampaignsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Attachment_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Attachment_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_tcnapi_omni_campaigns_v1_TimeZoneWrapper_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_tcnapi_omni_campaigns_v1_TimeZoneWrapper_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_tcnapi_omni_campaigns_v1_WeekdayTimeRange_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_tcnapi_omni_campaigns_v1_WeekdayTimeRange_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_tcnapi_omni_campaigns_v1_WeekdayTimeRangeEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_tcnapi_omni_campaigns_v1_WeekdayTimeRangeEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_tcnapi_omni_campaigns_v1_Weekday_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_tcnapi_omni_campaigns_v1_Weekday_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -37,36 +67,148 @@ public final class CampaignsProto {
       "to\022\030tcnapi.omni.campaigns.v1\032\037google/api" +
       "/field_behavior.proto\032\031google/api/resour" +
       "ce.proto\032\037google/protobuf/timestamp.prot" +
-      "o\"\337\007\n\010Campaign\022\027\n\004name\030\001 \001(\003B\003\340A\010R\004name\022" +
-      "\031\n\005title\030\002 \001(\tB\003\340A\002R\005title\022%\n\013descriptio" +
-      "n\030\003 \001(\tB\003\340A\002R\013description\0229\n\nstart_date\030" +
-      "\004 \001(\0132\032.google.protobuf.TimestampR\tstart" +
-      "Date\022I\n\006status\030\005 \001(\01621.tcnapi.omni.campa" +
-      "igns.v1.Campaign.CampaignStatusR\006status\022" +
-      "Q\n\014channel_type\030\006 \001(\0162..tcnapi.omni.camp" +
-      "aigns.v1.Campaign.ChannelTypeR\013channelTy" +
-      "pe\022@\n\013create_time\030\007 \001(\0132\032.google.protobu" +
-      "f.TimestampB\003\340A\003R\ncreateTime\022@\n\013update_t" +
-      "ime\030\010 \001(\0132\032.google.protobuf.TimestampB\003\340" +
-      "A\003R\nupdateTime\022$\n\013project_sid\030\t \001(\003B\003\340A\002" +
-      "R\nprojectSid\032\010\n\006Module\"\205\001\n\013ChannelType\022\026" +
-      "\n\022CHANNEL_TYPE_EMAIL\020\000\022\024\n\020CHANNEL_TYPE_S" +
-      "MS\020\001\022\025\n\021CHANNEL_TYPE_CHAT\020\002\022\026\n\022CHANNEL_T" +
-      "YPE_VOICE\020\003\022\031\n\025CHANNEL_TYPE_WHATSAPP\020\004\"\362" +
-      "\001\n\016CampaignStatus\022\016\n\nSCHEDULING\020\000\022\014\n\007RUN" +
-      "NING\020\310\001\022\013\n\006PAUSED\020\220\003\022\016\n\tCOMPLETED\020\330\004\022\r\n\010" +
-      "ARCHIVED\020\240\006\"\006\010\212\005\020\212\005\"\006\010\274\005\020\274\005\"\006\010\356\005\020\356\005\"\004\010d\020" +
-      "d\"\006\010\372\001\020\372\001\"\006\010\254\002\020\254\002\"\006\010\364\003\020\364\003*\020COMPLETED_SUM" +
-      "MED*\tCANCELLED*\020CANCELLED_SUMMED*\tPREPAR" +
-      "ING*\rRUNNING_ERROR*\rERROR_STANDBY*\010RESUM" +
-      "ING:n\352Ak\n\"campaigns.omni.tcnapi.com/Camp" +
-      "aign\0220regions/{region}/orgs/{org}/campai" +
-      "gns/{campaign}*\tcampaigns2\010campaignB\277\001\n*" +
-      "com.tcn.cloud.api.tcnapi.omni.campaigns." +
-      "v1B\016CampaignsProtoP\001\242\002\003TOC\252\002\030Tcnapi.Omni" +
-      ".Campaigns.V1\312\002\030Tcnapi\\Omni\\Campaigns\\V1" +
-      "\342\002$Tcnapi\\Omni\\Campaigns\\V1\\GPBMetadata\352" +
-      "\002\033Tcnapi::Omni::Campaigns::V1b\006proto3"
+      "o\032\036google/protobuf/wrappers.proto\"\362\030\n\010Ca" +
+      "mpaign\022\027\n\004name\030\001 \001(\003B\003\340A\010R\004name\022\031\n\005title" +
+      "\030\002 \001(\tB\003\340A\002R\005title\022%\n\013description\030\003 \001(\tB" +
+      "\003\340A\002R\013description\0229\n\nstart_date\030\004 \001(\0132\032." +
+      "google.protobuf.TimestampR\tstartDate\022F\n\005" +
+      "State\030\005 \001(\01620.tcnapi.omni.campaigns.v1.C" +
+      "ampaign.CampaignStateR\005State\022H\n\014channel_" +
+      "type\030\006 \001(\0162%.tcnapi.omni.campaigns.v1.Ch" +
+      "annelTypeR\013channelType\022@\n\013create_time\030\007 " +
+      "\001(\0132\032.google.protobuf.TimestampB\003\340A\003R\ncr" +
+      "eateTime\022@\n\013update_time\030\010 \001(\0132\032.google.p" +
+      "rotobuf.TimestampB\003\340A\003R\nupdateTime\022$\n\013pr" +
+      "oject_sid\030\t \001(\003B\003\340A\002R\nprojectSid\022K\n\ttime" +
+      "_zone\030\n \001(\0132).tcnapi.omni.campaigns.v1.T" +
+      "imeZoneWrapperB\003\340A\001R\010timeZone\022$\n\013shorten" +
+      "_url\030\013 \001(\010B\003\340A\001R\nshortenUrl\032\275\021\n\006Module\0223" +
+      "\n\023campaign_module_sid\030\001 \001(\003B\003\340A\001R\021campai" +
+      "gnModuleSid\022&\n\014campaign_sid\030\002 \001(\003B\003\340A\002R\013" +
+      "campaignSid\022J\n\013module_type\030\003 \001(\0162$.tcnap" +
+      "i.omni.campaigns.v1.ModuleTypeB\003\340A\002R\nmod" +
+      "uleType\022P\n\005State\030\004 \001(\01625.tcnapi.omni.cam" +
+      "paigns.v1.Campaign.Module.ModuleStateB\003\340" +
+      "A\002R\005State\022B\n\014date_created\030\006 \001(\0132\032.google" +
+      ".protobuf.TimestampB\003\340A\003R\013dateCreated\022D\n" +
+      "\rdate_modified\030\007 \001(\0132\032.google.protobuf.T" +
+      "imestampB\003\340A\003R\014dateModified\022O\n\023scheduled" +
+      "_stop_date\030\010 \001(\0132\032.google.protobuf.Times" +
+      "tampB\003\340A\001R\021scheduledStopDate\022I\n\020actual_s" +
+      "top_date\030\t \001(\0132\032.google.protobuf.Timesta" +
+      "mpB\003\340A\001R\016actualStopDate\022]\n\022hours_of_oper" +
+      "ation\030\n \001(\0132*.tcnapi.omni.campaigns.v1.W" +
+      "eekdayTimeRangeB\003\340A\001R\020hoursOfOperation\022P" +
+      "\n\007details\030\013 \001(\01321.tcnapi.omni.campaigns." +
+      "v1.Campaign.Module.DetailsB\003\340A\001R\007details" +
+      "\022[\n\013attachments\030\014 \003(\01324.tcnapi.omni.camp" +
+      "aigns.v1.Campaign.Module.AttachmentB\003\340A\001" +
+      "R\013attachments\032\315\004\n\007Details\022J\n\020total_task_" +
+      "count\030\001 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\003\340A\001R\016totalTaskCount\022R\n\024completed_task_" +
+      "count\030\002 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\003\340A\001R\022completedTaskCount\022Y\n\027connected_i" +
+      "nbox_address\030\003 \001(\0132\034.google.protobuf.Str" +
+      "ingValueB\003\340A\001R\025connectedInboxAddress\022W\n\026" +
+      "verified_email_address\030\004 \001(\0132\034.google.pr" +
+      "otobuf.StringValueB\003\340A\001R\024verifiedEmailAd" +
+      "dress\022N\n\022pending_task_count\030\005 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\003\340A\001R\020pendingTask" +
+      "Count\022L\n\021failed_task_count\030\006 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\003\340A\001R\017failedTaskCo" +
+      "unt\022P\n\023canceled_task_count\030\007 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\003\340A\001R\021canceledTask" +
+      "Count\032\324\004\n\nAttachment\022*\n\016attachment_sid\030\001" +
+      " \001(\003B\003\340A\002R\rattachmentSid\022\031\n\005title\030\002 \001(\tB" +
+      "\003\340A\002R\005title\022 \n\tfile_type\030\003 \001(\tB\003\340A\002R\010fil" +
+      "eType\022 \n\tfile_size\030\004 \001(\003B\003\340A\002R\010fileSize\022" +
+      "\027\n\004path\030\005 \001(\tB\003\340A\002R\004path\022:\n\007temp_id\030\006 \001(" +
+      "\0132\034.google.protobuf.StringValueB\003\340A\002R\006te" +
+      "mpId\022&\n\014download_url\030\007 \001(\tB\003\340A\001R\013downloa" +
+      "dUrl\022B\n\014date_created\030\010 \001(\0132\032.google.prot" +
+      "obuf.TimestampB\003\340A\001R\013dateCreated\022D\n\rdate" +
+      "_modified\030\t \001(\0132\032.google.protobuf.Timest" +
+      "ampB\003\340A\001R\014dateModified\022@\n\ncontent_id\030\n \001" +
+      "(\0132\034.google.protobuf.StringValueB\003\340A\001R\tc" +
+      "ontentId\0227\n\005width\030\013 \001(\0132\034.google.protobu" +
+      "f.StringValueB\003\340A\001R\005width\0229\n\006height\030\014 \001(" +
+      "\0132\034.google.protobuf.StringValueB\003\340A\001R\006he" +
+      "ight\"\334\001\n\013ModuleState\022\024\n\020MODULE_PREPARING" +
+      "\020\000\022\025\n\021MODULE_SCHEDULING\020d\022\023\n\016MODULE_RUNN" +
+      "ING\020\310\001\022\031\n\024MODULE_RUNNING_ERROR\020\372\001\022\031\n\024MOD" +
+      "ULE_ERROR_STANDBY\020\254\002\022\022\n\rMODULE_PAUSED\020\220\003" +
+      "\022\024\n\017MODULE_RESUMING\020\364\003\022\025\n\020MODULE_COMPLET" +
+      "ED\020\330\004\022\024\n\017MODULE_ARCHIVED\020\274\005\"\361\001\n\rCampaign" +
+      "State\022\016\n\nSCHEDULING\020\000\022\014\n\007RUNNING\020\310\001\022\013\n\006P" +
+      "AUSED\020\220\003\022\016\n\tCOMPLETED\020\330\004\022\r\n\010ARCHIVED\020\240\006\"" +
+      "\006\010\212\005\020\212\005\"\006\010\274\005\020\274\005\"\006\010\356\005\020\356\005\"\004\010d\020d\"\006\010\372\001\020\372\001\"\006\010" +
+      "\254\002\020\254\002\"\006\010\364\003\020\364\003*\020COMPLETED_SUMMED*\tCANCELL" +
+      "ED*\020CANCELLED_SUMMED*\tPREPARING*\rRUNNING" +
+      "_ERROR*\rERROR_STANDBY*\010RESUMING:m\352Aj\n!tc" +
+      "napi.omni.campaigns.v1/Campaign\0220regions" +
+      "/{region}/orgs/{org}/campaigns/{campaign" +
+      "}*\tcampaigns2\010campaign\"K\n\017TimeZoneWrappe" +
+      "r\0228\n\005value\030\001 \001(\0162\".tcnapi.omni.campaigns" +
+      ".v1.TimeZoneR\005value\"]\n\020WeekdayTimeRange\022" +
+      "I\n\007entries\030\001 \003(\0132/.tcnapi.omni.campaigns" +
+      ".v1.WeekdayTimeRangeEntryR\007entries\"\267\002\n\025W" +
+      "eekdayTimeRangeEntry\022H\n\tstart_day\030\001 \001(\0162" +
+      "&.tcnapi.omni.campaigns.v1.Weekday.EnumB" +
+      "\003\340A\001R\010startDay\022\"\n\nstart_hour\030\002 \001(\003B\003\340A\001R" +
+      "\tstartHour\022&\n\014start_minute\030\003 \001(\003B\003\340A\001R\013s" +
+      "tartMinute\022D\n\007end_day\030\004 \001(\0162&.tcnapi.omn" +
+      "i.campaigns.v1.Weekday.EnumB\003\340A\001R\006endDay" +
+      "\022\036\n\010end_hour\030\005 \001(\003B\003\340A\001R\007endHour\022\"\n\nend_" +
+      "minute\030\006 \001(\003B\003\340A\001R\tendMinute\"m\n\007Weekday\"" +
+      "b\n\004Enum\022\n\n\006SUNDAY\020\000\022\n\n\006MONDAY\020\001\022\013\n\007TUESD" +
+      "AY\020\002\022\r\n\tWEDNESDAY\020\003\022\014\n\010THURSDAY\020\004\022\n\n\006FRI" +
+      "DAY\020\005\022\014\n\010SATURDAY\020\006*\205\001\n\013ChannelType\022\026\n\022C" +
+      "HANNEL_TYPE_EMAIL\020\000\022\024\n\020CHANNEL_TYPE_SMS\020" +
+      "\001\022\025\n\021CHANNEL_TYPE_CHAT\020\002\022\026\n\022CHANNEL_TYPE" +
+      "_VOICE\020\003\022\031\n\025CHANNEL_TYPE_WHATSAPP\020\004*x\n\nM" +
+      "oduleType\022\027\n\023MODULE_TYPE_INBOUND\020\000\022\030\n\024MO" +
+      "DULE_TYPE_OUTBOUND\020\001\022\037\n\033MODULE_TYPE_MANU" +
+      "AL_APPROVAL\020\002\022\026\n\022MODULE_TYPE_MANUAL\020\003*\347\n" +
+      "\n\010TimeZone\022!\n\035TIME_ZONE_AMERICA_PUERTO_R" +
+      "ICO\020\000\022\036\n\032TIME_ZONE_AMERICA_NEW_YORK\020\001\022\"\n" +
+      "\036TIME_ZONE_AMERICA_INDIANAPOLIS\020\002\022\035\n\031TIM" +
+      "E_ZONE_AMERICA_CHICAGO\020\003\022\035\n\031TIME_ZONE_AM" +
+      "ERICA_PHOENIX\020\004\022\034\n\030TIME_ZONE_AMERICA_DEN" +
+      "VER\020\005\022!\n\035TIME_ZONE_AMERICA_LOS_ANGELES\020\006" +
+      "\022\037\n\033TIME_ZONE_AMERICA_ANCHORAGE\020\007\022\031\n\025TIM" +
+      "E_ZONE_ASIA_MANILA\020\010\022\033\n\027TIME_ZONE_ASIA_C" +
+      "ALCUTTA\020\t\022\032\n\026TIME_ZONE_ASIA_COLOMBO\020\n\022\036\n" +
+      "\032TIME_ZONE_PACIFIC_HONOLULU\020\013\022!\n\035TIME_ZO" +
+      "NE_CANADA_NEWFOUNDLAND\020\014\022\035\n\031TIME_ZONE_CA" +
+      "NADA_ATLANTIC\020\r\022\034\n\030TIME_ZONE_CANADA_CENT" +
+      "RAL\020\016\022&\n\"TIME_ZONE_CANADA_EAST_SASKATCHE" +
+      "WAN\020\017\022\034\n\030TIME_ZONE_CANADA_EASTERN\020\020\022\035\n\031T" +
+      "IME_ZONE_CANADA_MOUNTAIN\020\021\022\034\n\030TIME_ZONE_" +
+      "CANADA_PACIFIC\020\022\022!\n\035TIME_ZONE_CANADA_SAS" +
+      "KATCHEWAN\020\023\022\032\n\026TIME_ZONE_CANADA_YUKON\020\024\022" +
+      "\033\n\027TIME_ZONE_ETC_GREENWICH\020\025\022\033\n\027TIME_ZON" +
+      "E_ETC_UNIVERSAL\020\026\022\033\n\027TIME_ZONE_EUROPE_LO" +
+      "NDON\020\027\022\033\n\027TIME_ZONE_EUROPE_MADRID\020\030\022\033\n\027T" +
+      "IME_ZONE_EUROPE_BERLIN\020\031\022\036\n\032TIME_ZONE_EU" +
+      "ROPE_BUCHAREST\020\032\022!\n\035TIME_ZONE_AMERICA_ME" +
+      "XICO_CITY\020\033\022\034\n\030TIME_ZONE_MEXICO_BAJASUR\020" +
+      "\034\022\036\n\032TIME_ZONE_MEXICO_BAJANORTE\020\035\022\031\n\025TIM" +
+      "E_ZONE_BRAZIL_ACRE\020\036\022\031\n\025TIME_ZONE_BRAZIL" +
+      "_WEST\020\037\022\031\n\025TIME_ZONE_BRAZIL_EAST\020 \022\036\n\032TI" +
+      "ME_ZONE_BRAZIL_DENORONHA\020!\022\036\n\032TIME_ZONE_" +
+      "AUSTRALIA_DARWIN\020\"\022 \n\034TIME_ZONE_AUSTRALI" +
+      "A_ADELAIDE\020#\022\036\n\032TIME_ZONE_AUSTRALIA_SYDN" +
+      "EY\020$\022 \n\034TIME_ZONE_AUSTRALIA_BRISBANE\020%\022!" +
+      "\n\035TIME_ZONE_AUSTRALIA_MELBOURNE\020&\022\035\n\031TIM" +
+      "E_ZONE_AUSTRALIA_PERTH\020\'\022\036\n\032TIME_ZONE_PA" +
+      "CIFIC_AUCKLAND\020(\022\035\n\031TIME_ZONE_PACIFIC_CH" +
+      "ATHAM\020)\022\034\n\030TIME_ZONE_ASIA_SINGAPORE\020*\022\030\n" +
+      "\024TIME_ZONE_ASIA_JAPAN\020+B\277\001\n*com.tcn.clou" +
+      "d.api.tcnapi.omni.campaigns.v1B\016Campaign" +
+      "sProtoP\001\242\002\003TOC\252\002\030Tcnapi.Omni.Campaigns.V" +
+      "1\312\002\030Tcnapi\\Omni\\Campaigns\\V1\342\002$Tcnapi\\Om" +
+      "ni\\Campaigns\\V1\\GPBMetadata\352\002\033Tcnapi::Om" +
+      "ni::Campaigns::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -74,18 +216,55 @@ public final class CampaignsProto {
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_tcnapi_omni_campaigns_v1_Campaign_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_tcnapi_omni_campaigns_v1_Campaign_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_tcnapi_omni_campaigns_v1_Campaign_descriptor,
-        new java.lang.String[] { "Name", "Title", "Description", "StartDate", "Status", "ChannelType", "CreateTime", "UpdateTime", "ProjectSid", });
+        new java.lang.String[] { "Name", "Title", "Description", "StartDate", "State", "ChannelType", "CreateTime", "UpdateTime", "ProjectSid", "TimeZone", "ShortenUrl", });
     internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_descriptor =
       internal_static_tcnapi_omni_campaigns_v1_Campaign_descriptor.getNestedTypes().get(0);
     internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_descriptor,
+        new java.lang.String[] { "CampaignModuleSid", "CampaignSid", "ModuleType", "State", "DateCreated", "DateModified", "ScheduledStopDate", "ActualStopDate", "HoursOfOperation", "Details", "Attachments", });
+    internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_descriptor =
+      internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_descriptor.getNestedTypes().get(0);
+    internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_descriptor,
+        new java.lang.String[] { "TotalTaskCount", "CompletedTaskCount", "ConnectedInboxAddress", "VerifiedEmailAddress", "PendingTaskCount", "FailedTaskCount", "CanceledTaskCount", });
+    internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Attachment_descriptor =
+      internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_descriptor.getNestedTypes().get(1);
+    internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Attachment_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Attachment_descriptor,
+        new java.lang.String[] { "AttachmentSid", "Title", "FileType", "FileSize", "Path", "TempId", "DownloadUrl", "DateCreated", "DateModified", "ContentId", "Width", "Height", });
+    internal_static_tcnapi_omni_campaigns_v1_TimeZoneWrapper_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_tcnapi_omni_campaigns_v1_TimeZoneWrapper_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_tcnapi_omni_campaigns_v1_TimeZoneWrapper_descriptor,
+        new java.lang.String[] { "Value", });
+    internal_static_tcnapi_omni_campaigns_v1_WeekdayTimeRange_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_tcnapi_omni_campaigns_v1_WeekdayTimeRange_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_tcnapi_omni_campaigns_v1_WeekdayTimeRange_descriptor,
+        new java.lang.String[] { "Entries", });
+    internal_static_tcnapi_omni_campaigns_v1_WeekdayTimeRangeEntry_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_tcnapi_omni_campaigns_v1_WeekdayTimeRangeEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_tcnapi_omni_campaigns_v1_WeekdayTimeRangeEntry_descriptor,
+        new java.lang.String[] { "StartDay", "StartHour", "StartMinute", "EndDay", "EndHour", "EndMinute", });
+    internal_static_tcnapi_omni_campaigns_v1_Weekday_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_tcnapi_omni_campaigns_v1_Weekday_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_tcnapi_omni_campaigns_v1_Weekday_descriptor,
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -96,6 +275,7 @@ public final class CampaignsProto {
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
