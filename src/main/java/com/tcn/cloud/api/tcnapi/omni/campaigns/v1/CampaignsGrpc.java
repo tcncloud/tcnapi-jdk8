@@ -18,35 +18,66 @@ public final class CampaignsGrpc {
   public static final java.lang.String SERVICE_NAME = "tcnapi.omni.campaigns.v1.Campaigns";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsRequest,
-      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse> getListCampaignsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsRequest,
+      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse> getListCampaignsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "ListCampaigns",
-      requestType = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsRequest.class,
-      responseType = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse.class,
+      requestType = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsRequest.class,
+      responseType = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsRequest,
-      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse> getListCampaignsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsRequest, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse> getListCampaignsMethod;
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsRequest,
+      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse> getListCampaignsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsRequest, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse> getListCampaignsMethod;
     if ((getListCampaignsMethod = CampaignsGrpc.getListCampaignsMethod) == null) {
       synchronized (CampaignsGrpc.class) {
         if ((getListCampaignsMethod = CampaignsGrpc.getListCampaignsMethod) == null) {
           CampaignsGrpc.getListCampaignsMethod = getListCampaignsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsRequest, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsRequest, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCampaigns"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse.getDefaultInstance()))
+                  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse.getDefaultInstance()))
               .setSchemaDescriptor(new CampaignsMethodDescriptorSupplier("ListCampaigns"))
               .build();
         }
       }
     }
     return getListCampaignsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.GetCampaignRequest,
+      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign> getGetCampaignMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCampaign",
+      requestType = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.GetCampaignRequest.class,
+      responseType = com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.GetCampaignRequest,
+      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign> getGetCampaignMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.GetCampaignRequest, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign> getGetCampaignMethod;
+    if ((getGetCampaignMethod = CampaignsGrpc.getGetCampaignMethod) == null) {
+      synchronized (CampaignsGrpc.class) {
+        if ((getGetCampaignMethod = CampaignsGrpc.getGetCampaignMethod) == null) {
+          CampaignsGrpc.getGetCampaignMethod = getGetCampaignMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.GetCampaignRequest, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCampaign"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.GetCampaignRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.getDefaultInstance()))
+              .setSchemaDescriptor(new CampaignsMethodDescriptorSupplier("GetCampaign"))
+              .build();
+        }
+      }
+    }
+    return getGetCampaignMethod;
   }
 
   /**
@@ -105,9 +136,19 @@ public final class CampaignsGrpc {
      * Method to list campaigns
      * </pre>
      */
-    default void listCampaigns(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse> responseObserver) {
+    default void listCampaigns(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCampaignsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Method to get campaign
+     * </pre>
+     */
+    default void getCampaign(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.GetCampaignRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCampaignMethod(), responseObserver);
     }
   }
 
@@ -149,10 +190,21 @@ public final class CampaignsGrpc {
      * Method to list campaigns
      * </pre>
      */
-    public void listCampaigns(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse> responseObserver) {
+    public void listCampaigns(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListCampaignsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Method to get campaign
+     * </pre>
+     */
+    public void getCampaign(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.GetCampaignRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetCampaignMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -180,9 +232,19 @@ public final class CampaignsGrpc {
      * Method to list campaigns
      * </pre>
      */
-    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse listCampaigns(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsRequest request) {
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse listCampaigns(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListCampaignsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Method to get campaign
+     * </pre>
+     */
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign getCampaign(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.GetCampaignRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetCampaignMethod(), getCallOptions(), request);
     }
   }
 
@@ -210,14 +272,26 @@ public final class CampaignsGrpc {
      * Method to list campaigns
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse> listCampaigns(
-        com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse> listCampaigns(
+        com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListCampaignsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Method to get campaign
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign> getCampaign(
+        com.tcn.cloud.api.tcnapi.omni.campaigns.v1.GetCampaignRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetCampaignMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_LIST_CAMPAIGNS = 0;
+  private static final int METHODID_GET_CAMPAIGN = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -237,8 +311,12 @@ public final class CampaignsGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_LIST_CAMPAIGNS:
-          serviceImpl.listCampaigns((com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse>) responseObserver);
+          serviceImpl.listCampaigns((com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse>) responseObserver);
+          break;
+        case METHODID_GET_CAMPAIGN:
+          serviceImpl.getCampaign((com.tcn.cloud.api.tcnapi.omni.campaigns.v1.GetCampaignRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -262,9 +340,16 @@ public final class CampaignsGrpc {
           getListCampaignsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsRequest,
-              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse>(
+              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsRequest,
+              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse>(
                 service, METHODID_LIST_CAMPAIGNS)))
+        .addMethod(
+          getGetCampaignMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.GetCampaignRequest,
+              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign>(
+                service, METHODID_GET_CAMPAIGN)))
         .build();
   }
 
@@ -314,6 +399,7 @@ public final class CampaignsGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CampaignsFileDescriptorSupplier())
               .addMethod(getListCampaignsMethod())
+              .addMethod(getGetCampaignMethod())
               .build();
         }
       }

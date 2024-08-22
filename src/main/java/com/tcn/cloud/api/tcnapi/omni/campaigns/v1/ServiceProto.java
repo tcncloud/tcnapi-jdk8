@@ -28,18 +28,22 @@ public final class ServiceProto {
       "authz.proto\032\034google/api/annotations.prot" +
       "o\032\027google/api/client.proto\032(tcnapi/omni/" +
       "campaigns/v1/campaigns.proto\032\'tcnapi/omn" +
-      "i/campaigns/v1/entities.proto2\330\001\n\tCampai" +
+      "i/campaigns/v1/entities.proto2\224\003\n\tCampai" +
       "gns\022\312\001\n\rListCampaigns\022..tcnapi.omni.camp" +
-      "aigns.v1.ListcampaignsRequest\032/.tcnapi.o" +
-      "mni.campaigns.v1.ListcampaignsResponse\"X" +
+      "aigns.v1.ListCampaignsRequest\032/.tcnapi.o" +
+      "mni.campaigns.v1.ListCampaignsResponse\"X" +
       "\332A\006parent\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002?\022=/tcnapi/omni/" +
       "campaigns/v1/{parent=regions/*/orgs/*}/c" +
-      "ampaignsB\275\001\n*com.tcn.cloud.api.tcnapi.om" +
-      "ni.campaigns.v1B\014ServiceProtoP\001\242\002\003TOC\252\002\030" +
-      "Tcnapi.Omni.Campaigns.V1\312\002\030Tcnapi\\Omni\\C" +
-      "ampaigns\\V1\342\002$Tcnapi\\Omni\\Campaigns\\V1\\G" +
-      "PBMetadata\352\002\033Tcnapi::Omni::Campaigns::V1" +
-      "b\006proto3"
+      "ampaigns\022\271\001\n\013GetCampaign\022,.tcnapi.omni.c" +
+      "ampaigns.v1.GetCampaignRequest\032\".tcnapi." +
+      "omni.campaigns.v1.Campaign\"X\332A\004name\272\270\221\002\005" +
+      "\n\003\010\260\t\202\323\344\223\002A\022?/tcnapi/omni/campaigns/v1/{" +
+      "parent=regions/*/orgs/*/campaigns/*}B\275\001\n" +
+      "*com.tcn.cloud.api.tcnapi.omni.campaigns" +
+      ".v1B\014ServiceProtoP\001\242\002\003TOC\252\002\030Tcnapi.Omni." +
+      "Campaigns.V1\312\002\030Tcnapi\\Omni\\Campaigns\\V1\342" +
+      "\002$Tcnapi\\Omni\\Campaigns\\V1\\GPBMetadata\352\002" +
+      "\033Tcnapi::Omni::Campaigns::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

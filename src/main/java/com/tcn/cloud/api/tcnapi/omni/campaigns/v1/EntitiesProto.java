@@ -15,15 +15,20 @@ public final class EntitiesProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_tcnapi_omni_campaigns_v1_ListcampaignsRequest_descriptor;
+    internal_static_tcnapi_omni_campaigns_v1_ListCampaignsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_tcnapi_omni_campaigns_v1_ListcampaignsRequest_fieldAccessorTable;
+      internal_static_tcnapi_omni_campaigns_v1_ListCampaignsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_tcnapi_omni_campaigns_v1_ListcampaignsResponse_descriptor;
+    internal_static_tcnapi_omni_campaigns_v1_ListCampaignsResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_tcnapi_omni_campaigns_v1_ListcampaignsResponse_fieldAccessorTable;
+      internal_static_tcnapi_omni_campaigns_v1_ListCampaignsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_tcnapi_omni_campaigns_v1_GetCampaignRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_tcnapi_omni_campaigns_v1_GetCampaignRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38,20 +43,22 @@ public final class EntitiesProto {
       "field_behavior.proto\032\031google/api/resourc" +
       "e.proto\032 google/protobuf/field_mask.prot" +
       "o\032(tcnapi/omni/campaigns/v1/campaigns.pr" +
-      "oto\"\275\001\n\024ListcampaignsRequest\022B\n\006parent\030\001" +
+      "oto\"\275\001\n\024ListCampaignsRequest\022B\n\006parent\030\001" +
       " \001(\tB*\340A\002\372A$\022\"tcnapi.omni.campaigns.v1/C" +
       "ampaignsR\006parent\022 \n\tpage_size\030\002 \001(\005B\003\340A\001" +
       "R\010pageSize\022\"\n\npage_token\030\003 \001(\tB\003\340A\001R\tpag" +
       "eToken\022\033\n\006filter\030\004 \001(\tB\003\340A\001R\006filter\"\201\001\n\025" +
-      "ListcampaignsResponse\022@\n\tcampaigns\030\001 \003(\013" +
+      "ListCampaignsResponse\022@\n\tcampaigns\030\001 \003(\013" +
       "2\".tcnapi.omni.campaigns.v1.CampaignR\tca" +
       "mpaigns\022&\n\017next_page_token\030\002 \001(\tR\rnextPa" +
-      "geTokenB\276\001\n*com.tcn.cloud.api.tcnapi.omn" +
-      "i.campaigns.v1B\rEntitiesProtoP\001\242\002\003TOC\252\002\030" +
-      "Tcnapi.Omni.Campaigns.V1\312\002\030Tcnapi\\Omni\\C" +
-      "ampaigns\\V1\342\002$Tcnapi\\Omni\\Campaigns\\V1\\G" +
-      "PBMetadata\352\002\033Tcnapi::Omni::Campaigns::V1" +
-      "b\006proto3"
+      "geToken\"T\n\022GetCampaignRequest\022>\n\004name\030\001 " +
+      "\001(\tB*\340A\002\372A$\n\"tcnapi.omni.campaigns.v1/Ca" +
+      "mpaignsR\004nameB\276\001\n*com.tcn.cloud.api.tcna" +
+      "pi.omni.campaigns.v1B\rEntitiesProtoP\001\242\002\003" +
+      "TOC\252\002\030Tcnapi.Omni.Campaigns.V1\312\002\030Tcnapi\\" +
+      "Omni\\Campaigns\\V1\342\002$Tcnapi\\Omni\\Campaign" +
+      "s\\V1\\GPBMetadata\352\002\033Tcnapi::Omni::Campaig" +
+      "ns::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -61,18 +68,24 @@ public final class EntitiesProto {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.getDescriptor(),
         });
-    internal_static_tcnapi_omni_campaigns_v1_ListcampaignsRequest_descriptor =
+    internal_static_tcnapi_omni_campaigns_v1_ListCampaignsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_tcnapi_omni_campaigns_v1_ListcampaignsRequest_fieldAccessorTable = new
+    internal_static_tcnapi_omni_campaigns_v1_ListCampaignsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_tcnapi_omni_campaigns_v1_ListcampaignsRequest_descriptor,
+        internal_static_tcnapi_omni_campaigns_v1_ListCampaignsRequest_descriptor,
         new java.lang.String[] { "Parent", "PageSize", "PageToken", "Filter", });
-    internal_static_tcnapi_omni_campaigns_v1_ListcampaignsResponse_descriptor =
+    internal_static_tcnapi_omni_campaigns_v1_ListCampaignsResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_tcnapi_omni_campaigns_v1_ListcampaignsResponse_fieldAccessorTable = new
+    internal_static_tcnapi_omni_campaigns_v1_ListCampaignsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_tcnapi_omni_campaigns_v1_ListcampaignsResponse_descriptor,
+        internal_static_tcnapi_omni_campaigns_v1_ListCampaignsResponse_descriptor,
         new java.lang.String[] { "Campaigns", "NextPageToken", });
+    internal_static_tcnapi_omni_campaigns_v1_GetCampaignRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_tcnapi_omni_campaigns_v1_GetCampaignRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_tcnapi_omni_campaigns_v1_GetCampaignRequest_descriptor,
+        new java.lang.String[] { "Name", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);

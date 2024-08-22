@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.tcnapi.omni.campaigns.v1;
 
-public interface ListcampaignsResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:tcnapi.omni.campaigns.v1.ListcampaignsResponse)
+public interface ListCampaignsResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:tcnapi.omni.campaigns.v1.ListCampaignsResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

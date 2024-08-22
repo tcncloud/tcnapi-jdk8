@@ -8,18 +8,18 @@ package com.tcn.cloud.api.tcnapi.omni.campaigns.v1;
  * response used listing all campaigns
  * </pre>
  *
- * Protobuf type {@code tcnapi.omni.campaigns.v1.ListcampaignsResponse}
+ * Protobuf type {@code tcnapi.omni.campaigns.v1.ListCampaignsResponse}
  */
-public final class ListcampaignsResponse extends
+public final class ListCampaignsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:tcnapi.omni.campaigns.v1.ListcampaignsResponse)
-    ListcampaignsResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:tcnapi.omni.campaigns.v1.ListCampaignsResponse)
+    ListCampaignsResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ListcampaignsResponse.newBuilder() to construct.
-  private ListcampaignsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ListCampaignsResponse.newBuilder() to construct.
+  private ListCampaignsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ListcampaignsResponse() {
+  private ListCampaignsResponse() {
     campaigns_ = java.util.Collections.emptyList();
     nextPageToken_ = "";
   }
@@ -28,20 +28,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ListcampaignsResponse();
+    return new ListCampaignsResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.EntitiesProto.internal_static_tcnapi_omni_campaigns_v1_ListcampaignsResponse_descriptor;
+    return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.EntitiesProto.internal_static_tcnapi_omni_campaigns_v1_ListCampaignsResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.EntitiesProto.internal_static_tcnapi_omni_campaigns_v1_ListcampaignsResponse_fieldAccessorTable
+    return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.EntitiesProto.internal_static_tcnapi_omni_campaigns_v1_ListCampaignsResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse.class, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse.Builder.class);
+            com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse.class, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse.Builder.class);
   }
 
   public static final int CAMPAIGNS_FIELD_NUMBER = 1;
@@ -198,10 +198,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse other = (com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse) obj;
+    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse other = (com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse) obj;
 
     if (!getCampaignsList()
         .equals(other.getCampaignsList())) return false;
@@ -229,44 +229,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse parseFrom(
+  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse parseFrom(
+  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse parseFrom(
+  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse parseFrom(
+  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse parseFrom(
+  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse parseFrom(
+  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -274,26 +274,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse parseFrom(
+  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse parseFrom(
+  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -306,7 +306,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -326,26 +326,26 @@ private static final long serialVersionUID = 0L;
    * response used listing all campaigns
    * </pre>
    *
-   * Protobuf type {@code tcnapi.omni.campaigns.v1.ListcampaignsResponse}
+   * Protobuf type {@code tcnapi.omni.campaigns.v1.ListCampaignsResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:tcnapi.omni.campaigns.v1.ListcampaignsResponse)
-      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:tcnapi.omni.campaigns.v1.ListCampaignsResponse)
+      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.EntitiesProto.internal_static_tcnapi_omni_campaigns_v1_ListcampaignsResponse_descriptor;
+      return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.EntitiesProto.internal_static_tcnapi_omni_campaigns_v1_ListCampaignsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.EntitiesProto.internal_static_tcnapi_omni_campaigns_v1_ListcampaignsResponse_fieldAccessorTable
+      return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.EntitiesProto.internal_static_tcnapi_omni_campaigns_v1_ListCampaignsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse.class, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse.Builder.class);
+              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse.class, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse.newBuilder()
     private Builder() {
 
     }
@@ -373,17 +373,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.EntitiesProto.internal_static_tcnapi_omni_campaigns_v1_ListcampaignsResponse_descriptor;
+      return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.EntitiesProto.internal_static_tcnapi_omni_campaigns_v1_ListCampaignsResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse.getDefaultInstance();
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse build() {
-      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse result = buildPartial();
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse build() {
+      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -391,15 +391,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse buildPartial() {
-      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse result = new com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse(this);
+    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse buildPartial() {
+      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse result = new com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse result) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse result) {
       if (campaignsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           campaigns_ = java.util.Collections.unmodifiableList(campaigns_);
@@ -411,7 +411,7 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.nextPageToken_ = nextPageToken_;
@@ -452,16 +452,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse) {
-        return mergeFrom((com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse)other);
+      if (other instanceof com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse) {
+        return mergeFrom((com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse other) {
-      if (other == com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse other) {
+      if (other == com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse.getDefaultInstance()) return this;
       if (campaignsBuilder_ == null) {
         if (!other.campaigns_.isEmpty()) {
           if (campaigns_.isEmpty()) {
@@ -970,23 +970,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:tcnapi.omni.campaigns.v1.ListcampaignsResponse)
+    // @@protoc_insertion_point(builder_scope:tcnapi.omni.campaigns.v1.ListCampaignsResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:tcnapi.omni.campaigns.v1.ListcampaignsResponse)
-  private static final com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:tcnapi.omni.campaigns.v1.ListCampaignsResponse)
+  private static final com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse();
   }
 
-  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ListcampaignsResponse>
-      PARSER = new com.google.protobuf.AbstractParser<ListcampaignsResponse>() {
+  private static final com.google.protobuf.Parser<ListCampaignsResponse>
+      PARSER = new com.google.protobuf.AbstractParser<ListCampaignsResponse>() {
     @java.lang.Override
-    public ListcampaignsResponse parsePartialFrom(
+    public ListCampaignsResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1005,17 +1005,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ListcampaignsResponse> parser() {
+  public static com.google.protobuf.Parser<ListCampaignsResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ListcampaignsResponse> getParserForType() {
+  public com.google.protobuf.Parser<ListCampaignsResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListcampaignsResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ListCampaignsResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
