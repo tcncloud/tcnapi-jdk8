@@ -24,6 +24,26 @@ public final class SmartQuestionProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_scorecards_CreateSmartQuestionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_UpdateSmartQuestionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_UpdateSmartQuestionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_UpdateSmartQuestionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_UpdateSmartQuestionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_DeleteSmartQuestionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_DeleteSmartQuestionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_scorecards_DeleteSmartQuestionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_scorecards_DeleteSmartQuestionResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -35,22 +55,34 @@ public final class SmartQuestionProto {
     java.lang.String[] descriptorData = {
       "\n,api/v1alpha1/scorecards/smart_question" +
       ".proto\022\027api.v1alpha1.scorecards\032\034api/com" +
-      "mons/scorecards.proto\"_\n\032CreateSmartQues" +
-      "tionRequest\022A\n\016smart_question\030\001 \001(\0132\032.ap" +
-      "i.commons.SmartQuestionR\rsmartQuestion\"`" +
-      "\n\033CreateSmartQuestionResponse\022A\n\016smart_q" +
-      "uestion\030\001 \001(\0132\032.api.commons.SmartQuestio" +
-      "nR\rsmartQuestionB\275\001\n)com.tcn.cloud.api.a" +
-      "pi.v1alpha1.scorecardsB\022SmartQuestionPro" +
-      "toP\001\242\002\003AVS\252\002\027Api.V1alpha1.Scorecards\312\002\027A" +
-      "pi\\V1alpha1\\Scorecards\342\002#Api\\V1alpha1\\Sc" +
-      "orecards\\GPBMetadata\352\002\031Api::V1alpha1::Sc" +
-      "orecardsb\006proto3"
+      "mons/scorecards.proto\032 google/protobuf/f" +
+      "ield_mask.proto\"_\n\032CreateSmartQuestionRe" +
+      "quest\022A\n\016smart_question\030\001 \001(\0132\032.api.comm" +
+      "ons.SmartQuestionR\rsmartQuestion\"`\n\033Crea" +
+      "teSmartQuestionResponse\022A\n\016smart_questio" +
+      "n\030\001 \001(\0132\032.api.commons.SmartQuestionR\rsma" +
+      "rtQuestion\"\234\001\n\032UpdateSmartQuestionReques" +
+      "t\022A\n\016smart_question\030\001 \001(\0132\032.api.commons." +
+      "SmartQuestionR\rsmartQuestion\022;\n\013update_m" +
+      "ask\030\002 \001(\0132\032.google.protobuf.FieldMaskR\nu" +
+      "pdateMask\"`\n\033UpdateSmartQuestionResponse" +
+      "\022A\n\016smart_question\030\001 \001(\0132\032.api.commons.S" +
+      "martQuestionR\rsmartQuestion\"H\n\032DeleteSma" +
+      "rtQuestionRequest\022*\n\021smart_question_id\030\002" +
+      " \001(\003R\017smartQuestionId\"`\n\033DeleteSmartQues" +
+      "tionResponse\022A\n\016smart_question\030\001 \001(\0132\032.a" +
+      "pi.commons.SmartQuestionR\rsmartQuestionB" +
+      "\275\001\n)com.tcn.cloud.api.api.v1alpha1.score" +
+      "cardsB\022SmartQuestionProtoP\001\242\002\003AVS\252\002\027Api." +
+      "V1alpha1.Scorecards\312\002\027Api\\V1alpha1\\Score" +
+      "cards\342\002#Api\\V1alpha1\\Scorecards\\GPBMetad" +
+      "ata\352\002\031Api::V1alpha1::Scorecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
         });
     internal_static_api_v1alpha1_scorecards_CreateSmartQuestionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -64,7 +96,32 @@ public final class SmartQuestionProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_CreateSmartQuestionResponse_descriptor,
         new java.lang.String[] { "SmartQuestion", });
+    internal_static_api_v1alpha1_scorecards_UpdateSmartQuestionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_api_v1alpha1_scorecards_UpdateSmartQuestionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_UpdateSmartQuestionRequest_descriptor,
+        new java.lang.String[] { "SmartQuestion", "UpdateMask", });
+    internal_static_api_v1alpha1_scorecards_UpdateSmartQuestionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_api_v1alpha1_scorecards_UpdateSmartQuestionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_UpdateSmartQuestionResponse_descriptor,
+        new java.lang.String[] { "SmartQuestion", });
+    internal_static_api_v1alpha1_scorecards_DeleteSmartQuestionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_api_v1alpha1_scorecards_DeleteSmartQuestionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_DeleteSmartQuestionRequest_descriptor,
+        new java.lang.String[] { "SmartQuestionId", });
+    internal_static_api_v1alpha1_scorecards_DeleteSmartQuestionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_api_v1alpha1_scorecards_DeleteSmartQuestionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_scorecards_DeleteSmartQuestionResponse_descriptor,
+        new java.lang.String[] { "SmartQuestion", });
     com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
