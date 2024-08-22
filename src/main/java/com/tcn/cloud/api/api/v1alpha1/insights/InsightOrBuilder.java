@@ -154,23 +154,4 @@ public interface InsightOrBuilder extends
    * @return The standardInsight.
    */
   boolean getStandardInsight();
-
-  /**
-   * <pre>
-   * datasource type of the insight
-   * </pre>
-   *
-   * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 11 [json_name = "datasourceType"];</code>
-   * @return The enum numeric value on the wire for datasourceType.
-   */
-  int getDatasourceTypeValue();
-  /**
-   * <pre>
-   * datasource type of the insight
-   * </pre>
-   *
-   * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 11 [json_name = "datasourceType"];</code>
-   * @return The datasourceType.
-   */
-  com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType getDatasourceType();
 }

@@ -28,7 +28,6 @@ private static final long serialVersionUID = 0L;
     body_ = "";
     insightPermissionType_ = 0;
     resourceId_ = "";
-    datasourceType_ = 0;
   }
 
   @java.lang.Override
@@ -336,32 +335,6 @@ private static final long serialVersionUID = 0L;
     return standardInsight_;
   }
 
-  public static final int DATASOURCE_TYPE_FIELD_NUMBER = 11;
-  private int datasourceType_ = 0;
-  /**
-   * <pre>
-   * datasource type of the insight
-   * </pre>
-   *
-   * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 11 [json_name = "datasourceType"];</code>
-   * @return The enum numeric value on the wire for datasourceType.
-   */
-  @java.lang.Override public int getDatasourceTypeValue() {
-    return datasourceType_;
-  }
-  /**
-   * <pre>
-   * datasource type of the insight
-   * </pre>
-   *
-   * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 11 [json_name = "datasourceType"];</code>
-   * @return The datasourceType.
-   */
-  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType getDatasourceType() {
-    com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType result = com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType.forNumber(datasourceType_);
-    return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType.UNRECOGNIZED : result;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -402,9 +375,6 @@ private static final long serialVersionUID = 0L;
     }
     if (standardInsight_ != false) {
       output.writeBool(10, standardInsight_);
-    }
-    if (datasourceType_ != com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType.DATASOURCE_TYPE_UNSPECIFIED.getNumber()) {
-      output.writeEnum(11, datasourceType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -447,10 +417,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(10, standardInsight_);
     }
-    if (datasourceType_ != com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType.DATASOURCE_TYPE_UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(11, datasourceType_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -482,7 +448,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getResourceId())) return false;
     if (getStandardInsight()
         != other.getStandardInsight()) return false;
-    if (datasourceType_ != other.datasourceType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -514,8 +479,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + STANDARD_INSIGHT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getStandardInsight());
-    hash = (37 * hash) + DATASOURCE_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + datasourceType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -662,7 +625,6 @@ private static final long serialVersionUID = 0L;
       insightPermissionType_ = 0;
       resourceId_ = "";
       standardInsight_ = false;
-      datasourceType_ = 0;
       return this;
     }
 
@@ -722,9 +684,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.standardInsight_ = standardInsight_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.datasourceType_ = datasourceType_;
       }
     }
 
@@ -807,9 +766,6 @@ private static final long serialVersionUID = 0L;
       if (other.getStandardInsight() != false) {
         setStandardInsight(other.getStandardInsight());
       }
-      if (other.datasourceType_ != 0) {
-        setDatasourceTypeValue(other.getDatasourceTypeValue());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -881,11 +837,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 80
-            case 88: {
-              datasourceType_ = input.readEnum();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 88
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1545,79 +1496,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearStandardInsight() {
       bitField0_ = (bitField0_ & ~0x00000100);
       standardInsight_ = false;
-      onChanged();
-      return this;
-    }
-
-    private int datasourceType_ = 0;
-    /**
-     * <pre>
-     * datasource type of the insight
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 11 [json_name = "datasourceType"];</code>
-     * @return The enum numeric value on the wire for datasourceType.
-     */
-    @java.lang.Override public int getDatasourceTypeValue() {
-      return datasourceType_;
-    }
-    /**
-     * <pre>
-     * datasource type of the insight
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 11 [json_name = "datasourceType"];</code>
-     * @param value The enum numeric value on the wire for datasourceType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDatasourceTypeValue(int value) {
-      datasourceType_ = value;
-      bitField0_ |= 0x00000200;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * datasource type of the insight
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 11 [json_name = "datasourceType"];</code>
-     * @return The datasourceType.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType getDatasourceType() {
-      com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType result = com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType.forNumber(datasourceType_);
-      return result == null ? com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * datasource type of the insight
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 11 [json_name = "datasourceType"];</code>
-     * @param value The datasourceType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDatasourceType(com.tcn.cloud.api.api.v1alpha1.explorer.DatasourceType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000200;
-      datasourceType_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * datasource type of the insight
-     * </pre>
-     *
-     * <code>.api.v1alpha1.explorer.DatasourceType datasource_type = 11 [json_name = "datasourceType"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearDatasourceType() {
-      bitField0_ = (bitField0_ & ~0x00000200);
-      datasourceType_ = 0;
       onChanged();
       return this;
     }
