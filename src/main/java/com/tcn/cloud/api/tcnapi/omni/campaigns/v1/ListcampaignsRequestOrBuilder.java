@@ -56,4 +56,24 @@ public interface ListcampaignsRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPageTokenBytes();
+
+  /**
+   * <pre>
+   * used to specify the filter
+   * </pre>
+   *
+   * <code>string filter = 4 [json_name = "filter", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The filter.
+   */
+  java.lang.String getFilter();
+  /**
+   * <pre>
+   * used to specify the filter
+   * </pre>
+   *
+   * <code>string filter = 4 [json_name = "filter", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The bytes for filter.
+   */
+  com.google.protobuf.ByteString
+      getFilterBytes();
 }
