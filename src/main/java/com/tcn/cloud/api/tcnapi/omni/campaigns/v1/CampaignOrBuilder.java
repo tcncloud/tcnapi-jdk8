@@ -222,4 +222,48 @@ public interface CampaignOrBuilder extends
    * @return The shortenUrl.
    */
   boolean getShortenUrl();
+
+  /**
+   * <pre>
+   * associated module for campagin
+   * </pre>
+   *
+   * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module module = 12 [json_name = "module", (.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module> 
+      getModuleList();
+  /**
+   * <pre>
+   * associated module for campagin
+   * </pre>
+   *
+   * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module module = 12 [json_name = "module", (.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module getModule(int index);
+  /**
+   * <pre>
+   * associated module for campagin
+   * </pre>
+   *
+   * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module module = 12 [json_name = "module", (.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  int getModuleCount();
+  /**
+   * <pre>
+   * associated module for campagin
+   * </pre>
+   *
+   * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module module = 12 [json_name = "module", (.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.ModuleOrBuilder> 
+      getModuleOrBuilderList();
+  /**
+   * <pre>
+   * associated module for campagin
+   * </pre>
+   *
+   * <code>repeated .tcnapi.omni.campaigns.v1.Campaign.Module module = 12 [json_name = "module", (.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.ModuleOrBuilder getModuleOrBuilder(
+      int index);
 }
