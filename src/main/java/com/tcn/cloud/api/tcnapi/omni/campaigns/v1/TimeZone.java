@@ -815,7 +815,7 @@ public enum TimeZone
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.getDescriptor().getEnumTypes().get(2);
+    return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final TimeZone[] VALUES = values();

@@ -108,7 +108,7 @@ public interface CampaignOrBuilder extends
    * campaign channel type (chat|email|sms|etc.)
    * </pre>
    *
-   * <code>.tcnapi.omni.campaigns.v1.ChannelType channel_type = 6 [json_name = "channelType"];</code>
+   * <code>.tcnapi.omni.campaigns.v1.Campaign.ChannelType channel_type = 6 [json_name = "channelType"];</code>
    * @return The enum numeric value on the wire for channelType.
    */
   int getChannelTypeValue();
@@ -117,10 +117,10 @@ public interface CampaignOrBuilder extends
    * campaign channel type (chat|email|sms|etc.)
    * </pre>
    *
-   * <code>.tcnapi.omni.campaigns.v1.ChannelType channel_type = 6 [json_name = "channelType"];</code>
+   * <code>.tcnapi.omni.campaigns.v1.Campaign.ChannelType channel_type = 6 [json_name = "channelType"];</code>
    * @return The channelType.
    */
-  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.ChannelType getChannelType();
+  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.ChannelType getChannelType();
 
   /**
    * <pre>
