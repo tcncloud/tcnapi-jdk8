@@ -189,4 +189,14 @@ public interface FieldDefinitionOrBuilder extends
    * <code>.api.commons.integrations.HelperText helper_text = 8 [json_name = "helperText"];</code>
    */
   com.tcn.cloud.api.api.commons.integrations.HelperTextOrBuilder getHelperTextOrBuilder();
+
+  /**
+   * <pre>
+   * if it needs to be filled out before run time
+   * </pre>
+   *
+   * <code>bool required = 9 [json_name = "required"];</code>
+   * @return The required.
+   */
+  boolean getRequired();
 }
