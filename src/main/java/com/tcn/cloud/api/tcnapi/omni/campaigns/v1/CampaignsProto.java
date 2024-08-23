@@ -70,11 +70,6 @@ public final class CampaignsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_ModuleConfig_ConversationTimeoutMessageConfig_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_tcnapi_omni_campaigns_v1_TimeZoneWrapper_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -94,16 +89,6 @@ public final class CampaignsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_tcnapi_omni_campaigns_v1_SLATimeouts_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_tcnapi_omni_campaigns_v1_Disposition_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_tcnapi_omni_campaigns_v1_Disposition_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_tcnapi_omni_campaigns_v1_OmniAttachment_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_tcnapi_omni_campaigns_v1_OmniAttachment_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_tcnapi_omni_campaigns_v1_Weekday_descriptor;
   static final 
@@ -127,7 +112,7 @@ public final class CampaignsProto {
       "to\022\030tcnapi.omni.campaigns.v1\032\037google/api" +
       "/field_behavior.proto\032\031google/api/resour" +
       "ce.proto\032\037google/protobuf/timestamp.prot" +
-      "o\032\036google/protobuf/wrappers.proto\"\3144\n\010Ca" +
+      "o\032\036google/protobuf/wrappers.proto\"\261.\n\010Ca" +
       "mpaign\022\027\n\004name\030\001 \001(\003B\003\340A\010R\004name\022\031\n\005title" +
       "\030\002 \001(\tB\003\340A\002R\005title\022%\n\013description\030\003 \001(\tB" +
       "\003\340A\002R\013description\0229\n\nstart_date\030\004 \001(\0132\032." +
@@ -144,7 +129,7 @@ public final class CampaignsProto {
       "igns.v1.TimeZoneWrapperB\003\340A\001R\010timeZone\022$" +
       "\n\013shorten_url\030\013 \001(\010B\003\340A\001R\nshortenUrl\022F\n\006" +
       "module\030\014 \003(\0132).tcnapi.omni.campaigns.v1." +
-      "Campaign.ModuleB\003\340A\001R\006module\032\276+\n\006Module\022" +
+      "Campaign.ModuleB\003\340A\001R\006module\032\243%\n\006Module\022" +
       "3\n\023campaign_module_sid\030\001 \001(\003B\003\340A\001R\021campa" +
       "ignModuleSid\022&\n\014campaign_sid\030\002 \001(\003B\003\340A\002R" +
       "\013campaignSid\022Z\n\013module_type\030\003 \001(\01624.tcna" +
@@ -163,218 +148,178 @@ public final class CampaignsProto {
       "oogle.protobuf.TimestampB\003\340A\001R\016actualSto" +
       "pDate\022X\n\022hours_of_operation\030\013 \001(\0132*.tcna" +
       "pi.omni.campaigns.v1.WeekdayTimeRangeR\020h" +
-      "oursOfOperation\022K\n\007details\030\014 \001(\01321.tcnap" +
-      "i.omni.campaigns.v1.Campaign.Module.Deta" +
-      "ilsR\007details\032\200\036\n\014ModuleConfig\022I\n\017api_key" +
-      "_primary\030\001 \001(\0132\034.google.protobuf.StringV" +
-      "alueB\003\340A\002R\rapiKeyPrimary\022M\n\021api_key_seco" +
-      "ndary\030\002 \001(\0132\034.google.protobuf.StringValu" +
-      "eB\003\340A\002R\017apiKeySecondary\022z\n\020color_propert" +
-      "ies\030\003 \001(\0132J.tcnapi.omni.campaigns.v1.Cam" +
-      "paign.Module.ModuleConfig.ChatColorPrope" +
-      "rtiesB\003\340A\001R\017colorProperties\022V\n\023connected" +
-      "_inbox_sid\030\004 \001(\0132!.tcnapi.omni.campaigns" +
-      ".v1.Int64IdB\003\340A\001R\021connectedInboxSid\022N\n\014d" +
-      "ispositions\030\005 \003(\0132%.tcnapi.omni.campaign" +
-      "s.v1.DispositionB\003\340A\001R\014dispositions\0227\n\005e" +
-      "mail\030\006 \001(\0132\034.google.protobuf.StringValue" +
-      "B\003\340A\001R\005email\022D\n\014message_body\030\007 \001(\0132\034.goo" +
-      "gle.protobuf.StringValueB\003\340A\001R\013messageBo" +
-      "dy\022F\n\remail_subject\030\010 \001(\0132\034.google.proto" +
-      "buf.StringValueB\003\340A\001R\014emailSubject\022d\n\nsm" +
-      "s_number\030\t \001(\0132@.tcnapi.omni.campaigns.v" +
-      "1.Campaign.Module.ModuleConfig.SmsNumber" +
-      "B\003\340A\001R\tsmsNumber\022^\n\006header\030\n \001(\0132A.tcnap" +
-      "i.omni.campaigns.v1.Campaign.Module.Modu" +
-      "leConfig.ChatHeaderB\003\340A\001R\006header\022M\n\014sla_" +
-      "timeouts\030\013 \001(\0132%.tcnapi.omni.campaigns.v" +
-      "1.SLATimeoutsB\003\340A\001R\013slaTimeouts\022F\n\016sends" +
-      "_per_hour\030\014 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\003\340A\001R\014sendsPerHour\022X\n\024unsubscribe_l" +
-      "ink_sid\030\r \001(\0132!.tcnapi.omni.campaigns.v1" +
-      ".Int64IdB\003\340A\001R\022unsubscribeLinkSid\022T\n\022ver" +
-      "ified_email_sid\030\016 \001(\0132!.tcnapi.omni.camp" +
-      "aigns.v1.Int64IdB\003\340A\001R\020verifiedEmailSid\022" +
-      "P\n\024stop_on_task_deplete\030\017 \001(\0132\032.google.p" +
-      "rotobuf.BoolValueB\003\340A\001R\021stopOnTaskDeplet" +
-      "e\022O\n\013attachments\030\020 \003(\0132(.tcnapi.omni.cam" +
-      "paigns.v1.OmniAttachmentB\003\340A\001R\013attachmen" +
-      "ts\022V\n\026compliance_rule_set_id\030\021 \001(\0132\034.goo" +
-      "gle.protobuf.StringValueB\003\340A\001R\023complianc" +
-      "eRuleSetId\0221\n\022payment_portal_ids\030\022 \003(\tB\003" +
-      "\340A\001R\020paymentPortalIds\022?\n\007flow_id\030\023 \001(\0132!" +
-      ".tcnapi.omni.campaigns.v1.Int64IdB\003\340A\001R\006" +
-      "flowId\022j\n\006skills\030\024 \001(\0132M.tcnapi.omni.cam" +
-      "paigns.v1.Campaign.Module.ModuleConfig.O" +
-      "mniConversationSkillsB\003\340A\001R\006skills\022s\n\017wh" +
-      "atsapp_number\030\025 \001(\0132E.tcnapi.omni.campai" +
-      "gns.v1.Campaign.Module.ModuleConfig.What" +
-      "sAppNumberB\003\340A\001R\016whatsappNumber\022~\n\021provi" +
-      "der_metadata\030\026 \003(\0132L.tcnapi.omni.campaig" +
-      "ns.v1.Campaign.Module.ModuleConfig.Provi" +
-      "derMetadataEntryB\003\340A\001R\020providerMetadata\022" +
-      "&\n\014country_code\030\027 \001(\005B\003\340A\001R\013countryCode\022" +
-      "/\n\021postal_code_field\030\030 \001(\tB\003\340A\001R\017postalC" +
-      "odeField\022\222\001\n\026timeout_message_config\030\031 \001(" +
-      "\0132W.tcnapi.omni.campaigns.v1.Campaign.Mo" +
-      "dule.ModuleConfig.ConversationTimeoutMes" +
-      "sageConfigB\003\340A\001R\024timeoutMessageConfig\032C\n" +
-      "\025ProviderMetadataEntry\022\020\n\003key\030\001 \001(\tR\003key" +
-      "\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\032\230\001\n\023ChatColor" +
-      "Properties\022#\n\rprimary_color\030\001 \001(\tR\014prima" +
-      "ryColor\022*\n\021header_text_color\030\002 \001(\tR\017head" +
-      "erTextColor\0220\n\024paragraph_text_color\030\003 \001(" +
-      "\tR\022paragraphTextColor\032B\n\nChatHeader\022\026\n\006h" +
-      "eader\030\001 \001(\tR\006header\022\034\n\tsubheader\030\002 \001(\tR\t" +
-      "subheader\032\306\001\n\026OmniConversationSkills\022q\n\006" +
-      "skills\030\001 \003(\0132Y.tcnapi.omni.campaigns.v1." +
-      "Campaign.Module.ModuleConfig.OmniConvers" +
-      "ationSkills.SkillsEntryR\006skills\0329\n\013Skill" +
-      "sEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\010R" +
-      "\005value:\0028\001\032\350\004\n\tSmsNumber\022\026\n\006number\030\001 \001(\t" +
-      "R\006number\022b\n\004type\030\002 \001(\0162N.tcnapi.omni.cam" +
-      "paigns.v1.Campaign.Module.ModuleConfig.S" +
-      "msNumber.SmsNumberTypeR\004type\022n\n\010provider" +
-      "\030\003 \001(\0162R.tcnapi.omni.campaigns.v1.Campai" +
-      "gn.Module.ModuleConfig.SmsNumber.SmsNumb" +
-      "erProviderR\010provider\022!\n\014country_code\030\004 \001" +
-      "(\005R\013countryCode\"X\n\rSmsNumberType\022\027\n\023SMS_" +
-      "SHORT_CODE_TYPE\020\000\022\031\n\025SMS_ALPHANUMERIC_TY" +
-      "PE\020\001\022\023\n\017SMS_NUMBER_TYPE\020\002\"\361\001\n\021SmsNumberP" +
-      "rovider\022\024\n\020UNKNOWN_PROVIDER\020\000\022\026\n\022BANDWID" +
-      "TH_PROVIDER\020\001\022\026\n\022BURST_SMS_PROVIDER\020\002\022\022\n" +
-      "\016PLIVO_PROVIDER\020\003\022\024\n\020APEIRON_PROVIDER\020\004\022" +
-      "\031\n\025AUSBURST_SMS_PROVIDER\020\005\022\031\n\025MEDIASAT_S" +
-      "MS_PROVIDER\020\006\022\032\n\026TEXTLOCAL_SMS_PROVIDER\020" +
-      "\007\022\032\n\026SMARTPING_SMS_PROVIDER\020\010\032\360\003\n\016WhatsA" +
-      "ppNumber\022\026\n\006number\030\001 \001(\tR\006number\022x\n\010prov" +
-      "ider\030\002 \001(\0162\\.tcnapi.omni.campaigns.v1.Ca" +
-      "mpaign.Module.ModuleConfig.WhatsAppNumbe" +
-      "r.WhatsAppNumberProviderR\010provider\022!\n\014co" +
-      "untry_code\030\003 \001(\005R\013countryCode\0222\n\023whatsap" +
-      "p_number_sid\030\004 \001(\003B\0020\001R\021whatsappNumberSi" +
-      "d\022!\n\014display_name\030\005 \001(\tR\013displayName\022=\n\014" +
-      "date_created\030\006 \001(\0132\032.google.protobuf.Tim" +
-      "estampR\013dateCreated\022?\n\rdate_modified\030\007 \001" +
-      "(\0132\032.google.protobuf.TimestampR\014dateModi" +
-      "fied\"R\n\026WhatsAppNumberProvider\022\035\n\031UNKNOW" +
-      "N_WHATSAPP_PROVIDER\020\000\022\031\n\025WHATSAPP_SMS_PR" +
-      "OVIDER\020\001\032U\n ConversationTimeoutMessageCo" +
-      "nfig\022\037\n\013is_disabled\030\001 \001(\010R\nisDisabled\022\020\n" +
-      "\003msg\030\002 \001(\tR\003msg\032\252\004\n\007Details\022E\n\020total_tas" +
-      "k_count\030\001 \001(\0132\033.google.protobuf.Int64Val" +
-      "ueR\016totalTaskCount\022M\n\024completed_task_cou" +
-      "nt\030\002 \001(\0132\033.google.protobuf.Int64ValueR\022c" +
-      "ompletedTaskCount\022T\n\027connected_inbox_add" +
-      "ress\030\003 \001(\0132\034.google.protobuf.StringValue" +
-      "R\025connectedInboxAddress\022R\n\026verified_emai" +
-      "l_address\030\004 \001(\0132\034.google.protobuf.String" +
-      "ValueR\024verifiedEmailAddress\022I\n\022pending_t" +
-      "ask_count\030\005 \001(\0132\033.google.protobuf.Int64V" +
-      "alueR\020pendingTaskCount\022G\n\021failed_task_co" +
-      "unt\030\006 \001(\0132\033.google.protobuf.Int64ValueR\017" +
-      "failedTaskCount\022K\n\023canceled_task_count\030\007" +
-      " \001(\0132\033.google.protobuf.Int64ValueR\021cance" +
-      "ledTaskCount\"\334\001\n\013ModuleState\022\024\n\020MODULE_P" +
-      "REPARING\020\000\022\025\n\021MODULE_SCHEDULING\020d\022\023\n\016MOD" +
-      "ULE_RUNNING\020\310\001\022\031\n\024MODULE_RUNNING_ERROR\020\372" +
-      "\001\022\031\n\024MODULE_ERROR_STANDBY\020\254\002\022\022\n\rMODULE_P" +
-      "AUSED\020\220\003\022\024\n\017MODULE_RESUMING\020\364\003\022\025\n\020MODULE" +
-      "_COMPLETED\020\330\004\022\024\n\017MODULE_ARCHIVED\020\274\005\"x\n\nM" +
-      "oduleType\022\027\n\023MODULE_TYPE_INBOUND\020\000\022\030\n\024MO" +
-      "DULE_TYPE_OUTBOUND\020\001\022\037\n\033MODULE_TYPE_MANU" +
-      "AL_APPROVAL\020\002\022\026\n\022MODULE_TYPE_MANUAL\020\003\"\205\001" +
-      "\n\013ChannelType\022\026\n\022CHANNEL_TYPE_EMAIL\020\000\022\024\n" +
-      "\020CHANNEL_TYPE_SMS\020\001\022\025\n\021CHANNEL_TYPE_CHAT" +
-      "\020\002\022\026\n\022CHANNEL_TYPE_VOICE\020\003\022\031\n\025CHANNEL_TY" +
-      "PE_WHATSAPP\020\004\"\361\001\n\rCampaignState\022\016\n\nSCHED" +
-      "ULING\020\000\022\014\n\007RUNNING\020\310\001\022\013\n\006PAUSED\020\220\003\022\016\n\tCO" +
-      "MPLETED\020\330\004\022\r\n\010ARCHIVED\020\240\006\"\006\010\212\005\020\212\005\"\006\010\274\005\020\274" +
-      "\005\"\006\010\356\005\020\356\005\"\004\010d\020d\"\006\010\372\001\020\372\001\"\006\010\254\002\020\254\002\"\006\010\364\003\020\364\003*" +
-      "\020COMPLETED_SUMMED*\tCANCELLED*\020CANCELLED_" +
-      "SUMMED*\tPREPARING*\rRUNNING_ERROR*\rERROR_" +
-      "STANDBY*\010RESUMING:m\352Aj\n!tcnapi.omni.camp" +
-      "aigns.v1/Campaign\0220regions/{region}/orgs" +
-      "/{org}/campaigns/{campaign}*\tcampaigns2\010" +
-      "campaign\"K\n\017TimeZoneWrapper\0228\n\005value\030\001 \001" +
-      "(\0162\".tcnapi.omni.campaigns.v1.TimeZoneR\005" +
-      "value\"]\n\020WeekdayTimeRange\022I\n\007entries\030\001 \003" +
-      "(\0132/.tcnapi.omni.campaigns.v1.WeekdayTim" +
-      "eRangeEntryR\007entries\"\267\002\n\025WeekdayTimeRang" +
-      "eEntry\022H\n\tstart_day\030\001 \001(\0162&.tcnapi.omni." +
-      "campaigns.v1.Weekday.EnumB\003\340A\001R\010startDay" +
-      "\022\"\n\nstart_hour\030\002 \001(\003B\003\340A\001R\tstartHour\022&\n\014" +
-      "start_minute\030\003 \001(\003B\003\340A\001R\013startMinute\022D\n\007" +
-      "end_day\030\004 \001(\0162&.tcnapi.omni.campaigns.v1" +
-      ".Weekday.EnumB\003\340A\001R\006endDay\022\036\n\010end_hour\030\005" +
-      " \001(\003B\003\340A\001R\007endHour\022\"\n\nend_minute\030\006 \001(\003B\003" +
-      "\340A\001R\tendMinute\"s\n\013SLATimeouts\022\016\n\002t1\030\001 \001(" +
-      "\003R\002t1\022\016\n\002t2\030\002 \001(\003R\002t2\022\016\n\002t3\030\003 \001(\003R\002t3\022\020\n" +
-      "\003t10\030\n \001(\003R\003t10\022\020\n\003t11\030\013 \001(\003R\003t11\022\020\n\003t12" +
-      "\030\014 \001(\003R\003t12\"\366\001\n\013Disposition\022+\n\017dispositi" +
-      "on_sid\030\001 \001(\003B\0020\001R\016dispositionSid\022=\n\014date" +
-      "_created\030\002 \001(\0132\032.google.protobuf.Timesta" +
-      "mpR\013dateCreated\022?\n\rdate_modified\030\003 \001(\0132\032" +
-      ".google.protobuf.TimestampR\014dateModified" +
-      "\022 \n\013disposition\030\004 \001(\tR\013disposition\022\030\n\007de" +
-      "leted\030\005 \001(\010R\007deleted\"\247\004\n\016OmniAttachment\022" +
-      "2\n\023omni_attachment_sid\030\001 \001(\003B\0020\001R\021omniAt" +
-      "tachmentSid\022\022\n\004name\030\002 \001(\tR\004name\022\033\n\tfile_" +
-      "type\030\003 \001(\tR\010fileType\022\033\n\tfile_size\030\004 \001(\003R" +
-      "\010fileSize\022\022\n\004path\030\005 \001(\tR\004path\0225\n\007temp_id" +
-      "\030\006 \001(\0132\034.google.protobuf.StringValueR\006te" +
-      "mpId\022!\n\014download_url\030\007 \001(\tR\013downloadUrl\022" +
-      "=\n\014date_created\030\010 \001(\0132\032.google.protobuf." +
-      "TimestampR\013dateCreated\022?\n\rdate_modified\030" +
-      "\t \001(\0132\032.google.protobuf.TimestampR\014dateM" +
-      "odified\022;\n\ncontent_id\030\n \001(\0132\034.google.pro" +
-      "tobuf.StringValueR\tcontentId\0222\n\005width\030\013 " +
-      "\001(\0132\034.google.protobuf.StringValueR\005width" +
-      "\0224\n\006height\030\014 \001(\0132\034.google.protobuf.Strin" +
-      "gValueR\006height\"m\n\007Weekday\"b\n\004Enum\022\n\n\006SUN" +
-      "DAY\020\000\022\n\n\006MONDAY\020\001\022\013\n\007TUESDAY\020\002\022\r\n\tWEDNES" +
-      "DAY\020\003\022\014\n\010THURSDAY\020\004\022\n\n\006FRIDAY\020\005\022\014\n\010SATUR" +
-      "DAY\020\006\"#\n\007Int64Id\022\030\n\005value\030\001 \001(\003B\0020\001R\005val" +
-      "ue*\347\n\n\010TimeZone\022!\n\035TIME_ZONE_AMERICA_PUE" +
-      "RTO_RICO\020\000\022\036\n\032TIME_ZONE_AMERICA_NEW_YORK" +
-      "\020\001\022\"\n\036TIME_ZONE_AMERICA_INDIANAPOLIS\020\002\022\035" +
-      "\n\031TIME_ZONE_AMERICA_CHICAGO\020\003\022\035\n\031TIME_ZO" +
-      "NE_AMERICA_PHOENIX\020\004\022\034\n\030TIME_ZONE_AMERIC" +
-      "A_DENVER\020\005\022!\n\035TIME_ZONE_AMERICA_LOS_ANGE" +
-      "LES\020\006\022\037\n\033TIME_ZONE_AMERICA_ANCHORAGE\020\007\022\031" +
-      "\n\025TIME_ZONE_ASIA_MANILA\020\010\022\033\n\027TIME_ZONE_A" +
-      "SIA_CALCUTTA\020\t\022\032\n\026TIME_ZONE_ASIA_COLOMBO" +
-      "\020\n\022\036\n\032TIME_ZONE_PACIFIC_HONOLULU\020\013\022!\n\035TI" +
-      "ME_ZONE_CANADA_NEWFOUNDLAND\020\014\022\035\n\031TIME_ZO" +
-      "NE_CANADA_ATLANTIC\020\r\022\034\n\030TIME_ZONE_CANADA" +
-      "_CENTRAL\020\016\022&\n\"TIME_ZONE_CANADA_EAST_SASK" +
-      "ATCHEWAN\020\017\022\034\n\030TIME_ZONE_CANADA_EASTERN\020\020" +
-      "\022\035\n\031TIME_ZONE_CANADA_MOUNTAIN\020\021\022\034\n\030TIME_" +
-      "ZONE_CANADA_PACIFIC\020\022\022!\n\035TIME_ZONE_CANAD" +
-      "A_SASKATCHEWAN\020\023\022\032\n\026TIME_ZONE_CANADA_YUK" +
-      "ON\020\024\022\033\n\027TIME_ZONE_ETC_GREENWICH\020\025\022\033\n\027TIM" +
-      "E_ZONE_ETC_UNIVERSAL\020\026\022\033\n\027TIME_ZONE_EURO" +
-      "PE_LONDON\020\027\022\033\n\027TIME_ZONE_EUROPE_MADRID\020\030" +
-      "\022\033\n\027TIME_ZONE_EUROPE_BERLIN\020\031\022\036\n\032TIME_ZO" +
-      "NE_EUROPE_BUCHAREST\020\032\022!\n\035TIME_ZONE_AMERI" +
-      "CA_MEXICO_CITY\020\033\022\034\n\030TIME_ZONE_MEXICO_BAJ" +
-      "ASUR\020\034\022\036\n\032TIME_ZONE_MEXICO_BAJANORTE\020\035\022\031" +
-      "\n\025TIME_ZONE_BRAZIL_ACRE\020\036\022\031\n\025TIME_ZONE_B" +
-      "RAZIL_WEST\020\037\022\031\n\025TIME_ZONE_BRAZIL_EAST\020 \022" +
-      "\036\n\032TIME_ZONE_BRAZIL_DENORONHA\020!\022\036\n\032TIME_" +
-      "ZONE_AUSTRALIA_DARWIN\020\"\022 \n\034TIME_ZONE_AUS" +
-      "TRALIA_ADELAIDE\020#\022\036\n\032TIME_ZONE_AUSTRALIA" +
-      "_SYDNEY\020$\022 \n\034TIME_ZONE_AUSTRALIA_BRISBAN" +
-      "E\020%\022!\n\035TIME_ZONE_AUSTRALIA_MELBOURNE\020&\022\035" +
-      "\n\031TIME_ZONE_AUSTRALIA_PERTH\020\'\022\036\n\032TIME_ZO" +
-      "NE_PACIFIC_AUCKLAND\020(\022\035\n\031TIME_ZONE_PACIF" +
-      "IC_CHATHAM\020)\022\034\n\030TIME_ZONE_ASIA_SINGAPORE" +
-      "\020*\022\030\n\024TIME_ZONE_ASIA_JAPAN\020+B\277\001\n*com.tcn" +
-      ".cloud.api.tcnapi.omni.campaigns.v1B\016Cam" +
-      "paignsProtoP\001\242\002\003TOC\252\002\030Tcnapi.Omni.Campai" +
-      "gns.V1\312\002\030Tcnapi\\Omni\\Campaigns\\V1\342\002$Tcna" +
-      "pi\\Omni\\Campaigns\\V1\\GPBMetadata\352\002\033Tcnap" +
-      "i::Omni::Campaigns::V1b\006proto3"
+      "oursOfOperation\032\337\034\n\014ModuleConfig\022I\n\017api_" +
+      "key_primary\030\001 \001(\0132\034.google.protobuf.Stri" +
+      "ngValueB\003\340A\002R\rapiKeyPrimary\022M\n\021api_key_s" +
+      "econdary\030\002 \001(\0132\034.google.protobuf.StringV" +
+      "alueB\003\340A\002R\017apiKeySecondary\022z\n\020color_prop" +
+      "erties\030\003 \001(\0132J.tcnapi.omni.campaigns.v1." +
+      "Campaign.Module.ModuleConfig.ChatColorPr" +
+      "opertiesB\003\340A\001R\017colorProperties\022V\n\023connec" +
+      "ted_inbox_sid\030\004 \001(\0132!.tcnapi.omni.campai" +
+      "gns.v1.Int64IdB\003\340A\001R\021connectedInboxSid\0227" +
+      "\n\005email\030\005 \001(\0132\034.google.protobuf.StringVa" +
+      "lueB\003\340A\001R\005email\022D\n\014message_body\030\006 \001(\0132\034." +
+      "google.protobuf.StringValueB\003\340A\001R\013messag" +
+      "eBody\022F\n\remail_subject\030\007 \001(\0132\034.google.pr" +
+      "otobuf.StringValueB\003\340A\001R\014emailSubject\022d\n" +
+      "\nsms_number\030\010 \001(\0132@.tcnapi.omni.campaign" +
+      "s.v1.Campaign.Module.ModuleConfig.SmsNum" +
+      "berB\003\340A\001R\tsmsNumber\022^\n\006header\030\t \001(\0132A.tc" +
+      "napi.omni.campaigns.v1.Campaign.Module.M" +
+      "oduleConfig.ChatHeaderB\003\340A\001R\006header\022M\n\014s" +
+      "la_timeouts\030\n \001(\0132%.tcnapi.omni.campaign" +
+      "s.v1.SLATimeoutsB\003\340A\001R\013slaTimeouts\022F\n\016se" +
+      "nds_per_hour\030\013 \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\003\340A\001R\014sendsPerHour\022X\n\024unsubscrib" +
+      "e_link_sid\030\014 \001(\0132!.tcnapi.omni.campaigns" +
+      ".v1.Int64IdB\003\340A\001R\022unsubscribeLinkSid\022T\n\022" +
+      "verified_email_sid\030\r \001(\0132!.tcnapi.omni.c" +
+      "ampaigns.v1.Int64IdB\003\340A\001R\020verifiedEmailS" +
+      "id\022P\n\024stop_on_task_deplete\030\016 \001(\0132\032.googl" +
+      "e.protobuf.BoolValueB\003\340A\001R\021stopOnTaskDep" +
+      "lete\022V\n\026compliance_rule_set_id\030\017 \001(\0132\034.g" +
+      "oogle.protobuf.StringValueB\003\340A\001R\023complia" +
+      "nceRuleSetId\0221\n\022payment_portal_ids\030\020 \003(\t" +
+      "B\003\340A\001R\020paymentPortalIds\022?\n\007flow_id\030\021 \001(\013" +
+      "2!.tcnapi.omni.campaigns.v1.Int64IdB\003\340A\001" +
+      "R\006flowId\022j\n\006skills\030\022 \001(\0132M.tcnapi.omni.c" +
+      "ampaigns.v1.Campaign.Module.ModuleConfig" +
+      ".OmniConversationSkillsB\003\340A\001R\006skills\022s\n\017" +
+      "whatsapp_number\030\023 \001(\0132E.tcnapi.omni.camp" +
+      "aigns.v1.Campaign.Module.ModuleConfig.Wh" +
+      "atsAppNumberB\003\340A\001R\016whatsappNumber\022~\n\021pro" +
+      "vider_metadata\030\024 \003(\0132L.tcnapi.omni.campa" +
+      "igns.v1.Campaign.Module.ModuleConfig.Pro" +
+      "viderMetadataEntryB\003\340A\001R\020providerMetadat" +
+      "a\022&\n\014country_code\030\025 \001(\005B\003\340A\001R\013countryCod" +
+      "e\022/\n\021postal_code_field\030\026 \001(\tB\003\340A\001R\017posta" +
+      "lCodeField\022\222\001\n\026timeout_message_config\030\027 " +
+      "\001(\0132W.tcnapi.omni.campaigns.v1.Campaign." +
+      "Module.ModuleConfig.ConversationTimeoutM" +
+      "essageConfigB\003\340A\001R\024timeoutMessageConfig\032" +
+      "C\n\025ProviderMetadataEntry\022\020\n\003key\030\001 \001(\tR\003k" +
+      "ey\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\032\230\001\n\023ChatCol" +
+      "orProperties\022#\n\rprimary_color\030\001 \001(\tR\014pri" +
+      "maryColor\022*\n\021header_text_color\030\002 \001(\tR\017he" +
+      "aderTextColor\0220\n\024paragraph_text_color\030\003 " +
+      "\001(\tR\022paragraphTextColor\032B\n\nChatHeader\022\026\n" +
+      "\006header\030\001 \001(\tR\006header\022\034\n\tsubheader\030\002 \001(\t" +
+      "R\tsubheader\032\306\001\n\026OmniConversationSkills\022q" +
+      "\n\006skills\030\001 \003(\0132Y.tcnapi.omni.campaigns.v" +
+      "1.Campaign.Module.ModuleConfig.OmniConve" +
+      "rsationSkills.SkillsEntryR\006skills\0329\n\013Ski" +
+      "llsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(" +
+      "\010R\005value:\0028\001\032\350\004\n\tSmsNumber\022\026\n\006number\030\001 \001" +
+      "(\tR\006number\022b\n\004type\030\002 \001(\0162N.tcnapi.omni.c" +
+      "ampaigns.v1.Campaign.Module.ModuleConfig" +
+      ".SmsNumber.SmsNumberTypeR\004type\022n\n\010provid" +
+      "er\030\003 \001(\0162R.tcnapi.omni.campaigns.v1.Camp" +
+      "aign.Module.ModuleConfig.SmsNumber.SmsNu" +
+      "mberProviderR\010provider\022!\n\014country_code\030\004" +
+      " \001(\005R\013countryCode\"X\n\rSmsNumberType\022\027\n\023SM" +
+      "S_SHORT_CODE_TYPE\020\000\022\031\n\025SMS_ALPHANUMERIC_" +
+      "TYPE\020\001\022\023\n\017SMS_NUMBER_TYPE\020\002\"\361\001\n\021SmsNumbe" +
+      "rProvider\022\024\n\020UNKNOWN_PROVIDER\020\000\022\026\n\022BANDW" +
+      "IDTH_PROVIDER\020\001\022\026\n\022BURST_SMS_PROVIDER\020\002\022" +
+      "\022\n\016PLIVO_PROVIDER\020\003\022\024\n\020APEIRON_PROVIDER\020" +
+      "\004\022\031\n\025AUSBURST_SMS_PROVIDER\020\005\022\031\n\025MEDIASAT" +
+      "_SMS_PROVIDER\020\006\022\032\n\026TEXTLOCAL_SMS_PROVIDE" +
+      "R\020\007\022\032\n\026SMARTPING_SMS_PROVIDER\020\010\032\360\003\n\016What" +
+      "sAppNumber\022\026\n\006number\030\001 \001(\tR\006number\022x\n\010pr" +
+      "ovider\030\002 \001(\0162\\.tcnapi.omni.campaigns.v1." +
+      "Campaign.Module.ModuleConfig.WhatsAppNum" +
+      "ber.WhatsAppNumberProviderR\010provider\022!\n\014" +
+      "country_code\030\003 \001(\005R\013countryCode\0222\n\023whats" +
+      "app_number_sid\030\004 \001(\003B\0020\001R\021whatsappNumber" +
+      "Sid\022!\n\014display_name\030\005 \001(\tR\013displayName\022=" +
+      "\n\014date_created\030\006 \001(\0132\032.google.protobuf.T" +
+      "imestampR\013dateCreated\022?\n\rdate_modified\030\007" +
+      " \001(\0132\032.google.protobuf.TimestampR\014dateMo" +
+      "dified\"R\n\026WhatsAppNumberProvider\022\035\n\031UNKN" +
+      "OWN_WHATSAPP_PROVIDER\020\000\022\031\n\025WHATSAPP_SMS_" +
+      "PROVIDER\020\001\032U\n ConversationTimeoutMessage" +
+      "Config\022\037\n\013is_disabled\030\001 \001(\010R\nisDisabled\022" +
+      "\020\n\003msg\030\002 \001(\tR\003msg\"\334\001\n\013ModuleState\022\024\n\020MOD" +
+      "ULE_PREPARING\020\000\022\025\n\021MODULE_SCHEDULING\020d\022\023" +
+      "\n\016MODULE_RUNNING\020\310\001\022\031\n\024MODULE_RUNNING_ER" +
+      "ROR\020\372\001\022\031\n\024MODULE_ERROR_STANDBY\020\254\002\022\022\n\rMOD" +
+      "ULE_PAUSED\020\220\003\022\024\n\017MODULE_RESUMING\020\364\003\022\025\n\020M" +
+      "ODULE_COMPLETED\020\330\004\022\024\n\017MODULE_ARCHIVED\020\274\005" +
+      "\"x\n\nModuleType\022\027\n\023MODULE_TYPE_INBOUND\020\000\022" +
+      "\030\n\024MODULE_TYPE_OUTBOUND\020\001\022\037\n\033MODULE_TYPE" +
+      "_MANUAL_APPROVAL\020\002\022\026\n\022MODULE_TYPE_MANUAL" +
+      "\020\003\"\205\001\n\013ChannelType\022\026\n\022CHANNEL_TYPE_EMAIL" +
+      "\020\000\022\024\n\020CHANNEL_TYPE_SMS\020\001\022\025\n\021CHANNEL_TYPE" +
+      "_CHAT\020\002\022\026\n\022CHANNEL_TYPE_VOICE\020\003\022\031\n\025CHANN" +
+      "EL_TYPE_WHATSAPP\020\004\"\361\001\n\rCampaignState\022\016\n\n" +
+      "SCHEDULING\020\000\022\014\n\007RUNNING\020\310\001\022\013\n\006PAUSED\020\220\003\022" +
+      "\016\n\tCOMPLETED\020\330\004\022\r\n\010ARCHIVED\020\240\006\"\006\010\212\005\020\212\005\"\006" +
+      "\010\274\005\020\274\005\"\006\010\356\005\020\356\005\"\004\010d\020d\"\006\010\372\001\020\372\001\"\006\010\254\002\020\254\002\"\006\010\364" +
+      "\003\020\364\003*\020COMPLETED_SUMMED*\tCANCELLED*\020CANCE" +
+      "LLED_SUMMED*\tPREPARING*\rRUNNING_ERROR*\rE" +
+      "RROR_STANDBY*\010RESUMING:m\352Aj\n!tcnapi.omni" +
+      ".campaigns.v1/Campaign\0220regions/{region}" +
+      "/orgs/{org}/campaigns/{campaign}*\tcampai" +
+      "gns2\010campaign\"K\n\017TimeZoneWrapper\0228\n\005valu" +
+      "e\030\001 \001(\0162\".tcnapi.omni.campaigns.v1.TimeZ" +
+      "oneR\005value\"]\n\020WeekdayTimeRange\022I\n\007entrie" +
+      "s\030\001 \003(\0132/.tcnapi.omni.campaigns.v1.Weekd" +
+      "ayTimeRangeEntryR\007entries\"\267\002\n\025WeekdayTim" +
+      "eRangeEntry\022H\n\tstart_day\030\001 \001(\0162&.tcnapi." +
+      "omni.campaigns.v1.Weekday.EnumB\003\340A\001R\010sta" +
+      "rtDay\022\"\n\nstart_hour\030\002 \001(\003B\003\340A\001R\tstartHou" +
+      "r\022&\n\014start_minute\030\003 \001(\003B\003\340A\001R\013startMinut" +
+      "e\022D\n\007end_day\030\004 \001(\0162&.tcnapi.omni.campaig" +
+      "ns.v1.Weekday.EnumB\003\340A\001R\006endDay\022\036\n\010end_h" +
+      "our\030\005 \001(\003B\003\340A\001R\007endHour\022\"\n\nend_minute\030\006 " +
+      "\001(\003B\003\340A\001R\tendMinute\"s\n\013SLATimeouts\022\016\n\002t1" +
+      "\030\001 \001(\003R\002t1\022\016\n\002t2\030\002 \001(\003R\002t2\022\016\n\002t3\030\003 \001(\003R\002" +
+      "t3\022\020\n\003t10\030\n \001(\003R\003t10\022\020\n\003t11\030\013 \001(\003R\003t11\022\020" +
+      "\n\003t12\030\014 \001(\003R\003t12\"m\n\007Weekday\"b\n\004Enum\022\n\n\006S" +
+      "UNDAY\020\000\022\n\n\006MONDAY\020\001\022\013\n\007TUESDAY\020\002\022\r\n\tWEDN" +
+      "ESDAY\020\003\022\014\n\010THURSDAY\020\004\022\n\n\006FRIDAY\020\005\022\014\n\010SAT" +
+      "URDAY\020\006\"#\n\007Int64Id\022\030\n\005value\030\001 \001(\003B\0020\001R\005v" +
+      "alue*\347\n\n\010TimeZone\022!\n\035TIME_ZONE_AMERICA_P" +
+      "UERTO_RICO\020\000\022\036\n\032TIME_ZONE_AMERICA_NEW_YO" +
+      "RK\020\001\022\"\n\036TIME_ZONE_AMERICA_INDIANAPOLIS\020\002" +
+      "\022\035\n\031TIME_ZONE_AMERICA_CHICAGO\020\003\022\035\n\031TIME_" +
+      "ZONE_AMERICA_PHOENIX\020\004\022\034\n\030TIME_ZONE_AMER" +
+      "ICA_DENVER\020\005\022!\n\035TIME_ZONE_AMERICA_LOS_AN" +
+      "GELES\020\006\022\037\n\033TIME_ZONE_AMERICA_ANCHORAGE\020\007" +
+      "\022\031\n\025TIME_ZONE_ASIA_MANILA\020\010\022\033\n\027TIME_ZONE" +
+      "_ASIA_CALCUTTA\020\t\022\032\n\026TIME_ZONE_ASIA_COLOM" +
+      "BO\020\n\022\036\n\032TIME_ZONE_PACIFIC_HONOLULU\020\013\022!\n\035" +
+      "TIME_ZONE_CANADA_NEWFOUNDLAND\020\014\022\035\n\031TIME_" +
+      "ZONE_CANADA_ATLANTIC\020\r\022\034\n\030TIME_ZONE_CANA" +
+      "DA_CENTRAL\020\016\022&\n\"TIME_ZONE_CANADA_EAST_SA" +
+      "SKATCHEWAN\020\017\022\034\n\030TIME_ZONE_CANADA_EASTERN" +
+      "\020\020\022\035\n\031TIME_ZONE_CANADA_MOUNTAIN\020\021\022\034\n\030TIM" +
+      "E_ZONE_CANADA_PACIFIC\020\022\022!\n\035TIME_ZONE_CAN" +
+      "ADA_SASKATCHEWAN\020\023\022\032\n\026TIME_ZONE_CANADA_Y" +
+      "UKON\020\024\022\033\n\027TIME_ZONE_ETC_GREENWICH\020\025\022\033\n\027T" +
+      "IME_ZONE_ETC_UNIVERSAL\020\026\022\033\n\027TIME_ZONE_EU" +
+      "ROPE_LONDON\020\027\022\033\n\027TIME_ZONE_EUROPE_MADRID" +
+      "\020\030\022\033\n\027TIME_ZONE_EUROPE_BERLIN\020\031\022\036\n\032TIME_" +
+      "ZONE_EUROPE_BUCHAREST\020\032\022!\n\035TIME_ZONE_AME" +
+      "RICA_MEXICO_CITY\020\033\022\034\n\030TIME_ZONE_MEXICO_B" +
+      "AJASUR\020\034\022\036\n\032TIME_ZONE_MEXICO_BAJANORTE\020\035" +
+      "\022\031\n\025TIME_ZONE_BRAZIL_ACRE\020\036\022\031\n\025TIME_ZONE" +
+      "_BRAZIL_WEST\020\037\022\031\n\025TIME_ZONE_BRAZIL_EAST\020" +
+      " \022\036\n\032TIME_ZONE_BRAZIL_DENORONHA\020!\022\036\n\032TIM" +
+      "E_ZONE_AUSTRALIA_DARWIN\020\"\022 \n\034TIME_ZONE_A" +
+      "USTRALIA_ADELAIDE\020#\022\036\n\032TIME_ZONE_AUSTRAL" +
+      "IA_SYDNEY\020$\022 \n\034TIME_ZONE_AUSTRALIA_BRISB" +
+      "ANE\020%\022!\n\035TIME_ZONE_AUSTRALIA_MELBOURNE\020&" +
+      "\022\035\n\031TIME_ZONE_AUSTRALIA_PERTH\020\'\022\036\n\032TIME_" +
+      "ZONE_PACIFIC_AUCKLAND\020(\022\035\n\031TIME_ZONE_PAC" +
+      "IFIC_CHATHAM\020)\022\034\n\030TIME_ZONE_ASIA_SINGAPO" +
+      "RE\020*\022\030\n\024TIME_ZONE_ASIA_JAPAN\020+B\277\001\n*com.t" +
+      "cn.cloud.api.tcnapi.omni.campaigns.v1B\016C" +
+      "ampaignsProtoP\001\242\002\003TOC\252\002\030Tcnapi.Omni.Camp" +
+      "aigns.V1\312\002\030Tcnapi\\Omni\\Campaigns\\V1\342\002$Tc" +
+      "napi\\Omni\\Campaigns\\V1\\GPBMetadata\352\002\033Tcn" +
+      "api::Omni::Campaigns::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -395,13 +340,13 @@ public final class CampaignsProto {
     internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_descriptor,
-        new java.lang.String[] { "CampaignModuleSid", "CampaignSid", "ModuleType", "State", "Config", "DateCreated", "DateModified", "ScheduledStopDate", "ActualStopDate", "HoursOfOperation", "Details", });
+        new java.lang.String[] { "CampaignModuleSid", "CampaignSid", "ModuleType", "State", "Config", "DateCreated", "DateModified", "ScheduledStopDate", "ActualStopDate", "HoursOfOperation", });
     internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_ModuleConfig_descriptor =
       internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_descriptor.getNestedTypes().get(0);
     internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_ModuleConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_ModuleConfig_descriptor,
-        new java.lang.String[] { "ApiKeyPrimary", "ApiKeySecondary", "ColorProperties", "ConnectedInboxSid", "Dispositions", "Email", "MessageBody", "EmailSubject", "SmsNumber", "Header", "SlaTimeouts", "SendsPerHour", "UnsubscribeLinkSid", "VerifiedEmailSid", "StopOnTaskDeplete", "Attachments", "ComplianceRuleSetId", "PaymentPortalIds", "FlowId", "Skills", "WhatsappNumber", "ProviderMetadata", "CountryCode", "PostalCodeField", "TimeoutMessageConfig", });
+        new java.lang.String[] { "ApiKeyPrimary", "ApiKeySecondary", "ColorProperties", "ConnectedInboxSid", "Email", "MessageBody", "EmailSubject", "SmsNumber", "Header", "SlaTimeouts", "SendsPerHour", "UnsubscribeLinkSid", "VerifiedEmailSid", "StopOnTaskDeplete", "ComplianceRuleSetId", "PaymentPortalIds", "FlowId", "Skills", "WhatsappNumber", "ProviderMetadata", "CountryCode", "PostalCodeField", "TimeoutMessageConfig", });
     internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_ModuleConfig_ProviderMetadataEntry_descriptor =
       internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_ModuleConfig_descriptor.getNestedTypes().get(0);
     internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_ModuleConfig_ProviderMetadataEntry_fieldAccessorTable = new
@@ -450,12 +395,6 @@ public final class CampaignsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_ModuleConfig_ConversationTimeoutMessageConfig_descriptor,
         new java.lang.String[] { "IsDisabled", "Msg", });
-    internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_descriptor =
-      internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_descriptor.getNestedTypes().get(1);
-    internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_descriptor,
-        new java.lang.String[] { "TotalTaskCount", "CompletedTaskCount", "ConnectedInboxAddress", "VerifiedEmailAddress", "PendingTaskCount", "FailedTaskCount", "CanceledTaskCount", });
     internal_static_tcnapi_omni_campaigns_v1_TimeZoneWrapper_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_tcnapi_omni_campaigns_v1_TimeZoneWrapper_fieldAccessorTable = new
@@ -480,26 +419,14 @@ public final class CampaignsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_tcnapi_omni_campaigns_v1_SLATimeouts_descriptor,
         new java.lang.String[] { "T1", "T2", "T3", "T10", "T11", "T12", });
-    internal_static_tcnapi_omni_campaigns_v1_Disposition_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_tcnapi_omni_campaigns_v1_Disposition_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_tcnapi_omni_campaigns_v1_Disposition_descriptor,
-        new java.lang.String[] { "DispositionSid", "DateCreated", "DateModified", "Disposition", "Deleted", });
-    internal_static_tcnapi_omni_campaigns_v1_OmniAttachment_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_tcnapi_omni_campaigns_v1_OmniAttachment_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_tcnapi_omni_campaigns_v1_OmniAttachment_descriptor,
-        new java.lang.String[] { "OmniAttachmentSid", "Name", "FileType", "FileSize", "Path", "TempId", "DownloadUrl", "DateCreated", "DateModified", "ContentId", "Width", "Height", });
     internal_static_tcnapi_omni_campaigns_v1_Weekday_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_tcnapi_omni_campaigns_v1_Weekday_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_tcnapi_omni_campaigns_v1_Weekday_descriptor,
         new java.lang.String[] { });
     internal_static_tcnapi_omni_campaigns_v1_Int64Id_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_tcnapi_omni_campaigns_v1_Int64Id_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_tcnapi_omni_campaigns_v1_Int64Id_descriptor,

@@ -588,33 +588,6 @@ private static final long serialVersionUID = 0L;
      * <code>.tcnapi.omni.campaigns.v1.WeekdayTimeRange hours_of_operation = 11 [json_name = "hoursOfOperation"];</code>
      */
     com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRangeOrBuilder getHoursOfOperationOrBuilder();
-
-    /**
-     * <pre>
-     * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
-     * </pre>
-     *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 12 [json_name = "details"];</code>
-     * @return Whether the details field is set.
-     */
-    boolean hasDetails();
-    /**
-     * <pre>
-     * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
-     * </pre>
-     *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 12 [json_name = "details"];</code>
-     * @return The details.
-     */
-    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details getDetails();
-    /**
-     * <pre>
-     * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
-     * </pre>
-     *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 12 [json_name = "details"];</code>
-     */
-    com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.DetailsOrBuilder getDetailsOrBuilder();
   }
   /**
    * <pre>
@@ -1176,54 +1149,10 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * list of dispositions associated to the CampaignModule
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition> 
-          getDispositionsList();
-      /**
-       * <pre>
-       * list of dispositions associated to the CampaignModule
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition getDispositions(int index);
-      /**
-       * <pre>
-       * list of dispositions associated to the CampaignModule
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      int getDispositionsCount();
-      /**
-       * <pre>
-       * list of dispositions associated to the CampaignModule
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      java.util.List<? extends com.tcn.cloud.api.tcnapi.omni.campaigns.v1.DispositionOrBuilder> 
-          getDispositionsOrBuilderList();
-      /**
-       * <pre>
-       * list of dispositions associated to the CampaignModule
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.DispositionOrBuilder getDispositionsOrBuilder(
-          int index);
-
-      /**
-       * <pre>
        * email associated to the CampaignModule
        * </pre>
        *
-       * <code>.google.protobuf.StringValue email = 6 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue email = 5 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the email field is set.
        */
       boolean hasEmail();
@@ -1232,7 +1161,7 @@ private static final long serialVersionUID = 0L;
        * email associated to the CampaignModule
        * </pre>
        *
-       * <code>.google.protobuf.StringValue email = 6 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue email = 5 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The email.
        */
       com.google.protobuf.StringValue getEmail();
@@ -1241,7 +1170,7 @@ private static final long serialVersionUID = 0L;
        * email associated to the CampaignModule
        * </pre>
        *
-       * <code>.google.protobuf.StringValue email = 6 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue email = 5 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       com.google.protobuf.StringValueOrBuilder getEmailOrBuilder();
 
@@ -1250,7 +1179,7 @@ private static final long serialVersionUID = 0L;
        * message body
        * </pre>
        *
-       * <code>.google.protobuf.StringValue message_body = 7 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue message_body = 6 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the messageBody field is set.
        */
       boolean hasMessageBody();
@@ -1259,7 +1188,7 @@ private static final long serialVersionUID = 0L;
        * message body
        * </pre>
        *
-       * <code>.google.protobuf.StringValue message_body = 7 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue message_body = 6 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The messageBody.
        */
       com.google.protobuf.StringValue getMessageBody();
@@ -1268,7 +1197,7 @@ private static final long serialVersionUID = 0L;
        * message body
        * </pre>
        *
-       * <code>.google.protobuf.StringValue message_body = 7 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue message_body = 6 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       com.google.protobuf.StringValueOrBuilder getMessageBodyOrBuilder();
 
@@ -1277,7 +1206,7 @@ private static final long serialVersionUID = 0L;
        * email subjects
        * </pre>
        *
-       * <code>.google.protobuf.StringValue email_subject = 8 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue email_subject = 7 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the emailSubject field is set.
        */
       boolean hasEmailSubject();
@@ -1286,7 +1215,7 @@ private static final long serialVersionUID = 0L;
        * email subjects
        * </pre>
        *
-       * <code>.google.protobuf.StringValue email_subject = 8 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue email_subject = 7 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The emailSubject.
        */
       com.google.protobuf.StringValue getEmailSubject();
@@ -1295,7 +1224,7 @@ private static final long serialVersionUID = 0L;
        * email subjects
        * </pre>
        *
-       * <code>.google.protobuf.StringValue email_subject = 8 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue email_subject = 7 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       com.google.protobuf.StringValueOrBuilder getEmailSubjectOrBuilder();
 
@@ -1304,7 +1233,7 @@ private static final long serialVersionUID = 0L;
        * sms number
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 9 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 8 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the smsNumber field is set.
        */
       boolean hasSmsNumber();
@@ -1313,7 +1242,7 @@ private static final long serialVersionUID = 0L;
        * sms number
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 9 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 8 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The smsNumber.
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber getSmsNumber();
@@ -1322,7 +1251,7 @@ private static final long serialVersionUID = 0L;
        * sms number
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 9 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 8 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumberOrBuilder getSmsNumberOrBuilder();
 
@@ -1331,7 +1260,7 @@ private static final long serialVersionUID = 0L;
        * chat widget header
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 10 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 9 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the header field is set.
        */
       boolean hasHeader();
@@ -1340,7 +1269,7 @@ private static final long serialVersionUID = 0L;
        * chat widget header
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 10 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 9 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The header.
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader getHeader();
@@ -1349,7 +1278,7 @@ private static final long serialVersionUID = 0L;
        * chat widget header
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 10 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 9 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeaderOrBuilder getHeaderOrBuilder();
 
@@ -1358,7 +1287,7 @@ private static final long serialVersionUID = 0L;
        * sla timeouts associated with the CampaignModule
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 11 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 10 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the slaTimeouts field is set.
        */
       boolean hasSlaTimeouts();
@@ -1367,7 +1296,7 @@ private static final long serialVersionUID = 0L;
        * sla timeouts associated with the CampaignModule
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 11 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 10 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The slaTimeouts.
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.SLATimeouts getSlaTimeouts();
@@ -1376,7 +1305,7 @@ private static final long serialVersionUID = 0L;
        * sla timeouts associated with the CampaignModule
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 11 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 10 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.SLATimeoutsOrBuilder getSlaTimeoutsOrBuilder();
 
@@ -1385,7 +1314,7 @@ private static final long serialVersionUID = 0L;
        * maximum number of sends per hour for outbound CampaignModules
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value sends_per_hour = 12 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.Int64Value sends_per_hour = 11 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the sendsPerHour field is set.
        */
       boolean hasSendsPerHour();
@@ -1394,7 +1323,7 @@ private static final long serialVersionUID = 0L;
        * maximum number of sends per hour for outbound CampaignModules
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value sends_per_hour = 12 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.Int64Value sends_per_hour = 11 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The sendsPerHour.
        */
       com.google.protobuf.Int64Value getSendsPerHour();
@@ -1403,7 +1332,7 @@ private static final long serialVersionUID = 0L;
        * maximum number of sends per hour for outbound CampaignModules
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value sends_per_hour = 12 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.Int64Value sends_per_hour = 11 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getSendsPerHourOrBuilder();
 
@@ -1412,7 +1341,7 @@ private static final long serialVersionUID = 0L;
        * identifier of associated custom unsubscribe link
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 13 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 12 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the unsubscribeLinkSid field is set.
        */
       boolean hasUnsubscribeLinkSid();
@@ -1421,7 +1350,7 @@ private static final long serialVersionUID = 0L;
        * identifier of associated custom unsubscribe link
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 13 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 12 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The unsubscribeLinkSid.
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id getUnsubscribeLinkSid();
@@ -1430,7 +1359,7 @@ private static final long serialVersionUID = 0L;
        * identifier of associated custom unsubscribe link
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 13 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 12 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64IdOrBuilder getUnsubscribeLinkSidOrBuilder();
 
@@ -1439,7 +1368,7 @@ private static final long serialVersionUID = 0L;
        * verified email identifier
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 14 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 13 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the verifiedEmailSid field is set.
        */
       boolean hasVerifiedEmailSid();
@@ -1448,7 +1377,7 @@ private static final long serialVersionUID = 0L;
        * verified email identifier
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 14 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 13 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The verifiedEmailSid.
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id getVerifiedEmailSid();
@@ -1457,7 +1386,7 @@ private static final long serialVersionUID = 0L;
        * verified email identifier
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 14 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 13 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64IdOrBuilder getVerifiedEmailSidOrBuilder();
 
@@ -1466,7 +1395,7 @@ private static final long serialVersionUID = 0L;
        * stop module with all tasks are completed
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue stop_on_task_deplete = 15 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.BoolValue stop_on_task_deplete = 14 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the stopOnTaskDeplete field is set.
        */
       boolean hasStopOnTaskDeplete();
@@ -1475,7 +1404,7 @@ private static final long serialVersionUID = 0L;
        * stop module with all tasks are completed
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue stop_on_task_deplete = 15 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.BoolValue stop_on_task_deplete = 14 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The stopOnTaskDeplete.
        */
       com.google.protobuf.BoolValue getStopOnTaskDeplete();
@@ -1484,60 +1413,16 @@ private static final long serialVersionUID = 0L;
        * stop module with all tasks are completed
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue stop_on_task_deplete = 15 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.BoolValue stop_on_task_deplete = 14 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       com.google.protobuf.BoolValueOrBuilder getStopOnTaskDepleteOrBuilder();
-
-      /**
-       * <pre>
-       * attachments
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment> 
-          getAttachmentsList();
-      /**
-       * <pre>
-       * attachments
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment getAttachments(int index);
-      /**
-       * <pre>
-       * attachments
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      int getAttachmentsCount();
-      /**
-       * <pre>
-       * attachments
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      java.util.List<? extends com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachmentOrBuilder> 
-          getAttachmentsOrBuilderList();
-      /**
-       * <pre>
-       * attachments
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachmentOrBuilder getAttachmentsOrBuilder(
-          int index);
 
       /**
        * <pre>
        * Optional. compliance rule set to use for this campaign
        * </pre>
        *
-       * <code>.google.protobuf.StringValue compliance_rule_set_id = 17 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue compliance_rule_set_id = 15 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the complianceRuleSetId field is set.
        */
       boolean hasComplianceRuleSetId();
@@ -1546,7 +1431,7 @@ private static final long serialVersionUID = 0L;
        * Optional. compliance rule set to use for this campaign
        * </pre>
        *
-       * <code>.google.protobuf.StringValue compliance_rule_set_id = 17 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue compliance_rule_set_id = 15 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The complianceRuleSetId.
        */
       com.google.protobuf.StringValue getComplianceRuleSetId();
@@ -1555,7 +1440,7 @@ private static final long serialVersionUID = 0L;
        * Optional. compliance rule set to use for this campaign
        * </pre>
        *
-       * <code>.google.protobuf.StringValue compliance_rule_set_id = 17 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue compliance_rule_set_id = 15 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       com.google.protobuf.StringValueOrBuilder getComplianceRuleSetIdOrBuilder();
 
@@ -1564,7 +1449,7 @@ private static final long serialVersionUID = 0L;
        * Payment Portal Ids
        * </pre>
        *
-       * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return A list containing the paymentPortalIds.
        */
       java.util.List<java.lang.String>
@@ -1574,7 +1459,7 @@ private static final long serialVersionUID = 0L;
        * Payment Portal Ids
        * </pre>
        *
-       * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The count of paymentPortalIds.
        */
       int getPaymentPortalIdsCount();
@@ -1583,7 +1468,7 @@ private static final long serialVersionUID = 0L;
        * Payment Portal Ids
        * </pre>
        *
-       * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
        * @param index The index of the element to return.
        * @return The paymentPortalIds at the given index.
        */
@@ -1593,7 +1478,7 @@ private static final long serialVersionUID = 0L;
        * Payment Portal Ids
        * </pre>
        *
-       * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
        * @param index The index of the value to return.
        * @return The bytes of the paymentPortalIds at the given index.
        */
@@ -1605,7 +1490,7 @@ private static final long serialVersionUID = 0L;
        * Flow Id
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 19 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 17 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the flowId field is set.
        */
       boolean hasFlowId();
@@ -1614,7 +1499,7 @@ private static final long serialVersionUID = 0L;
        * Flow Id
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 19 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 17 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The flowId.
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id getFlowId();
@@ -1623,7 +1508,7 @@ private static final long serialVersionUID = 0L;
        * Flow Id
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 19 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 17 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64IdOrBuilder getFlowIdOrBuilder();
 
@@ -1632,7 +1517,7 @@ private static final long serialVersionUID = 0L;
        * skills
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 20 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 18 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the skills field is set.
        */
       boolean hasSkills();
@@ -1641,7 +1526,7 @@ private static final long serialVersionUID = 0L;
        * skills
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 20 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 18 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The skills.
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills getSkills();
@@ -1650,7 +1535,7 @@ private static final long serialVersionUID = 0L;
        * skills
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 20 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 18 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkillsOrBuilder getSkillsOrBuilder();
 
@@ -1659,7 +1544,7 @@ private static final long serialVersionUID = 0L;
        * whatsapp number
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 21 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 19 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the whatsappNumber field is set.
        */
       boolean hasWhatsappNumber();
@@ -1668,7 +1553,7 @@ private static final long serialVersionUID = 0L;
        * whatsapp number
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 21 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 19 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The whatsappNumber.
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber getWhatsappNumber();
@@ -1677,7 +1562,7 @@ private static final long serialVersionUID = 0L;
        * whatsapp number
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 21 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 19 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumberOrBuilder getWhatsappNumberOrBuilder();
 
@@ -1687,7 +1572,7 @@ private static final long serialVersionUID = 0L;
        * content_id - the id of the premade message in the smartping system
        * </pre>
        *
-       * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       int getProviderMetadataCount();
       /**
@@ -1696,7 +1581,7 @@ private static final long serialVersionUID = 0L;
        * content_id - the id of the premade message in the smartping system
        * </pre>
        *
-       * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       boolean containsProviderMetadata(
           java.lang.String key);
@@ -1712,7 +1597,7 @@ private static final long serialVersionUID = 0L;
        * content_id - the id of the premade message in the smartping system
        * </pre>
        *
-       * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       java.util.Map<java.lang.String, java.lang.String>
       getProviderMetadataMap();
@@ -1722,7 +1607,7 @@ private static final long serialVersionUID = 0L;
        * content_id - the id of the premade message in the smartping system
        * </pre>
        *
-       * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       /* nullable */
 java.lang.String getProviderMetadataOrDefault(
@@ -1735,7 +1620,7 @@ java.lang.String defaultValue);
        * content_id - the id of the premade message in the smartping system
        * </pre>
        *
-       * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       java.lang.String getProviderMetadataOrThrow(
           java.lang.String key);
@@ -1746,7 +1631,7 @@ java.lang.String defaultValue);
        * country code
        * </pre>
        *
-       * <code>int32 country_code = 23 [json_name = "countryCode", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>int32 country_code = 21 [json_name = "countryCode", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The countryCode.
        */
       int getCountryCode();
@@ -1756,7 +1641,7 @@ java.lang.String defaultValue);
        * postal code field
        * </pre>
        *
-       * <code>string postal_code_field = 24 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>string postal_code_field = 22 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The postalCodeField.
        */
       java.lang.String getPostalCodeField();
@@ -1765,7 +1650,7 @@ java.lang.String defaultValue);
        * postal code field
        * </pre>
        *
-       * <code>string postal_code_field = 24 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>string postal_code_field = 22 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The bytes for postalCodeField.
        */
       com.google.protobuf.ByteString
@@ -1776,7 +1661,7 @@ java.lang.String defaultValue);
        * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 25 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 23 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the timeoutMessageConfig field is set.
        */
       boolean hasTimeoutMessageConfig();
@@ -1785,7 +1670,7 @@ java.lang.String defaultValue);
        * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 25 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 23 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The timeoutMessageConfig.
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig getTimeoutMessageConfig();
@@ -1794,7 +1679,7 @@ java.lang.String defaultValue);
        * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 25 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 23 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfigOrBuilder getTimeoutMessageConfigOrBuilder();
     }
@@ -1815,8 +1700,6 @@ java.lang.String defaultValue);
         super(builder);
       }
       private ModuleConfig() {
-        dispositions_ = java.util.Collections.emptyList();
-        attachments_ = java.util.Collections.emptyList();
         paymentPortalIds_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
         postalCodeField_ = "";
@@ -1839,7 +1722,7 @@ java.lang.String defaultValue);
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 22:
+          case 20:
             return internalGetProviderMetadata();
           default:
             throw new RuntimeException(
@@ -8222,75 +8105,14 @@ java.lang.String defaultValue);
         return connectedInboxSid_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.getDefaultInstance() : connectedInboxSid_;
       }
 
-      public static final int DISPOSITIONS_FIELD_NUMBER = 5;
-      @SuppressWarnings("serial")
-      private java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition> dispositions_;
-      /**
-       * <pre>
-       * list of dispositions associated to the CampaignModule
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      @java.lang.Override
-      public java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition> getDispositionsList() {
-        return dispositions_;
-      }
-      /**
-       * <pre>
-       * list of dispositions associated to the CampaignModule
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      @java.lang.Override
-      public java.util.List<? extends com.tcn.cloud.api.tcnapi.omni.campaigns.v1.DispositionOrBuilder> 
-          getDispositionsOrBuilderList() {
-        return dispositions_;
-      }
-      /**
-       * <pre>
-       * list of dispositions associated to the CampaignModule
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      @java.lang.Override
-      public int getDispositionsCount() {
-        return dispositions_.size();
-      }
-      /**
-       * <pre>
-       * list of dispositions associated to the CampaignModule
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      @java.lang.Override
-      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition getDispositions(int index) {
-        return dispositions_.get(index);
-      }
-      /**
-       * <pre>
-       * list of dispositions associated to the CampaignModule
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      @java.lang.Override
-      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.DispositionOrBuilder getDispositionsOrBuilder(
-          int index) {
-        return dispositions_.get(index);
-      }
-
-      public static final int EMAIL_FIELD_NUMBER = 6;
+      public static final int EMAIL_FIELD_NUMBER = 5;
       private com.google.protobuf.StringValue email_;
       /**
        * <pre>
        * email associated to the CampaignModule
        * </pre>
        *
-       * <code>.google.protobuf.StringValue email = 6 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue email = 5 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the email field is set.
        */
       @java.lang.Override
@@ -8302,7 +8124,7 @@ java.lang.String defaultValue);
        * email associated to the CampaignModule
        * </pre>
        *
-       * <code>.google.protobuf.StringValue email = 6 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue email = 5 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The email.
        */
       @java.lang.Override
@@ -8314,21 +8136,21 @@ java.lang.String defaultValue);
        * email associated to the CampaignModule
        * </pre>
        *
-       * <code>.google.protobuf.StringValue email = 6 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue email = 5 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public com.google.protobuf.StringValueOrBuilder getEmailOrBuilder() {
         return email_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : email_;
       }
 
-      public static final int MESSAGE_BODY_FIELD_NUMBER = 7;
+      public static final int MESSAGE_BODY_FIELD_NUMBER = 6;
       private com.google.protobuf.StringValue messageBody_;
       /**
        * <pre>
        * message body
        * </pre>
        *
-       * <code>.google.protobuf.StringValue message_body = 7 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue message_body = 6 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the messageBody field is set.
        */
       @java.lang.Override
@@ -8340,7 +8162,7 @@ java.lang.String defaultValue);
        * message body
        * </pre>
        *
-       * <code>.google.protobuf.StringValue message_body = 7 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue message_body = 6 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The messageBody.
        */
       @java.lang.Override
@@ -8352,21 +8174,21 @@ java.lang.String defaultValue);
        * message body
        * </pre>
        *
-       * <code>.google.protobuf.StringValue message_body = 7 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue message_body = 6 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public com.google.protobuf.StringValueOrBuilder getMessageBodyOrBuilder() {
         return messageBody_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : messageBody_;
       }
 
-      public static final int EMAIL_SUBJECT_FIELD_NUMBER = 8;
+      public static final int EMAIL_SUBJECT_FIELD_NUMBER = 7;
       private com.google.protobuf.StringValue emailSubject_;
       /**
        * <pre>
        * email subjects
        * </pre>
        *
-       * <code>.google.protobuf.StringValue email_subject = 8 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue email_subject = 7 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the emailSubject field is set.
        */
       @java.lang.Override
@@ -8378,7 +8200,7 @@ java.lang.String defaultValue);
        * email subjects
        * </pre>
        *
-       * <code>.google.protobuf.StringValue email_subject = 8 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue email_subject = 7 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The emailSubject.
        */
       @java.lang.Override
@@ -8390,21 +8212,21 @@ java.lang.String defaultValue);
        * email subjects
        * </pre>
        *
-       * <code>.google.protobuf.StringValue email_subject = 8 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue email_subject = 7 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public com.google.protobuf.StringValueOrBuilder getEmailSubjectOrBuilder() {
         return emailSubject_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : emailSubject_;
       }
 
-      public static final int SMS_NUMBER_FIELD_NUMBER = 9;
+      public static final int SMS_NUMBER_FIELD_NUMBER = 8;
       private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber smsNumber_;
       /**
        * <pre>
        * sms number
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 9 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 8 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the smsNumber field is set.
        */
       @java.lang.Override
@@ -8416,7 +8238,7 @@ java.lang.String defaultValue);
        * sms number
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 9 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 8 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The smsNumber.
        */
       @java.lang.Override
@@ -8428,21 +8250,21 @@ java.lang.String defaultValue);
        * sms number
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 9 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 8 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumberOrBuilder getSmsNumberOrBuilder() {
         return smsNumber_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber.getDefaultInstance() : smsNumber_;
       }
 
-      public static final int HEADER_FIELD_NUMBER = 10;
+      public static final int HEADER_FIELD_NUMBER = 9;
       private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header_;
       /**
        * <pre>
        * chat widget header
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 10 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 9 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the header field is set.
        */
       @java.lang.Override
@@ -8454,7 +8276,7 @@ java.lang.String defaultValue);
        * chat widget header
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 10 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 9 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The header.
        */
       @java.lang.Override
@@ -8466,21 +8288,21 @@ java.lang.String defaultValue);
        * chat widget header
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 10 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 9 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeaderOrBuilder getHeaderOrBuilder() {
         return header_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader.getDefaultInstance() : header_;
       }
 
-      public static final int SLA_TIMEOUTS_FIELD_NUMBER = 11;
+      public static final int SLA_TIMEOUTS_FIELD_NUMBER = 10;
       private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.SLATimeouts slaTimeouts_;
       /**
        * <pre>
        * sla timeouts associated with the CampaignModule
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 11 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 10 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the slaTimeouts field is set.
        */
       @java.lang.Override
@@ -8492,7 +8314,7 @@ java.lang.String defaultValue);
        * sla timeouts associated with the CampaignModule
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 11 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 10 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The slaTimeouts.
        */
       @java.lang.Override
@@ -8504,21 +8326,21 @@ java.lang.String defaultValue);
        * sla timeouts associated with the CampaignModule
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 11 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 10 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.SLATimeoutsOrBuilder getSlaTimeoutsOrBuilder() {
         return slaTimeouts_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.SLATimeouts.getDefaultInstance() : slaTimeouts_;
       }
 
-      public static final int SENDS_PER_HOUR_FIELD_NUMBER = 12;
+      public static final int SENDS_PER_HOUR_FIELD_NUMBER = 11;
       private com.google.protobuf.Int64Value sendsPerHour_;
       /**
        * <pre>
        * maximum number of sends per hour for outbound CampaignModules
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value sends_per_hour = 12 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.Int64Value sends_per_hour = 11 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the sendsPerHour field is set.
        */
       @java.lang.Override
@@ -8530,7 +8352,7 @@ java.lang.String defaultValue);
        * maximum number of sends per hour for outbound CampaignModules
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value sends_per_hour = 12 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.Int64Value sends_per_hour = 11 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The sendsPerHour.
        */
       @java.lang.Override
@@ -8542,21 +8364,21 @@ java.lang.String defaultValue);
        * maximum number of sends per hour for outbound CampaignModules
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value sends_per_hour = 12 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.Int64Value sends_per_hour = 11 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getSendsPerHourOrBuilder() {
         return sendsPerHour_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sendsPerHour_;
       }
 
-      public static final int UNSUBSCRIBE_LINK_SID_FIELD_NUMBER = 13;
+      public static final int UNSUBSCRIBE_LINK_SID_FIELD_NUMBER = 12;
       private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id unsubscribeLinkSid_;
       /**
        * <pre>
        * identifier of associated custom unsubscribe link
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 13 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 12 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the unsubscribeLinkSid field is set.
        */
       @java.lang.Override
@@ -8568,7 +8390,7 @@ java.lang.String defaultValue);
        * identifier of associated custom unsubscribe link
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 13 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 12 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The unsubscribeLinkSid.
        */
       @java.lang.Override
@@ -8580,21 +8402,21 @@ java.lang.String defaultValue);
        * identifier of associated custom unsubscribe link
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 13 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 12 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64IdOrBuilder getUnsubscribeLinkSidOrBuilder() {
         return unsubscribeLinkSid_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.getDefaultInstance() : unsubscribeLinkSid_;
       }
 
-      public static final int VERIFIED_EMAIL_SID_FIELD_NUMBER = 14;
+      public static final int VERIFIED_EMAIL_SID_FIELD_NUMBER = 13;
       private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id verifiedEmailSid_;
       /**
        * <pre>
        * verified email identifier
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 14 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 13 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the verifiedEmailSid field is set.
        */
       @java.lang.Override
@@ -8606,7 +8428,7 @@ java.lang.String defaultValue);
        * verified email identifier
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 14 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 13 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The verifiedEmailSid.
        */
       @java.lang.Override
@@ -8618,21 +8440,21 @@ java.lang.String defaultValue);
        * verified email identifier
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 14 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 13 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64IdOrBuilder getVerifiedEmailSidOrBuilder() {
         return verifiedEmailSid_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.getDefaultInstance() : verifiedEmailSid_;
       }
 
-      public static final int STOP_ON_TASK_DEPLETE_FIELD_NUMBER = 15;
+      public static final int STOP_ON_TASK_DEPLETE_FIELD_NUMBER = 14;
       private com.google.protobuf.BoolValue stopOnTaskDeplete_;
       /**
        * <pre>
        * stop module with all tasks are completed
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue stop_on_task_deplete = 15 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.BoolValue stop_on_task_deplete = 14 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the stopOnTaskDeplete field is set.
        */
       @java.lang.Override
@@ -8644,7 +8466,7 @@ java.lang.String defaultValue);
        * stop module with all tasks are completed
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue stop_on_task_deplete = 15 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.BoolValue stop_on_task_deplete = 14 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The stopOnTaskDeplete.
        */
       @java.lang.Override
@@ -8656,82 +8478,21 @@ java.lang.String defaultValue);
        * stop module with all tasks are completed
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue stop_on_task_deplete = 15 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.BoolValue stop_on_task_deplete = 14 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public com.google.protobuf.BoolValueOrBuilder getStopOnTaskDepleteOrBuilder() {
         return stopOnTaskDeplete_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : stopOnTaskDeplete_;
       }
 
-      public static final int ATTACHMENTS_FIELD_NUMBER = 16;
-      @SuppressWarnings("serial")
-      private java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment> attachments_;
-      /**
-       * <pre>
-       * attachments
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      @java.lang.Override
-      public java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment> getAttachmentsList() {
-        return attachments_;
-      }
-      /**
-       * <pre>
-       * attachments
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      @java.lang.Override
-      public java.util.List<? extends com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachmentOrBuilder> 
-          getAttachmentsOrBuilderList() {
-        return attachments_;
-      }
-      /**
-       * <pre>
-       * attachments
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      @java.lang.Override
-      public int getAttachmentsCount() {
-        return attachments_.size();
-      }
-      /**
-       * <pre>
-       * attachments
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      @java.lang.Override
-      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment getAttachments(int index) {
-        return attachments_.get(index);
-      }
-      /**
-       * <pre>
-       * attachments
-       * </pre>
-       *
-       * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-       */
-      @java.lang.Override
-      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachmentOrBuilder getAttachmentsOrBuilder(
-          int index) {
-        return attachments_.get(index);
-      }
-
-      public static final int COMPLIANCE_RULE_SET_ID_FIELD_NUMBER = 17;
+      public static final int COMPLIANCE_RULE_SET_ID_FIELD_NUMBER = 15;
       private com.google.protobuf.StringValue complianceRuleSetId_;
       /**
        * <pre>
        * Optional. compliance rule set to use for this campaign
        * </pre>
        *
-       * <code>.google.protobuf.StringValue compliance_rule_set_id = 17 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue compliance_rule_set_id = 15 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the complianceRuleSetId field is set.
        */
       @java.lang.Override
@@ -8743,7 +8504,7 @@ java.lang.String defaultValue);
        * Optional. compliance rule set to use for this campaign
        * </pre>
        *
-       * <code>.google.protobuf.StringValue compliance_rule_set_id = 17 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue compliance_rule_set_id = 15 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The complianceRuleSetId.
        */
       @java.lang.Override
@@ -8755,14 +8516,14 @@ java.lang.String defaultValue);
        * Optional. compliance rule set to use for this campaign
        * </pre>
        *
-       * <code>.google.protobuf.StringValue compliance_rule_set_id = 17 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.google.protobuf.StringValue compliance_rule_set_id = 15 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public com.google.protobuf.StringValueOrBuilder getComplianceRuleSetIdOrBuilder() {
         return complianceRuleSetId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : complianceRuleSetId_;
       }
 
-      public static final int PAYMENT_PORTAL_IDS_FIELD_NUMBER = 18;
+      public static final int PAYMENT_PORTAL_IDS_FIELD_NUMBER = 16;
       @SuppressWarnings("serial")
       private com.google.protobuf.LazyStringArrayList paymentPortalIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
@@ -8771,7 +8532,7 @@ java.lang.String defaultValue);
        * Payment Portal Ids
        * </pre>
        *
-       * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return A list containing the paymentPortalIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -8783,7 +8544,7 @@ java.lang.String defaultValue);
        * Payment Portal Ids
        * </pre>
        *
-       * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The count of paymentPortalIds.
        */
       public int getPaymentPortalIdsCount() {
@@ -8794,7 +8555,7 @@ java.lang.String defaultValue);
        * Payment Portal Ids
        * </pre>
        *
-       * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
        * @param index The index of the element to return.
        * @return The paymentPortalIds at the given index.
        */
@@ -8806,7 +8567,7 @@ java.lang.String defaultValue);
        * Payment Portal Ids
        * </pre>
        *
-       * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
        * @param index The index of the value to return.
        * @return The bytes of the paymentPortalIds at the given index.
        */
@@ -8815,14 +8576,14 @@ java.lang.String defaultValue);
         return paymentPortalIds_.getByteString(index);
       }
 
-      public static final int FLOW_ID_FIELD_NUMBER = 19;
+      public static final int FLOW_ID_FIELD_NUMBER = 17;
       private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id flowId_;
       /**
        * <pre>
        * Flow Id
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 19 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 17 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the flowId field is set.
        */
       @java.lang.Override
@@ -8834,7 +8595,7 @@ java.lang.String defaultValue);
        * Flow Id
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 19 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 17 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The flowId.
        */
       @java.lang.Override
@@ -8846,21 +8607,21 @@ java.lang.String defaultValue);
        * Flow Id
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 19 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 17 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64IdOrBuilder getFlowIdOrBuilder() {
         return flowId_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.getDefaultInstance() : flowId_;
       }
 
-      public static final int SKILLS_FIELD_NUMBER = 20;
+      public static final int SKILLS_FIELD_NUMBER = 18;
       private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills_;
       /**
        * <pre>
        * skills
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 20 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 18 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the skills field is set.
        */
       @java.lang.Override
@@ -8872,7 +8633,7 @@ java.lang.String defaultValue);
        * skills
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 20 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 18 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The skills.
        */
       @java.lang.Override
@@ -8884,21 +8645,21 @@ java.lang.String defaultValue);
        * skills
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 20 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 18 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
         return skills_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills.getDefaultInstance() : skills_;
       }
 
-      public static final int WHATSAPP_NUMBER_FIELD_NUMBER = 21;
+      public static final int WHATSAPP_NUMBER_FIELD_NUMBER = 19;
       private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsappNumber_;
       /**
        * <pre>
        * whatsapp number
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 21 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 19 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the whatsappNumber field is set.
        */
       @java.lang.Override
@@ -8910,7 +8671,7 @@ java.lang.String defaultValue);
        * whatsapp number
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 21 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 19 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The whatsappNumber.
        */
       @java.lang.Override
@@ -8922,14 +8683,14 @@ java.lang.String defaultValue);
        * whatsapp number
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 21 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 19 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumberOrBuilder getWhatsappNumberOrBuilder() {
         return whatsappNumber_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber.getDefaultInstance() : whatsappNumber_;
       }
 
-      public static final int PROVIDER_METADATA_FIELD_NUMBER = 22;
+      public static final int PROVIDER_METADATA_FIELD_NUMBER = 20;
       private static final class ProviderMetadataDefaultEntryHolder {
         static final com.google.protobuf.MapEntry<
             java.lang.String, java.lang.String> defaultEntry =
@@ -8961,7 +8722,7 @@ java.lang.String defaultValue);
        * content_id - the id of the premade message in the smartping system
        * </pre>
        *
-       * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public boolean containsProviderMetadata(
@@ -8983,7 +8744,7 @@ java.lang.String defaultValue);
        * content_id - the id of the premade message in the smartping system
        * </pre>
        *
-       * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public java.util.Map<java.lang.String, java.lang.String> getProviderMetadataMap() {
@@ -8995,7 +8756,7 @@ java.lang.String defaultValue);
        * content_id - the id of the premade message in the smartping system
        * </pre>
        *
-       * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public /* nullable */
@@ -9014,7 +8775,7 @@ java.lang.String defaultValue) {
        * content_id - the id of the premade message in the smartping system
        * </pre>
        *
-       * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public java.lang.String getProviderMetadataOrThrow(
@@ -9028,7 +8789,7 @@ java.lang.String defaultValue) {
         return map.get(key);
       }
 
-      public static final int COUNTRY_CODE_FIELD_NUMBER = 23;
+      public static final int COUNTRY_CODE_FIELD_NUMBER = 21;
       private int countryCode_ = 0;
       /**
        * <pre>
@@ -9036,7 +8797,7 @@ java.lang.String defaultValue) {
        * country code
        * </pre>
        *
-       * <code>int32 country_code = 23 [json_name = "countryCode", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>int32 country_code = 21 [json_name = "countryCode", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The countryCode.
        */
       @java.lang.Override
@@ -9044,7 +8805,7 @@ java.lang.String defaultValue) {
         return countryCode_;
       }
 
-      public static final int POSTAL_CODE_FIELD_FIELD_NUMBER = 24;
+      public static final int POSTAL_CODE_FIELD_FIELD_NUMBER = 22;
       @SuppressWarnings("serial")
       private volatile java.lang.Object postalCodeField_ = "";
       /**
@@ -9052,7 +8813,7 @@ java.lang.String defaultValue) {
        * postal code field
        * </pre>
        *
-       * <code>string postal_code_field = 24 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>string postal_code_field = 22 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The postalCodeField.
        */
       @java.lang.Override
@@ -9073,7 +8834,7 @@ java.lang.String defaultValue) {
        * postal code field
        * </pre>
        *
-       * <code>string postal_code_field = 24 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>string postal_code_field = 22 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The bytes for postalCodeField.
        */
       @java.lang.Override
@@ -9091,14 +8852,14 @@ java.lang.String defaultValue) {
         }
       }
 
-      public static final int TIMEOUT_MESSAGE_CONFIG_FIELD_NUMBER = 25;
+      public static final int TIMEOUT_MESSAGE_CONFIG_FIELD_NUMBER = 23;
       private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeoutMessageConfig_;
       /**
        * <pre>
        * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 25 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 23 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return Whether the timeoutMessageConfig field is set.
        */
       @java.lang.Override
@@ -9110,7 +8871,7 @@ java.lang.String defaultValue) {
        * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 25 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 23 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
        * @return The timeoutMessageConfig.
        */
       @java.lang.Override
@@ -9122,7 +8883,7 @@ java.lang.String defaultValue) {
        * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
        * </pre>
        *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 25 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
+       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 23 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
        */
       @java.lang.Override
       public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfigOrBuilder getTimeoutMessageConfigOrBuilder() {
@@ -9155,71 +8916,65 @@ java.lang.String defaultValue) {
         if (connectedInboxSid_ != null) {
           output.writeMessage(4, getConnectedInboxSid());
         }
-        for (int i = 0; i < dispositions_.size(); i++) {
-          output.writeMessage(5, dispositions_.get(i));
-        }
         if (email_ != null) {
-          output.writeMessage(6, getEmail());
+          output.writeMessage(5, getEmail());
         }
         if (messageBody_ != null) {
-          output.writeMessage(7, getMessageBody());
+          output.writeMessage(6, getMessageBody());
         }
         if (emailSubject_ != null) {
-          output.writeMessage(8, getEmailSubject());
+          output.writeMessage(7, getEmailSubject());
         }
         if (smsNumber_ != null) {
-          output.writeMessage(9, getSmsNumber());
+          output.writeMessage(8, getSmsNumber());
         }
         if (header_ != null) {
-          output.writeMessage(10, getHeader());
+          output.writeMessage(9, getHeader());
         }
         if (slaTimeouts_ != null) {
-          output.writeMessage(11, getSlaTimeouts());
+          output.writeMessage(10, getSlaTimeouts());
         }
         if (sendsPerHour_ != null) {
-          output.writeMessage(12, getSendsPerHour());
+          output.writeMessage(11, getSendsPerHour());
         }
         if (unsubscribeLinkSid_ != null) {
-          output.writeMessage(13, getUnsubscribeLinkSid());
+          output.writeMessage(12, getUnsubscribeLinkSid());
         }
         if (verifiedEmailSid_ != null) {
-          output.writeMessage(14, getVerifiedEmailSid());
+          output.writeMessage(13, getVerifiedEmailSid());
         }
         if (stopOnTaskDeplete_ != null) {
-          output.writeMessage(15, getStopOnTaskDeplete());
-        }
-        for (int i = 0; i < attachments_.size(); i++) {
-          output.writeMessage(16, attachments_.get(i));
+          output.writeMessage(14, getStopOnTaskDeplete());
         }
         if (complianceRuleSetId_ != null) {
-          output.writeMessage(17, getComplianceRuleSetId());
+          output.writeMessage(15, getComplianceRuleSetId());
         }
         for (int i = 0; i < paymentPortalIds_.size(); i++) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 18, paymentPortalIds_.getRaw(i));
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 16, paymentPortalIds_.getRaw(i));
         }
         if (flowId_ != null) {
-          output.writeMessage(19, getFlowId());
+          output.writeMessage(17, getFlowId());
         }
         if (skills_ != null) {
-          output.writeMessage(20, getSkills());
+          output.writeMessage(18, getSkills());
         }
         if (whatsappNumber_ != null) {
-          output.writeMessage(21, getWhatsappNumber());
+          output.writeMessage(19, getWhatsappNumber());
         }
         com.google.protobuf.GeneratedMessageV3
           .serializeStringMapTo(
             output,
             internalGetProviderMetadata(),
             ProviderMetadataDefaultEntryHolder.defaultEntry,
-            22);
+            20);
         if (countryCode_ != 0) {
-          output.writeInt32(23, countryCode_);
+          output.writeInt32(21, countryCode_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postalCodeField_)) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 24, postalCodeField_);
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 22, postalCodeField_);
         }
         if (timeoutMessageConfig_ != null) {
-          output.writeMessage(25, getTimeoutMessageConfig());
+          output.writeMessage(23, getTimeoutMessageConfig());
         }
         getUnknownFields().writeTo(output);
       }
@@ -9246,57 +9001,49 @@ java.lang.String defaultValue) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, getConnectedInboxSid());
         }
-        for (int i = 0; i < dispositions_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(5, dispositions_.get(i));
-        }
         if (email_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(6, getEmail());
+            .computeMessageSize(5, getEmail());
         }
         if (messageBody_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(7, getMessageBody());
+            .computeMessageSize(6, getMessageBody());
         }
         if (emailSubject_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(8, getEmailSubject());
+            .computeMessageSize(7, getEmailSubject());
         }
         if (smsNumber_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(9, getSmsNumber());
+            .computeMessageSize(8, getSmsNumber());
         }
         if (header_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(10, getHeader());
+            .computeMessageSize(9, getHeader());
         }
         if (slaTimeouts_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(11, getSlaTimeouts());
+            .computeMessageSize(10, getSlaTimeouts());
         }
         if (sendsPerHour_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(12, getSendsPerHour());
+            .computeMessageSize(11, getSendsPerHour());
         }
         if (unsubscribeLinkSid_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(13, getUnsubscribeLinkSid());
+            .computeMessageSize(12, getUnsubscribeLinkSid());
         }
         if (verifiedEmailSid_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(14, getVerifiedEmailSid());
+            .computeMessageSize(13, getVerifiedEmailSid());
         }
         if (stopOnTaskDeplete_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(15, getStopOnTaskDeplete());
-        }
-        for (int i = 0; i < attachments_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(16, attachments_.get(i));
+            .computeMessageSize(14, getStopOnTaskDeplete());
         }
         if (complianceRuleSetId_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(17, getComplianceRuleSetId());
+            .computeMessageSize(15, getComplianceRuleSetId());
         }
         {
           int dataSize = 0;
@@ -9308,15 +9055,15 @@ java.lang.String defaultValue) {
         }
         if (flowId_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(19, getFlowId());
+            .computeMessageSize(17, getFlowId());
         }
         if (skills_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(20, getSkills());
+            .computeMessageSize(18, getSkills());
         }
         if (whatsappNumber_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(21, getWhatsappNumber());
+            .computeMessageSize(19, getWhatsappNumber());
         }
         for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
              : internalGetProviderMetadata().getMap().entrySet()) {
@@ -9326,18 +9073,18 @@ java.lang.String defaultValue) {
               .setValue(entry.getValue())
               .build();
           size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(22, providerMetadata__);
+              .computeMessageSize(20, providerMetadata__);
         }
         if (countryCode_ != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(23, countryCode_);
+            .computeInt32Size(21, countryCode_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(postalCodeField_)) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, postalCodeField_);
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, postalCodeField_);
         }
         if (timeoutMessageConfig_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(25, getTimeoutMessageConfig());
+            .computeMessageSize(23, getTimeoutMessageConfig());
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -9374,8 +9121,6 @@ java.lang.String defaultValue) {
           if (!getConnectedInboxSid()
               .equals(other.getConnectedInboxSid())) return false;
         }
-        if (!getDispositionsList()
-            .equals(other.getDispositionsList())) return false;
         if (hasEmail() != other.hasEmail()) return false;
         if (hasEmail()) {
           if (!getEmail()
@@ -9426,8 +9171,6 @@ java.lang.String defaultValue) {
           if (!getStopOnTaskDeplete()
               .equals(other.getStopOnTaskDeplete())) return false;
         }
-        if (!getAttachmentsList()
-            .equals(other.getAttachmentsList())) return false;
         if (hasComplianceRuleSetId() != other.hasComplianceRuleSetId()) return false;
         if (hasComplianceRuleSetId()) {
           if (!getComplianceRuleSetId()
@@ -9488,10 +9231,6 @@ java.lang.String defaultValue) {
           hash = (37 * hash) + CONNECTED_INBOX_SID_FIELD_NUMBER;
           hash = (53 * hash) + getConnectedInboxSid().hashCode();
         }
-        if (getDispositionsCount() > 0) {
-          hash = (37 * hash) + DISPOSITIONS_FIELD_NUMBER;
-          hash = (53 * hash) + getDispositionsList().hashCode();
-        }
         if (hasEmail()) {
           hash = (37 * hash) + EMAIL_FIELD_NUMBER;
           hash = (53 * hash) + getEmail().hashCode();
@@ -9531,10 +9270,6 @@ java.lang.String defaultValue) {
         if (hasStopOnTaskDeplete()) {
           hash = (37 * hash) + STOP_ON_TASK_DEPLETE_FIELD_NUMBER;
           hash = (53 * hash) + getStopOnTaskDeplete().hashCode();
-        }
-        if (getAttachmentsCount() > 0) {
-          hash = (37 * hash) + ATTACHMENTS_FIELD_NUMBER;
-          hash = (53 * hash) + getAttachmentsList().hashCode();
         }
         if (hasComplianceRuleSetId()) {
           hash = (37 * hash) + COMPLIANCE_RULE_SET_ID_FIELD_NUMBER;
@@ -9685,7 +9420,7 @@ java.lang.String defaultValue) {
         protected com.google.protobuf.MapField internalGetMapField(
             int number) {
           switch (number) {
-            case 22:
+            case 20:
               return internalGetProviderMetadata();
             default:
               throw new RuntimeException(
@@ -9696,7 +9431,7 @@ java.lang.String defaultValue) {
         protected com.google.protobuf.MapField internalGetMutableMapField(
             int number) {
           switch (number) {
-            case 22:
+            case 20:
               return internalGetMutableProviderMetadata();
             default:
               throw new RuntimeException(
@@ -9745,13 +9480,6 @@ java.lang.String defaultValue) {
             connectedInboxSidBuilder_.dispose();
             connectedInboxSidBuilder_ = null;
           }
-          if (dispositionsBuilder_ == null) {
-            dispositions_ = java.util.Collections.emptyList();
-          } else {
-            dispositions_ = null;
-            dispositionsBuilder_.clear();
-          }
-          bitField0_ = (bitField0_ & ~0x00000010);
           email_ = null;
           if (emailBuilder_ != null) {
             emailBuilder_.dispose();
@@ -9802,13 +9530,6 @@ java.lang.String defaultValue) {
             stopOnTaskDepleteBuilder_.dispose();
             stopOnTaskDepleteBuilder_ = null;
           }
-          if (attachmentsBuilder_ == null) {
-            attachments_ = java.util.Collections.emptyList();
-          } else {
-            attachments_ = null;
-            attachmentsBuilder_.clear();
-          }
-          bitField0_ = (bitField0_ & ~0x00008000);
           complianceRuleSetId_ = null;
           if (complianceRuleSetIdBuilder_ != null) {
             complianceRuleSetIdBuilder_.dispose();
@@ -9865,31 +9586,9 @@ java.lang.String defaultValue) {
         @java.lang.Override
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig buildPartial() {
           com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig result = new com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig(this);
-          buildPartialRepeatedFields(result);
           if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
-        }
-
-        private void buildPartialRepeatedFields(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig result) {
-          if (dispositionsBuilder_ == null) {
-            if (((bitField0_ & 0x00000010) != 0)) {
-              dispositions_ = java.util.Collections.unmodifiableList(dispositions_);
-              bitField0_ = (bitField0_ & ~0x00000010);
-            }
-            result.dispositions_ = dispositions_;
-          } else {
-            result.dispositions_ = dispositionsBuilder_.build();
-          }
-          if (attachmentsBuilder_ == null) {
-            if (((bitField0_ & 0x00008000) != 0)) {
-              attachments_ = java.util.Collections.unmodifiableList(attachments_);
-              bitField0_ = (bitField0_ & ~0x00008000);
-            }
-            result.attachments_ = attachments_;
-          } else {
-            result.attachments_ = attachmentsBuilder_.build();
-          }
         }
 
         private void buildPartial0(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig result) {
@@ -9914,91 +9613,91 @@ java.lang.String defaultValue) {
                 ? connectedInboxSid_
                 : connectedInboxSidBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00000020) != 0)) {
+          if (((from_bitField0_ & 0x00000010) != 0)) {
             result.email_ = emailBuilder_ == null
                 ? email_
                 : emailBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00000040) != 0)) {
+          if (((from_bitField0_ & 0x00000020) != 0)) {
             result.messageBody_ = messageBodyBuilder_ == null
                 ? messageBody_
                 : messageBodyBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00000080) != 0)) {
+          if (((from_bitField0_ & 0x00000040) != 0)) {
             result.emailSubject_ = emailSubjectBuilder_ == null
                 ? emailSubject_
                 : emailSubjectBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00000100) != 0)) {
+          if (((from_bitField0_ & 0x00000080) != 0)) {
             result.smsNumber_ = smsNumberBuilder_ == null
                 ? smsNumber_
                 : smsNumberBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00000200) != 0)) {
+          if (((from_bitField0_ & 0x00000100) != 0)) {
             result.header_ = headerBuilder_ == null
                 ? header_
                 : headerBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00000400) != 0)) {
+          if (((from_bitField0_ & 0x00000200) != 0)) {
             result.slaTimeouts_ = slaTimeoutsBuilder_ == null
                 ? slaTimeouts_
                 : slaTimeoutsBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00000800) != 0)) {
+          if (((from_bitField0_ & 0x00000400) != 0)) {
             result.sendsPerHour_ = sendsPerHourBuilder_ == null
                 ? sendsPerHour_
                 : sendsPerHourBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00001000) != 0)) {
+          if (((from_bitField0_ & 0x00000800) != 0)) {
             result.unsubscribeLinkSid_ = unsubscribeLinkSidBuilder_ == null
                 ? unsubscribeLinkSid_
                 : unsubscribeLinkSidBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00002000) != 0)) {
+          if (((from_bitField0_ & 0x00001000) != 0)) {
             result.verifiedEmailSid_ = verifiedEmailSidBuilder_ == null
                 ? verifiedEmailSid_
                 : verifiedEmailSidBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00004000) != 0)) {
+          if (((from_bitField0_ & 0x00002000) != 0)) {
             result.stopOnTaskDeplete_ = stopOnTaskDepleteBuilder_ == null
                 ? stopOnTaskDeplete_
                 : stopOnTaskDepleteBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00010000) != 0)) {
+          if (((from_bitField0_ & 0x00004000) != 0)) {
             result.complianceRuleSetId_ = complianceRuleSetIdBuilder_ == null
                 ? complianceRuleSetId_
                 : complianceRuleSetIdBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00020000) != 0)) {
+          if (((from_bitField0_ & 0x00008000) != 0)) {
             paymentPortalIds_.makeImmutable();
             result.paymentPortalIds_ = paymentPortalIds_;
           }
-          if (((from_bitField0_ & 0x00040000) != 0)) {
+          if (((from_bitField0_ & 0x00010000) != 0)) {
             result.flowId_ = flowIdBuilder_ == null
                 ? flowId_
                 : flowIdBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00080000) != 0)) {
+          if (((from_bitField0_ & 0x00020000) != 0)) {
             result.skills_ = skillsBuilder_ == null
                 ? skills_
                 : skillsBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00100000) != 0)) {
+          if (((from_bitField0_ & 0x00040000) != 0)) {
             result.whatsappNumber_ = whatsappNumberBuilder_ == null
                 ? whatsappNumber_
                 : whatsappNumberBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00200000) != 0)) {
+          if (((from_bitField0_ & 0x00080000) != 0)) {
             result.providerMetadata_ = internalGetProviderMetadata();
             result.providerMetadata_.makeImmutable();
           }
-          if (((from_bitField0_ & 0x00400000) != 0)) {
+          if (((from_bitField0_ & 0x00100000) != 0)) {
             result.countryCode_ = countryCode_;
           }
-          if (((from_bitField0_ & 0x00800000) != 0)) {
+          if (((from_bitField0_ & 0x00200000) != 0)) {
             result.postalCodeField_ = postalCodeField_;
           }
-          if (((from_bitField0_ & 0x01000000) != 0)) {
+          if (((from_bitField0_ & 0x00400000) != 0)) {
             result.timeoutMessageConfig_ = timeoutMessageConfigBuilder_ == null
                 ? timeoutMessageConfig_
                 : timeoutMessageConfigBuilder_.build();
@@ -10061,32 +9760,6 @@ java.lang.String defaultValue) {
           if (other.hasConnectedInboxSid()) {
             mergeConnectedInboxSid(other.getConnectedInboxSid());
           }
-          if (dispositionsBuilder_ == null) {
-            if (!other.dispositions_.isEmpty()) {
-              if (dispositions_.isEmpty()) {
-                dispositions_ = other.dispositions_;
-                bitField0_ = (bitField0_ & ~0x00000010);
-              } else {
-                ensureDispositionsIsMutable();
-                dispositions_.addAll(other.dispositions_);
-              }
-              onChanged();
-            }
-          } else {
-            if (!other.dispositions_.isEmpty()) {
-              if (dispositionsBuilder_.isEmpty()) {
-                dispositionsBuilder_.dispose();
-                dispositionsBuilder_ = null;
-                dispositions_ = other.dispositions_;
-                bitField0_ = (bitField0_ & ~0x00000010);
-                dispositionsBuilder_ = 
-                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                     getDispositionsFieldBuilder() : null;
-              } else {
-                dispositionsBuilder_.addAllMessages(other.dispositions_);
-              }
-            }
-          }
           if (other.hasEmail()) {
             mergeEmail(other.getEmail());
           }
@@ -10117,39 +9790,13 @@ java.lang.String defaultValue) {
           if (other.hasStopOnTaskDeplete()) {
             mergeStopOnTaskDeplete(other.getStopOnTaskDeplete());
           }
-          if (attachmentsBuilder_ == null) {
-            if (!other.attachments_.isEmpty()) {
-              if (attachments_.isEmpty()) {
-                attachments_ = other.attachments_;
-                bitField0_ = (bitField0_ & ~0x00008000);
-              } else {
-                ensureAttachmentsIsMutable();
-                attachments_.addAll(other.attachments_);
-              }
-              onChanged();
-            }
-          } else {
-            if (!other.attachments_.isEmpty()) {
-              if (attachmentsBuilder_.isEmpty()) {
-                attachmentsBuilder_.dispose();
-                attachmentsBuilder_ = null;
-                attachments_ = other.attachments_;
-                bitField0_ = (bitField0_ & ~0x00008000);
-                attachmentsBuilder_ = 
-                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                     getAttachmentsFieldBuilder() : null;
-              } else {
-                attachmentsBuilder_.addAllMessages(other.attachments_);
-              }
-            }
-          }
           if (other.hasComplianceRuleSetId()) {
             mergeComplianceRuleSetId(other.getComplianceRuleSetId());
           }
           if (!other.paymentPortalIds_.isEmpty()) {
             if (paymentPortalIds_.isEmpty()) {
               paymentPortalIds_ = other.paymentPortalIds_;
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00008000;
             } else {
               ensurePaymentPortalIdsIsMutable();
               paymentPortalIds_.addAll(other.paymentPortalIds_);
@@ -10167,13 +9814,13 @@ java.lang.String defaultValue) {
           }
           internalGetMutableProviderMetadata().mergeFrom(
               other.internalGetProviderMetadata());
-          bitField0_ |= 0x00200000;
+          bitField0_ |= 0x00080000;
           if (other.getCountryCode() != 0) {
             setCountryCode(other.getCountryCode());
           }
           if (!other.getPostalCodeField().isEmpty()) {
             postalCodeField_ = other.postalCodeField_;
-            bitField0_ |= 0x00800000;
+            bitField0_ |= 0x00200000;
             onChanged();
           }
           if (other.hasTimeoutMessageConfig()) {
@@ -10234,161 +9881,135 @@ java.lang.String defaultValue) {
                   break;
                 } // case 34
                 case 42: {
-                  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition m =
-                      input.readMessage(
-                          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition.parser(),
-                          extensionRegistry);
-                  if (dispositionsBuilder_ == null) {
-                    ensureDispositionsIsMutable();
-                    dispositions_.add(m);
-                  } else {
-                    dispositionsBuilder_.addMessage(m);
-                  }
+                  input.readMessage(
+                      getEmailFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000010;
                   break;
                 } // case 42
                 case 50: {
                   input.readMessage(
-                      getEmailFieldBuilder().getBuilder(),
+                      getMessageBodyFieldBuilder().getBuilder(),
                       extensionRegistry);
                   bitField0_ |= 0x00000020;
                   break;
                 } // case 50
                 case 58: {
                   input.readMessage(
-                      getMessageBodyFieldBuilder().getBuilder(),
+                      getEmailSubjectFieldBuilder().getBuilder(),
                       extensionRegistry);
                   bitField0_ |= 0x00000040;
                   break;
                 } // case 58
                 case 66: {
                   input.readMessage(
-                      getEmailSubjectFieldBuilder().getBuilder(),
+                      getSmsNumberFieldBuilder().getBuilder(),
                       extensionRegistry);
                   bitField0_ |= 0x00000080;
                   break;
                 } // case 66
                 case 74: {
                   input.readMessage(
-                      getSmsNumberFieldBuilder().getBuilder(),
+                      getHeaderFieldBuilder().getBuilder(),
                       extensionRegistry);
                   bitField0_ |= 0x00000100;
                   break;
                 } // case 74
                 case 82: {
                   input.readMessage(
-                      getHeaderFieldBuilder().getBuilder(),
+                      getSlaTimeoutsFieldBuilder().getBuilder(),
                       extensionRegistry);
                   bitField0_ |= 0x00000200;
                   break;
                 } // case 82
                 case 90: {
                   input.readMessage(
-                      getSlaTimeoutsFieldBuilder().getBuilder(),
+                      getSendsPerHourFieldBuilder().getBuilder(),
                       extensionRegistry);
                   bitField0_ |= 0x00000400;
                   break;
                 } // case 90
                 case 98: {
                   input.readMessage(
-                      getSendsPerHourFieldBuilder().getBuilder(),
+                      getUnsubscribeLinkSidFieldBuilder().getBuilder(),
                       extensionRegistry);
                   bitField0_ |= 0x00000800;
                   break;
                 } // case 98
                 case 106: {
                   input.readMessage(
-                      getUnsubscribeLinkSidFieldBuilder().getBuilder(),
+                      getVerifiedEmailSidFieldBuilder().getBuilder(),
                       extensionRegistry);
                   bitField0_ |= 0x00001000;
                   break;
                 } // case 106
                 case 114: {
                   input.readMessage(
-                      getVerifiedEmailSidFieldBuilder().getBuilder(),
+                      getStopOnTaskDepleteFieldBuilder().getBuilder(),
                       extensionRegistry);
                   bitField0_ |= 0x00002000;
                   break;
                 } // case 114
                 case 122: {
                   input.readMessage(
-                      getStopOnTaskDepleteFieldBuilder().getBuilder(),
+                      getComplianceRuleSetIdFieldBuilder().getBuilder(),
                       extensionRegistry);
                   bitField0_ |= 0x00004000;
                   break;
                 } // case 122
                 case 130: {
-                  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment m =
-                      input.readMessage(
-                          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment.parser(),
-                          extensionRegistry);
-                  if (attachmentsBuilder_ == null) {
-                    ensureAttachmentsIsMutable();
-                    attachments_.add(m);
-                  } else {
-                    attachmentsBuilder_.addMessage(m);
-                  }
+                  java.lang.String s = input.readStringRequireUtf8();
+                  ensurePaymentPortalIdsIsMutable();
+                  paymentPortalIds_.add(s);
                   break;
                 } // case 130
                 case 138: {
                   input.readMessage(
-                      getComplianceRuleSetIdFieldBuilder().getBuilder(),
+                      getFlowIdFieldBuilder().getBuilder(),
                       extensionRegistry);
                   bitField0_ |= 0x00010000;
                   break;
                 } // case 138
                 case 146: {
-                  java.lang.String s = input.readStringRequireUtf8();
-                  ensurePaymentPortalIdsIsMutable();
-                  paymentPortalIds_.add(s);
+                  input.readMessage(
+                      getSkillsFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00020000;
                   break;
                 } // case 146
                 case 154: {
                   input.readMessage(
-                      getFlowIdFieldBuilder().getBuilder(),
+                      getWhatsappNumberFieldBuilder().getBuilder(),
                       extensionRegistry);
                   bitField0_ |= 0x00040000;
                   break;
                 } // case 154
                 case 162: {
-                  input.readMessage(
-                      getSkillsFieldBuilder().getBuilder(),
-                      extensionRegistry);
-                  bitField0_ |= 0x00080000;
-                  break;
-                } // case 162
-                case 170: {
-                  input.readMessage(
-                      getWhatsappNumberFieldBuilder().getBuilder(),
-                      extensionRegistry);
-                  bitField0_ |= 0x00100000;
-                  break;
-                } // case 170
-                case 178: {
                   com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
                   providerMetadata__ = input.readMessage(
                       ProviderMetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                   internalGetMutableProviderMetadata().getMutableMap().put(
                       providerMetadata__.getKey(), providerMetadata__.getValue());
+                  bitField0_ |= 0x00080000;
+                  break;
+                } // case 162
+                case 168: {
+                  countryCode_ = input.readInt32();
+                  bitField0_ |= 0x00100000;
+                  break;
+                } // case 168
+                case 178: {
+                  postalCodeField_ = input.readStringRequireUtf8();
                   bitField0_ |= 0x00200000;
                   break;
                 } // case 178
-                case 184: {
-                  countryCode_ = input.readInt32();
-                  bitField0_ |= 0x00400000;
-                  break;
-                } // case 184
-                case 194: {
-                  postalCodeField_ = input.readStringRequireUtf8();
-                  bitField0_ |= 0x00800000;
-                  break;
-                } // case 194
-                case 202: {
+                case 186: {
                   input.readMessage(
                       getTimeoutMessageConfigFieldBuilder().getBuilder(),
                       extensionRegistry);
-                  bitField0_ |= 0x01000000;
+                  bitField0_ |= 0x00400000;
                   break;
-                } // case 202
+                } // case 186
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -11026,318 +10647,6 @@ java.lang.String defaultValue) {
           return connectedInboxSidBuilder_;
         }
 
-        private java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition> dispositions_ =
-          java.util.Collections.emptyList();
-        private void ensureDispositionsIsMutable() {
-          if (!((bitField0_ & 0x00000010) != 0)) {
-            dispositions_ = new java.util.ArrayList<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition>(dispositions_);
-            bitField0_ |= 0x00000010;
-           }
-        }
-
-        private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.DispositionOrBuilder> dispositionsBuilder_;
-
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition> getDispositionsList() {
-          if (dispositionsBuilder_ == null) {
-            return java.util.Collections.unmodifiableList(dispositions_);
-          } else {
-            return dispositionsBuilder_.getMessageList();
-          }
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public int getDispositionsCount() {
-          if (dispositionsBuilder_ == null) {
-            return dispositions_.size();
-          } else {
-            return dispositionsBuilder_.getCount();
-          }
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition getDispositions(int index) {
-          if (dispositionsBuilder_ == null) {
-            return dispositions_.get(index);
-          } else {
-            return dispositionsBuilder_.getMessage(index);
-          }
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder setDispositions(
-            int index, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition value) {
-          if (dispositionsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureDispositionsIsMutable();
-            dispositions_.set(index, value);
-            onChanged();
-          } else {
-            dispositionsBuilder_.setMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder setDispositions(
-            int index, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition.Builder builderForValue) {
-          if (dispositionsBuilder_ == null) {
-            ensureDispositionsIsMutable();
-            dispositions_.set(index, builderForValue.build());
-            onChanged();
-          } else {
-            dispositionsBuilder_.setMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder addDispositions(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition value) {
-          if (dispositionsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureDispositionsIsMutable();
-            dispositions_.add(value);
-            onChanged();
-          } else {
-            dispositionsBuilder_.addMessage(value);
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder addDispositions(
-            int index, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition value) {
-          if (dispositionsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureDispositionsIsMutable();
-            dispositions_.add(index, value);
-            onChanged();
-          } else {
-            dispositionsBuilder_.addMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder addDispositions(
-            com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition.Builder builderForValue) {
-          if (dispositionsBuilder_ == null) {
-            ensureDispositionsIsMutable();
-            dispositions_.add(builderForValue.build());
-            onChanged();
-          } else {
-            dispositionsBuilder_.addMessage(builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder addDispositions(
-            int index, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition.Builder builderForValue) {
-          if (dispositionsBuilder_ == null) {
-            ensureDispositionsIsMutable();
-            dispositions_.add(index, builderForValue.build());
-            onChanged();
-          } else {
-            dispositionsBuilder_.addMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder addAllDispositions(
-            java.lang.Iterable<? extends com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition> values) {
-          if (dispositionsBuilder_ == null) {
-            ensureDispositionsIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                values, dispositions_);
-            onChanged();
-          } else {
-            dispositionsBuilder_.addAllMessages(values);
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder clearDispositions() {
-          if (dispositionsBuilder_ == null) {
-            dispositions_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000010);
-            onChanged();
-          } else {
-            dispositionsBuilder_.clear();
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder removeDispositions(int index) {
-          if (dispositionsBuilder_ == null) {
-            ensureDispositionsIsMutable();
-            dispositions_.remove(index);
-            onChanged();
-          } else {
-            dispositionsBuilder_.remove(index);
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition.Builder getDispositionsBuilder(
-            int index) {
-          return getDispositionsFieldBuilder().getBuilder(index);
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.DispositionOrBuilder getDispositionsOrBuilder(
-            int index) {
-          if (dispositionsBuilder_ == null) {
-            return dispositions_.get(index);  } else {
-            return dispositionsBuilder_.getMessageOrBuilder(index);
-          }
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public java.util.List<? extends com.tcn.cloud.api.tcnapi.omni.campaigns.v1.DispositionOrBuilder> 
-             getDispositionsOrBuilderList() {
-          if (dispositionsBuilder_ != null) {
-            return dispositionsBuilder_.getMessageOrBuilderList();
-          } else {
-            return java.util.Collections.unmodifiableList(dispositions_);
-          }
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition.Builder addDispositionsBuilder() {
-          return getDispositionsFieldBuilder().addBuilder(
-              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition.getDefaultInstance());
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition.Builder addDispositionsBuilder(
-            int index) {
-          return getDispositionsFieldBuilder().addBuilder(
-              index, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition.getDefaultInstance());
-        }
-        /**
-         * <pre>
-         * list of dispositions associated to the CampaignModule
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.Disposition dispositions = 5 [json_name = "dispositions", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition.Builder> 
-             getDispositionsBuilderList() {
-          return getDispositionsFieldBuilder().getBuilderList();
-        }
-        private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.DispositionOrBuilder> 
-            getDispositionsFieldBuilder() {
-          if (dispositionsBuilder_ == null) {
-            dispositionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Disposition.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.DispositionOrBuilder>(
-                    dispositions_,
-                    ((bitField0_ & 0x00000010) != 0),
-                    getParentForChildren(),
-                    isClean());
-            dispositions_ = null;
-          }
-          return dispositionsBuilder_;
-        }
-
         private com.google.protobuf.StringValue email_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> emailBuilder_;
@@ -11346,18 +10655,18 @@ java.lang.String defaultValue) {
          * email associated to the CampaignModule
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email = 6 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email = 5 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return Whether the email field is set.
          */
         public boolean hasEmail() {
-          return ((bitField0_ & 0x00000020) != 0);
+          return ((bitField0_ & 0x00000010) != 0);
         }
         /**
          * <pre>
          * email associated to the CampaignModule
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email = 6 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email = 5 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The email.
          */
         public com.google.protobuf.StringValue getEmail() {
@@ -11372,7 +10681,7 @@ java.lang.String defaultValue) {
          * email associated to the CampaignModule
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email = 6 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email = 5 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setEmail(com.google.protobuf.StringValue value) {
           if (emailBuilder_ == null) {
@@ -11383,7 +10692,7 @@ java.lang.String defaultValue) {
           } else {
             emailBuilder_.setMessage(value);
           }
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
           onChanged();
           return this;
         }
@@ -11392,7 +10701,7 @@ java.lang.String defaultValue) {
          * email associated to the CampaignModule
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email = 6 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email = 5 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setEmail(
             com.google.protobuf.StringValue.Builder builderForValue) {
@@ -11401,7 +10710,7 @@ java.lang.String defaultValue) {
           } else {
             emailBuilder_.setMessage(builderForValue.build());
           }
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
           onChanged();
           return this;
         }
@@ -11410,11 +10719,11 @@ java.lang.String defaultValue) {
          * email associated to the CampaignModule
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email = 6 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email = 5 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder mergeEmail(com.google.protobuf.StringValue value) {
           if (emailBuilder_ == null) {
-            if (((bitField0_ & 0x00000020) != 0) &&
+            if (((bitField0_ & 0x00000010) != 0) &&
               email_ != null &&
               email_ != com.google.protobuf.StringValue.getDefaultInstance()) {
               getEmailBuilder().mergeFrom(value);
@@ -11424,7 +10733,7 @@ java.lang.String defaultValue) {
           } else {
             emailBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
           onChanged();
           return this;
         }
@@ -11433,10 +10742,10 @@ java.lang.String defaultValue) {
          * email associated to the CampaignModule
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email = 6 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email = 5 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder clearEmail() {
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000010);
           email_ = null;
           if (emailBuilder_ != null) {
             emailBuilder_.dispose();
@@ -11450,10 +10759,10 @@ java.lang.String defaultValue) {
          * email associated to the CampaignModule
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email = 6 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email = 5 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.google.protobuf.StringValue.Builder getEmailBuilder() {
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
           onChanged();
           return getEmailFieldBuilder().getBuilder();
         }
@@ -11462,7 +10771,7 @@ java.lang.String defaultValue) {
          * email associated to the CampaignModule
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email = 6 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email = 5 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.google.protobuf.StringValueOrBuilder getEmailOrBuilder() {
           if (emailBuilder_ != null) {
@@ -11477,7 +10786,7 @@ java.lang.String defaultValue) {
          * email associated to the CampaignModule
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email = 6 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email = 5 [json_name = "email", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -11501,18 +10810,18 @@ java.lang.String defaultValue) {
          * message body
          * </pre>
          *
-         * <code>.google.protobuf.StringValue message_body = 7 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue message_body = 6 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return Whether the messageBody field is set.
          */
         public boolean hasMessageBody() {
-          return ((bitField0_ & 0x00000040) != 0);
+          return ((bitField0_ & 0x00000020) != 0);
         }
         /**
          * <pre>
          * message body
          * </pre>
          *
-         * <code>.google.protobuf.StringValue message_body = 7 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue message_body = 6 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The messageBody.
          */
         public com.google.protobuf.StringValue getMessageBody() {
@@ -11527,7 +10836,7 @@ java.lang.String defaultValue) {
          * message body
          * </pre>
          *
-         * <code>.google.protobuf.StringValue message_body = 7 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue message_body = 6 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setMessageBody(com.google.protobuf.StringValue value) {
           if (messageBodyBuilder_ == null) {
@@ -11538,7 +10847,7 @@ java.lang.String defaultValue) {
           } else {
             messageBodyBuilder_.setMessage(value);
           }
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000020;
           onChanged();
           return this;
         }
@@ -11547,7 +10856,7 @@ java.lang.String defaultValue) {
          * message body
          * </pre>
          *
-         * <code>.google.protobuf.StringValue message_body = 7 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue message_body = 6 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setMessageBody(
             com.google.protobuf.StringValue.Builder builderForValue) {
@@ -11556,7 +10865,7 @@ java.lang.String defaultValue) {
           } else {
             messageBodyBuilder_.setMessage(builderForValue.build());
           }
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000020;
           onChanged();
           return this;
         }
@@ -11565,11 +10874,11 @@ java.lang.String defaultValue) {
          * message body
          * </pre>
          *
-         * <code>.google.protobuf.StringValue message_body = 7 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue message_body = 6 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder mergeMessageBody(com.google.protobuf.StringValue value) {
           if (messageBodyBuilder_ == null) {
-            if (((bitField0_ & 0x00000040) != 0) &&
+            if (((bitField0_ & 0x00000020) != 0) &&
               messageBody_ != null &&
               messageBody_ != com.google.protobuf.StringValue.getDefaultInstance()) {
               getMessageBodyBuilder().mergeFrom(value);
@@ -11579,7 +10888,7 @@ java.lang.String defaultValue) {
           } else {
             messageBodyBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000020;
           onChanged();
           return this;
         }
@@ -11588,10 +10897,10 @@ java.lang.String defaultValue) {
          * message body
          * </pre>
          *
-         * <code>.google.protobuf.StringValue message_body = 7 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue message_body = 6 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder clearMessageBody() {
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000020);
           messageBody_ = null;
           if (messageBodyBuilder_ != null) {
             messageBodyBuilder_.dispose();
@@ -11605,10 +10914,10 @@ java.lang.String defaultValue) {
          * message body
          * </pre>
          *
-         * <code>.google.protobuf.StringValue message_body = 7 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue message_body = 6 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.google.protobuf.StringValue.Builder getMessageBodyBuilder() {
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000020;
           onChanged();
           return getMessageBodyFieldBuilder().getBuilder();
         }
@@ -11617,7 +10926,7 @@ java.lang.String defaultValue) {
          * message body
          * </pre>
          *
-         * <code>.google.protobuf.StringValue message_body = 7 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue message_body = 6 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.google.protobuf.StringValueOrBuilder getMessageBodyOrBuilder() {
           if (messageBodyBuilder_ != null) {
@@ -11632,7 +10941,7 @@ java.lang.String defaultValue) {
          * message body
          * </pre>
          *
-         * <code>.google.protobuf.StringValue message_body = 7 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue message_body = 6 [json_name = "messageBody", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -11656,18 +10965,18 @@ java.lang.String defaultValue) {
          * email subjects
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email_subject = 8 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email_subject = 7 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return Whether the emailSubject field is set.
          */
         public boolean hasEmailSubject() {
-          return ((bitField0_ & 0x00000080) != 0);
+          return ((bitField0_ & 0x00000040) != 0);
         }
         /**
          * <pre>
          * email subjects
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email_subject = 8 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email_subject = 7 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The emailSubject.
          */
         public com.google.protobuf.StringValue getEmailSubject() {
@@ -11682,7 +10991,7 @@ java.lang.String defaultValue) {
          * email subjects
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email_subject = 8 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email_subject = 7 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setEmailSubject(com.google.protobuf.StringValue value) {
           if (emailSubjectBuilder_ == null) {
@@ -11693,7 +11002,7 @@ java.lang.String defaultValue) {
           } else {
             emailSubjectBuilder_.setMessage(value);
           }
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000040;
           onChanged();
           return this;
         }
@@ -11702,7 +11011,7 @@ java.lang.String defaultValue) {
          * email subjects
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email_subject = 8 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email_subject = 7 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setEmailSubject(
             com.google.protobuf.StringValue.Builder builderForValue) {
@@ -11711,7 +11020,7 @@ java.lang.String defaultValue) {
           } else {
             emailSubjectBuilder_.setMessage(builderForValue.build());
           }
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000040;
           onChanged();
           return this;
         }
@@ -11720,11 +11029,11 @@ java.lang.String defaultValue) {
          * email subjects
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email_subject = 8 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email_subject = 7 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder mergeEmailSubject(com.google.protobuf.StringValue value) {
           if (emailSubjectBuilder_ == null) {
-            if (((bitField0_ & 0x00000080) != 0) &&
+            if (((bitField0_ & 0x00000040) != 0) &&
               emailSubject_ != null &&
               emailSubject_ != com.google.protobuf.StringValue.getDefaultInstance()) {
               getEmailSubjectBuilder().mergeFrom(value);
@@ -11734,7 +11043,7 @@ java.lang.String defaultValue) {
           } else {
             emailSubjectBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000040;
           onChanged();
           return this;
         }
@@ -11743,10 +11052,10 @@ java.lang.String defaultValue) {
          * email subjects
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email_subject = 8 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email_subject = 7 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder clearEmailSubject() {
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000040);
           emailSubject_ = null;
           if (emailSubjectBuilder_ != null) {
             emailSubjectBuilder_.dispose();
@@ -11760,10 +11069,10 @@ java.lang.String defaultValue) {
          * email subjects
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email_subject = 8 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email_subject = 7 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.google.protobuf.StringValue.Builder getEmailSubjectBuilder() {
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000040;
           onChanged();
           return getEmailSubjectFieldBuilder().getBuilder();
         }
@@ -11772,7 +11081,7 @@ java.lang.String defaultValue) {
          * email subjects
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email_subject = 8 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email_subject = 7 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.google.protobuf.StringValueOrBuilder getEmailSubjectOrBuilder() {
           if (emailSubjectBuilder_ != null) {
@@ -11787,7 +11096,7 @@ java.lang.String defaultValue) {
          * email subjects
          * </pre>
          *
-         * <code>.google.protobuf.StringValue email_subject = 8 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue email_subject = 7 [json_name = "emailSubject", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -11811,18 +11120,18 @@ java.lang.String defaultValue) {
          * sms number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 9 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 8 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return Whether the smsNumber field is set.
          */
         public boolean hasSmsNumber() {
-          return ((bitField0_ & 0x00000100) != 0);
+          return ((bitField0_ & 0x00000080) != 0);
         }
         /**
          * <pre>
          * sms number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 9 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 8 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The smsNumber.
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber getSmsNumber() {
@@ -11837,7 +11146,7 @@ java.lang.String defaultValue) {
          * sms number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 9 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 8 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setSmsNumber(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber value) {
           if (smsNumberBuilder_ == null) {
@@ -11848,7 +11157,7 @@ java.lang.String defaultValue) {
           } else {
             smsNumberBuilder_.setMessage(value);
           }
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000080;
           onChanged();
           return this;
         }
@@ -11857,7 +11166,7 @@ java.lang.String defaultValue) {
          * sms number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 9 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 8 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setSmsNumber(
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber.Builder builderForValue) {
@@ -11866,7 +11175,7 @@ java.lang.String defaultValue) {
           } else {
             smsNumberBuilder_.setMessage(builderForValue.build());
           }
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000080;
           onChanged();
           return this;
         }
@@ -11875,11 +11184,11 @@ java.lang.String defaultValue) {
          * sms number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 9 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 8 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder mergeSmsNumber(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber value) {
           if (smsNumberBuilder_ == null) {
-            if (((bitField0_ & 0x00000100) != 0) &&
+            if (((bitField0_ & 0x00000080) != 0) &&
               smsNumber_ != null &&
               smsNumber_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber.getDefaultInstance()) {
               getSmsNumberBuilder().mergeFrom(value);
@@ -11889,7 +11198,7 @@ java.lang.String defaultValue) {
           } else {
             smsNumberBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000080;
           onChanged();
           return this;
         }
@@ -11898,10 +11207,10 @@ java.lang.String defaultValue) {
          * sms number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 9 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 8 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder clearSmsNumber() {
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000080);
           smsNumber_ = null;
           if (smsNumberBuilder_ != null) {
             smsNumberBuilder_.dispose();
@@ -11915,10 +11224,10 @@ java.lang.String defaultValue) {
          * sms number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 9 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 8 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber.Builder getSmsNumberBuilder() {
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000080;
           onChanged();
           return getSmsNumberFieldBuilder().getBuilder();
         }
@@ -11927,7 +11236,7 @@ java.lang.String defaultValue) {
          * sms number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 9 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 8 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumberOrBuilder getSmsNumberOrBuilder() {
           if (smsNumberBuilder_ != null) {
@@ -11942,7 +11251,7 @@ java.lang.String defaultValue) {
          * sms number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 9 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber sms_number = 8 [json_name = "smsNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumber.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.SmsNumberOrBuilder> 
@@ -11966,18 +11275,18 @@ java.lang.String defaultValue) {
          * chat widget header
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 10 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 9 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return Whether the header field is set.
          */
         public boolean hasHeader() {
-          return ((bitField0_ & 0x00000200) != 0);
+          return ((bitField0_ & 0x00000100) != 0);
         }
         /**
          * <pre>
          * chat widget header
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 10 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 9 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The header.
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader getHeader() {
@@ -11992,7 +11301,7 @@ java.lang.String defaultValue) {
          * chat widget header
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 10 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 9 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setHeader(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader value) {
           if (headerBuilder_ == null) {
@@ -12003,7 +11312,7 @@ java.lang.String defaultValue) {
           } else {
             headerBuilder_.setMessage(value);
           }
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000100;
           onChanged();
           return this;
         }
@@ -12012,7 +11321,7 @@ java.lang.String defaultValue) {
          * chat widget header
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 10 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 9 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setHeader(
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader.Builder builderForValue) {
@@ -12021,7 +11330,7 @@ java.lang.String defaultValue) {
           } else {
             headerBuilder_.setMessage(builderForValue.build());
           }
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000100;
           onChanged();
           return this;
         }
@@ -12030,11 +11339,11 @@ java.lang.String defaultValue) {
          * chat widget header
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 10 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 9 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder mergeHeader(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader value) {
           if (headerBuilder_ == null) {
-            if (((bitField0_ & 0x00000200) != 0) &&
+            if (((bitField0_ & 0x00000100) != 0) &&
               header_ != null &&
               header_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader.getDefaultInstance()) {
               getHeaderBuilder().mergeFrom(value);
@@ -12044,7 +11353,7 @@ java.lang.String defaultValue) {
           } else {
             headerBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000100;
           onChanged();
           return this;
         }
@@ -12053,10 +11362,10 @@ java.lang.String defaultValue) {
          * chat widget header
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 10 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 9 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder clearHeader() {
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000100);
           header_ = null;
           if (headerBuilder_ != null) {
             headerBuilder_.dispose();
@@ -12070,10 +11379,10 @@ java.lang.String defaultValue) {
          * chat widget header
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 10 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 9 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader.Builder getHeaderBuilder() {
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000100;
           onChanged();
           return getHeaderFieldBuilder().getBuilder();
         }
@@ -12082,7 +11391,7 @@ java.lang.String defaultValue) {
          * chat widget header
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 10 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 9 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeaderOrBuilder getHeaderOrBuilder() {
           if (headerBuilder_ != null) {
@@ -12097,7 +11406,7 @@ java.lang.String defaultValue) {
          * chat widget header
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 10 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader header = 9 [json_name = "header", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeader.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ChatHeaderOrBuilder> 
@@ -12121,18 +11430,18 @@ java.lang.String defaultValue) {
          * sla timeouts associated with the CampaignModule
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 11 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 10 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return Whether the slaTimeouts field is set.
          */
         public boolean hasSlaTimeouts() {
-          return ((bitField0_ & 0x00000400) != 0);
+          return ((bitField0_ & 0x00000200) != 0);
         }
         /**
          * <pre>
          * sla timeouts associated with the CampaignModule
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 11 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 10 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The slaTimeouts.
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.SLATimeouts getSlaTimeouts() {
@@ -12147,7 +11456,7 @@ java.lang.String defaultValue) {
          * sla timeouts associated with the CampaignModule
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 11 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 10 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setSlaTimeouts(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.SLATimeouts value) {
           if (slaTimeoutsBuilder_ == null) {
@@ -12158,7 +11467,7 @@ java.lang.String defaultValue) {
           } else {
             slaTimeoutsBuilder_.setMessage(value);
           }
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000200;
           onChanged();
           return this;
         }
@@ -12167,7 +11476,7 @@ java.lang.String defaultValue) {
          * sla timeouts associated with the CampaignModule
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 11 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 10 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setSlaTimeouts(
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.SLATimeouts.Builder builderForValue) {
@@ -12176,7 +11485,7 @@ java.lang.String defaultValue) {
           } else {
             slaTimeoutsBuilder_.setMessage(builderForValue.build());
           }
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000200;
           onChanged();
           return this;
         }
@@ -12185,11 +11494,11 @@ java.lang.String defaultValue) {
          * sla timeouts associated with the CampaignModule
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 11 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 10 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder mergeSlaTimeouts(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.SLATimeouts value) {
           if (slaTimeoutsBuilder_ == null) {
-            if (((bitField0_ & 0x00000400) != 0) &&
+            if (((bitField0_ & 0x00000200) != 0) &&
               slaTimeouts_ != null &&
               slaTimeouts_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.SLATimeouts.getDefaultInstance()) {
               getSlaTimeoutsBuilder().mergeFrom(value);
@@ -12199,7 +11508,7 @@ java.lang.String defaultValue) {
           } else {
             slaTimeoutsBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000200;
           onChanged();
           return this;
         }
@@ -12208,10 +11517,10 @@ java.lang.String defaultValue) {
          * sla timeouts associated with the CampaignModule
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 11 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 10 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder clearSlaTimeouts() {
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000200);
           slaTimeouts_ = null;
           if (slaTimeoutsBuilder_ != null) {
             slaTimeoutsBuilder_.dispose();
@@ -12225,10 +11534,10 @@ java.lang.String defaultValue) {
          * sla timeouts associated with the CampaignModule
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 11 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 10 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.SLATimeouts.Builder getSlaTimeoutsBuilder() {
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000200;
           onChanged();
           return getSlaTimeoutsFieldBuilder().getBuilder();
         }
@@ -12237,7 +11546,7 @@ java.lang.String defaultValue) {
          * sla timeouts associated with the CampaignModule
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 11 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 10 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.SLATimeoutsOrBuilder getSlaTimeoutsOrBuilder() {
           if (slaTimeoutsBuilder_ != null) {
@@ -12252,7 +11561,7 @@ java.lang.String defaultValue) {
          * sla timeouts associated with the CampaignModule
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 11 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.SLATimeouts sla_timeouts = 10 [json_name = "slaTimeouts", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.SLATimeouts, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.SLATimeouts.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.SLATimeoutsOrBuilder> 
@@ -12276,18 +11585,18 @@ java.lang.String defaultValue) {
          * maximum number of sends per hour for outbound CampaignModules
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value sends_per_hour = 12 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.Int64Value sends_per_hour = 11 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return Whether the sendsPerHour field is set.
          */
         public boolean hasSendsPerHour() {
-          return ((bitField0_ & 0x00000800) != 0);
+          return ((bitField0_ & 0x00000400) != 0);
         }
         /**
          * <pre>
          * maximum number of sends per hour for outbound CampaignModules
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value sends_per_hour = 12 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.Int64Value sends_per_hour = 11 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The sendsPerHour.
          */
         public com.google.protobuf.Int64Value getSendsPerHour() {
@@ -12302,7 +11611,7 @@ java.lang.String defaultValue) {
          * maximum number of sends per hour for outbound CampaignModules
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value sends_per_hour = 12 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.Int64Value sends_per_hour = 11 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setSendsPerHour(com.google.protobuf.Int64Value value) {
           if (sendsPerHourBuilder_ == null) {
@@ -12313,7 +11622,7 @@ java.lang.String defaultValue) {
           } else {
             sendsPerHourBuilder_.setMessage(value);
           }
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00000400;
           onChanged();
           return this;
         }
@@ -12322,7 +11631,7 @@ java.lang.String defaultValue) {
          * maximum number of sends per hour for outbound CampaignModules
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value sends_per_hour = 12 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.Int64Value sends_per_hour = 11 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setSendsPerHour(
             com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -12331,7 +11640,7 @@ java.lang.String defaultValue) {
           } else {
             sendsPerHourBuilder_.setMessage(builderForValue.build());
           }
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00000400;
           onChanged();
           return this;
         }
@@ -12340,11 +11649,11 @@ java.lang.String defaultValue) {
          * maximum number of sends per hour for outbound CampaignModules
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value sends_per_hour = 12 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.Int64Value sends_per_hour = 11 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder mergeSendsPerHour(com.google.protobuf.Int64Value value) {
           if (sendsPerHourBuilder_ == null) {
-            if (((bitField0_ & 0x00000800) != 0) &&
+            if (((bitField0_ & 0x00000400) != 0) &&
               sendsPerHour_ != null &&
               sendsPerHour_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
               getSendsPerHourBuilder().mergeFrom(value);
@@ -12354,7 +11663,7 @@ java.lang.String defaultValue) {
           } else {
             sendsPerHourBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00000400;
           onChanged();
           return this;
         }
@@ -12363,10 +11672,10 @@ java.lang.String defaultValue) {
          * maximum number of sends per hour for outbound CampaignModules
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value sends_per_hour = 12 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.Int64Value sends_per_hour = 11 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder clearSendsPerHour() {
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00000400);
           sendsPerHour_ = null;
           if (sendsPerHourBuilder_ != null) {
             sendsPerHourBuilder_.dispose();
@@ -12380,10 +11689,10 @@ java.lang.String defaultValue) {
          * maximum number of sends per hour for outbound CampaignModules
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value sends_per_hour = 12 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.Int64Value sends_per_hour = 11 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.google.protobuf.Int64Value.Builder getSendsPerHourBuilder() {
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00000400;
           onChanged();
           return getSendsPerHourFieldBuilder().getBuilder();
         }
@@ -12392,7 +11701,7 @@ java.lang.String defaultValue) {
          * maximum number of sends per hour for outbound CampaignModules
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value sends_per_hour = 12 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.Int64Value sends_per_hour = 11 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.google.protobuf.Int64ValueOrBuilder getSendsPerHourOrBuilder() {
           if (sendsPerHourBuilder_ != null) {
@@ -12407,7 +11716,7 @@ java.lang.String defaultValue) {
          * maximum number of sends per hour for outbound CampaignModules
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value sends_per_hour = 12 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.Int64Value sends_per_hour = 11 [json_name = "sendsPerHour", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -12431,18 +11740,18 @@ java.lang.String defaultValue) {
          * identifier of associated custom unsubscribe link
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 13 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 12 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return Whether the unsubscribeLinkSid field is set.
          */
         public boolean hasUnsubscribeLinkSid() {
-          return ((bitField0_ & 0x00001000) != 0);
+          return ((bitField0_ & 0x00000800) != 0);
         }
         /**
          * <pre>
          * identifier of associated custom unsubscribe link
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 13 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 12 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The unsubscribeLinkSid.
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id getUnsubscribeLinkSid() {
@@ -12457,7 +11766,7 @@ java.lang.String defaultValue) {
          * identifier of associated custom unsubscribe link
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 13 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 12 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setUnsubscribeLinkSid(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id value) {
           if (unsubscribeLinkSidBuilder_ == null) {
@@ -12468,7 +11777,7 @@ java.lang.String defaultValue) {
           } else {
             unsubscribeLinkSidBuilder_.setMessage(value);
           }
-          bitField0_ |= 0x00001000;
+          bitField0_ |= 0x00000800;
           onChanged();
           return this;
         }
@@ -12477,7 +11786,7 @@ java.lang.String defaultValue) {
          * identifier of associated custom unsubscribe link
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 13 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 12 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setUnsubscribeLinkSid(
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.Builder builderForValue) {
@@ -12486,7 +11795,7 @@ java.lang.String defaultValue) {
           } else {
             unsubscribeLinkSidBuilder_.setMessage(builderForValue.build());
           }
-          bitField0_ |= 0x00001000;
+          bitField0_ |= 0x00000800;
           onChanged();
           return this;
         }
@@ -12495,11 +11804,11 @@ java.lang.String defaultValue) {
          * identifier of associated custom unsubscribe link
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 13 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 12 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder mergeUnsubscribeLinkSid(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id value) {
           if (unsubscribeLinkSidBuilder_ == null) {
-            if (((bitField0_ & 0x00001000) != 0) &&
+            if (((bitField0_ & 0x00000800) != 0) &&
               unsubscribeLinkSid_ != null &&
               unsubscribeLinkSid_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.getDefaultInstance()) {
               getUnsubscribeLinkSidBuilder().mergeFrom(value);
@@ -12509,7 +11818,7 @@ java.lang.String defaultValue) {
           } else {
             unsubscribeLinkSidBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00001000;
+          bitField0_ |= 0x00000800;
           onChanged();
           return this;
         }
@@ -12518,10 +11827,10 @@ java.lang.String defaultValue) {
          * identifier of associated custom unsubscribe link
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 13 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 12 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder clearUnsubscribeLinkSid() {
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ = (bitField0_ & ~0x00000800);
           unsubscribeLinkSid_ = null;
           if (unsubscribeLinkSidBuilder_ != null) {
             unsubscribeLinkSidBuilder_.dispose();
@@ -12535,10 +11844,10 @@ java.lang.String defaultValue) {
          * identifier of associated custom unsubscribe link
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 13 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 12 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.Builder getUnsubscribeLinkSidBuilder() {
-          bitField0_ |= 0x00001000;
+          bitField0_ |= 0x00000800;
           onChanged();
           return getUnsubscribeLinkSidFieldBuilder().getBuilder();
         }
@@ -12547,7 +11856,7 @@ java.lang.String defaultValue) {
          * identifier of associated custom unsubscribe link
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 13 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 12 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64IdOrBuilder getUnsubscribeLinkSidOrBuilder() {
           if (unsubscribeLinkSidBuilder_ != null) {
@@ -12562,7 +11871,7 @@ java.lang.String defaultValue) {
          * identifier of associated custom unsubscribe link
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 13 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id unsubscribe_link_sid = 12 [json_name = "unsubscribeLinkSid", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64IdOrBuilder> 
@@ -12586,18 +11895,18 @@ java.lang.String defaultValue) {
          * verified email identifier
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 14 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 13 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return Whether the verifiedEmailSid field is set.
          */
         public boolean hasVerifiedEmailSid() {
-          return ((bitField0_ & 0x00002000) != 0);
+          return ((bitField0_ & 0x00001000) != 0);
         }
         /**
          * <pre>
          * verified email identifier
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 14 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 13 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The verifiedEmailSid.
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id getVerifiedEmailSid() {
@@ -12612,7 +11921,7 @@ java.lang.String defaultValue) {
          * verified email identifier
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 14 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 13 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setVerifiedEmailSid(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id value) {
           if (verifiedEmailSidBuilder_ == null) {
@@ -12623,7 +11932,7 @@ java.lang.String defaultValue) {
           } else {
             verifiedEmailSidBuilder_.setMessage(value);
           }
-          bitField0_ |= 0x00002000;
+          bitField0_ |= 0x00001000;
           onChanged();
           return this;
         }
@@ -12632,7 +11941,7 @@ java.lang.String defaultValue) {
          * verified email identifier
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 14 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 13 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setVerifiedEmailSid(
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.Builder builderForValue) {
@@ -12641,7 +11950,7 @@ java.lang.String defaultValue) {
           } else {
             verifiedEmailSidBuilder_.setMessage(builderForValue.build());
           }
-          bitField0_ |= 0x00002000;
+          bitField0_ |= 0x00001000;
           onChanged();
           return this;
         }
@@ -12650,11 +11959,11 @@ java.lang.String defaultValue) {
          * verified email identifier
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 14 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 13 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder mergeVerifiedEmailSid(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id value) {
           if (verifiedEmailSidBuilder_ == null) {
-            if (((bitField0_ & 0x00002000) != 0) &&
+            if (((bitField0_ & 0x00001000) != 0) &&
               verifiedEmailSid_ != null &&
               verifiedEmailSid_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.getDefaultInstance()) {
               getVerifiedEmailSidBuilder().mergeFrom(value);
@@ -12664,7 +11973,7 @@ java.lang.String defaultValue) {
           } else {
             verifiedEmailSidBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00002000;
+          bitField0_ |= 0x00001000;
           onChanged();
           return this;
         }
@@ -12673,10 +11982,10 @@ java.lang.String defaultValue) {
          * verified email identifier
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 14 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 13 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder clearVerifiedEmailSid() {
-          bitField0_ = (bitField0_ & ~0x00002000);
+          bitField0_ = (bitField0_ & ~0x00001000);
           verifiedEmailSid_ = null;
           if (verifiedEmailSidBuilder_ != null) {
             verifiedEmailSidBuilder_.dispose();
@@ -12690,10 +11999,10 @@ java.lang.String defaultValue) {
          * verified email identifier
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 14 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 13 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.Builder getVerifiedEmailSidBuilder() {
-          bitField0_ |= 0x00002000;
+          bitField0_ |= 0x00001000;
           onChanged();
           return getVerifiedEmailSidFieldBuilder().getBuilder();
         }
@@ -12702,7 +12011,7 @@ java.lang.String defaultValue) {
          * verified email identifier
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 14 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 13 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64IdOrBuilder getVerifiedEmailSidOrBuilder() {
           if (verifiedEmailSidBuilder_ != null) {
@@ -12717,7 +12026,7 @@ java.lang.String defaultValue) {
          * verified email identifier
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 14 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id verified_email_sid = 13 [json_name = "verifiedEmailSid", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64IdOrBuilder> 
@@ -12741,18 +12050,18 @@ java.lang.String defaultValue) {
          * stop module with all tasks are completed
          * </pre>
          *
-         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 15 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 14 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return Whether the stopOnTaskDeplete field is set.
          */
         public boolean hasStopOnTaskDeplete() {
-          return ((bitField0_ & 0x00004000) != 0);
+          return ((bitField0_ & 0x00002000) != 0);
         }
         /**
          * <pre>
          * stop module with all tasks are completed
          * </pre>
          *
-         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 15 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 14 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The stopOnTaskDeplete.
          */
         public com.google.protobuf.BoolValue getStopOnTaskDeplete() {
@@ -12767,7 +12076,7 @@ java.lang.String defaultValue) {
          * stop module with all tasks are completed
          * </pre>
          *
-         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 15 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 14 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setStopOnTaskDeplete(com.google.protobuf.BoolValue value) {
           if (stopOnTaskDepleteBuilder_ == null) {
@@ -12778,7 +12087,7 @@ java.lang.String defaultValue) {
           } else {
             stopOnTaskDepleteBuilder_.setMessage(value);
           }
-          bitField0_ |= 0x00004000;
+          bitField0_ |= 0x00002000;
           onChanged();
           return this;
         }
@@ -12787,7 +12096,7 @@ java.lang.String defaultValue) {
          * stop module with all tasks are completed
          * </pre>
          *
-         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 15 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 14 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setStopOnTaskDeplete(
             com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -12796,7 +12105,7 @@ java.lang.String defaultValue) {
           } else {
             stopOnTaskDepleteBuilder_.setMessage(builderForValue.build());
           }
-          bitField0_ |= 0x00004000;
+          bitField0_ |= 0x00002000;
           onChanged();
           return this;
         }
@@ -12805,11 +12114,11 @@ java.lang.String defaultValue) {
          * stop module with all tasks are completed
          * </pre>
          *
-         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 15 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 14 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder mergeStopOnTaskDeplete(com.google.protobuf.BoolValue value) {
           if (stopOnTaskDepleteBuilder_ == null) {
-            if (((bitField0_ & 0x00004000) != 0) &&
+            if (((bitField0_ & 0x00002000) != 0) &&
               stopOnTaskDeplete_ != null &&
               stopOnTaskDeplete_ != com.google.protobuf.BoolValue.getDefaultInstance()) {
               getStopOnTaskDepleteBuilder().mergeFrom(value);
@@ -12819,7 +12128,7 @@ java.lang.String defaultValue) {
           } else {
             stopOnTaskDepleteBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00004000;
+          bitField0_ |= 0x00002000;
           onChanged();
           return this;
         }
@@ -12828,10 +12137,10 @@ java.lang.String defaultValue) {
          * stop module with all tasks are completed
          * </pre>
          *
-         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 15 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 14 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder clearStopOnTaskDeplete() {
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00002000);
           stopOnTaskDeplete_ = null;
           if (stopOnTaskDepleteBuilder_ != null) {
             stopOnTaskDepleteBuilder_.dispose();
@@ -12845,10 +12154,10 @@ java.lang.String defaultValue) {
          * stop module with all tasks are completed
          * </pre>
          *
-         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 15 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 14 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.google.protobuf.BoolValue.Builder getStopOnTaskDepleteBuilder() {
-          bitField0_ |= 0x00004000;
+          bitField0_ |= 0x00002000;
           onChanged();
           return getStopOnTaskDepleteFieldBuilder().getBuilder();
         }
@@ -12857,7 +12166,7 @@ java.lang.String defaultValue) {
          * stop module with all tasks are completed
          * </pre>
          *
-         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 15 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 14 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.google.protobuf.BoolValueOrBuilder getStopOnTaskDepleteOrBuilder() {
           if (stopOnTaskDepleteBuilder_ != null) {
@@ -12872,7 +12181,7 @@ java.lang.String defaultValue) {
          * stop module with all tasks are completed
          * </pre>
          *
-         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 15 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.BoolValue stop_on_task_deplete = 14 [json_name = "stopOnTaskDeplete", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -12888,318 +12197,6 @@ java.lang.String defaultValue) {
           return stopOnTaskDepleteBuilder_;
         }
 
-        private java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment> attachments_ =
-          java.util.Collections.emptyList();
-        private void ensureAttachmentsIsMutable() {
-          if (!((bitField0_ & 0x00008000) != 0)) {
-            attachments_ = new java.util.ArrayList<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment>(attachments_);
-            bitField0_ |= 0x00008000;
-           }
-        }
-
-        private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachmentOrBuilder> attachmentsBuilder_;
-
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment> getAttachmentsList() {
-          if (attachmentsBuilder_ == null) {
-            return java.util.Collections.unmodifiableList(attachments_);
-          } else {
-            return attachmentsBuilder_.getMessageList();
-          }
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public int getAttachmentsCount() {
-          if (attachmentsBuilder_ == null) {
-            return attachments_.size();
-          } else {
-            return attachmentsBuilder_.getCount();
-          }
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment getAttachments(int index) {
-          if (attachmentsBuilder_ == null) {
-            return attachments_.get(index);
-          } else {
-            return attachmentsBuilder_.getMessage(index);
-          }
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder setAttachments(
-            int index, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment value) {
-          if (attachmentsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureAttachmentsIsMutable();
-            attachments_.set(index, value);
-            onChanged();
-          } else {
-            attachmentsBuilder_.setMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder setAttachments(
-            int index, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment.Builder builderForValue) {
-          if (attachmentsBuilder_ == null) {
-            ensureAttachmentsIsMutable();
-            attachments_.set(index, builderForValue.build());
-            onChanged();
-          } else {
-            attachmentsBuilder_.setMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder addAttachments(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment value) {
-          if (attachmentsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureAttachmentsIsMutable();
-            attachments_.add(value);
-            onChanged();
-          } else {
-            attachmentsBuilder_.addMessage(value);
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder addAttachments(
-            int index, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment value) {
-          if (attachmentsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureAttachmentsIsMutable();
-            attachments_.add(index, value);
-            onChanged();
-          } else {
-            attachmentsBuilder_.addMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder addAttachments(
-            com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment.Builder builderForValue) {
-          if (attachmentsBuilder_ == null) {
-            ensureAttachmentsIsMutable();
-            attachments_.add(builderForValue.build());
-            onChanged();
-          } else {
-            attachmentsBuilder_.addMessage(builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder addAttachments(
-            int index, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment.Builder builderForValue) {
-          if (attachmentsBuilder_ == null) {
-            ensureAttachmentsIsMutable();
-            attachments_.add(index, builderForValue.build());
-            onChanged();
-          } else {
-            attachmentsBuilder_.addMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder addAllAttachments(
-            java.lang.Iterable<? extends com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment> values) {
-          if (attachmentsBuilder_ == null) {
-            ensureAttachmentsIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                values, attachments_);
-            onChanged();
-          } else {
-            attachmentsBuilder_.addAllMessages(values);
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder clearAttachments() {
-          if (attachmentsBuilder_ == null) {
-            attachments_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00008000);
-            onChanged();
-          } else {
-            attachmentsBuilder_.clear();
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public Builder removeAttachments(int index) {
-          if (attachmentsBuilder_ == null) {
-            ensureAttachmentsIsMutable();
-            attachments_.remove(index);
-            onChanged();
-          } else {
-            attachmentsBuilder_.remove(index);
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment.Builder getAttachmentsBuilder(
-            int index) {
-          return getAttachmentsFieldBuilder().getBuilder(index);
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachmentOrBuilder getAttachmentsOrBuilder(
-            int index) {
-          if (attachmentsBuilder_ == null) {
-            return attachments_.get(index);  } else {
-            return attachmentsBuilder_.getMessageOrBuilder(index);
-          }
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public java.util.List<? extends com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachmentOrBuilder> 
-             getAttachmentsOrBuilderList() {
-          if (attachmentsBuilder_ != null) {
-            return attachmentsBuilder_.getMessageOrBuilderList();
-          } else {
-            return java.util.Collections.unmodifiableList(attachments_);
-          }
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment.Builder addAttachmentsBuilder() {
-          return getAttachmentsFieldBuilder().addBuilder(
-              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment.getDefaultInstance());
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment.Builder addAttachmentsBuilder(
-            int index) {
-          return getAttachmentsFieldBuilder().addBuilder(
-              index, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment.getDefaultInstance());
-        }
-        /**
-         * <pre>
-         * attachments
-         * </pre>
-         *
-         * <code>repeated .tcnapi.omni.campaigns.v1.OmniAttachment attachments = 16 [json_name = "attachments", (.google.api.field_behavior) = OPTIONAL];</code>
-         */
-        public java.util.List<com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment.Builder> 
-             getAttachmentsBuilderList() {
-          return getAttachmentsFieldBuilder().getBuilderList();
-        }
-        private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachmentOrBuilder> 
-            getAttachmentsFieldBuilder() {
-          if (attachmentsBuilder_ == null) {
-            attachmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachment.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.OmniAttachmentOrBuilder>(
-                    attachments_,
-                    ((bitField0_ & 0x00008000) != 0),
-                    getParentForChildren(),
-                    isClean());
-            attachments_ = null;
-          }
-          return attachmentsBuilder_;
-        }
-
         private com.google.protobuf.StringValue complianceRuleSetId_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> complianceRuleSetIdBuilder_;
@@ -13208,18 +12205,18 @@ java.lang.String defaultValue) {
          * Optional. compliance rule set to use for this campaign
          * </pre>
          *
-         * <code>.google.protobuf.StringValue compliance_rule_set_id = 17 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue compliance_rule_set_id = 15 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return Whether the complianceRuleSetId field is set.
          */
         public boolean hasComplianceRuleSetId() {
-          return ((bitField0_ & 0x00010000) != 0);
+          return ((bitField0_ & 0x00004000) != 0);
         }
         /**
          * <pre>
          * Optional. compliance rule set to use for this campaign
          * </pre>
          *
-         * <code>.google.protobuf.StringValue compliance_rule_set_id = 17 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue compliance_rule_set_id = 15 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The complianceRuleSetId.
          */
         public com.google.protobuf.StringValue getComplianceRuleSetId() {
@@ -13234,7 +12231,7 @@ java.lang.String defaultValue) {
          * Optional. compliance rule set to use for this campaign
          * </pre>
          *
-         * <code>.google.protobuf.StringValue compliance_rule_set_id = 17 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue compliance_rule_set_id = 15 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setComplianceRuleSetId(com.google.protobuf.StringValue value) {
           if (complianceRuleSetIdBuilder_ == null) {
@@ -13245,7 +12242,7 @@ java.lang.String defaultValue) {
           } else {
             complianceRuleSetIdBuilder_.setMessage(value);
           }
-          bitField0_ |= 0x00010000;
+          bitField0_ |= 0x00004000;
           onChanged();
           return this;
         }
@@ -13254,7 +12251,7 @@ java.lang.String defaultValue) {
          * Optional. compliance rule set to use for this campaign
          * </pre>
          *
-         * <code>.google.protobuf.StringValue compliance_rule_set_id = 17 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue compliance_rule_set_id = 15 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setComplianceRuleSetId(
             com.google.protobuf.StringValue.Builder builderForValue) {
@@ -13263,7 +12260,7 @@ java.lang.String defaultValue) {
           } else {
             complianceRuleSetIdBuilder_.setMessage(builderForValue.build());
           }
-          bitField0_ |= 0x00010000;
+          bitField0_ |= 0x00004000;
           onChanged();
           return this;
         }
@@ -13272,11 +12269,11 @@ java.lang.String defaultValue) {
          * Optional. compliance rule set to use for this campaign
          * </pre>
          *
-         * <code>.google.protobuf.StringValue compliance_rule_set_id = 17 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue compliance_rule_set_id = 15 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder mergeComplianceRuleSetId(com.google.protobuf.StringValue value) {
           if (complianceRuleSetIdBuilder_ == null) {
-            if (((bitField0_ & 0x00010000) != 0) &&
+            if (((bitField0_ & 0x00004000) != 0) &&
               complianceRuleSetId_ != null &&
               complianceRuleSetId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
               getComplianceRuleSetIdBuilder().mergeFrom(value);
@@ -13286,7 +12283,7 @@ java.lang.String defaultValue) {
           } else {
             complianceRuleSetIdBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00010000;
+          bitField0_ |= 0x00004000;
           onChanged();
           return this;
         }
@@ -13295,10 +12292,10 @@ java.lang.String defaultValue) {
          * Optional. compliance rule set to use for this campaign
          * </pre>
          *
-         * <code>.google.protobuf.StringValue compliance_rule_set_id = 17 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue compliance_rule_set_id = 15 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder clearComplianceRuleSetId() {
-          bitField0_ = (bitField0_ & ~0x00010000);
+          bitField0_ = (bitField0_ & ~0x00004000);
           complianceRuleSetId_ = null;
           if (complianceRuleSetIdBuilder_ != null) {
             complianceRuleSetIdBuilder_.dispose();
@@ -13312,10 +12309,10 @@ java.lang.String defaultValue) {
          * Optional. compliance rule set to use for this campaign
          * </pre>
          *
-         * <code>.google.protobuf.StringValue compliance_rule_set_id = 17 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue compliance_rule_set_id = 15 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.google.protobuf.StringValue.Builder getComplianceRuleSetIdBuilder() {
-          bitField0_ |= 0x00010000;
+          bitField0_ |= 0x00004000;
           onChanged();
           return getComplianceRuleSetIdFieldBuilder().getBuilder();
         }
@@ -13324,7 +12321,7 @@ java.lang.String defaultValue) {
          * Optional. compliance rule set to use for this campaign
          * </pre>
          *
-         * <code>.google.protobuf.StringValue compliance_rule_set_id = 17 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue compliance_rule_set_id = 15 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.google.protobuf.StringValueOrBuilder getComplianceRuleSetIdOrBuilder() {
           if (complianceRuleSetIdBuilder_ != null) {
@@ -13339,7 +12336,7 @@ java.lang.String defaultValue) {
          * Optional. compliance rule set to use for this campaign
          * </pre>
          *
-         * <code>.google.protobuf.StringValue compliance_rule_set_id = 17 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.google.protobuf.StringValue compliance_rule_set_id = 15 [json_name = "complianceRuleSetId", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -13361,14 +12358,14 @@ java.lang.String defaultValue) {
           if (!paymentPortalIds_.isModifiable()) {
             paymentPortalIds_ = new com.google.protobuf.LazyStringArrayList(paymentPortalIds_);
           }
-          bitField0_ |= 0x00020000;
+          bitField0_ |= 0x00008000;
         }
         /**
          * <pre>
          * Payment Portal Ids
          * </pre>
          *
-         * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return A list containing the paymentPortalIds.
          */
         public com.google.protobuf.ProtocolStringList
@@ -13381,7 +12378,7 @@ java.lang.String defaultValue) {
          * Payment Portal Ids
          * </pre>
          *
-         * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The count of paymentPortalIds.
          */
         public int getPaymentPortalIdsCount() {
@@ -13392,7 +12389,7 @@ java.lang.String defaultValue) {
          * Payment Portal Ids
          * </pre>
          *
-         * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
          * @param index The index of the element to return.
          * @return The paymentPortalIds at the given index.
          */
@@ -13404,7 +12401,7 @@ java.lang.String defaultValue) {
          * Payment Portal Ids
          * </pre>
          *
-         * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
          * @param index The index of the value to return.
          * @return The bytes of the paymentPortalIds at the given index.
          */
@@ -13417,7 +12414,7 @@ java.lang.String defaultValue) {
          * Payment Portal Ids
          * </pre>
          *
-         * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
          * @param index The index to set the value at.
          * @param value The paymentPortalIds to set.
          * @return This builder for chaining.
@@ -13427,7 +12424,7 @@ java.lang.String defaultValue) {
           if (value == null) { throw new NullPointerException(); }
           ensurePaymentPortalIdsIsMutable();
           paymentPortalIds_.set(index, value);
-          bitField0_ |= 0x00020000;
+          bitField0_ |= 0x00008000;
           onChanged();
           return this;
         }
@@ -13436,7 +12433,7 @@ java.lang.String defaultValue) {
          * Payment Portal Ids
          * </pre>
          *
-         * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
          * @param value The paymentPortalIds to add.
          * @return This builder for chaining.
          */
@@ -13445,7 +12442,7 @@ java.lang.String defaultValue) {
           if (value == null) { throw new NullPointerException(); }
           ensurePaymentPortalIdsIsMutable();
           paymentPortalIds_.add(value);
-          bitField0_ |= 0x00020000;
+          bitField0_ |= 0x00008000;
           onChanged();
           return this;
         }
@@ -13454,7 +12451,7 @@ java.lang.String defaultValue) {
          * Payment Portal Ids
          * </pre>
          *
-         * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
          * @param values The paymentPortalIds to add.
          * @return This builder for chaining.
          */
@@ -13463,7 +12460,7 @@ java.lang.String defaultValue) {
           ensurePaymentPortalIdsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
               values, paymentPortalIds_);
-          bitField0_ |= 0x00020000;
+          bitField0_ |= 0x00008000;
           onChanged();
           return this;
         }
@@ -13472,13 +12469,13 @@ java.lang.String defaultValue) {
          * Payment Portal Ids
          * </pre>
          *
-         * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return This builder for chaining.
          */
         public Builder clearPaymentPortalIds() {
           paymentPortalIds_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
-          bitField0_ = (bitField0_ & ~0x00020000);;
+          bitField0_ = (bitField0_ & ~0x00008000);;
           onChanged();
           return this;
         }
@@ -13487,7 +12484,7 @@ java.lang.String defaultValue) {
          * Payment Portal Ids
          * </pre>
          *
-         * <code>repeated string payment_portal_ids = 18 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>repeated string payment_portal_ids = 16 [json_name = "paymentPortalIds", (.google.api.field_behavior) = OPTIONAL];</code>
          * @param value The bytes of the paymentPortalIds to add.
          * @return This builder for chaining.
          */
@@ -13497,7 +12494,7 @@ java.lang.String defaultValue) {
           checkByteStringIsUtf8(value);
           ensurePaymentPortalIdsIsMutable();
           paymentPortalIds_.add(value);
-          bitField0_ |= 0x00020000;
+          bitField0_ |= 0x00008000;
           onChanged();
           return this;
         }
@@ -13510,18 +12507,18 @@ java.lang.String defaultValue) {
          * Flow Id
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 19 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 17 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return Whether the flowId field is set.
          */
         public boolean hasFlowId() {
-          return ((bitField0_ & 0x00040000) != 0);
+          return ((bitField0_ & 0x00010000) != 0);
         }
         /**
          * <pre>
          * Flow Id
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 19 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 17 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The flowId.
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id getFlowId() {
@@ -13536,7 +12533,7 @@ java.lang.String defaultValue) {
          * Flow Id
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 19 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 17 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setFlowId(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id value) {
           if (flowIdBuilder_ == null) {
@@ -13547,7 +12544,7 @@ java.lang.String defaultValue) {
           } else {
             flowIdBuilder_.setMessage(value);
           }
-          bitField0_ |= 0x00040000;
+          bitField0_ |= 0x00010000;
           onChanged();
           return this;
         }
@@ -13556,7 +12553,7 @@ java.lang.String defaultValue) {
          * Flow Id
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 19 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 17 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setFlowId(
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.Builder builderForValue) {
@@ -13565,7 +12562,7 @@ java.lang.String defaultValue) {
           } else {
             flowIdBuilder_.setMessage(builderForValue.build());
           }
-          bitField0_ |= 0x00040000;
+          bitField0_ |= 0x00010000;
           onChanged();
           return this;
         }
@@ -13574,11 +12571,11 @@ java.lang.String defaultValue) {
          * Flow Id
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 19 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 17 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder mergeFlowId(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id value) {
           if (flowIdBuilder_ == null) {
-            if (((bitField0_ & 0x00040000) != 0) &&
+            if (((bitField0_ & 0x00010000) != 0) &&
               flowId_ != null &&
               flowId_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.getDefaultInstance()) {
               getFlowIdBuilder().mergeFrom(value);
@@ -13588,7 +12585,7 @@ java.lang.String defaultValue) {
           } else {
             flowIdBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00040000;
+          bitField0_ |= 0x00010000;
           onChanged();
           return this;
         }
@@ -13597,10 +12594,10 @@ java.lang.String defaultValue) {
          * Flow Id
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 19 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 17 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder clearFlowId() {
-          bitField0_ = (bitField0_ & ~0x00040000);
+          bitField0_ = (bitField0_ & ~0x00010000);
           flowId_ = null;
           if (flowIdBuilder_ != null) {
             flowIdBuilder_.dispose();
@@ -13614,10 +12611,10 @@ java.lang.String defaultValue) {
          * Flow Id
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 19 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 17 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.Builder getFlowIdBuilder() {
-          bitField0_ |= 0x00040000;
+          bitField0_ |= 0x00010000;
           onChanged();
           return getFlowIdFieldBuilder().getBuilder();
         }
@@ -13626,7 +12623,7 @@ java.lang.String defaultValue) {
          * Flow Id
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 19 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 17 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64IdOrBuilder getFlowIdOrBuilder() {
           if (flowIdBuilder_ != null) {
@@ -13641,7 +12638,7 @@ java.lang.String defaultValue) {
          * Flow Id
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 19 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Int64Id flow_id = 17 [json_name = "flowId", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64Id.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Int64IdOrBuilder> 
@@ -13665,18 +12662,18 @@ java.lang.String defaultValue) {
          * skills
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 20 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 18 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return Whether the skills field is set.
          */
         public boolean hasSkills() {
-          return ((bitField0_ & 0x00080000) != 0);
+          return ((bitField0_ & 0x00020000) != 0);
         }
         /**
          * <pre>
          * skills
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 20 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 18 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The skills.
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills getSkills() {
@@ -13691,7 +12688,7 @@ java.lang.String defaultValue) {
          * skills
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 20 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 18 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setSkills(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills value) {
           if (skillsBuilder_ == null) {
@@ -13702,7 +12699,7 @@ java.lang.String defaultValue) {
           } else {
             skillsBuilder_.setMessage(value);
           }
-          bitField0_ |= 0x00080000;
+          bitField0_ |= 0x00020000;
           onChanged();
           return this;
         }
@@ -13711,7 +12708,7 @@ java.lang.String defaultValue) {
          * skills
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 20 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 18 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setSkills(
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills.Builder builderForValue) {
@@ -13720,7 +12717,7 @@ java.lang.String defaultValue) {
           } else {
             skillsBuilder_.setMessage(builderForValue.build());
           }
-          bitField0_ |= 0x00080000;
+          bitField0_ |= 0x00020000;
           onChanged();
           return this;
         }
@@ -13729,11 +12726,11 @@ java.lang.String defaultValue) {
          * skills
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 20 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 18 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder mergeSkills(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills value) {
           if (skillsBuilder_ == null) {
-            if (((bitField0_ & 0x00080000) != 0) &&
+            if (((bitField0_ & 0x00020000) != 0) &&
               skills_ != null &&
               skills_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills.getDefaultInstance()) {
               getSkillsBuilder().mergeFrom(value);
@@ -13743,7 +12740,7 @@ java.lang.String defaultValue) {
           } else {
             skillsBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00080000;
+          bitField0_ |= 0x00020000;
           onChanged();
           return this;
         }
@@ -13752,10 +12749,10 @@ java.lang.String defaultValue) {
          * skills
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 20 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 18 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder clearSkills() {
-          bitField0_ = (bitField0_ & ~0x00080000);
+          bitField0_ = (bitField0_ & ~0x00020000);
           skills_ = null;
           if (skillsBuilder_ != null) {
             skillsBuilder_.dispose();
@@ -13769,10 +12766,10 @@ java.lang.String defaultValue) {
          * skills
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 20 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 18 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills.Builder getSkillsBuilder() {
-          bitField0_ |= 0x00080000;
+          bitField0_ |= 0x00020000;
           onChanged();
           return getSkillsFieldBuilder().getBuilder();
         }
@@ -13781,7 +12778,7 @@ java.lang.String defaultValue) {
          * skills
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 20 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 18 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkillsOrBuilder getSkillsOrBuilder() {
           if (skillsBuilder_ != null) {
@@ -13796,7 +12793,7 @@ java.lang.String defaultValue) {
          * skills
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 20 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills skills = 18 [json_name = "skills", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkills.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.OmniConversationSkillsOrBuilder> 
@@ -13820,18 +12817,18 @@ java.lang.String defaultValue) {
          * whatsapp number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 21 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 19 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return Whether the whatsappNumber field is set.
          */
         public boolean hasWhatsappNumber() {
-          return ((bitField0_ & 0x00100000) != 0);
+          return ((bitField0_ & 0x00040000) != 0);
         }
         /**
          * <pre>
          * whatsapp number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 21 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 19 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The whatsappNumber.
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber getWhatsappNumber() {
@@ -13846,7 +12843,7 @@ java.lang.String defaultValue) {
          * whatsapp number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 21 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 19 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setWhatsappNumber(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber value) {
           if (whatsappNumberBuilder_ == null) {
@@ -13857,7 +12854,7 @@ java.lang.String defaultValue) {
           } else {
             whatsappNumberBuilder_.setMessage(value);
           }
-          bitField0_ |= 0x00100000;
+          bitField0_ |= 0x00040000;
           onChanged();
           return this;
         }
@@ -13866,7 +12863,7 @@ java.lang.String defaultValue) {
          * whatsapp number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 21 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 19 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setWhatsappNumber(
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber.Builder builderForValue) {
@@ -13875,7 +12872,7 @@ java.lang.String defaultValue) {
           } else {
             whatsappNumberBuilder_.setMessage(builderForValue.build());
           }
-          bitField0_ |= 0x00100000;
+          bitField0_ |= 0x00040000;
           onChanged();
           return this;
         }
@@ -13884,11 +12881,11 @@ java.lang.String defaultValue) {
          * whatsapp number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 21 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 19 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder mergeWhatsappNumber(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber value) {
           if (whatsappNumberBuilder_ == null) {
-            if (((bitField0_ & 0x00100000) != 0) &&
+            if (((bitField0_ & 0x00040000) != 0) &&
               whatsappNumber_ != null &&
               whatsappNumber_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber.getDefaultInstance()) {
               getWhatsappNumberBuilder().mergeFrom(value);
@@ -13898,7 +12895,7 @@ java.lang.String defaultValue) {
           } else {
             whatsappNumberBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x00100000;
+          bitField0_ |= 0x00040000;
           onChanged();
           return this;
         }
@@ -13907,10 +12904,10 @@ java.lang.String defaultValue) {
          * whatsapp number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 21 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 19 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder clearWhatsappNumber() {
-          bitField0_ = (bitField0_ & ~0x00100000);
+          bitField0_ = (bitField0_ & ~0x00040000);
           whatsappNumber_ = null;
           if (whatsappNumberBuilder_ != null) {
             whatsappNumberBuilder_.dispose();
@@ -13924,10 +12921,10 @@ java.lang.String defaultValue) {
          * whatsapp number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 21 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 19 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber.Builder getWhatsappNumberBuilder() {
-          bitField0_ |= 0x00100000;
+          bitField0_ |= 0x00040000;
           onChanged();
           return getWhatsappNumberFieldBuilder().getBuilder();
         }
@@ -13936,7 +12933,7 @@ java.lang.String defaultValue) {
          * whatsapp number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 21 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 19 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumberOrBuilder getWhatsappNumberOrBuilder() {
           if (whatsappNumberBuilder_ != null) {
@@ -13951,7 +12948,7 @@ java.lang.String defaultValue) {
          * whatsapp number
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 21 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber whatsapp_number = 19 [json_name = "whatsappNumber", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumber.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.WhatsAppNumberOrBuilder> 
@@ -13986,7 +12983,7 @@ java.lang.String defaultValue) {
           if (!providerMetadata_.isMutable()) {
             providerMetadata_ = providerMetadata_.copy();
           }
-          bitField0_ |= 0x00200000;
+          bitField0_ |= 0x00080000;
           onChanged();
           return providerMetadata_;
         }
@@ -13999,7 +12996,7 @@ java.lang.String defaultValue) {
          * content_id - the id of the premade message in the smartping system
          * </pre>
          *
-         * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         @java.lang.Override
         public boolean containsProviderMetadata(
@@ -14021,7 +13018,7 @@ java.lang.String defaultValue) {
          * content_id - the id of the premade message in the smartping system
          * </pre>
          *
-         * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         @java.lang.Override
         public java.util.Map<java.lang.String, java.lang.String> getProviderMetadataMap() {
@@ -14033,7 +13030,7 @@ java.lang.String defaultValue) {
          * content_id - the id of the premade message in the smartping system
          * </pre>
          *
-         * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         @java.lang.Override
         public /* nullable */
@@ -14052,7 +13049,7 @@ java.lang.String defaultValue) {
          * content_id - the id of the premade message in the smartping system
          * </pre>
          *
-         * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         @java.lang.Override
         public java.lang.String getProviderMetadataOrThrow(
@@ -14066,7 +13063,7 @@ java.lang.String defaultValue) {
           return map.get(key);
         }
         public Builder clearProviderMetadata() {
-          bitField0_ = (bitField0_ & ~0x00200000);
+          bitField0_ = (bitField0_ & ~0x00080000);
           internalGetMutableProviderMetadata().getMutableMap()
               .clear();
           return this;
@@ -14077,7 +13074,7 @@ java.lang.String defaultValue) {
          * content_id - the id of the premade message in the smartping system
          * </pre>
          *
-         * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder removeProviderMetadata(
             java.lang.String key) {
@@ -14092,7 +13089,7 @@ java.lang.String defaultValue) {
         @java.lang.Deprecated
         public java.util.Map<java.lang.String, java.lang.String>
             getMutableProviderMetadata() {
-          bitField0_ |= 0x00200000;
+          bitField0_ |= 0x00080000;
           return internalGetMutableProviderMetadata().getMutableMap();
         }
         /**
@@ -14101,7 +13098,7 @@ java.lang.String defaultValue) {
          * content_id - the id of the premade message in the smartping system
          * </pre>
          *
-         * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder putProviderMetadata(
             java.lang.String key,
@@ -14110,7 +13107,7 @@ java.lang.String defaultValue) {
           if (value == null) { throw new NullPointerException("map value"); }
           internalGetMutableProviderMetadata().getMutableMap()
               .put(key, value);
-          bitField0_ |= 0x00200000;
+          bitField0_ |= 0x00080000;
           return this;
         }
         /**
@@ -14119,13 +13116,13 @@ java.lang.String defaultValue) {
          * content_id - the id of the premade message in the smartping system
          * </pre>
          *
-         * <code>map&lt;string, string&gt; provider_metadata = 22 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>map&lt;string, string&gt; provider_metadata = 20 [json_name = "providerMetadata", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder putAllProviderMetadata(
             java.util.Map<java.lang.String, java.lang.String> values) {
           internalGetMutableProviderMetadata().getMutableMap()
               .putAll(values);
-          bitField0_ |= 0x00200000;
+          bitField0_ |= 0x00080000;
           return this;
         }
 
@@ -14136,7 +13133,7 @@ java.lang.String defaultValue) {
          * country code
          * </pre>
          *
-         * <code>int32 country_code = 23 [json_name = "countryCode", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>int32 country_code = 21 [json_name = "countryCode", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The countryCode.
          */
         @java.lang.Override
@@ -14149,14 +13146,14 @@ java.lang.String defaultValue) {
          * country code
          * </pre>
          *
-         * <code>int32 country_code = 23 [json_name = "countryCode", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>int32 country_code = 21 [json_name = "countryCode", (.google.api.field_behavior) = OPTIONAL];</code>
          * @param value The countryCode to set.
          * @return This builder for chaining.
          */
         public Builder setCountryCode(int value) {
 
           countryCode_ = value;
-          bitField0_ |= 0x00400000;
+          bitField0_ |= 0x00100000;
           onChanged();
           return this;
         }
@@ -14166,11 +13163,11 @@ java.lang.String defaultValue) {
          * country code
          * </pre>
          *
-         * <code>int32 country_code = 23 [json_name = "countryCode", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>int32 country_code = 21 [json_name = "countryCode", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return This builder for chaining.
          */
         public Builder clearCountryCode() {
-          bitField0_ = (bitField0_ & ~0x00400000);
+          bitField0_ = (bitField0_ & ~0x00100000);
           countryCode_ = 0;
           onChanged();
           return this;
@@ -14182,7 +13179,7 @@ java.lang.String defaultValue) {
          * postal code field
          * </pre>
          *
-         * <code>string postal_code_field = 24 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>string postal_code_field = 22 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The postalCodeField.
          */
         public java.lang.String getPostalCodeField() {
@@ -14202,7 +13199,7 @@ java.lang.String defaultValue) {
          * postal code field
          * </pre>
          *
-         * <code>string postal_code_field = 24 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>string postal_code_field = 22 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The bytes for postalCodeField.
          */
         public com.google.protobuf.ByteString
@@ -14223,7 +13220,7 @@ java.lang.String defaultValue) {
          * postal code field
          * </pre>
          *
-         * <code>string postal_code_field = 24 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>string postal_code_field = 22 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
          * @param value The postalCodeField to set.
          * @return This builder for chaining.
          */
@@ -14231,7 +13228,7 @@ java.lang.String defaultValue) {
             java.lang.String value) {
           if (value == null) { throw new NullPointerException(); }
           postalCodeField_ = value;
-          bitField0_ |= 0x00800000;
+          bitField0_ |= 0x00200000;
           onChanged();
           return this;
         }
@@ -14240,12 +13237,12 @@ java.lang.String defaultValue) {
          * postal code field
          * </pre>
          *
-         * <code>string postal_code_field = 24 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>string postal_code_field = 22 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return This builder for chaining.
          */
         public Builder clearPostalCodeField() {
           postalCodeField_ = getDefaultInstance().getPostalCodeField();
-          bitField0_ = (bitField0_ & ~0x00800000);
+          bitField0_ = (bitField0_ & ~0x00200000);
           onChanged();
           return this;
         }
@@ -14254,7 +13251,7 @@ java.lang.String defaultValue) {
          * postal code field
          * </pre>
          *
-         * <code>string postal_code_field = 24 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>string postal_code_field = 22 [json_name = "postalCodeField", (.google.api.field_behavior) = OPTIONAL];</code>
          * @param value The bytes for postalCodeField to set.
          * @return This builder for chaining.
          */
@@ -14263,7 +13260,7 @@ java.lang.String defaultValue) {
           if (value == null) { throw new NullPointerException(); }
           checkByteStringIsUtf8(value);
           postalCodeField_ = value;
-          bitField0_ |= 0x00800000;
+          bitField0_ |= 0x00200000;
           onChanged();
           return this;
         }
@@ -14276,18 +13273,18 @@ java.lang.String defaultValue) {
          * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 25 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 23 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return Whether the timeoutMessageConfig field is set.
          */
         public boolean hasTimeoutMessageConfig() {
-          return ((bitField0_ & 0x01000000) != 0);
+          return ((bitField0_ & 0x00400000) != 0);
         }
         /**
          * <pre>
          * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 25 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 23 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
          * @return The timeoutMessageConfig.
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig getTimeoutMessageConfig() {
@@ -14302,7 +13299,7 @@ java.lang.String defaultValue) {
          * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 25 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 23 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setTimeoutMessageConfig(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig value) {
           if (timeoutMessageConfigBuilder_ == null) {
@@ -14313,7 +13310,7 @@ java.lang.String defaultValue) {
           } else {
             timeoutMessageConfigBuilder_.setMessage(value);
           }
-          bitField0_ |= 0x01000000;
+          bitField0_ |= 0x00400000;
           onChanged();
           return this;
         }
@@ -14322,7 +13319,7 @@ java.lang.String defaultValue) {
          * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 25 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 23 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder setTimeoutMessageConfig(
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig.Builder builderForValue) {
@@ -14331,7 +13328,7 @@ java.lang.String defaultValue) {
           } else {
             timeoutMessageConfigBuilder_.setMessage(builderForValue.build());
           }
-          bitField0_ |= 0x01000000;
+          bitField0_ |= 0x00400000;
           onChanged();
           return this;
         }
@@ -14340,11 +13337,11 @@ java.lang.String defaultValue) {
          * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 25 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 23 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder mergeTimeoutMessageConfig(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig value) {
           if (timeoutMessageConfigBuilder_ == null) {
-            if (((bitField0_ & 0x01000000) != 0) &&
+            if (((bitField0_ & 0x00400000) != 0) &&
               timeoutMessageConfig_ != null &&
               timeoutMessageConfig_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig.getDefaultInstance()) {
               getTimeoutMessageConfigBuilder().mergeFrom(value);
@@ -14354,7 +13351,7 @@ java.lang.String defaultValue) {
           } else {
             timeoutMessageConfigBuilder_.mergeFrom(value);
           }
-          bitField0_ |= 0x01000000;
+          bitField0_ |= 0x00400000;
           onChanged();
           return this;
         }
@@ -14363,10 +13360,10 @@ java.lang.String defaultValue) {
          * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 25 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 23 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public Builder clearTimeoutMessageConfig() {
-          bitField0_ = (bitField0_ & ~0x01000000);
+          bitField0_ = (bitField0_ & ~0x00400000);
           timeoutMessageConfig_ = null;
           if (timeoutMessageConfigBuilder_ != null) {
             timeoutMessageConfigBuilder_.dispose();
@@ -14380,10 +13377,10 @@ java.lang.String defaultValue) {
          * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 25 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 23 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig.Builder getTimeoutMessageConfigBuilder() {
-          bitField0_ |= 0x01000000;
+          bitField0_ |= 0x00400000;
           onChanged();
           return getTimeoutMessageConfigFieldBuilder().getBuilder();
         }
@@ -14392,7 +13389,7 @@ java.lang.String defaultValue) {
          * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 25 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 23 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfigOrBuilder getTimeoutMessageConfigOrBuilder() {
           if (timeoutMessageConfigBuilder_ != null) {
@@ -14407,7 +13404,7 @@ java.lang.String defaultValue) {
          * allows the user to configure a custom message for when a conversation times out, or to disable the message all together
          * </pre>
          *
-         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 25 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
+         * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig timeout_message_config = 23 [json_name = "timeoutMessageConfig", (.google.api.field_behavior) = OPTIONAL];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfig.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig.ConversationTimeoutMessageConfigOrBuilder> 
@@ -14481,2202 +13478,6 @@ java.lang.String defaultValue) {
 
       @java.lang.Override
       public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.ModuleConfig getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    public interface DetailsOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:tcnapi.omni.campaigns.v1.Campaign.Module.Details)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <pre>
-       * the total number of tasks created by an outbound module
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount"];</code>
-       * @return Whether the totalTaskCount field is set.
-       */
-      boolean hasTotalTaskCount();
-      /**
-       * <pre>
-       * the total number of tasks created by an outbound module
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount"];</code>
-       * @return The totalTaskCount.
-       */
-      com.google.protobuf.Int64Value getTotalTaskCount();
-      /**
-       * <pre>
-       * the total number of tasks created by an outbound module
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount"];</code>
-       */
-      com.google.protobuf.Int64ValueOrBuilder getTotalTaskCountOrBuilder();
-
-      /**
-       * <pre>
-       * the total number of tasks that have successfully completed for an outbound module
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount"];</code>
-       * @return Whether the completedTaskCount field is set.
-       */
-      boolean hasCompletedTaskCount();
-      /**
-       * <pre>
-       * the total number of tasks that have successfully completed for an outbound module
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount"];</code>
-       * @return The completedTaskCount.
-       */
-      com.google.protobuf.Int64Value getCompletedTaskCount();
-      /**
-       * <pre>
-       * the total number of tasks that have successfully completed for an outbound module
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount"];</code>
-       */
-      com.google.protobuf.Int64ValueOrBuilder getCompletedTaskCountOrBuilder();
-
-      /**
-       * <pre>
-       * the name of the associated connected_inbox for this module
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress"];</code>
-       * @return Whether the connectedInboxAddress field is set.
-       */
-      boolean hasConnectedInboxAddress();
-      /**
-       * <pre>
-       * the name of the associated connected_inbox for this module
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress"];</code>
-       * @return The connectedInboxAddress.
-       */
-      com.google.protobuf.StringValue getConnectedInboxAddress();
-      /**
-       * <pre>
-       * the name of the associated connected_inbox for this module
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress"];</code>
-       */
-      com.google.protobuf.StringValueOrBuilder getConnectedInboxAddressOrBuilder();
-
-      /**
-       * <pre>
-       * the name of the associated verified_email for this module
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress"];</code>
-       * @return Whether the verifiedEmailAddress field is set.
-       */
-      boolean hasVerifiedEmailAddress();
-      /**
-       * <pre>
-       * the name of the associated verified_email for this module
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress"];</code>
-       * @return The verifiedEmailAddress.
-       */
-      com.google.protobuf.StringValue getVerifiedEmailAddress();
-      /**
-       * <pre>
-       * the name of the associated verified_email for this module
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress"];</code>
-       */
-      com.google.protobuf.StringValueOrBuilder getVerifiedEmailAddressOrBuilder();
-
-      /**
-       * <pre>
-       * the number of tasks pending
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount"];</code>
-       * @return Whether the pendingTaskCount field is set.
-       */
-      boolean hasPendingTaskCount();
-      /**
-       * <pre>
-       * the number of tasks pending
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount"];</code>
-       * @return The pendingTaskCount.
-       */
-      com.google.protobuf.Int64Value getPendingTaskCount();
-      /**
-       * <pre>
-       * the number of tasks pending
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount"];</code>
-       */
-      com.google.protobuf.Int64ValueOrBuilder getPendingTaskCountOrBuilder();
-
-      /**
-       * <pre>
-       * the number of tasks that failed
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
-       * @return Whether the failedTaskCount field is set.
-       */
-      boolean hasFailedTaskCount();
-      /**
-       * <pre>
-       * the number of tasks that failed
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
-       * @return The failedTaskCount.
-       */
-      com.google.protobuf.Int64Value getFailedTaskCount();
-      /**
-       * <pre>
-       * the number of tasks that failed
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
-       */
-      com.google.protobuf.Int64ValueOrBuilder getFailedTaskCountOrBuilder();
-
-      /**
-       * <pre>
-       * the number of tasks that are canceled
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
-       * @return Whether the canceledTaskCount field is set.
-       */
-      boolean hasCanceledTaskCount();
-      /**
-       * <pre>
-       * the number of tasks that are canceled
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
-       * @return The canceledTaskCount.
-       */
-      com.google.protobuf.Int64Value getCanceledTaskCount();
-      /**
-       * <pre>
-       * the number of tasks that are canceled
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
-       */
-      com.google.protobuf.Int64ValueOrBuilder getCanceledTaskCountOrBuilder();
-    }
-    /**
-     * Protobuf type {@code tcnapi.omni.campaigns.v1.Campaign.Module.Details}
-     */
-    public static final class Details extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:tcnapi.omni.campaigns.v1.Campaign.Module.Details)
-        DetailsOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Details.newBuilder() to construct.
-      private Details(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Details() {
-      }
-
-      @java.lang.Override
-      @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(
-          UnusedPrivateParameter unused) {
-        return new Details();
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.class, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.Builder.class);
-      }
-
-      public static final int TOTAL_TASK_COUNT_FIELD_NUMBER = 1;
-      private com.google.protobuf.Int64Value totalTaskCount_;
-      /**
-       * <pre>
-       * the total number of tasks created by an outbound module
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount"];</code>
-       * @return Whether the totalTaskCount field is set.
-       */
-      @java.lang.Override
-      public boolean hasTotalTaskCount() {
-        return totalTaskCount_ != null;
-      }
-      /**
-       * <pre>
-       * the total number of tasks created by an outbound module
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount"];</code>
-       * @return The totalTaskCount.
-       */
-      @java.lang.Override
-      public com.google.protobuf.Int64Value getTotalTaskCount() {
-        return totalTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalTaskCount_;
-      }
-      /**
-       * <pre>
-       * the total number of tasks created by an outbound module
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Int64ValueOrBuilder getTotalTaskCountOrBuilder() {
-        return totalTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalTaskCount_;
-      }
-
-      public static final int COMPLETED_TASK_COUNT_FIELD_NUMBER = 2;
-      private com.google.protobuf.Int64Value completedTaskCount_;
-      /**
-       * <pre>
-       * the total number of tasks that have successfully completed for an outbound module
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount"];</code>
-       * @return Whether the completedTaskCount field is set.
-       */
-      @java.lang.Override
-      public boolean hasCompletedTaskCount() {
-        return completedTaskCount_ != null;
-      }
-      /**
-       * <pre>
-       * the total number of tasks that have successfully completed for an outbound module
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount"];</code>
-       * @return The completedTaskCount.
-       */
-      @java.lang.Override
-      public com.google.protobuf.Int64Value getCompletedTaskCount() {
-        return completedTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : completedTaskCount_;
-      }
-      /**
-       * <pre>
-       * the total number of tasks that have successfully completed for an outbound module
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Int64ValueOrBuilder getCompletedTaskCountOrBuilder() {
-        return completedTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : completedTaskCount_;
-      }
-
-      public static final int CONNECTED_INBOX_ADDRESS_FIELD_NUMBER = 3;
-      private com.google.protobuf.StringValue connectedInboxAddress_;
-      /**
-       * <pre>
-       * the name of the associated connected_inbox for this module
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress"];</code>
-       * @return Whether the connectedInboxAddress field is set.
-       */
-      @java.lang.Override
-      public boolean hasConnectedInboxAddress() {
-        return connectedInboxAddress_ != null;
-      }
-      /**
-       * <pre>
-       * the name of the associated connected_inbox for this module
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress"];</code>
-       * @return The connectedInboxAddress.
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValue getConnectedInboxAddress() {
-        return connectedInboxAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : connectedInboxAddress_;
-      }
-      /**
-       * <pre>
-       * the name of the associated connected_inbox for this module
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValueOrBuilder getConnectedInboxAddressOrBuilder() {
-        return connectedInboxAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : connectedInboxAddress_;
-      }
-
-      public static final int VERIFIED_EMAIL_ADDRESS_FIELD_NUMBER = 4;
-      private com.google.protobuf.StringValue verifiedEmailAddress_;
-      /**
-       * <pre>
-       * the name of the associated verified_email for this module
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress"];</code>
-       * @return Whether the verifiedEmailAddress field is set.
-       */
-      @java.lang.Override
-      public boolean hasVerifiedEmailAddress() {
-        return verifiedEmailAddress_ != null;
-      }
-      /**
-       * <pre>
-       * the name of the associated verified_email for this module
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress"];</code>
-       * @return The verifiedEmailAddress.
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValue getVerifiedEmailAddress() {
-        return verifiedEmailAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : verifiedEmailAddress_;
-      }
-      /**
-       * <pre>
-       * the name of the associated verified_email for this module
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValueOrBuilder getVerifiedEmailAddressOrBuilder() {
-        return verifiedEmailAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : verifiedEmailAddress_;
-      }
-
-      public static final int PENDING_TASK_COUNT_FIELD_NUMBER = 5;
-      private com.google.protobuf.Int64Value pendingTaskCount_;
-      /**
-       * <pre>
-       * the number of tasks pending
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount"];</code>
-       * @return Whether the pendingTaskCount field is set.
-       */
-      @java.lang.Override
-      public boolean hasPendingTaskCount() {
-        return pendingTaskCount_ != null;
-      }
-      /**
-       * <pre>
-       * the number of tasks pending
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount"];</code>
-       * @return The pendingTaskCount.
-       */
-      @java.lang.Override
-      public com.google.protobuf.Int64Value getPendingTaskCount() {
-        return pendingTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : pendingTaskCount_;
-      }
-      /**
-       * <pre>
-       * the number of tasks pending
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Int64ValueOrBuilder getPendingTaskCountOrBuilder() {
-        return pendingTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : pendingTaskCount_;
-      }
-
-      public static final int FAILED_TASK_COUNT_FIELD_NUMBER = 6;
-      private com.google.protobuf.Int64Value failedTaskCount_;
-      /**
-       * <pre>
-       * the number of tasks that failed
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
-       * @return Whether the failedTaskCount field is set.
-       */
-      @java.lang.Override
-      public boolean hasFailedTaskCount() {
-        return failedTaskCount_ != null;
-      }
-      /**
-       * <pre>
-       * the number of tasks that failed
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
-       * @return The failedTaskCount.
-       */
-      @java.lang.Override
-      public com.google.protobuf.Int64Value getFailedTaskCount() {
-        return failedTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : failedTaskCount_;
-      }
-      /**
-       * <pre>
-       * the number of tasks that failed
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Int64ValueOrBuilder getFailedTaskCountOrBuilder() {
-        return failedTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : failedTaskCount_;
-      }
-
-      public static final int CANCELED_TASK_COUNT_FIELD_NUMBER = 7;
-      private com.google.protobuf.Int64Value canceledTaskCount_;
-      /**
-       * <pre>
-       * the number of tasks that are canceled
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
-       * @return Whether the canceledTaskCount field is set.
-       */
-      @java.lang.Override
-      public boolean hasCanceledTaskCount() {
-        return canceledTaskCount_ != null;
-      }
-      /**
-       * <pre>
-       * the number of tasks that are canceled
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
-       * @return The canceledTaskCount.
-       */
-      @java.lang.Override
-      public com.google.protobuf.Int64Value getCanceledTaskCount() {
-        return canceledTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : canceledTaskCount_;
-      }
-      /**
-       * <pre>
-       * the number of tasks that are canceled
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Int64ValueOrBuilder getCanceledTaskCountOrBuilder() {
-        return canceledTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : canceledTaskCount_;
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (totalTaskCount_ != null) {
-          output.writeMessage(1, getTotalTaskCount());
-        }
-        if (completedTaskCount_ != null) {
-          output.writeMessage(2, getCompletedTaskCount());
-        }
-        if (connectedInboxAddress_ != null) {
-          output.writeMessage(3, getConnectedInboxAddress());
-        }
-        if (verifiedEmailAddress_ != null) {
-          output.writeMessage(4, getVerifiedEmailAddress());
-        }
-        if (pendingTaskCount_ != null) {
-          output.writeMessage(5, getPendingTaskCount());
-        }
-        if (failedTaskCount_ != null) {
-          output.writeMessage(6, getFailedTaskCount());
-        }
-        if (canceledTaskCount_ != null) {
-          output.writeMessage(7, getCanceledTaskCount());
-        }
-        getUnknownFields().writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (totalTaskCount_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, getTotalTaskCount());
-        }
-        if (completedTaskCount_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, getCompletedTaskCount());
-        }
-        if (connectedInboxAddress_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(3, getConnectedInboxAddress());
-        }
-        if (verifiedEmailAddress_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(4, getVerifiedEmailAddress());
-        }
-        if (pendingTaskCount_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(5, getPendingTaskCount());
-        }
-        if (failedTaskCount_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(6, getFailedTaskCount());
-        }
-        if (canceledTaskCount_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(7, getCanceledTaskCount());
-        }
-        size += getUnknownFields().getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details)) {
-          return super.equals(obj);
-        }
-        com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details other = (com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details) obj;
-
-        if (hasTotalTaskCount() != other.hasTotalTaskCount()) return false;
-        if (hasTotalTaskCount()) {
-          if (!getTotalTaskCount()
-              .equals(other.getTotalTaskCount())) return false;
-        }
-        if (hasCompletedTaskCount() != other.hasCompletedTaskCount()) return false;
-        if (hasCompletedTaskCount()) {
-          if (!getCompletedTaskCount()
-              .equals(other.getCompletedTaskCount())) return false;
-        }
-        if (hasConnectedInboxAddress() != other.hasConnectedInboxAddress()) return false;
-        if (hasConnectedInboxAddress()) {
-          if (!getConnectedInboxAddress()
-              .equals(other.getConnectedInboxAddress())) return false;
-        }
-        if (hasVerifiedEmailAddress() != other.hasVerifiedEmailAddress()) return false;
-        if (hasVerifiedEmailAddress()) {
-          if (!getVerifiedEmailAddress()
-              .equals(other.getVerifiedEmailAddress())) return false;
-        }
-        if (hasPendingTaskCount() != other.hasPendingTaskCount()) return false;
-        if (hasPendingTaskCount()) {
-          if (!getPendingTaskCount()
-              .equals(other.getPendingTaskCount())) return false;
-        }
-        if (hasFailedTaskCount() != other.hasFailedTaskCount()) return false;
-        if (hasFailedTaskCount()) {
-          if (!getFailedTaskCount()
-              .equals(other.getFailedTaskCount())) return false;
-        }
-        if (hasCanceledTaskCount() != other.hasCanceledTaskCount()) return false;
-        if (hasCanceledTaskCount()) {
-          if (!getCanceledTaskCount()
-              .equals(other.getCanceledTaskCount())) return false;
-        }
-        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-        return true;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        if (hasTotalTaskCount()) {
-          hash = (37 * hash) + TOTAL_TASK_COUNT_FIELD_NUMBER;
-          hash = (53 * hash) + getTotalTaskCount().hashCode();
-        }
-        if (hasCompletedTaskCount()) {
-          hash = (37 * hash) + COMPLETED_TASK_COUNT_FIELD_NUMBER;
-          hash = (53 * hash) + getCompletedTaskCount().hashCode();
-        }
-        if (hasConnectedInboxAddress()) {
-          hash = (37 * hash) + CONNECTED_INBOX_ADDRESS_FIELD_NUMBER;
-          hash = (53 * hash) + getConnectedInboxAddress().hashCode();
-        }
-        if (hasVerifiedEmailAddress()) {
-          hash = (37 * hash) + VERIFIED_EMAIL_ADDRESS_FIELD_NUMBER;
-          hash = (53 * hash) + getVerifiedEmailAddress().hashCode();
-        }
-        if (hasPendingTaskCount()) {
-          hash = (37 * hash) + PENDING_TASK_COUNT_FIELD_NUMBER;
-          hash = (53 * hash) + getPendingTaskCount().hashCode();
-        }
-        if (hasFailedTaskCount()) {
-          hash = (37 * hash) + FAILED_TASK_COUNT_FIELD_NUMBER;
-          hash = (53 * hash) + getFailedTaskCount().hashCode();
-        }
-        if (hasCanceledTaskCount()) {
-          hash = (37 * hash) + CANCELED_TASK_COUNT_FIELD_NUMBER;
-          hash = (53 * hash) + getCanceledTaskCount().hashCode();
-        }
-        hash = (29 * hash) + getUnknownFields().hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-
-      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code tcnapi.omni.campaigns.v1.Campaign.Module.Details}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:tcnapi.omni.campaigns.v1.Campaign.Module.Details)
-          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.DetailsOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.class, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.Builder.class);
-        }
-
-        // Construct using com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.newBuilder()
-        private Builder() {
-
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          bitField0_ = 0;
-          totalTaskCount_ = null;
-          if (totalTaskCountBuilder_ != null) {
-            totalTaskCountBuilder_.dispose();
-            totalTaskCountBuilder_ = null;
-          }
-          completedTaskCount_ = null;
-          if (completedTaskCountBuilder_ != null) {
-            completedTaskCountBuilder_.dispose();
-            completedTaskCountBuilder_ = null;
-          }
-          connectedInboxAddress_ = null;
-          if (connectedInboxAddressBuilder_ != null) {
-            connectedInboxAddressBuilder_.dispose();
-            connectedInboxAddressBuilder_ = null;
-          }
-          verifiedEmailAddress_ = null;
-          if (verifiedEmailAddressBuilder_ != null) {
-            verifiedEmailAddressBuilder_.dispose();
-            verifiedEmailAddressBuilder_ = null;
-          }
-          pendingTaskCount_ = null;
-          if (pendingTaskCountBuilder_ != null) {
-            pendingTaskCountBuilder_.dispose();
-            pendingTaskCountBuilder_ = null;
-          }
-          failedTaskCount_ = null;
-          if (failedTaskCountBuilder_ != null) {
-            failedTaskCountBuilder_.dispose();
-            failedTaskCountBuilder_ = null;
-          }
-          canceledTaskCount_ = null;
-          if (canceledTaskCountBuilder_ != null) {
-            canceledTaskCountBuilder_.dispose();
-            canceledTaskCountBuilder_ = null;
-          }
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.CampaignsProto.internal_static_tcnapi_omni_campaigns_v1_Campaign_Module_Details_descriptor;
-        }
-
-        @java.lang.Override
-        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details getDefaultInstanceForType() {
-          return com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details build() {
-          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details buildPartial() {
-          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details result = new com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details(this);
-          if (bitField0_ != 0) { buildPartial0(result); }
-          onBuilt();
-          return result;
-        }
-
-        private void buildPartial0(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details result) {
-          int from_bitField0_ = bitField0_;
-          if (((from_bitField0_ & 0x00000001) != 0)) {
-            result.totalTaskCount_ = totalTaskCountBuilder_ == null
-                ? totalTaskCount_
-                : totalTaskCountBuilder_.build();
-          }
-          if (((from_bitField0_ & 0x00000002) != 0)) {
-            result.completedTaskCount_ = completedTaskCountBuilder_ == null
-                ? completedTaskCount_
-                : completedTaskCountBuilder_.build();
-          }
-          if (((from_bitField0_ & 0x00000004) != 0)) {
-            result.connectedInboxAddress_ = connectedInboxAddressBuilder_ == null
-                ? connectedInboxAddress_
-                : connectedInboxAddressBuilder_.build();
-          }
-          if (((from_bitField0_ & 0x00000008) != 0)) {
-            result.verifiedEmailAddress_ = verifiedEmailAddressBuilder_ == null
-                ? verifiedEmailAddress_
-                : verifiedEmailAddressBuilder_.build();
-          }
-          if (((from_bitField0_ & 0x00000010) != 0)) {
-            result.pendingTaskCount_ = pendingTaskCountBuilder_ == null
-                ? pendingTaskCount_
-                : pendingTaskCountBuilder_.build();
-          }
-          if (((from_bitField0_ & 0x00000020) != 0)) {
-            result.failedTaskCount_ = failedTaskCountBuilder_ == null
-                ? failedTaskCount_
-                : failedTaskCountBuilder_.build();
-          }
-          if (((from_bitField0_ & 0x00000040) != 0)) {
-            result.canceledTaskCount_ = canceledTaskCountBuilder_ == null
-                ? canceledTaskCount_
-                : canceledTaskCountBuilder_.build();
-          }
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details) {
-            return mergeFrom((com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details other) {
-          if (other == com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.getDefaultInstance()) return this;
-          if (other.hasTotalTaskCount()) {
-            mergeTotalTaskCount(other.getTotalTaskCount());
-          }
-          if (other.hasCompletedTaskCount()) {
-            mergeCompletedTaskCount(other.getCompletedTaskCount());
-          }
-          if (other.hasConnectedInboxAddress()) {
-            mergeConnectedInboxAddress(other.getConnectedInboxAddress());
-          }
-          if (other.hasVerifiedEmailAddress()) {
-            mergeVerifiedEmailAddress(other.getVerifiedEmailAddress());
-          }
-          if (other.hasPendingTaskCount()) {
-            mergePendingTaskCount(other.getPendingTaskCount());
-          }
-          if (other.hasFailedTaskCount()) {
-            mergeFailedTaskCount(other.getFailedTaskCount());
-          }
-          if (other.hasCanceledTaskCount()) {
-            mergeCanceledTaskCount(other.getCanceledTaskCount());
-          }
-          this.mergeUnknownFields(other.getUnknownFields());
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          if (extensionRegistry == null) {
-            throw new java.lang.NullPointerException();
-          }
-          try {
-            boolean done = false;
-            while (!done) {
-              int tag = input.readTag();
-              switch (tag) {
-                case 0:
-                  done = true;
-                  break;
-                case 10: {
-                  input.readMessage(
-                      getTotalTaskCountFieldBuilder().getBuilder(),
-                      extensionRegistry);
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 10
-                case 18: {
-                  input.readMessage(
-                      getCompletedTaskCountFieldBuilder().getBuilder(),
-                      extensionRegistry);
-                  bitField0_ |= 0x00000002;
-                  break;
-                } // case 18
-                case 26: {
-                  input.readMessage(
-                      getConnectedInboxAddressFieldBuilder().getBuilder(),
-                      extensionRegistry);
-                  bitField0_ |= 0x00000004;
-                  break;
-                } // case 26
-                case 34: {
-                  input.readMessage(
-                      getVerifiedEmailAddressFieldBuilder().getBuilder(),
-                      extensionRegistry);
-                  bitField0_ |= 0x00000008;
-                  break;
-                } // case 34
-                case 42: {
-                  input.readMessage(
-                      getPendingTaskCountFieldBuilder().getBuilder(),
-                      extensionRegistry);
-                  bitField0_ |= 0x00000010;
-                  break;
-                } // case 42
-                case 50: {
-                  input.readMessage(
-                      getFailedTaskCountFieldBuilder().getBuilder(),
-                      extensionRegistry);
-                  bitField0_ |= 0x00000020;
-                  break;
-                } // case 50
-                case 58: {
-                  input.readMessage(
-                      getCanceledTaskCountFieldBuilder().getBuilder(),
-                      extensionRegistry);
-                  bitField0_ |= 0x00000040;
-                  break;
-                } // case 58
-                default: {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
-              } // switch (tag)
-            } // while (!done)
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.unwrapIOException();
-          } finally {
-            onChanged();
-          } // finally
-          return this;
-        }
-        private int bitField0_;
-
-        private com.google.protobuf.Int64Value totalTaskCount_;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> totalTaskCountBuilder_;
-        /**
-         * <pre>
-         * the total number of tasks created by an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount"];</code>
-         * @return Whether the totalTaskCount field is set.
-         */
-        public boolean hasTotalTaskCount() {
-          return ((bitField0_ & 0x00000001) != 0);
-        }
-        /**
-         * <pre>
-         * the total number of tasks created by an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount"];</code>
-         * @return The totalTaskCount.
-         */
-        public com.google.protobuf.Int64Value getTotalTaskCount() {
-          if (totalTaskCountBuilder_ == null) {
-            return totalTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalTaskCount_;
-          } else {
-            return totalTaskCountBuilder_.getMessage();
-          }
-        }
-        /**
-         * <pre>
-         * the total number of tasks created by an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount"];</code>
-         */
-        public Builder setTotalTaskCount(com.google.protobuf.Int64Value value) {
-          if (totalTaskCountBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            totalTaskCount_ = value;
-          } else {
-            totalTaskCountBuilder_.setMessage(value);
-          }
-          bitField0_ |= 0x00000001;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the total number of tasks created by an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount"];</code>
-         */
-        public Builder setTotalTaskCount(
-            com.google.protobuf.Int64Value.Builder builderForValue) {
-          if (totalTaskCountBuilder_ == null) {
-            totalTaskCount_ = builderForValue.build();
-          } else {
-            totalTaskCountBuilder_.setMessage(builderForValue.build());
-          }
-          bitField0_ |= 0x00000001;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the total number of tasks created by an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount"];</code>
-         */
-        public Builder mergeTotalTaskCount(com.google.protobuf.Int64Value value) {
-          if (totalTaskCountBuilder_ == null) {
-            if (((bitField0_ & 0x00000001) != 0) &&
-              totalTaskCount_ != null &&
-              totalTaskCount_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
-              getTotalTaskCountBuilder().mergeFrom(value);
-            } else {
-              totalTaskCount_ = value;
-            }
-          } else {
-            totalTaskCountBuilder_.mergeFrom(value);
-          }
-          bitField0_ |= 0x00000001;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the total number of tasks created by an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount"];</code>
-         */
-        public Builder clearTotalTaskCount() {
-          bitField0_ = (bitField0_ & ~0x00000001);
-          totalTaskCount_ = null;
-          if (totalTaskCountBuilder_ != null) {
-            totalTaskCountBuilder_.dispose();
-            totalTaskCountBuilder_ = null;
-          }
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the total number of tasks created by an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount"];</code>
-         */
-        public com.google.protobuf.Int64Value.Builder getTotalTaskCountBuilder() {
-          bitField0_ |= 0x00000001;
-          onChanged();
-          return getTotalTaskCountFieldBuilder().getBuilder();
-        }
-        /**
-         * <pre>
-         * the total number of tasks created by an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount"];</code>
-         */
-        public com.google.protobuf.Int64ValueOrBuilder getTotalTaskCountOrBuilder() {
-          if (totalTaskCountBuilder_ != null) {
-            return totalTaskCountBuilder_.getMessageOrBuilder();
-          } else {
-            return totalTaskCount_ == null ?
-                com.google.protobuf.Int64Value.getDefaultInstance() : totalTaskCount_;
-          }
-        }
-        /**
-         * <pre>
-         * the total number of tasks created by an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value total_task_count = 1 [json_name = "totalTaskCount"];</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-            getTotalTaskCountFieldBuilder() {
-          if (totalTaskCountBuilder_ == null) {
-            totalTaskCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                    getTotalTaskCount(),
-                    getParentForChildren(),
-                    isClean());
-            totalTaskCount_ = null;
-          }
-          return totalTaskCountBuilder_;
-        }
-
-        private com.google.protobuf.Int64Value completedTaskCount_;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> completedTaskCountBuilder_;
-        /**
-         * <pre>
-         * the total number of tasks that have successfully completed for an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount"];</code>
-         * @return Whether the completedTaskCount field is set.
-         */
-        public boolean hasCompletedTaskCount() {
-          return ((bitField0_ & 0x00000002) != 0);
-        }
-        /**
-         * <pre>
-         * the total number of tasks that have successfully completed for an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount"];</code>
-         * @return The completedTaskCount.
-         */
-        public com.google.protobuf.Int64Value getCompletedTaskCount() {
-          if (completedTaskCountBuilder_ == null) {
-            return completedTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : completedTaskCount_;
-          } else {
-            return completedTaskCountBuilder_.getMessage();
-          }
-        }
-        /**
-         * <pre>
-         * the total number of tasks that have successfully completed for an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount"];</code>
-         */
-        public Builder setCompletedTaskCount(com.google.protobuf.Int64Value value) {
-          if (completedTaskCountBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            completedTaskCount_ = value;
-          } else {
-            completedTaskCountBuilder_.setMessage(value);
-          }
-          bitField0_ |= 0x00000002;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the total number of tasks that have successfully completed for an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount"];</code>
-         */
-        public Builder setCompletedTaskCount(
-            com.google.protobuf.Int64Value.Builder builderForValue) {
-          if (completedTaskCountBuilder_ == null) {
-            completedTaskCount_ = builderForValue.build();
-          } else {
-            completedTaskCountBuilder_.setMessage(builderForValue.build());
-          }
-          bitField0_ |= 0x00000002;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the total number of tasks that have successfully completed for an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount"];</code>
-         */
-        public Builder mergeCompletedTaskCount(com.google.protobuf.Int64Value value) {
-          if (completedTaskCountBuilder_ == null) {
-            if (((bitField0_ & 0x00000002) != 0) &&
-              completedTaskCount_ != null &&
-              completedTaskCount_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
-              getCompletedTaskCountBuilder().mergeFrom(value);
-            } else {
-              completedTaskCount_ = value;
-            }
-          } else {
-            completedTaskCountBuilder_.mergeFrom(value);
-          }
-          bitField0_ |= 0x00000002;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the total number of tasks that have successfully completed for an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount"];</code>
-         */
-        public Builder clearCompletedTaskCount() {
-          bitField0_ = (bitField0_ & ~0x00000002);
-          completedTaskCount_ = null;
-          if (completedTaskCountBuilder_ != null) {
-            completedTaskCountBuilder_.dispose();
-            completedTaskCountBuilder_ = null;
-          }
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the total number of tasks that have successfully completed for an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount"];</code>
-         */
-        public com.google.protobuf.Int64Value.Builder getCompletedTaskCountBuilder() {
-          bitField0_ |= 0x00000002;
-          onChanged();
-          return getCompletedTaskCountFieldBuilder().getBuilder();
-        }
-        /**
-         * <pre>
-         * the total number of tasks that have successfully completed for an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount"];</code>
-         */
-        public com.google.protobuf.Int64ValueOrBuilder getCompletedTaskCountOrBuilder() {
-          if (completedTaskCountBuilder_ != null) {
-            return completedTaskCountBuilder_.getMessageOrBuilder();
-          } else {
-            return completedTaskCount_ == null ?
-                com.google.protobuf.Int64Value.getDefaultInstance() : completedTaskCount_;
-          }
-        }
-        /**
-         * <pre>
-         * the total number of tasks that have successfully completed for an outbound module
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value completed_task_count = 2 [json_name = "completedTaskCount"];</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-            getCompletedTaskCountFieldBuilder() {
-          if (completedTaskCountBuilder_ == null) {
-            completedTaskCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                    getCompletedTaskCount(),
-                    getParentForChildren(),
-                    isClean());
-            completedTaskCount_ = null;
-          }
-          return completedTaskCountBuilder_;
-        }
-
-        private com.google.protobuf.StringValue connectedInboxAddress_;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> connectedInboxAddressBuilder_;
-        /**
-         * <pre>
-         * the name of the associated connected_inbox for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress"];</code>
-         * @return Whether the connectedInboxAddress field is set.
-         */
-        public boolean hasConnectedInboxAddress() {
-          return ((bitField0_ & 0x00000004) != 0);
-        }
-        /**
-         * <pre>
-         * the name of the associated connected_inbox for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress"];</code>
-         * @return The connectedInboxAddress.
-         */
-        public com.google.protobuf.StringValue getConnectedInboxAddress() {
-          if (connectedInboxAddressBuilder_ == null) {
-            return connectedInboxAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : connectedInboxAddress_;
-          } else {
-            return connectedInboxAddressBuilder_.getMessage();
-          }
-        }
-        /**
-         * <pre>
-         * the name of the associated connected_inbox for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress"];</code>
-         */
-        public Builder setConnectedInboxAddress(com.google.protobuf.StringValue value) {
-          if (connectedInboxAddressBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            connectedInboxAddress_ = value;
-          } else {
-            connectedInboxAddressBuilder_.setMessage(value);
-          }
-          bitField0_ |= 0x00000004;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the name of the associated connected_inbox for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress"];</code>
-         */
-        public Builder setConnectedInboxAddress(
-            com.google.protobuf.StringValue.Builder builderForValue) {
-          if (connectedInboxAddressBuilder_ == null) {
-            connectedInboxAddress_ = builderForValue.build();
-          } else {
-            connectedInboxAddressBuilder_.setMessage(builderForValue.build());
-          }
-          bitField0_ |= 0x00000004;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the name of the associated connected_inbox for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress"];</code>
-         */
-        public Builder mergeConnectedInboxAddress(com.google.protobuf.StringValue value) {
-          if (connectedInboxAddressBuilder_ == null) {
-            if (((bitField0_ & 0x00000004) != 0) &&
-              connectedInboxAddress_ != null &&
-              connectedInboxAddress_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-              getConnectedInboxAddressBuilder().mergeFrom(value);
-            } else {
-              connectedInboxAddress_ = value;
-            }
-          } else {
-            connectedInboxAddressBuilder_.mergeFrom(value);
-          }
-          bitField0_ |= 0x00000004;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the name of the associated connected_inbox for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress"];</code>
-         */
-        public Builder clearConnectedInboxAddress() {
-          bitField0_ = (bitField0_ & ~0x00000004);
-          connectedInboxAddress_ = null;
-          if (connectedInboxAddressBuilder_ != null) {
-            connectedInboxAddressBuilder_.dispose();
-            connectedInboxAddressBuilder_ = null;
-          }
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the name of the associated connected_inbox for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress"];</code>
-         */
-        public com.google.protobuf.StringValue.Builder getConnectedInboxAddressBuilder() {
-          bitField0_ |= 0x00000004;
-          onChanged();
-          return getConnectedInboxAddressFieldBuilder().getBuilder();
-        }
-        /**
-         * <pre>
-         * the name of the associated connected_inbox for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress"];</code>
-         */
-        public com.google.protobuf.StringValueOrBuilder getConnectedInboxAddressOrBuilder() {
-          if (connectedInboxAddressBuilder_ != null) {
-            return connectedInboxAddressBuilder_.getMessageOrBuilder();
-          } else {
-            return connectedInboxAddress_ == null ?
-                com.google.protobuf.StringValue.getDefaultInstance() : connectedInboxAddress_;
-          }
-        }
-        /**
-         * <pre>
-         * the name of the associated connected_inbox for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue connected_inbox_address = 3 [json_name = "connectedInboxAddress"];</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-            getConnectedInboxAddressFieldBuilder() {
-          if (connectedInboxAddressBuilder_ == null) {
-            connectedInboxAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                    getConnectedInboxAddress(),
-                    getParentForChildren(),
-                    isClean());
-            connectedInboxAddress_ = null;
-          }
-          return connectedInboxAddressBuilder_;
-        }
-
-        private com.google.protobuf.StringValue verifiedEmailAddress_;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> verifiedEmailAddressBuilder_;
-        /**
-         * <pre>
-         * the name of the associated verified_email for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress"];</code>
-         * @return Whether the verifiedEmailAddress field is set.
-         */
-        public boolean hasVerifiedEmailAddress() {
-          return ((bitField0_ & 0x00000008) != 0);
-        }
-        /**
-         * <pre>
-         * the name of the associated verified_email for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress"];</code>
-         * @return The verifiedEmailAddress.
-         */
-        public com.google.protobuf.StringValue getVerifiedEmailAddress() {
-          if (verifiedEmailAddressBuilder_ == null) {
-            return verifiedEmailAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : verifiedEmailAddress_;
-          } else {
-            return verifiedEmailAddressBuilder_.getMessage();
-          }
-        }
-        /**
-         * <pre>
-         * the name of the associated verified_email for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress"];</code>
-         */
-        public Builder setVerifiedEmailAddress(com.google.protobuf.StringValue value) {
-          if (verifiedEmailAddressBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            verifiedEmailAddress_ = value;
-          } else {
-            verifiedEmailAddressBuilder_.setMessage(value);
-          }
-          bitField0_ |= 0x00000008;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the name of the associated verified_email for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress"];</code>
-         */
-        public Builder setVerifiedEmailAddress(
-            com.google.protobuf.StringValue.Builder builderForValue) {
-          if (verifiedEmailAddressBuilder_ == null) {
-            verifiedEmailAddress_ = builderForValue.build();
-          } else {
-            verifiedEmailAddressBuilder_.setMessage(builderForValue.build());
-          }
-          bitField0_ |= 0x00000008;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the name of the associated verified_email for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress"];</code>
-         */
-        public Builder mergeVerifiedEmailAddress(com.google.protobuf.StringValue value) {
-          if (verifiedEmailAddressBuilder_ == null) {
-            if (((bitField0_ & 0x00000008) != 0) &&
-              verifiedEmailAddress_ != null &&
-              verifiedEmailAddress_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-              getVerifiedEmailAddressBuilder().mergeFrom(value);
-            } else {
-              verifiedEmailAddress_ = value;
-            }
-          } else {
-            verifiedEmailAddressBuilder_.mergeFrom(value);
-          }
-          bitField0_ |= 0x00000008;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the name of the associated verified_email for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress"];</code>
-         */
-        public Builder clearVerifiedEmailAddress() {
-          bitField0_ = (bitField0_ & ~0x00000008);
-          verifiedEmailAddress_ = null;
-          if (verifiedEmailAddressBuilder_ != null) {
-            verifiedEmailAddressBuilder_.dispose();
-            verifiedEmailAddressBuilder_ = null;
-          }
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the name of the associated verified_email for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress"];</code>
-         */
-        public com.google.protobuf.StringValue.Builder getVerifiedEmailAddressBuilder() {
-          bitField0_ |= 0x00000008;
-          onChanged();
-          return getVerifiedEmailAddressFieldBuilder().getBuilder();
-        }
-        /**
-         * <pre>
-         * the name of the associated verified_email for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress"];</code>
-         */
-        public com.google.protobuf.StringValueOrBuilder getVerifiedEmailAddressOrBuilder() {
-          if (verifiedEmailAddressBuilder_ != null) {
-            return verifiedEmailAddressBuilder_.getMessageOrBuilder();
-          } else {
-            return verifiedEmailAddress_ == null ?
-                com.google.protobuf.StringValue.getDefaultInstance() : verifiedEmailAddress_;
-          }
-        }
-        /**
-         * <pre>
-         * the name of the associated verified_email for this module
-         * </pre>
-         *
-         * <code>.google.protobuf.StringValue verified_email_address = 4 [json_name = "verifiedEmailAddress"];</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-            getVerifiedEmailAddressFieldBuilder() {
-          if (verifiedEmailAddressBuilder_ == null) {
-            verifiedEmailAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                    getVerifiedEmailAddress(),
-                    getParentForChildren(),
-                    isClean());
-            verifiedEmailAddress_ = null;
-          }
-          return verifiedEmailAddressBuilder_;
-        }
-
-        private com.google.protobuf.Int64Value pendingTaskCount_;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> pendingTaskCountBuilder_;
-        /**
-         * <pre>
-         * the number of tasks pending
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount"];</code>
-         * @return Whether the pendingTaskCount field is set.
-         */
-        public boolean hasPendingTaskCount() {
-          return ((bitField0_ & 0x00000010) != 0);
-        }
-        /**
-         * <pre>
-         * the number of tasks pending
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount"];</code>
-         * @return The pendingTaskCount.
-         */
-        public com.google.protobuf.Int64Value getPendingTaskCount() {
-          if (pendingTaskCountBuilder_ == null) {
-            return pendingTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : pendingTaskCount_;
-          } else {
-            return pendingTaskCountBuilder_.getMessage();
-          }
-        }
-        /**
-         * <pre>
-         * the number of tasks pending
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount"];</code>
-         */
-        public Builder setPendingTaskCount(com.google.protobuf.Int64Value value) {
-          if (pendingTaskCountBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            pendingTaskCount_ = value;
-          } else {
-            pendingTaskCountBuilder_.setMessage(value);
-          }
-          bitField0_ |= 0x00000010;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the number of tasks pending
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount"];</code>
-         */
-        public Builder setPendingTaskCount(
-            com.google.protobuf.Int64Value.Builder builderForValue) {
-          if (pendingTaskCountBuilder_ == null) {
-            pendingTaskCount_ = builderForValue.build();
-          } else {
-            pendingTaskCountBuilder_.setMessage(builderForValue.build());
-          }
-          bitField0_ |= 0x00000010;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the number of tasks pending
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount"];</code>
-         */
-        public Builder mergePendingTaskCount(com.google.protobuf.Int64Value value) {
-          if (pendingTaskCountBuilder_ == null) {
-            if (((bitField0_ & 0x00000010) != 0) &&
-              pendingTaskCount_ != null &&
-              pendingTaskCount_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
-              getPendingTaskCountBuilder().mergeFrom(value);
-            } else {
-              pendingTaskCount_ = value;
-            }
-          } else {
-            pendingTaskCountBuilder_.mergeFrom(value);
-          }
-          bitField0_ |= 0x00000010;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the number of tasks pending
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount"];</code>
-         */
-        public Builder clearPendingTaskCount() {
-          bitField0_ = (bitField0_ & ~0x00000010);
-          pendingTaskCount_ = null;
-          if (pendingTaskCountBuilder_ != null) {
-            pendingTaskCountBuilder_.dispose();
-            pendingTaskCountBuilder_ = null;
-          }
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the number of tasks pending
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount"];</code>
-         */
-        public com.google.protobuf.Int64Value.Builder getPendingTaskCountBuilder() {
-          bitField0_ |= 0x00000010;
-          onChanged();
-          return getPendingTaskCountFieldBuilder().getBuilder();
-        }
-        /**
-         * <pre>
-         * the number of tasks pending
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount"];</code>
-         */
-        public com.google.protobuf.Int64ValueOrBuilder getPendingTaskCountOrBuilder() {
-          if (pendingTaskCountBuilder_ != null) {
-            return pendingTaskCountBuilder_.getMessageOrBuilder();
-          } else {
-            return pendingTaskCount_ == null ?
-                com.google.protobuf.Int64Value.getDefaultInstance() : pendingTaskCount_;
-          }
-        }
-        /**
-         * <pre>
-         * the number of tasks pending
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value pending_task_count = 5 [json_name = "pendingTaskCount"];</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-            getPendingTaskCountFieldBuilder() {
-          if (pendingTaskCountBuilder_ == null) {
-            pendingTaskCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                    getPendingTaskCount(),
-                    getParentForChildren(),
-                    isClean());
-            pendingTaskCount_ = null;
-          }
-          return pendingTaskCountBuilder_;
-        }
-
-        private com.google.protobuf.Int64Value failedTaskCount_;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> failedTaskCountBuilder_;
-        /**
-         * <pre>
-         * the number of tasks that failed
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
-         * @return Whether the failedTaskCount field is set.
-         */
-        public boolean hasFailedTaskCount() {
-          return ((bitField0_ & 0x00000020) != 0);
-        }
-        /**
-         * <pre>
-         * the number of tasks that failed
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
-         * @return The failedTaskCount.
-         */
-        public com.google.protobuf.Int64Value getFailedTaskCount() {
-          if (failedTaskCountBuilder_ == null) {
-            return failedTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : failedTaskCount_;
-          } else {
-            return failedTaskCountBuilder_.getMessage();
-          }
-        }
-        /**
-         * <pre>
-         * the number of tasks that failed
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
-         */
-        public Builder setFailedTaskCount(com.google.protobuf.Int64Value value) {
-          if (failedTaskCountBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            failedTaskCount_ = value;
-          } else {
-            failedTaskCountBuilder_.setMessage(value);
-          }
-          bitField0_ |= 0x00000020;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the number of tasks that failed
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
-         */
-        public Builder setFailedTaskCount(
-            com.google.protobuf.Int64Value.Builder builderForValue) {
-          if (failedTaskCountBuilder_ == null) {
-            failedTaskCount_ = builderForValue.build();
-          } else {
-            failedTaskCountBuilder_.setMessage(builderForValue.build());
-          }
-          bitField0_ |= 0x00000020;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the number of tasks that failed
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
-         */
-        public Builder mergeFailedTaskCount(com.google.protobuf.Int64Value value) {
-          if (failedTaskCountBuilder_ == null) {
-            if (((bitField0_ & 0x00000020) != 0) &&
-              failedTaskCount_ != null &&
-              failedTaskCount_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
-              getFailedTaskCountBuilder().mergeFrom(value);
-            } else {
-              failedTaskCount_ = value;
-            }
-          } else {
-            failedTaskCountBuilder_.mergeFrom(value);
-          }
-          bitField0_ |= 0x00000020;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the number of tasks that failed
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
-         */
-        public Builder clearFailedTaskCount() {
-          bitField0_ = (bitField0_ & ~0x00000020);
-          failedTaskCount_ = null;
-          if (failedTaskCountBuilder_ != null) {
-            failedTaskCountBuilder_.dispose();
-            failedTaskCountBuilder_ = null;
-          }
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the number of tasks that failed
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
-         */
-        public com.google.protobuf.Int64Value.Builder getFailedTaskCountBuilder() {
-          bitField0_ |= 0x00000020;
-          onChanged();
-          return getFailedTaskCountFieldBuilder().getBuilder();
-        }
-        /**
-         * <pre>
-         * the number of tasks that failed
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
-         */
-        public com.google.protobuf.Int64ValueOrBuilder getFailedTaskCountOrBuilder() {
-          if (failedTaskCountBuilder_ != null) {
-            return failedTaskCountBuilder_.getMessageOrBuilder();
-          } else {
-            return failedTaskCount_ == null ?
-                com.google.protobuf.Int64Value.getDefaultInstance() : failedTaskCount_;
-          }
-        }
-        /**
-         * <pre>
-         * the number of tasks that failed
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value failed_task_count = 6 [json_name = "failedTaskCount"];</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-            getFailedTaskCountFieldBuilder() {
-          if (failedTaskCountBuilder_ == null) {
-            failedTaskCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                    getFailedTaskCount(),
-                    getParentForChildren(),
-                    isClean());
-            failedTaskCount_ = null;
-          }
-          return failedTaskCountBuilder_;
-        }
-
-        private com.google.protobuf.Int64Value canceledTaskCount_;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> canceledTaskCountBuilder_;
-        /**
-         * <pre>
-         * the number of tasks that are canceled
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
-         * @return Whether the canceledTaskCount field is set.
-         */
-        public boolean hasCanceledTaskCount() {
-          return ((bitField0_ & 0x00000040) != 0);
-        }
-        /**
-         * <pre>
-         * the number of tasks that are canceled
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
-         * @return The canceledTaskCount.
-         */
-        public com.google.protobuf.Int64Value getCanceledTaskCount() {
-          if (canceledTaskCountBuilder_ == null) {
-            return canceledTaskCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : canceledTaskCount_;
-          } else {
-            return canceledTaskCountBuilder_.getMessage();
-          }
-        }
-        /**
-         * <pre>
-         * the number of tasks that are canceled
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
-         */
-        public Builder setCanceledTaskCount(com.google.protobuf.Int64Value value) {
-          if (canceledTaskCountBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            canceledTaskCount_ = value;
-          } else {
-            canceledTaskCountBuilder_.setMessage(value);
-          }
-          bitField0_ |= 0x00000040;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the number of tasks that are canceled
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
-         */
-        public Builder setCanceledTaskCount(
-            com.google.protobuf.Int64Value.Builder builderForValue) {
-          if (canceledTaskCountBuilder_ == null) {
-            canceledTaskCount_ = builderForValue.build();
-          } else {
-            canceledTaskCountBuilder_.setMessage(builderForValue.build());
-          }
-          bitField0_ |= 0x00000040;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the number of tasks that are canceled
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
-         */
-        public Builder mergeCanceledTaskCount(com.google.protobuf.Int64Value value) {
-          if (canceledTaskCountBuilder_ == null) {
-            if (((bitField0_ & 0x00000040) != 0) &&
-              canceledTaskCount_ != null &&
-              canceledTaskCount_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
-              getCanceledTaskCountBuilder().mergeFrom(value);
-            } else {
-              canceledTaskCount_ = value;
-            }
-          } else {
-            canceledTaskCountBuilder_.mergeFrom(value);
-          }
-          bitField0_ |= 0x00000040;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the number of tasks that are canceled
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
-         */
-        public Builder clearCanceledTaskCount() {
-          bitField0_ = (bitField0_ & ~0x00000040);
-          canceledTaskCount_ = null;
-          if (canceledTaskCountBuilder_ != null) {
-            canceledTaskCountBuilder_.dispose();
-            canceledTaskCountBuilder_ = null;
-          }
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * the number of tasks that are canceled
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
-         */
-        public com.google.protobuf.Int64Value.Builder getCanceledTaskCountBuilder() {
-          bitField0_ |= 0x00000040;
-          onChanged();
-          return getCanceledTaskCountFieldBuilder().getBuilder();
-        }
-        /**
-         * <pre>
-         * the number of tasks that are canceled
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
-         */
-        public com.google.protobuf.Int64ValueOrBuilder getCanceledTaskCountOrBuilder() {
-          if (canceledTaskCountBuilder_ != null) {
-            return canceledTaskCountBuilder_.getMessageOrBuilder();
-          } else {
-            return canceledTaskCount_ == null ?
-                com.google.protobuf.Int64Value.getDefaultInstance() : canceledTaskCount_;
-          }
-        }
-        /**
-         * <pre>
-         * the number of tasks that are canceled
-         * </pre>
-         *
-         * <code>.google.protobuf.Int64Value canceled_task_count = 7 [json_name = "canceledTaskCount"];</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-            getCanceledTaskCountFieldBuilder() {
-          if (canceledTaskCountBuilder_ == null) {
-            canceledTaskCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                    getCanceledTaskCount(),
-                    getParentForChildren(),
-                    isClean());
-            canceledTaskCount_ = null;
-          }
-          return canceledTaskCountBuilder_;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:tcnapi.omni.campaigns.v1.Campaign.Module.Details)
-      }
-
-      // @@protoc_insertion_point(class_scope:tcnapi.omni.campaigns.v1.Campaign.Module.Details)
-      private static final com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details();
-      }
-
-      public static com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Details>
-          PARSER = new com.google.protobuf.AbstractParser<Details>() {
-        @java.lang.Override
-        public Details parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
-
-      public static com.google.protobuf.Parser<Details> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Details> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -16992,44 +13793,6 @@ java.lang.String defaultValue) {
       return hoursOfOperation_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.WeekdayTimeRange.getDefaultInstance() : hoursOfOperation_;
     }
 
-    public static final int DETAILS_FIELD_NUMBER = 12;
-    private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details details_;
-    /**
-     * <pre>
-     * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
-     * </pre>
-     *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 12 [json_name = "details"];</code>
-     * @return Whether the details field is set.
-     */
-    @java.lang.Override
-    public boolean hasDetails() {
-      return details_ != null;
-    }
-    /**
-     * <pre>
-     * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
-     * </pre>
-     *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 12 [json_name = "details"];</code>
-     * @return The details.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details getDetails() {
-      return details_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.getDefaultInstance() : details_;
-    }
-    /**
-     * <pre>
-     * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
-     * </pre>
-     *
-     * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 12 [json_name = "details"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.DetailsOrBuilder getDetailsOrBuilder() {
-      return details_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.getDefaultInstance() : details_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -17073,9 +13836,6 @@ java.lang.String defaultValue) {
       }
       if (hoursOfOperation_ != null) {
         output.writeMessage(11, getHoursOfOperation());
-      }
-      if (details_ != null) {
-        output.writeMessage(12, getDetails());
       }
       getUnknownFields().writeTo(output);
     }
@@ -17125,10 +13885,6 @@ java.lang.String defaultValue) {
       if (hoursOfOperation_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getHoursOfOperation());
-      }
-      if (details_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, getDetails());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -17181,11 +13937,6 @@ java.lang.String defaultValue) {
         if (!getHoursOfOperation()
             .equals(other.getHoursOfOperation())) return false;
       }
-      if (hasDetails() != other.hasDetails()) return false;
-      if (hasDetails()) {
-        if (!getDetails()
-            .equals(other.getDetails())) return false;
-      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -17230,10 +13981,6 @@ java.lang.String defaultValue) {
       if (hasHoursOfOperation()) {
         hash = (37 * hash) + HOURS_OF_OPERATION_FIELD_NUMBER;
         hash = (53 * hash) + getHoursOfOperation().hashCode();
-      }
-      if (hasDetails()) {
-        hash = (37 * hash) + DETAILS_FIELD_NUMBER;
-        hash = (53 * hash) + getDetails().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -17404,11 +14151,6 @@ java.lang.String defaultValue) {
           hoursOfOperationBuilder_.dispose();
           hoursOfOperationBuilder_ = null;
         }
-        details_ = null;
-        if (detailsBuilder_ != null) {
-          detailsBuilder_.dispose();
-          detailsBuilder_ = null;
-        }
         return this;
       }
 
@@ -17483,11 +14225,6 @@ java.lang.String defaultValue) {
           result.hoursOfOperation_ = hoursOfOperationBuilder_ == null
               ? hoursOfOperation_
               : hoursOfOperationBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
-          result.details_ = detailsBuilder_ == null
-              ? details_
-              : detailsBuilder_.build();
         }
       }
 
@@ -17564,9 +14301,6 @@ java.lang.String defaultValue) {
         }
         if (other.hasHoursOfOperation()) {
           mergeHoursOfOperation(other.getHoursOfOperation());
-        }
-        if (other.hasDetails()) {
-          mergeDetails(other.getDetails());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -17656,13 +14390,6 @@ java.lang.String defaultValue) {
                 bitField0_ |= 0x00000200;
                 break;
               } // case 90
-              case 98: {
-                input.readMessage(
-                    getDetailsFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000400;
-                break;
-              } // case 98
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -18842,161 +15569,6 @@ java.lang.String defaultValue) {
           hoursOfOperation_ = null;
         }
         return hoursOfOperationBuilder_;
-      }
-
-      private com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details details_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.DetailsOrBuilder> detailsBuilder_;
-      /**
-       * <pre>
-       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
-       * </pre>
-       *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 12 [json_name = "details"];</code>
-       * @return Whether the details field is set.
-       */
-      public boolean hasDetails() {
-        return ((bitField0_ & 0x00000400) != 0);
-      }
-      /**
-       * <pre>
-       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
-       * </pre>
-       *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 12 [json_name = "details"];</code>
-       * @return The details.
-       */
-      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details getDetails() {
-        if (detailsBuilder_ == null) {
-          return details_ == null ? com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.getDefaultInstance() : details_;
-        } else {
-          return detailsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
-       * </pre>
-       *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 12 [json_name = "details"];</code>
-       */
-      public Builder setDetails(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details value) {
-        if (detailsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          details_ = value;
-        } else {
-          detailsBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000400;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
-       * </pre>
-       *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 12 [json_name = "details"];</code>
-       */
-      public Builder setDetails(
-          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.Builder builderForValue) {
-        if (detailsBuilder_ == null) {
-          details_ = builderForValue.build();
-        } else {
-          detailsBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000400;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
-       * </pre>
-       *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 12 [json_name = "details"];</code>
-       */
-      public Builder mergeDetails(com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details value) {
-        if (detailsBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) != 0) &&
-            details_ != null &&
-            details_ != com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.getDefaultInstance()) {
-            getDetailsBuilder().mergeFrom(value);
-          } else {
-            details_ = value;
-          }
-        } else {
-          detailsBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000400;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
-       * </pre>
-       *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 12 [json_name = "details"];</code>
-       */
-      public Builder clearDetails() {
-        bitField0_ = (bitField0_ & ~0x00000400);
-        details_ = null;
-        if (detailsBuilder_ != null) {
-          detailsBuilder_.dispose();
-          detailsBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
-       * </pre>
-       *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 12 [json_name = "details"];</code>
-       */
-      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.Builder getDetailsBuilder() {
-        bitField0_ |= 0x00000400;
-        onChanged();
-        return getDetailsFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
-       * </pre>
-       *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 12 [json_name = "details"];</code>
-       */
-      public com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.DetailsOrBuilder getDetailsOrBuilder() {
-        if (detailsBuilder_ != null) {
-          return detailsBuilder_.getMessageOrBuilder();
-        } else {
-          return details_ == null ?
-              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.getDefaultInstance() : details_;
-        }
-      }
-      /**
-       * <pre>
-       * read-only (i.e. only returned from the BE, never read, so setting this does nothing) selectable details when retrieving a module
-       * </pre>
-       *
-       * <code>.tcnapi.omni.campaigns.v1.Campaign.Module.Details details = 12 [json_name = "details"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.DetailsOrBuilder> 
-          getDetailsFieldBuilder() {
-        if (detailsBuilder_ == null) {
-          detailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.Details.Builder, com.tcn.cloud.api.tcnapi.omni.campaigns.v1.Campaign.Module.DetailsOrBuilder>(
-                  getDetails(),
-                  getParentForChildren(),
-                  isClean());
-          details_ = null;
-        }
-        return detailsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
