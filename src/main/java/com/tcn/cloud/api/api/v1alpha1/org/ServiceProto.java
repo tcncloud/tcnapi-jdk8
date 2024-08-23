@@ -1054,7 +1054,7 @@ public final class ServiceProto {
       "e\"1\272\270\221\002\004\n\002\010w\202\323\344\223\002\"\"\035/api/v1alpha1/user/s" +
       "etmfatype:\001*\022\222\001\n\014SetMyMfaType\022%.api.v1al" +
       "pha1.org.SetMyMfaTypeRequest\032&.api.v1alp" +
-      "ha1.org.SetMyMfaTypeResponse\"3\272\270\221\002\004\n\002\010y\202" +
+      "ha1.org.SetMyMfaTypeResponse\"3\272\270\221\002\004\n\002\010x\202" +
       "\323\344\223\002$\"\037/api/v1alpha1/user/setmymfatype:\001" +
       "*\022\226\001\n\rEnableUserMfa\022&.api.v1alpha1.org.E" +
       "nableUserMfaRequest\032\'.api.v1alpha1.org.E" +
@@ -1062,7 +1062,7 @@ public final class ServiceProto {
       "api/v1alpha1/user/enableusermfa:\001*\022\236\001\n\017E" +
       "nableMyUserMfa\022(.api.v1alpha1.org.Enable" +
       "MyUserMfaRequest\032).api.v1alpha1.org.Enab" +
-      "leMyUserMfaResponse\"6\272\270\221\002\004\n\002\010y\202\323\344\223\002\'\"\"/a" +
+      "leMyUserMfaResponse\"6\272\270\221\002\004\n\002\010x\202\323\344\223\002\'\"\"/a" +
       "pi/v1alpha1/user/enablemyusermfa:\001*\022\232\001\n\016" +
       "GetUserMfaInfo\022\'.api.v1alpha1.org.GetUse" +
       "rMfaInfoRequest\032(.api.v1alpha1.org.GetUs" +
@@ -1070,20 +1070,20 @@ public final class ServiceProto {
       "/v1alpha1/user/getusermfainfo:\001*\022\242\001\n\020Get" +
       "MyUserMfaInfo\022).api.v1alpha1.org.GetMyUs" +
       "erMfaInfoRequest\032*.api.v1alpha1.org.GetM" +
-      "yUserMfaInfoResponse\"7\272\270\221\002\004\n\002\010y\202\323\344\223\002(\"#/" +
+      "yUserMfaInfoResponse\"7\272\270\221\002\004\n\002\010x\202\323\344\223\002(\"#/" +
       "api/v1alpha1/user/getmyusermfainfo:\001*\022\272\001" +
       "\n\026GetMyAllowedMfaMethods\022/.api.v1alpha1." +
       "org.GetMyAllowedMfaMethodsRequest\0320.api." +
       "v1alpha1.org.GetMyAllowedMfaMethodsRespo" +
-      "nse\"=\272\270\221\002\004\n\002\010y\202\323\344\223\002.\")/api/v1alpha1/user" +
+      "nse\"=\272\270\221\002\004\n\002\010x\202\323\344\223\002.\")/api/v1alpha1/user" +
       "/getmyallowedmfamethods:\001*\022\252\001\n\022GenerateT" +
       "OTPSecret\022+.api.v1alpha1.org.GenerateTOT" +
       "PSecretRequest\032,.api.v1alpha1.org.Genera" +
-      "teTOTPSecretResponse\"9\272\270\221\002\004\n\002\010y\202\323\344\223\002*\"%/" +
+      "teTOTPSecretResponse\"9\272\270\221\002\004\n\002\010x\202\323\344\223\002*\"%/" +
       "api/v1alpha1/user/generatetotpsecret:\001*\022" +
       "\232\001\n\016VerifyTOTPCode\022\'.api.v1alpha1.org.Ve" +
       "rifyTOTPCodeRequest\032(.api.v1alpha1.org.V" +
-      "erifyTOTPCodeResponse\"5\272\270\221\002\004\n\002\010y\202\323\344\223\002&\"!" +
+      "erifyTOTPCodeResponse\"5\272\270\221\002\004\n\002\010x\202\323\344\223\002&\"!" +
       "/api/v1alpha1/user/verifytotpcode:\001*\022\275\001\n" +
       "\023CreateBusinessHours\022,.api.v1alpha1.org." +
       "CreateBusinessHoursRequest\032-.api.v1alpha" +
