@@ -15,7 +15,7 @@ public interface CreateUserRequestOrBuilder extends
    *
    * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
    * @deprecated api.v0alpha.CreateUserRequest.org_id is deprecated.
-   *     See api/v0alpha/org.proto;l=5400
+   *     See api/v0alpha/org.proto;l=5396
    * @return The orgId.
    */
   @java.lang.Deprecated java.lang.String getOrgId();
@@ -27,7 +27,7 @@ public interface CreateUserRequestOrBuilder extends
    *
    * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
    * @deprecated api.v0alpha.CreateUserRequest.org_id is deprecated.
-   *     See api/v0alpha/org.proto;l=5400
+   *     See api/v0alpha/org.proto;l=5396
    * @return The bytes for orgId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -308,31 +308,4 @@ public interface CreateUserRequestOrBuilder extends
    * <code>.api.commons.TimeZoneWrapper time_zone_override = 23 [json_name = "timeZoneOverride"];</code>
    */
   com.tcn.cloud.api.api.commons.TimeZoneWrapperOrBuilder getTimeZoneOverrideOrBuilder();
-
-  /**
-   * <pre>
-   * The override for the users locale preferences
-   * </pre>
-   *
-   * <code>.api.commons.LocalePreferences locale_preferences_override = 24 [json_name = "localePreferencesOverride"];</code>
-   * @return Whether the localePreferencesOverride field is set.
-   */
-  boolean hasLocalePreferencesOverride();
-  /**
-   * <pre>
-   * The override for the users locale preferences
-   * </pre>
-   *
-   * <code>.api.commons.LocalePreferences locale_preferences_override = 24 [json_name = "localePreferencesOverride"];</code>
-   * @return The localePreferencesOverride.
-   */
-  com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferencesOverride();
-  /**
-   * <pre>
-   * The override for the users locale preferences
-   * </pre>
-   *
-   * <code>.api.commons.LocalePreferences locale_preferences_override = 24 [json_name = "localePreferencesOverride"];</code>
-   */
-  com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOverrideOrBuilder();
 }
