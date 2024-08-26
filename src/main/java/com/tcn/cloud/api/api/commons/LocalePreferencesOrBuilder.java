@@ -37,10 +37,12 @@ public interface LocalePreferencesOrBuilder extends
    * By default, it is set to false to indicate left-to-right.
    * </pre>
    *
-   * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft"];</code>
+   * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft", deprecated = true];</code>
+   * @deprecated api.commons.LocalePreferences.use_script_direction_right_to_left is deprecated.
+   *     See api/commons/org_preferences.proto;l=92
    * @return The useScriptDirectionRightToLeft.
    */
-  boolean getUseScriptDirectionRightToLeft();
+  @java.lang.Deprecated boolean getUseScriptDirectionRightToLeft();
 
   /**
    * <pre>

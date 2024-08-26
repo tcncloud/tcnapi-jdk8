@@ -103,11 +103,13 @@ private static final long serialVersionUID = 0L;
    * By default, it is set to false to indicate left-to-right.
    * </pre>
    *
-   * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft"];</code>
+   * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft", deprecated = true];</code>
+   * @deprecated api.commons.LocalePreferences.use_script_direction_right_to_left is deprecated.
+   *     See api/commons/org_preferences.proto;l=92
    * @return The useScriptDirectionRightToLeft.
    */
   @java.lang.Override
-  public boolean getUseScriptDirectionRightToLeft() {
+  @java.lang.Deprecated public boolean getUseScriptDirectionRightToLeft() {
     return useScriptDirectionRightToLeft_;
   }
 
@@ -649,11 +651,13 @@ private static final long serialVersionUID = 0L;
      * By default, it is set to false to indicate left-to-right.
      * </pre>
      *
-     * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft"];</code>
+     * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft", deprecated = true];</code>
+     * @deprecated api.commons.LocalePreferences.use_script_direction_right_to_left is deprecated.
+     *     See api/commons/org_preferences.proto;l=92
      * @return The useScriptDirectionRightToLeft.
      */
     @java.lang.Override
-    public boolean getUseScriptDirectionRightToLeft() {
+    @java.lang.Deprecated public boolean getUseScriptDirectionRightToLeft() {
       return useScriptDirectionRightToLeft_;
     }
     /**
@@ -662,11 +666,13 @@ private static final long serialVersionUID = 0L;
      * By default, it is set to false to indicate left-to-right.
      * </pre>
      *
-     * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft"];</code>
+     * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft", deprecated = true];</code>
+     * @deprecated api.commons.LocalePreferences.use_script_direction_right_to_left is deprecated.
+     *     See api/commons/org_preferences.proto;l=92
      * @param value The useScriptDirectionRightToLeft to set.
      * @return This builder for chaining.
      */
-    public Builder setUseScriptDirectionRightToLeft(boolean value) {
+    @java.lang.Deprecated public Builder setUseScriptDirectionRightToLeft(boolean value) {
 
       useScriptDirectionRightToLeft_ = value;
       bitField0_ |= 0x00000002;
@@ -679,10 +685,12 @@ private static final long serialVersionUID = 0L;
      * By default, it is set to false to indicate left-to-right.
      * </pre>
      *
-     * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft"];</code>
+     * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft", deprecated = true];</code>
+     * @deprecated api.commons.LocalePreferences.use_script_direction_right_to_left is deprecated.
+     *     See api/commons/org_preferences.proto;l=92
      * @return This builder for chaining.
      */
-    public Builder clearUseScriptDirectionRightToLeft() {
+    @java.lang.Deprecated public Builder clearUseScriptDirectionRightToLeft() {
       bitField0_ = (bitField0_ & ~0x00000002);
       useScriptDirectionRightToLeft_ = false;
       onChanged();
