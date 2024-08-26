@@ -70,22 +70,26 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * points to award if option selected
+     * deprecated; use answer_points
      * </pre>
      *
-     * <code>uint32 points = 2 [json_name = "points"];</code>
+     * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
+     * @deprecated api.commons.EvaluationQuestion.Answer.points is deprecated.
+     *     See api/commons/scorecards.proto;l=182
      * @return Whether the points field is set.
      */
-    boolean hasPoints();
+    @java.lang.Deprecated boolean hasPoints();
     /**
      * <pre>
-     * points to award if option selected
+     * deprecated; use answer_points
      * </pre>
      *
-     * <code>uint32 points = 2 [json_name = "points"];</code>
+     * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
+     * @deprecated api.commons.EvaluationQuestion.Answer.points is deprecated.
+     *     See api/commons/scorecards.proto;l=182
      * @return The points.
      */
-    int getPoints();
+    @java.lang.Deprecated int getPoints();
 
     /**
      * <pre>
@@ -114,6 +118,25 @@ private static final long serialVersionUID = 0L;
      * @return The failType.
      */
     com.tcn.cloud.api.api.commons.FailType getFailType();
+
+    /**
+     * <pre>
+     * points to award if option selected
+     * </pre>
+     *
+     * <code>int32 answer_points = 4 [json_name = "answerPoints"];</code>
+     * @return Whether the answerPoints field is set.
+     */
+    boolean hasAnswerPoints();
+    /**
+     * <pre>
+     * points to award if option selected
+     * </pre>
+     *
+     * <code>int32 answer_points = 4 [json_name = "answerPoints"];</code>
+     * @return The answerPoints.
+     */
+    int getAnswerPoints();
 
     com.tcn.cloud.api.api.commons.EvaluationQuestion.Answer.ResultCase getResultCase();
   }
@@ -163,8 +186,9 @@ private static final long serialVersionUID = 0L;
     public enum ResultCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      POINTS(2),
+      @java.lang.Deprecated POINTS(2),
       FAIL_TYPE(3),
+      ANSWER_POINTS(4),
       RESULT_NOT_SET(0);
       private final int value;
       private ResultCase(int value) {
@@ -184,6 +208,7 @@ private static final long serialVersionUID = 0L;
         switch (value) {
           case 2: return POINTS;
           case 3: return FAIL_TYPE;
+          case 4: return ANSWER_POINTS;
           case 0: return RESULT_NOT_SET;
           default: return null;
         }
@@ -249,26 +274,30 @@ private static final long serialVersionUID = 0L;
     public static final int POINTS_FIELD_NUMBER = 2;
     /**
      * <pre>
-     * points to award if option selected
+     * deprecated; use answer_points
      * </pre>
      *
-     * <code>uint32 points = 2 [json_name = "points"];</code>
+     * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
+     * @deprecated api.commons.EvaluationQuestion.Answer.points is deprecated.
+     *     See api/commons/scorecards.proto;l=182
      * @return Whether the points field is set.
      */
     @java.lang.Override
-    public boolean hasPoints() {
+    @java.lang.Deprecated public boolean hasPoints() {
       return resultCase_ == 2;
     }
     /**
      * <pre>
-     * points to award if option selected
+     * deprecated; use answer_points
      * </pre>
      *
-     * <code>uint32 points = 2 [json_name = "points"];</code>
+     * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
+     * @deprecated api.commons.EvaluationQuestion.Answer.points is deprecated.
+     *     See api/commons/scorecards.proto;l=182
      * @return The points.
      */
     @java.lang.Override
-    public int getPoints() {
+    @java.lang.Deprecated public int getPoints() {
       if (resultCase_ == 2) {
         return (java.lang.Integer) result_;
       }
@@ -318,6 +347,35 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.api.commons.FailType.FAIL_QUESTION;
     }
 
+    public static final int ANSWER_POINTS_FIELD_NUMBER = 4;
+    /**
+     * <pre>
+     * points to award if option selected
+     * </pre>
+     *
+     * <code>int32 answer_points = 4 [json_name = "answerPoints"];</code>
+     * @return Whether the answerPoints field is set.
+     */
+    @java.lang.Override
+    public boolean hasAnswerPoints() {
+      return resultCase_ == 4;
+    }
+    /**
+     * <pre>
+     * points to award if option selected
+     * </pre>
+     *
+     * <code>int32 answer_points = 4 [json_name = "answerPoints"];</code>
+     * @return The answerPoints.
+     */
+    @java.lang.Override
+    public int getAnswerPoints() {
+      if (resultCase_ == 4) {
+        return (java.lang.Integer) result_;
+      }
+      return 0;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -342,6 +400,10 @@ private static final long serialVersionUID = 0L;
       if (resultCase_ == 3) {
         output.writeEnum(3, ((java.lang.Integer) result_));
       }
+      if (resultCase_ == 4) {
+        output.writeInt32(
+            4, (int)((java.lang.Integer) result_));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -362,6 +424,11 @@ private static final long serialVersionUID = 0L;
       if (resultCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, ((java.lang.Integer) result_));
+      }
+      if (resultCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(
+              4, (int)((java.lang.Integer) result_));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -390,6 +457,10 @@ private static final long serialVersionUID = 0L;
           if (getFailTypeValue()
               != other.getFailTypeValue()) return false;
           break;
+        case 4:
+          if (getAnswerPoints()
+              != other.getAnswerPoints()) return false;
+          break;
         case 0:
         default:
       }
@@ -414,6 +485,10 @@ private static final long serialVersionUID = 0L;
         case 3:
           hash = (37 * hash) + FAIL_TYPE_FIELD_NUMBER;
           hash = (53 * hash) + getFailTypeValue();
+          break;
+        case 4:
+          hash = (37 * hash) + ANSWER_POINTS_FIELD_NUMBER;
+          hash = (53 * hash) + getAnswerPoints();
           break;
         case 0:
         default:
@@ -658,6 +733,10 @@ private static final long serialVersionUID = 0L;
             setFailTypeValue(other.getFailTypeValue());
             break;
           }
+          case ANSWER_POINTS: {
+            setAnswerPoints(other.getAnswerPoints());
+            break;
+          }
           case RESULT_NOT_SET: {
             break;
           }
@@ -704,6 +783,11 @@ private static final long serialVersionUID = 0L;
                 result_ = rawValue;
                 break;
               } // case 24
+              case 32: {
+                result_ = input.readInt32();
+                resultCase_ = 4;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -830,24 +914,28 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * points to award if option selected
+       * deprecated; use answer_points
        * </pre>
        *
-       * <code>uint32 points = 2 [json_name = "points"];</code>
+       * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
+       * @deprecated api.commons.EvaluationQuestion.Answer.points is deprecated.
+       *     See api/commons/scorecards.proto;l=182
        * @return Whether the points field is set.
        */
-      public boolean hasPoints() {
+      @java.lang.Deprecated public boolean hasPoints() {
         return resultCase_ == 2;
       }
       /**
        * <pre>
-       * points to award if option selected
+       * deprecated; use answer_points
        * </pre>
        *
-       * <code>uint32 points = 2 [json_name = "points"];</code>
+       * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
+       * @deprecated api.commons.EvaluationQuestion.Answer.points is deprecated.
+       *     See api/commons/scorecards.proto;l=182
        * @return The points.
        */
-      public int getPoints() {
+      @java.lang.Deprecated public int getPoints() {
         if (resultCase_ == 2) {
           return (java.lang.Integer) result_;
         }
@@ -855,14 +943,16 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * points to award if option selected
+       * deprecated; use answer_points
        * </pre>
        *
-       * <code>uint32 points = 2 [json_name = "points"];</code>
+       * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
+       * @deprecated api.commons.EvaluationQuestion.Answer.points is deprecated.
+       *     See api/commons/scorecards.proto;l=182
        * @param value The points to set.
        * @return This builder for chaining.
        */
-      public Builder setPoints(int value) {
+      @java.lang.Deprecated public Builder setPoints(int value) {
 
         resultCase_ = 2;
         result_ = value;
@@ -871,13 +961,15 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * points to award if option selected
+       * deprecated; use answer_points
        * </pre>
        *
-       * <code>uint32 points = 2 [json_name = "points"];</code>
+       * <code>uint32 points = 2 [json_name = "points", deprecated = true];</code>
+       * @deprecated api.commons.EvaluationQuestion.Answer.points is deprecated.
+       *     See api/commons/scorecards.proto;l=182
        * @return This builder for chaining.
        */
-      public Builder clearPoints() {
+      @java.lang.Deprecated public Builder clearPoints() {
         if (resultCase_ == 2) {
           resultCase_ = 0;
           result_ = null;
@@ -973,6 +1065,64 @@ private static final long serialVersionUID = 0L;
        */
       public Builder clearFailType() {
         if (resultCase_ == 3) {
+          resultCase_ = 0;
+          result_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <pre>
+       * points to award if option selected
+       * </pre>
+       *
+       * <code>int32 answer_points = 4 [json_name = "answerPoints"];</code>
+       * @return Whether the answerPoints field is set.
+       */
+      public boolean hasAnswerPoints() {
+        return resultCase_ == 4;
+      }
+      /**
+       * <pre>
+       * points to award if option selected
+       * </pre>
+       *
+       * <code>int32 answer_points = 4 [json_name = "answerPoints"];</code>
+       * @return The answerPoints.
+       */
+      public int getAnswerPoints() {
+        if (resultCase_ == 4) {
+          return (java.lang.Integer) result_;
+        }
+        return 0;
+      }
+      /**
+       * <pre>
+       * points to award if option selected
+       * </pre>
+       *
+       * <code>int32 answer_points = 4 [json_name = "answerPoints"];</code>
+       * @param value The answerPoints to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAnswerPoints(int value) {
+
+        resultCase_ = 4;
+        result_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * points to award if option selected
+       * </pre>
+       *
+       * <code>int32 answer_points = 4 [json_name = "answerPoints"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAnswerPoints() {
+        if (resultCase_ == 4) {
           resultCase_ = 0;
           result_ = null;
           onChanged();
