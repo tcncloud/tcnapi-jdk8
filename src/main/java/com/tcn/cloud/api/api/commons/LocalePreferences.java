@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private LocalePreferences() {
     languageTag_ = "";
     defaultCurrency_ = "";
+    languageDirectionPreference_ = 0;
   }
 
   @java.lang.Override
@@ -101,11 +102,12 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The direction of the script in Operator used in the organization.
    * By default, it is set to false to indicate left-to-right.
+   * DEPRECATED: use language_direction_preference instead.
    * </pre>
    *
    * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft", deprecated = true];</code>
    * @deprecated api.commons.LocalePreferences.use_script_direction_right_to_left is deprecated.
-   *     See api/commons/org_preferences.proto;l=92
+   *     See api/commons/org_preferences.proto;l=93
    * @return The useScriptDirectionRightToLeft.
    */
   @java.lang.Override
@@ -164,6 +166,32 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int LANGUAGE_DIRECTION_PREFERENCE_FIELD_NUMBER = 4;
+  private int languageDirectionPreference_ = 0;
+  /**
+   * <pre>
+   * The direction of the language used in the organization.
+   * </pre>
+   *
+   * <code>.api.commons.LanguageDirectionPreference language_direction_preference = 4 [json_name = "languageDirectionPreference"];</code>
+   * @return The enum numeric value on the wire for languageDirectionPreference.
+   */
+  @java.lang.Override public int getLanguageDirectionPreferenceValue() {
+    return languageDirectionPreference_;
+  }
+  /**
+   * <pre>
+   * The direction of the language used in the organization.
+   * </pre>
+   *
+   * <code>.api.commons.LanguageDirectionPreference language_direction_preference = 4 [json_name = "languageDirectionPreference"];</code>
+   * @return The languageDirectionPreference.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.LanguageDirectionPreference getLanguageDirectionPreference() {
+    com.tcn.cloud.api.api.commons.LanguageDirectionPreference result = com.tcn.cloud.api.api.commons.LanguageDirectionPreference.forNumber(languageDirectionPreference_);
+    return result == null ? com.tcn.cloud.api.api.commons.LanguageDirectionPreference.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -187,6 +215,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCurrency_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, defaultCurrency_);
     }
+    if (languageDirectionPreference_ != com.tcn.cloud.api.api.commons.LanguageDirectionPreference.LANGUAGE_DIRECTION_PREFERENCE_UNSPECIFIED.getNumber()) {
+      output.writeEnum(4, languageDirectionPreference_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -205,6 +236,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCurrency_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, defaultCurrency_);
+    }
+    if (languageDirectionPreference_ != com.tcn.cloud.api.api.commons.LanguageDirectionPreference.LANGUAGE_DIRECTION_PREFERENCE_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, languageDirectionPreference_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -227,6 +262,7 @@ private static final long serialVersionUID = 0L;
         != other.getUseScriptDirectionRightToLeft()) return false;
     if (!getDefaultCurrency()
         .equals(other.getDefaultCurrency())) return false;
+    if (languageDirectionPreference_ != other.languageDirectionPreference_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -245,6 +281,8 @@ private static final long serialVersionUID = 0L;
         getUseScriptDirectionRightToLeft());
     hash = (37 * hash) + DEFAULT_CURRENCY_FIELD_NUMBER;
     hash = (53 * hash) + getDefaultCurrency().hashCode();
+    hash = (37 * hash) + LANGUAGE_DIRECTION_PREFERENCE_FIELD_NUMBER;
+    hash = (53 * hash) + languageDirectionPreference_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -383,6 +421,7 @@ private static final long serialVersionUID = 0L;
       languageTag_ = "";
       useScriptDirectionRightToLeft_ = false;
       defaultCurrency_ = "";
+      languageDirectionPreference_ = 0;
       return this;
     }
 
@@ -424,6 +463,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.defaultCurrency_ = defaultCurrency_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.languageDirectionPreference_ = languageDirectionPreference_;
       }
     }
 
@@ -484,6 +526,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
+      if (other.languageDirectionPreference_ != 0) {
+        setLanguageDirectionPreferenceValue(other.getLanguageDirectionPreferenceValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -525,6 +570,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              languageDirectionPreference_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -649,11 +699,12 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The direction of the script in Operator used in the organization.
      * By default, it is set to false to indicate left-to-right.
+     * DEPRECATED: use language_direction_preference instead.
      * </pre>
      *
      * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft", deprecated = true];</code>
      * @deprecated api.commons.LocalePreferences.use_script_direction_right_to_left is deprecated.
-     *     See api/commons/org_preferences.proto;l=92
+     *     See api/commons/org_preferences.proto;l=93
      * @return The useScriptDirectionRightToLeft.
      */
     @java.lang.Override
@@ -664,11 +715,12 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The direction of the script in Operator used in the organization.
      * By default, it is set to false to indicate left-to-right.
+     * DEPRECATED: use language_direction_preference instead.
      * </pre>
      *
      * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft", deprecated = true];</code>
      * @deprecated api.commons.LocalePreferences.use_script_direction_right_to_left is deprecated.
-     *     See api/commons/org_preferences.proto;l=92
+     *     See api/commons/org_preferences.proto;l=93
      * @param value The useScriptDirectionRightToLeft to set.
      * @return This builder for chaining.
      */
@@ -683,11 +735,12 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The direction of the script in Operator used in the organization.
      * By default, it is set to false to indicate left-to-right.
+     * DEPRECATED: use language_direction_preference instead.
      * </pre>
      *
      * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft", deprecated = true];</code>
      * @deprecated api.commons.LocalePreferences.use_script_direction_right_to_left is deprecated.
-     *     See api/commons/org_preferences.proto;l=92
+     *     See api/commons/org_preferences.proto;l=93
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearUseScriptDirectionRightToLeft() {
@@ -795,6 +848,79 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       defaultCurrency_ = value;
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private int languageDirectionPreference_ = 0;
+    /**
+     * <pre>
+     * The direction of the language used in the organization.
+     * </pre>
+     *
+     * <code>.api.commons.LanguageDirectionPreference language_direction_preference = 4 [json_name = "languageDirectionPreference"];</code>
+     * @return The enum numeric value on the wire for languageDirectionPreference.
+     */
+    @java.lang.Override public int getLanguageDirectionPreferenceValue() {
+      return languageDirectionPreference_;
+    }
+    /**
+     * <pre>
+     * The direction of the language used in the organization.
+     * </pre>
+     *
+     * <code>.api.commons.LanguageDirectionPreference language_direction_preference = 4 [json_name = "languageDirectionPreference"];</code>
+     * @param value The enum numeric value on the wire for languageDirectionPreference to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLanguageDirectionPreferenceValue(int value) {
+      languageDirectionPreference_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The direction of the language used in the organization.
+     * </pre>
+     *
+     * <code>.api.commons.LanguageDirectionPreference language_direction_preference = 4 [json_name = "languageDirectionPreference"];</code>
+     * @return The languageDirectionPreference.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.LanguageDirectionPreference getLanguageDirectionPreference() {
+      com.tcn.cloud.api.api.commons.LanguageDirectionPreference result = com.tcn.cloud.api.api.commons.LanguageDirectionPreference.forNumber(languageDirectionPreference_);
+      return result == null ? com.tcn.cloud.api.api.commons.LanguageDirectionPreference.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The direction of the language used in the organization.
+     * </pre>
+     *
+     * <code>.api.commons.LanguageDirectionPreference language_direction_preference = 4 [json_name = "languageDirectionPreference"];</code>
+     * @param value The languageDirectionPreference to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLanguageDirectionPreference(com.tcn.cloud.api.api.commons.LanguageDirectionPreference value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      languageDirectionPreference_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The direction of the language used in the organization.
+     * </pre>
+     *
+     * <code>.api.commons.LanguageDirectionPreference language_direction_preference = 4 [json_name = "languageDirectionPreference"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLanguageDirectionPreference() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      languageDirectionPreference_ = 0;
       onChanged();
       return this;
     }
