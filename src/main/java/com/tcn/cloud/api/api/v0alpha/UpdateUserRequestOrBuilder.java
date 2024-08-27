@@ -171,7 +171,7 @@ public interface UpdateUserRequestOrBuilder extends
    *
    * <code>string user_caller_id = 10 [json_name = "userCallerId", deprecated = true];</code>
    * @deprecated api.v0alpha.UpdateUserRequest.user_caller_id is deprecated.
-   *     See api/v0alpha/org.proto;l=3374
+   *     See api/v0alpha/org.proto;l=3376
    * @return The userCallerId.
    */
   @java.lang.Deprecated java.lang.String getUserCallerId();
@@ -183,7 +183,7 @@ public interface UpdateUserRequestOrBuilder extends
    *
    * <code>string user_caller_id = 10 [json_name = "userCallerId", deprecated = true];</code>
    * @deprecated api.v0alpha.UpdateUserRequest.user_caller_id is deprecated.
-   *     See api/v0alpha/org.proto;l=3374
+   *     See api/v0alpha/org.proto;l=3376
    * @return The bytes for userCallerId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -270,6 +270,33 @@ public interface UpdateUserRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getEmailBytes();
+
+  /**
+   * <pre>
+   * The override for the users locale preferences
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences_override = 19 [json_name = "localePreferencesOverride"];</code>
+   * @return Whether the localePreferencesOverride field is set.
+   */
+  boolean hasLocalePreferencesOverride();
+  /**
+   * <pre>
+   * The override for the users locale preferences
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences_override = 19 [json_name = "localePreferencesOverride"];</code>
+   * @return The localePreferencesOverride.
+   */
+  com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferencesOverride();
+  /**
+   * <pre>
+   * The override for the users locale preferences
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences_override = 19 [json_name = "localePreferencesOverride"];</code>
+   */
+  com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOverrideOrBuilder();
 
   /**
    * <pre>

@@ -1101,6 +1101,44 @@ private static final long serialVersionUID = 0L;
     return emailVerified_;
   }
 
+  public static final int LOCALE_PREFERENCES_OVERRIDE_FIELD_NUMBER = 37;
+  private com.tcn.cloud.api.api.commons.LocalePreferences localePreferencesOverride_;
+  /**
+   * <pre>
+   * The override for the users locale preferences
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences_override = 37 [json_name = "localePreferencesOverride"];</code>
+   * @return Whether the localePreferencesOverride field is set.
+   */
+  @java.lang.Override
+  public boolean hasLocalePreferencesOverride() {
+    return localePreferencesOverride_ != null;
+  }
+  /**
+   * <pre>
+   * The override for the users locale preferences
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences_override = 37 [json_name = "localePreferencesOverride"];</code>
+   * @return The localePreferencesOverride.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferencesOverride() {
+    return localePreferencesOverride_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferencesOverride_;
+  }
+  /**
+   * <pre>
+   * The override for the users locale preferences
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences_override = 37 [json_name = "localePreferencesOverride"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOverrideOrBuilder() {
+    return localePreferencesOverride_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferencesOverride_;
+  }
+
   public static final int TRUSTS_FIELD_NUMBER = 200;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.Trust> trusts_;
@@ -1269,6 +1307,9 @@ private static final long serialVersionUID = 0L;
     if (emailVerified_ != false) {
       output.writeBool(36, emailVerified_);
     }
+    if (localePreferencesOverride_ != null) {
+      output.writeMessage(37, getLocalePreferencesOverride());
+    }
     for (int i = 0; i < trusts_.size(); i++) {
       output.writeMessage(200, trusts_.get(i));
     }
@@ -1403,6 +1444,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(36, emailVerified_);
     }
+    if (localePreferencesOverride_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(37, getLocalePreferencesOverride());
+    }
     for (int i = 0; i < trusts_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(200, trusts_.get(i));
@@ -1492,6 +1537,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEmail())) return false;
     if (getEmailVerified()
         != other.getEmailVerified()) return false;
+    if (hasLocalePreferencesOverride() != other.hasLocalePreferencesOverride()) return false;
+    if (hasLocalePreferencesOverride()) {
+      if (!getLocalePreferencesOverride()
+          .equals(other.getLocalePreferencesOverride())) return false;
+    }
     if (!getTrustsList()
         .equals(other.getTrustsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1592,6 +1642,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + EMAIL_VERIFIED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getEmailVerified());
+    if (hasLocalePreferencesOverride()) {
+      hash = (37 * hash) + LOCALE_PREFERENCES_OVERRIDE_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalePreferencesOverride().hashCode();
+    }
     if (getTrustsCount() > 0) {
       hash = (37 * hash) + TRUSTS_FIELD_NUMBER;
       hash = (53 * hash) + getTrustsList().hashCode();
@@ -1727,6 +1781,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      bitField1_ = 0;
       userId_ = "";
       userName_ = "";
       organizationName_ = "";
@@ -1791,13 +1846,18 @@ private static final long serialVersionUID = 0L;
       }
       email_ = "";
       emailVerified_ = false;
+      localePreferencesOverride_ = null;
+      if (localePreferencesOverrideBuilder_ != null) {
+        localePreferencesOverrideBuilder_.dispose();
+        localePreferencesOverrideBuilder_ = null;
+      }
       if (trustsBuilder_ == null) {
         trusts_ = java.util.Collections.emptyList();
       } else {
         trusts_ = null;
         trustsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x80000000);
+      bitField1_ = (bitField1_ & ~0x00000001);
       return this;
     }
 
@@ -1826,6 +1886,7 @@ private static final long serialVersionUID = 0L;
       com.tcn.cloud.api.api.v0alpha.UserDetails result = new com.tcn.cloud.api.api.v0alpha.UserDetails(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
       onBuilt();
       return result;
     }
@@ -1859,9 +1920,9 @@ private static final long serialVersionUID = 0L;
         result.labelEntities_ = labelEntitiesBuilder_.build();
       }
       if (trustsBuilder_ == null) {
-        if (((bitField0_ & 0x80000000) != 0)) {
+        if (((bitField1_ & 0x00000001) != 0)) {
           trusts_ = java.util.Collections.unmodifiableList(trusts_);
-          bitField0_ = (bitField0_ & ~0x80000000);
+          bitField1_ = (bitField1_ & ~0x00000001);
         }
         result.trusts_ = trusts_;
       } else {
@@ -1964,6 +2025,15 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x40000000) != 0)) {
         result.emailVerified_ = emailVerified_;
       }
+      if (((from_bitField0_ & 0x80000000) != 0)) {
+        result.localePreferencesOverride_ = localePreferencesOverrideBuilder_ == null
+            ? localePreferencesOverride_
+            : localePreferencesOverrideBuilder_.build();
+      }
+    }
+
+    private void buildPartial1(com.tcn.cloud.api.api.v0alpha.UserDetails result) {
+      int from_bitField1_ = bitField1_;
     }
 
     @java.lang.Override
@@ -2221,11 +2291,14 @@ private static final long serialVersionUID = 0L;
       if (other.getEmailVerified() != false) {
         setEmailVerified(other.getEmailVerified());
       }
+      if (other.hasLocalePreferencesOverride()) {
+        mergeLocalePreferencesOverride(other.getLocalePreferencesOverride());
+      }
       if (trustsBuilder_ == null) {
         if (!other.trusts_.isEmpty()) {
           if (trusts_.isEmpty()) {
             trusts_ = other.trusts_;
-            bitField0_ = (bitField0_ & ~0x80000000);
+            bitField1_ = (bitField1_ & ~0x00000001);
           } else {
             ensureTrustsIsMutable();
             trusts_.addAll(other.trusts_);
@@ -2238,7 +2311,7 @@ private static final long serialVersionUID = 0L;
             trustsBuilder_.dispose();
             trustsBuilder_ = null;
             trusts_ = other.trusts_;
-            bitField0_ = (bitField0_ & ~0x80000000);
+            bitField1_ = (bitField1_ & ~0x00000001);
             trustsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTrustsFieldBuilder() : null;
@@ -2461,6 +2534,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x40000000;
               break;
             } // case 288
+            case 298: {
+              input.readMessage(
+                  getLocalePreferencesOverrideFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x80000000;
+              break;
+            } // case 298
             case 1602: {
               com.tcn.cloud.api.api.commons.org.Trust m =
                   input.readMessage(
@@ -2490,6 +2570,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     private int bitField0_;
+    private int bitField1_;
 
     private java.lang.Object userId_ = "";
     /**
@@ -5453,12 +5534,167 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.tcn.cloud.api.api.commons.LocalePreferences localePreferencesOverride_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.LocalePreferences, com.tcn.cloud.api.api.commons.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder> localePreferencesOverrideBuilder_;
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 37 [json_name = "localePreferencesOverride"];</code>
+     * @return Whether the localePreferencesOverride field is set.
+     */
+    public boolean hasLocalePreferencesOverride() {
+      return ((bitField0_ & 0x80000000) != 0);
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 37 [json_name = "localePreferencesOverride"];</code>
+     * @return The localePreferencesOverride.
+     */
+    public com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferencesOverride() {
+      if (localePreferencesOverrideBuilder_ == null) {
+        return localePreferencesOverride_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferencesOverride_;
+      } else {
+        return localePreferencesOverrideBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 37 [json_name = "localePreferencesOverride"];</code>
+     */
+    public Builder setLocalePreferencesOverride(com.tcn.cloud.api.api.commons.LocalePreferences value) {
+      if (localePreferencesOverrideBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        localePreferencesOverride_ = value;
+      } else {
+        localePreferencesOverrideBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x80000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 37 [json_name = "localePreferencesOverride"];</code>
+     */
+    public Builder setLocalePreferencesOverride(
+        com.tcn.cloud.api.api.commons.LocalePreferences.Builder builderForValue) {
+      if (localePreferencesOverrideBuilder_ == null) {
+        localePreferencesOverride_ = builderForValue.build();
+      } else {
+        localePreferencesOverrideBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x80000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 37 [json_name = "localePreferencesOverride"];</code>
+     */
+    public Builder mergeLocalePreferencesOverride(com.tcn.cloud.api.api.commons.LocalePreferences value) {
+      if (localePreferencesOverrideBuilder_ == null) {
+        if (((bitField0_ & 0x80000000) != 0) &&
+          localePreferencesOverride_ != null &&
+          localePreferencesOverride_ != com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance()) {
+          getLocalePreferencesOverrideBuilder().mergeFrom(value);
+        } else {
+          localePreferencesOverride_ = value;
+        }
+      } else {
+        localePreferencesOverrideBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x80000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 37 [json_name = "localePreferencesOverride"];</code>
+     */
+    public Builder clearLocalePreferencesOverride() {
+      bitField0_ = (bitField0_ & ~0x80000000);
+      localePreferencesOverride_ = null;
+      if (localePreferencesOverrideBuilder_ != null) {
+        localePreferencesOverrideBuilder_.dispose();
+        localePreferencesOverrideBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 37 [json_name = "localePreferencesOverride"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.LocalePreferences.Builder getLocalePreferencesOverrideBuilder() {
+      bitField0_ |= 0x80000000;
+      onChanged();
+      return getLocalePreferencesOverrideFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 37 [json_name = "localePreferencesOverride"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOverrideOrBuilder() {
+      if (localePreferencesOverrideBuilder_ != null) {
+        return localePreferencesOverrideBuilder_.getMessageOrBuilder();
+      } else {
+        return localePreferencesOverride_ == null ?
+            com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferencesOverride_;
+      }
+    }
+    /**
+     * <pre>
+     * The override for the users locale preferences
+     * </pre>
+     *
+     * <code>.api.commons.LocalePreferences locale_preferences_override = 37 [json_name = "localePreferencesOverride"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.LocalePreferences, com.tcn.cloud.api.api.commons.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder> 
+        getLocalePreferencesOverrideFieldBuilder() {
+      if (localePreferencesOverrideBuilder_ == null) {
+        localePreferencesOverrideBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.LocalePreferences, com.tcn.cloud.api.api.commons.LocalePreferences.Builder, com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder>(
+                getLocalePreferencesOverride(),
+                getParentForChildren(),
+                isClean());
+        localePreferencesOverride_ = null;
+      }
+      return localePreferencesOverrideBuilder_;
+    }
+
     private java.util.List<com.tcn.cloud.api.api.commons.org.Trust> trusts_ =
       java.util.Collections.emptyList();
     private void ensureTrustsIsMutable() {
-      if (!((bitField0_ & 0x80000000) != 0)) {
+      if (!((bitField1_ & 0x00000001) != 0)) {
         trusts_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.Trust>(trusts_);
-        bitField0_ |= 0x80000000;
+        bitField1_ |= 0x00000001;
        }
     }
 
@@ -5652,7 +5888,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearTrusts() {
       if (trustsBuilder_ == null) {
         trusts_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x80000000);
+        bitField1_ = (bitField1_ & ~0x00000001);
         onChanged();
       } else {
         trustsBuilder_.clear();
@@ -5757,7 +5993,7 @@ private static final long serialVersionUID = 0L;
         trustsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.org.Trust, com.tcn.cloud.api.api.commons.org.Trust.Builder, com.tcn.cloud.api.api.commons.org.TrustOrBuilder>(
                 trusts_,
-                ((bitField0_ & 0x80000000) != 0),
+                ((bitField1_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         trusts_ = null;
