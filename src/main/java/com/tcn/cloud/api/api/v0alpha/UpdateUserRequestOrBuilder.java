@@ -273,6 +273,33 @@ public interface UpdateUserRequestOrBuilder extends
 
   /**
    * <pre>
+   * The override for the users locale preferences
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences_override = 19 [json_name = "localePreferencesOverride"];</code>
+   * @return Whether the localePreferencesOverride field is set.
+   */
+  boolean hasLocalePreferencesOverride();
+  /**
+   * <pre>
+   * The override for the users locale preferences
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences_override = 19 [json_name = "localePreferencesOverride"];</code>
+   * @return The localePreferencesOverride.
+   */
+  com.tcn.cloud.api.api.commons.LocalePreferences getLocalePreferencesOverride();
+  /**
+   * <pre>
+   * The override for the users locale preferences
+   * </pre>
+   *
+   * <code>.api.commons.LocalePreferences locale_preferences_override = 19 [json_name = "localePreferencesOverride"];</code>
+   */
+  com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOverrideOrBuilder();
+
+  /**
+   * <pre>
    * List of all fields being updated
    * </pre>
    *
