@@ -26,25 +26,54 @@ public final class ServiceProto {
       "\n)services/org/users/v1alpha1/service.pr" +
       "oto\022\033services.org.users.v1alpha1\032\027annota" +
       "tions/authz.proto\032\034google/api/annotation" +
-      "s.proto\032*services/org/users/v1alpha1/ent" +
-      "ities.proto2\016\n\014UsersServiceB\314\001\n-com.tcn." +
-      "cloud.api.services.org.users.v1alpha1B\014S" +
-      "erviceProtoP\001\242\002\003SOU\252\002\033Services.Org.Users" +
-      ".V1alpha1\312\002\033Services\\Org\\Users\\V1alpha1\342" +
-      "\002\'Services\\Org\\Users\\V1alpha1\\GPBMetadat" +
-      "a\352\002\036Services::Org::Users::V1alpha1b\006prot" +
-      "o3"
+      "s.proto\032-services/org/users/v1alpha1/pre" +
+      "ferences.proto2\310\007\n\014UsersService\022\342\001\n\030GetU" +
+      "serLocalePreferences\022<.services.org.user" +
+      "s.v1alpha1.GetUserLocalePreferencesReque" +
+      "st\032=.services.org.users.v1alpha1.GetUser" +
+      "LocalePreferencesResponse\"I\272\270\221\002\004\n\002\010e\202\323\344\223" +
+      "\002:\"5/services/org/users/v1alpha1/getuser" +
+      "localepreferences:\001*\022\356\001\n\033UpdateUserLocal" +
+      "ePreferences\022?.services.org.users.v1alph" +
+      "a1.UpdateUserLocalePreferencesRequest\032@." +
+      "services.org.users.v1alpha1.UpdateUserLo" +
+      "calePreferencesResponse\"L\272\270\221\002\004\n\002\010w\202\323\344\223\002=" +
+      "\"8/services/org/users/v1alpha1/updateuse" +
+      "rlocalepreferences:\001*\022\350\001\n\032GetMyUserLocal" +
+      "ePreferences\022>.services.org.users.v1alph" +
+      "a1.GetMyUserLocalePreferencesRequest\032?.s" +
+      "ervices.org.users.v1alpha1.GetMyUserLoca" +
+      "lePreferencesResponse\"I\272\270\221\002\002\030\001\202\323\344\223\002<\"7/s" +
+      "ervices/org/users/v1alpha1/getmyuserloca" +
+      "lepreferences:\001*\022\366\001\n\035UpdateMyUserLocaleP" +
+      "references\022A.services.org.users.v1alpha1" +
+      ".UpdateMyUserLocalePreferencesRequest\032B." +
+      "services.org.users.v1alpha1.UpdateMyUser" +
+      "LocalePreferencesResponse\"N\272\270\221\002\004\n\002\010y\202\323\344\223" +
+      "\002?\":/services/org/users/v1alpha1/updatem" +
+      "yuserlocalepreferences:\001*B\314\001\n-com.tcn.cl" +
+      "oud.api.services.org.users.v1alpha1B\014Ser" +
+      "viceProtoP\001\242\002\003SOU\252\002\033Services.Org.Users.V" +
+      "1alpha1\312\002\033Services\\Org\\Users\\V1alpha1\342\002\'" +
+      "Services\\Org\\Users\\V1alpha1\\GPBMetadata\352" +
+      "\002\036Services::Org::Users::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.tcn.cloud.api.services.org.users.v1alpha1.EntitiesProto.getDescriptor(),
+          com.tcn.cloud.api.services.org.users.v1alpha1.PreferencesProto.getDescriptor(),
         });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
+    registry.add(com.google.api.AnnotationsProto.http);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.tcn.cloud.api.services.org.users.v1alpha1.EntitiesProto.getDescriptor();
+    com.tcn.cloud.api.services.org.users.v1alpha1.PreferencesProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -47,25 +47,26 @@ public final class PreferencesProto {
       "eferences.proto\022#services.org.organizati" +
       "ons.v1alpha1\032!api/commons/org_preference" +
       "s.proto\032 google/protobuf/field_mask.prot" +
-      "o\")\n\'GetOrganizationLocalePreferencesReq" +
-      "uest\"y\n(GetOrganizationLocalePreferences" +
-      "Response\022M\n\022locale_preferences\030\001 \001(\0132\036.a" +
-      "pi.commons.LocalePreferencesR\021localePref" +
-      "erences\"\266\001\n*UpdateOrganizationLocalePref" +
-      "erencesRequest\022M\n\022locale_preferences\030\001 \001" +
-      "(\0132\036.api.commons.LocalePreferencesR\021loca" +
-      "lePreferences\0229\n\nfield_mask\030\002 \001(\0132\032.goog" +
-      "le.protobuf.FieldMaskR\tfieldMask\"|\n+Upda" +
-      "teOrganizationLocalePreferencesResponse\022" +
-      "M\n\022locale_preferences\030\001 \001(\0132\036.api.common" +
-      "s.LocalePreferencesR\021localePreferencesB\370" +
-      "\001\n5com.tcn.cloud.api.services.org.organi" +
-      "zations.v1alpha1B\020PreferencesProtoP\001\242\002\003S" +
-      "OO\252\002#Services.Org.Organizations.V1alpha1" +
-      "\312\002#Services\\Org\\Organizations\\V1alpha1\342\002" +
-      "/Services\\Org\\Organizations\\V1alpha1\\GPB" +
-      "Metadata\352\002&Services::Org::Organizations:" +
-      ":V1alpha1b\006proto3"
+      "o\"d\n\'GetOrganizationLocalePreferencesReq" +
+      "uest\0229\n\nfield_mask\030\001 \001(\0132\032.google.protob" +
+      "uf.FieldMaskR\tfieldMask\"y\n(GetOrganizati" +
+      "onLocalePreferencesResponse\022M\n\022locale_pr" +
+      "eferences\030\001 \001(\0132\036.api.commons.LocalePref" +
+      "erencesR\021localePreferences\"\266\001\n*UpdateOrg" +
+      "anizationLocalePreferencesRequest\022M\n\022loc" +
+      "ale_preferences\030\001 \001(\0132\036.api.commons.Loca" +
+      "lePreferencesR\021localePreferences\0229\n\nfiel" +
+      "d_mask\030\002 \001(\0132\032.google.protobuf.FieldMask" +
+      "R\tfieldMask\"|\n+UpdateOrganizationLocaleP" +
+      "referencesResponse\022M\n\022locale_preferences" +
+      "\030\001 \001(\0132\036.api.commons.LocalePreferencesR\021" +
+      "localePreferencesB\370\001\n5com.tcn.cloud.api." +
+      "services.org.organizations.v1alpha1B\020Pre" +
+      "ferencesProtoP\001\242\002\003SOO\252\002#Services.Org.Org" +
+      "anizations.V1alpha1\312\002#Services\\Org\\Organ" +
+      "izations\\V1alpha1\342\002/Services\\Org\\Organiz" +
+      "ations\\V1alpha1\\GPBMetadata\352\002&Services::" +
+      "Org::Organizations::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -78,7 +79,7 @@ public final class PreferencesProto {
     internal_static_services_org_organizations_v1alpha1_GetOrganizationLocalePreferencesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_organizations_v1alpha1_GetOrganizationLocalePreferencesRequest_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "FieldMask", });
     internal_static_services_org_organizations_v1alpha1_GetOrganizationLocalePreferencesResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_services_org_organizations_v1alpha1_GetOrganizationLocalePreferencesResponse_fieldAccessorTable = new
