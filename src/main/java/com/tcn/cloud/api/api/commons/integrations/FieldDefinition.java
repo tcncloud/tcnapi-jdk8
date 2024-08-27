@@ -359,6 +359,21 @@ private static final long serialVersionUID = 0L;
     return helperText_ == null ? com.tcn.cloud.api.api.commons.integrations.HelperText.getDefaultInstance() : helperText_;
   }
 
+  public static final int REQUIRED_FIELD_NUMBER = 9;
+  private boolean required_ = false;
+  /**
+   * <pre>
+   * if it needs to be filled out before run time
+   * </pre>
+   *
+   * <code>bool required = 9 [json_name = "required"];</code>
+   * @return The required.
+   */
+  @java.lang.Override
+  public boolean getRequired() {
+    return required_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -396,6 +411,9 @@ private static final long serialVersionUID = 0L;
     }
     if (helperText_ != null) {
       output.writeMessage(8, getHelperText());
+    }
+    if (required_ != false) {
+      output.writeBool(9, required_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -439,6 +457,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getHelperText());
     }
+    if (required_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(9, required_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -470,6 +492,8 @@ private static final long serialVersionUID = 0L;
       if (!getHelperText()
           .equals(other.getHelperText())) return false;
     }
+    if (getRequired()
+        != other.getRequired()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -501,6 +525,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HELPER_TEXT_FIELD_NUMBER;
       hash = (53 * hash) + getHelperText().hashCode();
     }
+    hash = (37 * hash) + REQUIRED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getRequired());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -650,6 +677,7 @@ private static final long serialVersionUID = 0L;
         helperTextBuilder_.dispose();
         helperTextBuilder_ = null;
       }
+      required_ = false;
       return this;
     }
 
@@ -709,6 +737,9 @@ private static final long serialVersionUID = 0L;
         result.helperText_ = helperTextBuilder_ == null
             ? helperText_
             : helperTextBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.required_ = required_;
       }
     }
 
@@ -793,6 +824,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasHelperText()) {
         mergeHelperText(other.getHelperText());
       }
+      if (other.getRequired() != false) {
+        setRequired(other.getRequired());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -862,6 +896,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 66
+            case 72: {
+              required_ = input.readBool();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1668,6 +1707,50 @@ private static final long serialVersionUID = 0L;
         helperText_ = null;
       }
       return helperTextBuilder_;
+    }
+
+    private boolean required_ ;
+    /**
+     * <pre>
+     * if it needs to be filled out before run time
+     * </pre>
+     *
+     * <code>bool required = 9 [json_name = "required"];</code>
+     * @return The required.
+     */
+    @java.lang.Override
+    public boolean getRequired() {
+      return required_;
+    }
+    /**
+     * <pre>
+     * if it needs to be filled out before run time
+     * </pre>
+     *
+     * <code>bool required = 9 [json_name = "required"];</code>
+     * @param value The required to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRequired(boolean value) {
+
+      required_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * if it needs to be filled out before run time
+     * </pre>
+     *
+     * <code>bool required = 9 [json_name = "required"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRequired() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      required_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
