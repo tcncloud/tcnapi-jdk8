@@ -12,44 +12,35 @@ public interface LocalePreferencesOrBuilder extends
    * Display language in Operator for users of the organization.
    * Must be a valid language tag supported in Operator.
    * IETF BCP 47 - https://en.wikipedia.org/wiki/IETF_language_tag
-   * DEPRECATED: Use operator_display_language instead.
    * </pre>
    *
-   * <code>string language_tag = 1 [json_name = "languageTag", deprecated = true];</code>
-   * @deprecated api.commons.LocalePreferences.language_tag is deprecated.
-   *     See api/commons/org_preferences.proto;l=100
+   * <code>string language_tag = 1 [json_name = "languageTag"];</code>
    * @return The languageTag.
    */
-  @java.lang.Deprecated java.lang.String getLanguageTag();
+  java.lang.String getLanguageTag();
   /**
    * <pre>
    * Display language in Operator for users of the organization.
    * Must be a valid language tag supported in Operator.
    * IETF BCP 47 - https://en.wikipedia.org/wiki/IETF_language_tag
-   * DEPRECATED: Use operator_display_language instead.
    * </pre>
    *
-   * <code>string language_tag = 1 [json_name = "languageTag", deprecated = true];</code>
-   * @deprecated api.commons.LocalePreferences.language_tag is deprecated.
-   *     See api/commons/org_preferences.proto;l=100
+   * <code>string language_tag = 1 [json_name = "languageTag"];</code>
    * @return The bytes for languageTag.
    */
-  @java.lang.Deprecated com.google.protobuf.ByteString
+  com.google.protobuf.ByteString
       getLanguageTagBytes();
 
   /**
    * <pre>
    * The direction of the script in Operator used in the organization.
    * By default, it is set to false to indicate left-to-right.
-   * DEPRECATED: Use operator_language_direction instead.
    * </pre>
    *
-   * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft", deprecated = true];</code>
-   * @deprecated api.commons.LocalePreferences.use_script_direction_right_to_left is deprecated.
-   *     See api/commons/org_preferences.proto;l=104
+   * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft"];</code>
    * @return The useScriptDirectionRightToLeft.
    */
-  @java.lang.Deprecated boolean getUseScriptDirectionRightToLeft();
+  boolean getUseScriptDirectionRightToLeft();
 
   /**
    * <pre>
@@ -74,50 +65,4 @@ public interface LocalePreferencesOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDefaultCurrencyBytes();
-
-  /**
-   * <pre>
-   * The display language in Operator for users of the organization.
-   * </pre>
-   *
-   * <code>.api.commons.OperatorDisplayLanguage operator_display_language = 4 [json_name = "operatorDisplayLanguage"];</code>
-   * @return Whether the operatorDisplayLanguage field is set.
-   */
-  boolean hasOperatorDisplayLanguage();
-  /**
-   * <pre>
-   * The display language in Operator for users of the organization.
-   * </pre>
-   *
-   * <code>.api.commons.OperatorDisplayLanguage operator_display_language = 4 [json_name = "operatorDisplayLanguage"];</code>
-   * @return The operatorDisplayLanguage.
-   */
-  com.tcn.cloud.api.api.commons.OperatorDisplayLanguage getOperatorDisplayLanguage();
-  /**
-   * <pre>
-   * The display language in Operator for users of the organization.
-   * </pre>
-   *
-   * <code>.api.commons.OperatorDisplayLanguage operator_display_language = 4 [json_name = "operatorDisplayLanguage"];</code>
-   */
-  com.tcn.cloud.api.api.commons.OperatorDisplayLanguageOrBuilder getOperatorDisplayLanguageOrBuilder();
-
-  /**
-   * <pre>
-   * The direction of the language used in the organization.
-   * </pre>
-   *
-   * <code>.api.commons.OperatorLanguageDirection operator_language_direction = 5 [json_name = "operatorLanguageDirection"];</code>
-   * @return The enum numeric value on the wire for operatorLanguageDirection.
-   */
-  int getOperatorLanguageDirectionValue();
-  /**
-   * <pre>
-   * The direction of the language used in the organization.
-   * </pre>
-   *
-   * <code>.api.commons.OperatorLanguageDirection operator_language_direction = 5 [json_name = "operatorLanguageDirection"];</code>
-   * @return The operatorLanguageDirection.
-   */
-  com.tcn.cloud.api.api.commons.OperatorLanguageDirection getOperatorLanguageDirection();
 }
