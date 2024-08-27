@@ -36,6 +36,14 @@ public enum LabeledEntity
    * <code>LABELED_ENTITY_USER = 2;</code>
    */
   LABELED_ENTITY_USER(2),
+  /**
+   * <pre>
+   * LABELED_ENTITY_TICKET is a ticket entity type.
+   * </pre>
+   *
+   * <code>LABELED_ENTITY_TICKET = 3;</code>
+   */
+  LABELED_ENTITY_TICKET(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -63,6 +71,14 @@ public enum LabeledEntity
    * <code>LABELED_ENTITY_USER = 2;</code>
    */
   public static final int LABELED_ENTITY_USER_VALUE = 2;
+  /**
+   * <pre>
+   * LABELED_ENTITY_TICKET is a ticket entity type.
+   * </pre>
+   *
+   * <code>LABELED_ENTITY_TICKET = 3;</code>
+   */
+  public static final int LABELED_ENTITY_TICKET_VALUE = 3;
 
 
   public final int getNumber() {
@@ -92,6 +108,7 @@ public enum LabeledEntity
       case 0: return LABELED_ENTITY_UNSPECIFIED;
       case 1: return LABELED_ENTITY_SKILL_GROUP;
       case 2: return LABELED_ENTITY_USER;
+      case 3: return LABELED_ENTITY_TICKET;
       default: return null;
     }
   }
