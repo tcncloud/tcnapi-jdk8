@@ -36,7 +36,7 @@ public interface UpdateMyUserLocalePreferencesRequestOrBuilder extends
 
   /**
    * <pre>
-   * The update mask to apply to the organization's locale preferences.
+   * The update mask to apply to the user's locale preferences.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
@@ -45,7 +45,7 @@ public interface UpdateMyUserLocalePreferencesRequestOrBuilder extends
   boolean hasFieldMask();
   /**
    * <pre>
-   * The update mask to apply to the organization's locale preferences.
+   * The update mask to apply to the user's locale preferences.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
@@ -54,7 +54,7 @@ public interface UpdateMyUserLocalePreferencesRequestOrBuilder extends
   com.google.protobuf.FieldMask getFieldMask();
   /**
    * <pre>
-   * The update mask to apply to the organization's locale preferences.
+   * The update mask to apply to the user's locale preferences.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>

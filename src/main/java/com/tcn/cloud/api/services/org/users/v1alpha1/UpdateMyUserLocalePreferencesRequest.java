@@ -84,7 +84,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.FieldMask fieldMask_;
   /**
    * <pre>
-   * The update mask to apply to the organization's locale preferences.
+   * The update mask to apply to the user's locale preferences.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
@@ -96,7 +96,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The update mask to apply to the organization's locale preferences.
+   * The update mask to apply to the user's locale preferences.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The update mask to apply to the organization's locale preferences.
+   * The update mask to apply to the user's locale preferences.
    * </pre>
    *
    * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
@@ -656,7 +656,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
     /**
      * <pre>
-     * The update mask to apply to the organization's locale preferences.
+     * The update mask to apply to the user's locale preferences.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
@@ -667,7 +667,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The update mask to apply to the organization's locale preferences.
+     * The update mask to apply to the user's locale preferences.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
@@ -682,7 +682,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The update mask to apply to the organization's locale preferences.
+     * The update mask to apply to the user's locale preferences.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
@@ -702,7 +702,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The update mask to apply to the organization's locale preferences.
+     * The update mask to apply to the user's locale preferences.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
@@ -720,7 +720,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The update mask to apply to the organization's locale preferences.
+     * The update mask to apply to the user's locale preferences.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
@@ -743,7 +743,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The update mask to apply to the organization's locale preferences.
+     * The update mask to apply to the user's locale preferences.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
@@ -760,7 +760,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The update mask to apply to the organization's locale preferences.
+     * The update mask to apply to the user's locale preferences.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
@@ -772,7 +772,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The update mask to apply to the organization's locale preferences.
+     * The update mask to apply to the user's locale preferences.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
@@ -787,7 +787,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The update mask to apply to the organization's locale preferences.
+     * The update mask to apply to the user's locale preferences.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask field_mask = 2 [json_name = "fieldMask"];</code>
