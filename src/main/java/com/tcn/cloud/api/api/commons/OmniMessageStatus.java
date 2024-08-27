@@ -158,6 +158,14 @@ public enum OmniMessageStatus
   OMNI_OUTBOUND_MESSAGE_BLOCKED(16250),
   /**
    * <pre>
+   * message did not recieve delivery confirmation, this could be that the destination carrier does not send delivery confirmations, or this could be a failure
+   * </pre>
+   *
+   * <code>OMNI_OUTBOUND_MESSAGE_UNCONFIRMED_DELIVERY = 16260;</code>
+   */
+  OMNI_OUTBOUND_MESSAGE_UNCONFIRMED_DELIVERY(16260),
+  /**
+   * <pre>
    * message sent from system
    * </pre>
    *
@@ -317,6 +325,14 @@ public enum OmniMessageStatus
   public static final int OMNI_OUTBOUND_MESSAGE_BLOCKED_VALUE = 16250;
   /**
    * <pre>
+   * message did not recieve delivery confirmation, this could be that the destination carrier does not send delivery confirmations, or this could be a failure
+   * </pre>
+   *
+   * <code>OMNI_OUTBOUND_MESSAGE_UNCONFIRMED_DELIVERY = 16260;</code>
+   */
+  public static final int OMNI_OUTBOUND_MESSAGE_UNCONFIRMED_DELIVERY_VALUE = 16260;
+  /**
+   * <pre>
    * message sent from system
    * </pre>
    *
@@ -368,6 +384,7 @@ public enum OmniMessageStatus
       case 16230: return OMNI_OUTBOUND_MESSAGE_UNSUBSCRIBED;
       case 16240: return OMNI_OUTBOUND_MESSAGE_MARKED_AS_SPAM;
       case 16250: return OMNI_OUTBOUND_MESSAGE_BLOCKED;
+      case 16260: return OMNI_OUTBOUND_MESSAGE_UNCONFIRMED_DELIVERY;
       case 16050: return OMNI_SYSTEM_MESSAGE;
       default: return null;
     }
