@@ -37,7 +37,7 @@ public final class ServiceProto {
       "proto\032%api/v1alpha1/scorecards/section.p" +
       "roto\032,api/v1alpha1/scorecards/smart_ques" +
       "tion.proto\032\034google/api/annotations.proto" +
-      "2\251K\n\nScorecards\022\276\001\n\017CreateScorecard\022/.ap" +
+      "2\313N\n\nScorecards\022\276\001\n\017CreateScorecard\022/.ap" +
       "i.v1alpha1.scorecards.CreateScorecardReq" +
       "uest\0320.api.v1alpha1.scorecards.CreateSco" +
       "recardResponse\"H\272\270\221\002\005\n\003\010\301\014\202\323\344\223\0028\"3/api/v" +
@@ -278,11 +278,22 @@ public final class ServiceProto {
       "1alpha1.scorecards.CreateSmartQuestionRe" +
       "sponse\"L\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002<\"7/api/v1alpha1/" +
       "scorecards/scorecards/createsmartquestio" +
-      "n:\001*B\267\001\n)com.tcn.cloud.api.api.v1alpha1." +
-      "scorecardsB\014ServiceProtoP\001\242\002\003AVS\252\002\027Api.V" +
-      "1alpha1.Scorecards\312\002\027Api\\V1alpha1\\Scorec" +
-      "ards\342\002#Api\\V1alpha1\\Scorecards\\GPBMetada" +
-      "ta\352\002\031Api::V1alpha1::Scorecardsb\006proto3"
+      "n:\001*\022\316\001\n\023UpdateSmartQuestion\0223.api.v1alp" +
+      "ha1.scorecards.UpdateSmartQuestionReques" +
+      "t\0324.api.v1alpha1.scorecards.UpdateSmartQ" +
+      "uestionResponse\"L\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002<\"7/api/" +
+      "v1alpha1/scorecards/scorecards/updatesma" +
+      "rtquestion:\001*\022\316\001\n\023DeleteSmartQuestion\0223." +
+      "api.v1alpha1.scorecards.DeleteSmartQuest" +
+      "ionRequest\0324.api.v1alpha1.scorecards.Del" +
+      "eteSmartQuestionResponse\"L\272\270\221\002\005\n\003\010\301\014\202\323\344\223" +
+      "\002<\"7/api/v1alpha1/scorecards/scorecards/" +
+      "deletesmartquestion:\001*B\267\001\n)com.tcn.cloud" +
+      ".api.api.v1alpha1.scorecardsB\014ServicePro" +
+      "toP\001\242\002\003AVS\252\002\027Api.V1alpha1.Scorecards\312\002\027A" +
+      "pi\\V1alpha1\\Scorecards\342\002#Api\\V1alpha1\\Sc" +
+      "orecards\\GPBMetadata\352\002\031Api::V1alpha1::Sc" +
+      "orecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
