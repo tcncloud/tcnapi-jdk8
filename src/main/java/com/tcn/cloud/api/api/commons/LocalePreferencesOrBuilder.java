@@ -35,12 +35,11 @@ public interface LocalePreferencesOrBuilder extends
    * <pre>
    * The direction of the script in Operator used in the organization.
    * By default, it is set to false to indicate left-to-right.
-   * DEPRECATED: use language_direction_preference instead.
    * </pre>
    *
    * <code>bool use_script_direction_right_to_left = 2 [json_name = "useScriptDirectionRightToLeft", deprecated = true];</code>
    * @deprecated api.commons.LocalePreferences.use_script_direction_right_to_left is deprecated.
-   *     See api/commons/org_preferences.proto;l=93
+   *     See api/commons/org_preferences.proto;l=92
    * @return The useScriptDirectionRightToLeft.
    */
   @java.lang.Deprecated boolean getUseScriptDirectionRightToLeft();
@@ -68,23 +67,4 @@ public interface LocalePreferencesOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDefaultCurrencyBytes();
-
-  /**
-   * <pre>
-   * The direction of the language used in the organization.
-   * </pre>
-   *
-   * <code>.api.commons.LanguageDirectionPreference language_direction_preference = 4 [json_name = "languageDirectionPreference"];</code>
-   * @return The enum numeric value on the wire for languageDirectionPreference.
-   */
-  int getLanguageDirectionPreferenceValue();
-  /**
-   * <pre>
-   * The direction of the language used in the organization.
-   * </pre>
-   *
-   * <code>.api.commons.LanguageDirectionPreference language_direction_preference = 4 [json_name = "languageDirectionPreference"];</code>
-   * @return The languageDirectionPreference.
-   */
-  com.tcn.cloud.api.api.commons.LanguageDirectionPreference getLanguageDirectionPreference();
 }
