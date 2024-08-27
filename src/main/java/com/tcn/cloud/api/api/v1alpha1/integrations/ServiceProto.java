@@ -1385,7 +1385,7 @@ public final class ServiceProto {
       ".integrations.ProcessWorkflowRes.DataEnt" +
       "ryR\004data\032Y\n\tDataEntry\022\020\n\003key\030\001 \001(\tR\003key\022" +
       "6\n\005value\030\002 \001(\0132 .api.v1alpha1.integratio" +
-      "ns.ValueR\005value:\0028\0012\366.\n\014Integrations\022\225\001\n" +
+      "ns.ValueR\005value:\0028\0012\373.\n\014Integrations\022\225\001\n" +
       "\007Process\022%.api.v1alpha1.integrations.Pro" +
       "cessReq\032%.api.v1alpha1.integrations.Proc" +
       "essRes\"<\272\270\221\002\n\n\003\010\224\n\n\003\010\327\002\202\323\344\223\002\'\"\"/api/v1al" +
@@ -1531,16 +1531,16 @@ public final class ServiceProto {
       "pi.v1alpha1.integrations.PopulateIntegra" +
       "tionLinkRes\"G\272\270\221\002\005\n\003\010\327\002\202\323\344\223\0027\"2/api/v1al" +
       "pha1/integrations/populateintegrationlin" +
-      "k:\001*\022\265\001\n\017ProcessWorkflow\022-.api.v1alpha1." +
+      "k:\001*\022\272\001\n\017ProcessWorkflow\022-.api.v1alpha1." +
       "integrations.ProcessWorkflowReq\032-.api.v1" +
-      "alpha1.integrations.ProcessWorkflowRes\"D" +
-      "\272\270\221\002\n\n\003\010\224\n\n\003\010\327\002\202\323\344\223\002/\"*/api/v1alpha1/int" +
-      "egrations/processworkflow:\001*B\301\001\n+com.tcn" +
-      ".cloud.api.api.v1alpha1.integrationsB\014Se" +
-      "rviceProtoP\001\242\002\003AVI\252\002\031Api.V1alpha1.Integr",
-      "ations\312\002\031Api\\V1alpha1\\Integrations\342\002%Api" +
-      "\\V1alpha1\\Integrations\\GPBMetadata\352\002\033Api" +
-      "::V1alpha1::Integrationsb\006proto3"
+      "alpha1.integrations.ProcessWorkflowRes\"I" +
+      "\272\270\221\002\017\n\003\010\224\n\n\003\010\327\002\n\003\010\331\002\202\323\344\223\002/\"*/api/v1alpha" +
+      "1/integrations/processworkflow:\001*B\301\001\n+co" +
+      "m.tcn.cloud.api.api.v1alpha1.integration" +
+      "sB\014ServiceProtoP\001\242\002\003AVI\252\002\031Api.V1alpha1.I",
+      "ntegrations\312\002\031Api\\V1alpha1\\Integrations\342" +
+      "\002%Api\\V1alpha1\\Integrations\\GPBMetadata\352" +
+      "\002\033Api::V1alpha1::Integrationsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

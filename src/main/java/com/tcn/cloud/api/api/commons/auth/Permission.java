@@ -385,6 +385,14 @@ public enum Permission
   PERMISSION_MANUAL_CONVERSATION(344),
   /**
    * <pre>
+   *Enables agents to use agent assisted portals
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_ASSISTED_PORTAL = 345 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_AGENT_ASSISTED_PORTAL(345),
+  /**
+   * <pre>
    * Enables Agents to change their own hunt group
    * </pre>
    *
@@ -1238,6 +1246,14 @@ public enum Permission
   public static final int PERMISSION_MANUAL_CONVERSATION_VALUE = 344;
   /**
    * <pre>
+   *Enables agents to use agent assisted portals
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_ASSISTED_PORTAL = 345 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_AGENT_ASSISTED_PORTAL_VALUE = 345;
+  /**
+   * <pre>
    * Enables Agents to change their own hunt group
    * </pre>
    *
@@ -1783,6 +1799,7 @@ public enum Permission
       case 342: return PERMISSION_AGENT_PLUGINS_VIEW;
       case 343: return PERMISSION_AGENT_HUNTGROUP_INTEGRATIONS_VIEW;
       case 344: return PERMISSION_MANUAL_CONVERSATION;
+      case 345: return PERMISSION_AGENT_ASSISTED_PORTAL;
       case 360: return PERMISSION_CHANGE_OWN_HUNT_GROUP;
       case 361: return PERMISSION_CHANGE_OWN_SKILL_GROUPS;
       case 500: return PERMISSION_VOICE_ANALYTICS;
