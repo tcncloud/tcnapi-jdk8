@@ -1565,6 +1565,99 @@ public final class ScorecardsGrpc {
     return getDeleteSmartQuestionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsResponse> getListSmartEvaluationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListSmartEvaluations",
+      requestType = com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsResponse> getListSmartEvaluationsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsResponse> getListSmartEvaluationsMethod;
+    if ((getListSmartEvaluationsMethod = ScorecardsGrpc.getListSmartEvaluationsMethod) == null) {
+      synchronized (ScorecardsGrpc.class) {
+        if ((getListSmartEvaluationsMethod = ScorecardsGrpc.getListSmartEvaluationsMethod) == null) {
+          ScorecardsGrpc.getListSmartEvaluationsMethod = getListSmartEvaluationsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSmartEvaluations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("ListSmartEvaluations"))
+              .build();
+        }
+      }
+    }
+    return getListSmartEvaluationsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationResponse> getDeleteSmartEvaluationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteSmartEvaluation",
+      requestType = com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationResponse> getDeleteSmartEvaluationMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationResponse> getDeleteSmartEvaluationMethod;
+    if ((getDeleteSmartEvaluationMethod = ScorecardsGrpc.getDeleteSmartEvaluationMethod) == null) {
+      synchronized (ScorecardsGrpc.class) {
+        if ((getDeleteSmartEvaluationMethod = ScorecardsGrpc.getDeleteSmartEvaluationMethod) == null) {
+          ScorecardsGrpc.getDeleteSmartEvaluationMethod = getDeleteSmartEvaluationMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteSmartEvaluation"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteSmartEvaluation"))
+              .build();
+        }
+      }
+    }
+    return getDeleteSmartEvaluationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationResponse> getGetSmartEvaluationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSmartEvaluation",
+      requestType = com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationResponse> getGetSmartEvaluationMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationResponse> getGetSmartEvaluationMethod;
+    if ((getGetSmartEvaluationMethod = ScorecardsGrpc.getGetSmartEvaluationMethod) == null) {
+      synchronized (ScorecardsGrpc.class) {
+        if ((getGetSmartEvaluationMethod = ScorecardsGrpc.getGetSmartEvaluationMethod) == null) {
+          ScorecardsGrpc.getGetSmartEvaluationMethod = getGetSmartEvaluationMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSmartEvaluation"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetSmartEvaluation"))
+              .build();
+        }
+      }
+    }
+    return getGetSmartEvaluationMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -2112,6 +2205,36 @@ public final class ScorecardsGrpc {
     default void deleteSmartQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSmartQuestionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListSmartEvaluations lists smart evaluations
+     * </pre>
+     */
+    default void listSmartEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmartEvaluationsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteSmartEvaluation deletes a smart evaluation
+     * </pre>
+     */
+    default void deleteSmartEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSmartEvaluationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetSmartEvaluation gets a smart evaluation
+     * </pre>
+     */
+    default void getSmartEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSmartEvaluationMethod(), responseObserver);
     }
   }
 
@@ -2692,6 +2815,39 @@ public final class ScorecardsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteSmartQuestionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListSmartEvaluations lists smart evaluations
+     * </pre>
+     */
+    public void listSmartEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListSmartEvaluationsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteSmartEvaluation deletes a smart evaluation
+     * </pre>
+     */
+    public void deleteSmartEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteSmartEvaluationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetSmartEvaluation gets a smart evaluation
+     * </pre>
+     */
+    public void getSmartEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetSmartEvaluationMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -3210,6 +3366,36 @@ public final class ScorecardsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartQuestionResponse deleteSmartQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartQuestionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteSmartQuestionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListSmartEvaluations lists smart evaluations
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsResponse listSmartEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListSmartEvaluationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteSmartEvaluation deletes a smart evaluation
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationResponse deleteSmartEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteSmartEvaluationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetSmartEvaluation gets a smart evaluation
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationResponse getSmartEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetSmartEvaluationMethod(), getCallOptions(), request);
     }
   }
 
@@ -3768,6 +3954,39 @@ public final class ScorecardsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteSmartQuestionMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * ListSmartEvaluations lists smart evaluations
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsResponse> listSmartEvaluations(
+        com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListSmartEvaluationsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteSmartEvaluation deletes a smart evaluation
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationResponse> deleteSmartEvaluation(
+        com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteSmartEvaluationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetSmartEvaluation gets a smart evaluation
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationResponse> getSmartEvaluation(
+        com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetSmartEvaluationMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_SCORECARD = 0;
@@ -3820,6 +4039,9 @@ public final class ScorecardsGrpc {
   private static final int METHODID_CREATE_SMART_QUESTION = 47;
   private static final int METHODID_UPDATE_SMART_QUESTION = 48;
   private static final int METHODID_DELETE_SMART_QUESTION = 49;
+  private static final int METHODID_LIST_SMART_EVALUATIONS = 50;
+  private static final int METHODID_DELETE_SMART_EVALUATION = 51;
+  private static final int METHODID_GET_SMART_EVALUATION = 52;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -4037,6 +4259,18 @@ public final class ScorecardsGrpc {
         case METHODID_DELETE_SMART_QUESTION:
           serviceImpl.deleteSmartQuestion((com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartQuestionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartQuestionResponse>) responseObserver);
+          break;
+        case METHODID_LIST_SMART_EVALUATIONS:
+          serviceImpl.listSmartEvaluations((com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_SMART_EVALUATION:
+          serviceImpl.deleteSmartEvaluation((com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationResponse>) responseObserver);
+          break;
+        case METHODID_GET_SMART_EVALUATION:
+          serviceImpl.getSmartEvaluation((com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -4406,6 +4640,27 @@ public final class ScorecardsGrpc {
               com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartQuestionRequest,
               com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartQuestionResponse>(
                 service, METHODID_DELETE_SMART_QUESTION)))
+        .addMethod(
+          getListSmartEvaluationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsResponse>(
+                service, METHODID_LIST_SMART_EVALUATIONS)))
+        .addMethod(
+          getDeleteSmartEvaluationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSmartEvaluationResponse>(
+                service, METHODID_DELETE_SMART_EVALUATION)))
+        .addMethod(
+          getGetSmartEvaluationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetSmartEvaluationResponse>(
+                service, METHODID_GET_SMART_EVALUATION)))
         .build();
   }
 
@@ -4504,6 +4759,9 @@ public final class ScorecardsGrpc {
               .addMethod(getCreateSmartQuestionMethod())
               .addMethod(getUpdateSmartQuestionMethod())
               .addMethod(getDeleteSmartQuestionMethod())
+              .addMethod(getListSmartEvaluationsMethod())
+              .addMethod(getDeleteSmartEvaluationMethod())
+              .addMethod(getGetSmartEvaluationMethod())
               .build();
         }
       }

@@ -129,6 +129,26 @@ public final class ScorecardsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_SmartQuestion_Answer_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_SmartEvaluation_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_SmartEvaluation_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_SmartEvaluationSection_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_SmartEvaluationSection_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_SmartEvaluationQuestion_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_SmartEvaluationQuestion_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_SmartEvaluationQuestion_Answer_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_SmartEvaluationQuestion_Answer_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -329,31 +349,64 @@ public final class ScorecardsProto {
       "r\030\014 \001(\005R\tsortOrder\032z\n\006Answer\022\026\n\006answer\030\001" +
       " \001(\tR\006answer\022\030\n\006points\030\002 \001(\005H\000R\006points\0224" +
       "\n\tfail_type\030\003 \001(\0162\025.api.commons.FailType" +
-      "H\000R\010failTypeB\010\n\006result*=\n\014CategoryType\022\013" +
-      "\n\007INVALID\020\000\022\017\n\013SKILL_CALLS\020\001\022\017\n\013MANUAL_D" +
-      "IAL\020\002*L\n\016EvaluationType\022\023\n\017EVALUATE_MANU" +
-      "AL\020\000\022\021\n\rEVALUATE_AUTO\020\001\022\022\n\016EVALUATE_SMAR" +
-      "T\020\002*V\n\tScoreType\022\024\n\020SCORE_SIMPLE_SUM\020\000\022\026" +
-      "\n\022SCORE_WEIGHTED_SUM\020\001\022\033\n\027SCORE_EVEN_WEI" +
-      "GHTED_SUM\020\002*C\n\010FailType\022\021\n\rFAIL_QUESTION" +
-      "\020\000\022\020\n\014FAIL_SECTION\020\001\022\022\n\016FAIL_SCORECARD\020\002" +
-      "*f\n\rQuestionFocus\022\036\n\032QUESTION_FOCUS_UNSP" +
-      "ECIFIED\020\000\022\030\n\024QUESTION_FOCUS_AGENT\020\001\022\033\n\027Q" +
-      "UESTION_FOCUS_CUSTOMER\020\002*\267\001\n\016ScorecardSt" +
-      "ate\022\026\n\022SCORECARD_IS_DRAFT\020\000\022\026\n\022SCORECARD" +
-      "_IS_READY\020\001\022\027\n\023SCORECARD_IS_IN_USE\020\002\022\031\n\025" +
-      "SCORECARD_IS_TEMPLATE\020\003\022\037\n\033SCORECARD_IS_" +
-      "READY_DISABLED\020\004\022 \n\034SCORECARD_IS_IN_USE_" +
-      "DISABLED\020\005*[\n\017EvaluationState\022\032\n\026EVALUAT" +
-      "ION_IN_PROGRESS\020\000\022\025\n\021EVALUATION_PASSED\020\001" +
-      "\022\025\n\021EVALUATION_FAILED\020\002*z\n\tRiskLevel\022\023\n\017" +
-      "RISK_LEVEL_NONE\020\000\022\022\n\016RISK_LEVEL_LOW\020\001\022\025\n" +
-      "\021RISK_LEVEL_MEDIUM\020\002\022\023\n\017RISK_LEVEL_HIGH\020" +
-      "\003\022\030\n\024RISK_LEVEL_RISK_FREE\020\004B}\n\035com.tcn.c" +
-      "loud.api.api.commonsB\017ScorecardsProtoP\001\242" +
-      "\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\" +
-      "Commons\\GPBMetadata\352\002\014Api::Commonsb\006prot" +
-      "o3"
+      "H\000R\010failTypeB\010\n\006result\"\372\003\n\017SmartEvaluati" +
+      "on\022.\n\023smart_evaluation_id\030\002 \001(\003R\021smartEv" +
+      "aluationId\022!\n\014scorecard_id\030\003 \001(\003R\013scorec" +
+      "ardId\022%\n\016transcript_sid\030\004 \001(\003R\rtranscrip" +
+      "tSid\022\"\n\ragent_user_id\030\005 \001(\tR\013agentUserId" +
+      "\022\024\n\005score\030\006 \001(\001R\005score\022\'\n\017scoring_versio" +
+      "n\030\007 \001(\005R\016scoringVersion\022+\n\021scorecard_ver" +
+      "sion\030\010 \001(\005R\020scorecardVersion\022?\n\rcomplete" +
+      "_time\030\t \001(\0132\032.google.protobuf.TimestampR" +
+      "\014completeTime\022;\n\013delete_time\030\n \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\ndeleteTime\022_\n\031sm" +
+      "art_evaluation_sections\030\013 \003(\0132#.api.comm" +
+      "ons.SmartEvaluationSectionR\027smartEvaluat" +
+      "ionSections\"\326\002\n\026SmartEvaluationSection\022\035" +
+      "\n\nsection_id\030\004 \001(\003R\tsectionId\022\026\n\006points\030" +
+      "\005 \001(\005R\006points\022\'\n\017possible_points\030\006 \001(\005R\016" +
+      "possiblePoints\022;\n\013create_time\030\007 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\ncreateTime\022;\n\013d" +
+      "elete_time\030\010 \001(\0132\032.google.protobuf.Times" +
+      "tampR\ndeleteTime\022b\n\032smart_evaluation_que" +
+      "stions\030\t \003(\0132$.api.commons.SmartEvaluati" +
+      "onQuestionR\030smartEvaluationQuestions\"\355\003\n" +
+      "\027SmartEvaluationQuestion\022*\n\021smart_questi" +
+      "on_id\030\005 \001(\003R\017smartQuestionId\022\026\n\006points\030\006" +
+      " \001(\005R\006points\022\'\n\017possible_points\030\007 \001(\005R\016p" +
+      "ossiblePoints\022C\n\006answer\030\010 \001(\0132+.api.comm" +
+      "ons.SmartEvaluationQuestion.AnswerR\006answ" +
+      "er\022;\n\013create_time\030\t \001(\0132\032.google.protobu" +
+      "f.TimestampR\ncreateTime\022;\n\013delete_time\030\n" +
+      " \001(\0132\032.google.protobuf.TimestampR\ndelete" +
+      "Time\032\245\001\n\006Answer\022\026\n\006answer\030\001 \001(\tR\006answer\022" +
+      "\034\n\006points\030\002 \001(\rB\002\030\001H\000R\006points\0224\n\tfail_ty" +
+      "pe\030\003 \001(\0162\025.api.commons.FailTypeH\000R\010failT" +
+      "ype\022%\n\ranswer_points\030\004 \001(\005H\000R\014answerPoin" +
+      "tsB\010\n\006result*=\n\014CategoryType\022\013\n\007INVALID\020" +
+      "\000\022\017\n\013SKILL_CALLS\020\001\022\017\n\013MANUAL_DIAL\020\002*L\n\016E" +
+      "valuationType\022\023\n\017EVALUATE_MANUAL\020\000\022\021\n\rEV" +
+      "ALUATE_AUTO\020\001\022\022\n\016EVALUATE_SMART\020\002*V\n\tSco" +
+      "reType\022\024\n\020SCORE_SIMPLE_SUM\020\000\022\026\n\022SCORE_WE" +
+      "IGHTED_SUM\020\001\022\033\n\027SCORE_EVEN_WEIGHTED_SUM\020" +
+      "\002*C\n\010FailType\022\021\n\rFAIL_QUESTION\020\000\022\020\n\014FAIL" +
+      "_SECTION\020\001\022\022\n\016FAIL_SCORECARD\020\002*f\n\rQuesti" +
+      "onFocus\022\036\n\032QUESTION_FOCUS_UNSPECIFIED\020\000\022" +
+      "\030\n\024QUESTION_FOCUS_AGENT\020\001\022\033\n\027QUESTION_FO" +
+      "CUS_CUSTOMER\020\002*\267\001\n\016ScorecardState\022\026\n\022SCO" +
+      "RECARD_IS_DRAFT\020\000\022\026\n\022SCORECARD_IS_READY\020" +
+      "\001\022\027\n\023SCORECARD_IS_IN_USE\020\002\022\031\n\025SCORECARD_" +
+      "IS_TEMPLATE\020\003\022\037\n\033SCORECARD_IS_READY_DISA" +
+      "BLED\020\004\022 \n\034SCORECARD_IS_IN_USE_DISABLED\020\005" +
+      "*[\n\017EvaluationState\022\032\n\026EVALUATION_IN_PRO" +
+      "GRESS\020\000\022\025\n\021EVALUATION_PASSED\020\001\022\025\n\021EVALUA" +
+      "TION_FAILED\020\002*z\n\tRiskLevel\022\023\n\017RISK_LEVEL" +
+      "_NONE\020\000\022\022\n\016RISK_LEVEL_LOW\020\001\022\025\n\021RISK_LEVE" +
+      "L_MEDIUM\020\002\022\023\n\017RISK_LEVEL_HIGH\020\003\022\030\n\024RISK_" +
+      "LEVEL_RISK_FREE\020\004B}\n\035com.tcn.cloud.api.a" +
+      "pi.commonsB\017ScorecardsProtoP\001\242\002\003ACX\252\002\013Ap" +
+      "i.Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GP" +
+      "BMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -499,6 +552,30 @@ public final class ScorecardsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_SmartQuestion_Answer_descriptor,
         new java.lang.String[] { "Answer", "Points", "FailType", "Result", });
+    internal_static_api_commons_SmartEvaluation_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_api_commons_SmartEvaluation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_SmartEvaluation_descriptor,
+        new java.lang.String[] { "SmartEvaluationId", "ScorecardId", "TranscriptSid", "AgentUserId", "Score", "ScoringVersion", "ScorecardVersion", "CompleteTime", "DeleteTime", "SmartEvaluationSections", });
+    internal_static_api_commons_SmartEvaluationSection_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_api_commons_SmartEvaluationSection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_SmartEvaluationSection_descriptor,
+        new java.lang.String[] { "SectionId", "Points", "PossiblePoints", "CreateTime", "DeleteTime", "SmartEvaluationQuestions", });
+    internal_static_api_commons_SmartEvaluationQuestion_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_api_commons_SmartEvaluationQuestion_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_SmartEvaluationQuestion_descriptor,
+        new java.lang.String[] { "SmartQuestionId", "Points", "PossiblePoints", "Answer", "CreateTime", "DeleteTime", });
+    internal_static_api_commons_SmartEvaluationQuestion_Answer_descriptor =
+      internal_static_api_commons_SmartEvaluationQuestion_descriptor.getNestedTypes().get(0);
+    internal_static_api_commons_SmartEvaluationQuestion_Answer_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_SmartEvaluationQuestion_Answer_descriptor,
+        new java.lang.String[] { "Answer", "Points", "FailType", "AnswerPoints", "Result", });
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
