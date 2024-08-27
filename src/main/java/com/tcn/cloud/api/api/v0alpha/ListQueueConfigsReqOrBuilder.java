@@ -14,7 +14,7 @@ public interface ListQueueConfigsReqOrBuilder extends
    *
    * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
    * @deprecated api.v0alpha.ListQueueConfigsReq.org_id is deprecated.
-   *     See api/v0alpha/org.proto;l=5570
+   *     See api/v0alpha/org.proto;l=5564
    * @return The orgId.
    */
   @java.lang.Deprecated java.lang.String getOrgId();
@@ -25,7 +25,7 @@ public interface ListQueueConfigsReqOrBuilder extends
    *
    * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
    * @deprecated api.v0alpha.ListQueueConfigsReq.org_id is deprecated.
-   *     See api/v0alpha/org.proto;l=5570
+   *     See api/v0alpha/org.proto;l=5564
    * @return The bytes for orgId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
