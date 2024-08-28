@@ -60,34 +60,4 @@ public interface PaginatedSearchResOrBuilder extends
    * @return The total.
    */
   long getTotal();
-
-  /**
-   * <pre>
-   * Whether or not there is another page of results
-   * </pre>
-   *
-   * <code>bool more_results = 3 [json_name = "moreResults"];</code>
-   * @return The moreResults.
-   */
-  boolean getMoreResults();
-
-  /**
-   * <pre>
-   * The last entry ID in the most recently grabbed page of results
-   * </pre>
-   *
-   * <code>string last_id = 4 [json_name = "lastId"];</code>
-   * @return The lastId.
-   */
-  java.lang.String getLastId();
-  /**
-   * <pre>
-   * The last entry ID in the most recently grabbed page of results
-   * </pre>
-   *
-   * <code>string last_id = 4 [json_name = "lastId"];</code>
-   * @return The bytes for lastId.
-   */
-  com.google.protobuf.ByteString
-      getLastIdBytes();
 }

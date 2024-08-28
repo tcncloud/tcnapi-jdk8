@@ -98,24 +98,4 @@ public interface SearchCollectionsPaginatedReqOrBuilder extends
    * @return The pageSize.
    */
   long getPageSize();
-
-  /**
-   * <pre>
-   * The last entry ID in the most recently returned page
-   * </pre>
-   *
-   * <code>string last_id = 7 [json_name = "lastId"];</code>
-   * @return The lastId.
-   */
-  java.lang.String getLastId();
-  /**
-   * <pre>
-   * The last entry ID in the most recently returned page
-   * </pre>
-   *
-   * <code>string last_id = 7 [json_name = "lastId"];</code>
-   * @return The bytes for lastId.
-   */
-  com.google.protobuf.ByteString
-      getLastIdBytes();
 }
