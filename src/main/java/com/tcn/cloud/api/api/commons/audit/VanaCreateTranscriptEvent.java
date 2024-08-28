@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private VanaCreateTranscriptEvent() {
+    channelType_ = 0;
   }
 
   @java.lang.Override
@@ -53,6 +54,35 @@ private static final long serialVersionUID = 0L;
     return transcriptSid_;
   }
 
+  public static final int AUDIO_TIME_FIELD_NUMBER = 2;
+  private int audioTime_ = 0;
+  /**
+   * <code>uint32 audio_time = 2 [json_name = "audioTime"];</code>
+   * @return The audioTime.
+   */
+  @java.lang.Override
+  public int getAudioTime() {
+    return audioTime_;
+  }
+
+  public static final int CHANNEL_TYPE_FIELD_NUMBER = 3;
+  private int channelType_ = 0;
+  /**
+   * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
+   * @return The enum numeric value on the wire for channelType.
+   */
+  @java.lang.Override public int getChannelTypeValue() {
+    return channelType_;
+  }
+  /**
+   * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
+   * @return The channelType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ChannelType getChannelType() {
+    com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channelType_);
+    return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -70,6 +100,12 @@ private static final long serialVersionUID = 0L;
     if (transcriptSid_ != 0L) {
       output.writeInt64(1, transcriptSid_);
     }
+    if (audioTime_ != 0) {
+      output.writeUInt32(2, audioTime_);
+    }
+    if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
+      output.writeEnum(3, channelType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -82,6 +118,14 @@ private static final long serialVersionUID = 0L;
     if (transcriptSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, transcriptSid_);
+    }
+    if (audioTime_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt32Size(2, audioTime_);
+    }
+    if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, channelType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -100,6 +144,9 @@ private static final long serialVersionUID = 0L;
 
     if (getTranscriptSid()
         != other.getTranscriptSid()) return false;
+    if (getAudioTime()
+        != other.getAudioTime()) return false;
+    if (channelType_ != other.channelType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -114,6 +161,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TRANSCRIPT_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getTranscriptSid());
+    hash = (37 * hash) + AUDIO_TIME_FIELD_NUMBER;
+    hash = (53 * hash) + getAudioTime();
+    hash = (37 * hash) + CHANNEL_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + channelType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -250,6 +301,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       transcriptSid_ = 0L;
+      audioTime_ = 0;
+      channelType_ = 0;
       return this;
     }
 
@@ -285,6 +338,12 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.transcriptSid_ = transcriptSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.audioTime_ = audioTime_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.channelType_ = channelType_;
       }
     }
 
@@ -335,6 +394,12 @@ private static final long serialVersionUID = 0L;
       if (other.getTranscriptSid() != 0L) {
         setTranscriptSid(other.getTranscriptSid());
       }
+      if (other.getAudioTime() != 0) {
+        setAudioTime(other.getAudioTime());
+      }
+      if (other.channelType_ != 0) {
+        setChannelTypeValue(other.getChannelTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -366,6 +431,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
+            case 16: {
+              audioTime_ = input.readUInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              channelType_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -411,6 +486,91 @@ private static final long serialVersionUID = 0L;
     public Builder clearTranscriptSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
       transcriptSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int audioTime_ ;
+    /**
+     * <code>uint32 audio_time = 2 [json_name = "audioTime"];</code>
+     * @return The audioTime.
+     */
+    @java.lang.Override
+    public int getAudioTime() {
+      return audioTime_;
+    }
+    /**
+     * <code>uint32 audio_time = 2 [json_name = "audioTime"];</code>
+     * @param value The audioTime to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAudioTime(int value) {
+
+      audioTime_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint32 audio_time = 2 [json_name = "audioTime"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAudioTime() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      audioTime_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int channelType_ = 0;
+    /**
+     * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
+     * @return The enum numeric value on the wire for channelType.
+     */
+    @java.lang.Override public int getChannelTypeValue() {
+      return channelType_;
+    }
+    /**
+     * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
+     * @param value The enum numeric value on the wire for channelType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setChannelTypeValue(int value) {
+      channelType_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
+     * @return The channelType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ChannelType getChannelType() {
+      com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channelType_);
+      return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
+     * @param value The channelType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setChannelType(com.tcn.cloud.api.api.commons.ChannelType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      channelType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearChannelType() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      channelType_ = 0;
       onChanged();
       return this;
     }
