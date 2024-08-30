@@ -88,15 +88,16 @@ public final class VanaEventsProto {
       "buf.DurationR\tendOffset\022#\n\roriginal_text" +
       "\030\003 \001(\tR\014originalText\022#\n\rproposed_text\030\004 " +
       "\001(\tR\014proposedText\022\020\n\003url\030\005 \001(\tR\003url\022\030\n\007c" +
-      "hannel\030\006 \001(\rR\007channel\"\236\001\n\031VanaCreateTran" +
+      "hannel\030\006 \001(\rR\007channel\"\273\001\n\031VanaCreateTran" +
       "scriptEvent\022%\n\016transcript_sid\030\001 \001(\003R\rtra" +
       "nscriptSid\022\035\n\naudio_time\030\002 \001(\rR\taudioTim" +
       "e\022;\n\014channel_type\030\003 \001(\0162\030.api.commons.Ch" +
-      "annelTypeR\013channelTypeB\234\001\n#com.tcn.cloud" +
-      ".api.api.commons.auditB\017VanaEventsProtoP" +
-      "\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Common" +
-      "s\\Audit\342\002\035Api\\Commons\\Audit\\GPBMetadata\352" +
-      "\002\023Api::Commons::Auditb\006proto3"
+      "annelTypeR\013channelType\022\033\n\ttalk_time\030\004 \001(" +
+      "\rR\010talkTimeB\234\001\n#com.tcn.cloud.api.api.co" +
+      "mmons.auditB\017VanaEventsProtoP\001\242\002\003ACA\252\002\021A" +
+      "pi.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035A" +
+      "pi\\Commons\\Audit\\GPBMetadata\352\002\023Api::Comm" +
+      "ons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -146,7 +147,7 @@ public final class VanaEventsProto {
     internal_static_api_commons_audit_VanaCreateTranscriptEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_VanaCreateTranscriptEvent_descriptor,
-        new java.lang.String[] { "TranscriptSid", "AudioTime", "ChannelType", });
+        new java.lang.String[] { "TranscriptSid", "AudioTime", "ChannelType", "TalkTime", });
     com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();

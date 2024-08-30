@@ -679,5 +679,20 @@ public interface ProductConfigOrBuilder extends
    */
   com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsOrBuilder();
 
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+   * @return Whether the workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts field is set.
+   */
+  boolean hasWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts();
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+   * @return The workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts.
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts();
+  /**
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+   */
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsOrBuilder();
+
   com.tcn.cloud.api.services.billing.entities.v1alpha4.ProductConfig.ConfigCase getConfigCase();
 }

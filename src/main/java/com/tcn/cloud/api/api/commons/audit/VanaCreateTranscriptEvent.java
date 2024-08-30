@@ -83,6 +83,17 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
   }
 
+  public static final int TALK_TIME_FIELD_NUMBER = 4;
+  private int talkTime_ = 0;
+  /**
+   * <code>uint32 talk_time = 4 [json_name = "talkTime"];</code>
+   * @return The talkTime.
+   */
+  @java.lang.Override
+  public int getTalkTime() {
+    return talkTime_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -106,6 +117,9 @@ private static final long serialVersionUID = 0L;
     if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       output.writeEnum(3, channelType_);
     }
+    if (talkTime_ != 0) {
+      output.writeUInt32(4, talkTime_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -127,6 +141,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, channelType_);
     }
+    if (talkTime_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt32Size(4, talkTime_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -147,6 +165,8 @@ private static final long serialVersionUID = 0L;
     if (getAudioTime()
         != other.getAudioTime()) return false;
     if (channelType_ != other.channelType_) return false;
+    if (getTalkTime()
+        != other.getTalkTime()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -165,6 +185,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getAudioTime();
     hash = (37 * hash) + CHANNEL_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + channelType_;
+    hash = (37 * hash) + TALK_TIME_FIELD_NUMBER;
+    hash = (53 * hash) + getTalkTime();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -303,6 +325,7 @@ private static final long serialVersionUID = 0L;
       transcriptSid_ = 0L;
       audioTime_ = 0;
       channelType_ = 0;
+      talkTime_ = 0;
       return this;
     }
 
@@ -344,6 +367,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.channelType_ = channelType_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.talkTime_ = talkTime_;
       }
     }
 
@@ -400,6 +426,9 @@ private static final long serialVersionUID = 0L;
       if (other.channelType_ != 0) {
         setChannelTypeValue(other.getChannelTypeValue());
       }
+      if (other.getTalkTime() != 0) {
+        setTalkTime(other.getTalkTime());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -441,6 +470,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 32: {
+              talkTime_ = input.readUInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -571,6 +605,38 @@ private static final long serialVersionUID = 0L;
     public Builder clearChannelType() {
       bitField0_ = (bitField0_ & ~0x00000004);
       channelType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int talkTime_ ;
+    /**
+     * <code>uint32 talk_time = 4 [json_name = "talkTime"];</code>
+     * @return The talkTime.
+     */
+    @java.lang.Override
+    public int getTalkTime() {
+      return talkTime_;
+    }
+    /**
+     * <code>uint32 talk_time = 4 [json_name = "talkTime"];</code>
+     * @param value The talkTime to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTalkTime(int value) {
+
+      talkTime_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint32 talk_time = 4 [json_name = "talkTime"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTalkTime() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      talkTime_ = 0;
       onChanged();
       return this;
     }

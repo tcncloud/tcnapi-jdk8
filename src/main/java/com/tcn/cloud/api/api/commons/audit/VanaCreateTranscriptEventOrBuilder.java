@@ -29,4 +29,10 @@ public interface VanaCreateTranscriptEventOrBuilder extends
    * @return The channelType.
    */
   com.tcn.cloud.api.api.commons.ChannelType getChannelType();
+
+  /**
+   * <code>uint32 talk_time = 4 [json_name = "talkTime"];</code>
+   * @return The talkTime.
+   */
+  int getTalkTime();
 }
