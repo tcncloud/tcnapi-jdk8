@@ -32,7 +32,7 @@ public final class ProductsProto {
       "ducts.proto\022\"services.billing.entities.v" +
       "1alpha4\0320services/billing/entities/v1alp" +
       "ha4/modules.proto\032-services/billing/enti" +
-      "ties/v1alpha4/omni.proto\"\2745\n\rProductConf" +
+      "ties/v1alpha4/omni.proto\"\3005\n\rProductConf" +
       "ig\022\217\001\n+communications_omni_chat_agent_me" +
       "ssage_unit\030\350\007 \001(\0132/.services.billing.ent" +
       "ities.v1alpha4.BasicConfigH\000R&communicat" +
@@ -192,25 +192,25 @@ public final class ProductsProto {
       "ance_compliance_rnd_query_cached\030\221N \001(\0132" +
       "/.services.billing.entities.v1alpha4.Bas" +
       "icConfigH\000R0dataManagementComplianceComp" +
-      "lianceRndQueryCached\022\316\001\nKworkfore_engage" +
-      "mgent_workfore_optimization_voice_analyt" +
-      "ics_call_transcripts\030\240\234\001 \001(\0132/.services." +
-      "billing.entities.v1alpha4.BasicConfigH\000R" +
-      "DworkforeEngagemgentWorkforeOptimization" +
-      "VoiceAnalyticsCallTranscripts\022\345\001\nWworkfo" +
-      "re_engagemgent_workfore_optimization_voi" +
-      "ce_analytics_accumulated_call_transcript" +
-      "s\030\241\234\001 \001(\0132/.services.billing.entities.v1" +
-      "alpha4.BasicConfigH\000ROworkforeEngagemgen" +
-      "tWorkforeOptimizationVoiceAnalyticsAccum" +
-      "ulatedCallTranscriptsB\010\n\006configB\360\001\n4com." +
-      "tcn.cloud.api.services.billing.entities." +
-      "v1alpha4B\rProductsProtoP\001\242\002\003SBE\252\002\"Servic" +
-      "es.Billing.Entities.V1alpha4\312\002\"Services\\" +
-      "Billing\\Entities\\V1alpha4\342\002.Services\\Bil" +
-      "ling\\Entities\\V1alpha4\\GPBMetadata\352\002%Ser" +
-      "vices::Billing::Entities::V1alpha4b\006prot" +
-      "o3"
+      "lianceRndQueryCached\022\320\001\nLworkforce_engag" +
+      "ement_workforce_optimization_voice_analy" +
+      "tics_call_transcripts\030\240\234\001 \001(\0132/.services" +
+      ".billing.entities.v1alpha4.BasicConfigH\000" +
+      "REworkforceEngagementWorkforceOptimizati" +
+      "onVoiceAnalyticsCallTranscripts\022\347\001\nXwork" +
+      "force_engagement_workforce_optimization_" +
+      "voice_analytics_accumulated_call_transcr" +
+      "ipts\030\241\234\001 \001(\0132/.services.billing.entities" +
+      ".v1alpha4.BasicConfigH\000RPworkforceEngage" +
+      "mentWorkforceOptimizationVoiceAnalyticsA" +
+      "ccumulatedCallTranscriptsB\010\n\006configB\360\001\n4" +
+      "com.tcn.cloud.api.services.billing.entit" +
+      "ies.v1alpha4B\rProductsProtoP\001\242\002\003SBE\252\002\"Se" +
+      "rvices.Billing.Entities.V1alpha4\312\002\"Servi" +
+      "ces\\Billing\\Entities\\V1alpha4\342\002.Services" +
+      "\\Billing\\Entities\\V1alpha4\\GPBMetadata\352\002" +
+      "%Services::Billing::Entities::V1alpha4b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -223,7 +223,7 @@ public final class ProductsProto {
     internal_static_services_billing_entities_v1alpha4_ProductConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_billing_entities_v1alpha4_ProductConfig_descriptor,
-        new java.lang.String[] { "CommunicationsOmniChatAgentMessageUnit", "CommunicationsOmniChatAgentAttachment", "CommunicationsOmniChatAgentAccumulatedAttachments", "CommunicationsOmniChatCustomerMessageUnit", "CommunicationsOmniChatCustomerAttachment", "CommunicationsOmniChatCustomerAccumulatedAttachments", "CommunicationsOmniChatManagerMessageUnit", "CommunicationsOmniChatManagerAttachment", "CommunicationsOmniChatManagerAccumulatedAttachments", "CommunicationsOmniChatSystemMessageUnit", "CommunicationsOmniChatSystemAttachment", "CommunicationsOmniChatSystemAccumulatedAttachments", "CommunicationsOmniEmailAgentMessageUnit", "CommunicationsOmniEmailAgentSize", "CommunicationsOmniEmailAgentAccumulatedSize", "CommunicationsOmniEmailCustomerMessageUnit", "CommunicationsOmniEmailCustomerSize", "CommunicationsOmniEmailCustomerAccumulatedSize", "CommunicationsOmniEmailManagerMessageUnit", "CommunicationsOmniEmailManagerSize", "CommunicationsOmniEmailManagerAccumulatedSize", "CommunicationsOmniEmailSystemMessageUnit", "CommunicationsOmniEmailSystemSize", "CommunicationsOmniEmailSystemAccumulatedSize", "CommunicationsOmniSmsAgentMessageUnit", "CommunicationsOmniSmsAgentAttachment", "CommunicationsOmniSmsAgentAccumulatedAttachments", "CommunicationsOmniSmsCustomerMessageUnit", "CommunicationsOmniSmsCustomerAttachment", "CommunicationsOmniSmsCustomerAccumulatedAttachments", "CommunicationsOmniSmsManagerMessageUnit", "CommunicationsOmniSmsManagerAttachment", "CommunicationsOmniSmsManagerAccumulatedAttachments", "CommunicationsOmniSmsSystemMessageUnit", "CommunicationsOmniSmsSystemAttachment", "CommunicationsOmniSmsSystemAccumulatedAttachments", "CommunicationsOmniAgentSeats", "CommunicationsOmniResourcesConnectedInboxPoll", "CommunicationsOmniResourcesConnectedInboxCreated", "DataManagementComplianceComplianceRndQuery", "DataManagementComplianceComplianceRndQueryCached", "WorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts", "WorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts", "Config", });
+        new java.lang.String[] { "CommunicationsOmniChatAgentMessageUnit", "CommunicationsOmniChatAgentAttachment", "CommunicationsOmniChatAgentAccumulatedAttachments", "CommunicationsOmniChatCustomerMessageUnit", "CommunicationsOmniChatCustomerAttachment", "CommunicationsOmniChatCustomerAccumulatedAttachments", "CommunicationsOmniChatManagerMessageUnit", "CommunicationsOmniChatManagerAttachment", "CommunicationsOmniChatManagerAccumulatedAttachments", "CommunicationsOmniChatSystemMessageUnit", "CommunicationsOmniChatSystemAttachment", "CommunicationsOmniChatSystemAccumulatedAttachments", "CommunicationsOmniEmailAgentMessageUnit", "CommunicationsOmniEmailAgentSize", "CommunicationsOmniEmailAgentAccumulatedSize", "CommunicationsOmniEmailCustomerMessageUnit", "CommunicationsOmniEmailCustomerSize", "CommunicationsOmniEmailCustomerAccumulatedSize", "CommunicationsOmniEmailManagerMessageUnit", "CommunicationsOmniEmailManagerSize", "CommunicationsOmniEmailManagerAccumulatedSize", "CommunicationsOmniEmailSystemMessageUnit", "CommunicationsOmniEmailSystemSize", "CommunicationsOmniEmailSystemAccumulatedSize", "CommunicationsOmniSmsAgentMessageUnit", "CommunicationsOmniSmsAgentAttachment", "CommunicationsOmniSmsAgentAccumulatedAttachments", "CommunicationsOmniSmsCustomerMessageUnit", "CommunicationsOmniSmsCustomerAttachment", "CommunicationsOmniSmsCustomerAccumulatedAttachments", "CommunicationsOmniSmsManagerMessageUnit", "CommunicationsOmniSmsManagerAttachment", "CommunicationsOmniSmsManagerAccumulatedAttachments", "CommunicationsOmniSmsSystemMessageUnit", "CommunicationsOmniSmsSystemAttachment", "CommunicationsOmniSmsSystemAccumulatedAttachments", "CommunicationsOmniAgentSeats", "CommunicationsOmniResourcesConnectedInboxPoll", "CommunicationsOmniResourcesConnectedInboxCreated", "DataManagementComplianceComplianceRndQuery", "DataManagementComplianceComplianceRndQueryCached", "WorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts", "WorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts", "Config", });
     com.tcn.cloud.api.services.billing.entities.v1alpha4.ModulesProto.getDescriptor();
     com.tcn.cloud.api.services.billing.entities.v1alpha4.OmniProto.getDescriptor();
   }

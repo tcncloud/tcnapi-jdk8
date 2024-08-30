@@ -657,42 +657,42 @@ public interface ProductConfigOrBuilder extends
    * vanalytics (20000 - 21000)
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts"];</code>
-   * @return Whether the workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts field is set.
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts"];</code>
+   * @return Whether the workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts field is set.
    */
-  boolean hasWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts();
+  boolean hasWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts();
   /**
    * <pre>
    * vanalytics (20000 - 21000)
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts"];</code>
-   * @return The workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts.
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts"];</code>
+   * @return The workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts();
   /**
    * <pre>
    * vanalytics (20000 - 21000)
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts"];</code>
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsOrBuilder();
 
   /**
-   * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
-   * @return Whether the workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts field is set.
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+   * @return Whether the workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts field is set.
    */
-  boolean hasWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts();
+  boolean hasWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts();
   /**
-   * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
-   * @return The workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts.
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+   * @return The workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts.
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts();
   /**
-   * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
    */
-  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsOrBuilder();
+  com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsOrBuilder();
 
   com.tcn.cloud.api.services.billing.entities.v1alpha4.ProductConfig.ConfigCase getConfigCase();
 }

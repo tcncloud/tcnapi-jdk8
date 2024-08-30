@@ -85,8 +85,8 @@ private static final long serialVersionUID = 0L;
     COMMUNICATIONS_OMNI_RESOURCES_CONNECTED_INBOX_CREATED(1401),
     DATA_MANAGEMENT_COMPLIANCE_COMPLIANCE_RND_QUERY(10000),
     DATA_MANAGEMENT_COMPLIANCE_COMPLIANCE_RND_QUERY_CACHED(10001),
-    WORKFORE_ENGAGEMGENT_WORKFORE_OPTIMIZATION_VOICE_ANALYTICS_CALL_TRANSCRIPTS(20000),
-    WORKFORE_ENGAGEMGENT_WORKFORE_OPTIMIZATION_VOICE_ANALYTICS_ACCUMULATED_CALL_TRANSCRIPTS(20001),
+    WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_CALL_TRANSCRIPTS(20000),
+    WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_ACCUMULATED_CALL_TRANSCRIPTS(20001),
     CONFIG_NOT_SET(0);
     private final int value;
     private ConfigCase(int value) {
@@ -145,8 +145,8 @@ private static final long serialVersionUID = 0L;
         case 1401: return COMMUNICATIONS_OMNI_RESOURCES_CONNECTED_INBOX_CREATED;
         case 10000: return DATA_MANAGEMENT_COMPLIANCE_COMPLIANCE_RND_QUERY;
         case 10001: return DATA_MANAGEMENT_COMPLIANCE_COMPLIANCE_RND_QUERY_CACHED;
-        case 20000: return WORKFORE_ENGAGEMGENT_WORKFORE_OPTIMIZATION_VOICE_ANALYTICS_CALL_TRANSCRIPTS;
-        case 20001: return WORKFORE_ENGAGEMGENT_WORKFORE_OPTIMIZATION_VOICE_ANALYTICS_ACCUMULATED_CALL_TRANSCRIPTS;
+        case 20000: return WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_CALL_TRANSCRIPTS;
+        case 20001: return WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_ACCUMULATED_CALL_TRANSCRIPTS;
         case 0: return CONFIG_NOT_SET;
         default: return null;
       }
@@ -1463,17 +1463,17 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
   }
 
-  public static final int WORKFORE_ENGAGEMGENT_WORKFORE_OPTIMIZATION_VOICE_ANALYTICS_CALL_TRANSCRIPTS_FIELD_NUMBER = 20000;
+  public static final int WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_CALL_TRANSCRIPTS_FIELD_NUMBER = 20000;
   /**
    * <pre>
    * vanalytics (20000 - 21000)
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts"];</code>
-   * @return Whether the workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts field is set.
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts"];</code>
+   * @return Whether the workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts field is set.
    */
   @java.lang.Override
-  public boolean hasWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts() {
+  public boolean hasWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts() {
     return configCase_ == 20000;
   }
   /**
@@ -1481,11 +1481,11 @@ private static final long serialVersionUID = 0L;
    * vanalytics (20000 - 21000)
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts"];</code>
-   * @return The workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts.
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts"];</code>
+   * @return The workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts() {
     if (configCase_ == 20000) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
     }
@@ -1496,41 +1496,41 @@ private static final long serialVersionUID = 0L;
    * vanalytics (20000 - 21000)
    * </pre>
    *
-   * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts"];</code>
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsOrBuilder() {
     if (configCase_ == 20000) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
   }
 
-  public static final int WORKFORE_ENGAGEMGENT_WORKFORE_OPTIMIZATION_VOICE_ANALYTICS_ACCUMULATED_CALL_TRANSCRIPTS_FIELD_NUMBER = 20001;
+  public static final int WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_ACCUMULATED_CALL_TRANSCRIPTS_FIELD_NUMBER = 20001;
   /**
-   * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
-   * @return Whether the workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts field is set.
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+   * @return Whether the workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts field is set.
    */
   @java.lang.Override
-  public boolean hasWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts() {
+  public boolean hasWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts() {
     return configCase_ == 20001;
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
-   * @return The workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts.
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+   * @return The workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts() {
     if (configCase_ == 20001) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
     }
     return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
   }
   /**
-   * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+   * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsOrBuilder() {
+  public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsOrBuilder() {
     if (configCase_ == 20001) {
        return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
     }
@@ -2043,12 +2043,12 @@ private static final long serialVersionUID = 0L;
             .equals(other.getDataManagementComplianceComplianceRndQueryCached())) return false;
         break;
       case 20000:
-        if (!getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts()
-            .equals(other.getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts())) return false;
+        if (!getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts()
+            .equals(other.getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts())) return false;
         break;
       case 20001:
-        if (!getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts()
-            .equals(other.getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts())) return false;
+        if (!getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts()
+            .equals(other.getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts())) return false;
         break;
       case 0:
       default:
@@ -2230,12 +2230,12 @@ private static final long serialVersionUID = 0L;
         hash = (53 * hash) + getDataManagementComplianceComplianceRndQueryCached().hashCode();
         break;
       case 20000:
-        hash = (37 * hash) + WORKFORE_ENGAGEMGENT_WORKFORE_OPTIMIZATION_VOICE_ANALYTICS_CALL_TRANSCRIPTS_FIELD_NUMBER;
-        hash = (53 * hash) + getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts().hashCode();
+        hash = (37 * hash) + WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_CALL_TRANSCRIPTS_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts().hashCode();
         break;
       case 20001:
-        hash = (37 * hash) + WORKFORE_ENGAGEMGENT_WORKFORE_OPTIMIZATION_VOICE_ANALYTICS_ACCUMULATED_CALL_TRANSCRIPTS_FIELD_NUMBER;
-        hash = (53 * hash) + getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts().hashCode();
+        hash = (37 * hash) + WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_ACCUMULATED_CALL_TRANSCRIPTS_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts().hashCode();
         break;
       case 0:
       default:
@@ -2495,11 +2495,11 @@ private static final long serialVersionUID = 0L;
       if (dataManagementComplianceComplianceRndQueryCachedBuilder_ != null) {
         dataManagementComplianceComplianceRndQueryCachedBuilder_.clear();
       }
-      if (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_ != null) {
-        workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_.clear();
+      if (workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_ != null) {
+        workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_.clear();
       }
-      if (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ != null) {
-        workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.clear();
+      if (workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ != null) {
+        workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.clear();
       }
       configCase_ = 0;
       config_ = null;
@@ -2712,12 +2712,12 @@ private static final long serialVersionUID = 0L;
         result.config_ = dataManagementComplianceComplianceRndQueryCachedBuilder_.build();
       }
       if (configCase_ == 20000 &&
-          workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_ != null) {
-        result.config_ = workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_.build();
+          workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_ != null) {
+        result.config_ = workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_.build();
       }
       if (configCase_ == 20001 &&
-          workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ != null) {
-        result.config_ = workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.build();
+          workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ != null) {
+        result.config_ = workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.build();
       }
     }
 
@@ -2930,12 +2930,12 @@ private static final long serialVersionUID = 0L;
           mergeDataManagementComplianceComplianceRndQueryCached(other.getDataManagementComplianceComplianceRndQueryCached());
           break;
         }
-        case WORKFORE_ENGAGEMGENT_WORKFORE_OPTIMIZATION_VOICE_ANALYTICS_CALL_TRANSCRIPTS: {
-          mergeWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts(other.getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts());
+        case WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_CALL_TRANSCRIPTS: {
+          mergeWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts(other.getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts());
           break;
         }
-        case WORKFORE_ENGAGEMGENT_WORKFORE_OPTIMIZATION_VOICE_ANALYTICS_ACCUMULATED_CALL_TRANSCRIPTS: {
-          mergeWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts(other.getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts());
+        case WORKFORCE_ENGAGEMENT_WORKFORCE_OPTIMIZATION_VOICE_ANALYTICS_ACCUMULATED_CALL_TRANSCRIPTS: {
+          mergeWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts(other.getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts());
           break;
         }
         case CONFIG_NOT_SET: {
@@ -3257,14 +3257,14 @@ private static final long serialVersionUID = 0L;
             } // case 80010
             case 160002: {
               input.readMessage(
-                  getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsFieldBuilder().getBuilder(),
+                  getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 20000;
               break;
             } // case 160002
             case 160010: {
               input.readMessage(
-                  getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsFieldBuilder().getBuilder(),
+                  getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsFieldBuilder().getBuilder(),
                   extensionRegistry);
               configCase_ = 20001;
               break;
@@ -9215,17 +9215,17 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder> workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder> workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_;
     /**
      * <pre>
      * vanalytics (20000 - 21000)
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts"];</code>
-     * @return Whether the workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts field is set.
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts"];</code>
+     * @return Whether the workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts field is set.
      */
     @java.lang.Override
-    public boolean hasWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts() {
+    public boolean hasWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts() {
       return configCase_ == 20000;
     }
     /**
@@ -9233,19 +9233,19 @@ private static final long serialVersionUID = 0L;
      * vanalytics (20000 - 21000)
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts"];</code>
-     * @return The workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts.
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts"];</code>
+     * @return The workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts() {
-      if (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_ == null) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts() {
+      if (workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_ == null) {
         if (configCase_ == 20000) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
       } else {
         if (configCase_ == 20000) {
-          return workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_.getMessage();
+          return workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
       }
@@ -9255,17 +9255,17 @@ private static final long serialVersionUID = 0L;
      * vanalytics (20000 - 21000)
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts"];</code>
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts"];</code>
      */
-    public Builder setWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts(com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig value) {
-      if (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_ == null) {
+    public Builder setWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts(com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig value) {
+      if (workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_.setMessage(value);
+        workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_.setMessage(value);
       }
       configCase_ = 20000;
       return this;
@@ -9275,15 +9275,15 @@ private static final long serialVersionUID = 0L;
      * vanalytics (20000 - 21000)
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts"];</code>
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts"];</code>
      */
-    public Builder setWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts(
+    public Builder setWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts(
         com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder builderForValue) {
-      if (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_ == null) {
+      if (workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_.setMessage(builderForValue.build());
+        workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_.setMessage(builderForValue.build());
       }
       configCase_ = 20000;
       return this;
@@ -9293,10 +9293,10 @@ private static final long serialVersionUID = 0L;
      * vanalytics (20000 - 21000)
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts"];</code>
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts"];</code>
      */
-    public Builder mergeWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts(com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig value) {
-      if (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_ == null) {
+    public Builder mergeWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts(com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig value) {
+      if (workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_ == null) {
         if (configCase_ == 20000 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_)
@@ -9307,9 +9307,9 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 20000) {
-          workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_.mergeFrom(value);
+          workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_.mergeFrom(value);
         } else {
-          workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_.setMessage(value);
+          workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_.setMessage(value);
         }
       }
       configCase_ = 20000;
@@ -9320,10 +9320,10 @@ private static final long serialVersionUID = 0L;
      * vanalytics (20000 - 21000)
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts"];</code>
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts"];</code>
      */
-    public Builder clearWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts() {
-      if (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_ == null) {
+    public Builder clearWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts() {
+      if (workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_ == null) {
         if (configCase_ == 20000) {
           configCase_ = 0;
           config_ = null;
@@ -9334,7 +9334,7 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_.clear();
+        workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_.clear();
       }
       return this;
     }
@@ -9343,22 +9343,22 @@ private static final long serialVersionUID = 0L;
      * vanalytics (20000 - 21000)
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts"];</code>
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder() {
-      return getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder() {
+      return getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * vanalytics (20000 - 21000)
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts"];</code>
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsOrBuilder() {
-      if ((configCase_ == 20000) && (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_ != null)) {
-        return workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsOrBuilder() {
+      if ((configCase_ == 20000) && (workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_ != null)) {
+        return workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 20000) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
@@ -9371,16 +9371,16 @@ private static final long serialVersionUID = 0L;
      * vanalytics (20000 - 21000)
      * </pre>
      *
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscripts"];</code>
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_call_transcripts = 20000 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscripts"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder> 
-        getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsFieldBuilder() {
-      if (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_ == null) {
+        getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsFieldBuilder() {
+      if (workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_ == null) {
         if (!(configCase_ == 20000)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
         }
-        workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_,
                 getParentForChildren(),
@@ -9389,72 +9389,72 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 20000;
       onChanged();
-      return workforeEngagemgentWorkforeOptimizationVoiceAnalyticsCallTranscriptsBuilder_;
+      return workforceEngagementWorkforceOptimizationVoiceAnalyticsCallTranscriptsBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder> workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_;
+        com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder> workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_;
     /**
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
-     * @return Whether the workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts field is set.
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+     * @return Whether the workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts field is set.
      */
     @java.lang.Override
-    public boolean hasWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts() {
+    public boolean hasWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts() {
       return configCase_ == 20001;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
-     * @return The workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts.
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+     * @return The workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts() {
-      if (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ == null) {
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts() {
+      if (workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ == null) {
         if (configCase_ == 20001) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
       } else {
         if (configCase_ == 20001) {
-          return workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.getMessage();
+          return workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.getMessage();
         }
         return com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
      */
-    public Builder setWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts(com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig value) {
-      if (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ == null) {
+    public Builder setWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts(com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig value) {
+      if (workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         config_ = value;
         onChanged();
       } else {
-        workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.setMessage(value);
+        workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.setMessage(value);
       }
       configCase_ = 20001;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
      */
-    public Builder setWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts(
+    public Builder setWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts(
         com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder builderForValue) {
-      if (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ == null) {
+      if (workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ == null) {
         config_ = builderForValue.build();
         onChanged();
       } else {
-        workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.setMessage(builderForValue.build());
+        workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.setMessage(builderForValue.build());
       }
       configCase_ = 20001;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
      */
-    public Builder mergeWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts(com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig value) {
-      if (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ == null) {
+    public Builder mergeWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts(com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig value) {
+      if (workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ == null) {
         if (configCase_ == 20001 &&
             config_ != com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance()) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.newBuilder((com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_)
@@ -9465,19 +9465,19 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (configCase_ == 20001) {
-          workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.mergeFrom(value);
+          workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.mergeFrom(value);
         } else {
-          workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.setMessage(value);
+          workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.setMessage(value);
         }
       }
       configCase_ = 20001;
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
      */
-    public Builder clearWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts() {
-      if (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ == null) {
+    public Builder clearWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts() {
+      if (workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ == null) {
         if (configCase_ == 20001) {
           configCase_ = 0;
           config_ = null;
@@ -9488,23 +9488,23 @@ private static final long serialVersionUID = 0L;
           configCase_ = 0;
           config_ = null;
         }
-        workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.clear();
+        workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
      */
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder() {
-      return getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsFieldBuilder().getBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder() {
+      return getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsOrBuilder() {
-      if ((configCase_ == 20001) && (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ != null)) {
-        return workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.getMessageOrBuilder();
+    public com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsOrBuilder() {
+      if ((configCase_ == 20001) && (workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ != null)) {
+        return workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_.getMessageOrBuilder();
       } else {
         if (configCase_ == 20001) {
           return (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_;
@@ -9513,16 +9513,16 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.services.billing.entities.v1alpha4.BasicConfig workfore_engagemgent_workfore_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
+     * <code>.services.billing.entities.v1alpha4.BasicConfig workforce_engagement_workforce_optimization_voice_analytics_accumulated_call_transcripts = 20001 [json_name = "workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscripts"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder> 
-        getWorkforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsFieldBuilder() {
-      if (workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ == null) {
+        getWorkforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsFieldBuilder() {
+      if (workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ == null) {
         if (!(configCase_ == 20001)) {
           config_ = com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.getDefaultInstance();
         }
-        workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig.Builder, com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfigOrBuilder>(
                 (com.tcn.cloud.api.services.billing.entities.v1alpha4.BasicConfig) config_,
                 getParentForChildren(),
@@ -9531,7 +9531,7 @@ private static final long serialVersionUID = 0L;
       }
       configCase_ = 20001;
       onChanged();
-      return workforeEngagemgentWorkforeOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_;
+      return workforceEngagementWorkforceOptimizationVoiceAnalyticsAccumulatedCallTranscriptsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
