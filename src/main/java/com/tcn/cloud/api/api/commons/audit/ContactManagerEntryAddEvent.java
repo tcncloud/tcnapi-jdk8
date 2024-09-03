@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons.audit;
 
 /**
  * <pre>
- *Same payload for CreateContactEntry(on upload) and AddContactEntry(from FE)
+ *payload for CreateContactEntry(upload) and AddContactEntry
  * </pre>
  *
  * Protobuf type {@code api.commons.audit.ContactManagerEntryAddEvent}
@@ -244,7 +244,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *Same payload for CreateContactEntry(on upload) and AddContactEntry(from FE)
+   *payload for CreateContactEntry(upload) and AddContactEntry
    * </pre>
    *
    * Protobuf type {@code api.commons.audit.ContactManagerEntryAddEvent}

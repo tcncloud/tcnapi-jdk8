@@ -953,7 +953,7 @@ public enum EventType
   /**
    * <pre>
    *ContactManager Events
-   *Same Event for CreateContactEntry(on upload) and AddContactEntry(from FE)
+   *CreateContactEntry(upload) and AddContactEntry
    * </pre>
    *
    * <code>EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT = 1200;</code>
@@ -1940,7 +1940,7 @@ public enum EventType
   /**
    * <pre>
    *ContactManager Events
-   *Same Event for CreateContactEntry(on upload) and AddContactEntry(from FE)
+   *CreateContactEntry(upload) and AddContactEntry
    * </pre>
    *
    * <code>EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT = 1200;</code>
