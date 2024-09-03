@@ -46,4 +46,46 @@ public interface ContactManagerListUploadEventOrBuilder extends
    * @return The numberOfFailedContacts.
    */
   long getNumberOfFailedContacts();
+
+  /**
+   * <pre>
+   * Number of new contacts in the list
+   * </pre>
+   *
+   * <code>int64 NumberOfNewContacts = 5 [json_name = "NumberOfNewContacts"];</code>
+   * @return The numberOfNewContacts.
+   */
+  long getNumberOfNewContacts();
+
+  /**
+   * <pre>
+   *Number of duplicate contacts in the list
+   * </pre>
+   *
+   * <code>int64 NumberOfDuplicateContacts = 6 [json_name = "NumberOfDuplicateContacts"];</code>
+   * @return The numberOfDuplicateContacts.
+   */
+  long getNumberOfDuplicateContacts();
+
+  /**
+   * <code>.api.commons.ClassifierEntityType DeDupFieldType = 7 [json_name = "DeDupFieldType"];</code>
+   * @return The enum numeric value on the wire for deDupFieldType.
+   */
+  int getDeDupFieldTypeValue();
+  /**
+   * <code>.api.commons.ClassifierEntityType DeDupFieldType = 7 [json_name = "DeDupFieldType"];</code>
+   * @return The deDupFieldType.
+   */
+  com.tcn.cloud.api.api.commons.ClassifierEntityType getDeDupFieldType();
+
+  /**
+   * <code>.api.commons.DeDuplicationMergeStrategy DeDupMergeStrategy = 8 [json_name = "DeDupMergeStrategy"];</code>
+   * @return The enum numeric value on the wire for deDupMergeStrategy.
+   */
+  int getDeDupMergeStrategyValue();
+  /**
+   * <code>.api.commons.DeDuplicationMergeStrategy DeDupMergeStrategy = 8 [json_name = "DeDupMergeStrategy"];</code>
+   * @return The deDupMergeStrategy.
+   */
+  com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy getDeDupMergeStrategy();
 }

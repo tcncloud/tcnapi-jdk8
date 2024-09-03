@@ -57,10 +57,12 @@ public final class ContactmanagerProto {
       " \001(\0132\032.google.protobuf.TimestampR\013dateCr" +
       "eated:\002\030\001\"F\n\026ContactManagerEntryVal\022\022\n\004t" +
       "ype\030\001 \001(\tR\004type\022\024\n\005value\030\002 \001(\tR\005value:\002\030" +
-      "\001B\201\001\n\035com.tcn.cloud.api.api.commonsB\023Con" +
-      "tactmanagerProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002" +
-      "\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata\352\002" +
-      "\014Api::Commonsb\006proto3"
+      "\001*O\n\032DeDuplicationMergeStrategy\022\026\n\022KEEP_" +
+      "EXISTING_LIST\020\000\022\031\n\025REPLACE_EXISTING_LIST" +
+      "\020\001B\201\001\n\035com.tcn.cloud.api.api.commonsB\023Co" +
+      "ntactmanagerProtoP\001\242\002\003ACX\252\002\013Api.Commons\312" +
+      "\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata\352" +
+      "\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

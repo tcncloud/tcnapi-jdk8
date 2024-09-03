@@ -20,6 +20,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ContactManagerListUploadEvent() {
+    deDupFieldType_ = 0;
+    deDupMergeStrategy_ = 0;
   }
 
   @java.lang.Override
@@ -102,6 +104,72 @@ private static final long serialVersionUID = 0L;
     return numberOfFailedContacts_;
   }
 
+  public static final int NUMBEROFNEWCONTACTS_FIELD_NUMBER = 5;
+  private long numberOfNewContacts_ = 0L;
+  /**
+   * <pre>
+   * Number of new contacts in the list
+   * </pre>
+   *
+   * <code>int64 NumberOfNewContacts = 5 [json_name = "NumberOfNewContacts"];</code>
+   * @return The numberOfNewContacts.
+   */
+  @java.lang.Override
+  public long getNumberOfNewContacts() {
+    return numberOfNewContacts_;
+  }
+
+  public static final int NUMBEROFDUPLICATECONTACTS_FIELD_NUMBER = 6;
+  private long numberOfDuplicateContacts_ = 0L;
+  /**
+   * <pre>
+   *Number of duplicate contacts in the list
+   * </pre>
+   *
+   * <code>int64 NumberOfDuplicateContacts = 6 [json_name = "NumberOfDuplicateContacts"];</code>
+   * @return The numberOfDuplicateContacts.
+   */
+  @java.lang.Override
+  public long getNumberOfDuplicateContacts() {
+    return numberOfDuplicateContacts_;
+  }
+
+  public static final int DEDUPFIELDTYPE_FIELD_NUMBER = 7;
+  private int deDupFieldType_ = 0;
+  /**
+   * <code>.api.commons.ClassifierEntityType DeDupFieldType = 7 [json_name = "DeDupFieldType"];</code>
+   * @return The enum numeric value on the wire for deDupFieldType.
+   */
+  @java.lang.Override public int getDeDupFieldTypeValue() {
+    return deDupFieldType_;
+  }
+  /**
+   * <code>.api.commons.ClassifierEntityType DeDupFieldType = 7 [json_name = "DeDupFieldType"];</code>
+   * @return The deDupFieldType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ClassifierEntityType getDeDupFieldType() {
+    com.tcn.cloud.api.api.commons.ClassifierEntityType result = com.tcn.cloud.api.api.commons.ClassifierEntityType.forNumber(deDupFieldType_);
+    return result == null ? com.tcn.cloud.api.api.commons.ClassifierEntityType.UNRECOGNIZED : result;
+  }
+
+  public static final int DEDUPMERGESTRATEGY_FIELD_NUMBER = 8;
+  private int deDupMergeStrategy_ = 0;
+  /**
+   * <code>.api.commons.DeDuplicationMergeStrategy DeDupMergeStrategy = 8 [json_name = "DeDupMergeStrategy"];</code>
+   * @return The enum numeric value on the wire for deDupMergeStrategy.
+   */
+  @java.lang.Override public int getDeDupMergeStrategyValue() {
+    return deDupMergeStrategy_;
+  }
+  /**
+   * <code>.api.commons.DeDuplicationMergeStrategy DeDupMergeStrategy = 8 [json_name = "DeDupMergeStrategy"];</code>
+   * @return The deDupMergeStrategy.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy getDeDupMergeStrategy() {
+    com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy result = com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy.forNumber(deDupMergeStrategy_);
+    return result == null ? com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -128,6 +196,18 @@ private static final long serialVersionUID = 0L;
     if (numberOfFailedContacts_ != 0L) {
       output.writeInt64(4, numberOfFailedContacts_);
     }
+    if (numberOfNewContacts_ != 0L) {
+      output.writeInt64(5, numberOfNewContacts_);
+    }
+    if (numberOfDuplicateContacts_ != 0L) {
+      output.writeInt64(6, numberOfDuplicateContacts_);
+    }
+    if (deDupFieldType_ != com.tcn.cloud.api.api.commons.ClassifierEntityType.CET_UNKNOWN.getNumber()) {
+      output.writeEnum(7, deDupFieldType_);
+    }
+    if (deDupMergeStrategy_ != com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy.KEEP_EXISTING_LIST.getNumber()) {
+      output.writeEnum(8, deDupMergeStrategy_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -153,6 +233,22 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, numberOfFailedContacts_);
     }
+    if (numberOfNewContacts_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(5, numberOfNewContacts_);
+    }
+    if (numberOfDuplicateContacts_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(6, numberOfDuplicateContacts_);
+    }
+    if (deDupFieldType_ != com.tcn.cloud.api.api.commons.ClassifierEntityType.CET_UNKNOWN.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(7, deDupFieldType_);
+    }
+    if (deDupMergeStrategy_ != com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy.KEEP_EXISTING_LIST.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(8, deDupMergeStrategy_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -176,6 +272,12 @@ private static final long serialVersionUID = 0L;
         != other.getNumberOfSuccessfulContactsUploaded()) return false;
     if (getNumberOfFailedContacts()
         != other.getNumberOfFailedContacts()) return false;
+    if (getNumberOfNewContacts()
+        != other.getNumberOfNewContacts()) return false;
+    if (getNumberOfDuplicateContacts()
+        != other.getNumberOfDuplicateContacts()) return false;
+    if (deDupFieldType_ != other.deDupFieldType_) return false;
+    if (deDupMergeStrategy_ != other.deDupMergeStrategy_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -199,6 +301,16 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + NUMBEROFFAILEDCONTACTS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getNumberOfFailedContacts());
+    hash = (37 * hash) + NUMBEROFNEWCONTACTS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getNumberOfNewContacts());
+    hash = (37 * hash) + NUMBEROFDUPLICATECONTACTS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getNumberOfDuplicateContacts());
+    hash = (37 * hash) + DEDUPFIELDTYPE_FIELD_NUMBER;
+    hash = (53 * hash) + deDupFieldType_;
+    hash = (37 * hash) + DEDUPMERGESTRATEGY_FIELD_NUMBER;
+    hash = (53 * hash) + deDupMergeStrategy_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -338,6 +450,10 @@ private static final long serialVersionUID = 0L;
       numberOfContactsUploaded_ = 0L;
       numberOfSuccessfulContactsUploaded_ = 0L;
       numberOfFailedContacts_ = 0L;
+      numberOfNewContacts_ = 0L;
+      numberOfDuplicateContacts_ = 0L;
+      deDupFieldType_ = 0;
+      deDupMergeStrategy_ = 0;
       return this;
     }
 
@@ -382,6 +498,18 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.numberOfFailedContacts_ = numberOfFailedContacts_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.numberOfNewContacts_ = numberOfNewContacts_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.numberOfDuplicateContacts_ = numberOfDuplicateContacts_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.deDupFieldType_ = deDupFieldType_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.deDupMergeStrategy_ = deDupMergeStrategy_;
       }
     }
 
@@ -441,6 +569,18 @@ private static final long serialVersionUID = 0L;
       if (other.getNumberOfFailedContacts() != 0L) {
         setNumberOfFailedContacts(other.getNumberOfFailedContacts());
       }
+      if (other.getNumberOfNewContacts() != 0L) {
+        setNumberOfNewContacts(other.getNumberOfNewContacts());
+      }
+      if (other.getNumberOfDuplicateContacts() != 0L) {
+        setNumberOfDuplicateContacts(other.getNumberOfDuplicateContacts());
+      }
+      if (other.deDupFieldType_ != 0) {
+        setDeDupFieldTypeValue(other.getDeDupFieldTypeValue());
+      }
+      if (other.deDupMergeStrategy_ != 0) {
+        setDeDupMergeStrategyValue(other.getDeDupMergeStrategyValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -487,6 +627,26 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 40: {
+              numberOfNewContacts_ = input.readInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              numberOfDuplicateContacts_ = input.readInt64();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              deDupFieldType_ = input.readEnum();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              deDupMergeStrategy_ = input.readEnum();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -676,6 +836,200 @@ private static final long serialVersionUID = 0L;
     public Builder clearNumberOfFailedContacts() {
       bitField0_ = (bitField0_ & ~0x00000008);
       numberOfFailedContacts_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long numberOfNewContacts_ ;
+    /**
+     * <pre>
+     * Number of new contacts in the list
+     * </pre>
+     *
+     * <code>int64 NumberOfNewContacts = 5 [json_name = "NumberOfNewContacts"];</code>
+     * @return The numberOfNewContacts.
+     */
+    @java.lang.Override
+    public long getNumberOfNewContacts() {
+      return numberOfNewContacts_;
+    }
+    /**
+     * <pre>
+     * Number of new contacts in the list
+     * </pre>
+     *
+     * <code>int64 NumberOfNewContacts = 5 [json_name = "NumberOfNewContacts"];</code>
+     * @param value The numberOfNewContacts to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNumberOfNewContacts(long value) {
+
+      numberOfNewContacts_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Number of new contacts in the list
+     * </pre>
+     *
+     * <code>int64 NumberOfNewContacts = 5 [json_name = "NumberOfNewContacts"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNumberOfNewContacts() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      numberOfNewContacts_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long numberOfDuplicateContacts_ ;
+    /**
+     * <pre>
+     *Number of duplicate contacts in the list
+     * </pre>
+     *
+     * <code>int64 NumberOfDuplicateContacts = 6 [json_name = "NumberOfDuplicateContacts"];</code>
+     * @return The numberOfDuplicateContacts.
+     */
+    @java.lang.Override
+    public long getNumberOfDuplicateContacts() {
+      return numberOfDuplicateContacts_;
+    }
+    /**
+     * <pre>
+     *Number of duplicate contacts in the list
+     * </pre>
+     *
+     * <code>int64 NumberOfDuplicateContacts = 6 [json_name = "NumberOfDuplicateContacts"];</code>
+     * @param value The numberOfDuplicateContacts to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNumberOfDuplicateContacts(long value) {
+
+      numberOfDuplicateContacts_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *Number of duplicate contacts in the list
+     * </pre>
+     *
+     * <code>int64 NumberOfDuplicateContacts = 6 [json_name = "NumberOfDuplicateContacts"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearNumberOfDuplicateContacts() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      numberOfDuplicateContacts_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int deDupFieldType_ = 0;
+    /**
+     * <code>.api.commons.ClassifierEntityType DeDupFieldType = 7 [json_name = "DeDupFieldType"];</code>
+     * @return The enum numeric value on the wire for deDupFieldType.
+     */
+    @java.lang.Override public int getDeDupFieldTypeValue() {
+      return deDupFieldType_;
+    }
+    /**
+     * <code>.api.commons.ClassifierEntityType DeDupFieldType = 7 [json_name = "DeDupFieldType"];</code>
+     * @param value The enum numeric value on the wire for deDupFieldType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeDupFieldTypeValue(int value) {
+      deDupFieldType_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ClassifierEntityType DeDupFieldType = 7 [json_name = "DeDupFieldType"];</code>
+     * @return The deDupFieldType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ClassifierEntityType getDeDupFieldType() {
+      com.tcn.cloud.api.api.commons.ClassifierEntityType result = com.tcn.cloud.api.api.commons.ClassifierEntityType.forNumber(deDupFieldType_);
+      return result == null ? com.tcn.cloud.api.api.commons.ClassifierEntityType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.ClassifierEntityType DeDupFieldType = 7 [json_name = "DeDupFieldType"];</code>
+     * @param value The deDupFieldType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeDupFieldType(com.tcn.cloud.api.api.commons.ClassifierEntityType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000040;
+      deDupFieldType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ClassifierEntityType DeDupFieldType = 7 [json_name = "DeDupFieldType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDeDupFieldType() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      deDupFieldType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int deDupMergeStrategy_ = 0;
+    /**
+     * <code>.api.commons.DeDuplicationMergeStrategy DeDupMergeStrategy = 8 [json_name = "DeDupMergeStrategy"];</code>
+     * @return The enum numeric value on the wire for deDupMergeStrategy.
+     */
+    @java.lang.Override public int getDeDupMergeStrategyValue() {
+      return deDupMergeStrategy_;
+    }
+    /**
+     * <code>.api.commons.DeDuplicationMergeStrategy DeDupMergeStrategy = 8 [json_name = "DeDupMergeStrategy"];</code>
+     * @param value The enum numeric value on the wire for deDupMergeStrategy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeDupMergeStrategyValue(int value) {
+      deDupMergeStrategy_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.DeDuplicationMergeStrategy DeDupMergeStrategy = 8 [json_name = "DeDupMergeStrategy"];</code>
+     * @return The deDupMergeStrategy.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy getDeDupMergeStrategy() {
+      com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy result = com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy.forNumber(deDupMergeStrategy_);
+      return result == null ? com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.DeDuplicationMergeStrategy DeDupMergeStrategy = 8 [json_name = "DeDupMergeStrategy"];</code>
+     * @param value The deDupMergeStrategy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDeDupMergeStrategy(com.tcn.cloud.api.api.commons.DeDuplicationMergeStrategy value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000080;
+      deDupMergeStrategy_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.DeDuplicationMergeStrategy DeDupMergeStrategy = 8 [json_name = "DeDupMergeStrategy"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDeDupMergeStrategy() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      deDupMergeStrategy_ = 0;
       onChanged();
       return this;
     }
