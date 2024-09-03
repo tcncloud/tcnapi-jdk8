@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private PaginatedSearchRes() {
     entries_ = java.util.Collections.emptyList();
+    lastId_ = "";
   }
 
   @java.lang.Override
@@ -115,6 +116,68 @@ private static final long serialVersionUID = 0L;
     return total_;
   }
 
+  public static final int MORE_RESULTS_FIELD_NUMBER = 3;
+  private boolean moreResults_ = false;
+  /**
+   * <pre>
+   * Whether or not there is another page of results
+   * </pre>
+   *
+   * <code>bool more_results = 3 [json_name = "moreResults"];</code>
+   * @return The moreResults.
+   */
+  @java.lang.Override
+  public boolean getMoreResults() {
+    return moreResults_;
+  }
+
+  public static final int LAST_ID_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object lastId_ = "";
+  /**
+   * <pre>
+   * The last entry ID in the most recently grabbed page of results
+   * </pre>
+   *
+   * <code>string last_id = 4 [json_name = "lastId"];</code>
+   * @return The lastId.
+   */
+  @java.lang.Override
+  public java.lang.String getLastId() {
+    java.lang.Object ref = lastId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      lastId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The last entry ID in the most recently grabbed page of results
+   * </pre>
+   *
+   * <code>string last_id = 4 [json_name = "lastId"];</code>
+   * @return The bytes for lastId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getLastIdBytes() {
+    java.lang.Object ref = lastId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      lastId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -135,6 +198,12 @@ private static final long serialVersionUID = 0L;
     if (total_ != 0L) {
       output.writeInt64(2, total_);
     }
+    if (moreResults_ != false) {
+      output.writeBool(3, moreResults_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, lastId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -151,6 +220,13 @@ private static final long serialVersionUID = 0L;
     if (total_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, total_);
+    }
+    if (moreResults_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, moreResults_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, lastId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -171,6 +247,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEntriesList())) return false;
     if (getTotal()
         != other.getTotal()) return false;
+    if (getMoreResults()
+        != other.getMoreResults()) return false;
+    if (!getLastId()
+        .equals(other.getLastId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -189,6 +269,11 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TOTAL_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getTotal());
+    hash = (37 * hash) + MORE_RESULTS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getMoreResults());
+    hash = (37 * hash) + LAST_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getLastId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -328,6 +413,8 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000001);
       total_ = 0L;
+      moreResults_ = false;
+      lastId_ = "";
       return this;
     }
 
@@ -376,6 +463,12 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.total_ = total_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.moreResults_ = moreResults_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.lastId_ = lastId_;
       }
     }
 
@@ -452,6 +545,14 @@ private static final long serialVersionUID = 0L;
       if (other.getTotal() != 0L) {
         setTotal(other.getTotal());
       }
+      if (other.getMoreResults() != false) {
+        setMoreResults(other.getMoreResults());
+      }
+      if (!other.getLastId().isEmpty()) {
+        lastId_ = other.lastId_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -496,6 +597,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 24: {
+              moreResults_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              lastId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -865,6 +976,142 @@ private static final long serialVersionUID = 0L;
     public Builder clearTotal() {
       bitField0_ = (bitField0_ & ~0x00000002);
       total_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private boolean moreResults_ ;
+    /**
+     * <pre>
+     * Whether or not there is another page of results
+     * </pre>
+     *
+     * <code>bool more_results = 3 [json_name = "moreResults"];</code>
+     * @return The moreResults.
+     */
+    @java.lang.Override
+    public boolean getMoreResults() {
+      return moreResults_;
+    }
+    /**
+     * <pre>
+     * Whether or not there is another page of results
+     * </pre>
+     *
+     * <code>bool more_results = 3 [json_name = "moreResults"];</code>
+     * @param value The moreResults to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMoreResults(boolean value) {
+
+      moreResults_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether or not there is another page of results
+     * </pre>
+     *
+     * <code>bool more_results = 3 [json_name = "moreResults"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMoreResults() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      moreResults_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object lastId_ = "";
+    /**
+     * <pre>
+     * The last entry ID in the most recently grabbed page of results
+     * </pre>
+     *
+     * <code>string last_id = 4 [json_name = "lastId"];</code>
+     * @return The lastId.
+     */
+    public java.lang.String getLastId() {
+      java.lang.Object ref = lastId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lastId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The last entry ID in the most recently grabbed page of results
+     * </pre>
+     *
+     * <code>string last_id = 4 [json_name = "lastId"];</code>
+     * @return The bytes for lastId.
+     */
+    public com.google.protobuf.ByteString
+        getLastIdBytes() {
+      java.lang.Object ref = lastId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lastId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The last entry ID in the most recently grabbed page of results
+     * </pre>
+     *
+     * <code>string last_id = 4 [json_name = "lastId"];</code>
+     * @param value The lastId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLastId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      lastId_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The last entry ID in the most recently grabbed page of results
+     * </pre>
+     *
+     * <code>string last_id = 4 [json_name = "lastId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLastId() {
+      lastId_ = getDefaultInstance().getLastId();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The last entry ID in the most recently grabbed page of results
+     * </pre>
+     *
+     * <code>string last_id = 4 [json_name = "lastId"];</code>
+     * @param value The bytes for lastId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLastIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      lastId_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
