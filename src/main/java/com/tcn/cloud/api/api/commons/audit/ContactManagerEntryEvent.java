@@ -62,7 +62,7 @@ private static final long serialVersionUID = 0L;
   private long contactManagerEntryId_ = 0L;
   /**
    * <pre>
-   *contact manager entry id
+   *contact manager entry
    * </pre>
    *
    * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
@@ -78,7 +78,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Internal.LongList contactManagerEntryListIds_;
   /**
    * <pre>
-   *entry list Ids added/edited/decrypted
+   *Question: Do we want to log the name, values and types as well along with the IDs?
    * </pre>
    *
    * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
@@ -91,7 +91,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *entry list Ids added/edited/decrypted
+   *Question: Do we want to log the name, values and types as well along with the IDs?
    * </pre>
    *
    * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *entry list Ids added/edited/decrypted
+   *Question: Do we want to log the name, values and types as well along with the IDs?
    * </pre>
    *
    * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
@@ -579,7 +579,7 @@ private static final long serialVersionUID = 0L;
     private long contactManagerEntryId_ ;
     /**
      * <pre>
-     *contact manager entry id
+     *contact manager entry
      * </pre>
      *
      * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
@@ -591,7 +591,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *contact manager entry id
+     *contact manager entry
      * </pre>
      *
      * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
@@ -607,7 +607,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *contact manager entry id
+     *contact manager entry
      * </pre>
      *
      * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
@@ -629,7 +629,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *entry list Ids added/edited/decrypted
+     *Question: Do we want to log the name, values and types as well along with the IDs?
      * </pre>
      *
      * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
@@ -642,7 +642,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *entry list Ids added/edited/decrypted
+     *Question: Do we want to log the name, values and types as well along with the IDs?
      * </pre>
      *
      * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
@@ -653,7 +653,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *entry list Ids added/edited/decrypted
+     *Question: Do we want to log the name, values and types as well along with the IDs?
      * </pre>
      *
      * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
@@ -665,7 +665,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *entry list Ids added/edited/decrypted
+     *Question: Do we want to log the name, values and types as well along with the IDs?
      * </pre>
      *
      * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
@@ -683,7 +683,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *entry list Ids added/edited/decrypted
+     *Question: Do we want to log the name, values and types as well along with the IDs?
      * </pre>
      *
      * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
@@ -699,7 +699,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *entry list Ids added/edited/decrypted
+     *Question: Do we want to log the name, values and types as well along with the IDs?
      * </pre>
      *
      * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
@@ -716,7 +716,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *entry list Ids added/edited/decrypted
+     *Question: Do we want to log the name, values and types as well along with the IDs?
      * </pre>
      *
      * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>

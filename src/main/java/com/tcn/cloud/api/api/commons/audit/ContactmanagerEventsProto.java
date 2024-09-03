@@ -68,30 +68,32 @@ public final class ContactmanagerEventsProto {
       "commons.audit.ContactManagerEntryEventR\t" +
       "viewEvent\"i\n\034ContactManagerEntryEditEven" +
       "t\022I\n\teditEvent\030\001 \001(\0132+.api.commons.audit" +
-      ".ContactManagerEntryEventR\teditEvent\"\033\n\031" +
-      "ContactManagerDeleteEvent\"\304\001\n\030ContactMan" +
-      "agerEntryEvent\0222\n\024ContactManagerListId\030\001" +
-      " \001(\003R\024ContactManagerListId\0224\n\025ContactMan" +
-      "agerEntryId\030\002 \001(\003R\025ContactManagerEntryId" +
-      "\022>\n\032ContactManagerEntryListIds\030\003 \003(\003R\032Co" +
-      "ntactManagerEntryListIds\"\227\002\n\035ContactMana" +
-      "gerListUploadEvent\0222\n\024ContactManagerList" +
-      "Id\030\001 \001(\003R\024ContactManagerListId\022:\n\030Number" +
-      "OfContactsUploaded\030\002 \001(\003R\030NumberOfContac" +
-      "tsUploaded\022N\n\"NumberOfSuccessfulContacts" +
-      "Uploaded\030\003 \001(\003R\"NumberOfSuccessfulContac" +
-      "tsUploaded\0226\n\026NumberOfFailedContacts\030\004 \001" +
-      "(\003R\026NumberOfFailedContacts\"\330\001\n\026ContactMa" +
-      "nagerKycEvent\0222\n\024ContactManagerListId\030\001 " +
+      ".ContactManagerEntryEventR\teditEvent\"j\n\031" +
+      "ContactManagerDeleteEvent\022M\n\013deleteEvent" +
+      "\030\001 \001(\0132+.api.commons.audit.ContactManage" +
+      "rEntryEventR\013deleteEvent\"\304\001\n\030ContactMana" +
+      "gerEntryEvent\0222\n\024ContactManagerListId\030\001 " +
       "\001(\003R\024ContactManagerListId\0224\n\025ContactMana" +
       "gerEntryId\030\002 \001(\003R\025ContactManagerEntryId\022" +
-      "\024\n\005types\030\003 \003(\tR\005types\022>\n\032ContactManagerE" +
-      "ntryListIds\030\004 \003(\003R\032ContactManagerEntryLi" +
-      "stIdsB\246\001\n#com.tcn.cloud.api.api.commons." +
-      "auditB\031ContactmanagerEventsProtoP\001\242\002\003ACA" +
-      "\252\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Audit" +
-      "\342\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Api::" +
-      "Commons::Auditb\006proto3"
+      ">\n\032ContactManagerEntryListIds\030\003 \003(\003R\032Con" +
+      "tactManagerEntryListIds\"\227\002\n\035ContactManag" +
+      "erListUploadEvent\0222\n\024ContactManagerListI" +
+      "d\030\001 \001(\003R\024ContactManagerListId\022:\n\030NumberO" +
+      "fContactsUploaded\030\002 \001(\003R\030NumberOfContact" +
+      "sUploaded\022N\n\"NumberOfSuccessfulContactsU" +
+      "ploaded\030\003 \001(\003R\"NumberOfSuccessfulContact" +
+      "sUploaded\0226\n\026NumberOfFailedContacts\030\004 \001(" +
+      "\003R\026NumberOfFailedContacts\"\330\001\n\026ContactMan" +
+      "agerKycEvent\0222\n\024ContactManagerListId\030\001 \001" +
+      "(\003R\024ContactManagerListId\0224\n\025ContactManag" +
+      "erEntryId\030\002 \001(\003R\025ContactManagerEntryId\022\024" +
+      "\n\005types\030\003 \003(\tR\005types\022>\n\032ContactManagerEn" +
+      "tryListIds\030\004 \003(\003R\032ContactManagerEntryLis" +
+      "tIdsB\246\001\n#com.tcn.cloud.api.api.commons.a" +
+      "uditB\031ContactmanagerEventsProtoP\001\242\002\003ACA\252" +
+      "\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Audit\342" +
+      "\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Api::C" +
+      "ommons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -121,7 +123,7 @@ public final class ContactmanagerEventsProto {
     internal_static_api_commons_audit_ContactManagerDeleteEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_ContactManagerDeleteEvent_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "DeleteEvent", });
     internal_static_api_commons_audit_ContactManagerEntryEvent_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_api_commons_audit_ContactManagerEntryEvent_fieldAccessorTable = new

@@ -19,7 +19,7 @@ public interface ContactManagerEntryEventOrBuilder extends
 
   /**
    * <pre>
-   *contact manager entry id
+   *contact manager entry
    * </pre>
    *
    * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
@@ -29,7 +29,7 @@ public interface ContactManagerEntryEventOrBuilder extends
 
   /**
    * <pre>
-   *entry list Ids added/edited/decrypted
+   *Question: Do we want to log the name, values and types as well along with the IDs?
    * </pre>
    *
    * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
@@ -38,7 +38,7 @@ public interface ContactManagerEntryEventOrBuilder extends
   java.util.List<java.lang.Long> getContactManagerEntryListIdsList();
   /**
    * <pre>
-   *entry list Ids added/edited/decrypted
+   *Question: Do we want to log the name, values and types as well along with the IDs?
    * </pre>
    *
    * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>
@@ -47,7 +47,7 @@ public interface ContactManagerEntryEventOrBuilder extends
   int getContactManagerEntryListIdsCount();
   /**
    * <pre>
-   *entry list Ids added/edited/decrypted
+   *Question: Do we want to log the name, values and types as well along with the IDs?
    * </pre>
    *
    * <code>repeated int64 ContactManagerEntryListIds = 3 [json_name = "ContactManagerEntryListIds"];</code>

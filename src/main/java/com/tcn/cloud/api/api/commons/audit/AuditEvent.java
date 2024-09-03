@@ -165,11 +165,12 @@ private static final long serialVersionUID = 0L;
     DELIVERY_SUCCESS_EVENT(1101),
     CONTACT_MANAGER_ENTRY_ADD_EVENT(1200),
     CONTACT_MANAGER_ENTRY_GET_ENC_EVENT(1201),
-    CONTACT_MANAGER_DELETE_EVENT(1202),
-    CONTACT_MANAGER_KYC_EVENT(1203),
+    @java.lang.Deprecated CONTACT_MANAGER_DELETE_EVENT(1202),
+    @java.lang.Deprecated CONTACT_MANAGER_KYC_EVENT(1203),
     CONTACT_MANAGER_ENTRY_EDIT_EVENT(1204),
     CONTACT_MANAGER_LIST_UPLOAD_EVENT(1205),
     CONTACT_MANAGER_KYC_VERIFICATION_EVENT(1206),
+    CONTACT_MANAGER_ENTRY_DELETE_EVENT(1207),
     EVENT_NOT_SET(0);
     private final int value;
     private EventCase(int value) {
@@ -304,6 +305,7 @@ private static final long serialVersionUID = 0L;
         case 1204: return CONTACT_MANAGER_ENTRY_EDIT_EVENT;
         case 1205: return CONTACT_MANAGER_LIST_UPLOAD_EVENT;
         case 1206: return CONTACT_MANAGER_KYC_VERIFICATION_EVENT;
+        case 1207: return CONTACT_MANAGER_ENTRY_DELETE_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
       }
@@ -5178,29 +5180,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int CONTACT_MANAGER_DELETE_EVENT_FIELD_NUMBER = 1202;
   /**
-   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=260
    * @return Whether the contactManagerDeleteEvent field is set.
    */
   @java.lang.Override
-  public boolean hasContactManagerDeleteEvent() {
+  @java.lang.Deprecated public boolean hasContactManagerDeleteEvent() {
     return eventCase_ == 1202;
   }
   /**
-   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=260
    * @return The contactManagerDeleteEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerDeleteEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerDeleteEvent() {
     if (eventCase_ == 1202) {
        return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
     }
     return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerDeleteEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerDeleteEventOrBuilder() {
     if (eventCase_ == 1202) {
        return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
     }
@@ -5209,29 +5215,33 @@ private static final long serialVersionUID = 0L;
 
   public static final int CONTACT_MANAGER_KYC_EVENT_FIELD_NUMBER = 1203;
   /**
-   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=261
    * @return Whether the contactManagerKycEvent field is set.
    */
   @java.lang.Override
-  public boolean hasContactManagerKycEvent() {
+  @java.lang.Deprecated public boolean hasContactManagerKycEvent() {
     return eventCase_ == 1203;
   }
   /**
-   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=261
    * @return The contactManagerKycEvent.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getContactManagerKycEvent() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getContactManagerKycEvent() {
     if (eventCase_ == 1203) {
        return (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_;
     }
     return com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder getContactManagerKycEventOrBuilder() {
+  @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder getContactManagerKycEventOrBuilder() {
     if (eventCase_ == 1203) {
        return (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_;
     }
@@ -5329,6 +5339,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_;
     }
     return com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance();
+  }
+
+  public static final int CONTACT_MANAGER_ENTRY_DELETE_EVENT_FIELD_NUMBER = 1207;
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_delete_event = 1207 [json_name = "contactManagerEntryDeleteEvent"];</code>
+   * @return Whether the contactManagerEntryDeleteEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasContactManagerEntryDeleteEvent() {
+    return eventCase_ == 1207;
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_delete_event = 1207 [json_name = "contactManagerEntryDeleteEvent"];</code>
+   * @return The contactManagerEntryDeleteEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerEntryDeleteEvent() {
+    if (eventCase_ == 1207) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_delete_event = 1207 [json_name = "contactManagerEntryDeleteEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerEntryDeleteEventOrBuilder() {
+    if (eventCase_ == 1207) {
+       return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -5713,6 +5754,9 @@ private static final long serialVersionUID = 0L;
     }
     if (eventCase_ == 1206) {
       output.writeMessage(1206, (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_);
+    }
+    if (eventCase_ == 1207) {
+      output.writeMessage(1207, (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -6210,6 +6254,10 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 1206) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1206, (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_);
+    }
+    if (eventCase_ == 1207) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1207, (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -6710,6 +6758,10 @@ private static final long serialVersionUID = 0L;
         if (!getContactManagerKycVerificationEvent()
             .equals(other.getContactManagerKycVerificationEvent())) return false;
         break;
+      case 1207:
+        if (!getContactManagerEntryDeleteEvent()
+            .equals(other.getContactManagerEntryDeleteEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -7206,6 +7258,10 @@ private static final long serialVersionUID = 0L;
       case 1206:
         hash = (37 * hash) + CONTACT_MANAGER_KYC_VERIFICATION_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getContactManagerKycVerificationEvent().hashCode();
+        break;
+      case 1207:
+        hash = (37 * hash) + CONTACT_MANAGER_ENTRY_DELETE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContactManagerEntryDeleteEvent().hashCode();
         break;
       case 0:
       default:
@@ -7708,6 +7764,9 @@ private static final long serialVersionUID = 0L;
       }
       if (contactManagerKycVerificationEventBuilder_ != null) {
         contactManagerKycVerificationEventBuilder_.clear();
+      }
+      if (contactManagerEntryDeleteEventBuilder_ != null) {
+        contactManagerEntryDeleteEventBuilder_.clear();
       }
       eventCase_ = 0;
       event_ = null;
@@ -8253,6 +8312,10 @@ private static final long serialVersionUID = 0L;
           contactManagerKycVerificationEventBuilder_ != null) {
         result.event_ = contactManagerKycVerificationEventBuilder_.build();
       }
+      if (eventCase_ == 1207 &&
+          contactManagerEntryDeleteEventBuilder_ != null) {
+        result.event_ = contactManagerEntryDeleteEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -8792,6 +8855,10 @@ private static final long serialVersionUID = 0L;
         }
         case CONTACT_MANAGER_KYC_VERIFICATION_EVENT: {
           mergeContactManagerKycVerificationEvent(other.getContactManagerKycVerificationEvent());
+          break;
+        }
+        case CONTACT_MANAGER_ENTRY_DELETE_EVENT: {
+          mergeContactManagerEntryDeleteEvent(other.getContactManagerEntryDeleteEvent());
           break;
         }
         case EVENT_NOT_SET: {
@@ -9675,6 +9742,13 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 1206;
               break;
             } // case 9650
+            case 9658: {
+              input.readMessage(
+                  getContactManagerEntryDeleteEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 1207;
+              break;
+            } // case 9658
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -29521,19 +29595,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder> contactManagerDeleteEventBuilder_;
     /**
-     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=260
      * @return Whether the contactManagerDeleteEvent field is set.
      */
     @java.lang.Override
-    public boolean hasContactManagerDeleteEvent() {
+    @java.lang.Deprecated public boolean hasContactManagerDeleteEvent() {
       return eventCase_ == 1202;
     }
     /**
-     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=260
      * @return The contactManagerDeleteEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerDeleteEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerDeleteEvent() {
       if (contactManagerDeleteEventBuilder_ == null) {
         if (eventCase_ == 1202) {
           return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
@@ -29547,9 +29625,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
      */
-    public Builder setContactManagerDeleteEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent value) {
+    @java.lang.Deprecated public Builder setContactManagerDeleteEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent value) {
       if (contactManagerDeleteEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -29563,9 +29641,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
      */
-    public Builder setContactManagerDeleteEvent(
+    @java.lang.Deprecated public Builder setContactManagerDeleteEvent(
         com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder builderForValue) {
       if (contactManagerDeleteEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -29577,9 +29655,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
      */
-    public Builder mergeContactManagerDeleteEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent value) {
+    @java.lang.Deprecated public Builder mergeContactManagerDeleteEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent value) {
       if (contactManagerDeleteEventBuilder_ == null) {
         if (eventCase_ == 1202 &&
             event_ != com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance()) {
@@ -29600,9 +29678,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
      */
-    public Builder clearContactManagerDeleteEvent() {
+    @java.lang.Deprecated public Builder clearContactManagerDeleteEvent() {
       if (contactManagerDeleteEventBuilder_ == null) {
         if (eventCase_ == 1202) {
           eventCase_ = 0;
@@ -29619,16 +29697,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder getContactManagerDeleteEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder getContactManagerDeleteEventBuilder() {
       return getContactManagerDeleteEventFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerDeleteEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerDeleteEventOrBuilder() {
       if ((eventCase_ == 1202) && (contactManagerDeleteEventBuilder_ != null)) {
         return contactManagerDeleteEventBuilder_.getMessageOrBuilder();
       } else {
@@ -29639,7 +29717,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder> 
@@ -29663,19 +29741,23 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder> contactManagerKycEventBuilder_;
     /**
-     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=261
      * @return Whether the contactManagerKycEvent field is set.
      */
     @java.lang.Override
-    public boolean hasContactManagerKycEvent() {
+    @java.lang.Deprecated public boolean hasContactManagerKycEvent() {
       return eventCase_ == 1203;
     }
     /**
-     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
+     * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
+     *     See api/commons/audit/audit.proto;l=261
      * @return The contactManagerKycEvent.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getContactManagerKycEvent() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getContactManagerKycEvent() {
       if (contactManagerKycEventBuilder_ == null) {
         if (eventCase_ == 1203) {
           return (com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent) event_;
@@ -29689,9 +29771,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
      */
-    public Builder setContactManagerKycEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent value) {
+    @java.lang.Deprecated public Builder setContactManagerKycEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent value) {
       if (contactManagerKycEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -29705,9 +29787,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
      */
-    public Builder setContactManagerKycEvent(
+    @java.lang.Deprecated public Builder setContactManagerKycEvent(
         com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder builderForValue) {
       if (contactManagerKycEventBuilder_ == null) {
         event_ = builderForValue.build();
@@ -29719,9 +29801,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
      */
-    public Builder mergeContactManagerKycEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent value) {
+    @java.lang.Deprecated public Builder mergeContactManagerKycEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent value) {
       if (contactManagerKycEventBuilder_ == null) {
         if (eventCase_ == 1203 &&
             event_ != com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.getDefaultInstance()) {
@@ -29742,9 +29824,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
      */
-    public Builder clearContactManagerKycEvent() {
+    @java.lang.Deprecated public Builder clearContactManagerKycEvent() {
       if (contactManagerKycEventBuilder_ == null) {
         if (eventCase_ == 1203) {
           eventCase_ = 0;
@@ -29761,16 +29843,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
      */
-    public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder getContactManagerKycEventBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder getContactManagerKycEventBuilder() {
       return getContactManagerKycEventFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder getContactManagerKycEventOrBuilder() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder getContactManagerKycEventOrBuilder() {
       if ((eventCase_ == 1203) && (contactManagerKycEventBuilder_ != null)) {
         return contactManagerKycEventBuilder_.getMessageOrBuilder();
       } else {
@@ -29781,7 +29863,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+     * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder> 
@@ -30226,6 +30308,148 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 1206;
       onChanged();
       return contactManagerKycVerificationEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder> contactManagerEntryDeleteEventBuilder_;
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_delete_event = 1207 [json_name = "contactManagerEntryDeleteEvent"];</code>
+     * @return Whether the contactManagerEntryDeleteEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasContactManagerEntryDeleteEvent() {
+      return eventCase_ == 1207;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_delete_event = 1207 [json_name = "contactManagerEntryDeleteEvent"];</code>
+     * @return The contactManagerEntryDeleteEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerEntryDeleteEvent() {
+      if (contactManagerEntryDeleteEventBuilder_ == null) {
+        if (eventCase_ == 1207) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 1207) {
+          return contactManagerEntryDeleteEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_delete_event = 1207 [json_name = "contactManagerEntryDeleteEvent"];</code>
+     */
+    public Builder setContactManagerEntryDeleteEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent value) {
+      if (contactManagerEntryDeleteEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        contactManagerEntryDeleteEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 1207;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_delete_event = 1207 [json_name = "contactManagerEntryDeleteEvent"];</code>
+     */
+    public Builder setContactManagerEntryDeleteEvent(
+        com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder builderForValue) {
+      if (contactManagerEntryDeleteEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        contactManagerEntryDeleteEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 1207;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_delete_event = 1207 [json_name = "contactManagerEntryDeleteEvent"];</code>
+     */
+    public Builder mergeContactManagerEntryDeleteEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent value) {
+      if (contactManagerEntryDeleteEventBuilder_ == null) {
+        if (eventCase_ == 1207 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 1207) {
+          contactManagerEntryDeleteEventBuilder_.mergeFrom(value);
+        } else {
+          contactManagerEntryDeleteEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 1207;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_delete_event = 1207 [json_name = "contactManagerEntryDeleteEvent"];</code>
+     */
+    public Builder clearContactManagerEntryDeleteEvent() {
+      if (contactManagerEntryDeleteEventBuilder_ == null) {
+        if (eventCase_ == 1207) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1207) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        contactManagerEntryDeleteEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_delete_event = 1207 [json_name = "contactManagerEntryDeleteEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder getContactManagerEntryDeleteEventBuilder() {
+      return getContactManagerEntryDeleteEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_delete_event = 1207 [json_name = "contactManagerEntryDeleteEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerEntryDeleteEventOrBuilder() {
+      if ((eventCase_ == 1207) && (contactManagerEntryDeleteEventBuilder_ != null)) {
+        return contactManagerEntryDeleteEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 1207) {
+          return (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_delete_event = 1207 [json_name = "contactManagerEntryDeleteEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder> 
+        getContactManagerEntryDeleteEventFieldBuilder() {
+      if (contactManagerEntryDeleteEventBuilder_ == null) {
+        if (!(eventCase_ == 1207)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance();
+        }
+        contactManagerEntryDeleteEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 1207;
+      onChanged();
+      return contactManagerEntryDeleteEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

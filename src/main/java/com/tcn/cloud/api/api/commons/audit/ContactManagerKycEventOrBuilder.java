@@ -70,7 +70,7 @@ public interface ContactManagerKycEventOrBuilder extends
 
   /**
    * <pre>
-   *entry list Ids decrypted
+   *Question:Do we want to log the name, values and types as well along with the IDs?
    * </pre>
    *
    * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>
@@ -79,7 +79,7 @@ public interface ContactManagerKycEventOrBuilder extends
   java.util.List<java.lang.Long> getContactManagerEntryListIdsList();
   /**
    * <pre>
-   *entry list Ids decrypted
+   *Question:Do we want to log the name, values and types as well along with the IDs?
    * </pre>
    *
    * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>
@@ -88,7 +88,7 @@ public interface ContactManagerKycEventOrBuilder extends
   int getContactManagerEntryListIdsCount();
   /**
    * <pre>
-   *entry list Ids decrypted
+   *Question:Do we want to log the name, values and types as well along with the IDs?
    * </pre>
    *
    * <code>repeated int64 ContactManagerEntryListIds = 4 [json_name = "ContactManagerEntryListIds"];</code>

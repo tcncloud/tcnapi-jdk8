@@ -6,7 +6,6 @@ package com.tcn.cloud.api.api.commons.audit;
 /**
  * <pre>
  *payload for contact list upload
- *payload for contact list upload
  * </pre>
  *
  * Protobuf type {@code api.commons.audit.ContactManagerListUploadEvent}
@@ -299,7 +298,6 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *payload for contact list upload
    *payload for contact list upload
    * </pre>
    *

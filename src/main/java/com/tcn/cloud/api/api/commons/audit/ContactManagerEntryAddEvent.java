@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons.audit;
 
 /**
+ * <pre>
+ *Same payload for CreateContactEntry(on upload) and AddContactEntry(from FE)
+ * </pre>
+ *
  * Protobuf type {@code api.commons.audit.ContactManagerEntryAddEvent}
  */
 public final class ContactManagerEntryAddEvent extends
@@ -239,6 +243,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   *Same payload for CreateContactEntry(on upload) and AddContactEntry(from FE)
+   * </pre>
+   *
    * Protobuf type {@code api.commons.audit.ContactManagerEntryAddEvent}
    */
   public static final class Builder extends
