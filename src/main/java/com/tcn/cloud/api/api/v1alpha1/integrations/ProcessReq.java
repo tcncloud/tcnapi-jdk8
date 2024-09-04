@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
     configName_ = "";
     configId_ = "";
     conds_ = java.util.Collections.emptyList();
+    callType_ = 0;
   }
 
   @java.lang.Override
@@ -407,6 +408,35 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     return conds_.get(index);
   }
 
+  public static final int CALL_SID_FIELD_NUMBER = 10;
+  private long callSid_ = 0L;
+  /**
+   * <code>int64 call_sid = 10 [json_name = "callSid"];</code>
+   * @return The callSid.
+   */
+  @java.lang.Override
+  public long getCallSid() {
+    return callSid_;
+  }
+
+  public static final int CALL_TYPE_FIELD_NUMBER = 11;
+  private int callType_ = 0;
+  /**
+   * <code>.api.commons.CallType.Enum call_type = 11 [json_name = "callType"];</code>
+   * @return The enum numeric value on the wire for callType.
+   */
+  @java.lang.Override public int getCallTypeValue() {
+    return callType_;
+  }
+  /**
+   * <code>.api.commons.CallType.Enum call_type = 11 [json_name = "callType"];</code>
+   * @return The callType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
+    com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
+    return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -444,6 +474,12 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, configId_);
+    }
+    if (callSid_ != 0L) {
+      output.writeInt64(10, callSid_);
+    }
+    if (callType_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
+      output.writeEnum(11, callType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -485,6 +521,14 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, configId_);
     }
+    if (callSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(10, callSid_);
+    }
+    if (callType_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(11, callType_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -512,6 +556,9 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         other.internalGetParams())) return false;
     if (!getCondsList()
         .equals(other.getCondsList())) return false;
+    if (getCallSid()
+        != other.getCallSid()) return false;
+    if (callType_ != other.callType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -541,6 +588,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       hash = (37 * hash) + CONDS_FIELD_NUMBER;
       hash = (53 * hash) + getCondsList().hashCode();
     }
+    hash = (37 * hash) + CALL_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getCallSid());
+    hash = (37 * hash) + CALL_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + callType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -707,6 +759,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         condsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000040);
+      callSid_ = 0L;
+      callType_ = 0;
       return this;
     }
 
@@ -771,6 +825,12 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.params_ = internalGetParams();
         result.params_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.callSid_ = callSid_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.callType_ = callType_;
       }
     }
 
@@ -868,6 +928,12 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
           }
         }
       }
+      if (other.getCallSid() != 0L) {
+        setCallSid(other.getCallSid());
+      }
+      if (other.callType_ != 0) {
+        setCallTypeValue(other.getCallTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -941,6 +1007,16 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
               bitField0_ |= 0x00000010;
               break;
             } // case 74
+            case 80: {
+              callSid_ = input.readInt64();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 80
+            case 88: {
+              callType_ = input.readEnum();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 88
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1850,6 +1926,91 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         conds_ = null;
       }
       return condsBuilder_;
+    }
+
+    private long callSid_ ;
+    /**
+     * <code>int64 call_sid = 10 [json_name = "callSid"];</code>
+     * @return The callSid.
+     */
+    @java.lang.Override
+    public long getCallSid() {
+      return callSid_;
+    }
+    /**
+     * <code>int64 call_sid = 10 [json_name = "callSid"];</code>
+     * @param value The callSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCallSid(long value) {
+
+      callSid_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 call_sid = 10 [json_name = "callSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCallSid() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      callSid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private int callType_ = 0;
+    /**
+     * <code>.api.commons.CallType.Enum call_type = 11 [json_name = "callType"];</code>
+     * @return The enum numeric value on the wire for callType.
+     */
+    @java.lang.Override public int getCallTypeValue() {
+      return callType_;
+    }
+    /**
+     * <code>.api.commons.CallType.Enum call_type = 11 [json_name = "callType"];</code>
+     * @param value The enum numeric value on the wire for callType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCallTypeValue(int value) {
+      callType_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.CallType.Enum call_type = 11 [json_name = "callType"];</code>
+     * @return The callType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
+      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
+      return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.CallType.Enum call_type = 11 [json_name = "callType"];</code>
+     * @param value The callType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCallType(com.tcn.cloud.api.api.commons.CallType.Enum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000100;
+      callType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.CallType.Enum call_type = 11 [json_name = "callType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCallType() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      callType_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

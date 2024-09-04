@@ -119,4 +119,21 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
    */
   com.tcn.cloud.api.api.v1alpha1.integrations.Value getParamsOrThrow(
       java.lang.String key);
+
+  /**
+   * <code>int64 call_sid = 6 [json_name = "callSid"];</code>
+   * @return The callSid.
+   */
+  long getCallSid();
+
+  /**
+   * <code>.api.commons.CallType.Enum call_type = 7 [json_name = "callType"];</code>
+   * @return The enum numeric value on the wire for callType.
+   */
+  int getCallTypeValue();
+  /**
+   * <code>.api.commons.CallType.Enum call_type = 7 [json_name = "callType"];</code>
+   * @return The callType.
+   */
+  com.tcn.cloud.api.api.commons.CallType.Enum getCallType();
 }
