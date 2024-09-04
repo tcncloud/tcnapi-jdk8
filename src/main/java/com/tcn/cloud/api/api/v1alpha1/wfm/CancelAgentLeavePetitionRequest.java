@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
    * ID of the agent leave petition to cancel.
    * </pre>
    *
-   * <code>int64 agent_leave_petition_id = 1 [json_name = "agentLeavePetitionId"];</code>
+   * <code>int64 agent_leave_petition_id = 1 [json_name = "agentLeavePetitionId", jstype = JS_STRING];</code>
    * @return The agentLeavePetitionId.
    */
   @java.lang.Override
@@ -393,7 +393,7 @@ private static final long serialVersionUID = 0L;
      * ID of the agent leave petition to cancel.
      * </pre>
      *
-     * <code>int64 agent_leave_petition_id = 1 [json_name = "agentLeavePetitionId"];</code>
+     * <code>int64 agent_leave_petition_id = 1 [json_name = "agentLeavePetitionId", jstype = JS_STRING];</code>
      * @return The agentLeavePetitionId.
      */
     @java.lang.Override
@@ -405,7 +405,7 @@ private static final long serialVersionUID = 0L;
      * ID of the agent leave petition to cancel.
      * </pre>
      *
-     * <code>int64 agent_leave_petition_id = 1 [json_name = "agentLeavePetitionId"];</code>
+     * <code>int64 agent_leave_petition_id = 1 [json_name = "agentLeavePetitionId", jstype = JS_STRING];</code>
      * @param value The agentLeavePetitionId to set.
      * @return This builder for chaining.
      */
@@ -421,7 +421,7 @@ private static final long serialVersionUID = 0L;
      * ID of the agent leave petition to cancel.
      * </pre>
      *
-     * <code>int64 agent_leave_petition_id = 1 [json_name = "agentLeavePetitionId"];</code>
+     * <code>int64 agent_leave_petition_id = 1 [json_name = "agentLeavePetitionId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearAgentLeavePetitionId() {

@@ -12,7 +12,7 @@ public interface ResolveAgentLeavePetitionRequestOrBuilder extends
    * ID of the agent leave petition to approve or deny.
    * </pre>
    *
-   * <code>int64 agent_leave_petition_id = 1 [json_name = "agentLeavePetitionId"];</code>
+   * <code>int64 agent_leave_petition_id = 1 [json_name = "agentLeavePetitionId", jstype = JS_STRING];</code>
    * @return The agentLeavePetitionId.
    */
   long getAgentLeavePetitionId();
