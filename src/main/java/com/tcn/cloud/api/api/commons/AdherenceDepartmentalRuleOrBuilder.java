@@ -141,4 +141,48 @@ public interface AdherenceDepartmentalRuleOrBuilder extends
    * <code>.api.commons.DatetimeRange custom_range = 7 [json_name = "customRange"];</code>
    */
   com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getCustomRangeOrBuilder();
+
+  /**
+   * <pre>
+   * Clauses that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceDepartmentalRule clauses = 8 [json_name = "clauses"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule> 
+      getClausesList();
+  /**
+   * <pre>
+   * Clauses that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceDepartmentalRule clauses = 8 [json_name = "clauses"];</code>
+   */
+  com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule getClauses(int index);
+  /**
+   * <pre>
+   * Clauses that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceDepartmentalRule clauses = 8 [json_name = "clauses"];</code>
+   */
+  int getClausesCount();
+  /**
+   * <pre>
+   * Clauses that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceDepartmentalRule clauses = 8 [json_name = "clauses"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.AdherenceDepartmentalRuleOrBuilder> 
+      getClausesOrBuilderList();
+  /**
+   * <pre>
+   * Clauses that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceDepartmentalRule clauses = 8 [json_name = "clauses"];</code>
+   */
+  com.tcn.cloud.api.api.commons.AdherenceDepartmentalRuleOrBuilder getClausesOrBuilder(
+      int index);
 }
