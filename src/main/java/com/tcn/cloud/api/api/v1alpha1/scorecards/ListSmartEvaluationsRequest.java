@@ -20,6 +20,9 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListSmartEvaluationsRequest() {
+    orderBy_ = "";
+    pageToken_ = "";
+    filter_ = "";
   }
 
   @java.lang.Override
@@ -42,6 +45,269 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest.class, com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest.Builder.class);
   }
 
+  public static final int ORDER_BY_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object orderBy_ = "";
+  /**
+   * <pre>
+   * Optional. The order by which smart evaluations will be listed. Follows sql order by
+   * syntax. When not provided the order defaults to "smart_evaluation_id".
+   * </pre>
+   *
+   * <code>string order_by = 2 [json_name = "orderBy"];</code>
+   * @return The orderBy.
+   */
+  @java.lang.Override
+  public java.lang.String getOrderBy() {
+    java.lang.Object ref = orderBy_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      orderBy_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Optional. The order by which smart evaluations will be listed. Follows sql order by
+   * syntax. When not provided the order defaults to "smart_evaluation_id".
+   * </pre>
+   *
+   * <code>string order_by = 2 [json_name = "orderBy"];</code>
+   * @return The bytes for orderBy.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getOrderByBytes() {
+    java.lang.Object ref = orderBy_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      orderBy_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int PAGE_SIZE_FIELD_NUMBER = 3;
+  private int pageSize_ = 0;
+  /**
+   * <pre>
+   * Optional - number of smart evaluations included in response.
+   * </pre>
+   *
+   * <code>int32 page_size = 3 [json_name = "pageSize"];</code>
+   * @return The pageSize.
+   */
+  @java.lang.Override
+  public int getPageSize() {
+    return pageSize_;
+  }
+
+  public static final int PAGE_TOKEN_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pageToken_ = "";
+  /**
+   * <pre>
+   * Optional. The next_page_token returned from a previous List request, if any.
+   * </pre>
+   *
+   * <code>string page_token = 4 [json_name = "pageToken"];</code>
+   * @return The pageToken.
+   */
+  @java.lang.Override
+  public java.lang.String getPageToken() {
+    java.lang.Object ref = pageToken_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      pageToken_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Optional. The next_page_token returned from a previous List request, if any.
+   * </pre>
+   *
+   * <code>string page_token = 4 [json_name = "pageToken"];</code>
+   * @return The bytes for pageToken.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPageTokenBytes() {
+    java.lang.Object ref = pageToken_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      pageToken_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int RETURN_FIELDS_FIELD_NUMBER = 5;
+  private com.google.protobuf.FieldMask returnFields_;
+  /**
+   * <pre>
+   * Required. Fields to return.
+   *
+   * Example selecting score, section points, and question answer:
+   * {
+   *   paths: [
+   *     "score",
+   *     "smart_evaluation_section.points",
+   *     "smart_evaluation_section.smart_evaluation_question.answer"
+   *   ]
+   * }
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask return_fields = 5 [json_name = "returnFields"];</code>
+   * @return Whether the returnFields field is set.
+   */
+  @java.lang.Override
+  public boolean hasReturnFields() {
+    return returnFields_ != null;
+  }
+  /**
+   * <pre>
+   * Required. Fields to return.
+   *
+   * Example selecting score, section points, and question answer:
+   * {
+   *   paths: [
+   *     "score",
+   *     "smart_evaluation_section.points",
+   *     "smart_evaluation_section.smart_evaluation_question.answer"
+   *   ]
+   * }
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask return_fields = 5 [json_name = "returnFields"];</code>
+   * @return The returnFields.
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMask getReturnFields() {
+    return returnFields_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : returnFields_;
+  }
+  /**
+   * <pre>
+   * Required. Fields to return.
+   *
+   * Example selecting score, section points, and question answer:
+   * {
+   *   paths: [
+   *     "score",
+   *     "smart_evaluation_section.points",
+   *     "smart_evaluation_section.smart_evaluation_question.answer"
+   *   ]
+   * }
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask return_fields = 5 [json_name = "returnFields"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMaskOrBuilder getReturnFieldsOrBuilder() {
+    return returnFields_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : returnFields_;
+  }
+
+  public static final int FILTER_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object filter_ = "";
+  /**
+   * <pre>
+   *
+   *Optional. The standard list filter as described in https://google.aip.dev/160.
+   *Multiple comparisons can be provided when separated with a logical AND
+   *operator. Supported fields, operators and functions are listed below.
+   *
+   *+----------------------------+-----------+-----------------+-----------+
+   *|                      field |      type |       operators | functions |
+   *+----------------------------+-----------+-----------------+-----------+
+   *|               scorecard_id |   integer |               = |       any |
+   *|                category_id |   integer |               = |       any |
+   *|              agent_user_id |    string |               = |       any |
+   *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
+   *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+   *+----------------------------+-----------+-----------------+-----------+
+   *
+   *Examples:
+   *transcript_sid &gt;= 1
+   *
+   *scorecard_id = 0 AND
+   *agent_user_id = any("00000000-0000-0000-0000-000000000000", "00000000-0000-0000-0000-000000000001") AND
+   *complete_time &gt;= '2012-04-21T11:30:00-04:00'
+   * </pre>
+   *
+   * <code>string filter = 6 [json_name = "filter"];</code>
+   * @return The filter.
+   */
+  @java.lang.Override
+  public java.lang.String getFilter() {
+    java.lang.Object ref = filter_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      filter_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *
+   *Optional. The standard list filter as described in https://google.aip.dev/160.
+   *Multiple comparisons can be provided when separated with a logical AND
+   *operator. Supported fields, operators and functions are listed below.
+   *
+   *+----------------------------+-----------+-----------------+-----------+
+   *|                      field |      type |       operators | functions |
+   *+----------------------------+-----------+-----------------+-----------+
+   *|               scorecard_id |   integer |               = |       any |
+   *|                category_id |   integer |               = |       any |
+   *|              agent_user_id |    string |               = |       any |
+   *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
+   *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+   *+----------------------------+-----------+-----------------+-----------+
+   *
+   *Examples:
+   *transcript_sid &gt;= 1
+   *
+   *scorecard_id = 0 AND
+   *agent_user_id = any("00000000-0000-0000-0000-000000000000", "00000000-0000-0000-0000-000000000001") AND
+   *complete_time &gt;= '2012-04-21T11:30:00-04:00'
+   * </pre>
+   *
+   * <code>string filter = 6 [json_name = "filter"];</code>
+   * @return The bytes for filter.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFilterBytes() {
+    java.lang.Object ref = filter_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      filter_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -56,6 +322,21 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orderBy_);
+    }
+    if (pageSize_ != 0) {
+      output.writeInt32(3, pageSize_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pageToken_);
+    }
+    if (returnFields_ != null) {
+      output.writeMessage(5, getReturnFields());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, filter_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -65,6 +346,23 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orderBy_);
+    }
+    if (pageSize_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(3, pageSize_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pageToken_);
+    }
+    if (returnFields_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getReturnFields());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, filter_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -80,6 +378,19 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest other = (com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest) obj;
 
+    if (!getOrderBy()
+        .equals(other.getOrderBy())) return false;
+    if (getPageSize()
+        != other.getPageSize()) return false;
+    if (!getPageToken()
+        .equals(other.getPageToken())) return false;
+    if (hasReturnFields() != other.hasReturnFields()) return false;
+    if (hasReturnFields()) {
+      if (!getReturnFields()
+          .equals(other.getReturnFields())) return false;
+    }
+    if (!getFilter()
+        .equals(other.getFilter())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -91,6 +402,18 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + ORDER_BY_FIELD_NUMBER;
+    hash = (53 * hash) + getOrderBy().hashCode();
+    hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+    hash = (53 * hash) + getPageSize();
+    hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+    hash = (53 * hash) + getPageToken().hashCode();
+    if (hasReturnFields()) {
+      hash = (37 * hash) + RETURN_FIELDS_FIELD_NUMBER;
+      hash = (53 * hash) + getReturnFields().hashCode();
+    }
+    hash = (37 * hash) + FILTER_FIELD_NUMBER;
+    hash = (53 * hash) + getFilter().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -225,6 +548,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      orderBy_ = "";
+      pageSize_ = 0;
+      pageToken_ = "";
+      returnFields_ = null;
+      if (returnFieldsBuilder_ != null) {
+        returnFieldsBuilder_.dispose();
+        returnFieldsBuilder_ = null;
+      }
+      filter_ = "";
       return this;
     }
 
@@ -251,8 +584,30 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest result = new com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.orderBy_ = orderBy_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.pageSize_ = pageSize_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.pageToken_ = pageToken_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.returnFields_ = returnFieldsBuilder_ == null
+            ? returnFields_
+            : returnFieldsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.filter_ = filter_;
+      }
     }
 
     @java.lang.Override
@@ -299,6 +654,27 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.scorecards.ListSmartEvaluationsRequest.getDefaultInstance()) return this;
+      if (!other.getOrderBy().isEmpty()) {
+        orderBy_ = other.orderBy_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (other.getPageSize() != 0) {
+        setPageSize(other.getPageSize());
+      }
+      if (!other.getPageToken().isEmpty()) {
+        pageToken_ = other.pageToken_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (other.hasReturnFields()) {
+        mergeReturnFields(other.getReturnFields());
+      }
+      if (!other.getFilter().isEmpty()) {
+        filter_ = other.filter_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -325,6 +701,33 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 18: {
+              orderBy_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 18
+            case 24: {
+              pageSize_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 24
+            case 34: {
+              pageToken_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getReturnFieldsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 42
+            case 50: {
+              filter_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -338,6 +741,668 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private java.lang.Object orderBy_ = "";
+    /**
+     * <pre>
+     * Optional. The order by which smart evaluations will be listed. Follows sql order by
+     * syntax. When not provided the order defaults to "smart_evaluation_id".
+     * </pre>
+     *
+     * <code>string order_by = 2 [json_name = "orderBy"];</code>
+     * @return The orderBy.
+     */
+    public java.lang.String getOrderBy() {
+      java.lang.Object ref = orderBy_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orderBy_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. The order by which smart evaluations will be listed. Follows sql order by
+     * syntax. When not provided the order defaults to "smart_evaluation_id".
+     * </pre>
+     *
+     * <code>string order_by = 2 [json_name = "orderBy"];</code>
+     * @return The bytes for orderBy.
+     */
+    public com.google.protobuf.ByteString
+        getOrderByBytes() {
+      java.lang.Object ref = orderBy_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orderBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. The order by which smart evaluations will be listed. Follows sql order by
+     * syntax. When not provided the order defaults to "smart_evaluation_id".
+     * </pre>
+     *
+     * <code>string order_by = 2 [json_name = "orderBy"];</code>
+     * @param value The orderBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrderBy(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      orderBy_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The order by which smart evaluations will be listed. Follows sql order by
+     * syntax. When not provided the order defaults to "smart_evaluation_id".
+     * </pre>
+     *
+     * <code>string order_by = 2 [json_name = "orderBy"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOrderBy() {
+      orderBy_ = getDefaultInstance().getOrderBy();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The order by which smart evaluations will be listed. Follows sql order by
+     * syntax. When not provided the order defaults to "smart_evaluation_id".
+     * </pre>
+     *
+     * <code>string order_by = 2 [json_name = "orderBy"];</code>
+     * @param value The bytes for orderBy to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrderByBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      orderBy_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private int pageSize_ ;
+    /**
+     * <pre>
+     * Optional - number of smart evaluations included in response.
+     * </pre>
+     *
+     * <code>int32 page_size = 3 [json_name = "pageSize"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public int getPageSize() {
+      return pageSize_;
+    }
+    /**
+     * <pre>
+     * Optional - number of smart evaluations included in response.
+     * </pre>
+     *
+     * <code>int32 page_size = 3 [json_name = "pageSize"];</code>
+     * @param value The pageSize to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPageSize(int value) {
+
+      pageSize_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional - number of smart evaluations included in response.
+     * </pre>
+     *
+     * <code>int32 page_size = 3 [json_name = "pageSize"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPageSize() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      pageSize_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object pageToken_ = "";
+    /**
+     * <pre>
+     * Optional. The next_page_token returned from a previous List request, if any.
+     * </pre>
+     *
+     * <code>string page_token = 4 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. The next_page_token returned from a previous List request, if any.
+     * </pre>
+     *
+     * <code>string page_token = 4 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. The next_page_token returned from a previous List request, if any.
+     * </pre>
+     *
+     * <code>string page_token = 4 [json_name = "pageToken"];</code>
+     * @param value The pageToken to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPageToken(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      pageToken_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The next_page_token returned from a previous List request, if any.
+     * </pre>
+     *
+     * <code>string page_token = 4 [json_name = "pageToken"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPageToken() {
+      pageToken_ = getDefaultInstance().getPageToken();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The next_page_token returned from a previous List request, if any.
+     * </pre>
+     *
+     * <code>string page_token = 4 [json_name = "pageToken"];</code>
+     * @param value The bytes for pageToken to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      pageToken_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.FieldMask returnFields_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> returnFieldsBuilder_;
+    /**
+     * <pre>
+     * Required. Fields to return.
+     *
+     * Example selecting score, section points, and question answer:
+     * {
+     *   paths: [
+     *     "score",
+     *     "smart_evaluation_section.points",
+     *     "smart_evaluation_section.smart_evaluation_question.answer"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 5 [json_name = "returnFields"];</code>
+     * @return Whether the returnFields field is set.
+     */
+    public boolean hasReturnFields() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Required. Fields to return.
+     *
+     * Example selecting score, section points, and question answer:
+     * {
+     *   paths: [
+     *     "score",
+     *     "smart_evaluation_section.points",
+     *     "smart_evaluation_section.smart_evaluation_question.answer"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 5 [json_name = "returnFields"];</code>
+     * @return The returnFields.
+     */
+    public com.google.protobuf.FieldMask getReturnFields() {
+      if (returnFieldsBuilder_ == null) {
+        return returnFields_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : returnFields_;
+      } else {
+        return returnFieldsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Required. Fields to return.
+     *
+     * Example selecting score, section points, and question answer:
+     * {
+     *   paths: [
+     *     "score",
+     *     "smart_evaluation_section.points",
+     *     "smart_evaluation_section.smart_evaluation_question.answer"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 5 [json_name = "returnFields"];</code>
+     */
+    public Builder setReturnFields(com.google.protobuf.FieldMask value) {
+      if (returnFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        returnFields_ = value;
+      } else {
+        returnFieldsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. Fields to return.
+     *
+     * Example selecting score, section points, and question answer:
+     * {
+     *   paths: [
+     *     "score",
+     *     "smart_evaluation_section.points",
+     *     "smart_evaluation_section.smart_evaluation_question.answer"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 5 [json_name = "returnFields"];</code>
+     */
+    public Builder setReturnFields(
+        com.google.protobuf.FieldMask.Builder builderForValue) {
+      if (returnFieldsBuilder_ == null) {
+        returnFields_ = builderForValue.build();
+      } else {
+        returnFieldsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. Fields to return.
+     *
+     * Example selecting score, section points, and question answer:
+     * {
+     *   paths: [
+     *     "score",
+     *     "smart_evaluation_section.points",
+     *     "smart_evaluation_section.smart_evaluation_question.answer"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 5 [json_name = "returnFields"];</code>
+     */
+    public Builder mergeReturnFields(com.google.protobuf.FieldMask value) {
+      if (returnFieldsBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          returnFields_ != null &&
+          returnFields_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getReturnFieldsBuilder().mergeFrom(value);
+        } else {
+          returnFields_ = value;
+        }
+      } else {
+        returnFieldsBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. Fields to return.
+     *
+     * Example selecting score, section points, and question answer:
+     * {
+     *   paths: [
+     *     "score",
+     *     "smart_evaluation_section.points",
+     *     "smart_evaluation_section.smart_evaluation_question.answer"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 5 [json_name = "returnFields"];</code>
+     */
+    public Builder clearReturnFields() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      returnFields_ = null;
+      if (returnFieldsBuilder_ != null) {
+        returnFieldsBuilder_.dispose();
+        returnFieldsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. Fields to return.
+     *
+     * Example selecting score, section points, and question answer:
+     * {
+     *   paths: [
+     *     "score",
+     *     "smart_evaluation_section.points",
+     *     "smart_evaluation_section.smart_evaluation_question.answer"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 5 [json_name = "returnFields"];</code>
+     */
+    public com.google.protobuf.FieldMask.Builder getReturnFieldsBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getReturnFieldsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Required. Fields to return.
+     *
+     * Example selecting score, section points, and question answer:
+     * {
+     *   paths: [
+     *     "score",
+     *     "smart_evaluation_section.points",
+     *     "smart_evaluation_section.smart_evaluation_question.answer"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 5 [json_name = "returnFields"];</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getReturnFieldsOrBuilder() {
+      if (returnFieldsBuilder_ != null) {
+        return returnFieldsBuilder_.getMessageOrBuilder();
+      } else {
+        return returnFields_ == null ?
+            com.google.protobuf.FieldMask.getDefaultInstance() : returnFields_;
+      }
+    }
+    /**
+     * <pre>
+     * Required. Fields to return.
+     *
+     * Example selecting score, section points, and question answer:
+     * {
+     *   paths: [
+     *     "score",
+     *     "smart_evaluation_section.points",
+     *     "smart_evaluation_section.smart_evaluation_question.answer"
+     *   ]
+     * }
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask return_fields = 5 [json_name = "returnFields"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+        getReturnFieldsFieldBuilder() {
+      if (returnFieldsBuilder_ == null) {
+        returnFieldsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                getReturnFields(),
+                getParentForChildren(),
+                isClean());
+        returnFields_ = null;
+      }
+      return returnFieldsBuilder_;
+    }
+
+    private java.lang.Object filter_ = "";
+    /**
+     * <pre>
+     *
+     *Optional. The standard list filter as described in https://google.aip.dev/160.
+     *Multiple comparisons can be provided when separated with a logical AND
+     *operator. Supported fields, operators and functions are listed below.
+     *
+     *+----------------------------+-----------+-----------------+-----------+
+     *|                      field |      type |       operators | functions |
+     *+----------------------------+-----------+-----------------+-----------+
+     *|               scorecard_id |   integer |               = |       any |
+     *|                category_id |   integer |               = |       any |
+     *|              agent_user_id |    string |               = |       any |
+     *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
+     *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+     *+----------------------------+-----------+-----------------+-----------+
+     *
+     *Examples:
+     *transcript_sid &gt;= 1
+     *
+     *scorecard_id = 0 AND
+     *agent_user_id = any("00000000-0000-0000-0000-000000000000", "00000000-0000-0000-0000-000000000001") AND
+     *complete_time &gt;= '2012-04-21T11:30:00-04:00'
+     * </pre>
+     *
+     * <code>string filter = 6 [json_name = "filter"];</code>
+     * @return The filter.
+     */
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     *
+     *Optional. The standard list filter as described in https://google.aip.dev/160.
+     *Multiple comparisons can be provided when separated with a logical AND
+     *operator. Supported fields, operators and functions are listed below.
+     *
+     *+----------------------------+-----------+-----------------+-----------+
+     *|                      field |      type |       operators | functions |
+     *+----------------------------+-----------+-----------------+-----------+
+     *|               scorecard_id |   integer |               = |       any |
+     *|                category_id |   integer |               = |       any |
+     *|              agent_user_id |    string |               = |       any |
+     *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
+     *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+     *+----------------------------+-----------+-----------------+-----------+
+     *
+     *Examples:
+     *transcript_sid &gt;= 1
+     *
+     *scorecard_id = 0 AND
+     *agent_user_id = any("00000000-0000-0000-0000-000000000000", "00000000-0000-0000-0000-000000000001") AND
+     *complete_time &gt;= '2012-04-21T11:30:00-04:00'
+     * </pre>
+     *
+     * <code>string filter = 6 [json_name = "filter"];</code>
+     * @return The bytes for filter.
+     */
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *
+     *Optional. The standard list filter as described in https://google.aip.dev/160.
+     *Multiple comparisons can be provided when separated with a logical AND
+     *operator. Supported fields, operators and functions are listed below.
+     *
+     *+----------------------------+-----------+-----------------+-----------+
+     *|                      field |      type |       operators | functions |
+     *+----------------------------+-----------+-----------------+-----------+
+     *|               scorecard_id |   integer |               = |       any |
+     *|                category_id |   integer |               = |       any |
+     *|              agent_user_id |    string |               = |       any |
+     *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
+     *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+     *+----------------------------+-----------+-----------------+-----------+
+     *
+     *Examples:
+     *transcript_sid &gt;= 1
+     *
+     *scorecard_id = 0 AND
+     *agent_user_id = any("00000000-0000-0000-0000-000000000000", "00000000-0000-0000-0000-000000000001") AND
+     *complete_time &gt;= '2012-04-21T11:30:00-04:00'
+     * </pre>
+     *
+     * <code>string filter = 6 [json_name = "filter"];</code>
+     * @param value The filter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFilter(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      filter_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *
+     *Optional. The standard list filter as described in https://google.aip.dev/160.
+     *Multiple comparisons can be provided when separated with a logical AND
+     *operator. Supported fields, operators and functions are listed below.
+     *
+     *+----------------------------+-----------+-----------------+-----------+
+     *|                      field |      type |       operators | functions |
+     *+----------------------------+-----------+-----------------+-----------+
+     *|               scorecard_id |   integer |               = |       any |
+     *|                category_id |   integer |               = |       any |
+     *|              agent_user_id |    string |               = |       any |
+     *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
+     *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+     *+----------------------------+-----------+-----------------+-----------+
+     *
+     *Examples:
+     *transcript_sid &gt;= 1
+     *
+     *scorecard_id = 0 AND
+     *agent_user_id = any("00000000-0000-0000-0000-000000000000", "00000000-0000-0000-0000-000000000001") AND
+     *complete_time &gt;= '2012-04-21T11:30:00-04:00'
+     * </pre>
+     *
+     * <code>string filter = 6 [json_name = "filter"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFilter() {
+      filter_ = getDefaultInstance().getFilter();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *
+     *Optional. The standard list filter as described in https://google.aip.dev/160.
+     *Multiple comparisons can be provided when separated with a logical AND
+     *operator. Supported fields, operators and functions are listed below.
+     *
+     *+----------------------------+-----------+-----------------+-----------+
+     *|                      field |      type |       operators | functions |
+     *+----------------------------+-----------+-----------------+-----------+
+     *|               scorecard_id |   integer |               = |       any |
+     *|                category_id |   integer |               = |       any |
+     *|              agent_user_id |    string |               = |       any |
+     *|             transcript_sid |   integer | =, &gt;=, &lt;=, &gt;, &lt; |           |
+     *|              complete_time | timestamp | =, &gt;=, &lt;=, &gt;, &lt; |           |
+     *+----------------------------+-----------+-----------------+-----------+
+     *
+     *Examples:
+     *transcript_sid &gt;= 1
+     *
+     *scorecard_id = 0 AND
+     *agent_user_id = any("00000000-0000-0000-0000-000000000000", "00000000-0000-0000-0000-000000000001") AND
+     *complete_time &gt;= '2012-04-21T11:30:00-04:00'
+     * </pre>
+     *
+     * <code>string filter = 6 [json_name = "filter"];</code>
+     * @param value The bytes for filter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFilterBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      filter_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     @java.lang.Override
