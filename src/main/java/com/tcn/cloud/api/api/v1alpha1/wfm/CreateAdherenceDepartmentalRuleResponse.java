@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
    * ID of the created departmental rule.
    * </pre>
    *
-   * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId"];</code>
+   * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId", jstype = JS_STRING];</code>
    * @return The adherenceDepartmentalRuleId.
    */
   @java.lang.Override
@@ -393,7 +393,7 @@ private static final long serialVersionUID = 0L;
      * ID of the created departmental rule.
      * </pre>
      *
-     * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId"];</code>
+     * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId", jstype = JS_STRING];</code>
      * @return The adherenceDepartmentalRuleId.
      */
     @java.lang.Override
@@ -405,7 +405,7 @@ private static final long serialVersionUID = 0L;
      * ID of the created departmental rule.
      * </pre>
      *
-     * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId"];</code>
+     * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId", jstype = JS_STRING];</code>
      * @param value The adherenceDepartmentalRuleId to set.
      * @return This builder for chaining.
      */
@@ -421,7 +421,7 @@ private static final long serialVersionUID = 0L;
      * ID of the created departmental rule.
      * </pre>
      *
-     * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId"];</code>
+     * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearAdherenceDepartmentalRuleId() {

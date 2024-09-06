@@ -76,7 +76,7 @@ private static final long serialVersionUID = 0L;
    * The rgba_color_id to create a state color association with.
    * </pre>
    *
-   * <code>int64 rgba_color_id = 2 [json_name = "rgbaColorId"];</code>
+   * <code>int64 rgba_color_id = 2 [json_name = "rgbaColorId", jstype = JS_STRING];</code>
    * @return The rgbaColorId.
    */
   @java.lang.Override
@@ -515,7 +515,7 @@ private static final long serialVersionUID = 0L;
      * The rgba_color_id to create a state color association with.
      * </pre>
      *
-     * <code>int64 rgba_color_id = 2 [json_name = "rgbaColorId"];</code>
+     * <code>int64 rgba_color_id = 2 [json_name = "rgbaColorId", jstype = JS_STRING];</code>
      * @return The rgbaColorId.
      */
     @java.lang.Override
@@ -527,7 +527,7 @@ private static final long serialVersionUID = 0L;
      * The rgba_color_id to create a state color association with.
      * </pre>
      *
-     * <code>int64 rgba_color_id = 2 [json_name = "rgbaColorId"];</code>
+     * <code>int64 rgba_color_id = 2 [json_name = "rgbaColorId", jstype = JS_STRING];</code>
      * @param value The rgbaColorId to set.
      * @return This builder for chaining.
      */
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
      * The rgba_color_id to create a state color association with.
      * </pre>
      *
-     * <code>int64 rgba_color_id = 2 [json_name = "rgbaColorId"];</code>
+     * <code>int64 rgba_color_id = 2 [json_name = "rgbaColorId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearRgbaColorId() {

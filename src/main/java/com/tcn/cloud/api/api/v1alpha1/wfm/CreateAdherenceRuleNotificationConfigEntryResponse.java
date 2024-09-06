@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
    * ID of the created notification config entry.
    * </pre>
    *
-   * <code>int64 adherence_rule_notification_config_entry_id = 1 [json_name = "adherenceRuleNotificationConfigEntryId"];</code>
+   * <code>int64 adherence_rule_notification_config_entry_id = 1 [json_name = "adherenceRuleNotificationConfigEntryId", jstype = JS_STRING];</code>
    * @return The adherenceRuleNotificationConfigEntryId.
    */
   @java.lang.Override
@@ -393,7 +393,7 @@ private static final long serialVersionUID = 0L;
      * ID of the created notification config entry.
      * </pre>
      *
-     * <code>int64 adherence_rule_notification_config_entry_id = 1 [json_name = "adherenceRuleNotificationConfigEntryId"];</code>
+     * <code>int64 adherence_rule_notification_config_entry_id = 1 [json_name = "adherenceRuleNotificationConfigEntryId", jstype = JS_STRING];</code>
      * @return The adherenceRuleNotificationConfigEntryId.
      */
     @java.lang.Override
@@ -405,7 +405,7 @@ private static final long serialVersionUID = 0L;
      * ID of the created notification config entry.
      * </pre>
      *
-     * <code>int64 adherence_rule_notification_config_entry_id = 1 [json_name = "adherenceRuleNotificationConfigEntryId"];</code>
+     * <code>int64 adherence_rule_notification_config_entry_id = 1 [json_name = "adherenceRuleNotificationConfigEntryId", jstype = JS_STRING];</code>
      * @param value The adherenceRuleNotificationConfigEntryId to set.
      * @return This builder for chaining.
      */
@@ -421,7 +421,7 @@ private static final long serialVersionUID = 0L;
      * ID of the created notification config entry.
      * </pre>
      *
-     * <code>int64 adherence_rule_notification_config_entry_id = 1 [json_name = "adherenceRuleNotificationConfigEntryId"];</code>
+     * <code>int64 adherence_rule_notification_config_entry_id = 1 [json_name = "adherenceRuleNotificationConfigEntryId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearAdherenceRuleNotificationConfigEntryId() {

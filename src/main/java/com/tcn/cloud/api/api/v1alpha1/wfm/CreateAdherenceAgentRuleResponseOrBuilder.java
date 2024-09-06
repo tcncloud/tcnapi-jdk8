@@ -12,7 +12,7 @@ public interface CreateAdherenceAgentRuleResponseOrBuilder extends
    * ID of the created agent rule.
    * </pre>
    *
-   * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId"];</code>
+   * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId", jstype = JS_STRING];</code>
    * @return The adherenceAgentRuleId.
    */
   long getAdherenceAgentRuleId();
