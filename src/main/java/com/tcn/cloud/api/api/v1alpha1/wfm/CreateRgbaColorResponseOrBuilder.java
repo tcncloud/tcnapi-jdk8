@@ -12,7 +12,7 @@ public interface CreateRgbaColorResponseOrBuilder extends
    * ID of the newly created rgba color
    * </pre>
    *
-   * <code>int64 rgba_color_id = 1 [json_name = "rgbaColorId", jstype = JS_STRING];</code>
+   * <code>int64 rgba_color_id = 1 [json_name = "rgbaColorId"];</code>
    * @return The rgbaColorId.
    */
   long getRgbaColorId();

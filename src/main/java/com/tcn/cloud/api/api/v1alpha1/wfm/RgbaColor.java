@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
    * ID of the rgba color.
    * </pre>
    *
-   * <code>int64 rgba_color_id = 6 [json_name = "rgbaColorId", jstype = JS_STRING];</code>
+   * <code>int64 rgba_color_id = 6 [json_name = "rgbaColorId"];</code>
    * @return The rgbaColorId.
    */
   @java.lang.Override
@@ -865,7 +865,7 @@ private static final long serialVersionUID = 0L;
      * ID of the rgba color.
      * </pre>
      *
-     * <code>int64 rgba_color_id = 6 [json_name = "rgbaColorId", jstype = JS_STRING];</code>
+     * <code>int64 rgba_color_id = 6 [json_name = "rgbaColorId"];</code>
      * @return The rgbaColorId.
      */
     @java.lang.Override
@@ -877,7 +877,7 @@ private static final long serialVersionUID = 0L;
      * ID of the rgba color.
      * </pre>
      *
-     * <code>int64 rgba_color_id = 6 [json_name = "rgbaColorId", jstype = JS_STRING];</code>
+     * <code>int64 rgba_color_id = 6 [json_name = "rgbaColorId"];</code>
      * @param value The rgbaColorId to set.
      * @return This builder for chaining.
      */
@@ -893,7 +893,7 @@ private static final long serialVersionUID = 0L;
      * ID of the rgba color.
      * </pre>
      *
-     * <code>int64 rgba_color_id = 6 [json_name = "rgbaColorId", jstype = JS_STRING];</code>
+     * <code>int64 rgba_color_id = 6 [json_name = "rgbaColorId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRgbaColorId() {

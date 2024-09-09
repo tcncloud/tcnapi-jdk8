@@ -9,8 +9,8 @@ public interface ListSmartEvaluationsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Optional. The order by which smart evaluations will be listed. Follows sql order by
-   * syntax. When not provided the order defaults to "smart_evaluation_id".
+   * Optional. The order by which smart evaluations will be listed. Follows sql
+   * order by syntax. Defaults to "complete_time desc, smart_evaluation_id desc".
    * </pre>
    *
    * <code>string order_by = 2 [json_name = "orderBy"];</code>
@@ -19,8 +19,8 @@ public interface ListSmartEvaluationsRequestOrBuilder extends
   java.lang.String getOrderBy();
   /**
    * <pre>
-   * Optional. The order by which smart evaluations will be listed. Follows sql order by
-   * syntax. When not provided the order defaults to "smart_evaluation_id".
+   * Optional. The order by which smart evaluations will be listed. Follows sql
+   * order by syntax. Defaults to "complete_time desc, smart_evaluation_id desc".
    * </pre>
    *
    * <code>string order_by = 2 [json_name = "orderBy"];</code>
@@ -31,7 +31,7 @@ public interface ListSmartEvaluationsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Optional - number of smart evaluations included in response.
+   * Optional - number of smart evaluations included in response. Defaults to 500.
    * </pre>
    *
    * <code>int32 page_size = 3 [json_name = "pageSize"];</code>

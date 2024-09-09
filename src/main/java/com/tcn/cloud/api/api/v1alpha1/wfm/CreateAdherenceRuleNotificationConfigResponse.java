@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
    * ID of the created notification config.
    * </pre>
    *
-   * <code>int64 adherence_rule_notification_config_id = 1 [json_name = "adherenceRuleNotificationConfigId", jstype = JS_STRING];</code>
+   * <code>int64 adherence_rule_notification_config_id = 1 [json_name = "adherenceRuleNotificationConfigId"];</code>
    * @return The adherenceRuleNotificationConfigId.
    */
   @java.lang.Override
@@ -393,7 +393,7 @@ private static final long serialVersionUID = 0L;
      * ID of the created notification config.
      * </pre>
      *
-     * <code>int64 adherence_rule_notification_config_id = 1 [json_name = "adherenceRuleNotificationConfigId", jstype = JS_STRING];</code>
+     * <code>int64 adherence_rule_notification_config_id = 1 [json_name = "adherenceRuleNotificationConfigId"];</code>
      * @return The adherenceRuleNotificationConfigId.
      */
     @java.lang.Override
@@ -405,7 +405,7 @@ private static final long serialVersionUID = 0L;
      * ID of the created notification config.
      * </pre>
      *
-     * <code>int64 adherence_rule_notification_config_id = 1 [json_name = "adherenceRuleNotificationConfigId", jstype = JS_STRING];</code>
+     * <code>int64 adherence_rule_notification_config_id = 1 [json_name = "adherenceRuleNotificationConfigId"];</code>
      * @param value The adherenceRuleNotificationConfigId to set.
      * @return This builder for chaining.
      */
@@ -421,7 +421,7 @@ private static final long serialVersionUID = 0L;
      * ID of the created notification config.
      * </pre>
      *
-     * <code>int64 adherence_rule_notification_config_id = 1 [json_name = "adherenceRuleNotificationConfigId", jstype = JS_STRING];</code>
+     * <code>int64 adherence_rule_notification_config_id = 1 [json_name = "adherenceRuleNotificationConfigId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAdherenceRuleNotificationConfigId() {

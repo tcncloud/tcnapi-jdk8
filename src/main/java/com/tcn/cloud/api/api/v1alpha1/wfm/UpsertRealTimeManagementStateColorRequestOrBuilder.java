@@ -31,7 +31,7 @@ public interface UpsertRealTimeManagementStateColorRequestOrBuilder extends
    * The rgba_color_id to create a state color association with.
    * </pre>
    *
-   * <code>int64 rgba_color_id = 2 [json_name = "rgbaColorId", jstype = JS_STRING];</code>
+   * <code>int64 rgba_color_id = 2 [json_name = "rgbaColorId"];</code>
    * @return The rgbaColorId.
    */
   long getRgbaColorId();

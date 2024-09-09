@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
    * ID of the created agent rule.
    * </pre>
    *
-   * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId", jstype = JS_STRING];</code>
+   * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId"];</code>
    * @return The adherenceAgentRuleId.
    */
   @java.lang.Override
@@ -393,7 +393,7 @@ private static final long serialVersionUID = 0L;
      * ID of the created agent rule.
      * </pre>
      *
-     * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId", jstype = JS_STRING];</code>
+     * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId"];</code>
      * @return The adherenceAgentRuleId.
      */
     @java.lang.Override
@@ -405,7 +405,7 @@ private static final long serialVersionUID = 0L;
      * ID of the created agent rule.
      * </pre>
      *
-     * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId", jstype = JS_STRING];</code>
+     * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId"];</code>
      * @param value The adherenceAgentRuleId to set.
      * @return This builder for chaining.
      */
@@ -421,7 +421,7 @@ private static final long serialVersionUID = 0L;
      * ID of the created agent rule.
      * </pre>
      *
-     * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId", jstype = JS_STRING];</code>
+     * <code>int64 adherence_agent_rule_id = 1 [json_name = "adherenceAgentRuleId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAdherenceAgentRuleId() {

@@ -50,8 +50,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object orderBy_ = "";
   /**
    * <pre>
-   * Optional. The order by which smart evaluations will be listed. Follows sql order by
-   * syntax. When not provided the order defaults to "smart_evaluation_id".
+   * Optional. The order by which smart evaluations will be listed. Follows sql
+   * order by syntax. Defaults to "complete_time desc, smart_evaluation_id desc".
    * </pre>
    *
    * <code>string order_by = 2 [json_name = "orderBy"];</code>
@@ -72,8 +72,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. The order by which smart evaluations will be listed. Follows sql order by
-   * syntax. When not provided the order defaults to "smart_evaluation_id".
+   * Optional. The order by which smart evaluations will be listed. Follows sql
+   * order by syntax. Defaults to "complete_time desc, smart_evaluation_id desc".
    * </pre>
    *
    * <code>string order_by = 2 [json_name = "orderBy"];</code>
@@ -98,7 +98,7 @@ private static final long serialVersionUID = 0L;
   private int pageSize_ = 0;
   /**
    * <pre>
-   * Optional - number of smart evaluations included in response.
+   * Optional - number of smart evaluations included in response. Defaults to 500.
    * </pre>
    *
    * <code>int32 page_size = 3 [json_name = "pageSize"];</code>
@@ -748,8 +748,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object orderBy_ = "";
     /**
      * <pre>
-     * Optional. The order by which smart evaluations will be listed. Follows sql order by
-     * syntax. When not provided the order defaults to "smart_evaluation_id".
+     * Optional. The order by which smart evaluations will be listed. Follows sql
+     * order by syntax. Defaults to "complete_time desc, smart_evaluation_id desc".
      * </pre>
      *
      * <code>string order_by = 2 [json_name = "orderBy"];</code>
@@ -769,8 +769,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. The order by which smart evaluations will be listed. Follows sql order by
-     * syntax. When not provided the order defaults to "smart_evaluation_id".
+     * Optional. The order by which smart evaluations will be listed. Follows sql
+     * order by syntax. Defaults to "complete_time desc, smart_evaluation_id desc".
      * </pre>
      *
      * <code>string order_by = 2 [json_name = "orderBy"];</code>
@@ -791,8 +791,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. The order by which smart evaluations will be listed. Follows sql order by
-     * syntax. When not provided the order defaults to "smart_evaluation_id".
+     * Optional. The order by which smart evaluations will be listed. Follows sql
+     * order by syntax. Defaults to "complete_time desc, smart_evaluation_id desc".
      * </pre>
      *
      * <code>string order_by = 2 [json_name = "orderBy"];</code>
@@ -809,8 +809,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. The order by which smart evaluations will be listed. Follows sql order by
-     * syntax. When not provided the order defaults to "smart_evaluation_id".
+     * Optional. The order by which smart evaluations will be listed. Follows sql
+     * order by syntax. Defaults to "complete_time desc, smart_evaluation_id desc".
      * </pre>
      *
      * <code>string order_by = 2 [json_name = "orderBy"];</code>
@@ -824,8 +824,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. The order by which smart evaluations will be listed. Follows sql order by
-     * syntax. When not provided the order defaults to "smart_evaluation_id".
+     * Optional. The order by which smart evaluations will be listed. Follows sql
+     * order by syntax. Defaults to "complete_time desc, smart_evaluation_id desc".
      * </pre>
      *
      * <code>string order_by = 2 [json_name = "orderBy"];</code>
@@ -845,7 +845,7 @@ private static final long serialVersionUID = 0L;
     private int pageSize_ ;
     /**
      * <pre>
-     * Optional - number of smart evaluations included in response.
+     * Optional - number of smart evaluations included in response. Defaults to 500.
      * </pre>
      *
      * <code>int32 page_size = 3 [json_name = "pageSize"];</code>
@@ -857,7 +857,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional - number of smart evaluations included in response.
+     * Optional - number of smart evaluations included in response. Defaults to 500.
      * </pre>
      *
      * <code>int32 page_size = 3 [json_name = "pageSize"];</code>
@@ -873,7 +873,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional - number of smart evaluations included in response.
+     * Optional - number of smart evaluations included in response. Defaults to 500.
      * </pre>
      *
      * <code>int32 page_size = 3 [json_name = "pageSize"];</code>

@@ -12,7 +12,7 @@ public interface CreateAdherenceDepartmentalRuleResponseOrBuilder extends
    * ID of the created departmental rule.
    * </pre>
    *
-   * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId", jstype = JS_STRING];</code>
+   * <code>int64 adherence_departmental_rule_id = 1 [json_name = "adherenceDepartmentalRuleId"];</code>
    * @return The adherenceDepartmentalRuleId.
    */
   long getAdherenceDepartmentalRuleId();

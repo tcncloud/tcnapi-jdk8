@@ -12,7 +12,7 @@ public interface AgentLeavePetitionOrBuilder extends
    * ID of the agent leave petition.
    * </pre>
    *
-   * <code>int64 agent_leave_petition_id = 1 [json_name = "agentLeavePetitionId", jstype = JS_STRING];</code>
+   * <code>int64 agent_leave_petition_id = 1 [json_name = "agentLeavePetitionId"];</code>
    * @return The agentLeavePetitionId.
    */
   long getAgentLeavePetitionId();

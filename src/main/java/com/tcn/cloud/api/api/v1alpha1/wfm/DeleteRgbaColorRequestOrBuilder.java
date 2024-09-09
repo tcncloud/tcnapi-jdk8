@@ -12,7 +12,7 @@ public interface DeleteRgbaColorRequestOrBuilder extends
    * ID of the rgba color to delete.
    * </pre>
    *
-   * <code>int64 rgba_color_id = 1 [json_name = "rgbaColorId", jstype = JS_STRING];</code>
+   * <code>int64 rgba_color_id = 1 [json_name = "rgbaColorId"];</code>
    * @return The rgbaColorId.
    */
   long getRgbaColorId();
