@@ -14,25 +14,34 @@ public interface VanaCreateTranscriptEventOrBuilder extends
   long getTranscriptSid();
 
   /**
-   * <code>uint32 audio_time = 2 [json_name = "audioTime"];</code>
-   * @return The audioTime.
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
+   * @return Whether the call field is set.
    */
-  int getAudioTime();
+  boolean hasCall();
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
+   * @return The call.
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call getCall();
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.CallOrBuilder getCallOrBuilder();
 
   /**
-   * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
-   * @return The enum numeric value on the wire for channelType.
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+   * @return Whether the sms field is set.
    */
-  int getChannelTypeValue();
+  boolean hasSms();
   /**
-   * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
-   * @return The channelType.
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+   * @return The sms.
    */
-  com.tcn.cloud.api.api.commons.ChannelType getChannelType();
+  com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms getSms();
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.SmsOrBuilder getSmsOrBuilder();
 
-  /**
-   * <code>uint32 talk_time = 4 [json_name = "talkTime"];</code>
-   * @return The talkTime.
-   */
-  int getTalkTime();
+  com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.MetadataCase getMetadataCase();
 }

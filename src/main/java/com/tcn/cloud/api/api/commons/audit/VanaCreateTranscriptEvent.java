@@ -20,7 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private VanaCreateTranscriptEvent() {
-    channelType_ = 0;
   }
 
   @java.lang.Override
@@ -43,6 +42,1146 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.class, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Builder.class);
   }
 
+  public interface CallOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.commons.audit.VanaCreateTranscriptEvent.Call)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 call_sid = 1 [json_name = "callSid"];</code>
+     * @return The callSid.
+     */
+    long getCallSid();
+
+    /**
+     * <code>uint32 talk_time = 2 [json_name = "talkTime"];</code>
+     * @return The talkTime.
+     */
+    int getTalkTime();
+
+    /**
+     * <code>uint32 audio_time = 3 [json_name = "audioTime"];</code>
+     * @return The audioTime.
+     */
+    int getAudioTime();
+  }
+  /**
+   * Protobuf type {@code api.commons.audit.VanaCreateTranscriptEvent.Call}
+   */
+  public static final class Call extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.commons.audit.VanaCreateTranscriptEvent.Call)
+      CallOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Call.newBuilder() to construct.
+    private Call(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Call() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Call();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.commons.audit.VanaEventsProto.internal_static_api_commons_audit_VanaCreateTranscriptEvent_Call_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.commons.audit.VanaEventsProto.internal_static_api_commons_audit_VanaCreateTranscriptEvent_Call_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.class, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.Builder.class);
+    }
+
+    public static final int CALL_SID_FIELD_NUMBER = 1;
+    private long callSid_ = 0L;
+    /**
+     * <code>int64 call_sid = 1 [json_name = "callSid"];</code>
+     * @return The callSid.
+     */
+    @java.lang.Override
+    public long getCallSid() {
+      return callSid_;
+    }
+
+    public static final int TALK_TIME_FIELD_NUMBER = 2;
+    private int talkTime_ = 0;
+    /**
+     * <code>uint32 talk_time = 2 [json_name = "talkTime"];</code>
+     * @return The talkTime.
+     */
+    @java.lang.Override
+    public int getTalkTime() {
+      return talkTime_;
+    }
+
+    public static final int AUDIO_TIME_FIELD_NUMBER = 3;
+    private int audioTime_ = 0;
+    /**
+     * <code>uint32 audio_time = 3 [json_name = "audioTime"];</code>
+     * @return The audioTime.
+     */
+    @java.lang.Override
+    public int getAudioTime() {
+      return audioTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (callSid_ != 0L) {
+        output.writeInt64(1, callSid_);
+      }
+      if (talkTime_ != 0) {
+        output.writeUInt32(2, talkTime_);
+      }
+      if (audioTime_ != 0) {
+        output.writeUInt32(3, audioTime_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (callSid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, callSid_);
+      }
+      if (talkTime_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, talkTime_);
+      }
+      if (audioTime_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, audioTime_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call other = (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call) obj;
+
+      if (getCallSid()
+          != other.getCallSid()) return false;
+      if (getTalkTime()
+          != other.getTalkTime()) return false;
+      if (getAudioTime()
+          != other.getAudioTime()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CALL_SID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCallSid());
+      hash = (37 * hash) + TALK_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getTalkTime();
+      hash = (37 * hash) + AUDIO_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getAudioTime();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.commons.audit.VanaCreateTranscriptEvent.Call}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.commons.audit.VanaCreateTranscriptEvent.Call)
+        com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.CallOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.commons.audit.VanaEventsProto.internal_static_api_commons_audit_VanaCreateTranscriptEvent_Call_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.commons.audit.VanaEventsProto.internal_static_api_commons_audit_VanaCreateTranscriptEvent_Call_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.class, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        callSid_ = 0L;
+        talkTime_ = 0;
+        audioTime_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.commons.audit.VanaEventsProto.internal_static_api_commons_audit_VanaCreateTranscriptEvent_Call_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call build() {
+        com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call buildPartial() {
+        com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call result = new com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.callSid_ = callSid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.talkTime_ = talkTime_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.audioTime_ = audioTime_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call) {
+          return mergeFrom((com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call other) {
+        if (other == com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.getDefaultInstance()) return this;
+        if (other.getCallSid() != 0L) {
+          setCallSid(other.getCallSid());
+        }
+        if (other.getTalkTime() != 0) {
+          setTalkTime(other.getTalkTime());
+        }
+        if (other.getAudioTime() != 0) {
+          setAudioTime(other.getAudioTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                callSid_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                talkTime_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                audioTime_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long callSid_ ;
+      /**
+       * <code>int64 call_sid = 1 [json_name = "callSid"];</code>
+       * @return The callSid.
+       */
+      @java.lang.Override
+      public long getCallSid() {
+        return callSid_;
+      }
+      /**
+       * <code>int64 call_sid = 1 [json_name = "callSid"];</code>
+       * @param value The callSid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallSid(long value) {
+
+        callSid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 call_sid = 1 [json_name = "callSid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCallSid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        callSid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int talkTime_ ;
+      /**
+       * <code>uint32 talk_time = 2 [json_name = "talkTime"];</code>
+       * @return The talkTime.
+       */
+      @java.lang.Override
+      public int getTalkTime() {
+        return talkTime_;
+      }
+      /**
+       * <code>uint32 talk_time = 2 [json_name = "talkTime"];</code>
+       * @param value The talkTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTalkTime(int value) {
+
+        talkTime_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 talk_time = 2 [json_name = "talkTime"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTalkTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        talkTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int audioTime_ ;
+      /**
+       * <code>uint32 audio_time = 3 [json_name = "audioTime"];</code>
+       * @return The audioTime.
+       */
+      @java.lang.Override
+      public int getAudioTime() {
+        return audioTime_;
+      }
+      /**
+       * <code>uint32 audio_time = 3 [json_name = "audioTime"];</code>
+       * @param value The audioTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAudioTime(int value) {
+
+        audioTime_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 audio_time = 3 [json_name = "audioTime"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAudioTime() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        audioTime_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.commons.audit.VanaCreateTranscriptEvent.Call)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.commons.audit.VanaCreateTranscriptEvent.Call)
+    private static final com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call();
+    }
+
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Call>
+        PARSER = new com.google.protobuf.AbstractParser<Call>() {
+      @java.lang.Override
+      public Call parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Call> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Call> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SmsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.commons.audit.VanaCreateTranscriptEvent.Sms)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+     * @return The conversationSid.
+     */
+    long getConversationSid();
+  }
+  /**
+   * Protobuf type {@code api.commons.audit.VanaCreateTranscriptEvent.Sms}
+   */
+  public static final class Sms extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.commons.audit.VanaCreateTranscriptEvent.Sms)
+      SmsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Sms.newBuilder() to construct.
+    private Sms(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Sms() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Sms();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.commons.audit.VanaEventsProto.internal_static_api_commons_audit_VanaCreateTranscriptEvent_Sms_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.commons.audit.VanaEventsProto.internal_static_api_commons_audit_VanaCreateTranscriptEvent_Sms_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.class, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.Builder.class);
+    }
+
+    public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
+    private long conversationSid_ = 0L;
+    /**
+     * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+     * @return The conversationSid.
+     */
+    @java.lang.Override
+    public long getConversationSid() {
+      return conversationSid_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (conversationSid_ != 0L) {
+        output.writeInt64(1, conversationSid_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (conversationSid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, conversationSid_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms other = (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms) obj;
+
+      if (getConversationSid()
+          != other.getConversationSid()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONVERSATION_SID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getConversationSid());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.commons.audit.VanaCreateTranscriptEvent.Sms}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.commons.audit.VanaCreateTranscriptEvent.Sms)
+        com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.SmsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.commons.audit.VanaEventsProto.internal_static_api_commons_audit_VanaCreateTranscriptEvent_Sms_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.commons.audit.VanaEventsProto.internal_static_api_commons_audit_VanaCreateTranscriptEvent_Sms_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.class, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        conversationSid_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.commons.audit.VanaEventsProto.internal_static_api_commons_audit_VanaCreateTranscriptEvent_Sms_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms build() {
+        com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms buildPartial() {
+        com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms result = new com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.conversationSid_ = conversationSid_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms) {
+          return mergeFrom((com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms other) {
+        if (other == com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.getDefaultInstance()) return this;
+        if (other.getConversationSid() != 0L) {
+          setConversationSid(other.getConversationSid());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                conversationSid_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long conversationSid_ ;
+      /**
+       * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+       * @return The conversationSid.
+       */
+      @java.lang.Override
+      public long getConversationSid() {
+        return conversationSid_;
+      }
+      /**
+       * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+       * @param value The conversationSid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConversationSid(long value) {
+
+        conversationSid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 conversation_sid = 1 [json_name = "conversationSid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConversationSid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        conversationSid_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.commons.audit.VanaCreateTranscriptEvent.Sms)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.commons.audit.VanaCreateTranscriptEvent.Sms)
+    private static final com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms();
+    }
+
+    public static com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Sms>
+        PARSER = new com.google.protobuf.AbstractParser<Sms>() {
+      @java.lang.Override
+      public Sms parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Sms> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Sms> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private int metadataCase_ = 0;
+  @SuppressWarnings("serial")
+  private java.lang.Object metadata_;
+  public enum MetadataCase
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    CALL(2),
+    SMS(3),
+    METADATA_NOT_SET(0);
+    private final int value;
+    private MetadataCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static MetadataCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static MetadataCase forNumber(int value) {
+      switch (value) {
+        case 2: return CALL;
+        case 3: return SMS;
+        case 0: return METADATA_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public MetadataCase
+  getMetadataCase() {
+    return MetadataCase.forNumber(
+        metadataCase_);
+  }
+
   public static final int TRANSCRIPT_SID_FIELD_NUMBER = 1;
   private long transcriptSid_ = 0L;
   /**
@@ -54,44 +1193,66 @@ private static final long serialVersionUID = 0L;
     return transcriptSid_;
   }
 
-  public static final int AUDIO_TIME_FIELD_NUMBER = 2;
-  private int audioTime_ = 0;
+  public static final int CALL_FIELD_NUMBER = 2;
   /**
-   * <code>uint32 audio_time = 2 [json_name = "audioTime"];</code>
-   * @return The audioTime.
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
+   * @return Whether the call field is set.
    */
   @java.lang.Override
-  public int getAudioTime() {
-    return audioTime_;
-  }
-
-  public static final int CHANNEL_TYPE_FIELD_NUMBER = 3;
-  private int channelType_ = 0;
-  /**
-   * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
-   * @return The enum numeric value on the wire for channelType.
-   */
-  @java.lang.Override public int getChannelTypeValue() {
-    return channelType_;
+  public boolean hasCall() {
+    return metadataCase_ == 2;
   }
   /**
-   * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
-   * @return The channelType.
-   */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.ChannelType getChannelType() {
-    com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channelType_);
-    return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
-  }
-
-  public static final int TALK_TIME_FIELD_NUMBER = 4;
-  private int talkTime_ = 0;
-  /**
-   * <code>uint32 talk_time = 4 [json_name = "talkTime"];</code>
-   * @return The talkTime.
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
+   * @return The call.
    */
   @java.lang.Override
-  public int getTalkTime() {
-    return talkTime_;
+  public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call getCall() {
+    if (metadataCase_ == 2) {
+       return (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call) metadata_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.CallOrBuilder getCallOrBuilder() {
+    if (metadataCase_ == 2) {
+       return (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call) metadata_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.getDefaultInstance();
+  }
+
+  public static final int SMS_FIELD_NUMBER = 3;
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+   * @return Whether the sms field is set.
+   */
+  @java.lang.Override
+  public boolean hasSms() {
+    return metadataCase_ == 3;
+  }
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+   * @return The sms.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms getSms() {
+    if (metadataCase_ == 3) {
+       return (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms) metadata_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.SmsOrBuilder getSmsOrBuilder() {
+    if (metadataCase_ == 3) {
+       return (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms) metadata_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -111,14 +1272,11 @@ private static final long serialVersionUID = 0L;
     if (transcriptSid_ != 0L) {
       output.writeInt64(1, transcriptSid_);
     }
-    if (audioTime_ != 0) {
-      output.writeUInt32(2, audioTime_);
+    if (metadataCase_ == 2) {
+      output.writeMessage(2, (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call) metadata_);
     }
-    if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
-      output.writeEnum(3, channelType_);
-    }
-    if (talkTime_ != 0) {
-      output.writeUInt32(4, talkTime_);
+    if (metadataCase_ == 3) {
+      output.writeMessage(3, (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms) metadata_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -133,17 +1291,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, transcriptSid_);
     }
-    if (audioTime_ != 0) {
+    if (metadataCase_ == 2) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(2, audioTime_);
+        .computeMessageSize(2, (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call) metadata_);
     }
-    if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
+    if (metadataCase_ == 3) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(3, channelType_);
-    }
-    if (talkTime_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(4, talkTime_);
+        .computeMessageSize(3, (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms) metadata_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -162,11 +1316,19 @@ private static final long serialVersionUID = 0L;
 
     if (getTranscriptSid()
         != other.getTranscriptSid()) return false;
-    if (getAudioTime()
-        != other.getAudioTime()) return false;
-    if (channelType_ != other.channelType_) return false;
-    if (getTalkTime()
-        != other.getTalkTime()) return false;
+    if (!getMetadataCase().equals(other.getMetadataCase())) return false;
+    switch (metadataCase_) {
+      case 2:
+        if (!getCall()
+            .equals(other.getCall())) return false;
+        break;
+      case 3:
+        if (!getSms()
+            .equals(other.getSms())) return false;
+        break;
+      case 0:
+      default:
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -181,12 +1343,18 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TRANSCRIPT_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getTranscriptSid());
-    hash = (37 * hash) + AUDIO_TIME_FIELD_NUMBER;
-    hash = (53 * hash) + getAudioTime();
-    hash = (37 * hash) + CHANNEL_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + channelType_;
-    hash = (37 * hash) + TALK_TIME_FIELD_NUMBER;
-    hash = (53 * hash) + getTalkTime();
+    switch (metadataCase_) {
+      case 2:
+        hash = (37 * hash) + CALL_FIELD_NUMBER;
+        hash = (53 * hash) + getCall().hashCode();
+        break;
+      case 3:
+        hash = (37 * hash) + SMS_FIELD_NUMBER;
+        hash = (53 * hash) + getSms().hashCode();
+        break;
+      case 0:
+      default:
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -323,9 +1491,14 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       transcriptSid_ = 0L;
-      audioTime_ = 0;
-      channelType_ = 0;
-      talkTime_ = 0;
+      if (callBuilder_ != null) {
+        callBuilder_.clear();
+      }
+      if (smsBuilder_ != null) {
+        smsBuilder_.clear();
+      }
+      metadataCase_ = 0;
+      metadata_ = null;
       return this;
     }
 
@@ -353,6 +1526,7 @@ private static final long serialVersionUID = 0L;
     public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent buildPartial() {
       com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent result = new com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent(this);
       if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
     }
@@ -362,14 +1536,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.transcriptSid_ = transcriptSid_;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.audioTime_ = audioTime_;
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent result) {
+      result.metadataCase_ = metadataCase_;
+      result.metadata_ = this.metadata_;
+      if (metadataCase_ == 2 &&
+          callBuilder_ != null) {
+        result.metadata_ = callBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.channelType_ = channelType_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.talkTime_ = talkTime_;
+      if (metadataCase_ == 3 &&
+          smsBuilder_ != null) {
+        result.metadata_ = smsBuilder_.build();
       }
     }
 
@@ -420,14 +1598,18 @@ private static final long serialVersionUID = 0L;
       if (other.getTranscriptSid() != 0L) {
         setTranscriptSid(other.getTranscriptSid());
       }
-      if (other.getAudioTime() != 0) {
-        setAudioTime(other.getAudioTime());
-      }
-      if (other.channelType_ != 0) {
-        setChannelTypeValue(other.getChannelTypeValue());
-      }
-      if (other.getTalkTime() != 0) {
-        setTalkTime(other.getTalkTime());
+      switch (other.getMetadataCase()) {
+        case CALL: {
+          mergeCall(other.getCall());
+          break;
+        }
+        case SMS: {
+          mergeSms(other.getSms());
+          break;
+        }
+        case METADATA_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -460,21 +1642,20 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
-            case 16: {
-              audioTime_ = input.readUInt32();
-              bitField0_ |= 0x00000002;
+            case 18: {
+              input.readMessage(
+                  getCallFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              metadataCase_ = 2;
               break;
-            } // case 16
-            case 24: {
-              channelType_ = input.readEnum();
-              bitField0_ |= 0x00000004;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getSmsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              metadataCase_ = 3;
               break;
-            } // case 24
-            case 32: {
-              talkTime_ = input.readUInt32();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -490,6 +1671,21 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int metadataCase_ = 0;
+    private java.lang.Object metadata_;
+    public MetadataCase
+        getMetadataCase() {
+      return MetadataCase.forNumber(
+          metadataCase_);
+    }
+
+    public Builder clearMetadata() {
+      metadataCase_ = 0;
+      metadata_ = null;
+      onChanged();
+      return this;
+    }
+
     private int bitField0_;
 
     private long transcriptSid_ ;
@@ -524,121 +1720,288 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int audioTime_ ;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.Builder, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.CallOrBuilder> callBuilder_;
     /**
-     * <code>uint32 audio_time = 2 [json_name = "audioTime"];</code>
-     * @return The audioTime.
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
+     * @return Whether the call field is set.
      */
     @java.lang.Override
-    public int getAudioTime() {
-      return audioTime_;
+    public boolean hasCall() {
+      return metadataCase_ == 2;
     }
     /**
-     * <code>uint32 audio_time = 2 [json_name = "audioTime"];</code>
-     * @param value The audioTime to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAudioTime(int value) {
-
-      audioTime_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>uint32 audio_time = 2 [json_name = "audioTime"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAudioTime() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      audioTime_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int channelType_ = 0;
-    /**
-     * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
-     * @return The enum numeric value on the wire for channelType.
-     */
-    @java.lang.Override public int getChannelTypeValue() {
-      return channelType_;
-    }
-    /**
-     * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
-     * @param value The enum numeric value on the wire for channelType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setChannelTypeValue(int value) {
-      channelType_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
-     * @return The channelType.
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
+     * @return The call.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ChannelType getChannelType() {
-      com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channelType_);
-      return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
-     * @param value The channelType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setChannelType(com.tcn.cloud.api.api.commons.ChannelType value) {
-      if (value == null) {
-        throw new NullPointerException();
+    public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call getCall() {
+      if (callBuilder_ == null) {
+        if (metadataCase_ == 2) {
+          return (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call) metadata_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.getDefaultInstance();
+      } else {
+        if (metadataCase_ == 2) {
+          return callBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.getDefaultInstance();
       }
-      bitField0_ |= 0x00000004;
-      channelType_ = value.getNumber();
-      onChanged();
-      return this;
     }
     /**
-     * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
-     * @return This builder for chaining.
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
      */
-    public Builder clearChannelType() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      channelType_ = 0;
-      onChanged();
+    public Builder setCall(com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call value) {
+      if (callBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        metadata_ = value;
+        onChanged();
+      } else {
+        callBuilder_.setMessage(value);
+      }
+      metadataCase_ = 2;
       return this;
     }
-
-    private int talkTime_ ;
     /**
-     * <code>uint32 talk_time = 4 [json_name = "talkTime"];</code>
-     * @return The talkTime.
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
+     */
+    public Builder setCall(
+        com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.Builder builderForValue) {
+      if (callBuilder_ == null) {
+        metadata_ = builderForValue.build();
+        onChanged();
+      } else {
+        callBuilder_.setMessage(builderForValue.build());
+      }
+      metadataCase_ = 2;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
+     */
+    public Builder mergeCall(com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call value) {
+      if (callBuilder_ == null) {
+        if (metadataCase_ == 2 &&
+            metadata_ != com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.getDefaultInstance()) {
+          metadata_ = com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.newBuilder((com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call) metadata_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          metadata_ = value;
+        }
+        onChanged();
+      } else {
+        if (metadataCase_ == 2) {
+          callBuilder_.mergeFrom(value);
+        } else {
+          callBuilder_.setMessage(value);
+        }
+      }
+      metadataCase_ = 2;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
+     */
+    public Builder clearCall() {
+      if (callBuilder_ == null) {
+        if (metadataCase_ == 2) {
+          metadataCase_ = 0;
+          metadata_ = null;
+          onChanged();
+        }
+      } else {
+        if (metadataCase_ == 2) {
+          metadataCase_ = 0;
+          metadata_ = null;
+        }
+        callBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.Builder getCallBuilder() {
+      return getCallFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
      */
     @java.lang.Override
-    public int getTalkTime() {
-      return talkTime_;
+    public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.CallOrBuilder getCallOrBuilder() {
+      if ((metadataCase_ == 2) && (callBuilder_ != null)) {
+        return callBuilder_.getMessageOrBuilder();
+      } else {
+        if (metadataCase_ == 2) {
+          return (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call) metadata_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.getDefaultInstance();
+      }
     }
     /**
-     * <code>uint32 talk_time = 4 [json_name = "talkTime"];</code>
-     * @param value The talkTime to set.
-     * @return This builder for chaining.
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
      */
-    public Builder setTalkTime(int value) {
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.Builder, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.CallOrBuilder> 
+        getCallFieldBuilder() {
+      if (callBuilder_ == null) {
+        if (!(metadataCase_ == 2)) {
+          metadata_ = com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.getDefaultInstance();
+        }
+        callBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call.Builder, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.CallOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call) metadata_,
+                getParentForChildren(),
+                isClean());
+        metadata_ = null;
+      }
+      metadataCase_ = 2;
+      onChanged();
+      return callBuilder_;
+    }
 
-      talkTime_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.Builder, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.SmsOrBuilder> smsBuilder_;
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+     * @return Whether the sms field is set.
+     */
+    @java.lang.Override
+    public boolean hasSms() {
+      return metadataCase_ == 3;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+     * @return The sms.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms getSms() {
+      if (smsBuilder_ == null) {
+        if (metadataCase_ == 3) {
+          return (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms) metadata_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.getDefaultInstance();
+      } else {
+        if (metadataCase_ == 3) {
+          return smsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+     */
+    public Builder setSms(com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms value) {
+      if (smsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        metadata_ = value;
+        onChanged();
+      } else {
+        smsBuilder_.setMessage(value);
+      }
+      metadataCase_ = 3;
       return this;
     }
     /**
-     * <code>uint32 talk_time = 4 [json_name = "talkTime"];</code>
-     * @return This builder for chaining.
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
      */
-    public Builder clearTalkTime() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      talkTime_ = 0;
-      onChanged();
+    public Builder setSms(
+        com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.Builder builderForValue) {
+      if (smsBuilder_ == null) {
+        metadata_ = builderForValue.build();
+        onChanged();
+      } else {
+        smsBuilder_.setMessage(builderForValue.build());
+      }
+      metadataCase_ = 3;
       return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+     */
+    public Builder mergeSms(com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms value) {
+      if (smsBuilder_ == null) {
+        if (metadataCase_ == 3 &&
+            metadata_ != com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.getDefaultInstance()) {
+          metadata_ = com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.newBuilder((com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms) metadata_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          metadata_ = value;
+        }
+        onChanged();
+      } else {
+        if (metadataCase_ == 3) {
+          smsBuilder_.mergeFrom(value);
+        } else {
+          smsBuilder_.setMessage(value);
+        }
+      }
+      metadataCase_ = 3;
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+     */
+    public Builder clearSms() {
+      if (smsBuilder_ == null) {
+        if (metadataCase_ == 3) {
+          metadataCase_ = 0;
+          metadata_ = null;
+          onChanged();
+        }
+      } else {
+        if (metadataCase_ == 3) {
+          metadataCase_ = 0;
+          metadata_ = null;
+        }
+        smsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.Builder getSmsBuilder() {
+      return getSmsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.SmsOrBuilder getSmsOrBuilder() {
+      if ((metadataCase_ == 3) && (smsBuilder_ != null)) {
+        return smsBuilder_.getMessageOrBuilder();
+      } else {
+        if (metadataCase_ == 3) {
+          return (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms) metadata_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.Builder, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.SmsOrBuilder> 
+        getSmsFieldBuilder() {
+      if (smsBuilder_ == null) {
+        if (!(metadataCase_ == 3)) {
+          metadata_ = com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.getDefaultInstance();
+        }
+        smsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms.Builder, com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.SmsOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms) metadata_,
+                getParentForChildren(),
+                isClean());
+        metadata_ = null;
+      }
+      metadataCase_ = 3;
+      onChanged();
+      return smsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
