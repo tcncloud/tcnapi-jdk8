@@ -12,4 +12,27 @@ public interface VanaCreateTranscriptEventOrBuilder extends
    * @return The transcriptSid.
    */
   long getTranscriptSid();
+
+  /**
+   * <code>uint32 audio_time = 2 [json_name = "audioTime"];</code>
+   * @return The audioTime.
+   */
+  int getAudioTime();
+
+  /**
+   * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
+   * @return The enum numeric value on the wire for channelType.
+   */
+  int getChannelTypeValue();
+  /**
+   * <code>.api.commons.ChannelType channel_type = 3 [json_name = "channelType"];</code>
+   * @return The channelType.
+   */
+  com.tcn.cloud.api.api.commons.ChannelType getChannelType();
+
+  /**
+   * <code>uint32 talk_time = 4 [json_name = "talkTime"];</code>
+   * @return The talkTime.
+   */
+  int getTalkTime();
 }
