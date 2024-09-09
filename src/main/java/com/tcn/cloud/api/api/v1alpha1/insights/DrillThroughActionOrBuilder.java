@@ -20,26 +20,26 @@ public interface DrillThroughActionOrBuilder extends
       getInsightResourceIdBytes();
 
   /**
-   * <code>repeated .api.v1alpha1.insights.DrillThrough drill_through_actions = 2 [json_name = "drillThroughActions"];</code>
+   * <code>repeated .api.v1alpha1.insights.DrillThroughParameter drill_through_parameters = 2 [json_name = "drillThroughParameters"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough> 
-      getDrillThroughActionsList();
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter> 
+      getDrillThroughParametersList();
   /**
-   * <code>repeated .api.v1alpha1.insights.DrillThrough drill_through_actions = 2 [json_name = "drillThroughActions"];</code>
+   * <code>repeated .api.v1alpha1.insights.DrillThroughParameter drill_through_parameters = 2 [json_name = "drillThroughParameters"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough getDrillThroughActions(int index);
+  com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter getDrillThroughParameters(int index);
   /**
-   * <code>repeated .api.v1alpha1.insights.DrillThrough drill_through_actions = 2 [json_name = "drillThroughActions"];</code>
+   * <code>repeated .api.v1alpha1.insights.DrillThroughParameter drill_through_parameters = 2 [json_name = "drillThroughParameters"];</code>
    */
-  int getDrillThroughActionsCount();
+  int getDrillThroughParametersCount();
   /**
-   * <code>repeated .api.v1alpha1.insights.DrillThrough drill_through_actions = 2 [json_name = "drillThroughActions"];</code>
+   * <code>repeated .api.v1alpha1.insights.DrillThroughParameter drill_through_parameters = 2 [json_name = "drillThroughParameters"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughOrBuilder> 
-      getDrillThroughActionsOrBuilderList();
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameterOrBuilder> 
+      getDrillThroughParametersOrBuilderList();
   /**
-   * <code>repeated .api.v1alpha1.insights.DrillThrough drill_through_actions = 2 [json_name = "drillThroughActions"];</code>
+   * <code>repeated .api.v1alpha1.insights.DrillThroughParameter drill_through_parameters = 2 [json_name = "drillThroughParameters"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughOrBuilder getDrillThroughActionsOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameterOrBuilder getDrillThroughParametersOrBuilder(
       int index);
 }

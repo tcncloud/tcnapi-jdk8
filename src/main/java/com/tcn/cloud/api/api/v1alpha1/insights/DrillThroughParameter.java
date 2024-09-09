@@ -8,114 +8,114 @@ package com.tcn.cloud.api.api.v1alpha1.insights;
  * Message for Drill Through
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.insights.DrillThrough}
+ * Protobuf type {@code api.v1alpha1.insights.DrillThroughParameter}
  */
-public final class DrillThrough extends
+public final class DrillThroughParameter extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.insights.DrillThrough)
-    DrillThroughOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.insights.DrillThroughParameter)
+    DrillThroughParameterOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use DrillThrough.newBuilder() to construct.
-  private DrillThrough(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use DrillThroughParameter.newBuilder() to construct.
+  private DrillThroughParameter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private DrillThrough() {
-    drillThroughParameter_ = "";
-    drillThroughParameterValue_ = "";
+  private DrillThroughParameter() {
+    parameterName_ = "";
+    columnName_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new DrillThrough();
+    return new DrillThroughParameter();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_DrillThrough_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_DrillThroughParameter_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_DrillThrough_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_DrillThroughParameter_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough.class, com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter.class, com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter.Builder.class);
   }
 
-  public static final int DRILL_THROUGH_PARAMETER_FIELD_NUMBER = 1;
+  public static final int PARAMETER_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object drillThroughParameter_ = "";
+  private volatile java.lang.Object parameterName_ = "";
   /**
-   * <code>string drill_through_parameter = 1 [json_name = "drillThroughParameter"];</code>
-   * @return The drillThroughParameter.
+   * <code>string parameter_name = 1 [json_name = "parameterName"];</code>
+   * @return The parameterName.
    */
   @java.lang.Override
-  public java.lang.String getDrillThroughParameter() {
-    java.lang.Object ref = drillThroughParameter_;
+  public java.lang.String getParameterName() {
+    java.lang.Object ref = parameterName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      drillThroughParameter_ = s;
+      parameterName_ = s;
       return s;
     }
   }
   /**
-   * <code>string drill_through_parameter = 1 [json_name = "drillThroughParameter"];</code>
-   * @return The bytes for drillThroughParameter.
+   * <code>string parameter_name = 1 [json_name = "parameterName"];</code>
+   * @return The bytes for parameterName.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getDrillThroughParameterBytes() {
-    java.lang.Object ref = drillThroughParameter_;
+      getParameterNameBytes() {
+    java.lang.Object ref = parameterName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      drillThroughParameter_ = b;
+      parameterName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int DRILL_THROUGH_PARAMETER_VALUE_FIELD_NUMBER = 2;
+  public static final int COLUMN_NAME_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object drillThroughParameterValue_ = "";
+  private volatile java.lang.Object columnName_ = "";
   /**
-   * <code>string drill_through_parameter_value = 2 [json_name = "drillThroughParameterValue"];</code>
-   * @return The drillThroughParameterValue.
+   * <code>string column_name = 2 [json_name = "columnName"];</code>
+   * @return The columnName.
    */
   @java.lang.Override
-  public java.lang.String getDrillThroughParameterValue() {
-    java.lang.Object ref = drillThroughParameterValue_;
+  public java.lang.String getColumnName() {
+    java.lang.Object ref = columnName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      drillThroughParameterValue_ = s;
+      columnName_ = s;
       return s;
     }
   }
   /**
-   * <code>string drill_through_parameter_value = 2 [json_name = "drillThroughParameterValue"];</code>
-   * @return The bytes for drillThroughParameterValue.
+   * <code>string column_name = 2 [json_name = "columnName"];</code>
+   * @return The bytes for columnName.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getDrillThroughParameterValueBytes() {
-    java.lang.Object ref = drillThroughParameterValue_;
+      getColumnNameBytes() {
+    java.lang.Object ref = columnName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      drillThroughParameterValue_ = b;
+      columnName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -136,11 +136,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(drillThroughParameter_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, drillThroughParameter_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parameterName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, parameterName_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(drillThroughParameterValue_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, drillThroughParameterValue_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(columnName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, columnName_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -151,11 +151,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(drillThroughParameter_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, drillThroughParameter_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parameterName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, parameterName_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(drillThroughParameterValue_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, drillThroughParameterValue_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(columnName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, columnName_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -167,15 +167,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough other = (com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough) obj;
+    com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter other = (com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter) obj;
 
-    if (!getDrillThroughParameter()
-        .equals(other.getDrillThroughParameter())) return false;
-    if (!getDrillThroughParameterValue()
-        .equals(other.getDrillThroughParameterValue())) return false;
+    if (!getParameterName()
+        .equals(other.getParameterName())) return false;
+    if (!getColumnName()
+        .equals(other.getColumnName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -187,53 +187,53 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + DRILL_THROUGH_PARAMETER_FIELD_NUMBER;
-    hash = (53 * hash) + getDrillThroughParameter().hashCode();
-    hash = (37 * hash) + DRILL_THROUGH_PARAMETER_VALUE_FIELD_NUMBER;
-    hash = (53 * hash) + getDrillThroughParameterValue().hashCode();
+    hash = (37 * hash) + PARAMETER_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getParameterName().hashCode();
+    hash = (37 * hash) + COLUMN_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getColumnName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -241,26 +241,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -273,7 +273,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -293,26 +293,26 @@ private static final long serialVersionUID = 0L;
    * Message for Drill Through
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.insights.DrillThrough}
+   * Protobuf type {@code api.v1alpha1.insights.DrillThroughParameter}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.insights.DrillThrough)
-      com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.insights.DrillThroughParameter)
+      com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameterOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_DrillThrough_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_DrillThroughParameter_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_DrillThrough_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_DrillThroughParameter_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough.class, com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter.class, com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter.newBuilder()
     private Builder() {
 
     }
@@ -326,25 +326,25 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      drillThroughParameter_ = "";
-      drillThroughParameterValue_ = "";
+      parameterName_ = "";
+      columnName_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_DrillThrough_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_DrillThroughParameter_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough build() {
-      com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter build() {
+      com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -352,20 +352,20 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough result = new com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough(this);
+    public com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter result = new com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.drillThroughParameter_ = drillThroughParameter_;
+        result.parameterName_ = parameterName_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.drillThroughParameterValue_ = drillThroughParameterValue_;
+        result.columnName_ = columnName_;
       }
     }
 
@@ -403,23 +403,23 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough.getDefaultInstance()) return this;
-      if (!other.getDrillThroughParameter().isEmpty()) {
-        drillThroughParameter_ = other.drillThroughParameter_;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter.getDefaultInstance()) return this;
+      if (!other.getParameterName().isEmpty()) {
+        parameterName_ = other.parameterName_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getDrillThroughParameterValue().isEmpty()) {
-        drillThroughParameterValue_ = other.drillThroughParameterValue_;
+      if (!other.getColumnName().isEmpty()) {
+        columnName_ = other.columnName_;
         bitField0_ |= 0x00000002;
         onChanged();
       }
@@ -450,12 +450,12 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              drillThroughParameter_ = input.readStringRequireUtf8();
+              parameterName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              drillThroughParameterValue_ = input.readStringRequireUtf8();
+              columnName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
@@ -476,145 +476,145 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object drillThroughParameter_ = "";
+    private java.lang.Object parameterName_ = "";
     /**
-     * <code>string drill_through_parameter = 1 [json_name = "drillThroughParameter"];</code>
-     * @return The drillThroughParameter.
+     * <code>string parameter_name = 1 [json_name = "parameterName"];</code>
+     * @return The parameterName.
      */
-    public java.lang.String getDrillThroughParameter() {
-      java.lang.Object ref = drillThroughParameter_;
+    public java.lang.String getParameterName() {
+      java.lang.Object ref = parameterName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        drillThroughParameter_ = s;
+        parameterName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string drill_through_parameter = 1 [json_name = "drillThroughParameter"];</code>
-     * @return The bytes for drillThroughParameter.
+     * <code>string parameter_name = 1 [json_name = "parameterName"];</code>
+     * @return The bytes for parameterName.
      */
     public com.google.protobuf.ByteString
-        getDrillThroughParameterBytes() {
-      java.lang.Object ref = drillThroughParameter_;
+        getParameterNameBytes() {
+      java.lang.Object ref = parameterName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        drillThroughParameter_ = b;
+        parameterName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string drill_through_parameter = 1 [json_name = "drillThroughParameter"];</code>
-     * @param value The drillThroughParameter to set.
+     * <code>string parameter_name = 1 [json_name = "parameterName"];</code>
+     * @param value The parameterName to set.
      * @return This builder for chaining.
      */
-    public Builder setDrillThroughParameter(
+    public Builder setParameterName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      drillThroughParameter_ = value;
+      parameterName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string drill_through_parameter = 1 [json_name = "drillThroughParameter"];</code>
+     * <code>string parameter_name = 1 [json_name = "parameterName"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearDrillThroughParameter() {
-      drillThroughParameter_ = getDefaultInstance().getDrillThroughParameter();
+    public Builder clearParameterName() {
+      parameterName_ = getDefaultInstance().getParameterName();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string drill_through_parameter = 1 [json_name = "drillThroughParameter"];</code>
-     * @param value The bytes for drillThroughParameter to set.
+     * <code>string parameter_name = 1 [json_name = "parameterName"];</code>
+     * @param value The bytes for parameterName to set.
      * @return This builder for chaining.
      */
-    public Builder setDrillThroughParameterBytes(
+    public Builder setParameterNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      drillThroughParameter_ = value;
+      parameterName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
-    private java.lang.Object drillThroughParameterValue_ = "";
+    private java.lang.Object columnName_ = "";
     /**
-     * <code>string drill_through_parameter_value = 2 [json_name = "drillThroughParameterValue"];</code>
-     * @return The drillThroughParameterValue.
+     * <code>string column_name = 2 [json_name = "columnName"];</code>
+     * @return The columnName.
      */
-    public java.lang.String getDrillThroughParameterValue() {
-      java.lang.Object ref = drillThroughParameterValue_;
+    public java.lang.String getColumnName() {
+      java.lang.Object ref = columnName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        drillThroughParameterValue_ = s;
+        columnName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string drill_through_parameter_value = 2 [json_name = "drillThroughParameterValue"];</code>
-     * @return The bytes for drillThroughParameterValue.
+     * <code>string column_name = 2 [json_name = "columnName"];</code>
+     * @return The bytes for columnName.
      */
     public com.google.protobuf.ByteString
-        getDrillThroughParameterValueBytes() {
-      java.lang.Object ref = drillThroughParameterValue_;
+        getColumnNameBytes() {
+      java.lang.Object ref = columnName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        drillThroughParameterValue_ = b;
+        columnName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string drill_through_parameter_value = 2 [json_name = "drillThroughParameterValue"];</code>
-     * @param value The drillThroughParameterValue to set.
+     * <code>string column_name = 2 [json_name = "columnName"];</code>
+     * @param value The columnName to set.
      * @return This builder for chaining.
      */
-    public Builder setDrillThroughParameterValue(
+    public Builder setColumnName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      drillThroughParameterValue_ = value;
+      columnName_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string drill_through_parameter_value = 2 [json_name = "drillThroughParameterValue"];</code>
+     * <code>string column_name = 2 [json_name = "columnName"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearDrillThroughParameterValue() {
-      drillThroughParameterValue_ = getDefaultInstance().getDrillThroughParameterValue();
+    public Builder clearColumnName() {
+      columnName_ = getDefaultInstance().getColumnName();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string drill_through_parameter_value = 2 [json_name = "drillThroughParameterValue"];</code>
-     * @param value The bytes for drillThroughParameterValue to set.
+     * <code>string column_name = 2 [json_name = "columnName"];</code>
+     * @param value The bytes for columnName to set.
      * @return This builder for chaining.
      */
-    public Builder setDrillThroughParameterValueBytes(
+    public Builder setColumnNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      drillThroughParameterValue_ = value;
+      columnName_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
@@ -632,23 +632,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.insights.DrillThrough)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.insights.DrillThroughParameter)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.insights.DrillThrough)
-  private static final com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.insights.DrillThroughParameter)
+  private static final com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<DrillThrough>
-      PARSER = new com.google.protobuf.AbstractParser<DrillThrough>() {
+  private static final com.google.protobuf.Parser<DrillThroughParameter>
+      PARSER = new com.google.protobuf.AbstractParser<DrillThroughParameter>() {
     @java.lang.Override
-    public DrillThrough parsePartialFrom(
+    public DrillThroughParameter parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -667,17 +667,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<DrillThrough> parser() {
+  public static com.google.protobuf.Parser<DrillThroughParameter> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<DrillThrough> getParserForType() {
+  public com.google.protobuf.Parser<DrillThroughParameter> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.insights.DrillThrough getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughParameter getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
