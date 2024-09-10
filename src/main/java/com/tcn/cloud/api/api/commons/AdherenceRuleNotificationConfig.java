@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private AdherenceRuleNotificationConfig() {
     name_ = "";
+    entries_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -105,6 +106,67 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int ENTRIES_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry> entries_;
+  /**
+   * <pre>
+   * Entries that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry> getEntriesList() {
+    return entries_;
+  }
+  /**
+   * <pre>
+   * Entries that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntryOrBuilder> 
+      getEntriesOrBuilderList() {
+    return entries_;
+  }
+  /**
+   * <pre>
+   * Entries that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+   */
+  @java.lang.Override
+  public int getEntriesCount() {
+    return entries_.size();
+  }
+  /**
+   * <pre>
+   * Entries that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry getEntries(int index) {
+    return entries_.get(index);
+  }
+  /**
+   * <pre>
+   * Entries that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntryOrBuilder getEntriesOrBuilder(
+      int index) {
+    return entries_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -125,6 +187,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
     }
+    for (int i = 0; i < entries_.size(); i++) {
+      output.writeMessage(3, entries_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -140,6 +205,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+    }
+    for (int i = 0; i < entries_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, entries_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -160,6 +229,8 @@ private static final long serialVersionUID = 0L;
         != other.getAdherenceRuleNotificationConfigId()) return false;
     if (!getName()
         .equals(other.getName())) return false;
+    if (!getEntriesList()
+        .equals(other.getEntriesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -176,6 +247,10 @@ private static final long serialVersionUID = 0L;
         getAdherenceRuleNotificationConfigId());
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
+    if (getEntriesCount() > 0) {
+      hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
+      hash = (53 * hash) + getEntriesList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -313,6 +388,13 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       adherenceRuleNotificationConfigId_ = 0L;
       name_ = "";
+      if (entriesBuilder_ == null) {
+        entries_ = java.util.Collections.emptyList();
+      } else {
+        entries_ = null;
+        entriesBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -339,9 +421,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfig buildPartial() {
       com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfig result = new com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfig(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfig result) {
+      if (entriesBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          entries_ = java.util.Collections.unmodifiableList(entries_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.entries_ = entries_;
+      } else {
+        result.entries_ = entriesBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfig result) {
@@ -406,6 +501,32 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (entriesBuilder_ == null) {
+        if (!other.entries_.isEmpty()) {
+          if (entries_.isEmpty()) {
+            entries_ = other.entries_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureEntriesIsMutable();
+            entries_.addAll(other.entries_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.entries_.isEmpty()) {
+          if (entriesBuilder_.isEmpty()) {
+            entriesBuilder_.dispose();
+            entriesBuilder_ = null;
+            entries_ = other.entries_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            entriesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getEntriesFieldBuilder() : null;
+          } else {
+            entriesBuilder_.addAllMessages(other.entries_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -442,6 +563,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry.parser(),
+                      extensionRegistry);
+              if (entriesBuilder_ == null) {
+                ensureEntriesIsMutable();
+                entries_.add(m);
+              } else {
+                entriesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -593,6 +727,318 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry> entries_ =
+      java.util.Collections.emptyList();
+    private void ensureEntriesIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        entries_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry>(entries_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry, com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry.Builder, com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntryOrBuilder> entriesBuilder_;
+
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry> getEntriesList() {
+      if (entriesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(entries_);
+      } else {
+        return entriesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public int getEntriesCount() {
+      if (entriesBuilder_ == null) {
+        return entries_.size();
+      } else {
+        return entriesBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry getEntries(int index) {
+      if (entriesBuilder_ == null) {
+        return entries_.get(index);
+      } else {
+        return entriesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public Builder setEntries(
+        int index, com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry value) {
+      if (entriesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEntriesIsMutable();
+        entries_.set(index, value);
+        onChanged();
+      } else {
+        entriesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public Builder setEntries(
+        int index, com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry.Builder builderForValue) {
+      if (entriesBuilder_ == null) {
+        ensureEntriesIsMutable();
+        entries_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        entriesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public Builder addEntries(com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry value) {
+      if (entriesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEntriesIsMutable();
+        entries_.add(value);
+        onChanged();
+      } else {
+        entriesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public Builder addEntries(
+        int index, com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry value) {
+      if (entriesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEntriesIsMutable();
+        entries_.add(index, value);
+        onChanged();
+      } else {
+        entriesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public Builder addEntries(
+        com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry.Builder builderForValue) {
+      if (entriesBuilder_ == null) {
+        ensureEntriesIsMutable();
+        entries_.add(builderForValue.build());
+        onChanged();
+      } else {
+        entriesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public Builder addEntries(
+        int index, com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry.Builder builderForValue) {
+      if (entriesBuilder_ == null) {
+        ensureEntriesIsMutable();
+        entries_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        entriesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public Builder addAllEntries(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry> values) {
+      if (entriesBuilder_ == null) {
+        ensureEntriesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, entries_);
+        onChanged();
+      } else {
+        entriesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public Builder clearEntries() {
+      if (entriesBuilder_ == null) {
+        entries_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        entriesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public Builder removeEntries(int index) {
+      if (entriesBuilder_ == null) {
+        ensureEntriesIsMutable();
+        entries_.remove(index);
+        onChanged();
+      } else {
+        entriesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry.Builder getEntriesBuilder(
+        int index) {
+      return getEntriesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntryOrBuilder getEntriesOrBuilder(
+        int index) {
+      if (entriesBuilder_ == null) {
+        return entries_.get(index);  } else {
+        return entriesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntryOrBuilder> 
+         getEntriesOrBuilderList() {
+      if (entriesBuilder_ != null) {
+        return entriesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(entries_);
+      }
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry.Builder addEntriesBuilder() {
+      return getEntriesFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry.Builder addEntriesBuilder(
+        int index) {
+      return getEntriesFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Entries that belong to this rule. Only used by List methods.
+     * </pre>
+     *
+     * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry.Builder> 
+         getEntriesBuilderList() {
+      return getEntriesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry, com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry.Builder, com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntryOrBuilder> 
+        getEntriesFieldBuilder() {
+      if (entriesBuilder_ == null) {
+        entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry, com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry.Builder, com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntryOrBuilder>(
+                entries_,
+                ((bitField0_ & 0x00000004) != 0),
+                getParentForChildren(),
+                isClean());
+        entries_ = null;
+      }
+      return entriesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

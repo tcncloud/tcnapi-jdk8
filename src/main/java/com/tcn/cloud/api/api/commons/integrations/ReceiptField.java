@@ -19,6 +19,8 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     displayName_ = "";
     value_ = "";
+    validationType_ = 0;
+    format_ = "";
   }
 
   @java.lang.Override
@@ -158,6 +160,83 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int VALIDATION_TYPE_FIELD_NUMBER = 4;
+  private int validationType_ = 0;
+  /**
+   * <pre>
+   * what the field should validate as,
+   *and how the front end should present the field to the user
+   * </pre>
+   *
+   * <code>.api.commons.integrations.Validation validation_type = 4 [json_name = "validationType"];</code>
+   * @return The enum numeric value on the wire for validationType.
+   */
+  @java.lang.Override public int getValidationTypeValue() {
+    return validationType_;
+  }
+  /**
+   * <pre>
+   * what the field should validate as,
+   *and how the front end should present the field to the user
+   * </pre>
+   *
+   * <code>.api.commons.integrations.Validation validation_type = 4 [json_name = "validationType"];</code>
+   * @return The validationType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.Validation getValidationType() {
+    com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.forNumber(validationType_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.Validation.UNRECOGNIZED : result;
+  }
+
+  public static final int FORMAT_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object format_ = "";
+  /**
+   * <pre>
+   * The datetime format allowed to use for date types.
+   * if left blank, a default set of format will be accepted
+   * </pre>
+   *
+   * <code>string format = 5 [json_name = "format"];</code>
+   * @return The format.
+   */
+  @java.lang.Override
+  public java.lang.String getFormat() {
+    java.lang.Object ref = format_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      format_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The datetime format allowed to use for date types.
+   * if left blank, a default set of format will be accepted
+   * </pre>
+   *
+   * <code>string format = 5 [json_name = "format"];</code>
+   * @return The bytes for format.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFormatBytes() {
+    java.lang.Object ref = format_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      format_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -181,6 +260,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, value_);
     }
+    if (validationType_ != com.tcn.cloud.api.api.commons.integrations.Validation.VALIDATION_NONE.getNumber()) {
+      output.writeEnum(4, validationType_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, format_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -198,6 +283,13 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, value_);
+    }
+    if (validationType_ != com.tcn.cloud.api.api.commons.integrations.Validation.VALIDATION_NONE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, validationType_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, format_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -220,6 +312,9 @@ private static final long serialVersionUID = 0L;
         .equals(other.getDisplayName())) return false;
     if (!getValue()
         .equals(other.getValue())) return false;
+    if (validationType_ != other.validationType_) return false;
+    if (!getFormat()
+        .equals(other.getFormat())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -237,6 +332,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getDisplayName().hashCode();
     hash = (37 * hash) + VALUE_FIELD_NUMBER;
     hash = (53 * hash) + getValue().hashCode();
+    hash = (37 * hash) + VALIDATION_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + validationType_;
+    hash = (37 * hash) + FORMAT_FIELD_NUMBER;
+    hash = (53 * hash) + getFormat().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -371,6 +470,8 @@ private static final long serialVersionUID = 0L;
       name_ = "";
       displayName_ = "";
       value_ = "";
+      validationType_ = 0;
+      format_ = "";
       return this;
     }
 
@@ -412,6 +513,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.value_ = value_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.validationType_ = validationType_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.format_ = format_;
       }
     }
 
@@ -474,6 +581,14 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
+      if (other.validationType_ != 0) {
+        setValidationTypeValue(other.getValidationTypeValue());
+      }
+      if (!other.getFormat().isEmpty()) {
+        format_ = other.format_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -515,6 +630,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              validationType_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              format_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -744,6 +869,181 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       value_ = value;
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private int validationType_ = 0;
+    /**
+     * <pre>
+     * what the field should validate as,
+     *and how the front end should present the field to the user
+     * </pre>
+     *
+     * <code>.api.commons.integrations.Validation validation_type = 4 [json_name = "validationType"];</code>
+     * @return The enum numeric value on the wire for validationType.
+     */
+    @java.lang.Override public int getValidationTypeValue() {
+      return validationType_;
+    }
+    /**
+     * <pre>
+     * what the field should validate as,
+     *and how the front end should present the field to the user
+     * </pre>
+     *
+     * <code>.api.commons.integrations.Validation validation_type = 4 [json_name = "validationType"];</code>
+     * @param value The enum numeric value on the wire for validationType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setValidationTypeValue(int value) {
+      validationType_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * what the field should validate as,
+     *and how the front end should present the field to the user
+     * </pre>
+     *
+     * <code>.api.commons.integrations.Validation validation_type = 4 [json_name = "validationType"];</code>
+     * @return The validationType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.Validation getValidationType() {
+      com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.forNumber(validationType_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.Validation.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * what the field should validate as,
+     *and how the front end should present the field to the user
+     * </pre>
+     *
+     * <code>.api.commons.integrations.Validation validation_type = 4 [json_name = "validationType"];</code>
+     * @param value The validationType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setValidationType(com.tcn.cloud.api.api.commons.integrations.Validation value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      validationType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * what the field should validate as,
+     *and how the front end should present the field to the user
+     * </pre>
+     *
+     * <code>.api.commons.integrations.Validation validation_type = 4 [json_name = "validationType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearValidationType() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      validationType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object format_ = "";
+    /**
+     * <pre>
+     * The datetime format allowed to use for date types.
+     * if left blank, a default set of format will be accepted
+     * </pre>
+     *
+     * <code>string format = 5 [json_name = "format"];</code>
+     * @return The format.
+     */
+    public java.lang.String getFormat() {
+      java.lang.Object ref = format_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        format_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The datetime format allowed to use for date types.
+     * if left blank, a default set of format will be accepted
+     * </pre>
+     *
+     * <code>string format = 5 [json_name = "format"];</code>
+     * @return The bytes for format.
+     */
+    public com.google.protobuf.ByteString
+        getFormatBytes() {
+      java.lang.Object ref = format_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        format_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The datetime format allowed to use for date types.
+     * if left blank, a default set of format will be accepted
+     * </pre>
+     *
+     * <code>string format = 5 [json_name = "format"];</code>
+     * @param value The format to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFormat(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      format_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The datetime format allowed to use for date types.
+     * if left blank, a default set of format will be accepted
+     * </pre>
+     *
+     * <code>string format = 5 [json_name = "format"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFormat() {
+      format_ = getDefaultInstance().getFormat();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The datetime format allowed to use for date types.
+     * if left blank, a default set of format will be accepted
+     * </pre>
+     *
+     * <code>string format = 5 [json_name = "format"];</code>
+     * @param value The bytes for format to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFormatBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      format_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
