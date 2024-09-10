@@ -42,4 +42,47 @@ public interface ReceiptFieldOrBuilder extends
    */
   com.google.protobuf.ByteString
       getValueBytes();
+
+  /**
+   * <pre>
+   * what the field should validate as,
+   *and how the front end should present the field to the user
+   * </pre>
+   *
+   * <code>.api.commons.integrations.Validation validation_type = 4 [json_name = "validationType"];</code>
+   * @return The enum numeric value on the wire for validationType.
+   */
+  int getValidationTypeValue();
+  /**
+   * <pre>
+   * what the field should validate as,
+   *and how the front end should present the field to the user
+   * </pre>
+   *
+   * <code>.api.commons.integrations.Validation validation_type = 4 [json_name = "validationType"];</code>
+   * @return The validationType.
+   */
+  com.tcn.cloud.api.api.commons.integrations.Validation getValidationType();
+
+  /**
+   * <pre>
+   * The datetime format allowed to use for date types.
+   * if left blank, a default set of format will be accepted
+   * </pre>
+   *
+   * <code>string format = 5 [json_name = "format"];</code>
+   * @return The format.
+   */
+  java.lang.String getFormat();
+  /**
+   * <pre>
+   * The datetime format allowed to use for date types.
+   * if left blank, a default set of format will be accepted
+   * </pre>
+   *
+   * <code>string format = 5 [json_name = "format"];</code>
+   * @return The bytes for format.
+   */
+  com.google.protobuf.ByteString
+      getFormatBytes();
 }

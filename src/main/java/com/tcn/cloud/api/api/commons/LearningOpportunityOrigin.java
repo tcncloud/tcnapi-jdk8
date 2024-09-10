@@ -61,6 +61,14 @@ public enum LearningOpportunityOrigin
    * <code>FLAGGED_CONVERSATION = 5;</code>
    */
   FLAGGED_CONVERSATION(5),
+  /**
+   * <pre>
+   * Created from Smart Evaluation.
+   * </pre>
+   *
+   * <code>SMART_EVALUATION = 6;</code>
+   */
+  SMART_EVALUATION(6),
   UNRECOGNIZED(-1),
   ;
 
@@ -112,6 +120,14 @@ public enum LearningOpportunityOrigin
    * <code>FLAGGED_CONVERSATION = 5;</code>
    */
   public static final int FLAGGED_CONVERSATION_VALUE = 5;
+  /**
+   * <pre>
+   * Created from Smart Evaluation.
+   * </pre>
+   *
+   * <code>SMART_EVALUATION = 6;</code>
+   */
+  public static final int SMART_EVALUATION_VALUE = 6;
 
 
   public final int getNumber() {
@@ -144,6 +160,7 @@ public enum LearningOpportunityOrigin
       case 3: return FLAG_EVALUATION;
       case 4: return CONVERSATION;
       case 5: return FLAGGED_CONVERSATION;
+      case 6: return SMART_EVALUATION;
       default: return null;
     }
   }

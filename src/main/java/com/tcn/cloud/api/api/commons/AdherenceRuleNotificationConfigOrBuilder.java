@@ -36,4 +36,48 @@ public interface AdherenceRuleNotificationConfigOrBuilder extends
    */
   com.google.protobuf.ByteString
       getNameBytes();
+
+  /**
+   * <pre>
+   * Entries that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry> 
+      getEntriesList();
+  /**
+   * <pre>
+   * Entries that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+   */
+  com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntry getEntries(int index);
+  /**
+   * <pre>
+   * Entries that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+   */
+  int getEntriesCount();
+  /**
+   * <pre>
+   * Entries that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntryOrBuilder> 
+      getEntriesOrBuilderList();
+  /**
+   * <pre>
+   * Entries that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceRuleNotificationConfigEntry entries = 3 [json_name = "entries"];</code>
+   */
+  com.tcn.cloud.api.api.commons.AdherenceRuleNotificationConfigEntryOrBuilder getEntriesOrBuilder(
+      int index);
 }
