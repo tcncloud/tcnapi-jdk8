@@ -20,6 +20,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CopyHuntGroupToOrganizationRequest() {
+    fromOrganizationId_ = "";
+    toOrganizationId_ = "";
   }
 
   @java.lang.Override
@@ -42,14 +44,108 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest.Builder.class);
   }
 
-  public static final int HUNT_GROUP_SID_FIELD_NUMBER = 1;
+  public static final int FROM_ORGANIZATION_ID_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object fromOrganizationId_ = "";
+  /**
+   * <pre>
+   * The id of the source organization where the hunt group is copied from
+   * </pre>
+   *
+   * <code>string from_organization_id = 1 [json_name = "fromOrganizationId"];</code>
+   * @return The fromOrganizationId.
+   */
+  @java.lang.Override
+  public java.lang.String getFromOrganizationId() {
+    java.lang.Object ref = fromOrganizationId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      fromOrganizationId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The id of the source organization where the hunt group is copied from
+   * </pre>
+   *
+   * <code>string from_organization_id = 1 [json_name = "fromOrganizationId"];</code>
+   * @return The bytes for fromOrganizationId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFromOrganizationIdBytes() {
+    java.lang.Object ref = fromOrganizationId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      fromOrganizationId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TO_ORGANIZATION_ID_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object toOrganizationId_ = "";
+  /**
+   * <pre>
+   * The id of the destination organization where the hunt group is copied to
+   * </pre>
+   *
+   * <code>string to_organization_id = 2 [json_name = "toOrganizationId"];</code>
+   * @return The toOrganizationId.
+   */
+  @java.lang.Override
+  public java.lang.String getToOrganizationId() {
+    java.lang.Object ref = toOrganizationId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      toOrganizationId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The id of the destination organization where the hunt group is copied to
+   * </pre>
+   *
+   * <code>string to_organization_id = 2 [json_name = "toOrganizationId"];</code>
+   * @return The bytes for toOrganizationId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getToOrganizationIdBytes() {
+    java.lang.Object ref = toOrganizationId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      toOrganizationId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int HUNT_GROUP_SID_FIELD_NUMBER = 3;
   private long huntGroupSid_ = 0L;
   /**
    * <pre>
    * The sid of the hunt group to copy
    * </pre>
    *
-   * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+   * <code>int64 hunt_group_sid = 3 [json_name = "huntGroupSid"];</code>
    * @return The huntGroupSid.
    */
   @java.lang.Override
@@ -57,19 +153,45 @@ private static final long serialVersionUID = 0L;
     return huntGroupSid_;
   }
 
-  public static final int ORGANIZATION_ID_FIELD_NUMBER = 2;
-  private long organizationId_ = 0L;
+  public static final int HUNT_GROUP_NAME_FIELD_NUMBER = 4;
+  private com.google.protobuf.StringValue huntGroupName_;
   /**
    * <pre>
-   * The id of the organization to copy the hunt group to
+   * The name of the hunt group to copy
+   * If left empty, the name of the source hunt group will be used
    * </pre>
    *
-   * <code>int64 organization_id = 2 [json_name = "organizationId"];</code>
-   * @return The organizationId.
+   * <code>.google.protobuf.StringValue hunt_group_name = 4 [json_name = "huntGroupName"];</code>
+   * @return Whether the huntGroupName field is set.
    */
   @java.lang.Override
-  public long getOrganizationId() {
-    return organizationId_;
+  public boolean hasHuntGroupName() {
+    return huntGroupName_ != null;
+  }
+  /**
+   * <pre>
+   * The name of the hunt group to copy
+   * If left empty, the name of the source hunt group will be used
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hunt_group_name = 4 [json_name = "huntGroupName"];</code>
+   * @return The huntGroupName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getHuntGroupName() {
+    return huntGroupName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : huntGroupName_;
+  }
+  /**
+   * <pre>
+   * The name of the hunt group to copy
+   * If left empty, the name of the source hunt group will be used
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue hunt_group_name = 4 [json_name = "huntGroupName"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getHuntGroupNameOrBuilder() {
+    return huntGroupName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : huntGroupName_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -86,11 +208,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (huntGroupSid_ != 0L) {
-      output.writeInt64(1, huntGroupSid_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromOrganizationId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fromOrganizationId_);
     }
-    if (organizationId_ != 0L) {
-      output.writeInt64(2, organizationId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toOrganizationId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, toOrganizationId_);
+    }
+    if (huntGroupSid_ != 0L) {
+      output.writeInt64(3, huntGroupSid_);
+    }
+    if (huntGroupName_ != null) {
+      output.writeMessage(4, getHuntGroupName());
     }
     getUnknownFields().writeTo(output);
   }
@@ -101,13 +229,19 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromOrganizationId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fromOrganizationId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toOrganizationId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, toOrganizationId_);
+    }
     if (huntGroupSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, huntGroupSid_);
+        .computeInt64Size(3, huntGroupSid_);
     }
-    if (organizationId_ != 0L) {
+    if (huntGroupName_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, organizationId_);
+        .computeMessageSize(4, getHuntGroupName());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -124,10 +258,17 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest other = (com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest) obj;
 
+    if (!getFromOrganizationId()
+        .equals(other.getFromOrganizationId())) return false;
+    if (!getToOrganizationId()
+        .equals(other.getToOrganizationId())) return false;
     if (getHuntGroupSid()
         != other.getHuntGroupSid()) return false;
-    if (getOrganizationId()
-        != other.getOrganizationId()) return false;
+    if (hasHuntGroupName() != other.hasHuntGroupName()) return false;
+    if (hasHuntGroupName()) {
+      if (!getHuntGroupName()
+          .equals(other.getHuntGroupName())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -139,12 +280,17 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + FROM_ORGANIZATION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getFromOrganizationId().hashCode();
+    hash = (37 * hash) + TO_ORGANIZATION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getToOrganizationId().hashCode();
     hash = (37 * hash) + HUNT_GROUP_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getHuntGroupSid());
-    hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getOrganizationId());
+    if (hasHuntGroupName()) {
+      hash = (37 * hash) + HUNT_GROUP_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getHuntGroupName().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -280,8 +426,14 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      fromOrganizationId_ = "";
+      toOrganizationId_ = "";
       huntGroupSid_ = 0L;
-      organizationId_ = 0L;
+      huntGroupName_ = null;
+      if (huntGroupNameBuilder_ != null) {
+        huntGroupNameBuilder_.dispose();
+        huntGroupNameBuilder_ = null;
+      }
       return this;
     }
 
@@ -316,10 +468,18 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.huntGroupSid_ = huntGroupSid_;
+        result.fromOrganizationId_ = fromOrganizationId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.organizationId_ = organizationId_;
+        result.toOrganizationId_ = toOrganizationId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.huntGroupSid_ = huntGroupSid_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.huntGroupName_ = huntGroupNameBuilder_ == null
+            ? huntGroupName_
+            : huntGroupNameBuilder_.build();
       }
     }
 
@@ -367,11 +527,21 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest other) {
       if (other == com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest.getDefaultInstance()) return this;
+      if (!other.getFromOrganizationId().isEmpty()) {
+        fromOrganizationId_ = other.fromOrganizationId_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (!other.getToOrganizationId().isEmpty()) {
+        toOrganizationId_ = other.toOrganizationId_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       if (other.getHuntGroupSid() != 0L) {
         setHuntGroupSid(other.getHuntGroupSid());
       }
-      if (other.getOrganizationId() != 0L) {
-        setOrganizationId(other.getOrganizationId());
+      if (other.hasHuntGroupName()) {
+        mergeHuntGroupName(other.getHuntGroupName());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -399,16 +569,28 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              huntGroupSid_ = input.readInt64();
+            case 10: {
+              fromOrganizationId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
-            } // case 8
-            case 16: {
-              organizationId_ = input.readInt64();
+            } // case 10
+            case 18: {
+              toOrganizationId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
-            } // case 16
+            } // case 18
+            case 24: {
+              huntGroupSid_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              input.readMessage(
+                  getHuntGroupNameFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -426,13 +608,197 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private java.lang.Object fromOrganizationId_ = "";
+    /**
+     * <pre>
+     * The id of the source organization where the hunt group is copied from
+     * </pre>
+     *
+     * <code>string from_organization_id = 1 [json_name = "fromOrganizationId"];</code>
+     * @return The fromOrganizationId.
+     */
+    public java.lang.String getFromOrganizationId() {
+      java.lang.Object ref = fromOrganizationId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fromOrganizationId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The id of the source organization where the hunt group is copied from
+     * </pre>
+     *
+     * <code>string from_organization_id = 1 [json_name = "fromOrganizationId"];</code>
+     * @return The bytes for fromOrganizationId.
+     */
+    public com.google.protobuf.ByteString
+        getFromOrganizationIdBytes() {
+      java.lang.Object ref = fromOrganizationId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fromOrganizationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The id of the source organization where the hunt group is copied from
+     * </pre>
+     *
+     * <code>string from_organization_id = 1 [json_name = "fromOrganizationId"];</code>
+     * @param value The fromOrganizationId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFromOrganizationId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      fromOrganizationId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The id of the source organization where the hunt group is copied from
+     * </pre>
+     *
+     * <code>string from_organization_id = 1 [json_name = "fromOrganizationId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFromOrganizationId() {
+      fromOrganizationId_ = getDefaultInstance().getFromOrganizationId();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The id of the source organization where the hunt group is copied from
+     * </pre>
+     *
+     * <code>string from_organization_id = 1 [json_name = "fromOrganizationId"];</code>
+     * @param value The bytes for fromOrganizationId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFromOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      fromOrganizationId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object toOrganizationId_ = "";
+    /**
+     * <pre>
+     * The id of the destination organization where the hunt group is copied to
+     * </pre>
+     *
+     * <code>string to_organization_id = 2 [json_name = "toOrganizationId"];</code>
+     * @return The toOrganizationId.
+     */
+    public java.lang.String getToOrganizationId() {
+      java.lang.Object ref = toOrganizationId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        toOrganizationId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The id of the destination organization where the hunt group is copied to
+     * </pre>
+     *
+     * <code>string to_organization_id = 2 [json_name = "toOrganizationId"];</code>
+     * @return The bytes for toOrganizationId.
+     */
+    public com.google.protobuf.ByteString
+        getToOrganizationIdBytes() {
+      java.lang.Object ref = toOrganizationId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        toOrganizationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The id of the destination organization where the hunt group is copied to
+     * </pre>
+     *
+     * <code>string to_organization_id = 2 [json_name = "toOrganizationId"];</code>
+     * @param value The toOrganizationId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setToOrganizationId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      toOrganizationId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The id of the destination organization where the hunt group is copied to
+     * </pre>
+     *
+     * <code>string to_organization_id = 2 [json_name = "toOrganizationId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearToOrganizationId() {
+      toOrganizationId_ = getDefaultInstance().getToOrganizationId();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The id of the destination organization where the hunt group is copied to
+     * </pre>
+     *
+     * <code>string to_organization_id = 2 [json_name = "toOrganizationId"];</code>
+     * @param value The bytes for toOrganizationId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setToOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      toOrganizationId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
     private long huntGroupSid_ ;
     /**
      * <pre>
      * The sid of the hunt group to copy
      * </pre>
      *
-     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+     * <code>int64 hunt_group_sid = 3 [json_name = "huntGroupSid"];</code>
      * @return The huntGroupSid.
      */
     @java.lang.Override
@@ -444,14 +810,14 @@ private static final long serialVersionUID = 0L;
      * The sid of the hunt group to copy
      * </pre>
      *
-     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+     * <code>int64 hunt_group_sid = 3 [json_name = "huntGroupSid"];</code>
      * @param value The huntGroupSid to set.
      * @return This builder for chaining.
      */
     public Builder setHuntGroupSid(long value) {
 
       huntGroupSid_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -460,58 +826,178 @@ private static final long serialVersionUID = 0L;
      * The sid of the hunt group to copy
      * </pre>
      *
-     * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
+     * <code>int64 hunt_group_sid = 3 [json_name = "huntGroupSid"];</code>
      * @return This builder for chaining.
      */
     public Builder clearHuntGroupSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000004);
       huntGroupSid_ = 0L;
       onChanged();
       return this;
     }
 
-    private long organizationId_ ;
+    private com.google.protobuf.StringValue huntGroupName_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> huntGroupNameBuilder_;
     /**
      * <pre>
-     * The id of the organization to copy the hunt group to
+     * The name of the hunt group to copy
+     * If left empty, the name of the source hunt group will be used
      * </pre>
      *
-     * <code>int64 organization_id = 2 [json_name = "organizationId"];</code>
-     * @return The organizationId.
+     * <code>.google.protobuf.StringValue hunt_group_name = 4 [json_name = "huntGroupName"];</code>
+     * @return Whether the huntGroupName field is set.
      */
-    @java.lang.Override
-    public long getOrganizationId() {
-      return organizationId_;
+    public boolean hasHuntGroupName() {
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * The id of the organization to copy the hunt group to
+     * The name of the hunt group to copy
+     * If left empty, the name of the source hunt group will be used
      * </pre>
      *
-     * <code>int64 organization_id = 2 [json_name = "organizationId"];</code>
-     * @param value The organizationId to set.
-     * @return This builder for chaining.
+     * <code>.google.protobuf.StringValue hunt_group_name = 4 [json_name = "huntGroupName"];</code>
+     * @return The huntGroupName.
      */
-    public Builder setOrganizationId(long value) {
-
-      organizationId_ = value;
-      bitField0_ |= 0x00000002;
+    public com.google.protobuf.StringValue getHuntGroupName() {
+      if (huntGroupNameBuilder_ == null) {
+        return huntGroupName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : huntGroupName_;
+      } else {
+        return huntGroupNameBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The name of the hunt group to copy
+     * If left empty, the name of the source hunt group will be used
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hunt_group_name = 4 [json_name = "huntGroupName"];</code>
+     */
+    public Builder setHuntGroupName(com.google.protobuf.StringValue value) {
+      if (huntGroupNameBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        huntGroupName_ = value;
+      } else {
+        huntGroupNameBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The id of the organization to copy the hunt group to
+     * The name of the hunt group to copy
+     * If left empty, the name of the source hunt group will be used
      * </pre>
      *
-     * <code>int64 organization_id = 2 [json_name = "organizationId"];</code>
-     * @return This builder for chaining.
+     * <code>.google.protobuf.StringValue hunt_group_name = 4 [json_name = "huntGroupName"];</code>
      */
-    public Builder clearOrganizationId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      organizationId_ = 0L;
+    public Builder setHuntGroupName(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (huntGroupNameBuilder_ == null) {
+        huntGroupName_ = builderForValue.build();
+      } else {
+        huntGroupNameBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
+    }
+    /**
+     * <pre>
+     * The name of the hunt group to copy
+     * If left empty, the name of the source hunt group will be used
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hunt_group_name = 4 [json_name = "huntGroupName"];</code>
+     */
+    public Builder mergeHuntGroupName(com.google.protobuf.StringValue value) {
+      if (huntGroupNameBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0) &&
+          huntGroupName_ != null &&
+          huntGroupName_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getHuntGroupNameBuilder().mergeFrom(value);
+        } else {
+          huntGroupName_ = value;
+        }
+      } else {
+        huntGroupNameBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The name of the hunt group to copy
+     * If left empty, the name of the source hunt group will be used
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hunt_group_name = 4 [json_name = "huntGroupName"];</code>
+     */
+    public Builder clearHuntGroupName() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      huntGroupName_ = null;
+      if (huntGroupNameBuilder_ != null) {
+        huntGroupNameBuilder_.dispose();
+        huntGroupNameBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The name of the hunt group to copy
+     * If left empty, the name of the source hunt group will be used
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hunt_group_name = 4 [json_name = "huntGroupName"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getHuntGroupNameBuilder() {
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return getHuntGroupNameFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The name of the hunt group to copy
+     * If left empty, the name of the source hunt group will be used
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hunt_group_name = 4 [json_name = "huntGroupName"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getHuntGroupNameOrBuilder() {
+      if (huntGroupNameBuilder_ != null) {
+        return huntGroupNameBuilder_.getMessageOrBuilder();
+      } else {
+        return huntGroupName_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : huntGroupName_;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the hunt group to copy
+     * If left empty, the name of the source hunt group will be used
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue hunt_group_name = 4 [json_name = "huntGroupName"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getHuntGroupNameFieldBuilder() {
+      if (huntGroupNameBuilder_ == null) {
+        huntGroupNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getHuntGroupName(),
+                getParentForChildren(),
+                isClean());
+        huntGroupName_ = null;
+      }
+      return huntGroupNameBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
