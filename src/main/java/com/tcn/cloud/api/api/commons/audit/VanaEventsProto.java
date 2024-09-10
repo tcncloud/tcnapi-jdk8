@@ -69,53 +69,57 @@ public final class VanaEventsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n#api/commons/audit/vana_events.proto\022\021a" +
-      "pi.commons.audit\032\036google/protobuf/durati" +
-      "on.proto\032\037google/protobuf/timestamp.prot" +
-      "o\"\236\001\n\rVanaFlagEvent\022\033\n\tflag_name\030\001 \001(\tR\010" +
-      "flagName\022\031\n\010flag_sid\030\002 \001(\003R\007flagSid\022\020\n\003u" +
-      "rl\030\003 \001(\tR\003url\022\'\n\017num_transcripts\030\004 \001(\003R\016" +
-      "numTranscripts\022\032\n\010priority\030\005 \001(\005R\010priori" +
-      "ty\"\244\001\n\023VanaFlagReviewEvent\022\033\n\tflag_name\030" +
-      "\001 \001(\tR\010flagName\022\031\n\010flag_sid\030\002 \001(\003R\007flagS" +
-      "id\022\020\n\003url\030\003 \001(\tR\003url\022\'\n\017num_transcripts\030" +
-      "\004 \001(\003R\016numTranscripts\022\032\n\010priority\030\005 \001(\005R" +
-      "\010priority\"\234\001\n\026VanaBillingReportEvent\0229\n\n" +
-      "start_time\030\001 \001(\0132\032.google.protobuf.Times" +
-      "tampR\tstartTime\0225\n\010end_time\030\002 \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\007endTime\022\020\n\003url\030\003 " +
-      "\001(\tR\003url\"\267\002\n\024VanaFlagSummaryEvent\0229\n\nsta" +
-      "rt_time\030\001 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\tstartTime\0225\n\010end_time\030\002 \001(\0132\032.google." +
-      "protobuf.TimestampR\007endTime\022Z\n\016flag_summ" +
-      "aries\030\003 \003(\01323.api.commons.audit.VanaFlag" +
-      "SummaryEvent.FlagSummaryR\rflagSummaries\032" +
-      "Q\n\013FlagSummary\022%\n\016transcript_sid\030\001 \001(\003R\r" +
-      "transcriptSid\022\033\n\tflag_sids\030\002 \003(\003R\010flagSi" +
-      "ds\"\211\002\n\031VanaPhraseCorrectionEvent\022<\n\014star" +
-      "t_offset\030\001 \001(\0132\031.google.protobuf.Duratio" +
-      "nR\013startOffset\0228\n\nend_offset\030\002 \001(\0132\031.goo" +
-      "gle.protobuf.DurationR\tendOffset\022#\n\rorig" +
-      "inal_text\030\003 \001(\tR\014originalText\022#\n\rpropose" +
-      "d_text\030\004 \001(\tR\014proposedText\022\020\n\003url\030\005 \001(\tR" +
-      "\003url\022\030\n\007channel\030\006 \001(\rR\007channel\"\356\002\n\031VanaC" +
-      "reateTranscriptEvent\022%\n\016transcript_sid\030\001" +
-      " \001(\003R\rtranscriptSid\022G\n\004call\030\002 \001(\01321.api." +
-      "commons.audit.VanaCreateTranscriptEvent." +
-      "CallH\000R\004call\022D\n\003sms\030\003 \001(\01320.api.commons." +
-      "audit.VanaCreateTranscriptEvent.SmsH\000R\003s" +
-      "ms\032]\n\004Call\022\031\n\010call_sid\030\001 \001(\003R\007callSid\022\033\n" +
-      "\ttalk_time\030\002 \001(\rR\010talkTime\022\035\n\naudio_time" +
-      "\030\003 \001(\rR\taudioTime\0320\n\003Sms\022)\n\020conversation" +
-      "_sid\030\001 \001(\003R\017conversationSidB\n\n\010metadataB" +
-      "\234\001\n#com.tcn.cloud.api.api.commons.auditB" +
-      "\017VanaEventsProtoP\001\242\002\003ACA\252\002\021Api.Commons.A" +
-      "udit\312\002\021Api\\Commons\\Audit\342\002\035Api\\Commons\\A" +
-      "udit\\GPBMetadata\352\002\023Api::Commons::Auditb\006" +
-      "proto3"
+      "pi.commons.audit\032\025api/commons/acd.proto\032" +
+      "\036google/protobuf/duration.proto\032\037google/" +
+      "protobuf/timestamp.proto\"\236\001\n\rVanaFlagEve" +
+      "nt\022\033\n\tflag_name\030\001 \001(\tR\010flagName\022\031\n\010flag_" +
+      "sid\030\002 \001(\003R\007flagSid\022\020\n\003url\030\003 \001(\tR\003url\022\'\n\017" +
+      "num_transcripts\030\004 \001(\003R\016numTranscripts\022\032\n" +
+      "\010priority\030\005 \001(\005R\010priority\"\244\001\n\023VanaFlagRe" +
+      "viewEvent\022\033\n\tflag_name\030\001 \001(\tR\010flagName\022\031" +
+      "\n\010flag_sid\030\002 \001(\003R\007flagSid\022\020\n\003url\030\003 \001(\tR\003" +
+      "url\022\'\n\017num_transcripts\030\004 \001(\003R\016numTranscr" +
+      "ipts\022\032\n\010priority\030\005 \001(\005R\010priority\"\234\001\n\026Van" +
+      "aBillingReportEvent\0229\n\nstart_time\030\001 \001(\0132" +
+      "\032.google.protobuf.TimestampR\tstartTime\0225" +
+      "\n\010end_time\030\002 \001(\0132\032.google.protobuf.Times" +
+      "tampR\007endTime\022\020\n\003url\030\003 \001(\tR\003url\"\267\002\n\024Vana" +
+      "FlagSummaryEvent\0229\n\nstart_time\030\001 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampR\tstartTime\0225\n\010e" +
+      "nd_time\030\002 \001(\0132\032.google.protobuf.Timestam" +
+      "pR\007endTime\022Z\n\016flag_summaries\030\003 \003(\01323.api" +
+      ".commons.audit.VanaFlagSummaryEvent.Flag" +
+      "SummaryR\rflagSummaries\032Q\n\013FlagSummary\022%\n" +
+      "\016transcript_sid\030\001 \001(\003R\rtranscriptSid\022\033\n\t" +
+      "flag_sids\030\002 \003(\003R\010flagSids\"\211\002\n\031VanaPhrase" +
+      "CorrectionEvent\022<\n\014start_offset\030\001 \001(\0132\031." +
+      "google.protobuf.DurationR\013startOffset\0228\n" +
+      "\nend_offset\030\002 \001(\0132\031.google.protobuf.Dura" +
+      "tionR\tendOffset\022#\n\roriginal_text\030\003 \001(\tR\014" +
+      "originalText\022#\n\rproposed_text\030\004 \001(\tR\014pro" +
+      "posedText\022\020\n\003url\030\005 \001(\tR\003url\022\030\n\007channel\030\006" +
+      " \001(\rR\007channel\"\336\003\n\031VanaCreateTranscriptEv" +
+      "ent\022%\n\016transcript_sid\030\001 \001(\003R\rtranscriptS" +
+      "id\022G\n\004call\030\002 \001(\01321.api.commons.audit.Van" +
+      "aCreateTranscriptEvent.CallH\000R\004call\022D\n\003s" +
+      "ms\030\003 \001(\01320.api.commons.audit.VanaCreateT" +
+      "ranscriptEvent.SmsH\000R\003sms\032\314\001\n\004Call\022\031\n\010ca" +
+      "ll_sid\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\016" +
+      "2\032.api.commons.CallType.EnumR\010callType\0226" +
+      "\n\ttalk_time\030\003 \001(\0132\031.google.protobuf.Dura" +
+      "tionR\010talkTime\0228\n\naudio_time\030\004 \001(\0132\031.goo" +
+      "gle.protobuf.DurationR\taudioTime\0320\n\003Sms\022" +
+      ")\n\020conversation_sid\030\001 \001(\003R\017conversationS" +
+      "idB\n\n\010metadataB\234\001\n#com.tcn.cloud.api.api" +
+      ".commons.auditB\017VanaEventsProtoP\001\242\002\003ACA\252" +
+      "\002\021Api.Commons.Audit\312\002\021Api\\Commons\\Audit\342" +
+      "\002\035Api\\Commons\\Audit\\GPBMetadata\352\002\023Api::C" +
+      "ommons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.api.commons.AcdProto.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
@@ -166,13 +170,14 @@ public final class VanaEventsProto {
     internal_static_api_commons_audit_VanaCreateTranscriptEvent_Call_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_VanaCreateTranscriptEvent_Call_descriptor,
-        new java.lang.String[] { "CallSid", "TalkTime", "AudioTime", });
+        new java.lang.String[] { "CallSid", "CallType", "TalkTime", "AudioTime", });
     internal_static_api_commons_audit_VanaCreateTranscriptEvent_Sms_descriptor =
       internal_static_api_commons_audit_VanaCreateTranscriptEvent_descriptor.getNestedTypes().get(1);
     internal_static_api_commons_audit_VanaCreateTranscriptEvent_Sms_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_VanaCreateTranscriptEvent_Sms_descriptor,
         new java.lang.String[] { "ConversationSid", });
+    com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }

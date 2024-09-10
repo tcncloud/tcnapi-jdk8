@@ -53,16 +53,45 @@ private static final long serialVersionUID = 0L;
     long getCallSid();
 
     /**
-     * <code>uint32 talk_time = 2 [json_name = "talkTime"];</code>
-     * @return The talkTime.
+     * <code>.api.commons.CallType.Enum call_type = 2 [json_name = "callType"];</code>
+     * @return The enum numeric value on the wire for callType.
      */
-    int getTalkTime();
+    int getCallTypeValue();
+    /**
+     * <code>.api.commons.CallType.Enum call_type = 2 [json_name = "callType"];</code>
+     * @return The callType.
+     */
+    com.tcn.cloud.api.api.commons.CallType.Enum getCallType();
 
     /**
-     * <code>uint32 audio_time = 3 [json_name = "audioTime"];</code>
+     * <code>.google.protobuf.Duration talk_time = 3 [json_name = "talkTime"];</code>
+     * @return Whether the talkTime field is set.
+     */
+    boolean hasTalkTime();
+    /**
+     * <code>.google.protobuf.Duration talk_time = 3 [json_name = "talkTime"];</code>
+     * @return The talkTime.
+     */
+    com.google.protobuf.Duration getTalkTime();
+    /**
+     * <code>.google.protobuf.Duration talk_time = 3 [json_name = "talkTime"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getTalkTimeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Duration audio_time = 4 [json_name = "audioTime"];</code>
+     * @return Whether the audioTime field is set.
+     */
+    boolean hasAudioTime();
+    /**
+     * <code>.google.protobuf.Duration audio_time = 4 [json_name = "audioTime"];</code>
      * @return The audioTime.
      */
-    int getAudioTime();
+    com.google.protobuf.Duration getAudioTime();
+    /**
+     * <code>.google.protobuf.Duration audio_time = 4 [json_name = "audioTime"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getAudioTimeOrBuilder();
   }
   /**
    * Protobuf type {@code api.commons.audit.VanaCreateTranscriptEvent.Call}
@@ -77,6 +106,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Call() {
+      callType_ = 0;
     }
 
     @java.lang.Override
@@ -110,26 +140,74 @@ private static final long serialVersionUID = 0L;
       return callSid_;
     }
 
-    public static final int TALK_TIME_FIELD_NUMBER = 2;
-    private int talkTime_ = 0;
+    public static final int CALL_TYPE_FIELD_NUMBER = 2;
+    private int callType_ = 0;
     /**
-     * <code>uint32 talk_time = 2 [json_name = "talkTime"];</code>
+     * <code>.api.commons.CallType.Enum call_type = 2 [json_name = "callType"];</code>
+     * @return The enum numeric value on the wire for callType.
+     */
+    @java.lang.Override public int getCallTypeValue() {
+      return callType_;
+    }
+    /**
+     * <code>.api.commons.CallType.Enum call_type = 2 [json_name = "callType"];</code>
+     * @return The callType.
+     */
+    @java.lang.Override public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
+      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
+      return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
+    }
+
+    public static final int TALK_TIME_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration talkTime_;
+    /**
+     * <code>.google.protobuf.Duration talk_time = 3 [json_name = "talkTime"];</code>
+     * @return Whether the talkTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasTalkTime() {
+      return talkTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration talk_time = 3 [json_name = "talkTime"];</code>
      * @return The talkTime.
      */
     @java.lang.Override
-    public int getTalkTime() {
-      return talkTime_;
+    public com.google.protobuf.Duration getTalkTime() {
+      return talkTime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : talkTime_;
+    }
+    /**
+     * <code>.google.protobuf.Duration talk_time = 3 [json_name = "talkTime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getTalkTimeOrBuilder() {
+      return talkTime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : talkTime_;
     }
 
-    public static final int AUDIO_TIME_FIELD_NUMBER = 3;
-    private int audioTime_ = 0;
+    public static final int AUDIO_TIME_FIELD_NUMBER = 4;
+    private com.google.protobuf.Duration audioTime_;
     /**
-     * <code>uint32 audio_time = 3 [json_name = "audioTime"];</code>
+     * <code>.google.protobuf.Duration audio_time = 4 [json_name = "audioTime"];</code>
+     * @return Whether the audioTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasAudioTime() {
+      return audioTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration audio_time = 4 [json_name = "audioTime"];</code>
      * @return The audioTime.
      */
     @java.lang.Override
-    public int getAudioTime() {
-      return audioTime_;
+    public com.google.protobuf.Duration getAudioTime() {
+      return audioTime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : audioTime_;
+    }
+    /**
+     * <code>.google.protobuf.Duration audio_time = 4 [json_name = "audioTime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getAudioTimeOrBuilder() {
+      return audioTime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : audioTime_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -149,11 +227,14 @@ private static final long serialVersionUID = 0L;
       if (callSid_ != 0L) {
         output.writeInt64(1, callSid_);
       }
-      if (talkTime_ != 0) {
-        output.writeUInt32(2, talkTime_);
+      if (callType_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
+        output.writeEnum(2, callType_);
       }
-      if (audioTime_ != 0) {
-        output.writeUInt32(3, audioTime_);
+      if (talkTime_ != null) {
+        output.writeMessage(3, getTalkTime());
+      }
+      if (audioTime_ != null) {
+        output.writeMessage(4, getAudioTime());
       }
       getUnknownFields().writeTo(output);
     }
@@ -168,13 +249,17 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, callSid_);
       }
-      if (talkTime_ != 0) {
+      if (callType_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, talkTime_);
+          .computeEnumSize(2, callType_);
       }
-      if (audioTime_ != 0) {
+      if (talkTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, audioTime_);
+          .computeMessageSize(3, getTalkTime());
+      }
+      if (audioTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getAudioTime());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -193,10 +278,17 @@ private static final long serialVersionUID = 0L;
 
       if (getCallSid()
           != other.getCallSid()) return false;
-      if (getTalkTime()
-          != other.getTalkTime()) return false;
-      if (getAudioTime()
-          != other.getAudioTime()) return false;
+      if (callType_ != other.callType_) return false;
+      if (hasTalkTime() != other.hasTalkTime()) return false;
+      if (hasTalkTime()) {
+        if (!getTalkTime()
+            .equals(other.getTalkTime())) return false;
+      }
+      if (hasAudioTime() != other.hasAudioTime()) return false;
+      if (hasAudioTime()) {
+        if (!getAudioTime()
+            .equals(other.getAudioTime())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -211,10 +303,16 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CALL_SID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getCallSid());
-      hash = (37 * hash) + TALK_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getTalkTime();
-      hash = (37 * hash) + AUDIO_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getAudioTime();
+      hash = (37 * hash) + CALL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + callType_;
+      if (hasTalkTime()) {
+        hash = (37 * hash) + TALK_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getTalkTime().hashCode();
+      }
+      if (hasAudioTime()) {
+        hash = (37 * hash) + AUDIO_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getAudioTime().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -347,8 +445,17 @@ private static final long serialVersionUID = 0L;
         super.clear();
         bitField0_ = 0;
         callSid_ = 0L;
-        talkTime_ = 0;
-        audioTime_ = 0;
+        callType_ = 0;
+        talkTime_ = null;
+        if (talkTimeBuilder_ != null) {
+          talkTimeBuilder_.dispose();
+          talkTimeBuilder_ = null;
+        }
+        audioTime_ = null;
+        if (audioTimeBuilder_ != null) {
+          audioTimeBuilder_.dispose();
+          audioTimeBuilder_ = null;
+        }
         return this;
       }
 
@@ -386,10 +493,17 @@ private static final long serialVersionUID = 0L;
           result.callSid_ = callSid_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.talkTime_ = talkTime_;
+          result.callType_ = callType_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.audioTime_ = audioTime_;
+          result.talkTime_ = talkTimeBuilder_ == null
+              ? talkTime_
+              : talkTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.audioTime_ = audioTimeBuilder_ == null
+              ? audioTime_
+              : audioTimeBuilder_.build();
         }
       }
 
@@ -440,11 +554,14 @@ private static final long serialVersionUID = 0L;
         if (other.getCallSid() != 0L) {
           setCallSid(other.getCallSid());
         }
-        if (other.getTalkTime() != 0) {
-          setTalkTime(other.getTalkTime());
+        if (other.callType_ != 0) {
+          setCallTypeValue(other.getCallTypeValue());
         }
-        if (other.getAudioTime() != 0) {
-          setAudioTime(other.getAudioTime());
+        if (other.hasTalkTime()) {
+          mergeTalkTime(other.getTalkTime());
+        }
+        if (other.hasAudioTime()) {
+          mergeAudioTime(other.getAudioTime());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -478,15 +595,24 @@ private static final long serialVersionUID = 0L;
                 break;
               } // case 8
               case 16: {
-                talkTime_ = input.readUInt32();
+                callType_ = input.readEnum();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
-              case 24: {
-                audioTime_ = input.readUInt32();
+              case 26: {
+                input.readMessage(
+                    getTalkTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000004;
                 break;
-              } // case 24
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getAudioTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -536,68 +662,295 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private int talkTime_ ;
+      private int callType_ = 0;
       /**
-       * <code>uint32 talk_time = 2 [json_name = "talkTime"];</code>
-       * @return The talkTime.
+       * <code>.api.commons.CallType.Enum call_type = 2 [json_name = "callType"];</code>
+       * @return The enum numeric value on the wire for callType.
        */
-      @java.lang.Override
-      public int getTalkTime() {
-        return talkTime_;
+      @java.lang.Override public int getCallTypeValue() {
+        return callType_;
       }
       /**
-       * <code>uint32 talk_time = 2 [json_name = "talkTime"];</code>
-       * @param value The talkTime to set.
+       * <code>.api.commons.CallType.Enum call_type = 2 [json_name = "callType"];</code>
+       * @param value The enum numeric value on the wire for callType to set.
        * @return This builder for chaining.
        */
-      public Builder setTalkTime(int value) {
-
-        talkTime_ = value;
+      public Builder setCallTypeValue(int value) {
+        callType_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 talk_time = 2 [json_name = "talkTime"];</code>
+       * <code>.api.commons.CallType.Enum call_type = 2 [json_name = "callType"];</code>
+       * @return The callType.
+       */
+      @java.lang.Override
+      public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
+        com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
+        return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.api.commons.CallType.Enum call_type = 2 [json_name = "callType"];</code>
+       * @param value The callType to set.
        * @return This builder for chaining.
        */
-      public Builder clearTalkTime() {
+      public Builder setCallType(com.tcn.cloud.api.api.commons.CallType.Enum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        callType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.commons.CallType.Enum call_type = 2 [json_name = "callType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCallType() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        talkTime_ = 0;
+        callType_ = 0;
         onChanged();
         return this;
       }
 
-      private int audioTime_ ;
+      private com.google.protobuf.Duration talkTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> talkTimeBuilder_;
       /**
-       * <code>uint32 audio_time = 3 [json_name = "audioTime"];</code>
-       * @return The audioTime.
+       * <code>.google.protobuf.Duration talk_time = 3 [json_name = "talkTime"];</code>
+       * @return Whether the talkTime field is set.
        */
-      @java.lang.Override
-      public int getAudioTime() {
-        return audioTime_;
+      public boolean hasTalkTime() {
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>uint32 audio_time = 3 [json_name = "audioTime"];</code>
-       * @param value The audioTime to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.Duration talk_time = 3 [json_name = "talkTime"];</code>
+       * @return The talkTime.
        */
-      public Builder setAudioTime(int value) {
-
-        audioTime_ = value;
+      public com.google.protobuf.Duration getTalkTime() {
+        if (talkTimeBuilder_ == null) {
+          return talkTime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : talkTime_;
+        } else {
+          return talkTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration talk_time = 3 [json_name = "talkTime"];</code>
+       */
+      public Builder setTalkTime(com.google.protobuf.Duration value) {
+        if (talkTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          talkTime_ = value;
+        } else {
+          talkTimeBuilder_.setMessage(value);
+        }
         bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 audio_time = 3 [json_name = "audioTime"];</code>
-       * @return This builder for chaining.
+       * <code>.google.protobuf.Duration talk_time = 3 [json_name = "talkTime"];</code>
        */
-      public Builder clearAudioTime() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        audioTime_ = 0;
+      public Builder setTalkTime(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (talkTimeBuilder_ == null) {
+          talkTime_ = builderForValue.build();
+        } else {
+          talkTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration talk_time = 3 [json_name = "talkTime"];</code>
+       */
+      public Builder mergeTalkTime(com.google.protobuf.Duration value) {
+        if (talkTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            talkTime_ != null &&
+            talkTime_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getTalkTimeBuilder().mergeFrom(value);
+          } else {
+            talkTime_ = value;
+          }
+        } else {
+          talkTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration talk_time = 3 [json_name = "talkTime"];</code>
+       */
+      public Builder clearTalkTime() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        talkTime_ = null;
+        if (talkTimeBuilder_ != null) {
+          talkTimeBuilder_.dispose();
+          talkTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration talk_time = 3 [json_name = "talkTime"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getTalkTimeBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getTalkTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration talk_time = 3 [json_name = "talkTime"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getTalkTimeOrBuilder() {
+        if (talkTimeBuilder_ != null) {
+          return talkTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return talkTime_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : talkTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration talk_time = 3 [json_name = "talkTime"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getTalkTimeFieldBuilder() {
+        if (talkTimeBuilder_ == null) {
+          talkTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getTalkTime(),
+                  getParentForChildren(),
+                  isClean());
+          talkTime_ = null;
+        }
+        return talkTimeBuilder_;
+      }
+
+      private com.google.protobuf.Duration audioTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> audioTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Duration audio_time = 4 [json_name = "audioTime"];</code>
+       * @return Whether the audioTime field is set.
+       */
+      public boolean hasAudioTime() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration audio_time = 4 [json_name = "audioTime"];</code>
+       * @return The audioTime.
+       */
+      public com.google.protobuf.Duration getAudioTime() {
+        if (audioTimeBuilder_ == null) {
+          return audioTime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : audioTime_;
+        } else {
+          return audioTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration audio_time = 4 [json_name = "audioTime"];</code>
+       */
+      public Builder setAudioTime(com.google.protobuf.Duration value) {
+        if (audioTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          audioTime_ = value;
+        } else {
+          audioTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration audio_time = 4 [json_name = "audioTime"];</code>
+       */
+      public Builder setAudioTime(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (audioTimeBuilder_ == null) {
+          audioTime_ = builderForValue.build();
+        } else {
+          audioTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration audio_time = 4 [json_name = "audioTime"];</code>
+       */
+      public Builder mergeAudioTime(com.google.protobuf.Duration value) {
+        if (audioTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            audioTime_ != null &&
+            audioTime_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getAudioTimeBuilder().mergeFrom(value);
+          } else {
+            audioTime_ = value;
+          }
+        } else {
+          audioTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration audio_time = 4 [json_name = "audioTime"];</code>
+       */
+      public Builder clearAudioTime() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        audioTime_ = null;
+        if (audioTimeBuilder_ != null) {
+          audioTimeBuilder_.dispose();
+          audioTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration audio_time = 4 [json_name = "audioTime"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getAudioTimeBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getAudioTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration audio_time = 4 [json_name = "audioTime"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getAudioTimeOrBuilder() {
+        if (audioTimeBuilder_ != null) {
+          return audioTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return audioTime_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : audioTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration audio_time = 4 [json_name = "audioTime"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getAudioTimeFieldBuilder() {
+        if (audioTimeBuilder_ == null) {
+          audioTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getAudioTime(),
+                  getParentForChildren(),
+                  isClean());
+          audioTime_ = null;
+        }
+        return audioTimeBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
