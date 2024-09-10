@@ -57,6 +57,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     EVALUATION_ID(16),
     AUTO_EVALUATION_ID(17),
+    SMART_EVALUATION_ID(18),
     ORIGINIDENTIFIER_NOT_SET(0);
     private final int value;
     private OriginIdentifierCase(int value) {
@@ -76,6 +77,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 16: return EVALUATION_ID;
         case 17: return AUTO_EVALUATION_ID;
+        case 18: return SMART_EVALUATION_ID;
         case 0: return ORIGINIDENTIFIER_NOT_SET;
         default: return null;
       }
@@ -528,6 +530,35 @@ private static final long serialVersionUID = 0L;
     return 0L;
   }
 
+  public static final int SMART_EVALUATION_ID_FIELD_NUMBER = 18;
+  /**
+   * <pre>
+   * (Scorecards) Smart Evaluation created from.
+   * </pre>
+   *
+   * <code>int64 smart_evaluation_id = 18 [json_name = "smartEvaluationId"];</code>
+   * @return Whether the smartEvaluationId field is set.
+   */
+  @java.lang.Override
+  public boolean hasSmartEvaluationId() {
+    return originIdentifierCase_ == 18;
+  }
+  /**
+   * <pre>
+   * (Scorecards) Smart Evaluation created from.
+   * </pre>
+   *
+   * <code>int64 smart_evaluation_id = 18 [json_name = "smartEvaluationId"];</code>
+   * @return The smartEvaluationId.
+   */
+  @java.lang.Override
+  public long getSmartEvaluationId() {
+    if (originIdentifierCase_ == 18) {
+      return (java.lang.Long) originIdentifier_;
+    }
+    return 0L;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -588,6 +619,10 @@ private static final long serialVersionUID = 0L;
     if (originIdentifierCase_ == 17) {
       output.writeInt64(
           17, (long)((java.lang.Long) originIdentifier_));
+    }
+    if (originIdentifierCase_ == 18) {
+      output.writeInt64(
+          18, (long)((java.lang.Long) originIdentifier_));
     }
     getUnknownFields().writeTo(output);
   }
@@ -656,6 +691,11 @@ private static final long serialVersionUID = 0L;
         .computeInt64Size(
             17, (long)((java.lang.Long) originIdentifier_));
     }
+    if (originIdentifierCase_ == 18) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(
+            18, (long)((java.lang.Long) originIdentifier_));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -706,6 +746,10 @@ private static final long serialVersionUID = 0L;
       case 17:
         if (getAutoEvaluationId()
             != other.getAutoEvaluationId()) return false;
+        break;
+      case 18:
+        if (getSmartEvaluationId()
+            != other.getSmartEvaluationId()) return false;
         break;
       case 0:
       default:
@@ -762,6 +806,11 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + AUTO_EVALUATION_ID_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getAutoEvaluationId());
+        break;
+      case 18:
+        hash = (37 * hash) + SMART_EVALUATION_ID_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSmartEvaluationId());
         break;
       case 0:
       default:
@@ -1102,6 +1151,10 @@ private static final long serialVersionUID = 0L;
           setAutoEvaluationId(other.getAutoEvaluationId());
           break;
         }
+        case SMART_EVALUATION_ID: {
+          setSmartEvaluationId(other.getSmartEvaluationId());
+          break;
+        }
         case ORIGINIDENTIFIER_NOT_SET: {
           break;
         }
@@ -1209,6 +1262,11 @@ private static final long serialVersionUID = 0L;
               originIdentifierCase_ = 17;
               break;
             } // case 136
+            case 144: {
+              originIdentifier_ = input.readInt64();
+              originIdentifierCase_ = 18;
+              break;
+            } // case 144
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2312,6 +2370,64 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAutoEvaluationId() {
       if (originIdentifierCase_ == 17) {
+        originIdentifierCase_ = 0;
+        originIdentifier_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * (Scorecards) Smart Evaluation created from.
+     * </pre>
+     *
+     * <code>int64 smart_evaluation_id = 18 [json_name = "smartEvaluationId"];</code>
+     * @return Whether the smartEvaluationId field is set.
+     */
+    public boolean hasSmartEvaluationId() {
+      return originIdentifierCase_ == 18;
+    }
+    /**
+     * <pre>
+     * (Scorecards) Smart Evaluation created from.
+     * </pre>
+     *
+     * <code>int64 smart_evaluation_id = 18 [json_name = "smartEvaluationId"];</code>
+     * @return The smartEvaluationId.
+     */
+    public long getSmartEvaluationId() {
+      if (originIdentifierCase_ == 18) {
+        return (java.lang.Long) originIdentifier_;
+      }
+      return 0L;
+    }
+    /**
+     * <pre>
+     * (Scorecards) Smart Evaluation created from.
+     * </pre>
+     *
+     * <code>int64 smart_evaluation_id = 18 [json_name = "smartEvaluationId"];</code>
+     * @param value The smartEvaluationId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSmartEvaluationId(long value) {
+
+      originIdentifierCase_ = 18;
+      originIdentifier_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * (Scorecards) Smart Evaluation created from.
+     * </pre>
+     *
+     * <code>int64 smart_evaluation_id = 18 [json_name = "smartEvaluationId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSmartEvaluationId() {
+      if (originIdentifierCase_ == 18) {
         originIdentifierCase_ = 0;
         originIdentifier_ = null;
         onChanged();

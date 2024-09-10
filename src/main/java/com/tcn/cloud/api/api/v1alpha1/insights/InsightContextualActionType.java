@@ -36,6 +36,14 @@ public enum InsightContextualActionType
    * <code>INSIGHT_CONTEXTUAL_ACTION_TYPE_COMPONENT = 2;</code>
    */
   INSIGHT_CONTEXTUAL_ACTION_TYPE_COMPONENT(2),
+  /**
+   * <pre>
+   * Contextual Action Type Drill Through
+   * </pre>
+   *
+   * <code>INSIGHT_CONTEXTUAL_ACTION_TYPE_DRILL_THROUGH = 3;</code>
+   */
+  INSIGHT_CONTEXTUAL_ACTION_TYPE_DRILL_THROUGH(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -63,6 +71,14 @@ public enum InsightContextualActionType
    * <code>INSIGHT_CONTEXTUAL_ACTION_TYPE_COMPONENT = 2;</code>
    */
   public static final int INSIGHT_CONTEXTUAL_ACTION_TYPE_COMPONENT_VALUE = 2;
+  /**
+   * <pre>
+   * Contextual Action Type Drill Through
+   * </pre>
+   *
+   * <code>INSIGHT_CONTEXTUAL_ACTION_TYPE_DRILL_THROUGH = 3;</code>
+   */
+  public static final int INSIGHT_CONTEXTUAL_ACTION_TYPE_DRILL_THROUGH_VALUE = 3;
 
 
   public final int getNumber() {
@@ -92,6 +108,7 @@ public enum InsightContextualActionType
       case 0: return INSIGHT_CONTEXTUAL_ACTION_TYPE_UNSPECIFIED;
       case 1: return INSIGHT_CONTEXTUAL_ACTION_TYPE_LINK;
       case 2: return INSIGHT_CONTEXTUAL_ACTION_TYPE_COMPONENT;
+      case 3: return INSIGHT_CONTEXTUAL_ACTION_TYPE_DRILL_THROUGH;
       default: return null;
     }
   }

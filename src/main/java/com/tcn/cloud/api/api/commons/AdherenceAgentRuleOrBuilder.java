@@ -95,4 +95,48 @@ public interface AdherenceAgentRuleOrBuilder extends
    * @return The adherenceRuleNotificationConfigId.
    */
   long getAdherenceRuleNotificationConfigId();
+
+  /**
+   * <pre>
+   * Clauses that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause> 
+      getClausesList();
+  /**
+   * <pre>
+   * Clauses that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
+   */
+  com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause getClauses(int index);
+  /**
+   * <pre>
+   * Clauses that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
+   */
+  int getClausesCount();
+  /**
+   * <pre>
+   * Clauses that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.AdherenceAgentRuleClauseOrBuilder> 
+      getClausesOrBuilderList();
+  /**
+   * <pre>
+   * Clauses that belong to this rule. Only used by List methods.
+   * </pre>
+   *
+   * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
+   */
+  com.tcn.cloud.api.api.commons.AdherenceAgentRuleClauseOrBuilder getClausesOrBuilder(
+      int index);
 }
