@@ -19,7 +19,7 @@ public interface ContactManagerEntryEventOrBuilder extends
 
   /**
    * <pre>
-   *contact manager entry id
+   *contact manager entry
    * </pre>
    *
    * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>

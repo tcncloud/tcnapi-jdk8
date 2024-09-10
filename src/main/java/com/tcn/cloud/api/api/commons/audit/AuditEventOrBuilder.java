@@ -2947,34 +2947,42 @@ public interface AuditEventOrBuilder extends
   com.tcn.cloud.api.api.commons.audit.ContactManagerEntryGetEncEventOrBuilder getContactManagerEntryGetEncEventOrBuilder();
 
   /**
-   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=260
    * @return Whether the contactManagerDeleteEvent field is set.
    */
-  boolean hasContactManagerDeleteEvent();
+  @java.lang.Deprecated boolean hasContactManagerDeleteEvent();
   /**
-   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=260
    * @return The contactManagerDeleteEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerDeleteEvent();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerDeleteEvent();
   /**
-   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent"];</code>
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerDeleteEventOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerDeleteEventOrBuilder();
 
   /**
-   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=261
    * @return Whether the contactManagerKycEvent field is set.
    */
-  boolean hasContactManagerKycEvent();
+  @java.lang.Deprecated boolean hasContactManagerKycEvent();
   /**
-   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=261
    * @return The contactManagerKycEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getContactManagerKycEvent();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.ContactManagerKycEvent getContactManagerKycEvent();
   /**
-   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent"];</code>
+   * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder getContactManagerKycEventOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder getContactManagerKycEventOrBuilder();
 
   /**
    * <code>.api.commons.audit.ContactManagerEntryEditEvent contact_manager_entry_edit_event = 1204 [json_name = "contactManagerEntryEditEvent"];</code>
@@ -3020,6 +3028,21 @@ public interface AuditEventOrBuilder extends
    * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_verification_event = 1206 [json_name = "contactManagerKycVerificationEvent"];</code>
    */
   com.tcn.cloud.api.api.commons.audit.ContactManagerKycEventOrBuilder getContactManagerKycVerificationEventOrBuilder();
+
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_delete_event = 1207 [json_name = "contactManagerEntryDeleteEvent"];</code>
+   * @return Whether the contactManagerEntryDeleteEvent field is set.
+   */
+  boolean hasContactManagerEntryDeleteEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_delete_event = 1207 [json_name = "contactManagerEntryDeleteEvent"];</code>
+   * @return The contactManagerEntryDeleteEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent getContactManagerEntryDeleteEvent();
+  /**
+   * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_entry_delete_event = 1207 [json_name = "contactManagerEntryDeleteEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEventOrBuilder getContactManagerEntryDeleteEventOrBuilder();
 
   com.tcn.cloud.api.api.commons.audit.AuditEvent.EventCase getEventCase();
 }

@@ -38,6 +38,44 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.class, com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.Builder.class);
   }
 
+  public static final int DELETEEVENT_FIELD_NUMBER = 1;
+  private com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent deleteEvent_;
+  /**
+   * <pre>
+   *delete event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryEvent deleteEvent = 1 [json_name = "deleteEvent"];</code>
+   * @return Whether the deleteEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasDeleteEvent() {
+    return deleteEvent_ != null;
+  }
+  /**
+   * <pre>
+   *delete event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryEvent deleteEvent = 1 [json_name = "deleteEvent"];</code>
+   * @return The deleteEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent getDeleteEvent() {
+    return deleteEvent_ == null ? com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.getDefaultInstance() : deleteEvent_;
+  }
+  /**
+   * <pre>
+   *delete event
+   * </pre>
+   *
+   * <code>.api.commons.audit.ContactManagerEntryEvent deleteEvent = 1 [json_name = "deleteEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEventOrBuilder getDeleteEventOrBuilder() {
+    return deleteEvent_ == null ? com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.getDefaultInstance() : deleteEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -52,6 +90,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (deleteEvent_ != null) {
+      output.writeMessage(1, getDeleteEvent());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -61,6 +102,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (deleteEvent_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, getDeleteEvent());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -76,6 +121,11 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent other = (com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent) obj;
 
+    if (hasDeleteEvent() != other.hasDeleteEvent()) return false;
+    if (hasDeleteEvent()) {
+      if (!getDeleteEvent()
+          .equals(other.getDeleteEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -87,6 +137,10 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasDeleteEvent()) {
+      hash = (37 * hash) + DELETEEVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeleteEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -217,6 +271,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      deleteEvent_ = null;
+      if (deleteEventBuilder_ != null) {
+        deleteEventBuilder_.dispose();
+        deleteEventBuilder_ = null;
+      }
       return this;
     }
 
@@ -243,8 +303,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent buildPartial() {
       com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent result = new com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.deleteEvent_ = deleteEventBuilder_ == null
+            ? deleteEvent_
+            : deleteEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -291,6 +361,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent other) {
       if (other == com.tcn.cloud.api.api.commons.audit.ContactManagerDeleteEvent.getDefaultInstance()) return this;
+      if (other.hasDeleteEvent()) {
+        mergeDeleteEvent(other.getDeleteEvent());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -317,6 +390,13 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              input.readMessage(
+                  getDeleteEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -331,6 +411,162 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } // finally
       return this;
+    }
+    private int bitField0_;
+
+    private com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent deleteEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEventOrBuilder> deleteEventBuilder_;
+    /**
+     * <pre>
+     *delete event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent deleteEvent = 1 [json_name = "deleteEvent"];</code>
+     * @return Whether the deleteEvent field is set.
+     */
+    public boolean hasDeleteEvent() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     *delete event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent deleteEvent = 1 [json_name = "deleteEvent"];</code>
+     * @return The deleteEvent.
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent getDeleteEvent() {
+      if (deleteEventBuilder_ == null) {
+        return deleteEvent_ == null ? com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.getDefaultInstance() : deleteEvent_;
+      } else {
+        return deleteEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     *delete event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent deleteEvent = 1 [json_name = "deleteEvent"];</code>
+     */
+    public Builder setDeleteEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent value) {
+      if (deleteEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        deleteEvent_ = value;
+      } else {
+        deleteEventBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *delete event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent deleteEvent = 1 [json_name = "deleteEvent"];</code>
+     */
+    public Builder setDeleteEvent(
+        com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.Builder builderForValue) {
+      if (deleteEventBuilder_ == null) {
+        deleteEvent_ = builderForValue.build();
+      } else {
+        deleteEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *delete event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent deleteEvent = 1 [json_name = "deleteEvent"];</code>
+     */
+    public Builder mergeDeleteEvent(com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent value) {
+      if (deleteEventBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0) &&
+          deleteEvent_ != null &&
+          deleteEvent_ != com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.getDefaultInstance()) {
+          getDeleteEventBuilder().mergeFrom(value);
+        } else {
+          deleteEvent_ = value;
+        }
+      } else {
+        deleteEventBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *delete event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent deleteEvent = 1 [json_name = "deleteEvent"];</code>
+     */
+    public Builder clearDeleteEvent() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      deleteEvent_ = null;
+      if (deleteEventBuilder_ != null) {
+        deleteEventBuilder_.dispose();
+        deleteEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *delete event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent deleteEvent = 1 [json_name = "deleteEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.Builder getDeleteEventBuilder() {
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return getDeleteEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     *delete event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent deleteEvent = 1 [json_name = "deleteEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEventOrBuilder getDeleteEventOrBuilder() {
+      if (deleteEventBuilder_ != null) {
+        return deleteEventBuilder_.getMessageOrBuilder();
+      } else {
+        return deleteEvent_ == null ?
+            com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.getDefaultInstance() : deleteEvent_;
+      }
+    }
+    /**
+     * <pre>
+     *delete event
+     * </pre>
+     *
+     * <code>.api.commons.audit.ContactManagerEntryEvent deleteEvent = 1 [json_name = "deleteEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEventOrBuilder> 
+        getDeleteEventFieldBuilder() {
+      if (deleteEventBuilder_ == null) {
+        deleteEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEvent.Builder, com.tcn.cloud.api.api.commons.audit.ContactManagerEntryEventOrBuilder>(
+                getDeleteEvent(),
+                getParentForChildren(),
+                isClean());
+        deleteEvent_ = null;
+      }
+      return deleteEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

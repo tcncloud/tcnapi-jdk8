@@ -827,6 +827,14 @@ public enum EventType
   TICKET_PROJECT_STATE_CHANGE_EVENT(614),
   /**
    * <pre>
+   * ticket-add-contact-event
+   * </pre>
+   *
+   * <code>TICKET_CONTACT_ADD_EVENT = 615;</code>
+   */
+  TICKET_CONTACT_ADD_EVENT(615),
+  /**
+   * <pre>
    * Compliance Events
    * rnd query event
    * </pre>
@@ -945,7 +953,7 @@ public enum EventType
   /**
    * <pre>
    *ContactManager Events
-   * add event
+   *CreateContactEntry(upload) and AddContactEntry
    * </pre>
    *
    * <code>EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT = 1200;</code>
@@ -964,16 +972,18 @@ public enum EventType
    * kyc event
    * </pre>
    *
-   * <code>EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT = 1202;</code>
+   * <code>EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT = 1202 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT(1202),
   /**
    * <pre>
    * ttl event
    * </pre>
    *
-   * <code>EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT = 1203;</code>
+   * <code>EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT = 1203 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT(1203),
   /**
    * <pre>
@@ -999,6 +1009,14 @@ public enum EventType
    * <code>EVENT_TYPE_CONTACT_MANAGER_VERIFICATION_EVENT = 1206;</code>
    */
   EVENT_TYPE_CONTACT_MANAGER_VERIFICATION_EVENT(1206),
+  /**
+   * <pre>
+   *Contact Manager entry delete event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_DELETE_EVENT = 1207;</code>
+   */
+  EVENT_TYPE_CONTACT_MANAGER_DELETE_EVENT(1207),
   UNRECOGNIZED(-1),
   ;
 
@@ -1807,6 +1825,14 @@ public enum EventType
   public static final int TICKET_PROJECT_STATE_CHANGE_EVENT_VALUE = 614;
   /**
    * <pre>
+   * ticket-add-contact-event
+   * </pre>
+   *
+   * <code>TICKET_CONTACT_ADD_EVENT = 615;</code>
+   */
+  public static final int TICKET_CONTACT_ADD_EVENT_VALUE = 615;
+  /**
+   * <pre>
    * Compliance Events
    * rnd query event
    * </pre>
@@ -1914,7 +1940,7 @@ public enum EventType
   /**
    * <pre>
    *ContactManager Events
-   * add event
+   *CreateContactEntry(upload) and AddContactEntry
    * </pre>
    *
    * <code>EVENT_TYPE_CONTACT_MANAGER_ADD_EVENT = 1200;</code>
@@ -1933,17 +1959,17 @@ public enum EventType
    * kyc event
    * </pre>
    *
-   * <code>EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT = 1202;</code>
+   * <code>EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT = 1202 [deprecated = true];</code>
    */
-  public static final int EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT_VALUE = 1202;
+  @java.lang.Deprecated public static final int EVENT_TYPE_CONTACT_MANAGER_KYC_ENC_VIEW_EVENT_VALUE = 1202;
   /**
    * <pre>
    * ttl event
    * </pre>
    *
-   * <code>EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT = 1203;</code>
+   * <code>EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT = 1203 [deprecated = true];</code>
    */
-  public static final int EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT_VALUE = 1203;
+  @java.lang.Deprecated public static final int EVENT_TYPE_CONTACT_MANAGER_TTL_EVENT_VALUE = 1203;
   /**
    * <pre>
    * edit event
@@ -1968,6 +1994,14 @@ public enum EventType
    * <code>EVENT_TYPE_CONTACT_MANAGER_VERIFICATION_EVENT = 1206;</code>
    */
   public static final int EVENT_TYPE_CONTACT_MANAGER_VERIFICATION_EVENT_VALUE = 1206;
+  /**
+   * <pre>
+   *Contact Manager entry delete event
+   * </pre>
+   *
+   * <code>EVENT_TYPE_CONTACT_MANAGER_DELETE_EVENT = 1207;</code>
+   */
+  public static final int EVENT_TYPE_CONTACT_MANAGER_DELETE_EVENT_VALUE = 1207;
 
 
   public final int getNumber() {
@@ -2102,6 +2136,7 @@ public enum EventType
       case 612: return TICKET_TEMPLATE_ASSIGN_EVENT;
       case 613: return TICKET_TEMPLATE_STATE_CHANGE_EVENT;
       case 614: return TICKET_PROJECT_STATE_CHANGE_EVENT;
+      case 615: return TICKET_CONTACT_ADD_EVENT;
       case 700: return COMPLIANCE_RND_QUERY_EVENT;
       case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
       case 800: return AGENT_TRAINING_CREATE_LEARNING_OPPORTUNITY_EVENT;
@@ -2129,6 +2164,7 @@ public enum EventType
       case 1204: return EVENT_TYPE_CONTACT_MANAGER_EDIT_EVENT;
       case 1205: return EVENT_TYPE_CONTACT_MANAGER_UPLOAD_EVENT;
       case 1206: return EVENT_TYPE_CONTACT_MANAGER_VERIFICATION_EVENT;
+      case 1207: return EVENT_TYPE_CONTACT_MANAGER_DELETE_EVENT;
       default: return null;
     }
   }

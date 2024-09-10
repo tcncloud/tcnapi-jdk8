@@ -62,7 +62,7 @@ private static final long serialVersionUID = 0L;
   private long contactManagerEntryId_ = 0L;
   /**
    * <pre>
-   *contact manager entry id
+   *contact manager entry
    * </pre>
    *
    * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
@@ -579,7 +579,7 @@ private static final long serialVersionUID = 0L;
     private long contactManagerEntryId_ ;
     /**
      * <pre>
-     *contact manager entry id
+     *contact manager entry
      * </pre>
      *
      * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
@@ -591,7 +591,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *contact manager entry id
+     *contact manager entry
      * </pre>
      *
      * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
@@ -607,7 +607,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *contact manager entry id
+     *contact manager entry
      * </pre>
      *
      * <code>int64 ContactManagerEntryId = 2 [json_name = "ContactManagerEntryId"];</code>
