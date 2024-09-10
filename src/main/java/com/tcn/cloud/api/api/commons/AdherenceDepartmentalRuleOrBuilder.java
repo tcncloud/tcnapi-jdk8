@@ -147,42 +147,42 @@ public interface AdherenceDepartmentalRuleOrBuilder extends
    * Clauses that belong to this rule. Only used by List methods.
    * </pre>
    *
-   * <code>repeated .api.commons.AdherenceDepartmentalRuleClause rule_clauses = 9 [json_name = "ruleClauses"];</code>
+   * <code>repeated .api.commons.AdherenceDepartmentalRule clauses = 8 [json_name = "clauses"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.AdherenceDepartmentalRuleClause> 
-      getRuleClausesList();
+  java.util.List<com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule> 
+      getClausesList();
   /**
    * <pre>
    * Clauses that belong to this rule. Only used by List methods.
    * </pre>
    *
-   * <code>repeated .api.commons.AdherenceDepartmentalRuleClause rule_clauses = 9 [json_name = "ruleClauses"];</code>
+   * <code>repeated .api.commons.AdherenceDepartmentalRule clauses = 8 [json_name = "clauses"];</code>
    */
-  com.tcn.cloud.api.api.commons.AdherenceDepartmentalRuleClause getRuleClauses(int index);
+  com.tcn.cloud.api.api.commons.AdherenceDepartmentalRule getClauses(int index);
   /**
    * <pre>
    * Clauses that belong to this rule. Only used by List methods.
    * </pre>
    *
-   * <code>repeated .api.commons.AdherenceDepartmentalRuleClause rule_clauses = 9 [json_name = "ruleClauses"];</code>
+   * <code>repeated .api.commons.AdherenceDepartmentalRule clauses = 8 [json_name = "clauses"];</code>
    */
-  int getRuleClausesCount();
+  int getClausesCount();
   /**
    * <pre>
    * Clauses that belong to this rule. Only used by List methods.
    * </pre>
    *
-   * <code>repeated .api.commons.AdherenceDepartmentalRuleClause rule_clauses = 9 [json_name = "ruleClauses"];</code>
+   * <code>repeated .api.commons.AdherenceDepartmentalRule clauses = 8 [json_name = "clauses"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.AdherenceDepartmentalRuleClauseOrBuilder> 
-      getRuleClausesOrBuilderList();
+  java.util.List<? extends com.tcn.cloud.api.api.commons.AdherenceDepartmentalRuleOrBuilder> 
+      getClausesOrBuilderList();
   /**
    * <pre>
    * Clauses that belong to this rule. Only used by List methods.
    * </pre>
    *
-   * <code>repeated .api.commons.AdherenceDepartmentalRuleClause rule_clauses = 9 [json_name = "ruleClauses"];</code>
+   * <code>repeated .api.commons.AdherenceDepartmentalRule clauses = 8 [json_name = "clauses"];</code>
    */
-  com.tcn.cloud.api.api.commons.AdherenceDepartmentalRuleClauseOrBuilder getRuleClausesOrBuilder(
+  com.tcn.cloud.api.api.commons.AdherenceDepartmentalRuleOrBuilder getClausesOrBuilder(
       int index);
 }

@@ -22,7 +22,7 @@ private static final long serialVersionUID = 0L;
   private AdherenceAgentRule() {
     name_ = "";
     ruleRequirementType_ = 0;
-    ruleClauses_ = java.util.Collections.emptyList();
+    clauses_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -189,65 +189,65 @@ private static final long serialVersionUID = 0L;
     return adherenceRuleNotificationConfigId_;
   }
 
-  public static final int RULE_CLAUSES_FIELD_NUMBER = 7;
+  public static final int CLAUSES_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause> ruleClauses_;
+  private java.util.List<com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause> clauses_;
   /**
    * <pre>
    * Clauses that belong to this rule. Only used by List methods.
    * </pre>
    *
-   * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+   * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause> getRuleClausesList() {
-    return ruleClauses_;
+  public java.util.List<com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause> getClausesList() {
+    return clauses_;
   }
   /**
    * <pre>
    * Clauses that belong to this rule. Only used by List methods.
    * </pre>
    *
-   * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+   * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.commons.AdherenceAgentRuleClauseOrBuilder> 
-      getRuleClausesOrBuilderList() {
-    return ruleClauses_;
+      getClausesOrBuilderList() {
+    return clauses_;
   }
   /**
    * <pre>
    * Clauses that belong to this rule. Only used by List methods.
    * </pre>
    *
-   * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+   * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
    */
   @java.lang.Override
-  public int getRuleClausesCount() {
-    return ruleClauses_.size();
+  public int getClausesCount() {
+    return clauses_.size();
   }
   /**
    * <pre>
    * Clauses that belong to this rule. Only used by List methods.
    * </pre>
    *
-   * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+   * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause getRuleClauses(int index) {
-    return ruleClauses_.get(index);
+  public com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause getClauses(int index) {
+    return clauses_.get(index);
   }
   /**
    * <pre>
    * Clauses that belong to this rule. Only used by List methods.
    * </pre>
    *
-   * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+   * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.AdherenceAgentRuleClauseOrBuilder getRuleClausesOrBuilder(
+  public com.tcn.cloud.api.api.commons.AdherenceAgentRuleClauseOrBuilder getClausesOrBuilder(
       int index) {
-    return ruleClauses_.get(index);
+    return clauses_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -279,8 +279,8 @@ private static final long serialVersionUID = 0L;
     if (adherenceRuleNotificationConfigId_ != 0L) {
       output.writeInt64(5, adherenceRuleNotificationConfigId_);
     }
-    for (int i = 0; i < ruleClauses_.size(); i++) {
-      output.writeMessage(7, ruleClauses_.get(i));
+    for (int i = 0; i < clauses_.size(); i++) {
+      output.writeMessage(6, clauses_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -310,9 +310,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, adherenceRuleNotificationConfigId_);
     }
-    for (int i = 0; i < ruleClauses_.size(); i++) {
+    for (int i = 0; i < clauses_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, ruleClauses_.get(i));
+        .computeMessageSize(6, clauses_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -341,8 +341,8 @@ private static final long serialVersionUID = 0L;
     if (ruleRequirementType_ != other.ruleRequirementType_) return false;
     if (getAdherenceRuleNotificationConfigId()
         != other.getAdherenceRuleNotificationConfigId()) return false;
-    if (!getRuleClausesList()
-        .equals(other.getRuleClausesList())) return false;
+    if (!getClausesList()
+        .equals(other.getClausesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -368,9 +368,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ADHERENCE_RULE_NOTIFICATION_CONFIG_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getAdherenceRuleNotificationConfigId());
-    if (getRuleClausesCount() > 0) {
-      hash = (37 * hash) + RULE_CLAUSES_FIELD_NUMBER;
-      hash = (53 * hash) + getRuleClausesList().hashCode();
+    if (getClausesCount() > 0) {
+      hash = (37 * hash) + CLAUSES_FIELD_NUMBER;
+      hash = (53 * hash) + getClausesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -516,11 +516,11 @@ private static final long serialVersionUID = 0L;
       }
       ruleRequirementType_ = 0;
       adherenceRuleNotificationConfigId_ = 0L;
-      if (ruleClausesBuilder_ == null) {
-        ruleClauses_ = java.util.Collections.emptyList();
+      if (clausesBuilder_ == null) {
+        clauses_ = java.util.Collections.emptyList();
       } else {
-        ruleClauses_ = null;
-        ruleClausesBuilder_.clear();
+        clauses_ = null;
+        clausesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000020);
       return this;
@@ -556,14 +556,14 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.AdherenceAgentRule result) {
-      if (ruleClausesBuilder_ == null) {
+      if (clausesBuilder_ == null) {
         if (((bitField0_ & 0x00000020) != 0)) {
-          ruleClauses_ = java.util.Collections.unmodifiableList(ruleClauses_);
+          clauses_ = java.util.Collections.unmodifiableList(clauses_);
           bitField0_ = (bitField0_ & ~0x00000020);
         }
-        result.ruleClauses_ = ruleClauses_;
+        result.clauses_ = clauses_;
       } else {
-        result.ruleClauses_ = ruleClausesBuilder_.build();
+        result.clauses_ = clausesBuilder_.build();
       }
     }
 
@@ -649,29 +649,29 @@ private static final long serialVersionUID = 0L;
       if (other.getAdherenceRuleNotificationConfigId() != 0L) {
         setAdherenceRuleNotificationConfigId(other.getAdherenceRuleNotificationConfigId());
       }
-      if (ruleClausesBuilder_ == null) {
-        if (!other.ruleClauses_.isEmpty()) {
-          if (ruleClauses_.isEmpty()) {
-            ruleClauses_ = other.ruleClauses_;
+      if (clausesBuilder_ == null) {
+        if (!other.clauses_.isEmpty()) {
+          if (clauses_.isEmpty()) {
+            clauses_ = other.clauses_;
             bitField0_ = (bitField0_ & ~0x00000020);
           } else {
-            ensureRuleClausesIsMutable();
-            ruleClauses_.addAll(other.ruleClauses_);
+            ensureClausesIsMutable();
+            clauses_.addAll(other.clauses_);
           }
           onChanged();
         }
       } else {
-        if (!other.ruleClauses_.isEmpty()) {
-          if (ruleClausesBuilder_.isEmpty()) {
-            ruleClausesBuilder_.dispose();
-            ruleClausesBuilder_ = null;
-            ruleClauses_ = other.ruleClauses_;
+        if (!other.clauses_.isEmpty()) {
+          if (clausesBuilder_.isEmpty()) {
+            clausesBuilder_.dispose();
+            clausesBuilder_ = null;
+            clauses_ = other.clauses_;
             bitField0_ = (bitField0_ & ~0x00000020);
-            ruleClausesBuilder_ = 
+            clausesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getRuleClausesFieldBuilder() : null;
+                 getClausesFieldBuilder() : null;
           } else {
-            ruleClausesBuilder_.addAllMessages(other.ruleClauses_);
+            clausesBuilder_.addAllMessages(other.clauses_);
           }
         }
       }
@@ -728,19 +728,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
-            case 58: {
+            case 50: {
               com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause m =
                   input.readMessage(
                       com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.parser(),
                       extensionRegistry);
-              if (ruleClausesBuilder_ == null) {
-                ensureRuleClausesIsMutable();
-                ruleClauses_.add(m);
+              if (clausesBuilder_ == null) {
+                ensureClausesIsMutable();
+                clauses_.add(m);
               } else {
-                ruleClausesBuilder_.addMessage(m);
+                clausesBuilder_.addMessage(m);
               }
               break;
-            } // case 58
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1175,30 +1175,30 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause> ruleClauses_ =
+    private java.util.List<com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause> clauses_ =
       java.util.Collections.emptyList();
-    private void ensureRuleClausesIsMutable() {
+    private void ensureClausesIsMutable() {
       if (!((bitField0_ & 0x00000020) != 0)) {
-        ruleClauses_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause>(ruleClauses_);
+        clauses_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause>(clauses_);
         bitField0_ |= 0x00000020;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause, com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.Builder, com.tcn.cloud.api.api.commons.AdherenceAgentRuleClauseOrBuilder> ruleClausesBuilder_;
+        com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause, com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.Builder, com.tcn.cloud.api.api.commons.AdherenceAgentRuleClauseOrBuilder> clausesBuilder_;
 
     /**
      * <pre>
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause> getRuleClausesList() {
-      if (ruleClausesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(ruleClauses_);
+    public java.util.List<com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause> getClausesList() {
+      if (clausesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(clauses_);
       } else {
-        return ruleClausesBuilder_.getMessageList();
+        return clausesBuilder_.getMessageList();
       }
     }
     /**
@@ -1206,13 +1206,13 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public int getRuleClausesCount() {
-      if (ruleClausesBuilder_ == null) {
-        return ruleClauses_.size();
+    public int getClausesCount() {
+      if (clausesBuilder_ == null) {
+        return clauses_.size();
       } else {
-        return ruleClausesBuilder_.getCount();
+        return clausesBuilder_.getCount();
       }
     }
     /**
@@ -1220,13 +1220,13 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause getRuleClauses(int index) {
-      if (ruleClausesBuilder_ == null) {
-        return ruleClauses_.get(index);
+    public com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause getClauses(int index) {
+      if (clausesBuilder_ == null) {
+        return clauses_.get(index);
       } else {
-        return ruleClausesBuilder_.getMessage(index);
+        return clausesBuilder_.getMessage(index);
       }
     }
     /**
@@ -1234,19 +1234,19 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public Builder setRuleClauses(
+    public Builder setClauses(
         int index, com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause value) {
-      if (ruleClausesBuilder_ == null) {
+      if (clausesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureRuleClausesIsMutable();
-        ruleClauses_.set(index, value);
+        ensureClausesIsMutable();
+        clauses_.set(index, value);
         onChanged();
       } else {
-        ruleClausesBuilder_.setMessage(index, value);
+        clausesBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -1255,16 +1255,16 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public Builder setRuleClauses(
+    public Builder setClauses(
         int index, com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.Builder builderForValue) {
-      if (ruleClausesBuilder_ == null) {
-        ensureRuleClausesIsMutable();
-        ruleClauses_.set(index, builderForValue.build());
+      if (clausesBuilder_ == null) {
+        ensureClausesIsMutable();
+        clauses_.set(index, builderForValue.build());
         onChanged();
       } else {
-        ruleClausesBuilder_.setMessage(index, builderForValue.build());
+        clausesBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1273,18 +1273,18 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public Builder addRuleClauses(com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause value) {
-      if (ruleClausesBuilder_ == null) {
+    public Builder addClauses(com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause value) {
+      if (clausesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureRuleClausesIsMutable();
-        ruleClauses_.add(value);
+        ensureClausesIsMutable();
+        clauses_.add(value);
         onChanged();
       } else {
-        ruleClausesBuilder_.addMessage(value);
+        clausesBuilder_.addMessage(value);
       }
       return this;
     }
@@ -1293,19 +1293,19 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public Builder addRuleClauses(
+    public Builder addClauses(
         int index, com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause value) {
-      if (ruleClausesBuilder_ == null) {
+      if (clausesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureRuleClausesIsMutable();
-        ruleClauses_.add(index, value);
+        ensureClausesIsMutable();
+        clauses_.add(index, value);
         onChanged();
       } else {
-        ruleClausesBuilder_.addMessage(index, value);
+        clausesBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -1314,16 +1314,16 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public Builder addRuleClauses(
+    public Builder addClauses(
         com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.Builder builderForValue) {
-      if (ruleClausesBuilder_ == null) {
-        ensureRuleClausesIsMutable();
-        ruleClauses_.add(builderForValue.build());
+      if (clausesBuilder_ == null) {
+        ensureClausesIsMutable();
+        clauses_.add(builderForValue.build());
         onChanged();
       } else {
-        ruleClausesBuilder_.addMessage(builderForValue.build());
+        clausesBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -1332,16 +1332,16 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public Builder addRuleClauses(
+    public Builder addClauses(
         int index, com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.Builder builderForValue) {
-      if (ruleClausesBuilder_ == null) {
-        ensureRuleClausesIsMutable();
-        ruleClauses_.add(index, builderForValue.build());
+      if (clausesBuilder_ == null) {
+        ensureClausesIsMutable();
+        clauses_.add(index, builderForValue.build());
         onChanged();
       } else {
-        ruleClausesBuilder_.addMessage(index, builderForValue.build());
+        clausesBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1350,17 +1350,17 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public Builder addAllRuleClauses(
+    public Builder addAllClauses(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause> values) {
-      if (ruleClausesBuilder_ == null) {
-        ensureRuleClausesIsMutable();
+      if (clausesBuilder_ == null) {
+        ensureClausesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, ruleClauses_);
+            values, clauses_);
         onChanged();
       } else {
-        ruleClausesBuilder_.addAllMessages(values);
+        clausesBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -1369,15 +1369,15 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public Builder clearRuleClauses() {
-      if (ruleClausesBuilder_ == null) {
-        ruleClauses_ = java.util.Collections.emptyList();
+    public Builder clearClauses() {
+      if (clausesBuilder_ == null) {
+        clauses_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
-        ruleClausesBuilder_.clear();
+        clausesBuilder_.clear();
       }
       return this;
     }
@@ -1386,15 +1386,15 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public Builder removeRuleClauses(int index) {
-      if (ruleClausesBuilder_ == null) {
-        ensureRuleClausesIsMutable();
-        ruleClauses_.remove(index);
+    public Builder removeClauses(int index) {
+      if (clausesBuilder_ == null) {
+        ensureClausesIsMutable();
+        clauses_.remove(index);
         onChanged();
       } else {
-        ruleClausesBuilder_.remove(index);
+        clausesBuilder_.remove(index);
       }
       return this;
     }
@@ -1403,24 +1403,24 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.Builder getRuleClausesBuilder(
+    public com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.Builder getClausesBuilder(
         int index) {
-      return getRuleClausesFieldBuilder().getBuilder(index);
+      return getClausesFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public com.tcn.cloud.api.api.commons.AdherenceAgentRuleClauseOrBuilder getRuleClausesOrBuilder(
+    public com.tcn.cloud.api.api.commons.AdherenceAgentRuleClauseOrBuilder getClausesOrBuilder(
         int index) {
-      if (ruleClausesBuilder_ == null) {
-        return ruleClauses_.get(index);  } else {
-        return ruleClausesBuilder_.getMessageOrBuilder(index);
+      if (clausesBuilder_ == null) {
+        return clauses_.get(index);  } else {
+        return clausesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -1428,14 +1428,14 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.commons.AdherenceAgentRuleClauseOrBuilder> 
-         getRuleClausesOrBuilderList() {
-      if (ruleClausesBuilder_ != null) {
-        return ruleClausesBuilder_.getMessageOrBuilderList();
+         getClausesOrBuilderList() {
+      if (clausesBuilder_ != null) {
+        return clausesBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(ruleClauses_);
+        return java.util.Collections.unmodifiableList(clauses_);
       }
     }
     /**
@@ -1443,10 +1443,10 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.Builder addRuleClausesBuilder() {
-      return getRuleClausesFieldBuilder().addBuilder(
+    public com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.Builder addClausesBuilder() {
+      return getClausesFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.getDefaultInstance());
     }
     /**
@@ -1454,11 +1454,11 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
-    public com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.Builder addRuleClausesBuilder(
+    public com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.Builder addClausesBuilder(
         int index) {
-      return getRuleClausesFieldBuilder().addBuilder(
+      return getClausesFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.getDefaultInstance());
     }
     /**
@@ -1466,25 +1466,25 @@ private static final long serialVersionUID = 0L;
      * Clauses that belong to this rule. Only used by List methods.
      * </pre>
      *
-     * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
+     * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.Builder> 
-         getRuleClausesBuilderList() {
-      return getRuleClausesFieldBuilder().getBuilderList();
+         getClausesBuilderList() {
+      return getClausesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
         com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause, com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.Builder, com.tcn.cloud.api.api.commons.AdherenceAgentRuleClauseOrBuilder> 
-        getRuleClausesFieldBuilder() {
-      if (ruleClausesBuilder_ == null) {
-        ruleClausesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        getClausesFieldBuilder() {
+      if (clausesBuilder_ == null) {
+        clausesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause, com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause.Builder, com.tcn.cloud.api.api.commons.AdherenceAgentRuleClauseOrBuilder>(
-                ruleClauses_,
+                clauses_,
                 ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
-        ruleClauses_ = null;
+        clauses_ = null;
       }
-      return ruleClausesBuilder_;
+      return clausesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
