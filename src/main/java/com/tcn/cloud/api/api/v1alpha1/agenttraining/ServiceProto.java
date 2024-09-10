@@ -27,7 +27,7 @@ public final class ServiceProto {
       "to\022\032api.v1alpha1.agenttraining\032\027annotati" +
       "ons/authz.proto\0325api/v1alpha1/agenttrain" +
       "ing/learning_opportunity.proto\032\034google/a" +
-      "pi/annotations.proto2\356\017\n\024AgentTrainingSe" +
+      "pi/annotations.proto2\321\021\n\024AgentTrainingSe" +
       "rvice\022\371\001\n\031CreateLearningOpportunity\022<.ap" +
       "i.v1alpha1.agenttraining.CreateLearningO" +
       "pportunityRequest\032=.api.v1alpha1.agenttr" +
@@ -59,31 +59,37 @@ public final class ServiceProto {
       "ardsRequest\0322.api.v1alpha1.agenttraining" +
       ".ListDashboardsResponse\"T\272\270\221\002\005\n\003\010\324\002\202\323\344\223\002" +
       "D\"?/api/v1alpha1/agenttraining/agenttrai" +
-      "ningservice/listdashboards:\001*\022\371\001\n\031Update" +
-      "LearningOpportunity\022<.api.v1alpha1.agent" +
-      "training.UpdateLearningOpportunityReques" +
-      "t\032=.api.v1alpha1.agenttraining.UpdateLea" +
-      "rningOpportunityResponse\"_\272\270\221\002\005\n\003\010\304\014\202\323\344\223" +
-      "\002O\"J/api/v1alpha1/agenttraining/agenttra" +
-      "iningservice/updatelearningopportunity:\001" +
-      "*\022\371\001\n\031DeleteLearningOpportunity\022<.api.v1" +
-      "alpha1.agenttraining.DeleteLearningOppor" +
-      "tunityRequest\032=.api.v1alpha1.agenttraini" +
-      "ng.DeleteLearningOpportunityResponse\"_\272\270" +
-      "\221\002\005\n\003\010\304\014\202\323\344\223\002O\"J/api/v1alpha1/agenttrain" +
-      "ing/agenttrainingservice/deletelearningo" +
-      "pportunity:\001*\022\355\001\n\026GetLearningOpportunity" +
-      "\0229.api.v1alpha1.agenttraining.GetLearnin" +
-      "gOpportunityRequest\032:.api.v1alpha1.agent" +
-      "training.GetLearningOpportunityResponse\"" +
-      "\\\272\270\221\002\005\n\003\010\304\014\202\323\344\223\002L\"G/api/v1alpha1/agenttr" +
-      "aining/agenttrainingservice/getlearningo" +
-      "pportunity:\001*B\306\001\n,com.tcn.cloud.api.api." +
-      "v1alpha1.agenttrainingB\014ServiceProtoP\001\242\002" +
-      "\003AVA\252\002\032Api.V1alpha1.Agenttraining\312\002\032Api\\" +
-      "V1alpha1\\Agenttraining\342\002&Api\\V1alpha1\\Ag" +
-      "enttraining\\GPBMetadata\352\002\034Api::V1alpha1:" +
-      ":Agenttrainingb\006proto3"
+      "ningservice/listdashboards:\001*\022\340\001\n\025ListMa" +
+      "nagerDashboards\0221.api.v1alpha1.agenttrai" +
+      "ning.ListDashboardsRequest\0322.api.v1alpha" +
+      "1.agenttraining.ListDashboardsResponse\"`" +
+      "\272\270\221\002\n\n\003\010\300\014\n\003\010\301\014\202\323\344\223\002K\"F/api/v1alpha1/age" +
+      "nttraining/agenttrainingservice/listmana" +
+      "gerdashboards:\001*\022\371\001\n\031UpdateLearningOppor" +
+      "tunity\022<.api.v1alpha1.agenttraining.Upda" +
+      "teLearningOpportunityRequest\032=.api.v1alp" +
+      "ha1.agenttraining.UpdateLearningOpportun" +
+      "ityResponse\"_\272\270\221\002\005\n\003\010\304\014\202\323\344\223\002O\"J/api/v1al" +
+      "pha1/agenttraining/agenttrainingservice/" +
+      "updatelearningopportunity:\001*\022\371\001\n\031DeleteL" +
+      "earningOpportunity\022<.api.v1alpha1.agentt" +
+      "raining.DeleteLearningOpportunityRequest" +
+      "\032=.api.v1alpha1.agenttraining.DeleteLear" +
+      "ningOpportunityResponse\"_\272\270\221\002\005\n\003\010\304\014\202\323\344\223\002" +
+      "O\"J/api/v1alpha1/agenttraining/agenttrai" +
+      "ningservice/deletelearningopportunity:\001*" +
+      "\022\355\001\n\026GetLearningOpportunity\0229.api.v1alph" +
+      "a1.agenttraining.GetLearningOpportunityR" +
+      "equest\032:.api.v1alpha1.agenttraining.GetL" +
+      "earningOpportunityResponse\"\\\272\270\221\002\005\n\003\010\304\014\202\323" +
+      "\344\223\002L\"G/api/v1alpha1/agenttraining/agentt" +
+      "rainingservice/getlearningopportunity:\001*" +
+      "B\306\001\n,com.tcn.cloud.api.api.v1alpha1.agen" +
+      "ttrainingB\014ServiceProtoP\001\242\002\003AVA\252\002\032Api.V1" +
+      "alpha1.Agenttraining\312\002\032Api\\V1alpha1\\Agen" +
+      "ttraining\342\002&Api\\V1alpha1\\Agenttraining\\G" +
+      "PBMetadata\352\002\034Api::V1alpha1::Agenttrainin" +
+      "gb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
