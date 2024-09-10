@@ -51,6 +51,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     LINK(2),
     COMPONENT(3),
+    DRILL_THROUGH(4),
     ACTION_NOT_SET(0);
     private final int value;
     private ActionCase(int value) {
@@ -70,6 +71,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 2: return LINK;
         case 3: return COMPONENT;
+        case 4: return DRILL_THROUGH;
         case 0: return ACTION_NOT_SET;
         default: return null;
       }
@@ -197,6 +199,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction.getDefaultInstance();
   }
 
+  public static final int DRILL_THROUGH_FIELD_NUMBER = 4;
+  /**
+   * <pre>
+   * Drill through action
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.DrillThroughAction drill_through = 4 [json_name = "drillThrough"];</code>
+   * @return Whether the drillThrough field is set.
+   */
+  @java.lang.Override
+  public boolean hasDrillThrough() {
+    return actionCase_ == 4;
+  }
+  /**
+   * <pre>
+   * Drill through action
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.DrillThroughAction drill_through = 4 [json_name = "drillThrough"];</code>
+   * @return The drillThrough.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction getDrillThrough() {
+    if (actionCase_ == 4) {
+       return (com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction) action_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Drill through action
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.DrillThroughAction drill_through = 4 [json_name = "drillThrough"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughActionOrBuilder getDrillThroughOrBuilder() {
+    if (actionCase_ == 4) {
+       return (com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction) action_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -220,6 +265,9 @@ private static final long serialVersionUID = 0L;
     if (actionCase_ == 3) {
       output.writeMessage(3, (com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction) action_);
     }
+    if (actionCase_ == 4) {
+      output.writeMessage(4, (com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction) action_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -240,6 +288,10 @@ private static final long serialVersionUID = 0L;
     if (actionCase_ == 3) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, (com.tcn.cloud.api.api.v1alpha1.insights.ComponentAction) action_);
+    }
+    if (actionCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction) action_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -267,6 +319,10 @@ private static final long serialVersionUID = 0L;
         if (!getComponent()
             .equals(other.getComponent())) return false;
         break;
+      case 4:
+        if (!getDrillThrough()
+            .equals(other.getDrillThrough())) return false;
+        break;
       case 0:
       default:
     }
@@ -291,6 +347,10 @@ private static final long serialVersionUID = 0L;
       case 3:
         hash = (37 * hash) + COMPONENT_FIELD_NUMBER;
         hash = (53 * hash) + getComponent().hashCode();
+        break;
+      case 4:
+        hash = (37 * hash) + DRILL_THROUGH_FIELD_NUMBER;
+        hash = (53 * hash) + getDrillThrough().hashCode();
         break;
       case 0:
       default:
@@ -437,6 +497,9 @@ private static final long serialVersionUID = 0L;
       if (componentBuilder_ != null) {
         componentBuilder_.clear();
       }
+      if (drillThroughBuilder_ != null) {
+        drillThroughBuilder_.clear();
+      }
       actionCase_ = 0;
       action_ = null;
       return this;
@@ -488,6 +551,10 @@ private static final long serialVersionUID = 0L;
       if (actionCase_ == 3 &&
           componentBuilder_ != null) {
         result.action_ = componentBuilder_.build();
+      }
+      if (actionCase_ == 4 &&
+          drillThroughBuilder_ != null) {
+        result.action_ = drillThroughBuilder_.build();
       }
     }
 
@@ -547,6 +614,10 @@ private static final long serialVersionUID = 0L;
           mergeComponent(other.getComponent());
           break;
         }
+        case DRILL_THROUGH: {
+          mergeDrillThrough(other.getDrillThrough());
+          break;
+        }
         case ACTION_NOT_SET: {
           break;
         }
@@ -596,6 +667,13 @@ private static final long serialVersionUID = 0L;
               actionCase_ = 3;
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  getDrillThroughFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              actionCase_ = 4;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1055,6 +1133,184 @@ private static final long serialVersionUID = 0L;
       actionCase_ = 3;
       onChanged();
       return componentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction, com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction.Builder, com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughActionOrBuilder> drillThroughBuilder_;
+    /**
+     * <pre>
+     * Drill through action
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.DrillThroughAction drill_through = 4 [json_name = "drillThrough"];</code>
+     * @return Whether the drillThrough field is set.
+     */
+    @java.lang.Override
+    public boolean hasDrillThrough() {
+      return actionCase_ == 4;
+    }
+    /**
+     * <pre>
+     * Drill through action
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.DrillThroughAction drill_through = 4 [json_name = "drillThrough"];</code>
+     * @return The drillThrough.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction getDrillThrough() {
+      if (drillThroughBuilder_ == null) {
+        if (actionCase_ == 4) {
+          return (com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction) action_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction.getDefaultInstance();
+      } else {
+        if (actionCase_ == 4) {
+          return drillThroughBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Drill through action
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.DrillThroughAction drill_through = 4 [json_name = "drillThrough"];</code>
+     */
+    public Builder setDrillThrough(com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction value) {
+      if (drillThroughBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        action_ = value;
+        onChanged();
+      } else {
+        drillThroughBuilder_.setMessage(value);
+      }
+      actionCase_ = 4;
+      return this;
+    }
+    /**
+     * <pre>
+     * Drill through action
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.DrillThroughAction drill_through = 4 [json_name = "drillThrough"];</code>
+     */
+    public Builder setDrillThrough(
+        com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction.Builder builderForValue) {
+      if (drillThroughBuilder_ == null) {
+        action_ = builderForValue.build();
+        onChanged();
+      } else {
+        drillThroughBuilder_.setMessage(builderForValue.build());
+      }
+      actionCase_ = 4;
+      return this;
+    }
+    /**
+     * <pre>
+     * Drill through action
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.DrillThroughAction drill_through = 4 [json_name = "drillThrough"];</code>
+     */
+    public Builder mergeDrillThrough(com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction value) {
+      if (drillThroughBuilder_ == null) {
+        if (actionCase_ == 4 &&
+            action_ != com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction.getDefaultInstance()) {
+          action_ = com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction.newBuilder((com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction) action_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          action_ = value;
+        }
+        onChanged();
+      } else {
+        if (actionCase_ == 4) {
+          drillThroughBuilder_.mergeFrom(value);
+        } else {
+          drillThroughBuilder_.setMessage(value);
+        }
+      }
+      actionCase_ = 4;
+      return this;
+    }
+    /**
+     * <pre>
+     * Drill through action
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.DrillThroughAction drill_through = 4 [json_name = "drillThrough"];</code>
+     */
+    public Builder clearDrillThrough() {
+      if (drillThroughBuilder_ == null) {
+        if (actionCase_ == 4) {
+          actionCase_ = 0;
+          action_ = null;
+          onChanged();
+        }
+      } else {
+        if (actionCase_ == 4) {
+          actionCase_ = 0;
+          action_ = null;
+        }
+        drillThroughBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Drill through action
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.DrillThroughAction drill_through = 4 [json_name = "drillThrough"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction.Builder getDrillThroughBuilder() {
+      return getDrillThroughFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Drill through action
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.DrillThroughAction drill_through = 4 [json_name = "drillThrough"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughActionOrBuilder getDrillThroughOrBuilder() {
+      if ((actionCase_ == 4) && (drillThroughBuilder_ != null)) {
+        return drillThroughBuilder_.getMessageOrBuilder();
+      } else {
+        if (actionCase_ == 4) {
+          return (com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction) action_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Drill through action
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.DrillThroughAction drill_through = 4 [json_name = "drillThrough"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction, com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction.Builder, com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughActionOrBuilder> 
+        getDrillThroughFieldBuilder() {
+      if (drillThroughBuilder_ == null) {
+        if (!(actionCase_ == 4)) {
+          action_ = com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction.getDefaultInstance();
+        }
+        drillThroughBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction, com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction.Builder, com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughActionOrBuilder>(
+                (com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction) action_,
+                getParentForChildren(),
+                isClean());
+        action_ = null;
+      }
+      actionCase_ = 4;
+      onChanged();
+      return drillThroughBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -80,5 +80,32 @@ public interface InsightContextualActionOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.insights.ComponentActionOrBuilder getComponentOrBuilder();
 
+  /**
+   * <pre>
+   * Drill through action
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.DrillThroughAction drill_through = 4 [json_name = "drillThrough"];</code>
+   * @return Whether the drillThrough field is set.
+   */
+  boolean hasDrillThrough();
+  /**
+   * <pre>
+   * Drill through action
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.DrillThroughAction drill_through = 4 [json_name = "drillThrough"];</code>
+   * @return The drillThrough.
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughAction getDrillThrough();
+  /**
+   * <pre>
+   * Drill through action
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.DrillThroughAction drill_through = 4 [json_name = "drillThrough"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.DrillThroughActionOrBuilder getDrillThroughOrBuilder();
+
   com.tcn.cloud.api.api.v1alpha1.insights.InsightContextualAction.ActionCase getActionCase();
 }

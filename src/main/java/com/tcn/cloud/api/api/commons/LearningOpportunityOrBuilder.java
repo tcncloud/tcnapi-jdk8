@@ -259,5 +259,24 @@ public interface LearningOpportunityOrBuilder extends
    */
   long getAutoEvaluationId();
 
+  /**
+   * <pre>
+   * (Scorecards) Smart Evaluation created from.
+   * </pre>
+   *
+   * <code>int64 smart_evaluation_id = 18 [json_name = "smartEvaluationId"];</code>
+   * @return Whether the smartEvaluationId field is set.
+   */
+  boolean hasSmartEvaluationId();
+  /**
+   * <pre>
+   * (Scorecards) Smart Evaluation created from.
+   * </pre>
+   *
+   * <code>int64 smart_evaluation_id = 18 [json_name = "smartEvaluationId"];</code>
+   * @return The smartEvaluationId.
+   */
+  long getSmartEvaluationId();
+
   com.tcn.cloud.api.api.commons.LearningOpportunity.OriginIdentifierCase getOriginIdentifierCase();
 }
