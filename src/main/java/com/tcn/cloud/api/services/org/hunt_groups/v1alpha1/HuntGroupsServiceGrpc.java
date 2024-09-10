@@ -355,7 +355,7 @@ public final class HuntGroupsServiceGrpc {
      * <pre>
      * CopyHuntGroupToOrganization copies a hunt group to a different organization.
      * This will create a new hunt group in the destination organization with the same
-     * settings/parameters as the source hunt group.
+     * settings/parameters and all associated data (skill, call-queue config) as the source hunt group.
      * </pre>
      */
     default void copyHuntGroupToOrganization(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest request,
@@ -472,7 +472,7 @@ public final class HuntGroupsServiceGrpc {
      * <pre>
      * CopyHuntGroupToOrganization copies a hunt group to a different organization.
      * This will create a new hunt group in the destination organization with the same
-     * settings/parameters as the source hunt group.
+     * settings/parameters and all associated data (skill, call-queue config) as the source hunt group.
      * </pre>
      */
     public void copyHuntGroupToOrganization(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest request,
@@ -570,7 +570,7 @@ public final class HuntGroupsServiceGrpc {
      * <pre>
      * CopyHuntGroupToOrganization copies a hunt group to a different organization.
      * This will create a new hunt group in the destination organization with the same
-     * settings/parameters as the source hunt group.
+     * settings/parameters and all associated data (skill, call-queue config) as the source hunt group.
      * </pre>
      */
     public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse copyHuntGroupToOrganization(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest request) {
@@ -673,7 +673,7 @@ public final class HuntGroupsServiceGrpc {
      * <pre>
      * CopyHuntGroupToOrganization copies a hunt group to a different organization.
      * This will create a new hunt group in the destination organization with the same
-     * settings/parameters as the source hunt group.
+     * settings/parameters and all associated data (skill, call-queue config) as the source hunt group.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse> copyHuntGroupToOrganization(
