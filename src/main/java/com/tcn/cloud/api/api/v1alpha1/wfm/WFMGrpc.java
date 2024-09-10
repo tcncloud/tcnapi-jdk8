@@ -5846,35 +5846,35 @@ public final class WFMGrpc {
     return getCreateAdherenceRuleNotificationConfigEntryMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse> getListAdherenceAgentRulesMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse> getListAdherenceRuleNotificationConfigsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListAdherenceAgentRules",
-      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "ListAdherenceRuleNotificationConfigs",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse> getListAdherenceAgentRulesMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse> getListAdherenceAgentRulesMethod;
-    if ((getListAdherenceAgentRulesMethod = WFMGrpc.getListAdherenceAgentRulesMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse> getListAdherenceRuleNotificationConfigsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse> getListAdherenceRuleNotificationConfigsMethod;
+    if ((getListAdherenceRuleNotificationConfigsMethod = WFMGrpc.getListAdherenceRuleNotificationConfigsMethod) == null) {
       synchronized (WFMGrpc.class) {
-        if ((getListAdherenceAgentRulesMethod = WFMGrpc.getListAdherenceAgentRulesMethod) == null) {
-          WFMGrpc.getListAdherenceAgentRulesMethod = getListAdherenceAgentRulesMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse>newBuilder()
+        if ((getListAdherenceRuleNotificationConfigsMethod = WFMGrpc.getListAdherenceRuleNotificationConfigsMethod) == null) {
+          WFMGrpc.getListAdherenceRuleNotificationConfigsMethod = getListAdherenceRuleNotificationConfigsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAdherenceAgentRules"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAdherenceRuleNotificationConfigs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListAdherenceAgentRules"))
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListAdherenceRuleNotificationConfigs"))
               .build();
         }
       }
     }
-    return getListAdherenceAgentRulesMethod;
+    return getListAdherenceRuleNotificationConfigsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleRequest,
@@ -6032,35 +6032,35 @@ public final class WFMGrpc {
     return getCreateAdherenceAgentRuleClauseMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse> getListAdherenceRuleNotificationConfigsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse> getListAdherenceAgentRulesMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListAdherenceRuleNotificationConfigs",
-      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "ListAdherenceAgentRules",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest,
-      com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse> getListAdherenceRuleNotificationConfigsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse> getListAdherenceRuleNotificationConfigsMethod;
-    if ((getListAdherenceRuleNotificationConfigsMethod = WFMGrpc.getListAdherenceRuleNotificationConfigsMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse> getListAdherenceAgentRulesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse> getListAdherenceAgentRulesMethod;
+    if ((getListAdherenceAgentRulesMethod = WFMGrpc.getListAdherenceAgentRulesMethod) == null) {
       synchronized (WFMGrpc.class) {
-        if ((getListAdherenceRuleNotificationConfigsMethod = WFMGrpc.getListAdherenceRuleNotificationConfigsMethod) == null) {
-          WFMGrpc.getListAdherenceRuleNotificationConfigsMethod = getListAdherenceRuleNotificationConfigsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse>newBuilder()
+        if ((getListAdherenceAgentRulesMethod = WFMGrpc.getListAdherenceAgentRulesMethod) == null) {
+          WFMGrpc.getListAdherenceAgentRulesMethod = getListAdherenceAgentRulesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest, com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAdherenceRuleNotificationConfigs"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAdherenceAgentRules"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListAdherenceRuleNotificationConfigs"))
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListAdherenceAgentRules"))
               .build();
         }
       }
     }
-    return getListAdherenceRuleNotificationConfigsMethod;
+    return getListAdherenceAgentRulesMethod;
   }
 
   /**
@@ -9049,16 +9049,16 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets all adherence agent &#64;rules for the org sending the request.
-     * Rules will include their respective clauses.
+     * Gets all adherence rule &#64;notification_configs for the org sending the request.
+     * Configs will include their respective entries.
      * Errors:
      *   - grpc.Invalid: the request arguments are invalid.
-     *   - grpc.Internal: error occurs when getting the rules.
+     *   - grpc.Internal: error occurs when getting the notification configs.
      * </pre>
      */
-    default void listAdherenceAgentRules(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAdherenceAgentRulesMethod(), responseObserver);
+    default void listAdherenceRuleNotificationConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAdherenceRuleNotificationConfigsMethod(), responseObserver);
     }
 
     /**
@@ -9131,16 +9131,16 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets all adherence rule &#64;notification_configs for the org sending the request.
-     * Configs will include their respective entries.
+     * Gets all adherence agent &#64;rules for the org sending the request.
+     * Rules will include their respective clauses.
      * Errors:
      *   - grpc.Invalid: the request arguments are invalid.
-     *   - grpc.Internal: error occurs when getting the notification configs.
+     *   - grpc.Internal: error occurs when getting the rules.
      * </pre>
      */
-    default void listAdherenceRuleNotificationConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAdherenceRuleNotificationConfigsMethod(), responseObserver);
+    default void listAdherenceAgentRules(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAdherenceAgentRulesMethod(), responseObserver);
     }
   }
 
@@ -12300,17 +12300,17 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets all adherence agent &#64;rules for the org sending the request.
-     * Rules will include their respective clauses.
+     * Gets all adherence rule &#64;notification_configs for the org sending the request.
+     * Configs will include their respective entries.
      * Errors:
      *   - grpc.Invalid: the request arguments are invalid.
-     *   - grpc.Internal: error occurs when getting the rules.
+     *   - grpc.Internal: error occurs when getting the notification configs.
      * </pre>
      */
-    public void listAdherenceAgentRules(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse> responseObserver) {
+    public void listAdherenceRuleNotificationConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListAdherenceAgentRulesMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListAdherenceRuleNotificationConfigsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -12388,17 +12388,17 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets all adherence rule &#64;notification_configs for the org sending the request.
-     * Configs will include their respective entries.
+     * Gets all adherence agent &#64;rules for the org sending the request.
+     * Rules will include their respective clauses.
      * Errors:
      *   - grpc.Invalid: the request arguments are invalid.
-     *   - grpc.Internal: error occurs when getting the notification configs.
+     *   - grpc.Internal: error occurs when getting the rules.
      * </pre>
      */
-    public void listAdherenceRuleNotificationConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse> responseObserver) {
+    public void listAdherenceAgentRules(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListAdherenceRuleNotificationConfigsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListAdherenceAgentRulesMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -15362,16 +15362,16 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets all adherence agent &#64;rules for the org sending the request.
-     * Rules will include their respective clauses.
+     * Gets all adherence rule &#64;notification_configs for the org sending the request.
+     * Configs will include their respective entries.
      * Errors:
      *   - grpc.Invalid: the request arguments are invalid.
-     *   - grpc.Internal: error occurs when getting the rules.
+     *   - grpc.Internal: error occurs when getting the notification configs.
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse listAdherenceAgentRules(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest request) {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse listAdherenceRuleNotificationConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListAdherenceAgentRulesMethod(), getCallOptions(), request);
+          getChannel(), getListAdherenceRuleNotificationConfigsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -15444,16 +15444,16 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets all adherence rule &#64;notification_configs for the org sending the request.
-     * Configs will include their respective entries.
+     * Gets all adherence agent &#64;rules for the org sending the request.
+     * Rules will include their respective clauses.
      * Errors:
      *   - grpc.Invalid: the request arguments are invalid.
-     *   - grpc.Internal: error occurs when getting the notification configs.
+     *   - grpc.Internal: error occurs when getting the rules.
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse listAdherenceRuleNotificationConfigs(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest request) {
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse listAdherenceAgentRules(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListAdherenceRuleNotificationConfigsMethod(), getCallOptions(), request);
+          getChannel(), getListAdherenceAgentRulesMethod(), getCallOptions(), request);
     }
   }
 
@@ -18497,17 +18497,17 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets all adherence agent &#64;rules for the org sending the request.
-     * Rules will include their respective clauses.
+     * Gets all adherence rule &#64;notification_configs for the org sending the request.
+     * Configs will include their respective entries.
      * Errors:
      *   - grpc.Invalid: the request arguments are invalid.
-     *   - grpc.Internal: error occurs when getting the rules.
+     *   - grpc.Internal: error occurs when getting the notification configs.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse> listAdherenceAgentRules(
-        com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse> listAdherenceRuleNotificationConfigs(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListAdherenceAgentRulesMethod(), getCallOptions()), request);
+          getChannel().newCall(getListAdherenceRuleNotificationConfigsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -18585,17 +18585,17 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Gets all adherence rule &#64;notification_configs for the org sending the request.
-     * Configs will include their respective entries.
+     * Gets all adherence agent &#64;rules for the org sending the request.
+     * Rules will include their respective clauses.
      * Errors:
      *   - grpc.Invalid: the request arguments are invalid.
-     *   - grpc.Internal: error occurs when getting the notification configs.
+     *   - grpc.Internal: error occurs when getting the rules.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse> listAdherenceRuleNotificationConfigs(
-        com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse> listAdherenceAgentRules(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListAdherenceRuleNotificationConfigsMethod(), getCallOptions()), request);
+          getChannel().newCall(getListAdherenceAgentRulesMethod(), getCallOptions()), request);
     }
   }
 
@@ -18787,13 +18787,13 @@ public final class WFMGrpc {
   private static final int METHODID_DELETE_RGBA_COLOR = 185;
   private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 186;
   private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 187;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 188;
+  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 188;
   private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 189;
   private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 190;
   private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 191;
   private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 192;
   private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 193;
-  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 194;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 194;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -19564,9 +19564,9 @@ public final class WFMGrpc {
           serviceImpl.createAdherenceRuleNotificationConfigEntry((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse>) responseObserver);
           break;
-        case METHODID_LIST_ADHERENCE_AGENT_RULES:
-          serviceImpl.listAdherenceAgentRules((com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse>) responseObserver);
+        case METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS:
+          serviceImpl.listAdherenceRuleNotificationConfigs((com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse>) responseObserver);
           break;
         case METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE:
           serviceImpl.createAdherenceDepartmentalRule((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleRequest) request,
@@ -19588,9 +19588,9 @@ public final class WFMGrpc {
           serviceImpl.createAdherenceAgentRuleClause((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseResponse>) responseObserver);
           break;
-        case METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS:
-          serviceImpl.listAdherenceRuleNotificationConfigs((com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse>) responseObserver);
+        case METHODID_LIST_ADHERENCE_AGENT_RULES:
+          serviceImpl.listAdherenceAgentRules((com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -20927,12 +20927,12 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse>(
                 service, METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY)))
         .addMethod(
-          getListAdherenceAgentRulesMethod(),
+          getListAdherenceRuleNotificationConfigsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse>(
-                service, METHODID_LIST_ADHERENCE_AGENT_RULES)))
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse>(
+                service, METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS)))
         .addMethod(
           getCreateAdherenceDepartmentalRuleMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -20969,12 +20969,12 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceAgentRuleClauseResponse>(
                 service, METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE)))
         .addMethod(
-          getListAdherenceRuleNotificationConfigsMethod(),
+          getListAdherenceAgentRulesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse>(
-                service, METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS)))
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse>(
+                service, METHODID_LIST_ADHERENCE_AGENT_RULES)))
         .build();
   }
 
@@ -21211,13 +21211,13 @@ public final class WFMGrpc {
               .addMethod(getDeleteRgbaColorMethod())
               .addMethod(getCreateAdherenceRuleNotificationConfigMethod())
               .addMethod(getCreateAdherenceRuleNotificationConfigEntryMethod())
-              .addMethod(getListAdherenceAgentRulesMethod())
+              .addMethod(getListAdherenceRuleNotificationConfigsMethod())
               .addMethod(getCreateAdherenceDepartmentalRuleMethod())
               .addMethod(getCreateAdherenceDepartmentalRuleClauseMethod())
               .addMethod(getListAdherenceDepartmentalRulesMethod())
               .addMethod(getCreateAdherenceAgentRuleMethod())
               .addMethod(getCreateAdherenceAgentRuleClauseMethod())
-              .addMethod(getListAdherenceRuleNotificationConfigsMethod())
+              .addMethod(getListAdherenceAgentRulesMethod())
               .build();
         }
       }
