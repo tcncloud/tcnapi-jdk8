@@ -204,37 +204,6 @@ public final class HuntGroupsServiceGrpc {
     return getUpdateHuntGroupAgentTriggersMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest,
-      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse> getCopyHuntGroupToOrganizationMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CopyHuntGroupToOrganization",
-      requestType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest.class,
-      responseType = com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest,
-      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse> getCopyHuntGroupToOrganizationMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse> getCopyHuntGroupToOrganizationMethod;
-    if ((getCopyHuntGroupToOrganizationMethod = HuntGroupsServiceGrpc.getCopyHuntGroupToOrganizationMethod) == null) {
-      synchronized (HuntGroupsServiceGrpc.class) {
-        if ((getCopyHuntGroupToOrganizationMethod = HuntGroupsServiceGrpc.getCopyHuntGroupToOrganizationMethod) == null) {
-          HuntGroupsServiceGrpc.getCopyHuntGroupToOrganizationMethod = getCopyHuntGroupToOrganizationMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyHuntGroupToOrganization"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new HuntGroupsServiceMethodDescriptorSupplier("CopyHuntGroupToOrganization"))
-              .build();
-        }
-      }
-    }
-    return getCopyHuntGroupToOrganizationMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -350,16 +319,6 @@ public final class HuntGroupsServiceGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateHuntGroupAgentTriggersMethod(), responseObserver);
     }
-
-    /**
-     * <pre>
-     * CopyHuntGroupToOrganization copies a hunt group to a different organization.
-     * </pre>
-     */
-    default void copyHuntGroupToOrganization(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyHuntGroupToOrganizationMethod(), responseObserver);
-    }
   }
 
   /**
@@ -465,17 +424,6 @@ public final class HuntGroupsServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateHuntGroupAgentTriggersMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     * <pre>
-     * CopyHuntGroupToOrganization copies a hunt group to a different organization.
-     * </pre>
-     */
-    public void copyHuntGroupToOrganization(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCopyHuntGroupToOrganizationMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -560,16 +508,6 @@ public final class HuntGroupsServiceGrpc {
     public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse updateHuntGroupAgentTriggers(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateHuntGroupAgentTriggersMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * CopyHuntGroupToOrganization copies a hunt group to a different organization.
-     * </pre>
-     */
-    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse copyHuntGroupToOrganization(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCopyHuntGroupToOrganizationMethod(), getCallOptions(), request);
     }
   }
 
@@ -662,17 +600,6 @@ public final class HuntGroupsServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateHuntGroupAgentTriggersMethod(), getCallOptions()), request);
     }
-
-    /**
-     * <pre>
-     * CopyHuntGroupToOrganization copies a hunt group to a different organization.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse> copyHuntGroupToOrganization(
-        com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCopyHuntGroupToOrganizationMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_LIST_HUNT_GROUP_EXILE_LINKS = 0;
@@ -681,7 +608,6 @@ public final class HuntGroupsServiceGrpc {
   private static final int METHODID_LIST_HUNT_GROUP_AGENT_TRIGGERS = 3;
   private static final int METHODID_COPY_HUNT_GROUP_AGENT_TRIGGER = 4;
   private static final int METHODID_UPDATE_HUNT_GROUP_AGENT_TRIGGERS = 5;
-  private static final int METHODID_COPY_HUNT_GROUP_TO_ORGANIZATION = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -723,10 +649,6 @@ public final class HuntGroupsServiceGrpc {
         case METHODID_UPDATE_HUNT_GROUP_AGENT_TRIGGERS:
           serviceImpl.updateHuntGroupAgentTriggers((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse>) responseObserver);
-          break;
-        case METHODID_COPY_HUNT_GROUP_TO_ORGANIZATION:
-          serviceImpl.copyHuntGroupToOrganization((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -788,13 +710,6 @@ public final class HuntGroupsServiceGrpc {
               com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersRequest,
               com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.UpdateHuntGroupAgentTriggersResponse>(
                 service, METHODID_UPDATE_HUNT_GROUP_AGENT_TRIGGERS)))
-        .addMethod(
-          getCopyHuntGroupToOrganizationMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest,
-              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse>(
-                service, METHODID_COPY_HUNT_GROUP_TO_ORGANIZATION)))
         .build();
   }
 
@@ -849,7 +764,6 @@ public final class HuntGroupsServiceGrpc {
               .addMethod(getListHuntGroupAgentTriggersMethod())
               .addMethod(getCopyHuntGroupAgentTriggerMethod())
               .addMethod(getUpdateHuntGroupAgentTriggersMethod())
-              .addMethod(getCopyHuntGroupToOrganizationMethod())
               .build();
         }
       }
