@@ -3860,6 +3860,111 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionValidateOrBuilder getSwervepayProcessNewTransactionValidateOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations"];</code>
+   * @return Whether the veradigmGetLocations field is set.
+   */
+  boolean hasVeradigmGetLocations();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations"];</code>
+   * @return The veradigmGetLocations.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations getVeradigmGetLocations();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocationsOrBuilder getVeradigmGetLocationsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance"];</code>
+   * @return Whether the veradigmGetPatientAccountBalance field is set.
+   */
+  boolean hasVeradigmGetPatientAccountBalance();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance"];</code>
+   * @return The veradigmGetPatientAccountBalance.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance getVeradigmGetPatientAccountBalance();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalanceOrBuilder getVeradigmGetPatientAccountBalanceOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments"];</code>
+   * @return Whether the veradigmGetPayments field is set.
+   */
+  boolean hasVeradigmGetPayments();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments"];</code>
+   * @return The veradigmGetPayments.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments getVeradigmGetPayments();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPaymentsOrBuilder getVeradigmGetPaymentsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService"];</code>
+   * @return Whether the veradigmGetPlacesOfService field is set.
+   */
+  boolean hasVeradigmGetPlacesOfService();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService"];</code>
+   * @return The veradigmGetPlacesOfService.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService getVeradigmGetPlacesOfService();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfServiceOrBuilder getVeradigmGetPlacesOfServiceOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction"];</code>
+   * @return Whether the veradigmSavePaymentTransaction field is set.
+   */
+  boolean hasVeradigmSavePaymentTransaction();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction"];</code>
+   * @return The veradigmSavePaymentTransaction.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction getVeradigmSavePaymentTransaction();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransactionOrBuilder getVeradigmSavePaymentTransactionOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction"];</code>
+   * @return Whether the veradigmSaveRefundTransaction field is set.
+   */
+  boolean hasVeradigmSaveRefundTransaction();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction"];</code>
+   * @return The veradigmSaveRefundTransaction.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction getVeradigmSaveRefundTransaction();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransactionOrBuilder getVeradigmSaveRefundTransactionOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment"];</code>
+   * @return Whether the veradigmSaveVoucherPayment field is set.
+   */
+  boolean hasVeradigmSaveVoucherPayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment"];</code>
+   * @return The veradigmSaveVoucherPayment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment getVeradigmSaveVoucherPayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPaymentOrBuilder getVeradigmSaveVoucherPaymentOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
    * @return Whether the debugEcho field is set.
    */

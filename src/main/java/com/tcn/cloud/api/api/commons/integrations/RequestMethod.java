@@ -1043,6 +1043,42 @@ public enum RequestMethod
   REQUEST_METHOD_SWERVEPAY_PROCESS_NEW_TRANSACTION_VALIDATE(4622),
   /**
    * <pre>
+   * TODO:::
+   * TODO:::
+   * TODO:::
+   * TODO:::
+   * TODO::: ask TAYLOR if he would prefer the sunrise or other to be a separate integration?
+   * </pre>
+   *
+   * <code>REQUEST_METHOD_VERADIGM_GET_LOCATIONS = 4701;</code>
+   */
+  REQUEST_METHOD_VERADIGM_GET_LOCATIONS(4701),
+  /**
+   * <code>REQUEST_METHOD_VERADIGM_GET_PATIENT_ACCOUNT_BALANCE = 4702;</code>
+   */
+  REQUEST_METHOD_VERADIGM_GET_PATIENT_ACCOUNT_BALANCE(4702),
+  /**
+   * <code>REQUEST_METHOD_VERADIGM_GET_PAYMENTS = 4703;</code>
+   */
+  REQUEST_METHOD_VERADIGM_GET_PAYMENTS(4703),
+  /**
+   * <code>REQUEST_METHOD_VERADIGM_GET_PLACES_OF_SERVICE = 4704;</code>
+   */
+  REQUEST_METHOD_VERADIGM_GET_PLACES_OF_SERVICE(4704),
+  /**
+   * <code>REQUEST_METHOD_VERADIGM_SAVE_PAYMENT_TRANSACTION = 4705;</code>
+   */
+  REQUEST_METHOD_VERADIGM_SAVE_PAYMENT_TRANSACTION(4705),
+  /**
+   * <code>REQUEST_METHOD_VERADIGM_SAVE_REFUND_TRANSACTION = 4706;</code>
+   */
+  REQUEST_METHOD_VERADIGM_SAVE_REFUND_TRANSACTION(4706),
+  /**
+   * <code>REQUEST_METHOD_VERADIGM_SAVE_VOUCHER_PAYMENT = 4707;</code>
+   */
+  REQUEST_METHOD_VERADIGM_SAVE_VOUCHER_PAYMENT(4707),
+  /**
+   * <pre>
    * just evaluates the request and sends back the data
    * this is useful for CompositeValue types, or when we are wanting to see
    * what a request would look like if it were to be called on a different method
@@ -2092,6 +2128,42 @@ public enum RequestMethod
   public static final int REQUEST_METHOD_SWERVEPAY_PROCESS_NEW_TRANSACTION_VALIDATE_VALUE = 4622;
   /**
    * <pre>
+   * TODO:::
+   * TODO:::
+   * TODO:::
+   * TODO:::
+   * TODO::: ask TAYLOR if he would prefer the sunrise or other to be a separate integration?
+   * </pre>
+   *
+   * <code>REQUEST_METHOD_VERADIGM_GET_LOCATIONS = 4701;</code>
+   */
+  public static final int REQUEST_METHOD_VERADIGM_GET_LOCATIONS_VALUE = 4701;
+  /**
+   * <code>REQUEST_METHOD_VERADIGM_GET_PATIENT_ACCOUNT_BALANCE = 4702;</code>
+   */
+  public static final int REQUEST_METHOD_VERADIGM_GET_PATIENT_ACCOUNT_BALANCE_VALUE = 4702;
+  /**
+   * <code>REQUEST_METHOD_VERADIGM_GET_PAYMENTS = 4703;</code>
+   */
+  public static final int REQUEST_METHOD_VERADIGM_GET_PAYMENTS_VALUE = 4703;
+  /**
+   * <code>REQUEST_METHOD_VERADIGM_GET_PLACES_OF_SERVICE = 4704;</code>
+   */
+  public static final int REQUEST_METHOD_VERADIGM_GET_PLACES_OF_SERVICE_VALUE = 4704;
+  /**
+   * <code>REQUEST_METHOD_VERADIGM_SAVE_PAYMENT_TRANSACTION = 4705;</code>
+   */
+  public static final int REQUEST_METHOD_VERADIGM_SAVE_PAYMENT_TRANSACTION_VALUE = 4705;
+  /**
+   * <code>REQUEST_METHOD_VERADIGM_SAVE_REFUND_TRANSACTION = 4706;</code>
+   */
+  public static final int REQUEST_METHOD_VERADIGM_SAVE_REFUND_TRANSACTION_VALUE = 4706;
+  /**
+   * <code>REQUEST_METHOD_VERADIGM_SAVE_VOUCHER_PAYMENT = 4707;</code>
+   */
+  public static final int REQUEST_METHOD_VERADIGM_SAVE_VOUCHER_PAYMENT_VALUE = 4707;
+  /**
+   * <pre>
    * just evaluates the request and sends back the data
    * this is useful for CompositeValue types, or when we are wanting to see
    * what a request would look like if it were to be called on a different method
@@ -2391,6 +2463,13 @@ public enum RequestMethod
       case 4620: return REQUEST_METHOD_SWERVEPAY_PROCESS_NEW_TRANSACTION_REFUND;
       case 4621: return REQUEST_METHOD_SWERVEPAY_PROCESS_NEW_TRANSACTION_SALE;
       case 4622: return REQUEST_METHOD_SWERVEPAY_PROCESS_NEW_TRANSACTION_VALIDATE;
+      case 4701: return REQUEST_METHOD_VERADIGM_GET_LOCATIONS;
+      case 4702: return REQUEST_METHOD_VERADIGM_GET_PATIENT_ACCOUNT_BALANCE;
+      case 4703: return REQUEST_METHOD_VERADIGM_GET_PAYMENTS;
+      case 4704: return REQUEST_METHOD_VERADIGM_GET_PLACES_OF_SERVICE;
+      case 4705: return REQUEST_METHOD_VERADIGM_SAVE_PAYMENT_TRANSACTION;
+      case 4706: return REQUEST_METHOD_VERADIGM_SAVE_REFUND_TRANSACTION;
+      case 4707: return REQUEST_METHOD_VERADIGM_SAVE_VOUCHER_PAYMENT;
       case 5001: return REQUEST_METHOD_DEBUG_ECHO;
       case 5002: return REQUESET_METHOD_DEBUG_VALIDATE;
       default: return null;

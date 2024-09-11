@@ -308,6 +308,13 @@ private static final long serialVersionUID = 0L;
     SWERVEPAY_PROCESS_NEW_TRANSACTION_REFUND(4620),
     SWERVEPAY_PROCESS_NEW_TRANSACTION_SALE(4621),
     SWERVEPAY_PROCESS_NEW_TRANSACTION_VALIDATE(4622),
+    VERADIGM_GET_LOCATIONS(4701),
+    VERADIGM_GET_PATIENT_ACCOUNT_BALANCE(4702),
+    VERADIGM_GET_PAYMENTS(4703),
+    VERADIGM_GET_PLACES_OF_SERVICE(4704),
+    VERADIGM_SAVE_PAYMENT_TRANSACTION(4705),
+    VERADIGM_SAVE_REFUND_TRANSACTION(4706),
+    VERADIGM_SAVE_VOUCHER_PAYMENT(4707),
     DEBUG_ECHO(5001),
     DEBUG_VALIDATE(5002),
     VALUE_NOT_SET(0);
@@ -583,6 +590,13 @@ private static final long serialVersionUID = 0L;
         case 4620: return SWERVEPAY_PROCESS_NEW_TRANSACTION_REFUND;
         case 4621: return SWERVEPAY_PROCESS_NEW_TRANSACTION_SALE;
         case 4622: return SWERVEPAY_PROCESS_NEW_TRANSACTION_VALIDATE;
+        case 4701: return VERADIGM_GET_LOCATIONS;
+        case 4702: return VERADIGM_GET_PATIENT_ACCOUNT_BALANCE;
+        case 4703: return VERADIGM_GET_PAYMENTS;
+        case 4704: return VERADIGM_GET_PLACES_OF_SERVICE;
+        case 4705: return VERADIGM_SAVE_PAYMENT_TRANSACTION;
+        case 4706: return VERADIGM_SAVE_REFUND_TRANSACTION;
+        case 4707: return VERADIGM_SAVE_VOUCHER_PAYMENT;
         case 5001: return DEBUG_ECHO;
         case 5002: return DEBUG_VALIDATE;
         case 0: return VALUE_NOT_SET;
@@ -8575,6 +8589,223 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionValidate.getDefaultInstance();
   }
 
+  public static final int VERADIGM_GET_LOCATIONS_FIELD_NUMBER = 4701;
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations"];</code>
+   * @return Whether the veradigmGetLocations field is set.
+   */
+  @java.lang.Override
+  public boolean hasVeradigmGetLocations() {
+    return valueCase_ == 4701;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations"];</code>
+   * @return The veradigmGetLocations.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations getVeradigmGetLocations() {
+    if (valueCase_ == 4701) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocationsOrBuilder getVeradigmGetLocationsOrBuilder() {
+    if (valueCase_ == 4701) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations.getDefaultInstance();
+  }
+
+  public static final int VERADIGM_GET_PATIENT_ACCOUNT_BALANCE_FIELD_NUMBER = 4702;
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance"];</code>
+   * @return Whether the veradigmGetPatientAccountBalance field is set.
+   */
+  @java.lang.Override
+  public boolean hasVeradigmGetPatientAccountBalance() {
+    return valueCase_ == 4702;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance"];</code>
+   * @return The veradigmGetPatientAccountBalance.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance getVeradigmGetPatientAccountBalance() {
+    if (valueCase_ == 4702) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalanceOrBuilder getVeradigmGetPatientAccountBalanceOrBuilder() {
+    if (valueCase_ == 4702) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance.getDefaultInstance();
+  }
+
+  public static final int VERADIGM_GET_PAYMENTS_FIELD_NUMBER = 4703;
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments"];</code>
+   * @return Whether the veradigmGetPayments field is set.
+   */
+  @java.lang.Override
+  public boolean hasVeradigmGetPayments() {
+    return valueCase_ == 4703;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments"];</code>
+   * @return The veradigmGetPayments.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments getVeradigmGetPayments() {
+    if (valueCase_ == 4703) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPaymentsOrBuilder getVeradigmGetPaymentsOrBuilder() {
+    if (valueCase_ == 4703) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments.getDefaultInstance();
+  }
+
+  public static final int VERADIGM_GET_PLACES_OF_SERVICE_FIELD_NUMBER = 4704;
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService"];</code>
+   * @return Whether the veradigmGetPlacesOfService field is set.
+   */
+  @java.lang.Override
+  public boolean hasVeradigmGetPlacesOfService() {
+    return valueCase_ == 4704;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService"];</code>
+   * @return The veradigmGetPlacesOfService.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService getVeradigmGetPlacesOfService() {
+    if (valueCase_ == 4704) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfServiceOrBuilder getVeradigmGetPlacesOfServiceOrBuilder() {
+    if (valueCase_ == 4704) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService.getDefaultInstance();
+  }
+
+  public static final int VERADIGM_SAVE_PAYMENT_TRANSACTION_FIELD_NUMBER = 4705;
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction"];</code>
+   * @return Whether the veradigmSavePaymentTransaction field is set.
+   */
+  @java.lang.Override
+  public boolean hasVeradigmSavePaymentTransaction() {
+    return valueCase_ == 4705;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction"];</code>
+   * @return The veradigmSavePaymentTransaction.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction getVeradigmSavePaymentTransaction() {
+    if (valueCase_ == 4705) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransactionOrBuilder getVeradigmSavePaymentTransactionOrBuilder() {
+    if (valueCase_ == 4705) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction.getDefaultInstance();
+  }
+
+  public static final int VERADIGM_SAVE_REFUND_TRANSACTION_FIELD_NUMBER = 4706;
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction"];</code>
+   * @return Whether the veradigmSaveRefundTransaction field is set.
+   */
+  @java.lang.Override
+  public boolean hasVeradigmSaveRefundTransaction() {
+    return valueCase_ == 4706;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction"];</code>
+   * @return The veradigmSaveRefundTransaction.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction getVeradigmSaveRefundTransaction() {
+    if (valueCase_ == 4706) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransactionOrBuilder getVeradigmSaveRefundTransactionOrBuilder() {
+    if (valueCase_ == 4706) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction.getDefaultInstance();
+  }
+
+  public static final int VERADIGM_SAVE_VOUCHER_PAYMENT_FIELD_NUMBER = 4707;
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment"];</code>
+   * @return Whether the veradigmSaveVoucherPayment field is set.
+   */
+  @java.lang.Override
+  public boolean hasVeradigmSaveVoucherPayment() {
+    return valueCase_ == 4707;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment"];</code>
+   * @return The veradigmSaveVoucherPayment.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment getVeradigmSaveVoucherPayment() {
+    if (valueCase_ == 4707) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPaymentOrBuilder getVeradigmSaveVoucherPaymentOrBuilder() {
+    if (valueCase_ == 4707) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment.getDefaultInstance();
+  }
+
   public static final int DEBUG_ECHO_FIELD_NUMBER = 5001;
   /**
    * <code>.api.commons.integrations.ExecuteDebugEcho debug_echo = 5001 [json_name = "debugEcho"];</code>
@@ -9421,6 +9652,27 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 4622) {
       output.writeMessage(4622, (com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionValidate) value_);
+    }
+    if (valueCase_ == 4701) {
+      output.writeMessage(4701, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations) value_);
+    }
+    if (valueCase_ == 4702) {
+      output.writeMessage(4702, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance) value_);
+    }
+    if (valueCase_ == 4703) {
+      output.writeMessage(4703, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments) value_);
+    }
+    if (valueCase_ == 4704) {
+      output.writeMessage(4704, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService) value_);
+    }
+    if (valueCase_ == 4705) {
+      output.writeMessage(4705, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction) value_);
+    }
+    if (valueCase_ == 4706) {
+      output.writeMessage(4706, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction) value_);
+    }
+    if (valueCase_ == 4707) {
+      output.writeMessage(4707, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment) value_);
     }
     if (valueCase_ == 5001) {
       output.writeMessage(5001, (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho) value_);
@@ -10463,6 +10715,34 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 4622) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4622, (com.tcn.cloud.api.api.commons.integrations.ExecuteSwervepayProcessNewTransactionValidate) value_);
+    }
+    if (valueCase_ == 4701) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4701, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations) value_);
+    }
+    if (valueCase_ == 4702) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4702, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance) value_);
+    }
+    if (valueCase_ == 4703) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4703, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments) value_);
+    }
+    if (valueCase_ == 4704) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4704, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService) value_);
+    }
+    if (valueCase_ == 4705) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4705, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction) value_);
+    }
+    if (valueCase_ == 4706) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4706, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction) value_);
+    }
+    if (valueCase_ == 4707) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4707, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment) value_);
     }
     if (valueCase_ == 5001) {
       size += com.google.protobuf.CodedOutputStream
@@ -11515,6 +11795,34 @@ private static final long serialVersionUID = 0L;
         if (!getSwervepayProcessNewTransactionValidate()
             .equals(other.getSwervepayProcessNewTransactionValidate())) return false;
         break;
+      case 4701:
+        if (!getVeradigmGetLocations()
+            .equals(other.getVeradigmGetLocations())) return false;
+        break;
+      case 4702:
+        if (!getVeradigmGetPatientAccountBalance()
+            .equals(other.getVeradigmGetPatientAccountBalance())) return false;
+        break;
+      case 4703:
+        if (!getVeradigmGetPayments()
+            .equals(other.getVeradigmGetPayments())) return false;
+        break;
+      case 4704:
+        if (!getVeradigmGetPlacesOfService()
+            .equals(other.getVeradigmGetPlacesOfService())) return false;
+        break;
+      case 4705:
+        if (!getVeradigmSavePaymentTransaction()
+            .equals(other.getVeradigmSavePaymentTransaction())) return false;
+        break;
+      case 4706:
+        if (!getVeradigmSaveRefundTransaction()
+            .equals(other.getVeradigmSaveRefundTransaction())) return false;
+        break;
+      case 4707:
+        if (!getVeradigmSaveVoucherPayment()
+            .equals(other.getVeradigmSaveVoucherPayment())) return false;
+        break;
       case 5001:
         if (!getDebugEcho()
             .equals(other.getDebugEcho())) return false;
@@ -12564,6 +12872,34 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SWERVEPAY_PROCESS_NEW_TRANSACTION_VALIDATE_FIELD_NUMBER;
         hash = (53 * hash) + getSwervepayProcessNewTransactionValidate().hashCode();
         break;
+      case 4701:
+        hash = (37 * hash) + VERADIGM_GET_LOCATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getVeradigmGetLocations().hashCode();
+        break;
+      case 4702:
+        hash = (37 * hash) + VERADIGM_GET_PATIENT_ACCOUNT_BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getVeradigmGetPatientAccountBalance().hashCode();
+        break;
+      case 4703:
+        hash = (37 * hash) + VERADIGM_GET_PAYMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getVeradigmGetPayments().hashCode();
+        break;
+      case 4704:
+        hash = (37 * hash) + VERADIGM_GET_PLACES_OF_SERVICE_FIELD_NUMBER;
+        hash = (53 * hash) + getVeradigmGetPlacesOfService().hashCode();
+        break;
+      case 4705:
+        hash = (37 * hash) + VERADIGM_SAVE_PAYMENT_TRANSACTION_FIELD_NUMBER;
+        hash = (53 * hash) + getVeradigmSavePaymentTransaction().hashCode();
+        break;
+      case 4706:
+        hash = (37 * hash) + VERADIGM_SAVE_REFUND_TRANSACTION_FIELD_NUMBER;
+        hash = (53 * hash) + getVeradigmSaveRefundTransaction().hashCode();
+        break;
+      case 4707:
+        hash = (37 * hash) + VERADIGM_SAVE_VOUCHER_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getVeradigmSaveVoucherPayment().hashCode();
+        break;
       case 5001:
         hash = (37 * hash) + DEBUG_ECHO_FIELD_NUMBER;
         hash = (53 * hash) + getDebugEcho().hashCode();
@@ -13489,6 +13825,27 @@ private static final long serialVersionUID = 0L;
       }
       if (swervepayProcessNewTransactionValidateBuilder_ != null) {
         swervepayProcessNewTransactionValidateBuilder_.clear();
+      }
+      if (veradigmGetLocationsBuilder_ != null) {
+        veradigmGetLocationsBuilder_.clear();
+      }
+      if (veradigmGetPatientAccountBalanceBuilder_ != null) {
+        veradigmGetPatientAccountBalanceBuilder_.clear();
+      }
+      if (veradigmGetPaymentsBuilder_ != null) {
+        veradigmGetPaymentsBuilder_.clear();
+      }
+      if (veradigmGetPlacesOfServiceBuilder_ != null) {
+        veradigmGetPlacesOfServiceBuilder_.clear();
+      }
+      if (veradigmSavePaymentTransactionBuilder_ != null) {
+        veradigmSavePaymentTransactionBuilder_.clear();
+      }
+      if (veradigmSaveRefundTransactionBuilder_ != null) {
+        veradigmSaveRefundTransactionBuilder_.clear();
+      }
+      if (veradigmSaveVoucherPaymentBuilder_ != null) {
+        veradigmSaveVoucherPaymentBuilder_.clear();
       }
       if (debugEchoBuilder_ != null) {
         debugEchoBuilder_.clear();
@@ -14604,6 +14961,34 @@ private static final long serialVersionUID = 0L;
           swervepayProcessNewTransactionValidateBuilder_ != null) {
         result.value_ = swervepayProcessNewTransactionValidateBuilder_.build();
       }
+      if (valueCase_ == 4701 &&
+          veradigmGetLocationsBuilder_ != null) {
+        result.value_ = veradigmGetLocationsBuilder_.build();
+      }
+      if (valueCase_ == 4702 &&
+          veradigmGetPatientAccountBalanceBuilder_ != null) {
+        result.value_ = veradigmGetPatientAccountBalanceBuilder_.build();
+      }
+      if (valueCase_ == 4703 &&
+          veradigmGetPaymentsBuilder_ != null) {
+        result.value_ = veradigmGetPaymentsBuilder_.build();
+      }
+      if (valueCase_ == 4704 &&
+          veradigmGetPlacesOfServiceBuilder_ != null) {
+        result.value_ = veradigmGetPlacesOfServiceBuilder_.build();
+      }
+      if (valueCase_ == 4705 &&
+          veradigmSavePaymentTransactionBuilder_ != null) {
+        result.value_ = veradigmSavePaymentTransactionBuilder_.build();
+      }
+      if (valueCase_ == 4706 &&
+          veradigmSaveRefundTransactionBuilder_ != null) {
+        result.value_ = veradigmSaveRefundTransactionBuilder_.build();
+      }
+      if (valueCase_ == 4707 &&
+          veradigmSaveVoucherPaymentBuilder_ != null) {
+        result.value_ = veradigmSaveVoucherPaymentBuilder_.build();
+      }
       if (valueCase_ == 5001 &&
           debugEchoBuilder_ != null) {
         result.value_ = debugEchoBuilder_.build();
@@ -15686,6 +16071,34 @@ private static final long serialVersionUID = 0L;
         }
         case SWERVEPAY_PROCESS_NEW_TRANSACTION_VALIDATE: {
           mergeSwervepayProcessNewTransactionValidate(other.getSwervepayProcessNewTransactionValidate());
+          break;
+        }
+        case VERADIGM_GET_LOCATIONS: {
+          mergeVeradigmGetLocations(other.getVeradigmGetLocations());
+          break;
+        }
+        case VERADIGM_GET_PATIENT_ACCOUNT_BALANCE: {
+          mergeVeradigmGetPatientAccountBalance(other.getVeradigmGetPatientAccountBalance());
+          break;
+        }
+        case VERADIGM_GET_PAYMENTS: {
+          mergeVeradigmGetPayments(other.getVeradigmGetPayments());
+          break;
+        }
+        case VERADIGM_GET_PLACES_OF_SERVICE: {
+          mergeVeradigmGetPlacesOfService(other.getVeradigmGetPlacesOfService());
+          break;
+        }
+        case VERADIGM_SAVE_PAYMENT_TRANSACTION: {
+          mergeVeradigmSavePaymentTransaction(other.getVeradigmSavePaymentTransaction());
+          break;
+        }
+        case VERADIGM_SAVE_REFUND_TRANSACTION: {
+          mergeVeradigmSaveRefundTransaction(other.getVeradigmSaveRefundTransaction());
+          break;
+        }
+        case VERADIGM_SAVE_VOUCHER_PAYMENT: {
+          mergeVeradigmSaveVoucherPayment(other.getVeradigmSaveVoucherPayment());
           break;
         }
         case DEBUG_ECHO: {
@@ -17523,6 +17936,55 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 4622;
               break;
             } // case 36978
+            case 37610: {
+              input.readMessage(
+                  getVeradigmGetLocationsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4701;
+              break;
+            } // case 37610
+            case 37618: {
+              input.readMessage(
+                  getVeradigmGetPatientAccountBalanceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4702;
+              break;
+            } // case 37618
+            case 37626: {
+              input.readMessage(
+                  getVeradigmGetPaymentsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4703;
+              break;
+            } // case 37626
+            case 37634: {
+              input.readMessage(
+                  getVeradigmGetPlacesOfServiceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4704;
+              break;
+            } // case 37634
+            case 37642: {
+              input.readMessage(
+                  getVeradigmSavePaymentTransactionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4705;
+              break;
+            } // case 37642
+            case 37650: {
+              input.readMessage(
+                  getVeradigmSaveRefundTransactionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4706;
+              break;
+            } // case 37650
+            case 37658: {
+              input.readMessage(
+                  getVeradigmSaveVoucherPaymentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4707;
+              break;
+            } // case 37658
             case 40010: {
               input.readMessage(
                   getDebugEchoFieldBuilder().getBuilder(),
@@ -53999,6 +54461,1000 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 4622;
       onChanged();
       return swervepayProcessNewTransactionValidateBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocationsOrBuilder> veradigmGetLocationsBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations"];</code>
+     * @return Whether the veradigmGetLocations field is set.
+     */
+    @java.lang.Override
+    public boolean hasVeradigmGetLocations() {
+      return valueCase_ == 4701;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations"];</code>
+     * @return The veradigmGetLocations.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations getVeradigmGetLocations() {
+      if (veradigmGetLocationsBuilder_ == null) {
+        if (valueCase_ == 4701) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4701) {
+          return veradigmGetLocationsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations"];</code>
+     */
+    public Builder setVeradigmGetLocations(com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations value) {
+      if (veradigmGetLocationsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        veradigmGetLocationsBuilder_.setMessage(value);
+      }
+      valueCase_ = 4701;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations"];</code>
+     */
+    public Builder setVeradigmGetLocations(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations.Builder builderForValue) {
+      if (veradigmGetLocationsBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        veradigmGetLocationsBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4701;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations"];</code>
+     */
+    public Builder mergeVeradigmGetLocations(com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations value) {
+      if (veradigmGetLocationsBuilder_ == null) {
+        if (valueCase_ == 4701 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4701) {
+          veradigmGetLocationsBuilder_.mergeFrom(value);
+        } else {
+          veradigmGetLocationsBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4701;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations"];</code>
+     */
+    public Builder clearVeradigmGetLocations() {
+      if (veradigmGetLocationsBuilder_ == null) {
+        if (valueCase_ == 4701) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4701) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        veradigmGetLocationsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations.Builder getVeradigmGetLocationsBuilder() {
+      return getVeradigmGetLocationsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocationsOrBuilder getVeradigmGetLocationsOrBuilder() {
+      if ((valueCase_ == 4701) && (veradigmGetLocationsBuilder_ != null)) {
+        return veradigmGetLocationsBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4701) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocationsOrBuilder> 
+        getVeradigmGetLocationsFieldBuilder() {
+      if (veradigmGetLocationsBuilder_ == null) {
+        if (!(valueCase_ == 4701)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations.getDefaultInstance();
+        }
+        veradigmGetLocationsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocationsOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetLocations) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4701;
+      onChanged();
+      return veradigmGetLocationsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalanceOrBuilder> veradigmGetPatientAccountBalanceBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance"];</code>
+     * @return Whether the veradigmGetPatientAccountBalance field is set.
+     */
+    @java.lang.Override
+    public boolean hasVeradigmGetPatientAccountBalance() {
+      return valueCase_ == 4702;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance"];</code>
+     * @return The veradigmGetPatientAccountBalance.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance getVeradigmGetPatientAccountBalance() {
+      if (veradigmGetPatientAccountBalanceBuilder_ == null) {
+        if (valueCase_ == 4702) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4702) {
+          return veradigmGetPatientAccountBalanceBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance"];</code>
+     */
+    public Builder setVeradigmGetPatientAccountBalance(com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance value) {
+      if (veradigmGetPatientAccountBalanceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        veradigmGetPatientAccountBalanceBuilder_.setMessage(value);
+      }
+      valueCase_ = 4702;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance"];</code>
+     */
+    public Builder setVeradigmGetPatientAccountBalance(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance.Builder builderForValue) {
+      if (veradigmGetPatientAccountBalanceBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        veradigmGetPatientAccountBalanceBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4702;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance"];</code>
+     */
+    public Builder mergeVeradigmGetPatientAccountBalance(com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance value) {
+      if (veradigmGetPatientAccountBalanceBuilder_ == null) {
+        if (valueCase_ == 4702 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4702) {
+          veradigmGetPatientAccountBalanceBuilder_.mergeFrom(value);
+        } else {
+          veradigmGetPatientAccountBalanceBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4702;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance"];</code>
+     */
+    public Builder clearVeradigmGetPatientAccountBalance() {
+      if (veradigmGetPatientAccountBalanceBuilder_ == null) {
+        if (valueCase_ == 4702) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4702) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        veradigmGetPatientAccountBalanceBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance.Builder getVeradigmGetPatientAccountBalanceBuilder() {
+      return getVeradigmGetPatientAccountBalanceFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalanceOrBuilder getVeradigmGetPatientAccountBalanceOrBuilder() {
+      if ((valueCase_ == 4702) && (veradigmGetPatientAccountBalanceBuilder_ != null)) {
+        return veradigmGetPatientAccountBalanceBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4702) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalanceOrBuilder> 
+        getVeradigmGetPatientAccountBalanceFieldBuilder() {
+      if (veradigmGetPatientAccountBalanceBuilder_ == null) {
+        if (!(valueCase_ == 4702)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance.getDefaultInstance();
+        }
+        veradigmGetPatientAccountBalanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalanceOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4702;
+      onChanged();
+      return veradigmGetPatientAccountBalanceBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPaymentsOrBuilder> veradigmGetPaymentsBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments"];</code>
+     * @return Whether the veradigmGetPayments field is set.
+     */
+    @java.lang.Override
+    public boolean hasVeradigmGetPayments() {
+      return valueCase_ == 4703;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments"];</code>
+     * @return The veradigmGetPayments.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments getVeradigmGetPayments() {
+      if (veradigmGetPaymentsBuilder_ == null) {
+        if (valueCase_ == 4703) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4703) {
+          return veradigmGetPaymentsBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments"];</code>
+     */
+    public Builder setVeradigmGetPayments(com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments value) {
+      if (veradigmGetPaymentsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        veradigmGetPaymentsBuilder_.setMessage(value);
+      }
+      valueCase_ = 4703;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments"];</code>
+     */
+    public Builder setVeradigmGetPayments(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments.Builder builderForValue) {
+      if (veradigmGetPaymentsBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        veradigmGetPaymentsBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4703;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments"];</code>
+     */
+    public Builder mergeVeradigmGetPayments(com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments value) {
+      if (veradigmGetPaymentsBuilder_ == null) {
+        if (valueCase_ == 4703 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4703) {
+          veradigmGetPaymentsBuilder_.mergeFrom(value);
+        } else {
+          veradigmGetPaymentsBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4703;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments"];</code>
+     */
+    public Builder clearVeradigmGetPayments() {
+      if (veradigmGetPaymentsBuilder_ == null) {
+        if (valueCase_ == 4703) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4703) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        veradigmGetPaymentsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments.Builder getVeradigmGetPaymentsBuilder() {
+      return getVeradigmGetPaymentsFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPaymentsOrBuilder getVeradigmGetPaymentsOrBuilder() {
+      if ((valueCase_ == 4703) && (veradigmGetPaymentsBuilder_ != null)) {
+        return veradigmGetPaymentsBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4703) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPaymentsOrBuilder> 
+        getVeradigmGetPaymentsFieldBuilder() {
+      if (veradigmGetPaymentsBuilder_ == null) {
+        if (!(valueCase_ == 4703)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments.getDefaultInstance();
+        }
+        veradigmGetPaymentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPaymentsOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPayments) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4703;
+      onChanged();
+      return veradigmGetPaymentsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfServiceOrBuilder> veradigmGetPlacesOfServiceBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService"];</code>
+     * @return Whether the veradigmGetPlacesOfService field is set.
+     */
+    @java.lang.Override
+    public boolean hasVeradigmGetPlacesOfService() {
+      return valueCase_ == 4704;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService"];</code>
+     * @return The veradigmGetPlacesOfService.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService getVeradigmGetPlacesOfService() {
+      if (veradigmGetPlacesOfServiceBuilder_ == null) {
+        if (valueCase_ == 4704) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4704) {
+          return veradigmGetPlacesOfServiceBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService"];</code>
+     */
+    public Builder setVeradigmGetPlacesOfService(com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService value) {
+      if (veradigmGetPlacesOfServiceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        veradigmGetPlacesOfServiceBuilder_.setMessage(value);
+      }
+      valueCase_ = 4704;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService"];</code>
+     */
+    public Builder setVeradigmGetPlacesOfService(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService.Builder builderForValue) {
+      if (veradigmGetPlacesOfServiceBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        veradigmGetPlacesOfServiceBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4704;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService"];</code>
+     */
+    public Builder mergeVeradigmGetPlacesOfService(com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService value) {
+      if (veradigmGetPlacesOfServiceBuilder_ == null) {
+        if (valueCase_ == 4704 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4704) {
+          veradigmGetPlacesOfServiceBuilder_.mergeFrom(value);
+        } else {
+          veradigmGetPlacesOfServiceBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4704;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService"];</code>
+     */
+    public Builder clearVeradigmGetPlacesOfService() {
+      if (veradigmGetPlacesOfServiceBuilder_ == null) {
+        if (valueCase_ == 4704) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4704) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        veradigmGetPlacesOfServiceBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService.Builder getVeradigmGetPlacesOfServiceBuilder() {
+      return getVeradigmGetPlacesOfServiceFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfServiceOrBuilder getVeradigmGetPlacesOfServiceOrBuilder() {
+      if ((valueCase_ == 4704) && (veradigmGetPlacesOfServiceBuilder_ != null)) {
+        return veradigmGetPlacesOfServiceBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4704) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfServiceOrBuilder> 
+        getVeradigmGetPlacesOfServiceFieldBuilder() {
+      if (veradigmGetPlacesOfServiceBuilder_ == null) {
+        if (!(valueCase_ == 4704)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService.getDefaultInstance();
+        }
+        veradigmGetPlacesOfServiceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfServiceOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmGetPlacesOfService) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4704;
+      onChanged();
+      return veradigmGetPlacesOfServiceBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransactionOrBuilder> veradigmSavePaymentTransactionBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction"];</code>
+     * @return Whether the veradigmSavePaymentTransaction field is set.
+     */
+    @java.lang.Override
+    public boolean hasVeradigmSavePaymentTransaction() {
+      return valueCase_ == 4705;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction"];</code>
+     * @return The veradigmSavePaymentTransaction.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction getVeradigmSavePaymentTransaction() {
+      if (veradigmSavePaymentTransactionBuilder_ == null) {
+        if (valueCase_ == 4705) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4705) {
+          return veradigmSavePaymentTransactionBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction"];</code>
+     */
+    public Builder setVeradigmSavePaymentTransaction(com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction value) {
+      if (veradigmSavePaymentTransactionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        veradigmSavePaymentTransactionBuilder_.setMessage(value);
+      }
+      valueCase_ = 4705;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction"];</code>
+     */
+    public Builder setVeradigmSavePaymentTransaction(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction.Builder builderForValue) {
+      if (veradigmSavePaymentTransactionBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        veradigmSavePaymentTransactionBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4705;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction"];</code>
+     */
+    public Builder mergeVeradigmSavePaymentTransaction(com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction value) {
+      if (veradigmSavePaymentTransactionBuilder_ == null) {
+        if (valueCase_ == 4705 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4705) {
+          veradigmSavePaymentTransactionBuilder_.mergeFrom(value);
+        } else {
+          veradigmSavePaymentTransactionBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4705;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction"];</code>
+     */
+    public Builder clearVeradigmSavePaymentTransaction() {
+      if (veradigmSavePaymentTransactionBuilder_ == null) {
+        if (valueCase_ == 4705) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4705) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        veradigmSavePaymentTransactionBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction.Builder getVeradigmSavePaymentTransactionBuilder() {
+      return getVeradigmSavePaymentTransactionFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransactionOrBuilder getVeradigmSavePaymentTransactionOrBuilder() {
+      if ((valueCase_ == 4705) && (veradigmSavePaymentTransactionBuilder_ != null)) {
+        return veradigmSavePaymentTransactionBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4705) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransactionOrBuilder> 
+        getVeradigmSavePaymentTransactionFieldBuilder() {
+      if (veradigmSavePaymentTransactionBuilder_ == null) {
+        if (!(valueCase_ == 4705)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction.getDefaultInstance();
+        }
+        veradigmSavePaymentTransactionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransactionOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4705;
+      onChanged();
+      return veradigmSavePaymentTransactionBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransactionOrBuilder> veradigmSaveRefundTransactionBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction"];</code>
+     * @return Whether the veradigmSaveRefundTransaction field is set.
+     */
+    @java.lang.Override
+    public boolean hasVeradigmSaveRefundTransaction() {
+      return valueCase_ == 4706;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction"];</code>
+     * @return The veradigmSaveRefundTransaction.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction getVeradigmSaveRefundTransaction() {
+      if (veradigmSaveRefundTransactionBuilder_ == null) {
+        if (valueCase_ == 4706) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4706) {
+          return veradigmSaveRefundTransactionBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction"];</code>
+     */
+    public Builder setVeradigmSaveRefundTransaction(com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction value) {
+      if (veradigmSaveRefundTransactionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        veradigmSaveRefundTransactionBuilder_.setMessage(value);
+      }
+      valueCase_ = 4706;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction"];</code>
+     */
+    public Builder setVeradigmSaveRefundTransaction(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction.Builder builderForValue) {
+      if (veradigmSaveRefundTransactionBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        veradigmSaveRefundTransactionBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4706;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction"];</code>
+     */
+    public Builder mergeVeradigmSaveRefundTransaction(com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction value) {
+      if (veradigmSaveRefundTransactionBuilder_ == null) {
+        if (valueCase_ == 4706 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4706) {
+          veradigmSaveRefundTransactionBuilder_.mergeFrom(value);
+        } else {
+          veradigmSaveRefundTransactionBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4706;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction"];</code>
+     */
+    public Builder clearVeradigmSaveRefundTransaction() {
+      if (veradigmSaveRefundTransactionBuilder_ == null) {
+        if (valueCase_ == 4706) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4706) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        veradigmSaveRefundTransactionBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction.Builder getVeradigmSaveRefundTransactionBuilder() {
+      return getVeradigmSaveRefundTransactionFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransactionOrBuilder getVeradigmSaveRefundTransactionOrBuilder() {
+      if ((valueCase_ == 4706) && (veradigmSaveRefundTransactionBuilder_ != null)) {
+        return veradigmSaveRefundTransactionBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4706) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransactionOrBuilder> 
+        getVeradigmSaveRefundTransactionFieldBuilder() {
+      if (veradigmSaveRefundTransactionBuilder_ == null) {
+        if (!(valueCase_ == 4706)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction.getDefaultInstance();
+        }
+        veradigmSaveRefundTransactionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransactionOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4706;
+      onChanged();
+      return veradigmSaveRefundTransactionBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPaymentOrBuilder> veradigmSaveVoucherPaymentBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment"];</code>
+     * @return Whether the veradigmSaveVoucherPayment field is set.
+     */
+    @java.lang.Override
+    public boolean hasVeradigmSaveVoucherPayment() {
+      return valueCase_ == 4707;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment"];</code>
+     * @return The veradigmSaveVoucherPayment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment getVeradigmSaveVoucherPayment() {
+      if (veradigmSaveVoucherPaymentBuilder_ == null) {
+        if (valueCase_ == 4707) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4707) {
+          return veradigmSaveVoucherPaymentBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment"];</code>
+     */
+    public Builder setVeradigmSaveVoucherPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment value) {
+      if (veradigmSaveVoucherPaymentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        veradigmSaveVoucherPaymentBuilder_.setMessage(value);
+      }
+      valueCase_ = 4707;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment"];</code>
+     */
+    public Builder setVeradigmSaveVoucherPayment(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment.Builder builderForValue) {
+      if (veradigmSaveVoucherPaymentBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        veradigmSaveVoucherPaymentBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4707;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment"];</code>
+     */
+    public Builder mergeVeradigmSaveVoucherPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment value) {
+      if (veradigmSaveVoucherPaymentBuilder_ == null) {
+        if (valueCase_ == 4707 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4707) {
+          veradigmSaveVoucherPaymentBuilder_.mergeFrom(value);
+        } else {
+          veradigmSaveVoucherPaymentBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4707;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment"];</code>
+     */
+    public Builder clearVeradigmSaveVoucherPayment() {
+      if (veradigmSaveVoucherPaymentBuilder_ == null) {
+        if (valueCase_ == 4707) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4707) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        veradigmSaveVoucherPaymentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment.Builder getVeradigmSaveVoucherPaymentBuilder() {
+      return getVeradigmSaveVoucherPaymentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPaymentOrBuilder getVeradigmSaveVoucherPaymentOrBuilder() {
+      if ((valueCase_ == 4707) && (veradigmSaveVoucherPaymentBuilder_ != null)) {
+        return veradigmSaveVoucherPaymentBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4707) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPaymentOrBuilder> 
+        getVeradigmSaveVoucherPaymentFieldBuilder() {
+      if (veradigmSaveVoucherPaymentBuilder_ == null) {
+        if (!(valueCase_ == 4707)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment.getDefaultInstance();
+        }
+        veradigmSaveVoucherPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4707;
+      onChanged();
+      return veradigmSaveVoucherPaymentBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
