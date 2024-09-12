@@ -218,41 +218,41 @@ public final class EntitiesProto {
       "tGroupSid\022V\n\016agent_triggers\030\002 \003(\0132/.serv" +
       "ices.org.hunt_groups.v1alpha1.AgentTrigg" +
       "erR\ragentTriggers\"&\n$UpdateHuntGroupAgen" +
-      "tTriggersResponse\"\360\001\n\"CopyHuntGroupToOrg" +
+      "tTriggersResponse\"\331\001\n\"CopyHuntGroupToOrg" +
       "anizationRequest\0220\n\024from_organization_id" +
       "\030\001 \001(\tR\022fromOrganizationId\022,\n\022to_organiz" +
       "ation_id\030\002 \001(\tR\020toOrganizationId\022$\n\016hunt" +
-      "_group_sid\030\003 \001(\003R\014huntGroupSid\022D\n\017hunt_g" +
-      "roup_name\030\004 \001(\0132\034.google.protobuf.String" +
-      "ValueR\rhuntGroupName\"%\n#CopyHuntGroupToO" +
-      "rganizationResponse*\327\002\n\013AgentStatus\022\034\n\030A" +
-      "GENT_STATUS_UNSPECIFIED\020\000\022\032\n\026AGENT_STATU" +
-      "S_LOGGED_IN\020\001\022\030\n\024AGENT_STATUS_WAITING\020\002\022" +
-      "\027\n\023AGENT_STATUS_PAUSED\020\003\022\030\n\024AGENT_STATUS" +
-      "_ON_CALL\020\004\022\036\n\032AGENT_STATUS_TRANSFER_CALL" +
-      "\020\005\022\036\n\032AGENT_STATUS_TRANSFER_LOST\020\006\022%\n!AG" +
-      "ENT_STATUS_TRANSFER_TARGET_LOST\020\007\022\035\n\031AGE" +
-      "NT_STATUS_PREVIEW_CALL\020\010\022!\n\035AGENT_STATUS" +
-      "_MANUAL_DIAL_CALL\020\t\022\030\n\024AGENT_STATUS_WRAP" +
-      "_UP\020\n*\350\001\n\017SystemPauseCode\022!\n\035SYSTEM_PAUS" +
-      "E_CODE_UNSPECIFIED\020\000\0225\n1SYSTEM_PAUSE_COD" +
-      "E_AGENT_TRIGGER_ADVANCE_TO_PAUSED\020\001\022%\n!S" +
-      "YSTEM_PAUSE_CODE_CHANGE_PASSWORD\020\002\022&\n\"SY" +
-      "STEM_PAUSE_CODE_CHECK_VOICE_MAIL\020\003\022,\n(SY" +
-      "STEM_PAUSE_CODE_MANUALLY_APPROVE_CALLS\020\004" +
-      "*\222\002\n\rTriggerAction\022\036\n\032TRIGGER_ACTION_UNS" +
-      "PECIFIED\020\000\022$\n TRIGGER_ACTION_ADVANCE_TO_" +
-      "STATUS\020\001\022\"\n\036TRIGGER_ACTION_DISPLAY_MESSA" +
-      "GE\020\002\022\036\n\032TRIGGER_ACTION_EJECT_AGENT\020\003\022#\n\037" +
-      "TRIGGER_ACTION_EXECUTE_WEB_LINK\020\004\022+\n\'TRI" +
-      "GGER_ACTION_EXECUTE_INTEGRATION_LINK\020\005\022%" +
-      "\n!TRIGGER_ACTION_EXECUTE_EXILE_LINK\020\006B\347\001" +
-      "\n3com.tcn.cloud.api.services.org.hunt_gr" +
-      "oups.v1alpha1B\rEntitiesProtoP\001\242\002\003SOH\252\002 S" +
-      "ervices.Org.HuntGroups.V1alpha1\312\002 Servic" +
-      "es\\Org\\HuntGroups\\V1alpha1\342\002,Services\\Or" +
-      "g\\HuntGroups\\V1alpha1\\GPBMetadata\352\002#Serv" +
-      "ices::Org::HuntGroups::V1alpha1b\006proto3"
+      "_group_sid\030\003 \001(\003R\014huntGroupSid\022-\n\023new_hu" +
+      "nt_group_name\030\004 \001(\tR\020newHuntGroupName\"%\n" +
+      "#CopyHuntGroupToOrganizationResponse*\327\002\n" +
+      "\013AgentStatus\022\034\n\030AGENT_STATUS_UNSPECIFIED" +
+      "\020\000\022\032\n\026AGENT_STATUS_LOGGED_IN\020\001\022\030\n\024AGENT_" +
+      "STATUS_WAITING\020\002\022\027\n\023AGENT_STATUS_PAUSED\020" +
+      "\003\022\030\n\024AGENT_STATUS_ON_CALL\020\004\022\036\n\032AGENT_STA" +
+      "TUS_TRANSFER_CALL\020\005\022\036\n\032AGENT_STATUS_TRAN" +
+      "SFER_LOST\020\006\022%\n!AGENT_STATUS_TRANSFER_TAR" +
+      "GET_LOST\020\007\022\035\n\031AGENT_STATUS_PREVIEW_CALL\020" +
+      "\010\022!\n\035AGENT_STATUS_MANUAL_DIAL_CALL\020\t\022\030\n\024" +
+      "AGENT_STATUS_WRAP_UP\020\n*\350\001\n\017SystemPauseCo" +
+      "de\022!\n\035SYSTEM_PAUSE_CODE_UNSPECIFIED\020\000\0225\n" +
+      "1SYSTEM_PAUSE_CODE_AGENT_TRIGGER_ADVANCE" +
+      "_TO_PAUSED\020\001\022%\n!SYSTEM_PAUSE_CODE_CHANGE" +
+      "_PASSWORD\020\002\022&\n\"SYSTEM_PAUSE_CODE_CHECK_V" +
+      "OICE_MAIL\020\003\022,\n(SYSTEM_PAUSE_CODE_MANUALL" +
+      "Y_APPROVE_CALLS\020\004*\222\002\n\rTriggerAction\022\036\n\032T" +
+      "RIGGER_ACTION_UNSPECIFIED\020\000\022$\n TRIGGER_A" +
+      "CTION_ADVANCE_TO_STATUS\020\001\022\"\n\036TRIGGER_ACT" +
+      "ION_DISPLAY_MESSAGE\020\002\022\036\n\032TRIGGER_ACTION_" +
+      "EJECT_AGENT\020\003\022#\n\037TRIGGER_ACTION_EXECUTE_" +
+      "WEB_LINK\020\004\022+\n\'TRIGGER_ACTION_EXECUTE_INT" +
+      "EGRATION_LINK\020\005\022%\n!TRIGGER_ACTION_EXECUT" +
+      "E_EXILE_LINK\020\006B\347\001\n3com.tcn.cloud.api.ser" +
+      "vices.org.hunt_groups.v1alpha1B\rEntities" +
+      "ProtoP\001\242\002\003SOH\252\002 Services.Org.HuntGroups." +
+      "V1alpha1\312\002 Services\\Org\\HuntGroups\\V1alp" +
+      "ha1\342\002,Services\\Org\\HuntGroups\\V1alpha1\\G" +
+      "PBMetadata\352\002#Services::Org::HuntGroups::" +
+      "V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -385,7 +385,7 @@ public final class EntitiesProto {
     internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupToOrganizationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupToOrganizationRequest_descriptor,
-        new java.lang.String[] { "FromOrganizationId", "ToOrganizationId", "HuntGroupSid", "HuntGroupName", });
+        new java.lang.String[] { "FromOrganizationId", "ToOrganizationId", "HuntGroupSid", "NewHuntGroupName", });
     internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupToOrganizationResponse_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupToOrganizationResponse_fieldAccessorTable = new

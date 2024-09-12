@@ -9,7 +9,7 @@ public interface CopyHuntGroupToOrganizationRequestOrBuilder extends
 
   /**
    * <pre>
-   * The id of the source organization where the hunt group is copied from
+   * The id of the source organization where the hunt group is copied from.
    * </pre>
    *
    * <code>string from_organization_id = 1 [json_name = "fromOrganizationId"];</code>
@@ -18,7 +18,7 @@ public interface CopyHuntGroupToOrganizationRequestOrBuilder extends
   java.lang.String getFromOrganizationId();
   /**
    * <pre>
-   * The id of the source organization where the hunt group is copied from
+   * The id of the source organization where the hunt group is copied from.
    * </pre>
    *
    * <code>string from_organization_id = 1 [json_name = "fromOrganizationId"];</code>
@@ -29,7 +29,7 @@ public interface CopyHuntGroupToOrganizationRequestOrBuilder extends
 
   /**
    * <pre>
-   * The id of the destination organization where the hunt group is copied to
+   * The id of the destination organization where the hunt group is copied to.
    * </pre>
    *
    * <code>string to_organization_id = 2 [json_name = "toOrganizationId"];</code>
@@ -38,7 +38,7 @@ public interface CopyHuntGroupToOrganizationRequestOrBuilder extends
   java.lang.String getToOrganizationId();
   /**
    * <pre>
-   * The id of the destination organization where the hunt group is copied to
+   * The id of the destination organization where the hunt group is copied to.
    * </pre>
    *
    * <code>string to_organization_id = 2 [json_name = "toOrganizationId"];</code>
@@ -49,7 +49,7 @@ public interface CopyHuntGroupToOrganizationRequestOrBuilder extends
 
   /**
    * <pre>
-   * The sid of the hunt group to copy
+   * The sid of the hunt group to copy.
    * </pre>
    *
    * <code>int64 hunt_group_sid = 3 [json_name = "huntGroupSid"];</code>
@@ -59,31 +59,21 @@ public interface CopyHuntGroupToOrganizationRequestOrBuilder extends
 
   /**
    * <pre>
-   * The name of the hunt group to copy
-   * If left empty, the name of the source hunt group will be used
+   * The name of the new hunt group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue hunt_group_name = 4 [json_name = "huntGroupName"];</code>
-   * @return Whether the huntGroupName field is set.
+   * <code>string new_hunt_group_name = 4 [json_name = "newHuntGroupName"];</code>
+   * @return The newHuntGroupName.
    */
-  boolean hasHuntGroupName();
+  java.lang.String getNewHuntGroupName();
   /**
    * <pre>
-   * The name of the hunt group to copy
-   * If left empty, the name of the source hunt group will be used
+   * The name of the new hunt group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue hunt_group_name = 4 [json_name = "huntGroupName"];</code>
-   * @return The huntGroupName.
+   * <code>string new_hunt_group_name = 4 [json_name = "newHuntGroupName"];</code>
+   * @return The bytes for newHuntGroupName.
    */
-  com.google.protobuf.StringValue getHuntGroupName();
-  /**
-   * <pre>
-   * The name of the hunt group to copy
-   * If left empty, the name of the source hunt group will be used
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue hunt_group_name = 4 [json_name = "huntGroupName"];</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getHuntGroupNameOrBuilder();
+  com.google.protobuf.ByteString
+      getNewHuntGroupNameBytes();
 }
