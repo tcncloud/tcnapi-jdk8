@@ -135,130 +135,128 @@ public final class EntitiesProto {
     java.lang.String[] descriptorData = {
       "\n0services/org/hunt_groups/v1alpha1/enti" +
       "ties.proto\022!services.org.hunt_groups.v1a" +
-      "lpha1\032\037api/commons/org/huntgroup.proto\032\036" +
-      "google/protobuf/wrappers.proto\"\316\002\n\tExile" +
-      "Link\022#\n\rparameter_sid\030\001 \001(\003R\014parameterSi" +
-      "d\022$\n\016hunt_group_sid\030\002 \001(\003R\014huntGroupSid\022" +
-      "\022\n\004name\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(\t" +
-      "R\013description\022\024\n\005order\030\005 \001(\003R\005order\022S\n\014i" +
-      "nbound_data\030\006 \001(\01320.services.org.hunt_gr" +
-      "oups.v1alpha1.ExileLinkDataR\013inboundData" +
-      "\022U\n\routbound_data\030\007 \001(\01320.services.org.h" +
-      "unt_groups.v1alpha1.ExileLinkDataR\014outbo" +
-      "undData\"\275\001\n\rExileLinkData\022R\n\trecord_id\030\001" +
-      " \001(\01325.services.org.hunt_groups.v1alpha1" +
-      ".ExileLinkParameterR\010recordId\022X\n\014alterna" +
-      "te_id\030\002 \001(\01325.services.org.hunt_groups.v" +
-      "1alpha1.ExileLinkParameterR\013alternateId\"" +
-      "\275\001\n\022ExileLinkParameter\022*\n\021contact_field_" +
-      "sid\030\001 \001(\003R\017contactFieldSid\022!\n\014helper_val" +
-      "ue\030\002 \001(\tR\013helperValue\022X\n\025parameter_sourc" +
-      "e_type\030\003 \001(\0162$.api.commons.org.Parameter" +
-      "SourceTypeR\023parameterSourceType\"F\n\036ListH" +
-      "untGroupExileLinksRequest\022$\n\016hunt_group_" +
-      "sid\030\001 \001(\003R\014huntGroupSid\"p\n\037ListHuntGroup" +
-      "ExileLinksResponse\022M\n\013exile_links\030\001 \003(\0132" +
-      ",.services.org.hunt_groups.v1alpha1.Exil" +
-      "eLinkR\nexileLinks\"\227\001\n\035CopyHuntGroupExile" +
-      "LinkRequest\022)\n\021to_hunt_group_sid\030\001 \001(\003R\016" +
-      "toHuntGroupSid\022K\n\nexile_link\030\002 \001(\0132,.ser" +
-      "vices.org.hunt_groups.v1alpha1.ExileLink" +
-      "R\texileLink\" \n\036CopyHuntGroupExileLinkRes" +
-      "ponse\"\227\001\n UpdateHuntGroupExileLinksReque" +
-      "st\022$\n\016hunt_group_sid\030\001 \001(\003R\014huntGroupSid" +
-      "\022M\n\013exile_links\030\002 \003(\0132,.services.org.hun" +
-      "t_groups.v1alpha1.ExileLinkR\nexileLinks\"" +
-      "#\n!UpdateHuntGroupExileLinksResponse\"\256\002\n" +
-      "\014AgentTrigger\022*\n\021agent_trigger_sid\030\001 \001(\003" +
-      "R\017agentTriggerSid\022 \n\013description\030\002 \001(\tR\013" +
-      "description\022d\n\023agent_status_option\030\003 \001(\013" +
-      "24.services.org.hunt_groups.v1alpha1.Age" +
-      "ntStatusOptionR\021agentStatusOption\022j\n\025tri" +
-      "gger_action_option\030\004 \001(\01326.services.org." +
-      "hunt_groups.v1alpha1.TriggerActionOption" +
-      "R\023triggerActionOption\"\350\002\n\021AgentStatusOpt" +
-      "ion\022Q\n\014agent_status\030\001 \001(\0162..services.org" +
-      ".hunt_groups.v1alpha1.AgentStatusR\013agent" +
-      "Status\022\032\n\010duration\030\002 \001(\003R\010duration\022R\n\npa" +
-      "use_code\030\003 \001(\01323.services.org.hunt_group" +
-      "s.v1alpha1.TriggerPauseCodeR\tpauseCode\022R" +
-      "\n\ncall_types\030\004 \001(\01323.services.org.hunt_g" +
-      "roups.v1alpha1.TriggerCallTypesR\tcallTyp" +
-      "es\022<\n\032scheduled_callback_present\030\005 \001(\010R\030" +
-      "scheduledCallbackPresent\"\260\001\n\020TriggerPaus" +
-      "eCode\022`\n\021system_pause_code\030\001 \001(\01622.servi" +
-      "ces.org.hunt_groups.v1alpha1.SystemPause" +
-      "CodeH\000R\017systemPauseCode\022,\n\021custom_pause_" +
-      "code\030\002 \001(\tH\000R\017customPauseCodeB\014\n\npause_c" +
-      "ode\"z\n\020TriggerCallTypes\022\032\n\010outbound\030\001 \001(" +
-      "\010R\010outbound\022\030\n\007inbound\030\002 \001(\010R\007inbound\022\026\n" +
-      "\006manual\030\003 \001(\010R\006manual\022\030\n\007preview\030\004 \001(\010R\007" +
-      "preview\"\336\002\n\023TriggerActionOption\022H\n\006actio" +
-      "n\030\001 \001(\01620.services.org.hunt_groups.v1alp" +
-      "ha1.TriggerActionR\006action\022\'\n\017display_mes" +
-      "sage\030\002 \001(\tR\016displayMessage\022Z\n\021advance_to" +
-      "_status\030\003 \001(\0162..services.org.hunt_groups" +
-      ".v1alpha1.AgentStatusR\017advanceToStatus\022 " +
-      "\n\014web_link_sid\030\004 \001(\003R\nwebLinkSid\0220\n\024inte" +
-      "gration_link_sid\030\005 \001(\003R\022integrationLinkS" +
-      "id\022$\n\016exile_link_sid\030\006 \001(\003R\014exileLinkSid" +
-      "\"I\n!ListHuntGroupAgentTriggersRequest\022$\n" +
-      "\016hunt_group_sid\030\001 \001(\003R\014huntGroupSid\"|\n\"L" +
-      "istHuntGroupAgentTriggersResponse\022V\n\016age" +
-      "nt_triggers\030\001 \003(\0132/.services.org.hunt_gr" +
-      "oups.v1alpha1.AgentTriggerR\ragentTrigger" +
-      "s\"\322\001\n CopyHuntGroupAgentTriggerRequest\022-" +
-      "\n\023from_hunt_group_sid\030\001 \001(\003R\020fromHuntGro" +
-      "upSid\022)\n\021to_hunt_group_sid\030\002 \001(\003R\016toHunt" +
-      "GroupSid\022T\n\ragent_trigger\030\003 \001(\0132/.servic" +
-      "es.org.hunt_groups.v1alpha1.AgentTrigger" +
-      "R\014agentTrigger\"#\n!CopyHuntGroupAgentTrig" +
-      "gerResponse\"\243\001\n#UpdateHuntGroupAgentTrig" +
-      "gersRequest\022$\n\016hunt_group_sid\030\001 \001(\003R\014hun" +
-      "tGroupSid\022V\n\016agent_triggers\030\002 \003(\0132/.serv" +
-      "ices.org.hunt_groups.v1alpha1.AgentTrigg" +
-      "erR\ragentTriggers\"&\n$UpdateHuntGroupAgen" +
-      "tTriggersResponse\"\331\001\n\"CopyHuntGroupToOrg" +
-      "anizationRequest\0220\n\024from_organization_id" +
-      "\030\001 \001(\tR\022fromOrganizationId\022,\n\022to_organiz" +
-      "ation_id\030\002 \001(\tR\020toOrganizationId\022$\n\016hunt" +
-      "_group_sid\030\003 \001(\003R\014huntGroupSid\022-\n\023new_hu" +
-      "nt_group_name\030\004 \001(\tR\020newHuntGroupName\"%\n" +
-      "#CopyHuntGroupToOrganizationResponse*\327\002\n" +
-      "\013AgentStatus\022\034\n\030AGENT_STATUS_UNSPECIFIED" +
-      "\020\000\022\032\n\026AGENT_STATUS_LOGGED_IN\020\001\022\030\n\024AGENT_" +
-      "STATUS_WAITING\020\002\022\027\n\023AGENT_STATUS_PAUSED\020" +
-      "\003\022\030\n\024AGENT_STATUS_ON_CALL\020\004\022\036\n\032AGENT_STA" +
-      "TUS_TRANSFER_CALL\020\005\022\036\n\032AGENT_STATUS_TRAN" +
-      "SFER_LOST\020\006\022%\n!AGENT_STATUS_TRANSFER_TAR" +
-      "GET_LOST\020\007\022\035\n\031AGENT_STATUS_PREVIEW_CALL\020" +
-      "\010\022!\n\035AGENT_STATUS_MANUAL_DIAL_CALL\020\t\022\030\n\024" +
-      "AGENT_STATUS_WRAP_UP\020\n*\350\001\n\017SystemPauseCo" +
-      "de\022!\n\035SYSTEM_PAUSE_CODE_UNSPECIFIED\020\000\0225\n" +
-      "1SYSTEM_PAUSE_CODE_AGENT_TRIGGER_ADVANCE" +
-      "_TO_PAUSED\020\001\022%\n!SYSTEM_PAUSE_CODE_CHANGE" +
-      "_PASSWORD\020\002\022&\n\"SYSTEM_PAUSE_CODE_CHECK_V" +
-      "OICE_MAIL\020\003\022,\n(SYSTEM_PAUSE_CODE_MANUALL" +
-      "Y_APPROVE_CALLS\020\004*\222\002\n\rTriggerAction\022\036\n\032T" +
-      "RIGGER_ACTION_UNSPECIFIED\020\000\022$\n TRIGGER_A" +
-      "CTION_ADVANCE_TO_STATUS\020\001\022\"\n\036TRIGGER_ACT" +
-      "ION_DISPLAY_MESSAGE\020\002\022\036\n\032TRIGGER_ACTION_" +
-      "EJECT_AGENT\020\003\022#\n\037TRIGGER_ACTION_EXECUTE_" +
-      "WEB_LINK\020\004\022+\n\'TRIGGER_ACTION_EXECUTE_INT" +
-      "EGRATION_LINK\020\005\022%\n!TRIGGER_ACTION_EXECUT" +
-      "E_EXILE_LINK\020\006B\347\001\n3com.tcn.cloud.api.ser" +
-      "vices.org.hunt_groups.v1alpha1B\rEntities" +
-      "ProtoP\001\242\002\003SOH\252\002 Services.Org.HuntGroups." +
-      "V1alpha1\312\002 Services\\Org\\HuntGroups\\V1alp" +
-      "ha1\342\002,Services\\Org\\HuntGroups\\V1alpha1\\G" +
-      "PBMetadata\352\002#Services::Org::HuntGroups::" +
-      "V1alpha1b\006proto3"
+      "lpha1\032\037api/commons/org/huntgroup.proto\"\316" +
+      "\002\n\tExileLink\022#\n\rparameter_sid\030\001 \001(\003R\014par" +
+      "ameterSid\022$\n\016hunt_group_sid\030\002 \001(\003R\014huntG" +
+      "roupSid\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013descripti" +
+      "on\030\004 \001(\tR\013description\022\024\n\005order\030\005 \001(\003R\005or" +
+      "der\022S\n\014inbound_data\030\006 \001(\01320.services.org" +
+      ".hunt_groups.v1alpha1.ExileLinkDataR\013inb" +
+      "oundData\022U\n\routbound_data\030\007 \001(\01320.servic" +
+      "es.org.hunt_groups.v1alpha1.ExileLinkDat" +
+      "aR\014outboundData\"\275\001\n\rExileLinkData\022R\n\trec" +
+      "ord_id\030\001 \001(\01325.services.org.hunt_groups." +
+      "v1alpha1.ExileLinkParameterR\010recordId\022X\n" +
+      "\014alternate_id\030\002 \001(\01325.services.org.hunt_" +
+      "groups.v1alpha1.ExileLinkParameterR\013alte" +
+      "rnateId\"\275\001\n\022ExileLinkParameter\022*\n\021contac" +
+      "t_field_sid\030\001 \001(\003R\017contactFieldSid\022!\n\014he" +
+      "lper_value\030\002 \001(\tR\013helperValue\022X\n\025paramet" +
+      "er_source_type\030\003 \001(\0162$.api.commons.org.P" +
+      "arameterSourceTypeR\023parameterSourceType\"" +
+      "F\n\036ListHuntGroupExileLinksRequest\022$\n\016hun" +
+      "t_group_sid\030\001 \001(\003R\014huntGroupSid\"p\n\037ListH" +
+      "untGroupExileLinksResponse\022M\n\013exile_link" +
+      "s\030\001 \003(\0132,.services.org.hunt_groups.v1alp" +
+      "ha1.ExileLinkR\nexileLinks\"\227\001\n\035CopyHuntGr" +
+      "oupExileLinkRequest\022)\n\021to_hunt_group_sid" +
+      "\030\001 \001(\003R\016toHuntGroupSid\022K\n\nexile_link\030\002 \001" +
+      "(\0132,.services.org.hunt_groups.v1alpha1.E" +
+      "xileLinkR\texileLink\" \n\036CopyHuntGroupExil" +
+      "eLinkResponse\"\227\001\n UpdateHuntGroupExileLi" +
+      "nksRequest\022$\n\016hunt_group_sid\030\001 \001(\003R\014hunt" +
+      "GroupSid\022M\n\013exile_links\030\002 \003(\0132,.services" +
+      ".org.hunt_groups.v1alpha1.ExileLinkR\nexi" +
+      "leLinks\"#\n!UpdateHuntGroupExileLinksResp" +
+      "onse\"\256\002\n\014AgentTrigger\022*\n\021agent_trigger_s" +
+      "id\030\001 \001(\003R\017agentTriggerSid\022 \n\013description" +
+      "\030\002 \001(\tR\013description\022d\n\023agent_status_opti" +
+      "on\030\003 \001(\01324.services.org.hunt_groups.v1al" +
+      "pha1.AgentStatusOptionR\021agentStatusOptio" +
+      "n\022j\n\025trigger_action_option\030\004 \001(\01326.servi" +
+      "ces.org.hunt_groups.v1alpha1.TriggerActi" +
+      "onOptionR\023triggerActionOption\"\350\002\n\021AgentS" +
+      "tatusOption\022Q\n\014agent_status\030\001 \001(\0162..serv" +
+      "ices.org.hunt_groups.v1alpha1.AgentStatu" +
+      "sR\013agentStatus\022\032\n\010duration\030\002 \001(\003R\010durati" +
+      "on\022R\n\npause_code\030\003 \001(\01323.services.org.hu" +
+      "nt_groups.v1alpha1.TriggerPauseCodeR\tpau" +
+      "seCode\022R\n\ncall_types\030\004 \001(\01323.services.or" +
+      "g.hunt_groups.v1alpha1.TriggerCallTypesR" +
+      "\tcallTypes\022<\n\032scheduled_callback_present" +
+      "\030\005 \001(\010R\030scheduledCallbackPresent\"\260\001\n\020Tri" +
+      "ggerPauseCode\022`\n\021system_pause_code\030\001 \001(\016" +
+      "22.services.org.hunt_groups.v1alpha1.Sys" +
+      "temPauseCodeH\000R\017systemPauseCode\022,\n\021custo" +
+      "m_pause_code\030\002 \001(\tH\000R\017customPauseCodeB\014\n" +
+      "\npause_code\"z\n\020TriggerCallTypes\022\032\n\010outbo" +
+      "und\030\001 \001(\010R\010outbound\022\030\n\007inbound\030\002 \001(\010R\007in" +
+      "bound\022\026\n\006manual\030\003 \001(\010R\006manual\022\030\n\007preview" +
+      "\030\004 \001(\010R\007preview\"\336\002\n\023TriggerActionOption\022" +
+      "H\n\006action\030\001 \001(\01620.services.org.hunt_grou" +
+      "ps.v1alpha1.TriggerActionR\006action\022\'\n\017dis" +
+      "play_message\030\002 \001(\tR\016displayMessage\022Z\n\021ad" +
+      "vance_to_status\030\003 \001(\0162..services.org.hun" +
+      "t_groups.v1alpha1.AgentStatusR\017advanceTo" +
+      "Status\022 \n\014web_link_sid\030\004 \001(\003R\nwebLinkSid" +
+      "\0220\n\024integration_link_sid\030\005 \001(\003R\022integrat" +
+      "ionLinkSid\022$\n\016exile_link_sid\030\006 \001(\003R\014exil" +
+      "eLinkSid\"I\n!ListHuntGroupAgentTriggersRe" +
+      "quest\022$\n\016hunt_group_sid\030\001 \001(\003R\014huntGroup" +
+      "Sid\"|\n\"ListHuntGroupAgentTriggersRespons" +
+      "e\022V\n\016agent_triggers\030\001 \003(\0132/.services.org" +
+      ".hunt_groups.v1alpha1.AgentTriggerR\ragen" +
+      "tTriggers\"\322\001\n CopyHuntGroupAgentTriggerR" +
+      "equest\022-\n\023from_hunt_group_sid\030\001 \001(\003R\020fro" +
+      "mHuntGroupSid\022)\n\021to_hunt_group_sid\030\002 \001(\003" +
+      "R\016toHuntGroupSid\022T\n\ragent_trigger\030\003 \001(\0132" +
+      "/.services.org.hunt_groups.v1alpha1.Agen" +
+      "tTriggerR\014agentTrigger\"#\n!CopyHuntGroupA" +
+      "gentTriggerResponse\"\243\001\n#UpdateHuntGroupA" +
+      "gentTriggersRequest\022$\n\016hunt_group_sid\030\001 " +
+      "\001(\003R\014huntGroupSid\022V\n\016agent_triggers\030\002 \003(" +
+      "\0132/.services.org.hunt_groups.v1alpha1.Ag" +
+      "entTriggerR\ragentTriggers\"&\n$UpdateHuntG" +
+      "roupAgentTriggersResponse\"\331\001\n\"CopyHuntGr" +
+      "oupToOrganizationRequest\0220\n\024from_organiz" +
+      "ation_id\030\001 \001(\tR\022fromOrganizationId\022,\n\022to" +
+      "_organization_id\030\002 \001(\tR\020toOrganizationId" +
+      "\022$\n\016hunt_group_sid\030\003 \001(\003R\014huntGroupSid\022-" +
+      "\n\023new_hunt_group_name\030\004 \001(\tR\020newHuntGrou" +
+      "pName\"%\n#CopyHuntGroupToOrganizationResp" +
+      "onse*\327\002\n\013AgentStatus\022\034\n\030AGENT_STATUS_UNS" +
+      "PECIFIED\020\000\022\032\n\026AGENT_STATUS_LOGGED_IN\020\001\022\030" +
+      "\n\024AGENT_STATUS_WAITING\020\002\022\027\n\023AGENT_STATUS" +
+      "_PAUSED\020\003\022\030\n\024AGENT_STATUS_ON_CALL\020\004\022\036\n\032A" +
+      "GENT_STATUS_TRANSFER_CALL\020\005\022\036\n\032AGENT_STA" +
+      "TUS_TRANSFER_LOST\020\006\022%\n!AGENT_STATUS_TRAN" +
+      "SFER_TARGET_LOST\020\007\022\035\n\031AGENT_STATUS_PREVI" +
+      "EW_CALL\020\010\022!\n\035AGENT_STATUS_MANUAL_DIAL_CA" +
+      "LL\020\t\022\030\n\024AGENT_STATUS_WRAP_UP\020\n*\350\001\n\017Syste" +
+      "mPauseCode\022!\n\035SYSTEM_PAUSE_CODE_UNSPECIF" +
+      "IED\020\000\0225\n1SYSTEM_PAUSE_CODE_AGENT_TRIGGER" +
+      "_ADVANCE_TO_PAUSED\020\001\022%\n!SYSTEM_PAUSE_COD" +
+      "E_CHANGE_PASSWORD\020\002\022&\n\"SYSTEM_PAUSE_CODE" +
+      "_CHECK_VOICE_MAIL\020\003\022,\n(SYSTEM_PAUSE_CODE" +
+      "_MANUALLY_APPROVE_CALLS\020\004*\222\002\n\rTriggerAct" +
+      "ion\022\036\n\032TRIGGER_ACTION_UNSPECIFIED\020\000\022$\n T" +
+      "RIGGER_ACTION_ADVANCE_TO_STATUS\020\001\022\"\n\036TRI" +
+      "GGER_ACTION_DISPLAY_MESSAGE\020\002\022\036\n\032TRIGGER" +
+      "_ACTION_EJECT_AGENT\020\003\022#\n\037TRIGGER_ACTION_" +
+      "EXECUTE_WEB_LINK\020\004\022+\n\'TRIGGER_ACTION_EXE" +
+      "CUTE_INTEGRATION_LINK\020\005\022%\n!TRIGGER_ACTIO" +
+      "N_EXECUTE_EXILE_LINK\020\006B\347\001\n3com.tcn.cloud" +
+      ".api.services.org.hunt_groups.v1alpha1B\r" +
+      "EntitiesProtoP\001\242\002\003SOH\252\002 Services.Org.Hun" +
+      "tGroups.V1alpha1\312\002 Services\\Org\\HuntGrou" +
+      "ps\\V1alpha1\342\002,Services\\Org\\HuntGroups\\V1" +
+      "alpha1\\GPBMetadata\352\002#Services::Org::Hunt" +
+      "Groups::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.org.HuntgroupProto.getDescriptor(),
-          com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_services_org_hunt_groups_v1alpha1_ExileLink_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -393,7 +391,6 @@ public final class EntitiesProto {
         internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupToOrganizationResponse_descriptor,
         new java.lang.String[] { });
     com.tcn.cloud.api.api.commons.org.HuntgroupProto.getDescriptor();
-    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
