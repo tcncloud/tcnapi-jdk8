@@ -12,7 +12,7 @@ public interface DeleteAdherenceDepartmentalRuleClauseRequestOrBuilder extends
    * ID of the departmental rule clause to delete.
    * </pre>
    *
-   * <code>int64 adherence_departmental_rule_clause_id = 1 [json_name = "adherenceDepartmentalRuleClauseId"];</code>
+   * <code>int64 adherence_departmental_rule_clause_id = 1 [json_name = "adherenceDepartmentalRuleClauseId", jstype = JS_STRING];</code>
    * @return The adherenceDepartmentalRuleClauseId.
    */
   long getAdherenceDepartmentalRuleClauseId();

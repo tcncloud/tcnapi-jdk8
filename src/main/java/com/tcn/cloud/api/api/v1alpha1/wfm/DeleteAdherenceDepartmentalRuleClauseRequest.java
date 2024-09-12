@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
    * ID of the departmental rule clause to delete.
    * </pre>
    *
-   * <code>int64 adherence_departmental_rule_clause_id = 1 [json_name = "adherenceDepartmentalRuleClauseId"];</code>
+   * <code>int64 adherence_departmental_rule_clause_id = 1 [json_name = "adherenceDepartmentalRuleClauseId", jstype = JS_STRING];</code>
    * @return The adherenceDepartmentalRuleClauseId.
    */
   @java.lang.Override
@@ -393,7 +393,7 @@ private static final long serialVersionUID = 0L;
      * ID of the departmental rule clause to delete.
      * </pre>
      *
-     * <code>int64 adherence_departmental_rule_clause_id = 1 [json_name = "adherenceDepartmentalRuleClauseId"];</code>
+     * <code>int64 adherence_departmental_rule_clause_id = 1 [json_name = "adherenceDepartmentalRuleClauseId", jstype = JS_STRING];</code>
      * @return The adherenceDepartmentalRuleClauseId.
      */
     @java.lang.Override
@@ -405,7 +405,7 @@ private static final long serialVersionUID = 0L;
      * ID of the departmental rule clause to delete.
      * </pre>
      *
-     * <code>int64 adherence_departmental_rule_clause_id = 1 [json_name = "adherenceDepartmentalRuleClauseId"];</code>
+     * <code>int64 adherence_departmental_rule_clause_id = 1 [json_name = "adherenceDepartmentalRuleClauseId", jstype = JS_STRING];</code>
      * @param value The adherenceDepartmentalRuleClauseId to set.
      * @return This builder for chaining.
      */
@@ -421,7 +421,7 @@ private static final long serialVersionUID = 0L;
      * ID of the departmental rule clause to delete.
      * </pre>
      *
-     * <code>int64 adherence_departmental_rule_clause_id = 1 [json_name = "adherenceDepartmentalRuleClauseId"];</code>
+     * <code>int64 adherence_departmental_rule_clause_id = 1 [json_name = "adherenceDepartmentalRuleClauseId", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearAdherenceDepartmentalRuleClauseId() {

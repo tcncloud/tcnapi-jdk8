@@ -12,7 +12,7 @@ public interface DeleteAdherenceAgentRuleClauseRequestOrBuilder extends
    * ID of the agent rule clause to delete.
    * </pre>
    *
-   * <code>int64 adherence_agent_rule_clause_id = 1 [json_name = "adherenceAgentRuleClauseId"];</code>
+   * <code>int64 adherence_agent_rule_clause_id = 1 [json_name = "adherenceAgentRuleClauseId", jstype = JS_STRING];</code>
    * @return The adherenceAgentRuleClauseId.
    */
   long getAdherenceAgentRuleClauseId();
