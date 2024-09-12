@@ -5970,6 +5970,37 @@ public final class WFMGrpc {
     return getCreateAdherenceDepartmentalRuleMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleResponse> getUpdateAdherenceDepartmentalRuleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateAdherenceDepartmentalRule",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleResponse> getUpdateAdherenceDepartmentalRuleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleResponse> getUpdateAdherenceDepartmentalRuleMethod;
+    if ((getUpdateAdherenceDepartmentalRuleMethod = WFMGrpc.getUpdateAdherenceDepartmentalRuleMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdateAdherenceDepartmentalRuleMethod = WFMGrpc.getUpdateAdherenceDepartmentalRuleMethod) == null) {
+          WFMGrpc.getUpdateAdherenceDepartmentalRuleMethod = getUpdateAdherenceDepartmentalRuleMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAdherenceDepartmentalRule"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateAdherenceDepartmentalRule"))
+              .build();
+        }
+      }
+    }
+    return getUpdateAdherenceDepartmentalRuleMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest,
       com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse> getCreateAdherenceDepartmentalRuleClauseMethod;
 
@@ -5999,6 +6030,37 @@ public final class WFMGrpc {
       }
     }
     return getCreateAdherenceDepartmentalRuleClauseMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseResponse> getUpdateAdherenceDepartmentalRuleClauseMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateAdherenceDepartmentalRuleClause",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseResponse> getUpdateAdherenceDepartmentalRuleClauseMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseResponse> getUpdateAdherenceDepartmentalRuleClauseMethod;
+    if ((getUpdateAdherenceDepartmentalRuleClauseMethod = WFMGrpc.getUpdateAdherenceDepartmentalRuleClauseMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdateAdherenceDepartmentalRuleClauseMethod = WFMGrpc.getUpdateAdherenceDepartmentalRuleClauseMethod) == null) {
+          WFMGrpc.getUpdateAdherenceDepartmentalRuleClauseMethod = getUpdateAdherenceDepartmentalRuleClauseMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAdherenceDepartmentalRuleClause"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateAdherenceDepartmentalRuleClause"))
+              .build();
+        }
+      }
+    }
+    return getUpdateAdherenceDepartmentalRuleClauseMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDepartmentalRulesRequest,
@@ -9230,6 +9292,22 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Updates the given adherence departmental &#64;rule for the org sending the request.
+     * Fields that can be updated are: name, selected_entity_id, selected_entity_type, rule_requirement_type,
+     * rule_range, custom_range, adherence_rule_notification_config_id.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;rule are invalid.
+     *   - grpc.NotFound: departmental rule clause with &#64;adherence_departmental_rule_clause_id does not exist.
+     *   - grpc.Internal: error occurs when updating the given &#64;rule.
+     * </pre>
+     */
+    default void updateAdherenceDepartmentalRule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAdherenceDepartmentalRuleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates the given adherence departmental rule &#64;clause for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;clause are invalid.
@@ -9240,6 +9318,21 @@ public final class WFMGrpc {
     default void createAdherenceDepartmentalRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAdherenceDepartmentalRuleClauseMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given adherence departmental rule &#64;clause for the given &#64;org_id.
+     * Fields that can be updated are: action_type, condition, amount, unit, per_amount, per_unit.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;clause are invalid.
+     *   - grpc.Internal: error occurs when updating the given &#64;clause.
+     *   - grpc.NotFound: departmental rule with the with &#64;adherence_departmental_rule_clause_id does not exist to update.
+     * </pre>
+     */
+    default void updateAdherenceDepartmentalRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAdherenceDepartmentalRuleClauseMethod(), responseObserver);
     }
 
     /**
@@ -12545,6 +12638,23 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Updates the given adherence departmental &#64;rule for the org sending the request.
+     * Fields that can be updated are: name, selected_entity_id, selected_entity_type, rule_requirement_type,
+     * rule_range, custom_range, adherence_rule_notification_config_id.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;rule are invalid.
+     *   - grpc.NotFound: departmental rule clause with &#64;adherence_departmental_rule_clause_id does not exist.
+     *   - grpc.Internal: error occurs when updating the given &#64;rule.
+     * </pre>
+     */
+    public void updateAdherenceDepartmentalRule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateAdherenceDepartmentalRuleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates the given adherence departmental rule &#64;clause for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;clause are invalid.
@@ -12556,6 +12666,22 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateAdherenceDepartmentalRuleClauseMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given adherence departmental rule &#64;clause for the given &#64;org_id.
+     * Fields that can be updated are: action_type, condition, amount, unit, per_amount, per_unit.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;clause are invalid.
+     *   - grpc.Internal: error occurs when updating the given &#64;clause.
+     *   - grpc.NotFound: departmental rule with the with &#64;adherence_departmental_rule_clause_id does not exist to update.
+     * </pre>
+     */
+    public void updateAdherenceDepartmentalRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateAdherenceDepartmentalRuleClauseMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -15667,6 +15793,22 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Updates the given adherence departmental &#64;rule for the org sending the request.
+     * Fields that can be updated are: name, selected_entity_id, selected_entity_type, rule_requirement_type,
+     * rule_range, custom_range, adherence_rule_notification_config_id.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;rule are invalid.
+     *   - grpc.NotFound: departmental rule clause with &#64;adherence_departmental_rule_clause_id does not exist.
+     *   - grpc.Internal: error occurs when updating the given &#64;rule.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleResponse updateAdherenceDepartmentalRule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateAdherenceDepartmentalRuleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Creates the given adherence departmental rule &#64;clause for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;clause are invalid.
@@ -15677,6 +15819,21 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse createAdherenceDepartmentalRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateAdherenceDepartmentalRuleClauseMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given adherence departmental rule &#64;clause for the given &#64;org_id.
+     * Fields that can be updated are: action_type, condition, amount, unit, per_amount, per_unit.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;clause are invalid.
+     *   - grpc.Internal: error occurs when updating the given &#64;clause.
+     *   - grpc.NotFound: departmental rule with the with &#64;adherence_departmental_rule_clause_id does not exist to update.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseResponse updateAdherenceDepartmentalRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateAdherenceDepartmentalRuleClauseMethod(), getCallOptions(), request);
     }
 
     /**
@@ -18866,6 +19023,23 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Updates the given adherence departmental &#64;rule for the org sending the request.
+     * Fields that can be updated are: name, selected_entity_id, selected_entity_type, rule_requirement_type,
+     * rule_range, custom_range, adherence_rule_notification_config_id.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;rule are invalid.
+     *   - grpc.NotFound: departmental rule clause with &#64;adherence_departmental_rule_clause_id does not exist.
+     *   - grpc.Internal: error occurs when updating the given &#64;rule.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleResponse> updateAdherenceDepartmentalRule(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateAdherenceDepartmentalRuleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates the given adherence departmental rule &#64;clause for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;clause are invalid.
@@ -18877,6 +19051,22 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateAdherenceDepartmentalRuleClauseMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given adherence departmental rule &#64;clause for the given &#64;org_id.
+     * Fields that can be updated are: action_type, condition, amount, unit, per_amount, per_unit.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;clause are invalid.
+     *   - grpc.Internal: error occurs when updating the given &#64;clause.
+     *   - grpc.NotFound: departmental rule with the with &#64;adherence_departmental_rule_clause_id does not exist to update.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseResponse> updateAdherenceDepartmentalRuleClause(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateAdherenceDepartmentalRuleClauseMethod(), getCallOptions()), request);
     }
 
     /**
@@ -19163,13 +19353,15 @@ public final class WFMGrpc {
   private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 189;
   private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 190;
   private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 191;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 192;
-  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 193;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 194;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 195;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 196;
-  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 197;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 198;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE = 192;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 193;
+  private static final int METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 194;
+  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 195;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 196;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE = 197;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 198;
+  private static final int METHODID_UPDATE_ADHERENCE_AGENT_RULE_CLAUSE = 199;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 200;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -19956,9 +20148,17 @@ public final class WFMGrpc {
           serviceImpl.createAdherenceDepartmentalRule((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleResponse>) responseObserver);
           break;
+        case METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE:
+          serviceImpl.updateAdherenceDepartmentalRule((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleResponse>) responseObserver);
+          break;
         case METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE:
           serviceImpl.createAdherenceDepartmentalRuleClause((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE:
+          serviceImpl.updateAdherenceDepartmentalRuleClause((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseResponse>) responseObserver);
           break;
         case METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES:
           serviceImpl.listAdherenceDepartmentalRules((com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDepartmentalRulesRequest) request,
@@ -21347,12 +21547,26 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleResponse>(
                 service, METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE)))
         .addMethod(
+          getUpdateAdherenceDepartmentalRuleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleResponse>(
+                service, METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE)))
+        .addMethod(
           getCreateAdherenceDepartmentalRuleClauseMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest,
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse>(
                 service, METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE)))
+        .addMethod(
+          getUpdateAdherenceDepartmentalRuleClauseMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceDepartmentalRuleClauseResponse>(
+                service, METHODID_UPDATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE)))
         .addMethod(
           getListAdherenceDepartmentalRulesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -21635,7 +21849,9 @@ public final class WFMGrpc {
               .addMethod(getUpdateAdherenceRuleNotificationConfigEntryMethod())
               .addMethod(getListAdherenceRuleNotificationConfigsMethod())
               .addMethod(getCreateAdherenceDepartmentalRuleMethod())
+              .addMethod(getUpdateAdherenceDepartmentalRuleMethod())
               .addMethod(getCreateAdherenceDepartmentalRuleClauseMethod())
+              .addMethod(getUpdateAdherenceDepartmentalRuleClauseMethod())
               .addMethod(getListAdherenceDepartmentalRulesMethod())
               .addMethod(getCreateAdherenceAgentRuleMethod())
               .addMethod(getUpdateAdherenceAgentRuleMethod())
