@@ -5815,6 +5815,37 @@ public final class WFMGrpc {
     return getCreateAdherenceRuleNotificationConfigMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigResponse> getUpdateAdherenceRuleNotificationConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateAdherenceRuleNotificationConfig",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigResponse> getUpdateAdherenceRuleNotificationConfigMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigResponse> getUpdateAdherenceRuleNotificationConfigMethod;
+    if ((getUpdateAdherenceRuleNotificationConfigMethod = WFMGrpc.getUpdateAdherenceRuleNotificationConfigMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdateAdherenceRuleNotificationConfigMethod = WFMGrpc.getUpdateAdherenceRuleNotificationConfigMethod) == null) {
+          WFMGrpc.getUpdateAdherenceRuleNotificationConfigMethod = getUpdateAdherenceRuleNotificationConfigMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAdherenceRuleNotificationConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateAdherenceRuleNotificationConfig"))
+              .build();
+        }
+      }
+    }
+    return getUpdateAdherenceRuleNotificationConfigMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest,
       com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse> getCreateAdherenceRuleNotificationConfigEntryMethod;
 
@@ -5844,6 +5875,37 @@ public final class WFMGrpc {
       }
     }
     return getCreateAdherenceRuleNotificationConfigEntryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryResponse> getUpdateAdherenceRuleNotificationConfigEntryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateAdherenceRuleNotificationConfigEntry",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryResponse> getUpdateAdherenceRuleNotificationConfigEntryMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryResponse> getUpdateAdherenceRuleNotificationConfigEntryMethod;
+    if ((getUpdateAdherenceRuleNotificationConfigEntryMethod = WFMGrpc.getUpdateAdherenceRuleNotificationConfigEntryMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdateAdherenceRuleNotificationConfigEntryMethod = WFMGrpc.getUpdateAdherenceRuleNotificationConfigEntryMethod) == null) {
+          WFMGrpc.getUpdateAdherenceRuleNotificationConfigEntryMethod = getUpdateAdherenceRuleNotificationConfigEntryMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryRequest, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAdherenceRuleNotificationConfigEntry"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateAdherenceRuleNotificationConfigEntry"))
+              .build();
+        }
+      }
+    }
+    return getUpdateAdherenceRuleNotificationConfigEntryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest,
@@ -9035,6 +9097,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Updates the given adherence &#64;notification_config for the org sending the request.
+     * Fields that can be updated are: name.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config are invalid.
+     *   - grpc.NotFound: the given notification config is not found.
+     *   - grpc.Internal: error occurs when updating the given &#64;notification_config.
+     * </pre>
+     */
+    default void updateAdherenceRuleNotificationConfig(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAdherenceRuleNotificationConfigMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates the given adherence &#64;notification_config_entry for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;notification_config_entry are invalid.
@@ -9045,6 +9122,21 @@ public final class WFMGrpc {
     default void createAdherenceRuleNotificationConfigEntry(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAdherenceRuleNotificationConfigEntryMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given adherence &#64;notification_config_entry for the org sending the request.
+     * Fields that can be updated are: recipient_user_id, notification_medium, seconds_to_wait_for_no_response.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config_entry are invalid.
+     *   - grpc.NotFound: the given notification config entry is not found.
+     *   - grpc.Internal: error occurs when updating the given &#64;notification_config_entry.
+     * </pre>
+     */
+    default void updateAdherenceRuleNotificationConfigEntry(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAdherenceRuleNotificationConfigEntryMethod(), responseObserver);
     }
 
     /**
@@ -12285,6 +12377,22 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Updates the given adherence &#64;notification_config for the org sending the request.
+     * Fields that can be updated are: name.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config are invalid.
+     *   - grpc.NotFound: the given notification config is not found.
+     *   - grpc.Internal: error occurs when updating the given &#64;notification_config.
+     * </pre>
+     */
+    public void updateAdherenceRuleNotificationConfig(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateAdherenceRuleNotificationConfigMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates the given adherence &#64;notification_config_entry for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;notification_config_entry are invalid.
@@ -12296,6 +12404,22 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateAdherenceRuleNotificationConfigEntryMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the given adherence &#64;notification_config_entry for the org sending the request.
+     * Fields that can be updated are: recipient_user_id, notification_medium, seconds_to_wait_for_no_response.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config_entry are invalid.
+     *   - grpc.NotFound: the given notification config entry is not found.
+     *   - grpc.Internal: error occurs when updating the given &#64;notification_config_entry.
+     * </pre>
+     */
+    public void updateAdherenceRuleNotificationConfigEntry(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateAdherenceRuleNotificationConfigEntryMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -15348,6 +15472,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Updates the given adherence &#64;notification_config for the org sending the request.
+     * Fields that can be updated are: name.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config are invalid.
+     *   - grpc.NotFound: the given notification config is not found.
+     *   - grpc.Internal: error occurs when updating the given &#64;notification_config.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigResponse updateAdherenceRuleNotificationConfig(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateAdherenceRuleNotificationConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Creates the given adherence &#64;notification_config_entry for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;notification_config_entry are invalid.
@@ -15358,6 +15497,21 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse createAdherenceRuleNotificationConfigEntry(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateAdherenceRuleNotificationConfigEntryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given adherence &#64;notification_config_entry for the org sending the request.
+     * Fields that can be updated are: recipient_user_id, notification_medium, seconds_to_wait_for_no_response.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config_entry are invalid.
+     *   - grpc.NotFound: the given notification config entry is not found.
+     *   - grpc.Internal: error occurs when updating the given &#64;notification_config_entry.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryResponse updateAdherenceRuleNotificationConfigEntry(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateAdherenceRuleNotificationConfigEntryMethod(), getCallOptions(), request);
     }
 
     /**
@@ -18482,6 +18636,22 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Updates the given adherence &#64;notification_config for the org sending the request.
+     * Fields that can be updated are: name.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config are invalid.
+     *   - grpc.NotFound: the given notification config is not found.
+     *   - grpc.Internal: error occurs when updating the given &#64;notification_config.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigResponse> updateAdherenceRuleNotificationConfig(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateAdherenceRuleNotificationConfigMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates the given adherence &#64;notification_config_entry for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;notification_config_entry are invalid.
@@ -18493,6 +18663,22 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateAdherenceRuleNotificationConfigEntryMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the given adherence &#64;notification_config_entry for the org sending the request.
+     * Fields that can be updated are: recipient_user_id, notification_medium, seconds_to_wait_for_no_response.
+     * Errors:
+     *   - grpc.Invalid: the values on the given &#64;notification_config_entry are invalid.
+     *   - grpc.NotFound: the given notification config entry is not found.
+     *   - grpc.Internal: error occurs when updating the given &#64;notification_config_entry.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryResponse> updateAdherenceRuleNotificationConfigEntry(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateAdherenceRuleNotificationConfigEntryMethod(), getCallOptions()), request);
     }
 
     /**
@@ -18786,14 +18972,16 @@ public final class WFMGrpc {
   private static final int METHODID_UPDATE_RGBA_COLOR = 184;
   private static final int METHODID_DELETE_RGBA_COLOR = 185;
   private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 186;
-  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 187;
-  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 188;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 189;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 190;
-  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 191;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 192;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 193;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 194;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 187;
+  private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 188;
+  private static final int METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 189;
+  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 190;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 191;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 192;
+  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 193;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 194;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 195;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 196;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -19560,9 +19748,17 @@ public final class WFMGrpc {
           serviceImpl.createAdherenceRuleNotificationConfig((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigResponse>) responseObserver);
           break;
+        case METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG:
+          serviceImpl.updateAdherenceRuleNotificationConfig((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigResponse>) responseObserver);
+          break;
         case METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY:
           serviceImpl.createAdherenceRuleNotificationConfigEntry((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY:
+          serviceImpl.updateAdherenceRuleNotificationConfigEntry((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryResponse>) responseObserver);
           break;
         case METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS:
           serviceImpl.listAdherenceRuleNotificationConfigs((com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest) request,
@@ -20920,12 +21116,26 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigResponse>(
                 service, METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG)))
         .addMethod(
+          getUpdateAdherenceRuleNotificationConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigResponse>(
+                service, METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG)))
+        .addMethod(
           getCreateAdherenceRuleNotificationConfigEntryMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest,
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse>(
                 service, METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY)))
+        .addMethod(
+          getUpdateAdherenceRuleNotificationConfigEntryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAdherenceRuleNotificationConfigEntryResponse>(
+                service, METHODID_UPDATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY)))
         .addMethod(
           getListAdherenceRuleNotificationConfigsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -21210,7 +21420,9 @@ public final class WFMGrpc {
               .addMethod(getUpdateRgbaColorMethod())
               .addMethod(getDeleteRgbaColorMethod())
               .addMethod(getCreateAdherenceRuleNotificationConfigMethod())
+              .addMethod(getUpdateAdherenceRuleNotificationConfigMethod())
               .addMethod(getCreateAdherenceRuleNotificationConfigEntryMethod())
+              .addMethod(getUpdateAdherenceRuleNotificationConfigEntryMethod())
               .addMethod(getListAdherenceRuleNotificationConfigsMethod())
               .addMethod(getCreateAdherenceDepartmentalRuleMethod())
               .addMethod(getCreateAdherenceDepartmentalRuleClauseMethod())
