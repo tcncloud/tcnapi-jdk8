@@ -9142,7 +9142,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the given adherence &#64;adherence_rule_notification_config_entry_id for the org sending the request.
+     * Deletes the notification config entry that has the given &#64;adherence_rule_notification_config_entry_id for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the given &#64;adherence_rule_notification_config_entry_id is invalid.
      *   - grpc.Internal: error occurs when deleting the given &#64;adherence_rule_notification_config_entry_id.
@@ -9197,7 +9197,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the &#64;adherence_departmental_rule_clause_id for the org sending the request.
+     * Deletes the departmental rule clause that has the given &#64;adherence_departmental_rule_clause_id for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the value of the given &#64;adherence_departmental_rule_clause_id is invalid.
      *   - grpc.Internal: error occurs when deleting the given &#64;adherence_departmental_rule_clause_id.
@@ -9266,7 +9266,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the &#64;adherence_agent_rule_clause_id for the org sending the request.
+     * Deletes the agent rule clause that has the given &#64;adherence_agent_rule_clause_id for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the value of the given &#64;adherence_agent_rule_clause_id is invalid.
      *   - grpc.Internal: error occurs when deleting the given &#64;adherence_agent_rule_clause_id.
@@ -12435,7 +12435,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the given adherence &#64;adherence_rule_notification_config_entry_id for the org sending the request.
+     * Deletes the notification config entry that has the given &#64;adherence_rule_notification_config_entry_id for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the given &#64;adherence_rule_notification_config_entry_id is invalid.
      *   - grpc.Internal: error occurs when deleting the given &#64;adherence_rule_notification_config_entry_id.
@@ -12494,7 +12494,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the &#64;adherence_departmental_rule_clause_id for the org sending the request.
+     * Deletes the departmental rule clause that has the given &#64;adherence_departmental_rule_clause_id for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the value of the given &#64;adherence_departmental_rule_clause_id is invalid.
      *   - grpc.Internal: error occurs when deleting the given &#64;adherence_departmental_rule_clause_id.
@@ -12568,7 +12568,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the &#64;adherence_agent_rule_clause_id for the org sending the request.
+     * Deletes the agent rule clause that has the given &#64;adherence_agent_rule_clause_id for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the value of the given &#64;adherence_agent_rule_clause_id is invalid.
      *   - grpc.Internal: error occurs when deleting the given &#64;adherence_agent_rule_clause_id.
@@ -15542,7 +15542,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the given adherence &#64;adherence_rule_notification_config_entry_id for the org sending the request.
+     * Deletes the notification config entry that has the given &#64;adherence_rule_notification_config_entry_id for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the given &#64;adherence_rule_notification_config_entry_id is invalid.
      *   - grpc.Internal: error occurs when deleting the given &#64;adherence_rule_notification_config_entry_id.
@@ -15597,7 +15597,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the &#64;adherence_departmental_rule_clause_id for the org sending the request.
+     * Deletes the departmental rule clause that has the given &#64;adherence_departmental_rule_clause_id for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the value of the given &#64;adherence_departmental_rule_clause_id is invalid.
      *   - grpc.Internal: error occurs when deleting the given &#64;adherence_departmental_rule_clause_id.
@@ -15666,7 +15666,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the &#64;adherence_agent_rule_clause_id for the org sending the request.
+     * Deletes the agent rule clause that has the given &#64;adherence_agent_rule_clause_id for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the value of the given &#64;adherence_agent_rule_clause_id is invalid.
      *   - grpc.Internal: error occurs when deleting the given &#64;adherence_agent_rule_clause_id.
@@ -18719,7 +18719,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the given adherence &#64;adherence_rule_notification_config_entry_id for the org sending the request.
+     * Deletes the notification config entry that has the given &#64;adherence_rule_notification_config_entry_id for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the given &#64;adherence_rule_notification_config_entry_id is invalid.
      *   - grpc.Internal: error occurs when deleting the given &#64;adherence_rule_notification_config_entry_id.
@@ -18778,7 +18778,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the &#64;adherence_departmental_rule_clause_id for the org sending the request.
+     * Deletes the departmental rule clause that has the given &#64;adherence_departmental_rule_clause_id for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the value of the given &#64;adherence_departmental_rule_clause_id is invalid.
      *   - grpc.Internal: error occurs when deleting the given &#64;adherence_departmental_rule_clause_id.
@@ -18852,7 +18852,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes the &#64;adherence_agent_rule_clause_id for the org sending the request.
+     * Deletes the agent rule clause that has the given &#64;adherence_agent_rule_clause_id for the org sending the request.
      * Errors:
      *   - grpc.Invalid: the value of the given &#64;adherence_agent_rule_clause_id is invalid.
      *   - grpc.Internal: error occurs when deleting the given &#64;adherence_agent_rule_clause_id.
