@@ -7318,7 +7318,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity and &#64;org_id, filled with &#64;member_wfm_agents.
+     * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity filled with &#64;member_wfm_agents for the org sending the request.
      * The given &#64;entity must be either a Node or a ShiftTemplate.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
@@ -9322,7 +9322,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Updates the given adherence departmental rule &#64;clause for the given &#64;org_id.
+     * Updates the given adherence departmental rule &#64;clause for the org sending the request.
      * Fields that can be updated are: action_type, condition, amount, unit, per_amount, per_unit.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;clause are invalid.
@@ -9393,7 +9393,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Updates the given adherence agent rule &#64;clause for the given &#64;org_id.
+     * Updates the given adherence agent rule &#64;clause for the org sending the request.
      * Fields that can be updated are: action_type, condition, amount, unit.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;clause are invalid.
@@ -10538,7 +10538,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity and &#64;org_id, filled with &#64;member_wfm_agents.
+     * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity filled with &#64;member_wfm_agents for the org sending the request.
      * The given &#64;entity must be either a Node or a ShiftTemplate.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
@@ -12670,7 +12670,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Updates the given adherence departmental rule &#64;clause for the given &#64;org_id.
+     * Updates the given adherence departmental rule &#64;clause for the org sending the request.
      * Fields that can be updated are: action_type, condition, amount, unit, per_amount, per_unit.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;clause are invalid.
@@ -12746,7 +12746,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Updates the given adherence agent rule &#64;clause for the given &#64;org_id.
+     * Updates the given adherence agent rule &#64;clause for the org sending the request.
      * Fields that can be updated are: action_type, condition, amount, unit.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;clause are invalid.
@@ -13819,7 +13819,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity and &#64;org_id, filled with &#64;member_wfm_agents.
+     * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity filled with &#64;member_wfm_agents for the org sending the request.
      * The given &#64;entity must be either a Node or a ShiftTemplate.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
@@ -15823,7 +15823,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Updates the given adherence departmental rule &#64;clause for the given &#64;org_id.
+     * Updates the given adherence departmental rule &#64;clause for the org sending the request.
      * Fields that can be updated are: action_type, condition, amount, unit, per_amount, per_unit.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;clause are invalid.
@@ -15894,7 +15894,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Updates the given adherence agent rule &#64;clause for the given &#64;org_id.
+     * Updates the given adherence agent rule &#64;clause for the org sending the request.
      * Fields that can be updated are: action_type, condition, amount, unit.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;clause are invalid.
@@ -16923,7 +16923,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity and &#64;org_id, filled with &#64;member_wfm_agents.
+     * ListAgentScheduleGroups lists all schedulable agent groups for the given &#64;entity filled with &#64;member_wfm_agents for the org sending the request.
      * The given &#64;entity must be either a Node or a ShiftTemplate.
      * Errors:
      *   - grpc.Invalid: the request data is invalid.
@@ -19055,7 +19055,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Updates the given adherence departmental rule &#64;clause for the given &#64;org_id.
+     * Updates the given adherence departmental rule &#64;clause for the org sending the request.
      * Fields that can be updated are: action_type, condition, amount, unit, per_amount, per_unit.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;clause are invalid.
@@ -19131,7 +19131,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Updates the given adherence agent rule &#64;clause for the given &#64;org_id.
+     * Updates the given adherence agent rule &#64;clause for the org sending the request.
      * Fields that can be updated are: action_type, condition, amount, unit.
      * Errors:
      *   - grpc.Invalid: the values on the given &#64;clause are invalid.
