@@ -1042,14 +1042,6 @@ public enum RequestMethod
    */
   REQUEST_METHOD_SWERVEPAY_PROCESS_NEW_TRANSACTION_VALIDATE(4622),
   /**
-   * <pre>
-   * TODO:::
-   * TODO:::
-   * TODO:::
-   * TODO:::
-   * TODO::: ask TAYLOR if he would prefer the sunrise or other to be a separate integration?
-   * </pre>
-   *
    * <code>REQUEST_METHOD_VERADIGM_GET_LOCATIONS = 4701;</code>
    */
   REQUEST_METHOD_VERADIGM_GET_LOCATIONS(4701),
@@ -2127,14 +2119,6 @@ public enum RequestMethod
    */
   public static final int REQUEST_METHOD_SWERVEPAY_PROCESS_NEW_TRANSACTION_VALIDATE_VALUE = 4622;
   /**
-   * <pre>
-   * TODO:::
-   * TODO:::
-   * TODO:::
-   * TODO:::
-   * TODO::: ask TAYLOR if he would prefer the sunrise or other to be a separate integration?
-   * </pre>
-   *
    * <code>REQUEST_METHOD_VERADIGM_GET_LOCATIONS = 4701;</code>
    */
   public static final int REQUEST_METHOD_VERADIGM_GET_LOCATIONS_VALUE = 4701;
