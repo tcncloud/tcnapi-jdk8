@@ -12,4 +12,16 @@ public interface ValidateFieldResOrBuilder extends
    * @return The valid.
    */
   boolean getValid();
+
+  /**
+   * <code>string reason = 2 [json_name = "reason"];</code>
+   * @return The reason.
+   */
+  java.lang.String getReason();
+  /**
+   * <code>string reason = 2 [json_name = "reason"];</code>
+   * @return The bytes for reason.
+   */
+  com.google.protobuf.ByteString
+      getReasonBytes();
 }
