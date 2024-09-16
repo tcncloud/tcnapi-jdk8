@@ -2165,6 +2165,36 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbAuthtestOrBuilder getNtvbAuthtestOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteNtvbCompletePendingOrder ntvb_complete_pending_order = 2815 [json_name = "ntvbCompletePendingOrder"];</code>
+   * @return Whether the ntvbCompletePendingOrder field is set.
+   */
+  boolean hasNtvbCompletePendingOrder();
+  /**
+   * <code>.api.commons.integrations.ExecuteNtvbCompletePendingOrder ntvb_complete_pending_order = 2815 [json_name = "ntvbCompletePendingOrder"];</code>
+   * @return The ntvbCompletePendingOrder.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder getNtvbCompletePendingOrder();
+  /**
+   * <code>.api.commons.integrations.ExecuteNtvbCompletePendingOrder ntvb_complete_pending_order = 2815 [json_name = "ntvbCompletePendingOrder"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrderOrBuilder getNtvbCompletePendingOrderOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNtvbPlaceOrder ntvb_place_order = 2816 [json_name = "ntvbPlaceOrder"];</code>
+   * @return Whether the ntvbPlaceOrder field is set.
+   */
+  boolean hasNtvbPlaceOrder();
+  /**
+   * <code>.api.commons.integrations.ExecuteNtvbPlaceOrder ntvb_place_order = 2816 [json_name = "ntvbPlaceOrder"];</code>
+   * @return The ntvbPlaceOrder.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder getNtvbPlaceOrder();
+  /**
+   * <code>.api.commons.integrations.ExecuteNtvbPlaceOrder ntvb_place_order = 2816 [json_name = "ntvbPlaceOrder"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrderOrBuilder getNtvbPlaceOrderOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteElavonCreditCardSale elavon_credit_card_sale = 2901 [json_name = "elavonCreditCardSale"];</code>
    * @return Whether the elavonCreditCardSale field is set.
    */
@@ -3138,6 +3168,21 @@ public interface ExecuteFlowOrBuilder extends
    * <code>.api.commons.integrations.ExecuteNewzwarePhoneLookupMulti newzware_phone_lookup_multi = 3809 [json_name = "newzwarePhoneLookupMulti"];</code>
    */
   com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwarePhoneLookupMultiOrBuilder getNewzwarePhoneLookupMultiOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareSubscriptionRestart newzware_subscription_restart = 3810 [json_name = "newzwareSubscriptionRestart"];</code>
+   * @return Whether the newzwareSubscriptionRestart field is set.
+   */
+  boolean hasNewzwareSubscriptionRestart();
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareSubscriptionRestart newzware_subscription_restart = 3810 [json_name = "newzwareSubscriptionRestart"];</code>
+   * @return The newzwareSubscriptionRestart.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart getNewzwareSubscriptionRestart();
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareSubscriptionRestart newzware_subscription_restart = 3810 [json_name = "newzwareSubscriptionRestart"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestartOrBuilder getNewzwareSubscriptionRestartOrBuilder();
 
   /**
    * <code>.api.commons.integrations.ExecutePriocommerceAchPayment priocommerce_ach_payment = 3901 [json_name = "priocommerceAchPayment"];</code>
