@@ -43,27 +43,65 @@ public interface ScrubListResOrBuilder extends
   long getEntriesAdded();
 
   /**
-   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1072
    * @return A list containing the invalidEntries.
    */
-  java.util.List<java.lang.String>
+  @java.lang.Deprecated java.util.List<java.lang.String>
       getInvalidEntriesList();
   /**
-   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1072
    * @return The count of invalidEntries.
    */
-  int getInvalidEntriesCount();
+  @java.lang.Deprecated int getInvalidEntriesCount();
   /**
-   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1072
    * @param index The index of the element to return.
    * @return The invalidEntries at the given index.
    */
-  java.lang.String getInvalidEntries(int index);
+  @java.lang.Deprecated java.lang.String getInvalidEntries(int index);
   /**
-   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1072
    * @param index The index of the value to return.
    * @return The bytes of the invalidEntries at the given index.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getInvalidEntriesBytes(int index);
+
+  /**
+   * <code>int64 total_invalid = 6 [json_name = "totalInvalid"];</code>
+   * @return The totalInvalid.
+   */
+  long getTotalInvalid();
+
+  /**
+   * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.InvalidScrubListEntry> 
+      getInvalidListList();
+  /**
+   * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+   */
+  com.tcn.cloud.api.api.commons.InvalidScrubListEntry getInvalidList(int index);
+  /**
+   * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+   */
+  int getInvalidListCount();
+  /**
+   * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.InvalidScrubListEntryOrBuilder> 
+      getInvalidListOrBuilderList();
+  /**
+   * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+   */
+  com.tcn.cloud.api.api.commons.InvalidScrubListEntryOrBuilder getInvalidListOrBuilder(
+      int index);
 }

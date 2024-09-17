@@ -96,7 +96,7 @@ public interface GetConsentByProfileAndContentResOrBuilder extends
    *
    * <code>.api.commons.CommType channel = 13 [json_name = "channel", deprecated = true];</code>
    * @deprecated api.v0alpha.GetConsentByProfileAndContentRes.channel is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1641
+   *     See api/v0alpha/compliance.proto;l=1643
    * @return Whether the channel field is set.
    */
   @java.lang.Deprecated boolean hasChannel();
@@ -107,7 +107,7 @@ public interface GetConsentByProfileAndContentResOrBuilder extends
    *
    * <code>.api.commons.CommType channel = 13 [json_name = "channel", deprecated = true];</code>
    * @deprecated api.v0alpha.GetConsentByProfileAndContentRes.channel is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1641
+   *     See api/v0alpha/compliance.proto;l=1643
    * @return The channel.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.CommType getChannel();

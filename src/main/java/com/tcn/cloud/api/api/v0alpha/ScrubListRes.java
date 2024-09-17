@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     contentType_ = 0;
     invalidEntries_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    invalidList_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -126,36 +127,96 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList invalidEntries_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1072
    * @return A list containing the invalidEntries.
    */
-  public com.google.protobuf.ProtocolStringList
+  @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
       getInvalidEntriesList() {
     return invalidEntries_;
   }
   /**
-   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1072
    * @return The count of invalidEntries.
    */
-  public int getInvalidEntriesCount() {
+  @java.lang.Deprecated public int getInvalidEntriesCount() {
     return invalidEntries_.size();
   }
   /**
-   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1072
    * @param index The index of the element to return.
    * @return The invalidEntries at the given index.
    */
-  public java.lang.String getInvalidEntries(int index) {
+  @java.lang.Deprecated public java.lang.String getInvalidEntries(int index) {
     return invalidEntries_.get(index);
   }
   /**
-   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+   * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+   * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+   *     See api/v0alpha/compliance.proto;l=1072
    * @param index The index of the value to return.
    * @return The bytes of the invalidEntries at the given index.
    */
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getInvalidEntriesBytes(int index) {
     return invalidEntries_.getByteString(index);
+  }
+
+  public static final int TOTAL_INVALID_FIELD_NUMBER = 6;
+  private long totalInvalid_ = 0L;
+  /**
+   * <code>int64 total_invalid = 6 [json_name = "totalInvalid"];</code>
+   * @return The totalInvalid.
+   */
+  @java.lang.Override
+  public long getTotalInvalid() {
+    return totalInvalid_;
+  }
+
+  public static final int INVALID_LIST_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.commons.InvalidScrubListEntry> invalidList_;
+  /**
+   * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.InvalidScrubListEntry> getInvalidListList() {
+    return invalidList_;
+  }
+  /**
+   * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.InvalidScrubListEntryOrBuilder> 
+      getInvalidListOrBuilderList() {
+    return invalidList_;
+  }
+  /**
+   * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+   */
+  @java.lang.Override
+  public int getInvalidListCount() {
+    return invalidList_.size();
+  }
+  /**
+   * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.InvalidScrubListEntry getInvalidList(int index) {
+    return invalidList_.get(index);
+  }
+  /**
+   * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.InvalidScrubListEntryOrBuilder getInvalidListOrBuilder(
+      int index) {
+    return invalidList_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -186,6 +247,12 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < invalidEntries_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, invalidEntries_.getRaw(i));
+    }
+    if (totalInvalid_ != 0L) {
+      output.writeInt64(6, totalInvalid_);
+    }
+    for (int i = 0; i < invalidList_.size(); i++) {
+      output.writeMessage(7, invalidList_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -219,6 +286,14 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getInvalidEntriesList().size();
     }
+    if (totalInvalid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(6, totalInvalid_);
+    }
+    for (int i = 0; i < invalidList_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, invalidList_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -243,6 +318,10 @@ private static final long serialVersionUID = 0L;
         != other.getEntriesAdded()) return false;
     if (!getInvalidEntriesList()
         .equals(other.getInvalidEntriesList())) return false;
+    if (getTotalInvalid()
+        != other.getTotalInvalid()) return false;
+    if (!getInvalidListList()
+        .equals(other.getInvalidListList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -267,6 +346,13 @@ private static final long serialVersionUID = 0L;
     if (getInvalidEntriesCount() > 0) {
       hash = (37 * hash) + INVALID_ENTRIES_FIELD_NUMBER;
       hash = (53 * hash) + getInvalidEntriesList().hashCode();
+    }
+    hash = (37 * hash) + TOTAL_INVALID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTotalInvalid());
+    if (getInvalidListCount() > 0) {
+      hash = (37 * hash) + INVALID_LIST_FIELD_NUMBER;
+      hash = (53 * hash) + getInvalidListList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -405,6 +491,14 @@ private static final long serialVersionUID = 0L;
       entriesAdded_ = 0L;
       invalidEntries_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      totalInvalid_ = 0L;
+      if (invalidListBuilder_ == null) {
+        invalidList_ = java.util.Collections.emptyList();
+      } else {
+        invalidList_ = null;
+        invalidListBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -431,9 +525,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ScrubListRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ScrubListRes result = new com.tcn.cloud.api.api.v0alpha.ScrubListRes(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.ScrubListRes result) {
+      if (invalidListBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0)) {
+          invalidList_ = java.util.Collections.unmodifiableList(invalidList_);
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.invalidList_ = invalidList_;
+      } else {
+        result.invalidList_ = invalidListBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ScrubListRes result) {
@@ -453,6 +560,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         invalidEntries_.makeImmutable();
         result.invalidEntries_ = invalidEntries_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.totalInvalid_ = totalInvalid_;
       }
     }
 
@@ -524,6 +634,35 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.getTotalInvalid() != 0L) {
+        setTotalInvalid(other.getTotalInvalid());
+      }
+      if (invalidListBuilder_ == null) {
+        if (!other.invalidList_.isEmpty()) {
+          if (invalidList_.isEmpty()) {
+            invalidList_ = other.invalidList_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureInvalidListIsMutable();
+            invalidList_.addAll(other.invalidList_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.invalidList_.isEmpty()) {
+          if (invalidListBuilder_.isEmpty()) {
+            invalidListBuilder_.dispose();
+            invalidListBuilder_ = null;
+            invalidList_ = other.invalidList_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+            invalidListBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getInvalidListFieldBuilder() : null;
+          } else {
+            invalidListBuilder_.addAllMessages(other.invalidList_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -576,6 +715,24 @@ private static final long serialVersionUID = 0L;
               invalidEntries_.add(s);
               break;
             } // case 42
+            case 48: {
+              totalInvalid_ = input.readInt64();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 58: {
+              com.tcn.cloud.api.api.commons.InvalidScrubListEntry m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.InvalidScrubListEntry.parser(),
+                      extensionRegistry);
+              if (invalidListBuilder_ == null) {
+                ensureInvalidListIsMutable();
+                invalidList_.add(m);
+              } else {
+                invalidListBuilder_.addMessage(m);
+              }
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -791,45 +948,55 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000010;
     }
     /**
-     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+     * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+     *     See api/v0alpha/compliance.proto;l=1072
      * @return A list containing the invalidEntries.
      */
-    public com.google.protobuf.ProtocolStringList
+    @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
         getInvalidEntriesList() {
       invalidEntries_.makeImmutable();
       return invalidEntries_;
     }
     /**
-     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+     * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+     *     See api/v0alpha/compliance.proto;l=1072
      * @return The count of invalidEntries.
      */
-    public int getInvalidEntriesCount() {
+    @java.lang.Deprecated public int getInvalidEntriesCount() {
       return invalidEntries_.size();
     }
     /**
-     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+     * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+     *     See api/v0alpha/compliance.proto;l=1072
      * @param index The index of the element to return.
      * @return The invalidEntries at the given index.
      */
-    public java.lang.String getInvalidEntries(int index) {
+    @java.lang.Deprecated public java.lang.String getInvalidEntries(int index) {
       return invalidEntries_.get(index);
     }
     /**
-     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+     * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+     *     See api/v0alpha/compliance.proto;l=1072
      * @param index The index of the value to return.
      * @return The bytes of the invalidEntries at the given index.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getInvalidEntriesBytes(int index) {
       return invalidEntries_.getByteString(index);
     }
     /**
-     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+     * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+     *     See api/v0alpha/compliance.proto;l=1072
      * @param index The index to set the value at.
      * @param value The invalidEntries to set.
      * @return This builder for chaining.
      */
-    public Builder setInvalidEntries(
+    @java.lang.Deprecated public Builder setInvalidEntries(
         int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ensureInvalidEntriesIsMutable();
@@ -839,11 +1006,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+     * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+     *     See api/v0alpha/compliance.proto;l=1072
      * @param value The invalidEntries to add.
      * @return This builder for chaining.
      */
-    public Builder addInvalidEntries(
+    @java.lang.Deprecated public Builder addInvalidEntries(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ensureInvalidEntriesIsMutable();
@@ -853,11 +1022,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+     * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+     *     See api/v0alpha/compliance.proto;l=1072
      * @param values The invalidEntries to add.
      * @return This builder for chaining.
      */
-    public Builder addAllInvalidEntries(
+    @java.lang.Deprecated public Builder addAllInvalidEntries(
         java.lang.Iterable<java.lang.String> values) {
       ensureInvalidEntriesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -867,10 +1038,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+     * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+     *     See api/v0alpha/compliance.proto;l=1072
      * @return This builder for chaining.
      */
-    public Builder clearInvalidEntries() {
+    @java.lang.Deprecated public Builder clearInvalidEntries() {
       invalidEntries_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
       bitField0_ = (bitField0_ & ~0x00000010);;
@@ -878,11 +1051,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries"];</code>
+     * <code>repeated string invalid_entries = 5 [json_name = "invalidEntries", deprecated = true];</code>
+     * @deprecated api.v0alpha.ScrubListRes.invalid_entries is deprecated.
+     *     See api/v0alpha/compliance.proto;l=1072
      * @param value The bytes of the invalidEntries to add.
      * @return This builder for chaining.
      */
-    public Builder addInvalidEntriesBytes(
+    @java.lang.Deprecated public Builder addInvalidEntriesBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -891,6 +1066,278 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
+    }
+
+    private long totalInvalid_ ;
+    /**
+     * <code>int64 total_invalid = 6 [json_name = "totalInvalid"];</code>
+     * @return The totalInvalid.
+     */
+    @java.lang.Override
+    public long getTotalInvalid() {
+      return totalInvalid_;
+    }
+    /**
+     * <code>int64 total_invalid = 6 [json_name = "totalInvalid"];</code>
+     * @param value The totalInvalid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTotalInvalid(long value) {
+
+      totalInvalid_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 total_invalid = 6 [json_name = "totalInvalid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTotalInvalid() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      totalInvalid_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.commons.InvalidScrubListEntry> invalidList_ =
+      java.util.Collections.emptyList();
+    private void ensureInvalidListIsMutable() {
+      if (!((bitField0_ & 0x00000040) != 0)) {
+        invalidList_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.InvalidScrubListEntry>(invalidList_);
+        bitField0_ |= 0x00000040;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.InvalidScrubListEntry, com.tcn.cloud.api.api.commons.InvalidScrubListEntry.Builder, com.tcn.cloud.api.api.commons.InvalidScrubListEntryOrBuilder> invalidListBuilder_;
+
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.InvalidScrubListEntry> getInvalidListList() {
+      if (invalidListBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(invalidList_);
+      } else {
+        return invalidListBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public int getInvalidListCount() {
+      if (invalidListBuilder_ == null) {
+        return invalidList_.size();
+      } else {
+        return invalidListBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.InvalidScrubListEntry getInvalidList(int index) {
+      if (invalidListBuilder_ == null) {
+        return invalidList_.get(index);
+      } else {
+        return invalidListBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public Builder setInvalidList(
+        int index, com.tcn.cloud.api.api.commons.InvalidScrubListEntry value) {
+      if (invalidListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInvalidListIsMutable();
+        invalidList_.set(index, value);
+        onChanged();
+      } else {
+        invalidListBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public Builder setInvalidList(
+        int index, com.tcn.cloud.api.api.commons.InvalidScrubListEntry.Builder builderForValue) {
+      if (invalidListBuilder_ == null) {
+        ensureInvalidListIsMutable();
+        invalidList_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        invalidListBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public Builder addInvalidList(com.tcn.cloud.api.api.commons.InvalidScrubListEntry value) {
+      if (invalidListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInvalidListIsMutable();
+        invalidList_.add(value);
+        onChanged();
+      } else {
+        invalidListBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public Builder addInvalidList(
+        int index, com.tcn.cloud.api.api.commons.InvalidScrubListEntry value) {
+      if (invalidListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureInvalidListIsMutable();
+        invalidList_.add(index, value);
+        onChanged();
+      } else {
+        invalidListBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public Builder addInvalidList(
+        com.tcn.cloud.api.api.commons.InvalidScrubListEntry.Builder builderForValue) {
+      if (invalidListBuilder_ == null) {
+        ensureInvalidListIsMutable();
+        invalidList_.add(builderForValue.build());
+        onChanged();
+      } else {
+        invalidListBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public Builder addInvalidList(
+        int index, com.tcn.cloud.api.api.commons.InvalidScrubListEntry.Builder builderForValue) {
+      if (invalidListBuilder_ == null) {
+        ensureInvalidListIsMutable();
+        invalidList_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        invalidListBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public Builder addAllInvalidList(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.InvalidScrubListEntry> values) {
+      if (invalidListBuilder_ == null) {
+        ensureInvalidListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, invalidList_);
+        onChanged();
+      } else {
+        invalidListBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public Builder clearInvalidList() {
+      if (invalidListBuilder_ == null) {
+        invalidList_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+      } else {
+        invalidListBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public Builder removeInvalidList(int index) {
+      if (invalidListBuilder_ == null) {
+        ensureInvalidListIsMutable();
+        invalidList_.remove(index);
+        onChanged();
+      } else {
+        invalidListBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.InvalidScrubListEntry.Builder getInvalidListBuilder(
+        int index) {
+      return getInvalidListFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.InvalidScrubListEntryOrBuilder getInvalidListOrBuilder(
+        int index) {
+      if (invalidListBuilder_ == null) {
+        return invalidList_.get(index);  } else {
+        return invalidListBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.InvalidScrubListEntryOrBuilder> 
+         getInvalidListOrBuilderList() {
+      if (invalidListBuilder_ != null) {
+        return invalidListBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(invalidList_);
+      }
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.InvalidScrubListEntry.Builder addInvalidListBuilder() {
+      return getInvalidListFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.InvalidScrubListEntry.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.InvalidScrubListEntry.Builder addInvalidListBuilder(
+        int index) {
+      return getInvalidListFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.InvalidScrubListEntry.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .api.commons.InvalidScrubListEntry invalid_list = 7 [json_name = "invalidList"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.InvalidScrubListEntry.Builder> 
+         getInvalidListBuilderList() {
+      return getInvalidListFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.InvalidScrubListEntry, com.tcn.cloud.api.api.commons.InvalidScrubListEntry.Builder, com.tcn.cloud.api.api.commons.InvalidScrubListEntryOrBuilder> 
+        getInvalidListFieldBuilder() {
+      if (invalidListBuilder_ == null) {
+        invalidListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.InvalidScrubListEntry, com.tcn.cloud.api.api.commons.InvalidScrubListEntry.Builder, com.tcn.cloud.api.api.commons.InvalidScrubListEntryOrBuilder>(
+                invalidList_,
+                ((bitField0_ & 0x00000040) != 0),
+                getParentForChildren(),
+                isClean());
+        invalidList_ = null;
+      }
+      return invalidListBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
