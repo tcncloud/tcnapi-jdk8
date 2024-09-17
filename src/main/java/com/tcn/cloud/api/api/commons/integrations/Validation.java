@@ -139,6 +139,10 @@ public enum Validation
    * <code>VALIDATION_ACCOUNT = 502;</code>
    */
   VALIDATION_ACCOUNT(502),
+  /**
+   * <code>VALIDATION_TRANSACTION_ID = 601;</code>
+   */
+  VALIDATION_TRANSACTION_ID(601),
   UNRECOGNIZED(-1),
   ;
 
@@ -267,6 +271,10 @@ public enum Validation
    * <code>VALIDATION_ACCOUNT = 502;</code>
    */
   public static final int VALIDATION_ACCOUNT_VALUE = 502;
+  /**
+   * <code>VALIDATION_TRANSACTION_ID = 601;</code>
+   */
+  public static final int VALIDATION_TRANSACTION_ID_VALUE = 601;
 
 
   public final int getNumber() {
@@ -309,6 +317,7 @@ public enum Validation
       case 402: return VALIDATION_REGEX;
       case 501: return VALIDATION_ROUTING;
       case 502: return VALIDATION_ACCOUNT;
+      case 601: return VALIDATION_TRANSACTION_ID;
       default: return null;
     }
   }
