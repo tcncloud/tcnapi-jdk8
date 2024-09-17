@@ -667,633 +667,635 @@ public final class ComplianceProto {
       "etScrubListReq\022\027\n\007list_id\030\002 \001(\tR\006listId\"" +
       "\022\n\020GetScrubListsReq\"@\n\rScrubListsRes\022/\n\005" +
       "lists\030\001 \003(\0132\031.api.v0alpha.ScrubListResR\005" +
-      "lists\"\317\001\n\014ScrubListRes\022\027\n\007list_id\030\001 \001(\tR" +
+      "lists\"\277\002\n\014ScrubListRes\022\027\n\007list_id\030\001 \001(\tR" +
       "\006listId\022\033\n\tread_only\030\002 \001(\010R\010readOnly\022;\n\014" +
       "content_type\030\003 \001(\0162\030.api.commons.Content" +
       "TypeR\013contentType\022#\n\rentries_added\030\004 \001(\003" +
-      "R\014entriesAdded\022\'\n\017invalid_entries\030\005 \003(\tR" +
-      "\016invalidEntries\"-\n\022DeleteScrubListReq\022\027\n" +
-      "\007list_id\030\002 \001(\tR\006listId\"A\n\022SearchScrubLis" +
-      "tReq\022\027\n\007list_id\030\002 \001(\tR\006listId\022\022\n\004term\030\003 " +
-      "\001(\tR\004term\"\326\004\n\nScrubEntry\022\037\n\013country_sid\030" +
-      "\002 \001(\003R\ncountrySid\022\027\n\007list_id\030\006 \001(\tR\006list" +
-      "Id\022\033\n\tsource_id\030\007 \001(\003R\010sourceId\022!\n\014sourc" +
-      "e_field\030\010 \001(\tR\013sourceField\0222\n\005notes\030\n \001(" +
-      "\0132\034.google.protobuf.StringValueR\005notes\0226" +
-      "\n\007content\030\013 \001(\0132\034.google.protobuf.String" +
-      "ValueR\007content\022C\n\017expiration_date\030\014 \001(\0132" +
-      "\032.google.protobuf.TimestampR\016expirationD" +
-      "ate\0224\n\006result\030\r \001(\0132\034.google.protobuf.St" +
-      "ringValueR\006result\022,\n\004type\030\016 \001(\0162\030.api.co" +
-      "mmons.ContentTypeR\004type\022?\n\014country_code\030" +
-      "\017 \001(\0132\034.google.protobuf.StringValueR\013cou" +
-      "ntryCode\022:\n\ncreated_on\030\310\001 \001(\0132\032.google.p" +
-      "rotobuf.TimestampR\tcreatedOn\022<\n\ncreated_" +
-      "by\030\311\001 \001(\0132\034.google.protobuf.StringValueR" +
-      "\tcreatedBy\"E\n\023RuleAutoCompleteReq\022\026\n\006phr" +
-      "ase\030\001 \001(\tR\006phrase\022\026\n\006cursor\030\002 \001(\005R\006curso" +
-      "r\"/\n\023RuleAutoCompleteRes\022\030\n\007options\030\001 \003(" +
-      "\tR\007options\")\n\017CheckRuleSetReq\022\026\n\006phrase\030" +
-      "\001 \001(\tR\006phrase\"V\n\017CheckRuleSetRes\022\'\n\005rule" +
-      "s\030\001 \003(\0132\021.api.commons.RuleR\005rules\022\032\n\010war" +
-      "nings\030\002 \003(\tR\010warnings\"<\n\017ListRuleSetsReq" +
-      "\022)\n\020include_disabled\030\002 \001(\010R\017includeDisab" +
-      "led\"\200\001\n\017ListRuleSetsRes\022\036\n\013rule_set_id\030\001" +
-      " \001(\tR\truleSetId\022\022\n\004name\030\002 \001(\tR\004name\022\035\n\nr" +
-      "ule_count\030\004 \001(\003R\truleCount\022\032\n\010disabled\030\005" +
-      " \001(\010R\010disabled\"Q\n\rGetRuleSetReq\022\036\n\013rule_" +
-      "set_id\030\001 \001(\tR\truleSetId\022 \n\014rule_set_sha\030" +
-      "\002 \001(\tR\nruleSetSha\")\n\023GetRuleSetByNameReq" +
-      "\022\022\n\004name\030\003 \001(\tR\004name\"\177\n\020AssignRuleSetReq" +
-      "\0222\n\tcomm_type\030\001 \001(\0132\025.api.commons.CommTy" +
-      "peR\010commType\022\027\n\007comm_id\030\002 \001(\tR\006commId\022\036\n" +
-      "\013rule_set_id\030\003 \001(\tR\truleSetId\"N\n\020AssignR" +
-      "uleSetRes\022:\n\032cpl_rule_set_assignment_id\030" +
-      "\001 \001(\tR\026cplRuleSetAssignmentId\"F\n\020RenameR" +
-      "uleSetReq\022\036\n\013rule_set_id\030\002 \001(\tR\truleSetI" +
-      "d\022\022\n\004name\030\003 \001(\tR\004name\"\022\n\020RenameRuleSetRe" +
-      "s\"\216\001\n\020CreateRuleSetReq\022\036\n\013rule_set_id\030\001 " +
-      "\001(\tR\truleSetId\022\022\n\004name\030\004 \001(\tR\004name\022\035\n\nru" +
-      "les_text\030\006 \001(\tR\trulesText\022\'\n\005rules\030\007 \003(\013" +
-      "2\021.api.commons.RuleR\005rules\"T\n\020EnableRule" +
-      "SetReq\022\036\n\013rule_set_id\030\002 \001(\tR\truleSetId\022 " +
-      "\n\014rule_set_sha\030\003 \001(\tR\nruleSetSha\"U\n\021Disa" +
-      "bleRuleSetReq\022\036\n\013rule_set_id\030\002 \001(\tR\trule" +
-      "SetId\022 \n\014rule_set_sha\030\003 \001(\tR\nruleSetSha\"" +
-      "\022\n\020EnableRuleSetRes\"\023\n\021DisableRuleSetRes" +
-      "\"\023\n\021EvaluationResults\"\307\001\n\007RuleSet\022\036\n\013rul" +
-      "e_set_id\030\001 \001(\tR\truleSetId\022\022\n\004name\030\004 \001(\tR" +
-      "\004name\022\022\n\004head\030\005 \001(\010R\004head\022\032\n\010disabled\030\006 " +
-      "\001(\010R\010disabled\022\035\n\nrules_text\030\t \001(\tR\trules" +
-      "Text\022\020\n\003sha\030\n \001(\tR\003sha\022\'\n\005rules\030\024 \003(\0132\021." +
-      "api.commons.RuleR\005rules\"\024\n\022GetDefaultRul" +
-      "esReq\"*\n\022GetDefaultRulesRes\022\024\n\005rules\030\001 \003" +
-      "(\tR\005rules\"1\n\030GetScrubListUploadUrlReq\022\025\n" +
-      "\006org_id\030\001 \001(\tR\005orgId\"`\n\030GetScrubListUplo" +
-      "adUrlRes\022\020\n\003url\030\001 \001(\tR\003url\022\032\n\010filename\030\002" +
-      " \001(\tR\010filename\022\026\n\006bucket\030\003 \001(\tR\006bucket\"\343" +
-      "\001\n\031ProcessScrubListUploadReq\022\032\n\010filename" +
-      "\030\002 \001(\tR\010filename\022\027\n\007list_id\030\004 \001(\tR\006listI" +
-      "d\022;\n\014content_type\030\n \001(\0162\030.api.commons.Co" +
-      "ntentTypeR\013contentType\0221\n\024notification_m" +
-      "essage\030\013 \001(\tR\023notificationMessage\022!\n\014cou" +
-      "ntry_code\030\014 \001(\tR\013countryCode\"i\n\031ProcessS" +
-      "crubListUploadRes\022#\n\rentries_added\030\001 \001(\003" +
-      "R\014entriesAdded\022\'\n\017invalid_entries\030\002 \003(\tR" +
-      "\016invalidEntries\"\211\001\n\037ProcessScrubListDele" +
-      "teUploadReq\022\027\n\007list_id\030\n \001(\tR\006listId\022\032\n\010" +
-      "filename\030\013 \001(\tR\010filename\0221\n\024notification" +
-      "_message\030\014 \001(\tR\023notificationMessage\"!\n\037P" +
-      "rocessScrubListDeleteUploadRes\"-\n\022Export" +
-      "ScrubListReq\022\027\n\007list_id\030\001 \001(\tR\006listId\"&\n" +
-      "\022ExportScrubListRes\022\020\n\003url\030\001 \001(\tR\003url\"\227\002" +
-      "\n\010Scenario\022&\n\017cpl_scenario_id\030\001 \001(\003R\rcpl" +
-      "ScenarioId\022<\n\014should_allow\030\003 \001(\0132\031.api.c" +
-      "ommons.ScenarioDataR\013shouldAllow\022:\n\013shou" +
-      "ld_deny\030\004 \001(\0132\031.api.commons.ScenarioData" +
-      "R\nshouldDeny\022O\n\025last_execution_result\030\005 " +
-      "\001(\0132\033.api.commons.ScenarioResultR\023lastEx" +
-      "ecutionResult\022\022\n\004name\030\006 \001(\tR\004nameJ\004\010\002\020\003\"" +
-      "\247\001\n\021CreateScenarioReq\022<\n\014should_allow\030\002 " +
-      "\001(\0132\031.api.commons.ScenarioDataR\013shouldAl" +
-      "low\022:\n\013should_deny\030\003 \001(\0132\031.api.commons.S" +
-      "cenarioDataR\nshouldDeny\022\022\n\004name\030\004 \001(\tR\004n" +
-      "ameJ\004\010\001\020\002\"F\n\021CreateScenarioRes\0221\n\010scenar" +
-      "io\030\001 \001(\0132\025.api.v0alpha.ScenarioR\010scenari" +
-      "o\"8\n\016GetScenarioReq\022&\n\017cpl_scenario_id\030\001" +
-      " \001(\003R\rcplScenarioId\"C\n\016GetScenarioRes\0221\n" +
-      "\010scenario\030\001 \001(\0132\025.api.v0alpha.ScenarioR\010" +
-      "scenario\"F\n\021UpdateScenarioReq\0221\n\010scenari" +
+      "R\014entriesAdded\022+\n\017invalid_entries\030\005 \003(\tB" +
+      "\002\030\001R\016invalidEntries\022#\n\rtotal_invalid\030\006 \001" +
+      "(\003R\014totalInvalid\022E\n\014invalid_list\030\007 \003(\0132\"" +
+      ".api.commons.InvalidScrubListEntryR\013inva" +
+      "lidList\"-\n\022DeleteScrubListReq\022\027\n\007list_id" +
+      "\030\002 \001(\tR\006listId\"A\n\022SearchScrubListReq\022\027\n\007" +
+      "list_id\030\002 \001(\tR\006listId\022\022\n\004term\030\003 \001(\tR\004ter" +
+      "m\"\326\004\n\nScrubEntry\022\037\n\013country_sid\030\002 \001(\003R\nc" +
+      "ountrySid\022\027\n\007list_id\030\006 \001(\tR\006listId\022\033\n\tso" +
+      "urce_id\030\007 \001(\003R\010sourceId\022!\n\014source_field\030" +
+      "\010 \001(\tR\013sourceField\0222\n\005notes\030\n \001(\0132\034.goog" +
+      "le.protobuf.StringValueR\005notes\0226\n\007conten" +
+      "t\030\013 \001(\0132\034.google.protobuf.StringValueR\007c" +
+      "ontent\022C\n\017expiration_date\030\014 \001(\0132\032.google" +
+      ".protobuf.TimestampR\016expirationDate\0224\n\006r" +
+      "esult\030\r \001(\0132\034.google.protobuf.StringValu" +
+      "eR\006result\022,\n\004type\030\016 \001(\0162\030.api.commons.Co" +
+      "ntentTypeR\004type\022?\n\014country_code\030\017 \001(\0132\034." +
+      "google.protobuf.StringValueR\013countryCode" +
+      "\022:\n\ncreated_on\030\310\001 \001(\0132\032.google.protobuf." +
+      "TimestampR\tcreatedOn\022<\n\ncreated_by\030\311\001 \001(" +
+      "\0132\034.google.protobuf.StringValueR\tcreated" +
+      "By\"E\n\023RuleAutoCompleteReq\022\026\n\006phrase\030\001 \001(" +
+      "\tR\006phrase\022\026\n\006cursor\030\002 \001(\005R\006cursor\"/\n\023Rul" +
+      "eAutoCompleteRes\022\030\n\007options\030\001 \003(\tR\007optio" +
+      "ns\")\n\017CheckRuleSetReq\022\026\n\006phrase\030\001 \001(\tR\006p" +
+      "hrase\"V\n\017CheckRuleSetRes\022\'\n\005rules\030\001 \003(\0132" +
+      "\021.api.commons.RuleR\005rules\022\032\n\010warnings\030\002 " +
+      "\003(\tR\010warnings\"<\n\017ListRuleSetsReq\022)\n\020incl" +
+      "ude_disabled\030\002 \001(\010R\017includeDisabled\"\200\001\n\017" +
+      "ListRuleSetsRes\022\036\n\013rule_set_id\030\001 \001(\tR\tru" +
+      "leSetId\022\022\n\004name\030\002 \001(\tR\004name\022\035\n\nrule_coun" +
+      "t\030\004 \001(\003R\truleCount\022\032\n\010disabled\030\005 \001(\010R\010di" +
+      "sabled\"Q\n\rGetRuleSetReq\022\036\n\013rule_set_id\030\001" +
+      " \001(\tR\truleSetId\022 \n\014rule_set_sha\030\002 \001(\tR\nr" +
+      "uleSetSha\")\n\023GetRuleSetByNameReq\022\022\n\004name" +
+      "\030\003 \001(\tR\004name\"\177\n\020AssignRuleSetReq\0222\n\tcomm" +
+      "_type\030\001 \001(\0132\025.api.commons.CommTypeR\010comm" +
+      "Type\022\027\n\007comm_id\030\002 \001(\tR\006commId\022\036\n\013rule_se" +
+      "t_id\030\003 \001(\tR\truleSetId\"N\n\020AssignRuleSetRe" +
+      "s\022:\n\032cpl_rule_set_assignment_id\030\001 \001(\tR\026c" +
+      "plRuleSetAssignmentId\"F\n\020RenameRuleSetRe" +
+      "q\022\036\n\013rule_set_id\030\002 \001(\tR\truleSetId\022\022\n\004nam" +
+      "e\030\003 \001(\tR\004name\"\022\n\020RenameRuleSetRes\"\216\001\n\020Cr" +
+      "eateRuleSetReq\022\036\n\013rule_set_id\030\001 \001(\tR\trul" +
+      "eSetId\022\022\n\004name\030\004 \001(\tR\004name\022\035\n\nrules_text" +
+      "\030\006 \001(\tR\trulesText\022\'\n\005rules\030\007 \003(\0132\021.api.c" +
+      "ommons.RuleR\005rules\"T\n\020EnableRuleSetReq\022\036" +
+      "\n\013rule_set_id\030\002 \001(\tR\truleSetId\022 \n\014rule_s" +
+      "et_sha\030\003 \001(\tR\nruleSetSha\"U\n\021DisableRuleS" +
+      "etReq\022\036\n\013rule_set_id\030\002 \001(\tR\truleSetId\022 \n" +
+      "\014rule_set_sha\030\003 \001(\tR\nruleSetSha\"\022\n\020Enabl" +
+      "eRuleSetRes\"\023\n\021DisableRuleSetRes\"\023\n\021Eval" +
+      "uationResults\"\307\001\n\007RuleSet\022\036\n\013rule_set_id" +
+      "\030\001 \001(\tR\truleSetId\022\022\n\004name\030\004 \001(\tR\004name\022\022\n" +
+      "\004head\030\005 \001(\010R\004head\022\032\n\010disabled\030\006 \001(\010R\010dis" +
+      "abled\022\035\n\nrules_text\030\t \001(\tR\trulesText\022\020\n\003" +
+      "sha\030\n \001(\tR\003sha\022\'\n\005rules\030\024 \003(\0132\021.api.comm" +
+      "ons.RuleR\005rules\"\024\n\022GetDefaultRulesReq\"*\n" +
+      "\022GetDefaultRulesRes\022\024\n\005rules\030\001 \003(\tR\005rule" +
+      "s\"1\n\030GetScrubListUploadUrlReq\022\025\n\006org_id\030" +
+      "\001 \001(\tR\005orgId\"`\n\030GetScrubListUploadUrlRes" +
+      "\022\020\n\003url\030\001 \001(\tR\003url\022\032\n\010filename\030\002 \001(\tR\010fi" +
+      "lename\022\026\n\006bucket\030\003 \001(\tR\006bucket\"\343\001\n\031Proce" +
+      "ssScrubListUploadReq\022\032\n\010filename\030\002 \001(\tR\010" +
+      "filename\022\027\n\007list_id\030\004 \001(\tR\006listId\022;\n\014con" +
+      "tent_type\030\n \001(\0162\030.api.commons.ContentTyp" +
+      "eR\013contentType\0221\n\024notification_message\030\013" +
+      " \001(\tR\023notificationMessage\022!\n\014country_cod" +
+      "e\030\014 \001(\tR\013countryCode\"i\n\031ProcessScrubList" +
+      "UploadRes\022#\n\rentries_added\030\001 \001(\003R\014entrie" +
+      "sAdded\022\'\n\017invalid_entries\030\002 \003(\tR\016invalid" +
+      "Entries\"\211\001\n\037ProcessScrubListDeleteUpload" +
+      "Req\022\027\n\007list_id\030\n \001(\tR\006listId\022\032\n\010filename" +
+      "\030\013 \001(\tR\010filename\0221\n\024notification_message" +
+      "\030\014 \001(\tR\023notificationMessage\"!\n\037ProcessSc" +
+      "rubListDeleteUploadRes\"-\n\022ExportScrubLis" +
+      "tReq\022\027\n\007list_id\030\001 \001(\tR\006listId\"&\n\022ExportS" +
+      "crubListRes\022\020\n\003url\030\001 \001(\tR\003url\"\227\002\n\010Scenar" +
+      "io\022&\n\017cpl_scenario_id\030\001 \001(\003R\rcplScenario" +
+      "Id\022<\n\014should_allow\030\003 \001(\0132\031.api.commons.S" +
+      "cenarioDataR\013shouldAllow\022:\n\013should_deny\030" +
+      "\004 \001(\0132\031.api.commons.ScenarioDataR\nshould" +
+      "Deny\022O\n\025last_execution_result\030\005 \001(\0132\033.ap" +
+      "i.commons.ScenarioResultR\023lastExecutionR" +
+      "esult\022\022\n\004name\030\006 \001(\tR\004nameJ\004\010\002\020\003\"\247\001\n\021Crea" +
+      "teScenarioReq\022<\n\014should_allow\030\002 \001(\0132\031.ap" +
+      "i.commons.ScenarioDataR\013shouldAllow\022:\n\013s" +
+      "hould_deny\030\003 \001(\0132\031.api.commons.ScenarioD" +
+      "ataR\nshouldDeny\022\022\n\004name\030\004 \001(\tR\004nameJ\004\010\001\020" +
+      "\002\"F\n\021CreateScenarioRes\0221\n\010scenario\030\001 \001(\013" +
+      "2\025.api.v0alpha.ScenarioR\010scenario\"8\n\016Get" +
+      "ScenarioReq\022&\n\017cpl_scenario_id\030\001 \001(\003R\rcp" +
+      "lScenarioId\"C\n\016GetScenarioRes\0221\n\010scenari" +
       "o\030\001 \001(\0132\025.api.v0alpha.ScenarioR\010scenario" +
-      "\"F\n\021UpdateScenarioRes\0221\n\010scenario\030\001 \001(\0132" +
-      "\025.api.v0alpha.ScenarioR\010scenario\";\n\021Dele" +
-      "teScenarioReq\022&\n\017cpl_scenario_id\030\001 \001(\003R\r" +
-      "cplScenarioId\"\023\n\021DeleteScenarioRes\"@\n\027Ru" +
-      "nAssignedScenariosReq\022%\n\017cpl_rule_set_id" +
-      "\030\001 \001(\tR\014cplRuleSetId\"\244\001\n\027RunAssignedScen" +
-      "ariosRes\0225\n\007results\030\002 \003(\0132\033.api.commons." +
-      "ScenarioResultR\007results\022!\n\014passed_value\030" +
-      "\004 \001(\010R\013passedValue\022)\n\021cpl_rule_set_name\030" +
-      "\003 \001(\tR\016cplRuleSetNameJ\004\010\001\020\002\"\025\n\023ListAllSc" +
-      "enariosReq\"J\n\023ListAllScenariosRes\0223\n\tsce" +
-      "narios\030\001 \003(\0132\025.api.v0alpha.ScenarioR\tsce" +
-      "narios\"A\n\027ListAssignedRuleSetsReq\022&\n\017cpl" +
-      "_scenario_id\030\003 \001(\003R\rcplScenarioId\"L\n\027Lis" +
-      "tAssignedRuleSetsRes\0221\n\trule_sets\030\001 \003(\0132" +
-      "\024.api.v0alpha.RuleSetR\010ruleSets\"A\n\030ListA" +
-      "ssignedScenariosReq\022%\n\017cpl_rule_set_id\030\003" +
-      " \001(\tR\014cplRuleSetId\"\260\001\n\020AssignedScenario\022" +
-      "1\n\010scenario\030\001 \001(\0132\025.api.v0alpha.Scenario" +
-      "R\010scenario\022\030\n\007enabled\030\002 \001(\010R\007enabled\022O\n\025" +
-      "last_execution_result\030\003 \001(\0132\033.api.common" +
-      "s.ScenarioResultR\023lastExecutionResult\"h\n" +
-      "\030ListAssignedScenariosRes\022L\n\022assigned_sc" +
-      "enarios\030\001 \003(\0132\035.api.v0alpha.AssignedScen" +
-      "arioR\021assignedScenarios\"C\n\032ListUnassigne" +
-      "dScenariosReq\022%\n\017cpl_rule_set_id\030\003 \001(\tR\014" +
-      "cplRuleSetId\"Q\n\032ListUnassignedScenariosR" +
-      "es\0223\n\tscenarios\030\001 \003(\0132\025.api.v0alpha.Scen" +
-      "arioR\tscenarios\"b\n\021AssignScenarioReq\022%\n\017" +
-      "cpl_rule_set_id\030\003 \001(\tR\014cplRuleSetId\022&\n\017c" +
-      "pl_scenario_id\030\004 \001(\003R\rcplScenarioId\"d\n\023U" +
-      "nassignScenarioReq\022%\n\017cpl_rule_set_id\030\003 " +
-      "\001(\tR\014cplRuleSetId\022&\n\017cpl_scenario_id\030\004 \001" +
-      "(\003R\rcplScenarioId\"b\n\021EnableScenarioReq\022%" +
-      "\n\017cpl_rule_set_id\030\003 \001(\tR\014cplRuleSetId\022&\n" +
-      "\017cpl_scenario_id\030\004 \001(\003R\rcplScenarioId\"c\n" +
-      "\022DisableScenarioReq\022%\n\017cpl_rule_set_id\030\003" +
-      " \001(\tR\014cplRuleSetId\022&\n\017cpl_scenario_id\030\004 " +
-      "\001(\003R\rcplScenarioId\"\332\001\n\027CreateConsentProf" +
-      "ileReq\022,\n\022consent_profile_id\030\001 \001(\tR\020cons" +
-      "entProfileId\022!\n\014profile_name\030\n \001(\tR\013prof" +
-      "ileName\022\032\n\010disabled\030\013 \001(\010R\010disabled\0223\n\007c" +
-      "hannel\030\014 \001(\0132\025.api.commons.CommTypeB\002\030\001R" +
-      "\007channel\022\035\n\ncreated_by\0302 \001(\tR\tcreatedBy\"" +
-      "G\n\027CreateConsentProfileRes\022,\n\022consent_pr" +
-      "ofile_id\030\001 \001(\tR\020consentProfileId\".\n\rGetC" +
-      "onsentReq\022\035\n\nconsent_id\030\001 \001(\003R\tconsentId" +
-      "\"\262\007\n\020CreateConsentReq\022,\n\022consent_profile" +
-      "_id\030\002 \001(\tR\020consentProfileId\022\030\n\007content\030\n" +
-      " \001(\tR\007content\0226\n\010recorded\030\013 \001(\0132\032.google" +
-      ".protobuf.TimestampR\010recorded\0222\n\006expire\030" +
-      "\014 \001(\0132\032.google.protobuf.TimestampR\006expir" +
-      "e\022#\n\rreferring_url\030\r \001(\tR\014referringUrl\0223" +
-      "\n\007channel\030\017 \001(\0132\025.api.commons.CommTypeB\002" +
-      "\030\001R\007channel\022\024\n\005topic\030\020 \001(\tR\005topic\022%\n\016rev" +
-      "oked_reason\030\021 \001(\tR\rrevokedReason\022%\n\016gran" +
-      "ted_reason\030\022 \001(\tR\rgrantedReason\022\024\n\005proof" +
-      "\030\023 \001(\tR\005proof\022U\n\032condition_days_of_the_w" +
-      "eek\030\024 \003(\0162\031.api.commons.Weekday.EnumR\026co" +
-      "nditionDaysOfTheWeek\022:\n\032condition_time_o" +
-      "f_day_from\030\025 \001(\tR\026conditionTimeOfDayFrom" +
-      "\0226\n\030condition_time_of_day_to\030\026 \001(\tR\024cond" +
-      "itionTimeOfDayTo\022A\n\016condition_from\030\027 \001(\013" +
-      "2\032.google.protobuf.TimestampR\rconditionF" +
-      "rom\022=\n\014condition_to\030\030 \001(\0132\032.google.proto" +
-      "buf.TimestampR\013conditionTo\022\024\n\005notes\030\031 \001(" +
-      "\tR\005notes\022=\n\nconditions\030\032 \003(\0132\035.api.commo" +
-      "ns.ConsentConditionR\nconditions\022;\n\014conte" +
-      "nt_type\030\033 \001(\0162\030.api.commons.ContentTypeR" +
-      "\013contentType\0227\n\014channel_type\030\034 \001(\0162\024.api" +
-      ".commons.ChannelR\013channelType\"1\n\020CreateC" +
-      "onsentRes\022\035\n\nconsent_id\030\001 \001(\003R\tconsentId" +
-      "\"\276\002\n\016ConsentProfile\022,\n\022consent_profile_i" +
-      "d\030\001 \001(\tR\020consentProfileId\022!\n\014profile_nam" +
-      "e\030\n \001(\tR\013profileName\022\032\n\010disabled\030\013 \001(\010R\010" +
-      "disabled\0220\n\010consents\030\014 \003(\0132\024.api.v0alpha" +
-      ".ConsentR\010consents\0223\n\007channel\030\r \001(\0132\025.ap" +
-      "i.commons.CommTypeB\002\030\001R\007channel\0229\n\ncreat" +
-      "ed_on\0302 \001(\0132\032.google.protobuf.TimestampR" +
-      "\tcreatedOn\022\035\n\ncreated_by\0303 \001(\tR\tcreatedB" +
-      "y\"\347\010\n\007Consent\022\035\n\nconsent_id\030\001 \001(\003R\tconse" +
-      "ntId\022,\n\022consent_profile_id\030\002 \001(\tR\020consen" +
-      "tProfileId\022\030\n\007deleted\030\004 \001(\010R\007deleted\0229\n\n" +
-      "deleted_on\030\005 \001(\0132\032.google.protobuf.Times" +
-      "tampR\tdeletedOn\022\030\n\007content\030\n \001(\tR\007conten" +
-      "t\0226\n\010recorded\030\013 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\010recorded\0224\n\007revoked\030\014 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\007revoked\0222\n\006expir" +
-      "e\030\r \001(\0132\032.google.protobuf.TimestampR\006exp" +
-      "ire\022#\n\rreferring_url\030\016 \001(\tR\014referringUrl" +
-      "\0223\n\007channel\030\017 \001(\0132\025.api.commons.CommType" +
-      "B\002\030\001R\007channel\022\024\n\005topic\030\020 \001(\tR\005topic\022%\n\016r" +
-      "evoked_reason\030\021 \001(\tR\rrevokedReason\022%\n\016gr" +
-      "anted_reason\030\022 \001(\tR\rgrantedReason\022\024\n\005pro" +
-      "of\030\023 \001(\tR\005proof\022Y\n\032condition_days_of_the" +
-      "_week\030\024 \003(\0162\031.api.commons.Weekday.EnumB\002" +
-      "\030\001R\026conditionDaysOfTheWeek\022>\n\032condition_" +
-      "time_of_day_from\030\025 \001(\tB\002\030\001R\026conditionTim" +
-      "eOfDayFrom\022:\n\030condition_time_of_day_to\030\026" +
-      " \001(\tB\002\030\001R\024conditionTimeOfDayTo\022E\n\016condit" +
-      "ion_from\030\027 \001(\0132\032.google.protobuf.Timesta" +
-      "mpB\002\030\001R\rconditionFrom\022A\n\014condition_to\030\030 " +
-      "\001(\0132\032.google.protobuf.TimestampB\002\030\001R\013con" +
-      "ditionTo\022\024\n\005notes\030\031 \001(\tR\005notes\022=\n\ncondit" +
-      "ions\030\032 \003(\0132\035.api.commons.ConsentConditio" +
-      "nR\nconditions\022;\n\014content_type\030\033 \001(\0162\030.ap" +
-      "i.commons.ContentTypeR\013contentType\0227\n\014ch" +
-      "annel_type\030\034 \001(\0162\024.api.commons.ChannelR\013" +
-      "channelType\"D\n\024GetConsentProfileReq\022,\n\022c" +
-      "onsent_profile_id\030\001 \001(\tR\020consentProfileI" +
-      "d\"\207\010\n\020UpdateConsentReq\022\035\n\nconsent_id\030\001 \001" +
-      "(\003R\tconsentId\022,\n\022consent_profile_id\030\003 \001(" +
+      "\"F\n\021UpdateScenarioReq\0221\n\010scenario\030\001 \001(\0132" +
+      "\025.api.v0alpha.ScenarioR\010scenario\"F\n\021Upda" +
+      "teScenarioRes\0221\n\010scenario\030\001 \001(\0132\025.api.v0" +
+      "alpha.ScenarioR\010scenario\";\n\021DeleteScenar" +
+      "ioReq\022&\n\017cpl_scenario_id\030\001 \001(\003R\rcplScena" +
+      "rioId\"\023\n\021DeleteScenarioRes\"@\n\027RunAssigne" +
+      "dScenariosReq\022%\n\017cpl_rule_set_id\030\001 \001(\tR\014" +
+      "cplRuleSetId\"\244\001\n\027RunAssignedScenariosRes" +
+      "\0225\n\007results\030\002 \003(\0132\033.api.commons.Scenario" +
+      "ResultR\007results\022!\n\014passed_value\030\004 \001(\010R\013p" +
+      "assedValue\022)\n\021cpl_rule_set_name\030\003 \001(\tR\016c" +
+      "plRuleSetNameJ\004\010\001\020\002\"\025\n\023ListAllScenariosR" +
+      "eq\"J\n\023ListAllScenariosRes\0223\n\tscenarios\030\001" +
+      " \003(\0132\025.api.v0alpha.ScenarioR\tscenarios\"A" +
+      "\n\027ListAssignedRuleSetsReq\022&\n\017cpl_scenari" +
+      "o_id\030\003 \001(\003R\rcplScenarioId\"L\n\027ListAssigne" +
+      "dRuleSetsRes\0221\n\trule_sets\030\001 \003(\0132\024.api.v0" +
+      "alpha.RuleSetR\010ruleSets\"A\n\030ListAssignedS" +
+      "cenariosReq\022%\n\017cpl_rule_set_id\030\003 \001(\tR\014cp" +
+      "lRuleSetId\"\260\001\n\020AssignedScenario\0221\n\010scena" +
+      "rio\030\001 \001(\0132\025.api.v0alpha.ScenarioR\010scenar" +
+      "io\022\030\n\007enabled\030\002 \001(\010R\007enabled\022O\n\025last_exe" +
+      "cution_result\030\003 \001(\0132\033.api.commons.Scenar" +
+      "ioResultR\023lastExecutionResult\"h\n\030ListAss" +
+      "ignedScenariosRes\022L\n\022assigned_scenarios\030" +
+      "\001 \003(\0132\035.api.v0alpha.AssignedScenarioR\021as" +
+      "signedScenarios\"C\n\032ListUnassignedScenari" +
+      "osReq\022%\n\017cpl_rule_set_id\030\003 \001(\tR\014cplRuleS" +
+      "etId\"Q\n\032ListUnassignedScenariosRes\0223\n\tsc" +
+      "enarios\030\001 \003(\0132\025.api.v0alpha.ScenarioR\tsc" +
+      "enarios\"b\n\021AssignScenarioReq\022%\n\017cpl_rule" +
+      "_set_id\030\003 \001(\tR\014cplRuleSetId\022&\n\017cpl_scena" +
+      "rio_id\030\004 \001(\003R\rcplScenarioId\"d\n\023UnassignS" +
+      "cenarioReq\022%\n\017cpl_rule_set_id\030\003 \001(\tR\014cpl" +
+      "RuleSetId\022&\n\017cpl_scenario_id\030\004 \001(\003R\rcplS" +
+      "cenarioId\"b\n\021EnableScenarioReq\022%\n\017cpl_ru" +
+      "le_set_id\030\003 \001(\tR\014cplRuleSetId\022&\n\017cpl_sce" +
+      "nario_id\030\004 \001(\003R\rcplScenarioId\"c\n\022Disable" +
+      "ScenarioReq\022%\n\017cpl_rule_set_id\030\003 \001(\tR\014cp" +
+      "lRuleSetId\022&\n\017cpl_scenario_id\030\004 \001(\003R\rcpl" +
+      "ScenarioId\"\332\001\n\027CreateConsentProfileReq\022," +
+      "\n\022consent_profile_id\030\001 \001(\tR\020consentProfi" +
+      "leId\022!\n\014profile_name\030\n \001(\tR\013profileName\022" +
+      "\032\n\010disabled\030\013 \001(\010R\010disabled\0223\n\007channel\030\014" +
+      " \001(\0132\025.api.commons.CommTypeB\002\030\001R\007channel" +
+      "\022\035\n\ncreated_by\0302 \001(\tR\tcreatedBy\"G\n\027Creat" +
+      "eConsentProfileRes\022,\n\022consent_profile_id" +
+      "\030\001 \001(\tR\020consentProfileId\".\n\rGetConsentRe" +
+      "q\022\035\n\nconsent_id\030\001 \001(\003R\tconsentId\"\262\007\n\020Cre" +
+      "ateConsentReq\022,\n\022consent_profile_id\030\002 \001(" +
       "\tR\020consentProfileId\022\030\n\007content\030\n \001(\tR\007co" +
       "ntent\0226\n\010recorded\030\013 \001(\0132\032.google.protobu" +
-      "f.TimestampR\010recorded\0224\n\007revoked\030\014 \001(\0132\032" +
-      ".google.protobuf.TimestampR\007revoked\0222\n\006e" +
-      "xpire\030\r \001(\0132\032.google.protobuf.TimestampR" +
-      "\006expire\022#\n\rreferring_url\030\016 \001(\tR\014referrin" +
-      "gUrl\0223\n\007channel\030\017 \001(\0132\025.api.commons.Comm" +
-      "TypeB\002\030\001R\007channel\022\024\n\005topic\030\020 \001(\tR\005topic\022" +
-      "%\n\016revoked_reason\030\021 \001(\tR\rrevokedReason\022%" +
-      "\n\016granted_reason\030\022 \001(\tR\rgrantedReason\022\024\n" +
-      "\005proof\030\023 \001(\tR\005proof\022U\n\032condition_days_of" +
-      "_the_week\030\024 \003(\0162\031.api.commons.Weekday.En" +
-      "umR\026conditionDaysOfTheWeek\022:\n\032condition_" +
-      "time_of_day_from\030\025 \001(\tR\026conditionTimeOfD" +
-      "ayFrom\0226\n\030condition_time_of_day_to\030\026 \001(\t" +
-      "R\024conditionTimeOfDayTo\022A\n\016condition_from" +
-      "\030\027 \001(\0132\032.google.protobuf.TimestampR\rcond" +
-      "itionFrom\022=\n\014condition_to\030\030 \001(\0132\032.google" +
-      ".protobuf.TimestampR\013conditionTo\022\024\n\005note" +
-      "s\030\031 \001(\tR\005notes\022=\n\nconditions\030\032 \003(\0132\035.api" +
-      ".commons.ConsentConditionR\nconditions\022;\n" +
-      "\014content_type\030\033 \001(\0162\030.api.commons.Conten" +
-      "tTypeR\013contentType\0227\n\014channel_type\030\034 \001(\016" +
-      "2\024.api.commons.ChannelR\013channelType\"e\n\020E" +
-      "xpireConsentReq\022\035\n\nconsent_id\030\001 \001(\003R\tcon" +
-      "sentId\0222\n\006expire\030\003 \001(\0132\032.google.protobuf" +
-      ".TimestampR\006expire\"\314\002\n\020RevokeConsentReq\022" +
-      "\035\n\nconsent_id\030\001 \001(\003R\tconsentId\0224\n\007revoke" +
-      "d\030\003 \001(\0132\032.google.protobuf.TimestampR\007rev" +
-      "oked\022,\n\022consent_profile_id\030\004 \001(\tR\020consen" +
-      "tProfileId\022\030\n\007content\030\005 \001(\tR\007content\0227\n\014" +
-      "channel_type\030\006 \001(\0162\024.api.commons.Channel" +
-      "R\013channelType\022%\n\016revoked_reason\030\007 \001(\tR\rr" +
-      "evokedReason\022;\n\014content_type\030\010 \001(\0162\030.api" +
-      ".commons.ContentTypeR\013contentType\"G\n\027Ena" +
-      "bleConsentProfileReq\022,\n\022consent_profile_" +
-      "id\030\001 \001(\tR\020consentProfileId\"H\n\030DisableCon" +
-      "sentProfileReq\022,\n\022consent_profile_id\030\001 \001" +
-      "(\tR\020consentProfileId\"\030\n\026ListConsentProfi" +
-      "lesReq\"\314\001\n\022ListConsentProfile\022,\n\022consent" +
-      "_profile_id\030\001 \001(\tR\020consentProfileId\022!\n\014p" +
-      "rofile_name\030\002 \001(\tR\013profileName\022\024\n\005count\030" +
-      "\003 \001(\003R\005count\022\032\n\010disabled\030\004 \001(\010R\010disabled" +
-      "\0223\n\007channel\030\005 \001(\0132\025.api.commons.CommType" +
-      "B\002\030\001R\007channel\"d\n\026ListConsentProfilesRes\022" +
-      "J\n\020consent_profiles\030\001 \003(\0132\037.api.v0alpha." +
-      "ListConsentProfileR\017consentProfiles\"\030\n\026G" +
-      "etConsentUploadUrlReq\"^\n\026GetConsentUploa" +
-      "dUrlRes\022\020\n\003url\030\001 \001(\tR\003url\022\032\n\010filename\030\002 " +
-      "\001(\tR\010filename\022\026\n\006bucket\030\003 \001(\tR\006bucket\"1\n" +
-      "\020DeleteConsentReq\022\035\n\nconsent_id\030\001 \001(\003R\tc" +
-      "onsentId\"|\n\027ProcessConsentUploadReq\022\032\n\010f" +
-      "ilename\030\002 \001(\tR\010filename\022,\n\022consent_profi" +
-      "le_id\030\003 \001(\tR\020consentProfileId\022\027\n\007user_id" +
-      "\030\004 \001(\tR\006userId\">\n\027ProcessConsentUploadRe" +
-      "s\022#\n\rentries_added\030\001 \001(\003R\014entriesAdded\"1" +
-      "\n\020GetFieldNamesReq\022\035\n\nphone_only\030\002 \001(\010R\t" +
-      "phoneOnly\"\"\n\nFieldNames\022\024\n\005names\030\001 \003(\tR\005" +
-      "names\"\032\n\030GetResultDescriptionsReq\",\n\021Pur" +
-      "geScrubListReq\022\027\n\007list_id\030\001 \001(\tR\006listId\"" +
-      "8\n\021PurgeScrubListRes\022#\n\rentries_found\030\001 " +
-      "\001(\003R\014entriesFound\"\007\n\005Empty\"U\n\014ConsentTop" +
-      "ic\022\024\n\005topic\030\001 \001(\tR\005topic\022\025\n\006org_id\030\002 \001(\t" +
-      "R\005orgId\022\030\n\007deleted\030\003 \001(\010R\007deleted\"\026\n\024Lis" +
-      "tConsentTopicsReq\"I\n\024ListConsentTopicsRe" +
-      "s\0221\n\006topics\030\001 \003(\0132\031.api.v0alpha.ConsentT" +
-      "opicR\006topics\"*\n\022GetConsentTopicReq\022\024\n\005to" +
-      "pic\030\001 \001(\tR\005topic\"[\n\025UpdateConsentTopicRe" +
-      "q\022%\n\016original_topic\030\001 \001(\tR\roriginalTopic" +
-      "\022\033\n\tnew_topic\030\003 \001(\tR\010newTopic\"c\n\031SearchC" +
-      "onsentByContentReq\022\030\n\007content\030\002 \001(\tR\007con" +
-      "tent\022,\n\022consent_profile_id\030\003 \001(\tR\020consen" +
-      "tProfileId\"\215\007\n\020ConsentByContent\022\025\n\006org_i" +
-      "d\030\001 \001(\tR\005orgId\022\035\n\nprofile_id\030\002 \001(\tR\tprof" +
-      "ileId\022!\n\014profile_name\030\003 \001(\tR\013profileName" +
-      "\022\035\n\nconsent_id\030\004 \001(\003R\tconsentId\022\030\n\007conte" +
-      "nt\030\005 \001(\tR\007content\0224\n\007revoked\030\n \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\007revoked\0222\n\006expir" +
-      "e\030\013 \001(\0132\032.google.protobuf.TimestampR\006exp" +
-      "ire\022\032\n\010disabled\030\014 \001(\010R\010disabled\0223\n\007chann" +
-      "el\030\r \001(\0132\025.api.commons.CommTypeB\002\030\001R\007cha" +
-      "nnel\022\024\n\005topic\030\016 \001(\tR\005topic\022U\n\032condition_" +
-      "days_of_the_week\030\017 \003(\0162\031.api.commons.Wee" +
-      "kday.EnumR\026conditionDaysOfTheWeek\022:\n\032con" +
-      "dition_time_of_day_from\030\020 \001(\tR\026condition" +
-      "TimeOfDayFrom\0226\n\030condition_time_of_day_t" +
-      "o\030\021 \001(\tR\024conditionTimeOfDayTo\022A\n\016conditi" +
-      "on_from\030\022 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\rconditionFrom\022=\n\014condition_to\030\023 \001(\0132\032" +
-      ".google.protobuf.TimestampR\013conditionTo\022" +
-      "\024\n\005notes\030\024 \001(\tR\005notes\022;\n\014content_type\030\025 " +
-      "\001(\0162\030.api.commons.ContentTypeR\013contentTy" +
-      "pe\022=\n\nconditions\030\026 \003(\0132\035.api.commons.Con" +
-      "sentConditionR\nconditions\0227\n\014channel_typ" +
-      "e\030\027 \001(\0162\024.api.commons.ChannelR\013channelTy" +
-      "pe\"V\n\031SearchConsentByContentRes\0229\n\010conse" +
-      "nts\030\001 \003(\0132\035.api.v0alpha.ConsentByContent" +
-      "R\010consents\"\364\001\n GetConsentByProfileAndCon" +
-      "tentReq\022!\n\014profile_name\030\002 \001(\tR\013profileNa" +
-      "me\022\030\n\007content\030\003 \001(\tR\007content\022\035\n\nprofile_" +
-      "id\030\004 \001(\tR\tprofileId\022;\n\014content_type\030\005 \001(" +
-      "\0162\030.api.commons.ContentTypeR\013contentType" +
-      "\0227\n\014channel_type\030\006 \001(\0162\024.api.commons.Cha" +
-      "nnelR\013channelType\"\347\007\n GetConsentByProfil" +
-      "eAndContentRes\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\035\n" +
-      "\nprofile_id\030\002 \001(\tR\tprofileId\022!\n\014profile_" +
-      "name\030\003 \001(\tR\013profileName\022\035\n\nconsent_id\030\004 " +
-      "\001(\003R\tconsentId\0224\n\007revoked\030\n \001(\0132\032.google" +
-      ".protobuf.TimestampR\007revoked\0222\n\006expire\030\013" +
-      " \001(\0132\032.google.protobuf.TimestampR\006expire" +
-      "\022\032\n\010disabled\030\014 \001(\010R\010disabled\0223\n\007channel\030" +
-      "\r \001(\0132\025.api.commons.CommTypeB\002\030\001R\007channe" +
-      "l\022\024\n\005topic\030\016 \001(\tR\005topic\022U\n\032condition_day" +
-      "s_of_the_week\030\017 \003(\0162\031.api.commons.Weekda" +
-      "y.EnumR\026conditionDaysOfTheWeek\022:\n\032condit" +
-      "ion_time_of_day_from\030\020 \001(\tR\026conditionTim" +
-      "eOfDayFrom\0226\n\030condition_time_of_day_to\030\021" +
-      " \001(\tR\024conditionTimeOfDayTo\022A\n\016condition_" +
-      "from\030\022 \001(\0132\032.google.protobuf.TimestampR\r" +
-      "conditionFrom\022=\n\014condition_to\030\023 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\013conditionTo\022\024\n\005" +
-      "notes\030\024 \001(\tR\005notes\022;\n\014content_type\030\025 \001(\016" +
-      "2\030.api.commons.ContentTypeR\013contentType\022" +
-      "=\n\nconditions\030\026 \003(\0132\035.api.commons.Consen" +
-      "tConditionR\nconditions\0227\n\014channel_type\030\027" +
-      " \001(\0162\024.api.commons.ChannelR\013channelType\022" +
-      "%\n\016revoked_reason\030\030 \001(\tR\rrevokedReason\022%" +
-      "\n\016granted_reason\030\031 \001(\tR\rgrantedReason\022\024\n" +
-      "\005proof\030\032 \001(\tR\005proof\"\255\001\n\026GetConsentByCont" +
-      "entReq\022!\n\014profile_name\030\002 \001(\tR\013profileNam" +
-      "e\022\030\n\007content\030\003 \001(\tR\007content\022\035\n\nprofile_i" +
-      "d\030\004 \001(\tR\tprofileId\0227\n\014channel_type\030\005 \001(\016" +
-      "2\024.api.commons.ChannelR\013channelType\"\236\001\n\026" +
-      "GetConsentByContentRes\022\025\n\006org_id\030\001 \001(\tR\005" +
-      "orgId\022!\n\014profile_name\030\002 \001(\tR\013profileName" +
-      "\022.\n\007consent\030\003 \001(\0132\024.api.v0alpha.ConsentR",
-      "\007consent\022\032\n\010disabled\030\004 \001(\010R\010disabled\"\240\001\n" +
-      "!ProcessConsentListDeleteUploadReq\022,\n\022co" +
-      "nsent_profile_id\030\n \001(\tR\020consentProfileId" +
-      "\022\032\n\010filename\030\013 \001(\tR\010filename\0221\n\024notifica" +
-      "tion_message\030\014 \001(\tR\023notificationMessage\"" +
-      "#\n!ProcessConsentListDeleteUploadRes\"c\n\"" +
-      "ProcessConsentListDeleteUploadMeta\022=\n\014ti" +
-      "me_started\030\001 \001(\0132\032.google.protobuf.Times" +
-      "tampR\013timeStarted\"E\n\025QueryHolidaysRespon" +
-      "se\022,\n\004rows\030\001 \003(\0132\030.api.v0alpha.HolidayDa" +
-      "taR\004rows\"\364\001\n\013HolidayData\022\022\n\004date\030\001 \001(\tR\004" +
-      "date\022\022\n\004name\030\002 \001(\tR\004name\022\022\n\004year\030\003 \001(\tR\004" +
-      "year\022\024\n\005month\030\004 \001(\tR\005month\022\020\n\003day\030\005 \001(\tR" +
-      "\003day\022\030\n\007weekday\030\006 \001(\tR\007weekday\022\024\n\005types\030" +
-      "\007 \003(\tR\005types\022\037\n\013is_observed\030\010 \001(\tR\nisObs" +
-      "erved\022\030\n\007country\030\t \001(\tR\007country\022\026\n\006state" +
-      "s\030\013 \003(\tR\006states\"\371\001\n\024QueryHolidaysRequest" +
-      "\022\022\n\004date\030\001 \001(\tR\004date\022\022\n\004name\030\002 \001(\tR\004name" +
-      "\022\022\n\004year\030\003 \001(\tR\004year\022\024\n\005month\030\004 \001(\tR\005mon" +
-      "th\022\020\n\003day\030\005 \001(\tR\003day\022\030\n\007weekday\030\006 \001(\tR\007w" +
-      "eekday\022\022\n\004type\030\007 \001(\tR\004type\022\037\n\013is_observe" +
-      "d\030\010 \001(\tR\nisObserved\022\030\n\007country\030\t \001(\tR\007co" +
-      "untry\022\024\n\005state\030\013 \001(\tR\005state\"H\n\030ExportCon" +
-      "sentListRequest\022,\n\022consent_profile_id\030\001 " +
-      "\001(\tR\020consentProfileId\"-\n\031ExportConsentLi" +
-      "stResponse\022\020\n\003url\030\001 \001(\tR\003url\"3\n\030ScrubLis" +
-      "tDownloadRequest\022\027\n\007list_id\030\004 \001(\tR\006listI" +
-      "d\"J\n\032ConsentListDownloadRequest\022,\n\022conse" +
-      "nt_profile_id\030\004 \001(\tR\020consentProfileId2\267M" +
-      "\n\nCompliance\022\225\001\n\020RuleAutoComplete\022 .api." +
-      "v0alpha.RuleAutoCompleteReq\032 .api.v0alph" +
-      "a.RuleAutoCompleteRes\"=\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002-\"" +
-      "(/api/v0alpha/compliance/ruleautocomplet" +
-      "e:\001*\022\205\001\n\014CheckRuleSet\022\034.api.v0alpha.Chec" +
-      "kRuleSetReq\032\034.api.v0alpha.CheckRuleSetRe" +
-      "s\"9\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002)\"$/api/v0alpha/compli" +
-      "ance/checkruleset:\001*\022\211\001\n\rAssignRuleSet\022\035" +
-      ".api.v0alpha.AssignRuleSetReq\032\035.api.v0al" +
-      "pha.AssignRuleSetRes\":\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002*\"%" +
-      "/api/v0alpha/compliance/assignruleset:\001*" +
-      "\022\207\001\n\014ListRuleSets\022\034.api.v0alpha.ListRule" +
-      "SetsReq\032\034.api.v0alpha.ListRuleSetsRes\"9\272" +
-      "\270\221\002\005\n\003\010\204\007\202\323\344\223\002)\"$/api/v0alpha/compliance" +
-      "/listrulesets:\001*0\001\022w\n\nGetRuleSet\022\032.api.v" +
-      "0alpha.GetRuleSetReq\032\024.api.v0alpha.RuleS" +
-      "et\"7\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002\'\"\"/api/v0alpha/compl" +
-      "iance/getruleset:\001*\022\211\001\n\020GetRuleSetByName" +
-      "\022 .api.v0alpha.GetRuleSetByNameReq\032\024.api" +
-      ".v0alpha.RuleSet\"=\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002-\"(/api" +
-      "/v0alpha/compliance/getrulesetbyname:\001*\022" +
-      "\200\001\n\rCreateRuleSet\022\035.api.v0alpha.CreateRu" +
-      "leSetReq\032\024.api.v0alpha.RuleSet\":\272\270\221\002\005\n\003\010" +
-      "\204\007\202\323\344\223\002*\"%/api/v0alpha/compliance/create" +
-      "ruleset:\001*\022\211\001\n\rRenameRuleSet\022\035.api.v0alp" +
-      "ha.RenameRuleSetReq\032\035.api.v0alpha.Rename" +
-      "RuleSetRes\":\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002*\"%/api/v0alp" +
-      "ha/compliance/renameruleset:\001*\022\211\001\n\rEnabl" +
-      "eRuleSet\022\035.api.v0alpha.EnableRuleSetReq\032" +
-      "\035.api.v0alpha.EnableRuleSetRes\":\272\270\221\002\005\n\003\010" +
-      "\204\007\202\323\344\223\002*\"%/api/v0alpha/compliance/enable" +
-      "ruleset:\001*\022\215\001\n\016DisableRuleSet\022\036.api.v0al" +
-      "pha.DisableRuleSetReq\032\036.api.v0alpha.Disa" +
-      "bleRuleSetRes\";\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002+\"&/api/v0" +
-      "alpha/compliance/disableruleset:\001*\022\213\001\n\017C" +
-      "reateScrubList\022\037.api.v0alpha.CreateScrub" +
-      "ListReq\032\031.api.v0alpha.ScrubListRes\"<\272\270\221\002" +
-      "\005\n\003\010\204\007\202\323\344\223\002,\"\'/api/v0alpha/compliance/cr" +
-      "eatescrublist:\001*\022\234\001\n\023AddScrubListEntries" +
-      "\022#.api.v0alpha.AddScrubListEntriesReq\032\031." +
-      "api.v0alpha.ScrubListRes\"E\272\270\221\002\n\n\003\010\204\007\n\003\010\312" +
-      "\002\202\323\344\223\0020\"+/api/v0alpha/compliance/addscru" +
-      "blistentries:\001*\022\225\001\n\020UpdateScrubEntry\022 .a" +
-      "pi.v0alpha.UpdateScrubEntryReq\032 .api.v0a" +
-      "lpha.UpdateScrubEntryRes\"=\272\270\221\002\005\n\003\010\204\007\202\323\344\223" +
-      "\002-\"(/api/v0alpha/compliance/updatescrube" +
-      "ntry:\001*\022\245\001\n\026DeleteScrubListEntries\022&.api" +
-      ".v0alpha.DeleteScrubListEntriesReq\032\031.api" +
-      ".v0alpha.ScrubListRes\"H\272\270\221\002\n\n\003\010\204\007\n\003\010\312\002\202\323" +
-      "\344\223\0023\"./api/v0alpha/compliance/deletescru" +
-      "blistentries:\001*\022\207\001\n\014GetScrubList\022\034.api.v" +
-      "0alpha.GetScrubListReq\032\031.api.v0alpha.Scr" +
-      "ubListRes\">\272\270\221\002\n\n\003\010\204\007\n\003\010\312\002\202\323\344\223\002)\"$/api/v" +
-      "0alpha/compliance/getScrublist:\001*\022\213\001\n\017De" +
-      "leteScrubList\022\037.api.v0alpha.DeleteScrubL" +
-      "istReq\032\031.api.v0alpha.ScrubListRes\"<\272\270\221\002\005" +
-      "\n\003\010\204\007\202\323\344\223\002,\"\'/api/v0alpha/compliance/del" +
-      "eteScrublist:\001*\022\216\001\n\017GetDefaultRules\022\037.ap" +
-      "i.v0alpha.GetDefaultRulesReq\032\037.api.v0alp" +
-      "ha.GetDefaultRulesRes\"9\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002)\022" +
-      "\'/api/v0alpha/compliance/getdefaultrules" +
-      "\022\206\001\n\rGetScrubLists\022\035.api.v0alpha.GetScru" +
-      "bListsReq\032\032.api.v0alpha.ScrubListsRes\":\272" +
-      "\270\221\002\005\n\003\010\204\007\202\323\344\223\002*\"%/api/v0alpha/compliance" +
-      "/getscrublists:\001*\022\215\001\n\017SearchScrubList\022\037." +
-      "api.v0alpha.SearchScrubListReq\032\026.api.v0a" +
-      "lpha.ScrubList\"A\272\270\221\002\n\n\003\010\204\007\n\003\010\312\002\202\323\344\223\002,\"\'/" +
-      "api/v0alpha/compliance/searchscrublist:\001" +
-      "*\022\251\001\n\025GetScrubListUploadUrl\022%.api.v0alph" +
-      "a.GetScrubListUploadUrlReq\032%.api.v0alpha" +
-      ".GetScrubListUploadUrlRes\"B\272\270\221\002\005\n\003\010\204\007\202\323\344" +
-      "\223\0022\"-/api/v0alpha/compliance/getscrublis" +
-      "tuploadurl:\001*\022\244\001\n\026ProcessScrubListUpload" +
-      "\022&.api.v0alpha.ProcessScrubListUploadReq" +
-      "\032\035.google.longrunning.Operation\"C\272\270\221\002\005\n\003" +
-      "\010\204\007\202\323\344\223\0023\"./api/v0alpha/compliance/proce" +
-      "ssscrublistupload:\001*\022\231\001\n\021ScrubListDownlo" +
-      "ad\022%.api.v0alpha.ScrubListDownloadReques" +
-      "t\032\035.google.longrunning.Operation\">\272\270\221\002\005\n" +
-      "\003\010\204\007\202\323\344\223\002.\")/api/v0alpha/compliance/scru" +
-      "blistdownload:\001*\022\266\001\n\034ProcessScrubListDel" +
-      "eteUpload\022,.api.v0alpha.ProcessScrubList" +
-      "DeleteUploadReq\032\035.google.longrunning.Ope" +
-      "ration\"I\272\270\221\002\005\n\003\010\204\007\202\323\344\223\0029\"4/api/v0alpha/c" +
-      "ompliance/processscrublistdeleteupload:\001" +
-      "*\022\221\001\n\017ExportScrubList\022\037.api.v0alpha.Expo" +
-      "rtScrubListReq\032\037.api.v0alpha.ExportScrub" +
-      "ListRes\"<\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002,\"\'/api/v0alpha/" +
-      "compliance/exportscrublist:\001*\022\215\001\n\016PurgeS" +
-      "crubList\022\036.api.v0alpha.PurgeScrubListReq" +
-      "\032\036.api.v0alpha.PurgeScrubListRes\";\272\270\221\002\005\n" +
-      "\003\010\204\007\202\323\344\223\002+\"&/api/v0alpha/compliance/purg" +
-      "escrublist:\001*\022\215\001\n\016CreateScenario\022\036.api.v" +
-      "0alpha.CreateScenarioReq\032\036.api.v0alpha.C" +
-      "reateScenarioRes\";\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002+\"&/api" +
-      "/v0alpha/compliance/createscenario:\001*\022~\n" +
-      "\013GetScenario\022\033.api.v0alpha.GetScenarioRe" +
-      "q\032\033.api.v0alpha.GetScenarioRes\"5\272\270\221\002\005\n\003\010" +
-      "\204\007\202\323\344\223\002%\022#/api/v0alpha/compliance/getsce" +
-      "nario\022\215\001\n\016UpdateScenario\022\036.api.v0alpha.U" +
-      "pdateScenarioReq\032\036.api.v0alpha.UpdateSce" +
+      "f.TimestampR\010recorded\0222\n\006expire\030\014 \001(\0132\032." +
+      "google.protobuf.TimestampR\006expire\022#\n\rref" +
+      "erring_url\030\r \001(\tR\014referringUrl\0223\n\007channe" +
+      "l\030\017 \001(\0132\025.api.commons.CommTypeB\002\030\001R\007chan" +
+      "nel\022\024\n\005topic\030\020 \001(\tR\005topic\022%\n\016revoked_rea" +
+      "son\030\021 \001(\tR\rrevokedReason\022%\n\016granted_reas" +
+      "on\030\022 \001(\tR\rgrantedReason\022\024\n\005proof\030\023 \001(\tR\005" +
+      "proof\022U\n\032condition_days_of_the_week\030\024 \003(" +
+      "\0162\031.api.commons.Weekday.EnumR\026conditionD" +
+      "aysOfTheWeek\022:\n\032condition_time_of_day_fr" +
+      "om\030\025 \001(\tR\026conditionTimeOfDayFrom\0226\n\030cond" +
+      "ition_time_of_day_to\030\026 \001(\tR\024conditionTim" +
+      "eOfDayTo\022A\n\016condition_from\030\027 \001(\0132\032.googl" +
+      "e.protobuf.TimestampR\rconditionFrom\022=\n\014c" +
+      "ondition_to\030\030 \001(\0132\032.google.protobuf.Time" +
+      "stampR\013conditionTo\022\024\n\005notes\030\031 \001(\tR\005notes" +
+      "\022=\n\nconditions\030\032 \003(\0132\035.api.commons.Conse" +
+      "ntConditionR\nconditions\022;\n\014content_type\030" +
+      "\033 \001(\0162\030.api.commons.ContentTypeR\013content" +
+      "Type\0227\n\014channel_type\030\034 \001(\0162\024.api.commons" +
+      ".ChannelR\013channelType\"1\n\020CreateConsentRe" +
+      "s\022\035\n\nconsent_id\030\001 \001(\003R\tconsentId\"\276\002\n\016Con" +
+      "sentProfile\022,\n\022consent_profile_id\030\001 \001(\tR" +
+      "\020consentProfileId\022!\n\014profile_name\030\n \001(\tR" +
+      "\013profileName\022\032\n\010disabled\030\013 \001(\010R\010disabled" +
+      "\0220\n\010consents\030\014 \003(\0132\024.api.v0alpha.Consent" +
+      "R\010consents\0223\n\007channel\030\r \001(\0132\025.api.common" +
+      "s.CommTypeB\002\030\001R\007channel\0229\n\ncreated_on\0302 " +
+      "\001(\0132\032.google.protobuf.TimestampR\tcreated" +
+      "On\022\035\n\ncreated_by\0303 \001(\tR\tcreatedBy\"\347\010\n\007Co" +
+      "nsent\022\035\n\nconsent_id\030\001 \001(\003R\tconsentId\022,\n\022" +
+      "consent_profile_id\030\002 \001(\tR\020consentProfile" +
+      "Id\022\030\n\007deleted\030\004 \001(\010R\007deleted\0229\n\ndeleted_" +
+      "on\030\005 \001(\0132\032.google.protobuf.TimestampR\tde" +
+      "letedOn\022\030\n\007content\030\n \001(\tR\007content\0226\n\010rec" +
+      "orded\030\013 \001(\0132\032.google.protobuf.TimestampR" +
+      "\010recorded\0224\n\007revoked\030\014 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\007revoked\0222\n\006expire\030\r \001(\0132" +
+      "\032.google.protobuf.TimestampR\006expire\022#\n\rr" +
+      "eferring_url\030\016 \001(\tR\014referringUrl\0223\n\007chan" +
+      "nel\030\017 \001(\0132\025.api.commons.CommTypeB\002\030\001R\007ch" +
+      "annel\022\024\n\005topic\030\020 \001(\tR\005topic\022%\n\016revoked_r" +
+      "eason\030\021 \001(\tR\rrevokedReason\022%\n\016granted_re" +
+      "ason\030\022 \001(\tR\rgrantedReason\022\024\n\005proof\030\023 \001(\t" +
+      "R\005proof\022Y\n\032condition_days_of_the_week\030\024 " +
+      "\003(\0162\031.api.commons.Weekday.EnumB\002\030\001R\026cond" +
+      "itionDaysOfTheWeek\022>\n\032condition_time_of_" +
+      "day_from\030\025 \001(\tB\002\030\001R\026conditionTimeOfDayFr" +
+      "om\022:\n\030condition_time_of_day_to\030\026 \001(\tB\002\030\001" +
+      "R\024conditionTimeOfDayTo\022E\n\016condition_from" +
+      "\030\027 \001(\0132\032.google.protobuf.TimestampB\002\030\001R\r" +
+      "conditionFrom\022A\n\014condition_to\030\030 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampB\002\030\001R\013conditionTo" +
+      "\022\024\n\005notes\030\031 \001(\tR\005notes\022=\n\nconditions\030\032 \003" +
+      "(\0132\035.api.commons.ConsentConditionR\ncondi" +
+      "tions\022;\n\014content_type\030\033 \001(\0162\030.api.common" +
+      "s.ContentTypeR\013contentType\0227\n\014channel_ty" +
+      "pe\030\034 \001(\0162\024.api.commons.ChannelR\013channelT" +
+      "ype\"D\n\024GetConsentProfileReq\022,\n\022consent_p" +
+      "rofile_id\030\001 \001(\tR\020consentProfileId\"\207\010\n\020Up" +
+      "dateConsentReq\022\035\n\nconsent_id\030\001 \001(\003R\tcons" +
+      "entId\022,\n\022consent_profile_id\030\003 \001(\tR\020conse" +
+      "ntProfileId\022\030\n\007content\030\n \001(\tR\007content\0226\n" +
+      "\010recorded\030\013 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\010recorded\0224\n\007revoked\030\014 \001(\0132\032.google." +
+      "protobuf.TimestampR\007revoked\0222\n\006expire\030\r " +
+      "\001(\0132\032.google.protobuf.TimestampR\006expire\022" +
+      "#\n\rreferring_url\030\016 \001(\tR\014referringUrl\0223\n\007" +
+      "channel\030\017 \001(\0132\025.api.commons.CommTypeB\002\030\001" +
+      "R\007channel\022\024\n\005topic\030\020 \001(\tR\005topic\022%\n\016revok" +
+      "ed_reason\030\021 \001(\tR\rrevokedReason\022%\n\016grante" +
+      "d_reason\030\022 \001(\tR\rgrantedReason\022\024\n\005proof\030\023" +
+      " \001(\tR\005proof\022U\n\032condition_days_of_the_wee" +
+      "k\030\024 \003(\0162\031.api.commons.Weekday.EnumR\026cond" +
+      "itionDaysOfTheWeek\022:\n\032condition_time_of_" +
+      "day_from\030\025 \001(\tR\026conditionTimeOfDayFrom\0226" +
+      "\n\030condition_time_of_day_to\030\026 \001(\tR\024condit" +
+      "ionTimeOfDayTo\022A\n\016condition_from\030\027 \001(\0132\032" +
+      ".google.protobuf.TimestampR\rconditionFro" +
+      "m\022=\n\014condition_to\030\030 \001(\0132\032.google.protobu" +
+      "f.TimestampR\013conditionTo\022\024\n\005notes\030\031 \001(\tR" +
+      "\005notes\022=\n\nconditions\030\032 \003(\0132\035.api.commons" +
+      ".ConsentConditionR\nconditions\022;\n\014content" +
+      "_type\030\033 \001(\0162\030.api.commons.ContentTypeR\013c" +
+      "ontentType\0227\n\014channel_type\030\034 \001(\0162\024.api.c" +
+      "ommons.ChannelR\013channelType\"e\n\020ExpireCon" +
+      "sentReq\022\035\n\nconsent_id\030\001 \001(\003R\tconsentId\0222" +
+      "\n\006expire\030\003 \001(\0132\032.google.protobuf.Timesta" +
+      "mpR\006expire\"\314\002\n\020RevokeConsentReq\022\035\n\nconse" +
+      "nt_id\030\001 \001(\003R\tconsentId\0224\n\007revoked\030\003 \001(\0132" +
+      "\032.google.protobuf.TimestampR\007revoked\022,\n\022" +
+      "consent_profile_id\030\004 \001(\tR\020consentProfile" +
+      "Id\022\030\n\007content\030\005 \001(\tR\007content\0227\n\014channel_" +
+      "type\030\006 \001(\0162\024.api.commons.ChannelR\013channe" +
+      "lType\022%\n\016revoked_reason\030\007 \001(\tR\rrevokedRe" +
+      "ason\022;\n\014content_type\030\010 \001(\0162\030.api.commons" +
+      ".ContentTypeR\013contentType\"G\n\027EnableConse" +
+      "ntProfileReq\022,\n\022consent_profile_id\030\001 \001(\t" +
+      "R\020consentProfileId\"H\n\030DisableConsentProf" +
+      "ileReq\022,\n\022consent_profile_id\030\001 \001(\tR\020cons" +
+      "entProfileId\"\030\n\026ListConsentProfilesReq\"\314" +
+      "\001\n\022ListConsentProfile\022,\n\022consent_profile" +
+      "_id\030\001 \001(\tR\020consentProfileId\022!\n\014profile_n" +
+      "ame\030\002 \001(\tR\013profileName\022\024\n\005count\030\003 \001(\003R\005c" +
+      "ount\022\032\n\010disabled\030\004 \001(\010R\010disabled\0223\n\007chan" +
+      "nel\030\005 \001(\0132\025.api.commons.CommTypeB\002\030\001R\007ch" +
+      "annel\"d\n\026ListConsentProfilesRes\022J\n\020conse" +
+      "nt_profiles\030\001 \003(\0132\037.api.v0alpha.ListCons" +
+      "entProfileR\017consentProfiles\"\030\n\026GetConsen" +
+      "tUploadUrlReq\"^\n\026GetConsentUploadUrlRes\022" +
+      "\020\n\003url\030\001 \001(\tR\003url\022\032\n\010filename\030\002 \001(\tR\010fil" +
+      "ename\022\026\n\006bucket\030\003 \001(\tR\006bucket\"1\n\020DeleteC" +
+      "onsentReq\022\035\n\nconsent_id\030\001 \001(\003R\tconsentId" +
+      "\"|\n\027ProcessConsentUploadReq\022\032\n\010filename\030" +
+      "\002 \001(\tR\010filename\022,\n\022consent_profile_id\030\003 " +
+      "\001(\tR\020consentProfileId\022\027\n\007user_id\030\004 \001(\tR\006" +
+      "userId\">\n\027ProcessConsentUploadRes\022#\n\rent" +
+      "ries_added\030\001 \001(\003R\014entriesAdded\"1\n\020GetFie" +
+      "ldNamesReq\022\035\n\nphone_only\030\002 \001(\010R\tphoneOnl" +
+      "y\"\"\n\nFieldNames\022\024\n\005names\030\001 \003(\tR\005names\"\032\n" +
+      "\030GetResultDescriptionsReq\",\n\021PurgeScrubL" +
+      "istReq\022\027\n\007list_id\030\001 \001(\tR\006listId\"8\n\021Purge" +
+      "ScrubListRes\022#\n\rentries_found\030\001 \001(\003R\014ent" +
+      "riesFound\"\007\n\005Empty\"U\n\014ConsentTopic\022\024\n\005to" +
+      "pic\030\001 \001(\tR\005topic\022\025\n\006org_id\030\002 \001(\tR\005orgId\022" +
+      "\030\n\007deleted\030\003 \001(\010R\007deleted\"\026\n\024ListConsent" +
+      "TopicsReq\"I\n\024ListConsentTopicsRes\0221\n\006top" +
+      "ics\030\001 \003(\0132\031.api.v0alpha.ConsentTopicR\006to" +
+      "pics\"*\n\022GetConsentTopicReq\022\024\n\005topic\030\001 \001(" +
+      "\tR\005topic\"[\n\025UpdateConsentTopicReq\022%\n\016ori" +
+      "ginal_topic\030\001 \001(\tR\roriginalTopic\022\033\n\tnew_" +
+      "topic\030\003 \001(\tR\010newTopic\"c\n\031SearchConsentBy" +
+      "ContentReq\022\030\n\007content\030\002 \001(\tR\007content\022,\n\022" +
+      "consent_profile_id\030\003 \001(\tR\020consentProfile" +
+      "Id\"\215\007\n\020ConsentByContent\022\025\n\006org_id\030\001 \001(\tR" +
+      "\005orgId\022\035\n\nprofile_id\030\002 \001(\tR\tprofileId\022!\n" +
+      "\014profile_name\030\003 \001(\tR\013profileName\022\035\n\ncons" +
+      "ent_id\030\004 \001(\003R\tconsentId\022\030\n\007content\030\005 \001(\t" +
+      "R\007content\0224\n\007revoked\030\n \001(\0132\032.google.prot" +
+      "obuf.TimestampR\007revoked\0222\n\006expire\030\013 \001(\0132" +
+      "\032.google.protobuf.TimestampR\006expire\022\032\n\010d" +
+      "isabled\030\014 \001(\010R\010disabled\0223\n\007channel\030\r \001(\013" +
+      "2\025.api.commons.CommTypeB\002\030\001R\007channel\022\024\n\005" +
+      "topic\030\016 \001(\tR\005topic\022U\n\032condition_days_of_" +
+      "the_week\030\017 \003(\0162\031.api.commons.Weekday.Enu" +
+      "mR\026conditionDaysOfTheWeek\022:\n\032condition_t" +
+      "ime_of_day_from\030\020 \001(\tR\026conditionTimeOfDa" +
+      "yFrom\0226\n\030condition_time_of_day_to\030\021 \001(\tR" +
+      "\024conditionTimeOfDayTo\022A\n\016condition_from\030" +
+      "\022 \001(\0132\032.google.protobuf.TimestampR\rcondi" +
+      "tionFrom\022=\n\014condition_to\030\023 \001(\0132\032.google." +
+      "protobuf.TimestampR\013conditionTo\022\024\n\005notes" +
+      "\030\024 \001(\tR\005notes\022;\n\014content_type\030\025 \001(\0162\030.ap" +
+      "i.commons.ContentTypeR\013contentType\022=\n\nco" +
+      "nditions\030\026 \003(\0132\035.api.commons.ConsentCond" +
+      "itionR\nconditions\0227\n\014channel_type\030\027 \001(\0162" +
+      "\024.api.commons.ChannelR\013channelType\"V\n\031Se" +
+      "archConsentByContentRes\0229\n\010consents\030\001 \003(" +
+      "\0132\035.api.v0alpha.ConsentByContentR\010consen" +
+      "ts\"\364\001\n GetConsentByProfileAndContentReq\022" +
+      "!\n\014profile_name\030\002 \001(\tR\013profileName\022\030\n\007co" +
+      "ntent\030\003 \001(\tR\007content\022\035\n\nprofile_id\030\004 \001(\t" +
+      "R\tprofileId\022;\n\014content_type\030\005 \001(\0162\030.api." +
+      "commons.ContentTypeR\013contentType\0227\n\014chan" +
+      "nel_type\030\006 \001(\0162\024.api.commons.ChannelR\013ch" +
+      "annelType\"\347\007\n GetConsentByProfileAndCont" +
+      "entRes\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\035\n\nprofile" +
+      "_id\030\002 \001(\tR\tprofileId\022!\n\014profile_name\030\003 \001" +
+      "(\tR\013profileName\022\035\n\nconsent_id\030\004 \001(\003R\tcon" +
+      "sentId\0224\n\007revoked\030\n \001(\0132\032.google.protobu" +
+      "f.TimestampR\007revoked\0222\n\006expire\030\013 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampR\006expire\022\032\n\010disa" +
+      "bled\030\014 \001(\010R\010disabled\0223\n\007channel\030\r \001(\0132\025." +
+      "api.commons.CommTypeB\002\030\001R\007channel\022\024\n\005top" +
+      "ic\030\016 \001(\tR\005topic\022U\n\032condition_days_of_the" +
+      "_week\030\017 \003(\0162\031.api.commons.Weekday.EnumR\026" +
+      "conditionDaysOfTheWeek\022:\n\032condition_time" +
+      "_of_day_from\030\020 \001(\tR\026conditionTimeOfDayFr" +
+      "om\0226\n\030condition_time_of_day_to\030\021 \001(\tR\024co" +
+      "nditionTimeOfDayTo\022A\n\016condition_from\030\022 \001" +
+      "(\0132\032.google.protobuf.TimestampR\rconditio" +
+      "nFrom\022=\n\014condition_to\030\023 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\013conditionTo\022\024\n\005notes\030\024 " +
+      "\001(\tR\005notes\022;\n\014content_type\030\025 \001(\0162\030.api.c" +
+      "ommons.ContentTypeR\013contentType\022=\n\ncondi" +
+      "tions\030\026 \003(\0132\035.api.commons.ConsentConditi" +
+      "onR\nconditions\0227\n\014channel_type\030\027 \001(\0162\024.a" +
+      "pi.commons.ChannelR\013channelType\022%\n\016revok" +
+      "ed_reason\030\030 \001(\tR\rrevokedReason\022%\n\016grante" +
+      "d_reason\030\031 \001(\tR\rgrantedReason\022\024\n\005proof\030\032" +
+      " \001(\tR\005proof\"\255\001\n\026GetConsentByContentReq\022!" +
+      "\n\014profile_name\030\002 \001(\tR\013profileName\022\030\n\007con" +
+      "tent\030\003 \001(\tR\007content\022\035\n\nprofile_id\030\004 \001(\tR" +
+      "\tprofileId\0227\n\014channel_type\030\005 \001(\0162\024.api.c" +
+      "ommons.ChannelR\013channelType\"\236\001\n\026GetConse",
+      "ntByContentRes\022\025\n\006org_id\030\001 \001(\tR\005orgId\022!\n" +
+      "\014profile_name\030\002 \001(\tR\013profileName\022.\n\007cons" +
+      "ent\030\003 \001(\0132\024.api.v0alpha.ConsentR\007consent" +
+      "\022\032\n\010disabled\030\004 \001(\010R\010disabled\"\240\001\n!Process" +
+      "ConsentListDeleteUploadReq\022,\n\022consent_pr" +
+      "ofile_id\030\n \001(\tR\020consentProfileId\022\032\n\010file" +
+      "name\030\013 \001(\tR\010filename\0221\n\024notification_mes" +
+      "sage\030\014 \001(\tR\023notificationMessage\"#\n!Proce" +
+      "ssConsentListDeleteUploadRes\"c\n\"ProcessC" +
+      "onsentListDeleteUploadMeta\022=\n\014time_start" +
+      "ed\030\001 \001(\0132\032.google.protobuf.TimestampR\013ti" +
+      "meStarted\"E\n\025QueryHolidaysResponse\022,\n\004ro" +
+      "ws\030\001 \003(\0132\030.api.v0alpha.HolidayDataR\004rows" +
+      "\"\364\001\n\013HolidayData\022\022\n\004date\030\001 \001(\tR\004date\022\022\n\004" +
+      "name\030\002 \001(\tR\004name\022\022\n\004year\030\003 \001(\tR\004year\022\024\n\005" +
+      "month\030\004 \001(\tR\005month\022\020\n\003day\030\005 \001(\tR\003day\022\030\n\007" +
+      "weekday\030\006 \001(\tR\007weekday\022\024\n\005types\030\007 \003(\tR\005t" +
+      "ypes\022\037\n\013is_observed\030\010 \001(\tR\nisObserved\022\030\n" +
+      "\007country\030\t \001(\tR\007country\022\026\n\006states\030\013 \003(\tR" +
+      "\006states\"\371\001\n\024QueryHolidaysRequest\022\022\n\004date" +
+      "\030\001 \001(\tR\004date\022\022\n\004name\030\002 \001(\tR\004name\022\022\n\004year" +
+      "\030\003 \001(\tR\004year\022\024\n\005month\030\004 \001(\tR\005month\022\020\n\003da" +
+      "y\030\005 \001(\tR\003day\022\030\n\007weekday\030\006 \001(\tR\007weekday\022\022" +
+      "\n\004type\030\007 \001(\tR\004type\022\037\n\013is_observed\030\010 \001(\tR" +
+      "\nisObserved\022\030\n\007country\030\t \001(\tR\007country\022\024\n" +
+      "\005state\030\013 \001(\tR\005state\"H\n\030ExportConsentList" +
+      "Request\022,\n\022consent_profile_id\030\001 \001(\tR\020con" +
+      "sentProfileId\"-\n\031ExportConsentListRespon" +
+      "se\022\020\n\003url\030\001 \001(\tR\003url\"3\n\030ScrubListDownloa" +
+      "dRequest\022\027\n\007list_id\030\004 \001(\tR\006listId\"J\n\032Con" +
+      "sentListDownloadRequest\022,\n\022consent_profi" +
+      "le_id\030\004 \001(\tR\020consentProfileId2\267M\n\nCompli" +
+      "ance\022\225\001\n\020RuleAutoComplete\022 .api.v0alpha." +
+      "RuleAutoCompleteReq\032 .api.v0alpha.RuleAu" +
+      "toCompleteRes\"=\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002-\"(/api/v0" +
+      "alpha/compliance/ruleautocomplete:\001*\022\205\001\n" +
+      "\014CheckRuleSet\022\034.api.v0alpha.CheckRuleSet" +
+      "Req\032\034.api.v0alpha.CheckRuleSetRes\"9\272\270\221\002\005" +
+      "\n\003\010\204\007\202\323\344\223\002)\"$/api/v0alpha/compliance/che" +
+      "ckruleset:\001*\022\211\001\n\rAssignRuleSet\022\035.api.v0a" +
+      "lpha.AssignRuleSetReq\032\035.api.v0alpha.Assi" +
+      "gnRuleSetRes\":\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002*\"%/api/v0a" +
+      "lpha/compliance/assignruleset:\001*\022\207\001\n\014Lis" +
+      "tRuleSets\022\034.api.v0alpha.ListRuleSetsReq\032" +
+      "\034.api.v0alpha.ListRuleSetsRes\"9\272\270\221\002\005\n\003\010\204" +
+      "\007\202\323\344\223\002)\"$/api/v0alpha/compliance/listrul" +
+      "esets:\001*0\001\022w\n\nGetRuleSet\022\032.api.v0alpha.G" +
+      "etRuleSetReq\032\024.api.v0alpha.RuleSet\"7\272\270\221\002" +
+      "\005\n\003\010\204\007\202\323\344\223\002\'\"\"/api/v0alpha/compliance/ge" +
+      "truleset:\001*\022\211\001\n\020GetRuleSetByName\022 .api.v" +
+      "0alpha.GetRuleSetByNameReq\032\024.api.v0alpha" +
+      ".RuleSet\"=\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002-\"(/api/v0alpha" +
+      "/compliance/getrulesetbyname:\001*\022\200\001\n\rCrea" +
+      "teRuleSet\022\035.api.v0alpha.CreateRuleSetReq" +
+      "\032\024.api.v0alpha.RuleSet\":\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002*" +
+      "\"%/api/v0alpha/compliance/createruleset:" +
+      "\001*\022\211\001\n\rRenameRuleSet\022\035.api.v0alpha.Renam" +
+      "eRuleSetReq\032\035.api.v0alpha.RenameRuleSetR" +
+      "es\":\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002*\"%/api/v0alpha/compl" +
+      "iance/renameruleset:\001*\022\211\001\n\rEnableRuleSet" +
+      "\022\035.api.v0alpha.EnableRuleSetReq\032\035.api.v0" +
+      "alpha.EnableRuleSetRes\":\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002*" +
+      "\"%/api/v0alpha/compliance/enableruleset:" +
+      "\001*\022\215\001\n\016DisableRuleSet\022\036.api.v0alpha.Disa" +
+      "bleRuleSetReq\032\036.api.v0alpha.DisableRuleS" +
+      "etRes\";\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002+\"&/api/v0alpha/co" +
+      "mpliance/disableruleset:\001*\022\213\001\n\017CreateScr" +
+      "ubList\022\037.api.v0alpha.CreateScrubListReq\032" +
+      "\031.api.v0alpha.ScrubListRes\"<\272\270\221\002\005\n\003\010\204\007\202\323" +
+      "\344\223\002,\"\'/api/v0alpha/compliance/createscru" +
+      "blist:\001*\022\234\001\n\023AddScrubListEntries\022#.api.v" +
+      "0alpha.AddScrubListEntriesReq\032\031.api.v0al" +
+      "pha.ScrubListRes\"E\272\270\221\002\n\n\003\010\204\007\n\003\010\312\002\202\323\344\223\0020\"" +
+      "+/api/v0alpha/compliance/addscrublistent" +
+      "ries:\001*\022\225\001\n\020UpdateScrubEntry\022 .api.v0alp" +
+      "ha.UpdateScrubEntryReq\032 .api.v0alpha.Upd" +
+      "ateScrubEntryRes\"=\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002-\"(/api" +
+      "/v0alpha/compliance/updatescrubentry:\001*\022" +
+      "\245\001\n\026DeleteScrubListEntries\022&.api.v0alpha" +
+      ".DeleteScrubListEntriesReq\032\031.api.v0alpha" +
+      ".ScrubListRes\"H\272\270\221\002\n\n\003\010\204\007\n\003\010\312\002\202\323\344\223\0023\"./a" +
+      "pi/v0alpha/compliance/deletescrublistent" +
+      "ries:\001*\022\207\001\n\014GetScrubList\022\034.api.v0alpha.G" +
+      "etScrubListReq\032\031.api.v0alpha.ScrubListRe" +
+      "s\">\272\270\221\002\n\n\003\010\204\007\n\003\010\312\002\202\323\344\223\002)\"$/api/v0alpha/c" +
+      "ompliance/getScrublist:\001*\022\213\001\n\017DeleteScru" +
+      "bList\022\037.api.v0alpha.DeleteScrubListReq\032\031" +
+      ".api.v0alpha.ScrubListRes\"<\272\270\221\002\005\n\003\010\204\007\202\323\344" +
+      "\223\002,\"\'/api/v0alpha/compliance/deleteScrub" +
+      "list:\001*\022\216\001\n\017GetDefaultRules\022\037.api.v0alph" +
+      "a.GetDefaultRulesReq\032\037.api.v0alpha.GetDe" +
+      "faultRulesRes\"9\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002)\022\'/api/v0" +
+      "alpha/compliance/getdefaultrules\022\206\001\n\rGet" +
+      "ScrubLists\022\035.api.v0alpha.GetScrubListsRe" +
+      "q\032\032.api.v0alpha.ScrubListsRes\":\272\270\221\002\005\n\003\010\204" +
+      "\007\202\323\344\223\002*\"%/api/v0alpha/compliance/getscru" +
+      "blists:\001*\022\215\001\n\017SearchScrubList\022\037.api.v0al" +
+      "pha.SearchScrubListReq\032\026.api.v0alpha.Scr" +
+      "ubList\"A\272\270\221\002\n\n\003\010\204\007\n\003\010\312\002\202\323\344\223\002,\"\'/api/v0al" +
+      "pha/compliance/searchscrublist:\001*\022\251\001\n\025Ge" +
+      "tScrubListUploadUrl\022%.api.v0alpha.GetScr" +
+      "ubListUploadUrlReq\032%.api.v0alpha.GetScru" +
+      "bListUploadUrlRes\"B\272\270\221\002\005\n\003\010\204\007\202\323\344\223\0022\"-/ap" +
+      "i/v0alpha/compliance/getscrublistuploadu" +
+      "rl:\001*\022\244\001\n\026ProcessScrubListUpload\022&.api.v" +
+      "0alpha.ProcessScrubListUploadReq\032\035.googl" +
+      "e.longrunning.Operation\"C\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002" +
+      "3\"./api/v0alpha/compliance/processscrubl" +
+      "istupload:\001*\022\231\001\n\021ScrubListDownload\022%.api" +
+      ".v0alpha.ScrubListDownloadRequest\032\035.goog" +
+      "le.longrunning.Operation\">\272\270\221\002\005\n\003\010\204\007\202\323\344\223" +
+      "\002.\")/api/v0alpha/compliance/scrublistdow" +
+      "nload:\001*\022\266\001\n\034ProcessScrubListDeleteUploa" +
+      "d\022,.api.v0alpha.ProcessScrubListDeleteUp" +
+      "loadReq\032\035.google.longrunning.Operation\"I" +
+      "\272\270\221\002\005\n\003\010\204\007\202\323\344\223\0029\"4/api/v0alpha/complianc" +
+      "e/processscrublistdeleteupload:\001*\022\221\001\n\017Ex" +
+      "portScrubList\022\037.api.v0alpha.ExportScrubL" +
+      "istReq\032\037.api.v0alpha.ExportScrubListRes\"" +
+      "<\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002,\"\'/api/v0alpha/complian" +
+      "ce/exportscrublist:\001*\022\215\001\n\016PurgeScrubList" +
+      "\022\036.api.v0alpha.PurgeScrubListReq\032\036.api.v" +
+      "0alpha.PurgeScrubListRes\";\272\270\221\002\005\n\003\010\204\007\202\323\344\223" +
+      "\002+\"&/api/v0alpha/compliance/purgescrubli" +
+      "st:\001*\022\215\001\n\016CreateScenario\022\036.api.v0alpha.C" +
+      "reateScenarioReq\032\036.api.v0alpha.CreateSce" +
       "narioRes\";\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002+\"&/api/v0alpha" +
-      "/compliance/updatescenario:\001*\022\215\001\n\016Delete" +
-      "Scenario\022\036.api.v0alpha.DeleteScenarioReq" +
-      "\032\036.api.v0alpha.DeleteScenarioRes\";\272\270\221\002\005\n" +
-      "\003\010\204\007\202\323\344\223\002+\"&/api/v0alpha/compliance/dele" +
-      "tescenario:\001*\022\245\001\n\024RunAssignedScenarios\022$" +
-      ".api.v0alpha.RunAssignedScenariosReq\032$.a" +
-      "pi.v0alpha.RunAssignedScenariosRes\"A\272\270\221\002" +
-      "\005\n\003\010\204\007\202\323\344\223\0021\",/api/v0alpha/compliance/ru" +
-      "nassignedscenarios:\001*\022\225\001\n\020ListAllScenari" +
-      "os\022 .api.v0alpha.ListAllScenariosReq\032 .a" +
-      "pi.v0alpha.ListAllScenariosRes\"=\272\270\221\002\005\n\003\010" +
-      "\204\007\202\323\344\223\002-\"(/api/v0alpha/compliance/listal" +
-      "lscenarios:\001*\022\261\001\n\027ListUnassignedScenario" +
-      "s\022\'.api.v0alpha.ListUnassignedScenariosR" +
-      "eq\032\'.api.v0alpha.ListUnassignedScenarios" +
-      "Res\"D\272\270\221\002\005\n\003\010\204\007\202\323\344\223\0024\"//api/v0alpha/comp" +
-      "liance/listunassignedscenarios:\001*\022\245\001\n\024Li" +
-      "stAssignedRuleSets\022$.api.v0alpha.ListAss" +
-      "ignedRuleSetsReq\032$.api.v0alpha.ListAssig" +
-      "nedRuleSetsRes\"A\272\270\221\002\005\n\003\010\204\007\202\323\344\223\0021\",/api/v" +
-      "0alpha/compliance/listassignedrulesets:\001" +
-      "*\022\251\001\n\025ListAssignedScenarios\022%.api.v0alph" +
-      "a.ListAssignedScenariosReq\032%.api.v0alpha" +
-      ".ListAssignedScenariosRes\"B\272\270\221\002\005\n\003\010\204\007\202\323\344" +
-      "\223\0022\"-/api/v0alpha/compliance/listassigne" +
-      "dscenarios:\001*\022\205\001\n\016AssignScenario\022\036.api.v" +
-      "0alpha.AssignScenarioReq\032\026.google.protob" +
-      "uf.Empty\";\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002+\"&/api/v0alpha" +
-      "/compliance/assignscenario:\001*\022\213\001\n\020Unassi" +
-      "gnScenario\022 .api.v0alpha.UnassignScenari" +
-      "oReq\032\026.google.protobuf.Empty\"=\272\270\221\002\005\n\003\010\204\007" +
-      "\202\323\344\223\002-\"(/api/v0alpha/compliance/unassign" +
-      "scenario:\001*\022\205\001\n\016EnableScenario\022\036.api.v0a" +
-      "lpha.EnableScenarioReq\032\026.google.protobuf" +
-      ".Empty\";\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002+\"&/api/v0alpha/c" +
-      "ompliance/enablescenario:\001*\022\210\001\n\017DisableS" +
-      "cenario\022\037.api.v0alpha.DisableScenarioReq" +
-      "\032\026.google.protobuf.Empty\"<\272\270\221\002\005\n\003\010\204\007\202\323\344\223" +
-      "\002,\"\'/api/v0alpha/compliance/disablescena" +
-      "rio:\001*\022\203\001\n\rGetFieldNames\022\035.api.v0alpha.G" +
-      "etFieldNamesReq\032\027.api.v0alpha.FieldNames" +
-      "\":\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002*\"%/api/v0alpha/complia" +
-      "nce/getfieldnames:\001*\022\230\001\n\025GetResultDescri" +
-      "ptions\022%.api.v0alpha.GetResultDescriptio" +
-      "nsReq\032\027.api.v0alpha.FieldNames\"?\272\270\221\002\002\030\001\202" +
-      "\323\344\223\0022\"-/api/v0alpha/compliance/getresult" +
-      "descriptions:\001*\022\245\001\n\024CreateConsentProfile" +
-      "\022$.api.v0alpha.CreateConsentProfileReq\032$" +
-      ".api.v0alpha.CreateConsentProfileRes\"A\272\270" +
-      "\221\002\005\n\003\010\216\007\202\323\344\223\0021\",/api/v0alpha/compliance/" +
-      "createconsentprofile:\001*\022\206\001\n\rCreateConsen" +
-      "t\022\035.api.v0alpha.CreateConsentReq\032\035.api.v" +
-      "0alpha.CreateConsentRes\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%" +
-      "/api/v0alpha/compliance/createconsent:\001*" +
-      "\022\223\001\n\021GetConsentProfile\022!.api.v0alpha.Get" +
-      "ConsentProfileReq\032\033.api.v0alpha.ConsentP" +
-      "rofile\">\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002.\")/api/v0alpha/c" +
-      "ompliance/getconsentprofile:\001*\022w\n\nGetCon" +
-      "sent\022\032.api.v0alpha.GetConsentReq\032\024.api.v" +
-      "0alpha.Consent\"7\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002\'\"\"/api/v" +
-      "0alpha/compliance/getconsent:\001*\022\311\001\n\035GetC" +
-      "onsentByProfileAndContent\022-.api.v0alpha." +
-      "GetConsentByProfileAndContentReq\032-.api.v" +
-      "0alpha.GetConsentByProfileAndContentRes\"" +
-      "J\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002:\"5/api/v0alpha/complian" +
-      "ce/getconsentbyprofileandcontent:\001*\022\241\001\n\023" +
-      "GetConsentByContent\022#.api.v0alpha.GetCon" +
-      "sentByContentReq\032#.api.v0alpha.GetConsen" +
-      "tByContentRes\"@\272\270\221\002\005\n\003\010\216\007\202\323\344\223\0020\"+/api/v0" +
-      "alpha/compliance/getconsentbycontent:\001*\022" +
-      "\255\001\n\026SearchConsentByContent\022&.api.v0alpha" +
-      ".SearchConsentByContentReq\032&.api.v0alpha" +
-      ".SearchConsentByContentRes\"C\272\270\221\002\005\n\003\010\216\007\202\323" +
-      "\344\223\0023\"./api/v0alpha/compliance/searchcons" +
-      "entbycontent:\001*\022\202\001\n\rUpdateConsent\022\035.api." +
-      "v0alpha.UpdateConsentReq\032\026.google.protob" +
-      "uf.Empty\":\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002*\"%/api/v0alpha" +
-      "/compliance/updateconsent:\001*\022\202\001\n\rExpireC" +
-      "onsent\022\035.api.v0alpha.ExpireConsentReq\032\026." +
-      "google.protobuf.Empty\":\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002*\"" +
-      "%/api/v0alpha/compliance/expireconsent:\001" +
-      "*\022\177\n\rRevokeConsent\022\035.api.v0alpha.RevokeC" +
-      "onsentReq\032\026.google.protobuf.Empty\"7\272\270\221\002\002" +
-      "\030\001\202\323\344\223\002*\"%/api/v0alpha/compliance/revoke" +
-      "consent:\001*\022\202\001\n\rDeleteConsent\022\035.api.v0alp" +
-      "ha.DeleteConsentReq\032\026.google.protobuf.Em" +
-      "pty\":\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002*\"%/api/v0alpha/comp" +
-      "liance/deleteconsent:\001*\022\274\001\n\036ProcessConse" +
-      "ntListDeleteUpload\022..api.v0alpha.Process" +
-      "ConsentListDeleteUploadReq\032\035.google.long" +
-      "running.Operation\"K\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002;\"6/ap" +
-      "i/v0alpha/compliance/processconsentlistd" +
-      "eleteupload:\001*\022\237\001\n\023ConsentListDownload\022\'" +
-      ".api.v0alpha.ConsentListDownloadRequest\032" +
-      "\035.google.longrunning.Operation\"@\272\270\221\002\005\n\003\010" +
-      "\216\007\202\323\344\223\0020\"+/api/v0alpha/compliance/consen" +
-      "tlistdownload:\001*\022\227\001\n\024EnableConsentProfil" +
-      "e\022$.api.v0alpha.EnableConsentProfileReq\032" +
-      "\026.google.protobuf.Empty\"A\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002" +
-      "1\",/api/v0alpha/compliance/enableconsent" +
-      "profile:\001*\022\232\001\n\025DisableConsentProfile\022%.a" +
-      "pi.v0alpha.DisableConsentProfileReq\032\026.go" +
-      "ogle.protobuf.Empty\"B\272\270\221\002\005\n\003\010\216\007\202\323\344\223\0022\"-/" +
-      "api/v0alpha/compliance/disableconsentpro" +
-      "file:\001*\022\241\001\n\023ListConsentProfiles\022#.api.v0" +
-      "alpha.ListConsentProfilesReq\032#.api.v0alp" +
-      "ha.ListConsentProfilesRes\"@\272\270\221\002\005\n\003\010\216\007\202\323\344" +
-      "\223\0020\"+/api/v0alpha/compliance/listconsent" +
-      "profiles:\001*\022\241\001\n\023GetConsentUploadUrl\022#.ap" +
-      "i.v0alpha.GetConsentUploadUrlReq\032#.api.v" +
-      "0alpha.GetConsentUploadUrlRes\"@\272\270\221\002\005\n\003\010\216" +
-      "\007\202\323\344\223\0020\"+/api/v0alpha/compliance/getcons" +
-      "entuploadurl:\001*\022\236\001\n\024ProcessConsentUpload" +
-      "\022$.api.v0alpha.ProcessConsentUploadReq\032\035" +
-      ".google.longrunning.Operation\"A\272\270\221\002\005\n\003\010\216" +
-      "\007\202\323\344\223\0021\",/api/v0alpha/compliance/process" +
-      "consentupload:\001*\022\242\001\n\021ExportConsentList\022%" +
-      ".api.v0alpha.ExportConsentListRequest\032&." +
-      "api.v0alpha.ExportConsentListResponse\">\272" +
-      "\270\221\002\005\n\003\010\216\007\202\323\344\223\002.\")/api/v0alpha/compliance" +
-      "/exportconsentlist:\001*\022\231\001\n\021ListConsentTop" +
-      "ics\022!.api.v0alpha.ListConsentTopicsReq\032!" +
-      ".api.v0alpha.ListConsentTopicsRes\">\272\270\221\002\005" +
-      "\n\003\010\216\007\202\323\344\223\002.\")/api/v0alpha/compliance/lis" +
-      "tconsenttopics:\001*\022\213\001\n\017GetConsentTopic\022\037." +
-      "api.v0alpha.GetConsentTopicReq\032\031.api.v0a" +
-      "lpha.ConsentTopic\"<\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002,\"\'/ap" +
-      "i/v0alpha/compliance/getconsenttopic:\001*\022" +
-      "\204\001\n\022CreateConsentTopic\022\031.api.v0alpha.Con" +
-      "sentTopic\032\022.api.v0alpha.Empty\"?\272\270\221\002\005\n\003\010\216" +
-      "\007\202\323\344\223\002/\"*/api/v0alpha/compliance/createc" +
-      "onsenttopic:\001*\022\204\001\n\022DeleteConsentTopic\022\031." +
-      "api.v0alpha.ConsentTopic\032\022.api.v0alpha.E" +
-      "mpty\"?\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002/\"*/api/v0alpha/com" +
-      "pliance/deleteconsenttopic:\001*\022\215\001\n\022Update" +
-      "ConsentTopic\022\".api.v0alpha.UpdateConsent" +
-      "TopicReq\032\022.api.v0alpha.Empty\"?\272\270\221\002\005\n\003\010\216\007" +
-      "\202\323\344\223\002/\"*/api/v0alpha/compliance/updateco" +
-      "nsenttopic:\001*\022\225\001\n\023ProcessOutboundCall\022#." +
-      "api.v0alpha.ProcessOutboundCallReq\032\027.api" +
-      ".v0alpha.ProcessRes\"@\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0020\"+/" +
-      "api/v0alpha/compliance/processoutboundca" +
-      "ll:\001*\022\217\001\n\rQueryHolidays\022!.api.v0alpha.Qu" +
-      "eryHolidaysRequest\032\".api.v0alpha.QueryHo" +
-      "lidaysResponse\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v0al" +
-      "pha/compliance/queryholidays:\001*B}\n\035com.t" +
-      "cn.cloud.api.api.v0alphaB\017ComplianceProt" +
-      "oP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027" +
-      "Api\\V0alpha\\GPBMetadata\352\002\014Api::V0alphab\006" +
-      "proto3"
+      "/compliance/createscenario:\001*\022~\n\013GetScen" +
+      "ario\022\033.api.v0alpha.GetScenarioReq\032\033.api." +
+      "v0alpha.GetScenarioRes\"5\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002%" +
+      "\022#/api/v0alpha/compliance/getscenario\022\215\001" +
+      "\n\016UpdateScenario\022\036.api.v0alpha.UpdateSce" +
+      "narioReq\032\036.api.v0alpha.UpdateScenarioRes" +
+      "\";\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002+\"&/api/v0alpha/complia" +
+      "nce/updatescenario:\001*\022\215\001\n\016DeleteScenario" +
+      "\022\036.api.v0alpha.DeleteScenarioReq\032\036.api.v" +
+      "0alpha.DeleteScenarioRes\";\272\270\221\002\005\n\003\010\204\007\202\323\344\223" +
+      "\002+\"&/api/v0alpha/compliance/deletescenar" +
+      "io:\001*\022\245\001\n\024RunAssignedScenarios\022$.api.v0a" +
+      "lpha.RunAssignedScenariosReq\032$.api.v0alp" +
+      "ha.RunAssignedScenariosRes\"A\272\270\221\002\005\n\003\010\204\007\202\323" +
+      "\344\223\0021\",/api/v0alpha/compliance/runassigne" +
+      "dscenarios:\001*\022\225\001\n\020ListAllScenarios\022 .api" +
+      ".v0alpha.ListAllScenariosReq\032 .api.v0alp" +
+      "ha.ListAllScenariosRes\"=\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002-" +
+      "\"(/api/v0alpha/compliance/listallscenari" +
+      "os:\001*\022\261\001\n\027ListUnassignedScenarios\022\'.api." +
+      "v0alpha.ListUnassignedScenariosReq\032\'.api" +
+      ".v0alpha.ListUnassignedScenariosRes\"D\272\270\221" +
+      "\002\005\n\003\010\204\007\202\323\344\223\0024\"//api/v0alpha/compliance/l" +
+      "istunassignedscenarios:\001*\022\245\001\n\024ListAssign" +
+      "edRuleSets\022$.api.v0alpha.ListAssignedRul" +
+      "eSetsReq\032$.api.v0alpha.ListAssignedRuleS" +
+      "etsRes\"A\272\270\221\002\005\n\003\010\204\007\202\323\344\223\0021\",/api/v0alpha/c" +
+      "ompliance/listassignedrulesets:\001*\022\251\001\n\025Li" +
+      "stAssignedScenarios\022%.api.v0alpha.ListAs" +
+      "signedScenariosReq\032%.api.v0alpha.ListAss" +
+      "ignedScenariosRes\"B\272\270\221\002\005\n\003\010\204\007\202\323\344\223\0022\"-/ap" +
+      "i/v0alpha/compliance/listassignedscenari" +
+      "os:\001*\022\205\001\n\016AssignScenario\022\036.api.v0alpha.A" +
+      "ssignScenarioReq\032\026.google.protobuf.Empty" +
+      "\";\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002+\"&/api/v0alpha/complia" +
+      "nce/assignscenario:\001*\022\213\001\n\020UnassignScenar" +
+      "io\022 .api.v0alpha.UnassignScenarioReq\032\026.g" +
+      "oogle.protobuf.Empty\"=\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002-\"(" +
+      "/api/v0alpha/compliance/unassignscenario" +
+      ":\001*\022\205\001\n\016EnableScenario\022\036.api.v0alpha.Ena" +
+      "bleScenarioReq\032\026.google.protobuf.Empty\";" +
+      "\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002+\"&/api/v0alpha/complianc" +
+      "e/enablescenario:\001*\022\210\001\n\017DisableScenario\022" +
+      "\037.api.v0alpha.DisableScenarioReq\032\026.googl" +
+      "e.protobuf.Empty\"<\272\270\221\002\005\n\003\010\204\007\202\323\344\223\002,\"\'/api" +
+      "/v0alpha/compliance/disablescenario:\001*\022\203" +
+      "\001\n\rGetFieldNames\022\035.api.v0alpha.GetFieldN" +
+      "amesReq\032\027.api.v0alpha.FieldNames\":\272\270\221\002\005\n" +
+      "\003\010\204\007\202\323\344\223\002*\"%/api/v0alpha/compliance/getf" +
+      "ieldnames:\001*\022\230\001\n\025GetResultDescriptions\022%" +
+      ".api.v0alpha.GetResultDescriptionsReq\032\027." +
+      "api.v0alpha.FieldNames\"?\272\270\221\002\002\030\001\202\323\344\223\0022\"-/" +
+      "api/v0alpha/compliance/getresultdescript" +
+      "ions:\001*\022\245\001\n\024CreateConsentProfile\022$.api.v" +
+      "0alpha.CreateConsentProfileReq\032$.api.v0a" +
+      "lpha.CreateConsentProfileRes\"A\272\270\221\002\005\n\003\010\216\007" +
+      "\202\323\344\223\0021\",/api/v0alpha/compliance/createco" +
+      "nsentprofile:\001*\022\206\001\n\rCreateConsent\022\035.api." +
+      "v0alpha.CreateConsentReq\032\035.api.v0alpha.C" +
+      "reateConsentRes\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v0a" +
+      "lpha/compliance/createconsent:\001*\022\223\001\n\021Get" +
+      "ConsentProfile\022!.api.v0alpha.GetConsentP" +
+      "rofileReq\032\033.api.v0alpha.ConsentProfile\">" +
+      "\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002.\")/api/v0alpha/complianc" +
+      "e/getconsentprofile:\001*\022w\n\nGetConsent\022\032.a" +
+      "pi.v0alpha.GetConsentReq\032\024.api.v0alpha.C" +
+      "onsent\"7\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002\'\"\"/api/v0alpha/c" +
+      "ompliance/getconsent:\001*\022\311\001\n\035GetConsentBy" +
+      "ProfileAndContent\022-.api.v0alpha.GetConse" +
+      "ntByProfileAndContentReq\032-.api.v0alpha.G" +
+      "etConsentByProfileAndContentRes\"J\272\270\221\002\005\n\003" +
+      "\010\216\007\202\323\344\223\002:\"5/api/v0alpha/compliance/getco" +
+      "nsentbyprofileandcontent:\001*\022\241\001\n\023GetConse" +
+      "ntByContent\022#.api.v0alpha.GetConsentByCo" +
+      "ntentReq\032#.api.v0alpha.GetConsentByConte" +
+      "ntRes\"@\272\270\221\002\005\n\003\010\216\007\202\323\344\223\0020\"+/api/v0alpha/co" +
+      "mpliance/getconsentbycontent:\001*\022\255\001\n\026Sear" +
+      "chConsentByContent\022&.api.v0alpha.SearchC" +
+      "onsentByContentReq\032&.api.v0alpha.SearchC" +
+      "onsentByContentRes\"C\272\270\221\002\005\n\003\010\216\007\202\323\344\223\0023\"./a" +
+      "pi/v0alpha/compliance/searchconsentbycon" +
+      "tent:\001*\022\202\001\n\rUpdateConsent\022\035.api.v0alpha." +
+      "UpdateConsentReq\032\026.google.protobuf.Empty" +
+      "\":\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002*\"%/api/v0alpha/complia" +
+      "nce/updateconsent:\001*\022\202\001\n\rExpireConsent\022\035" +
+      ".api.v0alpha.ExpireConsentReq\032\026.google.p" +
+      "rotobuf.Empty\":\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002*\"%/api/v0" +
+      "alpha/compliance/expireconsent:\001*\022\177\n\rRev" +
+      "okeConsent\022\035.api.v0alpha.RevokeConsentRe" +
+      "q\032\026.google.protobuf.Empty\"7\272\270\221\002\002\030\001\202\323\344\223\002*" +
+      "\"%/api/v0alpha/compliance/revokeconsent:" +
+      "\001*\022\202\001\n\rDeleteConsent\022\035.api.v0alpha.Delet" +
+      "eConsentReq\032\026.google.protobuf.Empty\":\272\270\221" +
+      "\002\005\n\003\010\216\007\202\323\344\223\002*\"%/api/v0alpha/compliance/d" +
+      "eleteconsent:\001*\022\274\001\n\036ProcessConsentListDe" +
+      "leteUpload\022..api.v0alpha.ProcessConsentL" +
+      "istDeleteUploadReq\032\035.google.longrunning." +
+      "Operation\"K\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002;\"6/api/v0alph" +
+      "a/compliance/processconsentlistdeleteupl" +
+      "oad:\001*\022\237\001\n\023ConsentListDownload\022\'.api.v0a" +
+      "lpha.ConsentListDownloadRequest\032\035.google" +
+      ".longrunning.Operation\"@\272\270\221\002\005\n\003\010\216\007\202\323\344\223\0020" +
+      "\"+/api/v0alpha/compliance/consentlistdow" +
+      "nload:\001*\022\227\001\n\024EnableConsentProfile\022$.api." +
+      "v0alpha.EnableConsentProfileReq\032\026.google" +
+      ".protobuf.Empty\"A\272\270\221\002\005\n\003\010\216\007\202\323\344\223\0021\",/api/" +
+      "v0alpha/compliance/enableconsentprofile:" +
+      "\001*\022\232\001\n\025DisableConsentProfile\022%.api.v0alp" +
+      "ha.DisableConsentProfileReq\032\026.google.pro" +
+      "tobuf.Empty\"B\272\270\221\002\005\n\003\010\216\007\202\323\344\223\0022\"-/api/v0al" +
+      "pha/compliance/disableconsentprofile:\001*\022" +
+      "\241\001\n\023ListConsentProfiles\022#.api.v0alpha.Li" +
+      "stConsentProfilesReq\032#.api.v0alpha.ListC" +
+      "onsentProfilesRes\"@\272\270\221\002\005\n\003\010\216\007\202\323\344\223\0020\"+/ap" +
+      "i/v0alpha/compliance/listconsentprofiles" +
+      ":\001*\022\241\001\n\023GetConsentUploadUrl\022#.api.v0alph" +
+      "a.GetConsentUploadUrlReq\032#.api.v0alpha.G" +
+      "etConsentUploadUrlRes\"@\272\270\221\002\005\n\003\010\216\007\202\323\344\223\0020\"" +
+      "+/api/v0alpha/compliance/getconsentuploa" +
+      "durl:\001*\022\236\001\n\024ProcessConsentUpload\022$.api.v" +
+      "0alpha.ProcessConsentUploadReq\032\035.google." +
+      "longrunning.Operation\"A\272\270\221\002\005\n\003\010\216\007\202\323\344\223\0021\"" +
+      ",/api/v0alpha/compliance/processconsentu" +
+      "pload:\001*\022\242\001\n\021ExportConsentList\022%.api.v0a" +
+      "lpha.ExportConsentListRequest\032&.api.v0al" +
+      "pha.ExportConsentListResponse\">\272\270\221\002\005\n\003\010\216" +
+      "\007\202\323\344\223\002.\")/api/v0alpha/compliance/exportc" +
+      "onsentlist:\001*\022\231\001\n\021ListConsentTopics\022!.ap" +
+      "i.v0alpha.ListConsentTopicsReq\032!.api.v0a" +
+      "lpha.ListConsentTopicsRes\">\272\270\221\002\005\n\003\010\216\007\202\323\344" +
+      "\223\002.\")/api/v0alpha/compliance/listconsent" +
+      "topics:\001*\022\213\001\n\017GetConsentTopic\022\037.api.v0al" +
+      "pha.GetConsentTopicReq\032\031.api.v0alpha.Con" +
+      "sentTopic\"<\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002,\"\'/api/v0alph" +
+      "a/compliance/getconsenttopic:\001*\022\204\001\n\022Crea" +
+      "teConsentTopic\022\031.api.v0alpha.ConsentTopi" +
+      "c\032\022.api.v0alpha.Empty\"?\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002/\"" +
+      "*/api/v0alpha/compliance/createconsentto" +
+      "pic:\001*\022\204\001\n\022DeleteConsentTopic\022\031.api.v0al" +
+      "pha.ConsentTopic\032\022.api.v0alpha.Empty\"?\272\270" +
+      "\221\002\005\n\003\010\216\007\202\323\344\223\002/\"*/api/v0alpha/compliance/" +
+      "deleteconsenttopic:\001*\022\215\001\n\022UpdateConsentT" +
+      "opic\022\".api.v0alpha.UpdateConsentTopicReq" +
+      "\032\022.api.v0alpha.Empty\"?\272\270\221\002\005\n\003\010\216\007\202\323\344\223\002/\"*" +
+      "/api/v0alpha/compliance/updateconsenttop" +
+      "ic:\001*\022\225\001\n\023ProcessOutboundCall\022#.api.v0al" +
+      "pha.ProcessOutboundCallReq\032\027.api.v0alpha" +
+      ".ProcessRes\"@\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0020\"+/api/v0al" +
+      "pha/compliance/processoutboundcall:\001*\022\217\001" +
+      "\n\rQueryHolidays\022!.api.v0alpha.QueryHolid" +
+      "aysRequest\032\".api.v0alpha.QueryHolidaysRe" +
+      "sponse\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v0alpha/comp" +
+      "liance/queryholidays:\001*B}\n\035com.tcn.cloud" +
+      ".api.api.v0alphaB\017ComplianceProtoP\001\242\002\003AV" +
+      "X\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0al" +
+      "pha\\GPBMetadata\352\002\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1386,7 +1388,7 @@ public final class ComplianceProto {
     internal_static_api_v0alpha_ScrubListRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ScrubListRes_descriptor,
-        new java.lang.String[] { "ListId", "ReadOnly", "ContentType", "EntriesAdded", "InvalidEntries", });
+        new java.lang.String[] { "ListId", "ReadOnly", "ContentType", "EntriesAdded", "InvalidEntries", "TotalInvalid", "InvalidList", });
     internal_static_api_v0alpha_DeleteScrubListReq_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_api_v0alpha_DeleteScrubListReq_fieldAccessorTable = new
