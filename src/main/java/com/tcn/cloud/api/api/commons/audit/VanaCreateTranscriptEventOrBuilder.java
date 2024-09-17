@@ -12,4 +12,36 @@ public interface VanaCreateTranscriptEventOrBuilder extends
    * @return The transcriptSid.
    */
   long getTranscriptSid();
+
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
+   * @return Whether the call field is set.
+   */
+  boolean hasCall();
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
+   * @return The call.
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Call getCall();
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Call call = 2 [json_name = "call"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.CallOrBuilder getCallOrBuilder();
+
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+   * @return Whether the sms field is set.
+   */
+  boolean hasSms();
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+   * @return The sms.
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.Sms getSms();
+  /**
+   * <code>.api.commons.audit.VanaCreateTranscriptEvent.Sms sms = 3 [json_name = "sms"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.SmsOrBuilder getSmsOrBuilder();
+
+  com.tcn.cloud.api.api.commons.audit.VanaCreateTranscriptEvent.MetadataCase getMetadataCase();
 }
