@@ -7177,7 +7177,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the Open Time and Agent Availability patterns for the given &#64;parent_entity, &#64;scheduling_activity_classifications, for the org sending the request.
+     * Lists the Open Time and Agent Availability patterns for the given &#64;parent_entity and &#64;scheduling_activity_classifications, for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10335,7 +10335,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the Open Time and Agent Availability patterns for the given &#64;parent_entity, &#64;scheduling_activity_classifications, for the org sending the request.
+     * Lists the Open Time and Agent Availability patterns for the given &#64;parent_entity and &#64;scheduling_activity_classifications, for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
@@ -13552,7 +13552,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the Open Time and Agent Availability patterns for the given &#64;parent_entity, &#64;scheduling_activity_classifications, for the org sending the request.
+     * Lists the Open Time and Agent Availability patterns for the given &#64;parent_entity and &#64;scheduling_activity_classifications, for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
@@ -16594,7 +16594,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Lists the Open Time and Agent Availability patterns for the given &#64;parent_entity, &#64;scheduling_activity_classifications, for the org sending the request.
+     * Lists the Open Time and Agent Availability patterns for the given &#64;parent_entity and &#64;scheduling_activity_classifications, for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
