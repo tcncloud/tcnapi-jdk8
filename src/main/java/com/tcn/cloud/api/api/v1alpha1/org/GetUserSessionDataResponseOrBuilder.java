@@ -247,31 +247,4 @@ public interface GetUserSessionDataResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getBillingIdBytes();
-
-  /**
-   * <pre>
-   * The access token expiration time for the user.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp access_token_expiration = 9 [json_name = "accessTokenExpiration"];</code>
-   * @return Whether the accessTokenExpiration field is set.
-   */
-  boolean hasAccessTokenExpiration();
-  /**
-   * <pre>
-   * The access token expiration time for the user.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp access_token_expiration = 9 [json_name = "accessTokenExpiration"];</code>
-   * @return The accessTokenExpiration.
-   */
-  com.google.protobuf.Timestamp getAccessTokenExpiration();
-  /**
-   * <pre>
-   * The access token expiration time for the user.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp access_token_expiration = 9 [json_name = "accessTokenExpiration"];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getAccessTokenExpirationOrBuilder();
 }
