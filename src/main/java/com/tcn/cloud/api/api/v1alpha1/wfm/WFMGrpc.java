@@ -5846,6 +5846,37 @@ public final class WFMGrpc {
     return getCreateAdherenceRuleNotificationConfigEntryMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryResponse> getDeleteAdherenceRuleNotificationConfigEntryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteAdherenceRuleNotificationConfigEntry",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryResponse> getDeleteAdherenceRuleNotificationConfigEntryMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryRequest, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryResponse> getDeleteAdherenceRuleNotificationConfigEntryMethod;
+    if ((getDeleteAdherenceRuleNotificationConfigEntryMethod = WFMGrpc.getDeleteAdherenceRuleNotificationConfigEntryMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getDeleteAdherenceRuleNotificationConfigEntryMethod = WFMGrpc.getDeleteAdherenceRuleNotificationConfigEntryMethod) == null) {
+          WFMGrpc.getDeleteAdherenceRuleNotificationConfigEntryMethod = getDeleteAdherenceRuleNotificationConfigEntryMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryRequest, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAdherenceRuleNotificationConfigEntry"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteAdherenceRuleNotificationConfigEntry"))
+              .build();
+        }
+      }
+    }
+    return getDeleteAdherenceRuleNotificationConfigEntryMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest,
       com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse> getListAdherenceRuleNotificationConfigsMethod;
 
@@ -5937,6 +5968,37 @@ public final class WFMGrpc {
       }
     }
     return getCreateAdherenceDepartmentalRuleClauseMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseResponse> getDeleteAdherenceDepartmentalRuleClauseMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteAdherenceDepartmentalRuleClause",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseResponse> getDeleteAdherenceDepartmentalRuleClauseMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseRequest, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseResponse> getDeleteAdherenceDepartmentalRuleClauseMethod;
+    if ((getDeleteAdherenceDepartmentalRuleClauseMethod = WFMGrpc.getDeleteAdherenceDepartmentalRuleClauseMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getDeleteAdherenceDepartmentalRuleClauseMethod = WFMGrpc.getDeleteAdherenceDepartmentalRuleClauseMethod) == null) {
+          WFMGrpc.getDeleteAdherenceDepartmentalRuleClauseMethod = getDeleteAdherenceDepartmentalRuleClauseMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseRequest, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAdherenceDepartmentalRuleClause"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteAdherenceDepartmentalRuleClause"))
+              .build();
+        }
+      }
+    }
+    return getDeleteAdherenceDepartmentalRuleClauseMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDepartmentalRulesRequest,
@@ -6061,6 +6123,37 @@ public final class WFMGrpc {
       }
     }
     return getListAdherenceAgentRulesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse> getDeleteAdherenceAgentRuleClauseMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteAdherenceAgentRuleClause",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest,
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse> getDeleteAdherenceAgentRuleClauseMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse> getDeleteAdherenceAgentRuleClauseMethod;
+    if ((getDeleteAdherenceAgentRuleClauseMethod = WFMGrpc.getDeleteAdherenceAgentRuleClauseMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getDeleteAdherenceAgentRuleClauseMethod = WFMGrpc.getDeleteAdherenceAgentRuleClauseMethod) == null) {
+          WFMGrpc.getDeleteAdherenceAgentRuleClauseMethod = getDeleteAdherenceAgentRuleClauseMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAdherenceAgentRuleClause"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteAdherenceAgentRuleClause"))
+              .build();
+        }
+      }
+    }
+    return getDeleteAdherenceAgentRuleClauseMethod;
   }
 
   /**
@@ -9049,6 +9142,20 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Deletes the notification config entry that has the given &#64;adherence_rule_notification_config_entry_id for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the given &#64;adherence_rule_notification_config_entry_id is invalid.
+     *   - grpc.Internal: error occurs when deleting the given &#64;adherence_rule_notification_config_entry_id.
+     *   - grpc.NotFound: notification config with the &#64;adherence_rule_notification_config_entry_id does not exist.
+     * </pre>
+     */
+    default void deleteAdherenceRuleNotificationConfigEntry(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAdherenceRuleNotificationConfigEntryMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Gets all adherence rule &#64;notification_configs for the org sending the request.
      * Configs will include their respective entries.
      * Errors:
@@ -9086,6 +9193,20 @@ public final class WFMGrpc {
     default void createAdherenceDepartmentalRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAdherenceDepartmentalRuleClauseMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the departmental rule clause that has the given &#64;adherence_departmental_rule_clause_id for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the value of the given &#64;adherence_departmental_rule_clause_id is invalid.
+     *   - grpc.Internal: error occurs when deleting the given &#64;adherence_departmental_rule_clause_id.
+     *   - grpc.NotFound: departmental rule with the &#64;adherence_departmental_rule_clause_id does not exist.
+     * </pre>
+     */
+    default void deleteAdherenceDepartmentalRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAdherenceDepartmentalRuleClauseMethod(), responseObserver);
     }
 
     /**
@@ -9141,6 +9262,20 @@ public final class WFMGrpc {
     default void listAdherenceAgentRules(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAdherenceAgentRulesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the agent rule clause that has the given &#64;adherence_agent_rule_clause_id for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the value of the given &#64;adherence_agent_rule_clause_id is invalid.
+     *   - grpc.Internal: error occurs when deleting the given &#64;adherence_agent_rule_clause_id.
+     *   - grpc.NotFound: departmental rule with the &#64;adherence_agent_rule_clause_id does not exist.
+     * </pre>
+     */
+    default void deleteAdherenceAgentRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAdherenceAgentRuleClauseMethod(), responseObserver);
     }
   }
 
@@ -12300,6 +12435,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Deletes the notification config entry that has the given &#64;adherence_rule_notification_config_entry_id for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the given &#64;adherence_rule_notification_config_entry_id is invalid.
+     *   - grpc.Internal: error occurs when deleting the given &#64;adherence_rule_notification_config_entry_id.
+     *   - grpc.NotFound: notification config with the &#64;adherence_rule_notification_config_entry_id does not exist.
+     * </pre>
+     */
+    public void deleteAdherenceRuleNotificationConfigEntry(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteAdherenceRuleNotificationConfigEntryMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Gets all adherence rule &#64;notification_configs for the org sending the request.
      * Configs will include their respective entries.
      * Errors:
@@ -12340,6 +12490,21 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateAdherenceDepartmentalRuleClauseMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the departmental rule clause that has the given &#64;adherence_departmental_rule_clause_id for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the value of the given &#64;adherence_departmental_rule_clause_id is invalid.
+     *   - grpc.Internal: error occurs when deleting the given &#64;adherence_departmental_rule_clause_id.
+     *   - grpc.NotFound: departmental rule with the &#64;adherence_departmental_rule_clause_id does not exist.
+     * </pre>
+     */
+    public void deleteAdherenceDepartmentalRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteAdherenceDepartmentalRuleClauseMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -12399,6 +12564,21 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAdherenceAgentRulesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the agent rule clause that has the given &#64;adherence_agent_rule_clause_id for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the value of the given &#64;adherence_agent_rule_clause_id is invalid.
+     *   - grpc.Internal: error occurs when deleting the given &#64;adherence_agent_rule_clause_id.
+     *   - grpc.NotFound: departmental rule with the &#64;adherence_agent_rule_clause_id does not exist.
+     * </pre>
+     */
+    public void deleteAdherenceAgentRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteAdherenceAgentRuleClauseMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -15362,6 +15542,20 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Deletes the notification config entry that has the given &#64;adherence_rule_notification_config_entry_id for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the given &#64;adherence_rule_notification_config_entry_id is invalid.
+     *   - grpc.Internal: error occurs when deleting the given &#64;adherence_rule_notification_config_entry_id.
+     *   - grpc.NotFound: notification config with the &#64;adherence_rule_notification_config_entry_id does not exist.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryResponse deleteAdherenceRuleNotificationConfigEntry(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteAdherenceRuleNotificationConfigEntryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Gets all adherence rule &#64;notification_configs for the org sending the request.
      * Configs will include their respective entries.
      * Errors:
@@ -15399,6 +15593,20 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse createAdherenceDepartmentalRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateAdherenceDepartmentalRuleClauseMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the departmental rule clause that has the given &#64;adherence_departmental_rule_clause_id for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the value of the given &#64;adherence_departmental_rule_clause_id is invalid.
+     *   - grpc.Internal: error occurs when deleting the given &#64;adherence_departmental_rule_clause_id.
+     *   - grpc.NotFound: departmental rule with the &#64;adherence_departmental_rule_clause_id does not exist.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseResponse deleteAdherenceDepartmentalRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteAdherenceDepartmentalRuleClauseMethod(), getCallOptions(), request);
     }
 
     /**
@@ -15454,6 +15662,20 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse listAdherenceAgentRules(com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAdherenceAgentRulesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the agent rule clause that has the given &#64;adherence_agent_rule_clause_id for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the value of the given &#64;adherence_agent_rule_clause_id is invalid.
+     *   - grpc.Internal: error occurs when deleting the given &#64;adherence_agent_rule_clause_id.
+     *   - grpc.NotFound: departmental rule with the &#64;adherence_agent_rule_clause_id does not exist.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse deleteAdherenceAgentRuleClause(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteAdherenceAgentRuleClauseMethod(), getCallOptions(), request);
     }
   }
 
@@ -18497,6 +18719,21 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Deletes the notification config entry that has the given &#64;adherence_rule_notification_config_entry_id for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the given &#64;adherence_rule_notification_config_entry_id is invalid.
+     *   - grpc.Internal: error occurs when deleting the given &#64;adherence_rule_notification_config_entry_id.
+     *   - grpc.NotFound: notification config with the &#64;adherence_rule_notification_config_entry_id does not exist.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryResponse> deleteAdherenceRuleNotificationConfigEntry(
+        com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteAdherenceRuleNotificationConfigEntryMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Gets all adherence rule &#64;notification_configs for the org sending the request.
      * Configs will include their respective entries.
      * Errors:
@@ -18537,6 +18774,21 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateAdherenceDepartmentalRuleClauseMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the departmental rule clause that has the given &#64;adherence_departmental_rule_clause_id for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the value of the given &#64;adherence_departmental_rule_clause_id is invalid.
+     *   - grpc.Internal: error occurs when deleting the given &#64;adherence_departmental_rule_clause_id.
+     *   - grpc.NotFound: departmental rule with the &#64;adherence_departmental_rule_clause_id does not exist.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseResponse> deleteAdherenceDepartmentalRuleClause(
+        com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteAdherenceDepartmentalRuleClauseMethod(), getCallOptions()), request);
     }
 
     /**
@@ -18596,6 +18848,21 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAdherenceAgentRulesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the agent rule clause that has the given &#64;adherence_agent_rule_clause_id for the org sending the request.
+     * Errors:
+     *   - grpc.Invalid: the value of the given &#64;adherence_agent_rule_clause_id is invalid.
+     *   - grpc.Internal: error occurs when deleting the given &#64;adherence_agent_rule_clause_id.
+     *   - grpc.NotFound: departmental rule with the &#64;adherence_agent_rule_clause_id does not exist.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse> deleteAdherenceAgentRuleClause(
+        com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteAdherenceAgentRuleClauseMethod(), getCallOptions()), request);
     }
   }
 
@@ -18787,13 +19054,16 @@ public final class WFMGrpc {
   private static final int METHODID_DELETE_RGBA_COLOR = 185;
   private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG = 186;
   private static final int METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 187;
-  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 188;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 189;
-  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 190;
-  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 191;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 192;
-  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 193;
-  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 194;
+  private static final int METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY = 188;
+  private static final int METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS = 189;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE = 190;
+  private static final int METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 191;
+  private static final int METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE = 192;
+  private static final int METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES = 193;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE = 194;
+  private static final int METHODID_CREATE_ADHERENCE_AGENT_RULE_CLAUSE = 195;
+  private static final int METHODID_LIST_ADHERENCE_AGENT_RULES = 196;
+  private static final int METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE = 197;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -19564,6 +19834,10 @@ public final class WFMGrpc {
           serviceImpl.createAdherenceRuleNotificationConfigEntry((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse>) responseObserver);
           break;
+        case METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY:
+          serviceImpl.deleteAdherenceRuleNotificationConfigEntry((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryResponse>) responseObserver);
+          break;
         case METHODID_LIST_ADHERENCE_RULE_NOTIFICATION_CONFIGS:
           serviceImpl.listAdherenceRuleNotificationConfigs((com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceRuleNotificationConfigsResponse>) responseObserver);
@@ -19575,6 +19849,10 @@ public final class WFMGrpc {
         case METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE:
           serviceImpl.createAdherenceDepartmentalRuleClause((com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE:
+          serviceImpl.deleteAdherenceDepartmentalRuleClause((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseResponse>) responseObserver);
           break;
         case METHODID_LIST_ADHERENCE_DEPARTMENTAL_RULES:
           serviceImpl.listAdherenceDepartmentalRules((com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceDepartmentalRulesRequest) request,
@@ -19591,6 +19869,10 @@ public final class WFMGrpc {
         case METHODID_LIST_ADHERENCE_AGENT_RULES:
           serviceImpl.listAdherenceAgentRules((com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE:
+          serviceImpl.deleteAdherenceAgentRuleClause((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -20927,6 +21209,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceRuleNotificationConfigEntryResponse>(
                 service, METHODID_CREATE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY)))
         .addMethod(
+          getDeleteAdherenceRuleNotificationConfigEntryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceRuleNotificationConfigEntryResponse>(
+                service, METHODID_DELETE_ADHERENCE_RULE_NOTIFICATION_CONFIG_ENTRY)))
+        .addMethod(
           getListAdherenceRuleNotificationConfigsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -20947,6 +21236,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseRequest,
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateAdherenceDepartmentalRuleClauseResponse>(
                 service, METHODID_CREATE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE)))
+        .addMethod(
+          getDeleteAdherenceDepartmentalRuleClauseMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceDepartmentalRuleClauseResponse>(
+                service, METHODID_DELETE_ADHERENCE_DEPARTMENTAL_RULE_CLAUSE)))
         .addMethod(
           getListAdherenceDepartmentalRulesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -20975,6 +21271,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesRequest,
               com.tcn.cloud.api.api.v1alpha1.wfm.ListAdherenceAgentRulesResponse>(
                 service, METHODID_LIST_ADHERENCE_AGENT_RULES)))
+        .addMethod(
+          getDeleteAdherenceAgentRuleClauseMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseRequest,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAdherenceAgentRuleClauseResponse>(
+                service, METHODID_DELETE_ADHERENCE_AGENT_RULE_CLAUSE)))
         .build();
   }
 
@@ -21211,13 +21514,16 @@ public final class WFMGrpc {
               .addMethod(getDeleteRgbaColorMethod())
               .addMethod(getCreateAdherenceRuleNotificationConfigMethod())
               .addMethod(getCreateAdherenceRuleNotificationConfigEntryMethod())
+              .addMethod(getDeleteAdherenceRuleNotificationConfigEntryMethod())
               .addMethod(getListAdherenceRuleNotificationConfigsMethod())
               .addMethod(getCreateAdherenceDepartmentalRuleMethod())
               .addMethod(getCreateAdherenceDepartmentalRuleClauseMethod())
+              .addMethod(getDeleteAdherenceDepartmentalRuleClauseMethod())
               .addMethod(getListAdherenceDepartmentalRulesMethod())
               .addMethod(getCreateAdherenceAgentRuleMethod())
               .addMethod(getCreateAdherenceAgentRuleClauseMethod())
               .addMethod(getListAdherenceAgentRulesMethod())
+              .addMethod(getDeleteAdherenceAgentRuleClauseMethod())
               .build();
         }
       }
