@@ -201,6 +201,10 @@ public enum IntegrationType
    */
   INTEGRATION_TYPE_SWERVEPAY(4600),
   /**
+   * <code>INTEGRATION_TYPE_VERADIGM = 4700;</code>
+   */
+  INTEGRATION_TYPE_VERADIGM(4700),
+  /**
    * <code>INTEGRATION_TYPE_DEBUG = 5000;</code>
    */
   INTEGRATION_TYPE_DEBUG(5000),
@@ -396,6 +400,10 @@ public enum IntegrationType
    */
   public static final int INTEGRATION_TYPE_SWERVEPAY_VALUE = 4600;
   /**
+   * <code>INTEGRATION_TYPE_VERADIGM = 4700;</code>
+   */
+  public static final int INTEGRATION_TYPE_VERADIGM_VALUE = 4700;
+  /**
    * <code>INTEGRATION_TYPE_DEBUG = 5000;</code>
    */
   public static final int INTEGRATION_TYPE_DEBUG_VALUE = 5000;
@@ -472,6 +480,7 @@ public enum IntegrationType
       case 4400: return INTEGRATION_TYPE_NAVIGA_DTI_CIRC;
       case 4500: return INTEGRATION_TYPE_NAVIGA_DTI_CS;
       case 4600: return INTEGRATION_TYPE_SWERVEPAY;
+      case 4700: return INTEGRATION_TYPE_VERADIGM;
       case 5000: return INTEGRATION_TYPE_DEBUG;
       default: return null;
     }
