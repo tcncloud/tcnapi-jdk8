@@ -15,7 +15,7 @@ public interface UpsertProfileForecastReqOrBuilder extends
    *
    * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.UpsertProfileForecastReq.skill_profile_sid is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=4465
+   *     See api/v1alpha1/wfm/wfm.proto;l=4501
    * @return The skillProfileSid.
    */
   @java.lang.Deprecated long getSkillProfileSid();
