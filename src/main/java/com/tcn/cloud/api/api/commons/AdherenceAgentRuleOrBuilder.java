@@ -101,42 +101,42 @@ public interface AdherenceAgentRuleOrBuilder extends
    * Clauses that belong to this rule. Only used by List methods.
    * </pre>
    *
-   * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
+   * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause> 
-      getClausesList();
+      getRuleClausesList();
   /**
    * <pre>
    * Clauses that belong to this rule. Only used by List methods.
    * </pre>
    *
-   * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
+   * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
    */
-  com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause getClauses(int index);
+  com.tcn.cloud.api.api.commons.AdherenceAgentRuleClause getRuleClauses(int index);
   /**
    * <pre>
    * Clauses that belong to this rule. Only used by List methods.
    * </pre>
    *
-   * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
+   * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
    */
-  int getClausesCount();
+  int getRuleClausesCount();
   /**
    * <pre>
    * Clauses that belong to this rule. Only used by List methods.
    * </pre>
    *
-   * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
+   * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.AdherenceAgentRuleClauseOrBuilder> 
-      getClausesOrBuilderList();
+      getRuleClausesOrBuilderList();
   /**
    * <pre>
    * Clauses that belong to this rule. Only used by List methods.
    * </pre>
    *
-   * <code>repeated .api.commons.AdherenceAgentRuleClause clauses = 6 [json_name = "clauses"];</code>
+   * <code>repeated .api.commons.AdherenceAgentRuleClause rule_clauses = 7 [json_name = "ruleClauses"];</code>
    */
-  com.tcn.cloud.api.api.commons.AdherenceAgentRuleClauseOrBuilder getClausesOrBuilder(
+  com.tcn.cloud.api.api.commons.AdherenceAgentRuleClauseOrBuilder getRuleClausesOrBuilder(
       int index);
 }
