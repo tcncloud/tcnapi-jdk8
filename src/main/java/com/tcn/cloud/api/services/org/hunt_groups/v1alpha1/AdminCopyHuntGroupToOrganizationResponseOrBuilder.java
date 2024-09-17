@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.services.org.hunt_groups.v1alpha1;
 
-public interface CopyHuntGroupToOrganizationResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse)
+public interface AdminCopyHuntGroupToOrganizationResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse)
     com.google.protobuf.MessageOrBuilder {
 }

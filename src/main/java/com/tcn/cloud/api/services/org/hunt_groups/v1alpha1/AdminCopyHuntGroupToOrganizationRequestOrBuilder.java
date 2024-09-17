@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.services.org.hunt_groups.v1alpha1;
 
-public interface CopyHuntGroupToOrganizationRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationRequest)
+public interface AdminCopyHuntGroupToOrganizationRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

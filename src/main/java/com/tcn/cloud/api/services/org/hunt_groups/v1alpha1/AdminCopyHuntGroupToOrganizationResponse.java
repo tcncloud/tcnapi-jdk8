@@ -5,41 +5,41 @@ package com.tcn.cloud.api.services.org.hunt_groups.v1alpha1;
 
 /**
  * <pre>
- * CopyHuntGroupToOrganizationResponse is the response message for the CopyHuntGroupToOrganization rpc.
+ * AdminCopyHuntGroupToOrganizationResponse is the response message for the AdminCopyHuntGroupToOrganization rpc.
  * </pre>
  *
- * Protobuf type {@code services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse}
+ * Protobuf type {@code services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse}
  */
-public final class CopyHuntGroupToOrganizationResponse extends
+public final class AdminCopyHuntGroupToOrganizationResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse)
-    CopyHuntGroupToOrganizationResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse)
+    AdminCopyHuntGroupToOrganizationResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use CopyHuntGroupToOrganizationResponse.newBuilder() to construct.
-  private CopyHuntGroupToOrganizationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use AdminCopyHuntGroupToOrganizationResponse.newBuilder() to construct.
+  private AdminCopyHuntGroupToOrganizationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private CopyHuntGroupToOrganizationResponse() {
+  private AdminCopyHuntGroupToOrganizationResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new CopyHuntGroupToOrganizationResponse();
+    return new AdminCopyHuntGroupToOrganizationResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupToOrganizationResponse_descriptor;
+    return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_AdminCopyHuntGroupToOrganizationResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupToOrganizationResponse_fieldAccessorTable
+    return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_AdminCopyHuntGroupToOrganizationResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse.Builder.class);
+            com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -75,10 +75,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse other = (com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse) obj;
+    com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse other = (com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -96,44 +96,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -141,26 +141,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse parseFrom(
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -190,29 +190,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * CopyHuntGroupToOrganizationResponse is the response message for the CopyHuntGroupToOrganization rpc.
+   * AdminCopyHuntGroupToOrganizationResponse is the response message for the AdminCopyHuntGroupToOrganization rpc.
    * </pre>
    *
-   * Protobuf type {@code services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse}
+   * Protobuf type {@code services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse)
-      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse)
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupToOrganizationResponse_descriptor;
+      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_AdminCopyHuntGroupToOrganizationResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupToOrganizationResponse_fieldAccessorTable
+      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_AdminCopyHuntGroupToOrganizationResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse.Builder.class);
+              com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse.newBuilder()
     private Builder() {
 
     }
@@ -231,17 +231,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_CopyHuntGroupToOrganizationResponse_descriptor;
+      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.EntitiesProto.internal_static_services_org_hunt_groups_v1alpha1_AdminCopyHuntGroupToOrganizationResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse.getDefaultInstance();
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse build() {
-      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse result = buildPartial();
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse build() {
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -249,8 +249,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse buildPartial() {
-      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse result = new com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse(this);
+    public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse buildPartial() {
+      com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse result = new com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse(this);
       onBuilt();
       return result;
     }
@@ -289,16 +289,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse) {
-        return mergeFrom((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse)other);
+      if (other instanceof com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse) {
+        return mergeFrom((com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse other) {
-      if (other == com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse other) {
+      if (other == com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -353,23 +353,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse)
+    // @@protoc_insertion_point(builder_scope:services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse)
-  private static final com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse)
+  private static final com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse();
   }
 
-  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<CopyHuntGroupToOrganizationResponse>
-      PARSER = new com.google.protobuf.AbstractParser<CopyHuntGroupToOrganizationResponse>() {
+  private static final com.google.protobuf.Parser<AdminCopyHuntGroupToOrganizationResponse>
+      PARSER = new com.google.protobuf.AbstractParser<AdminCopyHuntGroupToOrganizationResponse>() {
     @java.lang.Override
-    public CopyHuntGroupToOrganizationResponse parsePartialFrom(
+    public AdminCopyHuntGroupToOrganizationResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -388,17 +388,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<CopyHuntGroupToOrganizationResponse> parser() {
+  public static com.google.protobuf.Parser<AdminCopyHuntGroupToOrganizationResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<CopyHuntGroupToOrganizationResponse> getParserForType() {
+  public com.google.protobuf.Parser<AdminCopyHuntGroupToOrganizationResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.CopyHuntGroupToOrganizationResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminCopyHuntGroupToOrganizationResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
