@@ -195,6 +195,8 @@ private static final long serialVersionUID = 0L;
     NTVB_SUBSCRIPTION_INFO(2812),
     NTVB_VACATION_STOP(2813),
     NTVB_AUTHTEST(2814),
+    NTVB_COMPLETE_PENDING_ORDER(2815),
+    NTVB_PLACE_ORDER(2816),
     ELAVON_CREDIT_CARD_SALE(2901),
     ELAVON_ADD_RECURRING(2902),
     ELAVON_DCC_RESPONSE(2903),
@@ -260,6 +262,7 @@ private static final long serialVersionUID = 0L;
     NEWZWARE_VACATION_RESTART(3807),
     NEWZWARE_VACATION_UPDATE(3808),
     NEWZWARE_PHONE_LOOKUP_MULTI(3809),
+    NEWZWARE_SUBSCRIPTION_RESTART(3810),
     PRIOCOMMERCE_ACH_PAYMENT(3901),
     PRIOCOMMERCE_CC_PAYMENT(3902),
     NAVIGA_CREATE_PAYMENT(4001),
@@ -477,6 +480,8 @@ private static final long serialVersionUID = 0L;
         case 2812: return NTVB_SUBSCRIPTION_INFO;
         case 2813: return NTVB_VACATION_STOP;
         case 2814: return NTVB_AUTHTEST;
+        case 2815: return NTVB_COMPLETE_PENDING_ORDER;
+        case 2816: return NTVB_PLACE_ORDER;
         case 2901: return ELAVON_CREDIT_CARD_SALE;
         case 2902: return ELAVON_ADD_RECURRING;
         case 2903: return ELAVON_DCC_RESPONSE;
@@ -542,6 +547,7 @@ private static final long serialVersionUID = 0L;
         case 3807: return NEWZWARE_VACATION_RESTART;
         case 3808: return NEWZWARE_VACATION_UPDATE;
         case 3809: return NEWZWARE_PHONE_LOOKUP_MULTI;
+        case 3810: return NEWZWARE_SUBSCRIPTION_RESTART;
         case 3901: return PRIOCOMMERCE_ACH_PAYMENT;
         case 3902: return PRIOCOMMERCE_CC_PAYMENT;
         case 4001: return NAVIGA_CREATE_PAYMENT;
@@ -5086,6 +5092,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbAuthtest.getDefaultInstance();
   }
 
+  public static final int NTVB_COMPLETE_PENDING_ORDER_FIELD_NUMBER = 2815;
+  /**
+   * <code>.api.commons.integrations.ExecuteNtvbCompletePendingOrder ntvb_complete_pending_order = 2815 [json_name = "ntvbCompletePendingOrder"];</code>
+   * @return Whether the ntvbCompletePendingOrder field is set.
+   */
+  @java.lang.Override
+  public boolean hasNtvbCompletePendingOrder() {
+    return valueCase_ == 2815;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteNtvbCompletePendingOrder ntvb_complete_pending_order = 2815 [json_name = "ntvbCompletePendingOrder"];</code>
+   * @return The ntvbCompletePendingOrder.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder getNtvbCompletePendingOrder() {
+    if (valueCase_ == 2815) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteNtvbCompletePendingOrder ntvb_complete_pending_order = 2815 [json_name = "ntvbCompletePendingOrder"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrderOrBuilder getNtvbCompletePendingOrderOrBuilder() {
+    if (valueCase_ == 2815) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder.getDefaultInstance();
+  }
+
+  public static final int NTVB_PLACE_ORDER_FIELD_NUMBER = 2816;
+  /**
+   * <code>.api.commons.integrations.ExecuteNtvbPlaceOrder ntvb_place_order = 2816 [json_name = "ntvbPlaceOrder"];</code>
+   * @return Whether the ntvbPlaceOrder field is set.
+   */
+  @java.lang.Override
+  public boolean hasNtvbPlaceOrder() {
+    return valueCase_ == 2816;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteNtvbPlaceOrder ntvb_place_order = 2816 [json_name = "ntvbPlaceOrder"];</code>
+   * @return The ntvbPlaceOrder.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder getNtvbPlaceOrder() {
+    if (valueCase_ == 2816) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteNtvbPlaceOrder ntvb_place_order = 2816 [json_name = "ntvbPlaceOrder"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrderOrBuilder getNtvbPlaceOrderOrBuilder() {
+    if (valueCase_ == 2816) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder.getDefaultInstance();
+  }
+
   public static final int ELAVON_CREDIT_CARD_SALE_FIELD_NUMBER = 2901;
   /**
    * <code>.api.commons.integrations.ExecuteElavonCreditCardSale elavon_credit_card_sale = 2901 [json_name = "elavonCreditCardSale"];</code>
@@ -7099,6 +7167,37 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwarePhoneLookupMulti) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwarePhoneLookupMulti.getDefaultInstance();
+  }
+
+  public static final int NEWZWARE_SUBSCRIPTION_RESTART_FIELD_NUMBER = 3810;
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareSubscriptionRestart newzware_subscription_restart = 3810 [json_name = "newzwareSubscriptionRestart"];</code>
+   * @return Whether the newzwareSubscriptionRestart field is set.
+   */
+  @java.lang.Override
+  public boolean hasNewzwareSubscriptionRestart() {
+    return valueCase_ == 3810;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareSubscriptionRestart newzware_subscription_restart = 3810 [json_name = "newzwareSubscriptionRestart"];</code>
+   * @return The newzwareSubscriptionRestart.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart getNewzwareSubscriptionRestart() {
+    if (valueCase_ == 3810) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteNewzwareSubscriptionRestart newzware_subscription_restart = 3810 [json_name = "newzwareSubscriptionRestart"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestartOrBuilder getNewzwareSubscriptionRestartOrBuilder() {
+    if (valueCase_ == 3810) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart.getDefaultInstance();
   }
 
   public static final int PRIOCOMMERCE_ACH_PAYMENT_FIELD_NUMBER = 3901;
@@ -9314,6 +9413,12 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 2814) {
       output.writeMessage(2814, (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbAuthtest) value_);
     }
+    if (valueCase_ == 2815) {
+      output.writeMessage(2815, (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder) value_);
+    }
+    if (valueCase_ == 2816) {
+      output.writeMessage(2816, (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder) value_);
+    }
     if (valueCase_ == 2901) {
       output.writeMessage(2901, (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonCreditCardSale) value_);
     }
@@ -9508,6 +9613,9 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 3809) {
       output.writeMessage(3809, (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwarePhoneLookupMulti) value_);
+    }
+    if (valueCase_ == 3810) {
+      output.writeMessage(3810, (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart) value_);
     }
     if (valueCase_ == 3901) {
       output.writeMessage(3901, (com.tcn.cloud.api.api.commons.integrations.ExecutePriocommerceAchPayment) value_);
@@ -10264,6 +10372,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2814, (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbAuthtest) value_);
     }
+    if (valueCase_ == 2815) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2815, (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder) value_);
+    }
+    if (valueCase_ == 2816) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2816, (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder) value_);
+    }
     if (valueCase_ == 2901) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2901, (com.tcn.cloud.api.api.commons.integrations.ExecuteElavonCreditCardSale) value_);
@@ -10523,6 +10639,10 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3809) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3809, (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwarePhoneLookupMulti) value_);
+    }
+    if (valueCase_ == 3810) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3810, (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart) value_);
     }
     if (valueCase_ == 3901) {
       size += com.google.protobuf.CodedOutputStream
@@ -11343,6 +11463,14 @@ private static final long serialVersionUID = 0L;
         if (!getNtvbAuthtest()
             .equals(other.getNtvbAuthtest())) return false;
         break;
+      case 2815:
+        if (!getNtvbCompletePendingOrder()
+            .equals(other.getNtvbCompletePendingOrder())) return false;
+        break;
+      case 2816:
+        if (!getNtvbPlaceOrder()
+            .equals(other.getNtvbPlaceOrder())) return false;
+        break;
       case 2901:
         if (!getElavonCreditCardSale()
             .equals(other.getElavonCreditCardSale())) return false;
@@ -11602,6 +11730,10 @@ private static final long serialVersionUID = 0L;
       case 3809:
         if (!getNewzwarePhoneLookupMulti()
             .equals(other.getNewzwarePhoneLookupMulti())) return false;
+        break;
+      case 3810:
+        if (!getNewzwareSubscriptionRestart()
+            .equals(other.getNewzwareSubscriptionRestart())) return false;
         break;
       case 3901:
         if (!getPriocommerceAchPayment()
@@ -12420,6 +12552,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + NTVB_AUTHTEST_FIELD_NUMBER;
         hash = (53 * hash) + getNtvbAuthtest().hashCode();
         break;
+      case 2815:
+        hash = (37 * hash) + NTVB_COMPLETE_PENDING_ORDER_FIELD_NUMBER;
+        hash = (53 * hash) + getNtvbCompletePendingOrder().hashCode();
+        break;
+      case 2816:
+        hash = (37 * hash) + NTVB_PLACE_ORDER_FIELD_NUMBER;
+        hash = (53 * hash) + getNtvbPlaceOrder().hashCode();
+        break;
       case 2901:
         hash = (37 * hash) + ELAVON_CREDIT_CARD_SALE_FIELD_NUMBER;
         hash = (53 * hash) + getElavonCreditCardSale().hashCode();
@@ -12679,6 +12819,10 @@ private static final long serialVersionUID = 0L;
       case 3809:
         hash = (37 * hash) + NEWZWARE_PHONE_LOOKUP_MULTI_FIELD_NUMBER;
         hash = (53 * hash) + getNewzwarePhoneLookupMulti().hashCode();
+        break;
+      case 3810:
+        hash = (37 * hash) + NEWZWARE_SUBSCRIPTION_RESTART_FIELD_NUMBER;
+        hash = (53 * hash) + getNewzwareSubscriptionRestart().hashCode();
         break;
       case 3901:
         hash = (37 * hash) + PRIOCOMMERCE_ACH_PAYMENT_FIELD_NUMBER;
@@ -13487,6 +13631,12 @@ private static final long serialVersionUID = 0L;
       if (ntvbAuthtestBuilder_ != null) {
         ntvbAuthtestBuilder_.clear();
       }
+      if (ntvbCompletePendingOrderBuilder_ != null) {
+        ntvbCompletePendingOrderBuilder_.clear();
+      }
+      if (ntvbPlaceOrderBuilder_ != null) {
+        ntvbPlaceOrderBuilder_.clear();
+      }
       if (elavonCreditCardSaleBuilder_ != null) {
         elavonCreditCardSaleBuilder_.clear();
       }
@@ -13681,6 +13831,9 @@ private static final long serialVersionUID = 0L;
       }
       if (newzwarePhoneLookupMultiBuilder_ != null) {
         newzwarePhoneLookupMultiBuilder_.clear();
+      }
+      if (newzwareSubscriptionRestartBuilder_ != null) {
+        newzwareSubscriptionRestartBuilder_.clear();
       }
       if (priocommerceAchPaymentBuilder_ != null) {
         priocommerceAchPaymentBuilder_.clear();
@@ -14509,6 +14662,14 @@ private static final long serialVersionUID = 0L;
           ntvbAuthtestBuilder_ != null) {
         result.value_ = ntvbAuthtestBuilder_.build();
       }
+      if (valueCase_ == 2815 &&
+          ntvbCompletePendingOrderBuilder_ != null) {
+        result.value_ = ntvbCompletePendingOrderBuilder_.build();
+      }
+      if (valueCase_ == 2816 &&
+          ntvbPlaceOrderBuilder_ != null) {
+        result.value_ = ntvbPlaceOrderBuilder_.build();
+      }
       if (valueCase_ == 2901 &&
           elavonCreditCardSaleBuilder_ != null) {
         result.value_ = elavonCreditCardSaleBuilder_.build();
@@ -14768,6 +14929,10 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 3809 &&
           newzwarePhoneLookupMultiBuilder_ != null) {
         result.value_ = newzwarePhoneLookupMultiBuilder_.build();
+      }
+      if (valueCase_ == 3810 &&
+          newzwareSubscriptionRestartBuilder_ != null) {
+        result.value_ = newzwareSubscriptionRestartBuilder_.build();
       }
       if (valueCase_ == 3901 &&
           priocommerceAchPaymentBuilder_ != null) {
@@ -15621,6 +15786,14 @@ private static final long serialVersionUID = 0L;
           mergeNtvbAuthtest(other.getNtvbAuthtest());
           break;
         }
+        case NTVB_COMPLETE_PENDING_ORDER: {
+          mergeNtvbCompletePendingOrder(other.getNtvbCompletePendingOrder());
+          break;
+        }
+        case NTVB_PLACE_ORDER: {
+          mergeNtvbPlaceOrder(other.getNtvbPlaceOrder());
+          break;
+        }
         case ELAVON_CREDIT_CARD_SALE: {
           mergeElavonCreditCardSale(other.getElavonCreditCardSale());
           break;
@@ -15879,6 +16052,10 @@ private static final long serialVersionUID = 0L;
         }
         case NEWZWARE_PHONE_LOOKUP_MULTI: {
           mergeNewzwarePhoneLookupMulti(other.getNewzwarePhoneLookupMulti());
+          break;
+        }
+        case NEWZWARE_SUBSCRIPTION_RESTART: {
+          mergeNewzwareSubscriptionRestart(other.getNewzwareSubscriptionRestart());
           break;
         }
         case PRIOCOMMERCE_ACH_PAYMENT: {
@@ -17145,6 +17322,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 2814;
               break;
             } // case 22514
+            case 22522: {
+              input.readMessage(
+                  getNtvbCompletePendingOrderFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2815;
+              break;
+            } // case 22522
+            case 22530: {
+              input.readMessage(
+                  getNtvbPlaceOrderFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2816;
+              break;
+            } // case 22530
             case 23210: {
               input.readMessage(
                   getElavonCreditCardSaleFieldBuilder().getBuilder(),
@@ -17600,6 +17791,13 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3809;
               break;
             } // case 30474
+            case 30482: {
+              input.readMessage(
+                  getNewzwareSubscriptionRestartFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3810;
+              break;
+            } // case 30482
             case 31210: {
               input.readMessage(
                   getPriocommerceAchPaymentFieldBuilder().getBuilder(),
@@ -38418,6 +38616,290 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder, com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrderOrBuilder> ntvbCompletePendingOrderBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbCompletePendingOrder ntvb_complete_pending_order = 2815 [json_name = "ntvbCompletePendingOrder"];</code>
+     * @return Whether the ntvbCompletePendingOrder field is set.
+     */
+    @java.lang.Override
+    public boolean hasNtvbCompletePendingOrder() {
+      return valueCase_ == 2815;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbCompletePendingOrder ntvb_complete_pending_order = 2815 [json_name = "ntvbCompletePendingOrder"];</code>
+     * @return The ntvbCompletePendingOrder.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder getNtvbCompletePendingOrder() {
+      if (ntvbCompletePendingOrderBuilder_ == null) {
+        if (valueCase_ == 2815) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder.getDefaultInstance();
+      } else {
+        if (valueCase_ == 2815) {
+          return ntvbCompletePendingOrderBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbCompletePendingOrder ntvb_complete_pending_order = 2815 [json_name = "ntvbCompletePendingOrder"];</code>
+     */
+    public Builder setNtvbCompletePendingOrder(com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder value) {
+      if (ntvbCompletePendingOrderBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        ntvbCompletePendingOrderBuilder_.setMessage(value);
+      }
+      valueCase_ = 2815;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbCompletePendingOrder ntvb_complete_pending_order = 2815 [json_name = "ntvbCompletePendingOrder"];</code>
+     */
+    public Builder setNtvbCompletePendingOrder(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder.Builder builderForValue) {
+      if (ntvbCompletePendingOrderBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        ntvbCompletePendingOrderBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 2815;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbCompletePendingOrder ntvb_complete_pending_order = 2815 [json_name = "ntvbCompletePendingOrder"];</code>
+     */
+    public Builder mergeNtvbCompletePendingOrder(com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder value) {
+      if (ntvbCompletePendingOrderBuilder_ == null) {
+        if (valueCase_ == 2815 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 2815) {
+          ntvbCompletePendingOrderBuilder_.mergeFrom(value);
+        } else {
+          ntvbCompletePendingOrderBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 2815;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbCompletePendingOrder ntvb_complete_pending_order = 2815 [json_name = "ntvbCompletePendingOrder"];</code>
+     */
+    public Builder clearNtvbCompletePendingOrder() {
+      if (ntvbCompletePendingOrderBuilder_ == null) {
+        if (valueCase_ == 2815) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 2815) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        ntvbCompletePendingOrderBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbCompletePendingOrder ntvb_complete_pending_order = 2815 [json_name = "ntvbCompletePendingOrder"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder.Builder getNtvbCompletePendingOrderBuilder() {
+      return getNtvbCompletePendingOrderFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbCompletePendingOrder ntvb_complete_pending_order = 2815 [json_name = "ntvbCompletePendingOrder"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrderOrBuilder getNtvbCompletePendingOrderOrBuilder() {
+      if ((valueCase_ == 2815) && (ntvbCompletePendingOrderBuilder_ != null)) {
+        return ntvbCompletePendingOrderBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 2815) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbCompletePendingOrder ntvb_complete_pending_order = 2815 [json_name = "ntvbCompletePendingOrder"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder, com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrderOrBuilder> 
+        getNtvbCompletePendingOrderFieldBuilder() {
+      if (ntvbCompletePendingOrderBuilder_ == null) {
+        if (!(valueCase_ == 2815)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder.getDefaultInstance();
+        }
+        ntvbCompletePendingOrderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder, com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrderOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbCompletePendingOrder) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 2815;
+      onChanged();
+      return ntvbCompletePendingOrderBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder, com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrderOrBuilder> ntvbPlaceOrderBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbPlaceOrder ntvb_place_order = 2816 [json_name = "ntvbPlaceOrder"];</code>
+     * @return Whether the ntvbPlaceOrder field is set.
+     */
+    @java.lang.Override
+    public boolean hasNtvbPlaceOrder() {
+      return valueCase_ == 2816;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbPlaceOrder ntvb_place_order = 2816 [json_name = "ntvbPlaceOrder"];</code>
+     * @return The ntvbPlaceOrder.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder getNtvbPlaceOrder() {
+      if (ntvbPlaceOrderBuilder_ == null) {
+        if (valueCase_ == 2816) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder.getDefaultInstance();
+      } else {
+        if (valueCase_ == 2816) {
+          return ntvbPlaceOrderBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbPlaceOrder ntvb_place_order = 2816 [json_name = "ntvbPlaceOrder"];</code>
+     */
+    public Builder setNtvbPlaceOrder(com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder value) {
+      if (ntvbPlaceOrderBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        ntvbPlaceOrderBuilder_.setMessage(value);
+      }
+      valueCase_ = 2816;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbPlaceOrder ntvb_place_order = 2816 [json_name = "ntvbPlaceOrder"];</code>
+     */
+    public Builder setNtvbPlaceOrder(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder.Builder builderForValue) {
+      if (ntvbPlaceOrderBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        ntvbPlaceOrderBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 2816;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbPlaceOrder ntvb_place_order = 2816 [json_name = "ntvbPlaceOrder"];</code>
+     */
+    public Builder mergeNtvbPlaceOrder(com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder value) {
+      if (ntvbPlaceOrderBuilder_ == null) {
+        if (valueCase_ == 2816 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 2816) {
+          ntvbPlaceOrderBuilder_.mergeFrom(value);
+        } else {
+          ntvbPlaceOrderBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 2816;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbPlaceOrder ntvb_place_order = 2816 [json_name = "ntvbPlaceOrder"];</code>
+     */
+    public Builder clearNtvbPlaceOrder() {
+      if (ntvbPlaceOrderBuilder_ == null) {
+        if (valueCase_ == 2816) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 2816) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        ntvbPlaceOrderBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbPlaceOrder ntvb_place_order = 2816 [json_name = "ntvbPlaceOrder"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder.Builder getNtvbPlaceOrderBuilder() {
+      return getNtvbPlaceOrderFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbPlaceOrder ntvb_place_order = 2816 [json_name = "ntvbPlaceOrder"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrderOrBuilder getNtvbPlaceOrderOrBuilder() {
+      if ((valueCase_ == 2816) && (ntvbPlaceOrderBuilder_ != null)) {
+        return ntvbPlaceOrderBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 2816) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNtvbPlaceOrder ntvb_place_order = 2816 [json_name = "ntvbPlaceOrder"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder, com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrderOrBuilder> 
+        getNtvbPlaceOrderFieldBuilder() {
+      if (ntvbPlaceOrderBuilder_ == null) {
+        if (!(valueCase_ == 2816)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder.getDefaultInstance();
+        }
+        ntvbPlaceOrderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder, com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrderOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteNtvbPlaceOrder) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 2816;
+      onChanged();
+      return ntvbPlaceOrderBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.integrations.ExecuteElavonCreditCardSale, com.tcn.cloud.api.api.commons.integrations.ExecuteElavonCreditCardSale.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteElavonCreditCardSaleOrBuilder> elavonCreditCardSaleBuilder_;
     /**
      * <code>.api.commons.integrations.ExecuteElavonCreditCardSale elavon_credit_card_sale = 2901 [json_name = "elavonCreditCardSale"];</code>
@@ -47645,6 +48127,148 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 3809;
       onChanged();
       return newzwarePhoneLookupMultiBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart, com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestartOrBuilder> newzwareSubscriptionRestartBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteNewzwareSubscriptionRestart newzware_subscription_restart = 3810 [json_name = "newzwareSubscriptionRestart"];</code>
+     * @return Whether the newzwareSubscriptionRestart field is set.
+     */
+    @java.lang.Override
+    public boolean hasNewzwareSubscriptionRestart() {
+      return valueCase_ == 3810;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNewzwareSubscriptionRestart newzware_subscription_restart = 3810 [json_name = "newzwareSubscriptionRestart"];</code>
+     * @return The newzwareSubscriptionRestart.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart getNewzwareSubscriptionRestart() {
+      if (newzwareSubscriptionRestartBuilder_ == null) {
+        if (valueCase_ == 3810) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3810) {
+          return newzwareSubscriptionRestartBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNewzwareSubscriptionRestart newzware_subscription_restart = 3810 [json_name = "newzwareSubscriptionRestart"];</code>
+     */
+    public Builder setNewzwareSubscriptionRestart(com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart value) {
+      if (newzwareSubscriptionRestartBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        newzwareSubscriptionRestartBuilder_.setMessage(value);
+      }
+      valueCase_ = 3810;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNewzwareSubscriptionRestart newzware_subscription_restart = 3810 [json_name = "newzwareSubscriptionRestart"];</code>
+     */
+    public Builder setNewzwareSubscriptionRestart(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart.Builder builderForValue) {
+      if (newzwareSubscriptionRestartBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        newzwareSubscriptionRestartBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3810;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNewzwareSubscriptionRestart newzware_subscription_restart = 3810 [json_name = "newzwareSubscriptionRestart"];</code>
+     */
+    public Builder mergeNewzwareSubscriptionRestart(com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart value) {
+      if (newzwareSubscriptionRestartBuilder_ == null) {
+        if (valueCase_ == 3810 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3810) {
+          newzwareSubscriptionRestartBuilder_.mergeFrom(value);
+        } else {
+          newzwareSubscriptionRestartBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3810;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNewzwareSubscriptionRestart newzware_subscription_restart = 3810 [json_name = "newzwareSubscriptionRestart"];</code>
+     */
+    public Builder clearNewzwareSubscriptionRestart() {
+      if (newzwareSubscriptionRestartBuilder_ == null) {
+        if (valueCase_ == 3810) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3810) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        newzwareSubscriptionRestartBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNewzwareSubscriptionRestart newzware_subscription_restart = 3810 [json_name = "newzwareSubscriptionRestart"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart.Builder getNewzwareSubscriptionRestartBuilder() {
+      return getNewzwareSubscriptionRestartFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNewzwareSubscriptionRestart newzware_subscription_restart = 3810 [json_name = "newzwareSubscriptionRestart"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestartOrBuilder getNewzwareSubscriptionRestartOrBuilder() {
+      if ((valueCase_ == 3810) && (newzwareSubscriptionRestartBuilder_ != null)) {
+        return newzwareSubscriptionRestartBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3810) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteNewzwareSubscriptionRestart newzware_subscription_restart = 3810 [json_name = "newzwareSubscriptionRestart"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart, com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestartOrBuilder> 
+        getNewzwareSubscriptionRestartFieldBuilder() {
+      if (newzwareSubscriptionRestartBuilder_ == null) {
+        if (!(valueCase_ == 3810)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart.getDefaultInstance();
+        }
+        newzwareSubscriptionRestartBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart, com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestartOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteNewzwareSubscriptionRestart) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3810;
+      onChanged();
+      return newzwareSubscriptionRestartBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
