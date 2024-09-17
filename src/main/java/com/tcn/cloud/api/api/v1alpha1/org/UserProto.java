@@ -905,7 +905,7 @@ public final class UserProto {
       "mailVerificationByOrgIdRequest\022\027\n\007user_i" +
       "d\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\"*" +
       "\n(SendUserEmailVerificationByOrgIdRespon" +
-      "se\"\033\n\031GetUserSessionDataRequest\"\361\020\n\032GetU" +
+      "se\"\033\n\031GetUserSessionDataRequest\"\305\021\n\032GetU" +
       "serSessionDataResponse\022E\n\004user\030\001 \001(\01321.a" +
       "pi.v1alpha1.org.GetUserSessionDataRespon" +
       "se.UserR\004user\022\031\n\010org_name\030\002 \001(\tR\007orgName" +
@@ -917,7 +917,7 @@ public final class UserProto {
       "llowed_mfa\030\006 \001(\010R\rorgAllowedMfa\022M\n\022local" +
       "e_preferences\030\007 \001(\0132\036.api.commons.Locale" +
       "PreferencesR\021localePreferences\022\035\n\nbillin" +
-      "g_id\030\010 \001(\tR\tbillingId\032\233\r\n\004User\022\027\n\007user_i" +
+      "g_id\030\010 \001(\tR\tbillingId\032\357\r\n\004User\022\027\n\007user_i" +
       "d\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\032" +
       "\n\010username\030\003 \001(\tR\010username\0223\n\026p3_permiss" +
       "ion_group_id\030\004 \001(\tR\023p3PermissionGroupId\022" +
@@ -953,65 +953,67 @@ public final class UserProto {
       " \001(\0132\032.google.protobuf.TimestampR\021passwo" +
       "rdResetDate\022^\n\033locale_preferences_overri" +
       "de\030# \001(\0132\036.api.commons.LocalePreferences" +
-      "R\031localePreferencesOverride\032e\n\nRegionSid" +
-      "s\022\033\n\tlogin_sid\030\001 \001(\003R\010loginSid\022\033\n\tagent_" +
-      "sid\030\002 \001(\003R\010agentSid\022\035\n\nclient_sid\030\003 \001(\003R" +
-      "\tclientSid\032}\n\021RegionSidMapEntry\022\020\n\003key\030\001" +
-      " \001(\tR\003key\022R\n\005value\030\002 \001(\0132<.api.v1alpha1." +
-      "org.GetUserSessionDataResponse.User.Regi" +
-      "onSidsR\005value:\0028\001J\004\010\022\020\023R\nenable_mfa\"3\n\030R" +
-      "efreshMfaLockoutRequest\022\027\n\007user_id\030\001 \001(\t" +
-      "R\006userId\"Q\n\031RefreshMfaLockoutResponse\0224\n" +
-      "\007timeout\030\001 \001(\0132\032.google.protobuf.Timesta" +
-      "mpR\007timeout\"Q\n\037RefreshMfaLockoutByOrgIdR" +
-      "equest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_i" +
-      "d\030\002 \001(\tR\005orgId\"X\n RefreshMfaLockoutByOrg" +
-      "IdResponse\0224\n\007timeout\030\001 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\007timeout\"[\n\021SetMfaTypeRe" +
-      "quest\022,\n\004info\030\003 \001(\0132\030.api.commons.org.Mf" +
-      "aInfoR\004infoJ\004\010\001\020\002J\004\010\002\020\003R\003otpR\007user_id\"\024\n" +
-      "\022SetMfaTypeResponse\"N\n\023SetMyMfaTypeReque" +
-      "st\022,\n\004info\030\002 \001(\0132\030.api.commons.org.MfaIn" +
-      "foR\004infoJ\004\010\001\020\002R\003otp\"\026\n\024SetMyMfaTypeRespo",
-      "nse\"I\n\024EnableUserMfaRequest\022\027\n\007user_id\030\001" +
-      " \001(\tR\006userId\022\030\n\007enabled\030\002 \001(\010R\007enabled\"\027" +
-      "\n\025EnableUserMfaResponse\"\030\n\026EnableMyUserM" +
-      "faRequest\"\031\n\027EnableMyUserMfaResponse\"0\n\025" +
-      "GetUserMfaInfoRequest\022\027\n\007user_id\030\001 \001(\tR\006" +
-      "userId\"F\n\026GetUserMfaInfoResponse\022,\n\004info" +
-      "\030\001 \001(\0132\030.api.commons.org.MfaInfoR\004info\"\031" +
-      "\n\027GetMyUserMfaInfoRequest\"H\n\030GetMyUserMf" +
-      "aInfoResponse\022,\n\004info\030\001 \001(\0132\030.api.common" +
-      "s.org.MfaInfoR\004info\"\037\n\035GetMyAllowedMfaMe" +
-      "thodsRequest\"\252\001\n\036GetMyAllowedMfaMethodsR" +
-      "esponse\022\037\n\013mfa_enabled\030\001 \001(\010R\nmfaEnabled" +
-      "\022#\n\remail_enabled\030\002 \001(\010R\014emailEnabled\022\037\n" +
-      "\013duo_enabled\030\003 \001(\010R\nduoEnabled\022!\n\014totp_e" +
-      "nabled\030\004 \001(\010R\013totpEnabled\"\033\n\031GenerateTOT" +
-      "PSecretRequest\"[\n\032GenerateTOTPSecretResp" +
-      "onse\022\035\n\nsecret_key\030\001 \001(\tR\tsecretKey\022\036\n\013q" +
-      "r_code_url\030\002 \001(\tR\tqrCodeUrl\"+\n\025VerifyTOT" +
-      "PCodeRequest\022\022\n\004code\030\001 \001(\tR\004code\"\030\n\026Veri" +
-      "fyTOTPCodeResponse\"R\n#AddGroupedUserIPRe" +
-      "strictionsRequest\022\031\n\010user_ids\030\001 \003(\tR\007use" +
-      "rIds\022\020\n\003ips\030\002 \003(\tR\003ips\"&\n$AddGroupedUser" +
-      "IPRestrictionsResponse\"U\n&RemoveGroupedU" +
-      "serIPRestrictionsRequest\022\031\n\010user_ids\030\001 \003" +
-      "(\tR\007userIds\022\020\n\003ips\030\002 \003(\tR\003ips\")\n\'RemoveG" +
-      "roupedUserIPRestrictionsResponse\"7\n\032List" +
-      "UsersAllowedIpsRequest\022\031\n\010user_ids\030\001 \003(\t" +
-      "R\007userIds\"\264\002\n\033ListUsersAllowedIpsRespons" +
-      "e\022u\n\024user_allowed_ips_map\030\001 \003(\0132D.api.v1" +
-      "alpha1.org.ListUsersAllowedIpsResponse.U" +
-      "serAllowedIpsMapEntryR\021userAllowedIpsMap" +
-      "\032~\n\026UserAllowedIpsMapEntry\022\020\n\003key\030\001 \001(\tR" +
-      "\003key\022N\n\005value\030\002 \001(\01328.api.v1alpha1.org.L" +
-      "istUsersAllowedIpsResponse.AllowedIpsR\005v" +
-      "alue:\0028\001\032\036\n\nAllowedIps\022\020\n\003ips\030\001 \003(\tR\003ips" +
-      "B\221\001\n\"com.tcn.cloud.api.api.v1alpha1.orgB" +
-      "\tUserProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020" +
-      "Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBM" +
-      "etadata\352\002\022Api::V1alpha1::Orgb\006proto3"
+      "R\031localePreferencesOverride\022R\n\027access_to" +
+      "ken_expiration\030$ \001(\0132\032.google.protobuf.T" +
+      "imestampR\025accessTokenExpiration\032e\n\nRegio" +
+      "nSids\022\033\n\tlogin_sid\030\001 \001(\003R\010loginSid\022\033\n\tag" +
+      "ent_sid\030\002 \001(\003R\010agentSid\022\035\n\nclient_sid\030\003 " +
+      "\001(\003R\tclientSid\032}\n\021RegionSidMapEntry\022\020\n\003k" +
+      "ey\030\001 \001(\tR\003key\022R\n\005value\030\002 \001(\0132<.api.v1alp" +
+      "ha1.org.GetUserSessionDataResponse.User." +
+      "RegionSidsR\005value:\0028\001J\004\010\022\020\023R\nenable_mfa\"" +
+      "3\n\030RefreshMfaLockoutRequest\022\027\n\007user_id\030\001" +
+      " \001(\tR\006userId\"Q\n\031RefreshMfaLockoutRespons" +
+      "e\0224\n\007timeout\030\001 \001(\0132\032.google.protobuf.Tim" +
+      "estampR\007timeout\"Q\n\037RefreshMfaLockoutByOr" +
+      "gIdRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006o" +
+      "rg_id\030\002 \001(\tR\005orgId\"X\n RefreshMfaLockoutB" +
+      "yOrgIdResponse\0224\n\007timeout\030\001 \001(\0132\032.google" +
+      ".protobuf.TimestampR\007timeout\"[\n\021SetMfaTy" +
+      "peRequest\022,\n\004info\030\003 \001(\0132\030.api.commons.or" +
+      "g.MfaInfoR\004infoJ\004\010\001\020\002J\004\010\002\020\003R\003otpR\007user_i" +
+      "d\"\024\n\022SetMfaTypeResponse\"N\n\023SetMyMfaTypeR",
+      "equest\022,\n\004info\030\002 \001(\0132\030.api.commons.org.M" +
+      "faInfoR\004infoJ\004\010\001\020\002R\003otp\"\026\n\024SetMyMfaTypeR" +
+      "esponse\"I\n\024EnableUserMfaRequest\022\027\n\007user_" +
+      "id\030\001 \001(\tR\006userId\022\030\n\007enabled\030\002 \001(\010R\007enabl" +
+      "ed\"\027\n\025EnableUserMfaResponse\"\030\n\026EnableMyU" +
+      "serMfaRequest\"\031\n\027EnableMyUserMfaResponse" +
+      "\"0\n\025GetUserMfaInfoRequest\022\027\n\007user_id\030\001 \001" +
+      "(\tR\006userId\"F\n\026GetUserMfaInfoResponse\022,\n\004" +
+      "info\030\001 \001(\0132\030.api.commons.org.MfaInfoR\004in" +
+      "fo\"\031\n\027GetMyUserMfaInfoRequest\"H\n\030GetMyUs" +
+      "erMfaInfoResponse\022,\n\004info\030\001 \001(\0132\030.api.co" +
+      "mmons.org.MfaInfoR\004info\"\037\n\035GetMyAllowedM" +
+      "faMethodsRequest\"\252\001\n\036GetMyAllowedMfaMeth" +
+      "odsResponse\022\037\n\013mfa_enabled\030\001 \001(\010R\nmfaEna" +
+      "bled\022#\n\remail_enabled\030\002 \001(\010R\014emailEnable" +
+      "d\022\037\n\013duo_enabled\030\003 \001(\010R\nduoEnabled\022!\n\014to" +
+      "tp_enabled\030\004 \001(\010R\013totpEnabled\"\033\n\031Generat" +
+      "eTOTPSecretRequest\"[\n\032GenerateTOTPSecret" +
+      "Response\022\035\n\nsecret_key\030\001 \001(\tR\tsecretKey\022" +
+      "\036\n\013qr_code_url\030\002 \001(\tR\tqrCodeUrl\"+\n\025Verif" +
+      "yTOTPCodeRequest\022\022\n\004code\030\001 \001(\tR\004code\"\030\n\026" +
+      "VerifyTOTPCodeResponse\"R\n#AddGroupedUser" +
+      "IPRestrictionsRequest\022\031\n\010user_ids\030\001 \003(\tR" +
+      "\007userIds\022\020\n\003ips\030\002 \003(\tR\003ips\"&\n$AddGrouped" +
+      "UserIPRestrictionsResponse\"U\n&RemoveGrou" +
+      "pedUserIPRestrictionsRequest\022\031\n\010user_ids" +
+      "\030\001 \003(\tR\007userIds\022\020\n\003ips\030\002 \003(\tR\003ips\")\n\'Rem" +
+      "oveGroupedUserIPRestrictionsResponse\"7\n\032" +
+      "ListUsersAllowedIpsRequest\022\031\n\010user_ids\030\001" +
+      " \003(\tR\007userIds\"\264\002\n\033ListUsersAllowedIpsRes" +
+      "ponse\022u\n\024user_allowed_ips_map\030\001 \003(\0132D.ap" +
+      "i.v1alpha1.org.ListUsersAllowedIpsRespon" +
+      "se.UserAllowedIpsMapEntryR\021userAllowedIp" +
+      "sMap\032~\n\026UserAllowedIpsMapEntry\022\020\n\003key\030\001 " +
+      "\001(\tR\003key\022N\n\005value\030\002 \001(\01328.api.v1alpha1.o" +
+      "rg.ListUsersAllowedIpsResponse.AllowedIp" +
+      "sR\005value:\0028\001\032\036\n\nAllowedIps\022\020\n\003ips\030\001 \003(\tR" +
+      "\003ipsB\221\001\n\"com.tcn.cloud.api.api.v1alpha1." +
+      "orgB\tUserProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Or" +
+      "g\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\" +
+      "GPBMetadata\352\002\022Api::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1494,7 +1496,7 @@ public final class UserProto {
     internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_descriptor,
-        new java.lang.String[] { "UserId", "OrgId", "Username", "P3PermissionGroupId", "PartnerAgentId", "RegionSidMap", "DefaultRegion", "ApiKey", "Email", "LoginDisabled", "CallerIds", "LinkbackNumbers", "AuthUserId", "FirstName", "LastName", "Created", "LastUpdated", "PasswordResetRequired", "ConnectionId", "TimeZoneOverride", "PermissionGroupIds", "TrustIds", "DefaultApplication", "UserCallerId", "AgentProfileGroupId", "Agent", "AccountOwner", "MfaTimestamp", "PasswordResetDate", "LocalePreferencesOverride", });
+        new java.lang.String[] { "UserId", "OrgId", "Username", "P3PermissionGroupId", "PartnerAgentId", "RegionSidMap", "DefaultRegion", "ApiKey", "Email", "LoginDisabled", "CallerIds", "LinkbackNumbers", "AuthUserId", "FirstName", "LastName", "Created", "LastUpdated", "PasswordResetRequired", "ConnectionId", "TimeZoneOverride", "PermissionGroupIds", "TrustIds", "DefaultApplication", "UserCallerId", "AgentProfileGroupId", "Agent", "AccountOwner", "MfaTimestamp", "PasswordResetDate", "LocalePreferencesOverride", "AccessTokenExpiration", });
     internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_RegionSids_descriptor =
       internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_descriptor.getNestedTypes().get(0);
     internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_RegionSids_fieldAccessorTable = new

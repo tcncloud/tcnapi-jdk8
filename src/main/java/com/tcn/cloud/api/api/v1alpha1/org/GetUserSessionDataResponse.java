@@ -762,6 +762,33 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      * <code>.api.commons.LocalePreferences locale_preferences_override = 35 [json_name = "localePreferencesOverride"];</code>
      */
     com.tcn.cloud.api.api.commons.LocalePreferencesOrBuilder getLocalePreferencesOverrideOrBuilder();
+
+    /**
+     * <pre>
+     * The access token expiration time for the user.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
+     * @return Whether the accessTokenExpiration field is set.
+     */
+    boolean hasAccessTokenExpiration();
+    /**
+     * <pre>
+     * The access token expiration time for the user.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
+     * @return The accessTokenExpiration.
+     */
+    com.google.protobuf.Timestamp getAccessTokenExpiration();
+    /**
+     * <pre>
+     * The access token expiration time for the user.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getAccessTokenExpirationOrBuilder();
   }
   /**
    * Protobuf type {@code api.v1alpha1.org.GetUserSessionDataResponse.User}
@@ -2779,6 +2806,44 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       return localePreferencesOverride_ == null ? com.tcn.cloud.api.api.commons.LocalePreferences.getDefaultInstance() : localePreferencesOverride_;
     }
 
+    public static final int ACCESS_TOKEN_EXPIRATION_FIELD_NUMBER = 36;
+    private com.google.protobuf.Timestamp accessTokenExpiration_;
+    /**
+     * <pre>
+     * The access token expiration time for the user.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
+     * @return Whether the accessTokenExpiration field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccessTokenExpiration() {
+      return accessTokenExpiration_ != null;
+    }
+    /**
+     * <pre>
+     * The access token expiration time for the user.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
+     * @return The accessTokenExpiration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getAccessTokenExpiration() {
+      return accessTokenExpiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : accessTokenExpiration_;
+    }
+    /**
+     * <pre>
+     * The access token expiration time for the user.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getAccessTokenExpirationOrBuilder() {
+      return accessTokenExpiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : accessTokenExpiration_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2885,6 +2950,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
       if (localePreferencesOverride_ != null) {
         output.writeMessage(35, getLocalePreferencesOverride());
+      }
+      if (accessTokenExpiration_ != null) {
+        output.writeMessage(36, getAccessTokenExpiration());
       }
       getUnknownFields().writeTo(output);
     }
@@ -3024,6 +3092,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(35, getLocalePreferencesOverride());
       }
+      if (accessTokenExpiration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(36, getAccessTokenExpiration());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3118,6 +3190,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       if (hasLocalePreferencesOverride()) {
         if (!getLocalePreferencesOverride()
             .equals(other.getLocalePreferencesOverride())) return false;
+      }
+      if (hasAccessTokenExpiration() != other.hasAccessTokenExpiration()) return false;
+      if (hasAccessTokenExpiration()) {
+        if (!getAccessTokenExpiration()
+            .equals(other.getAccessTokenExpiration())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -3217,6 +3294,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       if (hasLocalePreferencesOverride()) {
         hash = (37 * hash) + LOCALE_PREFERENCES_OVERRIDE_FIELD_NUMBER;
         hash = (53 * hash) + getLocalePreferencesOverride().hashCode();
+      }
+      if (hasAccessTokenExpiration()) {
+        hash = (37 * hash) + ACCESS_TOKEN_EXPIRATION_FIELD_NUMBER;
+        hash = (53 * hash) + getAccessTokenExpiration().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3433,6 +3514,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           localePreferencesOverrideBuilder_.dispose();
           localePreferencesOverrideBuilder_ = null;
         }
+        accessTokenExpiration_ = null;
+        if (accessTokenExpirationBuilder_ != null) {
+          accessTokenExpirationBuilder_.dispose();
+          accessTokenExpirationBuilder_ = null;
+        }
         return this;
       }
 
@@ -3574,6 +3660,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           result.localePreferencesOverride_ = localePreferencesOverrideBuilder_ == null
               ? localePreferencesOverride_
               : localePreferencesOverrideBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x40000000) != 0)) {
+          result.accessTokenExpiration_ = accessTokenExpirationBuilder_ == null
+              ? accessTokenExpiration_
+              : accessTokenExpirationBuilder_.build();
         }
       }
 
@@ -3764,6 +3855,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         }
         if (other.hasLocalePreferencesOverride()) {
           mergeLocalePreferencesOverride(other.getLocalePreferencesOverride());
+        }
+        if (other.hasAccessTokenExpiration()) {
+          mergeAccessTokenExpiration(other.getAccessTokenExpiration());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -3963,6 +4057,13 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
                 bitField0_ |= 0x20000000;
                 break;
               } // case 282
+              case 290: {
+                input.readMessage(
+                    getAccessTokenExpirationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x40000000;
+                break;
+              } // case 290
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -7222,6 +7323,161 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           localePreferencesOverride_ = null;
         }
         return localePreferencesOverrideBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp accessTokenExpiration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> accessTokenExpirationBuilder_;
+      /**
+       * <pre>
+       * The access token expiration time for the user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
+       * @return Whether the accessTokenExpiration field is set.
+       */
+      public boolean hasAccessTokenExpiration() {
+        return ((bitField0_ & 0x40000000) != 0);
+      }
+      /**
+       * <pre>
+       * The access token expiration time for the user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
+       * @return The accessTokenExpiration.
+       */
+      public com.google.protobuf.Timestamp getAccessTokenExpiration() {
+        if (accessTokenExpirationBuilder_ == null) {
+          return accessTokenExpiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : accessTokenExpiration_;
+        } else {
+          return accessTokenExpirationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The access token expiration time for the user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
+       */
+      public Builder setAccessTokenExpiration(com.google.protobuf.Timestamp value) {
+        if (accessTokenExpirationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessTokenExpiration_ = value;
+        } else {
+          accessTokenExpirationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x40000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The access token expiration time for the user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
+       */
+      public Builder setAccessTokenExpiration(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (accessTokenExpirationBuilder_ == null) {
+          accessTokenExpiration_ = builderForValue.build();
+        } else {
+          accessTokenExpirationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x40000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The access token expiration time for the user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
+       */
+      public Builder mergeAccessTokenExpiration(com.google.protobuf.Timestamp value) {
+        if (accessTokenExpirationBuilder_ == null) {
+          if (((bitField0_ & 0x40000000) != 0) &&
+            accessTokenExpiration_ != null &&
+            accessTokenExpiration_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getAccessTokenExpirationBuilder().mergeFrom(value);
+          } else {
+            accessTokenExpiration_ = value;
+          }
+        } else {
+          accessTokenExpirationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x40000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The access token expiration time for the user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
+       */
+      public Builder clearAccessTokenExpiration() {
+        bitField0_ = (bitField0_ & ~0x40000000);
+        accessTokenExpiration_ = null;
+        if (accessTokenExpirationBuilder_ != null) {
+          accessTokenExpirationBuilder_.dispose();
+          accessTokenExpirationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The access token expiration time for the user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getAccessTokenExpirationBuilder() {
+        bitField0_ |= 0x40000000;
+        onChanged();
+        return getAccessTokenExpirationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The access token expiration time for the user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getAccessTokenExpirationOrBuilder() {
+        if (accessTokenExpirationBuilder_ != null) {
+          return accessTokenExpirationBuilder_.getMessageOrBuilder();
+        } else {
+          return accessTokenExpiration_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : accessTokenExpiration_;
+        }
+      }
+      /**
+       * <pre>
+       * The access token expiration time for the user.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp access_token_expiration = 36 [json_name = "accessTokenExpiration"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getAccessTokenExpirationFieldBuilder() {
+        if (accessTokenExpirationBuilder_ == null) {
+          accessTokenExpirationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getAccessTokenExpiration(),
+                  getParentForChildren(),
+                  isClean());
+          accessTokenExpiration_ = null;
+        }
+        return accessTokenExpirationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
