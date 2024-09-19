@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.commons.integrations;
 /**
  * Protobuf type {@code api.commons.integrations.ExecuteVeradigmGetPlacesOfService}
  */
-public final class ExecuteVeradigmGetPlacesOfService extends
+@java.lang.Deprecated public final class ExecuteVeradigmGetPlacesOfService extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.integrations.ExecuteVeradigmGetPlacesOfService)
     ExecuteVeradigmGetPlacesOfServiceOrBuilder {

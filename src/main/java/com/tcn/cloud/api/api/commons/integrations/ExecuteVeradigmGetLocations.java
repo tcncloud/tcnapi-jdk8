@@ -6,7 +6,7 @@ package com.tcn.cloud.api.api.commons.integrations;
 /**
  * Protobuf type {@code api.commons.integrations.ExecuteVeradigmGetLocations}
  */
-public final class ExecuteVeradigmGetLocations extends
+@java.lang.Deprecated public final class ExecuteVeradigmGetLocations extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.commons.integrations.ExecuteVeradigmGetLocations)
     ExecuteVeradigmGetLocationsOrBuilder {
