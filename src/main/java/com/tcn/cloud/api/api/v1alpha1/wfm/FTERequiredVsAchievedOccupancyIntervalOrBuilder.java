@@ -25,7 +25,7 @@ public interface FTERequiredVsAchievedOccupancyIntervalOrBuilder extends
   /**
    * <code>float required_fte_occupancy = 2 [json_name = "requiredFteOccupancy", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.required_fte_occupancy is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=6487
+   *     See api/v1alpha1/wfm/wfm.proto;l=6632
    * @return The requiredFteOccupancy.
    */
   @java.lang.Deprecated float getRequiredFteOccupancy();
@@ -33,7 +33,7 @@ public interface FTERequiredVsAchievedOccupancyIntervalOrBuilder extends
   /**
    * <code>float achieved_fte_occupancy = 3 [json_name = "achievedFteOccupancy", deprecated = true];</code>
    * @deprecated api.v1alpha1.wfm.FTERequiredVsAchievedOccupancyInterval.achieved_fte_occupancy is deprecated.
-   *     See api/v1alpha1/wfm/wfm.proto;l=6488
+   *     See api/v1alpha1/wfm/wfm.proto;l=6633
    * @return The achievedFteOccupancy.
    */
   @java.lang.Deprecated float getAchievedFteOccupancy();
