@@ -51,7 +51,6 @@ private static final long serialVersionUID = 0L;
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     INVOICE_TEMPLATE(1),
-    RECEIPT_TEMPLATE(2),
     VAL_NOT_SET(0);
     private final int value;
     private ValCase(int value) {
@@ -70,7 +69,6 @@ private static final long serialVersionUID = 0L;
     public static ValCase forNumber(int value) {
       switch (value) {
         case 1: return INVOICE_TEMPLATE;
-        case 2: return RECEIPT_TEMPLATE;
         case 0: return VAL_NOT_SET;
         default: return null;
       }
@@ -117,37 +115,6 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.Invoices.getDefaultInstance();
   }
 
-  public static final int RECEIPT_TEMPLATE_FIELD_NUMBER = 2;
-  /**
-   * <code>.api.commons.integrations.Receipt receipt_template = 2 [json_name = "receiptTemplate"];</code>
-   * @return Whether the receiptTemplate field is set.
-   */
-  @java.lang.Override
-  public boolean hasReceiptTemplate() {
-    return valCase_ == 2;
-  }
-  /**
-   * <code>.api.commons.integrations.Receipt receipt_template = 2 [json_name = "receiptTemplate"];</code>
-   * @return The receiptTemplate.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.Receipt getReceiptTemplate() {
-    if (valCase_ == 2) {
-       return (com.tcn.cloud.api.api.commons.integrations.Receipt) val_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.Receipt.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.Receipt receipt_template = 2 [json_name = "receiptTemplate"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ReceiptOrBuilder getReceiptTemplateOrBuilder() {
-    if (valCase_ == 2) {
-       return (com.tcn.cloud.api.api.commons.integrations.Receipt) val_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.Receipt.getDefaultInstance();
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -165,9 +132,6 @@ private static final long serialVersionUID = 0L;
     if (valCase_ == 1) {
       output.writeMessage(1, (com.tcn.cloud.api.api.commons.integrations.Invoices) val_);
     }
-    if (valCase_ == 2) {
-      output.writeMessage(2, (com.tcn.cloud.api.api.commons.integrations.Receipt) val_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -180,10 +144,6 @@ private static final long serialVersionUID = 0L;
     if (valCase_ == 1) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, (com.tcn.cloud.api.api.commons.integrations.Invoices) val_);
-    }
-    if (valCase_ == 2) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, (com.tcn.cloud.api.api.commons.integrations.Receipt) val_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -206,10 +166,6 @@ private static final long serialVersionUID = 0L;
         if (!getInvoiceTemplate()
             .equals(other.getInvoiceTemplate())) return false;
         break;
-      case 2:
-        if (!getReceiptTemplate()
-            .equals(other.getReceiptTemplate())) return false;
-        break;
       case 0:
       default:
     }
@@ -228,10 +184,6 @@ private static final long serialVersionUID = 0L;
       case 1:
         hash = (37 * hash) + INVOICE_TEMPLATE_FIELD_NUMBER;
         hash = (53 * hash) + getInvoiceTemplate().hashCode();
-        break;
-      case 2:
-        hash = (37 * hash) + RECEIPT_TEMPLATE_FIELD_NUMBER;
-        hash = (53 * hash) + getReceiptTemplate().hashCode();
         break;
       case 0:
       default:
@@ -376,9 +328,6 @@ private static final long serialVersionUID = 0L;
       if (invoiceTemplateBuilder_ != null) {
         invoiceTemplateBuilder_.clear();
       }
-      if (receiptTemplateBuilder_ != null) {
-        receiptTemplateBuilder_.clear();
-      }
       valCase_ = 0;
       val_ = null;
       return this;
@@ -423,10 +372,6 @@ private static final long serialVersionUID = 0L;
       if (valCase_ == 1 &&
           invoiceTemplateBuilder_ != null) {
         result.val_ = invoiceTemplateBuilder_.build();
-      }
-      if (valCase_ == 2 &&
-          receiptTemplateBuilder_ != null) {
-        result.val_ = receiptTemplateBuilder_.build();
       }
     }
 
@@ -479,10 +424,6 @@ private static final long serialVersionUID = 0L;
           mergeInvoiceTemplate(other.getInvoiceTemplate());
           break;
         }
-        case RECEIPT_TEMPLATE: {
-          mergeReceiptTemplate(other.getReceiptTemplate());
-          break;
-        }
         case VAL_NOT_SET: {
           break;
         }
@@ -520,13 +461,6 @@ private static final long serialVersionUID = 0L;
               valCase_ = 1;
               break;
             } // case 10
-            case 18: {
-              input.readMessage(
-                  getReceiptTemplateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valCase_ = 2;
-              break;
-            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -699,148 +633,6 @@ private static final long serialVersionUID = 0L;
       valCase_ = 1;
       onChanged();
       return invoiceTemplateBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.Receipt, com.tcn.cloud.api.api.commons.integrations.Receipt.Builder, com.tcn.cloud.api.api.commons.integrations.ReceiptOrBuilder> receiptTemplateBuilder_;
-    /**
-     * <code>.api.commons.integrations.Receipt receipt_template = 2 [json_name = "receiptTemplate"];</code>
-     * @return Whether the receiptTemplate field is set.
-     */
-    @java.lang.Override
-    public boolean hasReceiptTemplate() {
-      return valCase_ == 2;
-    }
-    /**
-     * <code>.api.commons.integrations.Receipt receipt_template = 2 [json_name = "receiptTemplate"];</code>
-     * @return The receiptTemplate.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.Receipt getReceiptTemplate() {
-      if (receiptTemplateBuilder_ == null) {
-        if (valCase_ == 2) {
-          return (com.tcn.cloud.api.api.commons.integrations.Receipt) val_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.Receipt.getDefaultInstance();
-      } else {
-        if (valCase_ == 2) {
-          return receiptTemplateBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.Receipt.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.Receipt receipt_template = 2 [json_name = "receiptTemplate"];</code>
-     */
-    public Builder setReceiptTemplate(com.tcn.cloud.api.api.commons.integrations.Receipt value) {
-      if (receiptTemplateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        val_ = value;
-        onChanged();
-      } else {
-        receiptTemplateBuilder_.setMessage(value);
-      }
-      valCase_ = 2;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.Receipt receipt_template = 2 [json_name = "receiptTemplate"];</code>
-     */
-    public Builder setReceiptTemplate(
-        com.tcn.cloud.api.api.commons.integrations.Receipt.Builder builderForValue) {
-      if (receiptTemplateBuilder_ == null) {
-        val_ = builderForValue.build();
-        onChanged();
-      } else {
-        receiptTemplateBuilder_.setMessage(builderForValue.build());
-      }
-      valCase_ = 2;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.Receipt receipt_template = 2 [json_name = "receiptTemplate"];</code>
-     */
-    public Builder mergeReceiptTemplate(com.tcn.cloud.api.api.commons.integrations.Receipt value) {
-      if (receiptTemplateBuilder_ == null) {
-        if (valCase_ == 2 &&
-            val_ != com.tcn.cloud.api.api.commons.integrations.Receipt.getDefaultInstance()) {
-          val_ = com.tcn.cloud.api.api.commons.integrations.Receipt.newBuilder((com.tcn.cloud.api.api.commons.integrations.Receipt) val_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          val_ = value;
-        }
-        onChanged();
-      } else {
-        if (valCase_ == 2) {
-          receiptTemplateBuilder_.mergeFrom(value);
-        } else {
-          receiptTemplateBuilder_.setMessage(value);
-        }
-      }
-      valCase_ = 2;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.Receipt receipt_template = 2 [json_name = "receiptTemplate"];</code>
-     */
-    public Builder clearReceiptTemplate() {
-      if (receiptTemplateBuilder_ == null) {
-        if (valCase_ == 2) {
-          valCase_ = 0;
-          val_ = null;
-          onChanged();
-        }
-      } else {
-        if (valCase_ == 2) {
-          valCase_ = 0;
-          val_ = null;
-        }
-        receiptTemplateBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.Receipt receipt_template = 2 [json_name = "receiptTemplate"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.Receipt.Builder getReceiptTemplateBuilder() {
-      return getReceiptTemplateFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.Receipt receipt_template = 2 [json_name = "receiptTemplate"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ReceiptOrBuilder getReceiptTemplateOrBuilder() {
-      if ((valCase_ == 2) && (receiptTemplateBuilder_ != null)) {
-        return receiptTemplateBuilder_.getMessageOrBuilder();
-      } else {
-        if (valCase_ == 2) {
-          return (com.tcn.cloud.api.api.commons.integrations.Receipt) val_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.Receipt.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.Receipt receipt_template = 2 [json_name = "receiptTemplate"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.Receipt, com.tcn.cloud.api.api.commons.integrations.Receipt.Builder, com.tcn.cloud.api.api.commons.integrations.ReceiptOrBuilder> 
-        getReceiptTemplateFieldBuilder() {
-      if (receiptTemplateBuilder_ == null) {
-        if (!(valCase_ == 2)) {
-          val_ = com.tcn.cloud.api.api.commons.integrations.Receipt.getDefaultInstance();
-        }
-        receiptTemplateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.Receipt, com.tcn.cloud.api.api.commons.integrations.Receipt.Builder, com.tcn.cloud.api.api.commons.integrations.ReceiptOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.Receipt) val_,
-                getParentForChildren(),
-                isClean());
-        val_ = null;
-      }
-      valCase_ = 2;
-      onChanged();
-      return receiptTemplateBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

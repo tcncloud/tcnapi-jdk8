@@ -22,20 +22,5 @@ public interface TemplateOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.InvoicesOrBuilder getInvoiceTemplateOrBuilder();
 
-  /**
-   * <code>.api.commons.integrations.Receipt receipt_template = 2 [json_name = "receiptTemplate"];</code>
-   * @return Whether the receiptTemplate field is set.
-   */
-  boolean hasReceiptTemplate();
-  /**
-   * <code>.api.commons.integrations.Receipt receipt_template = 2 [json_name = "receiptTemplate"];</code>
-   * @return The receiptTemplate.
-   */
-  com.tcn.cloud.api.api.commons.integrations.Receipt getReceiptTemplate();
-  /**
-   * <code>.api.commons.integrations.Receipt receipt_template = 2 [json_name = "receiptTemplate"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ReceiptOrBuilder getReceiptTemplateOrBuilder();
-
   com.tcn.cloud.api.api.v1alpha1.integrations.Template.ValCase getValCase();
 }
