@@ -267,15 +267,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object parameters_ = "";
   /**
    * <pre>
-   * The parameters of the exile configuration
-   * This is a JSON string with the following information:
-   *   1. Database Host
-   *   2. Database URL
-   *   3. Database Port
-   *   4. Database Username
-   *   5. Database Password
-   *   6. Max Number Connections
-   *   7. Max Number Exile Jobs
+   * The parameters of the exile configuration (JSON string)
    * </pre>
    *
    * <code>string parameters = 6 [json_name = "parameters"];</code>
@@ -296,15 +288,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The parameters of the exile configuration
-   * This is a JSON string with the following information:
-   *   1. Database Host
-   *   2. Database URL
-   *   3. Database Port
-   *   4. Database Username
-   *   5. Database Password
-   *   6. Max Number Connections
-   *   7. Max Number Exile Jobs
+   * The parameters of the exile configuration (JSON string)
    * </pre>
    *
    * <code>string parameters = 6 [json_name = "parameters"];</code>
@@ -1217,15 +1201,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object parameters_ = "";
     /**
      * <pre>
-     * The parameters of the exile configuration
-     * This is a JSON string with the following information:
-     *   1. Database Host
-     *   2. Database URL
-     *   3. Database Port
-     *   4. Database Username
-     *   5. Database Password
-     *   6. Max Number Connections
-     *   7. Max Number Exile Jobs
+     * The parameters of the exile configuration (JSON string)
      * </pre>
      *
      * <code>string parameters = 6 [json_name = "parameters"];</code>
@@ -1245,15 +1221,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The parameters of the exile configuration
-     * This is a JSON string with the following information:
-     *   1. Database Host
-     *   2. Database URL
-     *   3. Database Port
-     *   4. Database Username
-     *   5. Database Password
-     *   6. Max Number Connections
-     *   7. Max Number Exile Jobs
+     * The parameters of the exile configuration (JSON string)
      * </pre>
      *
      * <code>string parameters = 6 [json_name = "parameters"];</code>
@@ -1274,15 +1242,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The parameters of the exile configuration
-     * This is a JSON string with the following information:
-     *   1. Database Host
-     *   2. Database URL
-     *   3. Database Port
-     *   4. Database Username
-     *   5. Database Password
-     *   6. Max Number Connections
-     *   7. Max Number Exile Jobs
+     * The parameters of the exile configuration (JSON string)
      * </pre>
      *
      * <code>string parameters = 6 [json_name = "parameters"];</code>
@@ -1299,15 +1259,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The parameters of the exile configuration
-     * This is a JSON string with the following information:
-     *   1. Database Host
-     *   2. Database URL
-     *   3. Database Port
-     *   4. Database Username
-     *   5. Database Password
-     *   6. Max Number Connections
-     *   7. Max Number Exile Jobs
+     * The parameters of the exile configuration (JSON string)
      * </pre>
      *
      * <code>string parameters = 6 [json_name = "parameters"];</code>
@@ -1321,15 +1273,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The parameters of the exile configuration
-     * This is a JSON string with the following information:
-     *   1. Database Host
-     *   2. Database URL
-     *   3. Database Port
-     *   4. Database Username
-     *   5. Database Password
-     *   6. Max Number Connections
-     *   7. Max Number Exile Jobs
+     * The parameters of the exile configuration (JSON string)
      * </pre>
      *
      * <code>string parameters = 6 [json_name = "parameters"];</code>
