@@ -52,6 +52,14 @@ public enum ExileConfigurationType
    * <code>EXILE_CONFIGURATION_TYPE_FACS = 4;</code>
    */
   EXILE_CONFIGURATION_TYPE_FACS(4),
+  /**
+   * <pre>
+   * Type Velosidy specifies the configuration for Velosidy (parameters required).
+   * </pre>
+   *
+   * <code>EXILE_CONFIGURATION_TYPE_VELOSIDY = 5;</code>
+   */
+  EXILE_CONFIGURATION_TYPE_VELOSIDY(5),
   UNRECOGNIZED(-1),
   ;
 
@@ -95,6 +103,14 @@ public enum ExileConfigurationType
    * <code>EXILE_CONFIGURATION_TYPE_FACS = 4;</code>
    */
   public static final int EXILE_CONFIGURATION_TYPE_FACS_VALUE = 4;
+  /**
+   * <pre>
+   * Type Velosidy specifies the configuration for Velosidy (parameters required).
+   * </pre>
+   *
+   * <code>EXILE_CONFIGURATION_TYPE_VELOSIDY = 5;</code>
+   */
+  public static final int EXILE_CONFIGURATION_TYPE_VELOSIDY_VALUE = 5;
 
 
   public final int getNumber() {
@@ -126,6 +142,7 @@ public enum ExileConfigurationType
       case 2: return EXILE_CONFIGURATION_TYPE_ARTIVA_HCX;
       case 3: return EXILE_CONFIGURATION_TYPE_ARTIVA_RM;
       case 4: return EXILE_CONFIGURATION_TYPE_FACS;
+      case 5: return EXILE_CONFIGURATION_TYPE_VELOSIDY;
       default: return null;
     }
   }
