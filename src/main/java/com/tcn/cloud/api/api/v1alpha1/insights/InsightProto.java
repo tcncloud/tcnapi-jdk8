@@ -336,7 +336,7 @@ public final class InsightProto {
       "onse\022L\n\013vfs_schemas\030\001 \003(\0132+.api.v1alpha1" +
       ".insights.GetVfsSchemaResponseR\nvfsSchem" +
       "as\"u\n\027FixedWidthVisualization\022Z\n\024table_c" +
-      "olumn_details\030\003 \003(\0132(.api.v1alpha1.insig" +
+      "olumn_details\030\001 \003(\0132(.api.v1alpha1.insig" +
       "hts.TableColumnConfigR\022tableColumnDetail" +
       "s\"p\n\022TableVisualization\022Z\n\024table_column_" +
       "details\030\001 \003(\0132(.api.v1alpha1.insights.Ta" +

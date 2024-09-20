@@ -12,7 +12,7 @@ public interface FixedWidthVisualizationOrBuilder extends
    * Map of table column details
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig> 
       getTableColumnDetailsList();
@@ -21,7 +21,7 @@ public interface FixedWidthVisualizationOrBuilder extends
    * Map of table column details
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig getTableColumnDetails(int index);
   /**
@@ -29,7 +29,7 @@ public interface FixedWidthVisualizationOrBuilder extends
    * Map of table column details
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
    */
   int getTableColumnDetailsCount();
   /**
@@ -37,7 +37,7 @@ public interface FixedWidthVisualizationOrBuilder extends
    * Map of table column details
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfigOrBuilder> 
       getTableColumnDetailsOrBuilderList();
@@ -46,7 +46,7 @@ public interface FixedWidthVisualizationOrBuilder extends
    * Map of table column details
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfigOrBuilder getTableColumnDetailsOrBuilder(
       int index);

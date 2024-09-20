@@ -43,7 +43,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.insights.FixedWidthVisualization.class, com.tcn.cloud.api.api.v1alpha1.insights.FixedWidthVisualization.Builder.class);
   }
 
-  public static final int TABLE_COLUMN_DETAILS_FIELD_NUMBER = 3;
+  public static final int TABLE_COLUMN_DETAILS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig> tableColumnDetails_;
   /**
@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
    * Map of table column details
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
    */
   @java.lang.Override
   public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig> getTableColumnDetailsList() {
@@ -62,7 +62,7 @@ private static final long serialVersionUID = 0L;
    * Map of table column details
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfigOrBuilder> 
@@ -74,7 +74,7 @@ private static final long serialVersionUID = 0L;
    * Map of table column details
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
    */
   @java.lang.Override
   public int getTableColumnDetailsCount() {
@@ -85,7 +85,7 @@ private static final long serialVersionUID = 0L;
    * Map of table column details
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig getTableColumnDetails(int index) {
@@ -96,7 +96,7 @@ private static final long serialVersionUID = 0L;
    * Map of table column details
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+   * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfigOrBuilder getTableColumnDetailsOrBuilder(
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     for (int i = 0; i < tableColumnDetails_.size(); i++) {
-      output.writeMessage(3, tableColumnDetails_.get(i));
+      output.writeMessage(1, tableColumnDetails_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -132,7 +132,7 @@ private static final long serialVersionUID = 0L;
     size = 0;
     for (int i = 0; i < tableColumnDetails_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, tableColumnDetails_.get(i));
+        .computeMessageSize(1, tableColumnDetails_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -452,7 +452,7 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 26: {
+            case 10: {
               com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig m =
                   input.readMessage(
                       com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig.parser(),
@@ -464,7 +464,7 @@ private static final long serialVersionUID = 0L;
                 tableColumnDetailsBuilder_.addMessage(m);
               }
               break;
-            } // case 26
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -499,7 +499,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig> getTableColumnDetailsList() {
       if (tableColumnDetailsBuilder_ == null) {
@@ -513,7 +513,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public int getTableColumnDetailsCount() {
       if (tableColumnDetailsBuilder_ == null) {
@@ -527,7 +527,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig getTableColumnDetails(int index) {
       if (tableColumnDetailsBuilder_ == null) {
@@ -541,7 +541,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public Builder setTableColumnDetails(
         int index, com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig value) {
@@ -562,7 +562,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public Builder setTableColumnDetails(
         int index, com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig.Builder builderForValue) {
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public Builder addTableColumnDetails(com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig value) {
       if (tableColumnDetailsBuilder_ == null) {
@@ -600,7 +600,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public Builder addTableColumnDetails(
         int index, com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig value) {
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public Builder addTableColumnDetails(
         com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig.Builder builderForValue) {
@@ -639,7 +639,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public Builder addTableColumnDetails(
         int index, com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig.Builder builderForValue) {
@@ -657,7 +657,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public Builder addAllTableColumnDetails(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig> values) {
@@ -676,7 +676,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public Builder clearTableColumnDetails() {
       if (tableColumnDetailsBuilder_ == null) {
@@ -693,7 +693,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public Builder removeTableColumnDetails(int index) {
       if (tableColumnDetailsBuilder_ == null) {
@@ -710,7 +710,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig.Builder getTableColumnDetailsBuilder(
         int index) {
@@ -721,7 +721,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfigOrBuilder getTableColumnDetailsOrBuilder(
         int index) {
@@ -735,7 +735,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfigOrBuilder> 
          getTableColumnDetailsOrBuilderList() {
@@ -750,7 +750,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig.Builder addTableColumnDetailsBuilder() {
       return getTableColumnDetailsFieldBuilder().addBuilder(
@@ -761,7 +761,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig.Builder addTableColumnDetailsBuilder(
         int index) {
@@ -773,7 +773,7 @@ private static final long serialVersionUID = 0L;
      * Map of table column details
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 3 [json_name = "tableColumnDetails"];</code>
+     * <code>repeated .api.v1alpha1.insights.TableColumnConfig table_column_details = 1 [json_name = "tableColumnDetails"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.insights.TableColumnConfig.Builder> 
          getTableColumnDetailsBuilderList() {
