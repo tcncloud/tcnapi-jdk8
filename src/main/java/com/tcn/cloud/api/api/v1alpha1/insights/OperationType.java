@@ -100,6 +100,14 @@ public enum OperationType
    * <code>OPERATION_TYPE_PRECISION = 10;</code>
    */
   OPERATION_TYPE_PRECISION(10),
+  /**
+   * <pre>
+   * PAD operation
+   * </pre>
+   *
+   * <code>OPERATION_TYPE_PAD = 11;</code>
+   */
+  OPERATION_TYPE_PAD(11),
   UNRECOGNIZED(-1),
   ;
 
@@ -191,6 +199,14 @@ public enum OperationType
    * <code>OPERATION_TYPE_PRECISION = 10;</code>
    */
   public static final int OPERATION_TYPE_PRECISION_VALUE = 10;
+  /**
+   * <pre>
+   * PAD operation
+   * </pre>
+   *
+   * <code>OPERATION_TYPE_PAD = 11;</code>
+   */
+  public static final int OPERATION_TYPE_PAD_VALUE = 11;
 
 
   public final int getNumber() {
@@ -228,6 +244,7 @@ public enum OperationType
       case 8: return OPERATION_TYPE_DIVIDE;
       case 9: return OPERATION_TYPE_FORMAT_NUMBER;
       case 10: return OPERATION_TYPE_PRECISION;
+      case 11: return OPERATION_TYPE_PAD;
       default: return null;
     }
   }

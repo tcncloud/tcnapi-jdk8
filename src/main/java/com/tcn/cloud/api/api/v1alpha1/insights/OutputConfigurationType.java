@@ -44,6 +44,14 @@ public enum OutputConfigurationType
    * <code>OUTPUT_CONFIGURATION_TYPE_PIE_CHART = 3;</code>
    */
   OUTPUT_CONFIGURATION_TYPE_PIE_CHART(3),
+  /**
+   * <pre>
+   * Output configuration for fixed width format
+   * </pre>
+   *
+   * <code>OUTPUT_CONFIGURATION_TYPE_FIXED_WIDTH = 4;</code>
+   */
+  OUTPUT_CONFIGURATION_TYPE_FIXED_WIDTH(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -79,6 +87,14 @@ public enum OutputConfigurationType
    * <code>OUTPUT_CONFIGURATION_TYPE_PIE_CHART = 3;</code>
    */
   public static final int OUTPUT_CONFIGURATION_TYPE_PIE_CHART_VALUE = 3;
+  /**
+   * <pre>
+   * Output configuration for fixed width format
+   * </pre>
+   *
+   * <code>OUTPUT_CONFIGURATION_TYPE_FIXED_WIDTH = 4;</code>
+   */
+  public static final int OUTPUT_CONFIGURATION_TYPE_FIXED_WIDTH_VALUE = 4;
 
 
   public final int getNumber() {
@@ -109,6 +125,7 @@ public enum OutputConfigurationType
       case 1: return OUTPUT_CONFIGURATION_TYPE_TABLE;
       case 2: return OUTPUT_CONFIGURATION_TYPE_MULTI_SERIES;
       case 3: return OUTPUT_CONFIGURATION_TYPE_PIE_CHART;
+      case 4: return OUTPUT_CONFIGURATION_TYPE_FIXED_WIDTH;
       default: return null;
     }
   }
