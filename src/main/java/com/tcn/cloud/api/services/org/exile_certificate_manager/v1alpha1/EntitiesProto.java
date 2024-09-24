@@ -55,20 +55,21 @@ public final class EntitiesProto {
       "type\030\005 \001(\0162G.services.org.exile_certific" +
       "ate_manager.v1alpha1.ExileConfigurationT" +
       "ypeR\004type\022\036\n\nparameters\030\006 \001(\tR\nparameter" +
-      "s*\331\001\n\026ExileConfigurationType\022(\n$EXILE_CO" +
+      "s*\200\002\n\026ExileConfigurationType\022(\n$EXILE_CO" +
       "NFIGURATION_TYPE_UNSPECIFIED\020\000\022!\n\035EXILE_" +
       "CONFIGURATION_TYPE_NONE\020\001\022\'\n#EXILE_CONFI" +
       "GURATION_TYPE_ARTIVA_HCX\020\002\022&\n\"EXILE_CONF" +
       "IGURATION_TYPE_ARTIVA_RM\020\003\022!\n\035EXILE_CONF" +
-      "IGURATION_TYPE_FACS\020\004B\251\002\nAcom.tcn.cloud." +
-      "api.services.org.exile_certificate_manag" +
-      "er.v1alpha1B\rEntitiesProtoP\001\242\002\003SOE\252\002-Ser" +
-      "vices.Org.ExileCertificateManager.V1alph" +
-      "a1\312\002-Services\\Org\\ExileCertificateManage" +
-      "r\\V1alpha1\342\0029Services\\Org\\ExileCertifica" +
-      "teManager\\V1alpha1\\GPBMetadata\352\0020Service" +
-      "s::Org::ExileCertificateManager::V1alpha" +
-      "1b\006proto3"
+      "IGURATION_TYPE_FACS\020\004\022%\n!EXILE_CONFIGURA" +
+      "TION_TYPE_VELOSIDY\020\005B\251\002\nAcom.tcn.cloud.a" +
+      "pi.services.org.exile_certificate_manage" +
+      "r.v1alpha1B\rEntitiesProtoP\001\242\002\003SOE\252\002-Serv" +
+      "ices.Org.ExileCertificateManager.V1alpha" +
+      "1\312\002-Services\\Org\\ExileCertificateManager" +
+      "\\V1alpha1\342\0029Services\\Org\\ExileCertificat" +
+      "eManager\\V1alpha1\\GPBMetadata\352\0020Services" +
+      "::Org::ExileCertificateManager::V1alpha1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
