@@ -72,5 +72,32 @@ public interface ColumnOperationOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.insights.FormatSeriesOrBuilder getFormatSeriesOrBuilder();
 
+  /**
+   * <pre>
+   * Pad operation
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.PadOperation pad_operation = 4 [json_name = "padOperation"];</code>
+   * @return Whether the padOperation field is set.
+   */
+  boolean hasPadOperation();
+  /**
+   * <pre>
+   * Pad operation
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.PadOperation pad_operation = 4 [json_name = "padOperation"];</code>
+   * @return The padOperation.
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.PadOperation getPadOperation();
+  /**
+   * <pre>
+   * Pad operation
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.PadOperation pad_operation = 4 [json_name = "padOperation"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.insights.PadOperationOrBuilder getPadOperationOrBuilder();
+
   com.tcn.cloud.api.api.v1alpha1.insights.ColumnOperation.OperationValueCase getOperationValueCase();
 }

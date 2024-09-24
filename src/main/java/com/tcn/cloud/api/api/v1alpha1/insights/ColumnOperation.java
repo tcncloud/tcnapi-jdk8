@@ -51,6 +51,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     FLOAT_VALUE(2),
     FORMAT_SERIES(3),
+    PAD_OPERATION(4),
     OPERATIONVALUE_NOT_SET(0);
     private final int value;
     private OperationValueCase(int value) {
@@ -70,6 +71,7 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 2: return FLOAT_VALUE;
         case 3: return FORMAT_SERIES;
+        case 4: return PAD_OPERATION;
         case 0: return OPERATIONVALUE_NOT_SET;
         default: return null;
       }
@@ -183,6 +185,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.insights.FormatSeries.getDefaultInstance();
   }
 
+  public static final int PAD_OPERATION_FIELD_NUMBER = 4;
+  /**
+   * <pre>
+   * Pad operation
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.PadOperation pad_operation = 4 [json_name = "padOperation"];</code>
+   * @return Whether the padOperation field is set.
+   */
+  @java.lang.Override
+  public boolean hasPadOperation() {
+    return operationValueCase_ == 4;
+  }
+  /**
+   * <pre>
+   * Pad operation
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.PadOperation pad_operation = 4 [json_name = "padOperation"];</code>
+   * @return The padOperation.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.PadOperation getPadOperation() {
+    if (operationValueCase_ == 4) {
+       return (com.tcn.cloud.api.api.v1alpha1.insights.PadOperation) operationValue_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.insights.PadOperation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Pad operation
+   * </pre>
+   *
+   * <code>.api.v1alpha1.insights.PadOperation pad_operation = 4 [json_name = "padOperation"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.insights.PadOperationOrBuilder getPadOperationOrBuilder() {
+    if (operationValueCase_ == 4) {
+       return (com.tcn.cloud.api.api.v1alpha1.insights.PadOperation) operationValue_;
+    }
+    return com.tcn.cloud.api.api.v1alpha1.insights.PadOperation.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -207,6 +252,9 @@ private static final long serialVersionUID = 0L;
     if (operationValueCase_ == 3) {
       output.writeMessage(3, (com.tcn.cloud.api.api.v1alpha1.insights.FormatSeries) operationValue_);
     }
+    if (operationValueCase_ == 4) {
+      output.writeMessage(4, (com.tcn.cloud.api.api.v1alpha1.insights.PadOperation) operationValue_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -228,6 +276,10 @@ private static final long serialVersionUID = 0L;
     if (operationValueCase_ == 3) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, (com.tcn.cloud.api.api.v1alpha1.insights.FormatSeries) operationValue_);
+    }
+    if (operationValueCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (com.tcn.cloud.api.api.v1alpha1.insights.PadOperation) operationValue_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -256,6 +308,10 @@ private static final long serialVersionUID = 0L;
         if (!getFormatSeries()
             .equals(other.getFormatSeries())) return false;
         break;
+      case 4:
+        if (!getPadOperation()
+            .equals(other.getPadOperation())) return false;
+        break;
       case 0:
       default:
     }
@@ -281,6 +337,10 @@ private static final long serialVersionUID = 0L;
       case 3:
         hash = (37 * hash) + FORMAT_SERIES_FIELD_NUMBER;
         hash = (53 * hash) + getFormatSeries().hashCode();
+        break;
+      case 4:
+        hash = (37 * hash) + PAD_OPERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPadOperation().hashCode();
         break;
       case 0:
       default:
@@ -424,6 +484,9 @@ private static final long serialVersionUID = 0L;
       if (formatSeriesBuilder_ != null) {
         formatSeriesBuilder_.clear();
       }
+      if (padOperationBuilder_ != null) {
+        padOperationBuilder_.clear();
+      }
       operationValueCase_ = 0;
       operationValue_ = null;
       return this;
@@ -471,6 +534,10 @@ private static final long serialVersionUID = 0L;
       if (operationValueCase_ == 3 &&
           formatSeriesBuilder_ != null) {
         result.operationValue_ = formatSeriesBuilder_.build();
+      }
+      if (operationValueCase_ == 4 &&
+          padOperationBuilder_ != null) {
+        result.operationValue_ = padOperationBuilder_.build();
       }
     }
 
@@ -530,6 +597,10 @@ private static final long serialVersionUID = 0L;
           mergeFormatSeries(other.getFormatSeries());
           break;
         }
+        case PAD_OPERATION: {
+          mergePadOperation(other.getPadOperation());
+          break;
+        }
         case OPERATIONVALUE_NOT_SET: {
           break;
         }
@@ -577,6 +648,13 @@ private static final long serialVersionUID = 0L;
               operationValueCase_ = 3;
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  getPadOperationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              operationValueCase_ = 4;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -916,6 +994,184 @@ private static final long serialVersionUID = 0L;
       operationValueCase_ = 3;
       onChanged();
       return formatSeriesBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.PadOperation, com.tcn.cloud.api.api.v1alpha1.insights.PadOperation.Builder, com.tcn.cloud.api.api.v1alpha1.insights.PadOperationOrBuilder> padOperationBuilder_;
+    /**
+     * <pre>
+     * Pad operation
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.PadOperation pad_operation = 4 [json_name = "padOperation"];</code>
+     * @return Whether the padOperation field is set.
+     */
+    @java.lang.Override
+    public boolean hasPadOperation() {
+      return operationValueCase_ == 4;
+    }
+    /**
+     * <pre>
+     * Pad operation
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.PadOperation pad_operation = 4 [json_name = "padOperation"];</code>
+     * @return The padOperation.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.insights.PadOperation getPadOperation() {
+      if (padOperationBuilder_ == null) {
+        if (operationValueCase_ == 4) {
+          return (com.tcn.cloud.api.api.v1alpha1.insights.PadOperation) operationValue_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.insights.PadOperation.getDefaultInstance();
+      } else {
+        if (operationValueCase_ == 4) {
+          return padOperationBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v1alpha1.insights.PadOperation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Pad operation
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.PadOperation pad_operation = 4 [json_name = "padOperation"];</code>
+     */
+    public Builder setPadOperation(com.tcn.cloud.api.api.v1alpha1.insights.PadOperation value) {
+      if (padOperationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        operationValue_ = value;
+        onChanged();
+      } else {
+        padOperationBuilder_.setMessage(value);
+      }
+      operationValueCase_ = 4;
+      return this;
+    }
+    /**
+     * <pre>
+     * Pad operation
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.PadOperation pad_operation = 4 [json_name = "padOperation"];</code>
+     */
+    public Builder setPadOperation(
+        com.tcn.cloud.api.api.v1alpha1.insights.PadOperation.Builder builderForValue) {
+      if (padOperationBuilder_ == null) {
+        operationValue_ = builderForValue.build();
+        onChanged();
+      } else {
+        padOperationBuilder_.setMessage(builderForValue.build());
+      }
+      operationValueCase_ = 4;
+      return this;
+    }
+    /**
+     * <pre>
+     * Pad operation
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.PadOperation pad_operation = 4 [json_name = "padOperation"];</code>
+     */
+    public Builder mergePadOperation(com.tcn.cloud.api.api.v1alpha1.insights.PadOperation value) {
+      if (padOperationBuilder_ == null) {
+        if (operationValueCase_ == 4 &&
+            operationValue_ != com.tcn.cloud.api.api.v1alpha1.insights.PadOperation.getDefaultInstance()) {
+          operationValue_ = com.tcn.cloud.api.api.v1alpha1.insights.PadOperation.newBuilder((com.tcn.cloud.api.api.v1alpha1.insights.PadOperation) operationValue_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          operationValue_ = value;
+        }
+        onChanged();
+      } else {
+        if (operationValueCase_ == 4) {
+          padOperationBuilder_.mergeFrom(value);
+        } else {
+          padOperationBuilder_.setMessage(value);
+        }
+      }
+      operationValueCase_ = 4;
+      return this;
+    }
+    /**
+     * <pre>
+     * Pad operation
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.PadOperation pad_operation = 4 [json_name = "padOperation"];</code>
+     */
+    public Builder clearPadOperation() {
+      if (padOperationBuilder_ == null) {
+        if (operationValueCase_ == 4) {
+          operationValueCase_ = 0;
+          operationValue_ = null;
+          onChanged();
+        }
+      } else {
+        if (operationValueCase_ == 4) {
+          operationValueCase_ = 0;
+          operationValue_ = null;
+        }
+        padOperationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Pad operation
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.PadOperation pad_operation = 4 [json_name = "padOperation"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.insights.PadOperation.Builder getPadOperationBuilder() {
+      return getPadOperationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Pad operation
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.PadOperation pad_operation = 4 [json_name = "padOperation"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.insights.PadOperationOrBuilder getPadOperationOrBuilder() {
+      if ((operationValueCase_ == 4) && (padOperationBuilder_ != null)) {
+        return padOperationBuilder_.getMessageOrBuilder();
+      } else {
+        if (operationValueCase_ == 4) {
+          return (com.tcn.cloud.api.api.v1alpha1.insights.PadOperation) operationValue_;
+        }
+        return com.tcn.cloud.api.api.v1alpha1.insights.PadOperation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Pad operation
+     * </pre>
+     *
+     * <code>.api.v1alpha1.insights.PadOperation pad_operation = 4 [json_name = "padOperation"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.insights.PadOperation, com.tcn.cloud.api.api.v1alpha1.insights.PadOperation.Builder, com.tcn.cloud.api.api.v1alpha1.insights.PadOperationOrBuilder> 
+        getPadOperationFieldBuilder() {
+      if (padOperationBuilder_ == null) {
+        if (!(operationValueCase_ == 4)) {
+          operationValue_ = com.tcn.cloud.api.api.v1alpha1.insights.PadOperation.getDefaultInstance();
+        }
+        padOperationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.insights.PadOperation, com.tcn.cloud.api.api.v1alpha1.insights.PadOperation.Builder, com.tcn.cloud.api.api.v1alpha1.insights.PadOperationOrBuilder>(
+                (com.tcn.cloud.api.api.v1alpha1.insights.PadOperation) operationValue_,
+                getParentForChildren(),
+                isClean());
+        operationValue_ = null;
+      }
+      operationValueCase_ = 4;
+      onChanged();
+      return padOperationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
