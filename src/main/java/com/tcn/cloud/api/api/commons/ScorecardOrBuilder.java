@@ -252,7 +252,7 @@ public interface ScorecardOrBuilder extends
    *
    * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
    * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-   *     See api/commons/scorecards.proto;l=318
+   *     See api/commons/scorecards.proto;l=319
    * @return The isAdHoc.
    */
   @java.lang.Deprecated boolean getIsAdHoc();
@@ -373,4 +373,53 @@ public interface ScorecardOrBuilder extends
    * <code>.google.protobuf.Timestamp updated_at = 21 [json_name = "updatedAt"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
+
+  /**
+   * <pre>
+   * Channels supported by the scorecard.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+   * @return A list containing the channels.
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.ChannelType> getChannelsList();
+  /**
+   * <pre>
+   * Channels supported by the scorecard.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+   * @return The count of channels.
+   */
+  int getChannelsCount();
+  /**
+   * <pre>
+   * Channels supported by the scorecard.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+   * @param index The index of the element to return.
+   * @return The channels at the given index.
+   */
+  com.tcn.cloud.api.api.commons.ChannelType getChannels(int index);
+  /**
+   * <pre>
+   * Channels supported by the scorecard.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+   * @return A list containing the enum numeric values on the wire for channels.
+   */
+  java.util.List<java.lang.Integer>
+  getChannelsValueList();
+  /**
+   * <pre>
+   * Channels supported by the scorecard.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of channels at the given index.
+   */
+  int getChannelsValue(int index);
 }

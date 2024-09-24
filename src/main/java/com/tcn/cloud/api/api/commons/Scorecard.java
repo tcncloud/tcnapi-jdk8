@@ -31,6 +31,7 @@ private static final long serialVersionUID = 0L;
     customFieldKeys_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     callTypes_ = java.util.Collections.emptyList();
+    channels_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -455,7 +456,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
    * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-   *     See api/commons/scorecards.proto;l=318
+   *     See api/commons/scorecards.proto;l=319
    * @return The isAdHoc.
    */
   @java.lang.Override
@@ -632,6 +633,84 @@ private static final long serialVersionUID = 0L;
     return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
   }
 
+  public static final int CHANNELS_FIELD_NUMBER = 22;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> channels_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType> channels_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType>() {
+            public com.tcn.cloud.api.api.commons.ChannelType convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Channels supported by the scorecard.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+   * @return A list containing the channels.
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.ChannelType> getChannelsList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType>(channels_, channels_converter_);
+  }
+  /**
+   * <pre>
+   * Channels supported by the scorecard.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+   * @return The count of channels.
+   */
+  @java.lang.Override
+  public int getChannelsCount() {
+    return channels_.size();
+  }
+  /**
+   * <pre>
+   * Channels supported by the scorecard.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+   * @param index The index of the element to return.
+   * @return The channels at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ChannelType getChannels(int index) {
+    return channels_converter_.convert(channels_.get(index));
+  }
+  /**
+   * <pre>
+   * Channels supported by the scorecard.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+   * @return A list containing the enum numeric values on the wire for channels.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getChannelsValueList() {
+    return channels_;
+  }
+  /**
+   * <pre>
+   * Channels supported by the scorecard.
+   * </pre>
+   *
+   * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of channels at the given index.
+   */
+  @java.lang.Override
+  public int getChannelsValue(int index) {
+    return channels_.get(index);
+  }
+  private int channelsMemoizedSerializedSize;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -701,6 +780,13 @@ private static final long serialVersionUID = 0L;
     }
     if (updatedAt_ != null) {
       output.writeMessage(21, getUpdatedAt());
+    }
+    if (getChannelsList().size() > 0) {
+      output.writeUInt32NoTag(178);
+      output.writeUInt32NoTag(channelsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < channels_.size(); i++) {
+      output.writeEnumNoTag(channels_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -788,6 +874,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(21, getUpdatedAt());
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < channels_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(channels_.get(i));
+      }
+      size += dataSize;
+      if (!getChannelsList().isEmpty()) {  size += 2;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }channelsMemoizedSerializedSize = dataSize;
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -840,6 +938,7 @@ private static final long serialVersionUID = 0L;
       if (!getUpdatedAt()
           .equals(other.getUpdatedAt())) return false;
     }
+    if (!channels_.equals(other.channels_)) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -899,6 +998,10 @@ private static final long serialVersionUID = 0L;
     if (hasUpdatedAt()) {
       hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
       hash = (53 * hash) + getUpdatedAt().hashCode();
+    }
+    if (getChannelsCount() > 0) {
+      hash = (37 * hash) + CHANNELS_FIELD_NUMBER;
+      hash = (53 * hash) + channels_.hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1069,6 +1172,8 @@ private static final long serialVersionUID = 0L;
         updatedAtBuilder_.dispose();
         updatedAtBuilder_ = null;
       }
+      channels_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00020000);
       return this;
     }
 
@@ -1116,6 +1221,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00008000);
       }
       result.callTypes_ = callTypes_;
+      if (((bitField0_ & 0x00020000) != 0)) {
+        channels_ = java.util.Collections.unmodifiableList(channels_);
+        bitField0_ = (bitField0_ & ~0x00020000);
+      }
+      result.channels_ = channels_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.Scorecard result) {
@@ -1310,6 +1420,16 @@ private static final long serialVersionUID = 0L;
       if (other.hasUpdatedAt()) {
         mergeUpdatedAt(other.getUpdatedAt());
       }
+      if (!other.channels_.isEmpty()) {
+        if (channels_.isEmpty()) {
+          channels_ = other.channels_;
+          bitField0_ = (bitField0_ & ~0x00020000);
+        } else {
+          ensureChannelsIsMutable();
+          channels_.addAll(other.channels_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1446,6 +1566,23 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00010000;
               break;
             } // case 170
+            case 176: {
+              int tmpRaw = input.readEnum();
+              ensureChannelsIsMutable();
+              channels_.add(tmpRaw);
+              break;
+            } // case 176
+            case 178: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureChannelsIsMutable();
+                channels_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 178
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2653,7 +2790,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
      * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-     *     See api/commons/scorecards.proto;l=318
+     *     See api/commons/scorecards.proto;l=319
      * @return The isAdHoc.
      */
     @java.lang.Override
@@ -2667,7 +2804,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
      * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-     *     See api/commons/scorecards.proto;l=318
+     *     See api/commons/scorecards.proto;l=319
      * @param value The isAdHoc to set.
      * @return This builder for chaining.
      */
@@ -2685,7 +2822,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
      * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-     *     See api/commons/scorecards.proto;l=318
+     *     See api/commons/scorecards.proto;l=319
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearIsAdHoc() {
@@ -3183,6 +3320,194 @@ private static final long serialVersionUID = 0L;
         updatedAt_ = null;
       }
       return updatedAtBuilder_;
+    }
+
+    private java.util.List<java.lang.Integer> channels_ =
+      java.util.Collections.emptyList();
+    private void ensureChannelsIsMutable() {
+      if (!((bitField0_ & 0x00020000) != 0)) {
+        channels_ = new java.util.ArrayList<java.lang.Integer>(channels_);
+        bitField0_ |= 0x00020000;
+      }
+    }
+    /**
+     * <pre>
+     * Channels supported by the scorecard.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+     * @return A list containing the channels.
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.ChannelType> getChannelsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.ChannelType>(channels_, channels_converter_);
+    }
+    /**
+     * <pre>
+     * Channels supported by the scorecard.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+     * @return The count of channels.
+     */
+    public int getChannelsCount() {
+      return channels_.size();
+    }
+    /**
+     * <pre>
+     * Channels supported by the scorecard.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+     * @param index The index of the element to return.
+     * @return The channels at the given index.
+     */
+    public com.tcn.cloud.api.api.commons.ChannelType getChannels(int index) {
+      return channels_converter_.convert(channels_.get(index));
+    }
+    /**
+     * <pre>
+     * Channels supported by the scorecard.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+     * @param index The index to set the value at.
+     * @param value The channels to set.
+     * @return This builder for chaining.
+     */
+    public Builder setChannels(
+        int index, com.tcn.cloud.api.api.commons.ChannelType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureChannelsIsMutable();
+      channels_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Channels supported by the scorecard.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+     * @param value The channels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addChannels(com.tcn.cloud.api.api.commons.ChannelType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureChannelsIsMutable();
+      channels_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Channels supported by the scorecard.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+     * @param values The channels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllChannels(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.ChannelType> values) {
+      ensureChannelsIsMutable();
+      for (com.tcn.cloud.api.api.commons.ChannelType value : values) {
+        channels_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Channels supported by the scorecard.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearChannels() {
+      channels_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00020000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Channels supported by the scorecard.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+     * @return A list containing the enum numeric values on the wire for channels.
+     */
+    public java.util.List<java.lang.Integer>
+    getChannelsValueList() {
+      return java.util.Collections.unmodifiableList(channels_);
+    }
+    /**
+     * <pre>
+     * Channels supported by the scorecard.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of channels at the given index.
+     */
+    public int getChannelsValue(int index) {
+      return channels_.get(index);
+    }
+    /**
+     * <pre>
+     * Channels supported by the scorecard.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for channels to set.
+     * @return This builder for chaining.
+     */
+    public Builder setChannelsValue(
+        int index, int value) {
+      ensureChannelsIsMutable();
+      channels_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Channels supported by the scorecard.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+     * @param value The enum numeric value on the wire for channels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addChannelsValue(int value) {
+      ensureChannelsIsMutable();
+      channels_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Channels supported by the scorecard.
+     * </pre>
+     *
+     * <code>repeated .api.commons.ChannelType channels = 22 [json_name = "channels"];</code>
+     * @param values The enum numeric values on the wire for channels to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllChannelsValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureChannelsIsMutable();
+      for (int value : values) {
+        channels_.add(value);
+      }
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
