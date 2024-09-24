@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.integrations;
 
-public interface ExecuteVeradigmSaveVoucherPaymentOrBuilder extends
+@java.lang.Deprecated public interface ExecuteVeradigmSaveVoucherPaymentOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.integrations.ExecuteVeradigmSaveVoucherPayment)
     com.google.protobuf.MessageOrBuilder {
 }

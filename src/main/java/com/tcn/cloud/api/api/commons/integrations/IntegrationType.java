@@ -201,9 +201,14 @@ public enum IntegrationType
    */
   INTEGRATION_TYPE_SWERVEPAY(4600),
   /**
-   * <code>INTEGRATION_TYPE_VERADIGM = 4700;</code>
+   * <code>INTEGRATION_TYPE_VERADIGM = 4700 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   INTEGRATION_TYPE_VERADIGM(4700),
+  /**
+   * <code>INTEGRATION_TYPE_VERADIGM_PRACTICE_MANAGEMENT = 4800;</code>
+   */
+  INTEGRATION_TYPE_VERADIGM_PRACTICE_MANAGEMENT(4800),
   /**
    * <code>INTEGRATION_TYPE_DEBUG = 5000;</code>
    */
@@ -400,9 +405,13 @@ public enum IntegrationType
    */
   public static final int INTEGRATION_TYPE_SWERVEPAY_VALUE = 4600;
   /**
-   * <code>INTEGRATION_TYPE_VERADIGM = 4700;</code>
+   * <code>INTEGRATION_TYPE_VERADIGM = 4700 [deprecated = true];</code>
    */
-  public static final int INTEGRATION_TYPE_VERADIGM_VALUE = 4700;
+  @java.lang.Deprecated public static final int INTEGRATION_TYPE_VERADIGM_VALUE = 4700;
+  /**
+   * <code>INTEGRATION_TYPE_VERADIGM_PRACTICE_MANAGEMENT = 4800;</code>
+   */
+  public static final int INTEGRATION_TYPE_VERADIGM_PRACTICE_MANAGEMENT_VALUE = 4800;
   /**
    * <code>INTEGRATION_TYPE_DEBUG = 5000;</code>
    */
@@ -481,6 +490,7 @@ public enum IntegrationType
       case 4500: return INTEGRATION_TYPE_NAVIGA_DTI_CS;
       case 4600: return INTEGRATION_TYPE_SWERVEPAY;
       case 4700: return INTEGRATION_TYPE_VERADIGM;
+      case 4800: return INTEGRATION_TYPE_VERADIGM_PRACTICE_MANAGEMENT;
       case 5000: return INTEGRATION_TYPE_DEBUG;
       default: return null;
     }

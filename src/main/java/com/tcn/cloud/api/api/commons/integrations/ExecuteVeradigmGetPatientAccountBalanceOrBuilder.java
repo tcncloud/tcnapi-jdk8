@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.integrations;
 
-public interface ExecuteVeradigmGetPatientAccountBalanceOrBuilder extends
+@java.lang.Deprecated public interface ExecuteVeradigmGetPatientAccountBalanceOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance)
     com.google.protobuf.MessageOrBuilder {
 }

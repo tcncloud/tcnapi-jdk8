@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.integrations;
 
-public interface ExecuteVeradigmGetPlacesOfServiceOrBuilder extends
+@java.lang.Deprecated public interface ExecuteVeradigmGetPlacesOfServiceOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.integrations.ExecuteVeradigmGetPlacesOfService)
     com.google.protobuf.MessageOrBuilder {
 }

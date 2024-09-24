@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.integrations;
 
-public interface ExecuteVeradigmGetPaymentsOrBuilder extends
+@java.lang.Deprecated public interface ExecuteVeradigmGetPaymentsOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.integrations.ExecuteVeradigmGetPayments)
     com.google.protobuf.MessageOrBuilder {
 }
