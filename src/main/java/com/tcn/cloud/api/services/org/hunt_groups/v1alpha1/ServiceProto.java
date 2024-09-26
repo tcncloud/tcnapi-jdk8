@@ -27,7 +27,7 @@ public final class ServiceProto {
       "ice.proto\022!services.org.hunt_groups.v1al" +
       "pha1\032\027annotations/authz.proto\032\034google/ap" +
       "i/annotations.proto\0320services/org/hunt_g" +
-      "roups/v1alpha1/entities.proto2\210\016\n\021HuntGr" +
+      "roups/v1alpha1/entities.proto2\353\017\n\021HuntGr" +
       "oupsService\022\360\001\n\027ListHuntGroupExileLinks\022" +
       "A.services.org.hunt_groups.v1alpha1.List" +
       "HuntGroupExileLinksRequest\032B.services.or" +
@@ -72,13 +72,19 @@ public final class ServiceProto {
       "g.hunt_groups.v1alpha1.AdminCopyHuntGrou" +
       "pToOrganizationResponse\"W\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002" +
       "G\"B/services/org/huntgroups/v1alpha1/adm" +
-      "incopyhuntgrouptoorganization:\001*B\346\001\n3com" +
-      ".tcn.cloud.api.services.org.hunt_groups." +
-      "v1alpha1B\014ServiceProtoP\001\242\002\003SOH\252\002 Service" +
-      "s.Org.HuntGroups.V1alpha1\312\002 Services\\Org" +
-      "\\HuntGroups\\V1alpha1\342\002,Services\\Org\\Hunt" +
-      "Groups\\V1alpha1\\GPBMetadata\352\002#Services::" +
-      "Org::HuntGroups::V1alpha1b\006proto3"
+      "incopyhuntgrouptoorganization:\001*\022\340\001\n\023Adm" +
+      "inListHuntGroups\022=.services.org.hunt_gro" +
+      "ups.v1alpha1.AdminListHuntGroupsRequest\032" +
+      ">.services.org.hunt_groups.v1alpha1.Admi" +
+      "nListHuntGroupsResponse\"J\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002" +
+      ":\"5/services/org/huntgroups/v1alpha1/adm" +
+      "inlisthuntgroups:\001*B\346\001\n3com.tcn.cloud.ap" +
+      "i.services.org.hunt_groups.v1alpha1B\014Ser" +
+      "viceProtoP\001\242\002\003SOH\252\002 Services.Org.HuntGro" +
+      "ups.V1alpha1\312\002 Services\\Org\\HuntGroups\\V" +
+      "1alpha1\342\002,Services\\Org\\HuntGroups\\V1alph" +
+      "a1\\GPBMetadata\352\002#Services::Org::HuntGrou" +
+      "ps::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
