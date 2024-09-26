@@ -52,16 +52,6 @@ private static final long serialVersionUID = 0L;
      * The hunt group sid.
      * </pre>
      *
-     * <code>int64 client_sid = 1 [json_name = "clientSid"];</code>
-     * @return The clientSid.
-     */
-    long getClientSid();
-
-    /**
-     * <pre>
-     * The hunt group sid.
-     * </pre>
-     *
      * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
      * @return The huntGroupSid.
      */
@@ -69,7 +59,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The hunt group name.
+     * The name of the hunt group.
      * </pre>
      *
      * <code>string hunt_group_name = 3 [json_name = "huntGroupName"];</code>
@@ -78,7 +68,7 @@ private static final long serialVersionUID = 0L;
     java.lang.String getHuntGroupName();
     /**
      * <pre>
-     * The hunt group name.
+     * The name of the hunt group.
      * </pre>
      *
      * <code>string hunt_group_name = 3 [json_name = "huntGroupName"];</code>
@@ -127,21 +117,6 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminListHuntGroupsResponse.HuntGroup.class, com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminListHuntGroupsResponse.HuntGroup.Builder.class);
     }
 
-    public static final int CLIENT_SID_FIELD_NUMBER = 1;
-    private long clientSid_ = 0L;
-    /**
-     * <pre>
-     * The hunt group sid.
-     * </pre>
-     *
-     * <code>int64 client_sid = 1 [json_name = "clientSid"];</code>
-     * @return The clientSid.
-     */
-    @java.lang.Override
-    public long getClientSid() {
-      return clientSid_;
-    }
-
     public static final int HUNT_GROUP_SID_FIELD_NUMBER = 2;
     private long huntGroupSid_ = 0L;
     /**
@@ -162,7 +137,7 @@ private static final long serialVersionUID = 0L;
     private volatile java.lang.Object huntGroupName_ = "";
     /**
      * <pre>
-     * The hunt group name.
+     * The name of the hunt group.
      * </pre>
      *
      * <code>string hunt_group_name = 3 [json_name = "huntGroupName"];</code>
@@ -183,7 +158,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hunt group name.
+     * The name of the hunt group.
      * </pre>
      *
      * <code>string hunt_group_name = 3 [json_name = "huntGroupName"];</code>
@@ -218,9 +193,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (clientSid_ != 0L) {
-        output.writeInt64(1, clientSid_);
-      }
       if (huntGroupSid_ != 0L) {
         output.writeInt64(2, huntGroupSid_);
       }
@@ -236,10 +208,6 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (clientSid_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, clientSid_);
-      }
       if (huntGroupSid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, huntGroupSid_);
@@ -262,8 +230,6 @@ private static final long serialVersionUID = 0L;
       }
       com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminListHuntGroupsResponse.HuntGroup other = (com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminListHuntGroupsResponse.HuntGroup) obj;
 
-      if (getClientSid()
-          != other.getClientSid()) return false;
       if (getHuntGroupSid()
           != other.getHuntGroupSid()) return false;
       if (!getHuntGroupName()
@@ -279,9 +245,6 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CLIENT_SID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getClientSid());
       hash = (37 * hash) + HUNT_GROUP_SID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getHuntGroupSid());
@@ -422,7 +385,6 @@ private static final long serialVersionUID = 0L;
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        clientSid_ = 0L;
         huntGroupSid_ = 0L;
         huntGroupName_ = "";
         return this;
@@ -459,12 +421,9 @@ private static final long serialVersionUID = 0L;
       private void buildPartial0(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminListHuntGroupsResponse.HuntGroup result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.clientSid_ = clientSid_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.huntGroupSid_ = huntGroupSid_;
         }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
+        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.huntGroupName_ = huntGroupName_;
         }
       }
@@ -513,15 +472,12 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminListHuntGroupsResponse.HuntGroup other) {
         if (other == com.tcn.cloud.api.services.org.hunt_groups.v1alpha1.AdminListHuntGroupsResponse.HuntGroup.getDefaultInstance()) return this;
-        if (other.getClientSid() != 0L) {
-          setClientSid(other.getClientSid());
-        }
         if (other.getHuntGroupSid() != 0L) {
           setHuntGroupSid(other.getHuntGroupSid());
         }
         if (!other.getHuntGroupName().isEmpty()) {
           huntGroupName_ = other.huntGroupName_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -550,19 +506,14 @@ private static final long serialVersionUID = 0L;
               case 0:
                 done = true;
                 break;
-              case 8: {
-                clientSid_ = input.readInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
               case 16: {
                 huntGroupSid_ = input.readInt64();
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000001;
                 break;
               } // case 16
               case 26: {
                 huntGroupName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
+                bitField0_ |= 0x00000002;
                 break;
               } // case 26
               default: {
@@ -581,50 +532,6 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       private int bitField0_;
-
-      private long clientSid_ ;
-      /**
-       * <pre>
-       * The hunt group sid.
-       * </pre>
-       *
-       * <code>int64 client_sid = 1 [json_name = "clientSid"];</code>
-       * @return The clientSid.
-       */
-      @java.lang.Override
-      public long getClientSid() {
-        return clientSid_;
-      }
-      /**
-       * <pre>
-       * The hunt group sid.
-       * </pre>
-       *
-       * <code>int64 client_sid = 1 [json_name = "clientSid"];</code>
-       * @param value The clientSid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setClientSid(long value) {
-
-        clientSid_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The hunt group sid.
-       * </pre>
-       *
-       * <code>int64 client_sid = 1 [json_name = "clientSid"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearClientSid() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        clientSid_ = 0L;
-        onChanged();
-        return this;
-      }
 
       private long huntGroupSid_ ;
       /**
@@ -651,7 +558,7 @@ private static final long serialVersionUID = 0L;
       public Builder setHuntGroupSid(long value) {
 
         huntGroupSid_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -664,7 +571,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearHuntGroupSid() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         huntGroupSid_ = 0L;
         onChanged();
         return this;
@@ -673,7 +580,7 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object huntGroupName_ = "";
       /**
        * <pre>
-       * The hunt group name.
+       * The name of the hunt group.
        * </pre>
        *
        * <code>string hunt_group_name = 3 [json_name = "huntGroupName"];</code>
@@ -693,7 +600,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The hunt group name.
+       * The name of the hunt group.
        * </pre>
        *
        * <code>string hunt_group_name = 3 [json_name = "huntGroupName"];</code>
@@ -714,7 +621,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The hunt group name.
+       * The name of the hunt group.
        * </pre>
        *
        * <code>string hunt_group_name = 3 [json_name = "huntGroupName"];</code>
@@ -725,13 +632,13 @@ private static final long serialVersionUID = 0L;
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         huntGroupName_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The hunt group name.
+       * The name of the hunt group.
        * </pre>
        *
        * <code>string hunt_group_name = 3 [json_name = "huntGroupName"];</code>
@@ -739,13 +646,13 @@ private static final long serialVersionUID = 0L;
        */
       public Builder clearHuntGroupName() {
         huntGroupName_ = getDefaultInstance().getHuntGroupName();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * The hunt group name.
+       * The name of the hunt group.
        * </pre>
        *
        * <code>string hunt_group_name = 3 [json_name = "huntGroupName"];</code>
@@ -757,7 +664,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         huntGroupName_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
