@@ -1135,6 +1135,18 @@ public enum RequestMethod
    */
   REQUEST_METHOD_VERADIGM_PRACTICE_MANAGEMENT_SAVE_VOUCHER_PAYMENT(4809),
   /**
+   * <code>REQUEST_METHOD_PDCFLOW_GET_AUTH_TOKEN = 4901;</code>
+   */
+  REQUEST_METHOD_PDCFLOW_GET_AUTH_TOKEN(4901),
+  /**
+   * <code>REQUEST_METHOD_PDCFLOW_TOKENIZE_CREDIT_CARD = 4902;</code>
+   */
+  REQUEST_METHOD_PDCFLOW_TOKENIZE_CREDIT_CARD(4902),
+  /**
+   * <code>REQUEST_METHOD_PDCFLOW_CC_TRANSACTION = 4903;</code>
+   */
+  REQUEST_METHOD_PDCFLOW_CC_TRANSACTION(4903),
+  /**
    * <pre>
    * just evaluates the request and sends back the data
    * this is useful for CompositeValue types, or when we are wanting to see
@@ -2268,6 +2280,18 @@ public enum RequestMethod
    */
   public static final int REQUEST_METHOD_VERADIGM_PRACTICE_MANAGEMENT_SAVE_VOUCHER_PAYMENT_VALUE = 4809;
   /**
+   * <code>REQUEST_METHOD_PDCFLOW_GET_AUTH_TOKEN = 4901;</code>
+   */
+  public static final int REQUEST_METHOD_PDCFLOW_GET_AUTH_TOKEN_VALUE = 4901;
+  /**
+   * <code>REQUEST_METHOD_PDCFLOW_TOKENIZE_CREDIT_CARD = 4902;</code>
+   */
+  public static final int REQUEST_METHOD_PDCFLOW_TOKENIZE_CREDIT_CARD_VALUE = 4902;
+  /**
+   * <code>REQUEST_METHOD_PDCFLOW_CC_TRANSACTION = 4903;</code>
+   */
+  public static final int REQUEST_METHOD_PDCFLOW_CC_TRANSACTION_VALUE = 4903;
+  /**
    * <pre>
    * just evaluates the request and sends back the data
    * this is useful for CompositeValue types, or when we are wanting to see
@@ -2589,6 +2613,9 @@ public enum RequestMethod
       case 4807: return REQUEST_METHOD_VERADIGM_PRACTICE_MANAGEMENT_SAVE_PAYMENT_TRANSACTION;
       case 4808: return REQUEST_METHOD_VERADIGM_PRACTICE_MANAGEMENT_SAVE_REFUND_TRANSACTION;
       case 4809: return REQUEST_METHOD_VERADIGM_PRACTICE_MANAGEMENT_SAVE_VOUCHER_PAYMENT;
+      case 4901: return REQUEST_METHOD_PDCFLOW_GET_AUTH_TOKEN;
+      case 4902: return REQUEST_METHOD_PDCFLOW_TOKENIZE_CREDIT_CARD;
+      case 4903: return REQUEST_METHOD_PDCFLOW_CC_TRANSACTION;
       case 5001: return REQUEST_METHOD_DEBUG_ECHO;
       case 5002: return REQUESET_METHOD_DEBUG_VALIDATE;
       default: return null;

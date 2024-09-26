@@ -327,6 +327,9 @@ private static final long serialVersionUID = 0L;
     VERADIGM_PRACTICE_MANAGEMENT_SAVE_PAYMENT_TRANSACTION(4807),
     VERADIGM_PRACTICE_MANAGEMENT_SAVE_REFUND_TRANSACTION(4808),
     VERADIGM_PRACTICE_MANAGEMENT_SAVE_VOUCHER_PAYMENT(4809),
+    PDCFLOW_GET_AUTH_TOKEN(4901),
+    PDCFLOW_TOKENIZE_CREDIT_CARD(4902),
+    PDCFLOW_CC_TRANSACTION(4903),
     DEBUG_ECHO(5001),
     DEBUG_VALIDATE(5002),
     VALUE_NOT_SET(0);
@@ -621,6 +624,9 @@ private static final long serialVersionUID = 0L;
         case 4807: return VERADIGM_PRACTICE_MANAGEMENT_SAVE_PAYMENT_TRANSACTION;
         case 4808: return VERADIGM_PRACTICE_MANAGEMENT_SAVE_REFUND_TRANSACTION;
         case 4809: return VERADIGM_PRACTICE_MANAGEMENT_SAVE_VOUCHER_PAYMENT;
+        case 4901: return PDCFLOW_GET_AUTH_TOKEN;
+        case 4902: return PDCFLOW_TOKENIZE_CREDIT_CARD;
+        case 4903: return PDCFLOW_CC_TRANSACTION;
         case 5001: return DEBUG_ECHO;
         case 5002: return DEBUG_VALIDATE;
         case 0: return VALUE_NOT_SET;
@@ -8710,7 +8716,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1086
+   *     See api/commons/integrations/integrations.proto;l=1090
    * @return Whether the veradigmGetLocations field is set.
    */
   @java.lang.Override
@@ -8720,7 +8726,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1086
+   *     See api/commons/integrations/integrations.proto;l=1090
    * @return The veradigmGetLocations.
    */
   @java.lang.Override
@@ -8745,7 +8751,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1087
+   *     See api/commons/integrations/integrations.proto;l=1091
    * @return Whether the veradigmGetPatientAccountBalance field is set.
    */
   @java.lang.Override
@@ -8755,7 +8761,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1087
+   *     See api/commons/integrations/integrations.proto;l=1091
    * @return The veradigmGetPatientAccountBalance.
    */
   @java.lang.Override
@@ -8780,7 +8786,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1088
+   *     See api/commons/integrations/integrations.proto;l=1092
    * @return Whether the veradigmGetPayments field is set.
    */
   @java.lang.Override
@@ -8790,7 +8796,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1088
+   *     See api/commons/integrations/integrations.proto;l=1092
    * @return The veradigmGetPayments.
    */
   @java.lang.Override
@@ -8815,7 +8821,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1089
+   *     See api/commons/integrations/integrations.proto;l=1093
    * @return Whether the veradigmGetPlacesOfService field is set.
    */
   @java.lang.Override
@@ -8825,7 +8831,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1089
+   *     See api/commons/integrations/integrations.proto;l=1093
    * @return The veradigmGetPlacesOfService.
    */
   @java.lang.Override
@@ -8850,7 +8856,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1090
+   *     See api/commons/integrations/integrations.proto;l=1094
    * @return Whether the veradigmSavePaymentTransaction field is set.
    */
   @java.lang.Override
@@ -8860,7 +8866,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1090
+   *     See api/commons/integrations/integrations.proto;l=1094
    * @return The veradigmSavePaymentTransaction.
    */
   @java.lang.Override
@@ -8885,7 +8891,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1091
+   *     See api/commons/integrations/integrations.proto;l=1095
    * @return Whether the veradigmSaveRefundTransaction field is set.
    */
   @java.lang.Override
@@ -8895,7 +8901,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1091
+   *     See api/commons/integrations/integrations.proto;l=1095
    * @return The veradigmSaveRefundTransaction.
    */
   @java.lang.Override
@@ -8920,7 +8926,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1092
+   *     See api/commons/integrations/integrations.proto;l=1096
    * @return Whether the veradigmSaveVoucherPayment field is set.
    */
   @java.lang.Override
@@ -8930,7 +8936,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
    * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=1092
+   *     See api/commons/integrations/integrations.proto;l=1096
    * @return The veradigmSaveVoucherPayment.
    */
   @java.lang.Override
@@ -9228,6 +9234,99 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmPracticeManagementSaveVoucherPayment) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmPracticeManagementSaveVoucherPayment.getDefaultInstance();
+  }
+
+  public static final int PDCFLOW_GET_AUTH_TOKEN_FIELD_NUMBER = 4901;
+  /**
+   * <code>.api.commons.integrations.ExecutePDCFlowGetAuthToken pdcflow_get_auth_token = 4901 [json_name = "pdcflowGetAuthToken"];</code>
+   * @return Whether the pdcflowGetAuthToken field is set.
+   */
+  @java.lang.Override
+  public boolean hasPdcflowGetAuthToken() {
+    return valueCase_ == 4901;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePDCFlowGetAuthToken pdcflow_get_auth_token = 4901 [json_name = "pdcflowGetAuthToken"];</code>
+   * @return The pdcflowGetAuthToken.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken getPdcflowGetAuthToken() {
+    if (valueCase_ == 4901) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePDCFlowGetAuthToken pdcflow_get_auth_token = 4901 [json_name = "pdcflowGetAuthToken"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthTokenOrBuilder getPdcflowGetAuthTokenOrBuilder() {
+    if (valueCase_ == 4901) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken.getDefaultInstance();
+  }
+
+  public static final int PDCFLOW_TOKENIZE_CREDIT_CARD_FIELD_NUMBER = 4902;
+  /**
+   * <code>.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard pdcflow_tokenize_credit_card = 4902 [json_name = "pdcflowTokenizeCreditCard"];</code>
+   * @return Whether the pdcflowTokenizeCreditCard field is set.
+   */
+  @java.lang.Override
+  public boolean hasPdcflowTokenizeCreditCard() {
+    return valueCase_ == 4902;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard pdcflow_tokenize_credit_card = 4902 [json_name = "pdcflowTokenizeCreditCard"];</code>
+   * @return The pdcflowTokenizeCreditCard.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard getPdcflowTokenizeCreditCard() {
+    if (valueCase_ == 4902) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard pdcflow_tokenize_credit_card = 4902 [json_name = "pdcflowTokenizeCreditCard"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCardOrBuilder getPdcflowTokenizeCreditCardOrBuilder() {
+    if (valueCase_ == 4902) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard.getDefaultInstance();
+  }
+
+  public static final int PDCFLOW_CC_TRANSACTION_FIELD_NUMBER = 4903;
+  /**
+   * <code>.api.commons.integrations.ExecutePDCFlowCCTransaction pdcflow_cc_transaction = 4903 [json_name = "pdcflowCcTransaction"];</code>
+   * @return Whether the pdcflowCcTransaction field is set.
+   */
+  @java.lang.Override
+  public boolean hasPdcflowCcTransaction() {
+    return valueCase_ == 4903;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePDCFlowCCTransaction pdcflow_cc_transaction = 4903 [json_name = "pdcflowCcTransaction"];</code>
+   * @return The pdcflowCcTransaction.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction getPdcflowCcTransaction() {
+    if (valueCase_ == 4903) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePDCFlowCCTransaction pdcflow_cc_transaction = 4903 [json_name = "pdcflowCcTransaction"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransactionOrBuilder getPdcflowCcTransactionOrBuilder() {
+    if (valueCase_ == 4903) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction.getDefaultInstance();
   }
 
   public static final int DEBUG_ECHO_FIELD_NUMBER = 5001;
@@ -10133,6 +10232,15 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 4809) {
       output.writeMessage(4809, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmPracticeManagementSaveVoucherPayment) value_);
+    }
+    if (valueCase_ == 4901) {
+      output.writeMessage(4901, (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken) value_);
+    }
+    if (valueCase_ == 4902) {
+      output.writeMessage(4902, (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard) value_);
+    }
+    if (valueCase_ == 4903) {
+      output.writeMessage(4903, (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction) value_);
     }
     if (valueCase_ == 5001) {
       output.writeMessage(5001, (com.tcn.cloud.api.api.commons.integrations.ExecuteDebugEcho) value_);
@@ -11251,6 +11359,18 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 4809) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4809, (com.tcn.cloud.api.api.commons.integrations.ExecuteVeradigmPracticeManagementSaveVoucherPayment) value_);
+    }
+    if (valueCase_ == 4901) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4901, (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken) value_);
+    }
+    if (valueCase_ == 4902) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4902, (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard) value_);
+    }
+    if (valueCase_ == 4903) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4903, (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction) value_);
     }
     if (valueCase_ == 5001) {
       size += com.google.protobuf.CodedOutputStream
@@ -12379,6 +12499,18 @@ private static final long serialVersionUID = 0L;
         if (!getVeradigmPracticeManagementSaveVoucherPayment()
             .equals(other.getVeradigmPracticeManagementSaveVoucherPayment())) return false;
         break;
+      case 4901:
+        if (!getPdcflowGetAuthToken()
+            .equals(other.getPdcflowGetAuthToken())) return false;
+        break;
+      case 4902:
+        if (!getPdcflowTokenizeCreditCard()
+            .equals(other.getPdcflowTokenizeCreditCard())) return false;
+        break;
+      case 4903:
+        if (!getPdcflowCcTransaction()
+            .equals(other.getPdcflowCcTransaction())) return false;
+        break;
       case 5001:
         if (!getDebugEcho()
             .equals(other.getDebugEcho())) return false;
@@ -13504,6 +13636,18 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + VERADIGM_PRACTICE_MANAGEMENT_SAVE_VOUCHER_PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getVeradigmPracticeManagementSaveVoucherPayment().hashCode();
         break;
+      case 4901:
+        hash = (37 * hash) + PDCFLOW_GET_AUTH_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getPdcflowGetAuthToken().hashCode();
+        break;
+      case 4902:
+        hash = (37 * hash) + PDCFLOW_TOKENIZE_CREDIT_CARD_FIELD_NUMBER;
+        hash = (53 * hash) + getPdcflowTokenizeCreditCard().hashCode();
+        break;
+      case 4903:
+        hash = (37 * hash) + PDCFLOW_CC_TRANSACTION_FIELD_NUMBER;
+        hash = (53 * hash) + getPdcflowCcTransaction().hashCode();
+        break;
       case 5001:
         hash = (37 * hash) + DEBUG_ECHO_FIELD_NUMBER;
         hash = (53 * hash) + getDebugEcho().hashCode();
@@ -14486,6 +14630,15 @@ private static final long serialVersionUID = 0L;
       }
       if (veradigmPracticeManagementSaveVoucherPaymentBuilder_ != null) {
         veradigmPracticeManagementSaveVoucherPaymentBuilder_.clear();
+      }
+      if (pdcflowGetAuthTokenBuilder_ != null) {
+        pdcflowGetAuthTokenBuilder_.clear();
+      }
+      if (pdcflowTokenizeCreditCardBuilder_ != null) {
+        pdcflowTokenizeCreditCardBuilder_.clear();
+      }
+      if (pdcflowCcTransactionBuilder_ != null) {
+        pdcflowCcTransactionBuilder_.clear();
       }
       if (debugEchoBuilder_ != null) {
         debugEchoBuilder_.clear();
@@ -15677,6 +15830,18 @@ private static final long serialVersionUID = 0L;
           veradigmPracticeManagementSaveVoucherPaymentBuilder_ != null) {
         result.value_ = veradigmPracticeManagementSaveVoucherPaymentBuilder_.build();
       }
+      if (valueCase_ == 4901 &&
+          pdcflowGetAuthTokenBuilder_ != null) {
+        result.value_ = pdcflowGetAuthTokenBuilder_.build();
+      }
+      if (valueCase_ == 4902 &&
+          pdcflowTokenizeCreditCardBuilder_ != null) {
+        result.value_ = pdcflowTokenizeCreditCardBuilder_.build();
+      }
+      if (valueCase_ == 4903 &&
+          pdcflowCcTransactionBuilder_ != null) {
+        result.value_ = pdcflowCcTransactionBuilder_.build();
+      }
       if (valueCase_ == 5001 &&
           debugEchoBuilder_ != null) {
         result.value_ = debugEchoBuilder_.build();
@@ -16835,6 +17000,18 @@ private static final long serialVersionUID = 0L;
         }
         case VERADIGM_PRACTICE_MANAGEMENT_SAVE_VOUCHER_PAYMENT: {
           mergeVeradigmPracticeManagementSaveVoucherPayment(other.getVeradigmPracticeManagementSaveVoucherPayment());
+          break;
+        }
+        case PDCFLOW_GET_AUTH_TOKEN: {
+          mergePdcflowGetAuthToken(other.getPdcflowGetAuthToken());
+          break;
+        }
+        case PDCFLOW_TOKENIZE_CREDIT_CARD: {
+          mergePdcflowTokenizeCreditCard(other.getPdcflowTokenizeCreditCard());
+          break;
+        }
+        case PDCFLOW_CC_TRANSACTION: {
+          mergePdcflowCcTransaction(other.getPdcflowCcTransaction());
           break;
         }
         case DEBUG_ECHO: {
@@ -18805,6 +18982,27 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 4809;
               break;
             } // case 38474
+            case 39210: {
+              input.readMessage(
+                  getPdcflowGetAuthTokenFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4901;
+              break;
+            } // case 39210
+            case 39218: {
+              input.readMessage(
+                  getPdcflowTokenizeCreditCardFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4902;
+              break;
+            } // case 39218
+            case 39226: {
+              input.readMessage(
+                  getPdcflowCcTransactionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4903;
+              break;
+            } // case 39226
             case 40010: {
               input.readMessage(
                   getDebugEchoFieldBuilder().getBuilder(),
@@ -55714,7 +55912,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1086
+     *     See api/commons/integrations/integrations.proto;l=1090
      * @return Whether the veradigmGetLocations field is set.
      */
     @java.lang.Override
@@ -55724,7 +55922,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetLocations veradigm_get_locations = 4701 [json_name = "veradigmGetLocations", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_locations is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1086
+     *     See api/commons/integrations/integrations.proto;l=1090
      * @return The veradigmGetLocations.
      */
     @java.lang.Override
@@ -55860,7 +56058,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1087
+     *     See api/commons/integrations/integrations.proto;l=1091
      * @return Whether the veradigmGetPatientAccountBalance field is set.
      */
     @java.lang.Override
@@ -55870,7 +56068,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPatientAccountBalance veradigm_get_patient_account_balance = 4702 [json_name = "veradigmGetPatientAccountBalance", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_patient_account_balance is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1087
+     *     See api/commons/integrations/integrations.proto;l=1091
      * @return The veradigmGetPatientAccountBalance.
      */
     @java.lang.Override
@@ -56006,7 +56204,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1088
+     *     See api/commons/integrations/integrations.proto;l=1092
      * @return Whether the veradigmGetPayments field is set.
      */
     @java.lang.Override
@@ -56016,7 +56214,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPayments veradigm_get_payments = 4703 [json_name = "veradigmGetPayments", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_payments is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1088
+     *     See api/commons/integrations/integrations.proto;l=1092
      * @return The veradigmGetPayments.
      */
     @java.lang.Override
@@ -56152,7 +56350,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1089
+     *     See api/commons/integrations/integrations.proto;l=1093
      * @return Whether the veradigmGetPlacesOfService field is set.
      */
     @java.lang.Override
@@ -56162,7 +56360,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmGetPlacesOfService veradigm_get_places_of_service = 4704 [json_name = "veradigmGetPlacesOfService", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_get_places_of_service is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1089
+     *     See api/commons/integrations/integrations.proto;l=1093
      * @return The veradigmGetPlacesOfService.
      */
     @java.lang.Override
@@ -56298,7 +56496,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1090
+     *     See api/commons/integrations/integrations.proto;l=1094
      * @return Whether the veradigmSavePaymentTransaction field is set.
      */
     @java.lang.Override
@@ -56308,7 +56506,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSavePaymentTransaction veradigm_save_payment_transaction = 4705 [json_name = "veradigmSavePaymentTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_payment_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1090
+     *     See api/commons/integrations/integrations.proto;l=1094
      * @return The veradigmSavePaymentTransaction.
      */
     @java.lang.Override
@@ -56444,7 +56642,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1091
+     *     See api/commons/integrations/integrations.proto;l=1095
      * @return Whether the veradigmSaveRefundTransaction field is set.
      */
     @java.lang.Override
@@ -56454,7 +56652,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveRefundTransaction veradigm_save_refund_transaction = 4706 [json_name = "veradigmSaveRefundTransaction", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_refund_transaction is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1091
+     *     See api/commons/integrations/integrations.proto;l=1095
      * @return The veradigmSaveRefundTransaction.
      */
     @java.lang.Override
@@ -56590,7 +56788,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1092
+     *     See api/commons/integrations/integrations.proto;l=1096
      * @return Whether the veradigmSaveVoucherPayment field is set.
      */
     @java.lang.Override
@@ -56600,7 +56798,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.integrations.ExecuteVeradigmSaveVoucherPayment veradigm_save_voucher_payment = 4707 [json_name = "veradigmSaveVoucherPayment", deprecated = true];</code>
      * @deprecated api.commons.integrations.ExecuteFlow.veradigm_save_voucher_payment is deprecated.
-     *     See api/commons/integrations/integrations.proto;l=1092
+     *     See api/commons/integrations/integrations.proto;l=1096
      * @return The veradigmSaveVoucherPayment.
      */
     @java.lang.Override
@@ -58007,6 +58205,432 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 4809;
       onChanged();
       return veradigmPracticeManagementSaveVoucherPaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthTokenOrBuilder> pdcflowGetAuthTokenBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowGetAuthToken pdcflow_get_auth_token = 4901 [json_name = "pdcflowGetAuthToken"];</code>
+     * @return Whether the pdcflowGetAuthToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasPdcflowGetAuthToken() {
+      return valueCase_ == 4901;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowGetAuthToken pdcflow_get_auth_token = 4901 [json_name = "pdcflowGetAuthToken"];</code>
+     * @return The pdcflowGetAuthToken.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken getPdcflowGetAuthToken() {
+      if (pdcflowGetAuthTokenBuilder_ == null) {
+        if (valueCase_ == 4901) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4901) {
+          return pdcflowGetAuthTokenBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowGetAuthToken pdcflow_get_auth_token = 4901 [json_name = "pdcflowGetAuthToken"];</code>
+     */
+    public Builder setPdcflowGetAuthToken(com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken value) {
+      if (pdcflowGetAuthTokenBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        pdcflowGetAuthTokenBuilder_.setMessage(value);
+      }
+      valueCase_ = 4901;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowGetAuthToken pdcflow_get_auth_token = 4901 [json_name = "pdcflowGetAuthToken"];</code>
+     */
+    public Builder setPdcflowGetAuthToken(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken.Builder builderForValue) {
+      if (pdcflowGetAuthTokenBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        pdcflowGetAuthTokenBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4901;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowGetAuthToken pdcflow_get_auth_token = 4901 [json_name = "pdcflowGetAuthToken"];</code>
+     */
+    public Builder mergePdcflowGetAuthToken(com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken value) {
+      if (pdcflowGetAuthTokenBuilder_ == null) {
+        if (valueCase_ == 4901 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4901) {
+          pdcflowGetAuthTokenBuilder_.mergeFrom(value);
+        } else {
+          pdcflowGetAuthTokenBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4901;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowGetAuthToken pdcflow_get_auth_token = 4901 [json_name = "pdcflowGetAuthToken"];</code>
+     */
+    public Builder clearPdcflowGetAuthToken() {
+      if (pdcflowGetAuthTokenBuilder_ == null) {
+        if (valueCase_ == 4901) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4901) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        pdcflowGetAuthTokenBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowGetAuthToken pdcflow_get_auth_token = 4901 [json_name = "pdcflowGetAuthToken"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken.Builder getPdcflowGetAuthTokenBuilder() {
+      return getPdcflowGetAuthTokenFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowGetAuthToken pdcflow_get_auth_token = 4901 [json_name = "pdcflowGetAuthToken"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthTokenOrBuilder getPdcflowGetAuthTokenOrBuilder() {
+      if ((valueCase_ == 4901) && (pdcflowGetAuthTokenBuilder_ != null)) {
+        return pdcflowGetAuthTokenBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4901) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowGetAuthToken pdcflow_get_auth_token = 4901 [json_name = "pdcflowGetAuthToken"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthTokenOrBuilder> 
+        getPdcflowGetAuthTokenFieldBuilder() {
+      if (pdcflowGetAuthTokenBuilder_ == null) {
+        if (!(valueCase_ == 4901)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken.getDefaultInstance();
+        }
+        pdcflowGetAuthTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthTokenOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowGetAuthToken) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4901;
+      onChanged();
+      return pdcflowGetAuthTokenBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCardOrBuilder> pdcflowTokenizeCreditCardBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard pdcflow_tokenize_credit_card = 4902 [json_name = "pdcflowTokenizeCreditCard"];</code>
+     * @return Whether the pdcflowTokenizeCreditCard field is set.
+     */
+    @java.lang.Override
+    public boolean hasPdcflowTokenizeCreditCard() {
+      return valueCase_ == 4902;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard pdcflow_tokenize_credit_card = 4902 [json_name = "pdcflowTokenizeCreditCard"];</code>
+     * @return The pdcflowTokenizeCreditCard.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard getPdcflowTokenizeCreditCard() {
+      if (pdcflowTokenizeCreditCardBuilder_ == null) {
+        if (valueCase_ == 4902) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4902) {
+          return pdcflowTokenizeCreditCardBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard pdcflow_tokenize_credit_card = 4902 [json_name = "pdcflowTokenizeCreditCard"];</code>
+     */
+    public Builder setPdcflowTokenizeCreditCard(com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard value) {
+      if (pdcflowTokenizeCreditCardBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        pdcflowTokenizeCreditCardBuilder_.setMessage(value);
+      }
+      valueCase_ = 4902;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard pdcflow_tokenize_credit_card = 4902 [json_name = "pdcflowTokenizeCreditCard"];</code>
+     */
+    public Builder setPdcflowTokenizeCreditCard(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard.Builder builderForValue) {
+      if (pdcflowTokenizeCreditCardBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        pdcflowTokenizeCreditCardBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4902;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard pdcflow_tokenize_credit_card = 4902 [json_name = "pdcflowTokenizeCreditCard"];</code>
+     */
+    public Builder mergePdcflowTokenizeCreditCard(com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard value) {
+      if (pdcflowTokenizeCreditCardBuilder_ == null) {
+        if (valueCase_ == 4902 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4902) {
+          pdcflowTokenizeCreditCardBuilder_.mergeFrom(value);
+        } else {
+          pdcflowTokenizeCreditCardBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4902;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard pdcflow_tokenize_credit_card = 4902 [json_name = "pdcflowTokenizeCreditCard"];</code>
+     */
+    public Builder clearPdcflowTokenizeCreditCard() {
+      if (pdcflowTokenizeCreditCardBuilder_ == null) {
+        if (valueCase_ == 4902) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4902) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        pdcflowTokenizeCreditCardBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard pdcflow_tokenize_credit_card = 4902 [json_name = "pdcflowTokenizeCreditCard"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard.Builder getPdcflowTokenizeCreditCardBuilder() {
+      return getPdcflowTokenizeCreditCardFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard pdcflow_tokenize_credit_card = 4902 [json_name = "pdcflowTokenizeCreditCard"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCardOrBuilder getPdcflowTokenizeCreditCardOrBuilder() {
+      if ((valueCase_ == 4902) && (pdcflowTokenizeCreditCardBuilder_ != null)) {
+        return pdcflowTokenizeCreditCardBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4902) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard pdcflow_tokenize_credit_card = 4902 [json_name = "pdcflowTokenizeCreditCard"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCardOrBuilder> 
+        getPdcflowTokenizeCreditCardFieldBuilder() {
+      if (pdcflowTokenizeCreditCardBuilder_ == null) {
+        if (!(valueCase_ == 4902)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard.getDefaultInstance();
+        }
+        pdcflowTokenizeCreditCardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCardOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowTokenizeCreditCard) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4902;
+      onChanged();
+      return pdcflowTokenizeCreditCardBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransactionOrBuilder> pdcflowCcTransactionBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowCCTransaction pdcflow_cc_transaction = 4903 [json_name = "pdcflowCcTransaction"];</code>
+     * @return Whether the pdcflowCcTransaction field is set.
+     */
+    @java.lang.Override
+    public boolean hasPdcflowCcTransaction() {
+      return valueCase_ == 4903;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowCCTransaction pdcflow_cc_transaction = 4903 [json_name = "pdcflowCcTransaction"];</code>
+     * @return The pdcflowCcTransaction.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction getPdcflowCcTransaction() {
+      if (pdcflowCcTransactionBuilder_ == null) {
+        if (valueCase_ == 4903) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction.getDefaultInstance();
+      } else {
+        if (valueCase_ == 4903) {
+          return pdcflowCcTransactionBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowCCTransaction pdcflow_cc_transaction = 4903 [json_name = "pdcflowCcTransaction"];</code>
+     */
+    public Builder setPdcflowCcTransaction(com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction value) {
+      if (pdcflowCcTransactionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        pdcflowCcTransactionBuilder_.setMessage(value);
+      }
+      valueCase_ = 4903;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowCCTransaction pdcflow_cc_transaction = 4903 [json_name = "pdcflowCcTransaction"];</code>
+     */
+    public Builder setPdcflowCcTransaction(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction.Builder builderForValue) {
+      if (pdcflowCcTransactionBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        pdcflowCcTransactionBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 4903;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowCCTransaction pdcflow_cc_transaction = 4903 [json_name = "pdcflowCcTransaction"];</code>
+     */
+    public Builder mergePdcflowCcTransaction(com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction value) {
+      if (pdcflowCcTransactionBuilder_ == null) {
+        if (valueCase_ == 4903 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 4903) {
+          pdcflowCcTransactionBuilder_.mergeFrom(value);
+        } else {
+          pdcflowCcTransactionBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 4903;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowCCTransaction pdcflow_cc_transaction = 4903 [json_name = "pdcflowCcTransaction"];</code>
+     */
+    public Builder clearPdcflowCcTransaction() {
+      if (pdcflowCcTransactionBuilder_ == null) {
+        if (valueCase_ == 4903) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 4903) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        pdcflowCcTransactionBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowCCTransaction pdcflow_cc_transaction = 4903 [json_name = "pdcflowCcTransaction"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction.Builder getPdcflowCcTransactionBuilder() {
+      return getPdcflowCcTransactionFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowCCTransaction pdcflow_cc_transaction = 4903 [json_name = "pdcflowCcTransaction"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransactionOrBuilder getPdcflowCcTransactionOrBuilder() {
+      if ((valueCase_ == 4903) && (pdcflowCcTransactionBuilder_ != null)) {
+        return pdcflowCcTransactionBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 4903) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePDCFlowCCTransaction pdcflow_cc_transaction = 4903 [json_name = "pdcflowCcTransaction"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransactionOrBuilder> 
+        getPdcflowCcTransactionFieldBuilder() {
+      if (pdcflowCcTransactionBuilder_ == null) {
+        if (!(valueCase_ == 4903)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction.getDefaultInstance();
+        }
+        pdcflowCcTransactionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransactionOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePDCFlowCCTransaction) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 4903;
+      onChanged();
+      return pdcflowCcTransactionBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
