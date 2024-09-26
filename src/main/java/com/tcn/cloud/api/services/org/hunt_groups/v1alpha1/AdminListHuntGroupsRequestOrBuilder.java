@@ -12,18 +12,18 @@ public interface AdminListHuntGroupsRequestOrBuilder extends
    * The id of the organization to list the hunt groups for.
    * </pre>
    *
-   * <code>string organization_id = 1 [json_name = "organizationId"];</code>
-   * @return The organizationId.
+   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * @return The orgId.
    */
-  java.lang.String getOrganizationId();
+  java.lang.String getOrgId();
   /**
    * <pre>
    * The id of the organization to list the hunt groups for.
    * </pre>
    *
-   * <code>string organization_id = 1 [json_name = "organizationId"];</code>
-   * @return The bytes for organizationId.
+   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
    */
   com.google.protobuf.ByteString
-      getOrganizationIdBytes();
+      getOrgIdBytes();
 }
