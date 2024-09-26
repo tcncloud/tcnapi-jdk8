@@ -14,7 +14,7 @@ public interface PanelSourceOrBuilder extends
    *
    * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
    * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
-   *     See api/v0alpha/dashboards.proto;l=348
+   *     See api/v0alpha/dashboards.proto;l=369
    * @return Whether the insightId field is set.
    */
   @java.lang.Deprecated boolean hasInsightId();
@@ -25,7 +25,7 @@ public interface PanelSourceOrBuilder extends
    *
    * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
    * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
-   *     See api/v0alpha/dashboards.proto;l=348
+   *     See api/v0alpha/dashboards.proto;l=369
    * @return The insightId.
    */
   @java.lang.Deprecated java.lang.String getInsightId();
@@ -36,7 +36,7 @@ public interface PanelSourceOrBuilder extends
    *
    * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
    * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
-   *     See api/v0alpha/dashboards.proto;l=348
+   *     See api/v0alpha/dashboards.proto;l=369
    * @return The bytes for insightId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
