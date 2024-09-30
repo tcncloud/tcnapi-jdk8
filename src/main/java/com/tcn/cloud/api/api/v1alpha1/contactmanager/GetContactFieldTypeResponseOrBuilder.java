@@ -12,18 +12,17 @@ public interface GetContactFieldTypeResponseOrBuilder extends
    * Field type return on presidio analysis
    * </pre>
    *
-   * <code>string field_type = 1 [json_name = "fieldType"];</code>
-   * @return The fieldType.
+   * <code>.api.commons.ClassifierEntityType field_type = 1 [json_name = "fieldType"];</code>
+   * @return The enum numeric value on the wire for fieldType.
    */
-  java.lang.String getFieldType();
+  int getFieldTypeValue();
   /**
    * <pre>
    * Field type return on presidio analysis
    * </pre>
    *
-   * <code>string field_type = 1 [json_name = "fieldType"];</code>
-   * @return The bytes for fieldType.
+   * <code>.api.commons.ClassifierEntityType field_type = 1 [json_name = "fieldType"];</code>
+   * @return The fieldType.
    */
-  com.google.protobuf.ByteString
-      getFieldTypeBytes();
+  com.tcn.cloud.api.api.commons.ClassifierEntityType getFieldType();
 }
