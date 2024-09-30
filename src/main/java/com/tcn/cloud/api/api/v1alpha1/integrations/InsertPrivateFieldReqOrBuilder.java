@@ -8,60 +8,48 @@ public interface InsertPrivateFieldReqOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  java.lang.String getOrgId();
-  /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  com.google.protobuf.ByteString
-      getOrgIdBytes();
-
-  /**
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name"];</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name"];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>string server = 3 [json_name = "server"];</code>
+   * <code>string server = 2 [json_name = "server"];</code>
    * @return The server.
    */
   java.lang.String getServer();
   /**
-   * <code>string server = 3 [json_name = "server"];</code>
+   * <code>string server = 2 [json_name = "server"];</code>
    * @return The bytes for server.
    */
   com.google.protobuf.ByteString
       getServerBytes();
 
   /**
-   * <code>string value = 4 [json_name = "value"];</code>
+   * <code>string value = 3 [json_name = "value"];</code>
    * @return The value.
    */
   java.lang.String getValue();
   /**
-   * <code>string value = 4 [json_name = "value"];</code>
+   * <code>string value = 3 [json_name = "value"];</code>
    * @return The bytes for value.
    */
   com.google.protobuf.ByteString
       getValueBytes();
 
   /**
-   * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 5 [json_name = "privateFieldType"];</code>
+   * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 4 [json_name = "privateFieldType"];</code>
    * @return The enum numeric value on the wire for privateFieldType.
    */
   int getPrivateFieldTypeValue();
   /**
-   * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 5 [json_name = "privateFieldType"];</code>
+   * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 4 [json_name = "privateFieldType"];</code>
    * @return The privateFieldType.
    */
   com.tcn.cloud.api.api.v1alpha1.integrations.PrivateFieldType getPrivateFieldType();

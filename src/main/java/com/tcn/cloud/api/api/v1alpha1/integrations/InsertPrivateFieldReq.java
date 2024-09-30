@@ -16,7 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private InsertPrivateFieldReq() {
-    orgId_ = "";
     name_ = "";
     server_ = "";
     value_ = "";
@@ -43,50 +42,11 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq.class, com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq.Builder.class);
   }
 
-  public static final int ORG_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
-  /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  @java.lang.Override
-  public java.lang.String getOrgId() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      orgId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOrgIdBytes() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      orgId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int NAME_FIELD_NUMBER = 2;
+  public static final int NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name"];</code>
    * @return The name.
    */
   @java.lang.Override
@@ -103,7 +63,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string name = 2 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name"];</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -121,11 +81,11 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int SERVER_FIELD_NUMBER = 3;
+  public static final int SERVER_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object server_ = "";
   /**
-   * <code>string server = 3 [json_name = "server"];</code>
+   * <code>string server = 2 [json_name = "server"];</code>
    * @return The server.
    */
   @java.lang.Override
@@ -142,7 +102,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string server = 3 [json_name = "server"];</code>
+   * <code>string server = 2 [json_name = "server"];</code>
    * @return The bytes for server.
    */
   @java.lang.Override
@@ -160,11 +120,11 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int VALUE_FIELD_NUMBER = 4;
+  public static final int VALUE_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object value_ = "";
   /**
-   * <code>string value = 4 [json_name = "value"];</code>
+   * <code>string value = 3 [json_name = "value"];</code>
    * @return The value.
    */
   @java.lang.Override
@@ -181,7 +141,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string value = 4 [json_name = "value"];</code>
+   * <code>string value = 3 [json_name = "value"];</code>
    * @return The bytes for value.
    */
   @java.lang.Override
@@ -199,17 +159,17 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PRIVATE_FIELD_TYPE_FIELD_NUMBER = 5;
+  public static final int PRIVATE_FIELD_TYPE_FIELD_NUMBER = 4;
   private int privateFieldType_ = 0;
   /**
-   * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 5 [json_name = "privateFieldType"];</code>
+   * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 4 [json_name = "privateFieldType"];</code>
    * @return The enum numeric value on the wire for privateFieldType.
    */
   @java.lang.Override public int getPrivateFieldTypeValue() {
     return privateFieldType_;
   }
   /**
-   * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 5 [json_name = "privateFieldType"];</code>
+   * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 4 [json_name = "privateFieldType"];</code>
    * @return The privateFieldType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.integrations.PrivateFieldType getPrivateFieldType() {
@@ -231,20 +191,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(server_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, server_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, server_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, value_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, value_);
     }
     if (privateFieldType_ != com.tcn.cloud.api.api.v1alpha1.integrations.PrivateFieldType.UNKNOWN.getNumber()) {
-      output.writeEnum(5, privateFieldType_);
+      output.writeEnum(4, privateFieldType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -255,21 +212,18 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(server_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, server_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, server_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, value_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, value_);
     }
     if (privateFieldType_ != com.tcn.cloud.api.api.v1alpha1.integrations.PrivateFieldType.UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(5, privateFieldType_);
+        .computeEnumSize(4, privateFieldType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -286,8 +240,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq other = (com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq) obj;
 
-    if (!getOrgId()
-        .equals(other.getOrgId())) return false;
     if (!getName()
         .equals(other.getName())) return false;
     if (!getServer()
@@ -306,8 +258,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + SERVER_FIELD_NUMBER;
@@ -447,7 +397,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      orgId_ = "";
       name_ = "";
       server_ = "";
       value_ = "";
@@ -486,18 +435,15 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.orgId_ = orgId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.name_ = name_;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.server_ = server_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.value_ = value_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.privateFieldType_ = privateFieldType_;
       }
     }
@@ -546,24 +492,19 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq.getDefaultInstance()) return this;
-      if (!other.getOrgId().isEmpty()) {
-        orgId_ = other.orgId_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getServer().isEmpty()) {
         server_ = other.server_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getValue().isEmpty()) {
         value_ = other.value_;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.privateFieldType_ != 0) {
@@ -596,30 +537,25 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              orgId_ = input.readStringRequireUtf8();
+              name_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              name_ = input.readStringRequireUtf8();
+              server_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
-              server_ = input.readStringRequireUtf8();
+              value_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
             } // case 26
-            case 34: {
-              value_ = input.readStringRequireUtf8();
+            case 32: {
+              privateFieldType_ = input.readEnum();
               bitField0_ |= 0x00000008;
               break;
-            } // case 34
-            case 40: {
-              privateFieldType_ = input.readEnum();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -637,81 +573,9 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object orgId_ = "";
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @return The orgId.
-     */
-    public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @return The bytes for orgId.
-     */
-    public com.google.protobuf.ByteString
-        getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @param value The orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      orgId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOrgId() {
-      orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @param value The bytes for orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      orgId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object name_ = "";
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -727,7 +591,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -744,7 +608,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -752,22 +616,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       name_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string name = 2 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -776,14 +640,14 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       name_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
     private java.lang.Object server_ = "";
     /**
-     * <code>string server = 3 [json_name = "server"];</code>
+     * <code>string server = 2 [json_name = "server"];</code>
      * @return The server.
      */
     public java.lang.String getServer() {
@@ -799,7 +663,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string server = 3 [json_name = "server"];</code>
+     * <code>string server = 2 [json_name = "server"];</code>
      * @return The bytes for server.
      */
     public com.google.protobuf.ByteString
@@ -816,7 +680,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string server = 3 [json_name = "server"];</code>
+     * <code>string server = 2 [json_name = "server"];</code>
      * @param value The server to set.
      * @return This builder for chaining.
      */
@@ -824,22 +688,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       server_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string server = 3 [json_name = "server"];</code>
+     * <code>string server = 2 [json_name = "server"];</code>
      * @return This builder for chaining.
      */
     public Builder clearServer() {
       server_ = getDefaultInstance().getServer();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string server = 3 [json_name = "server"];</code>
+     * <code>string server = 2 [json_name = "server"];</code>
      * @param value The bytes for server to set.
      * @return This builder for chaining.
      */
@@ -848,14 +712,14 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       server_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
 
     private java.lang.Object value_ = "";
     /**
-     * <code>string value = 4 [json_name = "value"];</code>
+     * <code>string value = 3 [json_name = "value"];</code>
      * @return The value.
      */
     public java.lang.String getValue() {
@@ -871,7 +735,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value = 4 [json_name = "value"];</code>
+     * <code>string value = 3 [json_name = "value"];</code>
      * @return The bytes for value.
      */
     public com.google.protobuf.ByteString
@@ -888,7 +752,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string value = 4 [json_name = "value"];</code>
+     * <code>string value = 3 [json_name = "value"];</code>
      * @param value The value to set.
      * @return This builder for chaining.
      */
@@ -896,22 +760,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       value_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>string value = 4 [json_name = "value"];</code>
+     * <code>string value = 3 [json_name = "value"];</code>
      * @return This builder for chaining.
      */
     public Builder clearValue() {
       value_ = getDefaultInstance().getValue();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
-     * <code>string value = 4 [json_name = "value"];</code>
+     * <code>string value = 3 [json_name = "value"];</code>
      * @param value The bytes for value to set.
      * @return This builder for chaining.
      */
@@ -920,32 +784,32 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       value_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
 
     private int privateFieldType_ = 0;
     /**
-     * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 5 [json_name = "privateFieldType"];</code>
+     * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 4 [json_name = "privateFieldType"];</code>
      * @return The enum numeric value on the wire for privateFieldType.
      */
     @java.lang.Override public int getPrivateFieldTypeValue() {
       return privateFieldType_;
     }
     /**
-     * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 5 [json_name = "privateFieldType"];</code>
+     * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 4 [json_name = "privateFieldType"];</code>
      * @param value The enum numeric value on the wire for privateFieldType to set.
      * @return This builder for chaining.
      */
     public Builder setPrivateFieldTypeValue(int value) {
       privateFieldType_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 5 [json_name = "privateFieldType"];</code>
+     * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 4 [json_name = "privateFieldType"];</code>
      * @return The privateFieldType.
      */
     @java.lang.Override
@@ -954,7 +818,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.tcn.cloud.api.api.v1alpha1.integrations.PrivateFieldType.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 5 [json_name = "privateFieldType"];</code>
+     * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 4 [json_name = "privateFieldType"];</code>
      * @param value The privateFieldType to set.
      * @return This builder for chaining.
      */
@@ -962,17 +826,17 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       privateFieldType_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 5 [json_name = "privateFieldType"];</code>
+     * <code>.api.v1alpha1.integrations.PrivateFieldType private_field_type = 4 [json_name = "privateFieldType"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPrivateFieldType() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       privateFieldType_ = 0;
       onChanged();
       return this;
