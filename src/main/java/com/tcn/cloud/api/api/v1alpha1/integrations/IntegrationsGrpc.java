@@ -976,6 +976,37 @@ public final class IntegrationsGrpc {
     return getProcessWorkflowMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq,
+      com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldRes> getInsertPrivateFieldMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "InsertPrivateField",
+      requestType = com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq,
+      com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldRes> getInsertPrivateFieldMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq, com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldRes> getInsertPrivateFieldMethod;
+    if ((getInsertPrivateFieldMethod = IntegrationsGrpc.getInsertPrivateFieldMethod) == null) {
+      synchronized (IntegrationsGrpc.class) {
+        if ((getInsertPrivateFieldMethod = IntegrationsGrpc.getInsertPrivateFieldMethod) == null) {
+          IntegrationsGrpc.getInsertPrivateFieldMethod = getInsertPrivateFieldMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq, com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "InsertPrivateField"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldRes.getDefaultInstance()))
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("InsertPrivateField"))
+              .build();
+        }
+      }
+    }
+    return getInsertPrivateFieldMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1312,6 +1343,13 @@ public final class IntegrationsGrpc {
     default void processWorkflow(com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessWorkflowMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void insertPrivateField(com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInsertPrivateFieldMethod(), responseObserver);
     }
   }
 
@@ -1662,6 +1700,14 @@ public final class IntegrationsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProcessWorkflowMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void insertPrivateField(com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getInsertPrivateFieldMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1968,6 +2014,13 @@ public final class IntegrationsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes processWorkflow(com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProcessWorkflowMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldRes insertPrivateField(com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getInsertPrivateFieldMethod(), getCallOptions(), request);
     }
   }
 
@@ -2307,6 +2360,14 @@ public final class IntegrationsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getProcessWorkflowMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldRes> insertPrivateField(
+        com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getInsertPrivateFieldMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PROCESS = 0;
@@ -2340,6 +2401,7 @@ public final class IntegrationsGrpc {
   private static final int METHODID_GENERATE_EPIC_KEY_PAIRS = 28;
   private static final int METHODID_POPULATE_INTEGRATION_LINK = 29;
   private static final int METHODID_PROCESS_WORKFLOW = 30;
+  private static final int METHODID_INSERT_PRIVATE_FIELD = 31;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2481,6 +2543,10 @@ public final class IntegrationsGrpc {
         case METHODID_PROCESS_WORKFLOW:
           serviceImpl.processWorkflow((com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes>) responseObserver);
+          break;
+        case METHODID_INSERT_PRIVATE_FIELD:
+          serviceImpl.insertPrivateField((com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2717,6 +2783,13 @@ public final class IntegrationsGrpc {
               com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowReq,
               com.tcn.cloud.api.api.v1alpha1.integrations.ProcessWorkflowRes>(
                 service, METHODID_PROCESS_WORKFLOW)))
+        .addMethod(
+          getInsertPrivateFieldMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.InsertPrivateFieldRes>(
+                service, METHODID_INSERT_PRIVATE_FIELD)))
         .build();
   }
 
@@ -2796,6 +2869,7 @@ public final class IntegrationsGrpc {
               .addMethod(getGenerateEpicKeyPairsMethod())
               .addMethod(getPopulateIntegrationLinkMethod())
               .addMethod(getProcessWorkflowMethod())
+              .addMethod(getInsertPrivateFieldMethod())
               .build();
         }
       }
