@@ -119,6 +119,16 @@ public final class ContactmanagerProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_contactmanager_ListContactsByEntityResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -207,13 +217,16 @@ public final class ContactmanagerProto {
       "tity_id\030\002 \001(\tR\010entityId\"\204\001\n\034ListContacts" +
       "ByEntityResponse\022d\n\025contact_manager_entr" +
       "y\030\001 \003(\01320.api.v1alpha1.contactmanager.Co" +
-      "ntactManagerEntryR\023contactManagerEntryB\322" +
-      "\001\n-com.tcn.cloud.api.api.v1alpha1.contac" +
-      "tmanagerB\023ContactmanagerProtoP\001\242\002\003AVC\252\002\033" +
-      "Api.V1alpha1.Contactmanager\312\002\033Api\\V1alph" +
-      "a1\\Contactmanager\342\002\'Api\\V1alpha1\\Contact" +
-      "manager\\GPBMetadata\352\002\035Api::V1alpha1::Con" +
-      "tactmanagerb\006proto3"
+      "ntactManagerEntryR\023contactManagerEntry\"=" +
+      "\n\032GetContactFieldTypeRequest\022\037\n\013field_va" +
+      "lue\030\001 \001(\tR\nfieldValue\"<\n\033GetContactField" +
+      "TypeResponse\022\035\n\nfield_type\030\001 \001(\tR\tfieldT" +
+      "ypeB\322\001\n-com.tcn.cloud.api.api.v1alpha1.c" +
+      "ontactmanagerB\023ContactmanagerProtoP\001\242\002\003A" +
+      "VC\252\002\033Api.V1alpha1.Contactmanager\312\002\033Api\\V" +
+      "1alpha1\\Contactmanager\342\002\'Api\\V1alpha1\\Co" +
+      "ntactmanager\\GPBMetadata\352\002\035Api::V1alpha1" +
+      "::Contactmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -348,6 +361,18 @@ public final class ContactmanagerProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_contactmanager_ListContactsByEntityResponse_descriptor,
         new java.lang.String[] { "ContactManagerEntry", });
+    internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeRequest_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeRequest_descriptor,
+        new java.lang.String[] { "FieldValue", });
+    internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeResponse_descriptor,
+        new java.lang.String[] { "FieldType", });
     com.tcn.cloud.api.api.commons.ContactmanagerProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();

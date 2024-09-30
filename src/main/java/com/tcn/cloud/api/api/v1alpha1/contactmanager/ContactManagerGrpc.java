@@ -263,6 +263,37 @@ public final class ContactManagerGrpc {
     return getListContactsByEntityMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest,
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse> getGetContactFieldTypeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetContactFieldType",
+      requestType = com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest,
+      com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse> getGetContactFieldTypeMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse> getGetContactFieldTypeMethod;
+    if ((getGetContactFieldTypeMethod = ContactManagerGrpc.getGetContactFieldTypeMethod) == null) {
+      synchronized (ContactManagerGrpc.class) {
+        if ((getGetContactFieldTypeMethod = ContactManagerGrpc.getGetContactFieldTypeMethod) == null) {
+          ContactManagerGrpc.getGetContactFieldTypeMethod = getGetContactFieldTypeMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest, com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetContactFieldType"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ContactManagerMethodDescriptorSupplier("GetContactFieldType"))
+              .build();
+        }
+      }
+    }
+    return getGetContactFieldTypeMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -378,6 +409,17 @@ public final class ContactManagerGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListContactsByEntityMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     **
+     *Get Contact Field Type
+     * </pre>
+     */
+    default void getContactFieldType(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetContactFieldTypeMethod(), responseObserver);
+    }
   }
 
   /**
@@ -482,6 +524,18 @@ public final class ContactManagerGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListContactsByEntityMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     **
+     *Get Contact Field Type
+     * </pre>
+     */
+    public void getContactFieldType(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetContactFieldTypeMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -566,6 +620,17 @@ public final class ContactManagerGrpc {
     public com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse listContactsByEntity(com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListContactsByEntityMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     **
+     *Get Contact Field Type
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse getContactFieldType(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetContactFieldTypeMethod(), getCallOptions(), request);
     }
   }
 
@@ -660,6 +725,18 @@ public final class ContactManagerGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListContactsByEntityMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     **
+     *Get Contact Field Type
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse> getContactFieldType(
+        com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetContactFieldTypeMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_CONTACT_LIST = 0;
@@ -670,6 +747,7 @@ public final class ContactManagerGrpc {
   private static final int METHODID_ADD_CONTACT_ENTRY = 5;
   private static final int METHODID_EDIT_CONTACT_ENTRY = 6;
   private static final int METHODID_LIST_CONTACTS_BY_ENTITY = 7;
+  private static final int METHODID_GET_CONTACT_FIELD_TYPE = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -719,6 +797,10 @@ public final class ContactManagerGrpc {
         case METHODID_LIST_CONTACTS_BY_ENTITY:
           serviceImpl.listContactsByEntity((com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse>) responseObserver);
+          break;
+        case METHODID_GET_CONTACT_FIELD_TYPE:
+          serviceImpl.getContactFieldType((com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -794,6 +876,13 @@ public final class ContactManagerGrpc {
               com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityRequest,
               com.tcn.cloud.api.api.v1alpha1.contactmanager.ListContactsByEntityResponse>(
                 service, METHODID_LIST_CONTACTS_BY_ENTITY)))
+        .addMethod(
+          getGetContactFieldTypeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest,
+              com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeResponse>(
+                service, METHODID_GET_CONTACT_FIELD_TYPE)))
         .build();
   }
 
@@ -850,6 +939,7 @@ public final class ContactManagerGrpc {
               .addMethod(getAddContactEntryMethod())
               .addMethod(getEditContactEntryMethod())
               .addMethod(getListContactsByEntityMethod())
+              .addMethod(getGetContactFieldTypeMethod())
               .build();
         }
       }
