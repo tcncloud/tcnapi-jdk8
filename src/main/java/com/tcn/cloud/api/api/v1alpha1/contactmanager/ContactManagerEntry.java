@@ -23,6 +23,7 @@ private static final long serialVersionUID = 0L;
     key_ = "";
     value_ = "";
     type_ = "";
+    status_ = 0;
   }
 
   @java.lang.Override
@@ -210,6 +211,24 @@ private static final long serialVersionUID = 0L;
     return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
   }
 
+  public static final int STATUS_FIELD_NUMBER = 7;
+  private int status_ = 0;
+  /**
+   * <code>.api.commons.ContactEntryStatus status = 7 [json_name = "status"];</code>
+   * @return The enum numeric value on the wire for status.
+   */
+  @java.lang.Override public int getStatusValue() {
+    return status_;
+  }
+  /**
+   * <code>.api.commons.ContactEntryStatus status = 7 [json_name = "status"];</code>
+   * @return The status.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ContactEntryStatus getStatus() {
+    com.tcn.cloud.api.api.commons.ContactEntryStatus result = com.tcn.cloud.api.api.commons.ContactEntryStatus.forNumber(status_);
+    return result == null ? com.tcn.cloud.api.api.commons.ContactEntryStatus.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -242,6 +261,9 @@ private static final long serialVersionUID = 0L;
     if (dateCreated_ != null) {
       output.writeMessage(6, getDateCreated());
     }
+    if (status_ != com.tcn.cloud.api.api.commons.ContactEntryStatus.CONTACT_ENTRY_STATUS_NEW.getNumber()) {
+      output.writeEnum(7, status_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -271,6 +293,10 @@ private static final long serialVersionUID = 0L;
     if (dateCreated_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getDateCreated());
+    }
+    if (status_ != com.tcn.cloud.api.api.commons.ContactEntryStatus.CONTACT_ENTRY_STATUS_NEW.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(7, status_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -302,6 +328,7 @@ private static final long serialVersionUID = 0L;
       if (!getDateCreated()
           .equals(other.getDateCreated())) return false;
     }
+    if (status_ != other.status_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -329,6 +356,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DATE_CREATED_FIELD_NUMBER;
       hash = (53 * hash) + getDateCreated().hashCode();
     }
+    hash = (37 * hash) + STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + status_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -474,6 +503,7 @@ private static final long serialVersionUID = 0L;
         dateCreatedBuilder_.dispose();
         dateCreatedBuilder_ = null;
       }
+      status_ = 0;
       return this;
     }
 
@@ -526,6 +556,9 @@ private static final long serialVersionUID = 0L;
         result.dateCreated_ = dateCreatedBuilder_ == null
             ? dateCreated_
             : dateCreatedBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.status_ = status_;
       }
     }
 
@@ -597,6 +630,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasDateCreated()) {
         mergeDateCreated(other.getDateCreated());
       }
+      if (other.status_ != 0) {
+        setStatusValue(other.getStatusValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -655,6 +691,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
+            case 56: {
+              status_ = input.readEnum();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1069,6 +1110,59 @@ private static final long serialVersionUID = 0L;
         dateCreated_ = null;
       }
       return dateCreatedBuilder_;
+    }
+
+    private int status_ = 0;
+    /**
+     * <code>.api.commons.ContactEntryStatus status = 7 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.api.commons.ContactEntryStatus status = 7 [json_name = "status"];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatusValue(int value) {
+      status_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ContactEntryStatus status = 7 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ContactEntryStatus getStatus() {
+      com.tcn.cloud.api.api.commons.ContactEntryStatus result = com.tcn.cloud.api.api.commons.ContactEntryStatus.forNumber(status_);
+      return result == null ? com.tcn.cloud.api.api.commons.ContactEntryStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.ContactEntryStatus status = 7 [json_name = "status"];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatus(com.tcn.cloud.api.api.commons.ContactEntryStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000040;
+      status_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.ContactEntryStatus status = 7 [json_name = "status"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStatus() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      status_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
