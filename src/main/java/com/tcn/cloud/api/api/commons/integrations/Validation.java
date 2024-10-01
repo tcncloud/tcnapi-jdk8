@@ -72,6 +72,15 @@ public enum Validation
   VALIDATION_US_ZIP(106),
   /**
    * <pre>
+   * value must be a month and year expiration for credit/debit cards,
+   * and must not be expired
+   * </pre>
+   *
+   * <code>VALIDATION_CC_EXPIRATION_DATE = 107;</code>
+   */
+  VALIDATION_CC_EXPIRATION_DATE(107),
+  /**
+   * <pre>
    * value must be an integer with no '.' or fraction value
    * </pre>
    *
@@ -204,6 +213,15 @@ public enum Validation
   public static final int VALIDATION_US_ZIP_VALUE = 106;
   /**
    * <pre>
+   * value must be a month and year expiration for credit/debit cards,
+   * and must not be expired
+   * </pre>
+   *
+   * <code>VALIDATION_CC_EXPIRATION_DATE = 107;</code>
+   */
+  public static final int VALIDATION_CC_EXPIRATION_DATE_VALUE = 107;
+  /**
+   * <pre>
    * value must be an integer with no '.' or fraction value
    * </pre>
    *
@@ -308,6 +326,7 @@ public enum Validation
       case 104: return VALIDATION_YEAR_4_DIGIT;
       case 105: return VALIDATION_LAST_4_SSN;
       case 106: return VALIDATION_US_ZIP;
+      case 107: return VALIDATION_CC_EXPIRATION_DATE;
       case 201: return VALIDATION_INTEGER;
       case 202: return VALIDATION_FLOAT;
       case 203: return VALIDATION_CURRENCY_USD;

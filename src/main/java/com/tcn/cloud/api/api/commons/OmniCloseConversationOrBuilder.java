@@ -33,4 +33,26 @@ public interface OmniCloseConversationOrBuilder extends
    * <code>.google.protobuf.Int64Value primary_asm_session_sid = 1 [json_name = "primaryAsmSessionSid"];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getPrimaryAsmSessionSidOrBuilder();
+
+  /**
+   * <pre>
+   * user name used to display in the UI. This field is only set by
+   * the backend when the payload is being sent to the UI
+   * </pre>
+   *
+   * <code>string user_name = 2 [json_name = "userName"];</code>
+   * @return The userName.
+   */
+  java.lang.String getUserName();
+  /**
+   * <pre>
+   * user name used to display in the UI. This field is only set by
+   * the backend when the payload is being sent to the UI
+   * </pre>
+   *
+   * <code>string user_name = 2 [json_name = "userName"];</code>
+   * @return The bytes for userName.
+   */
+  com.google.protobuf.ByteString
+      getUserNameBytes();
 }
