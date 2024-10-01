@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons.audit;
 
-public interface OmnichannelMessageEventOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.audit.OmnichannelMessageEvent)
+public interface OmnichannelMessageSentEventOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.audit.OmnichannelMessageSentEvent)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -88,19 +88,4 @@ public interface OmnichannelMessageEventOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUserIdBytes();
-
-  /**
-   * <code>.api.commons.OmniMessagePayload payload = 10 [json_name = "payload"];</code>
-   * @return Whether the payload field is set.
-   */
-  boolean hasPayload();
-  /**
-   * <code>.api.commons.OmniMessagePayload payload = 10 [json_name = "payload"];</code>
-   * @return The payload.
-   */
-  com.tcn.cloud.api.api.commons.OmniMessagePayload getPayload();
-  /**
-   * <code>.api.commons.OmniMessagePayload payload = 10 [json_name = "payload"];</code>
-   */
-  com.tcn.cloud.api.api.commons.OmniMessagePayloadOrBuilder getPayloadOrBuilder();
 }

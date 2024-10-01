@@ -453,54 +453,62 @@ public interface AuditEventOrBuilder extends
    * customer sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_text_Message_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=67
    * @return Whether the omnichannelCustomerTextMessageEvent field is set.
    */
-  boolean hasOmnichannelCustomerTextMessageEvent();
+  @java.lang.Deprecated boolean hasOmnichannelCustomerTextMessageEvent();
   /**
    * <pre>
    * customer sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_text_Message_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=67
    * @return The omnichannelCustomerTextMessageEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent getOmnichannelCustomerTextMessageEvent();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent getOmnichannelCustomerTextMessageEvent();
   /**
    * <pre>
    * customer sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelCustomerTextMessageEvent omnichannel_customer_text_Message_event = 309 [json_name = "omnichannelCustomerTextMessageEvent", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEventOrBuilder getOmnichannelCustomerTextMessageEventOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEventOrBuilder getOmnichannelCustomerTextMessageEventOrBuilder();
 
   /**
    * <pre>
    * agent sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_text_message_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=69
    * @return Whether the omnichannelAgentTextMessageEvent field is set.
    */
-  boolean hasOmnichannelAgentTextMessageEvent();
+  @java.lang.Deprecated boolean hasOmnichannelAgentTextMessageEvent();
   /**
    * <pre>
    * agent sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_text_message_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=69
    * @return The omnichannelAgentTextMessageEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent getOmnichannelAgentTextMessageEvent();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent getOmnichannelAgentTextMessageEvent();
   /**
    * <pre>
    * agent sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelAgentTextMessageEvent omnichannel_agent_text_message_event = 310 [json_name = "omnichannelAgentTextMessageEvent", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEventOrBuilder getOmnichannelAgentTextMessageEventOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEventOrBuilder getOmnichannelAgentTextMessageEventOrBuilder();
 
   /**
    * <pre>
@@ -669,27 +677,31 @@ public interface AuditEventOrBuilder extends
    * manager sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_text_message_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=83
    * @return Whether the omnichannelManagerTextMessageEvent field is set.
    */
-  boolean hasOmnichannelManagerTextMessageEvent();
+  @java.lang.Deprecated boolean hasOmnichannelManagerTextMessageEvent();
   /**
    * <pre>
    * manager sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_text_message_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=83
    * @return The omnichannelManagerTextMessageEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent getOmnichannelManagerTextMessageEvent();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent getOmnichannelManagerTextMessageEvent();
   /**
    * <pre>
    * manager sent a text message event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelManagerTextMessageEvent omnichannel_manager_text_message_event = 332 [json_name = "omnichannelManagerTextMessageEvent", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEventOrBuilder getOmnichannelManagerTextMessageEventOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEventOrBuilder getOmnichannelManagerTextMessageEventOrBuilder();
 
   /**
    * <pre>
@@ -1155,81 +1167,93 @@ public interface AuditEventOrBuilder extends
    *  SmsMessageSent module event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_add_sms_message_sent_module_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=120
    * @return Whether the omnichannelAddSmsMessageSentModuleEvent field is set.
    */
-  boolean hasOmnichannelAddSmsMessageSentModuleEvent();
+  @java.lang.Deprecated boolean hasOmnichannelAddSmsMessageSentModuleEvent();
   /**
    * <pre>
    *  SmsMessageSent module event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_add_sms_message_sent_module_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=120
    * @return The omnichannelAddSmsMessageSentModuleEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent getOmnichannelAddSmsMessageSentModuleEvent();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent getOmnichannelAddSmsMessageSentModuleEvent();
   /**
    * <pre>
    *  SmsMessageSent module event
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelSmsMessageSentModuleEvent omnichannel_add_sms_message_sent_module_event = 347 [json_name = "omnichannelAddSmsMessageSentModuleEvent", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEventOrBuilder getOmnichannelAddSmsMessageSentModuleEventOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEventOrBuilder getOmnichannelAddSmsMessageSentModuleEventOrBuilder();
 
   /**
    * <pre>
    * ModuleInitialReply
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_module_initial_reply_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=122
    * @return Whether the omnichannelModuleInitialReplyEvent field is set.
    */
-  boolean hasOmnichannelModuleInitialReplyEvent();
+  @java.lang.Deprecated boolean hasOmnichannelModuleInitialReplyEvent();
   /**
    * <pre>
    * ModuleInitialReply
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_module_initial_reply_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=122
    * @return The omnichannelModuleInitialReplyEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent getOmnichannelModuleInitialReplyEvent();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent getOmnichannelModuleInitialReplyEvent();
   /**
    * <pre>
    * ModuleInitialReply
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelModuleInitialReplyEvent omnichannel_module_initial_reply_event = 349 [json_name = "omnichannelModuleInitialReplyEvent", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEventOrBuilder getOmnichannelModuleInitialReplyEventOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEventOrBuilder getOmnichannelModuleInitialReplyEventOrBuilder();
 
   /**
    * <pre>
    * a task message was sent for a campaign
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_task_message_sent_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=124
    * @return Whether the omnichannelTaskMessageSentEvent field is set.
    */
-  boolean hasOmnichannelTaskMessageSentEvent();
+  @java.lang.Deprecated boolean hasOmnichannelTaskMessageSentEvent();
   /**
    * <pre>
    * a task message was sent for a campaign
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_task_message_sent_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=124
    * @return The omnichannelTaskMessageSentEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent getOmnichannelTaskMessageSentEvent();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent getOmnichannelTaskMessageSentEvent();
   /**
    * <pre>
    * a task message was sent for a campaign
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelTaskMessageSentEvent omnichannel_task_message_sent_event = 350 [json_name = "omnichannelTaskMessageSentEvent", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEventOrBuilder getOmnichannelTaskMessageSentEventOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEventOrBuilder getOmnichannelTaskMessageSentEventOrBuilder();
 
   /**
    * <pre>
@@ -1290,108 +1314,124 @@ public interface AuditEventOrBuilder extends
    * an event for when the message units for an agent omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=130
    * @return Whether the omnichannelAgentMessageUnitsEvent field is set.
    */
-  boolean hasOmnichannelAgentMessageUnitsEvent();
+  @java.lang.Deprecated boolean hasOmnichannelAgentMessageUnitsEvent();
   /**
    * <pre>
    * an event for when the message units for an agent omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_agent_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=130
    * @return The omnichannelAgentMessageUnitsEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent getOmnichannelAgentMessageUnitsEvent();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent getOmnichannelAgentMessageUnitsEvent();
   /**
    * <pre>
    * an event for when the message units for an agent omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelAgentMessageUnitsEvent omnichannel_agent_message_units_event = 353 [json_name = "omnichannelAgentMessageUnitsEvent", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEventOrBuilder getOmnichannelAgentMessageUnitsEventOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEventOrBuilder getOmnichannelAgentMessageUnitsEventOrBuilder();
 
   /**
    * <pre>
    * an event for when the message units for a manager omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=132
    * @return Whether the omnichannelManagerMessageUnitsEvent field is set.
    */
-  boolean hasOmnichannelManagerMessageUnitsEvent();
+  @java.lang.Deprecated boolean hasOmnichannelManagerMessageUnitsEvent();
   /**
    * <pre>
    * an event for when the message units for a manager omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_manager_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=132
    * @return The omnichannelManagerMessageUnitsEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent getOmnichannelManagerMessageUnitsEvent();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent getOmnichannelManagerMessageUnitsEvent();
   /**
    * <pre>
    * an event for when the message units for a manager omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelManagerMessageUnitsEvent omnichannel_manager_message_units_event = 354 [json_name = "omnichannelManagerMessageUnitsEvent", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEventOrBuilder getOmnichannelManagerMessageUnitsEventOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEventOrBuilder getOmnichannelManagerMessageUnitsEventOrBuilder();
 
   /**
    * <pre>
    * an event for when the message units for a customer omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=134
    * @return Whether the omnichannelCustomerMessageUnitsEvent field is set.
    */
-  boolean hasOmnichannelCustomerMessageUnitsEvent();
+  @java.lang.Deprecated boolean hasOmnichannelCustomerMessageUnitsEvent();
   /**
    * <pre>
    * an event for when the message units for a customer omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_customer_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=134
    * @return The omnichannelCustomerMessageUnitsEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent getOmnichannelCustomerMessageUnitsEvent();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent getOmnichannelCustomerMessageUnitsEvent();
   /**
    * <pre>
    * an event for when the message units for a customer omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelCustomerMessageUnitsEvent omnichannel_customer_message_units_event = 355 [json_name = "omnichannelCustomerMessageUnitsEvent", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEventOrBuilder getOmnichannelCustomerMessageUnitsEventOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEventOrBuilder getOmnichannelCustomerMessageUnitsEventOrBuilder();
 
   /**
    * <pre>
    * an event for when the message units for a system omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_system_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=136
    * @return Whether the omnichannelSystemMessageUnitsEvent field is set.
    */
-  boolean hasOmnichannelSystemMessageUnitsEvent();
+  @java.lang.Deprecated boolean hasOmnichannelSystemMessageUnitsEvent();
   /**
    * <pre>
    * an event for when the message units for a system omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
+   * @deprecated api.commons.audit.AuditEvent.omnichannel_system_message_units_event is deprecated.
+   *     See api/commons/audit/audit.proto;l=136
    * @return The omnichannelSystemMessageUnitsEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent getOmnichannelSystemMessageUnitsEvent();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent getOmnichannelSystemMessageUnitsEvent();
   /**
    * <pre>
    * an event for when the message units for a system omni message were calculated
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelSystemMessageUnitsEvent omnichannel_system_message_units_event = 356 [json_name = "omnichannelSystemMessageUnitsEvent", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEventOrBuilder getOmnichannelSystemMessageUnitsEventOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEventOrBuilder getOmnichannelSystemMessageUnitsEventOrBuilder();
 
   /**
    * <pre>
@@ -1557,30 +1597,30 @@ public interface AuditEventOrBuilder extends
 
   /**
    * <pre>
-   * omni message event that encapsulates all omni message event types
+   * omni message event that encapsulates all omni messages sent
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
-   * @return Whether the omnichannelMessageEvent field is set.
+   * <code>.api.commons.audit.OmnichannelMessageSentEvent omnichannel_message_sent_event = 363 [json_name = "omnichannelMessageSentEvent"];</code>
+   * @return Whether the omnichannelMessageSentEvent field is set.
    */
-  boolean hasOmnichannelMessageEvent();
+  boolean hasOmnichannelMessageSentEvent();
   /**
    * <pre>
-   * omni message event that encapsulates all omni message event types
+   * omni message event that encapsulates all omni messages sent
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
-   * @return The omnichannelMessageEvent.
+   * <code>.api.commons.audit.OmnichannelMessageSentEvent omnichannel_message_sent_event = 363 [json_name = "omnichannelMessageSentEvent"];</code>
+   * @return The omnichannelMessageSentEvent.
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent getOmnichannelMessageEvent();
+  com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent getOmnichannelMessageSentEvent();
   /**
    * <pre>
-   * omni message event that encapsulates all omni message event types
+   * omni message event that encapsulates all omni messages sent
    * </pre>
    *
-   * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
+   * <code>.api.commons.audit.OmnichannelMessageSentEvent omnichannel_message_sent_event = 363 [json_name = "omnichannelMessageSentEvent"];</code>
    */
-  com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEventOrBuilder getOmnichannelMessageEventOrBuilder();
+  com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEventOrBuilder getOmnichannelMessageSentEventOrBuilder();
 
   /**
    * <pre>

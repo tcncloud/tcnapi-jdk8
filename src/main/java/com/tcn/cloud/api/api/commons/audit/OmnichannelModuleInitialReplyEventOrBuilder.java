@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.commons.audit;
 
-public interface OmnichannelModuleInitialReplyEventOrBuilder extends
+@java.lang.Deprecated public interface OmnichannelModuleInitialReplyEventOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.commons.audit.OmnichannelModuleInitialReplyEvent)
     com.google.protobuf.MessageOrBuilder {
 
