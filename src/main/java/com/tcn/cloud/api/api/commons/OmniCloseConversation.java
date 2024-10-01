@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private OmniCloseConversation() {
+    userName_ = "";
   }
 
   @java.lang.Override
@@ -76,6 +77,55 @@ private static final long serialVersionUID = 0L;
     return primaryAsmSessionSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : primaryAsmSessionSid_;
   }
 
+  public static final int USER_NAME_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object userName_ = "";
+  /**
+   * <pre>
+   * user name used to display in the UI. This field is only set by
+   * the backend when the payload is being sent to the UI
+   * </pre>
+   *
+   * <code>string user_name = 2 [json_name = "userName"];</code>
+   * @return The userName.
+   */
+  @java.lang.Override
+  public java.lang.String getUserName() {
+    java.lang.Object ref = userName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      userName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * user name used to display in the UI. This field is only set by
+   * the backend when the payload is being sent to the UI
+   * </pre>
+   *
+   * <code>string user_name = 2 [json_name = "userName"];</code>
+   * @return The bytes for userName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUserNameBytes() {
+    java.lang.Object ref = userName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      userName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -93,6 +143,9 @@ private static final long serialVersionUID = 0L;
     if (primaryAsmSessionSid_ != null) {
       output.writeMessage(1, getPrimaryAsmSessionSid());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userName_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -105,6 +158,9 @@ private static final long serialVersionUID = 0L;
     if (primaryAsmSessionSid_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getPrimaryAsmSessionSid());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userName_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -126,6 +182,8 @@ private static final long serialVersionUID = 0L;
       if (!getPrimaryAsmSessionSid()
           .equals(other.getPrimaryAsmSessionSid())) return false;
     }
+    if (!getUserName()
+        .equals(other.getUserName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -141,6 +199,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PRIMARY_ASM_SESSION_SID_FIELD_NUMBER;
       hash = (53 * hash) + getPrimaryAsmSessionSid().hashCode();
     }
+    hash = (37 * hash) + USER_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getUserName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -277,6 +337,7 @@ private static final long serialVersionUID = 0L;
         primaryAsmSessionSidBuilder_.dispose();
         primaryAsmSessionSidBuilder_ = null;
       }
+      userName_ = "";
       return this;
     }
 
@@ -314,6 +375,9 @@ private static final long serialVersionUID = 0L;
         result.primaryAsmSessionSid_ = primaryAsmSessionSidBuilder_ == null
             ? primaryAsmSessionSid_
             : primaryAsmSessionSidBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.userName_ = userName_;
       }
     }
 
@@ -364,6 +428,11 @@ private static final long serialVersionUID = 0L;
       if (other.hasPrimaryAsmSessionSid()) {
         mergePrimaryAsmSessionSid(other.getPrimaryAsmSessionSid());
       }
+      if (!other.getUserName().isEmpty()) {
+        userName_ = other.userName_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -397,6 +466,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              userName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -567,6 +641,103 @@ private static final long serialVersionUID = 0L;
         primaryAsmSessionSid_ = null;
       }
       return primaryAsmSessionSidBuilder_;
+    }
+
+    private java.lang.Object userName_ = "";
+    /**
+     * <pre>
+     * user name used to display in the UI. This field is only set by
+     * the backend when the payload is being sent to the UI
+     * </pre>
+     *
+     * <code>string user_name = 2 [json_name = "userName"];</code>
+     * @return The userName.
+     */
+    public java.lang.String getUserName() {
+      java.lang.Object ref = userName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * user name used to display in the UI. This field is only set by
+     * the backend when the payload is being sent to the UI
+     * </pre>
+     *
+     * <code>string user_name = 2 [json_name = "userName"];</code>
+     * @return The bytes for userName.
+     */
+    public com.google.protobuf.ByteString
+        getUserNameBytes() {
+      java.lang.Object ref = userName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * user name used to display in the UI. This field is only set by
+     * the backend when the payload is being sent to the UI
+     * </pre>
+     *
+     * <code>string user_name = 2 [json_name = "userName"];</code>
+     * @param value The userName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      userName_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * user name used to display in the UI. This field is only set by
+     * the backend when the payload is being sent to the UI
+     * </pre>
+     *
+     * <code>string user_name = 2 [json_name = "userName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUserName() {
+      userName_ = getDefaultInstance().getUserName();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * user name used to display in the UI. This field is only set by
+     * the backend when the payload is being sent to the UI
+     * </pre>
+     *
+     * <code>string user_name = 2 [json_name = "userName"];</code>
+     * @param value The bytes for userName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      userName_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
