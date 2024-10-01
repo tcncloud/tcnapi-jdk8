@@ -1557,7 +1557,7 @@ public interface AuditEventOrBuilder extends
 
   /**
    * <pre>
-   * omni message event that encapsulates all message event types
+   * omni message event that encapsulates all omni message event types
    * </pre>
    *
    * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
@@ -1566,7 +1566,7 @@ public interface AuditEventOrBuilder extends
   boolean hasOmnichannelMessageEvent();
   /**
    * <pre>
-   * omni message event that encapsulates all message event types
+   * omni message event that encapsulates all omni message event types
    * </pre>
    *
    * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
@@ -1575,7 +1575,7 @@ public interface AuditEventOrBuilder extends
   com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent getOmnichannelMessageEvent();
   /**
    * <pre>
-   * omni message event that encapsulates all message event types
+   * omni message event that encapsulates all omni message event types
    * </pre>
    *
    * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>

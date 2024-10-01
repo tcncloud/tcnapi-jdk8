@@ -2896,7 +2896,7 @@ private static final long serialVersionUID = 0L;
   public static final int OMNICHANNEL_MESSAGE_EVENT_FIELD_NUMBER = 363;
   /**
    * <pre>
-   * omni message event that encapsulates all message event types
+   * omni message event that encapsulates all omni message event types
    * </pre>
    *
    * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
@@ -2908,7 +2908,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * omni message event that encapsulates all message event types
+   * omni message event that encapsulates all omni message event types
    * </pre>
    *
    * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
@@ -2923,7 +2923,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * omni message event that encapsulates all message event types
+   * omni message event that encapsulates all omni message event types
    * </pre>
    *
    * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
@@ -20157,7 +20157,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEventOrBuilder> omnichannelMessageEventBuilder_;
     /**
      * <pre>
-     * omni message event that encapsulates all message event types
+     * omni message event that encapsulates all omni message event types
      * </pre>
      *
      * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
@@ -20169,7 +20169,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * omni message event that encapsulates all message event types
+     * omni message event that encapsulates all omni message event types
      * </pre>
      *
      * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
@@ -20191,7 +20191,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * omni message event that encapsulates all message event types
+     * omni message event that encapsulates all omni message event types
      * </pre>
      *
      * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
@@ -20211,7 +20211,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * omni message event that encapsulates all message event types
+     * omni message event that encapsulates all omni message event types
      * </pre>
      *
      * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
@@ -20229,7 +20229,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * omni message event that encapsulates all message event types
+     * omni message event that encapsulates all omni message event types
      * </pre>
      *
      * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
@@ -20256,7 +20256,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * omni message event that encapsulates all message event types
+     * omni message event that encapsulates all omni message event types
      * </pre>
      *
      * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
@@ -20279,7 +20279,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * omni message event that encapsulates all message event types
+     * omni message event that encapsulates all omni message event types
      * </pre>
      *
      * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
@@ -20289,7 +20289,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * omni message event that encapsulates all message event types
+     * omni message event that encapsulates all omni message event types
      * </pre>
      *
      * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
@@ -20307,7 +20307,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * omni message event that encapsulates all message event types
+     * omni message event that encapsulates all omni message event types
      * </pre>
      *
      * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
