@@ -27,7 +27,6 @@ private static final long serialVersionUID = 0L;
     trustedPeers_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     name_ = "";
-    billingId_ = "";
   }
 
   @java.lang.Override
@@ -299,53 +298,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int BILLING_ID_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object billingId_ = "";
-  /**
-   * <pre>
-   * The billing id
-   * </pre>
-   *
-   * <code>string billing_id = 6 [json_name = "billingId"];</code>
-   * @return The billingId.
-   */
-  @java.lang.Override
-  public java.lang.String getBillingId() {
-    java.lang.Object ref = billingId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      billingId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * The billing id
-   * </pre>
-   *
-   * <code>string billing_id = 6 [json_name = "billingId"];</code>
-   * @return The bytes for billingId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getBillingIdBytes() {
-    java.lang.Object ref = billingId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      billingId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -374,9 +326,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, name_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, billingId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -412,9 +361,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, name_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, billingId_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -440,8 +386,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTrustedPeersList())) return false;
     if (!getName()
         .equals(other.getName())) return false;
-    if (!getBillingId()
-        .equals(other.getBillingId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -467,8 +411,6 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
-    hash = (37 * hash) + BILLING_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getBillingId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -611,7 +553,6 @@ private static final long serialVersionUID = 0L;
       trustedPeers_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       name_ = "";
-      billingId_ = "";
       return this;
     }
 
@@ -661,9 +602,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.name_ = name_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.billingId_ = billingId_;
       }
     }
 
@@ -746,11 +684,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
-      if (!other.getBillingId().isEmpty()) {
-        billingId_ = other.billingId_;
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -804,11 +737,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
-            case 50: {
-              billingId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1397,98 +1325,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       name_ = value;
       bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object billingId_ = "";
-    /**
-     * <pre>
-     * The billing id
-     * </pre>
-     *
-     * <code>string billing_id = 6 [json_name = "billingId"];</code>
-     * @return The billingId.
-     */
-    public java.lang.String getBillingId() {
-      java.lang.Object ref = billingId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        billingId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The billing id
-     * </pre>
-     *
-     * <code>string billing_id = 6 [json_name = "billingId"];</code>
-     * @return The bytes for billingId.
-     */
-    public com.google.protobuf.ByteString
-        getBillingIdBytes() {
-      java.lang.Object ref = billingId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        billingId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The billing id
-     * </pre>
-     *
-     * <code>string billing_id = 6 [json_name = "billingId"];</code>
-     * @param value The billingId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setBillingId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      billingId_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The billing id
-     * </pre>
-     *
-     * <code>string billing_id = 6 [json_name = "billingId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearBillingId() {
-      billingId_ = getDefaultInstance().getBillingId();
-      bitField0_ = (bitField0_ & ~0x00000020);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The billing id
-     * </pre>
-     *
-     * <code>string billing_id = 6 [json_name = "billingId"];</code>
-     * @param value The bytes for billingId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setBillingIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      billingId_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

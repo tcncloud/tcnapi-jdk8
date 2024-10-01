@@ -21,7 +21,6 @@ private static final long serialVersionUID = 0L;
     description_ = "";
     listDetails_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-    status_ = 0;
   }
 
   @java.lang.Override
@@ -284,24 +283,6 @@ private static final long serialVersionUID = 0L;
     return isDeleted_;
   }
 
-  public static final int STATUS_FIELD_NUMBER = 10;
-  private int status_ = 0;
-  /**
-   * <code>.api.commons.ContactListStatus status = 10 [json_name = "status"];</code>
-   * @return The enum numeric value on the wire for status.
-   */
-  @java.lang.Override public int getStatusValue() {
-    return status_;
-  }
-  /**
-   * <code>.api.commons.ContactListStatus status = 10 [json_name = "status"];</code>
-   * @return The status.
-   */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.ContactListStatus getStatus() {
-    com.tcn.cloud.api.api.commons.ContactListStatus result = com.tcn.cloud.api.api.commons.ContactListStatus.forNumber(status_);
-    return result == null ? com.tcn.cloud.api.api.commons.ContactListStatus.UNRECOGNIZED : result;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -342,9 +323,6 @@ private static final long serialVersionUID = 0L;
     }
     if (isDeleted_ != false) {
       output.writeBool(9, isDeleted_);
-    }
-    if (status_ != com.tcn.cloud.api.api.commons.ContactListStatus.CONTACT_LIST_STATUS_NEW.getNumber()) {
-      output.writeEnum(10, status_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -392,10 +370,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(9, isDeleted_);
     }
-    if (status_ != com.tcn.cloud.api.api.commons.ContactListStatus.CONTACT_LIST_STATUS_NEW.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(10, status_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -432,7 +406,6 @@ private static final long serialVersionUID = 0L;
     }
     if (getIsDeleted()
         != other.getIsDeleted()) return false;
-    if (status_ != other.status_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -470,8 +443,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_DELETED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsDeleted());
-    hash = (37 * hash) + STATUS_FIELD_NUMBER;
-    hash = (53 * hash) + status_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -617,7 +588,6 @@ private static final long serialVersionUID = 0L;
         dateCreatedBuilder_ = null;
       }
       isDeleted_ = false;
-      status_ = 0;
       return this;
     }
 
@@ -680,9 +650,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.isDeleted_ = isDeleted_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.status_ = status_;
       }
     }
 
@@ -770,9 +737,6 @@ private static final long serialVersionUID = 0L;
       if (other.getIsDeleted() != false) {
         setIsDeleted(other.getIsDeleted());
       }
-      if (other.status_ != 0) {
-        setStatusValue(other.getStatusValue());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -847,11 +811,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000100;
               break;
             } // case 72
-            case 80: {
-              status_ = input.readEnum();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 80
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1475,59 +1434,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearIsDeleted() {
       bitField0_ = (bitField0_ & ~0x00000100);
       isDeleted_ = false;
-      onChanged();
-      return this;
-    }
-
-    private int status_ = 0;
-    /**
-     * <code>.api.commons.ContactListStatus status = 10 [json_name = "status"];</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    @java.lang.Override public int getStatusValue() {
-      return status_;
-    }
-    /**
-     * <code>.api.commons.ContactListStatus status = 10 [json_name = "status"];</code>
-     * @param value The enum numeric value on the wire for status to set.
-     * @return This builder for chaining.
-     */
-    public Builder setStatusValue(int value) {
-      status_ = value;
-      bitField0_ |= 0x00000200;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.ContactListStatus status = 10 [json_name = "status"];</code>
-     * @return The status.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.ContactListStatus getStatus() {
-      com.tcn.cloud.api.api.commons.ContactListStatus result = com.tcn.cloud.api.api.commons.ContactListStatus.forNumber(status_);
-      return result == null ? com.tcn.cloud.api.api.commons.ContactListStatus.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.api.commons.ContactListStatus status = 10 [json_name = "status"];</code>
-     * @param value The status to set.
-     * @return This builder for chaining.
-     */
-    public Builder setStatus(com.tcn.cloud.api.api.commons.ContactListStatus value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000200;
-      status_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.ContactListStatus status = 10 [json_name = "status"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearStatus() {
-      bitField0_ = (bitField0_ & ~0x00000200);
-      status_ = 0;
       onChanged();
       return this;
     }

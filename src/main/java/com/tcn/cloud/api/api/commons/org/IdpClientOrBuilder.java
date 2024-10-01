@@ -150,24 +150,4 @@ public interface IdpClientOrBuilder extends
    */
   com.google.protobuf.ByteString
       getNameBytes();
-
-  /**
-   * <pre>
-   * The billing id
-   * </pre>
-   *
-   * <code>string billing_id = 6 [json_name = "billingId"];</code>
-   * @return The billingId.
-   */
-  java.lang.String getBillingId();
-  /**
-   * <pre>
-   * The billing id
-   * </pre>
-   *
-   * <code>string billing_id = 6 [json_name = "billingId"];</code>
-   * @return The bytes for billingId.
-   */
-  com.google.protobuf.ByteString
-      getBillingIdBytes();
 }

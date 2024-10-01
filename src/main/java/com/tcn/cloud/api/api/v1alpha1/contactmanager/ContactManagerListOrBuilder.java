@@ -122,15 +122,4 @@ public interface ContactManagerListOrBuilder extends
    * @return The isDeleted.
    */
   boolean getIsDeleted();
-
-  /**
-   * <code>.api.commons.ContactListStatus status = 10 [json_name = "status"];</code>
-   * @return The enum numeric value on the wire for status.
-   */
-  int getStatusValue();
-  /**
-   * <code>.api.commons.ContactListStatus status = 10 [json_name = "status"];</code>
-   * @return The status.
-   */
-  com.tcn.cloud.api.api.commons.ContactListStatus getStatus();
 }

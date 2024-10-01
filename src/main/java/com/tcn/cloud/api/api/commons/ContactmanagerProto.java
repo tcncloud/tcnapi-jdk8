@@ -59,16 +59,10 @@ public final class ContactmanagerProto {
       "ype\030\001 \001(\tR\004type\022\024\n\005value\030\002 \001(\tR\005value:\002\030" +
       "\001*O\n\032DeDuplicationMergeStrategy\022\026\n\022KEEP_" +
       "EXISTING_LIST\020\000\022\031\n\025REPLACE_EXISTING_LIST" +
-      "\020\001*0\n\021ContactListStatus\022\033\n\027CONTACT_LIST_" +
-      "STATUS_NEW\020\000*\264\001\n\022ContactEntryStatus\022\034\n\030C" +
-      "ONTACT_ENTRY_STATUS_NEW\020\000\022\036\n\032CONTACT_ENT" +
-      "RY_STATUS_INUSE\020\001\022\037\n\033CONTACT_ENTRY_STATU" +
-      "S_NOTREF\020\002\022\035\n\031CONTACT_ENTRY_STATUS_DONE\020" +
-      "\003\022 \n\034CONTACT_ENTRY_STATUS_EXPIRED\020\004B\201\001\n\035" +
-      "com.tcn.cloud.api.api.commonsB\023Contactma" +
-      "nagerProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\C" +
-      "ommons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::" +
-      "Commonsb\006proto3"
+      "\020\001B\201\001\n\035com.tcn.cloud.api.api.commonsB\023Co" +
+      "ntactmanagerProtoP\001\242\002\003ACX\252\002\013Api.Commons\312" +
+      "\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata\352" +
+      "\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

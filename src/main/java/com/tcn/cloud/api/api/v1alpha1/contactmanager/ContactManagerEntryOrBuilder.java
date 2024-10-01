@@ -69,15 +69,4 @@ public interface ContactManagerEntryOrBuilder extends
    * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder();
-
-  /**
-   * <code>.api.commons.ContactEntryStatus status = 7 [json_name = "status"];</code>
-   * @return The enum numeric value on the wire for status.
-   */
-  int getStatusValue();
-  /**
-   * <code>.api.commons.ContactEntryStatus status = 7 [json_name = "status"];</code>
-   * @return The status.
-   */
-  com.tcn.cloud.api.api.commons.ContactEntryStatus getStatus();
 }
