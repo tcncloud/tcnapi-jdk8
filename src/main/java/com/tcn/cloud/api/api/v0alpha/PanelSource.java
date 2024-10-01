@@ -95,7 +95,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
    * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
-   *     See api/v0alpha/dashboards.proto;l=348
+   *     See api/v0alpha/dashboards.proto;l=369
    * @return Whether the insightId field is set.
    */
   @java.lang.Deprecated public boolean hasInsightId() {
@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
    * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
-   *     See api/v0alpha/dashboards.proto;l=348
+   *     See api/v0alpha/dashboards.proto;l=369
    * @return The insightId.
    */
   @java.lang.Deprecated public java.lang.String getInsightId() {
@@ -135,7 +135,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
    * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
-   *     See api/v0alpha/dashboards.proto;l=348
+   *     See api/v0alpha/dashboards.proto;l=369
    * @return The bytes for insightId.
    */
   @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -784,7 +784,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
      * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
-     *     See api/v0alpha/dashboards.proto;l=348
+     *     See api/v0alpha/dashboards.proto;l=369
      * @return Whether the insightId field is set.
      */
     @java.lang.Override
@@ -798,7 +798,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
      * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
-     *     See api/v0alpha/dashboards.proto;l=348
+     *     See api/v0alpha/dashboards.proto;l=369
      * @return The insightId.
      */
     @java.lang.Override
@@ -826,7 +826,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
      * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
-     *     See api/v0alpha/dashboards.proto;l=348
+     *     See api/v0alpha/dashboards.proto;l=369
      * @return The bytes for insightId.
      */
     @java.lang.Override
@@ -855,7 +855,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
      * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
-     *     See api/v0alpha/dashboards.proto;l=348
+     *     See api/v0alpha/dashboards.proto;l=369
      * @param value The insightId to set.
      * @return This builder for chaining.
      */
@@ -874,7 +874,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
      * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
-     *     See api/v0alpha/dashboards.proto;l=348
+     *     See api/v0alpha/dashboards.proto;l=369
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearInsightId() {
@@ -892,7 +892,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string insight_id = 1 [json_name = "insightId", deprecated = true];</code>
      * @deprecated api.v0alpha.PanelSource.insight_id is deprecated.
-     *     See api/v0alpha/dashboards.proto;l=348
+     *     See api/v0alpha/dashboards.proto;l=369
      * @param value The bytes for insightId to set.
      * @return This builder for chaining.
      */
