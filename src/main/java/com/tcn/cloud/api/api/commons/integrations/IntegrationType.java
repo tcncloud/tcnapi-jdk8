@@ -210,6 +210,10 @@ public enum IntegrationType
    */
   INTEGRATION_TYPE_VERADIGM_PRACTICE_MANAGEMENT(4800),
   /**
+   * <code>INTEGRATION_TYPE_PDCFLOW = 4900;</code>
+   */
+  INTEGRATION_TYPE_PDCFLOW(4900),
+  /**
    * <code>INTEGRATION_TYPE_DEBUG = 5000;</code>
    */
   INTEGRATION_TYPE_DEBUG(5000),
@@ -413,6 +417,10 @@ public enum IntegrationType
    */
   public static final int INTEGRATION_TYPE_VERADIGM_PRACTICE_MANAGEMENT_VALUE = 4800;
   /**
+   * <code>INTEGRATION_TYPE_PDCFLOW = 4900;</code>
+   */
+  public static final int INTEGRATION_TYPE_PDCFLOW_VALUE = 4900;
+  /**
    * <code>INTEGRATION_TYPE_DEBUG = 5000;</code>
    */
   public static final int INTEGRATION_TYPE_DEBUG_VALUE = 5000;
@@ -491,6 +499,7 @@ public enum IntegrationType
       case 4600: return INTEGRATION_TYPE_SWERVEPAY;
       case 4700: return INTEGRATION_TYPE_VERADIGM;
       case 4800: return INTEGRATION_TYPE_VERADIGM_PRACTICE_MANAGEMENT;
+      case 4900: return INTEGRATION_TYPE_PDCFLOW;
       case 5000: return INTEGRATION_TYPE_DEBUG;
       default: return null;
     }
