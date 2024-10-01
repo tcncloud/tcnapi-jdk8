@@ -109,6 +109,7 @@ private static final long serialVersionUID = 0L;
     OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT_EVENT(360),
     OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT(361),
     OMNICHANNEL_TRANSCRIPT_SAVED_EVENT(362),
+    OMNICHANNEL_MESSAGE_EVENT(363),
     ASM_AGENT_LOGIN_EVENT(400),
     ASM_OPEN_VOICE_EVENT(401),
     ASM_OPEN_OMNI_AGENT_EVENT(402),
@@ -244,6 +245,7 @@ private static final long serialVersionUID = 0L;
         case 360: return OMNICHANNEL_MANUAL_APPROVE_TASK_TIMEOUT_EVENT;
         case 361: return OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE_EVENT;
         case 362: return OMNICHANNEL_TRANSCRIPT_SAVED_EVENT;
+        case 363: return OMNICHANNEL_MESSAGE_EVENT;
         case 400: return ASM_AGENT_LOGIN_EVENT;
         case 401: return ASM_OPEN_VOICE_EVENT;
         case 402: return ASM_OPEN_OMNI_AGENT_EVENT;
@@ -2891,6 +2893,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent.getDefaultInstance();
   }
 
+  public static final int OMNICHANNEL_MESSAGE_EVENT_FIELD_NUMBER = 363;
+  /**
+   * <pre>
+   * omni message event that encapsulates all message event types
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
+   * @return Whether the omnichannelMessageEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmnichannelMessageEvent() {
+    return eventCase_ == 363;
+  }
+  /**
+   * <pre>
+   * omni message event that encapsulates all message event types
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
+   * @return The omnichannelMessageEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent getOmnichannelMessageEvent() {
+    if (eventCase_ == 363) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * omni message event that encapsulates all message event types
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEventOrBuilder getOmnichannelMessageEventOrBuilder() {
+    if (eventCase_ == 363) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent.getDefaultInstance();
+  }
+
   public static final int ASM_AGENT_LOGIN_EVENT_FIELD_NUMBER = 400;
   /**
    * <pre>
@@ -4610,7 +4655,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_commit_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=240
+   *     See api/commons/audit/audit.proto;l=243
    * @return Whether the billingCommitBillingPlanEvent field is set.
    */
   @java.lang.Override
@@ -4624,7 +4669,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_commit_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=240
+   *     See api/commons/audit/audit.proto;l=243
    * @return The billingCommitBillingPlanEvent.
    */
   @java.lang.Override
@@ -4653,7 +4698,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=241
+   *     See api/commons/audit/audit.proto;l=244
    * @return Whether the billingCreateBillingPlanEvent field is set.
    */
   @java.lang.Override
@@ -4663,7 +4708,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=241
+   *     See api/commons/audit/audit.proto;l=244
    * @return The billingCreateBillingPlanEvent.
    */
   @java.lang.Override
@@ -4688,7 +4733,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=242
+   *     See api/commons/audit/audit.proto;l=245
    * @return Whether the billingCreateInvoiceEvent field is set.
    */
   @java.lang.Override
@@ -4698,7 +4743,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=242
+   *     See api/commons/audit/audit.proto;l=245
    * @return The billingCreateInvoiceEvent.
    */
   @java.lang.Override
@@ -4723,7 +4768,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=243
+   *     See api/commons/audit/audit.proto;l=246
    * @return Whether the billingCreateRateDefinitionEvent field is set.
    */
   @java.lang.Override
@@ -4733,7 +4778,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_create_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=243
+   *     See api/commons/audit/audit.proto;l=246
    * @return The billingCreateRateDefinitionEvent.
    */
   @java.lang.Override
@@ -4758,7 +4803,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=244
+   *     See api/commons/audit/audit.proto;l=247
    * @return Whether the billingDeleteBillingPlanEvent field is set.
    */
   @java.lang.Override
@@ -4768,7 +4813,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=244
+   *     See api/commons/audit/audit.proto;l=247
    * @return The billingDeleteBillingPlanEvent.
    */
   @java.lang.Override
@@ -4793,7 +4838,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=245
+   *     See api/commons/audit/audit.proto;l=248
    * @return Whether the billingDeleteInvoiceEvent field is set.
    */
   @java.lang.Override
@@ -4803,7 +4848,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=245
+   *     See api/commons/audit/audit.proto;l=248
    * @return The billingDeleteInvoiceEvent.
    */
   @java.lang.Override
@@ -4828,7 +4873,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=246
+   *     See api/commons/audit/audit.proto;l=249
    * @return Whether the billingDeleteRateDefinitionEvent field is set.
    */
   @java.lang.Override
@@ -4838,7 +4883,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_delete_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=246
+   *     See api/commons/audit/audit.proto;l=249
    * @return The billingDeleteRateDefinitionEvent.
    */
   @java.lang.Override
@@ -4863,7 +4908,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_export_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=247
+   *     See api/commons/audit/audit.proto;l=250
    * @return Whether the billingExportInvoiceEvent field is set.
    */
   @java.lang.Override
@@ -4873,7 +4918,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_export_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=247
+   *     See api/commons/audit/audit.proto;l=250
    * @return The billingExportInvoiceEvent.
    */
   @java.lang.Override
@@ -4898,7 +4943,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=248
+   *     See api/commons/audit/audit.proto;l=251
    * @return Whether the billingUpdateBillingPlanEvent field is set.
    */
   @java.lang.Override
@@ -4908,7 +4953,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_billing_plan_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=248
+   *     See api/commons/audit/audit.proto;l=251
    * @return The billingUpdateBillingPlanEvent.
    */
   @java.lang.Override
@@ -4933,7 +4978,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=249
+   *     See api/commons/audit/audit.proto;l=252
    * @return Whether the billingUpdateInvoiceEvent field is set.
    */
   @java.lang.Override
@@ -4943,7 +4988,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=249
+   *     See api/commons/audit/audit.proto;l=252
    * @return The billingUpdateInvoiceEvent.
    */
   @java.lang.Override
@@ -4968,7 +5013,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=250
+   *     See api/commons/audit/audit.proto;l=253
    * @return Whether the billingUpdateRateDefinitionEvent field is set.
    */
   @java.lang.Override
@@ -4978,7 +5023,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.billing_update_rate_definition_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=250
+   *     See api/commons/audit/audit.proto;l=253
    * @return The billingUpdateRateDefinitionEvent.
    */
   @java.lang.Override
@@ -5182,7 +5227,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=260
+   *     See api/commons/audit/audit.proto;l=263
    * @return Whether the contactManagerDeleteEvent field is set.
    */
   @java.lang.Override
@@ -5192,7 +5237,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=260
+   *     See api/commons/audit/audit.proto;l=263
    * @return The contactManagerDeleteEvent.
    */
   @java.lang.Override
@@ -5217,7 +5262,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=261
+   *     See api/commons/audit/audit.proto;l=264
    * @return Whether the contactManagerKycEvent field is set.
    */
   @java.lang.Override
@@ -5227,7 +5272,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
    * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-   *     See api/commons/audit/audit.proto;l=261
+   *     See api/commons/audit/audit.proto;l=264
    * @return The contactManagerKycEvent.
    */
   @java.lang.Override
@@ -5571,6 +5616,9 @@ private static final long serialVersionUID = 0L;
     }
     if (eventCase_ == 362) {
       output.writeMessage(362, (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_);
+    }
+    if (eventCase_ == 363) {
+      output.writeMessage(363, (com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent) event_);
     }
     if (eventCase_ == 400) {
       output.writeMessage(400, (com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEvent) event_);
@@ -6010,6 +6058,10 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 362) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(362, (com.tcn.cloud.api.api.commons.audit.OmnichannelTranscriptSavedEvent) event_);
+    }
+    if (eventCase_ == 363) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(363, (com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent) event_);
     }
     if (eventCase_ == 400) {
       size += com.google.protobuf.CodedOutputStream
@@ -6514,6 +6566,10 @@ private static final long serialVersionUID = 0L;
         if (!getOmnichannelTranscriptSavedEvent()
             .equals(other.getOmnichannelTranscriptSavedEvent())) return false;
         break;
+      case 363:
+        if (!getOmnichannelMessageEvent()
+            .equals(other.getOmnichannelMessageEvent())) return false;
+        break;
       case 400:
         if (!getAsmAgentLoginEvent()
             .equals(other.getAsmAgentLoginEvent())) return false;
@@ -7014,6 +7070,10 @@ private static final long serialVersionUID = 0L;
       case 362:
         hash = (37 * hash) + OMNICHANNEL_TRANSCRIPT_SAVED_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getOmnichannelTranscriptSavedEvent().hashCode();
+        break;
+      case 363:
+        hash = (37 * hash) + OMNICHANNEL_MESSAGE_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getOmnichannelMessageEvent().hashCode();
         break;
       case 400:
         hash = (37 * hash) + ASM_AGENT_LOGIN_EVENT_FIELD_NUMBER;
@@ -7582,6 +7642,9 @@ private static final long serialVersionUID = 0L;
       if (omnichannelTranscriptSavedEventBuilder_ != null) {
         omnichannelTranscriptSavedEventBuilder_.clear();
       }
+      if (omnichannelMessageEventBuilder_ != null) {
+        omnichannelMessageEventBuilder_.clear();
+      }
       if (asmAgentLoginEventBuilder_ != null) {
         asmAgentLoginEventBuilder_.clear();
       }
@@ -8067,6 +8130,10 @@ private static final long serialVersionUID = 0L;
       if (eventCase_ == 362 &&
           omnichannelTranscriptSavedEventBuilder_ != null) {
         result.event_ = omnichannelTranscriptSavedEventBuilder_.build();
+      }
+      if (eventCase_ == 363 &&
+          omnichannelMessageEventBuilder_ != null) {
+        result.event_ = omnichannelMessageEventBuilder_.build();
       }
       if (eventCase_ == 400 &&
           asmAgentLoginEventBuilder_ != null) {
@@ -8611,6 +8678,10 @@ private static final long serialVersionUID = 0L;
         }
         case OMNICHANNEL_TRANSCRIPT_SAVED_EVENT: {
           mergeOmnichannelTranscriptSavedEvent(other.getOmnichannelTranscriptSavedEvent());
+          break;
+        }
+        case OMNICHANNEL_MESSAGE_EVENT: {
+          mergeOmnichannelMessageEvent(other.getOmnichannelMessageEvent());
           break;
         }
         case ASM_AGENT_LOGIN_EVENT: {
@@ -9315,6 +9386,13 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 362;
               break;
             } // case 2898
+            case 2906: {
+              input.readMessage(
+                  getOmnichannelMessageEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 363;
+              break;
+            } // case 2906
             case 3202: {
               input.readMessage(
                   getAsmAgentLoginEventFieldBuilder().getBuilder(),
@@ -20076,6 +20154,184 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEventOrBuilder> omnichannelMessageEventBuilder_;
+    /**
+     * <pre>
+     * omni message event that encapsulates all message event types
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
+     * @return Whether the omnichannelMessageEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmnichannelMessageEvent() {
+      return eventCase_ == 363;
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all message event types
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
+     * @return The omnichannelMessageEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent getOmnichannelMessageEvent() {
+      if (omnichannelMessageEventBuilder_ == null) {
+        if (eventCase_ == 363) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 363) {
+          return omnichannelMessageEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all message event types
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
+     */
+    public Builder setOmnichannelMessageEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent value) {
+      if (omnichannelMessageEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        omnichannelMessageEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 363;
+      return this;
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all message event types
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
+     */
+    public Builder setOmnichannelMessageEvent(
+        com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent.Builder builderForValue) {
+      if (omnichannelMessageEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        omnichannelMessageEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 363;
+      return this;
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all message event types
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
+     */
+    public Builder mergeOmnichannelMessageEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent value) {
+      if (omnichannelMessageEventBuilder_ == null) {
+        if (eventCase_ == 363 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 363) {
+          omnichannelMessageEventBuilder_.mergeFrom(value);
+        } else {
+          omnichannelMessageEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 363;
+      return this;
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all message event types
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
+     */
+    public Builder clearOmnichannelMessageEvent() {
+      if (omnichannelMessageEventBuilder_ == null) {
+        if (eventCase_ == 363) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 363) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        omnichannelMessageEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all message event types
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent.Builder getOmnichannelMessageEventBuilder() {
+      return getOmnichannelMessageEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all message event types
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEventOrBuilder getOmnichannelMessageEventOrBuilder() {
+      if ((eventCase_ == 363) && (omnichannelMessageEventBuilder_ != null)) {
+        return omnichannelMessageEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 363) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * omni message event that encapsulates all message event types
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelMessageEvent omnichannel_message_event = 363 [json_name = "omnichannelMessageEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEventOrBuilder> 
+        getOmnichannelMessageEventFieldBuilder() {
+      if (omnichannelMessageEventBuilder_ == null) {
+        if (!(eventCase_ == 363)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent.getDefaultInstance();
+        }
+        omnichannelMessageEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.OmnichannelMessageEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 363;
+      onChanged();
+      return omnichannelMessageEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEvent, com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEvent.Builder, com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEventOrBuilder> asmAgentLoginEventBuilder_;
     /**
      * <pre>
@@ -27177,7 +27433,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_commit_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=240
+     *     See api/commons/audit/audit.proto;l=243
      * @return Whether the billingCommitBillingPlanEvent field is set.
      */
     @java.lang.Override
@@ -27191,7 +27447,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.audit.BillingCommitBillingPlanEvent billing_commit_billing_plan_event = 1000 [json_name = "billingCommitBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_commit_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=240
+     *     See api/commons/audit/audit.proto;l=243
      * @return The billingCommitBillingPlanEvent.
      */
     @java.lang.Override
@@ -27355,7 +27611,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=241
+     *     See api/commons/audit/audit.proto;l=244
      * @return Whether the billingCreateBillingPlanEvent field is set.
      */
     @java.lang.Override
@@ -27365,7 +27621,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateBillingPlanEvent billing_create_billing_plan_event = 1001 [json_name = "billingCreateBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=241
+     *     See api/commons/audit/audit.proto;l=244
      * @return The billingCreateBillingPlanEvent.
      */
     @java.lang.Override
@@ -27501,7 +27757,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=242
+     *     See api/commons/audit/audit.proto;l=245
      * @return Whether the billingCreateInvoiceEvent field is set.
      */
     @java.lang.Override
@@ -27511,7 +27767,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateInvoiceEvent billing_create_invoice_event = 1002 [json_name = "billingCreateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=242
+     *     See api/commons/audit/audit.proto;l=245
      * @return The billingCreateInvoiceEvent.
      */
     @java.lang.Override
@@ -27647,7 +27903,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=243
+     *     See api/commons/audit/audit.proto;l=246
      * @return Whether the billingCreateRateDefinitionEvent field is set.
      */
     @java.lang.Override
@@ -27657,7 +27913,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingCreateRateDefinitionEvent billing_create_rate_definition_event = 1003 [json_name = "billingCreateRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_create_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=243
+     *     See api/commons/audit/audit.proto;l=246
      * @return The billingCreateRateDefinitionEvent.
      */
     @java.lang.Override
@@ -27793,7 +28049,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=244
+     *     See api/commons/audit/audit.proto;l=247
      * @return Whether the billingDeleteBillingPlanEvent field is set.
      */
     @java.lang.Override
@@ -27803,7 +28059,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteBillingPlanEvent billing_delete_billing_plan_event = 1004 [json_name = "billingDeleteBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=244
+     *     See api/commons/audit/audit.proto;l=247
      * @return The billingDeleteBillingPlanEvent.
      */
     @java.lang.Override
@@ -27939,7 +28195,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=245
+     *     See api/commons/audit/audit.proto;l=248
      * @return Whether the billingDeleteInvoiceEvent field is set.
      */
     @java.lang.Override
@@ -27949,7 +28205,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteInvoiceEvent billing_delete_invoice_event = 1005 [json_name = "billingDeleteInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=245
+     *     See api/commons/audit/audit.proto;l=248
      * @return The billingDeleteInvoiceEvent.
      */
     @java.lang.Override
@@ -28085,7 +28341,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=246
+     *     See api/commons/audit/audit.proto;l=249
      * @return Whether the billingDeleteRateDefinitionEvent field is set.
      */
     @java.lang.Override
@@ -28095,7 +28351,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingDeleteRateDefinitionEvent billing_delete_rate_definition_event = 1006 [json_name = "billingDeleteRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_delete_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=246
+     *     See api/commons/audit/audit.proto;l=249
      * @return The billingDeleteRateDefinitionEvent.
      */
     @java.lang.Override
@@ -28231,7 +28487,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_export_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=247
+     *     See api/commons/audit/audit.proto;l=250
      * @return Whether the billingExportInvoiceEvent field is set.
      */
     @java.lang.Override
@@ -28241,7 +28497,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingExportInvoiceEvent billing_export_invoice_event = 1007 [json_name = "billingExportInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_export_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=247
+     *     See api/commons/audit/audit.proto;l=250
      * @return The billingExportInvoiceEvent.
      */
     @java.lang.Override
@@ -28377,7 +28633,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=248
+     *     See api/commons/audit/audit.proto;l=251
      * @return Whether the billingUpdateBillingPlanEvent field is set.
      */
     @java.lang.Override
@@ -28387,7 +28643,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateBillingPlanEvent billing_update_billing_plan_event = 1008 [json_name = "billingUpdateBillingPlanEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_billing_plan_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=248
+     *     See api/commons/audit/audit.proto;l=251
      * @return The billingUpdateBillingPlanEvent.
      */
     @java.lang.Override
@@ -28523,7 +28779,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=249
+     *     See api/commons/audit/audit.proto;l=252
      * @return Whether the billingUpdateInvoiceEvent field is set.
      */
     @java.lang.Override
@@ -28533,7 +28789,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateInvoiceEvent billing_update_invoice_event = 1009 [json_name = "billingUpdateInvoiceEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_invoice_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=249
+     *     See api/commons/audit/audit.proto;l=252
      * @return The billingUpdateInvoiceEvent.
      */
     @java.lang.Override
@@ -28669,7 +28925,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=250
+     *     See api/commons/audit/audit.proto;l=253
      * @return Whether the billingUpdateRateDefinitionEvent field is set.
      */
     @java.lang.Override
@@ -28679,7 +28935,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.BillingUpdateRateDefinitionEvent billing_update_rate_definition_event = 1010 [json_name = "billingUpdateRateDefinitionEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.billing_update_rate_definition_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=250
+     *     See api/commons/audit/audit.proto;l=253
      * @return The billingUpdateRateDefinitionEvent.
      */
     @java.lang.Override
@@ -29597,7 +29853,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=260
+     *     See api/commons/audit/audit.proto;l=263
      * @return Whether the contactManagerDeleteEvent field is set.
      */
     @java.lang.Override
@@ -29607,7 +29863,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerDeleteEvent contact_manager_delete_event = 1202 [json_name = "contactManagerDeleteEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_delete_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=260
+     *     See api/commons/audit/audit.proto;l=263
      * @return The contactManagerDeleteEvent.
      */
     @java.lang.Override
@@ -29743,7 +29999,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=261
+     *     See api/commons/audit/audit.proto;l=264
      * @return Whether the contactManagerKycEvent field is set.
      */
     @java.lang.Override
@@ -29753,7 +30009,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.audit.ContactManagerKycEvent contact_manager_kyc_event = 1203 [json_name = "contactManagerKycEvent", deprecated = true];</code>
      * @deprecated api.commons.audit.AuditEvent.contact_manager_kyc_event is deprecated.
-     *     See api/commons/audit/audit.proto;l=261
+     *     See api/commons/audit/audit.proto;l=264
      * @return The contactManagerKycEvent.
      */
     @java.lang.Override

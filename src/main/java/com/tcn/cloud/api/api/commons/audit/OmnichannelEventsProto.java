@@ -259,6 +259,11 @@ public final class OmnichannelEventsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_audit_OmnichannelManualApproveTaskRequeueEvent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_audit_OmnichannelMessageEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_audit_OmnichannelMessageEvent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -539,12 +544,22 @@ public final class OmnichannelEventsProto {
       "id\"\226\001\n(OmnichannelManualApproveTaskReque" +
       "ueEvent\022)\n\004task\030\001 \001(\0132\025.api.commons.Omni" +
       "TaskR\004task\022\027\n\007user_id\030\002 \001(\tR\006userId\022&\n\017a" +
-      "sm_session_sid\030\003 \001(\003R\rasmSessionSidB\243\001\n#" +
-      "com.tcn.cloud.api.api.commons.auditB\026Omn" +
-      "ichannelEventsProtoP\001\242\002\003ACA\252\002\021Api.Common" +
-      "s.Audit\312\002\021Api\\Commons\\Audit\342\002\035Api\\Common" +
-      "s\\Audit\\GPBMetadata\352\002\023Api::Commons::Audi" +
-      "tb\006proto3"
+      "sm_session_sid\030\003 \001(\003R\rasmSessionSid\"\241\003\n\027" +
+      "OmnichannelMessageEvent\022\037\n\013message_sid\030\001" +
+      " \001(\003R\nmessageSid\022;\n\014channel_type\030\002 \001(\0162\030" +
+      ".api.commons.ChannelTypeR\013channelType\022\033\n" +
+      "\tsent_from\030\003 \001(\tR\010sentFrom\022\027\n\007sent_to\030\004 " +
+      "\001(\tR\006sentTo\022\024\n\005units\030\005 \001(\005R\005units\022!\n\014mes" +
+      "sage_size\030\006 \001(\003R\013messageSize\022\'\n\017attachme" +
+      "nt_size\030\007 \001(\003R\016attachmentSize\022<\n\013sender_" +
+      "type\030\010 \001(\0162\033.api.commons.OmniSenderTypeR" +
+      "\nsenderType\022\027\n\007user_id\030\t \001(\tR\006userId\0229\n\007" +
+      "payload\030\n \001(\0132\037.api.commons.OmniMessageP" +
+      "ayloadR\007payloadB\243\001\n#com.tcn.cloud.api.ap" +
+      "i.commons.auditB\026OmnichannelEventsProtoP" +
+      "\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Common" +
+      "s\\Audit\342\002\035Api\\Commons\\Audit\\GPBMetadata\352" +
+      "\002\023Api::Commons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -846,6 +861,12 @@ public final class OmnichannelEventsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_OmnichannelManualApproveTaskRequeueEvent_descriptor,
         new java.lang.String[] { "Task", "UserId", "AsmSessionSid", });
+    internal_static_api_commons_audit_OmnichannelMessageEvent_descriptor =
+      getDescriptor().getMessageTypes().get(49);
+    internal_static_api_commons_audit_OmnichannelMessageEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_audit_OmnichannelMessageEvent_descriptor,
+        new java.lang.String[] { "MessageSid", "ChannelType", "SentFrom", "SentTo", "Units", "MessageSize", "AttachmentSize", "SenderType", "UserId", "Payload", });
     com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }
