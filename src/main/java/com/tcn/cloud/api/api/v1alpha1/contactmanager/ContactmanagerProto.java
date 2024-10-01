@@ -218,17 +218,20 @@ public final class ContactmanagerProto {
       "\001(\tR\010entityId\"\204\001\n\034ListContactsByEntityRe" +
       "sponse\022d\n\025contact_manager_entry\030\001 \003(\01320." +
       "api.v1alpha1.contactmanager.ContactManag" +
-      "erEntryR\023contactManagerEntry\"=\n\032GetConta" +
-      "ctFieldTypeRequest\022\037\n\013field_value\030\001 \001(\tR" +
-      "\nfieldValue\"_\n\033GetContactFieldTypeRespon" +
-      "se\022@\n\nfield_type\030\001 \001(\0162!.api.commons.Cla" +
-      "ssifierEntityTypeR\tfieldTypeB\322\001\n-com.tcn" +
-      ".cloud.api.api.v1alpha1.contactmanagerB\023" +
-      "ContactmanagerProtoP\001\242\002\003AVC\252\002\033Api.V1alph" +
-      "a1.Contactmanager\312\002\033Api\\V1alpha1\\Contact" +
-      "manager\342\002\'Api\\V1alpha1\\Contactmanager\\GP" +
-      "BMetadata\352\002\035Api::V1alpha1::Contactmanage" +
-      "rb\006proto3"
+      "erEntryR\023contactManagerEntry\"\262\001\n\032GetCont" +
+      "actFieldTypeRequest\022\035\n\nfield_name\030\001 \001(\tR" +
+      "\tfieldName\022\037\n\013field_value\030\002 \001(\tR\nfieldVa" +
+      "lue\022E\n\nfield_type\030\003 \001(\0162!.api.commons.Cl" +
+      "assifierEntityTypeH\000R\tfieldType\210\001\001B\r\n\013_f" +
+      "ield_type\"_\n\033GetContactFieldTypeResponse" +
+      "\022@\n\nfield_type\030\001 \001(\0162!.api.commons.Class" +
+      "ifierEntityTypeR\tfieldTypeB\322\001\n-com.tcn.c" +
+      "loud.api.api.v1alpha1.contactmanagerB\023Co" +
+      "ntactmanagerProtoP\001\242\002\003AVC\252\002\033Api.V1alpha1" +
+      ".Contactmanager\312\002\033Api\\V1alpha1\\Contactma" +
+      "nager\342\002\'Api\\V1alpha1\\Contactmanager\\GPBM" +
+      "etadata\352\002\035Api::V1alpha1::Contactmanagerb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -369,7 +372,7 @@ public final class ContactmanagerProto {
     internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeRequest_descriptor,
-        new java.lang.String[] { "FieldValue", });
+        new java.lang.String[] { "FieldName", "FieldValue", "FieldType", "FieldType", });
     internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeResponse_descriptor =
       getDescriptor().getMessageTypes().get(22);
     internal_static_api_v1alpha1_contactmanager_GetContactFieldTypeResponse_fieldAccessorTable = new

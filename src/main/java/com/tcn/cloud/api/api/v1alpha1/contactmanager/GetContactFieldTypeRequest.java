@@ -16,7 +16,9 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GetContactFieldTypeRequest() {
+    fieldName_ = "";
     fieldValue_ = "";
+    fieldType_ = 0;
   }
 
   @java.lang.Override
@@ -39,7 +41,55 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest.class, com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest.Builder.class);
   }
 
-  public static final int FIELD_VALUE_FIELD_NUMBER = 1;
+  private int bitField0_;
+  public static final int FIELD_NAME_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object fieldName_ = "";
+  /**
+   * <pre>
+   * Field name to be analyzed by presidio
+   * </pre>
+   *
+   * <code>string field_name = 1 [json_name = "fieldName"];</code>
+   * @return The fieldName.
+   */
+  @java.lang.Override
+  public java.lang.String getFieldName() {
+    java.lang.Object ref = fieldName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      fieldName_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Field name to be analyzed by presidio
+   * </pre>
+   *
+   * <code>string field_name = 1 [json_name = "fieldName"];</code>
+   * @return The bytes for fieldName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFieldNameBytes() {
+    java.lang.Object ref = fieldName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      fieldName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int FIELD_VALUE_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object fieldValue_ = "";
   /**
@@ -47,7 +97,7 @@ private static final long serialVersionUID = 0L;
    * Field value to be analyzed by presidio
    * </pre>
    *
-   * <code>string field_value = 1 [json_name = "fieldValue"];</code>
+   * <code>string field_value = 2 [json_name = "fieldValue"];</code>
    * @return The fieldValue.
    */
   @java.lang.Override
@@ -68,7 +118,7 @@ private static final long serialVersionUID = 0L;
    * Field value to be analyzed by presidio
    * </pre>
    *
-   * <code>string field_value = 1 [json_name = "fieldValue"];</code>
+   * <code>string field_value = 2 [json_name = "fieldValue"];</code>
    * @return The bytes for fieldValue.
    */
   @java.lang.Override
@@ -86,6 +136,43 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int FIELD_TYPE_FIELD_NUMBER = 3;
+  private int fieldType_ = 0;
+  /**
+   * <pre>
+   * Field Type - optional to provide more info
+   * </pre>
+   *
+   * <code>optional .api.commons.ClassifierEntityType field_type = 3 [json_name = "fieldType"];</code>
+   * @return Whether the fieldType field is set.
+   */
+  @java.lang.Override public boolean hasFieldType() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * Field Type - optional to provide more info
+   * </pre>
+   *
+   * <code>optional .api.commons.ClassifierEntityType field_type = 3 [json_name = "fieldType"];</code>
+   * @return The enum numeric value on the wire for fieldType.
+   */
+  @java.lang.Override public int getFieldTypeValue() {
+    return fieldType_;
+  }
+  /**
+   * <pre>
+   * Field Type - optional to provide more info
+   * </pre>
+   *
+   * <code>optional .api.commons.ClassifierEntityType field_type = 3 [json_name = "fieldType"];</code>
+   * @return The fieldType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.ClassifierEntityType getFieldType() {
+    com.tcn.cloud.api.api.commons.ClassifierEntityType result = com.tcn.cloud.api.api.commons.ClassifierEntityType.forNumber(fieldType_);
+    return result == null ? com.tcn.cloud.api.api.commons.ClassifierEntityType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -100,8 +187,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fieldName_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldValue_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fieldValue_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fieldValue_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeEnum(3, fieldType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -112,8 +205,15 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fieldName_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldValue_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fieldValue_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fieldValue_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, fieldType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -130,8 +230,14 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest other = (com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest) obj;
 
+    if (!getFieldName()
+        .equals(other.getFieldName())) return false;
     if (!getFieldValue()
         .equals(other.getFieldValue())) return false;
+    if (hasFieldType() != other.hasFieldType()) return false;
+    if (hasFieldType()) {
+      if (fieldType_ != other.fieldType_) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -143,8 +249,14 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + FIELD_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getFieldName().hashCode();
     hash = (37 * hash) + FIELD_VALUE_FIELD_NUMBER;
     hash = (53 * hash) + getFieldValue().hashCode();
+    if (hasFieldType()) {
+      hash = (37 * hash) + FIELD_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + fieldType_;
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -276,7 +388,9 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      fieldName_ = "";
       fieldValue_ = "";
+      fieldType_ = 0;
       return this;
     }
 
@@ -311,8 +425,17 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.fieldName_ = fieldName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.fieldValue_ = fieldValue_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.fieldType_ = fieldType_;
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -359,10 +482,18 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.contactmanager.GetContactFieldTypeRequest.getDefaultInstance()) return this;
-      if (!other.getFieldValue().isEmpty()) {
-        fieldValue_ = other.fieldValue_;
+      if (!other.getFieldName().isEmpty()) {
+        fieldName_ = other.fieldName_;
         bitField0_ |= 0x00000001;
         onChanged();
+      }
+      if (!other.getFieldValue().isEmpty()) {
+        fieldValue_ = other.fieldValue_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (other.hasFieldType()) {
+        setFieldType(other.getFieldType());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -391,10 +522,20 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              fieldValue_ = input.readStringRequireUtf8();
+              fieldName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              fieldValue_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              fieldType_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -412,13 +553,105 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private java.lang.Object fieldName_ = "";
+    /**
+     * <pre>
+     * Field name to be analyzed by presidio
+     * </pre>
+     *
+     * <code>string field_name = 1 [json_name = "fieldName"];</code>
+     * @return The fieldName.
+     */
+    public java.lang.String getFieldName() {
+      java.lang.Object ref = fieldName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fieldName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Field name to be analyzed by presidio
+     * </pre>
+     *
+     * <code>string field_name = 1 [json_name = "fieldName"];</code>
+     * @return The bytes for fieldName.
+     */
+    public com.google.protobuf.ByteString
+        getFieldNameBytes() {
+      java.lang.Object ref = fieldName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fieldName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Field name to be analyzed by presidio
+     * </pre>
+     *
+     * <code>string field_name = 1 [json_name = "fieldName"];</code>
+     * @param value The fieldName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFieldName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      fieldName_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Field name to be analyzed by presidio
+     * </pre>
+     *
+     * <code>string field_name = 1 [json_name = "fieldName"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFieldName() {
+      fieldName_ = getDefaultInstance().getFieldName();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Field name to be analyzed by presidio
+     * </pre>
+     *
+     * <code>string field_name = 1 [json_name = "fieldName"];</code>
+     * @param value The bytes for fieldName to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFieldNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      fieldName_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object fieldValue_ = "";
     /**
      * <pre>
      * Field value to be analyzed by presidio
      * </pre>
      *
-     * <code>string field_value = 1 [json_name = "fieldValue"];</code>
+     * <code>string field_value = 2 [json_name = "fieldValue"];</code>
      * @return The fieldValue.
      */
     public java.lang.String getFieldValue() {
@@ -438,7 +671,7 @@ private static final long serialVersionUID = 0L;
      * Field value to be analyzed by presidio
      * </pre>
      *
-     * <code>string field_value = 1 [json_name = "fieldValue"];</code>
+     * <code>string field_value = 2 [json_name = "fieldValue"];</code>
      * @return The bytes for fieldValue.
      */
     public com.google.protobuf.ByteString
@@ -459,7 +692,7 @@ private static final long serialVersionUID = 0L;
      * Field value to be analyzed by presidio
      * </pre>
      *
-     * <code>string field_value = 1 [json_name = "fieldValue"];</code>
+     * <code>string field_value = 2 [json_name = "fieldValue"];</code>
      * @param value The fieldValue to set.
      * @return This builder for chaining.
      */
@@ -467,7 +700,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       fieldValue_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -476,12 +709,12 @@ private static final long serialVersionUID = 0L;
      * Field value to be analyzed by presidio
      * </pre>
      *
-     * <code>string field_value = 1 [json_name = "fieldValue"];</code>
+     * <code>string field_value = 2 [json_name = "fieldValue"];</code>
      * @return This builder for chaining.
      */
     public Builder clearFieldValue() {
       fieldValue_ = getDefaultInstance().getFieldValue();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -490,7 +723,7 @@ private static final long serialVersionUID = 0L;
      * Field value to be analyzed by presidio
      * </pre>
      *
-     * <code>string field_value = 1 [json_name = "fieldValue"];</code>
+     * <code>string field_value = 2 [json_name = "fieldValue"];</code>
      * @param value The bytes for fieldValue to set.
      * @return This builder for chaining.
      */
@@ -499,7 +732,91 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       fieldValue_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private int fieldType_ = 0;
+    /**
+     * <pre>
+     * Field Type - optional to provide more info
+     * </pre>
+     *
+     * <code>optional .api.commons.ClassifierEntityType field_type = 3 [json_name = "fieldType"];</code>
+     * @return Whether the fieldType field is set.
+     */
+    @java.lang.Override public boolean hasFieldType() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Field Type - optional to provide more info
+     * </pre>
+     *
+     * <code>optional .api.commons.ClassifierEntityType field_type = 3 [json_name = "fieldType"];</code>
+     * @return The enum numeric value on the wire for fieldType.
+     */
+    @java.lang.Override public int getFieldTypeValue() {
+      return fieldType_;
+    }
+    /**
+     * <pre>
+     * Field Type - optional to provide more info
+     * </pre>
+     *
+     * <code>optional .api.commons.ClassifierEntityType field_type = 3 [json_name = "fieldType"];</code>
+     * @param value The enum numeric value on the wire for fieldType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFieldTypeValue(int value) {
+      fieldType_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Field Type - optional to provide more info
+     * </pre>
+     *
+     * <code>optional .api.commons.ClassifierEntityType field_type = 3 [json_name = "fieldType"];</code>
+     * @return The fieldType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ClassifierEntityType getFieldType() {
+      com.tcn.cloud.api.api.commons.ClassifierEntityType result = com.tcn.cloud.api.api.commons.ClassifierEntityType.forNumber(fieldType_);
+      return result == null ? com.tcn.cloud.api.api.commons.ClassifierEntityType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Field Type - optional to provide more info
+     * </pre>
+     *
+     * <code>optional .api.commons.ClassifierEntityType field_type = 3 [json_name = "fieldType"];</code>
+     * @param value The fieldType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFieldType(com.tcn.cloud.api.api.commons.ClassifierEntityType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      fieldType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Field Type - optional to provide more info
+     * </pre>
+     *
+     * <code>optional .api.commons.ClassifierEntityType field_type = 3 [json_name = "fieldType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFieldType() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      fieldType_ = 0;
       onChanged();
       return this;
     }

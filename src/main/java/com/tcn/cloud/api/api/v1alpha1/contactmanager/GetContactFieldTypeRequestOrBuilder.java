@@ -9,10 +9,30 @@ public interface GetContactFieldTypeRequestOrBuilder extends
 
   /**
    * <pre>
+   * Field name to be analyzed by presidio
+   * </pre>
+   *
+   * <code>string field_name = 1 [json_name = "fieldName"];</code>
+   * @return The fieldName.
+   */
+  java.lang.String getFieldName();
+  /**
+   * <pre>
+   * Field name to be analyzed by presidio
+   * </pre>
+   *
+   * <code>string field_name = 1 [json_name = "fieldName"];</code>
+   * @return The bytes for fieldName.
+   */
+  com.google.protobuf.ByteString
+      getFieldNameBytes();
+
+  /**
+   * <pre>
    * Field value to be analyzed by presidio
    * </pre>
    *
-   * <code>string field_value = 1 [json_name = "fieldValue"];</code>
+   * <code>string field_value = 2 [json_name = "fieldValue"];</code>
    * @return The fieldValue.
    */
   java.lang.String getFieldValue();
@@ -21,9 +41,37 @@ public interface GetContactFieldTypeRequestOrBuilder extends
    * Field value to be analyzed by presidio
    * </pre>
    *
-   * <code>string field_value = 1 [json_name = "fieldValue"];</code>
+   * <code>string field_value = 2 [json_name = "fieldValue"];</code>
    * @return The bytes for fieldValue.
    */
   com.google.protobuf.ByteString
       getFieldValueBytes();
+
+  /**
+   * <pre>
+   * Field Type - optional to provide more info
+   * </pre>
+   *
+   * <code>optional .api.commons.ClassifierEntityType field_type = 3 [json_name = "fieldType"];</code>
+   * @return Whether the fieldType field is set.
+   */
+  boolean hasFieldType();
+  /**
+   * <pre>
+   * Field Type - optional to provide more info
+   * </pre>
+   *
+   * <code>optional .api.commons.ClassifierEntityType field_type = 3 [json_name = "fieldType"];</code>
+   * @return The enum numeric value on the wire for fieldType.
+   */
+  int getFieldTypeValue();
+  /**
+   * <pre>
+   * Field Type - optional to provide more info
+   * </pre>
+   *
+   * <code>optional .api.commons.ClassifierEntityType field_type = 3 [json_name = "fieldType"];</code>
+   * @return The fieldType.
+   */
+  com.tcn.cloud.api.api.commons.ClassifierEntityType getFieldType();
 }
