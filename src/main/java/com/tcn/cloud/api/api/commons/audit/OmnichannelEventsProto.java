@@ -259,6 +259,11 @@ public final class OmnichannelEventsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_audit_OmnichannelManualApproveTaskRequeueEvent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_audit_OmnichannelMessageSentEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_audit_OmnichannelMessageSentEvent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -329,222 +334,232 @@ public final class OmnichannelEventsProto {
       "\030\010 \001(\0132\030.api.commons.OmniMessageR\007messag" +
       "e\022S\n\030new_user_asm_session_sid\030\t \001(\0132\033.go" +
       "ogle.protobuf.Int64ValueR\024newUserAsmSess" +
-      "ionSid\"\313\001\n#OmnichannelCustomerTextMessag" +
+      "ionSid\"\317\001\n#OmnichannelCustomerTextMessag" +
       "eEvent\022-\n\020conversation_sid\030\003 \001(\003B\0020\001R\017co" +
       "nversationSid\0222\n\007message\030\004 \001(\0132\030.api.com" +
       "mons.OmniMessageR\007message\022A\n\014conversatio" +
       "n\030\005 \001(\0132\035.api.commons.OmniConversationR\014" +
-      "conversation\"\246\002\n OmnichannelAgentTextMes" +
-      "sageEvent\022-\n\020conversation_sid\030\003 \001(\003B\0020\001R" +
-      "\017conversationSid\0222\n\007message\030\004 \001(\0132\030.api." +
-      "commons.OmniMessageR\007message\022A\n\014conversa" +
-      "tion\030\005 \001(\0132\035.api.commons.OmniConversatio" +
-      "nR\014conversation\022C\n\017asm_session_sid\030\006 \001(\013" +
-      "2\033.google.protobuf.Int64ValueR\rasmSessio" +
-      "nSid\022\027\n\007user_id\030\007 \001(\tR\006userId\"\250\002\n\"Omnich" +
-      "annelManagerTextMessageEvent\022-\n\020conversa" +
-      "tion_sid\030\003 \001(\003B\0020\001R\017conversationSid\0222\n\007m" +
-      "essage\030\004 \001(\0132\030.api.commons.OmniMessageR\007" +
-      "message\022A\n\014conversation\030\005 \001(\0132\035.api.comm" +
-      "ons.OmniConversationR\014conversation\022C\n\017as" +
-      "m_session_sid\030\006 \001(\0132\033.google.protobuf.In" +
-      "t64ValueR\rasmSessionSid\022\027\n\007user_id\030\007 \001(\t" +
-      "R\006userId\"\355\002\n\034OmnichannelFinishWrapUpEven" +
-      "t\022-\n\020conversation_sid\030\001 \001(\003B\0020\001R\017convers" +
-      "ationSid\022%\n\014campaign_sid\030\002 \001(\003B\0020\001R\013camp" +
-      "aignSid\022;\n\014channel_type\030\003 \001(\0162\030.api.comm" +
-      "ons.ChannelTypeR\013channelType\022A\n\014conversa" +
-      "tion\030\004 \001(\0132\035.api.commons.OmniConversatio" +
-      "nR\014conversation\0222\n\007message\030\005 \001(\0132\030.api.c" +
-      "ommons.OmniMessageR\007message\022C\n\017asm_sessi" +
-      "on_sid\030\006 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eR\rasmSessionSid\"\205\003\n\033OmnichannelBeginWra" +
-      "pUpEvent\022-\n\020conversation_sid\030\001 \001(\003B\0020\001R\017" +
-      "conversationSid\022%\n\014campaign_sid\030\002 \001(\003B\0020" +
-      "\001R\013campaignSid\022;\n\014channel_type\030\003 \001(\0162\030.a" +
-      "pi.commons.ChannelTypeR\013channelType\022A\n\014c" +
-      "onversation\030\004 \001(\0132\035.api.commons.OmniConv" +
-      "ersationR\014conversation\0222\n\007message\030\005 \001(\0132" +
-      "\030.api.commons.OmniMessageR\007message\022C\n\017as" +
-      "m_session_sid\030\006 \001(\0132\033.google.protobuf.In" +
-      "t64ValueR\rasmSessionSid\022\027\n\007user_id\030\007 \001(\t" +
-      "R\006userId\"\353\001\n\023OmnichannelT11Event\022-\n\020conv" +
-      "ersation_sid\030\001 \001(\003B\0020\001R\017conversationSid\022" +
-      "%\n\014campaign_sid\030\002 \001(\003B\0020\001R\013campaignSid\022;" +
-      "\n\014channel_type\030\003 \001(\0162\030.api.commons.Chann" +
-      "elTypeR\013channelType\022A\n\014conversation\030\004 \001(" +
-      "\0132\035.api.commons.OmniConversationR\014conver" +
-      "sation\"\377\001\n\"OmnichannelCreateConversation" +
-      "Event\022%\n\014campaign_sid\030\001 \001(\003B\0020\001R\013campaig" +
-      "nSid\022;\n\014channel_type\030\002 \001(\0162\030.api.commons" +
-      ".ChannelTypeR\013channelType\022A\n\014conversatio" +
-      "n\030\003 \001(\0132\035.api.commons.OmniConversationR\014" +
-      "conversation\0222\n\007message\030\004 \001(\0132\030.api.comm" +
-      "ons.OmniMessageR\007message\"\332\001\n\034Omnichannel" +
-      "AgentSuspendEvent\0222\n\007message\030\001 \001(\0132\030.api" +
-      ".commons.OmniMessageR\007message\022A\n\014convers" +
-      "ation\030\002 \001(\0132\035.api.commons.OmniConversati" +
-      "onR\014conversation\022C\n\017asm_session_sid\030\003 \001(" +
-      "\0132\033.google.protobuf.Int64ValueR\rasmSessi" +
-      "onSid\"\370\001\n!OmnichannelCloseConversationEv" +
-      "ent\0222\n\007message\030\001 \001(\0132\030.api.commons.OmniM" +
-      "essageR\007message\022A\n\014conversation\030\002 \001(\0132\035." +
+      "conversation:\002\030\001\"\252\002\n OmnichannelAgentTex" +
+      "tMessageEvent\022-\n\020conversation_sid\030\003 \001(\003B" +
+      "\0020\001R\017conversationSid\0222\n\007message\030\004 \001(\0132\030." +
+      "api.commons.OmniMessageR\007message\022A\n\014conv" +
+      "ersation\030\005 \001(\0132\035.api.commons.OmniConvers" +
+      "ationR\014conversation\022C\n\017asm_session_sid\030\006" +
+      " \001(\0132\033.google.protobuf.Int64ValueR\rasmSe" +
+      "ssionSid\022\027\n\007user_id\030\007 \001(\tR\006userId:\002\030\001\"\254\002" +
+      "\n\"OmnichannelManagerTextMessageEvent\022-\n\020" +
+      "conversation_sid\030\003 \001(\003B\0020\001R\017conversation" +
+      "Sid\0222\n\007message\030\004 \001(\0132\030.api.commons.OmniM" +
+      "essageR\007message\022A\n\014conversation\030\005 \001(\0132\035." +
       "api.commons.OmniConversationR\014conversati" +
-      "on\022C\n\017asm_session_sid\030\003 \001(\0132\033.google.pro" +
+      "on\022C\n\017asm_session_sid\030\006 \001(\0132\033.google.pro" +
       "tobuf.Int64ValueR\rasmSessionSid\022\027\n\007user_" +
-      "id\030\004 \001(\tR\006userId\"\270\001\n\037OmnichannelTranscri" +
-      "ptSavedEvent\022)\n\020conversation_sid\030\001 \001(\003R\017" +
-      "conversationSid\022\'\n\017transcript_path\030\002 \001(\t" +
-      "R\016transcriptPath\022A\n\014conversation\030\003 \001(\0132\035" +
-      ".api.commons.OmniConversationR\014conversat" +
-      "ion\"\372\001\n\036OmnichannelUpdateCampaignEvent\022%" +
-      "\n\014campaign_sid\030\001 \001(\003B\0020\001R\013campaignSid\022\022\n" +
-      "\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013" +
-      "description\022;\n\014channel_type\030\004 \001(\0162\030.api." +
-      "commons.ChannelTypeR\013channelType\022>\n\romni" +
-      "_campaign\030\005 \001(\0132\031.api.commons.OmniCampai" +
-      "gnR\014omniCampaign\"\226\003\n,OmnichannelSetConve" +
-      "rsationCollectedDataEvent\022-\n\020conversatio" +
-      "n_sid\030\001 \001(\003B\0020\001R\017conversationSid\022\027\n\007user" +
-      "_id\030\002 \001(\tR\006userId\022;\n\014channel_type\030\003 \001(\0162" +
-      "\030.api.commons.ChannelTypeR\013channelType\022M" +
-      "\n\022campaign_direction\030\004 \001(\0162\036.api.commons" +
-      ".CampaignDirectionR\021campaignDirection\022M\n" +
-      "\016collected_data\030\005 \001(\0132&.api.commons.Conv" +
-      "ersationCollectedDataR\rcollectedData\022C\n\017" +
-      "asm_session_sid\030\006 \001(\0132\033.google.protobuf." +
-      "Int64ValueR\rasmSessionSid\"\374\001\n Omnichanne" +
-      "lCompleteCampaignEvent\022%\n\014campaign_sid\030\001" +
-      " \001(\003B\0020\001R\013campaignSid\022\022\n\004name\030\002 \001(\tR\004nam" +
-      "e\022 \n\013description\030\003 \001(\tR\013description\022;\n\014c" +
-      "hannel_type\030\004 \001(\0162\030.api.commons.ChannelT" +
-      "ypeR\013channelType\022>\n\romni_campaign\030\005 \001(\0132" +
-      "\031.api.commons.OmniCampaignR\014omniCampaign" +
-      "\"\373\001\n\037OmnichannelArchiveCampaignEvent\022%\n\014" +
-      "campaign_sid\030\001 \001(\003B\0020\001R\013campaignSid\022\022\n\004n" +
-      "ame\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013de" +
-      "scription\022;\n\014channel_type\030\004 \001(\0162\030.api.co" +
-      "mmons.ChannelTypeR\013channelType\022>\n\romni_c" +
-      "ampaign\030\005 \001(\0132\031.api.commons.OmniCampaign" +
-      "R\014omniCampaign\"\371\001\n\035OmnichannelStartCampa" +
+      "id\030\007 \001(\tR\006userId:\002\030\001\"\355\002\n\034OmnichannelFini" +
+      "shWrapUpEvent\022-\n\020conversation_sid\030\001 \001(\003B" +
+      "\0020\001R\017conversationSid\022%\n\014campaign_sid\030\002 \001" +
+      "(\003B\0020\001R\013campaignSid\022;\n\014channel_type\030\003 \001(" +
+      "\0162\030.api.commons.ChannelTypeR\013channelType" +
+      "\022A\n\014conversation\030\004 \001(\0132\035.api.commons.Omn" +
+      "iConversationR\014conversation\0222\n\007message\030\005" +
+      " \001(\0132\030.api.commons.OmniMessageR\007message\022" +
+      "C\n\017asm_session_sid\030\006 \001(\0132\033.google.protob" +
+      "uf.Int64ValueR\rasmSessionSid\"\205\003\n\033Omnicha" +
+      "nnelBeginWrapUpEvent\022-\n\020conversation_sid" +
+      "\030\001 \001(\003B\0020\001R\017conversationSid\022%\n\014campaign_" +
+      "sid\030\002 \001(\003B\0020\001R\013campaignSid\022;\n\014channel_ty" +
+      "pe\030\003 \001(\0162\030.api.commons.ChannelTypeR\013chan" +
+      "nelType\022A\n\014conversation\030\004 \001(\0132\035.api.comm" +
+      "ons.OmniConversationR\014conversation\0222\n\007me" +
+      "ssage\030\005 \001(\0132\030.api.commons.OmniMessageR\007m" +
+      "essage\022C\n\017asm_session_sid\030\006 \001(\0132\033.google" +
+      ".protobuf.Int64ValueR\rasmSessionSid\022\027\n\007u" +
+      "ser_id\030\007 \001(\tR\006userId\"\353\001\n\023OmnichannelT11E" +
+      "vent\022-\n\020conversation_sid\030\001 \001(\003B\0020\001R\017conv" +
+      "ersationSid\022%\n\014campaign_sid\030\002 \001(\003B\0020\001R\013c" +
+      "ampaignSid\022;\n\014channel_type\030\003 \001(\0162\030.api.c" +
+      "ommons.ChannelTypeR\013channelType\022A\n\014conve" +
+      "rsation\030\004 \001(\0132\035.api.commons.OmniConversa" +
+      "tionR\014conversation\"\377\001\n\"OmnichannelCreate" +
+      "ConversationEvent\022%\n\014campaign_sid\030\001 \001(\003B" +
+      "\0020\001R\013campaignSid\022;\n\014channel_type\030\002 \001(\0162\030" +
+      ".api.commons.ChannelTypeR\013channelType\022A\n" +
+      "\014conversation\030\003 \001(\0132\035.api.commons.OmniCo" +
+      "nversationR\014conversation\0222\n\007message\030\004 \001(" +
+      "\0132\030.api.commons.OmniMessageR\007message\"\332\001\n" +
+      "\034OmnichannelAgentSuspendEvent\0222\n\007message" +
+      "\030\001 \001(\0132\030.api.commons.OmniMessageR\007messag" +
+      "e\022A\n\014conversation\030\002 \001(\0132\035.api.commons.Om" +
+      "niConversationR\014conversation\022C\n\017asm_sess" +
+      "ion_sid\030\003 \001(\0132\033.google.protobuf.Int64Val" +
+      "ueR\rasmSessionSid\"\370\001\n!OmnichannelCloseCo" +
+      "nversationEvent\0222\n\007message\030\001 \001(\0132\030.api.c" +
+      "ommons.OmniMessageR\007message\022A\n\014conversat" +
+      "ion\030\002 \001(\0132\035.api.commons.OmniConversation" +
+      "R\014conversation\022C\n\017asm_session_sid\030\003 \001(\0132" +
+      "\033.google.protobuf.Int64ValueR\rasmSession" +
+      "Sid\022\027\n\007user_id\030\004 \001(\tR\006userId\"\270\001\n\037Omnicha" +
+      "nnelTranscriptSavedEvent\022)\n\020conversation" +
+      "_sid\030\001 \001(\003R\017conversationSid\022\'\n\017transcrip" +
+      "t_path\030\002 \001(\tR\016transcriptPath\022A\n\014conversa" +
+      "tion\030\003 \001(\0132\035.api.commons.OmniConversatio" +
+      "nR\014conversation\"\372\001\n\036OmnichannelUpdateCam" +
+      "paignEvent\022%\n\014campaign_sid\030\001 \001(\003B\0020\001R\013ca" +
+      "mpaignSid\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descrip" +
+      "tion\030\003 \001(\tR\013description\022;\n\014channel_type\030" +
+      "\004 \001(\0162\030.api.commons.ChannelTypeR\013channel" +
+      "Type\022>\n\romni_campaign\030\005 \001(\0132\031.api.common" +
+      "s.OmniCampaignR\014omniCampaign\"\226\003\n,Omnicha" +
+      "nnelSetConversationCollectedDataEvent\022-\n" +
+      "\020conversation_sid\030\001 \001(\003B\0020\001R\017conversatio" +
+      "nSid\022\027\n\007user_id\030\002 \001(\tR\006userId\022;\n\014channel" +
+      "_type\030\003 \001(\0162\030.api.commons.ChannelTypeR\013c" +
+      "hannelType\022M\n\022campaign_direction\030\004 \001(\0162\036" +
+      ".api.commons.CampaignDirectionR\021campaign" +
+      "Direction\022M\n\016collected_data\030\005 \001(\0132&.api." +
+      "commons.ConversationCollectedDataR\rcolle" +
+      "ctedData\022C\n\017asm_session_sid\030\006 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueR\rasmSessionSid\"\374\001" +
+      "\n OmnichannelCompleteCampaignEvent\022%\n\014ca" +
+      "mpaign_sid\030\001 \001(\003B\0020\001R\013campaignSid\022\022\n\004nam" +
+      "e\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013desc" +
+      "ription\022;\n\014channel_type\030\004 \001(\0162\030.api.comm" +
+      "ons.ChannelTypeR\013channelType\022>\n\romni_cam" +
+      "paign\030\005 \001(\0132\031.api.commons.OmniCampaignR\014" +
+      "omniCampaign\"\373\001\n\037OmnichannelArchiveCampa" +
       "ignEvent\022%\n\014campaign_sid\030\001 \001(\003B\0020\001R\013camp" +
       "aignSid\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descripti" +
       "on\030\003 \001(\tR\013description\022;\n\014channel_type\030\004 " +
       "\001(\0162\030.api.commons.ChannelTypeR\013channelTy" +
       "pe\022>\n\romni_campaign\030\005 \001(\0132\031.api.commons." +
       "OmniCampaignR\014omniCampaign\"\371\001\n\035Omnichann" +
-      "elPauseCampaignEvent\022%\n\014campaign_sid\030\001 \001" +
+      "elStartCampaignEvent\022%\n\014campaign_sid\030\001 \001" +
       "(\003B\0020\001R\013campaignSid\022\022\n\004name\030\002 \001(\tR\004name\022" +
       " \n\013description\030\003 \001(\tR\013description\022;\n\014cha" +
       "nnel_type\030\004 \001(\0162\030.api.commons.ChannelTyp" +
       "eR\013channelType\022>\n\romni_campaign\030\005 \001(\0132\031." +
-      "api.commons.OmniCampaignR\014omniCampaign\"\372" +
-      "\001\n\036OmnichannelResumeCampaignEvent\022%\n\014cam" +
-      "paign_sid\030\001 \001(\003B\0020\001R\013campaignSid\022\022\n\004name" +
-      "\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descr" +
-      "iption\022;\n\014channel_type\030\004 \001(\0162\030.api.commo" +
-      "ns.ChannelTypeR\013channelType\022>\n\romni_camp" +
-      "aign\030\005 \001(\0132\031.api.commons.OmniCampaignR\014o" +
-      "mniCampaign\"\203\001\n\036OmnichannelScheduleModul" +
-      "eEvent\022!\n\nmodule_sid\030\001 \001(\003B\0020\001R\tmoduleSi" +
-      "d\022>\n\romni_campaign\030\002 \001(\0132\031.api.commons.O" +
-      "mniCampaignR\014omniCampaign\"\200\001\n\033Omnichanne" +
-      "lStartModuleEvent\022!\n\nmodule_sid\030\001 \001(\003B\0020" +
-      "\001R\tmoduleSid\022>\n\romni_campaign\030\002 \001(\0132\031.ap" +
-      "i.commons.OmniCampaignR\014omniCampaign\"\200\001\n" +
-      "\033OmnichannelPauseModuleEvent\022!\n\nmodule_s" +
-      "id\030\001 \001(\003B\0020\001R\tmoduleSid\022>\n\romni_campaign" +
-      "\030\002 \001(\0132\031.api.commons.OmniCampaignR\014omniC" +
-      "ampaign\"\201\001\n\034OmnichannelResumeModuleEvent" +
+      "api.commons.OmniCampaignR\014omniCampaign\"\371" +
+      "\001\n\035OmnichannelPauseCampaignEvent\022%\n\014camp" +
+      "aign_sid\030\001 \001(\003B\0020\001R\013campaignSid\022\022\n\004name\030" +
+      "\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013descri" +
+      "ption\022;\n\014channel_type\030\004 \001(\0162\030.api.common" +
+      "s.ChannelTypeR\013channelType\022>\n\romni_campa" +
+      "ign\030\005 \001(\0132\031.api.commons.OmniCampaignR\014om" +
+      "niCampaign\"\372\001\n\036OmnichannelResumeCampaign" +
+      "Event\022%\n\014campaign_sid\030\001 \001(\003B\0020\001R\013campaig" +
+      "nSid\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013description\030" +
+      "\003 \001(\tR\013description\022;\n\014channel_type\030\004 \001(\016" +
+      "2\030.api.commons.ChannelTypeR\013channelType\022" +
+      ">\n\romni_campaign\030\005 \001(\0132\031.api.commons.Omn" +
+      "iCampaignR\014omniCampaign\"\203\001\n\036OmnichannelS" +
+      "cheduleModuleEvent\022!\n\nmodule_sid\030\001 \001(\003B\002" +
+      "0\001R\tmoduleSid\022>\n\romni_campaign\030\002 \001(\0132\031.a" +
+      "pi.commons.OmniCampaignR\014omniCampaign\"\200\001" +
+      "\n\033OmnichannelStartModuleEvent\022!\n\nmodule_" +
+      "sid\030\001 \001(\003B\0020\001R\tmoduleSid\022>\n\romni_campaig" +
+      "n\030\002 \001(\0132\031.api.commons.OmniCampaignR\014omni" +
+      "Campaign\"\200\001\n\033OmnichannelPauseModuleEvent" +
       "\022!\n\nmodule_sid\030\001 \001(\003B\0020\001R\tmoduleSid\022>\n\ro" +
       "mni_campaign\030\002 \001(\0132\031.api.commons.OmniCam" +
-      "paignR\014omniCampaign\"\200\001\n\033OmnichannelError" +
-      "ModuleEvent\022!\n\nmodule_sid\030\001 \001(\003B\0020\001R\tmod" +
-      "uleSid\022>\n\romni_campaign\030\002 \001(\0132\031.api.comm" +
-      "ons.OmniCampaignR\014omniCampaign\"\202\001\n\035Omnic" +
-      "hannelSuccessModuleEvent\022!\n\nmodule_sid\030\001" +
-      " \001(\003B\0020\001R\tmoduleSid\022>\n\romni_campaign\030\002 \001" +
-      "(\0132\031.api.commons.OmniCampaignR\014omniCampa" +
-      "ign\"\177\n\032OmnichannelFailModuleEvent\022!\n\nmod" +
-      "ule_sid\030\001 \001(\003B\0020\001R\tmoduleSid\022>\n\romni_cam" +
-      "paign\030\002 \001(\0132\031.api.commons.OmniCampaignR\014" +
-      "omniCampaign\"\203\001\n\036OmnichannelCompleteModu" +
-      "leEvent\022!\n\nmodule_sid\030\001 \001(\003B\0020\001R\tmoduleS" +
-      "id\022>\n\romni_campaign\030\002 \001(\0132\031.api.commons." +
-      "OmniCampaignR\014omniCampaign\"\202\001\n\035Omnichann" +
-      "elArchiveModuleEvent\022!\n\nmodule_sid\030\001 \001(\003" +
-      "B\0020\001R\tmoduleSid\022>\n\romni_campaign\030\002 \001(\0132\031" +
-      ".api.commons.OmniCampaignR\014omniCampaign\"" +
-      "\201\001\n\034OmnichannelUpdateModuleEvent\022!\n\nmodu" +
+      "paignR\014omniCampaign\"\201\001\n\034OmnichannelResum" +
+      "eModuleEvent\022!\n\nmodule_sid\030\001 \001(\003B\0020\001R\tmo" +
+      "duleSid\022>\n\romni_campaign\030\002 \001(\0132\031.api.com" +
+      "mons.OmniCampaignR\014omniCampaign\"\200\001\n\033Omni" +
+      "channelErrorModuleEvent\022!\n\nmodule_sid\030\001 " +
+      "\001(\003B\0020\001R\tmoduleSid\022>\n\romni_campaign\030\002 \001(" +
+      "\0132\031.api.commons.OmniCampaignR\014omniCampai" +
+      "gn\"\202\001\n\035OmnichannelSuccessModuleEvent\022!\n\n" +
+      "module_sid\030\001 \001(\003B\0020\001R\tmoduleSid\022>\n\romni_" +
+      "campaign\030\002 \001(\0132\031.api.commons.OmniCampaig" +
+      "nR\014omniCampaign\"\177\n\032OmnichannelFailModule" +
+      "Event\022!\n\nmodule_sid\030\001 \001(\003B\0020\001R\tmoduleSid" +
+      "\022>\n\romni_campaign\030\002 \001(\0132\031.api.commons.Om" +
+      "niCampaignR\014omniCampaign\"\203\001\n\036Omnichannel" +
+      "CompleteModuleEvent\022!\n\nmodule_sid\030\001 \001(\003B" +
+      "\0020\001R\tmoduleSid\022>\n\romni_campaign\030\002 \001(\0132\031." +
+      "api.commons.OmniCampaignR\014omniCampaign\"\202" +
+      "\001\n\035OmnichannelArchiveModuleEvent\022!\n\nmodu" +
       "le_sid\030\001 \001(\003B\0020\001R\tmoduleSid\022>\n\romni_camp" +
       "aign\030\002 \001(\0132\031.api.commons.OmniCampaignR\014o" +
-      "mniCampaign\"\342\001\n$OmnichannelSmsMessageSen" +
-      "tModuleEvent\022!\n\nmodule_sid\030\001 \001(\003B\0020\001R\tmo" +
-      "duleSid\022#\n\rmessage_units\030\002 \001(\003R\014messageU" +
-      "nits\022>\n\romni_campaign\030\003 \001(\0132\031.api.common" +
-      "s.OmniCampaignR\014omniCampaign\0222\n\007message\030" +
-      "\004 \001(\0132\030.api.commons.OmniMessageR\007message" +
-      "\"\341\002\n\"OmnichannelModuleInitialReplyEvent\022" +
-      "\025\n\006org_id\030\001 \001(\tR\005orgId\022!\n\014campaign_sid\030\002" +
-      " \001(\003R\013campaignSid\022.\n\023campaign_module_sid" +
-      "\030\003 \001(\003R\021campaignModuleSid\022)\n\020conversatio" +
-      "n_sid\030\004 \001(\003R\017conversationSid\022;\n\014channel_" +
-      "type\030\005 \001(\0162\030.api.commons.ChannelTypeR\013ch" +
-      "annelType\0222\n\007message\030\006 \001(\0132\030.api.commons" +
-      ".OmniMessageR\007message\0225\n\010campaign\030\007 \001(\0132" +
-      "\031.api.commons.OmniCampaignR\010campaign\"\271\002\n" +
-      "\037OmnichannelTaskMessageSentEvent\022\031\n\010task" +
-      "_sid\030\001 \001(\003R\007taskSid\022!\n\014campaign_sid\030\002 \001(" +
-      "\003R\013campaignSid\022\035\n\nmodule_sid\030\003 \001(\003R\tmodu" +
-      "leSid\022#\n\rmessage_units\030\004 \001(\003R\014messageUni" +
-      "ts\0225\n\010campaign\030\005 \001(\0132\031.api.commons.OmniC" +
-      "ampaignR\010campaign\0222\n\007message\030\006 \001(\0132\030.api" +
-      ".commons.OmniMessageR\007message\022)\n\004task\030\007 " +
-      "\001(\0132\025.api.commons.OmniTaskR\004task\"\332\001\n\"Omn" +
-      "ichannelConnectedInboxPollEvent\022>\n\romni_" +
-      "campaign\030\001 \001(\0132\031.api.commons.OmniCampaig" +
-      "nR\014omniCampaign\022.\n\023campaign_module_sid\030\002" +
-      " \001(\003R\021campaignModuleSid\022D\n\017connected_inb" +
-      "ox\030\003 \001(\0132\033.api.commons.ConnectedInboxR\016c" +
-      "onnectedInbox\"m\n%OmnichannelConnectedInb" +
-      "oxCreatedEvent\022D\n\017connected_inbox\030\001 \001(\0132" +
-      "\033.api.commons.ConnectedInboxR\016connectedI" +
-      "nbox\"|\n!OmnichannelAgentMessageUnitsEven" +
-      "t\0222\n\007message\030\001 \001(\0132\030.api.commons.OmniMes" +
-      "sageR\007message\022#\n\rmessage_units\030\002 \001(\005R\014me" +
-      "ssageUnits\"~\n#OmnichannelManagerMessageU" +
-      "nitsEvent\0222\n\007message\030\001 \001(\0132\030.api.commons" +
-      ".OmniMessageR\007message\022#\n\rmessage_units\030\002" +
-      " \001(\005R\014messageUnits\"\177\n$OmnichannelCustome" +
-      "rMessageUnitsEvent\0222\n\007message\030\001 \001(\0132\030.ap" +
-      "i.commons.OmniMessageR\007message\022#\n\rmessag" +
-      "e_units\030\002 \001(\005R\014messageUnits\"}\n\"Omnichann" +
+      "mniCampaign\"\201\001\n\034OmnichannelUpdateModuleE" +
+      "vent\022!\n\nmodule_sid\030\001 \001(\003B\0020\001R\tmoduleSid\022" +
+      ">\n\romni_campaign\030\002 \001(\0132\031.api.commons.Omn" +
+      "iCampaignR\014omniCampaign\"\346\001\n$OmnichannelS" +
+      "msMessageSentModuleEvent\022!\n\nmodule_sid\030\001" +
+      " \001(\003B\0020\001R\tmoduleSid\022#\n\rmessage_units\030\002 \001" +
+      "(\003R\014messageUnits\022>\n\romni_campaign\030\003 \001(\0132" +
+      "\031.api.commons.OmniCampaignR\014omniCampaign" +
+      "\0222\n\007message\030\004 \001(\0132\030.api.commons.OmniMess" +
+      "ageR\007message:\002\030\001\"\345\002\n\"OmnichannelModuleIn" +
+      "itialReplyEvent\022\025\n\006org_id\030\001 \001(\tR\005orgId\022!" +
+      "\n\014campaign_sid\030\002 \001(\003R\013campaignSid\022.\n\023cam" +
+      "paign_module_sid\030\003 \001(\003R\021campaignModuleSi" +
+      "d\022)\n\020conversation_sid\030\004 \001(\003R\017conversatio" +
+      "nSid\022;\n\014channel_type\030\005 \001(\0162\030.api.commons" +
+      ".ChannelTypeR\013channelType\0222\n\007message\030\006 \001" +
+      "(\0132\030.api.commons.OmniMessageR\007message\0225\n" +
+      "\010campaign\030\007 \001(\0132\031.api.commons.OmniCampai" +
+      "gnR\010campaign:\002\030\001\"\275\002\n\037OmnichannelTaskMess" +
+      "ageSentEvent\022\031\n\010task_sid\030\001 \001(\003R\007taskSid\022" +
+      "!\n\014campaign_sid\030\002 \001(\003R\013campaignSid\022\035\n\nmo" +
+      "dule_sid\030\003 \001(\003R\tmoduleSid\022#\n\rmessage_uni" +
+      "ts\030\004 \001(\003R\014messageUnits\0225\n\010campaign\030\005 \001(\013" +
+      "2\031.api.commons.OmniCampaignR\010campaign\0222\n" +
+      "\007message\030\006 \001(\0132\030.api.commons.OmniMessage" +
+      "R\007message\022)\n\004task\030\007 \001(\0132\025.api.commons.Om" +
+      "niTaskR\004task:\002\030\001\"\332\001\n\"OmnichannelConnecte" +
+      "dInboxPollEvent\022>\n\romni_campaign\030\001 \001(\0132\031" +
+      ".api.commons.OmniCampaignR\014omniCampaign\022" +
+      ".\n\023campaign_module_sid\030\002 \001(\003R\021campaignMo" +
+      "duleSid\022D\n\017connected_inbox\030\003 \001(\0132\033.api.c" +
+      "ommons.ConnectedInboxR\016connectedInbox\"m\n" +
+      "%OmnichannelConnectedInboxCreatedEvent\022D" +
+      "\n\017connected_inbox\030\001 \001(\0132\033.api.commons.Co" +
+      "nnectedInboxR\016connectedInbox\"\200\001\n!Omnicha" +
+      "nnelAgentMessageUnitsEvent\0222\n\007message\030\001 " +
+      "\001(\0132\030.api.commons.OmniMessageR\007message\022#" +
+      "\n\rmessage_units\030\002 \001(\005R\014messageUnits:\002\030\001\"" +
+      "\202\001\n#OmnichannelManagerMessageUnitsEvent\022" +
+      "2\n\007message\030\001 \001(\0132\030.api.commons.OmniMessa" +
+      "geR\007message\022#\n\rmessage_units\030\002 \001(\005R\014mess" +
+      "ageUnits:\002\030\001\"\203\001\n$OmnichannelCustomerMess" +
+      "ageUnitsEvent\0222\n\007message\030\001 \001(\0132\030.api.com" +
+      "mons.OmniMessageR\007message\022#\n\rmessage_uni" +
+      "ts\030\002 \001(\005R\014messageUnits:\002\030\001\"\201\001\n\"Omnichann" +
       "elSystemMessageUnitsEvent\0222\n\007message\030\001 \001" +
       "(\0132\030.api.commons.OmniMessageR\007message\022#\n" +
-      "\rmessage_units\030\002 \001(\005R\014messageUnits\"i\n\037Om" +
-      "nichannelPaymentLinkSentEvent\0222\n\007message" +
-      "\030\001 \001(\0132\030.api.commons.OmniMessageR\007messag" +
-      "e\022\022\n\004link\030\002 \001(\tR\004link\"\227\001\n)OmnichannelMan" +
-      "ualApproveTaskAcceptedEvent\022)\n\004task\030\001 \001(" +
-      "\0132\025.api.commons.OmniTaskR\004task\022\027\n\007user_i" +
-      "d\030\002 \001(\tR\006userId\022&\n\017asm_session_sid\030\003 \001(\003" +
-      "R\rasmSessionSid\"\227\001\n)OmnichannelManualApp" +
-      "roveTaskRejectedEvent\022)\n\004task\030\001 \001(\0132\025.ap" +
-      "i.commons.OmniTaskR\004task\022\027\n\007user_id\030\002 \001(" +
-      "\tR\006userId\022&\n\017asm_session_sid\030\003 \001(\003R\rasmS" +
-      "essionSid\"\226\001\n(OmnichannelManualApproveTa" +
-      "skTimeoutEvent\022)\n\004task\030\001 \001(\0132\025.api.commo" +
-      "ns.OmniTaskR\004task\022\027\n\007user_id\030\002 \001(\tR\006user" +
-      "Id\022&\n\017asm_session_sid\030\003 \001(\003R\rasmSessionS" +
-      "id\"\226\001\n(OmnichannelManualApproveTaskReque" +
-      "ueEvent\022)\n\004task\030\001 \001(\0132\025.api.commons.Omni" +
-      "TaskR\004task\022\027\n\007user_id\030\002 \001(\tR\006userId\022&\n\017a" +
-      "sm_session_sid\030\003 \001(\003R\rasmSessionSidB\243\001\n#" +
-      "com.tcn.cloud.api.api.commons.auditB\026Omn" +
-      "ichannelEventsProtoP\001\242\002\003ACA\252\002\021Api.Common" +
-      "s.Audit\312\002\021Api\\Commons\\Audit\342\002\035Api\\Common" +
-      "s\\Audit\\GPBMetadata\352\002\023Api::Commons::Audi" +
-      "tb\006proto3"
+      "\rmessage_units\030\002 \001(\005R\014messageUnits:\002\030\001\"i" +
+      "\n\037OmnichannelPaymentLinkSentEvent\0222\n\007mes" +
+      "sage\030\001 \001(\0132\030.api.commons.OmniMessageR\007me" +
+      "ssage\022\022\n\004link\030\002 \001(\tR\004link\"\227\001\n)Omnichanne" +
+      "lManualApproveTaskAcceptedEvent\022)\n\004task\030" +
+      "\001 \001(\0132\025.api.commons.OmniTaskR\004task\022\027\n\007us" +
+      "er_id\030\002 \001(\tR\006userId\022&\n\017asm_session_sid\030\003" +
+      " \001(\003R\rasmSessionSid\"\227\001\n)OmnichannelManua" +
+      "lApproveTaskRejectedEvent\022)\n\004task\030\001 \001(\0132" +
+      "\025.api.commons.OmniTaskR\004task\022\027\n\007user_id\030" +
+      "\002 \001(\tR\006userId\022&\n\017asm_session_sid\030\003 \001(\003R\r" +
+      "asmSessionSid\"\226\001\n(OmnichannelManualAppro" +
+      "veTaskTimeoutEvent\022)\n\004task\030\001 \001(\0132\025.api.c" +
+      "ommons.OmniTaskR\004task\022\027\n\007user_id\030\002 \001(\tR\006" +
+      "userId\022&\n\017asm_session_sid\030\003 \001(\003R\rasmSess" +
+      "ionSid\"\226\001\n(OmnichannelManualApproveTaskR" +
+      "equeueEvent\022)\n\004task\030\001 \001(\0132\025.api.commons." +
+      "OmniTaskR\004task\022\027\n\007user_id\030\002 \001(\tR\006userId\022" +
+      "&\n\017asm_session_sid\030\003 \001(\003R\rasmSessionSid\"" +
+      "\352\002\n\033OmnichannelMessageSentEvent\022\037\n\013messa" +
+      "ge_sid\030\001 \001(\003R\nmessageSid\022;\n\014channel_type" +
+      "\030\002 \001(\0162\030.api.commons.ChannelTypeR\013channe" +
+      "lType\022\033\n\tsent_from\030\003 \001(\tR\010sentFrom\022\027\n\007se" +
+      "nt_to\030\004 \001(\tR\006sentTo\022\024\n\005units\030\005 \001(\005R\005unit" +
+      "s\022!\n\014message_size\030\006 \001(\003R\013messageSize\022\'\n\017" +
+      "attachment_size\030\007 \001(\003R\016attachmentSize\022<\n" +
+      "\013sender_type\030\010 \001(\0162\033.api.commons.OmniSen" +
+      "derTypeR\nsenderType\022\027\n\007user_id\030\t \001(\tR\006us" +
+      "erIdB\243\001\n#com.tcn.cloud.api.api.commons.a" +
+      "uditB\026OmnichannelEventsProtoP\001\242\002\003ACA\252\002\021A" +
+      "pi.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035A" +
+      "pi\\Commons\\Audit\\GPBMetadata\352\002\023Api::Comm" +
+      "ons::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -846,6 +861,12 @@ public final class OmnichannelEventsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_OmnichannelManualApproveTaskRequeueEvent_descriptor,
         new java.lang.String[] { "Task", "UserId", "AsmSessionSid", });
+    internal_static_api_commons_audit_OmnichannelMessageSentEvent_descriptor =
+      getDescriptor().getMessageTypes().get(49);
+    internal_static_api_commons_audit_OmnichannelMessageSentEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_audit_OmnichannelMessageSentEvent_descriptor,
+        new java.lang.String[] { "MessageSid", "ChannelType", "SentFrom", "SentTo", "Units", "MessageSize", "AttachmentSize", "SenderType", "UserId", });
     com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }
