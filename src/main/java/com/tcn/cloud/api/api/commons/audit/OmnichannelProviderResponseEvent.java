@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.commons.audit;
 
 /**
  * <pre>
- * OmnichannelMessageSentEvent -
+ * OmnichannelProviderResponseEvent -
  * </pre>
  *
- * Protobuf type {@code api.commons.audit.OmnichannelMessageSentEvent}
+ * Protobuf type {@code api.commons.audit.OmnichannelProviderResponseEvent}
  */
-public final class OmnichannelMessageSentEvent extends
+public final class OmnichannelProviderResponseEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.audit.OmnichannelMessageSentEvent)
-    OmnichannelMessageSentEventOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.audit.OmnichannelProviderResponseEvent)
+    OmnichannelProviderResponseEventOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use OmnichannelMessageSentEvent.newBuilder() to construct.
-  private OmnichannelMessageSentEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use OmnichannelProviderResponseEvent.newBuilder() to construct.
+  private OmnichannelProviderResponseEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private OmnichannelMessageSentEvent() {
+  private OmnichannelProviderResponseEvent() {
     channelType_ = 0;
     sentFrom_ = "";
     sentTo_ = "";
@@ -31,31 +31,31 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new OmnichannelMessageSentEvent();
+    return new OmnichannelProviderResponseEvent();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.audit.OmnichannelEventsProto.internal_static_api_commons_audit_OmnichannelMessageSentEvent_descriptor;
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelEventsProto.internal_static_api_commons_audit_OmnichannelProviderResponseEvent_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.audit.OmnichannelEventsProto.internal_static_api_commons_audit_OmnichannelMessageSentEvent_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelEventsProto.internal_static_api_commons_audit_OmnichannelProviderResponseEvent_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.class, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.Builder.class);
+            com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.class, com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.Builder.class);
   }
 
-  public static final int MESSAGE_SID_FIELD_NUMBER = 1;
-  private long messageSid_ = 0L;
+  public static final int OMNI_MESSAGE_SID_FIELD_NUMBER = 1;
+  private long omniMessageSid_ = 0L;
   /**
-   * <code>int64 message_sid = 1 [json_name = "messageSid"];</code>
-   * @return The messageSid.
+   * <code>int64 omni_message_sid = 1 [json_name = "omniMessageSid"];</code>
+   * @return The omniMessageSid.
    */
   @java.lang.Override
-  public long getMessageSid() {
-    return messageSid_;
+  public long getOmniMessageSid() {
+    return omniMessageSid_;
   }
 
   public static final int CHANNEL_TYPE_FIELD_NUMBER = 2;
@@ -233,6 +233,17 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PROVIDER_MESSAGE_COUNT_FIELD_NUMBER = 9;
+  private long providerMessageCount_ = 0L;
+  /**
+   * <code>int64 provider_message_count = 9 [json_name = "providerMessageCount"];</code>
+   * @return The providerMessageCount.
+   */
+  @java.lang.Override
+  public long getProviderMessageCount() {
+    return providerMessageCount_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -247,8 +258,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (messageSid_ != 0L) {
-      output.writeInt64(1, messageSid_);
+    if (omniMessageSid_ != 0L) {
+      output.writeInt64(1, omniMessageSid_);
     }
     if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       output.writeEnum(2, channelType_);
@@ -271,6 +282,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, userId_);
     }
+    if (providerMessageCount_ != 0L) {
+      output.writeInt64(9, providerMessageCount_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -280,9 +294,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (messageSid_ != 0L) {
+    if (omniMessageSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, messageSid_);
+        .computeInt64Size(1, omniMessageSid_);
     }
     if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
@@ -309,6 +323,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, userId_);
     }
+    if (providerMessageCount_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(9, providerMessageCount_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -319,13 +337,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent other = (com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent) obj;
+    com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent other = (com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent) obj;
 
-    if (getMessageSid()
-        != other.getMessageSid()) return false;
+    if (getOmniMessageSid()
+        != other.getOmniMessageSid()) return false;
     if (channelType_ != other.channelType_) return false;
     if (!getSentFrom()
         .equals(other.getSentFrom())) return false;
@@ -338,6 +356,8 @@ private static final long serialVersionUID = 0L;
     if (senderType_ != other.senderType_) return false;
     if (!getUserId()
         .equals(other.getUserId())) return false;
+    if (getProviderMessageCount()
+        != other.getProviderMessageCount()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -349,9 +369,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + MESSAGE_SID_FIELD_NUMBER;
+    hash = (37 * hash) + OMNI_MESSAGE_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getMessageSid());
+        getOmniMessageSid());
     hash = (37 * hash) + CHANNEL_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + channelType_;
     hash = (37 * hash) + SENT_FROM_FIELD_NUMBER;
@@ -368,49 +388,52 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + senderType_;
     hash = (37 * hash) + USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getUserId().hashCode();
+    hash = (37 * hash) + PROVIDER_MESSAGE_COUNT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getProviderMessageCount());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -418,26 +441,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent parseFrom(
+  public static com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -450,7 +473,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -467,29 +490,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * OmnichannelMessageSentEvent -
+   * OmnichannelProviderResponseEvent -
    * </pre>
    *
-   * Protobuf type {@code api.commons.audit.OmnichannelMessageSentEvent}
+   * Protobuf type {@code api.commons.audit.OmnichannelProviderResponseEvent}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.audit.OmnichannelMessageSentEvent)
-      com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEventOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.audit.OmnichannelProviderResponseEvent)
+      com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEventOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.audit.OmnichannelEventsProto.internal_static_api_commons_audit_OmnichannelMessageSentEvent_descriptor;
+      return com.tcn.cloud.api.api.commons.audit.OmnichannelEventsProto.internal_static_api_commons_audit_OmnichannelProviderResponseEvent_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.audit.OmnichannelEventsProto.internal_static_api_commons_audit_OmnichannelMessageSentEvent_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.audit.OmnichannelEventsProto.internal_static_api_commons_audit_OmnichannelProviderResponseEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.class, com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.Builder.class);
+              com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.class, com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.newBuilder()
     private Builder() {
 
     }
@@ -503,7 +526,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      messageSid_ = 0L;
+      omniMessageSid_ = 0L;
       channelType_ = 0;
       sentFrom_ = "";
       sentTo_ = "";
@@ -511,23 +534,24 @@ private static final long serialVersionUID = 0L;
       attachmentSize_ = 0L;
       senderType_ = 0;
       userId_ = "";
+      providerMessageCount_ = 0L;
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.audit.OmnichannelEventsProto.internal_static_api_commons_audit_OmnichannelMessageSentEvent_descriptor;
+      return com.tcn.cloud.api.api.commons.audit.OmnichannelEventsProto.internal_static_api_commons_audit_OmnichannelProviderResponseEvent_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent build() {
-      com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent result = buildPartial();
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent build() {
+      com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -535,17 +559,17 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent buildPartial() {
-      com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent result = new com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent(this);
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent buildPartial() {
+      com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent result = new com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.messageSid_ = messageSid_;
+        result.omniMessageSid_ = omniMessageSid_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.channelType_ = channelType_;
@@ -567,6 +591,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.userId_ = userId_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.providerMessageCount_ = providerMessageCount_;
       }
     }
 
@@ -604,18 +631,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent other) {
-      if (other == com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent.getDefaultInstance()) return this;
-      if (other.getMessageSid() != 0L) {
-        setMessageSid(other.getMessageSid());
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent other) {
+      if (other == com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent.getDefaultInstance()) return this;
+      if (other.getOmniMessageSid() != 0L) {
+        setOmniMessageSid(other.getOmniMessageSid());
       }
       if (other.channelType_ != 0) {
         setChannelTypeValue(other.getChannelTypeValue());
@@ -644,6 +671,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000080;
         onChanged();
       }
+      if (other.getProviderMessageCount() != 0L) {
+        setProviderMessageCount(other.getProviderMessageCount());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -671,7 +701,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              messageSid_ = input.readInt64();
+              omniMessageSid_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
@@ -710,6 +740,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 66
+            case 72: {
+              providerMessageCount_ = input.readInt64();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -727,34 +762,34 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long messageSid_ ;
+    private long omniMessageSid_ ;
     /**
-     * <code>int64 message_sid = 1 [json_name = "messageSid"];</code>
-     * @return The messageSid.
+     * <code>int64 omni_message_sid = 1 [json_name = "omniMessageSid"];</code>
+     * @return The omniMessageSid.
      */
     @java.lang.Override
-    public long getMessageSid() {
-      return messageSid_;
+    public long getOmniMessageSid() {
+      return omniMessageSid_;
     }
     /**
-     * <code>int64 message_sid = 1 [json_name = "messageSid"];</code>
-     * @param value The messageSid to set.
+     * <code>int64 omni_message_sid = 1 [json_name = "omniMessageSid"];</code>
+     * @param value The omniMessageSid to set.
      * @return This builder for chaining.
      */
-    public Builder setMessageSid(long value) {
+    public Builder setOmniMessageSid(long value) {
 
-      messageSid_ = value;
+      omniMessageSid_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 message_sid = 1 [json_name = "messageSid"];</code>
+     * <code>int64 omni_message_sid = 1 [json_name = "omniMessageSid"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearMessageSid() {
+    public Builder clearOmniMessageSid() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      messageSid_ = 0L;
+      omniMessageSid_ = 0L;
       onChanged();
       return this;
     }
@@ -1144,6 +1179,38 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
+    private long providerMessageCount_ ;
+    /**
+     * <code>int64 provider_message_count = 9 [json_name = "providerMessageCount"];</code>
+     * @return The providerMessageCount.
+     */
+    @java.lang.Override
+    public long getProviderMessageCount() {
+      return providerMessageCount_;
+    }
+    /**
+     * <code>int64 provider_message_count = 9 [json_name = "providerMessageCount"];</code>
+     * @param value The providerMessageCount to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProviderMessageCount(long value) {
+
+      providerMessageCount_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 provider_message_count = 9 [json_name = "providerMessageCount"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProviderMessageCount() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      providerMessageCount_ = 0L;
+      onChanged();
+      return this;
+    }
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1157,23 +1224,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.audit.OmnichannelMessageSentEvent)
+    // @@protoc_insertion_point(builder_scope:api.commons.audit.OmnichannelProviderResponseEvent)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.audit.OmnichannelMessageSentEvent)
-  private static final com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.audit.OmnichannelProviderResponseEvent)
+  private static final com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent();
   }
 
-  public static com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<OmnichannelMessageSentEvent>
-      PARSER = new com.google.protobuf.AbstractParser<OmnichannelMessageSentEvent>() {
+  private static final com.google.protobuf.Parser<OmnichannelProviderResponseEvent>
+      PARSER = new com.google.protobuf.AbstractParser<OmnichannelProviderResponseEvent>() {
     @java.lang.Override
-    public OmnichannelMessageSentEvent parsePartialFrom(
+    public OmnichannelProviderResponseEvent parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1192,17 +1259,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<OmnichannelMessageSentEvent> parser() {
+  public static com.google.protobuf.Parser<OmnichannelProviderResponseEvent> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<OmnichannelMessageSentEvent> getParserForType() {
+  public com.google.protobuf.Parser<OmnichannelProviderResponseEvent> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.OmnichannelMessageSentEvent getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelProviderResponseEvent getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

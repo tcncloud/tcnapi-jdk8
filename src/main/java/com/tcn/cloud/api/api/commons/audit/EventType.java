@@ -474,6 +474,14 @@ public enum EventType
   OMNICHANNEL_MESSAGE_SENT(363),
   /**
    * <pre>
+   *omnichannel provider response
+   * </pre>
+   *
+   * <code>OMNICHANNEL_PROVIDER_RESPONSE = 364;</code>
+   */
+  OMNICHANNEL_PROVIDER_RESPONSE(364),
+  /**
+   * <pre>
    * ASM
    * agent logs into asm
    * </pre>
@@ -1480,6 +1488,14 @@ public enum EventType
   public static final int OMNICHANNEL_MESSAGE_SENT_VALUE = 363;
   /**
    * <pre>
+   *omnichannel provider response
+   * </pre>
+   *
+   * <code>OMNICHANNEL_PROVIDER_RESPONSE = 364;</code>
+   */
+  public static final int OMNICHANNEL_PROVIDER_RESPONSE_VALUE = 364;
+  /**
+   * <pre>
    * ASM
    * agent logs into asm
    * </pre>
@@ -2115,6 +2131,7 @@ public enum EventType
       case 361: return OMNICHANNEL_MANUAL_APPROVE_TASK_REQUEUE;
       case 362: return OMNICHANNEL_TRANSCRIPT_SAVED;
       case 363: return OMNICHANNEL_MESSAGE_SENT;
+      case 364: return OMNICHANNEL_PROVIDER_RESPONSE;
       case 400: return ASM_AGENT_LOGIN;
       case 401: return ASM_OPEN_VOICE;
       case 402: return ASM_OPEN_OMNI_AGENT;

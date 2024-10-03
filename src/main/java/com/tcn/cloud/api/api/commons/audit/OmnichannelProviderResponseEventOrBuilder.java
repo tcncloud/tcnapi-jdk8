@@ -3,15 +3,15 @@
 
 package com.tcn.cloud.api.api.commons.audit;
 
-public interface OmnichannelMessageSentEventOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.audit.OmnichannelMessageSentEvent)
+public interface OmnichannelProviderResponseEventOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.audit.OmnichannelProviderResponseEvent)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 message_sid = 1 [json_name = "messageSid"];</code>
-   * @return The messageSid.
+   * <code>int64 omni_message_sid = 1 [json_name = "omniMessageSid"];</code>
+   * @return The omniMessageSid.
    */
-  long getMessageSid();
+  long getOmniMessageSid();
 
   /**
    * <code>.api.commons.ChannelType channel_type = 2 [json_name = "channelType"];</code>
@@ -82,4 +82,10 @@ public interface OmnichannelMessageSentEventOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUserIdBytes();
+
+  /**
+   * <code>int64 provider_message_count = 9 [json_name = "providerMessageCount"];</code>
+   * @return The providerMessageCount.
+   */
+  long getProviderMessageCount();
 }
