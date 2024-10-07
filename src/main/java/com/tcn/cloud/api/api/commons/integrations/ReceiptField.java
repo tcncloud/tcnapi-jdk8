@@ -237,6 +237,21 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int COPIABLE_FIELD_NUMBER = 6;
+  private boolean copiable_ = false;
+  /**
+   * <pre>
+   *copiable says whether or not the ui should add a copy to clipboard button next to it
+   * </pre>
+   *
+   * <code>bool copiable = 6 [json_name = "copiable"];</code>
+   * @return The copiable.
+   */
+  @java.lang.Override
+  public boolean getCopiable() {
+    return copiable_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -266,6 +281,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, format_);
     }
+    if (copiable_ != false) {
+      output.writeBool(6, copiable_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -291,6 +309,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, format_);
     }
+    if (copiable_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(6, copiable_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -315,6 +337,8 @@ private static final long serialVersionUID = 0L;
     if (validationType_ != other.validationType_) return false;
     if (!getFormat()
         .equals(other.getFormat())) return false;
+    if (getCopiable()
+        != other.getCopiable()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -336,6 +360,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + validationType_;
     hash = (37 * hash) + FORMAT_FIELD_NUMBER;
     hash = (53 * hash) + getFormat().hashCode();
+    hash = (37 * hash) + COPIABLE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getCopiable());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -472,6 +499,7 @@ private static final long serialVersionUID = 0L;
       value_ = "";
       validationType_ = 0;
       format_ = "";
+      copiable_ = false;
       return this;
     }
 
@@ -519,6 +547,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.format_ = format_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.copiable_ = copiable_;
       }
     }
 
@@ -589,6 +620,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
+      if (other.getCopiable() != false) {
+        setCopiable(other.getCopiable());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -640,6 +674,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 48: {
+              copiable_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1044,6 +1083,50 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       format_ = value;
       bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private boolean copiable_ ;
+    /**
+     * <pre>
+     *copiable says whether or not the ui should add a copy to clipboard button next to it
+     * </pre>
+     *
+     * <code>bool copiable = 6 [json_name = "copiable"];</code>
+     * @return The copiable.
+     */
+    @java.lang.Override
+    public boolean getCopiable() {
+      return copiable_;
+    }
+    /**
+     * <pre>
+     *copiable says whether or not the ui should add a copy to clipboard button next to it
+     * </pre>
+     *
+     * <code>bool copiable = 6 [json_name = "copiable"];</code>
+     * @param value The copiable to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCopiable(boolean value) {
+
+      copiable_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *copiable says whether or not the ui should add a copy to clipboard button next to it
+     * </pre>
+     *
+     * <code>bool copiable = 6 [json_name = "copiable"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCopiable() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      copiable_ = false;
       onChanged();
       return this;
     }

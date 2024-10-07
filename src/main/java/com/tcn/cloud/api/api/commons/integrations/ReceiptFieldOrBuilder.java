@@ -85,4 +85,14 @@ public interface ReceiptFieldOrBuilder extends
    */
   com.google.protobuf.ByteString
       getFormatBytes();
+
+  /**
+   * <pre>
+   *copiable says whether or not the ui should add a copy to clipboard button next to it
+   * </pre>
+   *
+   * <code>bool copiable = 6 [json_name = "copiable"];</code>
+   * @return The copiable.
+   */
+  boolean getCopiable();
 }
